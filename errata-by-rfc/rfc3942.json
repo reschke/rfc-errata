@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3204,
+    "doc-id": "RFC3942",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "6. IANA Cons",
+    "orig_text": "   4. change the listing of any options listed as \"Tentatively-Assigned\"\r\n|     to \"Unavailable\" 18 months from this RFC's publication date and\r\n      periodically thereafter as long as there is an option listed as\r\n      \"Tentatively-Assigned\", if no un-expired Internet-Draft exists\r\n      documenting the usage.\r\n",
+    "correct_text": "   4. change the listing of any options listed as \"Tentatively-Assigned\"\r\n|     to \"Unassigned\" 18 months from this RFC's publication date and\r\n      periodically thereafter as long as there is an option listed as\r\n      \"Tentatively-Assigned\", if no un-expired Internet-Draft exists\r\n      documenting the usage.\r\n",
+    "notes": "The body of the RFC clearly states in Section 4, bullet 4.\r\nthat the IANA action desired by the RFC is to make these code\r\npoints available for assignment after the 18-month grace period.\r\n\r\nThis Errata Note is tagged as \"Technical\" because the inconsistency\r\nbetween the IANA Considerations and the body of the RFC apparently\r\nhas caused IANA to not follow the body and spirit of the RFC -- at\r\nthe time this Errata Note is being filed, there are several entries\r\nleft in the BOOTP+DHCP parameters option codes registry that should\r\nhave been cleaned up and made available for assignment since the\r\npublication of RFC 3942 in November 2004.",
+    "submit_date": "2012-04-27",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 117,
+    "verifier_name": "Ralph Droms",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
