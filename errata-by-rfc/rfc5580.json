@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5465,
+    "doc-id": "RFC5580",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": " 0-1     0-1    0      0         0+         126  Operator-Name\r\n",
+    "correct_text": " 0+     0      0      0         0+         126  Operator-Name\r\n",
+    "notes": "Section 4.1 says:\r\n\r\n  The Operator-Name Attribute SHOULD be sent in Access-Request and\r\n   Accounting-Request messages where the Acc-Status-Type is set to\r\n   Start, Interim, or Stop.\r\n\r\nThe table in Section 5 does not appear to match this.\r\n\r\n- Access-Request is marked 0-1.  It should be marked 0+, to allow packets to contain both E212 and REALM values for Operator-Name\r\n\r\n- there is no discussion of Operator-Name in Access-Accept.  So it's not clear why the table lists 0-1 for that packet\r\n\r\n- The table allows 0+ for Accounting-Request, so it's not clear why it's 0-1 for Access-Request",
+    "submit_date": "2018-08-15",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
