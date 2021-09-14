@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5953,
+    "doc-id": "RFC8632",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "3.5.1.",
+    "orig_text": "   From a resource perspective, an alarm can, for example, have the\r\n   following lifecycle: raise, change severity, change severity, clear,",
+    "correct_text": "   From a resource perspective, an alarm can, for example, have the\r\n   following lifecycle: raise, change severity, clear,",
+    "notes": "\n --VERIFIER NOTES-- \n Per authors and chairs, the current RFC text is correct as it exemplifies how the severity can change multiple times over the lifecycle of an alarm.",
+    "submit_date": "2019-12-31",
+    "submitter_name": "Tetsuya Hasegawa",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2020-07-13 14:13:51"
+  }
+]
