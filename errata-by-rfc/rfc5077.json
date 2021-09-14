@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4800,
+    "doc-id": "RFC5077",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "      struct {\r\n          uint32 ticket_lifetime_hint;\r\n          opaque ticket<0..2^16-1>;\r\n      } NewSessionTicket;\r\n\r\n(...)\r\n\r\n   The ticket is structured as follows:\r\n\r\n      struct {\r\n          opaque key_name[16];\r\n          opaque iv[16];\r\n          opaque encrypted_state<0..2^16-1>;\r\n          opaque mac[32];\r\n      } ticket;\r\n\r\n(...)\r\n\r\n      struct {\r\n          ProtocolVersion protocol_version;\r\n          CipherSuite cipher_suite;\r\n          CompressionMethod compression_method;\r\n          opaque master_secret[48];\r\n          ClientIdentity client_identity;\r\n          uint32 timestamp;\r\n      } StatePlaintext;\r\n\r\n      enum {\r\n         anonymous(0),\r\n         certificate_based(1),\r\n         psk(2)\r\n     } ClientAuthenticationType;\r\n\r\n      struct {\r\n          ClientAuthenticationType client_authentication_type;\r\n          select (ClientAuthenticationType) {\r\n              case anonymous: struct {};\r\n              case certificate_based:\r\n                  ASN.1Cert certificate_list<0..2^24-1>;\r\n              case psk:\r\n                  opaque psk_identity<0..2^16-1>;   /* from [RFC4279] */\r\n          };\r\n       } ClientIdentity;",
+    "correct_text": null,
+    "notes": "The ticket construction recommended in section 4 appears to be unimplementable in two respects:\r\n\r\n1. Tickets are up to 2^16-1 bytes in length, given they appear in both the client hello extension and the NewSessionTicket handshake message. The recommended format defines a ticket of up to 16+16+32+2+2^16-1 bytes in length.  This does not fit.\r\n\r\n2. The recommended format allows for up to 2^16-1 bytes of state plaintext in the encrypted_state field. The suggested StatePlaintext is up to 2+2+1+48+1+4+3+2^24-1 bytes in length. This does not fit.",
+    "submit_date": "2016-09-10",
+    "submitter_name": "Joseph Birr-Pixton",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
