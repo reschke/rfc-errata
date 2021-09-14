@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 5179,
+    "doc-id": "RFC6234",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 8.5,
+    "orig_text": " *    This file will exercise the HKDF code performing\r\n *      the seven tests documented in RFC 4869.",
+    "correct_text": " *    This file will exercise the HKDF code performing\r\n *      the seven tests documented in RFC 5869.",
+    "notes": "Typo.  Provide the correct reference in the code comment.",
+    "submit_date": "2017-11-06",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5238,
+    "doc-id": "RFC6234",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   e. The rotate left (circular left shift) operation ROTL^n(x), where x\r\n      is a w-bit word and n is an integer with 0 <= n < w, is defined by\r\n\r\n         ROTL^n(X) = (x<<n) OR (x>>(w-n))",
+    "correct_text": "   e. The rotate left (circular left shift) operation ROTL^n(x), where x\r\n      is a w-bit word and n is an integer with 0 <= n < w, is defined by\r\n\r\n         ROTL^n(x) = (x<<n) OR (x>>(w-n))",
+    "notes": "A typo. The function argument has to be x, not X.",
+    "submit_date": "2018-01-19",
+    "submitter_name": "Yeong-u Kim (K.)",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5240,
+    "doc-id": "RFC6234",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 6,
+    "orig_text": "6.1.  SHA-224 and SHA-256 Initialization\r\n\r\n   For SHA-224, the initial hash value, H(0), consists of the following\r\n   32-bit words in hex:\r\n\r\n      H(0)0 = c1059ed8\r\n      H(0)1 = 367cd507\r\n      H(0)2 = 3070dd17\r\n      H(0)3 = f70e5939\r\n      H(0)4 = ffc00b31\r\n      H(0)5 = 68581511\r\n      H(0)6 = 64f98fa7\r\n      H(0)7 = befa4fa4",
+    "correct_text": "6.1.  SHA-224 and SHA-256 Initialization\r\n\r\n   For SHA-224, the initial hash value, H(0), consists of the following\r\n   32-bit words in hex.  These words were obtained by taking the second\r\n   32 bits of the fractional parts of the square roots of the ninth\r\n   through sixteenth prime numbers.\r\n\r\n      H(0)0 = c1059ed8\r\n      H(0)1 = 367cd507\r\n      H(0)2 = 3070dd17\r\n      H(0)3 = f70e5939\r\n      H(0)4 = ffc00b31\r\n      H(0)5 = 68581511\r\n      H(0)6 = 64f98fa7\r\n      H(0)7 = befa4fa4",
+    "notes": "The explanation for the way in which the initial hash value of SHA-224 was obtained is missing.",
+    "submit_date": "2018-01-21",
+    "submitter_name": "Yeong-u Kim (K.)",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6523,
+    "doc-id": "RFC6234",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 6.4,
+    "orig_text": "   For i = 1 to N\r\n\r\n      1. Prepare the message schedule W:\r\n         For t = 0 to 15\r\n            Wt = M(i)t\r\n         For t = 16 to 79\r\n            Wt = SSIG1(W(t-2)) + W(t-7) + SSIG0(W(t-15)) + W(t-16)\r\n\r\n      2. Initialize the working variables:\r\n         a = H(i-1)0\r\n         b = H(i-1)1\r\n         c = H(i-1)2\r\n         d = H(i-1)3\r\n         e = H(i-1)4\r\n         f = H(i-1)5\r\n         g = H(i-1)6\r\n         h = H(i-1)7\r\n\r\n      3. Perform the main hash computation:\r\n         For t = 0 to 79\r\n            T1 = h + BSIG1(e) + CH(e,f,g) + Kt + Wt\r\n            T2 = BSIG0(a) + MAJ(a,b,c)\r\n            h = g\r\n            g = f\r\n            f = e\r\n            e = d + T1\r\n            d = c\r\n            c = b\r\n            b = a\r\n            a = T1 + T2\r\n\r\n         4. Compute the intermediate hash value H(i)\r\n            H(i)0 = a + H(i-1)0\r\n            H(i)1 = b + H(i-1)1\r\n            H(i)2 = c + H(i-1)2\r\n            H(i)3 = d + H(i-1)3\r\n            H(i)4 = e + H(i-1)4\r\n            H(i)5 = f + H(i-1)5\r\n            H(i)6 = g + H(i-1)6\r\n            H(i)7 = h + H(i-1)7\r\n",
+    "correct_text": "   For i = 1 to N\r\n\r\n      1. Prepare the message schedule W:\r\n         For t = 0 to 15\r\n            Wt = M(i)t\r\n         For t = 16 to 79\r\n            Wt = SSIG1(W(t-2)) + W(t-7) + SSIG0(W(t-15)) + W(t-16)\r\n\r\n      2. Initialize the working variables:\r\n         a = H(i-1)0\r\n         b = H(i-1)1\r\n         c = H(i-1)2\r\n         d = H(i-1)3\r\n         e = H(i-1)4\r\n         f = H(i-1)5\r\n         g = H(i-1)6\r\n         h = H(i-1)7\r\n\r\n      3. Perform the main hash computation:\r\n         For t = 0 to 79\r\n            T1 = h + BSIG1(e) + CH(e,f,g) + Kt + Wt\r\n            T2 = BSIG0(a) + MAJ(a,b,c)\r\n            h = g\r\n            g = f\r\n            f = e\r\n            e = d + T1\r\n            d = c\r\n            c = b\r\n            b = a\r\n            a = T1 + T2\r\n\r\n      4. Compute the intermediate hash value H(i)\r\n         H(i)0 = a + H(i-1)0\r\n         H(i)1 = b + H(i-1)1\r\n         H(i)2 = c + H(i-1)2\r\n         H(i)3 = d + H(i-1)3\r\n         H(i)4 = e + H(i-1)4\r\n         H(i)5 = f + H(i-1)5\r\n         H(i)6 = g + H(i-1)6\r\n         H(i)7 = h + H(i-1)7\r\n",
+    "notes": "Identation correction on point 4. as it may lead to confussion and reader may think that point (4) may be done inside a loop (begining on point (3).",
+    "submit_date": "2021-04-08",
+    "submitter_name": "David Óscar Solé González",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
