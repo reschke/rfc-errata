@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1828,
+    "doc-id": "RFC5583",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.2.2, pg.10",
+    "orig_text": "[[ last paragraph of Section 5.2.2: ]]\r\n\r\n          v\r\n|  Further, dependency types MUST be defined in a Standards-Track\r\n   document.\r\n",
+    "correct_text": "|  Further dependency types MUST be defined in a Standards-Track\r\n   document.\r\n",
+    "notes": "Rationale:\r\n  In this case, \"Further\" is an attribute; the spurious comma\r\n  separates this attribute from its noun \"[dependency] types\",\r\n  and thus changes the sense of the sentence in an inappropriate\r\n  manner.",
+    "submit_date": "2009-08-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1829,
+    "doc-id": "RFC5583",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6.3, pg.12",
+    "orig_text": "   The signaling mechanisms defined in this document MUST NOT be used to\r\n|  negotiate between using the attribute-value pair (AVP) [RFC3551] and\r\n                               ^^^^^^^^^^^^^^^^^^^^ \r\n   SAVP [RFC3711] profile for RTP.  However, both profiles MAY be used\r\n   separately or jointly with the signaling mechanism defined in this\r\n   document.\r\n",
+    "correct_text": "   The signaling mechanisms defined in this document MUST NOT be used to\r\n|  negotiate between using the Audio/Video Profile (AVP) [RFC3551] and\r\n|  Secure Audio/Video Profile (SAVP) [RFC3711] for RTP.  However, both\r\n   profiles MAY be used separately or jointly with the signaling\r\n   mechanism defined in this document.\r\n",
+    "notes": "Rationale:\r\n  Nonsensical acronym expansion (introduced late in the process).\r\n  The correct expansion could have been found by inspection of\r\n  the References in Section 10.1, in the entry for [RFC3551] !\r\n\r\n  Only changing the bad expansion turns the sentence weird;\r\n  therefore, the above change proposal tries to balance the\r\n  language by also expanding \"SAVP\" and saving the trailing\r\n  instance of \"profile\" (being part of both acronym expansions).",
+    "submit_date": "2009-08-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
