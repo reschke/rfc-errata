@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 183,
+    "doc-id": "RFC4133",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.12.1",
+    "orig_text": "     For example, the entPhysicalUris object may be used to encode a URI\r\n     containing a Common Language Equipment Identifier (CLEI) URN for\r\n     the managed physical entity.  The URN name space for CLEIs is\r\n     defined in [RFCYYYY], and the CLEI format is defined in\r\n     [T1.213][T1.213a].  For example, an entPhysicalUris instance may\r\n     have the value of\r\n\r\n        URN:CLEI:D4CE18B7AA\r\n\r\n     [RFC3986] and [RFCYYYY] identify this as a URI in the CLEI URN name\r\n     space.  The specific CLEI code, D4CE18B7AA, is based on the example\r\n     provided in [T1.213a].",
+    "correct_text": "     For example, the entPhysicalUris object may be used to encode a URI\r\n     containing a Common Language Equipment Identifier (CLEI) URN for\r\n     the managed physical entity.  The URN name space for CLEIs is\r\n     defined in [RFC4152], and the CLEI format is defined in\r\n     [T1.213][T1.213a].  For example, an entPhysicalUris instance may\r\n     have the value of\r\n\r\n        URN:CLEI:D4CE18B7AA\r\n\r\n     [RFC3986] and [RFC4152] identify this as a URI in the CLEI URN name\r\n     space.  The specific CLEI code, D4CE18B7AA, is based on the example\r\n     provided in [T1.213a].\r\n",
+    "notes": "",
+    "submit_date": "2005-09-22",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 779,
+    "doc-id": "RFC4133",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 8.2,
+    "orig_text": " [RFCYYYY]     Tesink, K. and R. Fox, \"A Uniform Resource Name (URN) \r\n               Namespace for the CLEI Code\", RFC YYYY, August 2005.\r\n\r\n",
+    "correct_text": " [RFC4152]     Tesink, K. and R. Fox, \"A Uniform Resource Name (URN)\r\n               Namespace for the CLEI Code\", RFC 4152, August 2005.",
+    "notes": "",
+    "submit_date": "2005-09-22",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Ron Bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
