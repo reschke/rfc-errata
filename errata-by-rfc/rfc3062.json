@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 340,
+    "doc-id": "RFC3062",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 1,
+    "orig_text": "   Traditionally, LDAP users where identified by the Distinguished Name\n   [RFC2253] of a directory entry and this entry contained a userPassword\n   [RFC2256] attribute containing one or more passwords.",
+    "correct_text": "   Traditionally, LDAP users were identified by the Distinguished\n   Name [RFC2253] of a directory entry and this entry contained a\n   userPassword [RFC2256] attribute containing one or more passwords.\n",
+    "notes": "",
+    "submit_date": "2001-03-07",
+    "submitter_name": "Kurt Zeilenga",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4899,
+    "doc-id": "RFC3062",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "   PasswdModifyRequestValue ::= SEQUENCE {\r\n     userIdentity    [0]  OCTET STRING OPTIONAL\r\n     oldPasswd       [1]  OCTET STRING OPTIONAL\r\n     newPasswd       [2]  OCTET STRING OPTIONAL }\r\n",
+    "correct_text": "   PasswdModifyRequestValue ::= SEQUENCE {\r\n     userIdentity    [0]  OCTET STRING OPTIONAL,\r\n     oldPasswd       [1]  OCTET STRING OPTIONAL,\r\n     newPasswd       [2]  OCTET STRING OPTIONAL }\r\n",
+    "notes": "The missing commas are probably just a typo in the formal specifications, but it is pleasant if they are acceptable to ASN.1 compilers.",
+    "submit_date": "2017-01-09",
+    "submitter_name": "Rick van Rein",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
