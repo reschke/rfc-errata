@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5213,
+    "doc-id": "RFC2322",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Issuing IP",
+    "orig_text": "   If someone could apply for a networkrange, and he net-extension isn't\r\n   used, coat-hangers can be prepared with sets of pegs attached to\r\n   them.",
+    "correct_text": "   If someone could apply for a networkrange, and the net-extension\r\n   isn't used, coat-hangers can be prepared with sets of pegs attached\r\n   to them.",
+    "notes": "typo “he”",
+    "submit_date": "2017-12-23",
+    "submitter_name": "Junxiao Shi",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5753,
+    "doc-id": "RFC2322",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Security",
+    "orig_text": "But, once the peg is attached to a network cable, \r\nthe chance to loose the peg is minimized.",
+    "correct_text": "But, once the peg is attached to a network cable, \r\nthe chance to lose the peg is minimized.",
+    "notes": "Although there is a possibility that the author intended to use the verb form of \"loose\", implying that there would be a chance to unbind the peg to go about its own business, it's more likely that they intended to refer to the situation where the peg is lost, rather than simply released.",
+    "submit_date": "2019-06-14",
+    "submitter_name": "Adam Schumacher",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
