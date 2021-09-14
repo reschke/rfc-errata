@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 350,
+    "doc-id": "RFC3028",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.4.1",
+    "orig_text": "   mebi-, or 1,048,576 (2^20) times the value of the number; and G\n   specifies tebi-, or 1,073,741,824 (2^30) times the value of the\n   number [BINARY-SI].",
+    "correct_text": "    mebi-, or 1,048,576 (2^20) times the value of the number; and G\n    specifies gibi-, or 1,073,741,824 (2^30) times the value of the\n    number [BINARY-SI].\n",
+    "notes": "",
+    "submit_date": "2003-09-22",
+    "submitter_name": "Piotr Kucharski",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1493,
+    "doc-id": "RFC3028",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "   actually a separate command in terms of the grammar.  However, an\r\n   elsif MUST only follow an if, and an else MUST follow only either an\r\n   if or an elsif.  An error occurs if these conditions are not met.\r\n",
+    "correct_text": "   actually a separate command in terms of the grammar.  However, an\r\n   elsif or an else MUST only follow an if or an elsif.  An error occurs\r\n   if these conditions are not met.\r\n",
+    "notes": "Peter: Fixed in RFC 5228.",
+    "submit_date": "2008-08-21",
+    "submitter_name": "Costin Chirvasuta",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5134,
+    "doc-id": "RFC3028",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 8.1,
+    "orig_text": "   CHAR-NOT-SLASH = (%x00-57 / %x58-ff)\r\n\r\n   CHAR-NOT-STAR = (%x00-51 / %x53-ff)",
+    "correct_text": "   CHAR-NOT-SLASH = (%x00-2e / %x30-ff)\r\n\r\n   CHAR-NOT-STAR = (%x00-29 / %x2b-ff)",
+    "notes": "The CHAR-NOT-SLASH is attempting to not include the SLASH character and makes two errors.  Firstly, no character is skipped.  Secondly, a slash character is octal 57.  The correct hex value for slash is 2F.\r\n\r\nThe CHAR-NOT-STAR is attempting to not include the STAR character and claims that this is character 52.  STAR is actually hex 0x2A.  The apparent mistake is that the octal value of the character (STAR is octal 52) was entered as a hex value.",
+    "submit_date": "2017-10-03",
+    "submitter_name": "Peter Smith",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
