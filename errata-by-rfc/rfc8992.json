@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6591,
+    "doc-id": "RFC8992",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "objective = [\"PrefixManager.Params\", objective-flags, any]",
+    "correct_text": "objective = [\"PrefixManager.Params\", objective-flags, loop-count, any]",
+    "notes": "Clarifying an omission in the original.  All GRASP Objective Options must include a loop-count as required by the format defined in section 2.10 of RFC 8990.",
+    "submit_date": "2021-05-25",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 166,
+    "verifier_name": "Rob Wilton",
+    "update_date": "2021-06-08 02:20:12"
+  }
+]
