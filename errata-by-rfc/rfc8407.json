@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5693,
+    "doc-id": "RFC8407",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.17,
+    "orig_text": "Note that the set of features within a module\r\n   is easily discovered by the reader, but the set of related modules\r\n   within the entire YANG library is not as easy to identity.  Module\r\n   names with a common prefix can help readers identity the set of\r\n   related modules, but this assumes the reader will have discovered and\r\n   installed all the relevant modules.",
+    "correct_text": "Note that the set of features within a module\r\n   is easily discovered by the reader, but the set of related modules\r\n   within the entire YANG library is not as easy to identify.  Module\r\n   names with a common prefix can help readers identify the set of\r\n   related modules, but this assumes the reader will have discovered and\r\n   installed all the relevant modules.",
+    "notes": "The word identity is not correct here. It should be identify to give the sentence correct meaning.",
+    "submit_date": "2019-04-15",
+    "submitter_name": "Mobashshera Rasool",
+    "verifier_id": 158,
+    "verifier_name": "Ignas Bagdonas",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5800,
+    "doc-id": "RFC8407",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "appendix b",
+    "orig_text": "       \"WG Web:   <http://datatracker.ietf.org/wg/your-wg-name/>\r\n.....\r\n        (http://trustee.ietf.org/license-info).\r\n",
+    "correct_text": "       \"WG Web:   <https://datatracker.ietf.org/wg/your-wg-name/>\r\n.....\r\n        (https://trustee.ietf.org/license-info).\r\n",
+    "notes": "Appendix A rightly says that these URL should have a scheme of https:\r\nbut Appendix B wrongly specifies http:\r\n\r\n[WK]: I'm marking this as 'Verified' (instead of \"Hold for Document Update\") as it is in a template which is likely to be copied and pasted, and this seems like it may get more visibility.",
+    "submit_date": "2019-07-31",
+    "submitter_name": "tom Petch",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
