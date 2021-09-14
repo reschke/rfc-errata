@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 582,
+    "doc-id": "RFC0005",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99In the Forward, it says:",
+    "orig_text": "It was generally agreed beforehand that the runmning of interactive\r\nprograms across the network was the first problem that would be\r\nfaced.",
+    "correct_text": "It was generally agreed beforehand that the running of interactive\r\nprograms across the network was the first problem that would be\r\nfaced.\r\n",
+    "notes": "",
+    "submit_date": "2005-05-23",
+    "submitter_name": "Zhang Xin Liang",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5296,
+    "doc-id": "RFC0005",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "Network Working Group                                           4691\r\nRFC-5                                                           Jeff Rulifson\r\n                                                                June 2, l969",
+    "correct_text": "Network Working Group                                           4691\r\nRFC-5                                                           Jeff Rulifson\r\n                                                                June 2, 1969",
+    "notes": "Most likely OCR interpreted 1 as L. The date should be 1969 obviously.",
+    "submit_date": "2018-03-22",
+    "submitter_name": "Krzysztof Piecuch",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5866,
+    "doc-id": "RFC0005",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "FORWARD",
+    "orig_text": "FORWARD",
+    "correct_text": "FOREWORD",
+    "notes": "\"Foreword\" is a generally accepted name for text that is put before a document.  In this case \"PREFACE\" would also be acceptable, but it seems to be the case that \"FOREWORD\" was the intent.",
+    "submit_date": "2019-09-26",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-25 20:50:27"
+  }
+]
