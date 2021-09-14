@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 430,
+    "doc-id": "RFC2464",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "99The URL in this reference is incorrect:\n",
+    "orig_text": "   [EUI64] \"Guidelines For 64-bit Global Identifier (EUI-64)\",\n           http://standards.ieee.org/db/oui/tutorials/EUI64.html",
+    "correct_text": "   [EUI64] \"Guidelines For 64-bit Global Identifier (EUI-64)\",\n           http://standards.ieee.org/regauth/oui/tutorials/EUI64.html\n",
+    "notes": "",
+    "submit_date": "2004-04-29",
+    "submitter_name": "Peter Koch",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4855,
+    "doc-id": "RFC2464",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "For example, the Interface Identifier for an Ethernet interface whose\r\n   built-in address is, in hexadecimal,\r\n\r\n                             34-56-78-9A-BC-DE\r\n\r\n   would be\r\n\r\n                         36-56-78-FF-FE-9A-BC-DE.",
+    "correct_text": "For example, the Interface Identifier for an Ethernet interface whose\r\n   built-in address is, in hexadecimal,\r\n\r\n                             34-56-78-9A-BC-DE\r\n\r\n   would be\r\n\r\n                         32-56-78-FF-FE-9A-BC-DE.",
+    "notes": "U/L bit inversion of 34 should be 32 instead of 36\r\n\r\n--- Verifier note --\r\nThe example is correct: 0x34 = 0x0011 0100\r\nThe U/L bit is \" the next-to-lowest order bit of the first octet of the EUI-64\" 0b00000010\r\nSo flipping this bit in 0x34 gives 0x0011 0110 = 0x36 as in RFC 2464\n --VERIFIER NOTES-- \nThe example is correct: 0x34 = 0x0011 0100\r\n\r\nThe U/L bit is \" the next-to-lowest order bit of the first octet of the EUI-64\" 0b00000010\r\n\r\nSo flipping this bit in 0x34 gives 0x0011 0110 = 0x36 as in RFC 2464\r\n\r\n",
+    "submit_date": "2016-11-06",
+    "submitter_name": "Gigon Olivier",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-01-28 05:17:06"
+  }
+]
