@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4708,
+    "doc-id": "RFC5538",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "newsURL         = \"news:\" [ server \"/\" ] ( article / newsgroups )",
+    "correct_text": "newsURL         = \"news:\" [ server \"/\" ] [ article / newsgroups ]",
+    "notes": "Neither <article> nor <newsgroups> allow empty entries, but in the example there is an empty entry.\r\n\r\nnews://news.server.example/\r\n\r\nWhich means the as same as\r\n\r\nnews://news.server.example/*",
+    "submit_date": "2016-06-11",
+    "submitter_name": "stream9",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
