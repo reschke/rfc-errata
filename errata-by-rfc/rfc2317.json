@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1474,
+    "doc-id": "RFC2317",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "the the first component",
+    "correct_text": "the first component",
+    "notes": null,
+    "submit_date": "2008-07-17",
+    "submitter_name": "Justin Pryzby",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5688,
+    "doc-id": "RFC2317",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "[Page 2]",
+    "orig_text": " Let us assume we have assigned the address spaces to three different\r\n   parties as follows:\r\n\r\n           192.0.2.0/25   to organization A\r\n           192.0.2.128/26 to organization B\r\n           192.0.2.192/26 to organization C\r\n",
+    "correct_text": " Let us assume we have assigned the address spaces to three different\r\n   parties as follows:\r\n\r\n           192.0.2.0/25   to organization A\r\n           192.0.2.128/26 to organization B\r\n           192.0.2.192/27 to organization C\r\n\r\n ",
+    "notes": "Ip mask 27 ?",
+    "submit_date": "2019-04-11",
+    "submitter_name": "Dominik",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
