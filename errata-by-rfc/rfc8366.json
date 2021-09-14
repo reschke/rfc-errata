@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6646,
+    "doc-id": "RFC8366",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "   {\r\n     \"ietf-voucher:voucher\": {\r\n       \"created-on\": \"2016-10-07T19:31:42Z\",\r\n       \"expires-on\": \"2016-10-21T19:31:42Z\",\r\n       \"assertion\": \"verified\",\r\n       \"serial-number\": \"JADA123456789\",\r\n       \"idevid-issuer\": \"base64encodedvalue==\",\r\n       \"pinned-domain-cert\": \"base64encodedvalue==\",\r\n       \"domain-cert-revocation-checks\": \"true\",\r\n       \"last-renewal-date\": \"2017-10-07T19:31:42Z\"\r\n     }\r\n   }",
+    "correct_text": "   {\r\n     \"ietf-voucher:voucher\": {\r\n       \"created-on\": \"2016-10-07T19:31:42Z\",\r\n       \"expires-on\": \"2016-10-21T19:31:42Z\",\r\n       \"assertion\": \"verified\",\r\n       \"serial-number\": \"JADA123456789\",\r\n       \"idevid-issuer\": \"base64encodedvalue==\",\r\n       \"pinned-domain-cert\": \"base64encodedvalue==\",\r\n       \"domain-cert-revocation-checks\": true,\r\n       \"last-renewal-date\": \"2017-10-07T19:31:42Z\"\r\n     }\r\n   }",
+    "notes": "domain-cert-revocation-checks is defined as boolean in the YANG specification in section 5.3 of the same RFC 8366. Boolean value in JSON are represented using true/false without the quotes.",
+    "submit_date": "2021-07-22",
+    "submitter_name": "Aman Mangal",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
