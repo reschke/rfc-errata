@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2617,
+    "doc-id": "RFC5451",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "2.4.2",
+    "orig_text": "   hardfail:  This client is explicitly not authorized to inject or\r\n      relay mail using the sender's DNS domain.\r\n",
+    "correct_text": "   fail:  This client is explicitly not authorized to inject or\r\n      relay mail using the sender's DNS domain.\r\n",
+    "notes": "Change [sixth paragraph] for consistency:\r\n1)  RFC 4408 (SPF) defines this state as \"fail\", not \"hardfail\".\r\n2)  The other subsections of 2.4 of this RFC define \"fail\".\r\nThe change makes the result state consistent and parallel to those as noted in other RFCs and for the alternative methods defined in this RFC.",
+    "submit_date": "2010-11-09",
+    "submitter_name": "D. Stussy",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2818,
+    "doc-id": "RFC5451",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "B.5",
+    "orig_text": "        Authentication-Results: example.com;\r\n                  sender-id=hardfail header.from=example.com;\r\n                  dkim=pass (good signature) header.i=sender@example.com\r\n        Received: from mail-router.example.com\r\n                      (mail-router.example.com [192.0.2.1])\r\n                  by auth-checker.example.com (8.11.6/8.11.6)\r\n                      with ESMTP id i7PK0sH7021929;\r\n                  Fri, Feb 15 2002 17:19:22 -0800\r\n        Authentication-Results: example.com;\r\n                  auth=pass (cram-md5) smtp.auth=sender@example.com;\r\n                  spf=hardfail smtp.mailfrom=example.com\r\n        Received: from dialup-1-2-3-4.example.net\r\n                      (dialup-1-2-3-4.example.net [192.0.2.200])\r\n                  by mail-router.example.com (8.11.6/8.11.6)\r\n                      with ESMTP id g1G0r1kA003489;\r\n                  Fri, Feb 15 2002 17:19:07 -0800\r\n        DKIM-Signature:  v=1; a=rsa-sha256; s=gatsby; d=example.com;\r\n                  i=sender@example.com; t=1188964191; c=simple/simple;\r\n                  h=From:Date:To:Message-Id:Subject;\r\n                  bh=sEuZGD/pSr7ANysbY3jtdaQ3Xv9xPQtS0m70;\r\n                  b=EToRSuvUfQVP3Bkz ... rTB0t0gYnBVCM=\r\n        From: sender@example.com\r\n        Date: Fri, Feb 15 2002 16:54:30 -0800\r\n        To: receiver@example.com\r\n        Message-Id: <12345.abc@example.com>\r\n        Subject: here's a sample\r\n\r\n        Hello!  Goodbye!\r\n",
+    "correct_text": "        Authentication-Results: example.com;\r\n                  spf=pass smtp.mailfrom=example.com\r\n                  dkim=pass (good signature) header.i=@example.com\r\n        Received: from msa.example.com (msa.example.com [192.0.2.1])\r\n                  by mx.example.com (8.11.6/8.11.6)\r\n                      with ESMTP id i7PK0sH7021929;\r\n                  Fri, Feb 15 2002 17:19:22 -0800\r\n        DKIM-Signature:  v=1; a=rsa-sha256; s=gatsby; d=example.com;\r\n                  t=1188964191; c=simple/simple; h=From:Date:To:Subject:\r\n                  Message-Id:Authentication-Results;\r\n                  bh=sEuZGD/pSr7ANysbY3jtdaQ3Xv9xPQtS0m70;\r\n                  b=EToRSuvUfQVP3Bkz ... rTB0t0gYnBVCM=\r\n        Authentication-Results: example.com;\r\n                  auth=pass (details omitted as precautionary measure)\r\n        Received: from [192.0.2.200]\r\n                      (dialup-1-2-3-4.example.net [192.0.2.200])\r\n                  by msa.example.com (8.11.6/8.11.6)\r\n                      with ESMTP id g1G0r1kA003489;\r\n                  Fri, Feb 15 2002 17:19:07 -0800\r\n        From: sender@example.com\r\n        Date: Fri, Feb 15 2002 16:54:30 -0800\r\n        To: receiver@example.com\r\n        Message-Id: <12345.abc@example.com>\r\n        Subject: here's a sample\r\n\r\n        Hello!  Goodbye!\r\n",
+    "notes": "The corrected example shows how an MSA may prove that it handled submission by signing an A-R field. (I reordered the header, changed host names, changed A-R fields, removed i=, and added A-R in h=)\r\n\r\nSome text in the same section may need minor revision.  In particular, SPF pass, host name, senderid, and the origin of the DKIM key (in the corrected example, example.net may well be a MUA, while example.com has separate MSA and MX hosts.)",
+    "submit_date": "2011-05-31",
+    "submitter_name": "Alessandro Vesely",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3182,
+    "doc-id": "RFC5451",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "Header.",
+    "orig_text": null,
+    "correct_text": "Updated by RFC 6577.",
+    "notes": "RFC 6577 (March 2012) indicates that it updates 5451, but 5451 does not indicate it is updated.  This update is the same as errata ID 2617 (date reported 2010-11-09).\n --VERIFIER NOTES-- \nThe \"updated by\" information is in the metadata for the RFC, and that metadata is correct (see the version in the datatracker: https://datatracker.ietf.org/doc/rfc5451/ ).  The text of an RFC does not change once it's published.   ",
+    "submit_date": "2012-04-09",
+    "submitter_name": "D. Stussy",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3195,
+    "doc-id": "RFC5451",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 2.3,
+    "orig_text": "     reasonspec = \"reason\" [CFWS] \"=\" [CFWS] value\r\n                ; a free-form comment on the reason the given result\r\n                ; was returned\r\n",
+    "correct_text": "     reasonspec = [CFWS] \"(\" value \")\"\r\n                ; a free-form comment on the reason the given result\r\n                ; was returned\r\n\r\n",
+    "notes": "I am not sure if it is a mistake, but the examples look this way:\r\n\r\n     Authentication-Results: example.com;\r\n           dkim=pass (good signature) header.i=@mail-router.example.net;\r\n           dkim=fail (bad signature) header.i=@newyork.example.com\r\n\r\nSo I think the \"reasonspec\" is here \"(good signature)\" and \"(bad signature)\". All other examples show similar entries for \"reasonspec\".\r\n\r\n[Verifier's note:\r\nThis change is INCORRECT.  The free-form parenthesized comments are actually part of the \"CFWS\" production.  The confusion is caused by having no examples that use the \"reasonspec\" production, and that should be fixed if the document is updated.]",
+    "submit_date": "2012-04-17",
+    "submitter_name": "Dirk Geschke",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
