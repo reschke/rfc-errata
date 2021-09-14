@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3556,
+    "doc-id": "RFC3875",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.1.1",
+    "orig_text": "   The AUTH_TYPE variable identifies any mechanism used by the server to\r\n   authenticate the user.  It contains a case-insensitive value defined\r\n   by the client protocol or server implementation.\r\n\r\n   For HTTP, if the client request required authentication for external\r\n   access, then the server MUST set the value of this variable from the\r\n   'auth-scheme' token in the request Authorization header field.\r\n\r\n      AUTH_TYPE      = \"\" | auth-scheme\r\n      auth-scheme    = \"Basic\" | \"Digest\" | extension-auth\r\n      extension-auth = token\r\n\r\n   HTTP access authentication schemes are described in RFC 2617 [5].",
+    "correct_text": "[see below]",
+    "notes": "The current definition of AUTH_TYPE is flawed, namely then when several authentication methods have been used.\r\nOne example would be to have first some SSL/TLS client certificate authentication and then (afterwards) HTTP Basic Authentication.\r\nOther examples are e.g. Apache HTTPD's SSL/FakeBasicAuth, where the SSL certs DN is mapped to the HTTP Basic Authentication username (i.e. the CGI REMOTE_USER variable).\r\n\r\nRight now, AUTH_TYPE provides not syntax to encode several layers of authentication types, so the behaviour of webservers is basically undefined (e.g. Apache omits AUTH_TYPE in conjunction with SSL altogether (see https://issues.apache.org/bugzilla/show_bug.cgi?id=45058), which is also problematic, as much software depends on it).\r\n\r\n\r\nI see two possible solutions:\r\n\r\n1) Extend the syntax to allow lists of authentication types be specified.\r\nA syntax like this would be possible:\r\n<1st authentication type>;<2nd authentication type>;<3rd authentication type>\r\nand so on, no trailing \";\" required.\r\nThe \";\" seems to be a possible largely backwards compatible separator as right now:\r\n     auth-scheme    = \"Basic\" | \"Digest\" | extension-auth\r\n     extension-auth = token\r\nwith\r\n      token         = 1*<any CHAR except CTLs or separators>\r\n      separator     = \"(\" | \")\" | \"<\" | \">\" | \"@\" | \",\" | \";\" | \":\" |\r\n                      \"\\\" | <\"> | \"/\" | \"[\" | \"]\" | \"?\" | \"=\" | \"{\" |\r\n                      \"}\" | SP | HT\r\n\r\nIn the example above (where first SSL client auth took place, then Basic auth) this would look like e.g. \"TLS_client_certificate;Basic\" (a name for SSL/TLS client certificate authentication would need to be found).\r\n\r\n\r\n2) Define AUTH_TYPE explicitly to describe the authentication type at _plain_ HTTP level.\r\nI would like this solution less, as it seems less mighty and future-proof.\r\n\r\n\r\nCheers,\r\nChris.\r\n\r\nThis erratum points out a flaw in RFC 3875, and suggests some improvements to it - of these, (1) seems the simplest.  However, this change would require a new RFC, so I'm setting this to \"Hold for update\" now.\r\n\r\nNevil",
+    "submit_date": "2013-03-18",
+    "submitter_name": "Christoph Anton Mitterer",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5266,
+    "doc-id": "RFC3875",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.17",
+    "orig_text": "SERVER_SOFTWARE = 1*( product | comment )",
+    "correct_text": "SERVER_SOFTWARE = 1*( *( SP | HT ) ( product | comment ) )",
+    "notes": "It seems actual usage separates products and comments with spaces such as «Apache/2.4.27 (Win32) OpenSSL/1.1.0f PHP/7.1.9».  The definition «1*rule» in section 2.1 doesn't include implicit optional (required?) spaces as a separator.\r\n\r\nThe proposed definition is backward compatible with the original.",
+    "submit_date": "2018-02-25",
+    "submitter_name": "Denny O'Breham",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5880,
+    "doc-id": "RFC3875",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3.2",
+    "orig_text": "...that has a permanent affect, such a change in a database.",
+    "correct_text": "...that has a permanent effect, such as a change in a database.",
+    "notes": null,
+    "submit_date": "2019-10-23",
+    "submitter_name": "Zach Scott",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-10-26 10:33:31"
+  }
+]
