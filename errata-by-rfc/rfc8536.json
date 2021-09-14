@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6426,
+    "doc-id": "RFC8536",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "B.3",
+    "orig_text": "   | 000    | 54 5a 69 66  | magic            | \"TZif\"                 |\r\n   | 004    | 33           | version          | '3' (3)                |\r\n   | 005    | 00 00 00 00  |                  |                        |\r\n   |        | 00 00 00 00  |                  |                        |\r\n   |        | 00 00 00 00  |                  |                        |\r\n   |        | 00 00 00     |                  |                        |\r\n   | 020    | 00 00 00 00  | isutccnt         | 0                      |\r\n   | 024    | 00 00 00 00  | isstdcnt         | 0                      |\r\n   | 028    | 00 00 00 00  | isleapcnt        | 0                      |\r\n   | 032    | 00 00 00 00  | timecnt          | 0                      |\r\n   | 036    | 00 00 00 00  | typecnt          | 0                      |\r\n   | 040    | 00 00 00 00  | charcnt          | 0                      |\r\n",
+    "correct_text": "Delete this header.",
+    "notes": "According to section 3.1 p. 6, the typecnt and charcnt fields of  the header MUST NOT be zero.\r\n\r\n===== Verifier notes =====\r\nThere are errors in these tables, but the suggested fix is not correct.  There really needs to be a proper update to the document instead.",
+    "submit_date": "2021-02-12",
+    "submitter_name": "Thomas Conner",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2021-02-21 06:40:06"
+  },
+  {
+    "errata_id": 6435,
+    "doc-id": "RFC8536",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "   >> Response <<\r\n\r\n   HTTP/1.1 200 OK\r\n   Date: Fri, 01 Jun 2018 14:52:23 GMT\r\n   Content-Type: application/json; charset=\"utf-8\"\r\n   Content-Length: xxxx",
+    "correct_text": "   >> Response <<\r\n\r\n   HTTP/1.1 200 OK\r\n   Date: Fri, 01 Jun 2018 14:52:23 GMT\r\n   Content-Type: application/json\r\n   Content-Length: xxxx",
+    "notes": "There is no charset parameter on application/json. See https://tools.ietf.org/html/rfc8259#section-11 (last sentence).",
+    "submit_date": "2021-02-20",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2021-02-21 06:38:36"
+  }
+]
