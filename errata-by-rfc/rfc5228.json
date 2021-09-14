@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5579,
+    "doc-id": "RFC5228",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.3.",
+    "orig_text": "   Example:  if size :over 100k { # this is a comment\r\n                discard;\r\n             }",
+    "correct_text": "   Example:  if size :over 100K { # this is a comment\r\n                discard;\r\n             }",
+    "notes": "The small \"k\" after the 100 is invalid syntax according the ABNF.\r\n\r\n\"8.1.  Lexical Tokens\" defines a number as:\r\n\r\nnumber             = 1*DIGIT [ QUANTIFIER ]\r\nQUANTIFIER         = \"K\" / \"M\" / \"G\"\r\n\r\nEither the Quantifier needs to be extended to allow also lowercase characters or the example needs to be corrected.",
+    "submit_date": "2018-12-19",
+    "submitter_name": "Thomas Schmid",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
