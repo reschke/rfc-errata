@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3073,
+    "doc-id": "RFC6434",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 15.2,
+    "orig_text": "15.2.  Authors and Acknowledgments from RFC 4279\r\n\r\n   The original version of this document (RFC 4279) was written by the\r\n   IPv6 Node Requirements design team:\r\n",
+    "correct_text": "15.2.  Authors and Acknowledgments from RFC 4294  \r\n\r\n   The original version of this document (RFC 4294 ) was written by the\r\n   IPv6 Node Requirements design team:\r\n",
+    "notes": "RFC 4279 is the TLS RFC.",
+    "submit_date": "2012-01-04",
+    "submitter_name": "John Loughney",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3091,
+    "doc-id": "RFC6434",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.1,
+    "orig_text": "   Nodes supporting applications that expect\r\n   to only take advantage of MLDv2's INCLUDE functionality as well as\r\n   Any-Source Multicast will find it sufficient to support MLDv2 as\r\n   defined in [RFC5790].",
+    "correct_text": "   Nodes supporting applications that expect \r\n   to only take advantage of MLDv2's INCLUDE functionality as well as \r\n   Any-Source Multicast will find it sufficient to support Lightweight \r\n   MLDv2 as defined in [RFC5790].",
+    "notes": "MLDv2 is RFC3810, and has both INCLUDE and EXCLUDE filter modes (as per previous paragraph.\r\n\r\nRFC5790 (Lightweight MLDv2) is sufficient for nodes supporting application using only INCLUDE and Any-Source Multicast.",
+    "submit_date": "2012-01-16",
+    "submitter_name": "Sam Silvester",
+    "verifier_id": 2,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
