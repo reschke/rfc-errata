@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 191,
+    "doc-id": "RFC4051",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.3.5",
+    "orig_text": "Identifier:\r\n  http://www.w3.org/2001/04/xmldsig-more/rsa-ripemd160\r\n\r\n...\r\n\r\n<SignatureMethod\r\n  Algorithm=\"http://www.w3.org/2001/04/xmldsig-more/rsa-ripemd160\" />\r\n",
+    "correct_text": "Identifier:\r\n  http://www.w3.org/2001/04/xmldsig-more#rsa-ripemd160\r\n\r\n...\r\n\r\n<SignatureMethod\r\n  Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-ripemd160\" />",
+    "notes": "In Section 2.3.5, the two URLs should have their right-most slash (\"/\") replaced with a pound sign (\"#\").",
+    "submit_date": "2005-11-08",
+    "submitter_name": "Donald Eastlake III",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
