@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5786,
+    "doc-id": "RFC8478",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.1.1.2.3",
+    "orig_text": "   A Compressed_Block has the extra restriction that Block_Size is\r\n   always strictly less than the decompressed size.  If this condition\r\n   cannot be respected, the block must be sent uncompressed instead\r\n   (i.e., treated as a Raw_Block).",
+    "correct_text": "   If this condition cannot be respected when generating a\r\n   Compressed_Block, the block must be sent uncompressed instead\r\n   (i.e., treated as a Raw_Block).",
+    "notes": "The RFC as originally written places a limit on the size of compressed\r\nblocks (that they can be no larger than the compressed content they\r\nrepresent) above and beyond the restrictions placed on the other block\r\ntypes.\r\n\r\nThis restriction does not belong in the spec, and it should be\r\nremoved. Here's why:\r\n\r\nUnder only cursory examination, a rule like this makes sense. A\r\ncompressed representation that is larger than the uncompressed content\r\nit represents seems useless, since Zstandard supports raw blocks.\r\nHowever, even if this were true (which, see below), that reasoning\r\nmotivates implementing such a fallback in the compressor, it doesn't\r\nexplain why compressors should be required to implement such behavior.\r\n\r\nHowever, this restriction is not actually useful for decoders, and its\r\nremoval will not negatively affect decompressors or their\r\ninteroperability. All conforming decompressor implementations must\r\nalready be prepared to accept blocks, including compressed blocks, up\r\nto the Block_Maximum_Decompressed_Size, so loosening this restriction\r\nwill not require them to allocate any more memory than required at\r\npresent. And in fact, to the best of my knowledge, no decompressor\r\nimplementation currently enforces the restriction in question or has\r\never done so in the past.\r\n\r\nFinally, this restriction does in fact over-constrain compressors.\r\nCompressed blocks that are larger than the content they represent can\r\nnonetheless have value, when they contain entropy tables (e.g., a\r\nHuffman_Tree_Description), the cost of which is amortized over\r\nsubsequent blocks that reuse the same table description.\r\n\r\nIn short, this change is a safe, strict improvement over the existing\r\nlanguage, which better reflects the reality of implementations, and\r\nwhich removes a restriction which should never have been in the spec\r\nin the first place.\r\n\r\nWe've already made this change to the Zstandard format document\r\nmaintained in the reference implementation repo[0].\r\n\r\n[0] https://github.com/facebook/zstd/blob/dev/doc/zstd_compression_format.md#blocks\r\n\r\n===== Verifier Notes =====\r\nAll this is fine, but the document says exactly what it was meant to say when it was written; this is not an erratum.  This is now on record for discussion if the document is updated.",
+    "submit_date": "2019-07-17",
+    "submitter_name": "Felix Handte",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6303,
+    "doc-id": "RFC8478",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.1.1.5",
+    "orig_text": "The newest offset takes the lead in offset history, shifting others\r\nback (up to its previous place if it was already present).  This\r\nmeans that when Repeated_Offset1 (most recent) is used, history is\r\nunmodified.  When Repeated_Offset2 is used, it is swapped with\r\nRepeated_Offset1.  If any other offset is used, it becomes\r\nRepeated_Offset1, and the rest are shifted back by 1.",
+    "correct_text": "The newest offset takes the lead in offset history, shifting others\r\nback (up to its previous place if the new offset is a repeat offset).\r\nThis means that when the new offset is a repeat offset referring to\r\nRepeated_Offset1 (most recent), history is unmodified.\r\nWhen the new offset is a repeat offset referring to Repeated_Offset2,\r\nit is swapped with Repeated_Offset1.  In any other situation, the new\r\noffset becomes Repeated_Offset1 and the rest are shifted back by 1.\r\n\r\nNote that if a non-repeat offset happens to match one of the\r\nRepeated_Offset values, it is treated just like any other non-repeat\r\noffset; all the Repeated_Offset values are shifted back by 1.\r\n\r\nThe following code demonstrates how an offset_value is decoded into\r\na NewOffset and the Repeated_Offset values are updated.\r\n\r\nif offset_value <= 3:\r\n    if literal_length == 0:\r\n        offset_value = offset_value + 1\r\n    if offset_value == 1:\r\n        NewOffset = Repeated_Offset1\r\n    elif offset_value == 2:\r\n        NewOffset = Repeated_Offset2\r\n        Repeated_Offset2 = Repeated_Offset1\r\n        Repeated_Offset1 = NewOffset\r\n    elif offset_value == 3:\r\n        NewOffset = Repeated_Offset3\r\n        Repeated_Offset3 = Repeated_Offset2\r\n        Repeated_Offset2 = Repeated_Offset1\r\n        Repeated_Offset1 = NewOffset\r\n    elif offset_value == 4:\r\n        NewOffset = Repeated_Offset1 - 1\r\n        if NewOffset == 0:\r\n            # corrupted input\r\n            NewOffset = 1\r\n        Repeated_Offset3 = Repeated_Offset2\r\n        Repeated_Offset2 = Repeated_Offset1\r\n        Repeated_Offset1 = NewOffset\r\nelif offset_value > 3:\r\n    NewOffset = offset_value - 3\r\n    Repeated_Offset3 = Repeated_Offset2\r\n    Repeated_Offset2 = Repeated_Offset1\r\n    Repeated_Offset1 = NewOffset",
+    "notes": "Change the explanation of how Repeated_Offset values are updated in order to match the reference implementation. See https://github.com/facebook/zstd/issues/2346",
+    "submit_date": "2020-10-07",
+    "submitter_name": "Sean Bartell",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-10-08 14:08:15"
+  }
+]
