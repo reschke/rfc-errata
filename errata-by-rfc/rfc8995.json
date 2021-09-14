@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 6642,
+    "doc-id": "RFC8995",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.4,
+    "orig_text": "Use of TLS 1.3 (or newer) is encouraged.  TLS 1.2 or newer is \r\nREQUIRED.  TLS 1.3 (or newer) SHOULD be available.",
+    "correct_text": "TLS 1.2 [RFC5246] with SNI support [RFC6066] is REQUIRED if \r\nTLS 1.3 is not available.\r\nThe Server Name Indicator (SNI) is required when the Registrar \r\ncommunicates with the MASA in order for the MASA to be hosted in \r\na modern multi-tenant TLS infrastructure.\r\n\r\n",
+    "notes": "https://mailarchive.ietf.org/arch/msg/anima/bqrZXAk7vstWQ3V1-irIATnBKpY/\r\nThis adds new references to the text.",
+    "submit_date": "2021-07-14",
+    "submitter_name": "Michael Richardson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6648,
+    "doc-id": "RFC8995",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "   Use of TLS 1.3 (or newer) is encouraged.  TLS 1.2 or newer is\r\n   REQUIRED on the pledge side.  TLS 1.3 (or newer) SHOULD be available\r\n   on the registrar server interface, and the registrar client\r\n   interface, but TLS 1.2 MAY be used.  TLS 1.3 (or newer) SHOULD be\r\n   available on the MASA server interface, but TLS 1.2 MAY be used.\r\n\r\n",
+    "correct_text": "Use of TLS 1.3 (or newer) is encouraged.  TLS 1.2 or newer is\r\nREQUIRED on the pledge side.  TLS 1.3 (or newer) SHOULD be available\r\non the registrar server interface, and the registrar client\r\ninterface, but TLS 1.2 MAY be used.  When TLS 1.3 is used the use of\r\nServer Name Indicator (SNI, [RFC6066]) is not required, per RFC8446 \r\nsection 9.2, this specification is an application profile specification.\r\n\r\nA pledge connects to the Registrar using only an IP address and it will \r\nnot have any idea of a correct SNI value. \r\nThis also implies that the Registrar interface may not be virtual \\\r\nhosted using SNI.\r\n\r\n\r\n",
+    "notes": "Another errata says that SNI is mandatory on MASA interface, and the distinction between the two is subtle.",
+    "submit_date": "2021-07-27",
+    "submitter_name": "Michael Richardson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6649,
+    "doc-id": "RFC8995",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.5.4.",
+    "orig_text": "Even when a domain CA is authenticated to the MASA, and there is\r\nstrong sales channel integration to understand who the legitimate\r\nowner is, the above id-kp-cmcRA check prevents arbitrary end-entity\r\ncertificates (such as an LDevID certificate) from having vouchers\r\nissued against them.\r\n",
+    "correct_text": "Even when a domain CA is authenticated to the MASA, and there is\r\nstrong sales channel integration to understand who the legitimate\r\nowner is, the above id-kp-cmcRA check prevents arbitrary end-entity\r\ncertificates (such as an LDevID certificate) from having vouchers\r\nissued against them.\r\n\r\nadd:\r\nThe id-kp-cmcRA is an Extended Key Usage (EKU) attribute.\r\nWhen any EKU attribute it set, then the certificate MUST have all \r\nrelated attributes set.  \r\nThis means that the Registrar certificate MUST also have the \r\nid-kp-clientAuth (for use with the MASA) and the id-kp-serverAuth \r\n(for use with the Pledge) set.\r\n",
+    "notes": "https://mailarchive.ietf.org/arch/msg/anima/H6Xs_f3rQAh9acOEFXEYuoZZGls/",
+    "submit_date": "2021-07-27",
+    "submitter_name": "Michael Richardson",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2021-07-27 13:39:06"
+  }
+]
