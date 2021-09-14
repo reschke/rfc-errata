@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2551,
+    "doc-id": "RFC6003",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4, pg. 5",
+    "orig_text": "   Type: 16 bits\r\n\r\n      Defined values are:\r\n\r\n      Type     Length   Format            Description\r\n      ------------------------------------------------------\r\n        0         -     Reserved          Reserved value\r\n        1         -     Reserved          Reserved value\r\n|       2        24     see Section 3.1   Ethernet Bandwidth\r\n                                          Profile [MEF10.1]\r\n        3         8     [RFC6004]         Layer 2 Control\r\n                                          Protocol (L2CP)\r\n      255         -     Reserved          Reserved value\r\n",
+    "correct_text": "   Type: 16 bits\r\n\r\n      Defined values are:\r\n\r\n      Type     Length   Format            Description\r\n      ------------------------------------------------------\r\n        0         -     Reserved          Reserved value\r\n        1         -     Reserved          Reserved value\r\n|       2        24     see Section 4.1   Ethernet Bandwidth\r\n                                          Profile [MEF10.1]\r\n        3         8     [RFC6004]         Layer 2 Control\r\n                                          Protocol (L2CP)\r\n      255         -     Reserved          Reserved value\r\n",
+    "notes": "Incorrect internal reference.",
+    "submit_date": "2010-10-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2552,
+    "doc-id": "RFC6003",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.1, pg.7",
+    "orig_text": "   Index: 8 bits\r\n\r\n      [...]\r\n\r\n      A given index value j can be associated to at most N Class-Type\r\n      values CTi (i =< N) of the EXTENDED_CLASSTYPE object.  This\r\n|     association applies when a set of one or more CTIs maps to a\r\n      single (shared) BW profile.  An example of value setting consists\r\n      in assigning an arbitrary value comprised within the range\r\n      [0x08,0xF8] associated to a set of CTi, the values in the range\r\n|     [0xF8,0xFF] being selected for reserved sets.  This allows mapping\r\n      to one of 248 predefined CTi sets.\r\n",
+    "correct_text": "   Index: 8 bits\r\n\r\n      [...]\r\n\r\n      A given index value j can be associated to at most N Class-Type\r\n      values CTi (i =< N) of the EXTENDED_CLASSTYPE object.  This\r\n|     association applies when a set of one or more CTis maps to a\r\n      single (shared) BW profile.  An example of value setting consists\r\n      in assigning an arbitrary value comprised within the range\r\n      [0x08,0xF8] associated to a set of CTi, the values in the range\r\n|     [0xF9,0xFF] being selected for reserved sets.  This allows mapping\r\n      to one of 248 predefined CTi sets.\r\n",
+    "notes": "Rationale:\r\na) consistent use of \"CTi\" -- 'i' essentially is a subscript index;\r\nb) avoid ambiguity due to overlap in ranges given\r\n\r\n[The first item is Editorial, but the second one clearly Technical]",
+    "submit_date": "2010-10-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
