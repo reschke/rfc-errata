@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 904,
+    "doc-id": "RFC4607",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 16,
+    "orig_text": "   [RFC3513]     Hinden, R. and S. Deering, \"Internet Protocol Version 6\r\n                 (IPv6) Addressing Architecture\", RFC 3513, April 2003.",
+    "correct_text": "   [RFC4291]    Hinden, R. and S. Deering, \"IP Version 6 Addressing \r\n                Architecture\", RFC 4291, February 2006.",
+    "notes": "Unfortunately, Section 1 (first paragraph) and Section 11\r\nof RFC 4607 refer to the previous IPv6 Address Architecture\r\ndocument, RFC 3513, that has been superseded by RFC 4291 (February 2006).\r\n\r\nfrom pending\n --VERIFIER NOTES-- \nAt the time of document approval for 4607, 4291 had not been published and the authors needed to make a normative reference to an RFC and not to an I-D.\r\n\r\nHowever, this is not an issue because anyone tracking the reference to 3513 will find that it has been obsoleted by 4291 and will read the correct document.",
+    "submit_date": "2006-11-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 905,
+    "doc-id": "RFC4607",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "problems with IPv6 SSM address range, and with related text\r\n\r\nThe 4th paragraph of Section 1, on page 3, RFC 4607 says:\r\n\r\n   Addresses in the range FF3x::4000:0001 through FF3x::7FFF:FFFF are\r\n   reserved in [IPv6-MALLOC] for allocation by IANA.  Addresses in the\r\n   range FF3x::8000:0000 through FF3x::FFFF:FFFF are allowed for dynamic\r\n   allocation by a host, as described in [IPv6-MALLOC].  Addresses in\r\n   the range FF3x::0000:0000 through FF3x::3FFF:FFFF are invalid IPv6\r\n   SSM addresses.  ([IPv6-MALLOC] indicates that FF3x::0000:0001 to\r\n   FF3x::3FFF:FFFF must set P=0 and T=0, but for SSM, [IPv6-UBM]\r\n   mandates that  P=1 and T=1, hence their designation as invalid.)  ...\r\n\r\nI see a lot of problems in that reasoning.\r\n\r\na) The most obvious issue first:\r\nAs far as I can see, RFC 3307 [IPv6-MALLOC] only requires for\r\n\"Permanent IPv6 Multicast Addresses\":\r\n\r\n   Multicast addresses assigned by IANA MUST have the T bit set to 0 and\r\n   the P bit set to 0.\r\n\r\n(RFC 3307, Section 4, top of page 4)\r\n\r\nThis restriction is not mentioned for other cases.\r\n\r\nSince the '3' nibbles in \"FF3x::0000:0000 through FF3x::3FFF:FFFF\"\r\njust mean P=1 and T=1 (cf. RFC 3306 [IPv6-UBM], Section 4, pp. 2/3),\r\nIMHO the phrase from the above quotation,\r\n                  [IPv6-MALLOC] indicates that FF3x::0000:0001 to\r\n   FF3x::3FFF:FFFF must set P=0 and T=0,\r\nis neither logical nor conclusive.  Hence the final conclusion,\r\n                   \"hence their designation as invalid.\"\r\ndoes not hold.\r\n\r\nPerhaps it would have been much more simple and clear to just\r\ndeclare the range FF3x::0000:0000 through FF3x::3FFF:FFFF as\r\nreserved or invalid -- without giving any reason.\r\n\r\nb) Delving into further details of RFC 3307, one can find that\r\nSection 4.2 reserves the range 0x40000000 to 0x7FFFFFFF for\r\n\"Permanent IPv6 Multicast Group Identifiers\" with the intent that\r\nassignments in that range hold\r\n   \"regardless of the upper 96 bits of the multicast address\".\r\n\r\nOn the other hand, the current IPv6 Addressing Architecture document\r\nclearly states that\r\n   T=0 means  \"well known\" / \"permanently-assiged\" / IANA allocated,\r\nwhile\r\n   T=1 means  \"transient\" / \"dynamically allocated\".\r\nUnder this rule, the above \"regardless\" in RFC 3307 is partially\r\ninvalid, because upper 96 bits containing T=1 are not allowed for\r\nIANA allocated MC addresses.\r\n\r\n[Note: Perhaps, this statement is also inappropriate, because\r\n RFC 3307 initially states (in Section 4, at the bottom of page 3):\r\n   ....  The following guidelines assume that the prefix of the\r\n   multicast address has been initialized according to [ADDRARCH] or\r\n   [UNIMCAST].\r\n and both specifications quoted restrict or fix the values of some\r\n of these upper 96 bits ...]\r\n\r\nHence, there is a subtle conflict between RFC 3307 and RFC 4291 !\r\n\r\nc) Taking the ADDRARCH and RFC 3307 rules together, it is clear\r\nthat the first sentence of the RFC 4607 quotation above,\r\n   Addresses in the range FF3x::4000:0001 through FF3x::7FFF:FFFF are\r\n   reserved in [IPv6-MALLOC] for allocation by IANA.\r\ndoes not hold, as T=1 in these addresses !\r\n\r\nLater on, in Section 9 (IANA Cosiderations, page 15), RFC 4607 says:\r\n\r\n   IANA allocates IPv4 addresses in the range 232.0.0.1 through\r\n   232.0.0.255 and IPv6 addresses in the range FF3x:4000:0001 to\r\n   FF3x::7FFF:FFFF.  [...]\r\n\r\nThe latter clearly contradicts RFC 4291 for this reason (T=1).\r\n\r\nTherefore, this range might better have been reserved/forbidden,\r\nor excluded from the IPv6 SSM address range.\r\n\r\n\r\nTaking all together:\r\nThere are serious conflicts between RFC 4291, RFC 3307, and RFC 4607.\r\n\r\nSadly enough, it seems that it was not a good idea to assign\r\nFF3x::/32 for IPv6 SSM.\r\n\r\nI'm sure that RFC 4291 should NOT be called in question.\r\n\r\nPerhaps, it would have been better to restrict the IPv6 SSM range to\r\nFF3x::8000:0000/31, and *not* provide for any subrange available\r\nfor specific IANA assignments.\r\nThen, should there really arise the serious need for IANA allocated,\r\nspecific IPv6 SSM addresses, another (small) range (with T=0 and P=0)\r\ncould be assigned additionally for this purpose.\r\n\r\n[Note 1: Thus, this address range would indeed fall under the regime\r\n of Section 4.1 of RFC 3307, \"Permanent IPv6 Multicast Addresses\".\r\n Note 2: T=0 + P=1 would necessitate a formal update to RFC 3306 that\r\n does not allow this combination, and maybe to RFC 3956 as well.]",
+    "correct_text": "",
+    "notes": "from pending\n --VERIFIER NOTES-- \nThis Errata Report is rejected because it constitutes a significant technical change to the specification. This rejection makes no judgement about whether the issues raised are right or wrong.\r\n\r\nIn considering the issues raised in this Errata Report readers are also invited to consider draft-ietf-6man-multicast-addr-arch-update that may be related work.",
+    "submit_date": "2006-11-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 906,
+    "doc-id": "RFC4607",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 7.5,
+    "orig_text": "applied to all source address",
+    "correct_text": "applied to all source addresses",
+    "notes": "from pending",
+    "submit_date": "2006-11-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
