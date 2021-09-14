@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4517,
+    "doc-id": "RFC7203",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "The schema has the <sequence> </sequence> tags.",
+    "correct_text": "The tags should be <xsd:sequence></xsd:sequence>.",
+    "notes": "The schema is invalid without the correction.\r\n\r\nThe examples use <xsd:sequence>, but the actual schema just has <sequence> and does need to be fixed.  With this errata update, the hope is the IANA registered schema can be updated.",
+    "submit_date": "2015-10-31",
+    "submitter_name": "Takeshi Takahashi",
+    "verifier_id": 141,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4518,
+    "doc-id": "RFC7203",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Addresses",
+    "orig_text": " Phone: +80 423 27 5862",
+    "correct_text": " Phone: +81 423 27 5862",
+    "notes": "Number update from editor",
+    "submit_date": "2015-10-31",
+    "submitter_name": "Takeshi Takahashi",
+    "verifier_id": 141,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
