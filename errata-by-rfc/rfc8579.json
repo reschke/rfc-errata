@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5877,
+    "doc-id": "RFC8579",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "require \"imapsieve\";\r\nrequire \"special-use\";\r\nrequire \"environment\";\r\nrequire \"variables\";\r\n\r\nif environment :contains \"imap.mailbox\" \"*\" {\r\n    set \"mailbox\" \"${1}\";\r\n}\r\n\r\nif allof(\r\n    environment \"imap.cause\" \"COPY\",\r\n    specialuse_exists \"${mailbox}\" \"\\\\Junk\") {\r\n    redirect \"spam-report@example.org\";\r\n}\r\n",
+    "correct_text": "require \"imapsieve\";\r\nrequire \"special-use\";\r\nrequire \"environment\";\r\nrequire \"variables\";\r\n\r\nif environment :matches \"imap.mailbox\" \"*\" {\r\n    set \"mailbox\" \"${1}\";\r\n}\r\n\r\nif allof(\r\n    environment \"imap.cause\" \"COPY\",\r\n    specialuse_exists \"${mailbox}\" \"\\\\Junk\") {\r\n    redirect \"spam-report@example.org\";\r\n}\r\n",
+    "notes": "The final example is using the \":contains\" match type to extract a match variable, which will not work. It should use \":matches\" instead.",
+    "submit_date": "2019-10-18",
+    "submitter_name": "Stephan Bosch",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-10-18 18:55:34"
+  }
+]
