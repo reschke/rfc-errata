@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1507,
+    "doc-id": "RFC4952",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "1 (and 1.*)",
+    "orig_text": "                                                 [...].  However, it\r\n   does not permit the use of email addresses that include non-ASCII\r\n   characters.  Without the extensions defined here, or some equivalent\r\n   set, the only way to incorporate non-ASCII characters in any part of\r\n   email addresses is to use RFC 2047 coding to embed them in what RFC\r\n   2822 [RFC2822] calls the \"display name\" (known as a \"name phrase\" or\r\n|  by other terms elsewhere) of the relevant headers.  Information coded\r\n   into the display name is invisible in the message envelope and, for\r\n   many purposes, is not part of the address at all.",
+    "correct_text": "                                                 [...].  However, it\r\n   does not permit the use of email addresses that include non-ASCII\r\n   characters.  Without the extensions defined here, or some equivalent\r\n   set, the only way to incorporate non-ASCII characters in any part of\r\n   email addresses is to use RFC 2047 coding to embed them in what RFC\r\n   2822 [RFC2822] calls the \"display name\" (known as a \"name phrase\" or\r\n|  by other terms elsewhere) of the relevant header fields.\r\n   Information coded into the display name is invisible in the message\r\n   envelope and, for many purposes, is not part of the address at all.",
+    "notes": "Conformance to terminology established in the IETF requires\r\nmaking the precise distinction between a header and the\r\nheader fields it is comprised of.\r\n\r\nThis same issue recurs in the first paragraph of Section 1.1\r\nand in the 3rd line of the last paragraph of Section 1.2.",
+    "submit_date": "2008-09-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1508,
+    "doc-id": "RFC4952",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "1.3, pg.5",
+    "orig_text": "   An \"i18mail user\" has one or more non-ASCII email addresses.  [...]",
+    "correct_text": null,
+    "notes": "This unusual term, \"i18mail user\" does not appear anywhere else in\r\nthe RFC besides the quoted paragraph in the Terminology section.\n --VERIFIER NOTES-- \n   The term is used in draft-ietf-eai-mailinglist-03.txt, which refers to rfc4952.",
+    "submit_date": "2008-09-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 101,
+    "verifier_name": "Lisa Dusseault",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
