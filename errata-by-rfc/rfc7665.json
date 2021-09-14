@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4528,
+    "doc-id": "RFC7665",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "packets at certain points on certain service chains, the control\r\nmechanism MUST verify that appropriate protective treatment of\r\nNSH information is available from the point where the\r\ninformation is added to the point where it will be removed.  If\r\nsuch mechanisms are unavailable, error notifications SHOULD be\r\ngenerated.",
+    "correct_text": "packets at certain points on certain service chains, the control\r\nmechanism MUST verify that appropriate protective treatment of\r\nSFC encapsulation information is available from the point where the\r\ninformation is added to the point where it will be removed.  If\r\nsuch mechanisms are unavailable, error notifications SHOULD be\r\ngenerated.",
+    "notes": "NSH has not been introduced earlier in the document. Moreover, the reference to NSH itself seems to have been a tiny mistake that slipped.\r\nThe corrected text replaces NSH with SFC encapsulation.",
+    "submit_date": "2015-11-09",
+    "submitter_name": "Igor Duarte Cardoso",
+    "verifier_id": 140,
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4974,
+    "doc-id": "RFC7665",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 1.4,
+    "orig_text": "One or more service functions can be involved in the delivery of\r\nadded-value services.  A non-exhaustive list of abstract service\r\nfunctions includes: firewalls, WAN and application acceleration,\r\nDeep Packet Inspection (DPI), Lawful Intercept (LI), server load\r\nbalancing, NAT44 [RFC3022], NAT64 [RFC6146], NPTv6 [RFC6296],\r\nHOST_ID injection, HTTP Header Enrichment functions, and TCP\r\noptimizer.",
+    "correct_text": "One or more service functions can be involved in the delivery of\r\nadded-value services.  A non-exhaustive list of abstract service\r\nfunctions includes: firewalls, WAN and application acceleration,\r\nDeep Packet Inspection (DPI), Lawful Intercept (LI), server load\r\nbalancing, NAT44 [RFC3022], NAT64 [RFC6146], NPTv6 [RFC6296],\r\nHOST_ID injection, HTTP Header Enrichment functions, TCP\r\noptimizer, Parental control etc.",
+    "notes": "Parental control can be added in the non-exhaustive list of abstract service functions. Also this list cannot be fixed, so etc an be added at the end of the list.\n --VERIFIER NOTES-- \n   The list specifically says that it is non-exhaustive.  Adding more examples and an etc is not needed.",
+    "submit_date": "2017-03-21",
+    "submitter_name": "Phaneendra Manda",
+    "verifier_id": 140,
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
