@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 219,
+    "doc-id": "RFC3877",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6.3,
+    "orig_text": "ituAlarmPerceivedSeverity        critical (3)",
+    "correct_text": "alarmModelState                  3",
+    "notes": "\nHowever,\n ituAlarmPerceivedSeverity        critical (3)\nshould be mapped to\n alarmModelState                  6\nTo match the mapping shown in Section 5.4:\n              alarmModelState -> ituAlarmPerceivedSeverity\n                    1        ->         clear (1)\n                    2        ->         indeterminate (2)\n                    3        ->         warning (6)\n                    4        ->         minor (5)\n                    5        ->         major (4)\n                    6        ->         critical (3)\n\n",
+    "submit_date": "2005-08-08",
+    "submitter_name": "Andreas Politze",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1652,
+    "doc-id": "RFC3877",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 5.4,
+    "orig_text": "alarmModelState -> ituAlarmPerceivedSeverity\r\n       1        ->         clear (1)\r\n       2        ->         indeterminate (2)\r\n       3        ->         warning (6)\r\n       4        ->         minor (5)\r\n       5        ->         major (4)\r\n       6        ->         critical (3)",
+    "correct_text": "alarmModelState -> ituAlarmPerceivedSeverity\r\n       1        ->         clear (1)\r\n       2        ->         warning (6)\r\n       3        ->         indeterminate (2)\r\n       4        ->         minor (5)\r\n       5        ->         major (4)\r\n       6        ->         critical (3)",
+    "notes": "alarmModelState requires that the states be defined from less severe to more severe; however, under ITU-T PerceivedSeverity from ITU-T Rec. X.721 | ISO/IEC 10165-2 \"indeterminate\" is more severe than \"warning\".  This change corrects the order to match the requirement for order of severity for alarmModelState.\n --VERIFIER NOTES-- \nWhile the discrepancy between the documents is unfortunate, there is not a technical requirement for the enumeration values to be identical, nor is there a technical requirement for the labels to be identical, even though there is obviously considerable documentation value in avoiding gratuitous differences.\r\n\r\nWhat *is* technically important is that the MIB be able to uniquely represent all the cases from M.3100, and it accomplishes that goal.\r\n\r\nIn a future version of the document we can add an informative note alerting implementors to the discrepancies in numbering and spelling, so their implementations can include appropriate mapping functions to avoid losing information.\r\n   ",
+    "submit_date": "2009-01-13",
+    "submitter_name": "Brian Bidulock",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1819,
+    "doc-id": "RFC3877",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "    -- The following are used with Processing error alarm.\r\n                storageCapacityProblem (151),\r\n                memoryMismatch  (152),\r\n                corruptData  (153),\r\n                outOfCPUCycles   (154),\r\n                sfwrEnvironmentProblem  (155),\r\n                sfwrDownloadFailure  (156),\r\n                lossOfRealTimel (157),\r\n    --A processing error alarm to be issued after the system has\r\n    --reinitialised. This will indicate\r\n    --to the management systems that the view they have of the managed\r\n    --system may no longer\r\n    --be valid. Usage example: The managed\r\n    --system issues this alarm after a reinitialization with severity\r\n    --warning to inform the\r\n    --management system about the event. No clearing notification will\r\n    --be sent.\r\n                applicationSubsystemFailure (158),\r\n                configurationOrCustomisationError (159),\r\n                databaseInconsistency (160),\r\n                fileError (161),\r\n                outOfMemory (162),\r\n                softwareError (163),\r\n                timeoutExpired (164),\r\n                underlayingResourceUnavailable (165),\r\n                versionMismatch (166),\r\n    --Values 168-200 are reserved for processing error alarm related\r\n    -- probable causes.\r\n",
+    "correct_text": "    -- The following are used with Processing error alarm.\r\n                storageCapacityProblem (151),\r\n                memoryMismatch  (152),\r\n                corruptData  (153),\r\n                outOfCPUCycles   (154),\r\n                sfwrEnvironmentProblem  (155),\r\n                sfwrDownloadFailure  (156),\r\n                lossOfRealTime (157),\r\n-- A processing error alarm to be issued if the system detects that it has lost the time in\r\n-- the real time clock but  the clock itself is working. This could happen e.g. during a power \r\n-- cut in a small NE which does not have battery backup for the real time clock.\r\n                reinitialized (158),\r\n    --A processing error alarm to be issued after the system has\r\n    --reinitialised. This will indicate\r\n    --to the management systems that the view they have of the managed\r\n    --system may no longer\r\n    --be valid. Usage example: The managed\r\n    --system issues this alarm after a reinitialization with severity\r\n    --warning to inform the\r\n    --management system about the event. No clearing notification will\r\n    --be sent.\r\n                applicationSubsystemFailure (159),\r\n                configurationOrCustomisationError (160),\r\n                databaseInconsistency (161),\r\n                fileError (162),\r\n                outOfMemory (163),\r\n                softwareError (164),\r\n                timeoutExpired (165),\r\n                underlayingResourceUnavailable (166),\r\n                versionMismatch (167),\r\n    --Values 168-200 are reserved for processing error alarm related\r\n    -- probable causes.\r\n",
+    "notes": "It seems to be a copy/paste error from the M.3100 Standard PC text. The comment in the MIB after \"lossOfRealTimel\" (Note also rogue \"l\" at the end!) clearly refers to the PC string \"reinitialized\" instead. It is strange how the integers have continued on from 158 instead of retaining the original values, but anyway, it appears to be a mismatch between the two standards. Ironically I noticed it when I saw that \"versionMismatch\" had different values (166 and 167).",
+    "submit_date": "2009-07-29",
+    "submitter_name": "Enda Murphy",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
