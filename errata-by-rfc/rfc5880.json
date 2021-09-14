@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2530,
+    "doc-id": "RFC5880",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.3,
+    "orig_text": "Sequence Number\r\n\r\n      The sequence number for this packet.  For Keyed MD5\r\n      Authentication, this value is incremented occasionally.  For\r\n      Meticulous Keyed MD5 Authentication, this value is incremented for\r\n      each successive packet transmitted for a session.  This provides\r\n      protection against replay attacks.\r\n",
+    "correct_text": "Sequence Number\r\n\r\n      The sequence number for this packet.  For Keyed MD5\r\n      Authentication, this value is incremented (by one) occasionally.  For\r\n      Meticulous Keyed MD5 Authentication, this value is incremented by one for\r\n      each successive packet transmitted for a session.  This provides\r\n      protection against replay attacks.\r\n",
+    "notes": "This change clarifies the amount by which the sequence number is incremented. ",
+    "submit_date": "2010-09-24",
+    "submitter_name": "Mach Chen",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4410,
+    "doc-id": "RFC5880",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6.8.4",
+    "orig_text": "If Demand mode is active, and a period of time equal to the Detection\r\nTime passes after the initiation of a Poll Sequence (the transmission\r\nof the first BFD Control packet with the Poll bit set), the session\r\nhas gone down",
+    "correct_text": "If Demand mode is active, and a period of time equal to the Detection\r\nTime passes after the initiation of a Poll Sequence (the transmission\r\nof the first BFD Control packet with the Poll bit set),and without \r\nreceiving a BFD Control packet with the Final (F) bit set from the\r\nremote system, the session has gone down",
+    "notes": "If has received BFD Control packet with the Final (F) bit set from the\r\nremote system, the session will not gone down",
+    "submit_date": "2015-07-07",
+    "submitter_name": "Liu Lin",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5205,
+    "doc-id": "RFC5880",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "6.8.4",
+    "orig_text": "If Demand mode is not active, and a period of time equal to the\r\nDetection Time passes without receiving a BFD Control packet from the\r\nremote system, and bfd.SessionState is Init or Up, the session has\r\ngone down -- the local system MUST set bfd.SessionState to Down and\r\nbfd.LocalDiag to 1 (Control Detection Time Expired).",
+    "correct_text": "If Demand mode is not active, and a period of time equal to the\r\nDetection Time passes without receiving a BFD Control packet from the\r\nremote system, the session has\r\ngone down -- the local system MUST set bfd.SessionState to Down and\r\nbfd.LocalDiag to 1 (Control Detection Time Expired).",
+    "notes": "This is based on an email I received from Anil Kumar of Nokia (anil.kumar_t_v@nokia.com).\r\n\r\nThe language as originally written made a session timeout a no-op when in Down state.  This was a gratuitous attempt to avoid a null state transition, but had the side effect of not setting the diag code (and otherwise is no different).\r\n\r\nThis turns out to be problematic in the case where system \"A\" signals AdminDown, causing system \"B\" to respond with Down state.  If the link then fails, the existing verbiage implies that \"B\" will not report the detection timeout, even locally.\r\n\r\nIf the link fails in a unidirectional manner (such that \"B\" is deaf), B will give no indication of a timeout in its outgoing Control packets back to A (which can in fact hear them).\r\n\r\nMaking the suggested change should ensure that the diagnostic code is always set to Detection Time Expired when Control packets stop arriving, even if the far end system was previously reporting AdminDown.",
+    "submit_date": "2017-12-14",
+    "submitter_name": "Dave Katz",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
