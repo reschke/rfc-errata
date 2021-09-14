@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5136,
+    "doc-id": "RFC3642",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "      day     =   ( %x30 %x31-39 )    ; \"01\" to \"09\"\r\n                / ( %x31-32 %x30-39 ) ; \"10\" to \"29\"\r\n                / ( %x32 %x30-31 )    ; \"30\" to \"31\"",
+    "correct_text": "      day     =   ( %x30 %x31-39 )    ; \"01\" to \"09\"\r\n                / ( %x31-32 %x30-39 ) ; \"10\" to \"29\"\r\n                / ( %x33 %x30-31 )    ; \"30\" to \"31\"",
+    "notes": "The day value incorrectly includes values 01 to 09, 10 to 29 and then 20 to 21.  The last field should instead allow for values 30 to 31.",
+    "submit_date": "2017-10-03",
+    "submitter_name": "Peter Smith",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
