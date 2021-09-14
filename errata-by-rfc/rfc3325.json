@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 3744,
+    "doc-id": "RFC3325",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 9.1,
+    "orig_text": "A P-Asserted-Identity header field value MUST consist of exactly one\r\nname-addr or addr-spec.",
+    "correct_text": "A P-Asserted-Identity header field value MUST consist of exactly one\r\nname-addr or addr-spec.  If the URI contains a comma, the URI MUST\r\nbe enclosed in angle brackets (< and >).",
+    "notes": "While the P-Asserted-Identity and P-Preferred-Identity header fields have an ambiguity only for \",\" (not for \";\" and \"?\"), we note that usage of \";\" and \"?\" also must be enclosed in angle brackets to preserve consistency with the RFC 3261 section 20 bracket rule.",
+    "submit_date": "2013-10-08",
+    "submitter_name": "Brett Tate",
+    "verifier_id": 136,
+    "verifier_name": "Richard Barnes",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3894,
+    "doc-id": "RFC3325",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 9.2,
+    "orig_text": "A P-Preferred-Identity header field value MUST consist of exactly one\r\nname-addr or addr-spec.",
+    "correct_text": "A P-Preferred-Identity header field value MUST consist of exactly one\r\nname-addr or addr-spec.  If the URI contains a comma, the URI MUST\r\nbe enclosed in angle brackets (< and >).",
+    "notes": "While the P-Asserted-Identity and P-Preferred-Identity header fields have an ambiguity only for \",\" (not for \";\" and \"?\"), we note that usage of \";\" and \"?\" also must be enclosed in angle brackets to preserve consistency with the RFC 3261 section 20 bracket rule.",
+    "submit_date": "2014-02-15",
+    "submitter_name": "Richard Barnes",
+    "verifier_id": 136,
+    "verifier_name": "Richard Barnes",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4202,
+    "doc-id": "RFC3325",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 10.2,
+    "orig_text": "P-Asserted-Identity: \"Cullen Jennings\" <sip:fluffy@vovida.org>\r\n",
+    "correct_text": "P-Asserted-Identity: \"Cullen Jennings\" <sip:fluffy@cisco.com>\r\n",
+    "notes": "May be an editorial error in the message F4, section 10.2.\r\nIn that message is added the P-Asserted-Identity with the SIP URI sip:fluffy@vovida.org\r\nI suppose it should be cisco.com and not vovida.com.\r\nThank you.",
+    "submit_date": "2014-12-17",
+    "submitter_name": "Giovanni Signoriello",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5499,
+    "doc-id": "RFC3325",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 10,
+    "orig_text": "   * F4   proxy.cisco.com -> proxy.pstn.net (trusted)\r\n\r\n   INVITE sip:+14085551212@proxy.pstn.net SIP/2.0\r\n   Via: SIP/2.0/TCP useragent.cisco.com;branch=z9hG4bK-124\r\n   Via: SIP/2.0/TCP proxy.cisco.com;branch=z9hG4bK-abc\r\n",
+    "correct_text": "   * F4   proxy.cisco.com -> proxy.pstn.net (trusted)\r\n\r\n   INVITE sip:+14085551212@proxy.pstn.net SIP/2.0\r\n   Via: SIP/2.0/TCP proxy.cisco.com;branch=z9hG4bK-abc\r\n   Via: SIP/2.0/TCP useragent.cisco.com;branch=z9hG4bK-124\r\n",
+    "notes": "As per RFC 3261, chapter 16.6, step 8:\r\n  The proxy MUST insert a Via header field value into the copy before the existing Via header field values.\r\n\r\nThe order of Via headers should be reversed. This applies to the following message examples:\r\nchapter 10.1: F4, F5\r\nchapter 10.2: F4, F5, F6",
+    "submit_date": "2018-09-20",
+    "submitter_name": "Richard Phernambucq",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
