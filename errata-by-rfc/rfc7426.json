@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5301,
+    "doc-id": "RFC7426",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "   All planes mentioned above are connected via interfaces (indicated\r\n   with \"Y\" in Figure 1.  An interface may take multiple roles depending\r\n   on whether the connected planes reside on the same (physical or\r\n   virtual) device.  If the respective planes are designed so that they\r\n   do not have to reside in the same device, then the interface can only\r\n   take the form of a protocol.  If the planes are collocated on the\r\n",
+    "correct_text": "   All planes mentioned above are connected via interfaces (indicated\r\n   with \"Y\" in Figure 1). An interface may take multiple roles depending\r\n   on whether the connected planes reside on the same (physical or\r\n   virtual) device.  If the respective planes are designed so that they\r\n   do not have to reside in the same device, then the interface can only\r\n   take the form of a protocol.  If the planes are collocated on the\r\n",
+    "notes": "The closing bracket is missing in the second line.",
+    "submit_date": "2018-03-24",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5302,
+    "doc-id": "RFC7426",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "   [REST]        Fielding, Roy, \"Chapter 5: Representational State\r\n                 Transfer (REST)\", in Disseration \"Architectural Styles\r\n                 and the Design of Network-based Software\r\n                 Architectures\", 2000.\r\n",
+    "correct_text": "   [REST]        Fielding, Roy, \"Chapter 5: Representational State\r\n                 Transfer (REST)\", in Dissertation \"Architectural Styles\r\n                 and the Design of Network-based Software\r\n                 Architectures\", 2000.\r\n",
+    "notes": "Typo (t letter missing).",
+    "submit_date": "2018-03-25",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 163,
+    "verifier_name": "Colin Perkins",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
