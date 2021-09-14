@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1578,
+    "doc-id": "RFC5254",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1.2, pg. 4",
+    "orig_text": "         Native  |<--------Multi-Segment Pseudowire----->|  Native\r\n         Service |         PSN              PSN          |  Service\r\n          (AC)   |     |<-Tunnel->|     |<-Tunnel->|     |  (AC)\r\n           |     V     V     1    V     V     2    V     V   |\r\n           |     +-----+          +-----+          +---- +   |\r\n   +---+   |     |T-PE1|==========|S-PE1|==========|T-PE2|   |    +---+\r\n   |   |---------|........PW1.......... |...PW3..........|---|----|   |\r\n   |CE1|   |     |     |          |     |          |     |   |    |CE2|\r\n   |   |---------|........PW2...........|...PW4..........|--------|   |\r\n   +---+   |     |     |==========|     |==========|     |   |    +---+\r\n       ^         +-----+          +-----+          +-----+        ^\r\n       |     Provider Edge 1         ^        Provider Edge 3     |\r\n       |                             |                            |\r\n       |                             |                            |\r\n       |                     PW switching point                   |\r\n       |                                                          |\r\n       |                                                          |\r\n       |<------------------- Emulated Service ------------------->|\r\n\r\n                Figure 2: PW Switching Reference Model\r\n\r\n   Figure 2 extends this architecture to show a multi-segment case.\r\n   Terminating PE1 (T-PE1) and Terminating PE3 (T-PE3) provide PWE3\r\n   service to CE1 and CE2.  These PEs terminate different PSN tunnels,\r\n   PSN Tunnel 1 and PSN Tunnel 2, and may reside in different PSN or\r\n   pseudowire domains.  One PSN tunnel extends from T-PE1 to S-PE1\r\n   across PSN1, and a second PSN tunnel extends from S-PE1 to T-PE2\r\n   across PSN2.",
+    "correct_text": "         Native  |<--------Multi-Segment Pseudowire----->|  Native\r\n         Service |         PSN              PSN          |  Service\r\n          (AC)   |     |<-Tunnel->|     |<-Tunnel->|     |  (AC)\r\n           |     V     V     1    V     V     2    V     V   |\r\n           |     +-----+          +-----+          +---- +   |\r\n   +---+   |     |T-PE1|==========|S-PE2|==========|T-PE3|   |    +---+\r\n   |   |---------|........PW1.......... |...PW3..........|---|----|   |\r\n   |CE1|   |     |     |          |     |          |     |   |    |CE2|\r\n   |   |---------|........PW2...........|...PW4..........|--------|   |\r\n   +---+   |     |     |==========|     |==========|     |   |    +---+\r\n       ^         +-----+          +-----+          +-----+        ^\r\n       |     Provider Edge 1         ^        Provider Edge 3     |\r\n       |                             |                            |\r\n       |                             |                            |\r\n       |                     PW switching point                   |\r\n       |                                                          |\r\n       |                                                          |\r\n       |<------------------- Emulated Service ------------------->|\r\n\r\n                Figure 2: PW Switching Reference Model\r\n\r\n   Figure 2 extends this architecture to show a multi-segment case.\r\n   Terminating PE1 (T-PE1) and Terminating PE3 (T-PE3) provide PWE3\r\n   service to CE1 and CE2.  These PEs terminate different PSN tunnels,\r\n   PSN Tunnel 1 and PSN Tunnel 2, and may reside in different PSN or\r\n   pseudowire domains.  One PSN tunnel extends from T-PE1 to S-PE2\r\n   across PSN1, and a second PSN tunnel extends from S-PE2 to T-PE2\r\n   across PSN2.",
+    "notes": "Rationale:\r\n\r\nThe original diagram was inconsistent. The proposed edits correct this inconsistency. Specifically the PEs are now labels xPE1, xPE2, xPE3 across\r\nthe page and the text is modified accordingly.\r\n\r\n\r\nThe erratum is technically correct, but since the purpose of this RFC was to establish the requirements in RFC5659 and the error does not occur in RFC5659 the problem may be classified as fixed in update.",
+    "submit_date": "2008-10-24",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1792,
+    "doc-id": "RFC5254",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "Single-Segment Pseudowire (SS-PW).  \r\n\r\nA PW setup directly between two PE devices.  Each direction of an SS-PW traverses one PSN tunnel that connects the two PEs.\r\n\r\n",
+    "correct_text": "Single-Segment Pseudowire (SS-PW). \r\n\r\nA PW set up directly between two T-PE devices. Each PW in one direction of a SS-PW traverses one PSN tunnel that connects the two T-PEs.\r\n",
+    "notes": "The document defines two types of PE, T-PE and S-PE. An SS-PW can only exist between a pair of T-PEs, so this is an editorial rather than a technical errata.\r\n\r\nThis errata aligns the definition of SS-PW with draft-ietf-pwe3-ms-pw-arch",
+    "submit_date": "2009-06-04",
+    "submitter_name": "Stewart Bryant",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
