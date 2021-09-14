@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5911,
+    "doc-id": "RFC6743",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |     Type      |     Code      |           Checksum            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Num of Locs  |   Operation   |           RESERVED            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "correct_text": "   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |     Type      |     Code      |           Checksum            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Num of Locs  |    RESERVED   |           RESERVED            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "notes": "The Operation field is not defined, or used. The example message later on shows the field as 'RESERVED'.",
+    "submit_date": "2019-11-16",
+    "submitter_name": "Rick Payne",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
