@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 836,
+    "doc-id": "RFC3779",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2.3.1",
+    "orig_text": "The ASIdentifiers type is a SEQUENCE containing one or more forms of\r\nautonomous system identifiers -- AS numbers (in the asnum element) or\r\nrouting domain identifiers (in the rdi element).  When the ASIdentifiers type\r\ncontains multiple forms of identifiers, the asnum\r\nentry MUST precede the rdi entry.  AS numbers are used by BGP, and\r\nrouting domain identifiers are specified in the IDRP [RFC1142].",
+    "correct_text": "[see Notes]",
+    "notes": "IDRP was never defined in an RFC, only by ISO 10747.\r\n\r\nfrom pending",
+    "submit_date": "2006-06-21",
+    "submitter_name": "Randy Bush",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1886,
+    "doc-id": "RFC3779",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.1.1",
+    "orig_text": "   An IPv6 address is a 128-bit quantity that is written as eight\r\n   hexadecimal numbers, each in the range 0 through ffff, separated by a\r\n   semicolon (\":\"); 2001:0:200:3:0:0:0:1 is an example of an IPv6\r\n   address.  IPv6 addresses frequently have adjacent fields whose value\r\n   is 0.  One such group of 0 fields may be abbreviated by two\r\n   semicolons (\"::\"). ",
+    "correct_text": "   An IPv6 address is a 128-bit quantity that is written as eight \r\n   hexadecimal numbers, each in the range 0 through ffff, separated by a \r\n   colon (\":\"); 2001:0:200:3:0:0:0:1 is an example of an IPv6 address.\r\n   IPv6 addresses frequently have adjacent fields whose value is 0.  One\r\n   such group of 0 fields may be abbreviated by two colons (\"::\").",
+    "notes": "\"semicolon\" should be \"colon\"\r\nAdded reference to RFC4291.\r\nVerifier: Forward reference to RFC4291 is inappropriate.",
+    "submit_date": "2009-09-21",
+    "submitter_name": "Charles Bobo",
+    "verifier_id": 2,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1887,
+    "doc-id": "RFC3779",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "References",
+    "orig_text": "   [RFC3513]   Hinden, R. and S. Deering, \"Internet Protocol Version 6\r\n               (IPv6) Addressing Architecture\", RFC 3513, April 2003.\r\n\r\n   [RFC3281]   Farrell, S. and R. Housley, \"An Internet Attribute\r\n               Certificate Profile for Authorization\", RFC 3281, April\r\n               2002.\r\n\r\n   [S-BGP]     S. Kent, C. Lynn, and K. Seo, \"Secure Border Gateway\r\n               Protocol (S-BGP),\" IEEE JSAC Special Issue on Network\r\n               Security, April 2000.",
+    "correct_text": "   [RFC3281]   Farrell, S. and R. Housley, \"An Internet Attribute\r\n               Certificate Profile for Authorization\", RFC 3281, April\r\n               2002.\r\n\r\n   [RFC3513]   Hinden, R. and S. Deering, \"Internet Protocol Version 6\r\n               (IPv6) Addressing Architecture\", RFC 3513, April 2003.\r\n\r\n   [RFC4291]   R. Hinden, S. Deering, \"IP Version 6 Addressing Architecture\",\r\n               RFC 4291, February 2006\r\n\r\n   [S-BGP]     S. Kent, C. Lynn, and K. Seo, \"Secure Border Gateway\r\n               Protocol (S-BGP),\" IEEE JSAC Special Issue on Network\r\n               Security, April 2000.",
+    "notes": "Section is \"Informational References\" but this doesn't fit in the Section field above.\r\nReferences were out of alphabetical order -- RFC3281 should come before RFC3513.\r\nAdded reference RFC4291",
+    "submit_date": "2009-09-21",
+    "submitter_name": "Charles Bobo",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2537,
+    "doc-id": "RFC3779",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.2.3.9",
+    "orig_text": "   To simplify the comparison of IP address blocks when performing\r\n   certification path validation, a maximum IP address MUST contain at\r\n   least one bit whose value is 1, i.e., the subsequent octets may not\r\n   be omitted nor all zero.",
+    "correct_text": "Text should be deleted.",
+    "notes": "There are a number of different issues relative to this text that need to be addressed.\r\n\r\n1.  This text implicitly change the rules for encoding a maximum value.  As an example the address 0.0.0.255 is encoded as 03 03 00 00 00 00 according to the rule \" The BIT STRING for the maximum address results from removing all the least-significant one-bits from the maximum address.\"\r\n\r\n2.  The rule in no way simplifies any comparisions of IP address blocks.  If one really wishes to simplify the comparison then one needs to change the rule for maximum addresses to remove all but the last least-signficant one-bit from the address.  However it is not clear that even this would really simplify the comparison in any significant way.\r\n\r\nIf you look at the example in 2.2.3.9 - tis is not clear how having the one bit at the top of the encoding helps make the comparisons any easier - but it satisfies the requirment that atleast one bit is a 1.  If the maximum value ws encoded as  1000 1   (0x3 0x02 0x03 0x84) - a bitwise comparision routine could make for a simplified a < b comparison (looking at only the top 5 bits of the address to be compared.)",
+    "submit_date": "2010-09-30",
+    "submitter_name": "Jim Schaad",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
