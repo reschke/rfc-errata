@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 5466,
+    "doc-id": "RFC8422",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.3,
+    "orig_text": "   Actions of the sender:\r\n\r\n   The server constructs an appropriate certificate chain and conveys it\r\n   to the client in the Certificate message.  If the client has used a\r\n   Supported Elliptic Curves Extension, the public key in the server's\r\n   certificate MUST respect the client's choice of elliptic curves.  A\r\n   server that cannot satisfy this requirement MUST NOT choose an ECC\r\n   cipher suite in its ServerHello message.)",
+    "correct_text": "   Actions of the sender:\r\n\r\n   The server constructs an appropriate certificate chain and conveys it\r\n   to the client in the Certificate message.  If the client has used a\r\n   Supported Elliptic Curves Extension, the public key in the server's\r\n   certificate MUST respect the client's choice of elliptic curves.  A\r\n   server that cannot satisfy this requirement MUST NOT choose an ECC\r\n   cipher suite in its ServerHello message.",
+    "notes": "This removes the spurious closing parenthesis of the last sentence of the \"Actions of the sender\" paragraph.",
+    "submit_date": "2018-08-17",
+    "submitter_name": "Masato Gosui",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5468,
+    "doc-id": "RFC8422",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 5.4,
+    "orig_text": "   namedCurve: Specifies a recommended set of elliptic curve domain",
+    "correct_text": "   namedcurve: Specifies a recommended set of elliptic curve domain",
+    "notes": "This fixes mismatched names of the variable \"namedcurve\" in the \"Structure of this message\" paragraph.",
+    "submit_date": "2018-08-17",
+    "submitter_name": "Masato Gosui",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5703,
+    "doc-id": "RFC8422",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.10.",
+    "orig_text": "All RSA signatures must be generated and verified according to\r\n   Section 7.2 of [RFC8017].",
+    "correct_text": "All RSA signatures must be generated and verified according to\r\n   Section 8.2 of [RFC8017].",
+    "notes": "Section 7.2 of RFC 8017 describes the RSAES-PKCS1-v1_5 encryption scheme. Section 8.2 of RFC 8017 describes the RSASSA-PKCS1-v1_5 signature scheme. The original text contradicts the natural expectation and is probably wrong. If it was intended, there should have been a thorough explanation (like in the well-known case of IKEv1 using the encryption scheme for signing).",
+    "submit_date": "2019-04-23",
+    "submitter_name": "Frank Theinen",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6002,
+    "doc-id": "RFC8422",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 9,
+    "orig_text": "   IANA has assigned two values in the \"TLS SignatureAlgorithm\" registry\r\n   for ed25519 (7) and ed448 (8) with this document as reference.  This\r\n   keeps compatibility with TLS 1.3.\r\n",
+    "correct_text": "   IANA has assigned two values in the \"TLS SignatureAlgorithm\" registry\r\n   for ed25519 (7) and ed448 (8) with DTLS-OK set to \"Y\" and this document\r\n   as reference.  This keeps compatibility with TLS 1.3.",
+    "notes": "IANA had consulted with Yoav, one of the authors (and a TLS registry expert), who explicitly told them to use DTLS-OK of \"Y\", but this clarification was not reflected in the final RFC.  This also matches the text in the subsequent paragraph.",
+    "submit_date": "2020-03-02",
+    "submitter_name": "Rich Salz",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2020-03-05 14:34:52"
+  }
+]
