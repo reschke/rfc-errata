@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2063,
+    "doc-id": "RFC5272",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": " EnrollmentMessageSyntax\r\n { iso(1) identified-organization(3) dod(4) internet(1)\r\n security(5) mechansims(5) pkix(7) id-mod(0) id-mod-cmc2002(23) }",
+    "correct_text": " EnrollmentMessageSyntax\r\n { iso(1) identified-organization(3) dod(6) internet(1)\r\n security(5) mechansims(5) pkix(7) id-mod(0) id-mod-cmc2002(23) }",
+    "notes": "ASN.1 Object Identifiers are assigned based on the number not the name, this means that the current module is assigned in a name space that is not under our control.",
+    "submit_date": "2010-03-04",
+    "submitter_name": "Jim Schaad",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2731,
+    "doc-id": "RFC5272",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2.2,
+    "orig_text": "Full PKI Response\r\n------------------------\r\n+----------------+\r\n| CMS ContentInfo|\r\n| CMS SignedData |\r\n|   or Auth Data |\r\n|     object     |\r\n+----------------+--------+\r\n|                         |\r\n| PKIResponseBody         |",
+    "correct_text": "Full PKI Response\r\n------------------------\r\n+----------------+\r\n| CMS ContentInfo|\r\n| CMS SignedData |\r\n|   or Auth Data |\r\n|     object     |\r\n+----------------+--------+\r\n|                         |\r\n| PKIResponse             |",
+    "notes": "PKIResponse should be PKIResponse.  It's the name of the content type.  PKIResponseBody only appears once in this RFC and it's in Figure 2.",
+    "submit_date": "2011-02-23",
+    "submitter_name": "Sean Turner",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4186,
+    "doc-id": "RFC5272",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.2.1.3.2",
+    "orig_text": "The Data content type allows for general transport of unstructured\r\n   data.\r\n\r\n   The Data content type is used by this document for:\r\n\r\n      Holding the encrypted random value y for POP proof in the\r\n      encrypted POP control (see Section 6.7).",
+    "correct_text": "See Notes",
+    "notes": "It's invalid for the encoding of an ANY or OpenType to have \"unstructured\" data.  See X.690 section 8.15:\r\n\r\n8.15 Encoding of an open type\r\nThe value of an open type is also a value of some (other) ASN.1 type. The encoding of such a value shall be the complete encoding herein specified for the value considered as being of that other type.\r\n\r\nNote there's similar wording in X.209 section 21 for ANY:\r\n\r\n21 Encoding of a value of the ANY type\r\nThe encoding of an ANY type shall be the complete encoding specified in this Recommendation for the type of the value of the ANY type.\n --VERIFIER NOTES-- \nThe Data content type being referenced here is the Data content type from CMS.  This type is defined as using an OCTET STRING wrapper around the data.  Therefore unstructured data is not being placed at the ASN.1 level and the referenced text does not apply.",
+    "submit_date": "2014-11-18",
+    "submitter_name": "Pierce Leonberger",
+    "verifier_id": 141,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4775,
+    "doc-id": "RFC5272",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "B.1",
+    "orig_text": "eContentType = id-ct-PKIData",
+    "correct_text": "eContentType = id-cct-PKIData",
+    "notes": "This is repeated a few times throughout Appendix B.",
+    "submit_date": "2016-08-11",
+    "submitter_name": "Kees-Jan Hermans",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
