@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5934,
+    "doc-id": "RFC8659",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "It also allows hyphens in Property Tags.",
+    "correct_text": "It also allows hyphens in tags of Property Value of\r\nissue and issuewild Property Tags.",
+    "notes": "Subsection 4.1 explicitly prohibits hyphens in Property Tags.\r\nWhile obsoleted RFC 6844 did not allow hyphens in tags of Property Value of issue and issuewild Property Tags, new ABNF definition in subsection 4.2 allows them.",
+    "submit_date": "2019-12-12",
+    "submitter_name": "IIDA Yosiaki",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
