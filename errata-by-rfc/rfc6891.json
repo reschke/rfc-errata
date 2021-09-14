@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3604,
+    "doc-id": "RFC6891",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 9.1,
+    "orig_text": "9.1.  OPT Option Code Allocation Procedure\r\n\r\n  OPT Option Codes are assigned by Expert Review.\r\n\r\n  Assignment of Option Codes should be liberal, but duplicate\r\n  functionality is to be avoided.",
+    "correct_text": "9.1.  DNS EDNS0 Option Code Changes\r\n\r\n  This document modifies the name of the existing registry DNS EDNS0 \r\n  Options to DNS EDNS0 Option Codes (OPT) and updates the registration\r\n  procedures to Expert Review.\r\n\r\n  Assignment of Option Codes should be liberal, but duplicate\r\n  functionality is to be avoided.",
+    "notes": "In the publication process fixing this one minor mistake in clarifying the name of the registry fell through the cracks, the consequence of this is that IANA needs this errata to clarify the registry name.",
+    "submit_date": "2013-04-24",
+    "submitter_name": "Olafur Gudmundsson",
+    "verifier_id": 134,
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
