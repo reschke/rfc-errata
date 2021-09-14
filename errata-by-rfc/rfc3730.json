@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 239,
+    "doc-id": "RFC3730",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.9.2.3",
+    "orig_text": "S:    <msgQ count=\"4\" id=\"12346\"/>",
+    "correct_text": "S:    <msgQ count=\"4\" id=\"12345\"/>",
+    "notes": "Author knows the best :-).",
+    "submit_date": "2004-11-22",
+    "submitter_name": "\"Scott Hollenbeck\"",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 240,
+    "doc-id": "RFC3730",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.9.2.3",
+    "orig_text": "A <poll> acknowledgement response notes the number of messages remaining in\r\nthe queue and the ID of the next message available for retrieval.",
+    "correct_text": "A <poll> acknowledgement response notes the ID of the message that has been\r\nacknowledged and the number of messages remaining in the queue.",
+    "notes": " ",
+    "submit_date": "2004-11-17",
+    "submitter_name": "\"Scott Hollenbeck\"",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
