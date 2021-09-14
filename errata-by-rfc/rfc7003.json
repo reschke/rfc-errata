@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3735,
+    "doc-id": "RFC7003",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6.1,
+    "orig_text": "6.1.  New RTCP XR Block Type Value\r\n\r\n   This document assigns the block type value 20 in the IANA \"RTP\r\n   Control Protocol Extended Reports (RTCP XR) Block Type Registry\" to\r\n   the \"Burst/Gap Discard Metrics Block\".\r\n\r\n",
+    "correct_text": "6.1.  New RTCP XR Block Type Value\r\n\r\n   This document assigns the block type value 21 in the IANA \"RTP\r\n   Control Protocol Extended Reports (RTCP XR) Block Type Registry\" to\r\n   the \"Burst/Gap Discard Metrics Block\".\r\n\r\n",
+    "notes": "This error was introduced in the final editorial process before publication. The change is needed because the correct value, as assigned in the IANA \"RTP\r\nControl Protocol Extended Reports (RTCP XR) Block Type Registry\", is 21.",
+    "submit_date": "2013-09-24",
+    "submitter_name": "Dan Romascanu",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
