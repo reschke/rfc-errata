@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3993,
+    "doc-id": "RFC2325",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "   potType OBJECT-TYPE\r\n        SYNTAX     INTEGER {\r\n           automatic-drip(1),\r\n           percolator(2),\r\n           french-press(3),\r\n           espresso(4),\r\n           }\r\n        MAX-ACCESS read-write\r\n        STATUS current\r\n        DESCRIPTION\r\n                \"The brew type of the coffee pot.\"\r\n        ::= { coffee 3 }\r\n",
+    "correct_text": "   potType OBJECT-TYPE\r\n        SYNTAX     INTEGER {\r\n           automatic-drip(1),\r\n           percolator(2),\r\n           french-press(3),\r\n           espresso(4),\r\n           }\r\n        MAX-ACCESS read-only\r\n        STATUS current\r\n        DESCRIPTION\r\n                \"The brew type of the coffee pot.\"\r\n        ::= { coffee 3 }\r\n",
+    "notes": "potName and potCapacity are read-only, as name and capacity will not change after instantiation; type should be as well, as potType will not change over time (reincarnation as a separate pot would constitute a new instance.) potLocation should remain read-write, as a pot may change locations.",
+    "submit_date": "2014-05-20",
+    "submitter_name": "Jack Lawson",
+    "verifier_id": 2,
+    "verifier_name": "Nevil Brownlee (ISE)",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4301,
+    "doc-id": "RFC2325",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "The MIB contains objects that\r\nrelate to physical connections,\r\nconfiguration, storage levels,\r\navailability, quality of service, and\r\navailability.",
+    "correct_text": "The MIB contains objects that\r\nrelate to physical connections,\r\nconfiguration, storage levels,\r\nquality of service, and availability.",
+    "notes": "Availability is stated twice.\n --VERIFIER NOTES-- \nAny coffee drinker will tell you that availability is absolutely critical.  Its appearance twice\r\nin the list reflects that importance, and I am rejecting this errata report on those...grounds.",
+    "submit_date": "2015-03-12",
+    "submitter_name": "Anthony Yu",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
