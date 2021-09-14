@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 521,
+    "doc-id": "RFC2028",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.6,
+    "orig_text": "The IAB appoints the IETF chair and is responsible for approving\r\nother IESG candidates put forward by the IETF nominating committee.",
+    "correct_text": "Full IAB members, including the IETF chair, are selected and \r\nappointed according to the procedures defined in [E].",
+    "notes": "The document references include:\r\n\r\n   [E] Galvin, J (Ed.), \"IAB and IESG Selection, Confirmation, and\r\n   Recall Process: Operation of the Nominating and Recall Committees\",\r\n   RFC 2027, October 1996.\r\n\r\nOf course, this document has been revised since RFC 2028 was written.",
+    "submit_date": "2006-03-21",
+    "submitter_name": "Pete Resnick",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 764,
+    "doc-id": "RFC2028",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.6,
+    "orig_text": "The IAB is also responsible for reviewing and approving the charters of new Working Groups that are proposed for the IETF.",
+    "correct_text": "The formation of a working group requires a charter which is primarily negotiated \r\nbetween a prospective working group Chair and the relevant Area \r\nDirector(s), although final approval is made by the IESG with advice \r\nfrom the Internet Architecture Board (IAB).",
+    "notes": "from pending",
+    "submit_date": "2006-03-21",
+    "submitter_name": "Pete Resnick",
+    "verifier_id": 2,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2727,
+    "doc-id": "RFC2028",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "[H] IRTF Charter, RFC 2014, October 1996.",
+    "correct_text": "[H]  Weinrib, A. and J. Postel, \"IRTF Research Group Guidelines and\r\n     Procedures\", BCP 8, RFC 2014, October 1996.",
+    "notes": null,
+    "submit_date": "2011-02-22",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2742,
+    "doc-id": "RFC2028",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "  [F] IANA Charter, Work in Progress.\r\n\r\n  [G] RFC Editor Charter, Work in Progress.",
+    "correct_text": "  [F] Carpenter, B., Baker, F., and M. Roberts, \"Memorandum of Understanding \r\n      Concerning the Technical Work of the Internet Assigned Numbers Authority\", \r\n      RFC 2860, June 2000.\r\n\r\n  [G] Daigle, L., Ed., and Internet Architecture Board, \"The RFC Series and\r\n      RFC Editor\", RFC 4844, July 2007.",
+    "notes": "\n --VERIFIER NOTES-- \n   These documents were not yet complete at the time RFC 2028 was written.",
+    "submit_date": "2011-03-05",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
