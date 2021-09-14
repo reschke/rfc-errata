@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3731,
+    "doc-id": "RFC5755",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 7.1,
+    "orig_text": "   Within EnvelopedData, the encapsulatedContentInfo identifies the\r\n   content type carried within the ciphertext.  In this case, the\r\n   contentType field of encapsulatedContentInfo MUST contain id-ct-\r\n   attrCertEncAttrs, which has the following value:",
+    "correct_text": "   Within EnvelopedData, the encryptedContentInfo identifies the\r\n   content type carried within the ciphertext.  In this case, the\r\n   contentType field of encryptedContentInfo MUST contain id-ct-\r\n   attrCertEncAttrs, which has the following value:",
+    "notes": "The EnvelopedData structure has no \"EncapsulatedContentInfo\". It has a \"EncryptedContentInfo\":\r\n\r\n      EnvelopedData ::= SEQUENCE {\r\n        version CMSVersion,\r\n        originatorInfo [0] IMPLICIT OriginatorInfo OPTIONAL,\r\n        recipientInfos RecipientInfos,\r\n        encryptedContentInfo EncryptedContentInfo,\r\n        unprotectedAttrs [1] IMPLICIT UnprotectedAttributes OPTIONAL }\r\n\r\nCMS objects that carry a \"EncapsulatedContentInfo\" are of type \"SignedData\":\r\n\r\n      SignedData ::= SEQUENCE {\r\n        version CMSVersion,\r\n        digestAlgorithms DigestAlgorithmIdentifiers,\r\n        encapContentInfo EncapsulatedContentInfo,\r\n        certificates [0] IMPLICIT CertificateSet OPTIONAL,\r\n        crls [1] IMPLICIT RevocationInfoChoices OPTIONAL,\r\n        signerInfos SignerInfos }\r\n\r\nSource: RFC 5652 (unchanged at least since RFC 3852).",
+    "submit_date": "2013-09-18",
+    "submitter_name": "Leonardo Cotta de Almeida",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4541,
+    "doc-id": "RFC5755",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.3.4",
+    "orig_text": "      name           id-ce-authorityInfoAccess\r\n      OID            { id-pe 1 }\r\n",
+    "correct_text": "      name           id-pe-authorityInfoAccess\r\n      OID            { id-pe 1 }\r\n",
+    "notes": "id-pe-authorityInfoAccess OBJECT IDENTIFIER ::= { id-pe 1 } is defined in http://tools.ietf.org/html/rfc5280#section-4.2.2.1",
+    "submit_date": "2015-11-20",
+    "submitter_name": "Vlad Semenov",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6567,
+    "doc-id": "RFC5755",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "   GeneralName, GeneralNames, id-ce, AuthorityKeyIdentifier,\r\n   AuthorityInfoAccessSyntax, CRLDistributionPoint\r\n     FROM PKIX1Implicit88",
+    "correct_text": "   GeneralName, GeneralNames, id-ce, AuthorityKeyIdentifier,\r\n   AuthorityInfoAccessSyntax\r\n     FROM PKIX1Implicit88",
+    "notes": "CRLDistributionPoint is part of the IMPORTS statement, but it is not used in the definitions that follow.",
+    "submit_date": "2021-05-01",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
