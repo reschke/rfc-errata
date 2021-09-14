@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1948,
+    "doc-id": "RFC5632",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "7, 2nd para",
+    "orig_text": "   The experiment did show that an ISP can improve performance without\r\n   exposing fine-grained details about network structure, which might\r\n   otherwise be a security concern (see Section 3.1 (P4P Fine Grain) and\r\n|  Section 3.2 (P4P Coarse Grain).  [...]\r\n                                 ^",
+    "correct_text": "   The experiment did show that an ISP can improve performance without\r\n   exposing fine-grained details about network structure, which might\r\n   otherwise be a security concern (see Section 3.1 (P4P Fine Grain) and\r\n|  Section 3.2 (P4P Coarse Grain)).  [...]\r\n                                 ^",
+    "notes": "Rationale: Mismatch of parentheses.",
+    "submit_date": "2009-11-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 101,
+    "verifier_name": "Lisa Dusseault",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1949,
+    "doc-id": "RFC5632",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 9,
+    "orig_text": "   [SIGCOMM]  Xie, H., Yang, Y., Krishnamurthy, A., Liu, Y., and A.\r\n              Silberschatz, \"ACM SIGCOMM 2008 - P4P: Provider Portal for\r\n|             Applications\", Association for Computing Machinery SIGCOMM\r\n              2008 Proceedings, August 2008, [..]",
+    "correct_text": "   [SIGCOMM]  Xie, H., Yang, Y., Krishnamurthy, A., Liu, Y., and A.\r\n              Silberschatz, \"ACM SIGCOMM 2008 - P4P: Provider Portal for\r\n|             Peer-to-Peer Applications\", Association for Computing\r\n|             Machinery, SIGCOMM 2008 Proceedings, August 2008, [..]",
+    "notes": "Rationale: word omission.\n --VERIFIER NOTES-- \n   The authors checked the published title and confirmed it.",
+    "submit_date": "2009-11-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 101,
+    "verifier_name": "Lisa Dusseault",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
