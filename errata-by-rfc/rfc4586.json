@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 50,
+    "doc-id": "RFC4586",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "   We can see that in configurations where both agents use the new\r\n   timing rules each of them uses, at most, about 2.5% of the session\r\n   bandwidth for RTP, which sums up to 5% of the session bandwidth for\r\n   both.",
+    "correct_text": "   We can see that in configurations where both agents use the new\r\n   timing rules each of them uses, at most, about 2.5% of the session\r\n   bandwidth for RTCP, which sums up to 5% of the session bandwidth for\r\n   both.  ",
+    "notes": "RTP -> RTCP\r\n\r\nfrom pending",
+    "submit_date": "2006-08-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 766,
+    "doc-id": "RFC4586",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7.3,
+    "orig_text": "|  We have shown that the limitations of RTP AVPF profile do not\r\n   generate such high delay in the feedback messages that the\r\n   performance of NEWPRED is degraded for sessions from 32 kbps to 2\r\n   Mbps.",
+    "correct_text": "|  We have shown that the limitations of the RTP AVPF profile do not\r\n   generate such high delay in the feedback messages that the\r\n   performance of NEWPRED is degraded for sessions from 32 kbps to 2\r\n   Mbps.  ",
+    "notes": "missing article\r\n\r\nfrom pending",
+    "submit_date": "2006-08-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 3,
+    "verifier_name": "Cullen Jennings",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
