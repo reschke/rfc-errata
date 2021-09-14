@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5280,
+    "doc-id": "RFC8327",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "BGP Session Culling is the practice of ensuring BGP sessions are\r\nforcefully torn down before maintenance activities on a lower-layer\r\nnetwork commence -- activities that otherwise would affect the flow\r\nof data between the BGP speakers.  BGP Session Culling is the\r\npractice of ensuring BGP sessions are forcefully torn down before\r\ncommencing maintenance activities (that otherwise would affect the\r\nflow of data between the BGP speakers) on a lower-layer network.",
+    "correct_text": "BGP Session Culling is the practice of ensuring BGP sessions are\r\nforcefully torn down before maintenance activities on a lower-layer\r\nnetwork commence -- activities that otherwise would affect the flow\r\nof data between the BGP speakers.",
+    "notes": "The original version of a corrected sentence was left in the document in the editing phase\r\n",
+    "submit_date": "2018-03-07",
+    "submitter_name": "Job Snijders",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
