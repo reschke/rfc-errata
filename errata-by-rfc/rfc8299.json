@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5721,
+    "doc-id": "RFC8299",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.2.1.3",
+    "orig_text": "Hub_Site ------- (VRF_Hub)  PE1\r\n                               (VRF_Spoke)\r\n                                  /  |\r\n  Spoke_Site1 -------------------+   |\r\n                                     |\r\n  Spoke_Site2 -----------------------+",
+    "correct_text": "Hub_Site ------- (VRF_Hub)  PE1\r\n                             (VRF_Spoke1) (VRF_Spoke2)\r\n                                  /            |\r\n  Spoke_Site1 -------------------+             |\r\n                                               |\r\n  Spoke_Site2 ---------------------------------+",
+    "notes": "On the picture, two spoke sites (“Spoke_Site1”, “Spoke_Site2”) are using the same VRF (“VRF_Spoke”) in PE1 router. For Hub and Spoke topology, it seems confusing. The spoke sites must not have a common routing table in the device and each spoke site must have its own VRF if there are more than one site using the same physical router.",
+    "submit_date": "2019-05-13",
+    "submitter_name": "Ivan Frolov",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
