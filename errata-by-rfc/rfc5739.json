@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2089,
+    "doc-id": "RFC5739",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.5,2nd para",
+    "orig_text": "   All other attributes except INTERNAL_IP6_ADDRESS (and\r\n|  INTENAL_ADDRESS_EXPIRY) from [IKEv2] remain valid, including the\r\n   somewhat confusingly named INTERNAL_IP6_SUBNET (see Section 6.3 of\r\n   [RFC4718] for discussion).\r\n",
+    "correct_text": "   All other attributes except INTERNAL_IP6_ADDRESS (and\r\n|  INTERNAL_ADDRESS_EXPIRY) from [IKEv2] remain valid, including the\r\n   somewhat confusingly named INTERNAL_IP6_SUBNET (see Section 6.3 of\r\n   [RFC4718] for discussion).\r\n",
+    "notes": "Rationale: Technically significant spelling error.",
+    "submit_date": "2010-03-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2090,
+    "doc-id": "RFC5739",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3,1st para",
+    "orig_text": "             [...].  However, if the same peers are also using IPsec/\r\n   IKEv2 for other uses (with addresses not assigned inside IKEv2), they\r\n   would also have SPD entries and PAD Child SA Authorization Data that\r\n|  is not related to the virtual link.\r\n",
+    "correct_text": "             [...].  However, if the same peers are also using IPsec/\r\n   IKEv2 for other uses (with addresses not assigned inside IKEv2), they\r\n   would also have SPD entries and PAD Child SA Authorization Data that\r\n|  are not related to the virtual link.\r\n",
+    "notes": "Rationale: Grammar: \"SPD entries and ... Data ... are ...\"",
+    "submit_date": "2010-03-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
