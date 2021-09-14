@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5540,
+    "doc-id": "RFC7728",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "8.2.  PAUSED",
+    "orig_text": "   PAUSED SHALL contain a fixed-length 32-bit parameter at the start of\r\n   the Type Specific field with the extended RTP sequence number of the\r\n   last RTP packet sent before the RTP stream was paused, in the same\r\n   format as the extended highest sequence number received\r\n   (Section 6.4.1 of [RFC3550]).",
+    "correct_text": "   PAUSED SHALL contain a fixed-length 32-bit parameter at the start of\r\n   the Type Specific field with the extended RTP sequence number of the\r\n   last RTP packet sent before the RTP stream was paused, in the same\r\n   format as the extended highest sequence number received\r\n   (Section 6.4.1 of [RFC3550]), or, if no packet has been sent, the\r\n   value one less than the sequence number that will be chosen for the\r\n   next packet sent (modulo 2^32).",
+    "notes": "The paragraph leaves the value of the parameter undefined when the stream is paused before any data has been sent.",
+    "submit_date": "2018-11-02",
+    "submitter_name": "Nicholas Wilson",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
