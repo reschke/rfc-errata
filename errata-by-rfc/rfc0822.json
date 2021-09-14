@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 1083,
+    "doc-id": "RFC0822",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.1.4.",
+    "orig_text": "                    Muhammed              atom\r\n                    .                     special\r\n                    (I am  the greatest)  comment\r\n                    Ali                   atom\r\n                    @                     atom\r\n                    (the)                 comment\r\n                    Vegas                 atom\r\n                    .                     special\r\n                    WBA                   atom",
+    "correct_text": "                    Muhammed              atom\r\n                    .                     special\r\n                    (I am  the greatest)  comment\r\n                    Ali                   atom\r\n                    @                     special\r\n                    (the)                 comment\r\n                    Vegas                 atom\r\n                    .                     special\r\n                    WBA                   atom",
+    "notes": "Apparently an artifact introduced by copying and incompletely adapting the example in RFC733, section III.B.e, which uses the atom \"at\" instead of the special \"@\".",
+    "submit_date": "2007-11-21",
+    "submitter_name": "Peter Backes",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1899,
+    "doc-id": "RFC0822",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.1.4",
+    "orig_text": "                    :sysmail              quoted string\r\n                    @                     special\r\n                    Some-Group            atom\r\n                    .                     special\r\n                    Some-Org              atom\r\n                    ,                     special\r\n                    Muhammed              atom\r\n                    .                     special\r\n                    (I am  the greatest)  comment\r\n                    Ali                   atom\r\n                    @                     atom\r\n                    (the)                 comment\r\n                    Vegas                 atom\r\n                    .                     special\r\n                    WBA                   atom",
+    "correct_text": "                    \":sysmail\"            quoted string\r\n                    @                     special\r\n                    Some-Group            atom\r\n                    .                     special\r\n                    Some-Org              atom\r\n                    ,                     special\r\n                    Muhammed              atom\r\n                    .                     special\r\n                    (I am  the greatest)  comment\r\n                    Ali                   atom\r\n                    @                     special\r\n                    (the)                 comment\r\n                    Vegas                 atom\r\n                    .                     special\r\n                    WBA                   atom",
+    "notes": "",
+    "submit_date": "2009-10-02",
+    "submitter_name": "Wolf Lammen",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3408,
+    "doc-id": "RFC0822",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 3.3,
+    "orig_text": "quoted-string = <\"> *(qtext/quoted-pair) <\">; Regular qtext or\r\n                                            ; quoted chars.\r\n\r\n\r\n[...]\r\n\r\ndomain-literal =  \"[\" *(dtext / quoted-pair) \"]\"\r\n\r\n[...]\r\n\r\ncomment     =  \"(\" *(ctext / quoted-pair / comment) \")\"",
+    "correct_text": "quoted-string = <\"> *(qtext/quoted-pair) <\">; Regular qtext or\r\n                                            ; quoted chars.\r\n                                            ; Bare LF MUST NOT\r\n                                            ; follow the\r\n                                            ; quoted-pair \\ CR\r\n\r\n\r\n[...]\r\n\r\ndomain-literal =  \"[\" *(dtext / quoted-pair) \"]\" ; Bare LF MUST NOT\r\n                                                 ; follow the\r\n                                                 ; quoted-pair \\ CR\r\n\r\n[...]\r\n\r\ncomment     =  \"(\" *(ctext / quoted-pair / comment) \")\" ; Bare LF MUST NOT\r\n                                                        ; follow the\r\n                                                        ; quoted-pair \\ CR\r\n\r\n",
+    "notes": "In Section B.1, the intent is made clear that an implementer should be able to read fields with minimal processing, and find their ends anywhere CRLF is not followed by a LWSP-char.\r\n\r\nThe current BNF allows the sequence \\ CR LF, where \\ CR is a quoted-pair, inside a quoted-string, domain-literal, or comment in a structured field.  An unstructured field may be any sequence of text, so the last character of an unstructured field could be \\, and the field would end with \\ CR LF.  So, robust minimal processing of fields does not work without this correction.\r\n\r\nExample:\r\n\r\n-- Unstructured field terminates here.\r\nSubject: evil = \"this \\[CRLF]\r\n[CRLF]\r\n\r\n-- Structured field does not terminate here, as written.\r\nStructured-Field: evil = \"this \\[CRLF] <-- quoted-pair,  bare LF as qtext\"\r\n[CRLF]\r\n\r\nConclusion: The plan in appendix B does not work if the quoted-pair \\ CR may be followed by a bare LF: the implementer would need to know whether a field is structured or unstructured to know where it terminates.  So, this must just be an oversight.\r\n\r\nI realize this oversight is eliminated in less obsolete documents 2822 and 5322, but (1) many other RFCs reference RFC 822 and not the less obsolete documents, and (2) the less obsolete documents do not specifically discuss this issue or release receivers from parsing messages generated according to this specification.\r\n\r\n --VERIFIER NOTES-- \r\nIt is unclear whether the original authors of 822 would have required no bare LF after a CR quoted-pair or would have changed appendix B to accommodate quoted-pairs. The IESG guidelines for errata say that errata on obsolete document that are still in use should be treated the same as errata on current documents. Since it's not clear where the error is, and since this has been dealt with in 2822/5322, this erratum is marked as \"Hold\".",
+    "submit_date": "2012-11-14",
+    "submitter_name": "Thomas Lane",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4584,
+    "doc-id": "RFC0822",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "A.3.3",
+    "orig_text": "     cc       :  Important folk:\r\n                   Tom Softwood <Balsa@Tree.Root>,\r\n                   \"Sam Irving\"@Other-Host;,\r\n                 Standard Distribution:\r\n                   /main/davis/people/standard@Other-Host,\r\n                   \"<Jones>standard.dist.3\"@Tops-20-Host>;",
+    "correct_text": "     cc       :  Important folk:\r\n                   Tom Softwood <Balsa@Tree.Root>,\r\n                   \"Sam Irving\"@Other-Host;,\r\n                 Standard Distribution:\r\n                   /main/davis/people/standard@Other-Host,\r\n                   \"<Jones>standard.dist.3\"@Tops-20-Host;\r\n\r\nor\r\n\r\n                   <\"Jones>standard.dist.3\"@Tops-20-Host>;\r\n\r\nor\r\n\r\n                   <\"<Jones>standard.dist.3\"@Tops-20-Host>;",
+    "notes": "According to 3.4.6 of the RFC, brackets must occur in matched pairs. There is not matching \"<\" for the closing \">\" after \"Tops-20-Host\".\r\n\r\n----- Verifier Notes -----\r\nRFC 822 has long been obsolete, first by RFC 2822 and then by RFC 5322, and I hope everyone is using 5322 by now.  The examples were completely re-done in 2822, and this issue is long gone.",
+    "submit_date": "2016-01-07",
+    "submitter_name": "Sebastian Haller",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
