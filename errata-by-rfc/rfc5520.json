@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 1776,
+    "doc-id": "RFC5520",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "8.2, pg. 18",
+    "orig_text": "|  [RBNF]     Farrel, A., \"Reduced Backus-Naur Form (RBNF) A Syntax Used\r\n|             in Various Protocol Specifications\", Work in Progress,\r\n|             November 2008.\r\n",
+    "correct_text": "|  [RBNF]     Farrel, A., \"Routing Backus-Naur Form (RBNF): A Syntax Used\r\n|             in Various Protocol Specifications\", RFC 5511, April 2009.\r\n",
+    "notes": "Rationale:  [[ may be deleted on approval of this erratum ]]\r\n\r\na) The referenced document has been published as RFC 5511 shortly\r\n   *before* this RFC.\r\n\r\nb) The expansion of \"RBNF\" in general, and in particular the title\r\n   of that document, have been changed before IESG approval, with\r\n   the -09 draft version submitted to the RFC Editor.\r\n   \"RBNF\" officially stands for \"Routing BNF\".\r\n   Also, the clarifying colon is missing in the citation.\r\n\r\nIt could have been expected that the RFC Editor better coordinate\r\nbetween the documents in his Queue.\r\n\r\nHint: b) also affects other RFCs published since the draft of RFC 5511\r\n  has entered the RFC Editor Queue, e.g. RFC 5440 ff. and RFC 5455.",
+    "submit_date": "2009-05-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1777,
+    "doc-id": "RFC5520",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.3, pg. 17",
+    "orig_text": "   IANA maintains a registry of bit flags carried in the PCEP RP object\r\n   as defined in [RFC5440].  IANA assigned a new bit flag as follows:\r\n\r\n|  Bit Number  Hex       Name                             Reference\r\n|  23          0x000017  Path-Key (P-bit)                 [RFC5520]\r\n",
+    "correct_text": "   IANA maintains a registry of bit flags carried in the PCEP RP object\r\n   as defined in [RFC5440].  IANA assigned a new bit flag as follows:\r\n\r\n|  Bit Number    Name                                     Reference\r\n|  23            Path-Key (P-bit)                         [RFC5520]\r\n",
+    "notes": "Rationale: 'translating' the decimal bit number into a 6-digit (!) \r\nhexadecimal value does not add specific insight and might even be\r\nconsidered confusing; at most a hexadecimal bit mask might have\r\nsome additional value -- but it should be specified as an /8/-digit\r\nmask in this case (the RP Flags field is 32 bits wide).\r\nBecause the definition of the addressed sub-registry (Section 9.6\r\nof RFC 5440) did not specify a 'Hex' item and the IANA Registry\r\nconsequentially does not contain such column, the 'Hex' column\r\nshould have been dropped from Section 7.3 of RFC 5520 as well.\r\n\r\nDowngraded to Editorial as the change makes no difference to the technical reading of the text.",
+    "submit_date": "2009-05-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3582,
+    "doc-id": "RFC5520",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2.3",
+    "orig_text": "<request>::= <RP>\r\n                    <segment-computation> | <path-key-expansion>\r\n\r\n       where:\r\n          <segment-computation> ::= <END-POINTS>\r\n                                    [<LSPA>]\r\n                                    [<BANDWIDTH>]\r\n                                    [<BANDWIDTH>]\r\n                                    [<metric-list>]\r\n                                    [<RRO>]\r\n                                    [<IRO>]\r\n                                    [<LOAD-BALANCING>]\r\n          <path-key-expansion> ::= <PATH-KEY>\r\n\r\n",
+    "correct_text": "<request>::= <RP>\r\n                    <segment-computation> | <path-key-expansion>\r\n\r\n       where:\r\n          <segment-computation> ::= <END-POINTS>\r\n                                    [<LSPA>]\r\n                                    [<BANDWIDTH>]\r\n                                    [<metric-list>]\r\n                                    [<RRO>[<BANDWIDTH>]]\r\n                                    [<IRO>]\r\n                                    [<LOAD-BALANCING>]\r\n          <path-key-expansion> ::= <PATH-KEY>\r\n\r\n",
+    "notes": "This document defines <path-key-expansion> to allow path request message to be used for getting the confidential path segment. The <segment-computation> should be as per RFC5440 itself. \r\nThere is a mistake in the second BANDWIDTH object which should be placed with RRO as per RFC5440.",
+    "submit_date": "2013-04-05",
+    "submitter_name": "Dhruv Dhody",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3583,
+    "doc-id": "RFC5520",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.2.3",
+    "orig_text": "The format of a PCReq message is as follows:\r\n\r\n   <PCReq Message>::= <Common Header>\r\n                      [<SVEC-list>]\r\n                      <request-list>\r\n\r\n   where:\r\n\r\n      <svec-list>::=<SVEC>[<svec-list>]\r\n      <request-list>::=<request>[<request-list>]\r\n",
+    "correct_text": "The format of a PCReq message is as follows:\r\n\r\n   <PCReq Message>::= <Common Header>\r\n                      [<svec-list>]\r\n                      <request-list>\r\n\r\n   where:\r\n\r\n      <svec-list>::=<SVEC>[<svec-list>]\r\n      <request-list>::=<request>[<request-list>]\r\n",
+    "notes": "The corrected text is as RFC5440 section 6.4, the editorial difference is <SVEC-list> in RFC5520 and in RFC5440 is <svec-list>.",
+    "submit_date": "2013-04-07",
+    "submitter_name": "Abdussalam Baryun",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
