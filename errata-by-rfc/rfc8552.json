@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5665,
+    "doc-id": "RFC8552",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.1.3",
+    "orig_text": "4.1.3.  _ta\r\n\r\n   Under the NULL RR Type, the entry \"_ta-*\" denotes all node names\r\n   beginning with the string \"_ta-*\".  It does NOT refer to a DNS\r\n   wildcard specification.\r\n",
+    "correct_text": "4.1.3.  _ta\r\n\r\n   Under the NULL RR Type, the entry \"_ta-*\" denotes all node names\r\n   beginning with the string \"_ta-\".  It does NOT refer to a DNS\r\n   wildcard specification.\r\n",
+    "notes": "The second '*' should not be present, as a literal asterisk does not appear in all node names beginning with \"_ta-\".",
+    "submit_date": "2019-03-21",
+    "submitter_name": "Ronan Flood",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6551,
+    "doc-id": "RFC8552",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "RFC 8552                      DNS AttrLeaf                    March 2019\r\n\r\n\r\n4.  IANA Considerations\r\n\r\n   IANA has established the \"Underscored and Globally Scoped DNS Node\r\n   Names\" registry.  This section describes the registry, the\r\n   definitions, the initial entries, the use of_ta and _example, and the\r\n   use of [RFC8126] as guidance for expert review.  IANA has also\r\n   updated the \"Enumservices Registrations\" registry with a pointer to\r\n   this document.",
+    "correct_text": "RFC 8552                      DNS AttrLeaf                    March 2019\r\n\r\n\r\n4.  IANA Considerations\r\n\r\n   IANA has established the \"Underscored and Globally Scoped DNS Node\r\n   Names\" registry.  This section describes the registry, the\r\n   definitions, the initial entries, the use of _ta and _example, and the\r\n   use of [RFC8126] as guidance for expert review.  IANA has also\r\n   updated the \"Enumservices Registrations\" registry with a pointer to\r\n   this document.",
+    "notes": "\"the use of_ta and _example\" is missing a single whitespace before `_ta`, corrected it should read:\r\n\r\n\"the use of _ta and _example\"",
+    "submit_date": "2021-04-19",
+    "submitter_name": "Jason Mills",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2021-04-19 14:14:22"
+  }
+]
