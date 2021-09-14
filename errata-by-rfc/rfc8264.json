@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5478,
+    "doc-id": "RFC8264",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 9.12,
+    "orig_text": "   L: Control(cp) = True",
+    "correct_text": "   L: General_Category(cp) = Cc",
+    "notes": "Nothing in the Unicode Standard (including UAX 44) defines a property or function named Control.  What is probably meant is the General_Category property value Control, which is abbreviated Cc.",
+    "submit_date": "2018-08-26",
+    "submitter_name": "Peter Occil",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
