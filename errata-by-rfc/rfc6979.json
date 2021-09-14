@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3812,
+    "doc-id": "RFC6979",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.4 (page 8)",
+    "orig_text": "     If r turns out to be zero, a new k should be selected and r\r\n       computed again (this is an utterly improbable occurrence).\r\n\r\n   4.  The value s (modulo q) is computed:\r\n\r\n          s = (h+x*r)/k mod q\r\n\r\n",
+    "correct_text": "     If r turns out to be zero, a new k should be selected and r\r\n       computed again (this is an utterly improbable occurrence).\r\n\r\n   4.  The value s (modulo q) is computed:\r\n\r\n          s = (h+x*r)/k mod q\r\n\r\n     If s turns out to be zero, a new k should be selected and r\r\n       and s computed again (a similarly improbable occurrence).\r\n\r\n\r\n",
+    "notes": "My understanding is that if s is zero it has no multiplicative inverse so the signature cannot be verified. Worse, for DSA the private key can be computed directly from r and the public key components. (I'm not sure about ECDSA..)\r\n\r\nIf I'm right about this, section 3.4 and others are affected. If not, sorry for wasting your time :-(",
+    "submit_date": "2013-11-27",
+    "submitter_name": "Edward M Drayton",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5963,
+    "doc-id": "RFC6979",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "   b.  Set:\r\n\r\n          V = 0x01 0x01 0x01 ... 0x01\r\n\r\n       such that the length of V, in bits, is equal to 8*ceil(hlen/8).\r\n:\r\n:\r\n   c.  Set:\r\n\r\n          K = 0x00 0x00 0x00 ... 0x00\r\n\r\n       such that the length of K, in bits, is equal to 8*ceil(hlen/8).\r\n",
+    "correct_text": "   b.  Set:\r\n\r\n          V = 0x010101...01\r\n\r\n       such that the length of V, in bits, is equal to 8*ceil(hlen/8).\r\n:\r\n:\r\n   c.  Set:\r\n\r\n          K = 0x000000...00\r\n\r\n       such that the length of K, in bits, is equal to 8*ceil(hlen/8).\r\n",
+    "notes": "Hrmonize the notations in 3.2 and A.1.1, where the hex string q is denoted as\r\n0x4000000000000000000020108A2E0CC0D99F8A5EF\r\nand not as \r\n0x40 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x20 0x10 0x8A 0x2E 0x0C 0xC0 0x0D 0x99 0xF8 0xA5 0xEF.",
+    "submit_date": "2020-01-23",
+    "submitter_name": "Annie Yousar",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2020-01-26 04:41:16"
+  }
+]
