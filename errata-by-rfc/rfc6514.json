@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3801,
+    "doc-id": "RFC6514",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "Usage of Intra-AS I-PMSI A-D routes is described in Section 9.2.\r\n",
+    "correct_text": "Usage of Intra-AS I-PMSI A-D routes is described in Section 9.1.\r\n",
+    "notes": "Section 9.2 defines Inter-AS I-PMSI A-D operation and is not the right reference to be called in Section 4.1",
+    "submit_date": "2013-11-13",
+    "submitter_name": "Nagendra Kumar",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3802,
+    "doc-id": "RFC6514",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4.2,
+    "orig_text": "Usage of Inter-AS I-PMSI A-D routes is described in Section 9.1",
+    "correct_text": "Usage of Inter-AS I-PMSI A-D routes is described in Section 9.2",
+    "notes": "Section 9.1 defines Intra-AS I-PMSI A-D operation and is not the right reference to be called in Section 4.2",
+    "submit_date": "2013-11-13",
+    "submitter_name": "Nagendra Kumar",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5724,
+    "doc-id": "RFC6514",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "11.1.3",
+    "orig_text": "The Source AS field in the C-multicast\r\nroute is set to value of the Originating Router's IP Address field of\r\nthe found Intra-AS I-PMSI A-D route.\r\n",
+    "correct_text": "The Source AS field in the C-multicast\r\nroute is set to value of the Originating Router's IP Address field of\r\nthe found Intra-AS I-PMSI A-D route when the Originating Router's IP \r\nAddress is an IPv4 address.\r\n",
+    "notes": "Source AS field in C-multicast route is a 4-octet field, and only an IPv4 address is possible to be filled in it. The Originating Router's IP Address can be an IPv6 address according to RFC6515.",
+    "submit_date": "2019-05-20",
+    "submitter_name": "Jingrong Xie",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
