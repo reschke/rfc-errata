@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 5571,
+    "doc-id": "RFC8214",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "C If set to 1, a control word [RFC4448] MUST be present\r\nwhen sending EVPN packets to this PE. It is\r\nrecommended that the control word be included in the\r\nabsence of an entropy label [RFC6790].",
+    "correct_text": "C If set to 1, a control word [RFC4448] MUST be present\r\nwhen sending EVPN packets to this PE. It is\r\nrecommended that the control word be included in the\r\nabsence of an entropy label [RFC6790]. \r\n\r\nFor detailed explanation of the behavior of EVPN VPWS \r\nsession based on control word bit can be referred link: \r\nhttps://tools.ietf.org/html/rfc4447#section-6.2\r\n\r\nwhich explains all combinations of control word \r\nconfigurations in detailed way whic was missing in RFC8214.",
+    "notes": "RFC8214 doesn't mention the cases where control word configuration between the PE's can mismatch, disabled, enabled. which will lead to ambiguity in protocol implementation.\n --VERIFIER NOTES-- \nThis could change the specification in a way which in fact would likely require consensus. Authors of this errata are encouraged to follow the normal process and start with having a discussion in BESS WG.",
+    "submit_date": "2018-12-10",
+    "submitter_name": "gangadhara reddy chavva; SatishKumar N Rodd",
+    "verifier_id": 160,
+    "verifier_name": "Martin Vigoureux",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6117,
+    "doc-id": "RFC8214",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.1, 8",
+    "orig_text": "3.1.  EVPN Layer 2 Attributes Extended Community\r\n            0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5\r\n           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n           |   MBZ                   |C|P|B|  (MBZ = MUST Be Zero)\r\n           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n         Name     Meaning\r\n         ---------------------------------------------------------------\r\n         P        If set to 1 in multihoming Single-Active scenarios, ...\r\n         B        If set to 1 in multihoming Single-Active scenarios, ...\r\n         C        If set to 1, a control word [RFC4448] MUST be present ...\r\n\r\n8.  IANA Considerations\r\n   Initial registrations are as follows:\r\n\r\n        P      Advertising PE is the primary PE.\r\n        B      Advertising PE is the backup PE.\r\n        C      Control word [RFC4448] MUST be present.\r\n\r\n",
+    "correct_text": "Option 1 : change explicit bitfield\r\n==========\r\n3.1.  EVPN Layer 2 Attributes Extended Community\r\n            0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5\r\n           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n##<swap>   |   MBZ                   |C|B|P|  (MBZ = MUST Be Zero)\r\n           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n         Name     Meaning\r\n         ---------------------------------------------------------------\r\n         P        If set to 1 in multihoming Single-Active scenarios, ...\r\n         B        If set to 1 in multihoming Single-Active scenarios, ...\r\n         C        If set to 1, a control word [RFC4448] MUST be present ...\r\n\r\n8.  IANA Considerations\r\n   Initial registrations are as follows:\r\n\r\n        P      Advertising PE is the primary PE.\r\n        B      Advertising PE is the backup PE.\r\n        C      Control word [RFC4448] MUST be present.\r\n\r\n\r\nOption 2 : change implicit order\r\n==========\r\n3.1.  EVPN Layer 2 Attributes Extended Community\r\n            0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5\r\n           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n           |   MBZ                   |C|P|B|  (MBZ = MUST Be Zero)\r\n           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n         Name     Meaning\r\n         ---------------------------------------------------------------\r\n##       B        If set to 1 in multihoming Single-Active scenarios, ...\r\n##<swap 'implicit' list order B,P to match bitfield>\r\n##       P        If set to 1 in multihoming Single-Active scenarios, ...\r\n         C        If set to 1, a control word [RFC4448] MUST be present ...\r\n\r\n8.  IANA Considerations\r\n   Initial registrations are as follows:\r\n\r\n##      B      Advertising PE is the backup PE.\r\n##<swap 'implicit' list order B,P to match bitfield>\r\n##      P      Advertising PE is the primary PE.\r\n        C      Control word [RFC4448] MUST be present.\r\n\r\n\r\n\r\n",
+    "notes": "While technically section 8 is not requesting any bit-position from IANA registry, the ordering of requests P-B-C vs. the field definition B-P-C is confusing, or at least inconsistent.\r\n\r\nA clarifying statement is required:\r\n - the field definition is should be swapped; or\r\n - the field definition shall prime over all the places implying order when listing P-B-C\n --VERIFIER NOTES-- \n   This is not a technical errata or at least the reasonable solution to it seems to be editorial (shifting text around) rather than modifying the order of bits on the wire.\r\n",
+    "submit_date": "2020-04-22",
+    "submitter_name": "Luc Andre Burdet",
+    "verifier_id": 160,
+    "verifier_name": "Martin Vigourex",
+    "update_date": "2021-02-08 14:13:03"
+  },
+  {
+    "errata_id": 6517,
+    "doc-id": "RFC8214",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "   Finally, EVPN may employ data-plane egress link protection mechanisms\r\n   not available in VPWS.  This can be done by the primary PE (on local\r\n   AC down) using the label advertised in the per-EVI Ethernet A-D route\r\n   by the backup PE to encapsulate the traffic and direct it to the\r\n   backup PE.",
+    "correct_text": "   Finally, EVPN may employ data-plane egress link protection mechanisms.\r\n   This can be done by the primary PE (on local AC down) using the label \r\n   advertised in the per-EVI Ethernet A-D route by the backup PE to\r\n   encapsulate the traffic and direct it to the backup PE.  Similar behavior\r\n   for LDP-signaled PWs can be achieved using LDP extensions defined in RFC 8104, \r\n   but the EVPN-based solution is simpler to implement (e.g., does not require \r\n   context-specific label spaces) and operate.\r\n\r\n\r\n\r\n",
+    "notes": "RFC 8104 \"Pseudowire (PW) Endpoint Fast Failure Protection\" defines a solution for egress PW endpoint protection that provides fast local protection against failure of the primary egress PE and failure of the Attachment Circuit of this PE, so that the claim that the data-plane egress link protection mechanisms are not available for LDP-signaled PWs is factually inaccurate. However, the solution defined in RFC 8104is much more complicated both from the POV of implementation and from the operational POV, while the EVPN-based solution is quite straightforward.",
+    "submit_date": "2021-04-05",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
