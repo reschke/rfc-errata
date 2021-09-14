@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1741,
+    "doc-id": "RFC5498",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 6,
+    "orig_text": "   Action 2:\r\n\r\n      IANA has made the following assignments in the \"PROTOCOL NUMBERS\"\r\n      registry:\r\n\r\n      sub-registry \"WELL KNOWN PORT NUMBERS\"\r\n\r\n      Keyword Decimal Description     References\r\n      ------- ------- -----------     ----------\r\n      manet   138     MANET Protocols [RFC5498]",
+    "correct_text": "   Action 2:\r\n\r\n      IANA has made the following assignments in the \"PROTOCOL NUMBERS\"\r\n      registry:\r\n\r\n      Keyword Decimal Description     References\r\n      ------- ------- -----------     ----------\r\n      manet   138     MANET Protocols [RFC5498]",
+    "notes": "The original text reads, for \"protocol numbers\" that an assignment should be made in the \"well known port numbers\" sub-registry. There appears to be no such sub-registry in the PROTOCOL NUMBERS registry managed by IANA.",
+    "submit_date": "2009-03-24",
+    "submitter_name": "Thomas Clausen",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
