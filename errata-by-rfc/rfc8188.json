@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5051,
+    "doc-id": "RFC8188",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6.1,
+    "orig_text": "   [FIPS180-4]\r\n              National Institute of Standards and Technology, \"Secure\r\n              Hash Standard (SHS)\", FIPS PUB 180-4,\r\n              DOI 10.6028/NIST.FIPS180-4, August 2015,\r\n              <http://nvlpubs.nist.gov/nistpubs/FIPS/\r\n              NIST.FIPS.180-4.pdf>.\r\n",
+    "correct_text": "   [FIPS180-4]\r\n              National Institute of Standards and Technology, \"Secure\r\n              Hash Standard (SHS)\", FIPS PUB 180-4,\r\n              DOI 10.6028/NIST.FIPS.180-4, August 2015,\r\n              <http://nvlpubs.nist.gov/nistpubs/FIPS/\r\n              NIST.FIPS.180-4.pdf>.\r\n",
+    "notes": "(incorrect DOI)",
+    "submit_date": "2017-06-24",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5516,
+    "doc-id": "RFC8188",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nContent-Length: 54\r\nContent-Encoding: aes128gcm\r\n\r\nI1BsxtFttlv3u_Oo94xnmwAAEAAA-NAVub2qFgBEuQKRapoZu-IxkIva3MEB1PD-\r\nly8Thjg",
+    "correct_text": "HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nContent-Length: 53\r\nContent-Encoding: aes128gcm\r\n\r\nI1BsxtFttlv3u_Oo94xnmwAAEAAA-NAVub2qFgBEuQKRapoZu-IxkIva3MEB1PD-\r\nly8Thjg",
+    "notes": "16-bit encrypted payload\r\n16-bit authentication tag\r\n21-bit header\r\n\r\nThe other example, in Section 3.2, reports the correct content length of 53",
+    "submit_date": "2018-10-05",
+    "submitter_name": "Dolan Murvihill",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
