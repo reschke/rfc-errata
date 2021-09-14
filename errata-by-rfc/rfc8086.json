@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5006,
+    "doc-id": "RFC8086",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 8,
+    "orig_text": "   Section 3.1.9 of [RFC8085] discusses the congestion considerations\r\n   for design and use of UDP tunnels;",
+    "correct_text": "   Section 3.1.11 of [RFC8085] discusses the congestion considerations\r\n   for design and use of UDP tunnels;",
+    "notes": "There appears to be an incorrect reference to 3.1.9 that should refer to 3.1.11.",
+    "submit_date": "2017-04-28",
+    "submitter_name": "Donald Eastlake",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
