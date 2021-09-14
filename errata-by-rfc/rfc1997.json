@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3889,
+    "doc-id": "RFC1997",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   This document creates the COMMUNITIES path attribute is an optional\r\n   transitive attribute of variable length.  The attribute consists of a\r\n   set of four octet values, each of which specify a community.  All\r\n   routes with this attribute belong to the communities listed in the\r\n   attribute.",
+    "correct_text": "   This document creates the COMMUNITIES path attribute, which is an \r\n   optional transitive attribute of variable length.  The attribute \r\n   consists of a set of four octet values, each of which specify a \r\n   community.  All routes with this attribute belong to the \r\n   communities listed in the attribute.",
+    "notes": "Typo in first sentence. \"which\" is missing.",
+    "submit_date": "2014-02-12",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 2,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3890,
+    "doc-id": "RFC1997",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   The community attribute values ranging from 0x0000000 through\r\n   0x0000FFFF and 0xFFFF0000 through 0xFFFFFFFF are hereby reserved.",
+    "correct_text": "   The community attribute values ranging from 0x00000000 through\r\n   0x0000FFFF and 0xFFFF0000 through 0xFFFFFFFF are hereby reserved.",
+    "notes": "Since community is a 32-bit value, 0x0000000 should be 0x00000000 to remove confusion.\r\n\r\nVerifier note: It might be useful to tidy this when the text is updated, but the text is correct and there is no possibility of confusion if you read the whole sentence.\r\n",
+    "submit_date": "2014-02-13",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 2,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4576,
+    "doc-id": "RFC1997",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "Well-known Communities\r\n\r\n   The following communities have global significance and their\r\n   operations shall be implemented in any community-attribute-aware BGP\r\n   speaker.\r\n\r\nNO_EXPORT (0xFFFFFF01)\r\n         All routes received carrying a communities attribute\r\n         containing this value MUST NOT be advertised outside a BGP\r\n         confederation boundary (a stand-alone autonomous system that\r\n         is not part of a confederation should be considered a\r\n         confederation itself).\r\nNO_ADVERTISE (0xFFFFFF02)\r\n         All routes received carrying a communities attribute\r\n         containing this value MUST NOT be advertised to other BGP\r\n         peers.\r\nNO_EXPORT_SUBCONFED (0xFFFFFF03)\r\n         All routes received carrying a communities attribute\r\n         containing this value MUST NOT be advertised to external BGP\r\n         peers (this includes peers in other members autonomous\r\n         systems inside a BGP confederation).",
+    "correct_text": "Well-known Communities\r\n\r\n   The following communities have global significance and their\r\n   operations shall be implemented in any community-attribute-aware BGP\r\n   speaker.\r\n\r\nNO_EXPORT (0xFFFFFF01)\r\n         All routes received carrying a communities attribute\r\n         containing this value MUST NOT be advertised to external BGP\r\n         peers (this includes peers in other members autonomous\r\n         systems inside a BGP confederation).  \r\nNO_ADVERTISE (0xFFFFFF02)\r\n         All routes received carrying a communities attribute\r\n         containing this value MUST NOT be advertised to other BGP\r\n         peers.\r\nNO_EXPORT_SUBCONFED (0xFFFFFF03)\r\n         All routes received carrying a communities attribute\r\n         containing this value MUST NOT be advertised outside a BGP\r\n         confederation boundary (a stand-alone autonomous system that\r\n         is not part of a confederation should be considered a\r\n         confederation itself).",
+    "notes": "Definitions of NO_EXPORT and NO_EXPORT_SUBCONFED are interchanged in the original text.\r\n\r\n=== (Alvaro Retana) ===\r\n\r\nAfter some research and discussion with the WG [1], I'm rejecting this report.\r\n\r\n[1] https://www.ietf.org/mail-archive/web/idr/current/msg15364.html\n --VERIFIER NOTES-- \n   After some research and discussion with the WG [1], I'm rejecting this report.\r\n\r\n[1] https://www.ietf.org/mail-archive/web/idr/current/msg15364.html\r\n",
+    "submit_date": "2016-01-02",
+    "submitter_name": "Gjoko Stamenkov",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
