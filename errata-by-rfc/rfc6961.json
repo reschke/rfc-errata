@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4882,
+    "doc-id": "RFC6961",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "opaque OCSPResponse<0..2^24-1>;",
+    "correct_text": "opaque OCSPResponse<1..2^24-1>;",
+    "notes": "- The text below the definition states: \r\n    Only one OCSP response, with a length of at least one byte, may be sent for status_type \"ocsp\".\r\n\r\n- `OCSPResponse` was originally (correctly) defined in RFC6066 (https://tools.ietf.org/html/rfc6066#section-8) with a lower bound of 1 byte.",
+    "submit_date": "2016-12-10",
+    "submitter_name": "Ashwini Oruganti",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
