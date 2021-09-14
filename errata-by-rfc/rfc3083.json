@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 334,
+    "doc-id": "RFC3083",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "   docsBpiCmAuthState      OBJECT-TYPE\r\n   SYNTAX                  INTEGER {\r\n    \r\n                                   authWait(2),\r\n                                   authorized(3),\r\n                                   reauthWait(4),\r\n                                   authRejectWait(5)",
+    "correct_text": "   docsBpiCmAuthState      OBJECT-TYPE\r\n   SYNTAX                  INTEGER {\r\n\r\n                                   start(1),\r\n                                   authWait(2),\r\n                                   authorized(3),\r\n                                   reauthWait(4),\r\n                                   authRejectWait(5)\r\n",
+    "notes": "2014-07-14: comma added. Thanks to Mark Ellison for the correction.",
+    "submit_date": "2001-04-10",
+    "submitter_name": "Rich Woundy",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
