@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1749,
+    "doc-id": "RFC5491",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.2.5,pg.20",
+    "orig_text": "     <presence xmlns=\"urn:ietf:params:xml:ns:pidf\"\r\n               xmlns:gp=\"urn:ietf:params:xml:ns:pidf:geopriv10\"\r\n               xmlns:gml=\"http://www.opengis.net/gml\"\r\n               xmlns:gs=\"http://www.opengis.net/pidflo/1.0\"\r\n               entity=\"pres:paul@somecell.example.com\">\r\n       <tuple id=\"arcband\">\r\n         <status>\r\n           <gp:geopriv>\r\n             <gp:location-info>\r\n               <gs:ArcBand srsName=\"urn:ogc:def:crs:EPSG::4326\">\r\n                 <gml:pos>-43.5723 153.21760</gml:pos>\r\n                 <gs:innerRadius uom=\"urn:ogc:def:uom:EPSG::9001\">\r\n                   3594\r\n                 </gs:innerRadius>\r\n                 <gs:outerRadius uom=\"urn:ogc:def:uom:EPSG::9001\">\r\n                   4148\r\n                 </gs:outerRadius>\r\n                 <gs:startAngle uom=\"urn:ogc:def:uom:EPSG::9102\">\r\n                   20\r\n                 </gs:startAngle>\r\n                 <gs:openingAngle uom=\"urn:ogc:def:uom:EPSG::9102\">\r\n|                  20\r\n                 </gs:openingAngle>\r\n               </gs:ArcBand>\r\n             </gp:location-info>\r\n             <gp:usage-rules/>\r\n             <gp:method>TA-NMR</gp:method>\r\n           </gp:geopriv>\r\n         </status>\r\n         <timestamp>2007-06-22T20:57:29Z</timestamp>\r\n       </tuple>\r\n     </presence>\r\n\r\n                 Figure 12: PIDF-LO Containing an Arc Band\r\n\r\n   An important note to make on the arc band is that the center point\r\n|  used in the definition of the shape is not included in resulting\r\n   enclosed area, and that Target may be anywhere in the defined area of\r\n   the arc band.",
+    "correct_text": "     <presence xmlns=\"urn:ietf:params:xml:ns:pidf\"\r\n               xmlns:gp=\"urn:ietf:params:xml:ns:pidf:geopriv10\"\r\n               xmlns:gml=\"http://www.opengis.net/gml\"\r\n               xmlns:gs=\"http://www.opengis.net/pidflo/1.0\"\r\n               entity=\"pres:paul@somecell.example.com\">\r\n       <tuple id=\"arcband\">\r\n         <status>\r\n           <gp:geopriv>\r\n             <gp:location-info>\r\n               <gs:ArcBand srsName=\"urn:ogc:def:crs:EPSG::4326\">\r\n                 <gml:pos>-43.5723 153.21760</gml:pos>\r\n                 <gs:innerRadius uom=\"urn:ogc:def:uom:EPSG::9001\">\r\n                   3594\r\n                 </gs:innerRadius>\r\n                 <gs:outerRadius uom=\"urn:ogc:def:uom:EPSG::9001\">\r\n                   4148\r\n                 </gs:outerRadius>\r\n                 <gs:startAngle uom=\"urn:ogc:def:uom:EPSG::9102\">\r\n                   20\r\n                 </gs:startAngle>\r\n                 <gs:openingAngle uom=\"urn:ogc:def:uom:EPSG::9102\">\r\n|                  120\r\n                 </gs:openingAngle>\r\n               </gs:ArcBand>\r\n             </gp:location-info>\r\n             <gp:usage-rules/>\r\n             <gp:method>TA-NMR</gp:method>\r\n           </gp:geopriv>\r\n         </status>\r\n         <timestamp>2007-06-22T20:57:29Z</timestamp>\r\n       </tuple>\r\n     </presence>\r\n\r\n                 Figure 12: PIDF-LO Containing an Arc Band\r\n\r\n   An important note to make on the arc band is that the center point\r\n|  used in the definition of the shape is not included in the resulting\r\n   enclosed area, and that Target may be anywhere in the defined area of\r\n   the arc band.",
+    "notes": "a)  The openingAngle in Figure 12 does not match the scenario\r\n    depicted in Figure 11 and described in the text on page 19.\r\n    ==>  s/20/120/\r\n\r\nb)  Missing article.\r\n\r\nHint (saving an additional Errata Note):\r\n  In Section 5.2.8 (2nd line on pg.24), another article is missing:\r\n  s/floors of building/floors of a building/",
+    "submit_date": "2009-03-30",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 107,
+    "verifier_name": "Cullen Jennings",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1888,
+    "doc-id": "RFC5491",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "The PIDF format provides for an unbounded number of <tuple>,\r\n<device>, and <person> elements.  Each of these elements contains a\r\nsingle <status> element that may contain more than one <geopriv>\r\nelement as a child.  ",
+    "correct_text": "The PIDF format provides for an unbounded number of <tuple>,\r\n<device>, and <person> elements.  Each of these elements may\r\ncontain more than one <geopriv> element.  ",
+    "notes": "<status> only exists in <tuple> [RFC3863], not <device> or <person> [RFC4479].  The proposed text removes the problem.\r\n\r\nI believe that it was only late that someone pointed out that <status> only applied to <tuple>; this sentence obviously got missed in the edit.",
+    "submit_date": "2009-09-21",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 107,
+    "verifier_name": "Cullen Jennings",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1951,
+    "doc-id": "RFC5491",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.2.2",
+    "orig_text": "                     <gml:pos>43.311 -73.422</gml:pos> <!--A-->\r\n                     <gml:pos>43.111 -73.322</gml:pos> <!--F-->\r\n                     <gml:pos>43.111 -73.222</gml:pos> <!--E-->\r\n                     <gml:pos>43.311 -73.122</gml:pos> <!--D-->\r\n                     <gml:pos>43.411 -73.222</gml:pos> <!--C-->\r\n                     <gml:pos>43.411 -73.322</gml:pos> <!--B-->\r\n                     <gml:pos>43.311 -73.422</gml:pos> <!--A-->",
+    "correct_text": "                     <gml:pos>43.311 -73.422</gml:pos> <!--A-->\r\n                     <gml:pos>43.111 -73.322</gml:pos> <!--B-->\r\n                     <gml:pos>43.111 -73.222</gml:pos> <!--C-->\r\n                     <gml:pos>43.311 -73.122</gml:pos> <!--D-->\r\n                     <gml:pos>43.411 -73.222</gml:pos> <!--E-->\r\n                     <gml:pos>43.411 -73.322</gml:pos> <!--F-->\r\n                     <gml:pos>43.311 -73.422</gml:pos> <!--A-->",
+    "notes": "The points in Figure 7 are correct (i.e., they are in a counter-clockwise direction) but the comment labels are in the wrong order.",
+    "submit_date": "2009-11-30",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 107,
+    "verifier_name": "Cullen Jennings",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
