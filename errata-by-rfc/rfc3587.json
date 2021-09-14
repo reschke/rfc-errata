@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5153,
+    "doc-id": "RFC3587",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "    | 3 |     45 bits         |  16 bits  |       64 bits              |\r\n    +---+---------------------+-----------+----------------------------+\r\n    |001|global routing prefix| subnet ID |       interface ID         |\r\n    +---+---------------------+-----------+----------------------------+",
+    "correct_text": "    | 3 |     45 bits         |  16 bits  |       64 bits              |\r\n    +---+---------------------+-----------+----------------------------+\r\n    |001|                     | subnet ID |       interface ID         |\r\n    +---+---------------------+-----------+----------------------------+\r\n    |<-global routing prefix->|",
+    "notes": "In the last figure of Section 3. Address Format, the global routing prefix should inlcude the prefix 001 in order to be consistent with the first two figures in the same section.",
+    "submit_date": "2017-10-12",
+    "submitter_name": "ZHANG Hongyuan",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
