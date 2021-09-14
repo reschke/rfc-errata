@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 31,
+    "doc-id": "RFC4661",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 11.2,
+    "orig_text": "   [17]  Roach, A. B., Campbell, B., and J. Rosenberg, \"A Session\r\n         Initiation Protocol (SIP) Event Notification Extension for\r\n         Resource Lists\", RFC 4663, September 2006.",
+    "correct_text": "   [17]  Roach, A. B., Campbell, B., and J. Rosenberg, \"A Session\r\n         Initiation Protocol (SIP) Event Notification Extension for\r\n         Resource Lists\", RFC 4662, August 2006.\r\n",
+    "notes": "",
+    "submit_date": "2006-11-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 918,
+    "doc-id": "RFC4661",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.6.1",
+    "orig_text": "   Previous XML\r\n   document\" in this context refers to the raw version of the most\r\n   recent XML document that was sent to the subscriber, before the\r\n   filters were applied to it.",
+    "correct_text": "   \"Previous XML\r\n   document\" in this context refers to the raw version of the most\r\n   recent XML document that was sent to the subscriber, before the\r\n   filters were applied to it.",
+    "notes": "missing quotation marks\r\n\r\nfrom pending",
+    "submit_date": "2006-11-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 923,
+    "doc-id": "RFC4661",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 6.5,
+    "orig_text": "   A user wants to know if a group of his friends is available for\r\n   gaming.  He orders notifications about the current status and future\r\n   changes of the game-specific presence information.",
+    "correct_text": "   A user wants to know if a group of his friends is available for\r\n   gaming.  He orders notifications about the current status and future\r\n|  changes of the (hypothetical) game-specific presence information.\r\n",
+    "notes": "The example in Section 6.5 of RFC 4661 makes us of an XML namespace\r\n\"game-ext\".\r\nI strongly suspect that this is a hypothetical namespace; at least,\r\nit currently does not appear in the IANA XML namespace sub-registry.\r\nIf this is the case, this fact should have been communicated to the\r\nRFC reader, e.g. by changing the text above.\r\n\r\nfrom pending",
+    "submit_date": "2006-11-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 925,
+    "doc-id": "RFC4661",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "significant issues with filter syntax  ( ABNF in RFC 4661 )\r\n\r\nMany of the filter examples in RFC 4661 and RFC 4660 do not conform\r\nwith the ABNF presented in Section 5, on page 11, of RFC 4661.\r\nFurther, that ABNF allows unexpected, strange instantiations of\r\n'elem-path', and there's at least one significant semantical\r\nambiguity in the syntax described.\r\n\r\nBecause I am a bloody XML and XML XPATH layman, I am not in a\r\nposition to exactly diagnose what is wrong, and to quickly propose\r\nsuitable corrections, in a way that keeps the specification as\r\nclose to XPATH as possible.\r\n\r\nI just present some of the strange outcomes of strict application\r\nof the RFC 4661 ABNF and a few pointers to examples in the RFC\r\ntext that do not conform with that syntax.\r\n\r\na) ambiguous semantics / insufficient syntax\r\n\r\nThe ABNF production,\r\n\r\n   expression = \"[\" (elem-expr / attr-expr)\r\n                         1*[oper (elem-expr / attr-expr)] \"]\"\r\nentails\r\n\r\n   oper = \"and\" / \"or\"\r\n\r\nAccordingly, these rules allow to build up expressions containing\r\nmultiple terms of the form  '(elem-expr / attr-expr)'  separated\r\nby \"and\" and/or \"or\" operators.\r\nThere are no operator precedence rules specified, and there's no\r\npossibility to insert parentheses to build sub-expressions / groups\r\nto enforce the desired operator precedence.\r\nThus, it remains unclear whether, e.g., an expression of the form,\r\n     [ <expr1> or <expr2> and <expr3> ]\r\nmeans:\r\n     [ <expr1> or ( <expr2> and <expr3> ) ]\r\n(corresponding to commonly used precedence rules),\r\nor:\r\n     [ ( <expr1> or <expr2> ) and <expr3> ]\r\n(corresponding to simple left-to-right operator evaluation).\r\n\r\nb)  strange productions (#1)\r\n\r\nThe ABNF production,\r\n\r\n   elem-path = (element / \"*\") 1*[\"/\" / \"*\" / element] [\"*\" / element]\r\n\r\ntogether with:\r\n\r\n   element = [ns] string\r\n   ns = string \":\"\r\n\r\nadmits 'elem-path' values of strange and unexpected forms, e.g.,\r\n\r\n   ****\r\n   *<ns_string1>:<elem_string1><elem_string2><ns_strind3>:<elem_string3>\r\n\r\nwithout any intervening separator characters.\r\n\r\nI am quite sure that this was not intended.\r\n\r\nLooking at the 'elem-path' production, it can be observed:\r\nThe construction '1*[ ... ]' apparently does not make much\r\nsense; since a group in brackets, '[ ... ]', means \"optional\",\r\nthis construction would be equivalent to the simpler '*( ...)'.\r\nPerhaps, the  '1*[ ... ]' group should look similar to the\r\n'1*( ... )'  group in\r\n   elem-reference =  \"/\" 1*(\"/\" / \"/*\" / (\"/\" element))\r\nincluding the required \"/\" in all alternatives.\r\nThis also make the final, optional group questionable.\r\n\r\nc)  strange productions (#2)\r\n\r\nThe ABNF productions,\r\n   reference = elem-reference / attr-reference\r\n   attr-reference = reference attribute\r\ntogether with:\r\n   attribute = \"@\" [ns] string\r\n   ns = string \":\"\r\nadmits 'reference' values with multiple attribute references like\r\n   <elem-reference>@<ns1>:<attr1>@<attr2>@<attr3>@<ns4>:<attr4>\r\n\r\nI am quite sure that this was not intended.\r\n\r\nc)  front end of examples not matching the syntax\r\n\r\nSuccessive substitution of the ABNF productions of RFC 4661 leads\r\nto the following observations:\r\n\r\n  *  each 'elem-reference' must start with a double-slash, \"//\" ;\r\n  *  each 'reference' starts with an 'elem-reference',\r\n     and hence it must start with a double-slash;\r\n  *  each 'selection' starts with a 'reference,\r\n     and hence it must start with a double-slash.\r\n\r\nMany examples do not conform to this restriction, starting from\r\nthe short examples at the bottom of page 11 up to many of the\r\ndetailed XML examples in both RFCs.\r\n\r\nd)  back end of examples not matching the syntax\r\n\r\nFurther observations from the ABNF:\r\n  *  (un-escaped) square brackets, \"[\" and \"]\" only appear\r\n     in the 'expression' production, forming the leading and\r\n     the trailing character of it, respectively;\r\n  *  each 'selection' contains at most one 'expression', and\r\n     this 'expression' is the trailing part of the 'selection;\r\n  *  hence, each 'selection' contains at most one matching pair\r\n     of square brackets, and if it does, the \"]\" must be the\r\n     last character of it.\r\n\r\nThere are examples given, e.g. in Section 6.1 of RFC 4661,\r\non top of page 13, and in Section 6.6 of RFC 4661, on page 15,\r\nwhere this restriction is not adhered to!\r\n\r\n\r\nFinal conclusion:  Apparently, all (or most) examples presented\r\nare expected to be crafted as intended, i.e. with valid syntax.\r\nHence, the ABNF needs to be substantially reworked to allow\r\nproduction of these examples, and to really produce exactly what\r\nit should.  Otherwise, implementations based on the ABNF will\r\ndrastically fail, will not conform to the intended behaviour,\r\nand will not be interoperable with implementations not based\r\non the ABNF of RFC 4661.",
+    "correct_text": "",
+    "notes": "from pending",
+    "submit_date": "2006-11-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
