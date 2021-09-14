@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2869,
+    "doc-id": "RFC6326",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "      Registry Name: IS-IS Group Address Type Codes for TLV 10\r\n",
+    "correct_text": "      Registry Name: IS-IS Group Address Type Codes for TLV 142\r\n",
+    "notes": "Other numeric references for the Group Address TLV are 142, the correct value, but in this one instance, it is show as 10, which is actually the Authentication TLV type number.",
+    "submit_date": "2011-07-26",
+    "submitter_name": "Donald E. Eastlake, 3rd",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
