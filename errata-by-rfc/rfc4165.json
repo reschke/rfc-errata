@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1629,
+    "doc-id": "RFC4165",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1.2, pg.4",
+    "orig_text": "                         vvvvv\r\n|  Signal Transfer Point (STP) - A Signal Transfer Point as defined by\r\n   MTP standards, e.g., [Q.700].\r\n\r\n                   vvvvv\r\n|  Signaling Point (STP) - A Signaling Point as defined by MTP\r\n   standards, e.g., [Q.700].\r\n",
+    "correct_text": "   Signal Transfer Point (STP) - A Signal Transfer Point as defined by\r\n   MTP standards, e.g., [Q.700].\r\n\r\n|  Signaling Point - A Signaling Point as defined by MTP standards,\r\n   e.g., [Q.700].\r\n",
+    "notes": "Overloading the same abbreviation in a single document does not\r\nmake sense.  \r\nThe list of Abbreviations (Section 1.3) is in favor of the first\r\ninterpretation of \"STP\", and the second use would be surprising.\r\nFurther, the only other use of \"STP\" in the whole RFC --\r\nin Section 1.5, at the bottom of page 6 -- also expands the\r\nabbreviation according to the first explanation quoted above.\r\nThe whole document (besides the quotation above) does not use\r\nan abbreviation for \"Signaling Point\"; therefore, the proper\r\nresolution seems to be dropping the second instance of \"(STP)\".",
+    "submit_date": "2008-12-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
