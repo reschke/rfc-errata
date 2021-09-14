@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1427,
+    "doc-id": "RFC5044",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": "FPDUPTR: The FPDU Pointer is a relative pointer, 16 bits long,\r\n   interpreted as an unsigned integer that indicates the number of\r\n   octets in the TCP stream from the beginning of the ULPDU Length field\r\n   to the first octet of the entire Marker.  The least significant two\r\n   bits MUST always be set to zero at the transmitter, and the receivers\r\n   MUST always treat these as zero for calculations.",
+    "correct_text": "FPDUPTR: The FPDU Pointer is a relative pointer, 16 bits long,\r\n   interpreted as an unsigned integer that indicates the number of\r\n   octets in the TCP stream from the beginning of the ULPDU Length field\r\n   to the first octet of the entire Marker.  The least significant two\r\n   bits MUST always be set to zero at the transmitter, and the receivers\r\n   MUST always treat these as zero for calculations (except for CRC calculation).",
+    "notes": "Evaluated by Pat Thaler and David Black.\r\nType changed from Editorial to Technical by Lars Eggert.",
+    "submit_date": "2008-05-21",
+    "submitter_name": "Zem Green",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
