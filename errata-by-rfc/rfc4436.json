@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 91,
+    "doc-id": "RFC4436",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.1.1",
+    "orig_text": "   If a valid ARP Reply is received, the MAC address in the sender\n   hardware address field (ar$sha) in the ARP Reply is matched against\n   the target hardware address field (ar$tpa) in the ARP Request, and\n   the IPv4 address in the sender protocol address field (ar$spa) of the\n   ARP Reply is matched against the target protocol address field\n   (ar$tpa) in the ARP Request.  If a match is found, then the host\n   continues to use that IPv4 address, subject to the lease re-\n   acquisition and expiration behavior described in Section 4.4.5 of the\n   DHCP specification [RFC2131].",
+    "correct_text": "   If a valid ARP Reply is received, where:\n   \n   (a) the address in the sender hardware address field (ar$sha) is\n       the MAC address of the node being tested for, and\n   (b) the address in the sender protocol address field (ar$spa) is\n       the IPv4 address of the node being tested for,\n   \n   then the host concludes that its candidate IPv4 address is valid\n   for this network and may continue to be used, subject to the lease\n   re-acquisition and expiration behavior described in Section 4.4.5\n   of the DHCP specification [RFC2131].\n",
+    "notes": "",
+    "submit_date": "2007-01-01",
+    "submitter_name": "Bernard Aboba",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
