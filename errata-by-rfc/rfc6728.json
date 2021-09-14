@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4370,
+    "doc-id": "RFC6728",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.8,
+    "orig_text": "   isFlowKey:  If this state parameter is present, this is a Flow Key\r\n      field.\r\n      This parameter is only available for non-Options Templates (i.e.,\r\n      if setId is 2).\r\n\r\n   isFlowKey:  If this state parameter is present, this is a scope\r\n      field.\r\n      This parameter is only available for Options Templates (i.e., if\r\n      setId is 3).",
+    "correct_text": "   isFlowKey:  If this state parameter is present, this is a Flow Key\r\n      field.\r\n      This parameter is only available for non-Options Templates (i.e.,\r\n      if setId is 2).\r\n\r\n   isScope:    If this state parameter is present, this is a scope\r\n      field.\r\n      This parameter is only available for Options Templates (i.e., if\r\n      setId is 3).",
+    "notes": null,
+    "submit_date": "2015-05-21",
+    "submitter_name": "Michael Duggan",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4843,
+    "doc-id": "RFC6728",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "          leaf isFlowKey {\r\n            when \"(name(../../..) != 'immediateCache')\r\n...\r\n      leaf activeTimeout {\r\n        when \"(name(..) = 'timeoutCache') or\r\n          (name(..) = 'naturalCache')\" {\r\n...\r\n      leaf idleTimeout {\r\n        when \"(name(..) = 'timeoutCache') or\r\n          (name(..) = 'naturalCache')\" {\r\n...\r\n      leaf exportInterval {\r\n        when \"name(..) = 'permanentCache'\" {\r\n\r\n",
+    "correct_text": "          leaf isFlowKey {\r\n            when \"(local-name(../../..) != 'immediateCache')\r\n...\r\n      leaf activeTimeout {\r\n        when \"(local-name(..) = 'timeoutCache') or\r\n          (local-name(..) = 'naturalCache')\" {\r\n...\r\n      leaf idleTimeout {\r\n        when \"(local-name(..) = 'timeoutCache') or\r\n          (local-name(..) = 'naturalCache')\" {\r\n...\r\n      leaf exportInterval {\r\n        when \"local-name(..) = 'permanentCache'\" {\r\n\r\n",
+    "notes": "The XPath function name() returns fully-qualified name (with namespace), but the comparisons are done on simple node names, which are returned by the local-name() XPath function.",
+    "submit_date": "2016-10-26",
+    "submitter_name": "Michal Vasko",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4909,
+    "doc-id": "RFC6728",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "  pattern \"\\S+\";\r\n\r\n...\r\n\r\n  pattern \"\\S(.*\\S)?\";",
+    "correct_text": "  pattern '\\S+';\r\n\r\n...\r\n\r\n  pattern '\\S(.*\\S)?';\r\n\r\n",
+    "notes": "RFC 7950 in section 6.1.3 says that backslash has special meaning if it is in the double-quoted string. The only characters immediately following the backslash are n, t, \\, \". Other characters are forbidden. This can be solved using single-quoted string or double backslash.",
+    "submit_date": "2017-01-16",
+    "submitter_name": "Pavol Vican",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
