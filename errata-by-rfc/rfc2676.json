@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 399,
+    "doc-id": "RFC2676",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.2.1",
+    "orig_text": "    0       8       16\n    |       |       |\n    -----------------\n   |EXP| MANT        |\n    -----------------",
+    "correct_text": "    0       8       15\n    |       |       |\n    -----------------\n   |EXP| MANT        |\n    -----------------\n",
+    "notes": "",
+    "submit_date": "2002-07-09",
+    "submitter_name": "Jussi Savolainen",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
