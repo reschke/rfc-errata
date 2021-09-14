@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6251,
+    "doc-id": "RFC8349",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 7,
+    "orig_text": "The RPC \"active-route\" is used to retrieve the active route in a RIB.\r\nRFC8349 defined two AFIs (v4/v6).\r\n\r\ndraft-ietf-mpls-base-yang is defining a new RIB AFI for MPLS as per section 3 in RFC8349.\r\n\r\nThe RPC has a \"MUST\" statement that all RIBs must augment input\r\nparameters with a leaf named 'destination-address'.\r\n\r\nFor MPLS RIB, it makes sense to augment with leaf named 'local-label' since MPLS routes are identified by MPLS label.\r\n\r\nWe ask to make the following change:\r\n\r\nOLD:\r\n           action active-route {\r\n             description\r\n               \"Return the active RIB route that is used for the\r\n                destination address.\r\n\r\n                Address-family-specific modules MUST augment input\r\n                parameters with a leaf named 'destination-address'.\";\r\n",
+    "correct_text": "NEW:\r\n           action active-route {\r\n             description\r\n               \"Return the active RIB route that is used for the\r\n                destination address.\r\n\r\n                Address-family-specific modules MUST augment input\r\n                parameters with a suitable leaf that identifies the route.\";\r\n",
+    "notes": "\n --VERIFIER NOTES-- \nAfter discussion between the submitter and authors of the RFC it was agreed that the errata should be rejected.",
+    "submit_date": "2020-08-07",
+    "submitter_name": "Tarek Saad",
+    "verifier_id": 166,
+    "verifier_name": "Rob Wilton",
+    "update_date": "2020-08-14 10:41:56"
+  }
+]
