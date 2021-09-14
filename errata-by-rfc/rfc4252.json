@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3268,
+    "doc-id": "RFC4252",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.1,
+    "orig_text": "   A request that requires further messages to be exchanged will be\r\n   aborted by a subsequent request.  A client MUST NOT send a subsequent\r\n   request if it has not received a response from the server for a\r\n   previous request.  A SSH_MSG_USERAUTH_FAILURE message MUST NOT be\r\n   sent for an aborted method.\r\n",
+    "correct_text": "   A request that requires further messages to be exchanged will be\r\n   aborted by a subsequent request.  In this case a client MUST NOT \r\n   send a subsequent request if it has not received a response from \r\n   the server for a previous request.  A SSH_MSG_USERAUTH_FAILURE \r\n   message MUST NOT be sent for an aborted method.\r\n",
+    "notes": "The ambiguous wording, which can be confusing. See previous paragraph",
+    "submit_date": "2012-06-28",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5563,
+    "doc-id": "RFC4252",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "      SSH_MSG_USERAUTH_FAILURE without partial success - The password\r\n      has not been changed.  Either password changing was not supported,\r\n      or the old password was bad.  Note that if the server has already\r\n      sent SSH_MSG_USERAUTH_PASSWD_CHANGEREQ, we know that it supports\r\n      changing the password.\r\n\r\n      SSH_MSG_USERAUTH_CHANGEREQ - The password was not changed because\r\n      the new password was not acceptable (e.g., too easy to guess).",
+    "correct_text": "      SSH_MSG_USERAUTH_FAILURE without partial success - The password\r\n      has not been changed.  Either password changing was not supported,\r\n      or the old password was bad.  Note that if the server has already\r\n      sent SSH_MSG_USERAUTH_PASSWD_CHANGEREQ, we know that it supports\r\n      changing the password.\r\n\r\n      SSH_MSG_USERAUTH_PASSWD_CHANGEREQ - The password was not changed \r\n      because the new password was not acceptable (e.g., too easy to \r\n      guess).",
+    "notes": "SSH_MSG_USERAUTH_PASSWD_CHANGEREQ seems to have been truncated to SSH_MSG_USERAUTH_CHANGEREQ for no apparent reason.",
+    "submit_date": "2018-11-27",
+    "submitter_name": "Benoît Morgan",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
