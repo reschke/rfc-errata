@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6417,
+    "doc-id": "RFC5942",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "In bullet item 4, the behavior for hosts when the default router list is empty is specified in a way that means that no prefix can ever be considered on-link.  4.b says that address resolution (which I take to mean neighbor discovery) should not be performed for any non-link-local address.\r\n\r\nIt is entirely possible for an on-link, non-default router to advertise an on-link prefix. In this case, the prefix should be considered on-link, and address resolution should be permitted. I don't see a way to read the text to allow this.",
+    "correct_text": "I think the confusion is in 4.b, which should read:\r\n\r\nThe host MUST NOT perform address resolution for non-link-local addresses that are not known to be on-link as described in section 3, part 1.",
+    "notes": "I don't know if the problem is that \"non-link-local\" should have been \"non-on-link\" or if the authors just weren't taking RFC4191 into consideration, but in the presence of RFC4191, requiring a default router before a prefix can be considered on-link renders perfectly valid configurations non-functional.",
+    "submit_date": "2021-01-29",
+    "submitter_name": "Ted Lemon",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
