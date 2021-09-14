@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1970,
+    "doc-id": "RFC5695",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.1.2",
+    "orig_text": "                                                              vv\r\n|  It is RECOMMENDED that all of the ports (A1, DA1, DB1, and A2) on the\r\n   DUT and test tool support a dynamic Interior Gateway Protocol (IGP)\r\n   for routing such as IS-IS, OSPF, RIP, etc.  [...]",
+    "correct_text": "                                                              vvvvvvvv\r\n|  It is RECOMMENDED that all of the ports (A1, DA1, DB1, and B1, etc.)\r\n   on the DUT and test tool support a dynamic Interior Gateway Protocol\r\n   (IGP) for routing such as IS-IS, OSPF, RIP, etc.  [...]",
+    "notes": "Rationale:\r\n  The text (on top of page 6 of the RFC) should refer to all four\r\n  columns in Figure 1 (on page 4); \"A2\" as the name of a second entity\r\n  in the first coulumn seems to be redundant; therefore,  s/A2/B1/ ;\r\n  additionally, \", etc.\" suggested as an indication of the other rows.",
+    "submit_date": "2009-12-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1971,
+    "doc-id": "RFC5695",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.1.4.1",
+    "orig_text": "(last paragraph:)\r\n\r\n   MPLS label values used in any test case MUST be outside the reserved\r\n|  label value (0-15) unless stated otherwise.\r\n",
+    "correct_text": "   MPLS label values used in any test case MUST be outside the reserved\r\n|  label value range (0-15) unless stated otherwise.\r\n              ^^^^^^^",
+    "notes": "Rationale:\r\n  \"(0-15)\" is not \"the reserved label value\".\r\n  To avoid confusion, more precise language should be used.\r\n  Inserting \"range\" seems to be the smallest sensical change.",
+    "submit_date": "2009-12-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1972,
+    "doc-id": "RFC5695",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5 (Table)",
+    "orig_text": "      [...]\r\n\r\n      Port Media                       GigE (Gigabit Ethernet),\r\n                                       POS, ATM, etc.\r\n\r\n|     Port Speed                       1 gbps, 100 Mbps, etc.\r\n                                         ^\r\n      Interface Encapsulation          Ethernet, Ethernet\r\n                                       VLAN, PPP, HDLC, etc.\r\n\r\n      [...]",
+    "correct_text": "      [...]\r\n\r\n      Port Media                       GigE (Gigabit Ethernet),\r\n                                       POS, ATM, etc.\r\n\r\n|     Port Speed                       1 Gbps, 100 Mbps, etc.\r\n                                         ^\r\n      Interface Encapsulation          Ethernet, Ethernet\r\n                                       VLAN, PPP, HDLC, etc.\r\n\r\n      [...]",
+    "notes": "Rationale:\r\n  Case matters for powers-of-ten indicating prefix characters in\r\n  SI unit designators; \"G\" = Giga (= 10^9); \"g\" is still undefined.",
+    "submit_date": "2009-12-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
