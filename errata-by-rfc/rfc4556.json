@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3157,
+    "doc-id": "RFC4556",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.2.1",
+    "orig_text": "   8.  The client's Diffie-Hellman public value (clientPublicValue) is\r\n       included if and only if the client wishes to use the Diffie-\r\n       Hellman key agreement method.  The Diffie-Hellman domain\r\n       parameters [IEEE1363] for the client's public key are specified\r\n       in the algorithm field of the type SubjectPublicKeyInfo\r\n       [RFC3279], and the client's Diffie-Hellman public key value is\r\n       mapped to a subjectPublicKey (a BIT STRING) according to\r\n       [RFC3279].  When using the Diffie-Hellman key agreement method,\r\n       implementations MUST support Oakley 1024-bit Modular Exponential\r\n       (MODP) well-known group 2 [RFC2412] and Oakley 2048-bit MODP\r\n       well-known group 14 [RFC3526] and SHOULD support Oakley 4096-bit\r\n       MODP well-known group 16 [RFC3526].\r\n\r\n       The Diffie-Hellman field size should be chosen so as to provide\r\n       sufficient cryptographic security [RFC3766].\r\n\r\n       When MODP Diffie-Hellman is used, the exponents should have at\r\n       least twice as many bits as the symmetric keys that will be\r\n       derived from them [ODL99].\r\n",
+    "correct_text": "   8.  The client's Diffie-Hellman public value (clientPublicValue) is\r\n       included if and only if the client wishes to use the Diffie-\r\n       Hellman key agreement method.  The Diffie-Hellman domain\r\n       parameters [IEEE1363] for the client's public key are specified\r\n       in the algorithm field of the type SubjectPublicKeyInfo\r\n       [RFC3279], and the client's Diffie-Hellman public key value is\r\n       mapped to a subjectPublicKey (a BIT STRING) according to\r\n       [RFC3279].  When using the Diffie-Hellman key agreement method,\r\n       implementations MUST support Oakley 1024-bit Modular Exponential\r\n       (MODP) well-known group 2 [RFC2412] and Oakley 2048-bit MODP\r\n       well-known group 14 [RFC3526] and SHOULD support Oakley 4096-bit\r\n       MODP well-known group 16 [RFC3526].\r\n\r\n       Some implementations are known to omit the mandatory Q value\r\n       from the DomainParameters (in the algorithm value of the\r\n       clientPublicValue) when using the well-known MODP groups 14 and\r\n       16, which can cause an ASN.1 decoding error for the\r\n       DomainParamters value.  While [RFC3526] does not explicitly\r\n       specify the Q value for the well-known MODP groups 14 and 16,\r\n       the prime modulus of each of these groups is a safe prime --\r\n       having the form P = 2Q + 1, where P and Q are prime.\r\n       Therefore, the Q value for each of these moduli is the\r\n       corresponding Sophie Germain prime, and it is equal to (P-1)/2.\r\n\r\n       The Diffie-Hellman field size should be chosen so as to provide\r\n       sufficient cryptographic security [RFC3766].\r\n\r\n       When MODP Diffie-Hellman is used, the exponents should have at\r\n       least twice as many bits as the symmetric keys that will be\r\n       derived from them [ODL99].\r\n",
+    "notes": "The new paragraph identifies an interoperability problem where an\r\nimplementation omits the Q value (required in the DomainParameters\r\ntype defined in RFC3370) of a Diffie-Hellman group when participating\r\nin PKINIT. This happens for two well-known IKEv2 MODP groups that are\r\ndefined in RFC3526, probably because RFC3526 does not explicitly state\r\nthe Q values for the moduli. The moduli are safe primes, so the new\r\ntext specifies how to compute their Q values (which are the\r\ncorresponding Sophie Germain primes).",
+    "submit_date": "2012-03-15",
+    "submitter_name": "Tom Yu",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3820,
+    "doc-id": "RFC4556",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.2.2",
+    "orig_text": "      The type of the otherName field is AnotherName.  The type-id field\r\n      of the type AnotherName is id-pkinit-san:\r\n\r\n       id-pkinit-san OBJECT IDENTIFIER ::=\r\n         { iso(1) org(3) dod(6) internet(1) security(5) kerberosv5(2)\r\n           x509SanAN (2) }\r\n",
+    "correct_text": "      The type of the otherName field is AnotherName.  The type-id field\r\n      of the type AnotherName is id-kerberos-san:\r\n\r\n       id-kerberos-san OBJECT IDENTIFIER ::=\r\n         { iso(1) org(3) dod(6) internet(1) security(5) kerberosv5(2)\r\n           x509SanAN (2) }\r\n",
+    "notes": "The certificate subject alternative name (SAN) type added by RFC4556 is and has been used more generically than its symbolic name denotes.\r\n\r\nNote that there is no risk in using id-pkinit-san for non-PKINIT purposes as presence of that SAN is -naturally- insufficient by itself to cause an AS to issue a ticket to the client for the named principal.  RFC4556 is quite clear on this point.\r\n\r\nTherefore id-pkinit-san should have been named id-kerberos-san, and should be referred to as id-kerberos-san going forward.  (If there was a registry of PKIX certificate extensions we would additionally ask IANA to updte it.)\r\n\r\nThere are a few other mentions of id-pkinit-san in RFC4556, all of which should read id-kerberos-san instead.",
+    "submit_date": "2013-12-05",
+    "submitter_name": "Nicolas Williams",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
