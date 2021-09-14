@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4450,
+    "doc-id": "RFC7273",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.8,
+    "orig_text": "  ; PTP domain allowed characters: 0x21-0x7E (IEEE 1588-2002)\r\n   ptp-domain-name = \"domain-name=\" 1*16ptp-domain-char\r\n   ptp-domain-char = %x21-7E\r\n\r\n   ; PTP domain allowed number range: 0-127 (IEEE 1588-2008)\r\n   ptp-domain-nmbr = \"domain-nmbr=\" ptp-domain-dgts\r\n   ptp-domain-dgts = ptp-domain-n1 / ptp-domain-n2 / ptp-domain-n3\r\n   ptp-domain-n1   = DIGIT             ; 0-9\r\n   ptp-domain-n2   = POS-DIGIT DIGIT   ; 10-99\r\n   ptp-domain-n3   = (\"10\"/\"11\") DIGIT ; 100-119\r\n                   / \"12\" %x30-37      ; 120-127\r\n",
+    "correct_text": "   ; PTP domain allowed characters: 0x21-0x7E (IEEE 1588-2002)\r\n   ptp-domain-name = 1*16ptp-domain-char\r\n   ptp-domain-char = %x21-7E\r\n\r\n   ; PTP domain allowed number range: 0-127 (IEEE 1588-2008)\r\n   ptp-domain-nmbr = ptp-domain-dgts\r\n   ptp-domain-dgts = ptp-domain-n1 / ptp-domain-n2 / ptp-domain-n3\r\n   ptp-domain-n1   = DIGIT             ; 0-9\r\n   ptp-domain-n2   = POS-DIGIT DIGIT   ; 10-99\r\n   ptp-domain-n3   = (\"10\"/\"11\") DIGIT ; 100-119\r\n                   / \"12\" %x30-37      ; 120-127\r\n",
+    "notes": "There is an inconsistency between ABNF in section 4.8 and examples in section 5.5. Due to evidence that current implementations are working to what is shown in the examples, this is resolved by updating the ABNF specification.\r\n",
+    "submit_date": "2015-08-18",
+    "submitter_name": "Kevin Gross",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4548,
+    "doc-id": "RFC7273",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 5.2,
+    "orig_text": "A rate modifier may be specified.  The modifier is expressed as the\r\nratio of two integers and modifies the rate specified or implied by\r\nthe media description by this ratio.",
+    "correct_text": "A rate modifier may be specified.  The modifier is expressed as the\r\nratio of two integers and multiplies the rate specified or implied by\r\nthe media description by this ratio.",
+    "notes": "Original text says that the rate modifier \\\\\\\"modifies the rate\\\\\\\" but does not say how.\r\n\r\nVerifier note: I think \"Modified by a ratio\" will be generally interpreted as \"multiply...\". This seems editorial.",
+    "submit_date": "2015-12-01",
+    "submitter_name": "John Fletcher",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
