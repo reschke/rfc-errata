@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 4139,
+    "doc-id": "RFC5663",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.7,
+    "orig_text": "<section doesn't exist yet>",
+    "correct_text": "2.7.  Volatile write caches\r\n\r\n   Many storage devices implement volatile write caches that require an\r\n   explicit flush to persist the data from write write operations to\r\n   stable storage.  When a volatile write cache is used the pNFS server\r\n   must ensure the volatile write cache has been committed to stable\r\n   storage before the LAYOUTCOMMIT operation returns.  An example for\r\n   this behavior are SCSI devices with the WCE (Writeback Cache Enable)\r\n   bit set to 1 in the caching mode page (mode page 0x8),\r\n   which require a \"SYNCRONIZE CACHE (10)\" or \"SYNCRONIZE CACHE (16)\"\r\n   operation to write back the storage device cache.",
+    "notes": "RFC5663 currently doesn't acknowledge the existence of volatile write caches, but they are common in consumer or SMB storage systems.  Add a section that requires the server to take care of them.",
+    "submit_date": "2014-10-23",
+    "submitter_name": "Christoph Hellwig",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4140,
+    "doc-id": "RFC5663",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "2.3.5",
+    "orig_text": "   Block/volume class storage devices are not required to perform read\r\n   and write operations atomically.  Overlapping concurrent read and\r\n   write operations to the same data may cause the read to return a\r\n   mixture of before-write and after-write data.  Overlapping write\r\n   operations can be worse, as the result could be a mixture of data\r\n   from the two write operations; data corruption can occur if the\r\n   underlying storage is striped and the operations complete in\r\n   different orders on different stripes.  When there are multiple\r\n   clients who wish to access the same data, a pNFS server can avoid\r\n   these conflicts by implementing a concurrency control policy of\r\n   single writer XOR multiple readers.  This policy MUST be implemented\r\n   when storage devices do not provide atomicity for concurrent\r\n   read/write and write/write operations to the same data.",
+    "correct_text": "   Block/volume class storage devices do not provide byte granularity\r\n   access and can only perform read and write operations atomically at\r\n   block granularity, and thus require read-modify-write cycles to write\r\n   data smaller than the block size.  Overlapping concurrent read and\r\n   write operations to the same data thus may cause the read to return\r\n   a mixture of before-write and after-write data.  Additionally, data\r\n   corruption can occur if the underlying storage is striped and the\r\n   operations complete in different orders on different stripes.  When\r\n   there are multiple clients who wish to access the same data, a pNFS\r\n   server MUST avoid these conflicts by implementing a concurrency\r\n   control policy of single writer XOR multiple readers for a given data\r\n   region.",
+    "notes": "No device classified as block device can support concurrent writes at arbitrary byte granularity, so reword the section to not confuse the reader.  Also make it explicit that the reader XOR writer policy only applies to different clients, as existing client implementation require layouts not to be recalled due to their own LAYOUTGET operations.  Note that fixing this on the client also isn't feasible as the block layout unfortunately decided to introduce it's own extent concept instead of using layouts to describe individual I/O mappings.\n --VERIFIER NOTES-- \nDavid Black:   \" The new text effectively states that block I/O operations are always atomic at block granularity.  That is not correct for all SCSI devices. The existing text suffices to warn implementers about what can go wrong here.\"",
+    "submit_date": "2014-10-23",
+    "submitter_name": "Christoph Hellwig",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4141,
+    "doc-id": "RFC5663",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "2.2.2",
+    "orig_text": null,
+    "correct_text": "   The volume size of a PNFS_BLOCK_VOLUME_SIMPLE volume must be obtained\r\n   by the client from the storage subsystem as no size is provided in\r\n   the XDR. All volumes listed in bsv_volumes of a\r\n   struct pnfs_block_stripe_volume_info4 must be the same size.  If\r\n   the size of the volumes listed in a stripe set does not align\r\n   to the bsv_stripe_unit, the last stripe should be treated as\r\n   having a size of volume size modulo the stripe size.\r\n   The volume size of a PNFS_BLOCK_VOLUME_SLICE volume is the sum\r\n   of the volume sizes of each component listed in bsv_volumes.\r\n   The volume size of a PNFS_BLOCK_VOLUME_CONCAT volume is the sum\r\n   of the volume sizes of each component listed in bcv_volumes.",
+    "notes": "RFC5663 provides no explanation of the volume types except for a few sparse comments in the XDR.  Explain at least basic size related rules.",
+    "submit_date": "2014-10-23",
+    "submitter_name": "Christoph Hellwig",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4142,
+    "doc-id": "RFC5663",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 2.8,
+    "orig_text": "<section does not exist yet>",
+    "correct_text": "2.8.  Device-ID-to-device-address\r\n\r\n   A pNFS block volume layout server MAY signal\r\n   device-ID-to-device-address changes to the client using the\r\n   CB_NOTIFY_DEVICEID callback operation.\r\n\r\n   If the change is compatible and does not require outstanding layouts\r\n   to be recalled the server can issue a notification of type\r\n   NOTIFY_DEVICEID4_CHANGE.\r\n\r\n   A device-ID-to-device-address mapping change signaled by\r\n   NOTIFY_DEVICEID4_CHANGE must not change the storage system specific\r\n   addressing of the volume, and can only add new storage to the\r\n   existing device.  In particular the following changes are allowed:\r\n\r\n     o increasing the size of the underlying block device of a\r\n       PNFS_BLOCK_VOLUME_SIMPLE volume.\r\n     o increasing the size of a PNFS_BLOCK_VOLUME_SLICE volume if the\r\n       underlying block device of the PNFS_BLOCK_VOLUME_SIMPLE volume\r\n       it refers to is big enough to fit the new size.\r\n     o increasing the size of each volume in a bsv_volumes of a\r\n       PNFS_BLOCK_VOLUME_SLICE volume by the same amount.\r\n     o increasing the size of the last volume in bcv_volumes of a\r\n       PNFS_BLOCK_VOLUME_CONCAT volume.\r\n     o adding new members to the end of bcv_volumes of a\r\n       PNFS_BLOCK_VOLUME_CONCAT volume.",
+    "notes": "Specify what device configuration changes can be supported without recalling layouts.",
+    "submit_date": "2014-10-23",
+    "submitter_name": "Christoph Hellwig",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
