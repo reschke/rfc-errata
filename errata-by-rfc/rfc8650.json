@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 6367,
+    "doc-id": "RFC8650",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "A.1.3",
+    "orig_text": "A.1.3.  Deleting Dynamic Subscriptions\r\n\r\n   The following demonstrates deleting a subscription.  This\r\n   subscription may have been to either a stream or a datastore.\r\n\r\n   POST /restconf/operations\r\n        /ietf-subscribed-notifications:delete-subscription\r\n\r\n   {\r\n    \"delete-subscription\": {\r\n       \"id\": \"22\"\r\n    }\r\n   }\r\n",
+    "correct_text": "A.1.3.  Deleting Dynamic Subscriptions\r\n\r\n   The following demonstrates deleting a subscription.  This\r\n   subscription may have been to either a stream or a datastore.\r\n\r\n   POST /restconf/operations\r\n        /ietf-subscribed-notifications:delete-subscription\r\n\r\n   {\r\n    \"ietf-subscribed-notifications:input\": {\r\n       \"id\": \"22\"\r\n    }\r\n   }\r\n",
+    "notes": "Encoding of RPC input parameters should follow RFC 8040 section 3.6.1",
+    "submit_date": "2020-12-24",
+    "submitter_name": "Muly Ilan",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6369,
+    "doc-id": "RFC8650",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "A.2.1",
+    "orig_text": "A.2.1.  \"subscription-modified\"\r\n\r\n   A \"subscription-modified\" encoded in JSON would look like:\r\n\r\n   {\r\n     \"ietf-restconf:notification\" : {\r\n       \"eventTime\": \"2007-09-01T10:00:00Z\",\r\n       \"ietf-subscribed-notifications:subscription-modified\": {\r\n         \"id\": 39,\r\n         \"uri\": \"https://example.com/restconf/subscriptions/22\"\r\n         \"stream-xpath-filter\": \"/example-module:foo\",\r\n         \"stream\": {\r\n            \"ietf-netconf-subscribed-notifications\" : \"NETCONF\"\r\n         }\r\n       }\r\n     }\r\n   }",
+    "correct_text": "A.2.1.  \"subscription-modified\"\r\n\r\n   A \"subscription-modified\" encoded in JSON would look like:\r\n\r\n   {\r\n     \"ietf-restconf:notification\" : {\r\n       \"eventTime\": \"2007-09-01T10:00:00Z\",\r\n       \"ietf-subscribed-notifications:subscription-modified\": {\r\n         \"id\": 39,\r\n         \"uri\": \"https://example.com/restconf/subscriptions/39\"\r\n         \"stream-xpath-filter\": \"/example-module:foo\",\r\n         \"stream\": {\r\n            \"ietf-netconf-subscribed-notifications\" : \"NETCONF\"\r\n         }\r\n       }\r\n     }\r\n   }",
+    "notes": "Change the URI to match the ID.",
+    "submit_date": "2020-12-24",
+    "submitter_name": "Muly Ilan",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6379,
+    "doc-id": "RFC8650",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "A.1.1",
+    "orig_text": "   Upon receipt of the successful response, the subscriber does a GET to\r\n   the provided URI to start the flow of notification messages.  When\r\n   the publisher receives this, the subscription is moved to the active\r\n   state (c).\r\n\r\n   GET /restconf/subscriptions/22\r\n\r\n             Figure 5: \"establish-subscription\" Subsequent POST",
+    "correct_text": "   Upon receipt of the successful response, the subscriber does a GET to\r\n   the provided URI to start the flow of notification messages.  When\r\n   the publisher receives this, the subscription is moved to the active\r\n   state (c).\r\n\r\n   GET /restconf/subscriptions/22\r\n\r\n             Figure 5: \"establish-subscription\" Subsequent GET",
+    "notes": "Substitute POST by GET in the figure caption",
+    "submit_date": "2021-01-03",
+    "submitter_name": "Muly Ilan",
+    "verifier_id": 166,
+    "verifier_name": "Rob Wilton",
+    "update_date": "2021-01-05 02:06:05"
+  }
+]
