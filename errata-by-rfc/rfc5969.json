@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3049,
+    "doc-id": "RFC5969",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 12,
+    "orig_text": "By restricting the 6rd domain to within a provider\r\nnetwork, a CE only needs to accept packets from a single or small set\r\nof known 6rd BR IPv4 addresses.",
+    "correct_text": "By restricting the 6rd domain to within a provider\r\nnetwork, a CE only needs to accept packets from a single or small set\r\nof known 6rd BR IPv4 addresses and from other CEs within the 6rd domain.",
+    "notes": "A CE also needs to accept packets from other CEs within the 6rd domain.\r\nThis happens when, within a 6rd domain, two customer sites want to communicate.\r\nReference: RFC5569 section 3",
+    "submit_date": "2011-12-11",
+    "submitter_name": "Alessandro Cortiana",
+    "verifier_id": 117,
+    "verifier_name": "Ralph Droms",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3869,
+    "doc-id": "RFC5969",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 9.2,
+    "orig_text": "In order to prevent spoofing of IPv6 addresses, the 6rd BR and CE\r\nMUST validate the embedded IPv4 source address of the encapsulated\r\nIPv6 packet with the IPv4 source address it is encapsulated by\r\naccording to the configured parameters of the 6rd domain.",
+    "correct_text": "In order to prevent spoofing of IPv6 addresses, the 6rd BR and CE\r\nMUST validate the embedded IPv6 source address of the encapsulated\r\nIPv6 packet with the IPv4 source address it is encapsulated by\r\naccording to the configured parameters of the 6rd domain.",
+    "notes": "Authors have verified that the text as written in the RFC is correct, and the proposed change is incorrect.\n --VERIFIER NOTES-- \nAuthors have verified that the text as written in the RFC is correct, and the proposed change is incorrect.",
+    "submit_date": "2014-01-20",
+    "submitter_name": "Fernando Gont",
+    "verifier_id": 134,
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
