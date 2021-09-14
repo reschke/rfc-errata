@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2812,
+    "doc-id": "RFC2319",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "Abstract\r\n\r\n   This document provides information about character encoding KOI8-U\r\n   (KOI8 Ukrainian) wich is a de-facto standard in Ukrainian Internet\r\n   community.  KOI8-U is compatible with KOI8-R (RFC 1489) in all\r\n   Russian letters and extends it with four Ukrainian letters which\r\n   locations are compliant with ISO-IR-111.  The official site of KOI8-U\r\n   Working Group is http://www.net.ua.\r\n",
+    "correct_text": "Abstract\r\n\r\n   This document provides information about character encoding KOI8-U\r\n   (KOI8 Ukrainian) which is a de-facto standard in Ukrainian Internet\r\n   community.  KOI8-U is compatible with KOI8-R (RFC 1489) in all\r\n   Russian letters and extends it with four Ukrainian letters which\r\n   locations are compliant with ISO-IR-111.  The official site of KOI8-U\r\n   Working Group is http://www.net.ua.\r\n",
+    "notes": "A typo in \"which\": s/wich/which",
+    "submit_date": "2011-05-22",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4641,
+    "doc-id": "RFC2319",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "    180       B4      U0403      CYRILLIC CAPITAL LETTER UKRAINIAN IE",
+    "correct_text": "    180       B4      U0404      CYRILLIC CAPITAL LETTER UKRAINIAN IE",
+    "notes": "Typo in Unicode code point number (main text of RFC has proper number 0404, but Appendix A has a typo: 0403).",
+    "submit_date": "2016-03-18",
+    "submitter_name": "Dmitry Kohmanyuk",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
