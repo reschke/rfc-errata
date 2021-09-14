@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4432,
+    "doc-id": "RFC2385",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.3,
+    "orig_text": "   The total header size is also an issue.  The TCP header specifies\r\n   where segment data starts with a 4-bit field which gives the total\r\n   size of the header (including options) in 32-byte words.  This means\r\n   that the total size of the header plus option must be less than or\r\n   equal to 60 bytes -- this leaves 40 bytes for options.\r\n",
+    "correct_text": "   The total header size is also an issue.  The TCP header specifies\r\n   where segment data starts with a 4-bit field which gives the total\r\n   size of the header (including options) in 32-bit words.  This means\r\n   that the total size of the header plus option must be less than or\r\n   equal to 60 bytes -- this leaves 40 bytes for options.\r\n",
+    "notes": "Correction for '32-byte words' to '32-bit words'.",
+    "submit_date": "2015-08-04",
+    "submitter_name": "Florin Frigioiu",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
