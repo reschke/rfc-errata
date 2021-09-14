@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5935,
+    "doc-id": "RFC5636",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "   -- Imports from RFC 3280 [PROFILE], Appendix A.1\r\n              AlgorithmIdentifier, Certificate, CertificateList,\r\n              CertificateSerialNumber, Name FROM PKIX1Explicit88\r\n                   { iso(1) identified-organization(3) dod(6)\r\n                     internet(1) security(5) mechanisms(5) pkix(7)\r\n                      mod(0) pkix1-explicit(18) }\r\n\r\n   -- Imports from CMS\r\n            ContentInfo, SignedData FROM\r\n            CryptographicMessageSyntax2004{ iso(1)\r\n            member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)\r\n            smime(16) modules(0) cms-2004(24)}",
+    "correct_text": "   -- Imports from CMS\r\n            ContentInfo, ContentType FROM\r\n            CryptographicMessageSyntax2004{ iso(1)\r\n            member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)\r\n            smime(16) modules(0) cms-2004(24)} ;",
+    "notes": "None of the imports from RFC 3280 are used.  The import list from RFC 3852 should not include SignedData, and it should include ContentType.  A semi-colon is needed at the end of the IMPORTS statement.",
+    "submit_date": "2019-12-12",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 5936,
+    "doc-id": "RFC5636",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "DEFINITIONS IMPLICIT TAGS ::=\r\n",
+    "correct_text": "RFC5636Module\r\nDEFINITIONS IMPLICIT TAGS ::=\r\n",
+    "notes": "A module name is needed for the module to properly compile.",
+    "submit_date": "2019-12-12",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
