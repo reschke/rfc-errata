@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1788,
+    "doc-id": "RFC3728",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "Global",
+    "orig_text": "Example:\r\n   vdslPhysCurrSnrMgn OBJECT-TYPE\r\n       SYNTAX       Integer32 (-127..127)\r\n       UNITS        \"0.25dBm\"\r\n       MAX-ACCESS   read-only\r\n       STATUS       current\r\n       DESCRIPTION\r\n           \"Noise Margin as seen by this Vtu with respect to its\r\n           received signal in 0.25dB.  The effective range is\r\n           -31.75 to +31.75 dB.\"\r\n       REFERENCE    \"T1E1.4/2000-009R3, Part 1, common spec\"\r\n        ::= { vdslPhysEntry 5 }\r\n\r\n   vdslPhysCurrAtn OBJECT-TYPE\r\n       SYNTAX       Gauge32 (0..255)\r\n       UNITS        \"0.25dBm\"\r\n       MAX-ACCESS   read-only\r\n       STATUS       current\r\n       DESCRIPTION\r\n           \"Measured difference in the total power transmitted by\r\n           the peer Vtu and the total power received by this Vtu.\r\n           The effective range is 0 to +63.75 dB.\"\r\n\r\n",
+    "correct_text": "UNITS statement (dBm) does not match units appearing in DESCRIPTION text (dB).\r\n\r\nI think 'dB' are the right units for the objects above, but one can check that. Anyway, it is clear that there should not be the existing mismatch.\r\n\r\nSame problem for more MIB objects in the RFC.\r\n\r\n\r\n  \r\n\r\n",
+    "notes": "\n --VERIFIER NOTES-- \nAccording to the discussions on the WG list, a new Errata report will be submitted including the complete list of objects affected by this change request.    ",
+    "submit_date": "2009-05-24",
+    "submitter_name": "Smadar Tauber",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1791,
+    "doc-id": "RFC3728",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "UNITS definition of the following MIB objects, should change from dBm to dB.\r\nThat will also fix the conflict with the units appearing in the Description of these MIB objects (dB).\r\n\r\nvdslPhysCurrSnrMgn\r\nvdslPhysCurrAtn\r\nvdslLineConfDownMaxSnrMgn\r\nvdslLineConfDownMinSnrMgn\r\nvdslLineConfDownTargetSnrMgn\r\nvdslLineConfUpMaxSnrMgn\r\nvdslLineConfUpMinSnrMgn\r\nvdslLineConfUpTargetSnrMgn\r\n\r\nExample of original text:\r\n   vdslPhysCurrSnrMgn OBJECT-TYPE\r\n       SYNTAX       Integer32 (-127..127)\r\n       UNITS        \"0.25dBm\"\r\n       MAX-ACCESS   read-only\r\n       STATUS       current\r\n       DESCRIPTION\r\n           \"Noise Margin as seen by this Vtu with respect to its\r\n           received signal in 0.25dB.  The effective range is\r\n           -31.75 to +31.75 dB.\"\r\n       REFERENCE    \"T1E1.4/2000-009R3, Part 1, common spec\"\r\n        ::= { vdslPhysEntry 5 }",
+    "correct_text": "Example of corrected text:\r\n   vdslPhysCurrSnrMgn OBJECT-TYPE\r\n       SYNTAX       Integer32 (-127..127)\r\n       UNITS        \"0.25dB\"\r\n       MAX-ACCESS   read-only\r\n       STATUS       current\r\n       DESCRIPTION\r\n           \"Noise Margin as seen by this Vtu with respect to its\r\n           received signal in 0.25dB.  The effective range is\r\n           -31.75 to +31.75 dB.\"\r\n       REFERENCE    \"T1E1.4/2000-009R3, Part 1, common spec\"\r\n        ::= { vdslPhysEntry 5 }\r\n",
+    "notes": "This Errata replaces errata 1788 (rejected because it did not include list of all MIB objects having this problem and could not be edited). \r\nIt was decided by the adslmib Forum, that the solution should be as described by this Errata.",
+    "submit_date": "2009-06-03",
+    "submitter_name": "Smadar Tauber",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
