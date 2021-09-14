@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1733,
+    "doc-id": "RFC5425",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.2.1, pg.6",
+    "orig_text": "   o  End-entity certificate matching: The transport sender or receiver\r\n      is configured with information necessary to identify the valid\r\n      end-entity certificates of its authorized peers.  The end-entity\r\n      certificates can be self-signed, and no certification path\r\n      validation is needed.  Implementations MUST support certificate\r\n|     fingerprints in Section 4.2.2 and MAY allow other formats for\r\n      end-entity certificates such as a DER-encoded certificate.  This\r\n      method provides an alternative to a PKI that is simple to deploy\r\n      and still maintains a reasonable level of security.\r\n",
+    "correct_text": "   o  End-entity certificate matching: The transport sender or receiver\r\n      is configured with information necessary to identify the valid\r\n      end-entity certificates of its authorized peers.  The end-entity\r\n      certificates can be self-signed, and no certification path\r\n      validation is needed.  Implementations MUST support certificate\r\n|     fingerprints as specified in Section 4.2.2 and MAY allow other\r\n                   ^^^^^^^^^^^^^ \r\n      formats for end-entity certificates such as a DER-encoded\r\n      certificate.  This method provides an alternative to a PKI that is\r\n      simple to deploy and still maintains a reasonable level of\r\n      security.\r\n",
+    "notes": "Clarification; keep for update!",
+    "submit_date": "2009-03-19",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 111,
+    "verifier_name": "Pasi Eronen",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1734,
+    "doc-id": "RFC5425",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.1, pg.8",
+    "orig_text": "   In the simplest case, the transport sender and receiver are\r\n|  configured with information necessary to identity the valid\r\n   end-entity certificates of its authorized peers.\r\n",
+    "correct_text": "   In the simplest case, the transport sender and receiver are\r\n|  configured with information necessary to identify the valid\r\n   end-entity certificates of its authorized peers.\r\n",
+    "notes": "Typo:   s/identity/identify/ \r\n                ^        ^\r\n(keep for update!)",
+    "submit_date": "2009-03-19",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 111,
+    "verifier_name": "Pasi Eronen",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
