@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5477,
+    "doc-id": "RFC7938",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.2.3",
+    "orig_text": "   The small example of topology in Figure 3 is built from devices with\r\n   a port count of 4.  In this document, one set of directly connected\r\n   Tier 2 and Tier 3 devices along with their attached servers will be\r\n   referred to as a \"cluster\".  For example, DEV A, B, C, D, and the\r\n   servers that connect to DEV A and B, on Figure 3 form a cluster.  The\r\n   concept of a cluster may also be a useful concept as a single\r\n   deployment or maintenance unit that can be operated on at a different\r\n   frequency than the entire topology.",
+    "correct_text": "   The small example of topology in Figure 3 is built from devices with\r\n   a port count of 4. By introducing an additional Tier the 4-port\r\n   Tier 1 device has still two unused ports to connect further devices,\r\n   therefore scaling from a maximum of 8 servers in a 3-stage Clos to a\r\n   maximum of 16 servers in this 5-stage Clos.\r\n   In this document, one set of directly connected Tier 2 and Tier 3\r\n   devices along with their attached servers will be referred to as a\r\n   \"cluster\".  For example, DEV A, B, C, D, and the servers that\r\n   connect to DEV A and B, on Figure 3 form a cluster.  The concept of\r\n   a cluster may also be a useful concept as a single deployment or\r\n   maintenance unit that can be operated on at a different frequency\r\n   than the entire topology.",
+    "notes": "Section does not properly describe where the scaling happens, also the depicted topology still connects only 8 servers (the same amount as with a 3-stage Clos). The reader can grasp the scaling only when looking very carefully at the figure.",
+    "submit_date": "2018-08-24",
+    "submitter_name": "Klemens Schragel",
+    "verifier_id": 160,
+    "verifier_name": "Martin Vigoureux",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
