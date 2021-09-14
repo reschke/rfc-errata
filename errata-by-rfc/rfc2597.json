@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 413,
+    "doc-id": "RFC2597",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "For example, if traffic conditioning actions at the ingress of the\r\nprovider DS domain make sure that an AF class in the DS nodes is only\r\nmoderately loaded by packets with the lowest drop precedence value\r\nand is not overloaded by packets with the two lowest drop precedence\r\nvalues, then the AF class can offer a high level of forwarding\r\nassurance for packets that are within the subscribed profile (i.e.,\r\nmarked with the lowest drop precedence value) and offer up to two\r\nlower levels of forwarding assurance for the excess traffic.",
+    "correct_text": "For example, if traffic conditioning actions at the ingress of the\r\nprovider DS domain make sure that an AF class in the DS nodes is only\r\nmoderately loaded by packets with the lowest drop precedence value\r\nand is not overloaded by packets with the two higher drop precedence\r\nvalues, then the AF class can offer a high level of forwarding\r\nassurance for packets that are within the subscribed profile (i.e.,\r\nmarked with the lowest drop precedence value) and offer up to two\r\nlower levels of forwarding assurance for the excess traffic.\r\n",
+    "notes": "",
+    "submit_date": "2005-05-24",
+    "submitter_name": "Bud",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
