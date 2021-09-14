@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2966,
+    "doc-id": "RFC6365",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "Malay is primarily written in\r\n      Latin script today, but the earlier, Arabic-script-based, Jawa\r\n      form is still in use",
+    "correct_text": "Malay is primarily written in\r\n      Latin script today, but the earlier, Arabic-script-based, Jawi\r\n      form is still in use",
+    "notes": "I don't know this script myself but it seems that, in english, it is always called Jawi (Jawa is the old name for the island it came from, so Jawi = script from Jawa).\r\n\r\nThis script (actually a variant of the arabic one) does not seem to be in ISO 15924 so I cannot offer an authoritative reference.",
+    "submit_date": "2011-09-10",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4005,
+    "doc-id": "RFC6365",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "US-ASCII",
+    "correct_text": "ASCII",
+    "notes": "The term \"US-ASCII\" is an IETF artifact, left over from some misunderstandings about what \"ASCII\" referred to (and the complete absence of CSCII or CASCII, MSCII or MXSCII, BRSCII, ARSCII, and other \"American\" coded character sets).  It is a source of confusion for people who come to IETF specifications with a background in coded character sets and terminology from other areas or standards bodies and has been warned against multiple times.  It should not have appeared in this document except possibly with a warning against its use (and the use of other bogus terms like \"ASCII7\").  The second author, who is normally sensitive to the issue, has no idea how this got past him, even in text picked up from other documents, but supposes this is what errata are for.\r\n\r\nIn any event, there is no such thing as \"US-ASCII\": the term is an erroneous and misleading synonym/ substitute for \"ASCII\".  The reference for the latter is correct, but the citation anchor should probably be corrected as well.\n --VERIFIER NOTES-- \n(1) It's clear that this is NOT errata: the use of \"US-ASCII\" in the document was quite intentional at the time.\r\n\r\n(2) If (and it's not clear that there's consensus on this) we think that \"US-ASCII\" is not the right term, the right answer is to revise the document.  Should that be done, we'd open up quite a debate about what terminology is right, and why.  Simply replacing all occurrences of \"US-ASCII\" with \"ASCII\" is unlikely to be the answer.  Whatever should happen would be more complicated than that.",
+    "submit_date": "2014-06-04",
+    "submitter_name": "John Klensin",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
