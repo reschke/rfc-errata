@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5946,
+    "doc-id": "RFC8700",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "   +--------------------+----------+-----------------------------------+\r\n   | [RFC0748]          | April    | First April 1st RFC               |\r\n   |                    | 1977     | published                         |\r\n   +--------------------+----------+-----------------------------------+",
+    "correct_text": "   +--------------------+----------+-----------------------------------+\r\n   | [RFC0748]          | April    | First April 1st RFC               |\r\n   |                    | 1978     | published                         |\r\n   +--------------------+----------+-----------------------------------+",
+    "notes": "RFC 748 carries the date \"1 April 1978\".",
+    "submit_date": "2019-12-26",
+    "submitter_name": "Matthäus Wander",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 5992,
+    "doc-id": "RFC8700",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.1.",
+    "orig_text": "would be several years before\r\n   ideas like mobile code, remote procedure calls, ActiveX, JAVA, and\r\n   Representational State Transfer (RESTful) interfaces appeared.\r\n",
+    "correct_text": "would be several years before\r\n   ideas like mobile code, remote procedure calls, ActiveX, Java, and\r\n   Representational State Transfer (RESTful) interfaces appeared.\r\n",
+    "notes": "Java doesn't stand for anything else...",
+    "submit_date": "2020-02-26",
+    "submitter_name": "Nicole Ortizo",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
