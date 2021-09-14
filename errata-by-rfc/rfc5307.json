@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 1552,
+    "doc-id": "RFC5307",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1.1, pg.2",
+    "orig_text": "1.1.  Link Local/Remote Identifiers\r\n\r\n|  A Link Local Interface Identifier is a sub-TLV of the extended IS\r\n   reachability TLV.  [...]\r\n",
+    "correct_text": "1.1.  Link Local/Remote Identifiers\r\n\r\n|  The Link Local/Remote Identifiers TLV is a sub-TLV of the extended IS\r\n   reachability TLV.  [...]\r\n\r\n",
+    "notes": "Rationale: Confusion in Terminology:\r\n  The term \"Link Local Interface Identifier\" does not\r\n  appear anywhere else in the document; the shorter form,\r\n  \"Link Local Identifier\" is used to denote a specific\r\n  component of the sub-TLV under consideration.  \r\n  Hence, the precise name of the sub-TLV should be used.",
+    "submit_date": "2008-10-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1553,
+    "doc-id": "RFC5307",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1.3, pg.5",
+    "orig_text": "   The Minimum LSP Bandwidth is encoded in a 4-octet field in the IEEE\r\n   floating point format.  The units are bytes (not bits!) per second.\r\n   The Interface MTU is encoded as a 2-octet integer, and carries the\r\n|  MTU value in the units of bytes.\r\n",
+    "correct_text": "   The Minimum LSP Bandwidth is encoded in a 4-octet field in the IEEE\r\n   floating point format.  The units are bytes (not bits!) per second.\r\n   The Interface MTU is encoded as a 2-octet integer, and carries the\r\n|  MTU value in units of bytes.\r\n",
+    "notes": "Location is first paragraph below the diagram on page 5.\r\n\r\nRationale: Surprising use of article.\r\n\r\nOn the other hand, there are other places in the document\r\nwhere an expected article is missing, for instance, the\r\nsame clause recurring four times in Sections 1.1 - 1.4,\r\n\r\n      The following illustrates encoding of ...\r\n\r\nshould better say:\r\n\r\n      The following illustrates the encoding of ...",
+    "submit_date": "2008-10-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1554,
+    "doc-id": "RFC5307",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "1.3, pg.6",
+    "orig_text": "|  When the Switching Capability field is LSC, there is no Switching\r\n   Capability specific information field present.\r\n",
+    "correct_text": "|  When the Switching Capability field is LSC or FSC, there is no\r\n   Switching Capability specific information field present.\r\n",
+    "notes": "Location is the penultimate paragraph in Section 1.3, on mid-page 6.\r\n\r\nRationale:\r\n In the same section, the list on top of page 5 shows the possible\r\n Switching Capability values, their meaning and short name.\r\n Later on, the RFC says:\r\n\r\n   The content of the Switching Capability specific information field\r\n   depends on the value of the Switching Capability field.\r\n\r\n ... and then starts to discuss the various cases.\r\n\r\n The quoted paragraph is the last one in this discussion, and\r\n it addresses the penultimate case in the list; the last case,\r\n FSC, is not dealt with in any way.\r\n\r\n Hence, the 'Switching Capability-specific information' in the\r\n Interface Switching Capability Descriptor is underspecified.\r\n\r\n The above correction tries to fix this deficiency to the best\r\n knowledge of the submitter of what has been intended.",
+    "submit_date": "2008-10-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4223,
+    "doc-id": "RFC5307",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 1.3,
+    "orig_text": "Maximum Link State Protocol Data Unit (LSP) Bandwidth is encoded as a\r\nlist of eight 4-octet fields in the IEEE floating point format\r\n[IEEE], with priority 0 first and priority 7 last.",
+    "correct_text": "Maximum Label Switched Path (LSP) Bandwidth is encoded as a\r\nlist of eight 4-octet fields in the IEEE floating point format\r\n[IEEE], with priority 0 first and priority 7 last.",
+    "notes": "Mixed up LSP abbreviation expansion.",
+    "submit_date": "2015-01-07",
+    "submitter_name": "Alexander Okonnikov",
+    "verifier_id": 140,
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
