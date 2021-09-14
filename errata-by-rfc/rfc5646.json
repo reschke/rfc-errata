@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5457,
+    "doc-id": "RFC5646",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2.9",
+    "orig_text": "   A tag is considered \"valid\" if it satisfies these conditions:\r\n\r\n   o  The tag is well-formed.\r\n\r\n   o  Either the tag is in the list of grandfathered tags or all of its\r\n      primary language, extended language, script, region, and variant\r\n      subtags appear in the IANA Language Subtag Registry as of the\r\n      particular registry date.\r\n\r\n   o  There are no duplicate variant subtags.\r\n\r\n   o  There are no duplicate singleton (extension) subtags.\r\n",
+    "correct_text": "   A tag is considered \"valid\" if it satisfies these conditions:\r\n\r\n   o  The tag is well-formed.\r\n\r\n   o  Either the tag is in the list of grandfathered tags or all of its\r\n      primary language, extended language, script, region, and variant\r\n      subtags appear in the IANA Language Subtag Registry as of the\r\n      particular registry date.\r\n\r\n   o  There are no duplicate variant subtags.\r\n\r\n   o  There are no duplicate singleton (extension) subtags.\r\n\r\n   o  There is no more than one extended language subtag.",
+    "notes": "Sec. 2.2.2 contains an additional validity requirement (point 4): the existence of no more than one extended language subtag.  This is not reflected in the definition of validity given in sec. 2.2.9 of the RFC.",
+    "submit_date": "2018-08-12",
+    "submitter_name": "Peter Occil",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
