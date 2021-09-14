@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1947,
+    "doc-id": "RFC5694",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.1, pg.12",
+    "orig_text": "   An example of a sensor network based on P2P content distribution and\r\n|  Delay-tolerant Networking (DTL) is ZebraNet [Juang2002].  [...]\r\n                                ^",
+    "correct_text": "   An example of a sensor network based on P2P content distribution and\r\n|  Delay-tolerant Networking (DTN) is ZebraNet [Juang2002].  [...]\r\n                                ^",
+    "notes": "Rationale:\r\nThe (common) acronym \"DTN\" is used subsequently in the RFC,\r\nbut \"DTL\" isn't used anywhere else in the text.",
+    "submit_date": "2009-11-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 4,
+    "verifier_name": "Danny McPherson",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
