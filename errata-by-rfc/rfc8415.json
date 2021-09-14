@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 6159,
+    "doc-id": "RFC8415",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 6.5,
+    "orig_text": "   Temporary addresses were originally introduced to avoid privacy\r\n   concerns with stateless address autoconfiguration, which based\r\n   64 bits of the address on the EUI-64 (see [RFC4941].",
+    "correct_text": "   Temporary addresses were originally introduced to avoid privacy\r\n   concerns with stateless address autoconfiguration, which based\r\n   64 bits of the address on the EUI-64 (see [RFC4941]).",
+    "notes": "Missing close parenthesis\r\n\r\nAD note: good catch but as it is a typo, it is for \"Held for Document Update\". Thank you.",
+    "submit_date": "2020-05-07",
+    "submitter_name": "Fernando Gont",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2020-05-07 01:29:35"
+  },
+  {
+    "errata_id": 6183,
+    "doc-id": "RFC8415",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "18.3.8",
+    "orig_text": "   After all the addresses have been processed, the server generates a\r\n   Reply message by setting the \"msg-type\" field to REPLY and copying\r\n   the transaction ID from the Decline message into the \"transaction-id\"\r\n   field.  The client includes a Status Code option (see Section 21.13)\r\n   with the value Success, a Server Identifier option (see Section 21.3)\r\n   with the server's DUID, and a Client Identifier option (see\r\n   Section 21.2) with the client's DUID",
+    "correct_text": "   After all the addresses have been processed, the server generates a\r\n   Reply message by setting the \"msg-type\" field to REPLY and copying\r\n   the transaction ID from the Decline message into the \"transaction-id\"\r\n   field.  The server includes a Status Code option (see Section 21.13)\r\n   with the value Success, a Server Identifier option (see Section 21.3)\r\n   with the server's DUID, and a Client Identifier option (see\r\n   Section 21.2) with the client's DUID",
+    "notes": "The corrected text replaces \"client\" with \"server\".\r\n\r\nI would like to thank Timothy Winters <tim@qacafe.com> for confirming that this is a bug in the specification.",
+    "submit_date": "2020-05-19",
+    "submitter_name": "Fernando Gont",
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2020-05-21 07:23:29"
+  },
+  {
+    "errata_id": 6269,
+    "doc-id": "RFC8415",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "section 16:\r\n\"A server MUST discard any Solicit, Confirm, Rebind, or Information-request messages it receives with a Layer 3 unicast destination address.\"\r\n\r\nsection 18.2:\r\n\"If the client has a source address of sufficient scope that can be used by the server as a return address and the client has received a Server Unicast option (see Section 21.12) from the server, the client SHOULD unicast any Request, Renew, Release, and Decline messages to the server.\"\r\n\r\n\r\nAppendix B does not permit a Server Unicast option in a Reconfigure message.",
+    "correct_text": "section 16:\r\n\"A server MUST discard any Solicit, Confirm, or Rebind messages it receives with a Layer 3 unicast destination address.\"\r\n\r\nsection 18.2:\r\n\"If the client has a source address of sufficient scope that can be used by the server as a return address and the client has received a Server Unicast option (see Section 21.12) from the server, the client SHOULD unicast any Request, Renew, Release, Decline, and Information-request messages to the server.\"\r\n\r\nAppendix B permits a Server Unicast option in a Reconfigure message.",
+    "notes": "Section 18.4 allows transmission of Information-request messages with a unicast destination address, if the client received a message with Server Unicast option. (See also https://mailarchive.ietf.org/arch/msg/dhcwg/x80cmfTN8fpRViiN_RHNXes-zVg/)\r\n\r\n-- Verifier note --\r\nAfter discussions inside the DHC WG (https://mailarchive.ietf.org/arch/msg/dhcwg/oNqBzT7CSOtoV7kQNLkJfSY_73E/), it appears that there is indeed an issue but as a RFC 8415-bis is probably coming and as the errata does not seem to be a couple of sentences to add/modify,  I am selecting 'hold for document update'",
+    "submit_date": "2020-08-30",
+    "submitter_name": "Felix Hamme",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-01-28 02:02:48"
+  }
+]
