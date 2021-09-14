@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2473,
+    "doc-id": "RFC5918",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3, last para",
+    "orig_text": "   This document specifies one FEC Element Type instance (e.g., Prefix\r\n   FEC) for the 'Typed Wildcard FEC Element' in Section 6.\r\n",
+    "correct_text": "   This document specifies one FEC Element Type instance (i.e., Prefix\r\n   FEC) for the 'Typed Wildcard FEC Element' in Section 6.\r\n",
+    "notes": "Adjust the semantics:    s!e.g.!i.e.!",
+    "submit_date": "2010-08-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2474,
+    "doc-id": "RFC5918",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6, pg.7",
+    "orig_text": "[[ below Figure 3: ]]\r\n\r\n      Len FEC Type Info: Two octets.  It MUST be set to 0x0002.\r\n",
+    "correct_text": "      Len FEC Type Info: One octet.  It MUST be set to 0x02.\r\n",
+    "notes": "The 'FEC Element Type' field is specified as a single octet in\r\nSection 3 (Figure 1 and subsequent field description on pg.4/5);\r\nFigure 3 also matches Figure 1.",
+    "submit_date": "2010-08-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
