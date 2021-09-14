@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2502,
+    "doc-id": "RFC5954",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.2, page 5",
+    "orig_text": "   NEW:\r\n\r\n   o  For two URIs to be equal, the user, password, host, and port\r\n|     components must match.  If the host component contains a textual\r\n|     representation of IP addresses, then the representation of those\r\n      IP addresses may vary.  If so, the host components are considered\r\n      to match if the different textual representations yield the same\r\n      binary IP address.\r\n",
+    "correct_text": "   NEW:\r\n\r\n   o  For two URIs to be equal, the user, password, host, and port\r\n|     components must match.  If both host components contain the textual\r\n|     representation of an IP address, then the representation of those\r\n      IP addresses may vary.  If so, the host components are considered\r\n      to match if the different textual representations yield the same\r\n      binary IP address.\r\n",
+    "notes": "Rationale:  Essential clarification of potentially misleading grammar\r\n  and semantics including singular/plural mismatches.  Because of the\r\n  perceived significance, this erratum is designated as Technical.",
+    "submit_date": "2010-08-23",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4929,
+    "doc-id": "RFC5954",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "   Because the <hexpart> production rule is defined such that two of its\r\n   alternatives already include the \"::\" token, this may yield to the\r\n   faulty construction of an IPv6-mapped IPv4 address with an extra\r\n   colon when expanding those alternatives.",
+    "correct_text": "   Because the <hexpart> production rule is defined such that two of its\r\n   alternatives already include the \"::\" token, this may yield to the\r\n   faulty construction of an IPv4-mapped IPv6 address with an extra\r\n   colon when expanding those alternatives.",
+    "notes": "The text refers to an IPv6 address, and thus should use the proper term \"IPv4-mapped IPv6 address,\" in line with the section title, the rest of the document, and (in particular) RFC 4291.",
+    "submit_date": "2017-02-08",
+    "submitter_name": "David van Moolenbroek",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
