@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4362,
+    "doc-id": "RFC6497",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "All",
+    "orig_text": "This registration is invalid because it attempts to\r\nimpose restrictions on field ordering the governing\r\nBCP47 has as illegal for extension subtag\r\ncanonicalization. The subtags are limited to 8\r\ncharacters, and any subfields of a subtag must use a\r\nDIGIT or ALPHA that is not a valid subfield character\r\nas separator, not DASH as specified, to maintain a\r\nparticular subfield order.",
+    "correct_text": "Not correctable, must be reformulated and resubmitted\r\nas new RFC.",
+    "notes": "\n --VERIFIER NOTES-- \nBCP 47 requires that extensions have a canonical form. There is no restriction on subtag ordering in an extension imposed by BCP 47, but an extension can specify such an order (in this case it does). Subtags in this RFC are separated by DASH and the dash is not part of any subtag. Unlike the base language tag, there is interplay between subtags, but this is not the same thing as the submitter implies. There exist important implementations that depend on this.",
+    "submit_date": "2015-05-11",
+    "submitter_name": "Mark Ziegast",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
