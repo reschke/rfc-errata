@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 5572,
+    "doc-id": "RFC8391",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.1.5",
+    "orig_text": "Input: WOTS+ public key pk, address ADRS, seed SEED",
+    "correct_text": "Input: WOTS+ public key pk, seed SEED, address ADRS",
+    "notes": "ltree is called twice as ltree(pk, seed, adr).",
+    "submit_date": "2018-12-10",
+    "submitter_name": "Franziskus Kiefer",
+    "verifier_id": 163,
+    "verifier_name": "Colin Perkins",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5573,
+    "doc-id": "RFC8391",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.1.6",
+    "orig_text": "Output: n-byte root node - top node on Stack",
+    "correct_text": "Output: n-byte root node - top node on Stack or -1",
+    "notes": "The algorithm can fail and might return -1 instead of a root node",
+    "submit_date": "2018-12-10",
+    "submitter_name": "Franziskus Kiefer",
+    "verifier_id": 163,
+    "verifier_name": "Colin Perkins",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6024,
+    "doc-id": "RFC8391",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "This section provides basic parameter sets that are assumed to cover most relevant applications.  Parameter sets for two classical security levels are defined.  Parameters with n = 32 provide a classical security level of 256 bits.  Parameters with n = 64 provide a classical security level of 512 bits.  Considering quantum-computer-aided attacks, these output sizes yield post-quantum security of 128 and 256 bits, respectively.",
+    "correct_text": "This section provides basic parameter sets that are assumed to cover most relevant applications. Parameter sets for two classical security levels are defined using the cryptographic functions SHA2 and SHAKE.  Parameters with SHA2 and n = 32 provide a classical security level of 256 bits. Parameters with SHA2 and n = 64 provide a classical security level of 512 bits.  Considering quantum-computer-aided attacks, these parameters yield post-quantum security of 128 and 256 bits, respectively. Parameters with SHAKE and n = 32 provide a classical security level of 128 bits.  Parameters with SHAKE and n = 64 provide a classical security level of 256 bits.  Considering quantum-computer-aided attacks, these parameters yield post-quantum security of 86 and 170 bits, respectively. ",
+    "notes": "Traditionally, a hash function with n-bit outputs is assumed to have n-bit security against classical preimage and second-preimage attacks, and n/2-bit security against classical collision attacks. For adversaries with access to a quantum computer, these bounds change to n/2 and n/3 bits when only counting queries to the hash function. This also applies to SHA2 and SHA3. In contrast, SHAKE follows a different reasoning. SHAKE with an internal state of n bits and an output length of n bits achieves n/2 bit security against classical preimage, second-preimage and collision attacks. For quantum attacks security changes to n/3 bits. The reason is that SHAKE allows for meet-in-the-middle preimage attacks that reduce to a collision search on the internal state. \r\n   \r\n In consequence, SHAKE-128 cannot provide more security than NIST post-quantum security level II.\r\n\r\n(Errata submitted by Andreas Hülsing; notes slightly revised after Crypto Forum review by Scott Fluhrer; verified by CFRG Chairs and IRTF Chair)",
+    "submit_date": "2020-03-18",
+    "submitter_name": "Andreas Hülsing",
+    "verifier_id": 163,
+    "verifier_name": "Colin Perkins",
+    "update_date": "2020-06-23 01:16:29"
+  },
+  {
+    "errata_id": 6352,
+    "doc-id": "RFC8391",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "The WOTS+ signature and public key formats are formally defined using\r\nXDR [RFC4506] in order to provide an unambiguous, machine readable\r\ndefinition. ",
+    "correct_text": "The WOTS+ signature and public key formats are defined in a syntax similar to XDR [RFC4506].",
+    "notes": "The definition is not machine readable, e.g. github.com/stellar/xdrgen fails. \r\nReason:\r\n- some Identifiers contain \"/\" and \"-\", RFC4506 allows only letter, digits and underbars\r\n- some enum bodies end with  \",}\", RFC4506 requests \"}\" here\r\n- some discriminated union definitions have incomplete declarations in the case-spec, e.g. the union xmss_ots_signature refers to the wotsp-sha2_256 without giving a type. \r\n- The encoding of some unions in the reference implementation is different to the encoding specified in RFC4506. The 4-byte discriminant is missing.",
+    "submit_date": "2020-12-09",
+    "submitter_name": "Andreas Kretschmer",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
