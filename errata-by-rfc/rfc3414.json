@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 278,
+    "doc-id": "RFC3414",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.3.1",
+    "orig_text": "   4) Prepend K2 to the result of the step 4 and calculate MD5 digest\n      over it according to [RFC1321].  Take the first 12 octets of the\n      final digest - this is Message Authentication Code (MAC).",
+    "correct_text": "   4) Prepend K2 to the result of the step 3 and calculate MD5 digest\n      over it according to [RFC1321].  Take the first 12 octets of the\n      final digest - this is Message Authentication Code (MAC).",
+    "notes": "In Section 7.3.1:\n    4) Prepend K2 to the result of the step 4 and calculate SHA digest\n      over it according to [SHA-NIST].  Take the first 12 octets of\n      the final digest - this is Message Authentication Code (MAC).\nShould be:\n    4) Prepend K2 to the result of the step 3 and calculate SHA digest\n      over it according to [SHA-NIST].  Take the first 12 octets of\n      the final digest - this is Message Authentication Code (MAC).\n\n",
+    "submit_date": "2003-10-28",
+    "submitter_name": "Piotr Bandur",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3612,
+    "doc-id": "RFC3414",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2.5.2",
+    "orig_text": "   maxMessageSize\r\n      The maximum message size as included in the message.  The User-bas\r\n      User-based Security module uses this value to calculate the\r\n      maxSizeResponseScopedPDU.\r\n",
+    "correct_text": "   maxMessageSize\r\n      The maximum message size as included in the message.  The\r\n      User-based Security module uses this value to calculate the\r\n      maxSizeResponseScopedPDU.\r\n",
+    "notes": "The words \"User-based\" were moved to the second line but not fully removed from the first.",
+    "submit_date": "2013-05-03",
+    "submitter_name": "Yitzchak M. Gottlieb",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5073,
+    "doc-id": "RFC3414",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "1.5.1",
+    "orig_text": "When an SNMP message contains a\r\n   payload which expects a response (those messages that contain a\r\n   Confirmed Class PDU [RFC3411]), then the receiver of such messages is\r\n   authoritative.  When an SNMP message contains a payload which does\r\n   not expect a response (those messages that contain an Unconfirmed\r\n   Class PDU [RFC3411]), then the sender of such a message is\r\n   authoritative.",
+    "correct_text": "When an SNMP message contains a\r\n   payload which expects a response (those messages that contain a\r\n   Confirmed Class PDU [RFC3411]), then the receiver of such messages is\r\n   authoritative.  When an SNMP message contains a payload which does\r\n   not expect a response (those messages that contain an Unconfirmed\r\n   Class PDU [RFC3411]), then the sender of such a message is\r\n   non-authoritative.",
+    "notes": "In both cases the receiver was classified as \"authoritative\".\n --VERIFIER NOTES-- \n   The initial text says it correctly:  the sender of such a message is  authoritative",
+    "submit_date": "2017-07-26",
+    "submitter_name": "Fabio Costantini",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
