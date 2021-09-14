@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5740,
+    "doc-id": "RFC5019",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.2.1",
+    "orig_text": "In the case where a responder does not have the ability to respond to\r\nan OCSP request containing a option not supported by the server, it\r\nSHOULD return the most complete response it can.\r\n",
+    "correct_text": "In the case where a responder does not have the ability to respond to\r\nan OCSP request containing an option not supported by the server, it\r\nSHOULD return the most complete response it can.",
+    "notes": "\"a option\" should be \"an option\"",
+    "submit_date": "2019-05-26",
+    "submitter_name": "Jaime Hablutzel",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
