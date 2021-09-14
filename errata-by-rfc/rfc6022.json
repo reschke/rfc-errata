@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4950,
+    "doc-id": "RFC6022",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.2 (2,3)",
+    "orig_text": "<get-schema\r\n           xmlns=\"urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring\">\r\n             <identifer>bar</identifer>\r\n             <version>2008-06-01</version>\r\n           </get-schema>\r\n\r\na. Via <get-schema> using identifer parameter:\r\n\r\n <get-schema\r\n         xmlns=\"urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring\">\r\n           <identifer>bar-types</identifer>\r\n         </get-schema>",
+    "correct_text": "<get-schema\r\n           xmlns=\"urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring\">\r\n             <identifier>bar</identifier>\r\n             <version>2008-06-01</version>\r\n           </get-schema>\r\n\r\na. Via <get-schema> using identifier parameter:\r\n\r\n <get-schema\r\n         xmlns=\"urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring\">\r\n           <identifier>bar-types</identifier>\r\n         </get-schema>",
+    "notes": null,
+    "submit_date": "2017-02-24",
+    "submitter_name": "Andreas Walden",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
