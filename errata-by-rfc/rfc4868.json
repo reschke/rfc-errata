@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1785,
+    "doc-id": "RFC4868",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.7.2.3",
+    "orig_text": "Test Case AUTH512-4:\r\n   Key =          0a0b0c0d0e0f10111213141516171819\r\n                  0102030405060708090a0b0c0d0e0f10\r\n                  1112131415161718191a1b1c1d1e1f20\r\n                  2122232425262728292a2b2c2d2e2f30\r\n                  3132333435363738393a3b3c3d3e3f40  (64 bytes)\r\n",
+    "correct_text": "Test Case AUTH512-4:\r\n   Key =          0102030405060708090a0b0c0d0e0f10\r\n                  1112131415161718191a1b1c1d1e1f20\r\n                  2122232425262728292a2b2c2d2e2f30\r\n                  3132333435363738393a3b3c3d3e3f40  (64 bytes)\r\n",
+    "notes": "Originally noted by Tero Kivinen",
+    "submit_date": "2009-05-19",
+    "submitter_name": "Sheila Frankel",
+    "verifier_id": 111,
+    "verifier_name": "Pasi Eronen",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5507,
+    "doc-id": "RFC4868",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.7.2.2.",
+    "orig_text": "Test Case AUTH384-4:\r\n   Key =          0102030405060708090a0b0c0d0e0f10\r\n                  1112131415161718191a1b1c1d1e1f20\r\n                  0a0b0c0d0e0f10111213141516171819",
+    "correct_text": "Test Case AUTH384-4:\r\n   Key =          0102030405060708090a0b0c0d0e0f10\r\n                  1112131415161718191a1b1c1d1e1f20\r\n                  2122232425262728292a2b2c2d2e2f30",
+    "notes": "as the keys increase from case 256 to 384 and to 512, they have the same base.",
+    "submit_date": "2018-09-27",
+    "submitter_name": "f. Le Pouliquen",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
