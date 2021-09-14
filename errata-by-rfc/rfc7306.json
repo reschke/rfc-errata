@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4443,
+    "doc-id": "RFC7306",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "A.2",
+    "orig_text": "   |              DDP (Atomic Operation Request) Queue Number      |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |        DDP (Atomic Operation Request) Message Sequence Number |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |             DDP (Atomic Operation Request) Message Offset     |",
+    "correct_text": "   |             DDP (Atomic Operation Response) Queue Number      |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |       DDP (Atomic Operation Response) Message Sequence Number |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |            DDP (Atomic Operation Response) Message Offset     |",
+    "notes": null,
+    "submit_date": "2015-08-10",
+    "submitter_name": "Chen Wumao",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
