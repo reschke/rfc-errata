@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4820,
+    "doc-id": "RFC2863",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.7",
+    "orig_text": "   Network speeds are increasing.  The range of ifSpeed is limited to\r\n   reporting a maximum speed of (2**31)-1 bits/second, or approximately\r\n   2.2Gbs.  SONET defines an OC-48 interface, which is defined at\r\n   operating at 48 times 51 Mbs, which is a speed in excess of 2.4Gbs.\r\n   Thus, ifSpeed is insufficient for the future, and this memo defines\r\n   an additional object: ifHighSpeed.\r\n",
+    "correct_text": "   Network speeds are increasing.  The range of ifSpeed is limited to\r\n   reporting a maximum speed of (2**32)-1 bits/second, or approximately\r\n   4.3Gbs.  SONET defines an OC-48 interface, which is defined at\r\n   operating at 48 times 51 Mbs, which is a speed in excess of 2.4Gbs.\r\n   Thus, ifSpeed is insufficient for the future, and this memo defines\r\n   an additional object: ifHighSpeed.\r\n",
+    "notes": "RFC 3635, in section 3.2.8 quotes RFC2863 as if it were using the correct 4.3Gbps value: \"For these speeds, ifSpeed should report a maximum unsigned 32-bit value of 4,294,967,295 as specified in [RFC2863].\"",
+    "submit_date": "2016-10-05",
+    "submitter_name": "Christopher L Marshall",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
