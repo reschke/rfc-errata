@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2758,
+    "doc-id": "RFC2743",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2.1.4",
+    "orig_text": "   o  actual_mechs SET OF OBJECT IDENTIFIER, -- if returned, caller must\r\n   -- release with GSS_Release_oid_set()\r\n\r\n   o  initiator_time_rec INTEGER -- in seconds, or reserved value for\r\n   -- INDEFINITE\r\n\r\n   o  acceptor_time_rec INTEGER -- in seconds, or reserved value for\r\n   -- INDEFINITE\r\n\r\n   o  cred_usage INTEGER, -- 0=INITIATE-AND-ACCEPT, 1=INITIATE-ONLY,\r\n   -- 2=ACCEPT-ONLY\r\n\r\n   o  mech_set SET OF OBJECT IDENTIFIER -- full set of mechanisms\r\n   -- supported by resulting credential.\r\n\r\n   Return major_status codes:\r\n",
+    "correct_text": "   o  actual_mechs SET OF OBJECT IDENTIFIER, -- full set of mechanisms\r\n   -- supported by resulting credential.  If returned, caller must\r\n   -- release with GSS_Release_oid_set()\r\n\r\n   o  initiator_time_rec INTEGER -- in seconds, or reserved value for\r\n   -- INDEFINITE\r\n\r\n   o  acceptor_time_rec INTEGER -- in seconds, or reserved value for\r\n   -- INDEFINITE\r\n\r\n   Return major_status codes:\r\n",
+    "notes": "There appears to be accidentally duplicated text trailing the list of output parameters in section 2.1.4:  GSS_Add_cred call  (top of page 38).\r\n\r\nThe parameter \"cred_usage\" is an input-only parameter and also listed under input parameters, and the parameter \"mech_set\" is a duplicate of the actual_mechs output parameter.  Compare GSS-API C-Bindings document rfc2744, section 5.3. gss_add_cred\r\n\r\n-Martin",
+    "submit_date": "2011-03-29",
+    "submitter_name": "Martin Rex",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3797,
+    "doc-id": "RFC2743",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2.4.5",
+    "orig_text": "   Outputs:\r\n\r\n   o  major_status INTEGER,\r\n\r\n   o  minor_status INTEGER,\r\n\r\n   o  output_name INTERNAL NAME  -- caller must release with\r\n   -- GSS_Release_name()\r\n\r\n   Return major_status codes:\r\n\r\n   o  GSS_S_COMPLETE indicates that a valid name representation is\r\n   output in output_name and described by the type value in\r\n   output_name_type.\r\n",
+    "correct_text": "   Outputs:\r\n\r\n   o  major_status INTEGER,\r\n\r\n   o  minor_status INTEGER,\r\n\r\n   o  output_name INTERNAL NAME  -- caller must release with\r\n   -- GSS_Release_name()\r\n\r\n   Return major_status codes:\r\n\r\n   o  GSS_S_COMPLETE indicates that a valid name representation is\r\n   output in output_name.\r\n",
+    "notes": "The description of the GSS_S_COMPLETE return value from GSS_Import_name() indicates that the contents of the output_name field are \"described by the type value in output_name_type\".  There is no such output_name_type parameter.",
+    "submit_date": "2013-11-12",
+    "submitter_name": "Benjamin Kaduk",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4151,
+    "doc-id": "RFC2743",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.2.4",
+    "orig_text": "   o  GSS_S_FAILURE indicates that the context is recognized, but that\r\n   the GSS_Process_context_token() operation could not be performed for\r\n   reasons unspecified at the GSS-API level.\r\n",
+    "correct_text": "   o  GSS_S_FAILURE indicates that the context is recognized, but\r\n   either the GSS_Process_context_token() operation could not be\r\n   performed for reasons unspecified at the GSS-API level, or the peer\r\n   had an error consuming the last context token sent to it.  The latter\r\n   occurs when the local side became fully established and produced one\r\n   last token which was sent to the peer, but the peer encountered an\r\n   error while processing that last context token.  In either case the\r\n   minor status code provides additional information.\r\n\r\n   In the case of successful processing of error tokens, the minor\r\n   status code provides information from the input token.  The display\r\n   string outputs of GSS_Display_status() as applied to such minor\r\n   status codes should indicate that the error originated on the remote\r\n   peer, along with the nature of the error.  Note that there is no\r\n   way to distinguish failures of GSS_Process_context_token() from\r\n   error token information other than to read the human-readable status\r\n   display strings.\r\n",
+    "notes": "The other major status codes that GSS_Process_context_token() can return are: GSS_S_COMPLETE (input token successfully processed), GSS_S_DEFECTIVE_TOKEN (e.g., integrity protection for the input token failed), GSS_S_NO_CONTEXT (invalid input security context).\r\n\r\nThis leaves a) no way to report error token information, b) no purpose for GSS_S_FAILURE, since the other major status codes cover all plausible error conditions.\r\n\r\nBut clearly the intention was that \"asynchronous error tokens\" should be passed to GSS_Process_context_token(), and for such tokens to be useful as far as conveying information about the error goes.\r\n\r\nThere are at least two easy ways to fix this: either have GSS_Process_context_token() report the error information in the minor status with a major status of GSS_S_COMPLETE, or decide that the GSS_S_FAILURE description was incorrect, that it should have been used to convey error token information.  The latter is the more natural fix.\r\n\r\nThe KITTEN WG will have to review this erratum and decide whether to reject it, accept one fix, or the other. That review happened resulting in the corrected\r\ntext above.\r\n",
+    "submit_date": "2014-11-03",
+    "submitter_name": "Nicolas Williams",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
