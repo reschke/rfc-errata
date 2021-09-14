@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 297,
+    "doc-id": "RFC3305",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2.1",
+    "orig_text": "*  'issn' defined by \"Using The ISSN as URN within an ISSN-URN\r\n         Namespace\" (RFC 3043) [4]",
+    "correct_text": "*  'issn' defined by \"Using The ISSN as URN within an ISSN-URN\r\n         Namespace\" (RFC 3044) [4]\r\n",
+    "notes": "",
+    "submit_date": "2005-10-10",
+    "submitter_name": "Tom Petch",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1375,
+    "doc-id": "RFC3305",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "   1. The W3C and IETF should jointly develop and endorse a model for\r\n      URIs, URLs, and URNs consistent with the \"Contemporary View\"\r\n      described in section 1, and which considers the additional URI\r\n      issues listed or alluded to in section 3.",
+    "correct_text": "   1. The W3C and IETF should jointly develop and endorse a model for\r\n      URIs, URLs, and URNs consistent with the \"Contemporary View\"\r\n      described in section 2, and which considers the additional URI\r\n      issues listed or alluded to in section 3.",
+    "notes": null,
+    "submit_date": "2008-03-20",
+    "submitter_name": "K. Ohwashi",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2787,
+    "doc-id": "RFC3305",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.1.1",
+    "orig_text": "The official register of URI scheme names is maintained by IANA, at\r\n   http://www.iana.org/assignments/uri-schemes.",
+    "correct_text": "The official register of URI scheme names is maintained by IANA, at\r\n   http://www.iana.org/assignments/uri-schemes.html.",
+    "notes": "The iana.org web site redirects appropriately, so this can be addressed in a future revision.",
+    "submit_date": "2011-04-20",
+    "submitter_name": "J. Clelland",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
