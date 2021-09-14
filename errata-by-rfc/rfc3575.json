@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3378,
+    "doc-id": "RFC3575",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Metadata",
+    "orig_text": "Updates: 2865\r\n\r\n",
+    "correct_text": "Updates: 2865, 2868",
+    "notes": "\r\nIANA needs to be updated as well.\r\n\r\nhttp://www.iana.org/assignments/radius-types/radius-types.xml#radius-types-14\r\n\r\nOLD\r\nRegistration Procedures\r\n     IETF Consensus\r\nReference\r\n     [RFC2868]\r\n\r\nNEW\r\nRegistration Procedures\r\n     Designated Expert\r\nReference\r\n     [RFC3575]\r\n\r\n\r\nhttp://www.iana.org/assignments/radius-types/radius-types.xml#radius-types-15\r\n\r\nOLD\r\nRegistration Procedures\r\n     IETF Consensus\r\nReference\r\n     [RFC2868]\r\n\r\nNEW\r\nRegistration Procedures\r\n     Designated Expert\r\nReference\r\n     [RFC3575]\r\n\r\n=======================================================\r\n\r\n\r\n\r\nSome background information:\r\n\r\n   RFC 3575 Section 2.1 states the following:\r\n \r\n   Certain attributes (for example, NAS-Port-Type) in RADIUS define a\r\n   list of values to correspond with various meanings.  There can be 4\r\n   billion (2^32) values for each attribute.  Additional values can be\r\n   allocated by the Designated Expert.  The exception to this policy is\r\n   the Service-Type attribute (6), whose values define new modes of\r\n   operation for RADIUS.  Values 1-16 of the Service-Type attribute have\r\n   been allocated.  Allocation of new Service-Type values are by IETF\r\n   Consensus.  The intention is that any allocation will be accompanied\r\n   by a published RFC.\r\n\r\n   Note that the Tunnel-Type and Tunnel-Medium-Type attributes are not called out as an exception, only Service-Type.  If the intent was to exempt RFC 2868, those attributes would have been included as exceptions but they are not.\r\n\r\nTherefore, it looks to me like the omission of RFC 2868 in the Updates: header is an errata.\r\n\r\nIn other words:\r\n\r\n   The discussion, as I understand it,  is about \"IETF consensus\" versus \"Designated Expert\"\r\n\r\n   From RFC 2868\r\n\r\n6.1.  Tunnel-Type Attribute Values\r\n\r\n   Values 1-12 of the Tunnel-Type Attribute are defined in Section 5.1;\r\n   the remaining values are available for assignment by the IANA with\r\n   IETF Consensus [16].\r\n\r\n6.2.  Tunnel-Medium-Type Attribute Values\r\n\r\n   Values 1-15 of the Tunnel-Medium-Type Attribute are defined in\r\n   Section 5.2; the remaining values are available for assignment by the\r\n   IANA with IETF Consensus [16].\r\n\r\nFrom RFC 3575\r\n\r\n   Certain attributes (for example, NAS-Port-Type) in RADIUS define a\r\n   list of values to correspond with various meanings.  There can be 4\r\n   billion (2^32) values for each attribute.  Additional values can be\r\n   allocated by the Designated Expert.  The exception to this policy is\r\n   the Service-Type attribute (6), whose values define new modes of\r\n   operation for RADIUS.\r\n\r\nSo  Tunnel-Type and Tunnel-Medium-Type  are \"IETF consensus\" or \"Designated Expert\"?\r\n\r\nFrom the IETF 80 meeting minutes, https://www.ietf.org/proceedings/80/minutes/radext.txt:\r\n\r\n2. IANA issues \r\nA. How to allocate tunnel params? In RFC 3575 (RFC2868 conflicts as 3575 assigns based on expert review but didn’t update 2868). Omission of RFC 2868 could be an errata; this is basically a request for metadata. \r\n- Asks Dan for comment: was looking for input from the working group before proceeding. \r\n- Alan thought it was an errata. \r\n- Stefan states no opinion. \r\n- Klaas also states no opinion. \r\n- Nancy asks for further understanding. Bernard clarifies: RFC 2868 states “standards action” and 3575 is more lenient in saying just expert review.\r\n- Now Dan remembers: when there’s conflicts such as this, 2 solutions: take the stricter or take the latest. But if it’s the latest, then it needs to be clearer. Believes in this case, explicit clarification is justified since 3575 is more recent and the request is justified. But need IESG perspective review by WG. \r\n- Bernard suggests to get a sense of this group and then take it to the mailgroup.\r\nAsks: proposal is to accept and verify the errata and update 3575 to include 2868.\r\nIn favor: 10, non oppose. Given consensus, will take to the mail list.",
+    "submit_date": "2012-10-13",
+    "submitter_name": "Bernard Aboba",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5093,
+    "doc-id": "RFC3575",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "Global",
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "Errata report was blank, assuming submitted in error / by a bot.\n --VERIFIER NOTES-- \n Reported errata was blank - assuming submitted in error.",
+    "submit_date": "2017-08-20",
+    "submitter_name": "Octabiolopez",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
