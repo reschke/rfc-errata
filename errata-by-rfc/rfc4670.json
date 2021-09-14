@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 27,
+    "doc-id": "RFC4670",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "99The DESCRIPTION clause of the radiusAccClientRetransmissionsOBJECT-TYPE declaration says:",
+    "orig_text": "         DESCRIPTION\r\n               \"The number of RADIUS Accounting-Request packets\r\n                retransmitted to this RADIUS accounting server.\r\n                Retransmissions include retries where the\r\n                Identifier and Acct-Delay have been updated, as\r\n                well as those in which they remain the same.\"",
+    "correct_text": "         DESCRIPTION\r\n               \"The number of RADIUS Accounting-Request packets\r\n                retransmitted to this RADIUS accounting server.\r\n                Retransmissions include retries where the\r\n                Identifier and Acct-Delay have been updated, as\r\n                well as those in which they remained the same.\"\r\n",
+    "notes": "for temporal consistency\r\n\r\nfrom pending\n --VERIFIER NOTES-- \nthe difference is not clear   ",
+    "submit_date": "2006-11-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 877,
+    "doc-id": "RFC4670",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "misleading RFC title, including abuse of defined terms \r\n(for RFCs 4668 - 4671)\r\n\r\nIMHO, the RFC titles, \"RADIUS ... MIB for IPv6\" are misleading.\r\nIn fact, the new RFCs extend the RADIUS MIB modules to cover\r\nIPv6, but they are not IPv6 specific!\r\nPerhaps, better wording would have been \"... for IPv4 and IPv6\".\r\n\r\nFurthermore, a very 'popular' clash of terms shines up here.\r\nAs specified in RFC 3410 and Part 1 of STD 62, RFC 3411, and\r\nre-stated in the boilerplate Section 3, \"The Internet-Standard\r\nManagement Framework\", of all four RFCs, there's just one single\r\nManagement Information Base (MIB) comprised of various \"MIB modules\".\r\nThus, throughout the titles and the text bodies of the RFCs, the\r\nproper term, \"RADIUS ... MIB module\" should be used instead of the\r\nrather sluggish \"RADIUS ... MIB\".",
+    "correct_text": "",
+    "notes": "from pending\n --VERIFIER NOTES-- \nno title change needed - ipv6 covers also previous ipv4 support   ",
+    "submit_date": "2006-11-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
