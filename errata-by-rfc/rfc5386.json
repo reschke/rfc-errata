@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1608,
+    "doc-id": "RFC5386",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2, pg. 3",
+    "orig_text": "   o  Any peer that uses an IKEv2 AUTH method involving a digital\r\n      signature (made with a private key to a public key cryptosystem)\r\n      may match a BTNS PAD entry, provided that it matches no non-BTNS\r\n      PAD entries.  Suitable AUTH methods as of August 2007 are: RSA\r\n|     Digital Signature (method #1) and DSS Digital Signature (method\r\n      #3); see [RFC4306], Section 3.8.",
+    "correct_text": "   o  Any peer that uses an IKEv2 AUTH method involving a digital\r\n      signature (made with a private key to a public key cryptosystem)\r\n      may match a BTNS PAD entry, provided that it matches no non-BTNS\r\n      PAD entries.  Suitable AUTH methods as of August 2007 are: RSA\r\n|     Digital Signature (method #1) and DSA Digital Signature (method\r\n      #3); see [RFC4306], Section 3.8.",
+    "notes": "Rationale:\r\n\r\nWhen referring to an authentication method, i.e. an algorithm,\r\nthe acronym used should designate the algorithm.\r\n\r\nThere is a particular distinction in the NIST FIPS documents:\r\na trailing 'S' designtes a Standard, and a trailing 'A' designates\r\nan Algorithm.\r\nIn particular, the DSS (Digital Signature Standard, FIPS 186-2/3)\r\ndescribes three different algorithms:\r\n   - the NIST's Digital Signature Algorithm (DSA),\r\n   - the Elliptic Curve Digital Signature Algorithm (ECDSA), and\r\n   - the RSA signature algorithm.\r\n\r\nHence, to avoid any potential confusion, \"DSA\" should be used to\r\ndesignate the particular algorithm listed as the first item above.",
+    "submit_date": "2008-11-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1609,
+    "doc-id": "RFC5386",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.1, pg.6",
+    "orig_text": "<< immediately below Figure 2 >>\r\n\r\n|  Note that [SG-A]'s PAD entry has one and only one wildcard PAD entry:\r\n   the BTNS catch-all PAD entry as the last entry, as described in\r\n   Section 2.\r\n",
+    "correct_text": "|  Note that [SG-A]'s PAD has one and only one wildcard PAD entry:\r\n   the BTNS catch-all PAD entry as the last entry, as described in\r\n   Section 2.\r\n",
+    "notes": "Rationale:\r\n\r\nDesignating the PAD (Peer Authentication Database) an an \"entry\"\r\nis misleading, and particularly confusing when in the same line\r\na table row in that database is also designated as an \"entry\".",
+    "submit_date": "2008-11-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
