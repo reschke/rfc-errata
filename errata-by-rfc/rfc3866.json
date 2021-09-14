@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 220,
+    "doc-id": "RFC3866",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "   A server SHOULD indicate that it supports storing attributes with\n   language tag options in the DIT by publishing 1.3.6.1.4.1.4203.1.5.4\n   as a value of the root DSE.",
+    "correct_text": "   A server SHOULD indicate that it supports storing attributes with\n   language tag options in the DIT by publishing 1.3.6.1.4.1.4203.1.5.4\n   as a value of the \"supportedFeatures\" [RFC3674] attribute of the root \n   DSE.",
+    "notes": "\n\nIn section 5, it says:\n\n    Implementators of this specification should take care that their use\n   of language tag options does not impede proper function of\n   implementations which do not support language tags.\n\nIt should say:\n\n    Implementors of this specification should take care that their use\n   of language tag options does not impede proper function of\n   implementations which do not support language tags.\n\n\n\n",
+    "submit_date": "2004-08-18",
+    "submitter_name": "Kurt D. Zeilenga",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 221,
+    "doc-id": "RFC3866",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "   An entry may contain multiple attributes with same\n   attribute type but different combinations of language tag (and other)\n   options.",
+    "correct_text": "   An entry may contain multiple attributes with the same\n   attribute type but different combinations of language tag (and other)\n   options.\n",
+    "notes": "",
+    "submit_date": "2004-08-31",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
