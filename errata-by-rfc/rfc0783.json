@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 580,
+    "doc-id": "RFC0783",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "Any transsfer begins with a request to read or write a file, which also \r\nserves to request a connection.",
+    "correct_text": "Any transfer begins with a request to read or write a file, which also \r\nserves to request a connection.",
+    "notes": "from pending",
+    "submit_date": "2006-02-18",
+    "submitter_name": "\"Yin Shuming\"",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 703,
+    "doc-id": "RFC0783",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "The mode field contains the string \"netascii\", \"octec\", or \"mail\" (or any \r\ncomibnation of upper and lower case, such as \"NETASCII\", \"NetAscii\", etc.) \r\nin netascii indicating the three modes defined in the protocol.",
+    "correct_text": "The mode field contains the string \"netascii\", \"octec\", or \"mail\" (or any \r\ncombination of upper and lower case, such as \"NETASCII\", \"NetAscii\", etc.) \r\nin netascii indicating the three modes defined in the protocol.",
+    "notes": "spelling error: comibnation/combination\r\n\r\nfrom pending\r\n",
+    "submit_date": "2006-02-18",
+    "submitter_name": "\"Yin Shuming\"",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
