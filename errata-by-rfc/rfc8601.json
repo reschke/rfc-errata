@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6026,
+    "doc-id": "RFC8601",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "     resinfo = [CFWS] \";\" methodspec [ CFWS reasonspec ]\r\n               [ CFWS 1*propspec ]\r\n\r\n",
+    "correct_text": "     resinfo = [CFWS] \";\" methodspec [ CFWS reasonspec ]\r\n               *( CFWS propspec )\r\n\r\n",
+    "notes": "When there is more than one propspec, they are separated by spaces. Every implementation I know puts in the spaces. This was correct in RFC 7601, but see unconfirmed erratum 5435 which introduced the mistake.\r\n\r\nWhile we're at it, take out the [CFWS] at the end of the definition of pvalue which is redundant and confusing.",
+    "submit_date": "2020-03-22",
+    "submitter_name": "John Levine",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6027,
+    "doc-id": "RFC8601",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "                  spf=pass smtp.mailfrom=example.net\r\n",
+    "correct_text": "                  spf=pass smtp.mailfrom=sender@example.net\r\n",
+    "notes": "This error appears three places in Appendix B. smtp.mailfrom takes a mailbox, not a domain name. \r\n\r\nThe example in section 2.7.4 at the bottom of page 21 is OK.",
+    "submit_date": "2020-03-22",
+    "submitter_name": "John Levine",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
