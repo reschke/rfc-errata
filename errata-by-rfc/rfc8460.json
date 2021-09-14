@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5889,
+    "doc-id": "RFC8460",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 6.7,
+    "orig_text": "Item is missing entirely",
+    "correct_text": "6.7 DKIM Service Type\r\n\r\nThis document registers a new DKIM Service Type in the DomainKeys Identified Mail (DKIM) Parameters registry:\r\n\r\nService Type name: tlsrpt\r\n\r\nReference: RFC 8460\r\n\r\nStatus Active",
+    "notes": "The new service type is discussed in Section 3, so it should have been added to the registry.  It's an IETF Review required registry, not Specification Required, so this can (and should) be addressed in terms at least of the registry now.\r\n\r\nAlexey: Murray wrote:\r\n\r\nI would guess we can't rectify this oversight via the errata system.  What got IETF Review was the need for the registration, but not the registration itself.\r\n\r\nI imagine this should either be done through DISPATCH (which is chartered to do minor housekeeping things like this) or through an AD-sponsored document that contains only the registration.\r\n",
+    "submit_date": "2019-10-31",
+    "submitter_name": "Scott Kitterman",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2020-03-25 09:57:51"
+  },
+  {
+    "errata_id": 6241,
+    "doc-id": "RFC8460",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "Appendix B.",
+    "orig_text": "Appendix B.  Example JSON Report\r\n...\r\n     \"policies\": [{\r\n       \"policy\": {\r\n...\r\n         \"mx-host\": \"*.mail.company-y.example\"\r\n       },\r\n...",
+    "correct_text": "Appendix B.  Example JSON Report\r\n...\r\n     \"policies\": [{\r\n       \"policy\": {\r\n...\r\n         \"mx-host\": [\"*.mail.company-y.example\"]\r\n       },\r\n...",
+    "notes": "\"mx-host-pattern\" is defined as a JSON array\r\n\r\n========== Verifier notes ==========\r\nThis is right on the edge of \"Verified\": the reporter is correct about the error, but the existing implementations don't comply with the proposed fix.  So this really needs to be dealt with in a document update, rather than through an errata report.\r\n",
+    "submit_date": "2020-07-27",
+    "submitter_name": "Kristian Klausen",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-07-29 12:53:00"
+  }
+]
