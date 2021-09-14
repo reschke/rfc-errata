@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4000,
+    "doc-id": "RFC6374",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.5,
+    "orig_text": "Upon receipt of a query message including an unrecognized mandatory \r\nTLV object, the recipient MUST respond with an Unsupported Mandatory \r\nTLV Object error code.",
+    "correct_text": "In this specification an object that is classed as mandatory is \r\none that the responder MUST either support or respond to indicating \r\nthat it does not support. Thus upon receipt of a query message \r\nincluding an unrecognized mandatory TLV object, the recipient \r\nMUST respond with an Unsupported Mandatory TLV Object error \r\ncode. Note that the term mandatory does not indicate mandatory \r\nto implement or mandatory to send.",
+    "notes": "In discussion on the MPLS list there was concern about the meaning \r\nof the term \"mandatory\" in this RFC. The use of the term is \r\nsomewhat unusual in an IETF context, but the quoted original \r\ntext makes it clear that there is no requirement to implement \r\nmandatory objects, only to respond to the reception of one if \r\nit is not supported.",
+    "submit_date": "2014-05-27",
+    "submitter_name": "Stewart Bryant",
+    "verifier_id": 140,
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
