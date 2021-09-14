@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3046,
+    "doc-id": "RFC4807",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5 & 5.1.2",
+    "orig_text": "s5:\r\n\r\nThe filter section of the MIB module is composed of the different\r\ntypes of filters in the Policy Model.  It is made up of the\r\nspdTrueFilter, spdCompoundFilterTable, spdSubfiltersTable,\r\nspdIpHeaderFilterTable, spdIpOffsetFilterTable, spdTimeFilterTable,\r\nspdIpsoHeaderFilterTable.\r\n\r\ns5.1.2, paragraph 9:\r\n\r\nSpdIpHeaderFilterEntry(spdIpHeadFiltName = \"192.0.2.6\")\r\n     = (spdIpHeadFiltType            = 0x80,        -- sourceAddress\r\n        spdIpHeadFiltIPVersion       = 1,           -- IPv4\r\n        spdIpHeadFiltSrcAddressBegin = 0xC0000206,  -- 192.0.2.6\r\n        spdIpHeadFiltSrcAddressEnd   = 0xC0000206,  -- 192.0.2.6\r\n        spdIpHeadFiltRowStatus       = 4)           -- createAndGo\r\n",
+    "correct_text": "s5:\r\n\r\nThe filter section of the MIB module is composed of the different\r\ntypes of filters in the Policy Model.  It is made up of the\r\nspdTrueFilter, spdCompoundFilterTable, spdSubfiltersTable,\r\nspdIpOffsetFilterTable, spdTimeFilterTable, and spdIpsoHeaderFilterTable.\r\n\r\ns5.1.2, paragraph 9:\r\n\r\nSpdIpOffsetHeaderFilterEntry(ipspIpOffFiltName = \"192.0.2.6\")\r\n     = (spdIpOffFiltOffset           = 0x0b         -- sourceAddress\r\n        spdIpOffFiltType             = 1            -- valueMatch\r\n        spdIpOffFiltValue            = 0xb0000206   -- 192.0.2.6\r\n        spdIpOffFiltRowStatus        = 4)           -- createAndGo",
+    "notes": "The text quoted includes spdIpHeaderFitlerTable, but it does not exist in the MIB definition in Section 6.  In addition, spdIpHeaderFilterTable is referenced in the tutorial of Section 5.1.2.  This oversight is either a large editorial oversight in Section 5 or a large technical oversight in Section 6.\r\n\r\nAfter discussions with the authors, spdIpHeaderFitlerEntry needs to be removed from s5 and the spdIpHeaderFitlerTable example in s5.1.2 needs to be amended.",
+    "submit_date": "2011-12-08",
+    "submitter_name": "Paul Clark",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
