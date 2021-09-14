@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2274,
+    "doc-id": "RFC5857",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.1, pg.4",
+    "orig_text": "[[ first paragraph on page 4: ]]\r\n \r\n  A new Notify Message Type value, denoted ROHC_SUPPORTED, indicates\r\n   that the Notify payload is conveying ROHC channel parameters (Section\r\n|  4).",
+    "correct_text": "   A new Notify Message Type value, denoted ROHC_SUPPORTED, indicates\r\n   that the Notify payload is conveying ROHC channel parameters (Section\r\n|  3.1.2).",
+    "notes": "Rationale:\r\n  Section 4 of RFC 5857 is \"Security Considerations\"; the various ROHC\r\n  parameters that can/must be signaled via this Notify payload are\r\n  described in Section 3.1.2 of RFC 5857.",
+    "submit_date": "2010-05-19",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2275,
+    "doc-id": "RFC5857",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.1.2, pg.8",
+    "orig_text": "[[ first paragraph of description for ROHC_ICV_LEN, on mid-page 8: ]]\r\n\r\n      [...]\r\n      If no ROHC_ICV_LEN attribute is sent at all or if the ROHC_ICV_LEN\r\n|     is larger than the length of the ICV of selected algorithm, then\r\n      the full ICV length as specified by the ROHC_INTEG algorithm MUST\r\n      be sent.",
+    "correct_text": "      [...]\r\n      If no ROHC_ICV_LEN attribute is sent at all or if the ROHC_ICV_LEN\r\n|     is larger than the length of the ICV of the selected algorithm,\r\n      then the full ICV length as specified by the ROHC_INTEG algorithm\r\n      MUST be sent.",
+    "notes": "Rationale: missing definite article",
+    "submit_date": "2010-05-19",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3320,
+    "doc-id": "RFC5857",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.1.2",
+    "orig_text": "   This section describes five ROHC Attribute Types: MAX_CID,\r\n   ROHC_PROFILE, ROHC_INTEG, ROHC_ICV_LEN, and MRRU.  The value\r\n   allocated for each ROHC Attribute Type is specified in Section 4.\r\n",
+    "correct_text": "   This section describes five ROHC Attribute Types: MAX_CID,\r\n   ROHC_PROFILE, ROHC_INTEG, ROHC_ICV_LEN, and MRRU.  The value\r\n   allocated for each ROHC Attribute Type is specified in Section 5.\r\n",
+    "notes": "Section 4 of RFC 5857 is \"Security Considerations\". Values of ROHC Attribute Types listed in Section 5.",
+    "submit_date": "2012-08-16",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
