@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5131,
+    "doc-id": "RFC8072",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "Regarding section 2.2 of RFC 8072, the third paragraph states:\r\n\r\n\r\n                                       ... If the edit does not identify\r\n    any existing resource instance and the operation for the edit is not\r\n    \"create\", then the request MUST NOT be processed and a \"404 Not\r\n    Found\" error response MUST be sent by the server.",
+    "correct_text": "                                      ... If the edit does not identify\r\n   any existing resource instance and the operation for the edit is\r\n   \"delete\" or \"move\" then the request MUST NOT be processed and a\r\n   \"404 Not Found\" error response MUST be sent by the server.",
+    "notes": "As per the second paragraph of section 2.2 of RFC 8072, the operations are expected to mirror the semantics of the \"operation\" attribute described in Section 7.2 of [RFC6241].\r\n\r\nThe spec also doesn't specify what happens if it is a \"create\" operation and the resource already exists.  It should probably also state that \"400 Bad Request\" is returned.",
+    "submit_date": "2017-09-28",
+    "submitter_name": "Robert Wilton",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
