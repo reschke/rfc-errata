@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5738,
+    "doc-id": "RFC6515",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "   1. \"Network Address of Next Hop\" field in the MP_REACH_NLRI\r\n      attribute, as defined in Section 3 of [BGP-MP].  This field is\r\n      preceded by a \"length of next hop address\" field. Hence, it is\r\n      always clear whether the address is an IPv4 address (length is 4)\r\n      or an IPv6 address (length is 16).  If the length of the next hop\r\n      address is neither 4 nor 16, the MP_REACH_NLRI attribute MUST be\r\n      considered to be \"incorrect\", and MUST be handled as specified in\r\n      Section 7 of [BGP-MP].",
+    "correct_text": "   1. \"Network Address of Next Hop\" field in the MP_REACH_NLRI\r\n      attribute, as defined in Section 3 of [BGP-MP].  This field is\r\n      preceded by a \"length of next hop address\" field. Hence, it is\r\n      always clear whether the address is an IPv4 address (length is 12)\r\n      or an IPv6 address (length is 24).  If the length of the next hop\r\n      address is neither 12 nor 24, the MP_REACH_NLRI attribute MUST be\r\n      considered to be \"incorrect\", and MUST be handled as specified in\r\n      Section 7 of [BGP-MP].",
+    "notes": "According to section 4.3.2 of RFC4364:\r\nWhen a PE router distributes a VPN-IPv4 route via BGP, it uses its own address as \r\nthe \"BGP next hop\".  This address is encoded as a VPN-IPv4 address with an RD of 0. \r\nThe MVPN should follow the same rule to use RD+IPv4 (len 12) or RD+IPv6 (len 24) \r\nin \"Network Address of Next Hop\".\n --VERIFIER NOTES-- \n   as requested by the original poster:\r\nhttps://mailarchive.ietf.org/arch/msg/bess/V3Qkf-Aeg3oIFiswDVRaSN43tyo/",
+    "submit_date": "2019-05-25",
+    "submitter_name": "Jingrong Xie",
+    "verifier_id": 160,
+    "verifier_name": "Martin Vigourex",
+    "update_date": "2021-02-08 14:21:42"
+  }
+]
