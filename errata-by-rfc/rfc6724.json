@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3343,
+    "doc-id": "RFC6724",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 10.1,
+    "orig_text": "Destination: 2001:db8:1::1\r\nCandidate Source Addresses: 2001:db8:3::1 or fe80::1\r\nResult: 2001:db8::1 (prefer appropriate scope)",
+    "correct_text": "Destination: 2001:db8:1::1\r\nCandidate Source Addresses: 2001:db8:3::1 or fe80::1\r\nResult: 2001:db8:3::1 (prefer appropriate scope)",
+    "notes": "2001:db8::1 is not even in the candidate set.",
+    "submit_date": "2012-09-12",
+    "submitter_name": "Stephane Bortzmeyer",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3344,
+    "doc-id": "RFC6724",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 10.1,
+    "orig_text": "   Destination: 2001:db8:1::1\r\n   Candidate Source Addresses: 2001:db8:1::2 or 2001:db8:3::2\r\n   Result: 2001:db8:1:::2 (longest matching prefix)",
+    "correct_text": "   Destination: 2001:db8:1::1\r\n   Candidate Source Addresses: 2001:db8:1::2 or 2001:db8:3::2\r\n   Result: 2001:db8:1::2 (longest matching prefix)",
+    "notes": "Invalid IPv6 syntax",
+    "submit_date": "2012-09-12",
+    "submitter_name": "Stephane Bortzmeyer",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
