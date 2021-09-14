@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 204,
+    "doc-id": "RFC3965",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99Normative Reference says:",
+    "orig_text": "   [5]  Buckley, R., Venable, D., McIntyre, L., Parsons, G., and J.\n        Rafferty, \"File Format for Internet Fax\", RFC 3949, November\n        2004.\n",
+    "correct_text": "   [5]  Buckley, R., Venable, D., McIntyre, L., Parsons, G., and J.\n        Rafferty, \"File Format for Internet Fax\", RFC 3949, February\n        2005.\n",
+    "notes": " \n [RFC3949] had not yet been published when [RFC3965] was in December, 2004.",
+    "submit_date": "2005-01-04",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 205,
+    "doc-id": "RFC3965",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99Informative References",
+    "orig_text": "[19] Ramsdell, B., \"S/MIME Version 3 Message Specification\", RFC 2633, June 1999.",
+    "correct_text": "[19] Ramsdell, B., \"S/MIME Version 3 Message Specification\", RFC 3851, June 1999.",
+    "notes": "from pending\r\n",
+    "submit_date": "2005-01-04",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 206,
+    "doc-id": "RFC3965",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "   \r\nThe Normative Reference [3] should be deleted from section 6.1., on page 10.\r\n\r\nRationale:   \r\n   References [1] and [2] from RFC 2305 have been updated, from\r\n   pointers to RFC 821 and RFC 822, to pointers to RFC 2821 and\r\n   RFC 2822, respectively.  The (normative) updates to RFC 821 and RFC 822 contained in\r\n   STD 3, RFC 1123 [3], have been incorporated into RFC 2821\r\n   and RFC 2822, respectively, which obsolete their predecessors.\r\n   Hence, the reference to RFC 1123 is no more needed in RFC 3965,\r\n   and in fact it is not mentioned in the textual body any more.\r\n",
+    "submit_date": "2005-01-04",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 711,
+    "doc-id": "RFC3965",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "a) Change the first sentence of section 2.1.3, on page 4, from:\r\n\r\n  \"An offramp gateway that operate as an MTA serving multiple users\r\n   SHOULD use SMTP;\" ...\r\n\r\nto:\r\n\r\n| \"An offramp gateway that operates as an MTA serving multiple users\r\n   SHOULD use SMTP;\" ...\r\n\r\nb) Change the first sentence of section 2.2.4, on page 4, from:\r\n\r\n  \"A single multi-page document SHOULD be sent as a single multi- page\r\n   TIFF file, even though recipients MUST process multipart/mixed\r\n   containing multiple TIFF files.\"\r\n\r\nto:\r\n\r\n| \"A single multi-page document SHOULD be sent as a single multi-page\r\n   TIFF file, even though recipients MUST process multipart/mixed\r\n   containing multiple TIFF files.\"\r\n\r\nc) Change section 5.1. on page 6 from:\r\n\r\n  \"This specification is based on use of existing Internet mail.  To\r\n   maintain interoperability with Internet mail, any security to be\r\n   provided should be part of the of the Internet security\r\n   infrastructure, rather than a new mechanism or some other mechanism\r\n   outside of the Internet infrastructure.\"\r\n\r\nto:\r\n\r\n| \"This specification is based on the use of existing Internet mail.\r\n   To maintain interoperability with Internet mail, any security to be\r\n|  provided should be part of the Internet security infrastructure,\r\n   rather than a new mechanism or some other mechanism outside of the\r\n   Internet infrastructure.\"\r\n\r\nd) Change the final sentence of section 5.2, on page 6, from:\r\n\r\n                 ... \"This section reviews relevant concerns about\r\n   Internet mail for IFax environments, as well as considering the\r\n   potential problems which can result of integrating the existing G3Fax\r\n   service with Internet mail.\"\r\n\r\nto:\r\n                 ... \"This section reviews relevant concerns about\r\n   Internet mail for IFax environments, as well as considering the\r\n|  potential problems which can result from integrating the existing\r\n   G3Fax service with Internet mail.\"\r\n\r\ne) Change the first paragraph of section 5.2.1, on page 6, from:\r\n\r\n   \"The actual sender of the message might not be the same as that\r\n   specified in the Sender or From fields of the message content headers\r\n   or the MAIL FROM address from the SMTP envelope.\"\r\n\r\nto:\r\n\r\n   \"The actual sender of the message might not be the same as that\r\n   specified in the Sender or From fields of the message content headers\r\n|  or the MAIL FROM address in the SMTP envelope.\"\r\n\r\nf) Change the second-to-last paragraph of section 5.2.2, on page 7,\r\nfrom:\r\n\r\n  \"Originator authentication entails the use of weak or strong\r\n   mechanisms, such as cleartext keywords or encryption-based\r\n   data-signing, respectively, to determine and validate the identify\r\n   of the sender and assess permissions accordingly.\"\r\n\r\nto:\r\n\r\n  \"Originator authentication entails the use of weak or strong\r\n   mechanisms, such as cleartext keywords or encryption-based\r\n|  data-signing, respectively, to determine and validate the identity\r\n   of the sender and assess permissions accordingly.\"\r\n\r\ng) Change the first sentence of the last paragraph of section 5.2.3,\r\non page 8, from:\r\n\r\n  \"Typically authorization needs to be associated to specific senders\r\n   and specific messages, in order to prevent a \"replay\" attack which\r\n   causes and earlier authorization to enable a later dial-out by a\r\n   different (and unauthorized) sender.\" ...\r\n\r\nto:\r\n\r\n| \"Typically authorization needs to be associated with specific senders\r\n   and specific messages, in order to prevent a \"replay\" attack which\r\n|  causes an earlier authorization to enable a later dial-out by a\r\n   different (and unauthorized) sender.\" ...",
+    "correct_text": "[see above]",
+    "notes": "from pending   ",
+    "submit_date": "2005-01-04",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
