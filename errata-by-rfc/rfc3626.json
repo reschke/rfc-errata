@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5092,
+    "doc-id": "RFC3626",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 6.1,
+    "orig_text": "      Reserved\r\n\r\n         This field must be set to \"0000000000000\" to be in compliance\r\n         with this specification.\r\n",
+    "correct_text": "      Reserved\r\n\r\n         This field must be set to zero to be in compliance with this \r\n         specification.\r\n",
+    "notes": "Reserved takes 16+n*8 bits in this message, but the text specifies a 13-bit constant.",
+    "submit_date": "2017-08-19",
+    "submitter_name": "Denis Ovsienko",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
