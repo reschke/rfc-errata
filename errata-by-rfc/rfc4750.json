@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2788,
+    "doc-id": "RFC4750",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "ospfVirtNbrEvents OBJECT-TYPE\r\nSYNTAX Counter32\r\nMAX-ACCESS read-only\r\nSTATUS current\r\nDESCRIPTION\r\n\"The number of times this virtual link has\r\nchanged its state or an error has occurred.\r\nDiscontinuities in the value of this counter can occur\r\nat re-initialization of the management system, and at other\r\ntimes as indicated by the value of ospfDiscontinuityTime.\"\r\n::= { ospfVirtNbrEntry 6 }",
+    "correct_text": "ospfVirtNbrEvents OBJECT-TYPE\r\nSYNTAX Counter32\r\nMAX-ACCESS read-only\r\nSTATUS current\r\nDESCRIPTION\r\n\"The number of times this virtual neighbor has\r\nchanged its state or an error has occurred.\r\nDiscontinuities in the value of this counter can occur\r\nat re-initialization of the management system, and at other\r\ntimes as indicated by the value of ospfDiscontinuityTime.\"\r\n::= { ospfVirtNbrEntry 6 }",
+    "notes": null,
+    "submit_date": "2011-04-25",
+    "submitter_name": "Vladica Stanisic",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3292,
+    "doc-id": "RFC4750",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "   ospfTrapCompliance MODULE-COMPLIANCE\r\n        STATUS       obsolete\r\n        DESCRIPTION\r\n           \"The compliance statement.\"\r\n        MODULE       -- this module\r\n        MANDATORY-GROUPS { ospfTrapControlGroup }\r\n\r\n        GROUP       ospfTrapControlGroup\r\n        DESCRIPTION\r\n           \"This group is optional but recommended for all\r\n           OSPF systems.\"\r\n        ::= { ospfTrapCompliances 1 }",
+    "correct_text": "   ospfTrapCompliance MODULE-COMPLIANCE\r\n        STATUS       obsolete\r\n        DESCRIPTION\r\n           \"The compliance statement.\"\r\n        MODULE       -- this module\r\n        GROUP       ospfTrapControlGroup\r\n        DESCRIPTION\r\n           \"This group is optional but recommended for all\r\n           OSPF systems.\"\r\n        ::= { ospfTrapCompliances 1 }",
+    "notes": "ospfTrapControlGroup is listed both in the MANDATORY-GROUPS clause and in a GROUP clause. Per RFC 2580, Conformance Statements for SMIv2 (brackets added to indicate pertinent rule):\r\n\r\n\"5.4.2.  Mapping of the GROUP clause\r\n\r\n   The GROUP clause, which need not be present, is repeatedly used to\r\n   name each object and notification group which is conditionally\r\n   mandatory for compliance to the MIB module.  The GROUP clause can\r\n   also be used to name unconditionally optional groups.  [A group named\r\n   in a GROUP clause must be absent from the correspondent MANDATORY-\r\n   GROUPS clause.]\"\r\n\r\nIt is listed in both clauses in RFC 1850 as well (which RFC 4750 obsoletes). It is STATUS current in RFC 1850 and STATUS obsolete in 4750; however, obsolete or not, it is not legal according to SMI rules.",
+    "submit_date": "2012-07-23",
+    "submitter_name": "Michael Kirkham",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
