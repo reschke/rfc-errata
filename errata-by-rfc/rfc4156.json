@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 177,
+    "doc-id": "RFC4156",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "Section 2 should be consistent with the systematic use of the term \"URI instead of \"URL\"\r\n\r\nRationale:\r\nRFC 3986 (== STD 66), in section 1.1.3., at the bottom of page 7,\r\nspecifies:\r\n\r\n       ...  Future specifications and related documentation should\r\n   use the general term \"URI\" rather than the more restrictive terms\r\n   \"URL\" and \"URN\" [RFC3305].\r\n\r\nAdmittedly, RFC1630 and RFC 1738 used the term \"URL\" -- but that\r\nwas long before RFC 3986!",
+    "submit_date": "2005-09-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
