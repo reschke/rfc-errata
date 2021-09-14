@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3006,
+    "doc-id": "RFC6392",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5.1.2",
+    "orig_text": "Not provided.",
+    "correct_text": "Basic deletion of resources is provided with the DELETE method.",
+    "notes": "The typical \"data management operation\" mentioned for other protocols is the deletion of data. HTTP has it from the beginning (Section 9.7 of RFC 2616).\r\n\r\nApache does not support it directly, you apparently have to provide a module which does it (mod_dav does it, even if DELETE is not a WebDAV method). Anyway, this section is about the abilities of the protocol, not of implementations.",
+    "submit_date": "2011-10-26",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
