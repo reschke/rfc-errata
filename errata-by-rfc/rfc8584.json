@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5899,
+    "doc-id": "RFC8584",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 1.1,
+    "orig_text": "BD: Broadcast Domain.  An EVI may be comprised of one BD\r\n      (VLAN-based or VLAN Bundle services) or multiple BDs (VLAN-aware\r\n      Bundle services).",
+    "correct_text": "BD: Bridge Domain.  An EVI may be comprised of one BD\r\n      (VLAN-based or VLAN Bundle services) or multiple BDs (VLAN-aware\r\n      Bundle services).",
+    "notes": "broadcast domain is not comprised in any services (VLAN-based or VLAN Bundle service).",
+    "submit_date": "2019-11-12",
+    "submitter_name": "Sean.Chen",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 5900,
+    "doc-id": "RFC8584",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 1.1,
+    "orig_text": "BD: Broadcast Domain.  An EVI may be comprised of one BD\r\n      (VLAN-based or VLAN Bundle services) or multiple BDs (VLAN-aware\r\n      Bundle services).",
+    "correct_text": "BD: Broadcast Domain.  An EVI may be comprised of one BD\r\n      (VLAN-based) or multiple BDs (VLAN Bundle services \r\nor VLAN-aware Bundle services).",
+    "notes": "By definition, tgere",
+    "submit_date": "2019-11-12",
+    "submitter_name": "Frank Lu",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
