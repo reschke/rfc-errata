@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1401,
+    "doc-id": "RFC5198",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2, pg.3",
+    "orig_text": "   3.  The control characters in the ASCII range (U+0000 to U+001F and\r\n|      U+007F to U+009F) SHOULD generally be avoided.  Space (SP,\r\n|      U+0020), CR, LF, and Form Feed (FF, U+000C) are exceptions to\r\n|      this principle, but use of all but the first requires care as\r\n       discussed elsewhere in this document.  The so-called \"C1\r\n       Controls\" (U+0080 through U+009F), which did not appear in ASCII,\r\n       MUST NOT appear.",
+    "correct_text": "   3.  The control characters in the ASCII range (U+0000 to U+001F and\r\n|      U+007F to U+009F) SHOULD generally be avoided. CR, LF, and Form\r\n|      Feed (FF, U+000C) are exceptions to this principle, but use of\r\n|      these, as well as Space (SP, U+0020, which is often treated as a\r\n|      control character), requires care as discussed elsewhere in this\r\n       document.  The so-called \"C1 Controls\" (U+0080 through U+009F),\r\n       which did not appear in ASCII, MUST NOT appear.",
+    "notes": "Logical inconsistency:\r\nSPACE is not contained in the enumeration in the first sentence;\r\nthus, it is no *exception* to that rule, and the published text\r\ndoes not make proper sense.",
+    "submit_date": "2008-03-31",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1402,
+    "doc-id": "RFC5198",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2, mid-pg.4",
+    "orig_text": "   The use of LF without CR is questionable; see Appendix B for more\r\n   discussion.  The newer control characters IND (U+0084) and NEL (\"Next\r\n   Line\", U+0085) might have been used to disambiguate the various line-\r\n   ending situations, but, because their use has not been established on\r\n   the Internet, because many protocols require CRLF, and because IND\r\n|  and NEL fall within the \"C1 Controls\" group (see below), they MUST\r\n   NOT be used.  [...]\r\n                                                    ^^^^^",
+    "correct_text": "   The use of LF without CR is questionable; see Appendix B for more\r\n   discussion.  The newer control characters IND (U+0084) and NEL (\"Next\r\n   Line\", U+0085) might have been used to disambiguate the various line-\r\n   ending situations, but, because their use has not been established on\r\n   the Internet, because many protocols require CRLF, and because IND\r\n|  and NEL fall within the \"C1 Controls\" group (see above), they MUST\r\n   NOT be used.  [...]\r\n                                                    ^^^^^^",
+    "notes": "The only relevant discussion of \"C1 Controls\" in the document\r\nis in bullet 3 within the same section, on the preceding page.\r\nHence, \"below\" is misleading for the reader and needs to be\r\nreplaced to correctly say \"above\".\r\n",
+    "submit_date": "2008-03-31",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3991,
+    "doc-id": "RFC5198",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "2, pg.3",
+    "orig_text": "   3.  The control characters in the ASCII range (U+0000 to U+001F and\r\n|      U+007F to U+009F) SHOULD generally be avoided.  Space (SP,\r\n|      U+0020), CR, LF, and Form Feed (FF, U+000C) are exceptions to\r\n|      this principle, but use of all but the first requires care as\r\n       discussed elsewhere in this document.  The so-called \"C1\r\n       Controls\" (U+0080 through U+009F), which did not appear in ASCII,\r\n       MUST NOT appear.",
+    "correct_text": "   3.  The control characters in the ASCII range (U+0000 to U+001F and\r\n|      U+007F to U+009F) SHOULD generally be avoided. CR, LF, and\r\n|      Form Feed (FF, U+000C) are exceptions to\r\n|      this principle, but use of these requires care as\r\n|      discussed elsewhere in this document.\r\n|      Space (SP, U+0020) is often treated as a control character and\r\n|      described that way in many documents.  It SHOULD NOT appear in\r\n|      identifiers.  When used in more general strings, it should be\r\n|      used with caution because Unicode supports a number of other\r\n|      spacing characters (see, e.g., NO-BREAK SPACE (U+00A0) and the\r\n|      collection of characters in the range 2000..200B that may or may\r\n|      not be considered equivalent depending on the normalization and\r\n|      other rules used.  The so-called \"C1 Controls\" (U+0080 through\r\n|       U+009F), which did not appear in ASCII, MUST NOT appear.",
+    "notes": "Logical inconsistency:\r\nSPACE is not contained in the enumeration in the first sentence;\r\nthus, it is no *exception* to that rule, and the published text\r\ndoes not make proper sense.\n --VERIFIER NOTES-- \nThe part of this erratum which says:\r\n\r\n\tIt SHOULD NOT appear in identifiers.  When used in more\r\n\tgeneral strings, it should be used with caution because\r\n\tUnicode supports a number of other spacing characters\r\n\t(see, e.g., NO-BREAK SPACE (U+00A0) and the collection\r\n\tof characters in the range 2000..200B that may or may\r\n\tnot be considered equivalent depending on the\r\n\tnormalization and other rules used.\r\n\r\nwhile possibly true, is not appropriate for an erratum. It is a substantive change.",
+    "submit_date": "2008-03-31",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
