@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 4677,
+    "doc-id": "RFC7788",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "   A network-wide\r\n   zone is appended to all single labels or unqualified zones in order\r\n   to qualify them. \".home\" is the default; however, an administrator\r\n   MAY configure the announcement of a Domain-Name TLV (Section 10.6)\r\n   for the network to use a different one.",
+    "correct_text": "   A network-wide\r\n   zone is appended to all single labels or unqualified zones in order \r\n   to qualify them.  A default value for this TLV MUST be set, although \r\n   the default value of the Domain-Name TLV (Section 10.6) is out of \r\n   scope of this document, and an administrator MAY configure the \r\n   announcement of a Domain-Name TLV for the network.",
+    "notes": "It may appear that the use of the label \".home\" is unofficially assigning this to be added to the Special Use Domain Registry. That registry can only be updated using the process outlined in RFC6761, therefore the text identifying \".home\" as the default network-wide zone is in error.\r\n\r\nIt is unclear of the IESG and the IETF in publishing this proposed standard if the intent was to use \".home\" as an example or placeholder until a name can be reserved.\r\n\r\nAD Note: A default label is a requirement for HNCP and its interoperability. As such the Homenet chosen label, \".home\", is a strong candidate for the RFC6761 process. The WG will be directed to follow this process and seek (again) the consensus on the \".home\" label and work with other IETF WGs as appropriate.",
+    "submit_date": "2016-04-26",
+    "submitter_name": "Tim Wicinski",
+    "verifier_id": 2,
+    "verifier_name": "Terry Manderson",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4718,
+    "doc-id": "RFC7788",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "7.4.  Multicast DNS Proxy\r\n\r\n   The designated Multicast DNS (mDNS) [RFC6762] proxy on a Common Link\r\n   is elected based on the capabilities described in Section 4.\r\n\r\n[...]\r\n\r\n   The elected router MUST provide an mDNS proxy on the given link and\r\n   announce it as described in Section 8.\r\n\r\n[...]\r\n\r\n8.  Naming and Service Discovery\r\n\r\n   [...]\r\n\r\n   Each HNCP router SHOULD provide and announce an auto-generated or\r\n   user-configured name for each internal Common Link (Section 6.1) for\r\n   which it is the designated DHCPv4, stateful DHCPv6 server, mDNS\r\n   proxy, or for which it provides forward or reverse DNS services on\r\n   behalf of connected devices.\r\n\r\n[...]\r\n\r\n10.1.  HNCP-Version TLV\r\n\r\n   [...]\r\n\r\n   M-capability:  Priority value used for electing the on-link mDNS\r\n      [RFC6762] proxy.  It MUST be set to 0 if the router is not capable\r\n      of proxying mDNS, otherwise it SHOULD be set to 4 but MAY be set\r\n      to any value from 1 to 7 to indicate a non-default priority\r\n\r\n\r\n",
+    "correct_text": "7.4.  Multicast DNS Hybrid Proxy\r\n\r\n   The designated Multicast DNS (mDNS) [RFC6762] Hybrid Proxy\r\n   [draft-ietf-dnssd-hybrid-03] on a Common Link is elected based\r\n   on the capabilities described in Section 4.\r\n\r\n[...]\r\n\r\n   The elected router MUST provide an mDNS Hybrid Proxy on the\r\n   given link and announce it as described in Section 8.\r\n\r\n[...]\r\n\r\n8.  Naming and Service Discovery\r\n\r\n   [...]\r\n\r\n   Each HNCP router SHOULD provide and announce an auto-generated or\r\n   user-configured name for each internal Common Link (Section 6.1) for\r\n   which it is the designated DHCPv4, stateful DHCPv6 server, mDNS\r\n   Hybrid Proxy, or for which it provides forward or reverse DNS\r\n   services on behalf of connected devices.\r\n\r\n[...]\r\n\r\n10.1.  HNCP-Version TLV\r\n\r\n   [...]\r\n\r\n   M-capability:  Priority value used for electing the on-link mDNS\r\n      Hybrid Proxy.  It MUST be set to 0 if the router is not capable\r\n      of providing an mDNS Hybrid Proxy service, otherwise it SHOULD\r\n      be set to 4 but MAY be set to any value from 1 to 7 to indicate\r\n      a non-default priority\r\n\r\n",
+    "notes": "RFC 7788 refers to \"Multicast DNS (mDNS) proxy\" and gives a citation for RFC 6762.\r\n\r\nRFC 6762, \"Multicast DNS,\" defines multicast DNS and mentions (without an explicit definition) a \"Multicast DNS Proxy\" service.  This proxy service is also known as \"Bonjour Sleep Proxy\" [https://en.wikipedia.org/wiki/Bonjour_Sleep_Proxy]\r\n\r\nHowever, the intent of RFC 7788 is to specify the operation and advertisement of the multicast DNS Hybrid Proxy Service, as defined in draft-ietf-dnssd-hybrid-03, \"Hybrid Unicast/Multicast DNS-Based Service Discovery.\"  This errata corrects the mentions of \"mDNS proxy\" in RFC 7788 to \"Hybrid Proxy.\"\r\n\r\ndraft-ietf-dnssd-hybrid-03 should also be added to the Normative References.",
+    "submit_date": "2016-06-23",
+    "submitter_name": "Ralph Droms",
+    "verifier_id": 146,
+    "verifier_name": "Terry Manderson",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5021,
+    "doc-id": "RFC7788",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "",
+    "orig_text": "HNCP uses opaque 32-bit node identifiers\r\n(DNCP_NODE_IDENTIFIER_LENGTH = 32).",
+    "correct_text": "HNCP uses opaque 32-bit node identifiers\r\n(DNCP_NODE_IDENTIFIER_LENGTH = 4).",
+    "notes": "RFC 7787 (DNCP) in section 9 defines DNCP_NODE_IDENTIFIER_LENGTH as being bytes, not bits.\r\n\r\n-- Verifier note --\r\nIndeed, section 9 of RFC 7787 clearly specifies \"DNCP_NODE_IDENTIFIER_LENGTH: The fixed length of a node identifier (in bytes).\"",
+    "submit_date": "2017-05-19",
+    "submitter_name": "Dirk Feytons",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-01-03 00:14:53"
+  },
+  {
+    "errata_id": 5113,
+    "doc-id": "RFC7788",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 10,
+    "orig_text": "10.2.2.  DHCPv6-Data TLV\r\n\r\n    0                   1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |    Type: DHCPv6-Data (37)     |          Length: > 0          |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n[...]\r\n\r\n10.2.3.  DHCPv4-Data TLV\r\n\r\n    0                   1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |     Type: DHCPv4-Data (38)    |          Length: > 0          |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "correct_text": "10.2.2.  DHCPv6-Data TLV\r\n\r\n    0                   1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |    Type: DHCPv6-Data (38)     |          Length: > 0          |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n[...]\r\n\r\n10.2.3.  DHCPv4-Data TLV\r\n\r\n    0                   1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |     Type: DHCPv4-Data (37)    |          Length: > 0          |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "notes": "Section 13 (IANA Considerations) of the document says:\r\n\r\n      37: DHCPv4-Data\r\n\r\n      38: DHCPv6-Data\r\n\r\nThose code points from Section 13 are in the \"HNCP TLV Types\" IANA registry as well as in the current source code of shncpd and tcpdump. The code points shown in Sections 10.2.2 and 10.2.3 were likely swapped by mistake.\r\n\r\n-- Verifier note --\r\nThe IANA registry for HNCP TLV types (https://www.iana.org/assignments/dncp-registry/dncp-registry.xhtml#hncp-tlv-types) has indeed 37 for DHCPv4 and the open source SHNCPD has the same https://github.com/jech/shncpd/blob/master/receive.c\r\n",
+    "submit_date": "2017-09-13",
+    "submitter_name": "Denis Ovsienko",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-01-03 00:24:06"
+  }
+]
