@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4456,
+    "doc-id": "RFC1349",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7.1,
+    "orig_text": "where type 1 entries result from the receipt of code 3 (or code 1)\r\nRedirects and type 2 entries result from the receipt of code 2 (or\r\ncode 0) Redirects.",
+    "correct_text": "where type 1 entries result from the receipt of code 3 (or code 2)\r\nRedirects and type 2 entries result from the receipt of code 1 (or\r\ncode 0) Redirects.",
+    "notes": "I think that original text has no sense, especially considering that routers MUST NOT send 0 and 2 Redirects, type 2 routing entries has no chance to occur. Sorry if I'm mistaking and not fully understand ideas behind RFC 1349\r\n=====\r\n(Alvaro Retana)  The report and correction are valid.  I did edit them for completeness.",
+    "submit_date": "2015-08-26",
+    "submitter_name": "Anton",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
