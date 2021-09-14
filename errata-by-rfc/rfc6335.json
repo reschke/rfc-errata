@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3814,
+    "doc-id": "RFC6335",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "10.3.1",
+    "orig_text": "Service codes are assigned on a \"first come, first served\" basis\r\naccording to Section 19.8 of the DCCP specification [RFC4340].\r\n",
+    "correct_text": "Service Codes are generally assigned on a \"first come, first\r\nserved\" basis, according to the rules specified in Section 19.8\r\nof the DCCP specification [RFC4340]. This also defines\r\nexceptions to this policy. [RFC5595] updated the policy\r\nto require Service Codes assignments\r\nin a Standards-Track specification to be assigned from the\r\nSpecifications-Required portion of the Service Code registry.\r\n",
+    "notes": "RFC 6335 should have noted in Section 10.3.1:  Exceptions to the FCFS\r\npolicy are documented in RFC 4340. RFC 5595 updated the usage of the SC\r\nvalues described in RFC 4340.",
+    "submit_date": "2013-11-29",
+    "submitter_name": "Gorry Fairhurst",
+    "verifier_id": 2,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4999,
+    "doc-id": "RFC6335",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "Many port number assignments are to individuals, but the document does not\r\ncontemplate how they should be handled when the assignee is dead or\r\notherwise can't be contacted. \r\n\r\nThe most obvious procedure to follow is a transfer (8.5), but that requires \r\nde-assignment (8.2), and that doesn't cover the case above.",
+    "submit_date": "2017-04-19",
+    "submitter_name": "Mark Nottingham",
+    "verifier_id": 153,
+    "verifier_name": "Mirja Kühlewind",
+    "update_date": "2020-03-04 03:30:26"
+  }
+]
