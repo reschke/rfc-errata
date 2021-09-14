@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2118,
+    "doc-id": "RFC5506",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "   This memo discusses benefits and issues that arise when allowing\r\n|  Real-time Transport Protocol (RTCP) packets to be transmitted with\r\n   reduced size.  [...]",
+    "correct_text": "   This memo discusses benefits and issues that arise when allowing\r\n|  Real-time Transport Control Protocol (RTCP) packets to be transmitted\r\n   with reduced size.  [...]",
+    "notes": "Rationale: Consistency with document title (and RFC 3550).",
+    "submit_date": "2010-04-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2119,
+    "doc-id": "RFC5506",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.4.5",
+    "orig_text": "|  o  Compression of RTCP: No IETF-defined header compression method\r\n      compress RTCP; however, if such methods are developed in the\r\n|     future, these methods must take Reduced-Size RTCP in account.\r\n",
+    "correct_text": "|  o  Compression of RTCP: No IETF-defined header compression methods\r\n      compress RTCP; however, if such methods are developed in the\r\n|     future, these methods must take Reduced-Size RTCP into account.\r\n",
+    "notes": "Rationale: singular/plural mismatch; language improvement.",
+    "submit_date": "2010-04-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
