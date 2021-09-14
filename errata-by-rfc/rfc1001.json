@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 679,
+    "doc-id": "RFC1001",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "I found something strange in rfc1001\r\nMaybe my code is wrong, but it returns \"Tge NetBIOS tame\"\r\ninstead of \"The NetBIOS name\" when I try to encode\r\nFEGHGFCAEOGFHEECEJEPFDCAHEGBGNGF\r\n\r\n\"For example, the NetBIOS name \"The NetBIOS name\" in the NetBIOS scope\r\n\"SCOPE.ID.COM\" would be represented at level one by the ASCII\r\n\r\ncharacter string:\r\n\r\nFEGHGFCAEOGFHEECEJEPFDCAHEGBGNGF.SCOPE.ID.COM\"",
+    "correct_text": "[not submitted]",
+    "notes": "from pending",
+    "submit_date": "2002-02-25",
+    "submitter_name": "Anvish",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5209,
+    "doc-id": "RFC1001",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 14,
+    "orig_text": "FEGHGFCAEOGFHEECEJEPFDCAHEGBGNGF",
+    "correct_text": "FEGIGFCAEOGFHEECEJEPFDCAGOGBGNGF",
+    "notes": "I notice the same issue that Anvish received. I did not find the corrected answer anywhere after doing a few searches.",
+    "submit_date": "2017-12-16",
+    "submitter_name": "Brian",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
