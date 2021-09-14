@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3450,
+    "doc-id": "RFC6639",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.2.9",
+    "orig_text": "   The mplsOutSegmentPerfTable [RFC3813] contains statistical\r\n   information (total packets received, total errored packets received,\r\n   total packets discarded, discontinuity time) for outgoing MPLS\r\n   segments from an LSR.\r\n",
+    "correct_text": "   The mplsOutSegmentPerfTable [RFC3813] contains statistical\r\n   information (total packets sent, \r\n   total packets that could not be sent due to errors, \r\n   total packets discarded, discontinuity time) for outgoing MPLS\r\n   segments from an LSR.\r\n",
+    "notes": "mplsOutSegmentPerfTable is for segments sent, current text relates to segments received.",
+    "submit_date": "2013-01-10",
+    "submitter_name": "tom petch",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3923,
+    "doc-id": "RFC6639",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.2.6",
+    "orig_text": "This MIB architecture is modeled based on PW3 architecture [RFC3985]",
+    "correct_text": "This MIB architecture is modeled based on PWE3 architecture [RFC3985]",
+    "notes": "PW3 -> PWE3",
+    "submit_date": "2014-03-20",
+    "submitter_name": "Liu Lin",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3925,
+    "doc-id": "RFC6639",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.2.9",
+    "orig_text": "The pwTDMPerfCurrentTable [RFC5604], pwTDMPerfIntervalTable\r\n[RFC5604], and pwTDMPerf1DayIntervalTable [RFC5604] contain\r\nstatistical information accumulated per 15-minute, 24-hour, and 1-day\r\nperiods, respectively.",
+    "correct_text": "The pwTDMPerfCurrentTable [RFC5604], pwTDMPerfIntervalTable\r\n[RFC5604], and pwTDMPerf1DayIntervalTable [RFC5604] contain\r\nstatistical information accumulated per 15-minute, 24-hour, and 1-month\r\nperiods, respectively.",
+    "notes": "1-day  --> 1-month\r\nRFC5604 section 6.1 states: \r\n    The TDM Performance Current Table (pwTDMPerfCurrentTable) contains TDM statistics for the current 15-minute period. \r\n    The TDM Performance Interval Table (pwTDMPerfIntervalTable) contains TDM statistics for historical intervals (usually 96 15-minute entries to cover a 24 hour period).\r\n    The TDM Performance One-Day Interval Table (pwTDMPerf1DayIntervalTable) contains TDM statistics for historical intervals accumulated per day.  Usually 30 one-day entries to cover a monthly period.",
+    "submit_date": "2014-03-21",
+    "submitter_name": "Liu Lin",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
