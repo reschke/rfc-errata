@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 256,
+    "doc-id": "RFC3525",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "Errata can be found in the ITU-T Implementor's Guide at:\nhttp://www.itu.int/itudoc/itu-t/com16/implgd/h248.1v1.html\n",
+    "submit_date": "2005-09-13",
+    "submitter_name": "Tom Taylor",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 257,
+    "doc-id": "RFC3525",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "99\r\nAppendix I says:",
+    "orig_text": "   MEGACO/1 [125.125.125.111]:55555 Reply = 50006 {\r\n    Context = 5000 {Modify = A4445} }",
+    "correct_text": "   MEGACO/1 [125.125.125.111]:55555 Reply = 50006 {\r\n    Context = 5000 {Modify = A5555} }\r\n",
+    "notes": "",
+    "submit_date": "2005-04-28",
+    "submitter_name": "Chen Rui",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
