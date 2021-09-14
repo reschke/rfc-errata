@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 105,
+    "doc-id": "RFC4368",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "   C-FR  RFC 3034 defines a label-switching-controlled Frame Relay\r\n         (LC-FR) interface.  Packets traversing such an interface carry\r\n         labels in the DLCI field\r\n\r\n   C-ATM RFC 3035 defines a label-switching-controlled ATM (LC-ATM)\r\n         interface as an ATM interface controlled by the label switching\r\n         control component. ",
+    "correct_text": "   LC-FR\r\n         RFC 3034 defines a label-switching-controlled Frame Relay\r\n         (LC-FR) interface.  Packets traversing such an interface carry\r\n         labels in the DLCI field\r\n\r\n   LC-ATM\r\n         RFC 3035 defines a label-switching-controlled ATM (LC-ATM)\r\n         interface as an ATM interface controlled by the label switching\r\n         control component. ",
+    "notes": "The acronyms, \"C-FR\" and \"C-ATM\", do not appear elsewhere in the text.\r\nApparently, the first column has been cut off.",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 675,
+    "doc-id": "RFC4368",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "    [...].  Note that mplsLcAtmStdUnlabTrafVci and mplsLcAtmStdCtrlVci\r\n   MUST not be equal; nor should mplsLcAtmStdCtrlVpi or\r\n   mplsLcAtmStdUnlabTrafVpi be equal.\r\n",
+    "correct_text": "  Note that the VPI/VCI pair used for unlabeled traffic \r\n  (mplsLcAtmStdUnlabTrafVpi, mplsLcAtmStdUnlabTrafVci) MUST NOT equal\r\n  the VPI/VIC pair used for control traffic (mplsLcAtmStdCtrlVpi,\r\n  mplsLcAtmStdCtrlVci).\r\n",
+    "notes": "The  (Vpi, Vci) - *pairs*  must not be equal for every\r\nmplsLcAtmStdInterfaceConfEntry.",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
