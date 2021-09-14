@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4569,
+    "doc-id": "RFC3390",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 8.1,
+    "orig_text": "   A second set of experiments explored TCP performance over dialup\r\n   modem links.  In experiments over a 28.8 bps dialup channel [All97a,\r\n   AHO98], a four-segment initial window decreased the transfer time of\r\n   a 16KB file by roughly 10%, with no accompanying increase in the drop\r\n   rate.  A simulation study [RFC2416] investigated the effects of using\r\n   a larger initial window on a host connected by a slow modem link and\r\n   a router with a 3 packet buffer.  The study concluded that for the\r\n   scenario investigated, the use of larger initial windows was not\r\n   harmful to TCP performance.",
+    "correct_text": "   A second set of experiments explored TCP performance over dialup\r\n   modem links.  In experiments over a 28.8 kbps dialup channel [All97a,\r\n   AHO98], a four-segment initial window decreased the transfer time of\r\n   a 16KB file by roughly 10%, with no accompanying increase in the drop\r\n   rate.  A simulation study [RFC2416] investigated the effects of using\r\n   a larger initial window on a host connected by a slow modem link and\r\n   a router with a 3 packet buffer.  The study concluded that for the\r\n   scenario investigated, the use of larger initial windows was not\r\n   harmful to TCP performance.",
+    "notes": "Error bit rate - kbps instead of bps.",
+    "submit_date": "2015-12-22",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4583,
+    "doc-id": "RFC3390",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 1,
+    "orig_text": "   This increased initial window is optional: a TCP MAY start with a\r\n   larger initial window.  However, we expect that most general-purpose\r\n   TCP implementations would choose to use the larger initial congestion\r\n   window given in equation (1) above.",
+    "correct_text": "   This increased initial window is optional: a TCP MAY start with a\r\n   smaller initial window.  However, we expect that most general-purpose\r\n   TCP implementations would choose to use the larger initial congestion\r\n   window given in equation (1) above.",
+    "notes": "The MAY allows use of values smaller than this document allows, not larger.",
+    "submit_date": "2016-01-06",
+    "submitter_name": "Joe Touch",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
