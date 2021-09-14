@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1556,
+    "doc-id": "RFC5251",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.1.2, Fig.4",
+    "orig_text": "        +---------------------------------------+\r\n        |     PPI Length (1 octet)              |\r\n        +---------------------------------------+\r\n        |     PPI (variable)                    |\r\n        +---------------------------------------+\r\n        |     CPI AFI (2 octets)                |\r\n        +---------------------------------------+\r\n|       |     CPI (length)                      |\r\n        +---------------------------------------+\r\n        |     CPI (variable)                    |\r\n        +---------------------------------------+\r\n\r\n          Figure 4: Auto-Discovery Information\r\n",
+    "correct_text": "        +---------------------------------------+\r\n        |     PPI Length (1 octet)              |\r\n        +---------------------------------------+\r\n        |     PPI (variable)                    |\r\n        +---------------------------------------+\r\n        |     CPI AFI (2 octets)                |\r\n        +---------------------------------------+\r\n|       |     CPI Length (1 octet)              |\r\n        +---------------------------------------+\r\n        |     CPI (variable)                    |\r\n        +---------------------------------------+\r\n\r\n          Figure 4: Auto-Discovery Information\r\n",
+    "notes": "Rationale:\r\nThe name of the field in the Figure should be consistent\r\nwith the subsequent explanations in the text, and the\r\ninformation presented should be comparable",
+    "submit_date": "2008-10-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1557,
+    "doc-id": "RFC5251",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.1.2, pg.14",
+    "orig_text": "         ... consistent between the those providers.  [...]",
+    "correct_text": "         ... consistent between those providers.  [...]",
+    "notes": "Rationale: extraneous aricle",
+    "submit_date": "2008-10-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1558,
+    "doc-id": "RFC5251",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.4, pg.19",
+    "orig_text": "   Signaling:\r\n\r\n   A CE requests a network-protected LSP (i.e., an LSP that is protected\r\n|  from PE-to-PE) by using the technique described in [RFC4873].\r\n   [...]\r\n",
+    "correct_text": "   Signaling:\r\n\r\n   A CE requests a network-protected LSP (i.e., an LSP that is protected\r\n|  from PE to PE) by using the technique described in [RFC4873].\r\n   [...]\r\n",
+    "notes": "Rationale:  distorting hyphens",
+    "submit_date": "2008-10-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
