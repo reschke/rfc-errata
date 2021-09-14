@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2303,
+    "doc-id": "RFC5831",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 9,
+    "orig_text": "[GOST3411]  \"Information technology.  Cryptographic Data Security.\r\n               Hashing function.\", GOST R 34.10-94, Gosudarstvennyi\r\n               Standard of Russian Federation, Government Committee of\r\n               the Russia for Standards, 1994. (In Russian)\r\n",
+    "correct_text": "[GOST3411]  \"Information technology.  Cryptographic Data Security.\r\n               Hashing function.\", GOST R 34.11-94, Gosudarstvennyi\r\n               Standard of Russian Federation, Government Committee of\r\n               the Russia for Standards, 1994. (In Russian)\r\n",
+    "notes": null,
+    "submit_date": "2010-06-17",
+    "submitter_name": "Vasily Dolmatov",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2863,
+    "doc-id": "RFC5831",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.3.1",
+    "orig_text": "K[1] = \r\n733D2C20 65686573 74746769 326c6568\r\n626E7373 20657369 79676120 33206D54",
+    "correct_text": "K[1] = \r\n733D2C20 65686573 74746769 79676120\r\n626E7373 20657369 326c6568 33206D54\r\n\r\n\r\n",
+    "notes": "The entries 326c6568 and 79676120 have to been swapped",
+    "submit_date": "2011-07-15",
+    "submitter_name": "Tino Kaufmann",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4262,
+    "doc-id": "RFC5831",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.3.2.",
+    "orig_text": "STEP 3.\r\n\r\n   H    = 95BEA0BE 88D5AA02 FE3C9D45 436CE821\r\n          B8287CB6 2CBC135B 3E339EFE F6576CA9\r\n\r\n   L    = 00000000 00000000 00000000 00000000\r\n          00000000 00000000 00000000 00000190\r\n\r\n   K[1] = 95FEB83E BE3C2833 A09D7C9E BE45B6FE\r\n          88432CF6 D56CBC57 AAE8136D 02215B39\r\n\r\n   K[2] = 8695FEB8 1BBE3C28 E2A09D7C 48BE45B6\r\n          DA88432C EBD56CBC 7FABE813 F292215B\r\n\r\n   K[2] = 8695FEB8 1BBE3C28 E2A09D7C 48BE45B6\r\n          DA88432C EBD56CBC 7FABE813 F292215B\r\n\r\n   K[3] = B9799501 141B413C 1EE2A062 0CB74145\r\n          6FDA88BC D0142A6C FA80AA16 15F2FDB1",
+    "correct_text": "STEP 3.\r\n\r\n   H    = 95BEA0BE 88D5AA02 FE3C9D45 436CE821\r\n          B8287CB6 2CBC135B 3E339EFE F6576CA9\r\n\r\n   L    = 00000000 00000000 00000000 00000000\r\n          00000000 00000000 00000000 00000190\r\n\r\n   K[1] = 95FEB83E BE3C2833 A09D7C9E BE45B6FE\r\n          88432CF6 D56CBC57 AAE8136D 02215B39\r\n   \r\n   K[2] = 8695FEB8 1BBE3C28 E2A09D7C 48BE45B6\r\n          DA88432C EBD56CBC 7FABE813 F292215B\r\n\r\n   K[3] = B9799501 141B413C 1EE2A062 0CB74145\r\n          6FDA88BC D0142A6C FA80AA16 15F2FDB1",
+    "notes": "You need to remove the double K[2]",
+    "submit_date": "2015-02-05",
+    "submitter_name": "Andrey Pilsky",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5739,
+    "doc-id": "RFC5831",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "      3.4 SIGMA := SIGMA (+)' M[s]",
+    "correct_text": "      3.4 SIGMA := SIGMA (+)' M_s",
+    "notes": "M[s] is not defined, and GOST R 34.11-94 also says M_s.",
+    "submit_date": "2019-05-25",
+    "submitter_name": "Vitaly Chikunov",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
