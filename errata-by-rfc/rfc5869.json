@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5161,
+    "doc-id": "RFC5869",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2.3,
+    "orig_text": "(where the constant concatenated to the end of each T(n) is a\r\nsingle octet.)\r\n",
+    "correct_text": "(where the constant concatenated to the end of each T(n) is a\r\nsingle octet with value mod(n, 256).)\r\n",
+    "notes": "It's clear what the values of the octets are supposed to be, but the text doesn't actually say what they are.",
+    "submit_date": "2017-10-20",
+    "submitter_name": "Dale R. Worley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
