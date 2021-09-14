@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5378,
+    "doc-id": "RFC8336",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "   +-------------------------------+-------------------------------+\r\n   |         Origin-Len (16)       | ASCII-Origin?               ...\r\n   +-------------------------------+-------------------------------+\r\n\r\n   Specifically:\r\n\r\n   Origin-Len:  An unsigned, 16-bit integer indicating the length, in\r\n      octets, of the ASCII-Origin field.\r\n\r\n   Origin:  An OPTIONAL sequence of characters containing the ASCII\r\n      serialization of an origin ([RFC6454], Section 6.2) that the\r\n      sender asserts this connection is or could be authoritative for.",
+    "correct_text": "   +-------------------------------+-------------------------------+\r\n   |         Origin-Len (16)       | ASCII-Origin?               ...\r\n   +-------------------------------+-------------------------------+\r\n\r\n   Specifically:\r\n\r\n   Origin-Len:  An unsigned, 16-bit integer indicating the length, in\r\n      octets, of the ASCII-Origin field.\r\n\r\n   ASCII-Origin:  An OPTIONAL sequence of characters containing the\r\n   ^^^^^^\r\n      ASCII serialization of an origin ([RFC6454], Section 6.2) that the\r\n      sender asserts this connection is or could be authoritative for.",
+    "notes": "The term used in the description of the Frame fields is inconsistent with the figure. I.E. the figure uses \"ASCII-Origin\" while the text uses \"Origin\". ASCII-Origin is used elsewhere in the document.",
+    "submit_date": "2018-06-04",
+    "submitter_name": "Lucas Pardue",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
