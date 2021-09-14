@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1715,
+    "doc-id": "RFC5467",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6, 1st para",
+    "orig_text": "   This document introduces new message objects for use in GMPLS\r\n   signaling [RFC3473] -- specifically the UPSTREAM_TSPEC,\r\n   UPSTREAM_ADSPEC, and UPSTREAM_FLOWSPEC objects.  These objects\r\n|  parallel the exiting SENDER_TSPEC, ADSPEC, and FLOWSPEC objects but\r\n   are used in the opposite direction.  As such, any vulnerabilities\r\n   that are due to the use of the old objects now apply to messages\r\n   flowing in the reverse direction.\r\n\r\n",
+    "correct_text": "   This document introduces new message objects for use in GMPLS\r\n   signaling [RFC3473] -- specifically the UPSTREAM_TSPEC,\r\n   UPSTREAM_ADSPEC, and UPSTREAM_FLOWSPEC objects.  These objects\r\n|  parallel the existing SENDER_TSPEC, ADSPEC, and FLOWSPEC objects but\r\n   are used in the opposite direction.  As such, any vulnerabilities\r\n   that are due to the use of the old objects now apply to messages\r\n   flowing in the reverse direction.\r\n",
+    "notes": "Rationale: typo changing the sense !\r\n  ==>   s/exiting/existing/",
+    "submit_date": "2009-03-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
