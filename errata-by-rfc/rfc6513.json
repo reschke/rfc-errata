@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3658,
+    "doc-id": "RFC6513",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.3.1",
+    "orig_text": "   Whenever a C-multicast route is sent, it must also carry the Selected\r\n   Upstream Multicast Hop corresponding to the C-root address\r\n   (determined by the procedures of Section 5.1).  The Selected Upstream\r\n   Multicast Hop must be encoded as part of a Route Target Extended\r\n   Community to facilitate the optional use of filters that can prevent\r\n   the distribution of the update to BGP speakers other than the\r\n   Upstream Multicast Hop.  See Section 10.1.3 of [MVPN-BGP] for the\r\n   details.",
+    "correct_text": "   Whenever a C-multicast route is sent, it must also carry the Selected\r\n   Upstream Multicast Hop corresponding to the C-root address\r\n   (determined by the procedures of Section 5.1).  The Selected Upstream\r\n   Multicast Hop must be encoded as part of a Route Target Extended\r\n   Community to facilitate the optional use of filters that can prevent\r\n   the distribution of the update to BGP speakers other than the\r\n   Upstream Multicast Hop.  See Section 11.1.3 of [MVPN-BGP] for the\r\n   details.",
+    "notes": null,
+    "submit_date": "2013-06-17",
+    "submitter_name": "Joël Repiquet",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
