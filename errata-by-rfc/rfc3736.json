@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3796,
+    "doc-id": "RFC3736",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "   Client message: sent by a DHCP relay agent in a Relay-forward message\r\n                   to carry the client message to a server (section 20)\r\n\r\n   Server message: sent by a DHCP server in a Relay-reply message to\r\n                   carry a response message to the relay agent (section\r\n                   20)\r\n",
+    "correct_text": "   Relay Message: sent by a DHCP relay agent in a Relay-forward\r\n                  message to carry the client message to a server or\r\n                  sent by a DHCP server in a Relay-reply message to\r\n                  carry a response message to the relay agent (section\r\n                  20)\r\n",
+    "notes": "The correct name for the option carries in the Relay-forward message is \"Relay Message\".  That option is shared by both Relay-forward and Relay-reply messages to carry a DHCPv6 message from or to (respectively) a DHCPv6 client.\r\n\r\nI've marked this errata as \"technical\" because it might have an impact on implementations.",
+    "submit_date": "2013-11-11",
+    "submitter_name": "Ralph Droms",
+    "verifier_id": 134,
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
