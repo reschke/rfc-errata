@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 503,
+    "doc-id": "RFC2060",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.4.8",
+    "orig_text": "   Example:    C: A999 UID FETCH 4827313:4828442 FLAGS\n               S: * 23 FETCH (FLAGS (\\Seen) UID 4827313)\n               S: * 24 FETCH (FLAGS (\\Seen) UID 4827943)\n               S: * 25 FETCH (FLAGS (\\Seen) UID 4828442)\n               S: A999 UID FETCH completed",
+    "correct_text": "   Example:    C: A999 UID FETCH 4827313:4828442 FLAGS\n               S: * 23 FETCH (FLAGS (\\Seen) UID 4827313)\n               S: * 24 FETCH (FLAGS (\\Seen) UID 4827943)\n               S: * 25 FETCH (FLAGS (\\Seen) UID 4828442)\n               S: A999 OK UID FETCH completed",
+    "notes": "A list of known errata can be found at: ftp://ftp.cac.washington.edu/mail/rfc2060-errata ",
+    "submit_date": "2002-05-28",
+    "submitter_name": "Mathieu Fenniak",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
