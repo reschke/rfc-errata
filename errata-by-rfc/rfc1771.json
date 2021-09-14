@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 539,
+    "doc-id": "RFC1771",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.3,
+    "orig_text": "Total Path Attribute Length:\n\n          This 2-octet unsigned integer indicates the total length of\n\t  the Path Attributes field in octets.  Its value must allow\n\t  the length of the Network Layer Reachability field to be\n\t  determined as specified below. \n\n          A value of 0 indicates that no Network Layer Reachability\n          Information field is present in this UPDATE message.",
+    "correct_text": "          A value of 0 indicates that the Path Attributes field is\n\t  not present in this UPDATE message.\n",
+    "notes": "",
+    "submit_date": "2003-10-01",
+    "submitter_name": "Pete Young",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
