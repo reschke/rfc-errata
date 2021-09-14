@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2255,
+    "doc-id": "RFC5861",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3, pg.3",
+    "orig_text": "   Note that this directive does not affect freshness; stale cached\r\n   responses that are used SHOULD still be visibly stale when sent\r\n|  (i.e., have a non-zero Age header and a warning header, as per HTTP's\r\n|  requirements).\r\n",
+    "correct_text": "   Note that this directive does not affect freshness; stale cached\r\n   responses that are used SHOULD still be visibly stale when sent\r\n|  (i.e., have a non-zero Age header field and a Warning header field,\r\n   as per HTTP's requirements).\r\n                                    ^^^^^^       ^             ^^^^^^",
+    "notes": "Rationale:\r\n- inconsistent use of standard terminology, and\r\n- inconsistent capitalization of header field names.\r\n\r\n(These issues recur in the last paragraph of Section 4.)",
+    "submit_date": "2010-05-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2256,
+    "doc-id": "RFC5861",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4, pg.4",
+    "orig_text": "   Note that this directive does not affect freshness; stale cached\r\n   responses that are used SHOULD still be visibly stale when sent\r\n|  (i.e., have a non-zero Age header and a warning header, as per HTTP's\r\n   requirements).\r\n",
+    "correct_text": "   Note that this directive does not affect freshness; stale cached\r\n   responses that are used SHOULD still be visibly stale when sent\r\n|  (i.e., have a non-zero Age header field and a Warning header field,\r\n   as per HTTP's requirements).\r\n                                    ^^^^^^       ^             ^^^^^^",
+    "notes": "Rationale:\r\n- inconsistent use of standard terminology, and\r\n- inconsistent capitalization of header field names.\r\n\r\n(Similar issues as for section 3 -- cf. EID=2255.)",
+    "submit_date": "2010-05-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
