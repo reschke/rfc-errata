@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3070,
+    "doc-id": "RFC3407",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "v=0\r\no=- 25678 753849 IN IP4 128.96.41.1\r\ns=\r\nc=IN IP4 128.96.41.1\r\nt=0 0\r\nm=audio 3456 RTP/AVP 18 96\r\na=rtpmap:96 telephone-event\r\na=fmtp:96 0-15,32-35\r\na=sqn: 0\r\na=cdsc: 1 audio RTP/AVP 0 18 96\r\na=cpar: a=fmtp:96 0-16,32-35\r\na=cdsc: 4 image udptl t38\r\na=cdsc: 5 image tcp t38\r\n",
+    "correct_text": "v=0\r\no=- 25678 753849 IN IP4 128.96.41.1\r\ns=\r\nc=IN IP4 128.96.41.1\r\nt=0 0\r\nm=audio 3456 RTP/AVP 18 96\r\na=rtpmap:96 telephone-event/8000\r\na=fmtp:96 0-15,32-35\r\na=sqn: 0\r\na=cdsc: 1 audio RTP/AVP 0 18 96\r\na=cpar: a=fmtp:96 0-16,32-35\r\na=cdsc: 4 image udptl t38\r\na=cdsc: 5 image tcp t38",
+    "notes": "According to RFC 4566 section 6, the clock rate is mandatory:\r\n\r\n\"a=rtpmap:<payload type> <encoding name>/<clock rate> [/<encoding\r\n         parameters>]\"",
+    "submit_date": "2011-12-28",
+    "submitter_name": "Marc Petit-Huguenin",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
