@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2597,
+    "doc-id": "RFC5910",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.2.5",
+    "orig_text": "   Example <update> Command,\r\n                 Removing all DS and Key Data Using <secDNS:rem>\r\n                 with <secDNS:all>:\r\n\r\n   C:<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\r\n   C:<epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\"\r\n   C:     xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   C:  <command>\r\n   C:    <update>\r\n   C:      <domain:update\r\n   C:       xmlns:domain=\"urn:ietf:params:xml:ns:domain-1.0\">\r\n   C:        <domain:name>example.com</domain:name>\r\n   C:      </domain:update>\r\n   C:    </update>\r\n   C:    <extension>\r\n   C:      <secDNS:update urgent=\"true\"\r\n|  C:       xmlns:secDNS=\"urn:ietf:params:xml:ns:secDNS-1.0\">\r\n   C:        <secDNS:rem>\r\n   C:          <secDNS:all>true</secDNS:all>\r\n   C:        </secDNS:rem>\r\n   C:      </secDNS:update>\r\n   C:    </extension>\r\n   C:    <clTRID>ABC-12345</clTRID>\r\n   C:  </command>\r\n   C:</epp>",
+    "correct_text": "   Example <update> Command,\r\n                 Removing all DS and Key Data Using <secDNS:rem>\r\n                 with <secDNS:all>:\r\n\r\n   C:<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\r\n   C:<epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\"\r\n   C:     xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   C:  <command>\r\n   C:    <update>\r\n   C:      <domain:update\r\n   C:       xmlns:domain=\"urn:ietf:params:xml:ns:domain-1.0\">\r\n   C:        <domain:name>example.com</domain:name>\r\n   C:      </domain:update>\r\n   C:    </update>\r\n   C:    <extension>\r\n   C:      <secDNS:update urgent=\"true\"\r\n|  C:       xmlns:secDNS=\"urn:ietf:params:xml:ns:secDNS-1.1\">\r\n   C:        <secDNS:rem>\r\n   C:          <secDNS:all>true</secDNS:all>\r\n   C:        </secDNS:rem>\r\n   C:      </secDNS:update>\r\n   C:    </extension>\r\n   C:    <clTRID>ABC-12345</clTRID>\r\n   C:  </command>\r\n   C:</epp>",
+    "notes": "secDNS-1.0 -> secDNS-1.1",
+    "submit_date": "2010-11-01",
+    "submitter_name": "NOGUCHI Shoji",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
