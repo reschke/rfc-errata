@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 13,
+    "doc-id": "RFC4730",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "   DRegexCharacter  = DIGIT / \"A\" / \"B\" / \"C\" / \"D\" / \"R\" / \"*\" / \"#\" /\r\n                              \"a\" / \"b\" / \"c\" / \"d\" / \"r\"",
+    "correct_text": "   DRegexCharacter  = DIGIT / \"A\" / \"B\" / \"C\" / \"D\" / \"R\" / \"X\" / \"*\" / \"#\"\r\n                              \"a\" / \"b\" / \"c\" / \"d\" / \"r\" / \"x\"",
+    "notes": "The ABNF for DRegex (page 29) is missing an 'x'.",
+    "submit_date": "2006-11-30",
+    "submitter_name": "Eric Burger",
+    "verifier_id": 107,
+    "verifier_name": "Cullen Jennings",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2265,
+    "doc-id": "RFC4730",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 10.2,
+    "orig_text": "NOTIFY sip:ap@client.subB.example.com SIP/2.0\r\nVia: SIP/2.0/UDP subA.example.com;branch=3qo3j0ouq\r\nTo: <sip:ap@subB.example.com>;tag=978675\r\nFrom: <sip:gw@subA.example.com>;tag=9783453\r\nCall-ID: 12345601@subA.example.com\r\nCSeq: 3001 NOTIFY\r\nContact: <sip:gw27@subA.example.com>\r\nEvent: kpml\r\nSubscription-State: active;expires=3442\r\nMax-Forwards: 70\r\nContent-Type: application/kpml-response+xml\r\nContent-Length: 271\r\n\r\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<kpml-response xmlns=\"urn:ietf:params:xml:ns:kpml-response\"\r\n      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n      xsi:schemaLocation=\r\n        \"urn:ietf:params:xml:ns:kpml-response kpml-response.xsd\"\r\n      version=\"1.0\"\r\n      code=\"200\" text=\"OK\"\r\n      digits=\"9999888877776666\"/>",
+    "correct_text": "NOTIFY sip:ap@client.subB.example.com SIP/2.0\r\nVia: SIP/2.0/UDP subA.example.com;branch=3qo3j0ouq\r\nTo: <sip:ap@subB.example.com>;tag=978675\r\nFrom: <sip:gw@subA.example.com>;tag=9783453\r\nCall-ID: 12345601@subA.example.com\r\nCSeq: 3001 NOTIFY\r\nContact: <sip:gw27@subA.example.com>\r\nEvent: kpml\r\nSubscription-State: active;expires=3442\r\nMax-Forwards: 70\r\nContent-Type: application/kpml-response+xml\r\nContent-Length: 271\r\n\r\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<kpml-response xmlns=\"urn:ietf:params:xml:ns:kpml-response\"\r\n      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n      xsi:schemaLocation=\r\n        \"urn:ietf:params:xml:ns:kpml-response kpml-response.xsd\"\r\n      version=\"1.0\"\r\n      code=\"200\" text=\"OK\"\r\n      digits=\"9999888877776666\" tag=\"card\"/>",
+    "notes": "The tag attribute is shown in the call-flow diagram, but not reproduced in the SIP message itself.",
+    "submit_date": "2010-05-18",
+    "submitter_name": "David Grant",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3209,
+    "doc-id": "RFC4730",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7.4, 7.5",
+    "orig_text": "urn:ietf:xml:ns:kpml-...",
+    "correct_text": "urn:ietf:params:xml:ns:kpml-...",
+    "notes": "The headlines of Sections 7.4 and 7.5 contain garbled versions of\r\nthe IETF protocol parameter sub-namespaces defined in the RFC:\r\nthe hierarchical element \"params:\" is missing.\r\n\r\nThis flaw also is mirrored in the Table of Contents of the RFC.",
+    "submit_date": "2012-05-03",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
