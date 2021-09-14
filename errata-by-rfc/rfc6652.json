@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6579,
+    "doc-id": "RFC6652",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "spf-rp-tag = \"rp=\" 1*12DIGIT \"/\" 1*12DIGIT",
+    "correct_text": "spf-rp-tag = \"rp=\" \"100\" / 1*2DIGIT",
+    "notes": "As explained in paragraph 3, the value of the \"rp\" modifier should be an integer value between 0 and 100. However, the specified abnf does not fit this requirement.",
+    "submit_date": "2021-05-11",
+    "submitter_name": "Benjamin Schwarze",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
