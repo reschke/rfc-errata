@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 207,
+    "doc-id": "RFC3961",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99The Unicode character g-clef used throughout the document says:",
+    "orig_text": "           \"g-clef    U+1011E   F0 9D 84 9E\"",
+    "correct_text": "           \"g-clef    U+1D11E   F0 9D 84 9E\"",
+    "notes": "",
+    "submit_date": "2006-04-05",
+    "submitter_name": "Weijun Wang",
+    "verifier_id": 2,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5522,
+    "doc-id": "RFC3961",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "6.2.3",
+    "orig_text": "                               des-cbc-crc\r\n   --------------------------------------------------------------------\r\n   protocol key format      8 bytes, parity in low bit of each\r\n\r\n   specific key structure   copy of original key\r\n\r\n   required checksum        rsa-md5-des\r\n   mechanism\r\n",
+    "correct_text": "                               des-cbc-crc\r\n   --------------------------------------------------------------------\r\n   protocol key format      8 bytes, parity in low bit of each\r\n\r\n   specific key structure   copy of original key\r\n\r\n   required checksum        CRC32\r\n   mechanism\r\n",
+    "notes": "des-cbc-crc is using the modified crc32 checksum, its required checksum should be CRC32, constant defined in section 8\n --VERIFIER NOTES-- \n   Rejected per submitter request; the required Checksum is a distinct operation, not a subset of the encryption operation.",
+    "submit_date": "2018-10-12",
+    "submitter_name": "Wrong required required checksum mechanism for des-cbc-crc",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
