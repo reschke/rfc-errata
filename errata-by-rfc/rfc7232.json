@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5162,
+    "doc-id": "RFC7232",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "A",
+    "orig_text": "   The ETag header field ABNF has been changed to not use quoted-string,\r\n   thus avoiding escaping issues.  (Section 2.3)",
+    "correct_text": "   The ETag header field ABNF has been changed to not use quoted-string,\r\n   thus avoiding escaping issues. Furthermore, it now disallows the\r\n   space character. (Section 2.3)",
+    "notes": "(This entry in the changes section is incomplete)",
+    "submit_date": "2017-10-20",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5236,
+    "doc-id": "RFC7232",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "Likewise, a validator is weak if it is shared by two or more\r\nrepresentations of a given resource at the same time, unless those\r\nrepresentations have identical representation data.  For example, if\r\nthe origin server sends the same validator for a representation with\r\na gzip content coding applied as it does for a representation with no\r\ncontent coding, then that validator is weak.  However, two\r\nsimultaneous representations might share the same strong validator if\r\nthey differ only in the representation metadata, such as when two\r\ndifferent media types are available for the same representation data.",
+    "correct_text": "Likewise, a validator is weak if it is shared by two or more\r\nrepresentations of a given resource at the same time, even if those\r\nrepresentations have identical representation data.  For example, if\r\nthe origin server sends the same validator for a representation with\r\na gzip content coding applied as it does for a representation with no\r\ncontent coding, then that validator is weak.",
+    "notes": "This paragraph (and only this paragraph) seems to be in direct conflict with this earlier text from the same section:\r\n\r\n\"However, if a resource has distinct representations that differ only in their metadata, such as might occur with content negotiation over media types that happen to share the same data format, then the origin server needs to incorporate additional information in the [strong] validator to distinguish those representations.\"\n --VERIFIER NOTES-- \n   There is not a conflict here: The text quoted in the notes needs to be read in the context of the entire paragraph it appears in, which the \"however\" references.  The quoted statement is being made in the context of generating strong validators based only upon the message body, when the headers might also change.",
+    "submit_date": "2018-01-16",
+    "submitter_name": "Chris Pacejo",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-08-27 05:39:08"
+  }
+]
