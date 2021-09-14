@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6227,
+    "doc-id": "RFC8624",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "   This document has no IANA actions.\r\n",
+    "correct_text": "   This document updates the IANA registry \"Delegation Signer (DS) Resource \r\n   Record (RR) Type Digest Algorithms\". The registry has been updated by\r\n   the following table from section 3.3:\r\n\r\n   +--------+-----------------+-------------------+-------------------+\r\n   | Number | Mnemonics       | DNSSEC Delegation | DNSSEC Validation |\r\n   +--------+-----------------+-------------------+-------------------+\r\n   | 0      | NULL (CDS only) | MUST NOT [*]      | MUST NOT [*]      |\r\n   | 1      | SHA-1           | MUST NOT          | MUST              |\r\n   | 2      | SHA-256         | MUST              | MUST              |\r\n   | 3      | GOST R 34.11-94 | MUST NOT          | MAY               |\r\n   | 4      | SHA-384         | MAY               | RECOMMENDED       |\r\n   +--------+-----------------+-------------------+-------------------+\r\n\r\n   [*] - This is a special type of CDS record signaling removal of DS at\r\n         the parent in [RFC8078].\r\n\r\n\r\n   This document updates the IANA registry \"DNS Security Algorithm Numbers\". \r\n   The registry has been updated by the following table from section 3.1:\r\n\r\n   +--------+--------------------+-----------------+-------------------+\r\n   | Number | Mnemonics          | DNSSEC Signing  | DNSSEC Validation |\r\n   +--------+--------------------+-----------------+-------------------+\r\n   | 1      | RSAMD5             | MUST NOT        | MUST NOT          |\r\n   | 3      | DSA                | MUST NOT        | MUST NOT          |\r\n   | 5      | RSASHA1            | NOT RECOMMENDED | MUST              |\r\n   | 6      | DSA-NSEC3-SHA1     | MUST NOT        | MUST NOT          |\r\n   | 7      | RSASHA1-NSEC3-SHA1 | NOT RECOMMENDED | MUST              |\r\n   | 8      | RSASHA256          | MUST            | MUST              |\r\n   | 10     | RSASHA512          | NOT RECOMMENDED | MUST              |\r\n   | 12     | ECC-GOST           | MUST NOT        | MAY               |\r\n   | 13     | ECDSAP256SHA256    | MUST            | MUST              |\r\n   | 14     | ECDSAP384SHA384    | MAY             | RECOMMENDED       |\r\n   | 15     | ED25519            | RECOMMENDED     | RECOMMENDED       |\r\n   | 16     | ED448              | MAY             | RECOMMENDED       |\r\n   +--------+--------------------+-----------------+-------------------+\r\n\r\n",
+    "notes": "The document clearly has the intention to update the IANA registers, which is also stated in the document, but not in section 6 (\"IANA Considerations\").",
+    "submit_date": "2020-07-10",
+    "submitter_name": "Mats Dufberg",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
