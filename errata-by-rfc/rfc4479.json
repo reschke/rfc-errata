@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 80,
+    "doc-id": "RFC4479",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   It is central to this model that each attribute\r\n   is affiliated with the service, person, or device because they\r\n   describe that service, presentity, or device.  This is in contrast to\r\n   a model whereby the attributes are associated with the service,\r\n   presentity, or device because they were reported by that service,\r\n   presentity, or device. ",
+    "correct_text": "   It is central to this model that each attribute\r\n   is affiliated with the service, person, or device because they\r\n   describe that service, person, or device.  This is in contrast to\r\n   a model whereby the attributes are associated with the service,\r\n   person, or device because they were reported by that service,\r\n   person, or device.  ",
+    "notes": "\r\nRegarding the definition from Section 2, on top of page 4 of the RFC,\r\n\r\n   Presentity:  A presentity combines devices, services, and person\r\n      information for a complete picture of a user's presence status on\r\n      the network.\r\n\r\nIMHO the term \"presentity\" should have been replaced by \"person\" to keep this text passage\r\nconsistent with the terminology introduced in Section 2.",
+    "submit_date": "2006-08-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2131,
+    "doc-id": "RFC4479",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7.1,
+    "orig_text": "   <presence xmlns=\"urn:ietf:params:xml:ns:pidf\"\r\n    xmlns:dm=\"urn:ietf:params:xml:ns:pidf:data-model\"\r\n    xmlns:rp=\"urn:ietf:params:xml:ns:pidf:rpid\"\r\n    xmlns:caps=\"urn:ietf:params:xml:ns:pidf:caps\"\r\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">",
+    "correct_text": "   <presence xmlns=\"urn:ietf:params:xml:ns:pidf\"\r\n    xmlns:dm=\"urn:ietf:params:xml:ns:pidf:data-model\"\r\n    xmlns:rp=\"urn:ietf:params:xml:ns:pidf:rpid\"\r\n    xmlns:caps=\"urn:ietf:params:xml:ns:pidf:caps\"\r\n    entity=\"pres:presentity@example.com\">",
+    "notes": "The entity attribute of the <presence> element is mandatory.  It contains a URI that identifies the presentity.\r\n\r\nThe namespace prefix binding for \"http://www.w3.org/2001/XMLSchema-instance\" is not used in the example and need not appear.\r\n\r\nNot corrected here: the example uses an undefined URI scheme, mac:, to identify a device.",
+    "submit_date": "2010-04-05",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2963,
+    "doc-id": "RFC4479",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "7.1.",
+    "orig_text": "<dm:deviceID>mac:8asd7d7d70</dm:deviceID>\r\n...\r\n<dm:deviceID>mac:8asd7d7d70</dm:deviceID>",
+    "correct_text": "Replace both with\r\n\r\n<dm:deviceID>urn:uuid:698137d0-b395-11e0-aff2-0800200c9a66</dm:deviceID>",
+    "notes": "As mentioned in Errata ID 2131 and 2962 a valid URN as defined in RFC3406: Uniform Resource Names (URN) Namespace Definition Mechanisms should be used for <dm:deviceID>. This is not the case for this example.\r\nRFC 4479 in section 3.4. Device RECOMMENDS version 1 UUIDs for the <deviceID> element: \"For devices with a MAC address, version 1 UUIDs are RECOMMENDED, as they result in a time-based identifier that makes use of the MAC address.\"",
+    "submit_date": "2011-09-08",
+    "submitter_name": "Raphael Bossek",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
