@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 268,
+    "doc-id": "RFC3470",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.13,
+    "orig_text": "   \"numeric entity reference\"  ",
+    "correct_text": "   \"numeric character reference\"",
+    "notes": "Section 4.16:\n    \"In XML instances all white space is considered significant and\n   is by default visible to processing applications.\"\nShould be:\n    \"In XML instances, white space is often significant and visible\n   to processing applications.\"\n\n",
+    "submit_date": "2003-04-25",
+    "submitter_name": "Larry Masinter",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3789,
+    "doc-id": "RFC3470",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4.2,
+    "orig_text": "It some cases, protocols have been defined",
+    "correct_text": "In some cases, protocols have been defined",
+    "notes": "Simple typo\r\n\r\n----- Verifier notes -----\r\nSimple typos just go into \"hold for document update\".  Best to resist the urge to submit them, unless they're likely to cause confusion.",
+    "submit_date": "2013-11-07",
+    "submitter_name": "Erik Wilde",
+    "verifier_id": 2,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3790,
+    "doc-id": "RFC3470",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": "n/a",
+    "correct_text": "n/a",
+    "notes": "While at the time of writing the Infoset was the most relevant spec, now there's XDM, which is more relevant now.\r\n\r\nIt also might make sense to describe the differences between XML syntax and the more abstract view of Infoset/XML in detail, in particular when it comes to nasty edge cases such as unserializable Infosets, and the fact that some information present in the XML syntax gets lost in the more abstract view.\n --VERIFIER NOTES-- \nAs the report says,\"at the time of writing the Infoset was the most relevant spec\" -- and errata are here to report things that would have been considered errors at the time of writing, but they got missed.  This isn't that.",
+    "submit_date": "2013-11-07",
+    "submitter_name": "Erik Wilde",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
