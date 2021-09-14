@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 241,
+    "doc-id": "RFC3720",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2.6.1",
+    "orig_text": "The only exception is if a discovery session (see Section 2.3 iSCSI Session Types) is to be established.\r\n\r\n",
+    "correct_text": "The only exception is if a discovery session (see Section 3.3 iSCSI Session Types) is to be established.",
+    "notes": "Section 2.3 --> Section 3.3",
+    "submit_date": "2004-09-01",
+    "submitter_name": "Julian Satran",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4332,
+    "doc-id": "RFC3720",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "B.4.",
+    "orig_text": "32 bytes of ones:",
+    "correct_text": "32 bytes of 255s:",
+    "notes": "The test data is correct but the description is wrong.\n --VERIFIER NOTES-- \nThis is purely editorial and on the edge of personal preference, if the \"ones\" are described based on base 2 notation or base 10 notation. ",
+    "submit_date": "2015-04-11",
+    "submitter_name": "Peter Powell",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
