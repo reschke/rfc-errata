@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3309,
+    "doc-id": "RFC5375",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "B.2.2",
+    "orig_text": " B.2.2. /127 Addresses\r\n\r\n   The usage of the /127 addresses, the equivalent of IPv4's RFC 3021\r\n   [RFC3021], is not valid and should be strongly discouraged as\r\n   documented in RFC 3627 [RFC3627].",
+    "correct_text": " B.2.2. /127 Addresses\r\n\r\n   The usage of the /127 addresses, the equivalent of IPv4's RFC 3021\r\n   [RFC3021], is valid as stated in RFC 6164 [RFC 6164].",
+    "notes": "",
+    "submit_date": "2012-08-06",
+    "submitter_name": "Lívio Zanol Pereira de Souza Puppim",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
