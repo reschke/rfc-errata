@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6556,
+    "doc-id": "RFC9010",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "   [RFC6775] also introduces the Address Registration Option (ARO),\r\n   which is carried in the unicast Neighbor Solicitation (NS) and\r\n   Neighbor Advertisement (NA) messages between the 6LoWPAN Node (6LN)\r\n   and the 6LoWPAN router (6LR).  It also defines the Duplicate Address\r\n   Request (DAR) and Duplicate Address Confirmation (DAC) messages\r\n   between the 6LR and the 6LBR).  In an LLN, the 6LBR is the central\r\n   repository of all the Registered Addresses in its domain and the\r\n   source of truth for uniqueness and ownership.",
+    "correct_text": "   [RFC6775] also introduces the Address Registration Option (ARO),\r\n   which is carried in the unicast Neighbor Solicitation (NS) and\r\n   Neighbor Advertisement (NA) messages between the 6LoWPAN Node (6LN)\r\n   and the 6LoWPAN router (6LR).  It also defines the Duplicate Address\r\n   Request (DAR) and Duplicate Address Confirmation (DAC) messages\r\n   between the 6LR and the 6LBR.  In an LLN, the 6LBR is the central\r\n   repository of all the Registered Addresses in its domain and the\r\n   source of truth for uniqueness and ownership.",
+    "notes": "Extra closing parenthesis",
+    "submit_date": "2021-04-23",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2021-04-23 08:14:03"
+  }
+]
