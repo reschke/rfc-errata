@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4420,
+    "doc-id": "RFC7595",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "   o  If no permanent, citable specification for the scheme definition\r\n      is included, credible reasons for not providing it SHOULD be\r\n      given.\r\n\r\n   o  The scheme definition SHOULD include clear security considerations\r\n      (Section 3.7) or explain why a full security analysis is not\r\n      available (e.g., in a third-party scheme registration).\r\n\r\n   o  If the scheme definition does not meet the guidelines laid out in\r\n      Section 3, the differences and reasons SHOULD be noted.\r\n",
+    "correct_text": "Submitters are also encouraged to provide the following information as \r\nappropriate:\r\n\r\n   o  If no permanent, citable specification for the scheme definition\r\n      is included, credible reasons for not providing it.\r\n\r\n   o  Clear security considerations (cf. Section 3.7), or an explanation\r\n      of  why a security analysis is not available (e.g., in a third-\r\n      party scheme registration).\r\n\r\n   o  A note of and reasons for any deviations from the guidelines for \r\n      permanent registrations laid out in Section 3.\r\n",
+    "notes": "The original text states a number of normative requirements on provisional registration of URI schemes, but the procedure for these (\"first come first served\") cannot reasonably be expected to check that they are satisfied.  The revision proposed here changes the text to encourage submitters to provide this information, without giving it force of a normative requirement.\r\n\r\nFor more details, see: \r\nhttps://mailarchive.ietf.org/arch/msg/apps-discuss/wsEAsWC1viE8YL1WfGkaW_NzMpg\r\n\r\nThe document editor has agreed the original text does not reflect the intent of the registration procedure:\r\nhttps://mailarchive.ietf.org/arch/msg/apps-discuss/uPb33G9duZlrwNcdCFUJmvcPLgk",
+    "submit_date": "2015-07-17",
+    "submitter_name": "Graham Klyne",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
