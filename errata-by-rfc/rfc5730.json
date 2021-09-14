@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 1846,
+    "doc-id": "RFC5730",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.4,
+    "orig_text": "o  An OPTIONAL <svcExtension> element that contains one or more\r\n   <extURI> elements that contain namespace URIs representing\r\n   object extensions supported by the server.\r\n\r\no  A <dcp> (data collection policy) element that contains child",
+    "correct_text": "  o  An OPTIONAL <svcExtension> element that contains one or more\r\n     <extURI> elements that contain namespace URIs representing\r\n     object extensions supported by the server.\r\n\r\n-  A <dcp> (data collection policy) element that contains child",
+    "notes": "The description of the <dcp> element, which extends to the description of the OPTIONAL <expiry> element, is indented one level too deep.  The <dcp> element should be described at the same level as the <svcMenu> element instead of being indented as if it were a child of the <svcMenu> element.",
+    "submit_date": "2009-09-02",
+    "submitter_name": "Scott Hollenbeck",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1876,
+    "doc-id": "RFC5730",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "a)  Section 1, 2nd paragraph:\r\n\r\n|  EPP content is identified by MIME media type application/epp+xml.\r\n   Registration information for this media type is included in an\r\n   appendix to this document.\r\n\r\nb)  Section 6, last paragraph:\r\n\r\n   A MIME media type registration template is included in Appendix B.\r\n\r\nc)  Appendix B, first two items\r\n\r\n   MIME media type name: application\r\n\r\n   MIME subtype name: epp+xml",
+    "correct_text": "a)\r\n\r\n|  EPP content is identified by the media type application/epp+xml.\r\n   Registration information for this media type is included in an\r\n   appendix to this document.\r\n\r\nb) \r\n\r\n   A media type registration template is included in Appendix B.\r\n\r\nc)\r\n\r\n   Media type name: application\r\n\r\n   Subtype name: epp+xm",
+    "notes": "Rationale:\r\n\r\nAs explained in Section 1 od BCP 13, RFC 4288, the concept of a\r\n\"Media Type\" formalized for the first time in the MIME RFCs has gained\r\nsignificance far beyond the narrow area of Internet Mail. Therefore,\r\nthe related terms should not be used in the colloquial form including\r\n\"MIME\" that did not even appear in RFC 2045; in particular, the\r\ncolloquial term \"MIME Type\" (or \"MIME Media Type\") should generally\r\nbe avoided in favor of the (original and) more appropriate bare\r\n\"Media Type\".\r\n\r\nI'd expect that a Full Standard RFC follows the established\r\nterminology of the IETF, and that it uses the revised Media Type\r\nregistration boilerplate published in RFC 4288 (December 2005),\r\neven when it merely updates/re-parents an existing registration.\r\n\r\nEPP has not even a standardized transport binding to Internet Email.\r\nHence, tying the terminology to MIME seems even more inappropriate\r\nhere.\r\n\r\nAlexey Melnikov: I can't see anybody be confused by use of MIME type where use of \"media type\" would be slightly more appropriate.",
+    "submit_date": "2009-09-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1877,
+    "doc-id": "RFC5730",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.4, pg.8",
+    "orig_text": "   -  An <svDate> element that contains the server's current date and\r\n|     time in Universal Coordinated Time (UTC).",
+    "correct_text": "   -  An <svDate> element that contains the server's current date and\r\n|     time in Coordinated Universal Time (UTC).",
+    "notes": "Rationale: Use of established, official terminology.\r\n\r\nNote: There are other variants of \"Universal Time\" (mostly of\r\n      historical interest now), and hence, the term initially\r\n      had been written as \"Universal Time, Coordinated\", giving\r\n      rise to the acronym \"UTC\" that parallels the precursor \"UT1\".",
+    "submit_date": "2009-09-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1878,
+    "doc-id": "RFC5730",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "a)  [[ global ]]\r\n\r\n   RFC 4646\r\n\r\nb)  [[ global ]]\r\n\r\n   [RFC4646]\r\n\r\nc)  [[ Section 9.1 ]]\r\n\r\n   [RFC4646]  Phillips, A. and M. Davis, \"Tags for Identifying\r\n              Languages\", BCP 47, RFC 4646, September 2006.",
+    "correct_text": "a)\r\n\r\n   RFC 5646\r\n\r\nb)\r\n\r\n   [RFC5646]\r\n\r\nc)\r\n\r\n   [RFC5646]  Phillips, A., Ed., and M. Davis, Ed., \"Tags for\r\n              Identifying Languages\", BCP 47, RFC 5646,\r\n              September 2009.",
+    "notes": "Unfortunately, RFC 5730 has been published just three days before\r\nRFC 5646, which has obsoleted RFC 4646 and performed a significant\r\nrevision of the Language Tag syntax and IANA registry.\r\n\r\nI hope that it was not intended to tie EPP to the old Language Tag\r\narchitecture.  The new one is much better aligned with ISO, the UN\r\nstatistics department, and Unicode, and will be generally adopted.\r\n\r\nThe intent of this Errata Note is to give the author and the IESG\r\nan opportunity to confirm that EPP shall not be tied to the old\r\nLangTag architecture and the now obsolete RFC 4646.",
+    "submit_date": "2009-09-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
