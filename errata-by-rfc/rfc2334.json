@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1922,
+    "doc-id": "RFC2334",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "B.3.1.2",
+    "orig_text": "   The default hash algorithm to be supported is HMAC-MD5-128 [11]. HMAC\r\n   is safer than normal keyed hashes. Other hash algorithms MAY be\r\n   supported by def.\r\n\r\n   IANA will assign the numbers to identify the algorithm being used as\r\n   described in Section C.",
+    "correct_text": "   The default hash algorithm to be supported is HMAC-MD5-128 [11]. HMAC\r\n   is safer than normal keyed hashes. Other hash algorithms MAY be\r\n   supported by def.",
+    "notes": "Removed last paragraph in section B.3.1.2.  After doing a review of RFC2334 for any incomplete IANA actions, IANA contacted an author to confirm if a registry for the algorithms needed to be set-up.  Joel Halpern confirmed that it the actual purpose of the section is only to make sure that there is something eveyrone can use for interoperability.  He suggested I submit an errata for the removal of the last paragraph.",
+    "submit_date": "2009-10-21",
+    "submitter_name": "Michelle Cotton",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
