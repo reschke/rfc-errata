@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2040,
+    "doc-id": "RFC4865",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   4) One required parameter, the hold-param, is added to the MAIL\r\n      command using either the keyword \"HOLDFOR\" or the keyword\r\n      \"HOLDUNTIL\".\r\n\r\n [...]\r\n\r\n      Using ABNF [n2], the syntax of this parameter is as follows:\r\n\r\n         future-release-interval = future-release-integer\r\n\r\n         future-release-date-time = Internet-style-date-time-UTC\r\n",
+    "correct_text": "The last quoted ABNF production should be:\r\n\r\n         future-release-date-time = date-time\r\n            ; <date-time> defined in Section 5.6 of RFC 3339\r\n",
+    "notes": "The ABNF contains a dangling production. An early draft shows that the RFC 3339 production date-time is what's intended (as Ned Freed found out).\r\n\r\nThe RFC also has no examples. I have a working server implementation of this, so without examples I guess talking to my server is second best. Send me mail in case of interest.",
+    "submit_date": "2010-02-11",
+    "submitter_name": "Arnt Gulbrandsen",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
