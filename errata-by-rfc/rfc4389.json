@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 103,
+    "doc-id": "RFC4389",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "(1)  typo??\r\n\r\nThe last paragraph of section 5 of RFC 4389, on page 12, says:\r\n\r\n   A receives this NA, processing it as usual.  Hence it creates a\r\n   neighbor entry for B on interface 2 in the REACHABLE state and\r\n   records the link-layer address p1.\r\n\r\nSince the packet described has been sent out by node P, on its\r\ninterface '1', to node A, and A has only a single interface\r\ninvolved in the scenarion, with link layer address 'a' (as explained\r\nat the beginning of section 5), \"on interface 2\" is improper in the\r\nsnippit above.  (This may be the result of incomplete adaptation\r\nafter a copy-and-paste operation.)  A minimal correction to resolve\r\nthis issue might be to name the receive interface by its link layer\r\naddress, hence changing the text above to say:\r\n\r\n   A receives this NA, processing it as usual.  Hence it creates a\r\n   neighbor entry for B on interface 'a' in the REACHABLE state and\r\n   records the link-layer address p1.\r\n\r\nor alternatively, more detailed:\r\n\r\n   A receives this NA, processing it as usual.  Hence it creates a\r\n   neighbor entry for B on the interface with link layer address 'a'\r\n   in the REACHABLE state and records the link-layer address p1.\r\n\r\n\r\n(2)  typo!\r\n\r\nThe 3rd paragraph of Section 9, on page 13, says:\r\n\r\n   This document does not introduce any new mechanisms for the\r\n   protection of proxy Neighbor Discovery.  That is, it does not provide\r\n   a mechanism from authorizing certain devices to act as proxies, and\r\n   it does not provide extensions to SEND to make it possible to use\r\n   both SEND and proxies at the same time.  [...]\r\n\r\nIt should perhaps better say ( applying 's/from/for/' ) :\r\n\r\n   This document does not introduce any new mechanisms for the\r\n   protection of proxy Neighbor Discovery.  That is, it does not provide\r\n|  a mechanism for authorizing certain devices to act as proxies, and\r\n   it does not provide extensions to SEND to make it possible to use\r\n   both SEND and proxies at the same time.  [...]\r\n\r\n\r\n(3)  outdated reference\r\n\r\nIn Section 11, Normative References, RFC 4389 contains the entry\r\n(on page 14) [ICMPv6], pointing to RFC 2463.\r\nBut exactly 3 weeks before RFC 4389, RFC 4443 has been published\r\nobsoleting and replacing RFC 2463.  Hence that entry should have\r\nbeen updated to properly point to RFC 4443 instead.\r\n\r\n\r\nIf you agree with my 'diagnosis', I recommend that you submit an\r\nAuthor's Errata Note for RFC 4389 covering the three issues\r\nlisted above.  But if you prefer, I can instead submit an Errata\r\nNote on my own, with your consent mailed to the RFC-Editor.",
+    "correct_text": "",
+    "notes": "from pending",
+    "submit_date": "2006-04-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
