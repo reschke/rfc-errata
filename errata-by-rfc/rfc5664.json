@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2017,
+    "doc-id": "RFC5664",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.4.2",
+    "orig_text": "N = L / (W-P * stripe_unit)\r\nL' = N * (W * stripe_unit) +\r\n    (L % (W-P * stripe_unit))\r\n",
+    "correct_text": "N = L / ((W-P) * stripe_unit)\r\nL' = N * (W * stripe_unit) +\r\n    (L % ((W-P) * stripe_unit))\r\n",
+    "notes": "Missing parenthesis around lower precedence expression",
+    "submit_date": "2010-01-26",
+    "submitter_name": "Benny Halevy",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2018,
+    "doc-id": "RFC5664",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.4.3",
+    "orig_text": "N = L / (W-1 * stripe_unit)\r\n",
+    "correct_text": "N = L / ((W-1) * stripe_unit)\r\n",
+    "notes": "Missing parenthesis around lower precedence expression",
+    "submit_date": "2010-01-26",
+    "submitter_name": "Benny Halevy",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2019,
+    "doc-id": "RFC5664",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "5.4.4",
+    "orig_text": "The equations given above for embedded parity can be used to\r\nmap a file offset to the correct component object by setting the\r\nnumber of parity components to 2 instead of 1 for RAID4 or RAID5.\r\n",
+    "correct_text": "The equations given above for embedded parity can be used to\r\nmap a file offset to the correct component object by setting the\r\nnumber of parity components to 2 instead of 1 for RAID5.\r\n",
+    "notes": "Clarify that the RAID_PQ algorithm extends the rotated parity scheme as specified for RAID_5.",
+    "submit_date": "2010-01-26",
+    "submitter_name": "Benny Halevy",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
