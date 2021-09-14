@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1555,
+    "doc-id": "RFC5339",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.1.3, pg.9",
+    "orig_text": "   FA-LSP connectivity verification relies on technology-specific\r\n   mechanisms (e.g., for SDH using G.707 and G.783; for MPLS using\r\n|  Bidrectional Forwarding Detection (BFD); etc.) as for any other LSP.\r\n   Hence, this requirement is out of the scope of GMPLS protocols.\r\n",
+    "correct_text": "   FA-LSP connectivity verification relies on technology-specific\r\n   mechanisms (e.g., for SDH using G.707 and G.783; for MPLS using\r\n|  Bidirectional Forwarding Detection (BFD); etc.) as for any other LSP.\r\n   Hence, this requirement is out of the scope of GMPLS protocols.\r\n\r\n",
+    "notes": "Typo, missing 'i'.",
+    "submit_date": "2008-10-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
