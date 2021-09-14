@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1400,
+    "doc-id": "RFC2819",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "1 2 &3",
+    "orig_text": "1. matrixDSSourceAddress\r\n2. matrixDSDestAddress\r\n3. hostAddress",
+    "correct_text": "Definition of OBJECT-TYPE 1, 2 & 3",
+    "notes": "Got error while compiling the MIB. Error says the above objects \"must have size restriction\".\n --VERIFIER NOTES-- \nMIB documents before RFC 4001 may present this problem. It's a warning not a compilation error that should be ignored. ",
+    "submit_date": "2008-03-31",
+    "submitter_name": "Mehala",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5156,
+    "doc-id": "RFC2819",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "device has to deal with more than own management station",
+    "correct_text": "device has to deal with more than one management station",
+    "notes": "Seems to be carried forward from RFC 1757",
+    "submit_date": "2017-10-16",
+    "submitter_name": "Joel Nelson",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
