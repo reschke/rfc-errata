@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4122,
+    "doc-id": "RFC6933",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2.12.1",
+    "orig_text": "The URN namespace for CLEIs is defined in [RFC4152], and the CLEI format\r\nis defined in [T1.213] and [T1.213a]. For example, an entPhysicalUris \r\ninstance may have the value of:\r\n\r\nURN:CLEI:D4CE18B7AA\r\n\r\n[RFC3986] and [RFC4152] identify this as a URI in the CLEI URN \r\nnamespace. The specific CLEI code, D4CE18B7AA, is based on the \r\nexample provided in [T1.213a].\r\n",
+    "correct_text": "The URN namespace for CLEIs is defined in [RFC4152], and the CLEI format\r\nis defined in [ATIS-0300213]. For example, an entPhysicalUris instance\r\nmay have the value of:\r\n\r\nURN:CLEI:IPUIADEUAA\r\n\r\n[RFC3986] and [RFC4152] identify this as a URI in the CLEI URN \r\nnamespace. The specific CLEI code, IPUIADEUAA, is based on the \r\nexample provided in [ATIS-0300213].\r\n",
+    "notes": "The ATIS standards T1.213 and T1.213a are obsolete and have \r\nbeen replaced by ATIS-0300213. The example in ATIS-0300213 uses a \r\ndifferent CLEI Code, IPUIADEUAA",
+    "submit_date": "2014-09-24",
+    "submitter_name": "Robert Fox",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4123,
+    "doc-id": "RFC6933",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 8.2,
+    "orig_text": "[T1.213] ATIS T1.213-2001, \"Coded Identification of Equipment\r\nEntities in the North American Telecommunications\r\nSystem for Information Exchange\", 2001, <www.ansi.org>.\r\n\r\n[T1.213a] ATIS T1.213a, \"Supplement to T1.213-2001, Coded\r\nIdentification of Equipment Entities in the North\r\nAmerican Telecommunications System for Information\r\nExchange, to Correct the Representation of the Basic\r\nCode in Figure B.1\", 2001, <www.ansi.org>.",
+    "correct_text": "[ATIS-0300213] ATIS-0300213, \"Structure for the \r\nIdentification of Equipment Entities for Information \r\nExchange\", 2006, <www.ansi.org>.\r\n",
+    "notes": "The ATIS standards T1.213 and T1.213a are obsolete and have \r\nbeen replaced by ATIS-0300213.",
+    "submit_date": "2014-09-24",
+    "submitter_name": "Robert Fox",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4416,
+    "doc-id": "RFC6933",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "battery (14)",
+    "correct_text": "battery(14)",
+    "notes": null,
+    "submit_date": "2015-07-16",
+    "submitter_name": "Amanda Baber",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
