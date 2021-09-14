@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5299,
+    "doc-id": "RFC5817",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "   The OSPF and IS-IS procedures for graceful shutdown of TE links are\r\n   similar to the graceful restart of OSPF and IS-IS as described in\r\n   [RFC4203] and [RFC5307], respectively.  Specifically, the node where\r\n   graceful shutdown of a link is desired originates the TE LSA or IS-\r\n   IS-LSP containing a Link TLV for the link under graceful shutdown\r\n   with the Traffic Engineering metric set to 0xffffffff, 0 as\r\n   unreserved bandwidth.",
+    "correct_text": "   The OSPF and IS-IS procedures for graceful shutdown of TE links are\r\n   similar to the graceful restart of OSPF and IS-IS as described in\r\n   [RFC4203] and [RFC5307], respectively.  Specifically, the node where\r\n   graceful shutdown of a link is desired originates the TE LSA or IS-\r\n   IS-LSP containing a Link TLV for the link under graceful shutdown\r\n   with the Traffic Engineering metric set to 0xffffffff for OSPF and\r\n   to 0xffffff for IS-IS, 0 as unreserved bandwidth.",
+    "notes": "IS-IS TE Default Metric is a 24-bit unsigned integer as defined in RFC 5305 section 3.7 \"Sub-TLV 18: Traffic Engineering Default Metric\"; while in OSPF, RFC 3630 section 2.5.5, the OSPF TE metric is four octets in length.",
+    "submit_date": "2018-03-24",
+    "submitter_name": "Naiming Shen",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
