@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4729,
+    "doc-id": "RFC7872",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "A.1",
+    "orig_text": "The domain names corresponding to the WIPv6LD dataset is\r\n      available at\r\n      <http://www.si6networks.com/datasets/wipv6day-domains.txt>.",
+    "correct_text": "given that this was a set of names used for a one time test \r\nit would not be expected to change.\r\n\r\na stable reference to it would be:\r\n\r\n\"https://web.archive.org/web/20150313063829/\r\nhttp://www.si6networks.com/datasets/wipv6day-domains.txt\"\r\n\r\nnote line truncated due to 72 char limit",
+    "notes": "% wget http://www.si6networks.com/datasets/wipv6day-domains.txt\r\n--2016-07-05 11:56:27--  http://www.si6networks.com/datasets/wipv6day-domains.txt\r\nResolving www.si6networks.com (www.si6networks.com)... 2001:67c:27e4::14, 91.239.96.14\r\nConnecting to www.si6networks.com (www.si6networks.com)|2001:67c:27e4::14|:80... connected.\r\nHTTP request sent, awaiting response... 301 Moved Permanently\r\nLocation: https://www.si6networks.com/datasets/wipv6day-domains.txt [following]\r\n--2016-07-05 11:56:28--  https://www.si6networks.com/datasets/wipv6day-domains.txt\r\nConnecting to www.si6networks.com (www.si6networks.com)|2001:67c:27e4::14|:443... connected.\r\nHTTP request sent, awaiting response... 404 Not Found\r\n2016-07-05 11:56:28 ERROR 404: Not Found.",
+    "submit_date": "2016-07-05",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 135,
+    "verifier_name": "Joel Jaeggli",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
