@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1960,
+    "doc-id": "RFC5656",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.2,2nd para",
+    "orig_text": "|  For example, the method name for ECDH key exchange with ephemeral\r\n|  keys generated on the nistp256 curve is \"ecdsa-sha2-nistp256\".\r\n",
+    "correct_text": "                                    vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\r\n|  For example, the method name for the SSH ECC public key algorithm\r\n|  using the nistp256 curve is \"ecdsa-sha2-nistp256\".\r\n   ^^^^^",
+    "notes": "Rationale: The RFC text inadvertently mixes content appropriate for\r\nSection 6.2 with content in Section 6.3; the current text would cause\r\na contradiction with 6.3, as can be seen from the 2nd para in 6.3.",
+    "submit_date": "2009-12-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2710,
+    "doc-id": "RFC5656",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 9,
+    "orig_text": "The SHA2 family \r\nconsists of four variants -- SHA-224, SHA-256, SHA-384, and SHA-521 \r\n-- named after their digest lengths.",
+    "correct_text": "The SHA2 family \r\nconsists of four variants -- SHA-224, SHA-256, SHA-384, and SHA-512 \r\n-- named after their digest lengths.",
+    "notes": "The SHA2 family has a SHA-512 variant, not SHA-521.",
+    "submit_date": "2011-02-10",
+    "submitter_name": "Mattias Wadenstein",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4207,
+    "doc-id": "RFC5656",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 12.1,
+    "orig_text": "   [SEC1]         Standards for Efficient Cryptography Group, \"Elliptic\r\n                  Curve Cryptography\", SEC 1, May 2009,\r\n                  <http://www.secg.org/download/aid-780/sec1-v2.pdf>.\r\n\r\n   [SEC2]         Standards for Efficient Cryptography Group,\r\n                  \"Recommended Elliptic Curve Domain Parameters\", SEC 2,\r\n                  September 2000,\r\n                  <http://www.secg.org/download/aid-386/sec2_final.pdf>.",
+    "correct_text": "  [SEC1]         Standards for Efficient Cryptography Group, \"Elliptic\r\n                 Curve Cryptography\", SEC 1, May 2009,\r\n                 <http://www.secg.org/sec1-v2.pdf>.\r\n\r\n  [SEC2]         Standards for Efficient Cryptography Group,\r\n                 \"Recommended Elliptic Curve Domain Parameters\", SEC 2,\r\n                 September 2000,\r\n                 <http://www.secg.org/SEC2-Ver-1.0.pdf>.",
+    "notes": "The link presented in these references are now 404s.  \r\n\r\nCorrected text was provided by Douglas Stebila.\r\n\r\nVerified the issue with old links and verified the new links have the referenced documents.",
+    "submit_date": "2014-12-23",
+    "submitter_name": "Alex Gaynor",
+    "verifier_id": 141,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
