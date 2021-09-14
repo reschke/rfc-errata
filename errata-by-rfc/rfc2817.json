@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1801,
+    "doc-id": "RFC2817",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7.1,
+    "orig_text": "   Values to be added to this name space SHOULD be subject to review in\r\n   the form of a standards track document within the IETF Applications\r\n   Area.  Any such document SHOULD be traceable through statuses of\r\n   either 'Obsoletes' or 'Updates' to the Draft Standard for\r\n   HTTP/1.1 [1].",
+    "correct_text": "     Values to be added to this name space are subject to IETF review\r\n     ([12], Section 4.1).\r\n\r\n(where [12] would refer to RFC 5226 in the References Section)",
+    "notes": "Since RFC 2817 was published, it has become harder to publish non-WG \r\ndocuments on the Standards Track. The \"IETF review\" policy is defined in \r\nRFC 5226 as:\r\n\r\n       IETF Review - (Formerly called \"IETF Consensus\" in\r\n             [IANA-CONSIDERATIONS]) New values are assigned only through\r\n             RFCs that have been shepherded through the IESG as AD-\r\n             Sponsored or IETF WG Documents [RFC3932] [RFC3978].  The\r\n             intention is that the document and proposed assignment will\r\n             be reviewed by the IESG and appropriate IETF WGs (or\r\n             experts, if suitable working groups no longer exist) to\r\n             ensure that the proposed assignment will not negatively\r\n             impact interoperability or otherwise extend IETF protocols\r\n             in an inappropriate or damaging manner.\r\n\r\n             To ensure adequate community review, such documents are\r\n             shepherded through the IESG as AD-sponsored (or WG)\r\n             documents with an IETF Last Call.\r\n\r\nwhich should address this nicely.\r\n\r\nFurthermore, overloading the \"Updates\" relation for specifications that \r\nuse a well-defined extension point plus an IANA registry is misleading.\r\n\r\nReviewed by the HTTPbis WG; see <http://trac.tools.ietf.org/wg/httpbis/trac/ticket/170>",
+    "submit_date": "2009-07-05",
+    "submitter_name": "Mark Nottingham",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3941,
+    "doc-id": "RFC2817",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "Note that HTTP/1.1 [1] specifies \"the upgrade keyword MUST be\r\nsupplied within a Connection header field (section 14.10)",
+    "correct_text": "The hyperlink (http://tools.ietf.org/html/rfc2817#section-14.10) \r\nto section 14.10 does not work, it should refer to RFC2616: \r\nhttp://tools.ietf.org/html/rfc2616#section-14.42",
+    "notes": "The hyperlink is an IETF tooling artefact and not part of the RFC, which is clear.\n --VERIFIER NOTES-- \n The hyperlink is an IETF tooling artefact and not part of the RFC, which is clear. ",
+    "submit_date": "2014-03-31",
+    "submitter_name": "Florian Borchert",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4187,
+    "doc-id": "RFC2817",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 7.2,
+    "orig_text": "   The Draft Standard for HTTP/1.1 [1] specifies that these tokens obey\r\n   the production for 'product':\r\n\r\n      product         = token [\"/\" product-version]\r\n      product-version = token\r\n\r\n[...]\r\n\r\n   This specification defines the protocol token \"TLS/1.0\" as the\r\n   identifier for the protocol specified by The TLS Protocol [6].\r\n",
+    "correct_text": "   The Draft Standard for HTTP/1.1 [1] specifies that these tokens obey\r\n   the production for 'product':\r\n\r\n      product         = token [\"/\" product-version]\r\n      product-version = token\r\n\r\n[...]\r\n\r\n   This specification defines the product token \"TLS\" as the\r\n   identifier for the protocol specified by The TLS Protocol [6].\r\n   When a specific version of TLS is desired, it is indicated by\r\n   appending a slash (\"/\") and the TLS version number as the\r\n   product-version (e.g., \"TLS/1.0\").\r\n",
+    "notes": "This erratum clarifies that \"TLS\" is the product token and any TLS version number (currently DIGIT \".\" DIGIT) is the product-version token.  This has already been corrected in the Upgrade Token Registry.",
+    "submit_date": "2014-11-20",
+    "submitter_name": "Roy T. Fielding",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
