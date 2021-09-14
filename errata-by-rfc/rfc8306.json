@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5622,
+    "doc-id": "RFC8306",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.13,
+    "orig_text": "   The total PCEP message length, including the common header, is\r\n   16 bytes.",
+    "correct_text": "   The total PCEP message length, including the common header, is\r\n   (2^16)-1 bytes.",
+    "notes": "The message length field is 16 bits, so the maximum message length is (2^16)-1.",
+    "submit_date": "2019-02-04",
+    "submitter_name": "Adrian FARREL",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
