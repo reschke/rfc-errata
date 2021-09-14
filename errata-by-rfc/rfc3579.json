@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6154,
+    "doc-id": "RFC3579",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "   EAP-Start is indicated by sending an EAP-Message attribute with a\r\n   length of 2 (no data).\r\n\r\n",
+    "correct_text": "   EAP-Start is indicated by sending an EAP-Message attribute with a\r\n   length of 3.  The single byte of data SHOULD be set to zero on \r\n   transmission and MUST be ignored on receipt.\r\n",
+    "notes": "RFC 2865 Section 5 says that empty attributes must be omitted:\r\n\r\n      text      1-253 octets containing UTF-8 encoded 10646 [7]\r\n                characters.  Text of length zero (0) MUST NOT be sent;\r\n                omit the entire attribute instead.\r\n\r\nSection 3.1 of RFC 3579 also says that the EAP-Message attribute cannot be sent with length 2:\r\n\r\n...\r\n   Type\r\n\r\n      79 for EAP-Message\r\n\r\n   Length\r\n\r\n      >= 3\r\n...\r\n\r\nIn practice, few devices seem to send EAP-Message with Length 2.",
+    "submit_date": "2020-05-01",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2020-07-01 13:18:30"
+  },
+  {
+    "errata_id": 6259,
+    "doc-id": "RFC3579",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "  Where the initial EAP-Request sent by the NAS is for an\r\n  authentication Type (4 or greater), the peer MAY respond with a Nak\r\n  indicating that it would prefer another authentication method that is\r\n  not implemented locally.  \r\n",
+    "correct_text": "  Where the initial EAP-Request sent by the NAS is for an\r\n  authentication Type (4 or greater), the peer MAY respond with a Nak\r\n  indicating that it would prefer another authentication method that is\r\n  implemented locally.  \r\n",
+    "notes": "Remove the \"not\".  The NAK should be requesting an authentication which is implemented, instead of preferring one which is NOT implemented.",
+    "submit_date": "2020-08-20",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
