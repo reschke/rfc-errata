@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4660,
+    "doc-id": "RFC7801",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "   delta: V_8 -> Q  bijective mapping that maps a binary string from V_8\r\n           into an element from field Q as follows: string\r\n           z_7||...||z_1||z_0, where z_i in {0, 1}, i = 0, ..., 7,\r\n           corresponds to the element z_0+(z_1*theta)+...+(z_7*theta^7)\r\n           belonging to Z,\r\n",
+    "correct_text": "   delta: V_8 -> Q  bijective mapping that maps a binary string from V_8\r\n           into an element from field Q as follows: string\r\n           z_7||...||z_1||z_0, where z_i in {0, 1}, i = 0, ..., 7,\r\n           corresponds to the element z_0+(z_1*theta)+...+(z_7*theta^7)\r\n           belonging to Q,\r\n",
+    "notes": null,
+    "submit_date": "2016-04-08",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
