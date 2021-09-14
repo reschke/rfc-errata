@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3743,
+    "doc-id": "RFC6112",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7,
+    "orig_text": " \"is ASCII string \"KeyExchange\"",
+    "correct_text": "\"is ASCII string \"KEYEXCHANGE\"\r\n",
+    "notes": "MIT Kerberos is the only public implementation of this draft and when I created the second implementation I noticed that the MIT folks had used the wrong constant in their code.\r\n\r\nAfter talking to them it makes more sense to change the specification then break backward compatibility with old clients since there no other implementations that we know about.",
+    "submit_date": "2013-10-08",
+    "submitter_name": "Love Hörnquist Åstrand",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
