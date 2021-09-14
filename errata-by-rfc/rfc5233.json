@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1331,
+    "doc-id": "RFC5233",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "Section 4",
+    "orig_text": "The \":user\" argument specifies the user sub-part of the local-part of\r\nan address.  If the address is not encoded to contain a detail sub-\r\npart, then \":user\" specifies the entire left side of the address\r\n(equivalent to \":localpart\").",
+    "correct_text": "The \":user\" argument specifies the user sub-part of the local-part of\r\nan address.  If the address is not encoded to contain a detail sub-\r\npart, then \":user\" specifies the entire left side of the address\r\n(equivalent to \":local-part\").",
+    "notes": "Through out the document \":local-part\" is hyphenated, except for the instance in the last sentence of the paragraph above.\n --VERIFIER NOTES-- \n\":localpart\" is defined in Section 8.3 of RFC 5228:\r\n\r\n   ADDRESS-PART = \":localpart\" / \":domain\" / \":all\"\r\n",
+    "submit_date": "2008-02-26",
+    "submitter_name": "Derek Diget",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3079,
+    "doc-id": "RFC5233",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "   A diagram showing the ADDRESS-PARTs of an email address where the\r\n   detail information follows a separator character sequence of \"+\" is\r\n   shown below:\r\n\r\n          :user \"+\" :detail  \"@\" :domain\r\n         \\-----------------/\r\n             :local-part\r\n\r\n   A diagram showing the ADDRESS-PARTs of a email address where the\r\n   detail information precedes a separator character sequence of \"--\" is\r\n   shown below:\r\n\r\n          :detail \"--\" :user  \"@\" :domain\r\n         \\------------------/\r\n             :local-part",
+    "correct_text": "   A diagram showing the ADDRESS-PARTs of an email address where the\r\n   detail information follows a separator character sequence of \"+\" is\r\n   shown below:\r\n\r\n          :user \"+\" :detail  \"@\" :domain\r\n         \\-----------------/\r\n             :localpart\r\n\r\n   A diagram showing the ADDRESS-PARTs of an email address where the\r\n   detail information precedes a separator character sequence of \"--\" is\r\n   shown below:\r\n\r\n          :detail \"--\" :user  \"@\" :domain\r\n         \\------------------/\r\n             :localpart",
+    "notes": "Throughout the document, the prose phrase \"local-part\" is hyphenated, while the syntactic word \":localpart\" is not hyphenated. Also, correct \"a email address\" to \"an email address\"",
+    "submit_date": "2012-01-05",
+    "submitter_name": "Aaron Stone",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
