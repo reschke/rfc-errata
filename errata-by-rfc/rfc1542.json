@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 544,
+    "doc-id": "RFC1542",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.1.1",
+    "orig_text": "  If a client falls into this category, it SHOULD set (to 1) the\r\n  newly-defined BROADCAST flag in the 'flags' field of BOOTREPLY\r\n  messages it generates.  This will provide a hint to BOOTP servers\r\n  and relay agents that they should attempt to broadcast their\r\n  BOOTREPLY messages to the client.",
+    "correct_text": "  If a client falls into this category, it SHOULD set (to 1) the\r\n  newly-defined BROADCAST flag in the 'flags' field of BOOTREQUEST\r\n  messages it generates.  This will provide a hint to BOOTP servers\r\n  and relay agents that they should attempt to broadcast their BOOTREPLY\r\n  messages to the client.",
+    "notes": "(i.e. the first instance of \"BOOTREPLY\" should be \"BOOTREQUEST\".)\r\n",
+    "submit_date": "2002-10-24",
+    "submitter_name": "Grzegorz R. Gryczka",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
