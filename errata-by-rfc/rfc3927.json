@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6293,
+    "doc-id": "RFC3927",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 7,
+    "orig_text": "7.  Router Considerations\r\n\r\n   A router MUST NOT forward a packet with an IPv4 Link-Local source or\r\n   destination address, irrespective of the router's default route\r\n   configuration or routes obtained from dynamic routing protocols.\r\n\r\n   A router which receives a packet with an IPv4 Link-Local source or\r\n   destination address MUST NOT forward the packet.  This prevents\r\n   forwarding of packets back onto the network segment from which they\r\n   originated, or to any other segment.\r\n",
+    "correct_text": "7.  Router Considerations\r\n\r\n   A router MUST NOT forward a packet with an IPv4 Link-Local \r\n   destination address, irrespective of the router's default route\r\n   configuration or routes obtained from dynamic routing protocols.\r\n\r\n   A router which receives a packet with an IPv4 Link-Local \r\n   destination address MUST NOT forward the packet.  This prevents\r\n   forwarding of packets back onto the network segment from which they\r\n   originated, or to any other segment.\r\n\r\n   A router MAY forward a packet with an IPv4 Link-Local source address if \r\n   the packet is an ICMP unreachable or ICMP time exceeded and the\r\n   destination address is not a link local address.",
+    "notes": "Link-Local IPv4 addressing is these days also often used for router to router link local connections.\r\nAlthough the scope of the document is related to dynamic configuration of link local it makes statements not to forward packets for routers (not on the link local segment).\r\nOnce 169.254 addresses are used on router to router link local interfaces they might send back icmp unreachables for pmtu discovery or ttl expiration. In those cases the source IP might be a 169.254 of the routers link local router to router interface.\n --VERIFIER NOTES-- \nRejecting, per https://www.ietf.org/about/groups/iesg/statements/processing-rfc-errata/, as this appears to \"[propose] a change to the RFC that should be done by publishing a new RFC that replaces [or updates] the current RFC.\"\r\n\r\nAlso, as suggested by Eric Vyncke, consider whether any guidance from RFC 7404 is applicable (by analogy, from IPv6 to IPv4 link-local address usage).",
+    "submit_date": "2020-09-22",
+    "submitter_name": "Markus Hofmann",
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2020-12-09 15:29:42"
+  }
+]
