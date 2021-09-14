@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 698,
+    "doc-id": "RFC3926",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "(1) On page 31, the Informative Reference \"[21]\" is inconsistent;\r\n    author, title, and publication month / year match RFC 2047,\r\n    *not* \"RFC 1521\" as stated there.\r\n\r\n(2) The first use of reference \"[21]\" appears on page 27, in the\r\n    10th line of the 2nd paragraph. There, \"RFC 2047\" _might_ be\r\n    what you meant (together with [20] pointing to RFC 2048).\r\n\r\n    Now, unfortunately, the current basic MIME specifications,\r\n    RFC 2045..2049, do not contain a substantial general\r\n    discussion of security issues.\r\n\r\n    The RFC 2045 and RFC 2049 \"Security Considerations\" just\r\n    refer to RFC 2046.\r\n    But RFC 2046 for this purpose refers to two specific media\r\n    type explanations / 'informal registrations' contained in\r\n    the body of that memo, and to RFC 2048, which in turn\r\n    does *NOT* contain a \"Security Considerations\" section.\r\n(NB:\r\n    - RFC 2048 just describes the registration PROCEDURES and\r\n      states the Security Considerations *requirement* for any\r\n      such registrations.\r\n    - The formal ['skeleton'] Registrations for the basic MIME\r\n      content types / subtypes from RFC 1521 - Appendix F -\r\n      unfortunately have been lost on their [expected] way\r\n      into RFC 2046. )\r\n\r\n    RFC 2047, in particular, is an extreme:\r\n      \"Security issues are not discussed in this memo.\"\r\n    (Section 10 on page 14).\r\n\r\n    Therefore I suspect that \"RFC 2047\" might indeed NOT be\r\n    what you wanted to refer to in loc. cit.  Perhaps the\r\n    combination of RFC 2046 and RFC 2048 would have been\r\n    the most appropriate selection for this citation.\r\n\r\n(3) The second use of reference \"[21]\" in RFC 3926 appears\r\n    2 lines further down in the same paragraph on page 27,\r\n    explicitely referring to RFC 1521.\r\n    The final statement there on RFC 1521,\r\n       \"... even though its protocol is obsoleted \r\n       by RFC 2048 [20].\"\r\n\r\n    as well does not seem to be very appropriate for me:\r\n    It might be disputable whether one should talk about a\r\n    \"protocol\" when talking about message/document format\r\n    descriptions, but more substantially, the major part\r\n    of RFC 1521 has been superseded by RFC 2046 - see (2)\r\n    above - while RFC 2048 only supersedes Appendix E of\r\n    RFC 1521, which at the time of its publication already\r\n    had been \"updated\" (i.e. obsoleted) by RFC 1590.\r\n\r\nTherefore, it might be appropriate to replace the impacted\r\nbad Informative Reference citation [21] on page 31 of RFC 3926\r\nby two citations (e.g. [21]' and [23]), one for RFC 1521 and\r\none for RFC 2046, and to modify the above mentioned phrase.",
+    "correct_text": "[see above]",
+    "notes": "from pending",
+    "submit_date": "2004-11-10",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
