@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5152,
+    "doc-id": "RFC7050",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "IANA Conside",
+    "orig_text": "N/A ",
+    "correct_text": "8.x DNSSEC\r\n\r\n    ipv4only.arpa MUST be insecurely delegated.  This allows ISP's to\r\n    modify / generate AAAA responses for ipv4only.arpa AAAA queries that\r\n    will pass through unmodified caching servers as required by 8.1 (4).\r\n",
+    "notes": "The protocol as described does not work when there is a validating caching server in the resolution path.  \r\n\r\nIANA should have been instructed to insecurely delegate ipv4only.arpa.  This allows ISP's to modify the\r\nAAAA response without running foul of DNSSEC  validation.\n --VERIFIER NOTES-- \nSo this errata was correct on the issue, but errata was not the appropriate way of resolving this issue. RFC 8880 that updates RFC 7050 specifies a resolution to this errata. ",
+    "submit_date": "2017-10-11",
+    "submitter_name": "Mark Andrews",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2021-01-13 07:21:10"
+  },
+  {
+    "errata_id": 6270,
+    "doc-id": "RFC7050",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3.4,
+    "orig_text": "\"PTR\" query #2 for \"2001:db8:43::192.0.0.170",
+    "correct_text": "\"PTR\" query #2 for \"2001:db8:43::192.0.0.171",
+    "notes": "The second PTR query should be for the reverse of the DNS64 mapped well known address 192.0.0.171.  This looks like a cut-and-paste error where 170 was not changed to 171.\n --VERIFIER NOTES-- \nAfter discussion on Behave mailing list it appears that the example is not in contradiction with what the RFC specifies. There was some additional discussion around this for other potential improvements that should be considered in case the specification is revised. \r\n\r\nMail thread: https://mailarchive.ietf.org/arch/msg/behave/KuvD2ppb9LLD3LnzS-DJ7wVCgvc/",
+    "submit_date": "2020-09-01",
+    "submitter_name": "Mark Andrews",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2021-01-13 07:12:22"
+  }
+]
