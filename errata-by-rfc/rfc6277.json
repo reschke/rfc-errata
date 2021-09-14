@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5892,
+    "doc-id": "RFC6277",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A.1",
+    "orig_text": "   PreferredSignatureAlgorithm ::= SEQUENCE {\r\n    sigIdentifier       AlgorithmIdentifier{SIGNATURE-ALGORITHM, {...}},\r\n    pubKeyAlgIdentifier SMIMECapability{PUBLIC-KEY, {...}} OPTIONAL  }\r\n",
+    "correct_text": "   PreferredSignatureAlgorithm ::= SEQUENCE {\r\n    sigIdentifier       AlgorithmIdentifier{SIGNATURE-ALGORITHM, {...}},\r\n    pubKeyAlgIdentifier AlgorithmIdentifier{PUBLIC-KEY, {...}} OPTIONAL}",
+    "notes": "The original ASN.1 definition does not compile.  The correction uses a syntax that is aligned with RFC 6960, which obsoletes RFC 6277.",
+    "submit_date": "2019-11-02",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-11-08 17:11:35"
+  }
+]
