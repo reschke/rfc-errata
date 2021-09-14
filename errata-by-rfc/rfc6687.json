@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4842,
+    "doc-id": "RFC6687",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "RPL makes use of trickle timers: the protocol sets a minimum time\r\nperiod with which the nodes start re-issuing DAOs, and this\r\nminimum period is denoted by the trickle parameter Imin.",
+    "correct_text": "RPL makes use of trickle timers: the protocol sets a minimum time\r\nperiod with which the nodes start re-issuing DIOs, and this\r\nminimum period is denoted by the trickle parameter Imin.",
+    "notes": "\"DAOs\" in this sentence seems a typo; it should be \"DIOs\".",
+    "submit_date": "2016-10-25",
+    "submitter_name": "Yasuyuki Tanaka",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
