@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 6624,
+    "doc-id": "RFC2739",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.3.3",
+    "orig_text": "2.3.3  CAPURI Property IANA Registration\r\n\r\n   To: ietf-mime-directory@imc.org\r\n\r\n   Subject: Registration of CAPURI type for application/directory MIME\r\n   type vCard profile.\r\n\r\n   Type name: CAPURI\r\n\r\n   Type purpose: To specify a protocol independent location from which a\r\n   calendaring and scheduling client (i.e., CUA) can communicate with a\r\n   user's entire calendar.\r\n\r\n   Type encoding: 8bit\r\n\r\n   Type value: A single URI value.\r\n\r\n   Type special notes: Where multiple CAPURI properties are specified,\r\n   the default CAPURI property is indicated with the PREF parameter.\r\n\r\n   Intended usage: Refer to section 1.3.",
+    "correct_text": "2.3.3  CAPURI Property IANA Registration\r\n\r\n   To: ietf-mime-directory@imc.org\r\n\r\n   Subject: Registration of CAPURI type for application/directory MIME\r\n   type vCard profile.\r\n\r\n   Type name: CAPURI\r\n\r\n   Type purpose: To specify a protocol independent location from which a\r\n   calendaring and scheduling client (i.e., CUA) can communicate with a\r\n   user's entire calendar.\r\n\r\n   Type encoding: 8bit\r\n\r\n   Type value: A single URI value.\r\n\r\n   Type special notes: Where multiple CAPURI properties are specified,\r\n   the default CAPURI property is indicated with the PREF parameter.\r\n\r\n   Intended usage: Refer to section 1.2.",
+    "notes": "Usage Reference Section was incorrect",
+    "submit_date": "2021-06-30",
+    "submitter_name": "Prakhar Makhija",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2021-07-06 14:40:04"
+  },
+  {
+    "errata_id": 6625,
+    "doc-id": "RFC2739",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.3.4",
+    "orig_text": "2.3.4 CALURI Property IANA Registration\r\n\r\n   To: ietf-mime-directory@imc.org\r\n\r\n   Subject: Registration of CALURI type for text/directory MIME type\r\n   vCard profile.\r\n\r\n   Type name: CALURI\r\n\r\n   Type purpose: To specify the URI for a user's calendar in a vCard\r\n   object.\r\n\r\n   Type encoding: 8bit\r\n\r\n   Type value type: A single URI value.\r\n\r\n   Type special notes: Where multiple CALURI properties are specified,\r\n   the default CALURI property is indicated with the PREF parameter. The\r\n   property should contain a URI pointing to an iCalendar object\r\n   associated with a snapshot of the user's calendar store. If the\r\n   iCalendar object is represented as a file or document, it's file type\r\n   should be \"ics\".\r\n\r\n   Intended usage: Refer to section 1.4.\r\n\r\n   Type examples:\r\n\r\n      CALURI;PREF:http://cal.host1.com/calA\r\n      CALURI:ftp://ftp.host1.com/calA.ics",
+    "correct_text": "2.3.4 CALURI Property IANA Registration\r\n\r\n   To: ietf-mime-directory@imc.org\r\n\r\n   Subject: Registration of CALURI type for text/directory MIME type\r\n   vCard profile.\r\n\r\n   Type name: CALURI\r\n\r\n   Type purpose: To specify the URI for a user's calendar in a vCard\r\n   object.\r\n\r\n   Type encoding: 8bit\r\n\r\n   Type value type: A single URI value.\r\n\r\n   Type special notes: Where multiple CALURI properties are specified,\r\n   the default CALURI property is indicated with the PREF parameter. The\r\n   property should contain a URI pointing to an iCalendar object\r\n   associated with a snapshot of the user's calendar store. If the\r\n   iCalendar object is represented as a file or document, it's file type\r\n   should be \"ics\".\r\n\r\n   Intended usage: Refer to section 1.3.\r\n\r\n   Type examples:\r\n\r\n      CALURI;PREF:http://cal.host1.com/calA\r\n      CALURI:ftp://ftp.host1.com/calA.ics",
+    "notes": "Usage Reference Section was incorrect",
+    "submit_date": "2021-06-30",
+    "submitter_name": "Prakhar Makhija",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2021-07-06 15:12:13"
+  },
+  {
+    "errata_id": 6626,
+    "doc-id": "RFC2739",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.3.2",
+    "orig_text": "2.3.2  CALADRURI Property IANA Registration\r\n\r\n   To: ietf-mime-directory@imc.org\r\n\r\n   Subject: Registration of CALADRURI type for application/directory\r\n   MIME type vCard profile.\r\n\r\n   Type name: CALADRURI\r\n\r\n   Type purpose: To specify the location to which an event request\r\n   should be sent for the user.\r\n\r\n   Type encoding: 8bit\r\n\r\n   Type value: A single URI value.\r\n\r\n   Type special notes: Where multiple CALADRURI properties are\r\n   specified, the default CALADRURI property is indicated with the PREF\r\n   parameter.\r\n\r\n   Intended usage: Refer to section 1.2.\r\n\r\n   Type examples:\r\n\r\n      CALADRURI;PREF:mailto:janedoe@host.com\r\n\r\n",
+    "correct_text": "2.3.2  CALADRURI Property IANA Registration\r\n\r\n   To: ietf-mime-directory@imc.org\r\n\r\n   Subject: Registration of CALADRURI type for application/directory\r\n   MIME type vCard profile.\r\n\r\n   Type name: CALADRURI\r\n\r\n   Type purpose: To specify the location to which an event request\r\n   should be sent for the user.\r\n\r\n   Type encoding: 8bit\r\n\r\n   Type value: A single URI value.\r\n\r\n   Type special notes: Where multiple CALADRURI properties are\r\n   specified, the default CALADRURI property is indicated with the PREF\r\n   parameter.\r\n\r\n   Type examples:\r\n\r\n      CALADRURI;PREF:mailto:janedoe@host.com\r\n\r\n",
+    "notes": "Usage Reference Section was wrong\r\n\r\nSection 1 (Calendaring and Scheduling URIs) does not define CALADRURI\r\n\r\nUsage type example is already mentioned in Section 2.3.2",
+    "submit_date": "2021-06-30",
+    "submitter_name": "Prakhar Makhija",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2021-07-06 15:21:50"
+  }
+]
