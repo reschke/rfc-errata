@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6372,
+    "doc-id": "RFC8894",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3.3",
+    "orig_text": "   The messageData for this type consists of an\r\n   IssuerAndSubject:\r\n\r\n   issuerAndSubject ::= SEQUENCE {\r\n       issuer     Name,\r\n       subject    Name\r\n       }\r\n",
+    "correct_text": "   The messageData for this type consists of an\r\n   IssuerAndSubject:\r\n\r\n   IssuerAndSubject ::= SEQUENCE {\r\n       issuer     Name,\r\n       subject    Name\r\n       }",
+    "notes": "For the ASN.1 to compile properly, the definition must begin with a capital letter.",
+    "submit_date": "2020-12-28",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
