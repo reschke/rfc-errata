@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 383,
+    "doc-id": "RFC2813",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.3,
+    "orig_text": "   The presence of a prefix is indicated with a single leading ASCII\r\n   colon character (':', 0x3b), which MUST be the first character of the\r\n                         ^^^^\r\n   message itself.",
+    "correct_text": "   The presence of a prefix is indicated with a single leading ASCII\r\n   colon character (':', 0x3a), which MUST be the first character of the\r\n                         ^^^^\r\n   message itself.\r\n",
+    "notes": "",
+    "submit_date": "2006-08-28",
+    "submitter_name": "Huang Xiangkui",
+    "verifier_id": 2,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2870,
+    "doc-id": "RFC2813",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.2.1",
+    "orig_text": "as per the LUSER reply",
+    "correct_text": "as per the LUSERS reply",
+    "notes": null,
+    "submit_date": "2011-07-27",
+    "submitter_name": "Ricardo Garcia",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
