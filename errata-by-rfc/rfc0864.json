@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4920,
+    "doc-id": "RFC0864",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "TCP Based",
+    "orig_text": "   It is fairly likely that users of this service will abruptly decide\r\n   that they have had enough and abort the TCP connection, instead of\r\n   carefully closing it.  The service should be prepared for either the\r\n   carfull close or the rude abort.",
+    "correct_text": "   It is fairly likely that users of this service will abruptly decide\r\n   that they have had enough and abort the TCP connection, instead of\r\n   carefully closing it.  The service should be prepared for either the\r\n   careful close or the rude abort.",
+    "notes": "Spelling of \"carfull\" for \"careful\".",
+    "submit_date": "2017-01-29",
+    "submitter_name": "Jim Young",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5333,
+    "doc-id": "RFC0864",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "      One popular pattern is 72 chraracter lines of the ASCII printing\r\n      characters.  There are 95 printing characters in the ASCII\r\n      character set.  Sort the characters into an ordered sequence and",
+    "correct_text": "      One popular pattern is 72 character lines of the ASCII printing\r\n      characters.  There are 95 printing characters in the ASCII\r\n      character set.  Sort the characters into an ordered sequence and",
+    "notes": "Misspelling of 'character' in the first line.",
+    "submit_date": "2018-04-25",
+    "submitter_name": "Richard Bos",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
