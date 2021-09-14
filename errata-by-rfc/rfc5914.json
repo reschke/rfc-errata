@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2667,
+    "doc-id": "RFC5914",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A.1",
+    "orig_text": "   PKCS7-CONTENT-TYPE ::= TYPE-IDENTIFIER\r\n\r\n   trust-anchor-list PKCS7-CONTENT-TYPE ::=\r\n       { TrustAnchorList IDENTIFIED BY id-ct-trustAnchorList }",
+    "correct_text": "INSERT INTO IMPORTS SECTION before the final semi-colon\r\n\r\n   CONTENT-TYPE\r\n   FROM CryptographicMessageSyntax-2009 -- from [RFC5911]\r\n      { iso(1) member-body(2) us(840) rsadsi(113549)\r\n      pkcs(1) pkcs-9(9) smime(16) modules(0)\r\n      id-mod-cms-2004-02(41) }\r\n\r\n\r\n\r\n\r\nREPLACE ABOVE TEXT WITH\r\n\r\n   trust-anchor-list CONTENT-TYPE ::=\r\n       { TYPE TrustAnchorList IDENTIFIED BY id-ct-trustAnchorList }",
+    "notes": "The content type is designed to be placed into a CMS SignedData object.  Since the exact same class definition (not a syntaxically identicial one) needs to be used to get object sets to work correctly, the defintion of the content type must be updated to reference the identical one defined in the CMS module.\r\n\r\nA future version should additionally note that the content type is to be added to the ContentSet object set in the CMS module.",
+    "submit_date": "2010-12-09",
+    "submitter_name": "Jim Schaad",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
