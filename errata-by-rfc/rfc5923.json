@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2310,
+    "doc-id": "RFC5923",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 8.2,
+    "orig_text": "[[ in the last paragraph at the bottom of page 13: ]]\r\n\r\n   The server, if it decides to reuse the connection, MUST cache in the\r\n   alias table the identity (or identities) of the client as they appear\r\n|  in the X.509 certificate subjectAlternativeName extension field.  [...]\r\n                                   ^^^^^^^^^^^",
+    "correct_text": "   The server, if it decides to reuse the connection, MUST cache in the\r\n   alias table the identity (or identities) of the client as they appear\r\n|  in the X.509 certificate subjectAltName extension field.  [...]\r\n                                   ^^^",
+    "notes": "Rationale:\r\n  Mis-spelling of the defined certificate extension name --\r\n  see (for example) RFC 5280.",
+    "submit_date": "2010-06-24",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
