@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1885,
+    "doc-id": "RFC4491",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "2.3.1, 2.3.2",
+    "orig_text": "a)  Section 2.3.1, page 7\r\n\r\n|  GostR3410-94-PublicKey MUST contain 128 octets of the little-endian\r\n   representation of the public key Y = a^x (mod p), where a and p are\r\n   public key parameters, and x is a private key.\r\n\r\nb) Section 2.3.2, page 9\r\n\r\n   GostR3410-2001-PublicKey MUST contain 64 octets, where the first 32\r\n|  octets contain the little-endian representation of x and the second\r\n|  32 octets contain the little-endian representation of y.  [...]",
+    "correct_text": "a)\r\n\r\n|  GostR3410-94-PublicKey MUST contain 128 octets of the big-endian\r\n   representation of the public key Y = a^x (mod p), where a and p are\r\n   public key parameters, and x is a private key.\r\n\r\nb)\r\n\r\n   GostR3410-2001-PublicKey MUST contain 64 octets, where the first 32\r\n|  octets contain the big-endian representation of x and the second\r\n|  32 octets contain the big-endian representation of y.  [...]",
+    "notes": "Rationale:\r\nInconsistency within the RFC.\r\nMost parts of the memo make use of the Internet-standard\r\n\"network byte order\". a.k.a. \"big-endian byte order\", which\r\nalso is at the heart of the ASN.1 BER/DER encoding.\r\nUse of mixed endian-ness within a single context, or even\r\na single specification, is a likely source of implementation\r\nerrors and, consequently, interoperability problems.\r\n\r\nCf. the related Errata Note for RFC 4490, EID=1884.\n --VERIFIER NOTES-- \n authors confirmed that little-endian encoding is correct.",
+    "submit_date": "2009-09-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
