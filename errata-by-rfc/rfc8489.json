@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6268,
+    "doc-id": "RFC8489",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix B.1",
+    "orig_text": "        00 01 00 9c      Request type and message length\r\n        21 12 a4 42      Magic cookie\r\n        78 ad 34 33   }\r\n        c6 ad 72 c0   }  Transaction ID\r\n        29 da 41 2e   }\r\n        00 1e 00 20      USERHASH attribute header\r\n        4a 3c f3 8f   }\r\n        ef 69 92 bd   }\r\n        a9 52 c6 78   }\r\n        04 17 da 0f   }  Userhash value (32 bytes)\r\n        24 81 94 15   }\r\n        56 9e 60 b2   }\r\n        05 c4 6e 41   }\r\n        40 7f 17 04   }\r\n        00 15 00 29      NONCE attribute header\r\n        6f 62 4d 61   }\r\n        74 4a 6f 73   }\r\n        32 41 41 41   }\r\n        43 66 2f 2f   }\r\n        34 39 39 6b   }  Nonce value and padding (3 bytes)\r\n        39 35 34 64   }\r\n        36 4f 4c 33   }\r\n        34 6f 4c 39   }\r\n        46 53 54 76   }\r\n        79 36 34 73   }\r\n        41 00 00 00   }\r\n        00 14 00 0b      REALM attribute header\r\n        65 78 61 6d   }\r\n        70 6c 65 2e   }  Realm value (11 bytes) and padding (1 byte)\r\n        6f 72 67 00   }\r\n        00 1c 00 20      MESSAGE-INTEGRITY-SHA256 attribute header\r\n        e4 68 6c 8f   }\r\n        0e de b5 90   }\r\n        13 e0 70 90   }\r\n        01 0a 93 ef   }  HMAC-SHA256 value\r\n        cc bc cc 54   }\r\n        4c 0a 45 d9   }\r\n        f8 30 aa 6d   }\r\n        6f 73 5a 01   }\r\n ",
+    "correct_text": "   Password Algorithm: SHA-256 (0x0002), and parameters len (0)\r\n\r\n      00 01 00 90     Request type and message length\r\n      21 12 a4 42     Magic cookie\r\n      78 ad 34 33  }\r\n      c6 ad 72 c0  }  Transaction ID\r\n      29 da 41 2e  }\r\n      00 1e 00 20     USERHASH attribute header\r\n      4a 3c f3 8f  }\r\n      ef 69 92 bd  }\r\n      a9 52 c6 78  }\r\n      04 17 da 0f  }  Userhash value (32  bytes)\r\n      24 81 94 15  }\r\n      56 9e 60 b2  }\r\n      05 c4 6e 41  }\r\n      40 7f 17 04  }\r\n      00 15 00 29     NONCE attribute header\r\n      6f 62 4d 61  }\r\n      74 4a 6f 73  }\r\n      32 41 41 41  }\r\n      43 66 2f 2f  }\r\n      34 39 39 6b  }  Nonce value and padding (3 bytes)\r\n      39 35 34 64  }\r\n      36 4f 4c 33  }\r\n      34 6f 4c 39  }\r\n      46 53 54 76  }\r\n      79 36 34 73  }\r\n      41 00 00 00  }\r\n      00 14 00 0b     REALM attribute header\r\n      65 78 61 6d  }\r\n      70 6c 65 2e  }  Realm value (11  bytes) and padding (1 byte)\r\n      6f 72 67 00  }\r\n      00 1d 00 04     PASSWORD-ALGORITHM attribute header\r\n      00 02 00 00     PASSWORD-ALGORITHM value (4 bytes)\r\n      00 1c 00 20     MESSAGE-INTEGRITY-SHA256 attribute header\r\n      b5 c7 bf 00  }\r\n      5b 6c 52 a2  }\r\n      1c 51 c5 e8  }\r\n      92 f8 19 24  }  HMAC-SHA256 value\r\n      13 62 96 cb  }\r\n      92 7c 43 14  }\r\n      93 09 27 8c  }\r\n      c6 51 8e 65  }",
+    "notes": "The message length in the test vector (first line, value: 9c) is the absolute length of the whole test vector. However from section 5. STUN Message Structure\r\n\r\n\"The message length MUST contain the size of the message in bytes, not\r\n   including the 20-byte STUN header.\"\r\n\r\nSo the message length in the header should be 20 bytes less than absolute length of the whole message. \r\n\r\n0x9C - 20 = 0x88.\r\n\r\nAlso the section was missing an indication of what password algorithm that was to be used to derive the password. As SHA-256 was used, and is not the default the PASSWORD-ALGORITHM attribute is required. Thus, this corrected message contains that STUN attribute. \r\n\r\nThe corrected message has a recalculated Message-Integrity-SHA256 attribute. ",
+    "submit_date": "2020-08-30",
+    "submitter_name": "Jared Williams",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2020-10-19 01:04:04"
+  },
+  {
+    "errata_id": 6290,
+    "doc-id": "RFC8489",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 18.1,
+    "orig_text": "Bits are assigned starting from the most significant side of the bit\r\nset, so Bit 0 is the leftmost bit and Bit 23 is the rightmost bit.",
+    "correct_text": "Bits are assigned starting from the least significant side of the bit\r\nset, so Bit 0 is the rightmost bit, and Bit 23 is the leftmost bit.\r\n",
+    "notes": null,
+    "submit_date": "2020-09-14",
+    "submitter_name": "Jared Williams",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2020-09-15 05:10:08"
+  }
+]
