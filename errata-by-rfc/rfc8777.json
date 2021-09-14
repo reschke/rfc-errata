@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6155,
+    "doc-id": "RFC8777",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "   <CODE BEGINS>\r\n     $ cat translate.py\r\n     #!/usr/bin/env python3\r\n     import sys\r\n     name=sys.argv[1]\r\n     wire=''\r\n     for dn in name.split('.'):\r\n       if len(dn) > 0:\r\n         wire += ('%02x' % len(dn))\r\n         wire += (''.join('%02x'%ord(x) for x in dn))\r\n     print(len(wire)//2) + 2\r\n     print(wire)\r\n\r\n     $ ./translate.py amtrelays.example.com\r\n     24\r\n     09616d7472656c617973076578616d706c6503636f6d\r\n   <CODE ENDS>",
+    "correct_text": "   <CODE BEGINS>\r\n     $ cat translate.py\r\n     #!/usr/bin/env python3\r\n     import sys\r\n     name=sys.argv[1]\r\n     wire=''\r\n     for dn in name.split('.'):\r\n       if len(dn) > 0:\r\n         wire += ('%02x' % len(dn))\r\n         wire += (''.join('%02x'%ord(x) for x in dn))\r\n     print(len(wire)//2 + 2)\r\n     print(wire)\r\n\r\n     $ ./translate.py amtrelays.example.com\r\n     24\r\n     09616d7472656c617973076578616d706c6503636f6d\r\n   <CODE ENDS>",
+    "notes": "The original sample code gives a runtime error when executed.  The +2 should have been inside the parenthesis for the print function.",
+    "submit_date": "2020-05-01",
+    "submitter_name": "Jake Holland",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2021-04-27 09:34:37"
+  },
+  {
+    "errata_id": 6218,
+    "doc-id": "RFC8777",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.3.2",
+    "orig_text": "10   IN TYPE260  \\# (\r\n       18 ; length\r\n       0a ; precedence=10\r\n       02 ; D=0, relay type=2, an IPv6 address\r\n       20010db800000000000000000000000f ) ; 2001:db8::15\r\n10   IN TYPE260  \\# (\r\n       24 ; length\r\n       80 ; precedence=128\r\n       83 ; D=1, relay type=3, a wire-encoded domain name\r\n       09616d7472656c617973076578616d706c6503636f6d ) ; domain name",
+    "correct_text": "10   IN TYPE260  \\# (\r\n       18 ; length\r\n       0a ; precedence=10\r\n       02 ; D=0, relay type=2, an IPv6 address\r\n       20010db8000000000000000000000015 ) ; 2001:db8::15\r\n10   IN TYPE260  \\# (\r\n       25 ; length\r\n       80 ; precedence=128\r\n       83 ; D=1, relay type=3, a wire-encoded domain name\r\n       09616d7472656c617973076578616d706c6503636f6d00 ) ; domain name",
+    "notes": "In the first example, the IPv6 address is incorrectly encoded.\r\n\r\nIn the second example, the trailing root label of the domain name was not included, and should be.  This also increases the length by 1 byte.",
+    "submit_date": "2020-07-01",
+    "submitter_name": "Brian Wellington",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2020-07-17 10:06:58"
+  }
+]
