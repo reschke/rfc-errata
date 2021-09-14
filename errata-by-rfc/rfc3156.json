@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3443,
+    "doc-id": "RFC3156",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "   Example message:\r\n\r\n      From: Michael Elkins <elkins@aero.org>\r\n      To: Michael Elkins <elkins@aero.org>\r\n      Mime-Version: 1.0",
+    "correct_text": "   Example message:\r\n\r\n      From: Michael Elkins <elkins@aero.org>\r\n      To: Michael Elkins <elkins@aero.org>\r\n      MIME-Version: 1.0",
+    "notes": "According to RFC2045 (on which this RFC builds upon) specifies that:\r\nMessages composed in accordance with this document MUST include such a header field, with the following verbatim text:\r\n\r\n     MIME-Version: 1.0\n --VERIFIER NOTES-- \nDespite the quote from 2045 above, the grammar that's in effect is such that header field names are case-insensitive, so \"MIME-Version\", \"Mime-Version\", and \"mime-version\" are all the same.\r\n   ",
+    "submit_date": "2013-01-03",
+    "submitter_name": "Kwadronaut",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
