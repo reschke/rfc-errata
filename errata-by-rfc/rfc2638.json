@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5359,
+    "doc-id": "RFC2638",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 9,
+    "orig_text": "[10] D. Clark and W. Fang, \"Explicit Allocation of Best Effort packet\r\n       Delivery Service\", IEEE/ACM Transactions on Networking, August,\r\n       1998, Vol6, No 4, pp. 362-373. also at: http://\r\n       diffserv.lcs.mit.edu/Papers/exp-alloc-ddc-wf.pdf\r\n",
+    "correct_text": "[10] D. Clark and W. Fang, \"Explicit Allocation of Best Effort\r\npacket Delivery Service\", IEEE/ACM Transactions on Networking,\r\nAugust, 1998, Vol6, No 4, pp. 362-373. also at:\r\nhttps://web.archive.org/web/20000816232212/\r\nhttp://diffserv.lcs.mit.edu:80/Papers/exp-alloc-ddc-wf.pdf ",
+    "notes": "The diffserv.lcs.mit.edu web server is no longer available.  However, the paper can be accessed via the Internet Archive.  (I needed to split the last sentence of the corrected text so it would be accepted by the errata tool.) If using Internet Archive links is not permitted or recommended, I would accept just omitting the last sentence (\"also at: ...) altogether.  The article is available at https://dl.acm.org/citation.cfm?id=288401&dl=ACM&coll=DL, but it is behind a paywall.",
+    "submit_date": "2018-05-15",
+    "submitter_name": "Greg Skinner",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5361,
+    "doc-id": "RFC2638",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Appendix",
+    "orig_text": "After the draft-nichols-diff-svc-00 was submitted, the co-authors had\r\na discussion with Dave Clark and John Wroclawski which resulted in\r\nClark's using the presentation slot for the draft at the December\r\n1997 IETF Integrated Services Working Group meeting.",
+    "correct_text": "After the draft-nichols-diff-svc-arch-00 was submitted, the co-authors\r\nhad a discussion with Dave Clark and John Wroclawski which resulted in\r\nClark's using the presentation slot for the draft at the December\r\n1997 IETF Integrated Services Working Group meeting.",
+    "notes": "The original text refers to a draft that never existed.",
+    "submit_date": "2018-05-15",
+    "submitter_name": "Greg Skinner",
+    "verifier_id": 153,
+    "verifier_name": "Mirja Kühlewind",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
