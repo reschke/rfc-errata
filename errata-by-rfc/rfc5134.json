@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1325,
+    "doc-id": "RFC5134",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2, pg. 4",
+    "orig_text": "   Rules for Lexical Equivalence:\r\n\r\n         The entire URN is case-sensitive.\r\n",
+    "correct_text": "   Rules for Lexical Equivalence:\r\n\r\n         The namespace-specific part of the URN is case-sensitive.\r\n",
+    "notes": "The original rule contradicts Section 5 of RFC 2141 [1],\r\nwhich requests case-insensitive comparison after downcasing\r\nof \"urn:\" and the NID, and normalization of %-escaping.\r\nThe correction restores conformance with RFC 2141.\r\n\r\n[[ please remove after verification:\r\n   apparently this correction has been lost since LC ]]",
+    "submit_date": "2008-02-16",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1328,
+    "doc-id": "RFC5134",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3, pg.7",
+    "orig_text": "   Rules for Lexical Equivalence:\r\n\r\n         The entire URN is case-sensitive.\r\n",
+    "correct_text": "   Rules for Lexical Equivalence:\r\n\r\n         The namespace-specific part of the URN is case-sensitive.\r\n",
+    "notes": "Rationale: See previous report, Errata ID 1325 !\r\n\r\n\r\n[[  Additional note (please remove upon verification):\r\n    Re-entered after reported change to the Errata System\r\n    (hopefully) allows it to accept this report.  ]]",
+    "submit_date": "2008-02-20",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
