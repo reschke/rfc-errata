@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 465,
+    "doc-id": "RFC2268",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "   RC2Version ::= INTEGER -- 1-1024\n\n   RC2 in CBC mode has two parameters: an 8-byte initialization vector\n   (IV) and a version number in the range 1-1024 which specifies in a\n   roundabout manner the number of effective key bits to be used for\n   the RC2 encryption/decryption.",
+    "correct_text": "   RC2Version ::= INTEGER -- 0-1024\n\n   RC2 in CBC mode has two parameters: an 8-byte initialization vector\n   (IV) and a version number in the range 0-1024 which specifies in a\n   roundabout manner the number of effective key bits to be used for\n   the RC2 encryption/decryption.\n",
+    "notes": "",
+    "submit_date": "2001-10-17",
+    "submitter_name": "Simon Josefsson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
