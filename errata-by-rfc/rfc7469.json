@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4354,
+    "doc-id": "RFC7469",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "   As in Section 2.4, the token refers to the algorithm name, and the\r\n   quoted-string refers to the base64 encoding of the SPKI Fingerprint.\r\n   When formulating the JSON POST body, the UA MUST either use single-\r\n   quoted JSON strings or use double-quoted JSON strings and backslash-\r\n   escape the embedded double quotes in the quoted-string part of the\r\n   known-pin.\r\n\r\n....\r\n\r\n      'pin-sha256=\"d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM=\"',",
+    "correct_text": "   As in Section 2.4, the token refers to the algorithm name, and the\r\n   quoted-string refers to the base64 encoding of the SPKI Fingerprint.\r\n   When formulating the JSON POST body, the UA MUST use double-quoted\r\n   JSON strings and backslash-escape the embedded double quotes in the\r\n   quoted-string part of the known-pin.\r\n\r\n....\r\n\r\n      \"pin-sha256=\\\"d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM=\\\"\",",
+    "notes": "This RFC seems to think that single quotes are permissible in JSON. This is not the case. See http://tools.ietf.org/html/rfc7159#section-7",
+    "submit_date": "2015-05-04",
+    "submitter_name": "Kirit Saelensminde",
+    "verifier_id": 2,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4658,
+    "doc-id": "RFC7469",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.  Reporting Pin Validation Failure",
+    "orig_text": "  {\r\n    \"date-time\": \"2014-04-06T13:00:50Z\",\r\n    \"hostname\": \"www.example.com\",\r\n    \"port\": 443,\r\n    \"effective-expiration-date\": \"2014-05-01T12:40:50Z\"\r\n",
+    "correct_text": "  {\r\n    \"date-time\": \"2014-04-06T13:00:50Z\",\r\n    \"hostname\": \"www.example.com\",\r\n    \"port\": 443,\r\n    \"effective-expiration-date\": \"2014-05-01T12:40:50Z\",\r\n ",
+    "notes": "Missing comma after \"effective-expiration-date\": \"2014-05-01T12:40:50Z\" in JSON at              Figure 8: Pin Validation Failure Report Example",
+    "submit_date": "2016-04-08",
+    "submitter_name": "Jxck",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5377,
+    "doc-id": "RFC7469",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.3.4",
+    "orig_text": "2.3.4.  HTTP-Equiv <Meta> Element Attribute\r\n\r\n   UAs MUST NOT heed http-equiv=\"Public-Key-Pins\" or\r\n   http-equiv=\"Public-Key-Pins-Report-Only\" attribute settings on <meta>\r\n   elements [W3C.REC-html401-19991224] in received content.",
+    "correct_text": "(remove the section)",
+    "notes": "The spec attempts to make a normative requirement on HTML consumers. It can't do that; that's the role of the HTML spec.\r\n\r\nIn addition to that, this is already covered by what recent HTML specs say about http-equiv extensibility.",
+    "submit_date": "2018-06-02",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
