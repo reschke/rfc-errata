@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4397,
+    "doc-id": "RFC7183",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "Generation of TIMESTAMP Message TLVs (as defined in [RFC7182]) for\r\n      inclusion in an outgoing message.  An implementation of [RFC6130]\r\n      and [RFC7181] MAY use more than one ICV TLV in a message, but it\r\n      MUST NOT use the same type extensio",
+    "correct_text": "Generation of TIMESTAMP Message TLVs (as defined in [RFC7182]) for\r\n      inclusion in an outgoing message.  An implementation of [RFC6130]\r\n      and [RFC7181] MAY use more than one TIMESTAMP TLV in a message\r\n      , but it MUST NOT use the same type extensio",
+    "notes": "We are only talking about TIMESTAMP TLV in this paragraph. \r\nI think it's an error when copying the text from the previous paragraph.",
+    "submit_date": "2015-06-22",
+    "submitter_name": "Jiazi",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5144,
+    "doc-id": "RFC7183",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "8.1.3",
+    "orig_text": "   is contained in message.  As an attacker cannot modify the content of\r\n   this timestamp (as it is protected by the identity check value), an\r\n   attacker cannot replay messages after this time.  Within this time\r\n",
+    "correct_text": "   is contained in message.  As an attacker cannot modify the content of\r\n   this timestamp (as it is protected by the integrity check value), an\r\n   attacker cannot replay messages after this time.  Within this time\r\n",
+    "notes": "Integrity check value (ICV) is the means of protection in this document.",
+    "submit_date": "2017-10-04",
+    "submitter_name": "Denis Ovsienko",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
