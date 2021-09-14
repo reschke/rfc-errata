@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1955,
+    "doc-id": "RFC4072",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.1.4",
+    "orig_text": "   Note that not all link layers use this name, and currently most EAP\r\n   methods do not generate it.  Since the NAS operates in pass-through\r\n   mode, it cannot know the Key-Name before receiving it from the AAA\r\n   server.  As a result, a Key-Name AVP sent in a Diameter-EAP-Request\r\n   MUST NOT contain any data.  A home Diameter server receiving a\r\n   Diameter-EAP-Request with a Key-Name AVP with non-empty data MUST\r\n   silently discard the AVP.  ",
+    "correct_text": "   Note that not all link layers use this name, and currently most EAP\r\n   methods do not generate it.  Since the NAS operates in pass-through\r\n   mode, it cannot know the name of the key before receiving it from the AAA\r\n   server.  As a result, an EAP-Key-Name AVP sent in a Diameter-EAP-Request\r\n   MUST NOT contain any data.  A home Diameter server receiving a\r\n   Diameter-EAP-Request containing an EAP-Key-Name AVP with non-empty data MUST\r\n   silently ignore the AVP.  ",
+    "notes": "In the original text, the first occurrence of the string \"Key-Name\" apparently is meant to refer to the actual name of the key, rather than an AVP identifier, while the next two occurrences are obviously typos, since no Key-Name AVP is defined in the document.  Also, the term \"silently discard\" is typically used in reference to messages; with reference to a single AVP, \"silently ignore\" seems more appropriate.",
+    "submit_date": "2009-12-03",
+    "submitter_name": "Glen Zorn",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1956,
+    "doc-id": "RFC4072",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.1.4",
+    "orig_text": "In addition, the home Diameter server SHOULD include this AVP in \r\nDiameter-EAP-Response only if an empty EAP-Key-Name AVP was present in \r\nDiameter-EAP-Request.\r\n",
+    "correct_text": "In addition, the home Diameter server SHOULD include this AVP in the \r\nDiameter-EAP-Answer message only if an empty EAP-Key-Name AVP was present in\r\nthe corresponding Diameter-EAP-Request.\r\n",
+    "notes": "There's no such thing as a \"Diameter-EAP-Response\" message; the rephrasing is for purposes of clarification.",
+    "submit_date": "2009-12-03",
+    "submitter_name": "Glen Zorn",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2317,
+    "doc-id": "RFC4072",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "3.2.",
+    "orig_text": "      <Diameter-EAP-Answer> ::= < Diameter Header: 268, PXY >\r\n                                < Session-Id >\r\n                                { Auth-Application-Id }\r\n                                { Auth-Request-Type }\r\n                                { Result-Code }\r\n                                { Origin-Host }\r\n                                { Origin-Realm }\r\n                                [ User-Name ]\r\n                                [ EAP-Payload ]\r\n                                [ EAP-Reissued-Payload ]\r\n                                [ EAP-Master-Session-Key ]\r\n                                [ EAP-Key-Name ]\r\n                                [ Multi-Round-Time-Out ]\r\n                                [ Accounting-EAP-Auth-Method ]\r\n                                [ Service-Type ]",
+    "correct_text": "      <Diameter-EAP-Answer> ::= < Diameter Header: 268, PXY >\r\n                                < Session-Id >\r\n                                { Auth-Application-Id }\r\n                                { Auth-Request-Type }\r\n                                { Result-Code }\r\n                                { Origin-Host }\r\n                                { Origin-Realm }\r\n                                [ User-Name ]\r\n                                [ EAP-Payload ]\r\n                                [ EAP-Reissued-Payload ]\r\n                                [ EAP-Master-Session-Key ]\r\n                                [ EAP-Key-Name ]\r\n                                [ Multi-Round-Time-Out ]\r\n                              * [ Accounting-EAP-Auth-Method ]\r\n                                [ Service-Type ]",
+    "notes": "When one or more EAP methods used for authenticating the user, for each used EAP method an Accounting-EAP-Auth-Method AVP is added in the Diameter-EAP-Answer with a successful result code. In the message format of Diameter-EAP-Answer, one or more Accounting-EAP-Auth-Method AVPs can be included.\n --VERIFIER NOTES-- \nThis erratum if verified would create an non-backward-compatible change. The submiter is kindly requested to consider the discussions with the author on the WG list and if he still thinks that the change is needed to resubmit the erratum as Technical.    ",
+    "submit_date": "2010-06-30",
+    "submitter_name": "Souheil Ben Ayed",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
