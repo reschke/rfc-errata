@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4538,
+    "doc-id": "RFC6793",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "If the BGP4-MIB [RFC4273] is supported, there are no additional\r\nmanageability concerns that arise from the use of four-octet AS\r\nnumbers, since the InetAutonomousSystemNumber textual convention\r\n[RFC4001] is defined as Unsigned32.",
+    "correct_text": "If the BGP4-MIBv2 [draft-ietf-idr-bgp4-mibv2] is supported, there are \r\nno additional manageability concerns that arise from the use of \r\nfour-octet AS numbers, since the InetAutonomousSystemNumber \r\ntextual convention [RFC4001] is defined as Unsigned32.",
+    "notes": "I do not have corrected text. RFC4273 does not use InetAutonomousSystemNumber for AS numbers:\r\nbgpPeerRemoteAs OBJECT-TYPE\r\n            SYNTAX     Integer32 (0..65535)\r\n            MAX-ACCESS read-only\r\n            STATUS     current\r\n            DESCRIPTION\r\n                    \"The remote autonomous system number received in\r\n                     the BGP OPEN message.\"\r\n            REFERENCE\r\n                    \"RFC 4271, Section 4.2.\"\r\n            ::= { bgpPeerEntry 9 }\r\n\r\nThis uses \"Integer32 (0...65535)\" (note, Integer, not Unsigned Int). \r\nIt is unclear to me how to fix this, I know some folk are simply treating it as a UInt32.\r\n\r\n=====\r\nThe report is correct, rfc4273 can't support 4-byte ASNs.\r\n\r\nAfter consulting with the authors and the WG, it seems like the correct reference should have been \r\ndraft-ietf-idr-bgp4-mibv2 (BGP4 MIBv2).   Besides the corrected text above, an Informative Reference should be added to draft-ietf-idr-bgp4-mibv2.",
+    "submit_date": "2015-11-19",
+    "submitter_name": "Warren Kumari",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
