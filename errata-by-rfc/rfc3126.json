@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1067,
+    "doc-id": "RFC3126",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.3.2",
+    "orig_text": "   RevocationValues ::=  SEQUENCE {\r\n      crlVals           [0] SEQUENCE OF CertificateList     OPTIONAL,\r\n      ocspVals          [1] SEQUENCE OF BasicOCSPResponse   OPTIONAL,\r\n      otherRevVals      [2] OtherRevVals\r\n   }",
+    "correct_text": "  RevocationValues ::=  SEQUENCE {\r\n     crlVals           [0] SEQUENCE OF CertificateList     OPTIONAL,\r\n     ocspVals          [1] SEQUENCE OF BasicOCSPResponse   OPTIONAL,\r\n     otherRevVals      [2] OtherRevVals                    OPTIONAL\r\n     }",
+    "notes": "\"OPTIONAL\" is present in ETSI TS 101 733 V1.4.0",
+    "submit_date": "2003-02-13",
+    "submitter_name": "Petra Barzin",
+    "verifier_id": 2,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
