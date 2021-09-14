@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1456,
+    "doc-id": "RFC4741",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "8.7.5.1",
+    "orig_text": "    <rpc message-id=\"101\"\r\n           xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n        <copy-config>\r\n          <source>\r\n            <running/>\r\n          </source>\r\n          <target>\r\n            <startup/>\r\n          </target>\r\n        </copy-config>\r\n      </rpc>",
+    "correct_text": "   <rpc message-id=\"101\"\r\n           xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n        <copy-config>\r\n          <target>\r\n            <startup/>\r\n          </target>\r\n          <source>\r\n            <running/>\r\n          </source>\r\n        </copy-config>\r\n      </rpc>",
+    "notes": "The parameters are in the wrong order.\r\nThe XSD and the example on page 40 are correct.",
+    "submit_date": "2008-06-19",
+    "submitter_name": "Andy Bierman",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
