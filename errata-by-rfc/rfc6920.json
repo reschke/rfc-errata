@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4248,
+    "doc-id": "RFC6920",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 8.2,
+    "orig_text": "   | .well-known URL (split over 2 lines):                             |\r\n   | http://example.com/.well-known/ni/sha256/                         |\r\n   | UyaQV-Ev4rdLoHyJJWCi11OHfrYv9E1aGQAlMO2X_-Q                       |",
+    "correct_text": "   | .well-known URL (split over 2 lines):                             |\r\n   | http://example.com/.well-known/ni/sha-256/                        |\r\n   | UyaQV-Ev4rdLoHyJJWCi11OHfrYv9E1aGQAlMO2X_-Q                       |",
+    "notes": "The 'alg' part of the well-known URL should be the same as that of the ni URI (\"sha-256\"), but is missing the hyphen in the example.",
+    "submit_date": "2015-01-28",
+    "submitter_name": "Matthew Kerwin",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
