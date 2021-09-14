@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 502,
+    "doc-id": "RFC2092",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.3.",
+    "orig_text": "   Triggered RIP will NOT fuction properly (and should NOT be used) if a\n   routing information will be retained/advertised for an arbitrarily\n   long period of time (until an update in the opposite direction fails\n   to obtain a response).",
+    "correct_text": "   Triggered RIP will NOT function properly (and should NOT be used) if a\n   routing information will be retained/advertised for an arbitrarily\n   long period of time (until an update in the opposite direction fails\n   to obtain a response).\n",
+    "notes": "",
+    "submit_date": "2004-03-30",
+    "submitter_name": "Kwan Jong Yoo",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
