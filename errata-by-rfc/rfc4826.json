@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1477,
+    "doc-id": "RFC4826",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "    <xs:complexType name=\"externalType\">\r\n     <xs:sequence>\r\n      <xs:element name=\"display-name\" type=\"display-nameType\"\r\n       minOccurs=\"0\"/>\r\n      <xs:any namespace=\"##other\" processContents=\"lax\" minOccurs=\"0\"\r\n       maxOccurs=\"unbounded\"/>\r\n     </xs:sequence>\r\n     <xs:attribute name=\"anchor\" type=\"xs:anyURI\"/>\r\n     <xs:anyAttribute namespace=\"##other\" processContents=\"lax\"/>\r\n    </xs:complexType>",
+    "correct_text": "    <xs:complexType name=\"externalType\">\r\n     <xs:sequence>\r\n      <xs:element name=\"display-name\" type=\"display-nameType\"\r\n       minOccurs=\"0\"/>\r\n      <xs:any namespace=\"##other\" processContents=\"lax\" minOccurs=\"0\"\r\n       maxOccurs=\"unbounded\"/>\r\n     </xs:sequence>\r\n     <xs:attribute name=\"anchor\" type=\"xs:anyURI\" use=\"required\"/>\r\n     <xs:anyAttribute namespace=\"##other\" processContents=\"lax\"/>\r\n    </xs:complexType>",
+    "notes": "Normative text reads:\r\nThe <external> element has a single\r\n   mandatory attribute, \"anchor\", which specifies the external list by\r\n   means of an absolute HTTP URI.",
+    "submit_date": "2008-07-22",
+    "submitter_name": "Byron Campen",
+    "verifier_id": 107,
+    "verifier_name": "Cullen Jennings",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2867,
+    "doc-id": "RFC4826",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "The <entry>\r\nelement has a single mandatory attribute, \"ref\".",
+    "correct_text": "The <entry-ref>\r\nelement has a single mandatory attribute, \"ref\".",
+    "notes": "ref is a mandatory attribute of entry-ref but not entry.",
+    "submit_date": "2011-07-20",
+    "submitter_name": "Yi Chen",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
