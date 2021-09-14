@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 407,
+    "doc-id": "RFC2625",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7.1,
+    "orig_text": "1. This table applies only to FC-4 related data, such as IP and\r\n   ARP packets. This table does not apply to link services and\r\n   other non-FC-4 sequences (PLOGI, for example) that must occur\r\n   for normal operation.",
+    "correct_text": "1. This table does not apply to FARP-REQ and FARP-REPLY.",
+    "notes": "",
+    "submit_date": "2003-07-21",
+    "submitter_name": "Elizabeth G. Rodriguez",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 655,
+    "doc-id": "RFC2625",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7.2,
+    "orig_text": "       1. This is REQUIRED for FC-4 (IP and ARP) packets\r\n\r\n         - Routing bits of R_CTL field MUST indicate Device Data\r\n           frames (0000)\r\n         - Information Category of R_CTL field MUST indicate\r\n           Unsolicited Data (0100)",
+    "correct_text": "       1. This is REQUIRED for FC-4 (IP and ARP) packets\r\n\r\n         - Routing bits of R_CTL field MUST indicate Device Data\r\n           frames (0000)\r\n         - Information Category of R_CTL field MUST indicate\r\n           Unsolicited Data (0100)\r\n           \r\n           This does not apply to FARP-REQ and FARP-REPLY.",
+    "notes": "Add a blank line and the sentence:\r\nThis does not apply to FARP-REQ and FARP-REPLY.\r\nindented as shown so that it applies to both bulleted items.",
+    "submit_date": "2003-07-21",
+    "submitter_name": "Elizabeth G. Rodriguez",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 656,
+    "doc-id": "RFC2625",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "E.4.2",
+    "orig_text": "      Code Points for FC Frame with FARP-REQ Command for MATCH_WW_PN_NN\r\n +---+----------------+----------------+----------------+------------+\r\n |Wrd|    <31:24>     |    <23:16>     |    <15:08>     |    <07:00> |\r\n +---+----------------+----------------+----------------+------------+\r\n | 0 |    0x04        |                     D_ID =                   |\r\n |   |                |    0xFF             0xFF              0xFF   |\r\n +---+----------------+----------------+----------------+------------+\r\n | 1 |    0x00        |                     S_ID                     |\r\n +---+----------------+----------------+----------------+------------+\r\n | 2 |    0x05        |                     F_CTL                    |\r\n +---+----------------+----------------+----------------+------------+\r\n | 3 |   SEQ_ID       |     0x20       |          SEQ_CNT            |\r\n +---+----------------+----------------+----------------+------------+\r\n\r\n",
+    "correct_text": "      Code Points for FC Frame with FARP-REQ Command for MATCH_WW_PN_NN\r\n +---+----------------+----------------+----------------+------------+\r\n |Wrd|    <31:24>     |    <23:16>     |    <15:08>     |    <07:00> |\r\n +---+----------------+----------------+----------------+------------+\r\n | 0 |    0x22        |                     D_ID =                   |\r\n |   |                |    0xFF             0xFF              0xFF   |\r\n +---+----------------+----------------+----------------+------------+\r\n | 1 |    0x00        |                     S_ID                     |\r\n +---+----------------+----------------+----------------+------------+\r\n | 2 |    0x01        |                     F_CTL                    |\r\n +---+----------------+----------------+----------------+------------+\r\n | 3 |   SEQ_ID       |     0x00       |          SEQ_CNT            |\r\n +---+----------------+----------------+----------------+------------+",
+    "notes": "This embodies three changes:\r\n- R_CTL (word 0, bits 31:24) should be 0x22, not 0x04\r\n- TYPE (word 2, bits 31:24) should be 0x01, not 0x05\r\n- DF_CTL (word 3, bits 23:16) should be 0x00, not 0x20\r\n",
+    "submit_date": "2003-07-21",
+    "submitter_name": "Elizabeth G. Rodriguez",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 657,
+    "doc-id": "RFC2625",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "E.4.2",
+    "orig_text": "             Code Points for FC Frame with FARP-REPLY Command\r\n +---+----------------+----------------+----------------+------------+\r\n |Wrd|    <31:24>     |    <23:16>     |    <15:08>     |    <07:00> |\r\n +---+----------------+----------------+----------------+------------+\r\n | 0 |    0x04        |                     D_ID                     |\r\n +---+----------------+----------------+----------------+------------+\r\n | 1 |    0x00        |                     S_ID                     |\r\n +---+----------------+----------------+----------------+------------+\r\n | 2 |    0x05        |                     F_CTL                    |\r\n +---+----------------+----------------+----------------+------------+\r\n | 3 |   SEQ_ID       |     0x20       |          SEQ_CNT            |\r\n +---+----------------+----------------+----------------+------------+",
+    "correct_text": "             Code Points for FC Frame with FARP-REPLY Command\r\n +---+----------------+----------------+----------------+------------+\r\n |Wrd|    <31:24>     |    <23:16>     |    <15:08>     |    <07:00> |\r\n +---+----------------+----------------+----------------+------------+\r\n | 0 |    0x23        |                     D_ID                     |\r\n +---+----------------+----------------+----------------+------------+\r\n | 1 |    0x00        |                     S_ID                     |\r\n +---+----------------+----------------+----------------+------------+\r\n | 2 |    0x01        |                     F_CTL                    |\r\n +---+----------------+----------------+----------------+------------+\r\n | 3 |   SEQ_ID       |     0x00       |          SEQ_CNT            |\r\n +---+----------------+----------------+----------------+------------+",
+    "notes": "This embodies three changes:\r\n- R_CTL (word 0, bits 31:24) should be 0x23, not 0x04\r\n- TYPE (word 2, bits 31:24) should be 0x01, not 0x05\r\n- DF_CTL (word 3, bits 23:16) should be 0x00, not 0x20\r\n",
+    "submit_date": "2003-07-21",
+    "submitter_name": "Elizabeth G. Rodriguez",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
