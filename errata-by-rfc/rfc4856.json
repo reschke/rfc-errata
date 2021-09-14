@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1042,
+    "doc-id": "RFC4856",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.1,
+    "orig_text": "   [6]  Schulzrinne, H., Casner, S., Frederick, R. and V. Jacobson,\r\n        \"RTP:  A Transport Protocol for Real-Time Applications\", RFC\r\n        3550, July 2003.\r\n\r\n...\r\n\r\n   [8]  Schulzrinne, H., Casner, S., Frederick, R. and V. Jacobson,\r\n        \"RTP:  A Transport Protocol for Real-Time Applications\", RFC\r\n        3550, July 2003.",
+    "correct_text": "   [6]  Schulzrinne, H., Casner, S., Frederick, R. and V. Jacobson,\r\n        \"RTP:  A Transport Protocol for Real-Time Applications\", STD\r\n        64, RFC 3550, July 2003.",
+    "notes": "I find two Normative References, [6] and [8],\r\nthat *both* point to RFC 3550, the RTP specification.\r\n\r\nI first thought there might something have gone wrong,\r\ne.g., another ref. intended.  Yet, it doesn't look like\r\nthat from the quotations in the text, in Section 2.1.1\r\nand Section 4.\r\n\r\nFurthermore, the ref. tag [6] in Section 2.1.1 is embedded\r\nin an IANA registration template, where such ref. tags should\r\nbe avoided generally (as has been done in all similar cases\r\nin the text: in Sections 2.1.2 - 2.1.19 and 2.2.1).\r\nRemoving that spurious tag orphans ref. [6] in RFC 4856 entirely.\r\n\r\nPerhaps, it would have been better to add a formal ref. to RFC 3550\r\nat the very beginning of the RFC, in the first sentence of Section 1:\r\n\r\n   This document updates the media type registrations initially\r\n   specified in RFC 3555 for the Real-time Transport Protocol (RTP)\r\n   payload formats defined in the RTP Profile for Audio and Video\r\n   Conferences, RFC 3551 [1], as subtypes under the \"audio\" and \"video\"\r\n   media types.  [...]\r\n---                                                                vvvv\r\n   This document updates the media type registrations initially\r\n|  specified in RFC 3555 for the Real-time Transport Protocol (RTP) [8]\r\n   payload formats defined in the RTP Profile for Audio and Video\r\n   Conferences, RFC 3551 [1], as subtypes under the \"audio\" and \"video\"\r\n   media types.  [...]\r\n\r\nBTW:\r\n  The usual RFC references include the 'special series' names\r\n  as well; has there been a particular reason to omit \"STD64, \"\r\n  from the ref. to RFC 3550?\r\n  In RFC 4855, this observation also holds, for RFC 3550 and\r\n  for RFC 3551 (STD 65) as well.",
+    "submit_date": "2007-03-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
