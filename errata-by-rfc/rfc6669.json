@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3392,
+    "doc-id": "RFC6669",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "  +------------------------+---------------------------------+---------+\r\n  | Lock Instruct (LI)     | (1) G-ACh-based Loopback,       |[RFC6426]|\r\n  |                        | (2) Lock Instruct (LI)          |         |\r\n  +------------------------+---------------------------------+---------+\r\n  | Lock Report (LKR)      | Flag in AIS message             |[RFC6426]|\r\n",
+    "correct_text": "  +------------------------+---------------------------------+---------+\r\n  | Lock Instruct (LI)     | (1) G-ACh-based Loopback,       |[RFC6435]|\r\n  |                        | (2) Lock Instruct (LI)          |         |\r\n  +------------------------+---------------------------------+---------+\r\n  | Lock Report (LKR)      | Flag in MPLS Fault Management   |[RFC6427]|\r\n  |                        | message                         |         |\r\n",
+    "notes": "The RFC numbers were correct in version latest draft version (9), and obviously it is an editing mistake.\r\n\r\n---\r\n\r\nI updated the \"Corrected Text\" section of this Errata Report after receiving email from the submitter.\r\n\r\n",
+    "submit_date": "2012-10-24",
+    "submitter_name": "Nurit Sprecher",
+    "verifier_id": 2,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
