@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 142,
+    "doc-id": "RFC4286",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.2",
+    "orig_text": "  3.1.2.  AdvertisementJitter\r\n\r\n     This is the maximum time (in seconds) by which the\r\n     AdvertisementInterval is perturbed for each unsolicited\r\n     Advertisement.  Note that the purpose of this jitter is to avoid\r\n     synchronization of multiple routers on a network, hence choosing a\r\n     value of zero is discouraged.  This value MUST be an integer no less\r\n     than 0 seconds and no greater than AdvertisementInterval.\r\n\r\n     The AdvertisementJitter MUST be  0.025*AdvertisementInterval .",
+    "correct_text": "  3.1.2.  AdvertisementJitter\r\n\r\n     This is the maximum time (in seconds) by which the\r\n     AdvertisementInterval is perturbed for each unsolicited\r\n     Advertisement.  Note that the purpose of this jitter is to avoid\r\n     synchronization of multiple routers on a network.\r\n     The value of AdvertisementJitter is not independently configurable;\r\n     it is a variable derived internally within the implementation\r\n     from the configured value for AdvertisementInterval.\r\n\r\n    The AdvertisementJitter MUST be set to 0.025*AdvertisementInterval.\r\n",
+    "notes": "",
+    "submit_date": "2005-12-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
