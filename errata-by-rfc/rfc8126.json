@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5772,
+    "doc-id": "RFC8126",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "   Jon Postel and Joyce Reynolds provided a detailed explanation on what\r\n   IANA needs in order to manage assignments efficiently, and patiently\r\n   provided comments on multiple versions of this document.  Brian\r\n   Carpenter provided helpful comments on earlier versions of the\r\n   document.  One paragraph in the Security Considerations section was\r\n   borrowed from RFC 4288.\r\n",
+    "correct_text": "   Jon Postel and Joyce Reynolds provided a detailed explanation on what\r\n   IANA needs in order to manage assignments efficiently, and patiently\r\n   provided comments on multiple versions of this document.  Brian\r\n   Carpenter provided helpful comments on earlier versions of the\r\n   document.  One paragraph in the Security Considerations section was\r\n   borrowed from RFC 2048.\r\n",
+    "notes": "Incorrect reference in ¨Acknowledgments from the First Edition (1998)¨, p. 46",
+    "submit_date": "2019-07-03",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6522,
+    "doc-id": "RFC8126",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 4.6,
+    "orig_text": "   The intention behind \"permanent and readily available\" is that a\r\n   document can reasonably be expected to be findable and retrievable\r\n   long after IANA assignment of the requested value.  Publication of an\r\n   RFC is an ideal means of achieving this requirement, but\r\n   Specification Required is intended to also cover the case of a\r\n   document published outside of the RFC path, including informal\r\n   documentation.",
+    "correct_text": "   The intention behind \"permanent and readily available\" is that a\r\n   document can reasonably be expected to be findable and retrievable\r\n   long after IANA assignment of the requested value.  Publication of an\r\n   RFC is an ideal means of achieving this requirement, but\r\n   Specification Required is intended to also cover the case of a\r\n   document published outside of the RFC path, including informal\r\n   documentation. Specific versions of Internet-Drafts, specifically\r\n   IETF Working Group documents, that serve as \"work in progress\" \r\n   reference for RFC path documents also achieve this requirement \r\n   subject to Designated Expert review. Upon publication as RFC the\r\n   reference may be updated upon request by Designated Expert.",
+    "notes": "As part of the IESG review of draft-ietf-idr-bgp-ls-registry, the was a debate about whether an Internet-Draft serves the requirement of \"permanent and readily available\" for allocation under Specification Required policy. While IDs are indeed permanent and readily available these days and referencing a specific version does meet the requirements. However, the boiler plate text on IDs indicate that they many not be cited as reference other than work-in-progress.\r\n\r\nFor certain WGs (e.g. IDR) which await at least two implementations, the process of RFC publication takes time and it would have been good if the WG could have requested allocation based on a WG ID instead of following the tedious process of early allocation in RFC7120. The reference in IANA registry can then be update to the RFC upon publication and if not can remain with the reference to the ID.\n --VERIFIER NOTES-- \n ------\r\n\r\nWhile the concerns are valid, this report doesn't target an error in the document but makes a proposal that will require community discussion and consensus.",
+    "submit_date": "2021-04-08",
+    "submitter_name": "Ketan Talaulikar",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2021-04-08 14:28:26"
+  }
+]
