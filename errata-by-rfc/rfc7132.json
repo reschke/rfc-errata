@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4454,
+    "doc-id": "RFC7132",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "   PATHSEC is intended to address the concerns cited above, to provide\r\n   significantly improved path security, which builds upon the route\r\n   origination validation capability offered by use of the RPKI\r\n   [RFC6810].",
+    "correct_text": "   PATHSEC is intended to address the concerns cited above, to provide\r\n   significantly improved path security, which builds upon the route\r\n   origination validation capability offered by use of the RPKI\r\n   [RFC6811].",
+    "notes": "I think this text should reference RFC6811 (origin validation), not RFC6810 (the rpki-rtr protocol).",
+    "submit_date": "2015-08-25",
+    "submitter_name": "David Mandelberg",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
