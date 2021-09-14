@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4648,
+    "doc-id": "RFC5502",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "EQUAL, HCOLON, SEMI, name-addr, addr-spec, and generic-param are\r\ndefined in RFC 3261 [2].\r\n",
+    "correct_text": "EQUAL, HCOLON, SEMI, name-addr, addr-spec, and generic-param are\r\ndefined in RFC 3261 [2].\r\n\r\nIf the URI contains a comma, question mark or semicolon, the URI MUST\r\nbe enclosed in angle brackets (< and >).",
+    "notes": "If addr-spec is used when there are parameters, it is ambiguous if the parameters are URI parameters or served-user-param.  For consistency with RFC 3261 section 20, the same bracket rule is indicated even if comma and question mark do not cause an issue.",
+    "submit_date": "2016-03-29",
+    "submitter_name": "Brett Tate",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4827,
+    "doc-id": "RFC5502",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "   sessioncase-param        = \"sescase\" EQUAL \"orig\" / \"term\"\r\n   registration-state-param = \"regstate\" EQUAL \"unreg\" / \"reg\"\r\n",
+    "correct_text": "   sessioncase-param        = \"sescase\" EQUAL ( \"orig\" / \"term\" )\r\n   registration-state-param = \"regstate\" EQUAL ( \"unreg\" / \"reg\" )\r\n",
+    "notes": "The ABNF as written does not take into account that concatenation binds tighter than alternation.",
+    "submit_date": "2016-10-11",
+    "submitter_name": "Dale R. Worley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
