@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3435,
+    "doc-id": "RFC0640",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "11a",
+    "orig_text": "       There are four values for the first digit of the reply code:      11a\r\n",
+    "correct_text": "       There are five values for the first digit of the reply code:      11a\r\n",
+    "notes": "Technical type (vs. Editorial) although operation was not affected (\"four\" cannot reasonably be considered a misspelling of \"five\")\r\n\r\nReply code first digit values per sections 11b through 11f are 1, 2, 3, 4, and 5",
+    "submit_date": "2012-12-25",
+    "submitter_name": "Bruce Lilly",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
