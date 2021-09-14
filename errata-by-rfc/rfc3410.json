@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 281,
+    "doc-id": "RFC3410",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 10.2,
+    "orig_text": "  [15] Case, J., McCloghrie, K., Rose, M. and S. Waldbusser,\n       \"Coexistence between Version 1 and Version 2 of the Internet-\n       Standard Network Management Framework\", RFC 2576, January 1996.",
+    "correct_text": "  [15] Case, J., McCloghrie, K., Rose, M. and S. Waldbusser,\n       \"Coexistence between Version 1 and Version 2 of the Internet-\n       Standard Network Management Framework\", RFC 1908, January 1996.\n",
+    "notes": "",
+    "submit_date": "2003-01-29",
+    "submitter_name": "C. M. Heard",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1559,
+    "doc-id": "RFC3410",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 6.4,
+    "orig_text": "STD 62, RFC 3415, \"View-based Access Control Model (VCAM) for the\r\nSimple Network Management Protocol (SNMP)\" [27], describes how\r\nview-based access control can be applied within command responder\r\nand notification originator applications.",
+    "correct_text": "STD 62, RFC 3415, \"View-based Access Control Model (VACM) for the\r\nSimple Network Management Protocol (SNMP)\" [27], describes how\r\nview-based access control can be applied within command responder\r\nand notification originator applications.",
+    "notes": " --VERIFIER NOTES-- \r\ns / VCAM / VACM",
+    "submit_date": "2008-10-11",
+    "submitter_name": "Carl Marcinik",
+    "verifier_id": 2,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1560,
+    "doc-id": "RFC3410",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 8.2,
+    "orig_text": "Of course, it is important that users deploying multi-lingual systems\r\nwith insecure protocols exercise sufficient due diligence to insure\r\nthat configurations limit access via SNMPv1 and SNMPv2c\r\nappropriately, in keeping with the organization’s security policy,\r\njust as they should carefully limit access granted via SNMPv3 with a\r\nsecurity level of no authentication and no privacy which is roughly\r\nequivalent from a security point of view.",
+    "correct_text": "Of course, it is important that users deploying multi-lingual systems\r\nwith insecure protocols exercise sufficient due diligence to ensure\r\nthat configurations limit access via SNMPv1 and SNMPv2c\r\nappropriately, in keeping with the organization’s security policy,\r\njust as they should carefully limit access granted via SNMPv3 with a\r\nsecurity level of no authentication and no privacy which is roughly\r\nequivalent from a security point of view.",
+    "notes": "The sentence used \"insure\" when it should have used \"ensure\".",
+    "submit_date": "2008-10-11",
+    "submitter_name": "Carl Marcinik",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
