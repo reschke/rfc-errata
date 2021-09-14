@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4864,
+    "doc-id": "RFC6106",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "5.2.",
+    "orig_text": "Length:\r\n8-bit unsigned integer.  The length of the option\r\n(including the Type and Length fields) is in units of\r\n8 octets.  The minimum value is 2 if at least one\r\ndomain name is contained in the option.  The Length\r\nfield is set to a multiple of 8 octets to accommodate\r\nall the domain names in the field of Domain Names of\r\nDNS Search List.",
+    "correct_text": "Length:\r\n8-bit unsigned integer.  The length of the option\r\n(including the Type and Length fields) is in units of\r\n8 octets.  The minimum value is 2 if at least one\r\ndomain name is contained in the option.  The Length\r\nfield is set to a multiple of 8 octets to accommodate\r\nall the domain names in the field of Domain Names of\r\nDNS Search List.\r\n\r\nThe exact maximum value supported by a given network\r\nis dictated by the MTU of the link, because the\r\nRouter Advertisement MUST NOT be fragmented as per\r\nRFC6980#section5. The lowest possible MTU of 1280\r\nresults in a lower bound for the maximum value of 148\r\n(representing 1192 octets).",
+    "notes": "While the submitter's point is valid, there is not much that can be done on a per-option basis. Even if this option is sized so that it does not result in the fragmentation of the RA message, there might be other options that do. That is why the restriction for non-fragmentation is specified in a separate document and not in each document that defines an ND option.\n --VERIFIER NOTES-- \nWhile the submitter's point is valid, there is not much that can be done on a per-option basis. Even if this option is sized so that it does not result in the fragmentation of the RA message, there might be other options that do. That is why the restriction for non-fragmentation is specified in a separate document and not in each document that defines an ND option.\r\n",
+    "submit_date": "2016-11-14",
+    "submitter_name": "Robin Johnson",
+    "verifier_id": 152,
+    "verifier_name": "Suresh Krishnan",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
