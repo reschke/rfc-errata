@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4549,
+    "doc-id": "RFC7683",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.3,
+    "orig_text": "The overloaded realm is identified by the Destination-Realm AVP \r\nof the message containing the OLR.",
+    "correct_text": "The overloaded realm is identified by the Origin-Realm AVP\r\nof the message containing the OLR.",
+    "notes": "When the overload report is of type \"REALM_REPORT\", the overloaded realm is identified by the Origin-Realm AVP of the Diameter command i.e. the realm of the originator of the Diameter command with the overload report.",
+    "submit_date": "2015-12-01",
+    "submitter_name": "Jan Kayser",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5277,
+    "doc-id": "RFC7683",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 7.2,
+    "orig_text": "7.2.  OC-Feature-Vector AVP\r\n\r\n   The OC-Feature-Vector AVP (AVP Code 622) is of type Unsigned64 and\r\n   contains a 64-bit flags field of announced capabilities of a DOIC\r\n   node.  The value of zero (0) is reserved.\r\n\r\n   The OC-Feature-Vector sub-AVP is used to announce the DOIC features\r\n   supported by the DOIC node, in the form of a flag-bits field in which\r\n   each bit announces one feature or capability supported by the node.\r\n   The absence of the OC-Feature-Vector AVP in request messages\r\n   indicates that only the default traffic abatement algorithm described\r\n   in this specification is supported.  The absence of the OC-Feature-\r\n   Vector AVP in answer messages indicates that the default traffic\r\n   abatement algorithm described in this specification is selected\r\n   (while other traffic abatement algorithms may be supported), and no\r\n   features other than abatement algorithms are supported.\r\n\r\n\r\n   The following capability is defined in this document:\r\n\r\n   OLR_DEFAULT_ALGO (0x0000000000000001)\r\n\r\n      When this flag is set by the a DOIC reacting node, it means that\r\n      the default traffic abatement (loss) algorithm is supported.  When\r\n      this flag is set by a DOIC reporting node, it means that the loss\r\n      algorithm will be used for requested overload abatement.",
+    "correct_text": "7.2.  OC-Feature-Vector AVP\r\n\r\n   The OC-Feature-Vector AVP (AVP Code 622) is of type Unsigned64 and\r\n   contains a 64-bit flags field of announced capabilities of a DOIC\r\n   node.  The value of zero (0) is reserved.\r\n\r\n      Note: The value of zero (0) any DOIC node supports at least the \r\n            Loss algorithm. Therefore, the OC-Feature-Vector AVP \r\n            cannot be sent with no bit set.\r\n\r\n   The OC-Feature-Vector sub-AVP is used to announce the DOIC features\r\n   supported by the DOIC node, in the form of a flag-bits field in which\r\n   each bit announces one feature or capability supported by the node.\r\n   The absence of the OC-Feature-Vector AVP in request messages\r\n   indicates that only the default traffic abatement algorithm described\r\n   in this specification is supported.  The absence of the OC-Feature-\r\n   Vector AVP in answer messages indicates that the default traffic\r\n   abatement algorithm described in this specification is selected\r\n   (while other traffic abatement algorithms may be supported), and no\r\n   features other than abatement algorithms are supported.\r\n\r\n   The following capability is defined in this document:\r\n\r\n+---+------------------+----------------------------------------------+\r\n|bit|  Feature Name    |  Description                                 |\r\n+---+------------------+----------------------------------------------+\r\n| 0 | OLR_DEFAULT_ALGO |When set by a DOIC reacting node, it means    |\r\n|   |                  |that the default traffic abatement (loss)     |\r\n|   |                  |algorithm is supported. When set by a DOIC    |\r\n|   |                  |reporting node, it means that the loss        |\r\n|   |                  |algorithm will be used for requested overload |\r\n|   |                  |abatment.                                     |\r\n+---+------------------+----------------------------------------------+\r\n",
+    "notes": "The OC-Feature-Vector AVP is a 64-bit flag field and not a set of values (one per feature). Using the hexadecimal notation, it gives the feeling that there is a unique value for the OC-Feature-Vector AVP per supported capability, hich is incorrect. It is only required to define the use of each bit. This errata report has an impact on the associated IANA regisrty.",
+    "submit_date": "2018-03-06",
+    "submitter_name": "Lionel Morand",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5278,
+    "doc-id": "RFC7683",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 9.2,
+    "orig_text": "9.2.  New Registries\r\n\r\n   Two new registries have been created in the \"AVP Specific Values\"\r\n   sub-registry under the \"Authentication, Authorization, and Accounting\r\n   (AAA) Parameters\" registry.\r\n\r\n   A new \"OC-Feature-Vector AVP Values (code 622)\" registry has been\r\n   created.  This registry contains the following:\r\n\r\n      Feature Vector Value Name\r\n\r\n      Feature Vector Value\r\n\r\n      Specification defining the new value\r\n\r\n   See Section 7.2 for the initial Feature Vector Value in the registry.\r\n   This specification defines the value.  New values can be added to the\r\n   registry using the Specification Required policy [RFC5226].\r\n\r\n   A new \"OC-Report-Type AVP Values (code 626)\" registry has been\r\n   created.  This registry contains the following:\r\n\r\n      Report Type Value Name\r\n\r\n      Report Type Value\r\n\r\n      Specification defining the new value\r\n\r\n   See Section 7.6 for the initial assignment in the registry.  New\r\n   types can be added using the Specification Required policy [RFC5226].",
+    "correct_text": "9.2.  New Registries\r\n\r\n   Two new registries have been created in the \"AVP Specific Values\"\r\n   sub-registry under the \"Authentication, Authorization, and Accounting\r\n   (AAA) Parameters\" registry.\r\n\r\n   A new \"OC-Feature-Vector AVP Values (code 622)\" registry has been\r\n   created.  This registry contains the following:\r\n\r\n      Assigned Bit\r\n\r\n      Feature Name\r\n\r\n      Specification defining the new capability\r\n\r\n   See Section 7.2 for the initial assigned bit in the registry.\r\n   This specification defines the capbility announced by the setting of \r\n   this bit.  New values can be added to the registry using the \r\n   Specification Required policy [RFC5226].\r\n\r\n   A new \"OC-Report-Type AVP Values (code 626)\" registry has been\r\n   created.  This registry contains the following:\r\n\r\n      Report Type Value Name\r\n\r\n      Report Type Value\r\n\r\n      Specification defining the new value\r\n\r\n   See Section 7.6 for the initial assignment in the registry.  New\r\n   types can be added using the Specification Required policy [RFC5226].",
+    "notes": "This errata report is linked to the following errata report: Errata ID: 5277\r\nThe IANA registry created for the OC-Feature-Vector AVP Values (code 622) should only describe the use of the bit assigned to a given feature. There is no AVP value assigned to a given feature. The associated IANA registry should provide a table describing the setting of the bit assigned to a given feature/capability.",
+    "submit_date": "2018-03-06",
+    "submitter_name": "Lionel Morand",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
