@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4051,
+    "doc-id": "RFC5660",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2.2,
+    "orig_text": "Connection latches can exist in any of the following five states:",
+    "correct_text": "Connection latches can exist in any of the following four states:",
+    "notes": "This sentence is followed by a list with four elements, not five. The state machine diagram also has four states, not five.",
+    "submit_date": "2014-07-16",
+    "submitter_name": "Watson Ladd",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
