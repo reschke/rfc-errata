@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3669,
+    "doc-id": "RFC6846",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 8.2,
+    "orig_text": " COMPRESSED ipv4_innermost_irregular {\r\n    ENFORCE(is_innermost == 1);\r\n    ip_id          =:=\r\n      ip_id_enc_irreg(ip_id_behavior_innermost.UVALUE) [ 0, 16 ];\r\n    ENFORCE(ip_inner_ecn == ip_ecn_flags.UVALUE);\r\n  }",
+    "correct_text": "COMPRESSED ipv4_innermost_irregular {\r\n    ENFORCE(is_innermost == 1);\r\n    ip_id          =:=\r\n      ip_id_enc_irreg(ip_id_behavior_innermost.UVALUE) [ 0, 16 ];\r\n    \r\n  }",
+    "notes": "I don't find any reason why IP-ID encoding in ipv4 irregular chain, should be dependent on ECN flags.\n --VERIFIER NOTES-- \n\"This errata is invalid. Those bits need to be bound in the format and needs to be done so in the irregular chain for the inner header which does special treatment for these.\"   ",
+    "submit_date": "2013-06-24",
+    "submitter_name": "Raj Kumar",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3724,
+    "doc-id": "RFC6846",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 8.2,
+    "orig_text": "tcp_opt_eol(nbits)\r\n{\r\nUNCOMPRESSED {\r\ntype =:= uncompressed_value(8, 0) [ 8 ];\r\npadding =:=\r\nuncompressed_value(nbits-8, 0) [ nbits-8 ];\r\n}\r\nCONTROL {\r\npad_len [ 8 ];\r\n}\r\nCOMPRESSED eol_list_item {\r\npad_len =:= compressed_value(8, nbits-8) [ 8 ];\r\n}\r\nCOMPRESSED eol_irregular {\r\npad_len =:= static;\r\nENFORCE(nbits-8 == pad_len.UVALUE);\r\n}\r\n}",
+    "correct_text": "tcp_opt_eol(nbits)\r\n{\r\nUNCOMPRESSED {\r\ntype =:= uncompressed_value(8, 0) [ 8 ];\r\npadding =:=\r\nuncompressed_value(nbits-8, 0) [ nbits-8 ];\r\n}\r\nCONTROL {\r\npad_len [ 8 ];\r\n}\r\nCOMPRESSED eol_list_item {\r\n\r\n}\r\npad_len can be calculated at De compressor by following formula\r\npad_len = 4 -(length of uncompressed header formed till EOL byte % 4)\r\n\r\nCOMPRESSED eol_irregular {\r\npad_len =:= static;\r\nENFORCE(nbits-8 == pad_len.UVALUE);\r\n}\r\n}",
+    "notes": "pad_len  has the potential to become Inferred field, by doing this we can save one byte in compressed header and can effectively increase the compression efficiency.\n --VERIFIER NOTES-- \nRejected, as this is not an errata, as the 'corrected text' is in fact a change to the formal definition of the header formats.",
+    "submit_date": "2013-09-12",
+    "submitter_name": "Raj Kumar",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4490,
+    "doc-id": "RFC6846",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 8.2,
+    "orig_text": "COMPRESSED sack3_irregular {\r\n   discriminator =:= '00000011';\r\n   block_1       =:= sack_block(ack_value);\r\n   block_2       =:= sack_block(block_1.UVALUE && 0xFFFFFFFF);\r\n   block_3       =:= sack_block(block_1.UVALUE && 0xFFFFFFFF);\r\n   ENFORCE(length.UVALUE == 26);\r\n }",
+    "correct_text": "COMPRESSED sack3_irregular {\r\n   discriminator =:= '00000011';\r\n   block_1       =:= sack_block(ack_value);\r\n   block_2       =:= sack_block(block_1.UVALUE && 0xFFFFFFFF);\r\n   block_3       =:= sack_block(block_2.UVALUE && 0xFFFFFFFF);\r\n   ENFORCE(length.UVALUE == 26);\r\n }",
+    "notes": "block_3 should be encoded with block_2.UVALUE as reference instead of block_1.UVALUE. All other sack[1-4]_list_item() and sack[1-4]_irregular() methods are defined this way.",
+    "submit_date": "2015-10-04",
+    "submitter_name": "Didier Barvaux",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-12-17 07:32:21"
+  }
+]
