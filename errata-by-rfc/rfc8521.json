@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5896,
+    "doc-id": "RFC8521",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "The bootstrap service registry for the RDAP service provider space is represented using the structure specified in Section 3 of RFC 7484 [RFC7484].",
+    "correct_text": "The bootstrap service registry for the RDAP service provider space is based on the structure specified in Section 3 of RFC 7484 [RFC7484].",
+    "notes": "The registry structure specific in RFC 8521 includes an additional contact information field that does not appear in the structure defined in RFC 7484. So, the 8521 registry is not \"represented using the structure specified in Section 3 of RFC 7484\". It extends the structure with the addition of the contact field.",
+    "submit_date": "2019-11-07",
+    "submitter_name": "Scott Hollenbeck",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6310,
+    "doc-id": "RFC8521",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "RDAP responses that contain values described in this document MUST\r\n   indicate conformance with this specification by including an\r\n   rdapConformance [RFC7483] value of \"rdap_objectTag_level_0\".  The\r\n   information needed to register this value in the \"RDAP Extensions\"\r\n   registry is described in Section 5.2.\r\n\r\n   The following is an example rdapConformance structure with the\r\n   extension specified.\r\n\r\n             \"rdapConformance\" :\r\n             [\r\n               \"rdap_level_0\",\r\n               \"rdap_objectTag_level_0\"\r\n             ]",
+    "correct_text": "RDAP responses that contain values described in this document MUST\r\n   indicate conformance with this specification by including an\r\n   rdapConformance [RFC7483] value of \"rdap_objectTag\".  The\r\n   information needed to register this value in the \"RDAP Extensions\"\r\n   registry is described in Section 5.2.\r\n\r\n   The following is an example rdapConformance structure with the\r\n   extension specified.\r\n\r\n             \"rdapConformance\" :\r\n             [\r\n               \"rdap_level_0\",\r\n               \"rdap_objectTag\"\r\n             ]",
+    "notes": "The value of the rdapConformance tag MUST match the value in the IANA registry, which is \"rdap_objectTag\".",
+    "submit_date": "2020-10-19",
+    "submitter_name": "Scott Hollenbeck",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
