@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1256,
+    "doc-id": "RFC4995",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.2.4,1st ln",
+    "orig_text": "   Feedback carries information from the decompressor to compressor.\r\n   Feedback can be sent over a ROHC channel that operates in the same\r\n   direction as the feedback.\r\n",
+    "correct_text": "|  Feedback carries information from the decompressor to the compressor.\r\n   Feedback can be sent over a ROHC channel that operates in the same\r\n   direction as the feedback.\r\n ",
+    "notes": "Missing article",
+    "submit_date": "2008-01-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1257,
+    "doc-id": "RFC4995",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6,2nd bullet",
+    "orig_text": "   o  Field encodings\r\n\r\n      Bits and groups of bits from the packet format layout, referred to\r\n      as Compressed fields, represents the result of an encoding method\r\n      specific for that compressed field within a specific packet\r\n      format.  The profile defines these encoding methods.\r\n",
+    "correct_text": "   o  Field encodings\r\n\r\n      Bits and groups of bits from the packet format layout, referred to\r\n|     as Compressed fields, represent the result of an encoding method\r\n      specific for that compressed field within a specific packet\r\n      format.  The profile defines these encoding methods.\r\n",
+    "notes": "singular/plural mismatch, resolved by:  s/represents/represent/",
+    "submit_date": "2008-01-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
