@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3140,
+    "doc-id": "RFC5213",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 8.1,
+    "orig_text": "    As per this specification, the following mobility options are\r\n      valid in a Proxy Binding Update message.  These options can be\r\n      present in the message in any order.  There can be one or more\r\n      instances of the Home Network Prefix options present in the\r\n      message.  However, there cannot be more than one instance of any\r\n      of the following options.\r\n\r\n         Mobile Node Identifier option\r\n\r\n         Home Network Prefix option\r\n\r\n         Handoff Indicator option\r\n\r\n         Access Technology Type option\r\n\r\n         Timestamp option\r\n\r\n         Mobile Node Link-layer Identifier option\r\n\r\n         Link-local Address option",
+    "correct_text": "    As per this specification, the following mobility options are\r\n      valid in a Proxy Binding Update message.  These options can be\r\n      present in the message in any order.  There can be one or more\r\n      instances of the Home Network Prefix options present in the\r\n      message.  However, there cannot be more than one instance of any\r\n      of the following options.\r\n\r\n         Mobile Node Identifier option\r\n\r\n         Handoff Indicator option\r\n\r\n         Access Technology Type option\r\n\r\n         Timestamp option\r\n\r\n         Mobile Node Link-layer Identifier option\r\n\r\n         Link-local Address option",
+    "notes": "There can be more than one instance of Home Network Prefix. So the list should not include Home Network Prefix",
+    "submit_date": "2012-02-28",
+    "submitter_name": "Behcet Sarikaya",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3141,
+    "doc-id": "RFC5213",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 8.2,
+    "orig_text": "As per this specification, the following mobility options are\r\n      valid in a Proxy Binding Acknowledgement message.  These options\r\n      can be present in the message in any order.  There can be one or\r\n      more instances of the Home Network Prefix options present in the\r\n      message.  However, there cannot be more than one instance of any\r\n      of the following options.\r\n\r\n         Mobile Node Identifier option\r\n\r\n         Home Network Prefix option\r\n\r\n         Handoff Indicator option\r\n\r\n         Access Technology Type option\r\n\r\n         Timestamp option\r\n\r\n         Mobile Node Link-layer Identifier option\r\n\r\n         Link-local Address option",
+    "correct_text": "As per this specification, the following mobility options are\r\n      valid in a Proxy Binding Acknowledgement message.  These options\r\n      can be present in the message in any order.  There can be one or\r\n      more instances of the Home Network Prefix options present in the\r\n      message.  However, there cannot be more than one instance of any\r\n      of the following options.\r\n\r\n         Mobile Node Identifier option\r\n\r\n         Handoff Indicator option\r\n\r\n         Access Technology Type option\r\n\r\n         Timestamp option\r\n\r\n         Mobile Node Link-layer Identifier option\r\n\r\n         Link-local Address option",
+    "notes": "There can be more than one instance of Home Network Prefix option so the list should not contain Home Network Prefix.",
+    "submit_date": "2012-02-28",
+    "submitter_name": "Behcet Sarikaya",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
