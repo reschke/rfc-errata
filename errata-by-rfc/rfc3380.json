@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5430,
+    "doc-id": "RFC3380",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 10,
+    "orig_text": "      5. if the \"job-message-from-operator\" Printer Description\r\n         attribute is supported (see [RFC2911], 4.3.16), then it MUST be\r\n         settable.\r\n",
+    "correct_text": "      5. if the \"job-message-from-operator\" Job Description\r\n         attribute is supported (see [RFC2911], 4.3.16), then it MUST be\r\n         settable.\r\n",
+    "notes": "\"job-message-from-operator\" is an attribute for Jobs, not Printers.",
+    "submit_date": "2018-07-18",
+    "submitter_name": "Michael Sweet",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
