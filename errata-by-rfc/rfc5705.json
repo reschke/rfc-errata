@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4395,
+    "doc-id": "RFC5705",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "   If no context is provided, it then computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random\r\n               )[length]\r\n\r\n   If context is provided, it computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random +\r\n               context_value_length + context_value\r\n               )[length]\r\n",
+    "correct_text": "   If no context is provided, it then computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random\r\n               )[0..length-1]\r\n\r\n   If context is provided, it computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random +\r\n               context_value_length + context_value\r\n               )[0..length-1]\r\n",
+    "notes": "The current notation is not in line with that of RFC 5246, where the [0..N-1] notation is used on a PRF outcome in Sections 7.4.9 and 8.1 and similar [A..B] notation is also used elsewhere.  This makes me believe that the current text is technically wrong, and not in line with the intentions stated informally below it,\r\n\r\n   The output is a pseudorandom bit string of length bytes generated\r\n   from the master_secret.",
+    "submit_date": "2015-06-16",
+    "submitter_name": "Rick van Rein",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
