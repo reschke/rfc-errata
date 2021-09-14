@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1657,
+    "doc-id": "RFC5326",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.1.1, pg.12",
+    "orig_text": "   if (CTRL flag = 0)\r\n      segment is a data segment if (EXC flag = 0)\r\n         segment contains only red-part data if (Flag 1 = 1)\r\n            segment is a checkpoint segment is the last segment in the\r\n            red part of the block if (Flag 0 = 1)\r\n               segment is the last segment in the block\r\n         else // segment is not end of red-part\r\n            if (Flag 0 = 1)\r\n               segment is a checkpoint\r\n      else\r\n         segment contains only green-part data if (Flag 1 = 1)\r\n            if (Flag 0 = 1)\r\n               segment is the last segment in the block\r\n   else\r\n      segment is a control segment if (EXC flag = 0)\r\n         segment pertains to report activity if (flag 0 = 0)\r\n            segment is a report segment\r\n         else\r\n            segment is an acknowledgment of a report segment\r\n      else\r\n         segment pertains to session cancellation activity if (Flag 1 =\r\n         0)\r\n            segment pertains to cancellation by block sender if (Flag 0\r\n            = 1)\r\n               segment is a cancellation by sender\r\n            else\r\n               segment is an acknowledgment of a cancellation by sender\r\n         else\r\n            segment pertains to cancellation by block receiver if (Flag\r\n            0 = 1)\r\n               segment is a cancellation by receiver\r\n            else\r\n               segment is an acknowledgment of a cancellation by\r\n               receiver\r\n",
+    "correct_text": "   if (CTRL flag = 0)\r\n      segment is a data segment\r\n      if (EXC flag = 0)\r\n         segment contains only red-part data\r\n         if (Flag 1 = 1)\r\n            segment is a checkpoint\r\n            segment is the last segment in the red part of the block\r\n            if (Flag 0 = 1)\r\n               segment is the last segment in the block\r\n         else // segment is not end of red-part\r\n            if (Flag 0 = 1)\r\n               segment is a checkpoint\r\n      else\r\n         segment contains only green-part data\r\n         if (Flag 1 = 1)\r\n            if (Flag 0 = 1)\r\n               segment is the last segment in the block\r\n   else\r\n      segment is a control segment\r\n      if (EXC flag = 0)\r\n         segment pertains to report activity\r\n         if (flag 0 = 0)\r\n            segment is a report segment\r\n         else\r\n            segment is an acknowledgment of a report segment\r\n      else\r\n         segment pertains to session cancellation activity\r\n         if (Flag 1 = 0)\r\n            segment pertains to cancellation by block sender\r\n|           if (Flag 0 = 0)\r\n               segment is a cancellation by sender\r\n            else\r\n               segment is an acknowledgment of a cancellation by sender\r\n         else\r\n            segment pertains to cancellation by block receiver\r\n|           if (Flag 0 = 0)\r\n               segment is a cancellation by receiver\r\n            else\r\n               segment is an acknowledgment of a cancellation by\r\n               receiver\r\n",
+    "notes": "Issues:\r\n\r\na)  Confusing placement of line breaks: \"if\" clauses could be\r\n    understood as postfix qualifiers, but in fact shall be prefixes\r\n    to subsequent clauses; independent statements should be separated\r\n    by line breaks.\r\n\r\n    Correction: re-formating of entire pseudocode block\r\n\r\nb)  Sense of \"Flag 0\" in the \"CTRL=1\" branches is illogical and inconsistent\r\n    with remainder of the RFC -- e.g., cf. sections 3.1.2 and 3.1.3 !\r\n\r\n    Correction: Change  \"if (Flag 0 = 1)\"   -->  \"if (Flag 0 = 0)\"\r\n    in the two lines tagged with change bars in the corrected text.",
+    "submit_date": "2009-01-23",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 5,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1658,
+    "doc-id": "RFC5326",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.2.1, pg.16",
+    "orig_text": "   If the data segment is a checkpoint, the segment MUST additionally\r\n   include the following two serial numbers (checkpoint serial number\r\n   and report serial number) to support efficient retransmission.  Data\r\n   segments that are not checkpoints MUST NOT have these two fields in\r\n|  the header and MUST continue on directly with the client service\r\n       ^^^^^^ \r\n  data.\r\n",
+    "correct_text": "   If the data segment is a checkpoint, the segment MUST additionally\r\n   include the following two serial numbers (checkpoint serial number\r\n   and report serial number) to support efficient retransmission.  Data\r\n   segments that are not checkpoints MUST NOT have these two fields in\r\n|  the segment content and MUST continue on directly with the client\r\n       ^^^^^^^^^^^^^^^\r\n   service data.\r\n",
+    "notes": "Rationale:\r\nSection 3.2 is about 'Segment Content' as defined in section 3\r\nand depicted in the figure on page 10 of the RFC.\r\nAccordingly, the subject two fields are *not* part of the segment\r\n_header_, and the original text is misleading.\r\n\r\nAdditional concern (please 'Keep for Update'):\r\nThe subject two fields, checkpoint serial number and report serial\r\nnumber, obviously are not in the restricted scope of the Client\r\nService ID -- they are related to corrresponding fields carried in\r\nnon-data segments which do not contain a Client Service ID field.\r\nTherefore, with respect to layering considerations, it would have\r\nbeen more reasonable to place the two subject fields in front of\r\nthe Client Service ID field, at the front of the data segment, to\r\nget them conceptionally out of the scope of the Client Service ID\r\nfield governing the Offset, Length, and Client Service Data fields.",
+    "submit_date": "2009-01-23",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 5,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
