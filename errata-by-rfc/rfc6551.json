@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3307,
+    "doc-id": "RFC6551",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "As far as the constraint is concerned, the object body\r\n   will carry a Node Energy constraint object defined in Section 3.1\r\n   indicating that nodes must be mains-powered:",
+    "correct_text": "As far as the constraint is concerned, the object body\r\n   will carry a Node Energy constraint object defined in Section 3.2\r\n   indicating that nodes must be mains-powered:",
+    "notes": "Node Energy object is mentioned in section 3.2",
+    "submit_date": "2012-08-03",
+    "submitter_name": "Duong Nguyen",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4531,
+    "doc-id": "RFC6551",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "Figure 3: NE Sub-Object Format",
+    "correct_text": "Figure 3: NE Object Body Format",
+    "notes": "Figure 3 describes the format of the NE object body while Figure 4 describes the format of the NE Sub-Object.",
+    "submit_date": "2015-11-13",
+    "submitter_name": "Jeremy Dubrulle",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
