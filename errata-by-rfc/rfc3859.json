@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4959,
+    "doc-id": "RFC3859",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "When an application wants to subscriber to the presence information\r\n   associated with a PRESENTITY (in order to receive periodic\r\n   notifications of presence information), it invokes the subscribe\r\n   operation, e.g.,",
+    "correct_text": "When an application wants to subscribe to the presence information\r\n   associated with a PRESENTITY (in order to receive periodic\r\n   notifications of presence information), it invokes the subscribe\r\n   operation, e.g.,",
+    "notes": "The word \"subscriber\" should be the verb \"subscribe.\"",
+    "submit_date": "2017-03-07",
+    "submitter_name": "Matt Kern",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
