@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6334,
+    "doc-id": "RFC8627",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.1.1",
+    "orig_text": "        a=fmtp:98; repair-window=200000\r\n",
+    "correct_text": "        a=fmtp:98 repair-window=200000\r\n",
+    "notes": "The example has invalid syntax for the SDP \"fmtp\" attribute.",
+    "submit_date": "2020-11-16",
+    "submitter_name": "Jonathan Lennox",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6335,
+    "doc-id": "RFC8627",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.1.2",
+    "orig_text": "        a=fmtp:110; repair-window:200000\r\n",
+    "correct_text": "        a=fmtp:110 repair-window:200000\r\n",
+    "notes": "The example has invalid syntax for the SDP \"fmtp\" attribute.",
+    "submit_date": "2020-11-16",
+    "submitter_name": "Jonathan Lennox",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
