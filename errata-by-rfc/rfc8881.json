@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 6308,
+    "doc-id": "RFC8881",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "18.32.3",
+    "orig_text": "   *  The server MUST commit the data at a level at least as high as\r\n      that committed.\r\n",
+    "correct_text": "   *  The server MUST commit the data at a level at least as high as\r\n      that requested.\r\n",
+    "notes": "The meaning is probably obvious, but perhaps a MUST ought\r\nto be unambiguous?\r\n\r\n---\r\n\r\neditorial: also, the point above this one uses the word \"stronger\"\r\nwhere this point uses \"high\", both for the stability level.\r\n\r\nThe two lines should probably use the same word.",
+    "submit_date": "2020-10-16",
+    "submitter_name": "Calum Mackay",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6337,
+    "doc-id": "RFC8881",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "18.33.1",
+    "orig_text": "struct gss_cb_handles4 {\r\n        rpc_gss_svc_t       gcbp_service; /* RFC 2203 */\r\n        gsshandle4_t        gcbp_handle_from_server;\r\n        gsshandle4_t        gcbp_handle_from_client;\r\n};",
+    "correct_text": "struct gss_cb_handles4 {\r\n        rpc_gss_service_t   gcbp_service; /* RFC 2203 */\r\n        gsshandle4_t        gcbp_handle_from_server;\r\n        gsshandle4_t        gcbp_handle_from_client;\r\n};",
+    "notes": "RFC 2203 (and its successors) do not define rpc_gss_svc_t. I believe the rpc_gss_service_t type was intended.",
+    "submit_date": "2020-11-16",
+    "submitter_name": "Charles Lever",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6611,
+    "doc-id": "RFC8881",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "18.37.3",
+    "orig_text": "*                                             Otherwise, the error\r\n   CB_BACK_CHAN_BUSY SHOULD be returned to indicate that there are\r\n   CB_COMPOUNDs that need to be replied to.",
+    "correct_text": "*                                                  Otherwise, the error\r\n   NFS4ERR_BACK_CHAN_BUSY SHOULD be returned to indicate that there are\r\n   CB_COMPOUNDs that need to be replied to.",
+    "notes": "CB_BACK_CHAN_BUSY is not defined in this document.",
+    "submit_date": "2021-06-16",
+    "submitter_name": "Seman.Shen",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
