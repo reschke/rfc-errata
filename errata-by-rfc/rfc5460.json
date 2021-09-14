@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3571,
+    "doc-id": "RFC5460",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.2.1",
+    "orig_text": "5.2.1. LEASEQUERY-DATA\r\n\r\nThe LEASEQUERY-DATA message carries data about a single DHCPv6\r\nclient’s leases and/or PD bindings on a single link. The purpose of\r\nthe message is to reduce redundant data when there are multiple\r\nbindings to be sent. The LEASEQUERY-DATA message MUST be preceded by\r\na LEASEQUERY-REPLY message. The LEASEQUERY-REPLY carries the query’s\r\nstatus, the Leasequery’s Client-ID and Server-ID options, and the\r\nfirst client’s binding data if the query was successful.\r\n\r\nLEASEQUERY-DATA MUST ONLY be sent in response to a successful\r\nLEASEQUERY, and only if more than one client’s data is to be sent.\r\nThe LEASEQUERY-DATA message’s transaction-id field MUST match the\r\ntransaction-id of the LEASEQUERY request message. The Server-ID,\r\nClient-ID, and OPTION_STATUS_CODE options SHOULD NOT be included:\r\nthat data should be constant for any one Bulk Leasequery reply, and\r\nshould have been conveyed in the LEASEQUERY-REPLY message.",
+    "correct_text": "5.2.1. LEASEQUERY-DATA\r\n\r\nThe LEASEQUERY-DATA message carries data about a single DHCPv6\r\nclient’s leases and/or PD bindings on a single link. The purpose of\r\nthe message is to reduce redundant data when there are multiple\r\nbindings to be sent. The LEASEQUERY-DATA message MUST be preceded by\r\na LEASEQUERY-REPLY message. The LEASEQUERY-REPLY carries the query’s\r\nstatus, the Leasequery’s Client-ID and Server-ID options, and the\r\nfirst client’s binding data if the query was successful.\r\n\r\nLEASEQUERY-DATA MUST ONLY be sent in response to a successful\r\nLEASEQUERY, and only if more than one client’s data is to be sent.\r\nThe LEASEQUERY-DATA message’s transaction-id field MUST match the\r\ntransaction-id of the LEASEQUERY request message. The Server-ID,\r\nrequestor's Client-ID, and OPTION_STATUS_CODE options SHOULD NOT be included:\r\nthat data should be constant for any one Bulk Leasequery reply, and\r\nshould have been conveyed in the LEASEQUERY-REPLY message.",
+    "notes": "The term \"Client-Id\" in second paragraph sounds like client's Client-Id and it will be different for more than one client's data. So it should be corrected to \"requestor's Client-ID\" or \"Leasequery's Client-ID\" instead of just \"Client-ID\".\r\n\r\nMark Stapp reviewed this erratum and agrees that it is an improvement.   Thanks!",
+    "submit_date": "2013-03-28",
+    "submitter_name": "Sunil M Gandhewar",
+    "verifier_id": 134,
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
