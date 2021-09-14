@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2020,
+    "doc-id": "RFC3348",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   In some instances a server that supports the CHILDREN extension MAY\r\n   NOT be able to determine whether a mailbox has children.",
+    "correct_text": "   In some instances a server that supports the CHILDREN extension might\r\n   not be able to determine whether a mailbox has children.",
+    "notes": "The \"may not\" in this sentence is not normative text, but is just a statement of fact.  It should not be rendered as an RFC 2119 term.",
+    "submit_date": "2010-01-26",
+    "submitter_name": "Barry Leiba",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
