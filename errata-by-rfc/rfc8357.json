@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6008,
+    "doc-id": "RFC8357",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": "       0                   1                   2                   3\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |    OPTION_RELAY_PORT    |         Option-Len                  |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |    Downstream Source Port     |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n ",
+    "correct_text": "       0                   1                   2                   3\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |       OPTION_RELAY_PORT       |         Option-Len            |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |    Downstream Source Port     |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "notes": "Discrepancy between the diagram and the text noted by draft-mcquistin-augmented-ascii-diagrams-02.\r\n\r\n-- Verifier note --\r\nThere is clearly an error in the diagram that does not reflect the text. As the text is sensible and used as a reference, implementors will follow the text. Hence, the status of 'hold for document update' as it does not cause significant implementation error.",
+    "submit_date": "2020-03-05",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-01-28 02:13:16"
+  }
+]
