@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 99,
+    "doc-id": "RFC4408",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "1) On page 1, in the IESG notes, \"aParticipants\" should be\r\n   \"Participants\".\r\n\r\n2) On page 40, the US-ASCII normative reference has an incorrectly\r\n   indented second paragraph.  Instead of:\r\n\r\n   [US-ASCII] American National Standards Institute (formerly United\r\n              States of America Standards Institute), \"USA Code for\r\n              Information Interchange, X3.4\", 1968.\r\n\r\n   ANSI X3.4-1968 has been replaced by newer versions with slight\r\n              modifications, but the 1968 version remains definitive for\r\n              the Internet.\r\n\r\n   it should be:\r\n\r\n   [US-ASCII] American National Standards Institute (formerly United\r\n              States of America Standards Institute), \"USA Code for\r\n              Information Interchange, X3.4\", 1968.\r\n\r\n              ANSI X3.4-1968 has been replaced by newer versions with\r\n              slight modifications, but the 1968 version remains\r\n              definitive for the Internet.",
+    "correct_text": "",
+    "notes": "",
+    "submit_date": "2006-05-16",
+    "submitter_name": "Wayne Schlitt",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 994,
+    "doc-id": "RFC4408",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "See this page for discussion of errata for RFC 4408:\r\n<http://www.openspf.org/RFC_4408/Errata>",
+    "correct_text": "",
+    "notes": "Alexey: if there is interest in revising the document, then it should be updated to incorporate some changes suggested on the above web page.",
+    "submit_date": "2007-11-06",
+    "submitter_name": "Frank Ellermann",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2250,
+    "doc-id": "RFC4408",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "B.3",
+    "orig_text": "   $ORIGIN _spf.example.com.  mary.mobile-users                   A\r\n   127.0.0.2 fred.mobile-users                   A 127.0.0.2\r\n   15.15.168.192.joel.remote-users     A 127.0.0.2\r\n   16.15.168.192.joel.remote-users     A 127.0.0.2\r\n",
+    "correct_text": "   $ORIGIN _spf.example.com.\r\n   mary.mobile-users                   A 127.0.0.2\r\n   fred.mobile-users                   A 127.0.0.2\r\n   15.15.168.192.joel.remote-users     A 127.0.0.2\r\n   16.15.168.192.joel.remote-users     A 127.0.0.2\r\n",
+    "notes": "The DNS zone file example has incorrect line breaks.\r\n",
+    "submit_date": "2006-05-16",
+    "submitter_name": "Wayne Schlitt",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
