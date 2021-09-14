@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3247,
+    "doc-id": "RFC5056",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "there are no MITMs between the two end-points at that higher \r\nnetwork layer.  ",
+    "correct_text": "there are no MITMs between the two end-points at that lower \r\nnetwork layer.  ",
+    "notes": "Typo in definition\r\n\r\n --VERIFIER NOTES-- \r\nFrom the RFC:\r\n\r\nGenerally, some data that \"names\" a channel or one or both of its end-points such that if this data can be shown, at a higher network layer, to be the same at both ends of a channel, then there are no MITMs between the two end-points at that higher network layer.  This term is used as a noun.",
+    "submit_date": "2012-06-06",
+    "submitter_name": "Sujing Zhou",
+    "verifier_id": 2,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
