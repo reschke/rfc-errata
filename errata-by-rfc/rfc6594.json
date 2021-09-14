@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6174,
+    "doc-id": "RFC6594",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Status",
+    "orig_text": "   This document is a product of the Internet Engineering Task Force\r\n   (IETF).  It represents the consensus of the IETF community.  It has\r\n   received public review and has been approved for publication by the\r\n   fInternet Engineering Steering Group (IESG).  Further information on\r\n   Internet Standards is available in Section 2 of RFC 5741.\r\n",
+    "correct_text": "   This document is a product of the Internet Engineering Task Force\r\n   (IETF).  It represents the consensus of the IETF community.  It has\r\n   received public review and has been approved for publication by the\r\n   Internet Engineering Steering Group (IESG).  Further information on\r\n   Internet Standards is available in Section 2 of RFC 5741.\r\n",
+    "notes": "s/fInternet/Internet/\r\n\r\n",
+    "submit_date": "2020-05-15",
+    "submitter_name": "HARUYAMA Seigo",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2020-05-15 10:13:21"
+  },
+  {
+    "errata_id": 6202,
+    "doc-id": "RFC6594",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "5.1.  RSA Public Key\r\n\r\n   A public key with the following value in OpenSSH format [RFC4716]\r\n   would appear as follows:\r\n",
+    "correct_text": "5.1.  RSA Public Key\r\n                                                                                   \r\n   A public key with the following value in secure shell public key file\r\n   format [RFC4716] would appear as follows:\r\n",
+    "notes": "RFC4716 defines secure shell public key file format, not OpenSSH format.\r\n\r\nSection 5.2 and 5.3 have the same issue.",
+    "submit_date": "2020-06-03",
+    "submitter_name": "IWAMOTO Kouichi",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
