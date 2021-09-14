@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 252,
+    "doc-id": "RFC3542",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99In section 10.2 (page 41), the RFC says:\n",
+    "orig_text": "      int inet6_opt_append(void *extbuf, socklen_t extlen, int offset,\n                           uint8_t type, socklen_t len, uint_t align,\n                           void **databufp);\n",
+    "correct_text": "      int inet6_opt_append(void *extbuf, socklen_t extlen, int offset,\n                           uint8_t type, socklen_t len, uint8_t align,\n                           void **databufp);\n",
+    "notes": "Similarly, the following part of Section 15 (page 55)\n\n       <netinet/in.h>    int inet6_opt_append(void *, socklen_t, int,\n                                             uint8_t, socklen_t, uint_t,\n                                             void **);\n\nShould actually be:\n\n       <netinet/in.h>    int inet6_opt_append(void *, socklen_t, int,\n                                             uint8_t, socklen_t,\n                                             uint8_t, void **);\n\nThat is, \"uint_t\" should be replaced with \"uint8_t\".\n\n",
+    "submit_date": "2004-02-12",
+    "submitter_name": "Tatuya JINMEI",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 253,
+    "doc-id": "RFC3542",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 11.3,
+    "orig_text": "   This cmsghdr will be passed to every socket that sets the\n   IPV6_RECVPATHMTU socket option, even if the socket is non-connected.\n   Note that this also means an application that sets the option may\n   receive an IPV6_MTU ancillary data item for each ICMP too big error\n   the node receives, including such ICMP errors caused by other\n   applications on the node.",
+    "correct_text": "   This cmsghdr will be passed to every socket that sets the\n   IPV6_RECVPATHMTU socket option, even if the socket is non-connected.\n   Note that this also means an application that sets the option may\n   receive an IPV6_PATHMTU ancillary data item for each ICMP too big error\n   the node receives, including such ICMP errors caused by other\n   applications on the node.",
+    "notes": "Change: IPV6_MTU should be IPV6_PATHMTU.",
+    "submit_date": "2005-06-26",
+    "submitter_name": "Hideaki Yoshifuji",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
