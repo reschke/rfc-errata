@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3615,
+    "doc-id": "RFC6311",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6.4,
+    "orig_text": "                        Note that this solution requires that either all Child SAs\r\n   use Extended Sequence Numbers (ESNs) or else that no Child SA uses\r\n   ESNs.",
+    "correct_text": "                        Note that this solution requires that either all Child SAs\r\n   use Extended Sequence Numbers (ESN) or else that no Child SA uses\r\n   ESN.",
+    "notes": "\"ESN\" is used here as a name of a feature. There is no need to pluralize it. This is different from \"SAs\" or \"SPIs\", where there are many of each.",
+    "submit_date": "2013-05-08",
+    "submitter_name": "Yoav Nir",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
