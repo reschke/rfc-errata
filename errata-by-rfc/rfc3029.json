@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 6443,
+    "doc-id": "RFC3029",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix E",
+    "orig_text": "  ContentInfo FROM CryptographicMessageSyntax {iso(1)\r\n  member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)\r\n  smime(16) modules(0) cms(1)}",
+    "correct_text": "  ContentInfo, DigestAlgorithmIdentifier\r\n  FROM CryptographicMessageSyntax\r\n    {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)\r\n     smime(16) modules(0) cms(1)}",
+    "notes": "DigestAlgorithmIdentifier is not defined in the ASN.1 Module.  The easiest fix is to IMPORT it from the CMS ASN.1 Module.",
+    "submit_date": "2021-02-26",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2021-02-26 12:52:50"
+  },
+  {
+    "errata_id": 6444,
+    "doc-id": "RFC3029",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix E",
+    "orig_text": "  GeneralName, PolicyInformation\r\n  FROM PKIX1Implicit88 {iso(1) identified-organization(3)\r\n  dod(6) internet(1) security(5) mechanisms(5) pkix(7)\r\n  id-mod(0) id-pkix1-implicit-88(2)}",
+    "correct_text": "  GeneralName, GeneralNames, PolicyInformation\r\n  FROM PKIX1Implicit88 {iso(1) identified-organization(3)\r\n  dod(6) internet(1) security(5) mechanisms(5) pkix(7)\r\n  id-mod(0) id-pkix1-implicit-88(2)}",
+    "notes": "The ASN.1 Module uses GeneralName and GeneralNames, but only one of them is IMPORTed.  The suggested fix IMPORTS both of GeneralName and GeneralNames.",
+    "submit_date": "2021-02-26",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6445,
+    "doc-id": "RFC3029",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix E",
+    "orig_text": "Version ::= Integer\r\n",
+    "correct_text": "Version ::= INTEGER\r\n",
+    "notes": "INTEGER must be in all capital letters for the ASN.1 Module to compile.",
+    "submit_date": "2021-02-26",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
