@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2714,
+    "doc-id": "RFC2868",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "3.10.  Tunnel-Server-Auth-ID\r\n\r\n   Description\r\n\r\n      This Attribute specifies the name used by the tunnel terminator\r\n      during the authentication phase of tunnel establishment.  The\r\n      Tunnel-Client-Auth-ID Attribute MAY be included (as a hint to the\r\n      ^^^^^^^^^^^^^^^^^^^^^",
+    "correct_text": "3.10.  Tunnel-Server-Auth-ID\r\n\r\n   Description\r\n\r\n      This Attribute specifies the name used by the tunnel terminator\r\n      during the authentication phase of tunnel establishment.  The\r\n      Tunnel-Server-Auth-ID Attribute MAY be included (as a hint to the",
+    "notes": "Maybe here should be the \"Tunnel-Server-Auth-ID\"",
+    "submit_date": "2011-02-12",
+    "submitter_name": "Wang Haojian",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2716,
+    "doc-id": "RFC2868",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6,
+    "orig_text": "6.1.  Tunnel-Type Attribute Values\r\n\r\n   Values 1-12 of the Tunnel-Type Attribute are defined in Section 5.1;\r\n   the remaining values are available for assignment by the IANA with\r\n   IETF Consensus [16].\r\n\r\n6.2.  Tunnel-Medium-Type Attribute Values\r\n\r\n   Values 1-15 of the Tunnel-Medium-Type Attribute are defined in\r\n   Section 5.2; the remaining values are available for assignment by the\r\n   IANA with IETF Consensus [16].",
+    "correct_text": "6.1.  Tunnel-Type Attribute Values\r\n\r\n   Values 1-12 of the Tunnel-Type Attribute are defined in Section 3.1;\r\n   the remaining values are available for assignment by the IANA with\r\n   IETF Consensus [16].\r\n\r\n6.2.  Tunnel-Medium-Type Attribute Values\r\n\r\n   Values 1-15 of the Tunnel-Medium-Type Attribute are defined in\r\n   Section 3.2; the remaining values are available for assignment by the\r\n   IANA with IETF Consensus [16].",
+    "notes": "Should be \"Section 3.1\" and \"Section 3.2\"",
+    "submit_date": "2011-02-12",
+    "submitter_name": "Wang Haojian",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
