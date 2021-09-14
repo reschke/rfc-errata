@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3817,
+    "doc-id": "RFC6396",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.7,
+    "orig_text": "            BGP4MP_ENTRY             2           See Section 4.4\r\n            BGP4MP_SNAPSHOT          3           See Section 4.4",
+    "correct_text": "            BGP4MP_ENTRY             2           See Section B.2.6\r\n            BGP4MP_SNAPSHOT          3           See Section B.2.6",
+    "notes": "These subtypes are deprecated and are defined only in Appendix B.",
+    "submit_date": "2013-12-01",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5511,
+    "doc-id": "RFC6396",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "|  BGP Update =\r\n\r\n                ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff\r\n                00 3e 02 00 00 00 1f 40 01 01 02 40 02 0e 02 03\r\n                00 00 fb f0 00 00 fb ff 00 00 fb f6 40 03 04 c6\r\n                33 64 55 c0 08 04 fb f0 00 0e 18 cb 00 71\r\n\r\n                 Figure 16: MRT BGP4MP_MESSAGE_AS4 Example",
+    "correct_text": "|  BGP Update =\r\n\r\n                ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff\r\n                00 3e 02 00 00 00 23 40 01 01 02 40 02 0e 02 03\r\n                00 00 fb f0 00 00 fb ff 00 00 fb f6 40 03 04 c6\r\n                33 64 bc c0 08 04 fb f0 00 0e 18 cb 00 71\r\n\r\n                 Figure 16: MRT BGP4MP_MESSAGE_AS4 Example",
+    "notes": "The total path attribute length is incorrectly encoded as 0x001F when it should be 0x0023 and the next hop ip address is incorrectly encoded as 0xc6336455 when it should be 0xc63364bc",
+    "submit_date": "2018-10-01",
+    "submitter_name": "James Clarke",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6640,
+    "doc-id": "RFC6396",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "      |   BGP Path Attributes =\r\n\r\n              40 01 01 00 50 02 00 0e 02 03 00 00 fb f0 00 00\r\n              fb ff 00 00 fb f6 80 0e 2b 00 02 01 20 20 01 0d\r\n              b8 00 0d 00 ff 00 00 00 00 00 00 01 87 fe 80 00\r\n              00 00 00 00 00 02 12 f2 ff fe 9f 1b 00 00 00 20\r\n              20 01 0d b8\r\n\r\n                  Figure 19: MRT RIB_IPV6_UNICAST Example\r\n\r\n   The contents of the BGP Path Attribute field above are as follows:\r\n\r\n   ORIGIN: IGP\r\n   ASPATH: 64496 64511 64502\r\n   MP_REACH_NLRI(IPv6 Unicast)\r\n   NEXT_HOP: 2001:db8:d:ff::187\r\n   NEXT_HOP: fe80::212:f2ff:fe9f:1b00\r\n   NLRI: 2001:0DB8::/32\r\n\r\n                  Figure 20: BGP Path Attribute Contents\r\n",
+    "correct_text": "      |   BGP Path Attributes =\r\n\r\n              40 01 01 00 50 02 00 0e 02 03 00 00 fb f0 00 00\r\n              fb ff 00 00 fb f6 80 0e 21 20 20 01 0d b8 00 0d\r\n              00 ff 00 00 00 00 00 00 01 87 fe 80 00 00 00 00\r\n              00 00 02 12 f2 ff fe 9f 1b 00\r\n\r\n                  Figure 19: MRT RIB_IPV6_UNICAST Example\r\n\r\n   The contents of the BGP Path Attribute field above are as follows:\r\n\r\n   ORIGIN: IGP\r\n   ASPATH: 64496 64511 64502\r\n   MP_REACH_NLRI(IPv6 Unicast)\r\n   NEXT_HOP: 2001:db8:d:ff::187\r\n   NEXT_HOP: fe80::212:f2ff:fe9f:1b00\r\n\r\n                  Figure 20: BGP Path Attribute Contents\r\n",
+    "notes": "The encoding of the MP_REACH_NLRI attribute is not in the form according to Section 4.3.4.  RIB Entries:\r\n\r\n   There is one exception to the encoding of BGP attributes for the BGP\r\n   MP_REACH_NLRI attribute (BGP Type Code 14) [RFC4760].  Since the AFI,\r\n   SAFI, and NLRI information is already encoded in the RIB Entry Header\r\n   or RIB_GENERIC Entry Header, only the Next Hop Address Length and\r\n   Next Hop Address fields are included.  The Reserved field is omitted.\r\n   The attribute length is also adjusted to reflect only the length of\r\n   the Next Hop Address Length and Next Hop Address fields.\r\n\r\nThe example includes a full MP_REACH_NLRI attribute. This is a common issue with TABLE_DUMP_V2 and parsers need to implement a workaround to support the broken form.\r\n\r\nOne way of solving this is to compare the attribute length of MP_REACH_NLRI with the first byte of the attribute.\r\nIf the value of the first byte is equal to the attribute lenght - 1 then it is the RFC encoding else assume that a full MP_REACH_NLRI attribute was dumped in which case the parser needs to skip the first 3 bytes to get to the nexthop.",
+    "submit_date": "2021-07-13",
+    "submitter_name": "Claudio Jeker",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2021-07-16 13:46:23"
+  }
+]
