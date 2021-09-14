@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4208,
+    "doc-id": "RFC0994",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7.5.4",
+    "orig_text": "7.5.4    Source Routing\r\n\r\n   The source routing parameter specifies, either completely or partial-\r\n   ly, the route to be taken from Source Network Address to Destination\r\n   Network Address.\r\n\r\n   Parameter Code:        1100 0101",
+    "correct_text": "7.5.4    Source Routing\r\n\r\n   The source routing parameter specifies, either completely or partial-\r\n   ly, the route to be taken from Source Network Address to Destination\r\n   Network Address.\r\n\r\n   Parameter Code:        1100 1000",
+    "notes": "The Source Routing (7.5.4) and the Security (7.5.3) options have the same parameter code.\r\nSee RFC926 7.5.4 for the correction.",
+    "submit_date": "2014-12-24",
+    "submitter_name": "Jean-Baptiste Cayrou",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
