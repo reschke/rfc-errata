@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3561,
+    "doc-id": "RFC6571",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.1.1.1",
+    "orig_text": "The LFA to P is via C2, because c < d + u.  It is node-protecting if\r\n   eq2: x + e < x + c, i.e., if e < c.",
+    "correct_text": "The LFA to P is via C2 if x + e < d + u + x.   It is node-protecting if\r\n   eq2: x + e < c + x, i.e., if e < c.",
+    "notes": "The condition for the first sentence e < d + u is not stated in the assumptions in Section 3.\r\n\r\nThe second sentence is not incorrect, but \"c + x\" is more consistent with eq1 in Section 2.\n --VERIFIER NOTES-- \n   The assumption that c < d + u is stated in section 3.0 (bullet 10) as a design assumption.",
+    "submit_date": "2013-03-20",
+    "submitter_name": "Ciril Rozic",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
