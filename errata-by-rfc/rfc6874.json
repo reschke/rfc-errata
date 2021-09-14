@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 3630,
+    "doc-id": "RFC6874",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "   Such bare \"%\" signs are for user interface convenience, and need to\r\n   be turned into properly encoded characters (where \"%25\" encodes \"%\")\r\n   before the URI is used in any protocol or HTML document.  However,\r\n   URIs including a ZoneID have no meaning outside the originating node.\r\n   It would therefore be highly desirable for a browser to remove the\r\n   ZoneID from a URI before including that URI in an HTTP request.",
+    "correct_text": "   Such bare \"%\" signs are for user interface convenience, and need to\r\n   be turned into properly encoded characters (where \"%25\" encodes \"%\")\r\n   before the URI is used in any protocol or HTML document.  HTTP Clients\r\n   MUST include a ZoneID in any URIs provided in an HTTP request since\r\n   HTTP Servers will need it when generating URIs, otherwise the IPv6\r\n   address will not be routable.",
+    "notes": "The original advice ignores a very real issue: HTTP Servers that generate URIs from the client's Host: need to include the Client's zoneid in order for the link local address to be usable/routable.\n --VERIFIER NOTES-- \nThe zoneid is internal to the HTTP client.  It would never be shared with a server, so there is no way for a server to know a client's zoneid.   ",
+    "submit_date": "2013-05-22",
+    "submitter_name": "Michael Sweet",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3631,
+    "doc-id": "RFC6874",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "   An HTTP client, proxy, or other intermediary MUST remove any ZoneID\r\n   attached to an outgoing URI, as it has only local significance at the\r\n   sending host.\r\n",
+    "correct_text": "   An HTTP client, proxy, or other intermediary MUST retain any ZoneID\r\n   attached to an outgoing URI, as it will be the only way for an HTTP server\r\n   to return a URI containing a link-local address that can subsequently be\r\n   used by the HTTP client.\r\n",
+    "notes": "The original advice ignores a very real issue: HTTP Servers that generate URIs from the client's Host: need to include the Client's zoneid in order for the link local address to be usable/routable.\n --VERIFIER NOTES-- \nThe zoneid is a strictly internal value that is not shared between devices.   ",
+    "submit_date": "2013-05-22",
+    "submitter_name": "Michael Sweet",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3632,
+    "doc-id": "RFC6874",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "  Such bare \"%\" signs are for user interface convenience, and need to\r\n  be turned into properly encoded characters (where \"%25\" encodes \"%\")\r\n  before the URI is used in any protocol or HTML document.  However,\r\n  URIs including a ZoneID have no meaning outside the originating node.\r\n  It would therefore be highly desirable for a browser to remove the\r\n  ZoneID from a URI before including that URI in an HTTP request.\r\n",
+    "correct_text": "  Such bare \"%\" signs are for user interface convenience, and need to\r\n  be turned into properly encoded characters (where \"%25\" encodes \"%\")\r\n  before the URI is used in any protocol or HTML document.  HTTP Clients\r\n  MUST include a ZoneID in any URIs provided in an HTTP request since\r\n  HTTP Servers will need it when generating URIs, otherwise the IPv6\r\n  address will not be usable by the Client.\r\n",
+    "notes": "NOTE: PLEASE DO NOT REJECT THIS ERRATA BEFORE FURTHER REVIEW. I WILL BE SUBMITTING A NEW DRAFT PROPOSING THESE CHANGES; THIS ERRATA CAN SERVE AS PUBLIC NOTICE OF POTENTIAL CHANGES TO THE RFC.\r\n\r\nThe client uses the zoneid to choose a network interface to route packets to that link local address. If the server returns a uri in its response that uses the same link local address but without the client's zoneid, then the client will be unable to use said uri because it won't know which interface to use. Yes the server doesn't care about the zoneid but the client depends on it (for link local anyways).\r\n\r\nThe client can supply the zoneid in the Host header. For example, the following illustrates a typical IPP request using the previously recommended IPvFuture format (which CUPS implements and uses):\r\n\r\n   POST /ipp/print HTTP/1.1\r\n   Host: [v1.fe80::1234+en0]:631\r\n   Content-Type: application/ipp\r\n   Transfer-Coding: chunked\r\n\r\n   ... IPP request ...\r\n\r\nThe printer then validates the Host header and responds with URIs containing the same Host value in any reported IPv6 link-local URIs.\r\n\r\nThe key issue is one of context - the client *may* be able to query the interface used for a particular socket connection but it probably can't (easily) cache and map this information in the URIs that are embedded in the content returned by the printer, particularly when the client may have to process said content from a variety of sources - IPP is also supported over a USB transport, HTML can be read from disk, etc.  Clients are usually unable to connect to a given IPv6 link local address without the zoneid information to tell them which network interface to use.  And typically the only reason clients use an IPv6 link local address is because it was handed to them by a discovery protocol like WS-Discovery...\r\n\r\nRequiring the client to rewrite all URIs is a tremendous burden and is error-prone.  Requiring the server to use the Host header is cheap in comparison.  Having the server validate and use the Host value also helps interoperability since existing clients may not support the new IPv6addrz format - for example, CUPS doesn't support it since it validates URIs and Host values using the ABNF in RFC 3986/STD 66.\r\n\r\nThe Host header mechanism has been standard practice outside the IETF for several years now. It is part of IPP Everywhere (Printer Working Group), Wi-Fi Direct Print Services (Wi-Fi Alliance), IPP USB (USB Implementers Forum), and AirPrint (Apple).  It solves the problem of client-side routing of IPv6 link local addresses that are used in URIs embedded in content returned by printers and other embedded devices.\r\n\r\nHundreds of millions of printers, computers, and mobile devices have been certified and shipped with IPv6 link local support using the IPvFuture format over the last 8 years. The new format is incompatible with parsers that use the ABNF in STD 66 (aka RFC 3986) and prevents the use of the Host header in HTTP requests to provide a backwards-compatible IPv6 implementation.\n --VERIFIER NOTES-- \nThe errata system is not intended as a notification system for potentially new work.   ",
+    "submit_date": "2013-05-23",
+    "submitter_name": "Michael Sweet",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3633,
+    "doc-id": "RFC6874",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "  An HTTP client, proxy, or other intermediary MUST remove any ZoneID\r\n  attached to an outgoing URI, as it has only local significance at the\r\n  sending host.\r\n",
+    "correct_text": "  An HTTP client, proxy, or other intermediary MUST retain any\r\n  ZoneID attached to an outgoing URI, as it will be the only way\r\n  for an HTTP server to return a URI containing a link-local address\r\n  that can subsequently be used by the HTTP client.\r\n",
+    "notes": "NOTE: PLEASE DO NOT REJECT THIS ERRATA BEFORE FURTHER REVIEW. I WILL BE SUBMITTING A NEW DRAFT PROPOSING THESE CHANGES; THIS ERRATA CAN SERVE AS PUBLIC NOTICE OF POTENTIAL CHANGES TO THE RFC.\r\n\r\nThe client uses the zoneid to choose a network interface to route packets to that link local address. If the server returns a uri in its response that uses the same link local address but without the client's zoneid, then the client will be unable to use said uri because it won't know which interface to use. Yes the server doesn't care about the zoneid but the client depends on it (for link local anyways).\r\n\r\nThe client can supply the zoneid in the Host header. For example, the following illustrates a typical IPP request using the previously recommended IPvFuture format (which CUPS implements and uses):\r\n\r\n   POST /ipp/print HTTP/1.1\r\n   Host: [v1.fe80::1234+en0]:631\r\n   Content-Type: application/ipp\r\n   Transfer-Coding: chunked\r\n\r\n   ... IPP request ...\r\n\r\nThe printer then validates the Host header and responds with URIs containing the same Host value in any reported IPv6 link-local URIs.\r\n\r\nThe key issue is one of context - the client *may* be able to query the interface used for a particular socket connection but it probably can't (easily) cache and map this information in the URIs that are embedded in the content returned by the printer, particularly when the client may have to process said content from a variety of sources - IPP is also supported over a USB transport, HTML can be read from disk, etc.  Clients are usually unable to connect to a given IPv6 link local address without the zoneid information to tell them which network interface to use.  And typically the only reason clients use an IPv6 link local address is because it was handed to them by a discovery protocol like WS-Discovery...\r\n\r\nRequiring the client to rewrite all URIs is a tremendous burden and is error-prone.  Requiring the server to use the Host header is cheap in comparison.  Having the server validate and use the Host value also helps interoperability since existing clients may not support the new IPv6addrz format - for example, CUPS doesn't support it since it validates URIs and Host values using the ABNF in RFC 3986/STD 66.\r\n\r\nThe Host header mechanism has been standard practice outside the IETF for several years now. It is part of IPP Everywhere (Printer Working Group), Wi-Fi Direct Print Services (Wi-Fi Alliance), IPP USB (USB Implementers Forum), and AirPrint (Apple).  It solves the problem of client-side routing of IPv6 link local addresses that are used in URIs embedded in content returned by printers and other embedded devices.\r\n\r\nHundreds of millions of printers, computers, and mobile devices have been certified and shipped with IPv6 link local support using the IPvFuture format over the last 8 years. The new format is incompatible with parsers that use the ABNF in STD 66 (aka RFC 3986) and prevents the use of the Host header in HTTP requests to provide a backwards-compatible IPv6 implementation.\n --VERIFIER NOTES-- \nThe attempt to use this erratum as a placeholder seems to be sapping the urgency from the work the author of the erratum promised to do.   This appears to be an end-run around the standards process.   Please do not re-submit this erratum, but instead please get to work in 6man fixing this problem, if indeed there is consensus that your proposed fix is correct.",
+    "submit_date": "2013-05-23",
+    "submitter_name": "Michael Sweet",
+    "verifier_id": 134,
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
