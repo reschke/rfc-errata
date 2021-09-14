@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4676,
+    "doc-id": "RFC7578",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.6.",
+    "orig_text": "       --AaB03x\r\n       content-disposition: form-data; name=\"_charset_\"\r\n\r\n       iso-8859-1\r\n       --AaB03x--\r\n       content-disposition: form-data; name=\"field1\"\r\n\r\n       ...text encoded in iso-8859-1 ...\r\n       AaB03x--",
+    "correct_text": "       --AaB03x\r\n       content-disposition: form-data; name=\"_charset_\"\r\n\r\n       iso-8859-1\r\n       --AaB03x\r\n       content-disposition: form-data; name=\"field1\"\r\n\r\n       ...text encoded in iso-8859-1 ...\r\n       --AaB03x--",
+    "notes": "Boundary hyphens were misplaced, I think.  The second boundary delimiter should not have them on the end of the line, and the last boundary delimiter should have them on the beginning of the line too.",
+    "submit_date": "2016-04-26",
+    "submitter_name": "Egon Eckert",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5616,
+    "doc-id": "RFC7578",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4.5,
+    "orig_text": "For example, a form with a text field in\r\nwhich a user typed \"Joe owes <eu>100\", where <eu> is the Euro symbol,\r\nmight have form data returned as:\r\n    --AaB03x\r\n    content-disposition: form-data; name=\"field1\"\r\n    content-type: text/plain;charset=UTF-8\r\n    content-transfer-encoding: quoted-printable\r\n\r\n    Joe owes =E2=82=AC100.\r\n    --AaB03x",
+    "correct_text": "For example, a form with a text field in\r\nwhich a user typed \"Joe owes <eu>100\", where <eu> is the Euro symbol,\r\nmight have form data returned as:\r\n    --AaB03x\r\n    content-disposition: form-data; name=\"field1\"\r\n    content-type: text/plain;charset=UTF-8\r\n    content-transfer-encoding: quoted-printable\r\n\r\n    Joe owes <eu>100.\r\n    --AaB03x",
+    "notes": "Section 4.7 says that \"Senders SHOULD NOT generate any parts with a Content-Transfer-Encoding header field.\"",
+    "submit_date": "2019-01-30",
+    "submitter_name": "Philip McGrath",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
