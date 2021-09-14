@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 738,
+    "doc-id": "RFC4595",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7.1,
+    "orig_text": "   [NIST.180-1.1995]\r\n              National Institute of Standards and Technology, \"Secure\r\n              Hash Standard\", NIST 180-1, April 1995.",
+    "correct_text": "   [NIST.180-2.2002]\r\n              National Institute of Standards and Technology, \"Secure\r\n              Hash Standard\", NIST 180-2, August 2002.",
+    "notes": "The current revision of the NIST's Secure Hash Standard is\r\n   \"FIPS-PUB 180-2 + Change Notice 1\",\r\nissued \"2004 Feb 25\", which has added SHA-224 to the repertoire.\r\n\r\nIf NIST publications are used as References in IETF publications,\r\ncurrent revisions should be used.\r\n\r\nIn the case of SHA-1, perhaps preferrably, RFC 3174 is available\r\nas a (secondary) dedicated reference that will not change.",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
