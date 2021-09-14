@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3409,
+    "doc-id": "RFC6536",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.4.6",
+    "orig_text": "        *  The rule does not have a \"rule-type\" defined or the \"rule-\r\n           type\" is \"notification\" and the \"notification-name\" is \"*\"\r\n           and equals the name of the notification.",
+    "correct_text": "        *  The rule does not have a \"rule-type\" defined or the \"rule-\r\n           type\" is \"notification\" and the \"notification-name\" is \"*\"\r\n           or equals the name of the notification.",
+    "notes": "The \"notification-name\" element may either have a value of \"*\" OR contains the name of the notification. This typo appears in section 3.4.6, authorization step 7, second bullet.",
+    "submit_date": "2012-11-15",
+    "submitter_name": "Jernej Tuljak",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3862,
+    "doc-id": "RFC6536",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.5.2.",
+    "orig_text": "     typedef matchall-string-type {\r\n       type string {\r\n         pattern \"\\*\";\r\n       }\r\n       description\r\n         \"The string containing a single asterisk '*' is used\r\n          to conceptually represent all possible values\r\n          for the particular leaf using this data type.\";\r\n     }",
+    "correct_text": "     typedef matchall-string-type {\r\n       type string {\r\n         pattern '\\*';\r\n       }\r\n       description\r\n         \"The string containing a single asterisk '*' is used\r\n          to conceptually represent all possible values\r\n          for the particular leaf using this data type.\";\r\n     }",
+    "notes": "As per RFC6020, Section 6.1.3., a backslash within a double-quoted string introduces a special character. The only valid escape sequences inside a double-quoted YANG string are: \\n, \\t, \\\" and \\\\. As \\* is not a valid escape sequence, a single quoted string should be used to specify the offending pattern statement's argument. The quotes could also be omitted.",
+    "submit_date": "2014-01-10",
+    "submitter_name": "Jernej Tuljak",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3863,
+    "doc-id": "RFC6536",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.5.2.",
+    "orig_text": "     typedef group-name-type {\r\n       type string {\r\n         length \"1..max\";\r\n         pattern \"[^\\*].*\";\r\n       }\r\n       description\r\n         \"Name of administrative group to which\r\n          users can be assigned.\";\r\n     }",
+    "correct_text": "     typedef group-name-type {\r\n       type string {\r\n         length \"1..max\";\r\n         pattern '[^\\*].*';\r\n       }\r\n       description\r\n         \"Name of administrative group to which\r\n          users can be assigned.\";\r\n     }",
+    "notes": "As per RFC6020, Section 6.1.3., a backslash within a double-quoted string introduces a special character. The only valid escape sequences inside a double-quoted YANG string are: \\n, \\t, \\\" and \\\\. As \\* is not a valid escape sequence, a single quoted string should be used to specify the offending pattern statement's argument. The quotes could also be omitted.",
+    "submit_date": "2014-01-10",
+    "submitter_name": "Jernej Tuljak",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
