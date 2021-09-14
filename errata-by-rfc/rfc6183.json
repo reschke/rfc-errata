@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2905,
+    "doc-id": "RFC6183",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "      If information about a set of Original Exporters needs to be\r\n      reported, it can be useful to export it as Common Properties as\r\n      specified in [RFC5473].  The commonPropertiesID may then serve as\r\n      a scope for the set of Original Exporters.",
+    "correct_text": "      If information about a set of Original Exporters needs to be\r\n      reported, it can be useful to export it as Common Properties as\r\n      specified in [RFC5473].  The commonPropertiesId may then serve as\r\n      a scope for the set of Original Exporters.",
+    "notes": "s/commonPropertiesID/commonPropertiesId/\r\n\r\nPer RFC5102 and IANA's IPFIX registry, the correct name is \"commonPropertiesId\".",
+    "submit_date": "2011-08-01",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
