@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1537,
+    "doc-id": "RFC5346",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.1.1,pg.5",
+    "orig_text": "   The case where a valid URI was present is covered in Section 4.1.2\r\n   (rule 2 A, second point).  The case where an ENUM entry was not\r\n   provisioned for a number that had an active PSTN Point of\r\n|  Interconnect is covered in Section 4.1.2 (rule 2 B).\r\n\r\n   For \"ENUM only\" ranges, where a given number in that range was in\r\n   service (i.e., there was an IP-based Point of Interconnect to a\r\n   carrier), a valid SIP or H.323 URI was always provisioned into the\r\n|  associated ENUM domain.  This is covered in Section 4.1.2 (rule 2 A,\r\n   second point).\r\n\r\n   In such an \"ENUM only\" range, if the number was not in service, a TXT\r\n   record was provisioned but no valid NAPTRs would be present.  This\r\n   ensured that a query for NAPTRs in a given (out of service, \"ENUM\r\n   only\" range) domain would succeed (i.e., return a RCODE of 0), but\r\n   that the number of answers would also be zero.  This is covered in\r\n|  Section 4.1.2 (rule 2 A, first point).  Note that this point also\r\n   covers the case where only NAPTRs that cannot be used to initiate a\r\n   call exist in such a zone.\r\n",
+    "correct_text": "   The case where a valid URI was present is covered in Section 4.1.2\r\n|  (rule 3 A, second point).  The case where an ENUM entry was not\r\n   provisioned for a number that had an active PSTN Point of\r\n|  Interconnect is covered in Section 4.1.2 (rule 3 B).\r\n\r\n   For \"ENUM only\" ranges, where a given number in that range was in\r\n   service (i.e., there was an IP-based Point of Interconnect to a\r\n   carrier), a valid SIP or H.323 URI was always provisioned into the\r\n|  associated ENUM domain.  This is covered in Section 4.1.2 (rule 3 A,\r\n   second point).\r\n\r\n   In such an \"ENUM only\" range, if the number was not in service, a TXT\r\n   record was provisioned but no valid NAPTRs would be present.  This\r\n   ensured that a query for NAPTRs in a given (out of service, \"ENUM\r\n   only\" range) domain would succeed (i.e., return a RCODE of 0), but\r\n   that the number of answers would also be zero.  This is covered in\r\n|  Section 4.1.2 (rule 3 A, first point).  Note that this point also\r\n   covers the case where only NAPTRs that cannot be used to initiate a\r\n   call exist in such a zone.\r\n",
+    "notes": "All (4) instances of \"rule 2\" should  say \"rule 3\".",
+    "submit_date": "2008-10-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1538,
+    "doc-id": "RFC5346",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.1.2,pg.7",
+    "orig_text": "           [...]\r\n|          Configuring it in a non-complaint manner was considered\r\n           unacceptable, due to the need to analyze the impact of that\r\n           choice on other DNS operations thoroughly before it could be\r\n           implemented safely.\r\n",
+    "correct_text": "           [...]    \r\n|          Configuring it in a non-compliant manner was considered\r\n           unacceptable, due to the need to analyze the impact of that\r\n           choice on other DNS operations thoroughly before it could be\r\n           implemented safely.\r\n",
+    "notes": "Distorting typo in the last paragraph of 4.1.2. !",
+    "submit_date": "2008-10-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
