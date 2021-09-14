@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3169,
+    "doc-id": "RFC5789",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "   If\r\n   the operation does not modify the resource identified by the Request-\r\n   URI in a predictable way, POST should be considered instead of PATCH\r\n   or PUT.\r\n",
+    "correct_text": "   If\r\n   the operation does not modify the resource identified by the Request-\r\n   URI in a predictable way that's defined by the semantics of the PATCH \r\n   media type, POST should be considered instead of PATCH or PUT.\r\n\r\n\r\n[Also, I suggest adding this to section two, after the sixth paragraph:]\r\n\r\n   The means of applying a PATCH request to a resource's state is\r\n   determined by the request's media type.  If a server receives a PATCH\r\n   request with a media type whose specification does not define\r\n   semantics specific to PATCH, the server SHOULD reject the request by\r\n   returning the 415 Unsupported Media Type status code, unless a more\r\n   specific error status code takes priority.\r\n\r\n   In particular, servers SHOULD NOT assume PATCH semantics for generic\r\n   media types that don't define them, such as \"application/xml\" or\r\n   \"application/json\".  Doing so will cause interoperability issues,\r\n   because the semantics of PATCH become specific to that resource,\r\n   rather than general.",
+    "notes": "RFC5789 does not explicitly tie PATCHing semantics to the media type of the request. This was well understood in the discussions around the document, and can be read between the lines in it, but it doesn't come out and say it.",
+    "submit_date": "2012-03-28",
+    "submitter_name": "Mark Nottingham",
+    "verifier_id": 2,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3419,
+    "doc-id": "RFC5789",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 1,
+    "orig_text": "A new method is necessary to improve interoperability and prevent\r\nerrors.  The PUT method is already defined to overwrite a resource\r\nwith a complete new body, and cannot be reused to do partial changes.\r\nOtherwise, proxies and caches, and even clients and servers, may get\r\nconfused as to the result of the operation.",
+    "correct_text": "A new method may be desirable (though it is not strictly necessary).\r\nThe PUT method is already defined to overwrite a resource or a subset\r\nthereof (see RFC 2612 section 9.6), but the semantics of Content-Range\r\nwith PUT have been poorly understood and implemented by the community.\r\nTo avoid breaking existing proxies and caches that may be confused by PUT\r\nwith a partial update, PATCH seems like a better solution.",
+    "notes": "Contrary to what is claimed in the justification for this RFC, RFC 2616 clearly\r\nanticipates the possibility of doing PUT with a partial content range. See section\r\n9.6 (http://tools.ietf.org/html/rfc2616#section-9.6). Thus, PUT is the moral\r\nequivalent of fseek() + fwrite(), not just fwrite(). I have personally implemented\r\nweb services that use PUT with Content-Range, and I don't think I'm alone. The\r\nfact that the community has not generally understood this nuance does not\r\nnecessarily mean PATCH is needed. It would be possible to simply clarify how\r\nPUT is used with Content-Range and accomplish virtually everything that PATCH\r\nis attempting. However, PATCH has the virtue of no semantic baggage, and it may\r\nalso be nice to use patch-if logic like the familiar *nix-style patch program, which\r\nis a valid semantic enhancement to dumb update. This point needs to be made\r\nmore clearly in the RFC's preamble; as-is, I think the case for PATCH is too weak.\n --VERIFIER NOTES-- \nA disagreement with IETF consensus does not an erratum make.  You may have strong disagreement with the document as published, but what's published is what was intended to be published; this is not an \"error\" in the document.   ",
+    "submit_date": "2012-11-27",
+    "submitter_name": "Daniel Hardman",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5521,
+    "doc-id": "RFC5789",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "   Successful PATCH response to existing text file:\r\n\r\n   HTTP/1.1 204 No Content\r\n   Content-Location: /file.txt\r\n   ETag: \"e0023aa4f\"\r\n\r\n   The 204 response code is used because the response does not carry a\r\n   message body (which a response with the 200 code would have).  Note\r\n   that other success codes could be used as well.\r\n\r\n   Furthermore, the ETag response header field contains the ETag for the\r\n   entity created by applying the PATCH, available at\r\n   http://www.example.com/file.txt, as indicated by the Content-Location\r\n   response header field.",
+    "correct_text": "   Successful PATCH response to existing text file:\r\n\r\n   HTTP/1.1 204 No Content\r\n   ETag: \"e0023aa4f\"\r\n\r\n   The 204 response code is used because the response does not carry a\r\n   message body (which a response with the 200 code would have).  Note\r\n   that other success codes could be used as well.\r\n\r\n   Furthermore, the ETag response header field contains the ETag for the\r\n   entity created by applying the PATCH.",
+    "notes": "See discussion at:\r\n  https://github.com/httpwg/http-core/issues/20",
+    "submit_date": "2018-10-12",
+    "submitter_name": "Mark Nottingham",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-01-07 05:55:53"
+  }
+]
