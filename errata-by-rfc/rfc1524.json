@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1755,
+    "doc-id": "RFC1524",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "B",
+    "orig_text": "         # Mailcap file for Bellcore lab 214.\r\n         #\r\n         # The next line sends \"richtext\" to the richtext\r\n         program\r\n         text/richtext; richtext %s; copiousoutput\r\n         #\r\n         # Next, basic u-law audio\r\n         audio/*; showaudio; test=/usr/local/bin/hasaudio\r\n         #\r\n         # Next, use the xview program to handle several image\r\n         formats\r\n         image/*; xview %s; test=/usr/local/bin/RunningX\r\n         #\r\n         # The ATOMICMAIL interpreter uses curses, so needs a\r\n         terminal\r\n         application/atomicmail; /usr/local/bin/atomicmail %s; \\\r\n             needsterminal\r\n         #\r\n         # The next line handles Andrew format,\r\n         #   if ez and ezview are installed\r\n         x-be2; /usr/andrew/bin/ezview %s; \\\r\n            print=/usr/andrew/bin/ezprint %s ; \\\r\n            compose=/usr/andrew/bin/ez -d %s \\;\r\n            edit=/usr/andrew/bin/ez -d %s; \\;\r\n            copiousoutput\r\n         #\r\n         # The next silly example demonstrates the use of\r\n         quoting\r\n         application/*; echo \"This is \\\"%t\\\" but \\\r\n            is 50 \\% Greek to me\" \\; cat %s; copiousoutput\r\n",
+    "correct_text": "         # Mailcap file for Bellcore lab 214.\r\n         #\r\n         # The next line sends \"richtext\" to the richtext\r\n         # program\r\n         text/richtext; richtext %s; copiousoutput\r\n         #\r\n         # Next, basic u-law audio\r\n         audio/*; showaudio; test=/usr/local/bin/hasaudio\r\n         #\r\n         # Next, use the xview program to handle several image\r\n         # formats\r\n         image/*; xview %s; test=/usr/local/bin/RunningX\r\n         #\r\n         # The ATOMICMAIL interpreter uses curses, so needs a\r\n         # terminal\r\n         application/atomicmail; /usr/local/bin/atomicmail %s; \\\r\n             needsterminal\r\n         #\r\n         # The next line handles Andrew format,\r\n         #   if ez and ezview are installed\r\n         x-be2; /usr/andrew/bin/ezview %s; \\\r\n            print=/usr/andrew/bin/ezprint %s ; \\\r\n            compose=/usr/andrew/bin/ez -d %s \\;\r\n            edit=/usr/andrew/bin/ez -d %s; \\;\r\n            copiousoutput\r\n         #\r\n         # The next silly example demonstrates the use of\r\n         # quoting\r\n         application/*; echo \"This is \\\"%t\\\" but \\\r\n            is 50 \\% Greek to me\" \\; cat %s; copiousoutput\r\n",
+    "notes": "Some comment lines in the example termcap file appear to have improperly reformatted to fit the 78-character limit; the needed \"# \" was ommitted.",
+    "submit_date": "2009-04-03",
+    "submitter_name": "Samuel Bronson",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5647,
+    "doc-id": "RFC1524",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "   The two characters \"%s\", if used, will be replaced by the name of a\r\n   file for the actual mail body data.  In the case of the edit adn\r\n   view-command, the body part will be passed to this command as\r\n   standard input unless one or more instances of \"%s\" appear in the\r\n   view-command, in which case %s will be replaced by the name of a file\r\n   containing the body part, a file which may have to be created before\r\n   the view-command program is executed.",
+    "correct_text": "   The two characters \"%s\", if used, will be replaced by the name of a\r\n   file for the actual mail body data.  In the case of the edit and\r\n   view-command, the body part will be passed to this command as\r\n   standard input unless one or more instances of \"%s\" appear in the\r\n   view-command, in which case %s will be replaced by the name of a file\r\n   containing the body part, a file which may have to be created before\r\n   the view-command program is executed.",
+    "notes": "Typo in \"Appendix A; Semantics of executable commands; 3rd paragraph\";\r\nadn vs. and",
+    "submit_date": "2019-03-08",
+    "submitter_name": "Urs Janßen",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
