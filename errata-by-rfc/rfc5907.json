@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2542,
+    "doc-id": "RFC5907",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "-- MIB contains 6 groups",
+    "correct_text": "-- MIB contains 5 groups",
+    "notes": "Late in NTPv4 MIB development the proposed 6th section in the MIB, NtpEntNotifPrefix, was removed, the comment preceding the section definitions was overlooked, still referencing 6 MIB sections.",
+    "submit_date": "2010-10-04",
+    "submitter_name": "Dave Hart",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2543,
+    "doc-id": "RFC5907",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "Discountinuities in the value of this counter can occur",
+    "correct_text": "Discontinuities in the value of this counter can occur",
+    "notes": "\"Discontinuities\" is misspelled in several counter descriptions.",
+    "submit_date": "2010-10-04",
+    "submitter_name": "Dave Hart",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
