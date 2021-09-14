@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1318,
+    "doc-id": "RFC5135",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "99In the Abstract, it says:",
+    "orig_text": "   This document specifies requirements for a for a Network Address\r\n   Translator (NAT) and ...",
+    "correct_text": "   This document specifies requirements for a Network Address\r\n   Translator (NAT) and ...\r\n",
+    "notes": "word replication (added in AUTH48!)",
+    "submit_date": "2008-02-14",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1319,
+    "doc-id": "RFC5135",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.1, pg.6",
+    "orig_text": "   REQ-7:   The NAT MUST NOT forward Local Network Control Block\r\n|           (224.0.0/24) [RFC3171] (also known as \"link-local\r\n            multicast\") traffic from its 'inside' interface(s) to its\r\n            'outside' interface.\r\n",
+    "correct_text": "   REQ-7:   The NAT MUST NOT forward Local Network Control Block\r\n|           (224.0.0.0/24) [RFC3171] (also known as \"link-local\r\n            multicast\") traffic from its 'inside' interface(s) to its\r\n            'outside' interface.\r\n",
+    "notes": "Location is end of Section 4.1, near the bottom of page 6.\r\nThis correction also needs to be applied to the re-statement\r\nof REQ-7 in Section 5 (mid-page 10).\r\n\r\nRationale:\r\nThe basic \"strategic\" document for CIDR notation now is BCP 122,\r\nRFC 4632, and that document clearly states (in section 3.1, at\r\nthe bottom of page 5):\r\n                                                           vvvvvvv\r\n|          [...]  In CIDR notation, a prefix is shown as a 4-octet\r\n   quantity, just like a traditional IPv4 address or network number,\r\n   followed by the \"/\" (slash) character, followed by a decimal value\r\n   between 0 and 32 that describes the number of significant bits.\r\n\r\nAlso being a BCP, RFC 5135 should follow this rule.",
+    "submit_date": "2008-02-14",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1320,
+    "doc-id": "RFC5135",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3, pg.8",
+    "orig_text": "   Any Source Multicast (ASM) uses the IP addresses in the 224/8 through\r\n   231/8, and 233/8 through 239/8 range [IANA-ALLOC].\r\n",
+    "correct_text": "   Any Source Multicast (ASM) uses the IP addresses in the 224.0.0.0/8\r\n   through 231.0.0.0/8, and 233.0.0.0/8 through 239.0.0.0/8 range\r\n   [IANA-ALLOC].\r\n",
+    "notes": "Rationale: see preceding entry",
+    "submit_date": "2008-02-14",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
