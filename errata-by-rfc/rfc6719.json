@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4878,
+    "doc-id": "RFC6719",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "MRHOF works with additive metrics along a route, and\r\nthe metrics it uses are determined by the metrics that the RPL\r\nDestination Information Object (DIO) messages advertise.",
+    "correct_text": "MRHOF works with additive metrics along a route, and\r\nthe metrics it uses are determined by the metrics that the RPL\r\nDODAG Information Object (DIO) messages advertise.",
+    "notes": "DIO stands for DODAG Information Object",
+    "submit_date": "2016-12-06",
+    "submitter_name": "Cenk Gündogan",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4879,
+    "doc-id": "RFC6719",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "RPL advertises metrics in RPL Destination Information\r\nObject (DIO) messages with a Metric Container suboption.",
+    "correct_text": "RPL advertises metrics in RPL DODAG Information\r\nObject (DIO) messages with a Metric Container suboption.",
+    "notes": "DIO stands for DODAG Information Object",
+    "submit_date": "2016-12-06",
+    "submitter_name": "Cenk Gündogan",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5283,
+    "doc-id": "RFC6719",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.3,
+    "orig_text": "whose paths have a large range of Ranks will likely result in\r\nsubptimal routing: nodes might not choose good paths because they are",
+    "correct_text": "whose paths have a large range of Ranks will likely result in\r\nsuboptimal routing: nodes might not choose good paths because they are",
+    "notes": "Incorrect spelling of suboptimal.",
+    "submit_date": "2018-03-07",
+    "submitter_name": "Dario Tedeschi",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
