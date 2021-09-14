@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 89,
+    "doc-id": "RFC4439",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "99\r\nThe DESCRIPTION clause for the\r\nt11FamAutoReconfigure OBJECT-TYPE macro invocation says:",
+    "orig_text": "           If value of this object is 'true', the switch will\r\n           send an RCF (ReConfigureFabric) to rebuild the\r\n           Fabric.",
+    "correct_text": "           If the value of this object is 'true', the switch will\r\n           send an RCF (ReConfigureFabric) to rebuild the\r\n           Fabric.\r\n",
+    "notes": "",
+    "submit_date": "2006-07-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
