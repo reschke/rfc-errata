@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1358,
+    "doc-id": "RFC5115",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3, 2nd para",
+    "orig_text": "   The requirements in [rfc3487] produced the corresponding document\r\n|  [rfc4412] in the SIP working group, which defines a new header for\r\n|  SIP called Resource-Priority.  This new header, which is optional, is\r\n   divided into two parts: a NameSpace and a Value.  [...]",
+    "correct_text": "   The requirements in [rfc3487] produced the corresponding document\r\n|  [rfc4412] in the SIP working group, which defines a new header field\r\n|  for SIP called Resource-Priority.  This new header field, which is\r\n|  optional, has a field value divided into two parts: a NameSpace and\r\n   a Value.  [...]\r\n",
+    "notes": "a)  Abuse of language /  non-use of established precise terminology:\r\n    \"header\"  -->  \"header field.\r\n\r\n    This issue recurs twice in Section 3.1 (first and last paragraph).\r\n\r\nb)  Any header field is divided into two parts, the header field name\r\n    and the header field value.  Hence, the RFC text is misleading.\r\n    Apparently, it wants to indicate that the field value is further\r\n    subdivided into two parts.\r\n    The proposed correction tries to clarify this with minimal rewording.",
+    "submit_date": "2008-03-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1359,
+    "doc-id": "RFC5115",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.1, pg. 3",
+    "orig_text": "    ... header ...",
+    "correct_text": "   ... header field  ...",
+    "notes": "Two occurrences: in the first and the last paragraph of Section 3.1.\r\nFor Rationale see NOTES for Errata-ID 1358.",
+    "submit_date": "2008-03-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
