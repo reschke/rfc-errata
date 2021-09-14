@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3723,
+    "doc-id": "RFC4967",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "Thus, the digit 2 is the first row, second column, and consists of\r\n   770Hz and 1209Hz frequencies mixed together.",
+    "correct_text": "Thus, the digit 2 is the first row, second column, and consists of\r\n   697Hz and 1336Hz frequencies mixed together.",
+    "notes": "As per the specification, DTMF is a 4 x 4 matrix with four row frequencies (697, 770, 852, 941 Hz) and four column frequencies (1209, 1336, 1477, 1633 Hz).\r\nThus correct matrix for digit 2 should be (697Hz, 1336Hz)",
+    "submit_date": "2013-09-12",
+    "submitter_name": "Gagandeep Singh",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
