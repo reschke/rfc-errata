@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3332,
+    "doc-id": "RFC6603",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4.2,
+    "orig_text": "   Any prefix excluded from the delegated prefix MUST be contained in\r\n   OPTION_PD_EXCLUDE options within the corresponding OPTION_IAPREFIX.",
+    "correct_text": "   Any prefix excluded from the delegated prefix MUST be contained in\r\n   OPTION_PD_EXCLUDE option within the corresponding OPTION_IAPREFIX.",
+    "notes": "As per this specification OPTION_PD_EXCLUDE option is used to exclude exactly one prefix from a delegated prefix. So as per this specification only one instance of OPTION_PD_EXCLUDE option can be present within OPTION_IAPREFIX.",
+    "submit_date": "2012-09-01",
+    "submitter_name": "Gaurav Halwasia",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4958,
+    "doc-id": "RFC6603",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6.1,
+    "orig_text": "6.1.  Requesting Router\r\n\r\n   The requesting router behavior regarding the use of the\r\n   OPTION_PD_EXCLUDE option is mostly identical to the steps described\r\n   in Section 5.1, with the difference being the use of a DHCPv6 Request\r\n   instead of an Solicit message.  The requesting router SHOULD include\r\n   the OPTION_PD_EXCLUDE option code in the OPTION_ORO option for DHCPv6\r\n   messages as described in Section 22.7 of [RFC3315].  The requesting\r\n   router SHOULD include the OPTION_PD_EXCLUDE option code in the\r\n   OPTION_ORO option for DHCPv6 messages as described in Section 22.7 of\r\n   [RFC3315].",
+    "correct_text": "6.1.  Requesting Router\r\n\r\n   The requesting router behavior regarding the use of the\r\n   OPTION_PD_EXCLUDE option is mostly identical to the steps described\r\n   in Section 5.1, with the difference being the use of a DHCPv6 Request\r\n   instead of an Solicit message.  The requesting router SHOULD include\r\n   the OPTION_PD_EXCLUDE option code in the OPTION_ORO option for DHCPv6\r\n   messages as described in Section 22.7 of [RFC3315].\r\n",
+    "notes": "Minor editorial bug: the last sentence of that paragraph was duplicated.",
+    "submit_date": "2017-03-07",
+    "submitter_name": "Sander Steffann",
+    "verifier_id": 152,
+    "verifier_name": "Suresh Krishnan",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
