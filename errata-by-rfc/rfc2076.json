@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4607,
+    "doc-id": "RFC2076",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3.5,
+    "orig_text": "   Address to which notifications       Errors-To:,    Non-standard,\r\n   are to be sent and a request to      Return-        discouraged.\r\n   get delivery notifications.          Receipt-To:\r\n   Internet standards recommend,\r\n   however, the use of RCPT TO and\r\n   Return-Path, not Errors-To, for\r\n   where delivery notifications are\r\n   to be sent.",
+    "correct_text": "   Address to which notifications       Errors-To:,    Non-standard,\r\n   are to be sent and a request to      Return-        discouraged.\r\n   get delivery notifications.          Receipt-To:\r\n   Internet standards recommend,\r\n   however, the use of MAIL FROM\r\n   and  Return-Path, not Errors-To,\r\n   for where delivery notifications\r\n   are to be sent.",
+    "notes": "Notifications and bounces are delivered to \"MAIL FROM\" envelope address of original message.\n --VERIFIER NOTES-- \nReturn-Path *is* where the MAIL FROM address is put into a message header.",
+    "submit_date": "2016-01-29",
+    "submitter_name": "Vladimir Dubrovin",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
