@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5520,
+    "doc-id": "RFC6176",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "   o  Sessions can be easily terminated.  A man-in-the-middle can easily\r\n      insert a TCP FIN to close the session, and the peer is unable to\r\n      determine whether or not it was a legitimate end of the session.",
+    "correct_text": "   o  Sessions can be easily terminated.  A man-in-the-middle can easily\r\n      insert a TCP FIN to close the session, and the peer is unable to\r\n      determine whether or not it was a legitimate end of the session.\r\n\r\n   o  The root certificate authority keys are overexposed. The server\r\n      sends only one certificate signed by a root certificate authority,\r\n      which means a frequent use of this authority keys for signing new\r\n      certificates. This use can lead to key loss and the compromise of\r\n      all certificates previously signed including the root certificate.",
+    "notes": "Adding a deficiency.\r\nRecent history showed that well-known authorities could loose their keys and it had a wide impact on security.\r\nSSL 2.0 limits the certificate handshake message to one single certificate, thus making it impossible to send a certificate chain.\r\nA certificate chain doesn't completely prevent key loss, but it gives more protection to the root certificate keys which can be stored and hidden until we need them again, which is much less often than without chaining.\r\n\r\n\r\n\n --VERIFIER NOTES-- \n   This isn't an error in the original document. It's new text you want to add.",
+    "submit_date": "2018-10-11",
+    "submitter_name": "Eugene Adell",
+    "verifier_id": 156,
+    "verifier_name": "EKR",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5536,
+    "doc-id": "RFC6176",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "   RFC 4346 [TLS1.1], and later RFC 5246 [TLS1.2], explicitly warned\r\n   implementers that the \"ability to send version 2.0 CLIENT-HELLO\r\n   messages will be phased out with all due haste\".  This document\r\n   accomplishes this by updating the backward compatibility sections\r\n   found in TLS [TLS1.0][TLS1.1][TLS1.2].",
+    "correct_text": "   RFC 2246 [TLS1.0], and later RFC 4346 [TLS1.1], then RFC 5246\r\n   [TLS1.2] explicitly warned implementers that the \"ability to send\r\n   version 2.0 CLIENT-HELLO messages will be phased out with all due\r\n   haste\". This document accomplishes this by updating the backward\r\n   compatibility sections found in TLS [TLS1.0][TLS1.1][TLS1.2].",
+    "notes": "The warning on the version 2.0 Client Hello is as old as the first TLS version (RFC 2246 Appendix E). That's what the authors meant and wanted to highlight by listing two of the three RFCs containing this warning. This is confirmed by their last sentence. It looks like a small mistake without concrete effects, I push this errata considering \"IESG Processing of RFC Errata for the IETF Stream rule 6\"",
+    "submit_date": "2018-10-19",
+    "submitter_name": "Eugene Adell",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
