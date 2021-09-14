@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1730,
+    "doc-id": "RFC5298",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.4.2, pg.15",
+    "orig_text": "   Since both LSPs are computed in a single pass, the LSPs can be\r\n|  signaled simultaneously of sequentially according to the preference\r\n   of the head-end LSR.\r\n                           ^^",
+    "correct_text": "   Since both LSPs are computed in a single pass, the LSPs can be\r\n|  signaled simultaneously or sequentially according to the preference\r\n   of the head-end LSR.\r\n                           ^^",
+    "notes": "Distorting typo; keep for Update!",
+    "submit_date": "2009-03-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
