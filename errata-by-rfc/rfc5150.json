@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1345,
+    "doc-id": "RFC5150",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.1.1,p.8",
+    "orig_text": "   If an egress node receiving a Path message with the \"LSP stitching\r\n|  desired\" bit set in the Flags field of received LSP_ATTRIBUTES object\r\n                                      ^^^^\r\n|  recognizes the object, the TLV TLV, and the bit and also supports the\r\n                              ^^^^^^^\r\n   desired stitching behavior, then it MUST allocate a non-NULL label\r\n   for that S-LSP in the corresponding Resv message.  Also, so that the\r\n   head-end node can ensure that the correct label (forwarding) actions\r\n   will be carried out by the egress node and that the S-LSP can be used\r\n   for stitching, the egress node MUST set the \"LSP segment stitching\r\n   ready\" bit defined in the Flags field of the RRO Attribute subobject.\r\n",
+    "correct_text": "   If an egress node receiving a Path message with the \"LSP stitching\r\n|  desired\" bit set in the Flags field of the Attributes Flags TLV of\r\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n|  the received LSP_ATTRIBUTES object recognizes the object, the TLV,\r\n   ^^^^                                                          ^^^\r\n   and the bit and also supports the desired stitching behavior, then it\r\n   MUST allocate a non-NULL label for that S-LSP in the corresponding\r\n   Resv message.  Also, so that the head-end node can ensure that the\r\n   correct label (forwarding) actions will be carried out by the egress\r\n   node and that the S-LSP can be used for stitching, the egress node\r\n   MUST set the \"LSP segment stitching ready\" bit defined in the Flags\r\n   field of the RRO Attribute subobject.\r\n",
+    "notes": "Location is 6th paragraph of Section 5.1.1 (i.e., 3rd paragraph on page 8).\r\n\r\nRationale:\r\na)  apparently significant text dropped\r\nb)  spurious word replication",
+    "submit_date": "2008-03-03",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
