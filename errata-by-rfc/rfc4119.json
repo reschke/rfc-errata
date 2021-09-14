@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 827,
+    "doc-id": "RFC4119",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "On mid-page 8, RFC 4119 specifies:\r\n                                                     [...]  If the\r\n    value in the 'retention-expires' element has already passed when\r\n    the Location Recipient receives the Location Object, the Recipient\r\n    MUST discard the Location Object immediately.\r\n\r\nNow, RFC 4119 contains examples of Location Objects. Thus, the reader\r\nof RFC 4119 (or his workstation) becomes a Location Recipient.\r\nBut those examples of Location Objects contained in RFC 4119 specify\r\na 'retention-expires' date that has passed *long before* the\r\npublication of RFC 4119.\r\nTherefore, every reader of RFC 4119, and every system receiving a\r\ncopy of RFC 4119, MUST immediately discard the RFC; moreover,\r\neven the RFC editor SHOULD NOT ever have processed the draft!\r\n\r\nBut in this case, the above rule would not have become effective,\r\nmaking these actions, creation and reading of the RFC, legitimate\r\nagain ...",
+    "correct_text": "[see above]",
+    "notes": "from pending\r\n\r\nFrom the RAI reviewer: Strictly speaking, only the Location Objects contained in the RFC4119 MUST be discarded. Since this would only remove the examples from the RFC and not the specifiction, the RFC would remain effective, if somewhat less convenient to use.\n --VERIFIER NOTES-- \n   ",
+    "submit_date": "2005-12-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1535,
+    "doc-id": "RFC4119",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.2.2",
+    "orig_text": "2.2.2.  'usage-rules' Element\r\n   'retransmission-allowed': When the value of this element is 'no', the\r\n      Recipient of this Location Object is not permitted to share the\r\n      enclosed Location Information, or the object as a whole, with\r\n      other parties.  When the value of this element is 'yes',\r\n\r\n\r\n snip.. \r\n\r\n 'retention-expires': This field specifies an absolute date at which\r\n      time the Recipient is no longer permitted to possess the location\r\n\r\nsnip..\r\n 'ruleset-reference': This field contains a URI that indicates where a\r\n      fuller ruleset of policies, related to this object, can be found.\r\n",
+    "correct_text": null,
+    "notes": "Definitions do not match with the XML schema : \r\n\r\n* boolean according to XML Schema Part 2: Datatypes Second Edition is either 'true', 'false', '0', or '1'\r\n\r\n     <xs:element name=\"retransmission-allowed\" type=\"xs:boolean\"\r\n        minOccurs=\"0\" maxOccurs=\"1\"/>\r\n\r\n* Element names do not match\r\n  \r\n <xs:element name=\"retention-expiry\" type=\"xs:dateTime\"\r\n        minOccurs=\"0\" maxOccurs=\"1\"/>\r\n\r\n     <xs:element name=\"external-ruleset\" type=\"xs:anyURI\"   \r\n        minOccurs=\"0\" maxOccurs=\"1\"/>",
+    "submit_date": "2008-10-03",
+    "submitter_name": "Eduardo Cardona",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1771,
+    "doc-id": "RFC4119",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.3,
+    "orig_text": " <presence xmlns=\"urn:ietf:params:xml:ns:pidf\"\r\n    xmlns:gp=\"urn:ietf:params:xml:ns:pidf:geopriv10\"\r\n    xmlns:cl=\" urn:ietf:params:xml:ns:pidf:geopriv10:civicLoc\"\r\n    entity=\"pres:geotarget@example.com\">\r\n...\r\n      <gp:usage-rules>\r\n        <gp:retransmission-allowed>no</gp:retransmission-allowed>\r\n        <gp:retention-expiry>2003-06-23T04:57:29Z</gp:retention-expiry>\r\n      </gp:usage-rules>",
+    "correct_text": " <presence xmlns=\"urn:ietf:params:xml:ns:pidf\"\r\n    xmlns:gp=\"urn:ietf:params:xml:ns:pidf:geopriv10\"\r\n    xmlns:gbp=\"urn:ietf:params:xml:ns:pidf:geopriv10:basicPolicy\"\r\n    xmlns:cl=\"urn:ietf:params:xml:ns:pidf:geopriv10:civicLoc\"\r\n    entity=\"pres:geotarget@example.com\">\r\n...\r\n      <gp:usage-rules>\r\n        <gbp:retransmission-allowed>no</gbp:retransmission-allowed>\r\n        <gbp:retention-expiry>2003-06-23T04:57:29Z</gbp:retention-expiry>\r\n      </gp:usage-rules>",
+    "notes": "This applies to both examples in Section 2.3.  The use of the \"urn:ietf:params:xml:ns:pidf:geopriv10\" namespace for the retransmission-allowed and retention-expiry elements is incorrect.  These elements are defined in the \"urn:ietf:params:xml:ns:pidf:geopriv10:basicPolicy\" namespace.\r\n\r\nThis does not manifest in an error in parsers due to the allowance for extensions.  The XML schema <any> rule with processContents=\"lax\" permits unknown elements, as these are.  A schema-aware processor would not reliably detect these elements, potentially leading to them being ignored.\r\n\r\nTo reveal this problem, validate these examples against a schema with processContents=\"strict\" on all <any> elements.",
+    "submit_date": "2009-05-03",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
