@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2035,
+    "doc-id": "RFC5230",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.4,
+    "orig_text": "   Unless explicitly overridden with a :from parameter, the From field\r\n   SHOULD be set to the address of the owner of the Sieve script.",
+    "correct_text": "   Unless explicitly overridden with a :from parameter, the From field\r\n   SHOULD be set to the address of the owner of the Sieve script.\r\n\r\n   Informative advice: Users often have multiple email addresses, and\r\n   \"the address of the owner of the Sieve script\" may offer a choice\r\n   among several.  If the sieve processor recognizes an address\r\n   belonging to the owner of the Sieve script in the To or Cc fields\r\n   of the input message, then it's better to use that address for the\r\n   From field of the generated message, rather than any other addresses\r\n   the script's owner may also have.",
+    "notes": "The added text represents the intent of the working group for selecting \"the address of the owner\" in cases where the owner has multiple addresses known to the Sieve engine.  Normative text would not be appropriate here, but an informative note clarifies the WG's intent.",
+    "submit_date": "2010-02-08",
+    "submitter_name": "Barry Leiba",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6294,
+    "doc-id": "RFC5230",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.4,
+    "orig_text": "require \"vacation\";\r\nvacation :mime text:\r\nContent-Type: multipart/alternative; boundary=foo\r\n\r\n--foo\r\n\r\nI'm at the beach relaxing.  Mmmm, surf...\r\n\r\n--foo\r\nContent-Type: text/html; charset=us-ascii\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\"\r\n \"http://www.w3.org/TR/REC-html40/strict.dtd\">\r\n<HTML><HEAD><TITLE>How to relax</TITLE>\r\n<BASE HREF=\"http://home.example.com/pictures/\"></HEAD>\r\n<BODY><P>I'm at the <A HREF=\"beach.gif\">beach</A> relaxing.\r\nMmmm, <A HREF=\"ocean.gif\">surf</A>...\r\n</BODY></HTML>\r\n\r\n--foo--\r\n.",
+    "correct_text": "require \"vacation\";\r\nvacation :mime text:\r\nContent-Type: multipart/alternative; boundary=foo\r\n\r\n--foo\r\n\r\nI'm at the beach relaxing.  Mmmm, surf...\r\n\r\n--foo\r\nContent-Type: text/html; charset=us-ascii\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\"\r\n \"http://www.w3.org/TR/REC-html40/strict.dtd\">\r\n<HTML><HEAD><TITLE>How to relax</TITLE>\r\n<BASE HREF=\"http://home.example.com/pictures/\"></HEAD>\r\n<BODY><P>I'm at the <A HREF=\"beach.gif\">beach</A> relaxing.\r\nMmmm, <A HREF=\"ocean.gif\">surf</A>...\r\n</BODY></HTML>\r\n\r\n--foo--\r\n.\r\n;",
+    "notes": "The ';' terminating the vacation action command is missing.",
+    "submit_date": "2020-09-22",
+    "submitter_name": "Ken Murchison",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-10-08 06:10:25"
+  }
+]
