@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3957,
+    "doc-id": "RFC6470",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "       uses common-session-parms {\r\n         when \"../confirm-event != 'timeout'\";\r\n       }\r\n\r\n       leaf confirm-event {\r\n",
+    "correct_text": "       uses common-session-parms {\r\n         when \"confirm-event != 'timeout'\";\r\n       }\r\n\r\n       leaf confirm-event {\r\n",
+    "notes": "\"uses\" does not define a node.  RFC 6020, 7.19.5 specifies that the context node for \"when\" is the node above the \"uses\" statement:\r\n\r\n   o  If the \"when\" statement is a child of a \"uses\", \"choice\", or\r\n      \"case\" statement, then the context node is the closest ancestor\r\n      node to the \"uses\", \"choice\", or \"case\" node that is also a data\r\n      node.",
+    "submit_date": "2014-04-11",
+    "submitter_name": "Martin Bjorklund",
+    "verifier_id": 2,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4073,
+    "doc-id": "RFC6470",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2.2,
+    "orig_text": "   <CODE BEGINS> file=\"ietf-netconf-notifications@2011-12-09.yang\"",
+    "correct_text": "   <CODE BEGINS> file=\"ietf-netconf-notifications@2012-02-06.yang\"",
+    "notes": "Reported to me by Martin Bjorklund",
+    "submit_date": "2014-08-07",
+    "submitter_name": "Andy Bierman",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
