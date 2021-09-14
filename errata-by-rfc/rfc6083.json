@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5744,
+    "doc-id": "RFC6083",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.8,
+    "orig_text": "4.8.  Handling of Endpoint-Pair Shared Secrets\r\n\r\n   The endpoint-pair shared secret for Shared Key Identifier 0 is empty\r\n   and MUST be used when establishing a DTLS connection.  Whenever the\r\n   master key changes, a 64-byte shared secret is derived from every\r\n   master secret and provided as a new endpoint-pair shared secret by\r\n   using the exporter described in [RFC5705].  The exporter MUST use the\r\n   label given in Section 5 and no context.  The new Shared Key\r\n   Identifier MUST be the old Shared Key Identifier incremented by 1.\r\n   If the old one is 65535, the new one MUST be 1.\r\n\r\n   Before sending the Finished message, the active SCTP-AUTH key MUST be\r\n   switched to the new one.\r\n\r\n   Once the corresponding Finished message from the peer has been\r\n   received, the old SCTP-AUTH key SHOULD be removed.",
+    "correct_text": "4.8.  Handling of Endpoint-Pair Shared Secrets\r\n\r\n   The endpoint-pair shared secret for Shared Key Identifier 0 is empty\r\n   and MUST be used when establishing a DTLS connection.  Whenever the\r\n   master key changes, a 64-byte shared secret is derived from every\r\n   master secret and provided as a new endpoint-pair shared secret by\r\n   using the exporter described in [RFC5705].  The exporter MUST use the\r\n   label given in Section 5 and no context.  The new Shared Key\r\n   Identifier MUST be the old Shared Key Identifier incremented by 1.\r\n   If the old one is 65535, the new one MUST be 1.\r\n\r\n   Before sending the Finished message, the active SCTP-AUTH key \r\n   SHOULD be switched to the new one.\r\n   However if the ChangeCipherSpec and Finished messages are sent \r\n   back to back, there may be a case if Finished message is sent with\r\n   the new key might get dropped by peer, if the new key is not \r\n   configured yet.\r\n   Hence the sender MAY send the Finished message with Old Key which\r\n   SHOULD be accepted by the peer. \r\n\r\n   Once the corresponding Finished message from the peer has been\r\n   received, the old SCTP-AUTH key SHOULD be removed.",
+    "notes": "If the time gap between the ChangeCipherSpec and Finished messages is very less than either the peer may wait to configure the new key received in ChangeCipherSpec and then validate the Finished messges with new key. Alternatively the Sender may choose to send the Finished message with Old key to peer which should still be configured at the peer. Once the peer recevies the Finished message it should accept with Old key. Subsequently the Old key Should be removed.\r\nHence during this switchover of Key , two keys can be used by both peer nodes.",
+    "submit_date": "2019-05-30",
+    "submitter_name": "Sidhartha Pant",
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2020-04-21 09:22:56"
+  },
+  {
+    "errata_id": 6323,
+    "doc-id": "RFC6083",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 1.1,
+    "orig_text": "The maximum user message size is 2^14 bytes, which is the DTLS\r\n      limit.",
+    "correct_text": "The maximum user message size is limited by the DTLS implementation.",
+    "notes": "TLS and DTLS handshake messages can be quite large (in theory up to 2^24-1 bytes, in practice many kilobytes). \r\nSee https://datatracker.ietf.org/doc/draft-ietf-tls-dtls13/?include_text=1\r\nsection 3.3 as reference\n --VERIFIER NOTES-- \n   The citation in the note clearly refers to handshake messages, not application data records. RFC 4347 and draft-ietf-tls-dtls13 clearly state that the limit is 2^14.",
+    "submit_date": "2020-11-04",
+    "submitter_name": "Claudio Porfiri",
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2020-11-06 08:54:28"
+  }
+]
