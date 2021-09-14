@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4673,
+    "doc-id": "RFC7420",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "pcePcepSessState OBJECT-TYPE\r\n       SYNTAX      INTEGER {\r\n                      tcpPending(1),\r\n                      openWait(2),\r\n                      keepWait(3),\r\n                      sessionUp(4)\r\n                   }\r\n       MAX-ACCESS  read-only\r\n       STATUS      current\r\n       DESCRIPTION\r\n           \"The current state of the session.\r\n\r\n            The set of possible states excludes the idle state since\r\n            entries do not exist in this table in the idle state.\"\r\n       ::= { pcePcepSessEntry 3 }",
+    "correct_text": "pcePcepSessState OBJECT-TYPE\r\n       SYNTAX      INTEGER {\r\n\t\t      idle(0),\r\n                      tcpPending(1),\r\n                      openWait(2),\r\n                      keepWait(3),\r\n                      sessionUp(4)\r\n                   }\r\n       MAX-ACCESS  read-only\r\n       STATUS      current\r\n       DESCRIPTION\r\n           \"The current state of the session.\"\r\n       ::= { pcePcepSessEntry 3 }\t",
+    "notes": "As per security consideration, if PCE needs to allow incomming connections from only known PCCs. \r\nSource addresses of PCCs are configured on PCE. If PCEP session on PCE goes down with configured PCCs. \r\nPCE needs to raise notification pcePcepSessDown (i.e. details mentioned below).\r\nIssue is whiling sending the notification pcePcepSessDown, as session state (pcePcepSessState) defined in RFC doesn't include idle state.\r\nI suggest to include idle(0) state for pcePcepSessState. \r\n \r\n\r\n   pcePcepSessDown NOTIFICATION-TYPE\r\n       OBJECTS     {\r\n                      pcePcepSessState,\r\n                      pcePcepSessStateLastChange\r\n                   }\r\n       STATUS      current\r\n       DESCRIPTION\r\n           \"This notification is sent when the value of\r\n            pcePcepSessState leaves the sessionUp state.\"\r\n       ::= { pcePcepNotifications 2 }",
+    "submit_date": "2016-04-20",
+    "submitter_name": "Mahendra Singh Negi",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
