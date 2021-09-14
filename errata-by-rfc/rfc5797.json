@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2581,
+    "doc-id": "RFC5797",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "   | STOU  | base | Store Unique      | a    | o    | 959, 1123        |",
+    "correct_text": "   | STOU  | base | Store Unique      | s    | o    | 959, 1123        |",
+    "notes": "RFC0959 has defined STOU as FTP (S)ervice command, but not (A)ccess Control command",
+    "submit_date": "2010-10-19",
+    "submitter_name": "VicTor Smirnoff",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3471,
+    "doc-id": "RFC5797",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "Section 5 states that the IANA has set up the registry, but does not give any hints as to how to find it. A link to its location would be handy. I presume the correct location is http://www.iana.org/assignments/ftp-commands-extensions/ftp-commands-extensions.xml\n --VERIFIER NOTES-- \nA a practice, we do not put URLs for registries into RFCs. Not an appropriate use of the errata system, in any event.   ",
+    "submit_date": "2013-01-27",
+    "submitter_name": "Alun Jones",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5748,
+    "doc-id": "RFC5797",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   | RNTO  | base | Rename From       | s    | m    | 959              |",
+    "correct_text": "   | RNTO  | base | Rename To         | s    | m    | 959              |",
+    "notes": "Obviously RNTO = Rename To as defined in RFC 959",
+    "submit_date": "2019-06-08",
+    "submitter_name": "Eugene Adell",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
