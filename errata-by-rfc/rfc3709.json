@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2325,
+    "doc-id": "RFC3709",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "   When using indirect addressing, the URI (refStructURI) pointing to\r\n   the external data structure MUST point to a binary file containing\r\n   the DER encoded data with the syntax LogotypeData.  The referenced\r\n   file name SHOULD include a file extension of \"LTD\".",
+    "correct_text": null,
+    "notes": "There is no IETF process for only registering a file extension. IETF MIME type registry allows to register MIME types together with the corresponding file extensions. An update to this document should register a new MIME type for \"LTD\".",
+    "submit_date": "2010-07-13",
+    "submitter_name": "Alexey Melnikov",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2679,
+    "doc-id": "RFC3709",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "LogotypeDetails ::= SEQUENCE {\r\n   mediaType       IA5String, -- MIME media type name and optional\r\n                              -- parameters\r\n   logotypeHash    SEQUENCE SIZE (1..MAX) OF HashAlgAndValue,\r\n   logotypeURI     SEQUENCE SIZE (1..MAX) OF IA5String }",
+    "correct_text": null,
+    "notes": "The mediaType is underspecified, as no specific syntax is given.\r\nE.g. are spaces allowed before parameters? Also, my understanding is that IA5String disallows UTF-8, while media type parameters can possibly include UTF-8 values.\r\n\r\nI would recommend referencing ABNF from Section 4.2 of RFC 4288.",
+    "submit_date": "2010-12-22",
+    "submitter_name": "Alexey Melnikov",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
