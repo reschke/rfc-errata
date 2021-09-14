@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5500,
+    "doc-id": "RFC8441",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "Using a SETTINGS parameter to opt into an otherwise incompatible\r\nprotocol change is a use of \"Extending HTTP/2\" defined by Section 5.5\r\nof [RFC7540].  Specifically, the addition a new pseudo-header field,\r\n",
+    "correct_text": "Using a SETTINGS parameter to opt into an otherwise incompatible\r\nprotocol change is a use of \"Extending HTTP/2\" defined by Section 5.5\r\nof [RFC7540].  Specifically, the addition of a new pseudo-header field,\r\n",
+    "notes": "I think it's missing a word.",
+    "submit_date": "2018-09-21",
+    "submitter_name": "Loïc Hoguin",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-04-01 13:59:37"
+  }
+]
