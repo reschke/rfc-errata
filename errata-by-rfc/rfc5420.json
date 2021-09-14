@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1688,
+    "doc-id": "RFC5420",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "11.2,11.3",
+    "orig_text": "     ... allocated only by IETF Consensus.\r\n                                ^^^^^^^^^\r\n",
+    "correct_text": "     ... allocated only by IETF Review.\r\n                                ^^^^^^\r\n",
+    "notes": "Location:\r\n   a)  last paragraph of section 11.2\r\n   b)  third paragraph of section 11.3\r\n\r\nRationale:\r\n  Adaptation to updated IANA policy terminology as per RFC 5226\r\n  has been missed.\n --VERIFIER NOTES-- \nThe IANA action was correctly taken in this case before the adoption of RFC5226 as an RFC. Thus the IANA action was correct. Furthermore, the mapping from IETF Consensus to IETF Review is well-known.",
+    "submit_date": "2009-02-20",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1689,
+    "doc-id": "RFC5420",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "11.3, pg.19",
+    "orig_text": "a)\r\n   The IANA has created a new registry and will manage the space of\r\n|  attributes bit flags, numbering them in the usual IETF notation:\r\n            ^\r\n   starting at zero and continuing at least through 31.\r\n\r\nb)\r\n   Each bit should be tracked with the following qualities:\r\n\r\n   - Bit number\r\n   - Defining RFC\r\n   - Name of bit\r\n|  - Whether there is meaning in the Attribute Flags TLV on a Path\r\n|  - Whether there is meaning in the Attribute Flags TLV on a Resv\r\n   - Whether there is meaning in the RRO Attributes subobject\r\n\r\n",
+    "correct_text": "a)\r\n   The IANA has created a new registry and will manage the space of\r\n   attribute bit flags, numbering them in the usual IETF notation:\r\n   starting at zero and continuing at least through 31.\r\n\r\nb)\r\n   Each bit should be tracked with the following qualities:\r\n\r\n   - Bit number\r\n   - Defining RFC\r\n   - Name of bit\r\n|  - Whether there is meaning in the Attribute Flags TLV on a Path message\r\n|  - Whether there is meaning in the Attribute Flags TLV on a Resv message\r\n   - Whether there is meaning in the RRO Attributes subobject\r\n",
+    "notes": "Rationale:\r\n\r\na) grammar fix in the body of RFC 5420 vs. RFC 4420\r\n   should also be reflected in the IANA Considerations\r\n   (and in the IANA registry -- subject to independent report to IANA);\r\n\r\nb) language improvement applied in the body of the RFC\r\n   should also be reflected in the IANA Considerations.",
+    "submit_date": "2009-02-20",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
