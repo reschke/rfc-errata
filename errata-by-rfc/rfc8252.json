@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5848,
+    "doc-id": "RFC8252",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "Appendix B.1",
+    "orig_text": "Apps can initiate an authorization request in the browser, without\r\nthe user leaving the app, through the \"SFSafariViewController\" class\r\nor its successor \"SFAuthenticationSession\", which implement the in-\r\napp browser tab pattern.  Safari can be used to handle requests on\r\nold versions of iOS without in-app browser tab functionality.",
+    "correct_text": "Apps can initiate an authorization request in the browser, without\r\nthe user leaving the app, through the \"ASWebAuthenticationSession\"\r\nclass or its successors \"SFAuthenticationSession\" and\r\n\"SFSafariViewController\", which implement the in-app browser tab\r\npattern.  The first of these allows calls to a handler registered\r\nfor the AS URL, consistent with Section 7.2. The latter two classes,\r\nnow deprecated, can use Safari to handle requests on old versions of\r\niOS without in-app browser tab functionality.",
+    "notes": "SFAuthenticationSession documentation reflects deprecated status:\r\n\r\nhttps://developer.apple.com/documentation/safariservices/sfauthenticationsession\r\n\r\nHere's the documentation for ASWebAuthenticationSession:\r\n\r\nhttps://developer.apple.com/documentation/authenticationservices/aswebauthenticationsession\n --VERIFIER NOTES-- \nThis sort of change to update for events since the time of publication is not appropriate for an erratum; errata are intended solely to indicate errors in a document that were errors at the time of publication.  A revision of the document or a new document with an \"Updates:\" relationship would be more appropriate ways to indicate that the situation has changed.",
+    "submit_date": "2019-08-26",
+    "submitter_name": "Bayard Bell",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
