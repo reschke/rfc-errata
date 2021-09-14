@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5267,
+    "doc-id": "RFC5926",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.1.1",
+    "orig_text": "- Label:     A binary string that clearly identifies the purpose\r\n                   of this KDF's derived keying material.  For TCP-AO,\r\n                   we use the ASCII string \"TCP-AO\", where the last\r\n                   character is the capital letter \"O\", not to be\r\n                   confused with a zero.  While this may seem like\r\n                   overkill in this specification since TCP-AO only\r\n                   describes one call to the KDF, it is included in\r\n                   order to comply with FIPS 140 certifications.\r\n",
+    "correct_text": "- Label:     A binary string that clearly identifies the purpose\r\n                   of this KDF's derived keying material.  For TCP-AO,\r\n                   we use the ASCII string \"TCP-AO\", where the last\r\n                   character is the capital letter \"O\", not to be\r\n                   confused with a zero. The ASCII string is terminated\r\n                   with a null octet (0x00). While this may seem like\r\n                   overkill in this specification since TCP-AO only\r\n                   describes one call to the KDF, it is included in\r\n                   order to comply with FIPS 140 certifications.",
+    "notes": "This section states that \"Both of these KDFs are based on the iteration-mode KDFs specified in [NIST-SP800-108].\", which is later clarified to be the \"counter mode\" KDF defined in that document. The definition of the \"Label\" input to the KDF in the original text is not clear.\r\n\r\n[NIST-SP800-108] specifies that a 0x00 octet should follow the Label. This 0x00 octet is important when the KDF does not have control over the Context given it, which is the case here -- RFC 5926 depends on the definition in RFC 5925. RFC 5925 currently declares two fixed-size inputs for the Context (See Figures 7 & 8 of RFC 5925), so the Context length differs. Also, RFC 5925 RFC could be updated over over time to include other Contexts that are variable sized. The risk of excluding 0x00 is enabling an attacker to choose a specially-crafted Context that violates the clean separation between the Label and Context arguments. Therefore, it is important to include the 0x00 octet for TCP-AO.\r\n\r\nI believe this 0x00 is implied in the specification of the string \"TCP-AO\", since conventionally many string definitions include a trailing 0x00 octet, The text should state that the 0x00 octet is present as part of the string.\r\n\r\nIf this errata does not result in adding the 0x00 octet, then its omission needs to be justified.\n --VERIFIER NOTES-- \nNIST-SP800-108 does not require the use of 0x00. It only requires that the length and order of each field be defined unambiguously. The method of providing that length unambiguously to the KDF algorithm is an implementation issue.",
+    "submit_date": "2018-02-26",
+    "submitter_name": "Brian Weis",
+    "verifier_id": 153,
+    "verifier_name": "Mirja Kühlewind",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6413,
+    "doc-id": "RFC5926",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.1.1.2",
+    "orig_text": "In section 3.1.1.2 Page 8, figure 1,\r\n\r\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n+                        KDF-AES-128-CMAC                           +\r\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n+                                                                   +\r\n+ Input  : MK (Master_Key, the variable-length shared secret)       +\r\n+        : I (Input, i.e., the input data of the PRF)               +\r\n+        : MKlen (length of MK in octets)                           +\r\n+        : len (length of M in octets)                              +\r\n+ Output : TK (Traffic_Key, 128-bit Pseudo-Random Variable)         +\r\n+                                                                   +\r\n+-------------------------------------------------------------------+",
+    "correct_text": "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n+                        KDF-AES-128-CMAC                           +\r\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n+                                                                   +\r\n+ Input  : MK (Master_Key, the variable-length shared secret)       +\r\n+        : I (Input, i.e., the input data of the PRF)               +\r\n+        : MKlen (length of MK in octets)                           +\r\n+        : len (length of I in octets)                              +\r\n+ Output : TK (Traffic_Key, 128-bit Pseudo-Random Variable)         +\r\n+                                                                   +\r\n+-------------------------------------------------------------------+",
+    "notes": "In Input, \"len\" is described as (length of \"M' in octets), but there is no \"M\" in the input, but it is supposed to mention the length of the Input Data \"I\", so it should be (length of \"I\" in octets)",
+    "submit_date": "2021-01-28",
+    "submitter_name": "Ananth Rajadurai",
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2021-02-02 13:33:31"
+  }
+]
