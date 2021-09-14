@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4305,
+    "doc-id": "RFC4862",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "   o  Clarified that on failure of Duplicate Address Detection, IP\r\n      network operation should be disabled and that the rule should\r\n      apply when the hardware address is supposed to be unique.\r\n",
+    "correct_text": "o  Clarified that on failure of Duplicate Address Detection, IP\r\n   network operation for the interface should be disabled if and \r\n   only if:\r\n   - the duplicate check is performed on the IP link-local address,\r\n   - the link-local address is based on an EUI-64 or other hardware \r\n     address, and\r\n   - the hardware address is supposed to be unique on the link.\r\n\r\n\r\n",
+    "notes": null,
+    "submit_date": "2015-03-17",
+    "submitter_name": "Erik Nordmark",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
