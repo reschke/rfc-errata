@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 5225,
+    "doc-id": "RFC7599",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "In the case of an IPv4 prefix, the IPv4 address field is right-padded\r\nwith zeros up to 32 bits.  The PSID is left-padded with zeros to\r\ncreate a 16-bit field.  For an IPv4 prefix or a complete IPv4\r\naddress, the PSID field is zero.",
+    "correct_text": "The PSID is left-padded with zeros to\r\ncreate a 16-bit field.  For an IPv4 prefix or a complete IPv4\r\naddress, the PSID field is zero.",
+    "notes": "This text has been copied from RFC7597 (MAP-E). While it is correct in the context of MAP-E, for MAP-T the complete IPv4 source address must be embedded in the interface-identifier for correct translation in the case of an IPv4 prefix. Right padding the prefix with zeroes would lead to the translated packet having all zeroes in its source address.",
+    "submit_date": "2018-01-03",
+    "submitter_name": "Ole Troan",
+    "verifier_id": 161,
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2020-01-08 14:05:03"
+  },
+  {
+    "errata_id": 5322,
+    "doc-id": "RFC7599",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "Example 2 - BR:\r\nPSID:  0                  x34 (1232)\r\n\r\nExample 4:\r\n\r\n",
+    "correct_text": "Example 2 - BR:\r\n\r\nPSID:                     0x34 (1232)",
+    "notes": "There is a long space between 0 and x34",
+    "submit_date": "2018-04-11",
+    "submitter_name": "Shachar Rosenberg",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2019-12-25 03:51:08"
+  },
+  {
+    "errata_id": 5323,
+    "doc-id": "RFC7599",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "Example 4:\r\n\r\nIPv4 address:            192.0.2.18 (0xc0000212)",
+    "correct_text": "Example 4:\r\n\r\nIPv4 address:            192.0.2.1 (0xc0000201)",
+    "notes": "BMR defines 0 EA bits and IPv4 prefix 192.0.2.1/32, shouldn't the IPv4 address be 192.0.2.1?\r\n\r\nAnother possible option perhaps would be to change the BMR IPv4 prefix to 192.0.2.18/32 and the IPv6 address of MAP CE to: 2001:db8:0012:3400:0000:c000:0212:0000",
+    "submit_date": "2018-04-11",
+    "submitter_name": "Shachar Rosenberg",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2020-01-08 06:47:07"
+  },
+  {
+    "errata_id": 5324,
+    "doc-id": "RFC7599",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "Example 5:\r\n\r\nPSID:                    0x20 (provisioned with DHCPv6)",
+    "correct_text": "Example 5:\r\n\r\nPSID:                    0x34 (provisioned with DHCPv6)",
+    "notes": "In IPv4, IPv6 and port ranges presented in the example the PSID matches to 0x34 and not 0x20:\r\n\r\n   PSID:                    0x34\r\n   Available ports (63 ranges): 1232-1235, 2256-2259, ...... ,\r\n                                63696-63699, 64720-64723\r\n   IPv6 address of MAP CE:  2001:db8:0012:3400:0000:c000:0212:0034",
+    "submit_date": "2018-04-11",
+    "submitter_name": "Shachar Rosenberg",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2019-12-25 07:45:27"
+  }
+]
