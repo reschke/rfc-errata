@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1618,
+    "doc-id": "RFC5387",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4, pg.15",
+    "orig_text": "   BTNS is intended for services open to the public but for which\r\n   protected associations are desired, and for services that can be\r\n   authenticated at higher layers in the protocol stack.  BTNS can also\r\n   provide some level of protection for private services when the\r\n|  alternative BTNS is no protection at all.",
+    "correct_text": "   BTNS is intended for services open to the public but for which\r\n   protected associations are desired, and for services that can be\r\n   authenticated at higher layers in the protocol stack.  BTNS can also\r\n   provide some level of protection for private services when the\r\n|  alternative to BTNS is no protection at all.\r\n              ^^^^",
+    "notes": "Rationale: Distorting word omission.",
+    "submit_date": "2008-11-24",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
