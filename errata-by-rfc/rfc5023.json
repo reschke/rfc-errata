@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1304,
+    "doc-id": "RFC5023",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.3,
+    "orig_text": "   2.  If the Member Resource was created successfully, the server\r\n       responds with a status code of 201 and a Location header that\r\n       contains the IRI of the newly created Entry Resource.  Media\r\n       Resources could have also been created and their IRIs can be\r\n       found through the Entry Resource.  See Section 9.6 for more\r\n       details.",
+    "correct_text": "   2.  If the Member Resource was created successfully, the server\r\n       responds with a status code of 201 and a Location header that\r\n       contains the URI of the newly created Entry Resource.  Media\r\n       Resources could have also been created and their IRIs can be\r\n       found through the Entry Resource.  See Section 9.6 for more\r\n       details.",
+    "notes": "The Location header (as defined in HTTP/1.1) contains a URI, not a IRI.",
+    "submit_date": "2008-01-29",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3207,
+    "doc-id": "RFC5023",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "p51",
+    "orig_text": "   anyForeignElement =\r\n       element * - atom:* {\r\n          (attribute * { text }\r\n           | text\r\n           | anyElement)*\r\n       }",
+    "correct_text": "   anyForeignElement =\r\n       element * - app:* {\r\n          (attribute * { text }\r\n           | text\r\n           | anyElement)*\r\n       }",
+    "notes": "I believe the schema unintentionally prohibits atom:link from being included in the categories document.  Given that in another schema in the same appendix it is allowed, and going by the text in the normative sections, I believe this must be a cut and paste error.",
+    "submit_date": "2012-05-01",
+    "submitter_name": "Peter Rushforth",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
