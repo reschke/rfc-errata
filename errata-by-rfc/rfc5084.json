@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4727,
+    "doc-id": "RFC5084",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "   The AES-GCM authenticated encryption algorithm is described in [GCM].\r\n   A brief summary of the properties of AES-CCM is provided in Section\r\n   1.5.\r\n",
+    "correct_text": "   The AES-GCM authenticated encryption algorithm is described in [GCM].\r\n   A brief summary of the properties of AES-GCM is provided in Section\r\n   1.5.\r\n",
+    "notes": "Section 3.2 discusses AES-GCM, and links to Section 1.5 (titled \"AES-GCM\"), so the text \"AES-CCM\" in the second sentence should be \"AES-GCM\".",
+    "submit_date": "2016-07-01",
+    "submitter_name": "Peter Dettman",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4774,
+    "doc-id": "RFC5084",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "aes-ICVlen       AES-GCM-ICVlen DEFAULT 12\r\n\r\nA length of 12 octets is RECOMMENDED.",
+    "correct_text": "aes-ICVlen       AES-GCM-ICVlen DEFAULT 16\r\n\r\nA length of 16 octets is RECOMMENDED.",
+    "notes": "Many JCE providers including OpenJDK, BouncyCastle, Conscrypt have a bug to use 12 bytes authentication tag (aes-ICVlen) as default if the code path [1] uses CMS. According to Ferguson's attack (http://csrc.nist.gov/groups/ST/toolkit/BCM/documents/comments/CWC-GCM/Ferguson2.pdf), if a user encrypts 2^32 block length message, then 12 bytes authentication tag length has only 96 - 32 = 64 bits security which is not good enough nowadays. Furthermore, once a forgery happens then authentication is leaked.\r\n\r\n[1] In other code paths, all providers use 16 bytes authentication tag as default.\r\n\r\n------\r\nAD Note: through on list discussions, it is clear this errata should be rejected.\r\n\r\nThe first half of this errata must be rejected.  We do not change the ASN.1\r\nfor something like this under just about any circumstances.\r\n\r\nChanging the recommendation of a value should probably not be done by an\r\nerratum but by publishing a new document.  We could make discuss and make\r\nthe recommendation change in the new S/MIME document in the LAMPS group\r\nrather than in this document.\r\n\r\nA possible way forward is a short draft that updates RFC 5084 to recommend the use of 16 octet authentication tags in all situations.\n --VERIFIER NOTES-- \n   AD Note: through on list discussions, it is clear this errata should be rejected.\r\n\r\nThe first half of this errata must be rejected. We do not change the ASN.1\r\nfor something like this under just about any circumstances.\r\n\r\nChanging the recommendation of a value should probably not be done by an\r\nerratum but by publishing a new document. We could make discuss and make\r\nthe recommendation change in the new S/MIME document in the LAMPS group\r\nrather than in this document.\r\n\r\nA possible way forward is a short draft that updates RFC 5084 to recommend the use of 16 octet authentication tags in all situations.",
+    "submit_date": "2016-08-11",
+    "submitter_name": "QUAN NGUYEN",
+    "verifier_id": 141,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
