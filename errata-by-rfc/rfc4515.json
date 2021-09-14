@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 72,
+    "doc-id": "RFC4515",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "   The first example shows use of the matching rule \"caseExactMatch.\"",
+    "correct_text": "   The first example shows use of the matching rule \"caseExactMatch\".",
+    "notes": "Source: apps",
+    "submit_date": "2006-06-23",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 840,
+    "doc-id": "RFC4515",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "The ASN.1 term, `AttributeValue`, has been replaced by\r\n`AssertionValue` wherever it was used previously.\r\nHence, in Section 2 (on page 3) of RFC 4515\r\n\r\n- the ASN.1 line\r\n\r\n        AttributeValue ::= OCTET STRING\r\n\r\n  is not needed any more and might have been omitted, and\r\n\r\n- in the subsequent explanation, the sentence,\r\n\r\n        [...]  The AttributeValue and AssertionValue OCTET STRING have\r\n   the form defined in [RFC4517].  [...]\r\n\r\n  might have been shortened to say:\r\n\r\n        [...]  The AssertionValue OCTET STRING has the form defined ib\r\n   [RFC4517].  [...]",
+    "correct_text": "",
+    "notes": "Source: apps",
+    "submit_date": "2006-06-23",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
