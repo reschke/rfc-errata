@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3955,
+    "doc-id": "RFC6857",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A",
+    "orig_text": "   Received: from ... by ...\r\n   Received: from ... by ...\r\n   From: =?UTF-8?Q?DISPLAY-LOCAL?=\r\n         =?UTF-8?Q?NON-ASCII-LOCAL@example.com?= :;\r\n   To:   =?UTF-8?Q?DISPLAY-REMOTE1?=\r\n         =?UTF-8?Q?NON-ASCII-REMOTE1@example.net?= :;,\r\n         =?UTF-8?Q?DISPLAY-REMOTE2?=\r\n         =?UTF-8?Q?NON-ASCII-REMOTE2@example.com?= :;,\r\n   Cc:   =?UTF-8?Q?DISPLAY-REMOTE3?=\r\n         =?UTF-8?Q?NON-ASCII-REMOTE3@example.org?= :;\r\n",
+    "correct_text": "   Received: from ... by ...\r\n   Received: from ... by ...\r\n   From: =?UTF-8?Q?DISPLAY-LOCAL?=\r\n         =?UTF-8?Q?NON-ASCII-LOCAL=40example=2Ecom?= :;\r\n   To:   =?UTF-8?Q?DISPLAY-REMOTE1?=\r\n         =?UTF-8?Q?NON-ASCII-REMOTE1=40example=2Enet?= :;,\r\n         =?UTF-8?Q?DISPLAY-REMOTE2?=\r\n         =?UTF-8?Q?NON-ASCII-REMOTE2=40example=2Ecom?= :;,\r\n   Cc:   =?UTF-8?Q?DISPLAY-REMOTE3?=\r\n         =?UTF-8?Q?NON-ASCII-REMOTE3=40example=2Eorg?= :;\r\n",
+    "notes": "The characters '@' and '.' cannot appear in an encoded-word occurring\r\nin a phrase (see rule 3 of section 5 of RFC 2047), so they must be escaped\r\nwith '=40' and '=2E', respectively, in the Q encoding.",
+    "submit_date": "2014-04-10",
+    "submitter_name": "Peter Occil",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5419,
+    "doc-id": "RFC6857",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.2.1",
+    "orig_text": "From:\r\n   Sender:\r\n   To:\r\n   Cc:\r\n   Bcc:\r\n   Reply-To:\r\n   Resent-From:\r\n   Resent-Sender:\r\n   Resent-To:\r\n   Resent-Cc:\r\n   Resent-Bcc:\r\n   Resent-Reply-To:\r\n   Return-Path:\r\n   ^^^^^^^^^^^\r\n   Disposition-Notification-To:\r\n",
+    "correct_text": "From:\r\n   Sender:\r\n   To:\r\n   Cc:\r\n   Bcc:\r\n   Reply-To:\r\n   Resent-From:\r\n   Resent-Sender:\r\n   Resent-To:\r\n   Resent-Cc:\r\n   Resent-Bcc:\r\n   Resent-Reply-To:\r\n   Disposition-Notification-To:\r\n",
+    "notes": "Under RFC 5322 sec. 3.6.7, the Return-Path header field contains no production named \"address\", but at most a production named \"angle-addr\", which does not accept display names, for one.  An update to this RFC could discuss this header field in its own section.\r\n\r\nI agree with John Levine's comment on this:\r\nThis erratum is correct.  I would suggest hold for update, since it is not \r\nmy impression that this flavor of downgrade is used very much if at all.\r\n",
+    "submit_date": "2018-07-13",
+    "submitter_name": "Peter Occil",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6573,
+    "doc-id": "RFC6857",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A",
+    "orig_text": "   From: =?UTF-8?Q?DISPLAY-LOCAL?=\r\n         =?UTF-8?Q?NON-ASCII-LOCAL=40example=2Ecom?= :;",
+    "correct_text": "   From: =?UTF-8?Q?DISPLAY-LOCAL_?=\r\n         =?UTF-8?Q?NON-ASCII-LOCAL=40example=2Ecom?= :;",
+    "notes": "Taking the original text from Errata 3955 (https://www.rfc-editor.org/errata/eid3955), the two encoded-words decode to: DISPLAY-LOCALNON-ASCII-LOCAL@example.com :; (According to section 6.2 of RFC 2047, linear whitespace between adjacent encoded-words is ignored.) This is clearly not desirable and thus a space should be encoded at the end of all display names in appendix A.",
+    "submit_date": "2021-05-05",
+    "submitter_name": "Kaspar Etter",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
