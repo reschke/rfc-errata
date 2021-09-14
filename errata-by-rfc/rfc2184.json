@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 484,
+    "doc-id": "RFC2184",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "   This specification changes this ABNF to:\r\n\r\n   encoded-word := \"=?\" charset [\"*\" language] \"?\" encoded-text \"?=\"",
+    "correct_text": "   This specification changes this ABNF to:\r\n\r\n   encoded-word := \"=?\" charset [\"*\" language] \"?\" encoding \"?\"\r\n                   encoded-text \"?=\"\r\n",
+    "notes": "",
+    "submit_date": "2001-04-14",
+    "submitter_name": "Terje Braten",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 841,
+    "doc-id": "RFC2184",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7,
+    "orig_text": "   initial-section := \"*1\"\r\n\r\n   other-sections := \"*\" ((\"2\" / \"3\" / \"4\" / \"5\" /\r\n                           \"6\" / \"7\" / \"8\" / \"9\") *DIGIT) /\r\n                          (\"1\" 1*DIGIT))",
+    "correct_text": "   initial-section := \"*0\"\r\n\r\n   other-sections := \"*\" (\"1\" / \"2\" / \"3\" / \"4\" / \"5\" /\r\n                          \"6\" / \"7\" / \"8\" / \"9\") *DIGIT)",
+    "notes": "Corrected in RFC 2231",
+    "submit_date": "2001-04-14",
+    "submitter_name": "Terje Braten",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2808,
+    "doc-id": "RFC2184",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "   Content-Type: application/x-stuff\r\n    title*1*=us-ascii'en'This%20is%20even%20more%20\r\n    title*2*=%2A%2A%2Afun%2A%2A%2A%20\r\n    title*3=\"isn't it!\"",
+    "correct_text": "   Content-Type: application/x-stuff\r\n    title*0*=us-ascii'en'This%20is%20even%20more%20\r\n    title*1*=%2A%2A%2Afun%2A%2A%2A%20\r\n    title*2=\"isn't it!\"",
+    "notes": "Verifier Note: Corrected in RFC 2231",
+    "submit_date": "2001-04-14",
+    "submitter_name": "Terje Braten",
+    "verifier_id": 2,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
