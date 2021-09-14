@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2107,
+    "doc-id": "RFC5795",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1, pg. 5",
+    "orig_text": "[[  1st paragraph on page 5: ]]\r\n\r\n|  RFC 3095 [RFC3095] defines the ROHC framework along with an initial\r\n   set of compression profiles.  [...]",
+    "correct_text": "|  RFC 3095 [RFC3095] defined the ROHC framework along with an initial\r\n   set of compression profiles.  [...]",
+    "notes": "Rationale: This is already the 2nd revision of RFC 3095;\r\n  therefore, the adjusted temporal form better reflects\r\n  the current state of the art.",
+    "submit_date": "2010-04-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2108,
+    "doc-id": "RFC5795",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "[[  last paragraph on page 9: ]]\r\n\r\n|  An enhanced variant of CRTP, called eCRTP [RFC3545], means to improve\r\n   the robustness of CRTP in the presence of reordering and packet\r\n   losses, while keeping the protocol almost unchanged from CRTP.  As a\r\n   result, eCRTP does provide better means to implement some degree of\r\n   robustness, albeit at the expense of additional overhead, leading to\r\n   a reduction in compression efficiency in comparison to CRTP.",
+    "correct_text": "|  An enhanced variant of CRTP, called eCRTP [RFC3545], introduces means\r\n   to improve the robustness of CRTP in the presence of reordering and\r\n   packet losses, while keeping the protocol almost unchanged from CRTP.\r\n   As a result, eCRTP does provide better means to implement some degree\r\n   of robustness, albeit at the expense of additional overhead, leading\r\n   to a reduction in compression efficiency in comparison to CRTP.",
+    "notes": "Rationale: missing verb (legacy).\n --VERIFIER NOTES-- \nReject, but make note to improve this text in next update\r\n   ",
+    "submit_date": "2010-04-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2109,
+    "doc-id": "RFC5795",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "5.1.2, pg.17",
+    "orig_text": "[[  first paragraph on page 17: ]]\r\n\r\n   PROFILES: Set of non-negative integers, where each integer indicates\r\n   a profile supported by both the compressor and the decompressor.  A\r\n|  profile is identified by a 16-bit value, where the 8 LSB bits\r\n|  indicate the actual profile, and the 8 MSB bits indicate the variant\r\n   of that profile.  The ROHC compressed header format identifies the\r\n|  profile used with only the 8 LSB bits; this means that if multiple\r\n   variants of the same profile are available for a ROHC channel, the\r\n   PROFILES set after negotiation MUST NOT include more than one variant\r\n   of the same profile.  The compressor MUST NOT compress using a\r\n   profile that is not in PROFILES.",
+    "correct_text": "   PROFILES:  Set of non-negative integers, where each integer indicates\r\n   a profile supported by both the compressor and the decompressor.  A\r\n|  profile is identified by a 16-bit value, where the 8 LSBs indicate\r\n|  the actual profile, and the 8 MSBs indicate the variant of that\r\n   profile.  The ROHC compressed header format identifies the profile\r\n|  used with only the 8 LSBs; this means that if multiple variants of\r\n   the same profile are available for a ROHC channel, the PROFILES set\r\n   after negotiation MUST NOT include more than one variant of the same\r\n   profile.  The compressor MUST NOT compress using a profile that is\r\n   not in PROFILES.",
+    "notes": "Rationale:  Abuse of language;\r\n  the acronym definitions in Section 2.1 clearly say:\r\n     LSB    Least Significant Bit.\r\n     ...\r\n     MSB    Most Significant Bit.\n --VERIFIER NOTES-- \nproposed change is somewhat pedantic; it actually might reduce readability for some readers   ",
+    "submit_date": "2010-04-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2110,
+    "doc-id": "RFC5795",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.2.5.2",
+    "orig_text": "[[  at the bottom of page 27: ]]\r\n\r\n|  Header: See Section 5.2.1\r\n\r\n|  Payload: See Section 5.2.1\r\n\r\n|  CRC: 32-bit CRC computed using the polynomial of Section 5.3.1.4",
+    "correct_text": "\r\n|  Header: See Section 5.2.1.\r\n\r\n|  Payload: See Section 5.2.1.\r\n\r\n|  CRC: 32-bit CRC computed using the polynomial of Section 5.3.1.4.",
+    "notes": "Rationale: consistent use of punctuation within the RFC.",
+    "submit_date": "2010-04-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
