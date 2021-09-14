@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 365,
+    "doc-id": "RFC2883",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.2.3",
+    "orig_text": "         Transmitted    Received    ACK Sent\n         Segment        Segment     (Including SACK Blocks)\n\n         500-999        500-999     1000\n         1000-1499      (data packet dropped)\n         1500-1999      (delayed)\n         2000-2499      (data packet dropped)\n         2500-2999      (delayed)\n         3000-3499      (data packet dropped)\n         3500-3999      3500-3999   1000, SACK=3500-4000\n         1000-1499      (data packet dropped)\n         1500-2999      1500-1999   1000, SACK=1500-2000, 3500-4000\n                        2000-2499   1000, SACK=2000-2500, 1500-2000,\n                                            3500-4000\n                        1500-2999   1000, SACK=1500-2000, 1500-3000,\n                                               ---------\n                                            3500-4000",
+    "correct_text": "         Transmitted    Received    ACK Sent\n         Segment        Segment     (Including SACK Blocks)\n\n         500-999        500-999     1000\n         1000-1499      (data packet dropped)\n         1500-1999      (delayed)\n         2000-2499      (data packet dropped)\n         2500-2999      (delayed)\n         3000-3499      (data packet dropped)\n         3500-3999      3500-3999   1000, SACK=3500-4000\n         1000-1499      (data packet dropped)\n         1500-2999      1500-1999   1000, SACK=1500-2000, 3500-4000\n                        2500-2999   1000, SACK=2500-3000, 1500-2000,\n                                            3500-4000\n                        1500-2999   1000, SACK=1500-2000, 1500-3000,\n                                               ---------\n                                            3500-4000",
+    "notes": "",
+    "submit_date": "2004-06-21",
+    "submitter_name": "Noritoshi Demizu",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6355,
+    "doc-id": "RFC2883",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.2,
+    "orig_text": "   The use of D-SACK allows the sender to detect some cases (e.g., when\r\n   no ACK packets have been lost) when a a Fast Retransmit was due to\r\n   packet reordering instead of packet loss.  This allows the TCP sender",
+    "correct_text": "   The use of D-SACK allows the sender to detect some cases (e.g., when\r\n   no ACK packets have been lost) when a Fast Retransmit was due to\r\n   packet reordering instead of packet loss.  This allows the TCP sender",
+    "notes": "redundant word",
+    "submit_date": "2020-12-14",
+    "submitter_name": "Eugene Adell",
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2020-12-22 08:22:35"
+  }
+]
