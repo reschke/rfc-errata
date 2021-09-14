@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 546,
+    "doc-id": "RFC1531",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.4.4",
+    "orig_text": "   Any DHCPACK messages that arrive with an 'xid' that does not match the\n   When the client receives a DHCPACK from the server, the client\n   computes the lease expiration time as the sum of the time at which the\n   client sent the DHCPREQUEST message and the duration of the lease in\n   the DHCPACK message.",
+    "correct_text": "   Any DHCPACK messages that arrive with an 'xid' that does not match the\n   'xid' of the client's DHCPREQUEST message are silently discarded.\n   When the client receives a DHCPACK from the server, the client\n   computes the lease expiration time as the sum of the time at which the\n   client sent the DHCPREQUEST message and the duration of the lease in\n   the DHCPACK message.  \n",
+    "notes": "",
+    "submit_date": "2001-10-31",
+    "submitter_name": "Jim Withnall",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
