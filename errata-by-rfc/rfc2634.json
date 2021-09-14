@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6562,
+    "doc-id": "RFC2634",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.4,
+    "orig_text": "   The first certificate identified in the sequence of certificate\r\n   identifiers MUST be the certificate used to verify the signature. The\r\n   encoding of the ESSCertID for this certificate SHOULD include the\r\n   issuerSerial field. If other constraints ensure that\r\n   issuerAndSerialNumber will be present in the SignerInfo, the\r\n   issuerSerial field MAY be omitted. The certificate identified is used\r\n   during the signature verification process. If the hash of the\r\n   certificate does not match the certificate used to verify the\r\n   signature, the signature MUST be considered invalid.\r\n\r\n   If more than one certificate is present in the sequence of\r\n   ESSCertIDs, the certificates after the first one limit the set of\r\n   authorization certificates that are used during signature validation.\r\n",
+    "correct_text": "   The sequence of certificate identifiers MUST contain at least one element.\r\n   The first certificate identified MUST be the certificate used to verify the signature.\r\n   The encoding of the ESSCertID for this certificate SHOULD include the\r\n   issuerSerial field. If other constraints ensure that\r\n   issuerAndSerialNumber will be present in the SignerInfo, the\r\n   issuerSerial field MAY be omitted. The certificate identified is used\r\n   during the signature verification process. If the hash of the\r\n   certificate does not match the certificate used to verify the\r\n   signature, the signature MUST be considered invalid.\r\n\r\n   If more than one certificate identifier is present in the sequence of ESSCertIDs,\r\n   all certificates referenced there MUST be part of the signature validation chain.\r\n",
+    "notes": "Some aspects of the 'certs' field of a SigningCertificate attribute:\r\n\r\n   SigningCertificate ::=  SEQUENCE {\r\n       certs        SEQUENCE OF ESSCertID,\r\n       policies     SEQUENCE OF PolicyInformation OPTIONAL\r\n   }\r\n\r\ndescribed in the sentences quoted above are very vague.\r\nThis lead to major confusion and wrong implementations.\r\nAs meanwhile has been clarified, they should be re-phrased;\r\nsee suggested new version above.\r\n\r\n(One may further mandate/clarify that the certificate identifiers must be given in the same order\r\nas they are expected in the validation chain, but I think this is not important because\r\nthe order should not play a critical role and will be determined by the validation chain anyway.)",
+    "submit_date": "2021-04-28",
+    "submitter_name": "David von Oheimb",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
