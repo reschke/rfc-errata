@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5924,
+    "doc-id": "RFC8199",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Section 6.1",
+    "orig_text": "6.1.  Normative References\r\n\r\n...\r\n\r\n   [RFC8049]  Litkowski, S., Tomotaki, L., and K. Ogaki, \"YANG Data\r\n              Model for L3VPN Service Delivery\", RFC 8049,\r\n              DOI 10.17487/RFC8049, February 2017,\r\n              <http://www.rfc-editor.org/info/rfc8049>.",
+    "correct_text": "6.1.  Informative References\r\n\r\n...\r\n\r\n   [RFC8049]  Litkowski, S., Tomotaki, L., and K. Ogaki, \"YANG Data\r\n              Model for L3VPN Service Delivery\", RFC 8049,\r\n              DOI 10.17487/RFC8049, February 2017,\r\n              <http://www.rfc-editor.org/info/rfc8049>.",
+    "notes": "RFC8049 is cited only as an example (Section 2.1):\r\n\r\n\"An example of a Network Service YANG Module is in [RFC8049]...\"\r\n\r\nNot sure why it was listed as normative.\r\n\r\n[Warren Kumari: Thanks to Benoit and Joel for review. ]",
+    "submit_date": "2019-12-02",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2020-01-05 08:55:11"
+  }
+]
