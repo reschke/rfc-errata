@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5603,
+    "doc-id": "RFC8484",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "   The URI Template defined in this document is processed without any\r\n   variables when the HTTP method is POST.  When the HTTP method is GET,\r\n   the single variable \"dns\" is defined as the content of the DNS\r\n   request (as described in Section 6), encoded with base64url\r\n   [RFC4648].\r\n",
+    "correct_text": "   The URI Template defined in this document is processed without any\r\n   variables when the HTTP method is POST.  When the HTTP method is GET,\r\n   the single variable \"dns\" is defined as the content of the DNS\r\n   request (as described in Section 6), encoded with base64url\r\n   [RFC4648]. Padding characters for base64url MUST NOT be included.\r\n",
+    "notes": "Note that Section 6 does say the same thing for a different usage of base64url, and note that the examples in 4.1.1 even explicitly state this, but the text that states the usual deviation from the default of RFC 4648 should be in the defining part as well.  (This is almost, but not quite, an editorial erratum.)",
+    "submit_date": "2019-01-15",
+    "submitter_name": "Carsten Bormann",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6033,
+    "doc-id": "RFC8484",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "   A DoH client MUST NOT use a different URI simply because it was\r\n   discovered outside of the client's configuration (such as through\r\n   HTTP/2 server push) or because a server offers an unsolicited\r\n   response that appears to be a valid answer to a DNS query. ",
+    "correct_text": "   A DoH client MUST NOT use a different URI that was discovered outside\r\n   of the client's configuration (except via HTTP redirection discussed\r\n   in Section 6.4 of [RFC7231]).  Also, the DoH client MUST ignore an\r\n   unsolicited response (such as through HTTP/2 server push) that\r\n   appears to be a valid answer to a DNS query unless that response\r\n   comes from a configured URI (as described in Section 5.3).",
+    "notes": "(1) The intent of this text is confusing. \r\n\r\n(2) I checked the mailing list and found that the text was updated late in the publication process to address this comment: https://mailarchive.ietf.org/arch/msg/doh/f_V-tBgB-KRsLZhttx9tGt75cps/. \r\n\r\n(3) The example provided in the thread (server push) is related to the second part of the OLD text. It is mistakenly attached to the first part. \r\n\r\n(4) The push example may be interpreted as if server push is disallowed. This is conflicting with Section 5.3.  \r\n\r\nHence, this change:\r\n\r\nAlso, the DoH client MUST ignore an\r\n   unsolicited response (such as through HTTP/2 server push) that\r\n   appears to be a valid answer to a DNS query ** unless that response\r\n   comes from a configured URI (as described in Section 5.3) **.\r\n\r\n(5) An intuitive way to discover the URI outside the configuration is redirection.  RFC8484 indicates clearly the following:\r\n\r\n   The described approach is more than a tunnel over HTTP.  It\r\n   establishes default media formatting types for requests and responses\r\n   but uses normal HTTP content negotiation mechanisms for selecting\r\n   alternatives that endpoints may prefer in anticipation of serving new\r\n   use cases.  In addition to this media type negotiation, it ** aligns\r\n   itself with HTTP features ** such as caching, **redirection**, proxying,\r\n   authentication, and compression.\r\n\r\nForbidding discovery of URI outside the configuration contradicts the above excerpt. The text is as such incorrect.\r\n\r\n(6) Also, I suggest to remove \"simply\" from the text. Not sure what message is supposed to convey.",
+    "submit_date": "2020-03-30",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2020-04-01 12:15:17"
+  }
+]
