@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6407,
+    "doc-id": "RFC8963",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.5,
+    "orig_text": "   Comparing the final draft and published RFC shows a minor set of copy\r\n   edits, mostly for style.  However, the author recalls a painful\r\n   process.  The RFC includes many charts and graphs that were very\r\n   difficult to format correctly in the author's production process that\r\n   involved conversions from markdown to XML, and then from XML to text.\r\n   The author had to get substantial help from the RFC Editor.",
+    "correct_text": "   Comparing the final draft and published RFC shows a minor set of copy\r\n   edits, mostly for style.  However, the author recalls a painful\r\n   process.  The RFC includes a ladder diagram that the author found\r\n   difficult to format correctly in the author's production process that\r\n   involved conversions from markdown to XML, and then from XML to text.\r\n   The author recalls getting substantial help from the RFC Editor.",
+    "notes": "The RFC actually does not contain any graphs or charts. The only piece of artwork is in an HTTP message exchange (in Section 5.1 of RFC 8441).",
+    "submit_date": "2021-01-22",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2021-01-23 12:32:46"
+  }
+]
