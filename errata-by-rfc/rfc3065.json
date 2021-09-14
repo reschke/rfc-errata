@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 338,
+    "doc-id": "RFC3065",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "99\r\nAppendix A says:",
+    "orig_text": "   The most notable change from [1] is that of reversing the values\r\n   AS_CONFED_SEQUENCE(4) and AS_CONFED_SET(3) to those defined in\r\n   section \"AS_CONFED Segment Type Extension\".  The reasoning for this\r\n   is that in the initial implementation, which was already widely\r\n   deployed, they were implemented backwards from [4], and as such,\r\n   subsequent implementations implemented them backwards as well.  In\r\n   order to foster interoperability and compliance with deployed\r\n   implementations, they've therefore been changed here as well. ",
+    "correct_text": "    The most notable change from [5] is that of reversing the values\r\n    AS_CONFED_SEQUENCE(4) and AS_CONFED_SET(3) to those defined in\r\n    section \"AS_CONFED Segment Type Extension\".  The reasoning foridely\r\n    deployed, they were implemented backwards from [4], and as such,\r\n    subsequent implementations implemented them backwards as well.  In\r\n    order to foster interoperability and compliance with deployed\r\n    implementations, they've therefore been changed here as well.",
+    "notes": "\r\nThere is an error in line 1 of Appendix A (RFC 3065). reference \r\nto document [1] is wrong and must be changed to [5].\r\n\n --VERIFIER NOTES-- \n   Nikolai Malykh made an error in the submission of this erratum which was corrected in erratum 339.",
+    "submit_date": "2006-01-25",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 339,
+    "doc-id": "RFC3065",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "99\r\nAppendix A says:",
+    "orig_text": "    The most notable change from [1] is that of reversing the values\r\n    AS_CONFED_SEQUENCE(4) and AS_CONFED_SET(3) to those defined in\r\n    section \"AS_CONFED Segment Type Extension\".  The reasoning for this\r\n    is that in the initial implementation, which was already widely\r\n    deployed, they were implemented backwards from [4], and as such,\r\n    subsequent implementations implemented them backwards as well.  In\r\n    order to foster interoperability and compliance with deployed\r\n    implementations, they've therefore been changed here as well. ",
+    "correct_text": "    The most notable change from [4] is that of reversing the values\r\n    AS_CONFED_SEQUENCE(4) and AS_CONFED_SET(3) to those defined in\r\n    section \"AS_CONFED Segment Type Extension\".  The reasoning foridely\r\n    deployed, they were implemented backwards from [4], and as such,\r\n    subsequent implementations implemented them backwards as well.  In\r\n    order to foster interoperability and compliance with deployed\r\n    implementations, they've therefore been changed here as well.",
+    "notes": "\r\nSorry for mistype error in my previous message.\r\nThere is a mistype error in line 1 of Appendix A (RFC 3065). reference \r\nto document [1] is wrong and must be changed to [4].",
+    "submit_date": "2006-01-25",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
