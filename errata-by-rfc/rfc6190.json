@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3711,
+    "doc-id": "RFC6190",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "1.1.3",
+    "orig_text": "   N:    1 bit\r\n         no_inter_layer_pred_flag.  This flag specifies, when present in\r\n         a coded slice NAL unit, whether inter-layer prediction may be\r\n         used for decoding the coded slice (when equal to 1) or not\r\n         (when equal to 0).",
+    "correct_text": "   N:    1 bit\r\n         no_inter_layer_pred_flag.  This flag specifies, when present in\r\n         a coded slice NAL unit, whether inter-layer prediction may be\r\n         used for decoding the coded slice (when equal to 0) or not\r\n                                                          ^\r\n         (when equal to 1).\r\n                        ^",
+    "notes": null,
+    "submit_date": "2013-08-26",
+    "submitter_name": "Xiaohui Wei (Joanne)",
+    "verifier_id": 136,
+    "verifier_name": "Richard Barnes",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
