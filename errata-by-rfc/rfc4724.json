@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4193,
+    "doc-id": "RFC4724",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4.2,
+    "orig_text": "See Section 8 for a description of this behavior",
+    "correct_text": "See Section 5 for a description of this behavior",
+    "notes": null,
+    "submit_date": "2014-12-04",
+    "submitter_name": "John Scudder",
+    "verifier_id": 140,
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6217,
+    "doc-id": "RFC4724",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 7,
+    "orig_text": "Since with this proposal a new connection can cause an old one to be\r\nterminated, it might seem to open the door to denial of service\r\nattacks.  However, it is noted that unauthenticated BGP is already\r\nknown to be vulnerable to denials of service through attacks on the\r\nTCP transport.  The TCP transport is commonly protected through use\r\nof [BGP-AUTH].  Such authentication will equally protect against\r\ndenials of service through spurious new connections.\r\n\r\nIf an attacker is able to successfully open a TCP connection\r\nimpersonating a legitimate peer, the attacker's connection will\r\nreplace the legitimate one, potentially enabling the attacker to\r\nadvertise bogus routes.  We note, however, that the window for such a\r\nroute insertion attack is small since through normal operation of the\r\nprotocol the legitimate peer would open a new connection, in turn\r\ncausing the attacker's connection to be terminated.  Thus, this\r\nattack devolves to a form of denial of service.\r\n\r\nIt is thus concluded that this proposal does not change the\r\nunderlying security model (and issues) of BGP-4.\r\n\r\nWe also note that implementations may allow use of graceful restart\r\nto be controlled by configuration.  If graceful restart is not\r\nenabled, naturally the underlying security model of BGP-4 is\r\nunchanged.\r\n",
+    "correct_text": "Since with this proposal a new connection can cause an old one to be\r\nterminated, it might seem to open the door to denial of service\r\nattacks.  However, it is noted that unauthenticated BGP is already\r\nknown to be vulnerable to denials of service through attacks on the\r\nTCP transport.  The TCP transport is commonly protected through use\r\nof [BGP-AUTH].  Such authentication will equally protect against\r\ndenials of service through spurious new connections.\r\n\r\nIf an attacker is able to successfully open a TCP connection\r\nimpersonating a legitimate peer, the attacker's connection will\r\nreplace the legitimate one, potentially enabling the attacker to\r\nadvertise bogus routes.  We note, however, that the window for such a\r\nroute insertion attack is small since through normal operation of the\r\nprotocol the legitimate peer would open a new connection, in turn\r\ncausing the attacker's connection to be terminated.  Thus, this\r\nattack devolves to a form of denial of service.\r\n\r\nHowever, it is possible to downgrade the session so it will be\r\ndevoided of capabilities via the NOTIFICATION message for OPEN\r\nmessages with an Unsupported Optional Parameter subcode.\r\nRFC5492 specifies that if a peer receives this type of NOTIFICATION\r\nmessage, it SHOULD try to re-establish the BGP connection without\r\ncapabilities and, among other things, reduce the use of Graceful\r\nRestart Capability.\r\nTherefore, in this situation, if the attacker is the first to\r\nestablish a BGP connection with the peer, he might secure his route\r\nadvertising position.\r\nThis time, the legitimate peer won't be able to open a new\r\nconnection and terminate the attacker's connection.\r\nThus, this attack devolves into a form of a man-in-the-middle attack.\r\n\r\nIt is thus concluded that this proposal does not change the\r\nunderlying security model (and issues) of BGP-4.\r\n\r\nWe also note that implementations may allow use of graceful restart\r\nto be controlled by configuration.  If graceful restart is not\r\nenabled, naturally the underlying security model of BGP-4 is\r\nunchanged.\r\n",
+    "notes": "The change in this section is the addition of a paragraph between paragraph 2 and paragraph 3 in the original section which describes an attack process where the attacker can gain a permanent grip on the connection",
+    "submit_date": "2020-06-29",
+    "submitter_name": "Nir Chako",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2020-07-21 07:40:38"
+  }
+]
