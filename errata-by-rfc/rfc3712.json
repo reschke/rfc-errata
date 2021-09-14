@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 243,
+    "doc-id": "RFC3712",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "[RFC2279] has been obsoleted by [RFC3629].  All citations to [RFC2279] should refer to [RFC3629].\n\n\n      [RFC3629]   Yergeau, F., \"UTF-8, a Transformation Format of ISO\n                  10646\", RFC 3629, STD 63, November 2003.\n\n",
+    "submit_date": "2004-09-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 244,
+    "doc-id": "RFC3712",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.2,
+    "orig_text": "     Note:  This attribute is based on 'printer-uri-supported', 'uri-\r\n     authentication-supported', and `'uri-security-supported' (called the\r\n     'Three Musketeers' because they are parallel ordered attributes)\r\n",
+    "correct_text": "     Note:  This attribute is based on 'printer-uri-supported', 'uri-\r\n     authentication-supported', and 'uri-security-supported' (called the\r\n     'Three Musketeers' because they are parallel ordered attributes)\r\n",
+    "notes": " \r\n  Extraneous \"`\" in 2nd line.\r\n",
+    "submit_date": "2004-09-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 2,
+    "verifier_name": "Bob Braden",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 245,
+    "doc-id": "RFC3712",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "References",
+    "orig_text": "     \r\n      [RFC2717]   Petke, R. and I. King, \"Registration Procedures for URL\r\n                  Scheme Names\", RFC 2717, November 1999.\r\n\r\n      [RFC2718]   Masinter, L., Alvestrand, H., Zigmond, D. and R. Petke,\r\n                  \"Guidelines for new URL Schemes\", BCP 19, RFC 2718,\r\n                  November 1999.\r\n\r\n      [RFC2978]   Freed, N. and J.Postel, \"IANA Charset Registration\r\n                  Procedures\", RFC2978, October 2000.\r\n",
+    "correct_text": "     \r\n      [RFC2717]   Petke, R. and I. King, \"Registration Procedures for URL\r\n                  Scheme Names\", RFC 2717, BCP 35, November 1999.\r\n\r\n      [RFC2718]   Masinter, L., Alvestrand, H., Zigmond, D. and R. Petke,\r\n                  \"Guidelines for new URL Schemes\", RFC 2718, November\r\n                  1999.\r\n\r\n      [RFC2978]   Freed, N. and J.Postel, \"IANA Charset Registration\r\n                  Procedures\", RFC2978, BCP 19, October 2000.",
+    "notes": "",
+    "submit_date": "2004-09-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 2,
+    "verifier_name": "Bob Braden",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
