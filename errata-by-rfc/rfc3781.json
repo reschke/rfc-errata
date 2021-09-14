@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 733,
+    "doc-id": "RFC3781",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "  Integer64 ::=\r\n       [APPLICATION 10]\r\n           IMPLICIT INTEGER (-9223372036854775808..9223372036854775807)\r\n\r\n   Unsigned64\r\n       [APPLICATION 11]\r\n           IMPLICIT INTEGER (0..18446744073709551615)\r\n\r\n   Float32\r\n       [APPLICATION 12]\r\n           IMPLICIT OCTET STRING (SIZE (4))\r\n\r\n   Float64\r\n       [APPLICATION 13]\r\n           IMPLICIT OCTET STRING (SIZE (8))\r\n\r\n   Float128\r\n       [APPLICATION 14]\r\n           IMPLICIT OCTET STRING (SIZE (16))\r\n\r\n",
+    "correct_text": "  Integer64 ::=\r\n       [APPLICATION 10]\r\n           IMPLICIT INTEGER (-9223372036854775808..9223372036854775807)\r\n\r\n   Unsigned64 ::=\r\n       [APPLICATION 11]\r\n           IMPLICIT INTEGER (0..18446744073709551615)\r\n\r\n   Float32 ::=\r\n       [APPLICATION 12]\r\n           IMPLICIT OCTET STRING (SIZE (4))\r\n\r\n   Float64 ::=\r\n       [APPLICATION 13]\r\n           IMPLICIT OCTET STRING (SIZE (8))\r\n\r\n   Float128 ::=\r\n       [APPLICATION 14]\r\n           IMPLICIT OCTET STRING (SIZE (16))\r\n\r\n",
+    "notes": "",
+    "submit_date": "2005-02-13",
+    "submitter_name": "Michael Kirkham",
+    "verifier_id": 115,
+    "verifier_name": "Bob Braden",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
