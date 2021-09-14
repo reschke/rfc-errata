@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4380,
+    "doc-id": "RFC7361",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "   At least one of the following sub-TLVs MUST be included in the MAC\r\n   Flush Parameters TLV if the C-flag is set to 1:\r\n\r\n   o  PBB B-MAC List Sub-TLV:\r\n\r\n      Type: 0x0407\r\n\r\n      Length: Value length in octets.  At least one B-MAC address MUST\r\n      be present in the list.\r\n\r\n      Value: One or a list of 48-bit B-MAC addresses.  These are the\r\n      source B-MAC addresses associated with the B-VPLS instance that\r\n      originated the MAC withdraw message.  It will be used to identify\r\n      the C-MAC(s) mapped to the B-MAC(s) listed in the sub-TLV.\r\n\r\n   o  PBB I-SID List Sub-TLV:\r\n\r\n      Type: 0x0408\r\n\r\n      Length: Value length in octets.  Zero indicates an empty I-SID\r\n      list.  An empty I-SID list means that the flushing applies to all\r\n      the I-SIDs mapped to the B-VPLS indicated by the FEC TLV.\r\n\r\n      Value: One or a list of 24-bit I-SIDs that represent the\r\n      I-component FIB(s) where the MAC flushing needs to take place.",
+    "correct_text": "   At least one of the following sub-TLVs MUST be included in the MAC\r\n   Flush Parameters TLV if the C-flag is set to 1:\r\n\r\n   o  PBB B-MAC List Sub-TLV:\r\n\r\n      Type: 0x01\r\n      Length: Value length in octets.  At least one B-MAC address MUST\r\n      be present in the list.\r\n\r\n      Value: One or a list of 48-bit B-MAC addresses.  These are the\r\n      source B-MAC addresses associated with the B-VPLS instance that\r\n      originated the MAC withdraw message.  It will be used to identify\r\n      the C-MAC(s) mapped to the B-MAC(s) listed in the sub-TLV.\r\n\r\n   o  PBB I-SID List Sub-TLV:\r\n\r\n      Type: 0x02\r\n      Length: Value length in octets.  Zero indicates an empty I-SID\r\n      list.  An empty I-SID list means that the flushing applies to all\r\n      the I-SIDs mapped to the B-VPLS indicated by the FEC TLV.\r\n\r\n      Value: One or a list of 24-bit I-SIDs that represent the\r\n      I-component FIB(s) where the MAC flushing needs to take place.",
+    "notes": "Type definition was error. The PBB B-MAC List Sub-TLV abd I-SID List Sub-TLV are only support for one byte, as defined in section 5.1.1 MAC flush parameters TLV.\r\nThis error was imported from draft-ietf-l2vpn-vpls-ldp-mac-opt-12. For this version, it submit the 2 sub-tlv to IANA for alloc id. But the two kinds tlv were sub-tlv, not LDP TLV",
+    "submit_date": "2015-05-29",
+    "submitter_name": "rainsword",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
