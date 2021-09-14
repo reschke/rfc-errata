@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3960,
+    "doc-id": "RFC2412",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2.8 & Appx E",
+    "orig_text": "Section 2.8:\r\n\r\n   [...] In order to maximize this, one can\r\n   choose \"strong\" or Sophie Germaine primes, P = 2Q + 1, where P and Q\r\n   are prime.  However, if P = kQ + 1, where k is small, then the\r\n   strength of the group is still considerable.  These groups are known\r\n   as Schnorr subgroups, and they can be found with much less\r\n   computational effort than Sophie-Germaine primes.\r\n\r\n   [...]\r\n\r\n      [...]  For Sophie Germain primes, if the\r\n      generator is a square, then there are only two elements in the\r\n      subgroup: 1 and g^(-1) (same as g^(p-1)) which we have already\r\n      recommended avoiding. \r\n\r\nAppendix E:\r\n\r\n   [...] The\r\n   primes are chosen to be Sophie Germain primes (i.e., (P-1)/2 is also\r\n   prime), to have the maximum strength against the square-root attack\r\n   on the discrete logarithm problem.",
+    "correct_text": "Section 2.8:\r\n   [...] In order to maximize this, one can\r\n   choose safe primes, P = 2Q + 1, where P and Q\r\n   are prime.  However, if P = kQ + 1, where k is small, then the\r\n   strength of the group is still considerable.  These groups are known\r\n   as Schnorr subgroups, and they can be found with much less\r\n   computational effort than safe primes.\r\n\r\n   [...]\r\n\r\n      [...]  For safe primes, if the\r\n      generator is a square, then there are only two elements in the\r\n      subgroup: 1 and g^(-1) (same as g^(p-1)) which we have already\r\n      recommended avoiding. \r\n\r\nAppendix E:\r\n   [...] The\r\n   primes are chosen to be safe primes (i.e., (P-1)/2 is also\r\n   prime), to have the maximum strength against the square-root attack\r\n   on the discrete logarithm problem.",
+    "notes": "This is a terminology clarification.\r\n\r\nFor primes P and Q related such that P = 2Q + 1, P is a \"safe prime\" and Q is a \"Sophie Germain prime\"  The draft gets this definition backward.  The draft also suggests that \"strong\" primes are equivalent to Sophie Germain primes, which is not necessarily the case.\r\n\r\nSection 2.8 also misspells \"Germain\" with an extra e at the end twice.\r\n\r\nsee for example: http://www.ams.org/journals/mcom/1996-65-213/S0025-5718-96-00670-9/S0025-5718-96-00670-9.pdf",
+    "submit_date": "2014-04-11",
+    "submitter_name": "Daniel Kahn Gillmor",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
