@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2765,
+    "doc-id": "RFC6122",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 7.2,
+    "orig_text": "   [XEP-0165]        Saint-Andre, P., \"Best Practices to Discourage JID\r\n                     Mimicking\", XSF XEP 0045, December 2007.\r\n",
+    "correct_text": "   [XEP-0165]        Saint-Andre, P., \"Best Practices to Discourage JID\r\n                     Mimicking\", XSF XEP 0165, December 2007.\r\n",
+    "notes": "Seems to be a problem caused by copy-and-paste: forgot to update the XEP number.",
+    "submit_date": "2011-04-03",
+    "submitter_name": "Nico Roeser",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2801,
+    "doc-id": "RFC6122",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "When preparing a text label (consisting of a sequence of UTF-8 encoded\r\nUnicode code points) for representation as an internationalized label\r\nin the process of constructing an XMPP domainpart or comparing two\r\nXMPP domainparts, an application MUST ensure that for each text label\r\nit is possible to apply without failing the ToASCII operation\r\nspecified in [IDNA2003] with the UseSTD3ASCIIRules flag set (thus\r\nforbidding ASCII code points other than letters, digits, and\r\nhyphens).",
+    "correct_text": "When preparing a text label (consisting of a sequence of UTF-8 encoded\r\nUnicode code points) for representation as an internationalized label\r\nin the process of constructing an XMPP domainpart, an application MUST\r\nensure that for each text label it is possible to apply without failing the\r\nToASCII operation specified in [IDNA2003] with the UseSTD3ASCIIRules flag set\r\n(thus forbidding ASCII code points other than letters, digits, and hyphens).\r\nWhen comparing two XMPP domainparts, an application MUST first apply the\r\n[NAMEPREP] profile of [STRINGPREP] to both domainparts and perform a byte-wise\r\ncomparison afterwards.",
+    "notes": "As is the RFC does not specify how to compare XMPP domainparts. It should have been pointed out that normalization is required and how to do that normalization.",
+    "submit_date": "2011-05-07",
+    "submitter_name": "Florian Zeitz",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
