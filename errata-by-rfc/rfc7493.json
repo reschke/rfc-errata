@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5354,
+    "doc-id": "RFC7493",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "An I-JSON sender cannot expect a receiver to treat an integer whose\r\nabsolute value is greater than 9007199254740991 (i.e., that is\r\noutside the range [-(2**53)+1, (2**53)-1]) as an exact value.",
+    "correct_text": "An I-JSON sender cannot expect a receiver to treat an integer whose\r\nabsolute value is greater than 9007199254740992 (i.e., that is\r\noutside the range [-(2**53), (2**53)]) as an exact value.",
+    "notes": "The limit is presumably derived from ECMAScript which says:\r\n\r\n\"The value of Number.MAX_SAFE_INTEGER is the largest integer n such that n and n + 1 are both exactly representable as a Number value\"\r\n\r\nHowever, Number.MAX_SAFE_INTEGER is 9007199254740991.",
+    "submit_date": "2018-05-10",
+    "submitter_name": "Anders Rundgren",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
