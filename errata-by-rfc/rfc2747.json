@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4313,
+    "doc-id": "RFC2747",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "   In this approach, we could use an NTP based timestamp value as the\r\n   sequence number.  The roll-over period of an NTP timestamp is about\r\n   136 years, much longer than any reasonable lifetime of a key.  In\r\n   addition, the granularity of the NTP timestamp is fine enough to\r\n   allow the generation of an RSVP message every 200 picoseconds for a\r\n   given key.  Many real time clock modules do not have the resolution\r\n   of an NTP timestamp.  In these cases, the least significant bits of\r\n   the timestamp can be generated using a message counter, which is\r\n   reset every clock tick.  For example, when the real time clock\r\n   provides a resolution of 1 second, the 32 least significant bits of\r\n   the sequence number can be generated using a message counter.  The\r\n   remaining 32 bits are filled with the 32 least significant bits of\r\n   the timestamp.  Assuming that the recovery time after failure takes\r\n   longer than one tick of the real time clock, the message counter for\r\n   the low order bits can be safely reset to zero after a restart.",
+    "correct_text": "   In this approach, we could use an NTP based timestamp value as the\r\n   sequence number.  The roll-over period of an NTP timestamp is about\r\n   136 years, much longer than any reasonable lifetime of a key.  In\r\n   addition, the granularity of the NTP timestamp is fine enough to\r\n   allow the generation of an RSVP message every 200 picoseconds for a\r\n   given key.  Many real time clock modules do not have the resolution\r\n   of an NTP timestamp.  In these cases, the least significant bits of\r\n   the sequence number can be generated using a message counter, which\r\n   is reset every clock tick.  For example, when the real time clock\r\n   provides a resolution of 1 second, the 32 least significant bits of\r\n   the sequence number can be generated using a message counter.  The\r\n   remaining 32 bits are filled with the 32 most significant bits of\r\n   the timestamp.  Assuming that the recovery time after failure takes\r\n   longer than one tick of the real time clock, the message counter for\r\n   the low order bits can be safely reset to zero after a restart.",
+    "notes": "32 least significant bits of the timestamp will in this case be set to zero.",
+    "submit_date": "2015-03-25",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
