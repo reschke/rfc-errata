@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1261,
+    "doc-id": "RFC5031",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "7.2 (p.11)",
+    "orig_text": "   [LOST]     Hardie, T., \"LoST: A Location-to-Service Translation\r\n|             Protocol\", Work in Progress, March 2007.\r\n",
+    "correct_text": "   [LOST]     Hardie, T., \"LoST: A Location-to-Service Translation\r\n|             Protocol\", Work in Progress, August 2007.\r\n",
+    "notes": "Outdated reference.\r\n\r\nThe publication of RFC 5012 and this RFC (5031) apparently has been\r\ncoordinated.  Hence, both RFCs should refer to the same version of\r\nthis particular work in progress.",
+    "submit_date": "2008-01-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1262,
+    "doc-id": "RFC5031",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "App.A (p.13)",
+    "orig_text": "   tel:sos  This solution avoids name conflicts, but requires extending\r\n|     the \"tel\" URI \"tel\" [RFC3966].  It also only works if every\r\n      outbound proxy knows how to route requests to a proxy that can\r\n      reach emergency services since tel URIs do not identify the\r\n      destination server.\r\n",
+    "correct_text": "   tel:sos  This solution avoids name conflicts, but requires extending\r\n|     the \"tel\" URI [RFC3966].  It also only works if every outbound\r\n      proxy knows how to route requests to a proxy that can reach\r\n      emergency services since tel URIs do not identify the destination\r\n      server.\r\n",
+    "notes": "Spurious word replication of  \"tel\" .\r\n\r\nFor conformance with the display enhancement style used throughout the\r\ndocument, it might also have been preferable to use single quotes:\r\n'tel' .",
+    "submit_date": "2008-01-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6359,
+    "doc-id": "RFC5031",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "4.2, 7.2",
+    "orig_text": "In section 4.2:\r\n\r\nThe 'sos' service type describes emergency services requiring an\r\nimmediate response, typically offered by various branches of the\r\ngovernment or other public institutions.",
+    "correct_text": "In section 4.2, add a reference:\r\n\r\nThe 'sos' service type describes emergency services requiring an\r\nimmediate response, typically offered by various branches of the\r\ngovernment or other public institutions. [IRC]\r\n\r\nIn section 7.2, add a reference:\r\n\r\n[IRC] Service Regulations annexed to the International Radiotelegraphic\r\nConvention, Berlin, 1906, section 6. a., article XVI.\r\nhttps://babel.hathitrust.org/cgi/pt?id=hvd.32044103239133&view=1up&seq=36\r\n",
+    "notes": "The referenced section of the protocols of the convention is \"Ships in distress make use of the following signal: . . . - - - . . .  repeated at short intervals. ...\".\n --VERIFIER NOTES-- \n   Thanks for suggesting the reference, and it's interesting to have a source that shows where the \"sos\" term started.\r\n\r\nIt's not an error, though: the RFC is correct as published, and there was never an intent to cite a reference there.  So as an errata report, this is rejected... with encouragement for interested readers to look at the historic reference.",
+    "submit_date": "2020-12-19",
+    "submitter_name": "Dale R. Worley",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-12-22 09:38:31"
+  }
+]
