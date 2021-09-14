@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 19,
+    "doc-id": "RFC4679",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.3.1",
+    "orig_text": "      The slot identifier does not exceed 6 characters in length, and the port\n      identifier does not exceed 3 characters in length using a '\\' as a\n      delimiter.",
+    "correct_text": "      The slot identifier does not exceed 6 characters in length, and the port\r\n      identifier does not exceed 3 characters in length using a '/' as a\r\n      delimiter.\r\n",
+    "notes": "",
+    "submit_date": "2006-11-01",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 597,
+    "doc-id": "RFC4679",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.3.17",
+    "orig_text": "Valid values for the sub-fields are as follows:\r\n\r\n      Data Link\r\n\r\n         0x01 AAL5\r\n         0x02 Ethernet",
+    "correct_text": "Valid values for the sub-fields are as follows:\r\n\r\n      Data Link\r\n\r\n         0x00 AAL5\r\n         0x01 Ethernet\r\n",
+    "notes": "\"Data Link\" values in the Value field of the Access-Loop-Encapsulation (Section 3.3.17, paragraph 14) are incorrect, should start from 0x00 and not 0x01 (see TR-101).",
+    "submit_date": "2007-10-03",
+    "submitter_name": "Carlos Pignataro",
+    "verifier_id": 99,
+    "verifier_name": "Vince Mammoliti",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
