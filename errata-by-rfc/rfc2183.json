@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 485,
+    "doc-id": "RFC2183",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "   NOTE ON PARAMETER VALUE LENGHTS: A short (length <= 78 characters)",
+    "correct_text": "   NOTE ON PARAMETER VALUE LENGTHS: A short (length <= 78 characters)\n",
+    "notes": "",
+    "submit_date": "2002-01-05",
+    "submitter_name": "Bruce Lilly",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1457,
+    "doc-id": "RFC2183",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Boilerplate",
+    "orig_text": "Network Working Group                                          R. Troost\r\nRequest for Comments: 2183                           New Century Systems\r\nUpdates: 1806                                                  S. Dorner\r\nCategory: Standards Track                          QUALCOMM Incorporated\r\n                                                        K. Moore, Editor\r\n                                                 University of Tennessee\r\n                                                             August 1997\r\n",
+    "correct_text": "Network Working Group                                          R. Troost\r\nRequest for Comments: 2183                           New Century Systems\r\nObsoletes: 1806                                                S. Dorner\r\nCategory: Standards Track                          QUALCOMM Incorporated\r\n                                                        K. Moore, Editor\r\n                                                 University of Tennessee\r\n                                                             August 1997\r\n",
+    "notes": "RFC 2183 completely replaces RFC 1806, so it should say \"obsoletes\" instead of \"updates\".",
+    "submit_date": "2008-06-20",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 101,
+    "verifier_name": "Lisa Dusseault",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3847,
+    "doc-id": "RFC2183",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "        Content-Type: image/jpeg\r\n        Content-Disposition: attachment; filename=genome.jpeg;\r\n          modification-date=\"Wed, 12 Feb 1997 16:29:51 -0500\";\r\n        Content-Description: a complete map of the human genome\r\n",
+    "correct_text": "        Content-Type: image/jpeg\r\n        Content-Disposition: attachment; filename=genome.jpeg;\r\n          modification-date=\"Wed, 12 Feb 1997 16:29:51 -0500\"\r\n        Content-Description: a complete map of the human genome\r\n",
+    "notes": "In section 2 it states:\r\n\r\n     disposition := \"Content-Disposition\" \":\"\r\n                    disposition-type\r\n                    *(\";\" disposition-parm)\r\n\r\nThe semicolon should not be at the end of a header field.\r\nAnd in the example there is a semicolon behind the disposition-parm \"modification-date\".",
+    "submit_date": "2013-12-23",
+    "submitter_name": "Eric Reitmaier",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5330,
+    "doc-id": "RFC2183",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "   NOTE ON PARAMETER VALUE LENGHTS: A short (length <= 78 characters)\r\n   parameter value containing only non-`tspecials' characters SHOULD be\r\n   represented as a single `token'.  A short parameter value containing\r\n   only ASCII characters, but including `tspecials' characters, SHOULD\r\n   be represented as `quoted-string'.  Parameter values longer than 78\r\n   characters, or which contain non-ASCII characters, MUST be encoded as\r\n   specified in [RFC 2184].",
+    "correct_text": "   NOTE ON PARAMETER VALUE LENGTHS: A short (length <= 78 characters)\r\n   parameter value formed solely from characters valid for a `token'\r\n   SHOULD be represented as a single `token', and not as a\r\n   `quoted-string'.  Parameter values longer than 78 characters, or\r\n   which contain non-ASCII characters, MUST be encoded as specified in\r\n   [RFC 2184].",
+    "notes": "The RFC seems to assume that token = ASCII - tspecials. Token in fact is defined more strictly: token := 1*<any (US-ASCII) CHAR except SPACE, CTLs, or tspecials>.\r\n\r\nConsequently, a value with spaces (such as \"Some file.txt\"), which is a value without any tspecials, is expected to be recorded as a token, when in fact this is impossible. The same applies to CTLs.\r\n\r\nI've written the corrected text according to the apparent intent, to avoid quotes around the value when they are unnecessary. You may wish to revise the correction for clarity or to better suit the intent of this restriction.",
+    "submit_date": "2018-04-20",
+    "submitter_name": "Daniel Beardsmore",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
