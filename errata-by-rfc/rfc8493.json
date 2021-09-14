@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5556,
+    "doc-id": "RFC8493",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 1.3,
+    "orig_text": " bag checksum algorithm:  The name of a cryptographic checksum\r\n      algorithm that has been normalized for use in a manifest or tag\r\n      manifest file name (e.g., \"sha512\") as described in Section 2.4.",
+    "correct_text": " bag checksum algorithm:  The name of a cryptographic checksum\r\n      algorithm that has been normalized for use in a manifest or tag\r\n      manifest file name.  See Section 2.4.",
+    "notes": "Remove confusing example and leave with reference to section that provides normative explanation.",
+    "submit_date": "2018-11-20",
+    "submitter_name": "Devin Edmison",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
