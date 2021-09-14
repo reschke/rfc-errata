@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2871,
+    "doc-id": "RFC5457",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.6,
+    "orig_text": "0x34 | OSPTOKEN       | OSP Token Block     ",
+    "correct_text": "0x35 | OSPTOKEN       | OSP Token Block     \r\n",
+    "notes": "The token value in the RFC is wrong - it should have been 0x35 not 0x34. This change has been reviewed by expert review for the IANA registry (Cullen Jennings), the responsible AD ( Robert Sparks) and Kevin Fleming and other developers of systems that implement this protocol.",
+    "submit_date": "2011-07-27",
+    "submitter_name": "Cullen Jennings",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
