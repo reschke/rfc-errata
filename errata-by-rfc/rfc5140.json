@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1355,
+    "doc-id": "RFC5140",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3, pg.7",
+    "orig_text": "      - Prefix (Hexadecimal Routing Number): This attribute is used to\r\n        represent the list of Hexadecimal prefixes to which the\r\n        respective route can complete calls.\r\n",
+    "correct_text": "      - Prefix (Pentadecimal Routing Number): This attribute is used to\r\n        represent the list of Pentadecimal prefixes to which the\r\n        respective route can complete calls.\r\n",
+    "notes": "There are no *Hexa*decimal Routing Numbers in TRIP or TGREP; but there\r\nare *Penta*decimal Routing Numbers (see RFC 3219, Section 5.1.1.3).\r\nThe rest of RFC 5140 never uses \"Hexadecimal\", only \"Pentadecimal\".",
+    "submit_date": "2008-03-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1356,
+    "doc-id": "RFC5140",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.4.5, pg.13",
+    "orig_text": "   The LS receiving this attribute should disseminate to other peers,\r\n   both internal and external to the ITAD.\r\n",
+    "correct_text": "                                                     vvvv\r\n   The LS receiving this attribute should disseminate it to other peers,\r\n   both internal and external to the ITAD.\r\n",
+    "notes": "cf. similar subsections of RFC 5140 (4.*.5)",
+    "submit_date": "2008-03-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1357,
+    "doc-id": "RFC5140",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6.7, pg.20",
+    "orig_text": "                                    [...].  TGREP should specify its\r\n   choice address family through the route-type capability in the OPEN\r\n   message.  And route-type specification in the OPEN message violating\r\n   the above rule should be rejected with a NOTIFICATION message.\r\n",
+    "correct_text": "                                    [...].  TGREP should specify its\r\n|  choice of address family through the route-type capability in the\r\n|  OPEN message.  Any route-type specification in the OPEN message\r\n   violating the above rule should be rejected with a NOTIFICATION\r\n   message.\r\n",
+    "notes": "a)  missing \"of\"\r\nb)  \"And\"  -->  \"Any\"",
+    "submit_date": "2008-03-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
