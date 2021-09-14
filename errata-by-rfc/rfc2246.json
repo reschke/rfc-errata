@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3481,
+    "doc-id": "RFC2246",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "8.1.2",
+    "orig_text": "8.1.2. Diffie-Hellman\r\n\r\n   A conventional Diffie-Hellman computation is performed. The\r\n   negotiated key (Z) is used as the pre_master_secret, and is converted\r\n   into the master_secret, as specified above.\r\n",
+    "correct_text": "8.1.2. Diffie-Hellman\r\n\r\n   A conventional Diffie-Hellman computation is performed.  The\r\n   negotiated key (Z) is used as the pre_master_secret, and is converted\r\n   into the master_secret, as specified above.  Leading bytes of Z that\r\n   contain all zero bits are stripped before it is used as the\r\n   pre_master_secret.\r\n",
+    "notes": "Adopting the clarification from rfc4346 Section 8.1.2.  Not stripping the leading zero bits of Z will cause interop problems (handshake failures) with the installed base.  Rfc2246 is still the authoritative spec for TLSv1.0.  One can not implement TLSv1.0 from rfc4346.\n --VERIFIER NOTES-- \nWe don't post errata for things fixed when an RFC is obsoleted.",
+    "submit_date": "2013-02-08",
+    "submitter_name": "Martin Rex",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3482,
+    "doc-id": "RFC2246",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "7.4.9.",
+    "orig_text": "The hash contained in finished messages sent by the server\r\nincorporate Sender.server; those sent by the client incorporate\r\nSender.client. The value handshake_messages includes all handshake\r\nmessages starting at client hello up to, but not including, this\r\nfinished message. This may be different from handshake_messages in\r\nSection 7.4.8 because it would include the certificate verify message\r\n(if sent). Also, the handshake_messages for the finished message sent\r\nby the client will be different from that for the finished message\r\nsent by the server, because the one which is sent second will include\r\nthe prior one.",
+    "correct_text": "The value handshake_messages includes all handshake messages starting\r\nat client hello up to, but not including, this finished message. This \r\nmay be different from handshake_messages in Section 7.4.8 because it \r\nwould include the certificate verify message (if sent). Also, the\r\nhandshake_messages for the finished message sent by the client will \r\nbe different from that for the finished message sent by the server, \r\nbecause the one which is sent second will include the prior one.",
+    "notes": "The sentence about Sender.client and Sender.server is a remainder from the draft 2 and previous versions. The verification computation changed between draft 2 and draft 3 (as showed by rfcdiff http://tools.ietf.org/rfcdiff?difftype=--hwdiff&url2=draft-ietf-tls-protocol-03.txt ) but the sentence remained. It should be stripped as the Sender enumerated type is not even declared anymore.",
+    "submit_date": "2013-02-11",
+    "submitter_name": "Florian Maury",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
