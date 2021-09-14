@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5374,
+    "doc-id": "RFC8373",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.4.",
+    "orig_text": "   An offer or answer indicating written Greek both ways:\r\n\r\n      m=text 45020 RTP/AVP 103 104\r\n      a=hlang-send:gr\r\n      a=hlang-recv:gr",
+    "correct_text": "   An offer or answer indicating written Greek both ways:\r\n\r\n      m=text 45020 RTP/AVP 103 104\r\n      a=hlang-send:el\r\n      a=hlang-recv:el",
+    "notes": "The language tag to represent Greek is \"el\" per BCP 47.\r\n\r\nThe IANA language subtag registry has the following entry for Greek:\r\n\r\nType: language\r\nSubtag: el\r\nDescription: Modern Greek (1453-)\r\nAdded: 2005-10-16\r\n\r\nhttps://www.iana.org/assignments/language-subtag-registry/language-subtag-registry",
+    "submit_date": "2018-05-31",
+    "submitter_name": "Dan Chiba",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5387,
+    "doc-id": "RFC8373",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.4.",
+    "orig_text": "      m=text 45020 RTP/AVP 103 104\r\n      a=hlang-send:sp pt\r\n\r\n      m=audio 49250 RTP/AVP 20\r\n      a=hlang-recv:sp pt\r\n\r\n   An answer for the above offer, indicating text in which the callee\r\n   will receive written Spanish and audio in which the callee will send\r\n   spoken Spanish.  (The answering party has no video capability):\r\n\r\n      m=video 0 RTP/AVP 31 32\r\n      m=text 45020 RTP/AVP 103 104\r\n      a=hlang-recv:sp\r\n\r\n      m=audio 49250 RTP/AVP 20\r\n      a=hlang-send:sp\r\n\r\nand later on the same page:\r\n\r\n   An answer for the above offer, indicating text in which the callee\r\n   will receive written Spanish, audio in which the callee will send\r\n   spoken Spanish, and supplemental video:\r\n\r\n      m=text 45020 RTP/AVP 103 104\r\n      a=hlang-recv:sp\r\n\r\n      m=audio 49250 RTP/AVP 20\r\n      a=hlang-send:sp\r\n\r\n      m=video 51372 RTP/AVP 31 32\r\n",
+    "correct_text": "      m=text 45020 RTP/AVP 103 104\r\n      a=hlang-send:es pt\r\n\r\n      m=audio 49250 RTP/AVP 20\r\n      a=hlang-recv:es pt\r\n\r\n   An answer for the above offer, indicating text in which the callee\r\n   will receive written Spanish and audio in which the callee will send\r\n   spoken Spanish.  (The answering party has no video capability):\r\n\r\n      m=video 0 RTP/AVP 31 32\r\n      m=text 45020 RTP/AVP 103 104\r\n      a=hlang-recv:es\r\n\r\n      m=audio 49250 RTP/AVP 20\r\n      a=hlang-send:es\r\n\r\nand later on the same page:\r\n\r\n   An answer for the above offer, indicating text in which the callee\r\n   will receive written Spanish, audio in which the callee will send\r\n   spoken Spanish, and supplemental video:\r\n\r\n      m=text 45020 RTP/AVP 103 104\r\n      a=hlang-recv:es\r\n\r\n      m=audio 49250 RTP/AVP 20\r\n      a=hlang-send:es\r\n\r\n      m=video 51372 RTP/AVP 31 32\r\n",
+    "notes": "The language tag to represent Spanish is \"es\" per BCP 47.\r\n\r\nThe IANA language subtag registry has the following entry for Spanish:\r\n\r\nType: language\r\nSubtag: es\r\nDescription: Spanish\r\nDescription: Castilian\r\nAdded: 2005-10-16\r\n\r\nhttps://www.iana.org/assignments/language-subtag-registry/language-subtag-registry",
+    "submit_date": "2018-05-31",
+    "submitter_name": "Dan Chiba",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
