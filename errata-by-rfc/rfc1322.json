@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1434,
+    "doc-id": "RFC1322",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.3.1",
+    "orig_text": "[Footnote: Although a domain's selection policies are not\r\n   explicitly distributed, they have an impact on the routes available\r\n   to other domains.  A route that may be preferred by a particular\r\n   domain, and not prohibited by transit restrictions, may still be\r\n   unavailable due to the selection policies of some intermediate\r\n   domain.  The ability to compute and install alternative routes that\r\n   may be lost using hop-by-hop routing (either LS of PV) is the\r\n   critical functionality provided by SDR.].\r\n",
+    "correct_text": "[Footnote: Although a domain's selection policies are not\r\n   explicitly distributed, they have an impact on the routes available\r\n   to other domains.  A route that may be preferred by a particular\r\n   domain, and not prohibited by transit restrictions, may still be\r\n   unavailable due to the selection policies of some intermediate\r\n   domain.  The ability to compute and install alternative routes that\r\n   may be lost using hop-by-hop routing (either LS or PV) is the\r\n   critical functionality provided by SDR.].\r\n",
+    "notes": null,
+    "submit_date": "2008-06-07",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 109,
+    "verifier_name": "Ross Callon",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
