@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 5808,
+    "doc-id": "RFC8018",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "   PBKDF2-PRFs ALGORITHM-IDENTIFIER ::= {\r\n     {NULL IDENTIFIED BY id-hmacWithSHA1},\r\n     {NULL IDENTIFIED BY id-hmacWithSHA224},\r\n     {NULL IDENTIFIED BY id-hmacWithSHA256},\r\n     {NULL IDENTIFIED BY id-hmacWithSHA384},\r\n     {NULL IDENTIFIED BY id-hmacWithSHA512},\r\n     {NULL IDENTIFIED BY id-hmacWithSHA512-224},\r\n     {NULL IDENTIFIED BY id-hmacWithSHA512-256},\r\n     ...\r\n   }",
+    "correct_text": "   PBKDF2-PRFs ALGORITHM-IDENTIFIER ::= {\r\n     {NULL IDENTIFIED BY id-hmacWithSHA1}        |\r\n     {NULL IDENTIFIED BY id-hmacWithSHA224}      |\r\n     {NULL IDENTIFIED BY id-hmacWithSHA256}      |\r\n     {NULL IDENTIFIED BY id-hmacWithSHA384}      |\r\n     {NULL IDENTIFIED BY id-hmacWithSHA512}      |\r\n     {NULL IDENTIFIED BY id-hmacWithSHA512-224}  |\r\n     {NULL IDENTIFIED BY id-hmacWithSHA512-256},\r\n     ...\r\n   }",
+    "notes": "For the ASN.1 Module to compile properly, six commas need to be replaced with \"|\" in the definition of PBKDF2-PRFs.",
+    "submit_date": "2019-08-13",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5809,
+    "doc-id": "RFC8018",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "   SupportingAlgorithms ALGORITHM-IDENTIFIER ::= {\r\n      {NULL IDENTIFIED BY id-hmacWithSHA1}                   |\r\n      {OCTET STRING (SIZE(8)) IDENTIFIED BY desCBC}          |\r\n      {OCTET STRING (SIZE(8)) IDENTIFIED BY des-EDE3-CBC}    |\r\n      {RC2-CBC-Parameter IDENTIFIED BY rc2CBC}               |\r\n      {RC5-CBC-Parameters IDENTIFIED BY rc5-CBC-PAD},        |\r\n      {OCTET STRING (SIZE(16)) IDENTIFIED BY aes128-CBC-PAD} |\r\n      {OCTET STRING (SIZE(16)) IDENTIFIED BY aes192-CBC-PAD} |\r\n      {OCTET STRING (SIZE(16)) IDENTIFIED BY aes256-CBC-PAD},\r\n       ...\r\n   }",
+    "correct_text": "   SupportingAlgorithms ALGORITHM-IDENTIFIER ::= {\r\n      {NULL IDENTIFIED BY id-hmacWithSHA1}                   |\r\n      {OCTET STRING (SIZE(8)) IDENTIFIED BY desCBC}          |\r\n      {OCTET STRING (SIZE(8)) IDENTIFIED BY des-EDE3-CBC}    |\r\n      {RC2-CBC-Parameter IDENTIFIED BY rc2CBC}               |\r\n      {RC5-CBC-Parameters IDENTIFIED BY rc5-CBC-PAD}         |\r\n      {OCTET STRING (SIZE(16)) IDENTIFIED BY aes128-CBC-PAD} |\r\n      {OCTET STRING (SIZE(16)) IDENTIFIED BY aes192-CBC-PAD} |\r\n      {OCTET STRING (SIZE(16)) IDENTIFIED BY aes256-CBC-PAD},\r\n       ...\r\n   }",
+    "notes": "For the ASN.1 Module to compile properly, the extra comma needs to be removed in the definition of SupportingAlgorithms.",
+    "submit_date": "2019-08-13",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6156,
+    "doc-id": "RFC8018",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A.2",
+    "orig_text": "      PBKDF2-PRFs ALGORITHM-IDENTIFIER ::= {\r\n        {NULL IDENTIFIED BY id-hmacWithSHA1},\r\n        {NULL IDENTIFIED BY id-hmacWithSHA224},\r\n        {NULL IDENTIFIED BY id-hmacWithSHA256},\r\n        {NULL IDENTIFIED BY id-hmacWithSHA384},\r\n        {NULL IDENTIFIED BY id-hmacWithSHA512},\r\n        {NULL IDENTIFIED BY id-hmacWithSHA512-224},\r\n        {NULL IDENTIFIED BY id-hmacWithSHA512-256},\r\n        ...\r\n      }",
+    "correct_text": "      PBKDF2-PRFs ALGORITHM-IDENTIFIER ::= {\r\n        {NULL IDENTIFIED BY id-hmacWithSHA1}        |\r\n        {NULL IDENTIFIED BY id-hmacWithSHA224}      |\r\n        {NULL IDENTIFIED BY id-hmacWithSHA256}      |\r\n        {NULL IDENTIFIED BY id-hmacWithSHA384}      |\r\n        {NULL IDENTIFIED BY id-hmacWithSHA512}      |\r\n        {NULL IDENTIFIED BY id-hmacWithSHA512-224}  |\r\n        {NULL IDENTIFIED BY id-hmacWithSHA512-256},\r\n        ...\r\n      }",
+    "notes": "For the ASN.1 Module to compile properly, six commas need to be replaced with \"|\" in the definition of PBKDF2-PRFs.\r\nErrata 5808 targets the complete ASN.1 module, here this is just an extract copied in PBKDF2 description.",
+    "submit_date": "2020-05-00",
+    "submitter_name": "Triton Circonflexe",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2020-05-07 13:59:51"
+  }
+]
