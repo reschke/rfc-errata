@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4057,
+    "doc-id": "RFC2209",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "   This memo assumes the generic interface calls defined in [RFC 2005]\r\n   and the following data structures.  An actual implementation may use\r\n   additional or different data structures and interfaces.  The data\r\n   structure fields that are shown are required unless they are\r\n   explicitly labelled as optional.",
+    "correct_text": "   This memo assumes the generic interface calls defined in [RFC 2205]\r\n   and the following data structures.  An actual implementation may use\r\n   additional or different data structures and interfaces.  The data\r\n   structure fields that are shown are required unless they are\r\n   explicitly labelled as optional.",
+    "notes": "Replace \"RFC 2005\" with \"RFC 2205\".\r\n\r\nThe generic interface calls are defined in RFC 2205 and not in RFC 2005.",
+    "submit_date": "2014-07-21",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
