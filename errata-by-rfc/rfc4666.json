@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2065,
+    "doc-id": "RFC4666",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.8.2",
+    "orig_text": "The Notify message contains the following parameters:\r\n\r\n      Status                     Mandatory\r\n      ASP Identifier             Conditional\r\n      Routing Context            Optional\r\n      INFO String                Optional\r\n",
+    "correct_text": "The Notify message contains the following parameters:\r\n\r\n      Status                     Mandatory\r\n      ASP Identifier             Conditional\r\n      Routing Context            Conditional <Changed>\r\n      INFO String                Optional\r\n",
+    "notes": "Considering the scenario below I think the Routing Context in Notify must be conditional.\r\n\r\nIf ASP1 is Actively processing traffic for both AS1(Override) and AS2(Loadshare) and another ASP2 of AS1 becomes ACTIVE. Then I think it becomes mandatory for SG to send Notify message (\"Alternate ASP Active\") with AS1 Routing Context. ASP1 will use this Notify (containing AS1 Routing Context) to become INACTIVE for AS1, without this AS1 Routing Context ASP1 will become INACTIVE for both AS1 and AS2, which is not desired here. \r\n\r\nAlso please go through mailing list with subject line \"M3UA Notification and Routing Context\" for more on this.",
+    "submit_date": "2010-03-04",
+    "submitter_name": "AMIR KHAN",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2518,
+    "doc-id": "RFC4666",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.2.",
+    "orig_text": "3.2. Variable-Length Parameter Format\r\n\r\nM3UA-Specific parameters. These TLV parameters are specific to the\r\nM3UA protocol:\r\n\r\nRegistration Result                               0x0208\r\nDeregistration Result                             0x0209\r\nLocal Routing Key Identifier                      0x020a\r\n",
+    "correct_text": "3.2. Variable-Length Parameter Format\r\n\r\nCommon Parameters. These TLV parameters are common across the\r\ndifferent adaptation layers:\r\n\r\nRegistration Result                 0x0014,\r\nDeregistration Result               0x0015,\r\nLocal Routing Key Identifier        0x0018,",
+    "notes": "As the above three parameters mentioned are used for the same purpose in RFC 3868 and in RFC 4666. So the above parameters in RFC 4666 Section 3.2, the M3UA-Specific parameters can be considered to move them into the common parameters section 3.2 of RFC 4666 with the above sepecified values.\r\n\r\nThe advantage could be, for one who implements both SUA & M3UA can use the same encoding and decoding mechanisms/code for both the implementations.\n --VERIFIER NOTES-- \n   Per discussion on the SIGTRAN list, this is a fundamental and non-interoperable change to the protocol.",
+    "submit_date": "2010-09-14",
+    "submitter_name": "Suyash Karmarkar",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4475,
+    "doc-id": "RFC4666",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.6.1, Pg 53",
+    "orig_text": "The optional SI [7,8] field contains one or more Service\r\n      Indicators from the values described in the MTP3-User Identity\r\n      field of the DUPU message.  The absence of the SI parameter in the\r\n      Routing Key indicates the use of any SI value, excluding of course\r\n      MTP management.  Where an SI parameter does not contain a multiple\r\n      of four SIs, the parameter is padded out to 32-byte alignment.",
+    "correct_text": "The optional SI [7,8] field contains one or more Service\r\n      Indicators from the values described in the MTP3-User Identity\r\n      field of the DUPU message.  The absence of the SI parameter in the\r\n      Routing Key indicates the use of any SI value, excluding of course\r\n      MTP management.  Where an SI parameter does not contain a multiple\r\n      of four SIs, the parameter is padded out to 32-bit alignment.",
+    "notes": "It seems obvious that diagram is referring to 32-bit and not 32-byte (as in 32-octets) alignment.",
+    "submit_date": "2015-09-14",
+    "submitter_name": "Valentin Micic",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
