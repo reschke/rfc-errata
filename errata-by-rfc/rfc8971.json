@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6427,
+    "doc-id": "RFC8971",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "00-52-02",
+    "correct_text": "00-00-0E-00-52-02",
+    "notes": "This is a 48-bit unicast MAC address. It starts with the IANA OUI (\"00-00-0E\"). There are two instances that should be corrected if this document is revised or replaced. But I don't think this fix is worth re-issuing the document. If someone one looks this up in the IANA assignment table, it says there that the unicast numbers all actually start with 00-00-0E.",
+    "submit_date": "2021-02-13",
+    "submitter_name": "Donald E. Eastlake, III",
+    "verifier_id": 160,
+    "verifier_name": "Martin Vigoureux",
+    "update_date": "2021-03-02 06:49:24"
+  }
+]
