@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 567,
+    "doc-id": "RFC1002",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.2.16",
+    "orig_text": "WAIT FOR ACKNOWLEDGEMENT (WACK) RESPONSE\r\n\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |          NULL (0x0020)        |         IN (0x0001)           |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "correct_text": "The values for the first field (the resource record type) are defined above\r\nin section 4.2.1.3.  RESOURCE RECORD:\r\n\r\n   NULL       0x000A   NULL Resource Record (See WAIT FOR\r\n                       ACKNOWLEDGEMENT RESPONSE)\r\n   NB         0x0020   NetBIOS general Name Service Resource Record\r\n                       (See NB_FLAGS and NB_ADDRESS, below)",
+    "notes": "\r\nThe value for type NULL is defined as 0x000A and the\r\ncomment specifically mentions WACK responses.  The value shown in the packet\r\nlayout is 0x0020, the value for NB resource records, the most common value\r\nfor this field.  In truth, I can't get Windows boxes to respond to this\r\npacket as documented with either value in that field.\r\n",
+    "submit_date": "2001-04-26",
+    "submitter_name": "Sir Dystic",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
