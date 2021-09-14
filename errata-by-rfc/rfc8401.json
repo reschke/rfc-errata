@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6418,
+    "doc-id": "RFC8401",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": " o  When the Prefix Attributes Flags sub-TLV [RFC7794] is present, the\r\n      N flag MUST be set and the R flag MUST NOT be set.",
+    "correct_text": "  o  When the Prefix Attributes Flags sub-TLV [RFC7794] is present, the\r\n      N flag MUST be set.",
+    "notes": "Early versions of the draft did not support leaking of BIER advertisements. At that time the requirement that R-flag be clear made sense. Once leaking was allowed the prohibition against R-bit being set no longer makes sense and should be removed.",
+    "submit_date": "2021-01-31",
+    "submitter_name": "Les Ginsberg",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2021-02-02 14:25:10"
+  }
+]
