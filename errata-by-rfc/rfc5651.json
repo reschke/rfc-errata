@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2000,
+    "doc-id": "RFC5651",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6.1, pg. 25",
+    "orig_text": "[ second-to-last paragraph, mid-page 25 : ]\r\n\r\n   For the reasons mentioned above, this document does not pose any\r\n   restriction on packet sizes.  However, network efficiency\r\n   considerations recommend that the sender uses an as large as possible\r\n   packet payload size, but in such a way that packets do not exceed the\r\n|  network's maximum transmission unit size (MTU), or when fragmentation\r\n   coupled with packet loss might introduce severe inefficiency in the\r\n   transmission.\r\n",
+    "correct_text": "   For the reasons mentioned above, this document does not pose any\r\n   restriction on packet sizes.  However, network efficiency\r\n   considerations recommend that the sender uses an as large as possible\r\n   packet payload size, but in such a way that packets do not exceed the\r\n|  network's maximum transmission unit size (MTU), because fragmentation\r\n   coupled with packet loss might introduce severe inefficiency in the\r\n   transmission.\r\n",
+    "notes": "Rationale: \"or when\" does not make proper sense here; \"because\" does.",
+    "submit_date": "2010-01-10",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2001,
+    "doc-id": "RFC5651",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.2.1, pg.20",
+    "orig_text": "   EXT_AUTH, HET=1 Packet authentication extension.  Information used to\r\n                   authenticate the sender of the packet.  The format of\r\n                   this Header Extension and its processing is outside\r\n                   the scope of this document and is to be communicated\r\n                   out-of-band as part of the session description.\r\n\r\n|  It is RECOMMENDED that senders provide some form of packet\r\n                   authentication.  If EXT_AUTH is present, whatever\r\n                   packet authentication checks that can be performed\r\n                   immediately upon reception of the packet SHOULD be\r\n                   performed before accepting the packet and performing\r\n                   any congestion-control-related action on it.\r\n\r\n|  Some packet authentication schemes impose a delay of several seconds\r\n                   between when a packet is received and when the packet\r\n                   is fully authenticated.  Any congestion control\r\n                   related action that is appropriate SHOULD NOT be\r\n                   postponed by any such full packet authentication.\r\n",
+    "correct_text": "   EXT_AUTH, HET=1 Packet authentication extension.  Information used to\r\n                   authenticate the sender of the packet.  The format of\r\n                   this Header Extension and its processing is outside\r\n                   the scope of this document and is to be communicated\r\n                   out-of-band as part of the session description.\r\n\r\n|                  It is RECOMMENDED that senders provide some form of\r\n                   packet authentication.  If EXT_AUTH is present,\r\n                   whatever packet authentication checks that can be\r\n                   performed immediately upon reception of the packet\r\n                   SHOULD be performed before accepting the packet and\r\n                   performing any congestion-control-related action on\r\n                   it.\r\n\r\n|                  Some packet authentication schemes impose a delay of\r\n                   several seconds between when a packet is received and\r\n                   when the packet is fully authenticated.  Any\r\n                   congestion control related action that is appropriate\r\n                   SHOULD NOT be postponed by any such full packet\r\n                   authentication.\r\n",
+    "notes": "Rationale:\r\n  Improper formatting of hanging list item consisting of three\r\n  paragraphs, visually pretending two more list items;\r\n  flaw apparently introduced in final pre-publication stages --\r\n  drafts were formatted properly.",
+    "submit_date": "2010-01-10",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3843,
+    "doc-id": "RFC5651",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.2.1",
+    "orig_text": "There are two formats for Header Extension fields, as depicted in\r\nFigure 2. The first format is used for variable-length extensions,\r\nwith Header Extension Type (HET) values between 0 and 127. The\r\nsecond format is used for fixed-length (one 32-bit word) extensions,\r\nusing HET values from 127 to 255.",
+    "correct_text": "There are two formats for Header Extension fields, as depicted in\r\nFigure 2. The first format is used for variable-length extensions,\r\nwith Header Extension Type (HET) values between 0 and 127. The\r\nsecond format is used for fixed-length (one 32-bit word) extensions,\r\nusing HET values from 128 to 255.",
+    "notes": "the correct range for one 32-bit word extension HET values starts from 128, and not from 127.",
+    "submit_date": "2013-12-16",
+    "submitter_name": "Eric Turcotte",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
