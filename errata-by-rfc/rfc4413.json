@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4277,
+    "doc-id": "RFC4413",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "2.1.1",
+    "orig_text": "| DSCP*               |      6      |   ALTERNATING  |",
+    "correct_text": "| DSCP*               |      6      |    CHANGING    |",
+    "notes": "Fields marked as changing are classified as alternating, irregular, etc., in section 4 and Figure 11.\r\nClassifying DSCP as alternating in Figure 1 implies a possible distinction between changing and alternating, despite alternating being a subclass of changing.\n --VERIFIER NOTES-- \n   The value ALTERNATING is correct, even though it is a subset of CHANGING. ",
+    "submit_date": "2015-02-23",
+    "submitter_name": "Justin Yirka",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4278,
+    "doc-id": "RFC4413",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "2.1.2",
+    "orig_text": "| DSCP*               |      6      |   ALTERNATING  |",
+    "correct_text": "| DSCP*               |      6      |    CHANGING    |",
+    "notes": "Fields marked as changing are classified as alternating, irregular, etc., in section 4 and Figure 11.\r\nClassifying DSCP as alternating in Figure 3 implies a possible distinction between changing and alternating, despite alternating being a subclass of changing.\n --VERIFIER NOTES-- \n   The value ALTERNATING is correct, even though it is a subset of CHANGING. ",
+    "submit_date": "2015-02-23",
+    "submitter_name": "Justin Yirka",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
