@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6467,
+    "doc-id": "RFC1172",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Link Quality",
+    "orig_text": "In-Rx-Packets   =  10 -   3 =  16",
+    "correct_text": "In-Rx-Packets   =  10 -   3 =  7",
+    "notes": "it is in Example part of link quality page 25\r\n\r\ni am pretty sure that 10 minus 3 is not equal to 16. \r\nHopping that i understood well things here(i'm french :) )",
+    "submit_date": "2021-03-09",
+    "submitter_name": "bacquet guillaume",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
