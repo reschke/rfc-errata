@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3494,
+    "doc-id": "RFC3680",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "   NOTIFY sip:app.example.com SIP/2.0\r\n   Via: SIP/2.0/UDP server19.example.com;branch=z9hG4bKnasaii\r\n   From: sip:joe@example.com;tag=xyzygg\r\n   To: sip:app.example.com;tag=123aa9\r\n   Call-ID: 9987@app.example.com\r\n   CSeq: 1288 NOTIFY\r\n   Contact: sip:server19.example.com\r\n   Event: reg\r\n   Max-Forwards: 70\r\n   Content-Type: application/reginfo+xml\r\n   Content-Length: ...\r\n\r\n   NOTIFY sip:app.example.com SIP/2.0\r\n   Via: SIP/2.0/UDP server19.example.com;branch=z9hG4bKnasaij\r\n   From: sip:joe@example.com;tag=xyzygg\r\n   To: sip:app.example.com;tag=123aa9\r\n   Call-ID: 9987@app.example.com\r\n   CSeq: 1289 NOTIFY\r\n   Contact: sip:server19.example.com\r\n   Event: reg\r\n   Max-Forwards: 70\r\n   Content-Type: application/reginfo+xml\r\n   Content-Length: ...\r\n",
+    "correct_text": "   NOTIFY sip:app.example.com SIP/2.0\r\n   Via: SIP/2.0/UDP server19.example.com;branch=z9hG4bKnasaii\r\n   From: sip:joe@example.com;tag=xyzygg\r\n   To: sip:app.example.com;tag=123aa9\r\n   Call-ID: 9987@app.example.com\r\n   CSeq: 1288 NOTIFY\r\n   Contact: sip:server19.example.com\r\n   Event: reg\r\n   Subscription-State:active;expires=3600\r\n   Max-Forwards: 70\r\n   Content-Type: application/reginfo+xml\r\n   Content-Length: ...\r\n\r\n   NOTIFY sip:app.example.com SIP/2.0\r\n   Via: SIP/2.0/UDP server19.example.com;branch=z9hG4bKnasaij\r\n   From: sip:joe@example.com;tag=xyzygg\r\n   To: sip:app.example.com;tag=123aa9\r\n   Call-ID: 9987@app.example.com\r\n   CSeq: 1289 NOTIFY\r\n   Contact: sip:server19.example.com\r\n   Event: reg\r\n   Subscription-State:active;expires=3000\r\n   Max-Forwards: 70\r\n   Content-Type: application/reginfo+xml\r\n   Content-Length: ...\r\n",
+    "notes": "The two NOTIFY examples are missing mandatory Subscription-State header.",
+    "submit_date": "2013-02-24",
+    "submitter_name": "Brett Tate",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
