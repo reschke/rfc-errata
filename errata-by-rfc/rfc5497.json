@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 1721,
+    "doc-id": "RFC5497",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6, pg.7",
+    "orig_text": "   The following data structure allows the representation of a single\r\n|  time-value, or of a default time-value plus pairs of (time-values,\r\n|  hop counts) for when hop-count-dependent time-values are required.\r\n   [...]",
+    "correct_text": "   The following data structure allows the representation of a single\r\n|  time-value, or of a default time-value plus pairs of (time-value,\r\n|  hop count) for when hop-count-dependent time-values are required.\r\n   [...]",
+    "notes": "Rationale:\r\nEach pair contains a single 'time-value' and a single 'hop-count'.\r\nSee text on pp. 8/9: multiple instances of \"(time-value, hop count)\".",
+    "submit_date": "2009-03-16",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1722,
+    "doc-id": "RFC5497",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.2, pg.9",
+    "orig_text": "[ first bullet: ]\r\n\r\n   o  The <length> field in the TLV MUST contain the value m * (2n+1),\r\n|     with n being the number of (time-value, hop count) pairs in the\r\n|     Time TLV, and m being number-values as defined in [RFC5444].\r\n",
+    "correct_text": "   o  The <length> field in the TLV MUST contain the value m * (2n+1),\r\n|     with n being the number of (time-value, hop count) pairs per\r\n|     associated address in the Time TLV, and m being number-values as\r\n      defined in [RFC5444].\r\n ",
+    "notes": "Rationale:\r\nThe original text is contradictory in itself, and it opposes the\r\nsubsequent bullets and prose in the same section.\r\nThe proposed correction (inserting \"per associated adddress\")\r\nis derived from the text in the first paragraph of the section.",
+    "submit_date": "2009-03-16",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1723,
+    "doc-id": "RFC5497",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.1 and 7.2",
+    "orig_text": "a) Section 7.1, last paragraph\r\n\r\n   An INTERVAL_TIME TLV is an example of a Time TLV specified as in\r\n|  Section 5.\r\n\r\nb) Section 7.2, last paragraph\r\n\r\n   A VALIDITY_TIME TLV is an example of a Time TLV specified as in\r\n|  Section 5.\r\n",
+    "correct_text": "a)\r\n\r\n   An INTERVAL_TIME TLV is an example of a Time TLV specified as in\r\n|  Section 6.\r\n\r\nb)\r\n\r\n   A VALIDITY_TIME TLV is an example of a Time TLV specified as in\r\n|  Section 6.\r\n\r\n",
+    "notes": "Rationale:\r\n  Section 5 only contains the low-level details;\r\n  Section 6, contains the precise specification of the \r\n  Time TLV format used in Sections 7.1 and 7.2.",
+    "submit_date": "2009-03-16",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1724,
+    "doc-id": "RFC5497",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "8.1 and 8.2",
+    "orig_text": "a) Section 8.1, last paragraph\r\n\r\n   An INTERVAL_TIME TLV is an example of a Time TLV specified as in\r\n|  Section 5.\r\n\r\nb) Section 8.2, last paragraph\r\n\r\n   A VALIDITY_TIME TLV is an example of a Time TLV specified as in\r\n|  Section 5.\r\n",
+    "correct_text": "a)\r\n\r\n   An INTERVAL_TIME TLV is an example of a Time TLV specified as in\r\n|  Section 6.\r\n\r\nb)\r\n\r\n   A VALIDITY_TIME TLV is an example of a Time TLV specified as in\r\n|  Section 6.\r\n",
+    "notes": "Rationale:\r\n  Section 5 only contains the low-level details;\r\n  Section 6 contains the precise specification of the\r\n  Time TLV format used in Sections 8.1 and 8.2. \r\n\r\nSee Errata ID #1723 for similar issues in Sections 7.1 and 7.2.",
+    "submit_date": "2009-03-16",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
