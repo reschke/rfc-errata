@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5652,
+    "doc-id": "RFC8239",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "      o  Last iteration: Ingress port N-2 sending line rate to egress\r\n         port N-1, while port N is sending a known low amount of\r\n         oversubscription traffic (1% recommended) with the same packet\r\n         size to egress port N.  Measure the buffer size value by\r\n         multiplying the number of extra frames sent by the frame size.\r\n",
+    "correct_text": "      o  Last iteration: Ingress port N-2 sending line rate to egress\r\n         port N-1, while port N is sending a known low amount of\r\n         oversubscription traffic (1% recommended) with the same packet\r\n         size to egress port N-1.  Measure the buffer size value by\r\n         multiplying the number of extra frames sent by the frame size.\r\n",
+    "notes": "Incorrect number of the output port for oversubscription traffic.\r\n\r\n[WK]: See https://mailarchive.ietf.org/arch/msg/bmwg/_zZOrFmBwGq3dc5Pfb833tmLSGk for additional context.",
+    "submit_date": "2019-03-12",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
