@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4067,
+    "doc-id": "RFC2203",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 5.1,
+    "orig_text": "The client should assume that the server supports RPCSEC_GSS_VERS_1\r\nand issue a Context Creation message (as described in the section\r\nRPCSEC_GSS_VERS_1, the RPC response will have a reply_stat of\r\nMSG_DENIED, a rejection status of AUTH_ERROR, and an auth_stat of\r\nAUTH_REJECTED_CRED.",
+    "correct_text": "The client should assume that the server supports RPCSEC_GSS_VERS_1\r\nand issue a Context Creation message (as described in the section\r\n'Context Creation'). If the server does not support\r\nRPCSEC_GSS_VERS_1, the RPC response will have a reply_stat of\r\nMSG_DENIED, a rejection status of AUTH_ERROR, and an auth_stat of\r\nAUTH_REJECTED_CRED.",
+    "notes": "This line was somehow lost in the transition from draft-ietf-oncrpc-rpcsec_gss-04 to RFC 2203.",
+    "submit_date": "2014-07-30",
+    "submitter_name": "Benjamin Kaduk",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
