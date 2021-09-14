@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5253,
+    "doc-id": "RFC5549",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 6.2,
+    "orig_text": "Length of Next Hop Network Address = 16 (or 32)",
+    "correct_text": "Length of Next Hop Network Address = 24 (or 48)",
+    "notes": "The lengths should include the RD length also, right ?\r\n\r\n===\r\nThis report is being addressed in draft-ietf-bess-rfc5549revision.",
+    "submit_date": "2018-02-02",
+    "submitter_name": "Shyam Sethuram",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2020-08-24 09:43:18"
+  }
+]
