@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 7,
+    "doc-id": "RFC4790",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "collation-id    = collation-prefix \";\" collation-core-name",
+    "correct_text": "collation-id    = collation-scope \";\" collation-core-name",
+    "notes": "Submitted to the RFC Editor by Chris Newman.\r\nAlso reported by Alfred Hoenes 2007-04-10.",
+    "submit_date": "2007-03-29",
+    "submitter_name": "Filip Navara",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2851,
+    "doc-id": "RFC4790",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.4,
+    "orig_text": "    other-uri        =  <absoluteURI>\r\n                     ;  excluding the IANA collation namespace.",
+    "correct_text": "     other-uri       =  absolute-URI\r\n                     ;  excluding the IANA collation namespace.\r\n\r\n   The ABNF production \"absolute-URI\" is imported from URI: Generic Syntax [4].",
+    "notes": "In the current definition it is assumed \"absoluteURI\" is a <prose-val> of RFC 4234. However it actually refers to the <absolute-URI> of RFC 3986, which I propose to be fixed.",
+    "submit_date": "2011-07-01",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3510,
+    "doc-id": "RFC4790",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Global",
+    "orig_text": "US-ASCII (most places)",
+    "correct_text": "ASCII (but see note)",
+    "notes": "The terms \"US-ASCII\" and \"ASCII\" are used interchangeably in this document, sometimes in the same paragraph (see the first paragraph of 9.2.1).  Neither is anchored in a reference to either X3.4-1986 (e.g., the \"us-ascii charset\") or to X3.4-1968 or RFC 20 (e.g., NVT ASCII).  There is one explicit mention of the \"US-ASCII charset\" (Section 5) but all the rest, including the section titles that use \"ASCII\" already, appear to be talking about the ASCII repertoire with terms like \"ASCII\" (or \"US-ASCII\") letters.  Except where the charset, or some very special property of X3.4-1986, is intended, I believe that all of these should be just \"ASCII\".\r\n\r\nI don't think this is likely to cause any significant confusion among anyone who is likely to read this spec, much less confusion sufficient to cause interoperability problems (hence, it is not a technical error), but it is confusing and should be cleaned up --both to rationalize the terminology and to provide citations for the terminology that is used-- if the document is ever updated.",
+    "submit_date": "2013-03-08",
+    "submitter_name": "John Klensin",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
