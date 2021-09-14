@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1509,
+    "doc-id": "RFC5335",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.5, 2nd par",
+    "orig_text": "|  The \"Return-Path\" header provides the email return address in the\r\n|  mail delivery.  Thus, the header is augmented to carry UTF-8\r\n   addresses (see the revised syntax of <angle-addr> in Section 4.4 of\r\n   this document).  This will not break the rule of trace field\r\n|  integrity, because the header is added at the last MTA and described\r\n   in [RFC2821].",
+    "correct_text": "|  The \"Return-Path\" header field provides the email return address in\r\n|  the mail delivery.  Thus, the header field is augmented to carry\r\n   UTF-8 addresses (see the revised syntax of <angle-addr> in Section\r\n   4.4 of this document).  This will not break the rule of trace field\r\n|  integrity, because the header field is added at the last MTA and\r\n   described in [RFC2821].",
+    "notes": "Conformance to long-standing terminology established in the IETF\r\nrequires making the precise distinction between a 'header' and the\r\n'header fields' it is comprised of.\r\n\r\nMost parts of this RFC do this job correctly; this paragraph is an\r\nexception.",
+    "submit_date": "2008-09-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2322,
+    "doc-id": "RFC5335",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Author info",
+    "orig_text": "Y. Abel   (in first-page header block)\r\n\r\nAbel      (in page footers)",
+    "correct_text": "A. Yang\r\n\r\nYang",
+    "notes": "The author is listed in the Author's Address section as \"Abel Yang (editor)\", which is correct although \"Abel YANG (editor)\" might have been preferable.  In any event, the family name is \"Yang\", not \"Abel\", so the page 1 header block, page footers, and RFC Index entries are in error.\r\n\r\nThis is fixed in draft-ietf-eai-rfc5335bis-02 and later.  A successor to that document will eventually obsolete RFC 5335.",
+    "submit_date": "2010-07-12",
+    "submitter_name": "John Klensin",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
