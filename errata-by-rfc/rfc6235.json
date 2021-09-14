@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2883,
+    "doc-id": "RFC6235",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.2.4",
+    "orig_text": "   The Exporting Process Reliability Statistics Options Template,\r\n   recommended in [RFC5101], contains an Exporting Process ID field,\r\n   which may be an exportingProcessIPv4Address Information Element or an\r\n   exportingProcessIPv6Address Information Element.\r\n\r\n...\r\n\r\n   Similarly, the Export Session Details Options Template and Message\r\n   Details Options Template specified for the IPFIX File Format\r\n   [RFC5655] may contain the exportingProcessIPv4Address Information\r\n   Element or the exportingProcessIPv6Address Information Element to\r\n   identify an Exporting Process from which a flow record was received,\r\n   and the collectingProcessIPv4Address Information Element or the\r\n   collectingProcessIPv6Address Information Element to identify the\r\n   Collecting Process which received it.",
+    "correct_text": "   The Exporting Process Reliability Statistics Options Template,\r\n   recommended in [RFC5101], contains an Exporting Process ID field,\r\n   which may be an exporterIPv4Address Information Element or an\r\n   exporterIPv6Address Information Element.\r\n\r\n...\r\n\r\n   Similarly, the Export Session Details Options Template and Message\r\n   Details Options Template specified for the IPFIX File Format\r\n   [RFC5655] may contain the exporterIPv4Address Information\r\n   Element or the exporterIPv6Address Information Element to\r\n   identify an Exporting Process from which a flow record was received,\r\n   and the collectorIPv4Address Information Element or the\r\n   collectorIPv6Address Information Element to identify the\r\n   Collecting Process which received it.",
+    "notes": "s/exportingProcessIPv4Address/exporterIPv4Address/ (twice)\r\ns/exportingProcessIPv6Address/exporterIPv6Address/ (twice)\r\ns/collectingProcessIPv4Address/collectorIPv4Address/ (once)\r\ns/collectingProcessIPv6Address/collectorIPv6Address/ (once)\r\n\r\n- per the names in IANA's IPFIX registry.",
+    "submit_date": "2011-08-01",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2887,
+    "doc-id": "RFC6235",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.2.1",
+    "orig_text": "   In this\r\n   description, a timestamp is an Information Element with the data type\r\n   dateTimeSeconds, dataTimeMilliseconds, dateTimeMicroseconds, or\r\n   dateTimeNanoseconds;",
+    "correct_text": "   In this\r\n   description, a timestamp is an Information Element with the data type\r\n   dateTimeSeconds, dateTimeMilliseconds, dateTimeMicroseconds, or\r\n   dateTimeNanoseconds;",
+    "notes": "s/dataTimeMilliseconds/dateTimeMilliseconds/\r\n\r\nPer [RFC5102] section 3.1.16, the definition is \"dateTimeMilliseconds\"",
+    "submit_date": "2011-08-01",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2907,
+    "doc-id": "RFC6235",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Figure 5",
+    "orig_text": "                        1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |          Set ID = 3           |          Length =  26         |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |      Template ID = 257        |        Field Count = 4        |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |    Scope Field Count = 2      |0| templateID              145 |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |       Field Length = 2        |0| informationElementId    303 |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |       Field Length = 2        |0| anonymizationFlags      285 |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |       Field Length = 2        |0| anonymizationTechnique  286 |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |       Field Length = 2        |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "correct_text": "                        1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |          Set ID = 3           |          Length =  26         |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |      Template ID = 257        |        Field Count = 4        |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |    Scope Field Count = 2      |0| templateId              145 |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |       Field Length = 2        |0| informationElementId    303 |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |       Field Length = 2        |0| anonymizationFlags      285 |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |       Field Length = 2        |0| anonymizationTechnique  286 |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |       Field Length = 2        |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "notes": "s/templateID/templateId/\r\n\r\nPer RFC5102 and IANA's IPFIX registry, the correct name is \"templateId\".",
+    "submit_date": "2011-08-01",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
