@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 822,
+    "doc-id": "RFC4636",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "99In the header, it does not include any relationship to other RFCs.",
+    "orig_text": "",
+    "correct_text": "Updates: 3344",
+    "notes": "Section 4 of RFC 4636, on page 3, clearly states:\r\n\r\n   This document updates the Mobile IP base specification [4] regarding\r\n   the procedures followed by the foreign agent in the case that the\r\n   home agent fails authentication.  [...]\r\n\r\n... and [4] is RFC 3344.\r\n\r\nI expected the line in the RFC heading, and appropriate links in the RFC index.\r\n\r\nHas this been omitted by accident, or have there been strong\r\narguments to omit this significant link ?\r\nIn the former case, can that be corrected 'after the fact' ?",
+    "submit_date": "2006-11-01",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 2,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 824,
+    "doc-id": "RFC4636",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 8,
+    "orig_text": "   The extension in this document improves the security features of\r\n   Mobile IPv4 by allowing the mobile node to be assured of the\r\n   authenticity of the information supplied within a Registration\r\n   Request. ",
+    "correct_text": "   The extension in this document improves the security features of\r\n   Mobile IPv4 by allowing the mobile node to be assured of the\r\n   authenticity of the information supplied within a Registration\r\n   Reply. ",
+    "notes": "From the body of the RFC, I would have expected to find \"Reply\"\r\nas the last word of that sentence -- cf. Section 1, 2nd sentence,\r\nand Section 4, 1st sentence.\r\n\r\nfrom pending",
+    "submit_date": "2006-11-01",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
