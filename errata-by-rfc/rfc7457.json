@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4403,
+    "doc-id": "RFC7457",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.7,
+    "orig_text": "While the Bleichenbacher attack has been mitigated in TLS 1.0,\r\nthe Klima attack, which relies on a version-check oracle, is only\r\nmitigated by TLS 1.1.",
+    "correct_text": "The Bleichenbacher attack has been first addressed in TLS 1.0. This\r\nmitigation closed the error message-based attack, but opened a\r\npotentially exploitable timing leak [*] which has been addressed in\r\nTLS 1.2. The Klima attack, which relies on a version-check oracle,\r\nis mitigated by TLS 1.1.\r\n\r\n[*]: Revisiting SSL/TLS Implementations: New Bleichenbacher Side\r\nChannels and Attacks. Meyer, Somorovsky, Weiss, Schwenk, Schinzel,\r\nTews.  23rd Usenix Security Symposium 2014.",
+    "notes": "RFC 7457 states: \"While the Bleichenbacher attack has been mitigated\r\nin TLS 1.0, the Klima attack, which relies on a version-check oracle,\r\nis only mitigated by TLS 1.1.\"\r\n\r\nRFC 2246 (TLS 1.0) states: \"The best way to avoid vulnerability\r\nto this attack is to treat incorrectly formatted messages in a\r\nmanner indistinguishable from correctly formatted RSA blocks. Thus,\r\nwhen it receives an incorrectly formatted RSA block, a server should\r\ngenerate a random 48-byte value and proceed using it as the premaster\r\nsecret. Thus, the server will act identically whether the received\r\nRSA block is correctly encoded or not.\"\r\n\r\nThis does not safely prevent Bleichenbacher style attacks. To rephrase\r\nit: implementations should generate and proceed with a random PMS\r\nif (implied \"*and only if*\") an incorrectly formatted message was\r\nreceived.  This opens a timing side channel that we successfully\r\nexploited in several TLS implementations that comply with RFC 2246\r\n(see [1], [2]).\r\n\r\nThis timing side channel was first addressed in TLS 1.2 (RFC 5246),\r\nwhich gives the following timing-constant algorithm to prevent\r\nBleichenbacher's attack: \"1. Generate a string R of 46 random bytes\r\n2. Decrypt the message to recover the plaintext M 3. If the PKCS#1\r\npadding is not correct, or the length of message\r\n      M is not exactly 48 bytes:\r\n         pre_master_secret = ClientHello.client_version || R\r\n      else If ClientHello.client_version <= TLS 1.0, and version\r\n      number check is explicitly disabled:\r\n         pre_master_secret = M\r\n      else:\r\n         pre_master_secret = ClientHello.client_version || M[2..47]\"\r\n\r\nThus, it is not TLS 1.0 which safely prevents Bleichenbacher attacks,\r\nbut TLS 1.2.",
+    "submit_date": "2015-06-28",
+    "submitter_name": "Sebastian Schinzel",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4592,
+    "doc-id": "RFC7457",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.6,
+    "orig_text": "The TIME attack can be mitigated by disabling TLS compression.  We\r\nare not aware of mitigations at the TLS protocol level to the BREACH\r\nattack, and so application-level mitigations are needed (see\r\n[BREACH]).",
+    "correct_text": "The CRIME attack can be mitigated by disabling TLS compression.  We\r\nare not aware of mitigations at the TLS protocol level to the TIME and\r\nBREACH attacks, and so application-level mitigations are needed (see\r\n[BREACH]).",
+    "notes": "As explained in the second paragraph in 2.6, the TIME attack makes use of HTTP-level response compression (in fact, it does not matter on which layer the compression occurs, but exploitation of HTTP-level response compression has been demonstrated). Hence, it cannot be mitigated by disabling TLS compression alone.\r\n\r\nInstead, CRIME can be mitigated by disabling TLS compression, as it exploits TLS-level compression of requests.",
+    "submit_date": "2016-01-10",
+    "submitter_name": "Matthäus Wander",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4894,
+    "doc-id": "RFC7457",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "   STARTTLS and similar mechanisms are vulnerable to downgrade attacks,\r\n   whereby the attacker simply removes the STARTTLS indication from the\r\n   (unprotected) request.  This cannot be mitigated unless HSTS-like\r\n   solutions are added.",
+    "correct_text": null,
+    "notes": "The second paragraph in Section 2.2 (\"STARTTLS Command Injection Attack\") should have been in Section 2.1 (\"SSL Stripping\") because it concerns the attack known as \"SSL Stripping\".\r\n\r\nNote that Section 3.2 of RFC 7525 refers to Section 2.1 (and not 2.2) of this RFC, when speaking about lack of advertise support for TLS.",
+    "submit_date": "2016-12-22",
+    "submitter_name": "Julien Élie",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
