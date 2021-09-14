@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1735,
+    "doc-id": "RFC5148",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 7.2,
+    "orig_text": "   [7]  Clausen, T., Dearlove, C., Dean, J., and C. Adjih, \"Generalized\r\n        MANET Packet/Message Format\", Work in Progress.",
+    "correct_text": "   [7]  Clausen, T., Dearlove, C., Dean, J., and C. Adjih,\r\n              \"Generalized MANET Packet/Message Format\", RFC 5444,\r\n              February 2009.",
+    "notes": "draft-ietf-manet-packetbb (\"Generalized MANET Packet/Message Format\") was published as RFC5444. RFC5148 should, therefore, reference this archival document (RFC5444) rather than the Internet Draft.\n --VERIFIER NOTES-- \nAt the time of publication of RFC 5148 (February 2008), RFC 5444 had not been published and could only be cited as an Internet-Draft. RFC 5444 was not published until February 2009.\r\n\r\nA future update of RFC 5148 can resolve this. Otherwise, the IETF's datatracker resolves the reference for the inquisitive reader. ",
+    "submit_date": "2009-03-22",
+    "submitter_name": "Thomas Clausen",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
