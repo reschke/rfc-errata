@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1454,
+    "doc-id": "RFC3092",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Appendix",
+    "orig_text": "   | 2818 |  X  |  X  |         |       | 190 |\r\n   | 2828 |     |  X  |    X    |       | 191 |\r\n   | 2830 |  X  |     |         |       | 192 |\r\n   | 2831 |  X  |  X  |    X    |       | 193 |\r\n   | 2839 |     |  X  |         |       | 194 |\r\n   | 2846 |  X  |  X  |         |       | 195 |\r\n   | 2853 |     |  X  |         |       | 196 |\r\n   | 2863 |     |  X  |         |       | 197 |\r\n   | 2910 |     |  X  |    X    |       | 198 |\r\n   | 2912 |     |  X  |    X    |       | 199 |\r\n   | 2915 |     |  X  |         |       | 200 |\r\n   | 2926 |     |     |    X    |       | 201 |\r\n   | 2942 |     |  X  |         |       | 202 |\r\n   | 2965 |     |  X  |         |       | 203 |\r\n   | 2967 |  X  |  X  |    X    |       | 204 |\r\n   | 2970 |     |  X  |         |       | 205 |\r\n   | 2993 |  X  |  X  |         |       | 206 |\r\n   | 3010 |  X  |  X  |         |       | 207 |\r\n   | 3023 |     |  X  |         |       | 208 |\r\n   | 3028 |     |  X  |         |       | 209 |\r\n   | 3075 |  X  |  X  |         |       | 210 |\r\n   | 3080 |     |  X  |         |       | 211 |\r\n   | 3092 |  X  |  X  |    X    |   X   | 212 |\r\n   +------+-----+-----+---------+-------+-----+\r\n   | RFC# | bar | foo | foo.bar | fubar |  #  |\r\n",
+    "correct_text": "   | 2818 |  X  |  X  |         |       | 190 |\r\n   | 2821 |  X  |  X  |         |       | 191 |\r\n   | 2828 |     |  X  |    X    |       | 192 |\r\n   | 2830 |  X  |     |         |       | 193 |\r\n   | 2831 |  X  |  X  |    X    |       | 194 |\r\n   | 2839 |     |  X  |         |       | 195 |\r\n   | 2846 |  X  |  X  |         |       | 196 |\r\n   | 2853 |     |  X  |         |       | 197 |\r\n   | 2863 |     |  X  |         |       | 198 |\r\n   | 2910 |     |  X  |    X    |       | 199 |\r\n   | 2912 |     |  X  |    X    |       | 200 |\r\n   | 2915 |     |  X  |         |       | 201 |\r\n   | 2926 |     |     |    X    |       | 202 |\r\n   | 2942 |     |  X  |         |       | 203 |\r\n   | 2965 |     |  X  |         |       | 204 |\r\n   | 2967 |  X  |  X  |    X    |       | 205 |\r\n   | 2970 |     |  X  |         |       | 206 |\r\n   | 2993 |  X  |  X  |         |       | 207 |\r\n   | 3010 |  X  |  X  |         |       | 208 |\r\n   | 3023 |     |  X  |         |       | 209 |\r\n   | 3028 |     |  X  |         |       | 210 |\r\n   | 3075 |  X  |  X  |         |       | 211 |\r\n   | 3080 |     |  X  |         |       | 212 |\r\n   | 3092 |  X  |  X  |    X    |   X   | 213 |\r\n   +------+-----+-----+---------+-------+-----+\r\n   | RFC# | bar | foo | foo.bar | fubar |  #  |\r\n",
+    "notes": "RFC 2821 contains foo.com (34 occurences), bar.com (18 occurences),\r\nbar.org (5 occurences), foo.org (4 occurences), and one foo-u.edu.",
+    "submit_date": "2008-06-15",
+    "submitter_name": "Frank Ellermann",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
