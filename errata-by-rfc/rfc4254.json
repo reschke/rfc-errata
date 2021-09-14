@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3877,
+    "doc-id": "RFC4254",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 6.1,
+    "orig_text": "6.10.  Returning Exit Status\r\n\r\n   When the command running at the other end terminates, the following\r\n   message can be sent to return the exit status of the command.\r\n   Returning the status is RECOMMENDED.  No acknowledgement is sent for\r\n   this message.  The channel needs to be closed with\r\n   SSH_MSG_CHANNEL_CLOSE after this message.\r\n\r\n   The client MAY ignore these messages.",
+    "correct_text": "6.10.  Returning Exit Status\r\n\r\n   When the command running at the other end terminates, the following\r\n   message can be sent to return the exit status of the command.\r\n   Returning the status is RECOMMENDED.  No acknowledgement is sent for\r\n   this message.  The channel needs to be closed by the server with\r\n   SSH_MSG_CHANNEL_CLOSE after this message.\r\n\r\n   The client MAY ignore these messages.",
+    "notes": "Even though it can arguably be inferred from the text as written I think it'd make it more clear if the RFC explicitly said that the server is the one that should be sending the SSH_MSG_CHANNEL_CLOSE message.",
+    "submit_date": "2014-02-02",
+    "submitter_name": "Jim Wigginton",
+    "verifier_id": 141,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3878,
+    "doc-id": "RFC4254",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 5.2,
+    "orig_text": "   The maximum amount of data allowed is determined by the maximum\r\n   packet size for the channel, and the current window size, whichever\r\n   is smaller.  The window size is decremented by the amount of data\r\n   sent.  Both parties MAY ignore all extra data sent after the allowed\r\n   window is empty.",
+    "correct_text": "   The maximum amount of data allowed is determined by the maximum\r\n   packet size for the channel, and the current window size, whichever\r\n   is smaller.  The window size is decremented by the length of the data\r\n   sent, length field included.  Both parties MAY ignore all extra data\r\n   sent after the allowed window is empty.",
+    "notes": "This is the data transfer packet:\r\n\r\n      byte      SSH_MSG_CHANNEL_DATA\r\n      uint32    recipient channel\r\n      string    data\r\n\r\nSince string's are defined by RFC4251 as being \"stored as a uint32 containing its length (number of bytes that follow) and zero (= empty string) or more     bytes that are the value of the string\" it's unclear weather or not the uint32 length field contributes to the total or not. In my interoperability testing it seems that it does but it doesn't seem that this is all that clear from this RFC.\r\n\r\nIt is also unclear from this RFC whether or not SSH_MSG_CHANNEL_EXTENDED_DATA should be decrementing from the window size or not. A strict interpretation would suggest it does not since the RFC makes no mention of it.",
+    "submit_date": "2014-02-02",
+    "submitter_name": "Jim Wigginton",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
