@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3661,
+    "doc-id": "RFC6109",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "   To guarantee the verifiability of signatures on as many mail clients\r\n   as possible, X.509v3 certificates used by certified email systems\r\n   MUST abide by the profile found in section 6.5.",
+    "correct_text": "   To guarantee the verifiability of signatures on as many mail clients\r\n   as possible, X.509v3 certificates used by certified email systems\r\n   MUST abide by the profile found in section 5.5.",
+    "notes": null,
+    "submit_date": "2013-06-17",
+    "submitter_name": "Joël Repiquet",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4131,
+    "doc-id": "RFC6109",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.22,
+    "orig_text": "X-Trasplorto: errore",
+    "correct_text": "X-Trasporto: errore",
+    "notes": "typo error",
+    "submit_date": "2014-10-14",
+    "submitter_name": "Luigi De Rosa",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
