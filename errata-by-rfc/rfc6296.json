@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3033,
+    "doc-id": "RFC6296",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.6,
+    "orig_text": "So, the value 0xD550 is written in the 16-bit subnet area,\r\nresulting in a mapped external address of 2001:0DB8:0001:D550::1234.\r\n\r\nWhen a response datagram is received, it will contain the destination\r\naddress 2001:0DB8:0001:D550::0001, which will be mapped back to\r\nFD01:0203:0405:0001::1234 using the inverse mapping algorithm.",
+    "correct_text": "So, the value 0xD550 is written in the 16-bit subnet area,\r\nresulting in a mapped external address of 2001:0DB8:0001:D550::1234.\r\n\r\nWhen a response datagram is received, it will contain the destination\r\naddress 2001:0DB8:0001:D550::1234, which will be mapped back to\r\nFD01:0203:0405:0001::1234 using the inverse mapping algorithm.",
+    "notes": "PC sends the packet with Ipv6 source address 2001:0DB8:0001:D550::1234. When a response datagram is received, it must contain the destination address 2001:0DB8:0001:D550::1234.",
+    "submit_date": "2011-11-21",
+    "submitter_name": "Marek Kopecký",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
