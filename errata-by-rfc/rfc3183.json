@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3757,
+    "doc-id": "RFC3183",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.1.2",
+    "orig_text": "   An S/MIME signed attribute is used to indicate the type of signature.\r\n   This should be used in conjunction with the naming conventions\r\n   specified in the previous section.  When an S/MIME signed message\r\n   containing the signature type attribute is received it triggers the\r\n   software to verify that the correct naming convention has been used.\r\n\r\n   The ASN.1 [4] notation of this attribute is: -\r\n\r\n      SignatureType ::= SEQUENCE OF OBJECT IDENTIFIER\r\n",
+    "correct_text": "   An S/MIME signed attribute is used to indicate the type of signature.\r\n   This should be used in conjunction with the naming conventions\r\n   specified in the previous section.  When an S/MIME signed message\r\n   containing the signature type attribute is received it triggers the\r\n   software to verify that the correct naming convention has been used.\r\n\r\n   The following object identifier identifies the SignatureType\r\n   attribute:\r\n\r\n      id-aa-signatureType OBJECT IDENTIFIER ::= { iso(1) \r\n          member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs9(9) 2 28 }\r\n\r\n   The ASN.1 [4] notation of this attribute is:\r\n\r\n      SignatureType ::= SEQUENCE OF OBJECT IDENTIFIER\r\n",
+    "notes": "The specification provides the syntax for the SignatureType attribute,\r\nbut it fails to provide the object identifier for the attribute.  The object\r\nidentifier was assigned, but for some reason it is not provided in the\r\ndocument.",
+    "submit_date": "2013-10-18",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2021-04-22 14:59:47"
+  }
+]
