@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4481,
+    "doc-id": "RFC7544",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7.3,
+    "orig_text": "   |       |       |INV C  |      |       |       |     |      |       |\r\n   |       |       |------>|      |       |       |     |      |       |\r\n   |       |       |History-Info: |       |       |     |      |       |\r\n   |       |       <sip:proxyP1>;index=1, |       |     |      |       |\r\n   |       |       <sip:userB>;index=1.1;rc=1,    |     |      |       |\r\n   |       |       <sip:proxyP2;cause=302>;index=1.1.1;mp=1.1  |       |\r\n   |       |       |       |      |       |       |     |      |       |\r\n   |       |       |       |INV C |       |       |     |      |       |\r\n   |       |       |       |----->|       |       |     |      |       |\r\n   |       |       | Diversion:   |       |       |     |      |       |\r\n   |       |     <sip:userB>;reason=unconditional;counter=1;privacy=off|\r\n   |       |       |       |History-Info: |       |     |      |       |\r\n   |       |       |       <sip:proxyP1>;index=1, |     |      |       |\r\n   |       |       |       <sip:userB>;index=1.1;rc=1,  |      |       |\r\n   |       |       |       <sip:proxyP2;cause=302>;index=1.1.1;mp=1.1  |\r\n   |       |       |       |      |       |       |     |      |       |",
+    "correct_text": "   |       |       |INV C  |      |       |       |     |      |       |\r\n   |       |       |------>|      |       |       |     |      |       |\r\n   |       |       |History-Info: |       |       |     |      |       |\r\n   |       |       <sip:proxyP1>;index=1, |       |     |      |       |\r\n   |       |       <sip:userB>;index=1.1;rc=1,    |     |      |       |\r\n   |       |       <sip:userC;cause=302>;index=1.1.1;mp=1.1    |       |\r\n   |       |       |       |      |       |       |     |      |       |\r\n   |       |       |       |INV C |       |       |     |      |       |\r\n   |       |       |       |----->|       |       |     |      |       |\r\n   |       |       | Diversion:   |       |       |     |      |       |\r\n   |       |     <sip:userB>;reason=unconditional;counter=1;privacy=off|\r\n   |       |       |       |History-Info: |       |     |      |       |\r\n   |       |       |       <sip:proxyP1>;index=1, |     |      |       |\r\n   |       |       |       <sip:userB>;index=1.1;rc=1,  |      |       |\r\n   |       |       |       <sip:userC;cause=302>;index=1.1.1;mp=1.1    |\r\n   |       |       |       |      |       |       |     |      |       |",
+    "notes": "Since the call is being diverted to userC, the last hi-targeted-to-uri should be that of userC instead of proxyP2. \r\nThis is same as example shown in section 3.4 which has userC in last hi-targeted-to-uri where the AS B is diverting the call.",
+    "submit_date": "2015-09-22",
+    "submitter_name": "Amrita Bhatt",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
