@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 4614,
+    "doc-id": "RFC7749",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "   <?xml version=\"1.0\"?>\r\n\r\n   <!DOCTYPE rfc [\r\n\r\n     <!-- allow later RFC 2629 reference using \"&rfc2629;\" -->\r\n     <!-- the data will be fetched from xml2rfc.ietf.org -->\r\n     <!ENTITY rfc2629 PUBLIC\r\n     \"http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2629.xml\">\r\n   ]>",
+    "correct_text": "   <?xml version=\"1.0\"?>\r\n\r\n   <!DOCTYPE rfc [\r\n\r\n     <!-- allow later RFC 2629 reference using \"&rfc2629;\" -->\r\n     <!-- the data will be fetched from xml2rfc.ietf.org -->\r\n     <!ENTITY rfc2629 SYSTEM\r\n     \"http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2629.xml\">\r\n   ]>",
+    "notes": "A \"PUBLIC\" entity would need an additional \"PubidLiteral\" (which could be an empty string); but it's simpler to use a \"SYSTEM\" entity instead.\r\n\r\nSee <https://www.w3.org/TR/2008/REC-xml-20081126/#sec-external-ent>.\r\n\r\n[Verified per request of J. Reschke and H. Flanagan.]",
+    "submit_date": "2016-02-05",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4715,
+    "doc-id": "RFC7749",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.22.3",
+    "orig_text": " The value is a free-form text that allows counter values to be\r\n      inserted using a \"percent-letter\" format.  For instance, \"[REQ%d]\"\r\n      generates labels of the form \"[REQ1]\", where \"%d\" inserts the item\r\n      number as a decimal number.\r\n",
+    "correct_text": " The value is a free-form text that allows counter values to be\r\n      inserted using a \"percent-letter\" format.  For instance, \r\n\"format [REQ%d]\"\r\n      generates labels of the form \"[REQ1]\", where \"%d\" inserts the item\r\n      number as a decimal number.\r\n",
+    "notes": "The string format must prefix the style text in order for it to be recognized and used.  This means that the example given is incorrect as it will not generate the requested output.\r\n\r\nIt is possible that explanatory text to the effect of the string format being required is needed as well, however modification of the example should be sufficient.",
+    "submit_date": "2016-06-20",
+    "submitter_name": "Jim Schaad",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4850,
+    "doc-id": "RFC7749",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A.4.",
+    "orig_text": "A.4.  The \"consensus\" Attribute\r\n\r\n   For some of the publication streams (see Appendix A.3), the \"Status\r\n   of This Memo\" section depends on whether there was a consensus to\r\n   publish (again, see Section 3.2.2 of [RFC5741]).\r\n\r\n   The \"consensus\" attribute (\"yes\"/\"no\", defaulting to \"yes\") can be\r\n   used to supply this information.  The effect for the various\r\n   streams is:\r\n\r\n   o  \"independent\" and \"IAB\": none.\r\n\r\n   o  \"IETF\": mention that there was an IETF consensus.\r\n\r\n   o  \"IRTF\": mention that there was a research group consensus (where\r\n      the name of the research group is extracted from the <workgroup>\r\n      element).",
+    "correct_text": "A.4.  The \"consensus\" Attribute\r\n\r\n   For some of the publication streams (see Appendix A.3), the \"Status\r\n   of This Memo\" section depends on whether there was a consensus to\r\n   publish (again, see Section 3.2.2 of [RFC5741]).\r\n\r\n   The \"consensus\" attribute (\"yes\"/\"no\", defaulting to \"yes\") can be\r\n   used to supply this information.  The effect for the various\r\n   streams is:\r\n\r\n   o  \"independent\": none.\r\n\r\n   o  \"IAB\": mention that there was an IAB consensus.\r\n\r\n   o  \"IETF\": mention that there was an IETF consensus.\r\n\r\n   o  \"IRTF\": mention that there was a research group consensus (where\r\n      the name of the research group is extracted from the <workgroup>\r\n      element).",
+    "notes": "IAB documents may or may not include a consensus statement. See https://www.rfc-editor.org/materials/status-memos.txt, numbers 9-12.",
+    "submit_date": "2016-10-31",
+    "submitter_name": "Heather Flanagan",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5394,
+    "doc-id": "RFC7749",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.33.3",
+    "orig_text": "   Note that the file extension is not part of the draft, so in general\r\n   it should end with the current draft number (\"-\", plus two digits).\r\n",
+    "correct_text": "   Note that the file extension is not part of the draft name, so in\r\n   general it should end with the current draft number (\"-\", plus two\r\n   digits).\r\n",
+    "notes": "replace \"draft\" by \"draft name\"",
+    "submit_date": "2018-06-15",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
