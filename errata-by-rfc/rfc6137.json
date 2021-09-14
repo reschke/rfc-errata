@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2728,
+    "doc-id": "RFC6137",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 11,
+    "orig_text": "11.  References\r\n\r\n11.1.  Normative References\r\n\r\n   [1]   Bradner, S., \"Key words for use in RFCs to Indicate Requirement\r\n         Levels\", BCP 14, RFC 2119, March 1997.\r\n\r\n   [2]   World Wide Web Consortium, \"Extensible Markup Language\r\n         (XML) 1.0 (Fifth Edition)\", W3C Recommendation, 26 November\r\n         2008, <http://www.w3.org/TR/2008/REC-xml-20081126>.\r\n\r\n   [3]   World Wide Web Consortium, \"XML Schema Part 0: Primer Second\r\n         Edition\", W3C Recommendation, 28 October 2004,\r\n         <http://www.w3.org/TR/2004/REC-xmlschema-0-20041028/>.\r\n\r\n   [4]   World Wide Web Consortium, \"XML Schema Part 1: Structures\r\n         Second Edition\", W3C Recommendation, 28 October 2004,\r\n         <http://www.w3.org/TR/xmlschema-1/>.\r\n\r\n   [5]   World Wide Web Consortium, \"XML Schema Part 2: Datatypes Second\r\n         Edition\", W3C Recommendation, 28 October 2004,\r\n         <http://www.w3.org/TR/xmlschema-2/>.\r\n\r\n   [6]   World Wide Web Consortium, \"Namespaces in XML 1.0 (Third\r\n         Edition)\", W3C Recommendation, 8 December 2009,\r\n         <http://www.w3.org/TR/2009/REC-xml-names-20091208/>.\r\n\r\n   [7]   Mealling, M., \"The IETF XML Registry\", BCP 81, RFC 3688,\r\n         January 2004.\r\n\r\n11.2.  Informative References\r\n\r\n   [8]   Enabling Grids for E-sciencE, http://www.eu-egee.org/.\r\n\r\n   [9]   Enabling Grids for E-sciencE, \"ENOC, EGEE Network Operation\r\n         Centre\", http://technical.eu-egee.org/index.php?id=353.\r\n\r\n   [10]  Rumbaugh, J., Jacobson, I., and G. Booch, \"The Unified Modeling\r\n         Language Reference Manual,\" ISBN 020130998X, Addison-Wesley,\r\n         1998.\r\n\r\n   [11]  Johnson, D., \"NOC Internal Integrated Trouble Ticket System\r\n         Functional Specification Wishlist (\"NOC TT REQUIREMENTS\")\",\r\n         RFC 1297, January 1992.\r\n\r\n",
+    "correct_text": "11.  References\r\n\r\n11.1.  Normative References\r\n\r\n   [1]   Bradner, S., \"Key words for use in RFCs to Indicate Requirement\r\n         Levels\", BCP 14, RFC 2119, March 1997.\r\n\r\n   [2]   World Wide Web Consortium, \"Extensible Markup Language\r\n         (XML) 1.0 (Fifth Edition)\", W3C Recommendation, 26 November\r\n         2008, <http://www.w3.org/TR/2008/REC-xml-20081126>.\r\n\r\n   [3]   World Wide Web Consortium, \"XML Schema Part 0: Primer Second\r\n         Edition\", W3C Recommendation, 28 October 2004,\r\n         <http://www.w3.org/TR/2004/REC-xmlschema-0-20041028/>.\r\n\r\n   [4]   World Wide Web Consortium, \"XML Schema Part 1: Structures\r\n         Second Edition\", W3C Recommendation, 28 October 2004,\r\n         <http://www.w3.org/TR/xmlschema-1/>.\r\n\r\n   [5]   World Wide Web Consortium, \"XML Schema Part 2: Datatypes Second\r\n         Edition\", W3C Recommendation, 28 October 2004,\r\n         <http://www.w3.org/TR/xmlschema-2/>.\r\n\r\n   [6]   World Wide Web Consortium, \"Namespaces in XML 1.0 (Third\r\n         Edition)\", W3C Recommendation, 8 December 2009,\r\n         <http://www.w3.org/TR/2009/REC-xml-names-20091208/>.\r\n\r\n11.2.  Informative References\r\n\r\n   [7]   Mealling, M., \"The IETF XML Registry\", BCP 81, RFC 3688,\r\n         January 2004.\r\n\r\n   [8]   Enabling Grids for E-sciencE, http://www.eu-egee.org/.\r\n\r\n   [9]   Enabling Grids for E-sciencE, \"ENOC, EGEE Network Operation\r\n         Centre\", http://technical.eu-egee.org/index.php?id=353.\r\n\r\n   [10]  Rumbaugh, J., Jacobson, I., and G. Booch, \"The Unified Modeling\r\n         Language Reference Manual,\" ISBN 020130998X, Addison-Wesley,\r\n         1998.\r\n\r\n   [11]  Johnson, D., \"NOC Internal Integrated Trouble Ticket System\r\n         Functional Specification Wishlist (\"NOC TT REQUIREMENTS\")\",\r\n         RFC 1297, January 1992.\r\n\r\n",
+    "notes": "Here RFC 3688 should be rather Informative reference, since it provides the background information on the registry being modified.\n --VERIFIER NOTES-- \n3688 is used here to specify the registry this XML schema is to be registered in.\r\nIt's as much a normative reference as that to 2119.",
+    "submit_date": "2011-02-23",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2729,
+    "doc-id": "RFC6137",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6,
+    "orig_text": "<xs:schema xmlns=\"urn:ietf:params:xml:ns:nttdm-0.1\"",
+    "correct_text": "<xs:schema xmlns=\"urn:ietf:params:xml:ns:nttdm-1.0\"",
+    "notes": "Please verify this errata so that IANA can then correct the XML schema in the IANA registry.\r\nThis reports a simple typo in section 6.",
+    "submit_date": "2011-02-23",
+    "submitter_name": "Dimitris Zisiadis",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
