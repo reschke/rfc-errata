@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 5168,
+    "doc-id": "RFC8288",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "B.3",
+    "orig_text": "input is modified to remove the parsed parameters.",
+    "correct_text": "Input is modified to remove the parsed parameters.",
+    "notes": "The first letter of the sentence is not capitalized.",
+    "submit_date": "2017-10-25",
+    "submitter_name": "Sawood Alam",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5169,
+    "doc-id": "RFC8288",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "B.4",
+    "orig_text": "input is modified to remove the parsed string.",
+    "correct_text": "Input is modified to remove the parsed string.",
+    "notes": "The first letter of the sentence is not capitalized.",
+    "submit_date": "2017-10-25",
+    "submitter_name": "Sawood Alam",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5319,
+    "doc-id": "RFC8288",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 1.1,
+    "orig_text": "   This document uses the Augmented Backus-Naur Form (ABNF) [RFC5234]\r\n   notation of [RFC7230], including the #rule, and explicitly includes\r\n   the following rules from it: quoted-string, token, SP (space), BWS\r\n   (bad whitespace), OWS (optional whitespace), RWS (required\r\n   whitespace), LOALPHA, DIGIT.",
+    "correct_text": "   This document uses the Augmented Backus-Naur Form (ABNF) [RFC5234]\r\n   notation of [RFC7230], including the #rule, and explicitly includes\r\n   the following rules from it: quoted-string, token, SP (space), BWS\r\n   (bad whitespace), OWS (optional whitespace), RWS (required\r\n   whitespace), DIGIT. It also uses the following additional rule:\r\n\r\n   LOALPHA = %x61-7A\r\n\r\n   ",
+    "notes": "I can't find a definition of LOALPHA in RFC5234 or RFC7230. I see a definition in RFC2616, which seems to have been dropped in the update.",
+    "submit_date": "2018-04-04",
+    "submitter_name": "Jeffrey Yasskin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5878,
+    "doc-id": "RFC8288",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "B.2",
+    "orig_text": "       15.  Let star_param_names be the set of param_names in the\r\n            (param_name, param_value) tuples of link_parameters where\r\n            the last character of param_name is an asterisk (\"*\").\r\n       16.  For each star_param_name in star_param_names:\r\n            1.  Let base_param_name be star_param_name with the last\r\n                character removed.\r\n            2.  If the implementation does not choose to support an\r\n                internationalised form of a parameter named\r\n                base_param_name for any reason (including, but not\r\n                limited to, it being prohibited by the parameter's\r\n                specification), remove all tuples from link_parameters\r\n                whose first member is star_param_name, and skip to the\r\n                next star_param_name.\r\n            3.  Remove all tuples from link_parameters whose first\r\n                member is base_param_name.\r\n            4.  Change the first member of all tuples in link_parameters\r\n                whose first member is star_param_name to\r\n                base_param_name.",
+    "correct_text": "       15.  Let star_param_names be the set of param_names in the\r\n            (param_name, param_value) tuples of target_attributes where\r\n            the last character of param_name is an asterisk (\"*\").\r\n       16.  For each star_param_name in star_param_names:\r\n            1.  Let base_param_name be star_param_name with the last\r\n                character removed.\r\n            2.  If the implementation does not choose to support an\r\n                internationalised form of a parameter named\r\n                base_param_name for any reason (including, but not\r\n                limited to, it being prohibited by the parameter's\r\n                specification), remove all tuples from target_attributes\r\n                whose first member is star_param_name, and skip to the\r\n                next star_param_name.\r\n            3.  Remove all tuples from target_attributes whose first\r\n                member is base_param_name.\r\n            4.  Change the first member of all tuples in target_attributes\r\n                whose first member is star_param_name to\r\n                base_param_name.",
+    "notes": "The modified link_parameters value is not used, but target_attributes is. Additionally, the normative part of the document states that the RFC 8187 decoding scheme MAY be used for target attributes (especially extension attributes), not the ones that belong to the general link model.",
+    "submit_date": "2019-10-22",
+    "submitter_name": "Jinoh Kang",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-10-24 06:22:31"
+  }
+]
