@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5743,
+    "doc-id": "RFC8577",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 11.3,
+    "orig_text": "   IANA manages the \"Record Route Object Sub-object Flags\" registry as\r\n   part of the \"Resource Reservation Protocol-Traffic Engineering (RSVP-\r\n   TE) Parameters\" registry located at <http://www.iana.org/assignments/\r\n   rsvp-te-parameters>.  Prior to this document, this registry did not\r\n   include Label Sub-object Flags.  This document creates the addition\r\n   of a new subregistry for Label Sub-object Flags as shown below.\r\n\r\n      Flag  Name                    Reference\r\n\r\n      0x1   Global Label            [RFC3209]\r\n      0x02  TE Link Label           [RFC8577], Section 9.3\r\n      0x04  Delegation Label        [RFC8577], Section 9.5\r\n",
+    "correct_text": "   IANA manages the \"Record Route Object Sub-object Flags\" registry as\r\n   part of the \"Resource Reservation Protocol-Traffic Engineering (RSVP-\r\n   TE) Parameters\" registry located at <http://www.iana.org/assignments/\r\n   rsvp-te-parameters>.  Prior to this document, this registry did not\r\n   include Label Sub-object Flags.  This document creates the addition\r\n   of a new subregistry for Label Sub-object Flags as shown below.\r\n\r\n      Flag  Name                    Reference\r\n\r\n      0x1   Global Label            [RFC3209]\r\n      0x02  TE Link Label           [RFC8577], Section 9.3\r\n      0x04  Delegation Label        [RFC8577], Section 9.5\r\n \r\n  All assignments in this sub-registry are to be performed via\r\n  Standards Action.",
+    "notes": "This errata is being reported as a response to the following email from IANA.\r\n\r\n**\r\nAuthors/WG Chairs/ADs for RFC 8577,\r\n\r\nDuring the publication process, the registration procedures were unintentionally removed from the document.  Is this something that an errata should be submitted for?\r\n\r\nIn version 9 of the document, it says: All assignments in this sub-registry are to be performed via Standards Action.\t\r\n\r\nIn the published RFC this sentence does not appear to be there.\r\n\r\nPlease advise.\r\n\r\nThank you,\r\n\r\nMichelle Cotton\r\nProtocol Parameters Engagement Sr. Manager",
+    "submit_date": "2019-05-30",
+    "submitter_name": "Vishnu Pavan Beeram",
+    "verifier_id": 2,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
