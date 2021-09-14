@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1611,
+    "doc-id": "RFC5381",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.2.1,pg.15",
+    "orig_text": "<<  example on mid-page 15 >>\r\n\r\n   C:\\NetconfServer>java -classpath .;%AXIS_HOME%\\lib\\axis.jar;%\r\n   AXIS_HOME%\\lib\\jaxrpc.jar;%AXIS_HOME%\\lib\\saaj.jar;%AXIS_HOME%\r\n   \\lib\\commons-logging-1.0.4.jar;%AXIS_HOME%\\lib\\commons-discovery-\r\n|  0.2.jar org.apache.axis.client.AdminClient -p 832 depoy.wsdd\r\n                                                     ^^^^^",
+    "correct_text": "   C:\\NetconfServer>java -classpath .;%AXIS_HOME%\\lib\\axis.jar;%\r\n   AXIS_HOME%\\lib\\jaxrpc.jar;%AXIS_HOME%\\lib\\saaj.jar;%AXIS_HOME%\r\n   \\lib\\commons-logging-1.0.4.jar;%AXIS_HOME%\\lib\\commons-discovery-\r\n|  0.2.jar org.apache.axis.client.AdminClient -p 832 deploy.wsdd\r\n                                                     ^^^^^^",
+    "notes": "Rationale:\r\n  Mismatch between example and explaining text; typo?\r\n  s/depoy/deploy/",
+    "submit_date": "2008-11-24",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
