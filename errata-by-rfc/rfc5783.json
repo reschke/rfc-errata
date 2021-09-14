@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2513,
+    "doc-id": "RFC5783",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "7, pg.19",
+    "orig_text": "      [RFC3450] specifies ALC, a rough header format using the RMT\r\n      building blocks, that can be used by multicast content\r\n      dissemination protocols.  ALC is intended to use a multi-rate\r\n      congestion control building block, where the sender does not\r\n      require any feedback, but where multiple multicast groups with\r\n|     different transmission rates are available within and ALC session,\r\n      and receivers control their rates by joining or leaving groups.",
+    "correct_text": "      [RFC3450] specifies ALC, a rough header format using the RMT\r\n      building blocks, that can be used by multicast content\r\n      dissemination protocols.  ALC is intended to use a multi-rate\r\n      congestion control building block, where the sender does not\r\n      require any feedback, but where multiple multicast groups with\r\n|     different transmission rates are available within an ALC session,\r\n      and receivers control their rates by joining or leaving groups.",
+    "notes": "Rationale: confusing typo -- s/and/an/",
+    "submit_date": "2010-09-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
