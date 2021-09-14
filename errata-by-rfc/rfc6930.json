@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3616,
+    "doc-id": "RFC6930",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": "    0-1     0       0      0         0-1      2    User-Password",
+    "correct_text": "     0-1     0       0      0         0      2    User-Password\r\n",
+    "notes": "RFC 2866 does not allow User-Password to be in Accounting-Request messages.",
+    "submit_date": "2013-05-08",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": 134,
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3622,
+    "doc-id": "RFC6930",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "Message-Authenticator (type 80) [RFC2865] SHOULD be used to protect \r\nboth Access-Request and Access-Accept messages.\r\n",
+    "correct_text": "Message-Authenticator (type 80) [RFC2869] SHOULD be used to protect \r\nboth Access-Request and Access-Accept messages.\r\n",
+    "notes": "The reference of Message-Authenticator was wrong",
+    "submit_date": "2013-05-16",
+    "submitter_name": "Sheng Jiang",
+    "verifier_id": 134,
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
