@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5950,
+    "doc-id": "RFC8572",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.1.  Initia",
+    "orig_text": "   7.  Devices that support decrypting SZTP artifacts MUST posses the",
+    "correct_text": "   7.  Devices that support decrypting SZTP artifacts MUST possess the",
+    "notes": null,
+    "submit_date": "2019-12-30",
+    "submitter_name": "Tetsuya Hasegawa",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2020-01-05 08:53:07"
+  },
+  {
+    "errata_id": 6616,
+    "doc-id": "RFC8572",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.2.3",
+    "orig_text": "   For device-independent queries, the three bootstrapping artifacts\r\n   defined in Section 3 are encoded into the SVR records as follows.\r\n\r\n   Artifact to SRV Record Mapping:\r\n\r\n      Conveyed Information:  This artifact is not supported directly.\r\n         Instead, the essence of unsigned redirect information is mapped\r\n         to SVR records per [RFC2782].",
+    "correct_text": "   For device-independent queries, the three bootstrapping artifacts\r\n   defined in Section 3 are encoded into the SRV records as follows.\r\n\r\n   Artifact to SRV Record Mapping:\r\n\r\n      Conveyed Information:  This artifact is not supported directly.\r\n         Instead, the essence of unsigned redirect information is mapped\r\n         to SRV records per [RFC2782].",
+    "notes": "In both places \"SVR\" should obviously read \"SRV\".\r\n",
+    "submit_date": "2021-06-18",
+    "submitter_name": "Srihari Ramanathan",
+    "verifier_id": 2,
+    "verifier_name": "Rob Wilton",
+    "update_date": "2021-06-21 13:03:08"
+  }
+]
