@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 52,
+    "doc-id": "RFC4584",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.6,
+    "orig_text": "   IPv6 Neighbor Discovery changes are also defined in\r\n   <netinet/icmp6.h>.\r\n\r\n      New 'Home Agent' flag in router advertisement:  #define\r\n      ND_RA_FLAG_HOMEAGENT   0x20  /* Home Agent flag in RA */\r\n\r\n      New Router flag with prefix information of the home agent:\r\n      #define  ND_OPT_PI_FLAG_ROUTER  0x20  /* Router flag in PI */\r\n \r\n   As per the Mobile IPv6 specification [2], Section 7.2, a Home Agent\r\n   MUST include at least one prefix option with the Router Address (R)\r\n   bit set.  Advanced Socket API [1] defines data structure for prefix\r\n   option as follows:",
+    "correct_text": "   IPv6 Neighbor Discovery changes are also defined in\r\n   <netinet/icmp6.h>.\r\n\r\n   New 'Home Agent' flag in router advertisement:\r\n \r\n      #define  ND_RA_FLAG_HOMEAGENT   0x20  /* Home Agent flag in RA */\r\n\r\n   New Router flag with prefix information of the home agent:\r\n \r\n      #define  ND_OPT_PI_FLAG_ROUTER  0x20  /* Router flag in PI */\r\n\r\n   As per the Mobile IPv6 specification [2], Section 7.2, a Home Agent\r\n   MUST include at least one prefix option with the Router Address (R)\r\n   bit set.  The Advanced Socket API [1] defines a data structure for\r\n   the prefix option as follows:\r\n",
+    "notes": "separation of machine readable text and RFC text, and missing articles\r\n\r\nfrom pending",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Samita Chakrabarti",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 739,
+    "doc-id": "RFC4584",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99All instances of",
+    "orig_text": "IPV6 and ICMPV6\r\n\r\nFor example, in section 5:\r\n\r\n   Legacy IPv6 applications/implementations using the Advanced Socket\r\n   API [1] mechanisms, upon receiving Home Address destination options\r\n   or Routing headers(Type 2), will discard the packet as per Sections\r\n   4.2 and 4.4 of IPV6 Protocol [3] specification, respectively;\r\n   otherwise, they should properly handle the Home Address destination\r\n   option and the Routing Header Type 2 specified in this document.",
+    "correct_text": "IPv6 and ICMPv6\r\n\r\nFor example, should say (also incorporating other corrections):\r\n\r\n   Legacy IPv6 applications/implementations using the Advanced Socket\r\n   API [1] mechanisms, upon receiving Home Address destination options\r\n   or Routing headers (Type 2), will discard the packet as per Sections\r\n   4.2 and 4.4 of the IPv6 Protocol [3] specification, respectively;\r\n   otherwise, they should properly handle the Home Address destination\r\n   option and the Routing Header Type 2 specified in this document.\r\n",
+    "notes": "unusual capitalization\r\n\r\nOther places affected are:\r\n  Section 5.1, 1st paragraph (page 17);\r\n  Section 5.3, 1st paragraph (page 19);\r\n  Section 6.1, 1st paragraph (page 21)\r\n\r\nfrom pending",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Samita Chakrabarti",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 740,
+    "doc-id": "RFC4584",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 5.3,
+    "orig_text": "   Any user-level implementation or application that sends the Home\r\n   address destination option through ancillary data objects should\r\n   follow the order extension header defined in this document when using\r\n   IPV6_MIPDSTOPTS socket options.",
+    "correct_text": "   Any user-level implementation or application that sends the Home\r\n   address destination option through ancillary data objects should\r\n|  follow the order of extension headers defined in this document when\r\n|  using the IPV6_MIPDSTOPTS socket options.",
+    "notes": "from pending",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Samita Chakrabarti",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 741,
+    "doc-id": "RFC4584",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6.1,
+    "orig_text": "   This specification recommends that the IPv6 RAW sockets mechanism\r\n   send and receive Mobility Header (MH) packets.  The behavior is\r\n|  similar to ICMPV6 processing, where the kernel passes a copy of the\r\n   mobility header packet to the receiving socket.  Depending on the\r\n   implementation, the kernel may process the mobility header in\r\n   addition to passing the mobility header to the application.  In order\r\n   to comply with the restriction in the Advanced Sockets API for IPv6\r\n   [1], applications should set the IPV6_CHECKSUM socket option with\r\n   IPPROTO_MH protocol RAW Sockets.  A Mobile IPv6 implementation that\r\n   supports the Mobile IPv6 API must implement Mobility Header API\r\n   checksum calculations by default at the kernel for both incoming and\r\n   outbound paths.  A Mobile IPv6 implementation must not return error\r\n   on the IPV6_CHECKSUM socket option setting, even if the socket option\r\n   is a NO-OP function for that implementation because it verifies the\r\n   checksum at the kernel level.  The Mobility Header checksum procedure\r\n   is described in the Mobile IPv6 Protocol [2] specification.  Again,\r\n   for application portability it is recommended that the applications\r\n   set the IPV6_CHECKSUM socket option along with the RAW sockets for\r\n   IPPROTO_MH protocol.",
+    "correct_text": "   This specification recommends that the IPv6 RAW sockets mechanism\r\n   send and receive Mobility Header (MH) packets.  The behavior is\r\n|  similar to ICMPv6 processing; the kernel passes a copy of the\r\n   mobility header packet to the receiving socket.  Depending on the\r\n   implementation, the kernel may process the mobility header in\r\n   addition to passing the mobility header to the application.  In order\r\n   to comply with the restriction in the Advanced Sockets API for IPv6\r\n   [1], applications should set the IPV6_CHECKSUM socket option with\r\n   IPPROTO_MH protocol RAW Sockets.  A Mobile IPv6 implementation that\r\n   supports the Mobile IPv6 API must implement Mobility Header API\r\n|  checksum calculations by default in the kernel for both incoming and\r\n   outbound paths.  A Mobile IPv6 implementation must not return an\r\n   error on the IPV6_CHECKSUM socket option setting, even if the socket\r\n   option is a NO-OP function for that implementation because it\r\n   verifies the checksum at the kernel level.  The Mobility Header\r\n   checksum procedure is described in the Mobile IPv6 Protocol [2]\r\n   specification.  Again, for application portability it is recommended\r\n   that the applications set the IPV6_CHECKSUM socket option along with\r\n|  the RAW sockets for the IPPROTO_MH protocol.",
+    "notes": "misleading wording\r\n\r\nfrom pending",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Samita Chakrabarti",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
