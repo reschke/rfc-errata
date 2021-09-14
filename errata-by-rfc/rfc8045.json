@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5009,
+    "doc-id": "RFC8045",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7.1,
+    "orig_text": "   o  sourceTransportPortsLimit:\r\n\r\n      *  Name: sourceTransportPortsLimit\r\n\r\n      *  Element ID: 458\r\n\r\n      *  Description: This Information Element contains the maximum\r\n         number of IP source transport ports that can be used by an end\r\n         user when sending IP packets; each user is associated with one\r\n         or more (source) IPv4 or IPv6 addresses.  This Information\r\n         Element is particularly useful in address-sharing deployments\r\n         that adhere to REQ-4 of [RFC6888].  Limiting the number of\r\n         ports assigned to each user ensures fairness among users and\r\n         mitigates the denial-of-service attack that a user could launch\r\n         against other users through the address-sharing device in order\r\n         to grab more ports.\r\n\r\n      *  Data type: unsigned16\r\n\r\n      *  Data type semantics: totalCounter",
+    "correct_text": "   o  sourceTransportPortsLimit:\r\n\r\n      *  Name: sourceTransportPortsLimit\r\n\r\n      *  Element ID: 458\r\n\r\n      *  Description: This Information Element contains the maximum\r\n         number of IP source transport ports that can be used by an end\r\n         user when sending IP packets; each user is associated with one\r\n         or more (source) IPv4 or IPv6 addresses.  This Information\r\n         Element is particularly useful in address-sharing deployments\r\n         that adhere to REQ-4 of [RFC6888].  Limiting the number of\r\n         ports assigned to each user ensures fairness among users and\r\n         mitigates the denial-of-service attack that a user could launch\r\n         against other users through the address-sharing device in order\r\n         to grab more ports.\r\n\r\n      *  Data type: unsigned16\r\n\r\n      *  Data type semantics: quantity",
+    "notes": "Only change is \r\n\r\n      *  Data type semantics: totalCounter\r\nto\r\n      *  Data type semantics: quantity\r\n\r\nThe description is pretty clear that this IE is a maximum value and not a counter.",
+    "submit_date": "2017-05-02",
+    "submitter_name": "Andrew Feren",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
