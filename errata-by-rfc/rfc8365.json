@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5497,
+    "doc-id": "RFC8365",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.1.3",
+    "orig_text": "   list of encapsulation types defined in [RFC5512]; they are listed in\r\n   Section 11.\r\n\r\n   The MPLS encapsulation tunnel type, listed in Section 11, is needed",
+    "correct_text": "   list of encapsulation types defined in [RFC5512]; they are listed in\r\n   Section 12.\r\n\r\n   The MPLS encapsulation tunnel type, listed in Section 12, is needed",
+    "notes": "Typo in the reference, Section 11 is \"11.  Security Considerations\", but text refers to \"12.  IANA Considerations\"",
+    "submit_date": "2018-09-12",
+    "submitter_name": "Klemens Schragel",
+    "verifier_id": 160,
+    "verifier_name": "Martin Vigoureux",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6336,
+    "doc-id": "RFC8365",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "8.1.5",
+    "orig_text": "8.1.5.  DF Election\r\n...\r\n   EVI, normalized VIDs, and etc., as along the IDs are configured\r\n",
+    "correct_text": "8.1.5.  DF Election\r\n...\r\n   EVI, normalized VIDs, and etc., as long as the IDs are configured\r\n",
+    "notes": "Nit.\r\n=> as long as",
+    "submit_date": "2020-11-16",
+    "submitter_name": "Luc Andre Burdet",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2020-11-17 01:05:17"
+  }
+]
