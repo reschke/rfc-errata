@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6612,
+    "doc-id": "RFC7518",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 0.4,
+    "orig_text": "   2.  Turn R and S into octet sequences in big-endian order, with each\r\n       array being be 32 octets long.  The octet sequence\r\n       representations MUST NOT be shortened to omit any leading zero\r\n       octets contained in the values.\r\n",
+    "correct_text": "   2.  Turn R and S into octet sequences in big-endian order, with each\r\n       array being 32 octets long.  The octet sequence\r\n       representations MUST NOT be shortened to omit any leading zero\r\n       octets contained in the values.\r\n",
+    "notes": "\"being be\" should be changed to \"being\"",
+    "submit_date": "2021-06-16",
+    "submitter_name": "Sebastián Ramírez",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2021-06-24 19:40:20"
+  }
+]
