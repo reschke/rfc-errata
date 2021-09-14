@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 560,
+    "doc-id": "RFC1071",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "        while( count > 1 )  {\n           /*  This is the inner loop */\n               sum += * (unsigned short) addr++;\n               count -= 2;",
+    "correct_text": "        while( count > 1 )  {\n           /*  This is the inner loop */\n               sum += * (unsigned short *) addr++;\n               count -= 2;",
+    "notes": "",
+    "submit_date": "2004-04-05",
+    "submitter_name": "Tim Moors",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3133,
+    "doc-id": "RFC1071",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "           /*  Add left-over byte, if any */\r\n       if( count > 0 )\r\n               sum += * (unsigned char *) addr;",
+    "correct_text": "           /*  Add left-over byte, if any */\r\n       if( count > 0 )  {\r\n               unsigned short left_over = 0;\r\n               * (unsigned char *) &left_over = * (unsigned char *) addr;\r\n               sum += left_over;\r\n       }",
+    "notes": "for big-endian",
+    "submit_date": "2012-02-23",
+    "submitter_name": "chenhaospark",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4918,
+    "doc-id": "RFC1071",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "while( count > 1 )  {\r\n        /*  This is the inner loop */\r\n        sum += * (unsigned short) addr++;\r\n        count -= 2;\r\n}",
+    "correct_text": "while( count > 1 )  {\r\n        /*  This is the inner loop */\r\n        sum += * (unsigned short *) addr;\r\n        addr += 2;\r\n        count -= 2;\r\n}",
+    "notes": "- In the original text, code incorrectly casts from pointer to integer.\r\n- Increments addr pointer by 1. Because unsigned short is two bytes, it should have been incremented by 2 instead.",
+    "submit_date": "2017-01-26",
+    "submitter_name": "Cihangir Akturk",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
