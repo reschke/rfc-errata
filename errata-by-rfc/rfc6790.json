@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3431,
+    "doc-id": "RFC6790",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "This is an optional, transitive BGP attribute of value 28.",
+    "correct_text": "This is an optional, transitive BGP Attribute having Attribute Type Code 28, length 0, and no data.",
+    "notes": "\"Value\" is (slightly) confusing in this context.  The text should also explicitly specify that there isn't Attribute Data and thus the length will be 0.\r\n\r\nAmbiguity on this matter may lead implementations to utilize the data field in some unforeseen way.  Other implementations may then reject the attribute, applying general attribute processing rules, with an Attribute Length Error (RFC 4271 S6.3 paragraph 4.)",
+    "submit_date": "2012-12-16",
+    "submitter_name": "Jeff Wheeler",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
