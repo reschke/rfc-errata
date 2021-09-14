@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6492,
+    "doc-id": "RFC8996",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 1.1,
+    "orig_text": "ServerHello.Random",
+    "correct_text": "ServerHello.random ",
+    "notes": "Very pedantic, but RFC 8446 uses all lowercase for \"random\" to match the grammar.",
+    "submit_date": "2021-03-23",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
