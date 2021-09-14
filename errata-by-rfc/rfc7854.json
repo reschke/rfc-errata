@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4722,
+    "doc-id": "RFC7854",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1 4.8 7",
+    "orig_text": "Stats Reports",
+    "correct_text": "Statistics Reports",
+    "notes": "The message of type 1 is called \"Statistics Report\" in the IANA registry https://www.iana.org/assignments/bmp-parameters/bmp-parameters.xml#message-types (I used it as the reference) and in sections 4.1 and 10.1 but \"Stats Report\" in sections 3.1, 4.8 and 7.",
+    "submit_date": "2016-06-28",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 135,
+    "verifier_name": "Joel Jaeggli",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4830,
+    "doc-id": "RFC7854",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.9,
+    "orig_text": "Peer Down Notification\r\n\r\n   This message is used to indicate that a peering session was\r\n   terminated.\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+\r\n     |    Reason     |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |            Data (present if Reason = 1, 2 or 3)               |\r\n     ~                                                               ~\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "correct_text": "Peer Down Notification\r\n\r\n   This message is used to indicate that a peering session was\r\n   terminated. Following the common BMP header and per-peer header is \r\n   the following:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+\r\n     |    Reason     |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |            Data (present if Reason = 1, 2 or 3)               |\r\n     ~                                                               ~\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "notes": "What: \r\n\r\nFor Peer Down Notification: To the programmer implementing the RFC, it is not clear if the Peer Down message consists of per peer header",
+    "submit_date": "2016-10-12",
+    "submitter_name": "Suhas Anand",
+    "verifier_id": 135,
+    "verifier_name": "Joel Jaeggli",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5736,
+    "doc-id": "RFC7854",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4.2,
+    "orig_text": "      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |   Peer Type   |  Peer Flags   |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |         Peer Distinguisher (present based on peer type)       |\r\n     |                                                               |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                 Peer Address (16 bytes)                       |\r\n     ~                                                               ~\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                           Peer AS                             |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                         Peer BGP ID                           |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                    Timestamp (seconds)                        |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                  Timestamp (microseconds)                     |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "correct_text": "      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |   Peer Type   |  Peer Flags   |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |         Peer Distinguisher (present based on peer type)       |\r\n     |                                                               |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                 Peer Address (16 bytes)                       |\r\n     ~                                                               ~\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                           Peer AS                             |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                         Peer BGP ID                           |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                    Timestamp (seconds)                        |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                  Timestamp (microseconds)                     |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "notes": "The OLD figure may be misinterpreted as if there are unused bits between the \"Peer Flags\" and \"Peer Distinguisher\".\r\nWK: This also makes is consistent with other diagrams in this RFC.",
+    "submit_date": "2019-05-23",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
