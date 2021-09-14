@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3557,
+    "doc-id": "RFC6896",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.1.1",
+    "orig_text": "encoded as a HEX string holding the number\r\nof seconds since the UNIX epoch",
+    "correct_text": "encoded as a DECIMAL string holding the number\r\nof seconds since the UNIX epoch",
+    "notes": "The examples in Appendix A use decimal numbers for ATIME (eg ATIME: 1347265955), not hexadecimal.",
+    "submit_date": "2013-03-18",
+    "submitter_name": "James Manger",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4085,
+    "doc-id": "RFC6896",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "   o  AES-CBC-128 key: \"123456789abcdef\"",
+    "correct_text": "Appendix A.  Examples\r\n\r\n   The examples in this section have been created using the 'scs' test\r\n   tool bundled with LibSCS, a free and opensource reference\r\n   implementation of the SCS protocol that can be found at\r\n   (http://github.com/koanlogic/libscs).\r\n\r\nA.1.  No Compression\r\n\r\n   The following parameters:\r\n\r\n   o  Plaintext cookie: \"a state string\"\r\n\r\n   o  AES-CBC-128 key: 0123456789abcdef\r\n\r\n   o  HMAC-SHA1 key: 12345678901234567890\r\n\r\n   o  TID: tid\r\n\r\n   o  ATIME: 1347265955\r\n\r\n   o  IV:\r\n      \\xb4\\xbd\\xe5\\x24\\xf7\\xf6\\x9d\\x44\\x85\\x30\\xde\\x9d\\xb5\\x55\\xc9\\x4f\r\n\r\n   produce the following tokens:\r\n\r\n   o  DATA: pzSOjcNui9-HWS_Qk1Pwpg\r\n\r\n   o  ATIME: MTM0NzI2NTk1NQ\r\n\r\n   o  TID: dGlk\r\n\r\n   o  IV: tL3lJPf2nUSFMN6dtVXJTw\r\n\r\n   o  AUTHTAG: uea1fgC67RmOxfpNz8gMbnPWfDA\r\n\r\nA.2.  Use Compression\r\n\r\n   The same parameters as above, except ATIME and IV:\r\n\r\n   o  Plaintext cookie: \"a state string\"\r\n\r\n   o  AES-CBC-128 key: 0123456789abcdef\r\n\r\n   o  HMAC-SHA1 key: 12345678901234567890\r\n\r\n   o  TID: tid\r\n\r\n   o  ATIME: 1347281709\r\n\r\n   o  IV:\r\n      \\x1d\\xa7\\x6f\\xa0\\xff\\x11\\xd7\\x95\\xe3\\x4b\\xfb\\xa9\\xff\\x65\\xf9\\xc7\r\n\r\n   produce the following tokens:\r\n\r\n   o  DATA: gEnL9b92EEFBLg1qNVLoO9BpVh4GH9fyOo-NkV354JU\r\n\r\n   o  ATIME: MTM0NzI4MTcwOQ\r\n\r\n   o  TID: dGlk\r\n\r\n   o  IV: HadvoP8R15XjS_up_2X5xw\r\n\r\n   o  AUTHTAG: ak1Kq1MJV-VHZ5zaci9FsI78wSw\r\n\r\n   In both cases, the resulting SCS cookie is obtained via ordered\r\n   concatenation of the produced tokens, as described in Section 3.1.\r\n\r\n\r\n",
+    "notes": "The key length for AES-CBC-128 is 128 bit (16 byte). The specified \r\nstring has a length of 15 bytes (and thus, cannot be used as the key).\r\n\r\nThis error is both in A.1. and A.2.\r\n\r\nThe corrected text above is a complete replacement (supplied by the Author) for \r\nAppendix A, with corrected results.",
+    "submit_date": "2014-08-17",
+    "submitter_name": "Sven Herzberg",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
