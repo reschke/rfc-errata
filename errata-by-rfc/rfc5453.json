@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5589,
+    "doc-id": "RFC5453",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "   +-----------------------------------------+-------------------------+\r\n   |        Interface Identifier Range       |       Description       |\r\n   +-----------------------------------------+-------------------------+\r\n   |           0000:0000:0000:0000           |  Subnet-Router Anycast  |\r\n   |                                         |        [RFC4291]        |\r\n   |                                         |                         |\r\n   | FDFF:FFFF:FFFF:FF80-FDFF:FFFF:FFFF:FFFF | Reserved Subnet Anycast |\r\n   |                                         |    Addresses[RFC2526]   |\r\n   +-----------------------------------------+-------------------------+\r\n\r\n                       Table 1: Current Assignments",
+    "correct_text": "   +-----------------------------------------+-------------------------+\r\n   |        Interface Identifier Range       |       Description       |\r\n   +-----------------------------------------+-------------------------+\r\n   |           0000:0000:0000:0000           |  Subnet-Router Anycast  |\r\n   |                                         |        [RFC4291]        |\r\n   |                                         |                         |\r\n   | FDFF:FFFF:FFFF:FF80-FDFF:FFFF:FFFF:FFFF | Reserved Subnet Anycast |\r\n   | FFFF:FFFF:FFFF:FF80-FFFF:FFFF:FFFF:FFFF |    Addresses[RFC2526]   |\r\n   +-----------------------------------------+-------------------------+\r\n\r\n                       Table 1: Current Assignments",
+    "notes": "Both these ranges are in fact reserved by Section 2 of RFC2526. Under current recommendations [RFC7217] the FDFF range is no longer recommended for routine use, and the FFFF range is equally likely to occur in a pseudo-random 64-bit IID. Credit to Kerry Lynn for pointing this out.",
+    "submit_date": "2019-01-02",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
