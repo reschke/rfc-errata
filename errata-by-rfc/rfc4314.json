@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 127,
+    "doc-id": "RFC4314",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.1.1",
+    "orig_text": "   The client has specified the \"d\" right in the SETACL command above\r\n   and it expands to \"et\" on the server:\r\n\r\n               C: A002 getacl INBOX/Drafts\r\n               S: * ACL INBOX Fred rwipslxcetda David lrswideta\r\n               S: A002 OK Getacl complete",
+    "correct_text": "   The client has specified the \"d\" right in the SETACL command above\r\n   and it expands to \"et\" on the server:\r\n\r\n               C: A002 getacl INBOX/Drafts\r\n               S: * ACL INBOX/Drafts Fred rwipslxcetda David lrswideta\r\n               S: A002 OK Getacl complete\r\n",
+    "notes": "",
+    "submit_date": "2005-12-31",
+    "submitter_name": "Arnaud Taddei",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 828,
+    "doc-id": "RFC4314",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.1.1",
+    "orig_text": "Example:       C: A003 Setacl INBOX/Drafts Byron lrswikda\r\n               S: A001 OK Setacl complete\r\n               C: A002 getAcl INBOX/Drafts\r\n               S: * ACL INBOX Fred rwipslxcetda Byron lrswikcdeta\r\n               S: A002 OK Getacl complete",
+    "correct_text": "Example:       C: A003 Setacl INBOX/Drafts Byron lrswikda\r\n               S: A003 OK Setacl complete\r\n               C: A004 getAcl INBOX/Drafts\r\n               S: * ACL INBOX/Drafts Fred rwipslxcetda Byron lrswikcdeta\r\n               S: A004 OK Getacl complete",
+    "notes": "from pending",
+    "submit_date": "2005-12-31",
+    "submitter_name": "Arnaud Taddei",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 831,
+    "doc-id": "RFC4314",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.5,
+    "orig_text": "The MYRIGHTS command returns the set of rights that the user has to\r\nmailbox in an untagged MYRIGHTS reply.\r\n",
+    "correct_text": "The MYRIGHTS command returns the set of rights that the user has to\r\nthe mailbox in an untagged MYRIGHTS reply.\r\n",
+    "notes": "from pending",
+    "submit_date": "2005-12-31",
+    "submitter_name": "Arnaud Taddei",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
