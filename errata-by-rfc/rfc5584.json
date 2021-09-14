@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1830,
+    "doc-id": "RFC5584",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "10.2, pg.29",
+    "orig_text": "   Also, validity checking of the received audio packets MUST be\r\n   performed.  It can be carried out by the decoding process, as the\r\n   ATRAC format is designed so that the validity of data frames can be\r\n|  determined by decoding the algorithm.  [...]\r\n                 ^^^^^^^^^^^^",
+    "correct_text": "   Also, validity checking of the received audio packets MUST be\r\n   performed.  It can be carried out by the decoding process, as the\r\n   ATRAC format is designed so that the validity of data frames can be\r\n|  determined by the decoding algorithm.  [...]\r\n                 ^^^^^^^^^^^^",
+    "notes": "Rationale: Confusing word twister.",
+    "submit_date": "2009-08-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
