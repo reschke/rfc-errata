@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1693,
+    "doc-id": "RFC5439",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "   Consider the requirement for a full mesh of LSPs linking all PEs.\r\n|  That is, each PE has an LSP to and from every other LSP.  Thus, if\r\n                                                       ^^^\r\n   there are S(PE) PEs in the network, there are S(PE)*(S(PE) - 1) LSPs.\r\n",
+    "correct_text": "   Consider the requirement for a full mesh of LSPs linking all PEs.\r\n|  That is, each PE has an LSP to and from every other PE.  Thus, if\r\n                                                       ^^\r\n   there are S(PE) PEs in the network, there are S(PE)*(S(PE) - 1) LSPs.\r\n",
+    "notes": "Rationale:\r\n  Distorting confusion of abbreviations.\r\n  The LSPs under consideration extend from one PE to another PE.",
+    "submit_date": "2009-02-22",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
