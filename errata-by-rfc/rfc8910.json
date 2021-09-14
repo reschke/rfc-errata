@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6620,
+    "doc-id": "RFC8910",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "   A captive portal MAY do content negotiation (Section 3.4 of\r\n   [RFC7231]) and attempt to redirect clients querying without an\r\n   explicit indication of support for the captive portal API content\r\n   type (i.e., without application/capport+json listed explicitly\r\n   anywhere within an Accept header field as described in Section 5.3 of\r\n   [RFC7231]).  In so doing, the captive portal SHOULD redirect the\r\n   client to the value associated with the \"user-portal-url\" API key.\r\n   When performing such content negotiation (Section 3.4 of [RFC7231]),\r\n   implementors of captive portals need to keep in mind that such\r\n   responses might be cached, and therefore SHOULD include an\r\n   appropriate Vary header field (Section 7.1.4 of [RFC7231]) or set the\r\n   Cache-Control header field in any responses to \"private\" or a more\r\n   restrictive value such as \"no-store\" (Section 5.2.2.3 of [RFC7234]).",
+    "correct_text": "   A captive portal MAY do content negotiation (Section 3.4 of\r\n   [RFC7231]) and attempt to redirect clients querying without an\r\n   explicit indication of support for the captive portal API content\r\n   type (i.e., without application/captive+json listed explicitly\r\n   anywhere within an Accept header field as described in Section 5.3 of\r\n   [RFC7231]).  In so doing, the captive portal SHOULD redirect the\r\n   client to the value associated with the \"user-portal-url\" API key.\r\n   When performing such content negotiation (Section 3.4 of [RFC7231]),\r\n   implementors of captive portals need to keep in mind that such\r\n   responses might be cached, and therefore SHOULD include an\r\n   appropriate Vary header field (Section 7.1.4 of [RFC7231]) or set the\r\n   Cache-Control header field in any responses to \"private\" or a more\r\n   restrictive value such as \"no-store\" (Section 5.2.2.3 of [RFC7234]).",
+    "notes": "In RFC8908 the relevant Content-Type is defined as \"application/captive+json\" and not \"application/capport+json\".",
+    "submit_date": "2021-06-23",
+    "submitter_name": "Vittorio Gambaletta (VittGam)",
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2021-06-23 23:32:09"
+  }
+]
