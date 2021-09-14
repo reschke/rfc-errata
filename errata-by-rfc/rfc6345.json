@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2996,
+    "doc-id": "RFC6345",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "When the PRE receives the PRY message, it retrieves the PAA-\r\noriginated PANA message from the Relayed-Message AVP and the PaC's\r\nIP address and UDP port number from and PaC-Information AVPs.  The\r\nPAA-originated PANA message is sent to the PaC's IP address with\r\nthe source UDP port number set to the PANA port number (716) and\r\nthe destination UDP port number set to the UDP port number contained\r\nin the Relayed-Message AVP.",
+    "correct_text": "When the PRE receives the PRY message, it retrieves the PAA-\r\noriginated PANA message from the Relayed-Message AVP and the PaC's\r\nIP address and UDP port number from and PaC-Information AVPs.  The\r\nPAA-originated PANA message is sent to the PaC's IP address with\r\nthe source UDP port number set to the PANA port number (716) and\r\nthe destination UDP port number set to the UDP port number contained\r\nin the PaC-Information AVP.",
+    "notes": "(s/Relayed-Message/PaC-Information/ in the last sentence.)  The reason for the change is that the UDP port number is contained in the PaC-Information AVP instead of the Relayed Message AVP.",
+    "submit_date": "2011-10-13",
+    "submitter_name": "Yoshihiro Ohba",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
