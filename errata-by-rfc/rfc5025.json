@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2544,
+    "doc-id": "RFC5025",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.3.2.12",
+    "orig_text": "   bare:  This value indicates that the <user-input> element is to be\r\n      retained.  However, any \"idle-threshold\" and \"since\" attributes\r\n      are to be removed.  This value is assigned the numeric value of\r\n      10.\r\n",
+    "correct_text": "   bare:  This value indicates that the <user-input> element is to be\r\n      retained.  However, any \"idle-threshold\" and \"last-input\" attributes\r\n      are to be removed.  This value is assigned the numeric value of\r\n      10.\r\n",
+    "notes": "<user-input> does not have a \"since\" attribute defined.",
+    "submit_date": "2010-10-05",
+    "submitter_name": "Tiberius Duluman",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
