@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4888,
+    "doc-id": "RFC5137",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 1.1,
+    "orig_text": "So, even for the fairly simple cases of ASCII and standard built by\r\nextending ASCII, such as the ISO 8859 family, we have been living",
+    "correct_text": "So, even for the fairly simple cases of ASCII and standards built by\r\nextending ASCII, such as the ISO 8859 family, we have been living",
+    "notes": "Should be plural \"standards\"",
+    "submit_date": "2016-12-14",
+    "submitter_name": "Matthew Kerwin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5138,
+    "doc-id": "RFC5137",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A.3",
+    "orig_text": "   EmbeddedUnicodeChar =   %x5C.7A 4HEXDIG ; starts with \"\\u\"",
+    "correct_text": "   EmbeddedUnicodeChar =   %x5C.75 4HEXDIG ; starts with \"\\u\"",
+    "notes": "Hex 7A is the character 'z', which doesn't match the comment.  \r\nAs far as I can tell, the Java language defines unicode characters to be \\u, like the comment says, and therefore the ABNF should be %x5C.75",
+    "submit_date": "2017-10-04",
+    "submitter_name": "Peter Smith",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
