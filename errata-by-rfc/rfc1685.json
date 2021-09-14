@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1404,
+    "doc-id": "RFC1685",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6,
+    "orig_text": "   RFC822: Harald.Alvestrand@uninett.no\r\n   X.400:  C=no; ADMD=; PRMD=uninett; O=uninett; S=alvestrand;\r\n   G=harald",
+    "correct_text": "   RFC822: Harald.Alvestrand@uninett.no\r\n   X.400:  G=Harald; S=alvestrand; O=uninett; P=uninett; C=no",
+    "notes": "The RFC is about the format of O/R names. The address as given in the author's address section should be consistent with the format recommended by the RFC.",
+    "submit_date": "2008-04-03",
+    "submitter_name": "Harald Tveit Alvestrand",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
