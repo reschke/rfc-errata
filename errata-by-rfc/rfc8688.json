@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6586,
+    "doc-id": "RFC8688",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "                         +--------+         +-----------+\r\n                         | Called |         |   Call    |\r\n        +-----+          | Party  |         | Analytics |   +-----+\r\n        | UAC |          | Proxy  |         |  Engine   |   | UAS |\r\n        +-----+          +--------+         +-----------+   +-----+\r\n           |  INVITE         |                    |            |\r\n           | --------------> |  Is call OK?       |            |\r\n           |                 |------------------->|            |\r\n           |                 |                    |            |\r\n           |                 |               Yes  |            |\r\n           |                 |<-------------------|            |\r\n           |                 |                    |            |\r\n           |                 | INVITE             |            |\r\n           |                 | ------------------------------> |\r\n           |                 |                    |            |\r\n           |                 |                    |       607  |\r\n           |                 | <------------------------------ |\r\n           |                 |                    |            |\r\n           |                 |  Unwanted call     |            |\r\n           |            607  | -----------------> |            |\r\n           | <-------------- |  indicators        |            |\r\n           |                 |                    |            |\r\n",
+    "correct_text": "                         +--------+         +-----------+\r\n                         | Called |         |   Call    |\r\n        +-----+          | Party  |         | Analytics |   +-----+\r\n        | UAC |          | Proxy  |         |  Engine   |   | UAS |\r\n        +-----+          +--------+         +-----------+   +-----+\r\n           |  INVITE         |                    |            |\r\n           | --------------> |  Is call OK?       |            |\r\n           |                 |------------------->|            |\r\n           |                 |                    |            |\r\n           |                 |               No   |            |\r\n           |                 |<-------------------|            |\r\n           |                 |                    |            |\r\n           |                 |              \t  |            |\r\n           |                 |                    |            |\r\n           |                 |                    |            |\r\n           |            608  |                    |            |\r\n           | <-------------- |                    |            |\r\n           |                 |                    |            |\r\n",
+    "notes": "\"Figure 4: Rejected (608) Ladder Diagram\" does not depict correct signalling flow.",
+    "submit_date": "2021-05-18",
+    "submitter_name": "Amrita Bhatt",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
