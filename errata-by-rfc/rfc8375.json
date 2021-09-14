@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6378,
+    "doc-id": "RFC8375",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "\"home.arpa.\"",
+    "correct_text": "\"home.arpa\"",
+    "notes": "The domain \"home.arpa.\" is used throughout the document. The domain should, instead, be \"home.arpa\".\n --VERIFIER NOTES-- \n As discussed over email, RFC 1034 specifies that FQDN should terminate with a dot else it is not a FQDN.",
+    "submit_date": "2021-01-02",
+    "submitter_name": "Kulvinder Matharu",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-01-03 00:07:41"
+  }
+]
