@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2733,
+    "doc-id": "RFC5771",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "[IANA]",
+    "correct_text": "[IANA-protocols]",
+    "notes": "All references named [IANA] should be replaced by [IANA-protocols] because such references refer to the list of current assignments, that are placed at the location, mentioned as [IANA-protocols].",
+    "submit_date": "2011-02-24",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2734,
+    "doc-id": "RFC5771",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 17.2,
+    "orig_text": " [IANA]    IANA, \"IANA Protocol Registries\", <http://www.iana.org/>.\r\n\r\n",
+    "correct_text": "<none - should be removed>",
+    "notes": "This errata report is to remove confusion made by Errata ID 2733.  That errata proposes that [IANA] shall be replaced by [IANA-protocols] and no references to [IANA] are therefore needed.",
+    "submit_date": "2011-02-24",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
