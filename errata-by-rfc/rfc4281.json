@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2859,
+    "doc-id": "RFC4281",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "   cod-fancy   := \"codecs*\" \":=\" encodedv",
+    "correct_text": "   cod-fancy   := \"codecs*\" \"=\" encodedv\r\n                                       ^^^",
+    "notes": "The syntax is supposed to specify \"=\" not \":=\"",
+    "submit_date": "2011-07-12",
+    "submitter_name": "Randall Gellens",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
