@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 895,
+    "doc-id": "RFC4468",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "X.7.8 Trust relationship required",
+    "correct_text": "X.7.14 Trust relationship required",
+    "notes": "Incorrect Enhanced Status Code. See <http://www.iana.org/assignments/smtp-enhanced-status-codes> for more details.\r\n",
+    "submit_date": "2007-04-11",
+    "submitter_name": "Alexey Melnikov",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 896,
+    "doc-id": "RFC4468",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "554 5.7.8 URL resolution requires trust relationship",
+    "correct_text": "554 5.7.14 URL resolution requires trust relationship",
+    "notes": "Incorrect Enhanced Status Code. See <http://www.iana.org/assignments/smtp-enhanced-status-codes> for more details.\r\n",
+    "submit_date": "2007-04-11",
+    "submitter_name": "Alexey Melnikov",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
