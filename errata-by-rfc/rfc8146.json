@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5454,
+    "doc-id": "RFC8146",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.2,
+    "orig_text": "salted-password = Hash(password | salt)",
+    "correct_text": "salted-password = Hash(password || salt)",
+    "notes": "Elsewhere in this document || is used to denote concatenation.",
+    "submit_date": "2018-08-09",
+    "submitter_name": "Edward Huff",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
