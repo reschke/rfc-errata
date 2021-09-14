@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2744,
+    "doc-id": "RFC6149",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 9,
+    "orig_text": "9. Informative References\r\n\r\n   [HASH-Attack] Hoffman, P. and B. Schneier, \"Attacks on Cryptographic\r\n                 Hashes in Internet Protocols\", RFC 4270, November 2005.\r\n\r\n   [KMM2010]     Knudsen, L., Mathiassen, J., Muller, F., and Thomsen,\r\n                 S., \"Cryptanalysis of MD2\", Journal of Cryptology,\r\n                 23(1):72-90, 2010.\r\n\r\n   [KNMA2005]    Knudsen, L., and J. Mathiassen, \"Preimage and Collision\r\n                 Attacks on MD2\", FSE 2005.\r\n\r\n   [MD2]         Kaliski, B., \"The MD2 Message-Digest Algorithm\", RFC\r\n                 1319, April 1992.\r\n",
+    "correct_text": "9. References\r\n\r\n9.1. Normative References\r\n\r\n   [MD2]         Kaliski, B., \"The MD2 Message-Digest Algorithm\", RFC\r\n                 1319, April 1992.\r\n\r\n9.2. Informative References\r\n\r\n   [HASH-Attack] Hoffman, P. and B. Schneier, \"Attacks on Cryptographic\r\n                 Hashes in Internet Protocols\", RFC 4270, November 2005.\r\n\r\n   [KMM2010]     Knudsen, L., Mathiassen, J., Muller, F., and Thomsen,\r\n                 S., \"Cryptanalysis of MD2\", Journal of Cryptology,\r\n                 23(1):72-90, 2010.\r\n\r\n   [KNMA2005]    Knudsen, L., and J. Mathiassen, \"Preimage and Collision\r\n                 Attacks on MD2\", FSE 2005.\r\n",
+    "notes": "\n --VERIFIER NOTES-- \n   ",
+    "submit_date": "2011-03-07",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
