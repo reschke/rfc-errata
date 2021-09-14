@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 101,
+    "doc-id": "RFC4404",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "   The FCIP Entity table contains information about this entity's\r\n   existing instances of FCIP entities.",
+    "correct_text": "   The FCIP Entity table contains information about this device's\r\n   existing instances of FCIP entities.",
+    "notes": "The present text is almost recursive nonsense.\r\n* Section 2. explains the terminology.\r\n* The DESCRIPTION clause of the fcipEntityInstanceTable OBJECT-TYPE\r\n  definition (on page 9) correctly states:\r\n\r\n           \"Information about this FCIP device's existing instances of\r\n            FCIP entities.\"\r\n                                        ^^^^^^\r\n\r\nfrom pending",
+    "submit_date": "2006-03-03",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
