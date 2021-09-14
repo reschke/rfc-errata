@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5847,
+    "doc-id": "RFC6333",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.3,
+    "orig_text": "   However, as not all service providers will be able to increase their\r\n   link MTU, the B4 element MUST perform fragmentation and reassembly if\r\n   the outgoing link MTU cannot accommodate the extra IPv6 header.  The\r\n   original IPv4 packet is not oversized.  The packet is oversized after\r\n   the IPv6 encapsulation.  The inner IPv4 packet MUST NOT be\r\n   fragmented.  Fragmentation MUST happen after the encapsulation of the\r\n   IPv6 packet.  Reassembly MUST happen before the decapsulation of the\r\n   IPv4 packet.  A detailed procedure has been specified in [RFC2473]\r\n   Section 7.2.",
+    "correct_text": "   However, as not all service providers will be able to increase their\r\n   link MTU, the B4 element MUST perform fragmentation and reassembly if\r\n   the outgoing link MTU cannot accommodate the extra IPv6 header.  The\r\n   original IPv4 packet is not oversized.  The packet is oversized after\r\n   the IPv6 encapsulation.  The inner IPv4 packet MUST NOT be\r\n   fragmented.  Fragmentation MUST happen after the encapsulation of the\r\n   IPv4 packet in the IPv6 packet.  Reassembly of the IPv6 packet MUST happen before the decapsulation of the\r\n   IPv4 packet.  A detailed procedure has been specified in [RFC2473]\r\n   Section 7.2 following point b) and ignoring the DF-bit setting.",
+    "notes": "I do not have a corrected text. The above text doesn't say what RFC2473 section 7.2 says, so... what should it be? RFC2473 7.2 says to use the DF bit and decide whether to inner fragment or drop+send ICMP error. The above text seems to make normative statements that counter at least the DF=1 case in RFC2473 7.2. Also the text above says \"Fragmentation MUST happen after the encapsulation of the IPv6 packet.\". The IPv6 packet isn't encapsulated, so that sentence should be changed?\r\n\r\n--- Verifier note ---\r\nFollowing the discussion in https://mailarchive.ietf.org/arch/msg/softwires/bBQT97R7p1Ho4cUZIP2MFU5ZYJ4/ , the original intent is to avoid fragmenting the IPv4 packet before encapsulation.",
+    "submit_date": "2019-08-26",
+    "submitter_name": "Mikael Abrahamsson",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-05-17 00:57:08"
+  },
+  {
+    "errata_id": 6584,
+    "doc-id": "RFC6333",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6.3,
+    "orig_text": "   As noted previously, fragmentation and reassembly need to be taken\r\n   care of by the tunnel endpoints.  As such, the AFTR MUST perform\r\n   fragmentation and reassembly if the underlying link MTU cannot\r\n   accommodate the encapsulation overhead.  Fragmentation MUST happen\r\n   after the encapsulation on the IPv6 packet.  Reassembly MUST happen\r\n                           ^^^^^^^^^^^^^^^^^^\r\n   before the decapsulation of the IPv6 header.  A detailed procedure\r\n   has been specified in [RFC2473] Section 7.2.\r\n",
+    "correct_text": "   As noted previously, fragmentation and reassembly need to be taken\r\n   care of by the tunnel endpoints.  As such, the AFTR MUST perform\r\n   fragmentation and reassembly if the underlying link MTU cannot\r\n   accommodate the encapsulation overhead.  Fragmentation MUST happen\r\n   after the IPv6 encapsulation.  Fragmentation MUST happen after the encapsulation of the\r\n   IPv4 packet in the IPv6 packet.  Reassembly of the IPv6 packet MUST happen before the decapsulation of the\r\n   IPv4 packet.  A detailed procedure has been specified in [RFC2473]\r\n   Section 7.2 following point b) and ignoring the DF-bit setting.\r\n",
+    "notes": "The original text is confusing as it seems to assume an extra encapsulation on the IPv6 packet, while this should be about adding an IPv6 header to an IPv4 packet.\r\n\r\n-- verifier notes --\r\nFollowing the discussion in https://mailarchive.ietf.org/arch/msg/softwires/bBQT97R7p1Ho4cUZIP2MFU5ZYJ4/ , the original intent is to avoid fragmenting the IPv4 packet before encapsulation.\r\nSee also errata 5874 on section 5.3 (the submitter's proposal has been updated by the verifier to be consistent with errata 5874).",
+    "submit_date": "2021-05-17",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-05-17 01:42:31"
+  }
+]
