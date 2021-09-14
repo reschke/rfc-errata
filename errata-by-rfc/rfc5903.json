@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2308,
+    "doc-id": "RFC5903",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.1 - 3.3",
+    "orig_text": "a) in Section 3.1:\r\n\r\n   Field Size:\r\n    256\r\n\r\nb) in Section 3.2:\r\n\r\n   Field Size:\r\n    384\r\n\r\nc) in Section 3.3:\r\n\r\n   Field Size:\r\n    521",
+    "correct_text": "a)\r\n\r\n   Field bit width:\r\n    256\r\n\r\nb)\r\n\r\n   Field bit width:\r\n    384\r\n\r\nc)\r\n\r\n   Field bit width:\r\n    521   ",
+    "notes": "Rationale:\r\n\r\nThe \"size\" of a finite field is the number of elements of the field,\r\naccording to century-old well-established mathematical terminology.\r\nIn the case of Sections 3.1 through 3.3, the field width is the prime\r\nnumber p given 3 lines above the given snippets.\r\nThe idea is to give the number of bits needed to represent the field\r\nelements (integers modulo p), which serve as the x and y coordinates\r\nof the Elliptic Curve group points -- hence this should be denoted as\r\nthe bit width of the field (elements), which equals ceil(lb(p)).\n --VERIFIER NOTES-- \nI just can't see keeping this as-is is going to cause any issues for implementers.   ",
+    "submit_date": "2010-06-22",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2309,
+    "doc-id": "RFC5903",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 10.2,
+    "orig_text": "   [Err9]         RFC Errata, Errata ID 9, RFC 4753,\r\n                  <http://www.rfc-editor.org>.\r\n",
+    "correct_text": "   [Err9]         RFC Errata, Errata ID 9, RFC 4753; see\r\n                  <http://www.rfc-editor.org/info/rfc4753>.\r\n",
+    "notes": "Rationale:\r\nA less experienced reader will likely have difficulties locating\r\nthe Errata entry given only the RFC Editor home page URL.\r\nThe RFC 'info' URIs have been introduced by RFC 5741 to provide\r\nstable canonical URIs for all information related to a given RFC;\r\nthus, the proper stable URI should be provided in the reference entry.\n --VERIFIER NOTES-- \nThe reference entry for Errata ID 9 is similar to how errata were referenced in previous RFCs (5550 and 5724). The URL of the main RFC Editor page was used intentionally, rather than the URL of the specific Errata ID or the RFC's info page (as in Alfred's corrected text).    ",
+    "submit_date": "2010-06-22",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5764,
+    "doc-id": "RFC5903",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 8,
+    "orig_text": "Sections 8.1, 8.2 and 8.3 say \"We suppose\r\nthat the response Diffie-Hellman private key is:\"",
+    "correct_text": "\"We suppose that the responder's Diffie-Hellman private key is:\"",
+    "notes": "While the text did not cause me any problems in testing my P-256 implementation, it did initially confuse me. IKE has initiator and responder. The way the text is currently phrased, it seems as if the private key is sent in response to a message from the initiator.",
+    "submit_date": "2019-06-27",
+    "submitter_name": "Mohit Sethi",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
