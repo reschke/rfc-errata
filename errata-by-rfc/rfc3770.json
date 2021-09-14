@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 233,
+    "doc-id": "RFC3770",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 8,
+    "orig_text": "   id-aca-wlanSSID  OBJECT IDENTIFIER ::= { id-aca 6 }\n",
+    "correct_text": "   id-aca-wlanSSID  OBJECT IDENTIFIER ::= { id-aca 7 }\n",
+    "notes": " ",
+    "submit_date": "2005-01-22",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 234,
+    "doc-id": "RFC3770",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "    The WLAN SSID attribute certificate attribute is identified by\r\n    id-aca-wlanSSID.\r\n\r\n      id-aca  OBJECT IDENTIFIER  ::=  { iso(1) identified-organization(3)\r\n        dod(6) internet(1) security(5) mechanisms(5) pkix(7) 10 }\r\n\r\n      id-aca-wlanSSID  OBJECT IDENTIFIER ::= { id-aca 6 }\r\n",
+    "correct_text": "    The WLAN SSID attribute certificate attribute is identified by\r\n    id-aca-wlanSSID.\r\n\r\n      id-aca  OBJECT IDENTIFIER  ::=  { iso(1) identified-organization(3)\r\n        dod(6) internet(1) security(5) mechanisms(5) pkix(7) 10 }\r\n\r\n      id-aca-wlanSSID  OBJECT IDENTIFIER ::= { id-aca 7 }\r\n",
+    "notes": "This same error is repeated in the ASN.1 Module (Section 8).",
+    "submit_date": "2005-01-22",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
