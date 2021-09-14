@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3084,
+    "doc-id": "RFC1510",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 1.2,
+    "orig_text": "\r\n\r\n   +    \"Denial of service\" attacks are not solved with Kerberos.  There\r\n        are places in these protocols where an intruder intruder can\r\n        prevent an application from participating in the proper\r\n        authentication steps.  Detection and solution of such attacks\r\n        (some of which can appear to be not-uncommon \"normal\" failure\r\n        modes for the system) is usually best left to the human\r\n        administrators and users.",
+    "correct_text": "\r\n\r\n   +    \"Denial of service\" attacks are not solved with Kerberos.  There\r\n        are places in these protocols where an intruder can\r\n        prevent an application from participating in the proper\r\n        authentication steps.  Detection and solution of such attacks\r\n        (some of which can appear to be not-uncommon \"normal\" failure\r\n        modes for the system) is usually best left to the human\r\n        administrators and users.",
+    "notes": "Intruder appeared twice.\r\n\r\nWhile that certainly can happen in practice, I don't think the author meant to allude to that possibility. :)\n --VERIFIER NOTES-- \nAlready fixed in 4120 which obsoletes this.   ",
+    "submit_date": "2012-01-05",
+    "submitter_name": "Jennifer Black",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
