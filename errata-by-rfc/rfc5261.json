@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 3458,
+    "doc-id": "RFC5261",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "<!ENTITY id     \"id\\(('&ncname;')?\\)|id\\((&quot;&ncname;&quot;)?\\)\">",
+    "correct_text": "<!ENTITY id     \"id\\('&ncname;'\\)|id\\(&quot;&ncname;&quot;\\)\">",
+    "notes": "The regex in the XSD suggests that \"id()\" would be a valid selector for a patch, but it would not make sense to specify such a selector since it never would select a node (there's no identifier to locate in the document). This means that while \"id()\" is a valid XPath expression, it should not be allowed as a selector expression within an XML patch document.",
+    "submit_date": "2013-01-16",
+    "submitter_name": "Erik Wilde",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3465,
+    "doc-id": "RFC5261",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.2.3",
+    "orig_text": "- Lastly, if the above two rules still don't apply, first all\r\n  in-scope namespace prefixes of the evaluation context node are\r\n  arranged alphabetically in an ascending order. ",
+    "correct_text": "n/a",
+    "notes": "It is not entirely clear what \"arranged alphabetically\" refers to in this section. Sorting can be done in a variety of ways, and while many environment may have standard sort orders, not all are the same and for this standard to be implement consistently it's important to clearly state what sort order the above sentence is referring to. The suggested fix for this erratum is to add text that clearly states which sorting method should be used.",
+    "submit_date": "2013-01-18",
+    "submitter_name": "Erik Wilde",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3477,
+    "doc-id": "RFC5261",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.2.2",
+    "orig_text": "In XPath 2.0, a \"bar\" selector\r\nnot only matches an unqualified <bar> element, but also matches a\r\nqualified <bar> element that is in scope of a default namespace\r\ndeclaration.  In contrast, in this specification, a selector without\r\na prefix only matches one element, and it may match an element with\r\nor without a prefix but only if the namespace it's qualified with (or\r\nnone) is an exact match.",
+    "correct_text": "In XPath 2.0, a \"bar\" selector matches elements that have the URI of \r\nthe \"default element/type namespace\", which is part of an XPath's \r\nstatic context. By setting this URI to the default namespace of the \r\ndiff document (or leave it empty, if there is none), XPath 2.0's \r\nbehavior matches the requirements of the previous section.",
+    "notes": "The original text is not easy to understand, but seems to assume that an unprefixed name in XPath 2.0 matches both unprefixed names, and prefixed ones that have the same namespace than the default namespace of the XPath static context. This is not the case: Matching depends on how the \"default element/type namespace\" of the XPath static context is defined, and then matches either namespace-less elements, or those in the \"default element/type namespace\", but never both. This context, however, is defined by the XPath itself, not by the document. Thus, it can be set externally and could be set to the diff document's default namespace (if there is one). In that case, XPath 2.0 can be used to evaluate XML Patch selectors.",
+    "submit_date": "2013-02-05",
+    "submitter_name": "Erik Wilde",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3478,
+    "doc-id": "RFC5261",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.4.3",
+    "orig_text": "4.4.3. Replacing a Namespace Declaration URI\r\n\r\n\r\n   An example for a replacement of a namespace URI:\r\n\r\n   <replace sel=\"doc/namespace::pref\">urn:new:xxx</replace>\r\n\r\n   This will replace the URI value of 'pref' prefixed namespace node\r\n   with \"urn:new:xxx\".  The parent node of the namespace declaration\r\n   MUST be the <doc> element, otherwise an error occurs.",
+    "correct_text": "4.4.3. Replacing a Namespace URI\r\n\r\n\r\n   An example for a replacement of a namespace URI:\r\n\r\n   <replace sel=\"doc/namespace::pref\">urn:new:xxx</replace>\r\n\r\n   This will replace the URI of the namespace associated with the\r\n   'pref' prefix with \"urn:new:xxx\". The parent node of the namespace\r\n   declaration MUST be the <doc> element, otherwise an error occurs.\r\n   Replacing the namespace at the element where it is declared MUST\r\n   also change all namespace nodes derived from this declaration in\r\n   descendant elements. ",
+    "notes": "The spec uses the terms \"namespace declaration\" and \"namespace\" almost interchangeably, which is incorrect. It is impossible to select (and thus patch) *namespace declarations* using XPath. When selecting and replacing a *namespace*, then it should be taken into account that the *namespace declaration* very likely has resulted in numerous namespace nodes, attached to child elements of the element where the namespace was declared. It is likely that the spec intended to specify a \"recursive replace\" of the resulting namespace nodes of a namespace declaration, and this is what the corrected text suggests. The original text is mixing terminology, hard to read, and ambiguous in its meaning.\r\n\r\nIf the spec text instead tried to specify that really only this one namespace node should be changed, then this can lead to rather strange effects in the resulting document, since the XPath tree now has \"orphan\" namespace nodes, which then need to be serialized and namespace declarations in locations where previously no namespace declarations occurred.\r\n\r\nOne way or the other, this ambiguity needs to be clarified to make the spec easier to read and implement.",
+    "submit_date": "2013-02-07",
+    "submitter_name": "Erik Wilde",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
