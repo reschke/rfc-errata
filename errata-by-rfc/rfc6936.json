@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4341,
+    "doc-id": "RFC6936",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "1.3.5",
+    "orig_text": "The ingress of a tunnel seeking to provide good\r\nentropy in the flow label field would therefore need to create a\r\nrandom flow label value and keep corresponding state so that all\r\npackets that were associated with a flow would be consistently given\r\nthe same flow label.  Although possible, this complexity may not be\r\ndesirable in a tunnel ingress.",
+    "correct_text": "The ingress of a tunnel seeking to provide good\r\nentropy in the flow label field would therefore need to create a\r\npseudo-random flow label value using a stateless method\r\nas described in [RFC6438] so that all\r\npackets that were associated with a flow would be consistently given\r\nthe same flow label.",
+    "notes": "It is incorrect that a stateful method is needed, and presumably that\r\nwas the complexity judged undesirable. Also, we shouldn't say \"random\"\r\nwhen we mean \"pseudo-random.\"",
+    "submit_date": "2015-04-20",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
