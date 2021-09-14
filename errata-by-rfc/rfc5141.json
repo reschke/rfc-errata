@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6328,
+    "doc-id": "RFC5141",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.4.1 + AppB",
+    "orig_text": "      docelement    = \":\" ( \"clause\" / \"figure\" / \"table\" / \"term\" ) \":\"\r\n                      elementnumber / elementrange\r\n                      *( \",\" elementnumber / elementrange )",
+    "correct_text": "      docelement    = \":\" ( \"clause\" / \"figure\" / \"table\" / \"term\" ) \":\"\r\n                      ( elementnumber / elementrange )\r\n                      *( \",\" ( elementnumber / elementrange ) )",
+    "notes": "In docelement, \"elementnumber / elementrange\" should be grouped in both places.\r\n",
+    "submit_date": "2020-11-06",
+    "submitter_name": "Jason Polis",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-11-10 07:30:48"
+  }
+]
