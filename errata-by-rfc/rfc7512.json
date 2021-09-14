@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4813,
+    "doc-id": "RFC7512",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.4,
+    "orig_text": "   o  If the value contains \"|<absolute-command-path>\", the\r\n      implementation SHOULD read the PIN from the output of an\r\n      application specified with absolute path \"<absolute-command-\r\n      path>\".  Note that character \"|\" representing a pipe does not have\r\n      to be percent-encoded in the query component of a PKCS #11 URI.\r\n",
+    "correct_text": "(Eliminate)",
+    "notes": "The \"|\" character is not a valid URI [RFC3986] character. Strings that include \"|\" are not URIs and therefore are not valid pkcs11: URIs.\r\n\r\nThe ABNF in Section 2.3 also needs to be updated to remove \"|\".\r\n\r\nSection 2.3 Original:\r\n pk11-query-res-avail = pk11-res-avail / \"/\" / \"?\" / \"|\"\r\n\r\nSection 2.3 Corrected:\r\n pk11-query-res-avail = pk11-res-avail / \"/\" / \"?\"",
+    "submit_date": "2016-09-27",
+    "submitter_name": "Sean Leonard",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
