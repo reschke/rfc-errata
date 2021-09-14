@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6666,
+    "doc-id": "RFC9085",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.3.1",
+    "orig_text": "   Flags:  1-octet value that should be set as:\r\n\r\n      *  IS-IS Prefix-SID flags as defined in Section 2.1.1 of\r\n         [RFC8667].\r\n\r\n      *  OSPFv2 Prefix-SID flags as defined in Section 5 of [RFC8665].\r\n\r\n      *  OSPFv3 Prefix-SID flags as defined in Section 6 of [RFC8665].",
+    "correct_text": "   Flags:  1-octet value that should be set as:\r\n\r\n      *  IS-IS Prefix-SID flags as defined in Section 2.1.1 of\r\n         [RFC8667].\r\n\r\n      *  OSPFv2 Prefix-SID flags as defined in Section 5 of [RFC8665].\r\n\r\n      *  OSPFv3 Prefix-SID flags as defined in Section 6 of [RFC8666].",
+    "notes": "The reference to the OSPFv3 spec in the text above needs to be corrected to RFC8666 instead of RFC8665.\r\n\r\nThis editorial error seems to have crept in during the RFC publication process. The draft version submitted by the WG and reviewed by the IESG has the correct text : https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-segment-routing-ext-18#section-2.3.1",
+    "submit_date": "2021-08-27",
+    "submitter_name": "Ketan Talaulikar",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2021-09-03 13:17:11"
+  }
+]
