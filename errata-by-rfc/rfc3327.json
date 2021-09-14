@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2778,
+    "doc-id": "RFC3327",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5.5.2",
+    "orig_text": "   Message sequence for INVITE using Path:\r\n\r\n   F1 Invite UA2 -> REGISTRAR\r\n\r\n      INVITE UA1@EXAMPLEHOME.COM SIP/2.0\r\n      Via: SIP/2.0/UDP 71.91.180.10:5060;branch=z9hG4bKe2i95c5st3R\r\n      To: UA1 <sip:UA1@EXAMPLEHOME.COM>\r\n      From: UA2 <sip:UA2@FOREIGN.ELSEWHERE.ORG>;tag=224497\r\n      Call-ID: 48273181116@71.91.180.10\r\n      CSeq: 29 INVITE\r\n      Contact: <sip:UA2@71.91.180.10>\r\n       . . .",
+    "correct_text": "   Message sequence for INVITE using Path:\r\n\r\n   F1 Invite UA2 -> REGISTRAR\r\n\r\n      INVITE sip:UA1@EXAMPLEHOME.COM SIP/2.0\r\n      Via: SIP/2.0/UDP 71.91.180.10:5060;branch=z9hG4bKe2i95c5st3R\r\n      To: UA1 <sip:UA1@EXAMPLEHOME.COM>\r\n      From: UA2 <sip:UA2@FOREIGN.ELSEWHERE.ORG>;tag=224497\r\n      Call-ID: 48273181116@71.91.180.10\r\n      CSeq: 29 INVITE\r\n      Contact: <sip:UA2@71.91.180.10>\r\n       . . .",
+    "notes": "In all the example flow the Request URI is wrong as doesn't contain the URI scheme (\"sip\" / \"sips\").",
+    "submit_date": "2011-04-16",
+    "submitter_name": "Iñaki Baz Castillo",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
