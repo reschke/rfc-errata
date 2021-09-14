@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3782,
+    "doc-id": "RFC4273",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "There are several management objects defined in this MIB that have a\r\nMAX-ACCESS clause of read-write and/or read-create.",
+    "correct_text": "There are several management objects defined in this MIB that have a\r\nMAX-ACCESS clause of read-write.",
+    "notes": "No object in this MIB has MAX-ACCESS clause of \"read-create\".",
+    "submit_date": "2013-11-04",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
