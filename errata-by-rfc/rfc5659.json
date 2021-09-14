@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2127,
+    "doc-id": "RFC5659",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.*",
+    "orig_text": "a)\r\n5.1.1.  Forwarding\r\n\r\nb)\r\n5.1.2.  Native Service Processing\r\n",
+    "correct_text": "a)\r\n5.2.  Forwarding\r\n\r\nb)\r\n\r\n5.3.  Native Service Processing\r\n",
+    "notes": "Rationale:\r\n  Obviously, the sections numbered 5.1.1 and 5.1.2  are _not_\r\n  subordinate to section   5.1.  Pseudowire Pre-Processing,\r\n  but of a sibling level.",
+    "submit_date": "2010-04-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2128,
+    "doc-id": "RFC5659",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6., pg.15",
+    "orig_text": "                       [...]  The receiving S-PE swaps the existing PW\r\n   demultiplexer for the demultiplexer of the next segment and then\r\n|  sends the PDU over transport tunnel in PSN2.  [...]",
+    "correct_text": "                       [...]  The receiving S-PE swaps the existing PW\r\n   demultiplexer for the demultiplexer of the next segment and then\r\n|  sends the PDU over the transport tunnel in PSN2.  [...]",
+    "notes": "Rationale: missing article.",
+    "submit_date": "2010-04-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
