@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 300,
+    "doc-id": "RFC3289",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "In the process of implementing the RFC 3289 DiffServ MIB, the following\nerrors and discrepancies were noted.\n\n1. In the diffServClfrTable description (second paragraph),\ndiffServClfrStatus should be diffServClfrStorage.  This is an\nunderstandability issue.\n\n2. The diffServClfrElementStatus description indicates that this entry\ncannot be deleted if there is a RowPointer pointing to it.  A RowPointer\nis not used to select a classifier element, but rather the\ndiffServClfrId and diffServClfrElementId index values.  Consequently,\nthe diffServClfrElementTable does not require a UsageCounter or a\nDestroyFlag.  This is an understandability issue.\n\n3. In the diffServActionSpecific description (third paragraph)\nerroneously references a meter.  This is an understandability issue.\n\n4. The diffServMinRateAbsolute description indicates that zero is a\nvalid value.  The SYNTAX range indicates (1..4294967295), but should be\n(0..4294967295).  This is an understandability issue and a MIB\nimplementation issue.\n\n5. The diffServMinRateRelative description indicates that zero is a\nvalid value and that the values are in units of 1/1000 of 1.  The SYNTAX\nrange indicates (1..4294967295), but should be (0..1000).  This is an\nunderstandability issue and a MIB implementation issue.\n\n6. The diffServMaxRateAbsolute description indicates that zero is a\nvalid value.  The SYNTAX range indicates (1..4294967295), but should be\n(0..4294967295).  This is an understandability issue and a MIB\nimplementation issue.\n\n7. The diffServMaxRateRelative description indicates that zero is a\nvalid value and that the values are in units of 1/1000 of 1.  The SYNTAX\nrange indicates (1..4294967295), but should be (0..1000).  This is an\nunderstandability issue and a MIB implementation issue.\n",
+    "submit_date": "2002-08-08",
+    "submitter_name": "Tom Irwin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 301,
+    "doc-id": "RFC3289",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "1.  During implementation, there has been some confusion on the \"reuse\nof structural elements\" in section 2.2.  It is clear from the comments\nand the MIB that counters cannot be effectively reused.  What appears\nconfusing is the case when an entire (or partial) DiffServ tree used for\na specific interface ifIndex and direction is reused.  Is the DiffServ\ntree in this case just a template such that all of the data path\nelements are replicated (counters will not work properly) for another\ninterface?  This seems reasonable since other data path elements such as\nqueues and schedulers are clearly interface dependent. It is important\nto remove this ambiguity since the RowPointer usage does not prohibit\nthis \"not generally recommended\" application.  What is the intent?\n\n2. Minor update in section 3.2.2:\n     ' Differentiated Services Code Point ' to\n     ' Differentiated Services Code Point, including \"any\" '\n\n3. Figure 9b in section 3.7.2.1 is somewhat difficult at first to follow\ndue to how the multiplexing is shown in the Yellow \"Count Action\" (an\naction only has a single input).\n",
+    "submit_date": "2002-08-27",
+    "submitter_name": "Tom Irwin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2976,
+    "doc-id": "RFC3289",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.4.5.",
+    "orig_text": "   diffServRandomDropInvProbMax represents Pmax (inverse).  This MIB\r\n   does not represent Pmin (assumed to be zero unless otherwise\r\n   represented).  In addition, since message memory is finite, queues\r\n   generally have some upper bound above which they are incapable of\r\n   storing additional traffic.  Normally this number is equal to Qclip,\r\n   specified by diffServAlgDropQThreshold.\r\n",
+    "correct_text": "       The average queue depth beyond which traffic has a probability\r\n       indicated by diffServRandomDropProbMax of being dropped or\r\n       marked. Note that this differs from the physical queue limit,\r\n       which is stored in diffServAlgDropQThreshold. ",
+    "notes": "diffServRandomDropInvProbMax should be removed\r\n\r\nAttaching the e-mail confirmation from Fred :\r\n==============================================\r\n\r\n\r\nFrom: Fred Baker (fred)\r\nSent: Tuesday, September 20, 2011 10:54 PM\r\nTo: Ina Singh (inasingh)\r\nSubject: Re: RFC3289/DiffesrvMIB SFS\r\n\r\nThanks for pointing this out. Correct me if I'm wrong; it looks to me like diffServRandomDropInvProbMax only shows up in the comment in section 3.4.5, and diffServRandomDropProbMax is used throughout the MIB. Yes, the comment should be fixed, but the MIB is itself correct with diffServRandomDropProbMax. Correct?\r\n\r\nThe right thing to do is file an erratum against RFC 3289, so that if it is edited in the future the error can be picked up, and implementers can see it.\r\n\r\nhttp://www.ietf.org/iesg/statement/errata-processing.html describes the process. \r\n\r\n\r\nOn Sep 20, 2011, at 6:50 PM, Ina Singh (inasingh) wrote:\r\n\r\n> Hey Fred,\r\n>  \r\n> While implementing RFC3289/DiffesrvMIB SFS recently on IOS,  we noticed the following error :\r\n> It would seem that diffServRandomDropInvProbMax was replaced by \r\n> diffServRandomDropProbMax (?) , but the reference to “diffServRandomDropInvProbMax” was not removed on subsequent versions.\r\n>  \r\n> Can you please confirm, if so, what’s the procedure to correct it ..\r\n>  \r\n> Thanks in advance for your help in this and appreciate your time..\r\n>  \r\n> Ina\r\n>  \r\n> Definition of \"diffServRandomDropInvProbMax\" upto version 7, here is a link for draft version 6.\r\n>  \r\n> http://tools.ietf.org/html/draft-ietf-diffserv-mib-06\r\n>  \r\n> iffServRandomDropInvProbMax OBJECT-TYPE\r\n>     SYNTAX       Unsigned32\r\n>     MAX-ACCESS   read-create\r\n>     STATUS       current\r\n>     DESCRIPTION\r\n>        \"The worst case random drop probability, expressed as\r\n>        the  inverse  of  the drop probability.  With special\r\n>        case of the value zero meaning  zero  probability  of\r\n>        drop.\r\n>  \r\n>        For example, if every packet may be  dropped  in  the\r\n>        worst   case   (100%),   this   has   the   value  of\r\n>        4,294,967,295.\"\r\n>     ::= { diffServRandomDropEntry 6 }\r\n>  \r\n>  \r\n>  \r\n> In contrast to \"diffServRandomDropProbMax\" starting from version 8.\r\n>  \r\n>  \r\n> diffServRandomDropProbMax OBJECT-TYPE\r\n>  \r\n>     SYNTAX       Unsigned32 (0..1000)\r\n>     MAX-ACCESS   read-create\r\n>     STATUS       current\r\n>     DESCRIPTION\r\n>        \"The worst case random drop probability, expressed in drops per\r\n>        thousand packets.\r\n>  \r\n>        For example, if in the worst case every arriving packet may be\r\n>        dropped (100%) for a period, this has the value 1000.\r\n>        Alternatively, if in the worst case only one percent (1%) of\r\n>        traffic may be dropped, it has the value 10.\"\r\n>    ::= { diffServRandomDropEntry 6 }",
+    "submit_date": "2011-09-21",
+    "submitter_name": "Ina Singh",
+    "verifier_id": 129,
+    "verifier_name": "Wesley Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
