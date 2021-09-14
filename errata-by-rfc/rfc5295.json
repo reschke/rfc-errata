@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1498,
+    "doc-id": "RFC5295",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7.5,
+    "orig_text": "                           v \r\n                                                    [...].  Setting a\r\n|  key lifetime shorter that a system lifetime may result in keys\r\n   becoming invalid with no convenient way to refresh them.  [...]",
+    "correct_text": "                           v\r\n                                                     [...].  Setting a\r\n|  key lifetime shorter than a system lifetime may result in keys\r\n   becoming invalid with no convenient way to refresh them.  [...]",
+    "notes": null,
+    "submit_date": "2008-09-02",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1499,
+    "doc-id": "RFC5295",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "8, pg.16",
+    "orig_text": "   The keywords \"Private Use\", \"Specification Required\", and \"IETF\r\n|  Consensus\" that appear in this document when used to describe\r\n   ^^^^^^^^^\r\n   namespace allocation are to be interpreted as described in [RFC5226].",
+    "correct_text": "   The keywords \"Private Use\", \"Specification Required\", and \"IETF\r\n|  Review\" that appear in this document when used to describe namespace\r\n   ^^^^^^\r\n   allocation are to be interpreted as described in [RFC5226].",
+    "notes": "RFC 5226 has purposely changed the terminology.\r\nUpdating the Ref. to RFC 5226 hence should have been accompanied by\r\nupgrading the terminology.\r\n\r\nThis same issue recurs in the third line of Section 8.2 of RFC 5295.",
+    "submit_date": "2008-09-02",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
