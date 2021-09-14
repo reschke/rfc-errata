@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6313,
+    "doc-id": "RFC6512",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2.1",
+    "orig_text": "Since P1 has no root to PE2, PE1 needs to originate an mLDP message with a FEC element that identifies ASBR1 as the root.",
+    "correct_text": "Since P1 has no route to PE2, PE1 needs to originate an mLDP message with a FEC element that identifies ASBR1 as the root.",
+    "notes": "\"no root to PE2\" does not parse and looks as a typo. \r\nAnd it is quite clear from the context that \"no route to PE2\" is intended.",
+    "submit_date": "2020-10-20",
+    "submitter_name": "Alexander Vainshtein",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2021-02-26 14:09:27"
+  }
+]
