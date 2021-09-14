@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4060,
+    "doc-id": "RFC6476",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "parameters have the value 08 00 02 01 01.",
+    "correct_text": "parameters have the value 04 00 02 01 01.",
+    "notes": "The text with the encoded form was added at the request of a reviewer who felt that providing only the ASN.1 might lead to developers getting the encoding wrong.  Ironically, this had the opposite effect to what was intended for anyone who used the encoded form rather than just going with the ASN.1.\r\n\r\nErrata report was verified by the editor of this RFC.",
+    "submit_date": "2014-07-23",
+    "submitter_name": "Peter Gutmann",
+    "verifier_id": 141,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
