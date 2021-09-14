@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5605,
+    "doc-id": "RFC6625",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.1",
+    "orig_text": "      - If there is an installed S-PMSI A-D route originated by PE2,\r\n        whose NLRI contains (C-S,C-G), then (C-S,C-G) matches that\r\n        route.\r\n\r\n      - Otherwise, if there is an installed S-PMSI A-D route originated\r\n        by PE2, whose NLRI contains (C-S,C-*), AND if C-G is an SSM\r\n        multicast group address, then (C-S,C-G) matches that route.\r\n\r\n      - Otherwise, if there is an installed S-PMSI A-D route originated\r\n        by PE2, whose NLRI contains (C-*,C-G), AND if C-G is an ASM\r\n        multicast group address, then (C-S,C-G) matches that route.\r\n\r\n      - Otherwise, if there is an installed S-PMSI A-D route originated\r\n        by PE2, whose NLRI contains (C-*,C-*), then (C-S,C-G) matches\r\n        that route.",
+    "correct_text": "      - If there is an installed S-PMSI A-D route originated by PE2,\r\n        whose NLRI contains (C-S,C-G), then (C-S,C-G) matches that\r\n        route.\r\n\r\n      - If there is an installed S-PMSI A-D route originated\r\n        by PE2, whose NLRI contains (C-S,C-*), AND if C-G is an SSM\r\n        multicast group address, then (C-S,C-G) matches that route too.\r\n\r\n      - If there is an installed S-PMSI A-D route originated\r\n        by PE2, whose NLRI contains (C-*,C-G), AND if C-G is an ASM\r\n        multicast group address, then (C-S,C-G) matches that route too.\r\n\r\n      - If there is an installed S-PMSI A-D route originated\r\n        by PE2, whose NLRI contains (C-*,C-*), then (C-S,C-G) matches\r\n        that route too.",
+    "notes": "The 'Match for data reception' is an behavior on the MVPN receiver-site PE. If an SPMSI A-D route is matched for data reception, it means that the receiver-site PE will respond to this SPMSI A-D route, either send a responded Leaf A-D route in case there is an explicit-tracking flag (LIR or LIRpF), or join the PMSI tunnel in the SPMSI A-D route in case the tunnel type is mLDP/PIM etc. This usage of 'match for data reception' is not explicitly explained in this RFC but it is used in <draft-ietf-bess-mvpn-expl-track-13>. \r\nThere is clear inclusive-selective relationship between S-PMSI A-D (*,*) and S-PMSI A-D(S,G).\r\nThinking the S-PMSI A-D (*,*) as an Inclusive one, the receiver site PE with a (C-S,C-G) state should keep its join state on both the S-PMSI A-D (*,*) and S-PMSI A-D(S,G), and setup the 'reception state' on both the (*,*) PMSI-tunnel and (S,G) PMSI-tunnel. So the 'match for reception' should be one or more SPMSI A-D routes.  The 'if/othersize/othersize' sentences make the wrong meaning.",
+    "submit_date": "2019-01-16",
+    "submitter_name": "Jingrong Xie",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
