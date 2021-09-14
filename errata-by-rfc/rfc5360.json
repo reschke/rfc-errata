@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4650,
+    "doc-id": "RFC5360",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.9.3",
+    "orig_text": "The following is an example of a Permission-Missing header field:",
+    "correct_text": "If the URI contains a comma, question mark or semicolon, the\r\nURI MUST be enclosed in angle brackets (< and >).\r\n\r\nThe following is an example of a Permission-Missing header field:",
+    "notes": "Comma and semicolon can cause decode ambiguities when the header contains addr-spec values instead of name-addr values.  For consistency with RFC 3261 section 20, the same bracket rule is indicated to resolve the ambiguity.",
+    "submit_date": "2016-03-29",
+    "submitter_name": "Brett Tate",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
