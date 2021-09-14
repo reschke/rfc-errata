@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1072,
+    "doc-id": "RFC4270",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "   Hash algorithms are used by cryptographers in a variety of security\r\n   protocols, for a variety of purposes, at all levels of the Internet\r\n   protocol stack.  They are used because they have two security\r\n   properties: to be one way and collision free.",
+    "correct_text": "   Hash algorithms are used by cryptographers in a variety of security\r\n   protocols, for a variety of purposes, at all levels of the Internet\r\n   protocol stack.  They are used because they have two security\r\n   properties: to be one-way and collision-free.\r\n",
+    "notes": "Note the \" one way and collision free.\"  On the face of it, as plain\r\nEnglish, this is nonsense.  In cryptographic terminology, I believe\r\nthe correct expression is \" one-way and collision-free.\"",
+    "submit_date": "2005-12-02",
+    "submitter_name": "Henrik Levkowetz",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2658,
+    "doc-id": "RFC4270",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 1,
+    "orig_text": "The Internet protocol community needs to\r\nmigrate in an orderly manner away from SHA-1 and MD5 -- especially\r\nMD5 -- and toward more secure hash algorithms.",
+    "correct_text": "The Internet community needs to migrate in an orderly manner away from reliance for\r\nsecurity purposes on SHA-1 and MD-5 -- especially MD5 -- and toward more secure hash algorithms\r\nfor all security-related usages of hash functions in all protocols.",
+    "notes": "This came up in discussion with Sean Turner, Martin Rex and the IESG over IESG Last Call: <draft-turner-md5-seccon-update-07.txt>.\r\n\r\nRFC4270 lists seven uses for hash algorithms in section 3. MD5 should not be used for two of those [non-repudiable signatures and digital signatures in  certificates] as those are are affected by collision attacks -- albeit only in limited circumstances. For the other five uses - particularly reliability checking (misnamed integrity protection in this draft) in a non-security context, MD5 remains fine to use. Martin flagged the original text as bad, and we came up with qualifiers - below.\r\n\r\n\r\nOn 3 Dec 2010, at 21:40, Martin Rex wrote:\r\n\r\n> L.Wood@surrey.ac.uk wrote:\r\n\r\n>> I also take issue with RFC4270's claim that:\r\n>> \r\n>> >The Internet protocol community needs to\r\n>> > migrate in an orderly manner away from SHA-1 and MD5 -- especially\r\n>> > MD5 -- and toward more secure hash algorithms.\r\n>>\r\n>> which is rather broad, and entirely without the context and qualifiers\r\n>> we're discussing. RFC4270 was not written for a general audience,\r\n>> but for a security audience.  The Internet _security protocol_ community\r\n>> may well need to migrate from these for certain uses (despite there not\r\n>> yet being obvious things to move _to_), but RFC4270 and your draft's\r\n>> sum take-away message that MD5BADDONOTUSE overstates the case. \r\n>\r\n> I agree that the above wording of rfc-4270 is BAD.\r\n>\r\n> It should have said:\r\n>\r\n> The Internet community needs to migrate in an orderly manner away from\r\n> SHA-1 and MD5 -- especially MD5 -- and toward more secure hash algorithms\r\n> for all security-related usages of hash functions in all protocols.\r\n\r\nThat wording is better, though I would also add a qualifier\r\non the front by saying 'away from reliance for security purposes on SHA-1\r\nand MD-5...'. This should imo be filed as an erratum on RFC4270.\n --VERIFIER NOTES-- \nThis is a substantive change that would require \"security-related\" to be sufficiently well defined.  Writing a draft about this would be better.",
+    "submit_date": "2010-12-04",
+    "submitter_name": "Lloyd Wood",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2659,
+    "doc-id": "RFC4270",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "      Integrity protection.  It is common to compare a hash value that\r\n      is received out-of-band for a file with the hash value of the file\r\n      after it is received over an unsecured protocol such as FTP.",
+    "correct_text": "      Reliability checking and error detection.  It is common to compare a hash value that\r\n      is received out-of-band for a file with the hash value of the file\r\n      after it is received over an unsecured protocol such as FTP.",
+    "notes": "\"integrity protection\" is a term with specific meaning to security researchers, and that meaning doesn't gel with how the rest of the world uses terms like 'integrity' or 'protection,' or with the rest of this bullet point. So, we swap the term out for something less contentious.\r\n\r\nThis came up in discussion with Martin Rex and the IESG. Martin writes:\r\n\r\n> Integrity protection is terminology that is used in the\r\n> security&cryptographic area and this defect of rfc-4270 is going\r\n> to create misunderstandings.\r\n\r\nSo, filing an erratum.",
+    "submit_date": "2010-12-04",
+    "submitter_name": "Lloyd Wood",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
