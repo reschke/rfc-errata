@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 128,
+    "doc-id": "RFC4312",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "\r\nInformative References need to be updated\r\n\r\nRationale:\r\nRFC 4312 apparently has been published a bit later than, but\r\nclosely coordinated with, the new IPsec document suite (RFC 430x).\r\n\r\nAccordingly, the Normative Reference [ESP] of RFC 4312 points to\r\nthe new ESP RFC 4303, as expected.\r\n\r\nBut surprisingly, the Informative References are not updated\r\nsimilarly.\r\nI would have expected [ARCH] pointing to RFC 4301 (that has\r\nobsoleted RFC 2401), and at least an additional Ref. to IKEv2\r\n(RFC 4306, which substantially amends/updates the old RFC 2409\r\n[IKE]) -- with title and text of Section 4 slightly adapted.\r\nThe current text and Ref. [IKE] even might lead to the mis-\r\nconception that the Camellia cipher would not be suitable for\r\nuse with IKEv2 (a statement certainly not intended by you).\r\n",
+    "submit_date": "2006-02-03",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
