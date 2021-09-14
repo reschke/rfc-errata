@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4814,
+    "doc-id": "RFC6282",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "Additionally, a Hop Limit value of 255 is often used to verify that a\r\ncommunication occurs over a single-hop.\r\n",
+    "correct_text": "Additionally, a Hop Limit value of 1 is often used to verify that a\r\ncommunication occurs over a single-hop.\r\n",
+    "notes": "The other Hop Limit values in this paragraph may also be mistaken.\r\nThe document treats the values 1, 64, and 255 specially, but fixing\r\nthis sentence would leave no reason for the value 255 to be treated\r\nspecially, so I expect that 255 is the value intended for another\r\nsentence.",
+    "submit_date": "2016-09-27",
+    "submitter_name": "Dale R. Worley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
