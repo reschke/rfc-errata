@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1347,
+    "doc-id": "RFC5098",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5, pg.12",
+    "orig_text": "  pktcSigDevCodecTable OBJECT-TYPE\r\n     ...\r\n     DESCRIPTION\r\n        \" ...\r\n\r\n          Codec Type     Maximum Number of Simultaneous Codecs\r\n          PCMA                             3\r\n\r\n          PCMA                             2\r\n          PCMU                             1\r\n\r\n          PCMA                             1\r\n|\r\n          PCMU                             2\r\n\r\n          PCMU                             3\r\n\r\n          PCMA                             1\r\n          G729                             1\r\n\r\n          G729                             2\r\n\r\n          PCMU                             1\r\n          G729                             1\r\n",
+    "correct_text": "  pktcSigDevCodecTable OBJECT-TYPE\r\n     ...\r\n     DESCRIPTION\r\n        \" ...\r\n\r\n          Codec Type     Maximum Number of Simultaneous Codecs\r\n|\r\n          PCMA                             3\r\n\r\n          PCMA                             2\r\n          PCMU                             1\r\n\r\n          PCMA                             1\r\n          PCMU                             2\r\n\r\n          PCMU                             3\r\n\r\n          PCMA                             1\r\n          G729                             1\r\n\r\n          G729                             2\r\n\r\n          PCMU                             1\r\n          G729                             1\r\n",
+    "notes": "Issue:      Spurious blank line distorts grouping of example\r\n            line and turns example ineffective.\r\nCorrection: Delete the spurious line, but add a blank line\r\n            after the headline, for clarity.",
+    "submit_date": "2008-03-04",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1348,
+    "doc-id": "RFC5098",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5, pg.20",
+    "orig_text": "  pktcSigCapabilityVendorExt      OBJECT-TYPE\r\n     ...\r\n     DESCRIPTION\r\n        \" The vendor extension allows vendors to provide a list of\r\n          additional capabilities.\r\n\r\n          The syntax for this MIB object in ABNF ([RFC5234]) is\r\n          specified to be zero or more occurrences of vendor\r\n          extensions, as follows:\r\n\r\n           pktcSigCapabilityVendorExt  = *(vendor-extension)\r\n|          vendor-extension = (ext symbol alphanum) DQUOTE ; DQUOTE\r\n|          ext      = DQUOTE %x58 DQUOTE\r\n|          symbol   = (DQUOTE %x2D DQUOTE)/(DQUOTE %x2D DQUOTE)\r\n           alphanum = 1*6(ALPHA/DIGIT)\r\n\r\n         \"",
+    "correct_text": "  pktcSigCapabilityVendorExt      OBJECT-TYPE\r\n     ...\r\n     DESCRIPTION\r\n        \" The vendor extension allows vendors to provide a list of\r\n          additional capabilities.\r\n\r\n          The syntax for this MIB object in ABNF ([RFC5234]) is\r\n          specified to be zero or more occurrences of vendor\r\n          extensions, as follows:\r\n\r\n           pktcSigCapabilityVendorExt  = *(vendor-extension)\r\n|          vendor-extension = ext symbol alphanum \";\" \r\n|          ext      = %x58               ; uppercase only X\r\n|          symbol   = %x2B / %x2D        ; + or -\r\n           alphanum = 1*6(ALPHA/DIGIT)\r\n\r\n         \"",
+    "notes": "Symptom: ABNF grossly nonsensical:\r\n         ABNF comment  '; DQUOTE'  perhaps intended as non-comment;\r\n         all DQUOTEs apparently should be removed;\r\n         two identical alternatives for symbol do not make sense.\r\n\r\nCorrection is based on earlier draft versions, applying the\r\ncorrections necessary to obtain valid ABNF, yet specifying\r\nwhat probably was intended.\r\n\r\nAlternatively, the following line might be substituted above:\r\n\r\n|          symbol   = \"+\" / \"-\"",
+    "submit_date": "2008-03-04",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1349,
+    "doc-id": "RFC5098",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5,pg.31-33",
+    "orig_text": "-",
+    "correct_text": "         osi                             any value  (not used)\r\n",
+    "notes": "Incomplete specification:\r\n\r\nThe line given as 'corrected text' is missing from the tabular\r\nlistings of all (other) cases possible, in the DESCRIPTION clauses\r\nof the following three scalar MIB objects, on pp.31-33 of the RFC:\r\n   \r\n   pktcSigDevVmwiAfterDTAS\r\n   pktcSigDevVmwiAfterRPAS\r\n   pktcSigDevVmwiDTASAfterLR",
+    "submit_date": "2008-03-04",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
