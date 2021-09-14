@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2085,
+    "doc-id": "RFC5786",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 6,
+    "orig_text": "   IANA has assigned the Node Attribute TLV (value 5) type from the\r\n   range 3-32767 as specified in [RFC3630], from the top level types in\r\n|  TE LSAs registry maintained by IANA at http://www.iana.org.\r\n\r\n   IANA has created and now maintains the registry for the sub-TLVs of\r\n|   the Node Attribute TLV.  Value 1 is reserved for Node IPv4 Local\r\n|  Address sub-TLV and value 2 for Node IPv6 Local Address sub-TLV.\r\n\r\n   [...]\r\n\r\n      o  Types in the range 32778-65535 are not to be assigned at this\r\n         time.  Before any assignments can be made in this range, there\r\n         MUST be a Standards Track RFC that specifies IANA\r\n|        Considerations that covers the range being assigned.\r\n",
+    "correct_text": "   IANA has assigned the Node Attribute TLV (value 5) type from the\r\n   range 3-32767 as specified in [RFC3630], from the top level types in\r\n|  the TE LSAs registry maintained by IANA at http://www.iana.org.\r\n\r\n   IANA has created and now maintains the registry for the sub-TLVs of\r\n|  the Node Attribute TLV.  Value 1 is assigned to the Node IPv4 Local\r\n|  Address sub-TLV and value 2 to the Node IPv6 Local Address sub-TLV.\r\n\r\n   [...]\r\n\r\n      o  Types in the range 32778-65535 are not to be assigned at this\r\n         time.  Before any assignments can be made in this range, there\r\n         MUST be a Standards Track RFC that specifies IANA\r\n|        Considerations that cover the range being assigned.\r\n",
+    "notes": "Rationale:\r\na)  missing article\r\nb)  confusing use of \"reserved\"; IANA has _assigned_ these 2 values\r\nc)  singular/plural mismatch",
+    "submit_date": "2010-03-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
