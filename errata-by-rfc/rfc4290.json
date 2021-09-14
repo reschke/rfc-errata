@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5594,
+    "doc-id": "RFC4290",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 1.1,
+    "orig_text": "The\r\n   definition of the subset was embedded in the DNS protocol itself,\r\n   although some applications protocols, notably those concerned with\r\n   electronic mail, did impose and enforce similar rules.\r\n",
+    "correct_text": "The\r\n   definition of the subset was not embedded in the DNS protocol itself,\r\n   although some applications protocols, notably those concerned with\r\n   electronic mail, did impose and enforce similar rules.\r\n",
+    "notes": "Author confirms the \"not\" is missing.",
+    "submit_date": "2019-01-07",
+    "submitter_name": "John Levine",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2021-06-01 13:13:32"
+  }
+]
