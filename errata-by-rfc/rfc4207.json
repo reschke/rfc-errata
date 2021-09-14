@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 167,
+    "doc-id": "RFC4207",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.1.1",
+    "orig_text": "           [...]  The format of the TraceMonitor message is as\r\n  follows:\r\n\r\n   <TraceMonitor Message> ::= <Common Header> <MESSAGE_ID>\r\n                              <LOCAL_INTERFACE_ID> <TRACE>",
+    "correct_text": "<< THIS CHANGE IS REJECTED >>\r\n<< See the Notes field for the revised editorial change. >>\r\n\r\n           [...]  The format of the TraceMonitor message is as\r\n  follows:\r\n\r\n   <TraceMonitor Message> ::= <Common Header> <MESSAGE_ID>\r\n                              <LOCAL_INTERFACE_ID>\r\n                              <TRACE> ...",
+    "notes": "<Original note>\r\n>   RFC 4207 defines the syntax of the TraceMonitor message in Section\r\n>   4.1.1, on page 6.\r\n>   Similarly, the TraceMonitorAck and TraceMonitorNack Messages are\r\n>   specified in Sections 4.1.2 and 4.1.3, respectively, on page 8.\r\n>\r\n>   While the former specifies a single <TRACE> object to appear\r\n>   in a TraceMonitor message, the latter specs uses wording like\r\n>   \"all of the TRACE Objects in a TraceMonitor message\" or\r\n>   \"TRACE object value(s)\".\r\n>\r\n>   IMHO, it makes much sense to indeed allow multiple TRACE Objects\r\n>   (with different trace types, but all related to a single Interface)\r\n>   in a single TraceMonitor Message.\r\n</Original note>\r\n\r\nCCAMP consensus on this issue is that the BNF is correct. That is, only a single instance of the <TRACE> object is permitted on the <TraceMonitor Message> or any of the other messages. \r\n\r\nThe text in the various sections is factually correct when it says things like \"all the Trace Objects...\" However, this is misleading and should be changed to be singlular in all cases.",
+    "submit_date": "2005-12-20",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
