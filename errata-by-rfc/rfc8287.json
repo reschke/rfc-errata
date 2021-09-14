@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 5290,
+    "doc-id": "RFC8287",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "   The IPv4 IGP-Prefix Segment ID is defined in [SR].  The format is as\r\n   specified below:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                         IPv4 Prefix                           |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |Prefix Length  |    Protocol   |         Reserved              |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n   IPv4 Prefix\r\n\r\n      This field carries the IPv4 Prefix to which the Segment ID is\r\n      assigned.  In case of an Anycast Segment ID, this field will carry\r\n      the IPv4 Anycast address.  If the prefix is shorter than 32 bits,\r\n      trailing bits SHOULD be set to zero.\r\n\r\n   Prefix Length\r\n\r\n      The Prefix Length field is one octet.  It gives the length of the\r\n      prefix in bits (values can be 1-32).",
+    "correct_text": "   The IPv4 IGP-Prefix Segment ID is defined in [SR]. \r\n   The sub-TLV length MUST be set to 8, and its format is \r\n   as specified below:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                         IPv4 Prefix                           |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |Prefix Length  |    Protocol   |         Reserved              |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n   IPv4 Prefix\r\n\r\n      This field carries the IPv4 Prefix to which the Segment ID is\r\n      assigned.  In case of an Anycast Segment ID, this field will carry\r\n      the IPv4 Anycast address.  If the prefix is shorter than 32 bits,\r\n      trailing bits SHOULD be set to zero.\r\n\r\n   Prefix Length\r\n\r\n      The Prefix Length field is one octet.  \r\n      It gives the length of the\r\n      prefix in bits (values can be 1-32).",
+    "notes": "The RFC in its current form does not explicitly specify the length of the sub-TLV for the IPv4 IGP-Prefix Segment ID, while the format includes a reserved (MBZ) field at the end. \r\nthe implementers therefore must guess whether the reserved bits are or are not included in the sub-TLV guess. Such guesses have already caused interoperabilty issues with some implementations including these bits and some not including them.\r\n\r\nFor comparison, RFC 8029 explicitly specifies length of every sub-TLV it defines. It also never includes MBZ fields at the end of sub-TLVs in the sub-TLV length.\r\n\r\nThe proposed text is aligned with majority of implementations known to me.\r\n\r\nNote also that sub-TLV length is also omitted in section 6.1. However, I am not aware of any actual interoperability issues with this sub-TLV.\n --VERIFIER NOTES-- \n   This change requires an update to the RFC, requires consensus.",
+    "submit_date": "2018-03-20",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6101,
+    "doc-id": "RFC8287",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7.2,
+    "orig_text": "   The network node that advertised the Node Segment ID is responsible\r\n   for generating a FEC Stack Change sub-TLV with the Post Office\r\n   Protocol (POP) operation type for the Node Segment ID, regardless of\r\n   whether or not Penultimate Hop Popping (PHP) is enabled.\r\n\r\n   The network node that is immediately downstream of the node that\r\n   advertised the Adjacency Segment ID is responsible for generating the\r\n   FEC Stack Change sub-TLV for POP operation for the Adjacency Segment\r\n   ID.",
+    "correct_text": "   The network node that advertised the Node Segment ID is responsible\r\n   for generating a FEC Stack Change sub-TLV with the pop operation type for \r\n   the Node Segment ID, regardless of whether or not penultimate hop popping \r\n   (PHP) is enabled.\r\n\r\n   The network node that is immediately downstream of the node that\r\n   advertised the Adjacency Segment ID is responsible for generating the\r\n   FEC Stack Change sub-TLV for pop operation for the Adjacency Segment\r\n   ID.",
+    "notes": "Expansion of POP to \"Post Office Protocol\" in the context of this document is wrong. It should not be capitalized, it is not an abbreviation, simply the verb, pop. In addition, expansion for PHP should not be with caps.",
+    "submit_date": "2020-04-13",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2020-04-30 11:28:09"
+  },
+  {
+    "errata_id": 6389,
+    "doc-id": "RFC8287",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 5.2,
+    "orig_text": "5.2.  IPv6 IGP-Prefix Segment ID\r\n\r\n   The IPv6 IGP-Prefix Segment ID is defined in [SR].  The format is as\r\n   specified below:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                                                               |\r\n     |                         IPv6 Prefix                           |\r\n     |                                                               |\r\n     |                                                               |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |Prefix Length  |    Protocol   |              Reserved         |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n   IPv6 Prefix\r\n\r\n      This field carries the IPv6 prefix to which the Segment ID is\r\n      assigned.  In case of an Anycast Segment ID, this field will carry\r\n      the IPv4 Anycast address.",
+    "correct_text": "5.2.  IPv6 IGP-Prefix Segment ID\r\n\r\n   The IPv6 IGP-Prefix Segment ID is defined in [SR].  The format is as\r\n   specified below:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                                                               |\r\n     |                         IPv6 Prefix                           |\r\n     |                                                               |\r\n     |                                                               |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |Prefix Length  |    Protocol   |              Reserved         |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n   IPv6 Prefix\r\n\r\n      This field carries the IPv6 prefix to which the Segment ID is\r\n      assigned.  In case of an Anycast Segment ID, this field will carry\r\n      the IPv6 Anycast address.",
+    "notes": "Copy-pasta reusing the IPv4 IGP-Prefix Segment ID description for the IPv6 IGP-Prefix Segment ID description, and in the case of an IPv6 Anycast Segment ID it states that an IPv4 prefix should be entered into the IPv6 Prefix field.",
+    "submit_date": "2021-01-19",
+    "submitter_name": "James Bensley",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2021-02-26 13:23:37"
+  }
+]
