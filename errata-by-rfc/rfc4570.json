@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 55,
+    "doc-id": "RFC4570",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 6,
+    "orig_text": "        Purpose:            See this document\r\n        Reference:          This document\r\n        Values:             See this document, and registrations below",
+    "correct_text": "        Purpose:            See RFC 4632\r\n        Reference:          RFC 4632\r\n        Values:             See RFC 4632",
+    "notes": "The filled out SDP attribute registration template in the IANA\r\nConsiderations (Section 6) on page 10 contains improper wording\r\n-- either just being garbage (there are no 'registrations below'\r\nin the RFC), or getting inappropriate when extracted from the RFC\r\nand included in a stand-alone IANA document.\r\n\r\n--VERIFIER COMMENT--\r\nThanks for the comments.  It would have been nice if these very minor\r\nerrors could have been corrected prior to RFC publication.  However,\r\nI'm not convinced that they are significant enough to warrant a RFC\r\nErrata note.  (If, however, the RFC editor disagrees, then I could\r\ncertainly go ahead and do this.)",
+    "submit_date": "2006-11-01",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Ross Finlayson",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 802,
+    "doc-id": "RFC4570",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "   Applications and hosts may also\r\n   share the source-filter information with network elements (e.g., with\r\n   routers using [IGMPv3]) so they can potentially perform the traffic\r\n|  filtering operation further \"upstream,\" closer to the source(s).",
+    "correct_text": "   Applications and hosts may also\r\n   share the source-filter information with network elements (e.g., with\r\n   routers using [IGMPv3]) so they can potentially perform the traffic\r\n|  filtering operation further \"upstream\", closer to the source(s).",
+    "notes": "quoting style\r\n\r\nfrom pending\r\n\r\n--VERIFIER COMMENT--\r\nThanks for the comments.  It would have been nice if these very minor\r\nerrors could have been corrected prior to RFC publication.  However,\r\nI'm not convinced that they are significant enough to warrant a RFC\r\nErrata note.  (If, however, the RFC editor disagrees, then I could\r\ncertainly go ahead and do this.)\r\n",
+    "submit_date": "2006-11-01",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Ross Finlayson",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 804,
+    "doc-id": "RFC4570",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "   Use of source-filters do not\r\n   corrupt the ASM semantics but provide more control for receivers, at\r\n   their discretion.",
+    "correct_text": "|  Use of source-filters does not\r\n|  corrupt the ASM semantics but provides more control for receivers, at\r\n   their discretion.",
+    "notes": "from pending\r\n\r\n--VERIFIER COMMENT--\r\nThanks for the comments.  It would have been nice if these very minor\r\nerrors could have been corrected prior to RFC publication.  However,\r\nI'm not convinced that they are significant enough to warrant a RFC\r\nErrata note.  (If, however, the RFC editor disagrees, then I could\r\ncertainly go ahead and do this.)",
+    "submit_date": "2006-11-01",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Ross Finlayson",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5416,
+    "doc-id": "RFC4570",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.2.5",
+    "orig_text": "a=source-filter incl IN IP6 FF0E::11A 2001:DB8:1:2:240:96FF:FE25:8EC9",
+    "correct_text": "a=source-filter: incl IN IP6 FF0E::11A 2001:DB8:1:2:240:96FF:FE25:8EC9",
+    "notes": "Normative text in section 3 requires a colon after the source-filter attribute, but the ipv6 example in section 3.2.5 omits this colon.",
+    "submit_date": "2018-07-06",
+    "submitter_name": "Simon Rankine",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
