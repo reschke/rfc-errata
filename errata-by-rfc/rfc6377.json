@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4127,
+    "doc-id": "RFC6377",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.3,
+    "orig_text": "creating that signature.  Section 5.5 of [DKIM] lists\r\nRFC5322.Subject as one that should be covered as it contains\r\nimportant user-visible text, so this is expected to be an issue\r\nfor any list that makes such changes.",
+    "correct_text": "creating that signature.  Section 5.4.1 of [DKIM] lists\r\nRFC5322.Subject as one that should be covered as it contains\r\nimportant user-visible text, so this is expected to be an issue\r\nfor any list that makes such changes.",
+    "notes": "----- Verifier notes -----\r\nThe section reference was correct when the DKIM reference was RFC 4871, but as 6376 and 6377 were published together, the reference was not changed accordingly.  Oops.",
+    "submit_date": "2014-10-09",
+    "submitter_name": "Andrew Richards",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
