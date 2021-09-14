@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 74,
+    "doc-id": "RFC4512",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "(E1)  text truncation (?)\r\n\r\nApparently, the text of the first paragraph of Section 3.2,\r\non page 18 of RFC 4512, has been truncated inadvertently.\r\nThe RFC text says:\r\n\r\n   A subentry is a \"special sort of entry, known by the Directory, used\r\n   to hold information associated with a subtree or subtree refinement\"\r\n|  [X.501].  Subentries are used in Directory to hold for administrative\r\n|  and operational purposes as defined in [X.501].  Their use in LDAP is\r\n   detailed in [RFC3672].\r\n\r\nI suspect that it should in fact say:\r\n\r\n   A subentry is a \"special sort of entry, known by the Directory, used\r\n   to hold information associated with a subtree or subtree refinement\"\r\n|  [X.501].  Subentries are used in the Directory to hold attributes for\r\n|  administrative and operational purposes as defined in [X.501].  Their\r\n   use in LDAP is detailed in [RFC3672].\r\n\r\n\r\n(E2)  typo\r\n\r\nIn Section 4.1.7.1, near the bottom of page 30, the explanation,\r\n\r\n     FORM is specifies the name form associated with this DIT structure\r\n         rule;\r\n\r\nshould say:\r\n\r\n|    FORM specifies the name form associated with this DIT structure\r\n         rule;\r\n\r\n\r\n(E3)  typo\r\n\r\nThe first paragraph of Section 5.1, on page 36, says:\r\n\r\n   An LDAP server SHALL provide information about itself and other\r\n   information that is specific to each server.  This is represented as\r\n   a group of attributes located in the root DSE, which is named with\r\n|  the DN with zero RDNs (whose [RFC4514] representation is as the\r\n   zero-length string).\r\n\r\nIt should say:\r\n\r\n   An LDAP server SHALL provide information about itself and other\r\n   information that is specific to each server.  This is represented as\r\n   a group of attributes located in the root DSE, which is named with\r\n|  the DN with zero RDNs (whose [RFC4514] representation is the zero-\r\n   length string).\r\n\r\n\r\n(E4)  word omission\r\n\r\nThe second paragraph of Section A.2.1, on page 49, says:\r\n\r\n   The <descr> syntax was changed to disallow semicolon (U+003B)\r\n   characters in order to appear to be consistent its natural language\r\n   specification \"descr is the syntactic representation of an object\r\n   descriptor, which consists of letters and digits, starting with a\r\n   letter\".  In a related change, the statement \"an AttributeDescription\r\n   can be used as the value in a NAME part of an\r\n   AttributeTypeDescription\" was deleted.  RFC 2252 provided no\r\n   specification of the semantics of attribute options appearing in NAME\r\n   fields.\r\n\r\nIt should say:\r\n\r\n   The <descr> syntax was changed to disallow semicolon (U+003B)\r\n|  characters in order to appear to be consistent with its natural\r\n   language specification \"descr is the syntactic representation of an\r\n   object descriptor, which consists of letters and digits, starting\r\n   with a letter\".\r\n   In a related change, the statement \"an AttributeDescription can be\r\n   used as the value in a NAME part of an AttributeTypeDescription\" was\r\n   deleted.  RFC 2252 provided no specification of the semantics of\r\n   attribute options appearing in NAME fields.\r\n\r\n\r\nAnd these are my side notes for future consideration.\r\nThere are a couple of missing articles in the RFC text.\r\nI have noted the following places:\r\n\r\n\r\n(N1)\r\n\r\nIn Section 4.1.1, on page 24, the explanation,\r\n\r\n   where:\r\n     <numericoid> is object identifier assigned to this object class;\r\n     [...]\r\n\r\nshould better say:\r\n\r\n   where:\r\n|    <numericoid> is the object identifier assigned to this object\r\n         class;\r\n     [...]\r\n\r\n\r\n(N2)\r\n\r\nIn Section 4.1.2,\r\n\r\na) on page 25, the literally same correction as (N1) applies, and\r\n\r\nb) the explanation:\r\n\r\n     SYNTAX identifies value syntax by object identifier and may suggest\r\n         a minimum upper bound;\r\n\r\nshould better say:\r\n\r\n|    SYNTAX identifies the value syntax by its object identifier and may\r\n         suggest a minimum upper bound;\r\n\r\nc) Finally, on top of page 26, the paragraph,\r\n\r\n   If SUP field is provided, the EQUALITY, ORDERING, and SUBSTRING\r\n   fields, if not specified, take their value from the supertype.\r\n\r\nshould better say:\r\n\r\n|  If the SUP field is provided, the EQUALITY, ORDERING, and SUBSTRING\r\n   fields, if not specified, take their value from the supertype.\r\n\r\n\r\n(N3)\r\n\r\nIn Section 4.1.3, on page 27, -- similarly to (N1) --\r\nthe explanation,\r\n\r\n   where:\r\n     <numericoid> is object identifier assigned to this matching rule;\r\n     [...]\r\n\r\nshould better say:\r\n\r\n   where:\r\n     <numericoid> is the object identifier assigned to this matching\r\n         rule;\r\n     [...]\r\n\r\n\r\n(N4)\r\n\r\nIn Section 4.1.7.2, on page 31, -- again like in (N1) --\r\nthe explanation,\r\n\r\n   where:\r\n     <numericoid> is object identifier that identifies this name form;\r\n     [...]\r\n\r\nshould better say:\r\n\r\n   where:\r\n     <numericoid> is the object identifier that identifies this name\r\n         form;\r\n     [...]\r\n\r\n\r\n(N5)\r\n\r\nThe final sentence of Section 4.2, i.e. the 3rd paragraph on page 33,\r\nsays:\r\n\r\n   The following subsections provide attribute type definitions for each\r\n   of schema definition attribute types.\r\n\r\nIt should say:\r\n\r\n   The following subsections provide attribute type definitions for each\r\n|  of the schema definition attribute types.",
+    "correct_text": "",
+    "notes": "Source: apps",
+    "submit_date": "2006-07-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2281,
+    "doc-id": "RFC4512",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "A.3",
+    "orig_text": "The second paragraph of Section A.3, at the bottom of page 50, says:\r\n\r\n   Section 5.1 of RFC 2256 provided the definition of the 'objectClass'\r\n   attribute type.  This was integrated into Section 2.4.1 of this\r\n   document.  The statement \"One of the values is either 'top' or\r\n   'alias'\" was replaced with statement that one of the values is 'top'\r\n   as entries belonging to 'alias' also belong to 'top'.\r\n",
+    "correct_text": "   Section 5.1 of RFC 2256 provided the definition of the 'objectClass'\r\n|  attribute type.  This was integrated into Section 3.3 of this\r\n   document.  The statement \"One of the values is either 'top' or\r\n   'alias'\" was replaced with statement that one of the values is 'top'\r\n   as entries belonging to 'alias' also belong to 'top'.\r\n",
+    "notes": "Apparently, 'Section 3.3' would have been much more appropriate than\r\n'Section 2.4.1'.\r\n\r\nSource: apps",
+    "submit_date": "2006-07-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5261,
+    "doc-id": "RFC4512",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 6.1,
+    "orig_text": "And where a server is unable (or\r\nunwilling) to preserve the value of user information, the server\r\nSHALL ensure that an equivalent value (per Section 2.3) is returned.",
+    "correct_text": "And where a server is unable (or\r\nunwilling) to preserve the value of user information, the server\r\nSHALL ensure that an equivalent value (per Section 2.2) is returned.",
+    "notes": "The concept of equivalent  values is defined in Section 2.2 of RFC 4512. Section 2.3 does not mention equivalent values.",
+    "submit_date": "2018-02-12",
+    "submitter_name": "Jonathan Giddy",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
