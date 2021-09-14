@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2304,
+    "doc-id": "RFC5832",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 9.1,
+    "orig_text": "[GOST3411]       \"Information technology.  Cryptographic Data\r\n                    Security.  Hashing function.\", GOST R 34.10-94,\r\n                    Gosudarstvennyi Standard of Russian Federation,\r\n                    Government Committee of Russia for Standards, 1994.\r\n                    (In Russian)\r\n",
+    "correct_text": "[GOST3411]       \"Information technology.  Cryptographic Data\r\n                    Security.  Hashing function.\", GOST R 34.11-94,\r\n                    Gosudarstvennyi Standard of Russian Federation,\r\n                    Government Committee of Russia for Standards, 1994.\r\n                    (In Russian)\r\n",
+    "notes": null,
+    "submit_date": "2010-06-17",
+    "submitter_name": "Vasily Dolmatov",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3768,
+    "doc-id": "RFC5832",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7.1.2",
+    "orig_text": "Parameters a and b take the following values in this example:\r\n\r\n   a = 7\r\n   a = 0x7\r\n\r\n   b = 43308876546767276905765904595650931995\\\\\r\n   942111794451039583252968842033849580414\r\n\r\n   b = 0x5FBFF498AA938CE739B8E022FBAFEF40563\\\\\r\n   F6E6A3472FC2A514C0CE9DAE23B7E\r\n",
+    "correct_text": "Parameters a and b take the following values in this example:\r\n\r\n   a = 57896044618658097711785492504343953926\\\\\r\n   634992332820282019728792003956564821034    (-7 mod p)\r\n\r\n   a = 0x8000000000000000000000000000\\\\\r\n   00000000000000000000000000000000042A\r\n\r\n   b = 43308876546767276905765904595650931995\\\\\r\n   942111794451039583252968842033849580414\r\n\r\n   b = 0x5FBFF498AA938CE739B8E022FBAFEF40563\\\\\r\n   F6E6A3472FC2A514C0CE9DAE23B7E\r\n",
+    "notes": "The elliptic curve coefficient 'a' in section 7.1.2 is incorrectly defined, with the result that the generator point P in section 7.1.5 fails to satisfy the congruence relationship (1) in section 5.1.\r\n\r\nThe mistake emanates from the appendix in the GOST R 34.10-2001 standard.\r\n \r\nDefining  a  to be  ( -7 mod p ) restores consistency, at least to the extent that the generator point P lies on the specified curve.",
+    "submit_date": "2013-10-27",
+    "submitter_name": "Dick Franks",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
