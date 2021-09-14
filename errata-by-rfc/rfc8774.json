@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6075,
+    "doc-id": "RFC8774",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "Abstract",
+    "orig_text": "   This\r\n   will lead to a perceived round-trip time of zero seconds on some\r\n   Internet paths, a capability which was not predicted and so not\r\n   included as a possibility in many protocol specifications.",
+    "correct_text": "Suggested text...\r\n   The\r\n   no communication theorem holds, and there will be no perceived\r\n   round-trip time of zero seconds on some Internet paths, a\r\n   capability which was not predicted and so not included as a\r\n   possibility in many protocol specifications.",
+    "notes": "This report has been marked as \"held for document update\" so that the authors can consider it when a revision to the RFC is made.\r\nAt that time, the authors may want to think about the following points:\r\n- The original text says \"perceived round-trip time of zero seconds\". Of course, the\r\n  perception of a zero round-trip time says nothing about the actual time: none of\r\n  the laws of physics apply to perception.\r\n- The well-known \"no-communication theorem\" is predicated on the assumption\r\n  that the laws of quantum mechanics hold, but that it is clearly not the case on\r\n  March 32nd.\r\n- The proof of the no-communication theorem depends on an understanding of\r\n  Hilbert Space. Mr Space is notably hard to comprehend.\r\n- The no-communication theorem is classically described in relation to\r\n  communications between Alice and Bob, but we know that the Internet is For All,\r\n  and so our concerns should extend wider than just Alice and Bob to include\r\n  Charlie, Daphne, Eustace, and Felicity.\r\n- The proof of the no-communication theorem depends on the Born rule, but while\r\n  there is one Born every minute, it is generally accepted that there is no change\r\n  through the Born identity.",
+    "submit_date": "2020-04-01",
+    "submitter_name": "Pickle Surprise",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2020-04-01 15:12:49"
+  },
+  {
+    "errata_id": 6077,
+    "doc-id": "RFC8774",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 1,
+    "orig_text": "time travel will never work (or it would already have been used).",
+    "correct_text": "time travel is still not available in the consumer market.",
+    "notes": "While the introduction section may allow some more leniency, its discarding of RFC6921 based on an unfounded dismissal of time travel shows a lack of the required technical competence that should be cardinal for a serious publication such as this [RFC 3935]. The simplistic \"it would already have been used\" misses any rigorous testing and falls for the fallacy best described by the 19th century aphorism Absence of Evidence Is Not Evidence of Absence [QUOTE-INV]. Not only do we lack any method to detect whether time travel has been used already (with 'already being used' defined as the timestamp of either point of the time travel journey being prior to the current point in time, i.e. satisfying a lesser-than operation when the representations of their TAI [IEEE1588] values are checked with the comparison defined in [RFC2550]) but there are also many sensible reasons for time travel invented in the future not leading (coronavirus-aside) to an interaction with 2020 human beings (much less to a widely known one), as has been thoroughly studied in [WHY-HAVENT].\r\n\r\n\r\n\r\n[RFC6921]  Hinden, R., \"Design Considerations for Faster-Than-Light\r\n          (FTL) Communication\", RFC 6921, DOI 10.17487/RFC6921,\r\n          April 2013, <https://www.rfc-editor.org/info/rfc6921>.\r\n\r\n[QUOTE-INV] Quote Investigator \"Absence of Evidence Is Not Evidence \r\n\t\t\tof Absence\", 17 September 2019\r\n\r\n[IEEE1588] IEEE, \"IEEE Standard for a Precision Clock Synchronization\r\n          Protocol for Networked Measurement and Control Systems\",\r\n          IEEE Std 1588-2008, DOI 10.1109/IEEESTD.2008.4579760, July\r\n          2008.\r\n\r\n[RFC2550] S. Glassman, M. Manasse, J. Mogul, \"Y10K and Beyond\", RFC 2550,\r\n\t\tApril 1999, <https://www.rfc-editor.org/info/rfc2550>\r\n\r\n[WHY-HAVENT] World Building Community, \"If time travel is possible in the \r\n\t\tfuture, no matter how distant, why haven't they come back to \r\n\t\ttell us?\", August 2016\r\n\t\t<https://worldbuilding.stackexchange.com/questions/51210/if-time-travel-is-possible-in-the-future-no-matter-how-distant-why-havent-the/51377>",
+    "submit_date": "2020-04-01",
+    "submitter_name": "Ángel",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
