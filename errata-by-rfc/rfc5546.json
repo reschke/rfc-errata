@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2097,
+    "doc-id": "RFC5546",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.4.6",
+    "orig_text": "   +--------------------+----------+-----------------------------------+\r\n   | Component/Property | Presence | Comment                           |\r\n   +--------------------+----------+-----------------------------------+\r\n   |                    |          |                                   |\r\n   | ...                |          |                                   |\r\n   |                    |          |                                   |\r\n   |   ORGANIZER        | 0        |                                   |",
+    "correct_text": "   +--------------------+----------+-----------------------------------+\r\n   | Component/Property | Presence | Comment                           |\r\n   +--------------------+----------+-----------------------------------+\r\n   |                    |          |                                   |\r\n   | ...                |          |                                   |\r\n   |                    |          |                                   |\r\n   |   ORGANIZER        | 1        |                                   |",
+    "notes": "The \"ORGANIZER\" property should be REQUIRED in \"VTODO\" calendar components with the \"REFRESH\" method.",
+    "submit_date": "2010-03-29",
+    "submitter_name": "Bernard Desruisseaux",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2331,
+    "doc-id": "RFC5546",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.4.",
+    "orig_text": "   | REPLY          | Reply to a VTODO request.  Attendees MAY set     |\r\n   |                | PARTSTAT to ACCEPTED, DECLINED, TENTATIVE,       |\r\n   |                | DELEGATED, PARTIAL, and COMPLETED.               |\r\n ",
+    "correct_text": "   | REPLY          | Reply to a VTODO request.  Attendees MAY set     |\r\n   |                | PARTSTAT to ACCEPTED, DECLINED, TENTATIVE,       |\r\n   |                | DELEGATED, IN-PROCESS, and COMPLETED.            |\r\n",
+    "notes": "The PARTSTAT value for VTODO component that is in progress is IN-PROCESS, not PARTIAL, per RFC 5545.",
+    "submit_date": "2010-07-15",
+    "submitter_name": "Filip Navara",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3037,
+    "doc-id": "RFC5546",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "3.1.3",
+    "orig_text": "   |   DURATION         | 0 or 1   | If present, REPEAT MUST be        |\r\n   |                    |          | present.                          |\r\n   |   REPEAT           | 0 or 1   | If present, DURATION MUST be      |\r\n   |                    |          | present.                          |",
+    "correct_text": "   |   DURATION         | 0 or 1   | If present, DURATION MUST be      |\r\n   |                    |          | present.                          |\r\n   |   REPEAT           | 0 or 1   | If present, REPEAT MUST be        |\r\n   |                    |          | present.                          |",
+    "notes": "Currently, the Component/Property doesn't match the term used in Comment. That needs to be corrected.\n --VERIFIER NOTES-- \nPer discussion on the ietf-calsify list, this report simply misunderstands the intent of the document and is clearly false.   ",
+    "submit_date": "2011-11-30",
+    "submitter_name": "Praveen Bhamidipati",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3932,
+    "doc-id": "RFC5546",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.2",
+    "orig_text": "   |   DAYLIGHT         | 0+       | MUST be one or more of either     |\r\n   |                    |          | STANDARD or DAYLIGHT.             |\r\n   |     COMMENT        | 0+       |                                   |\r\n   |     DTSTART        | 1        | MUST be local time format.        |\r\n   |     RDATE          | 0+       |                                   |\r\n   |     RRULE          | 0 or 1   |                                   |\r\n   |     TZNAME         | 0+       |                                   |",
+    "correct_text": "   |   DAYLIGHT         | 0+       | MUST be one or more of either     |\r\n   |                    |          | STANDARD or DAYLIGHT.             |\r\n   |     COMMENT        | 0+       |                                   |\r\n   |     DTSTART        | 1        | MUST be local time format.        |\r\n   |     RDATE          | 0+       | If present, RRULE MUST NOT be     |\r\n   |                    |          | present                           |\r\n   |     RRULE          | 0 or 1   | If present, RDATE MUST NOT be     |\r\n   |                    |          | present                           |\r\n   |     TZNAME         | 0+       |                                   |",
+    "notes": "The corrected text appeared in RFC 2446, however I couldn't find the reasoning as to why it was omitted in RFC 5546.\r\n\r\nThe correct comments also appear a few lines below, under \"STANDARD\".",
+    "submit_date": "2014-03-25",
+    "submitter_name": "Alfie John",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
