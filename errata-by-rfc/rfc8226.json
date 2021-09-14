@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5610,
+    "doc-id": "RFC8226",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "    JWTClaimPermittedValuesList ::= SEQUENCE SIZE (1..MAX) Of\r\n                                      JWTClaimPermittedValues",
+    "correct_text": "    JWTClaimPermittedValuesList ::= SEQUENCE SIZE (1..MAX) OF\r\n                                      JWTClaimPermittedValues",
+    "notes": "The ASN.1 Compiler require \"OF\" to be all capital letters.",
+    "submit_date": "2019-01-21",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
