@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4033,
+    "doc-id": "RFC7193",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "[RFC5751] registered the application/pkc7-mime media type.",
+    "correct_text": "[RFC5751] registered the application/pkcs7-mime media type.",
+    "notes": "The correct media type is application/pkcs7-mime.  \r\nThe references are correct to PKCS#7 and the RFC that establishes the media type.  This is clearly a typo, hence accepting the errata, but a change to editorial.",
+    "submit_date": "2014-07-02",
+    "submitter_name": "Sean Leonard",
+    "verifier_id": 141,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
