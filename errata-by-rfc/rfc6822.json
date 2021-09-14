@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4519,
+    "doc-id": "RFC6822",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.4.1 and 4",
+    "orig_text": "   MI-RTRs include the IID-TLV in the point-to-point Hello PDUs they\r\n   originate.\r\n\r\n------------------------------\r\nAlso in Section 4:\r\n\r\nThe following subsections describe the additional rules\r\n   an MI-RTR MUST follow when establishing adjacencies.",
+    "correct_text": "MI-RTRs include the IID-TLV in the point-to-point Hello PDUs associated\r\nwith non-zero instances that they originate.\r\n\r\n-----------------------------\r\nIn Section 4:\r\n\r\nThe following subsections describe the additional rules an MI-RTR MUST\r\nfollow when establishing adjacencies for non-zero instances.",
+    "notes": "The exception case (point-to-point hellos on a point-to-point IIHs on a point-to-point circuit (sic)) is discussed in Section 2.6.2.\r\nThe proposed text is therefore unnecessary.  However, clarification is useful.",
+    "submit_date": "2015-11-02",
+    "submitter_name": "Alexander Okonnikov",
+    "verifier_id": 140,
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4520,
+    "doc-id": "RFC6822",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.6.1",
+    "orig_text": "   An MI-RTR will use the AllL1IS or AllL2IS ISIS MAC-layer address (as\r\n   defined in [ISO10589]) as the destination address when sending an\r\n   IS-IS PDU for the standard instance.  An MI-RTR will use one of two\r\n   new dedicated layer 2 multicast addresses (AllL1MI-ISs or AllL2MI-\r\n   ISs) as the destination address when sending an IS-IS PDU for any\r\n   non-zero IID.  These addresses are specified in Section 6.  If\r\n   operating in point-to-point mode on a broadcast circuit [RFC5309], an\r\n   MI-RTR MUST use one of the two new multicast addresses as the\r\n   destination address when sending point-to-point IIHs associated with\r\n   a non-zero instance.  (Either address will do.)\r\n\r\n   MI-RTRs MUST discard IS-IS PDUs received if either of the following\r\n   is true:\r\n\r\n   o  The destination multicast address is AllL1IS or AllL2IS and the\r\n      PDU contains an IID-TLV.\r\n\r\n   o  The destination multicast address is one of the two new addresses,\r\n      and the PDU contains an IID-TLV with a zero value for the IID or\r\n      has no IID-TLV.\r\n\r\n   NOTE: If the multicast addresses AllL1IS and/or AllL2IS are\r\n   improperly used to send IS-IS PDUs for non-zero IIDs, legacy systems\r\n   will interpret these PDUs as being associated with IID #0.  This will\r\n   cause inconsistencies in the LSDB in those routers, may incorrectly\r\n   maintain adjacencies, and may lead to inconsistent DIS election.",
+    "correct_text": "   An MI-RTR will use the AllL1ISs or AllL2ISs ISIS MAC-layer address\r\n   (as defined in [ISO10589]) as the destination address when sending\r\n   an IS-IS PDU for the standard instance.  An MI-RTR will use one of\r\n   two new dedicated layer 2 multicast addresses (AllL1MI-ISs or\r\n   AllL2MI-ISs) as the destination address when sending an IS-IS PDU\r\n   for any non-zero IID.  These addresses are specified in Section 6.\r\n\r\n   If operating in point-to-point mode on a broadcast circuit\r\n   [RFC5309], an MI-RTR will use the AllL1ISs, AllL2ISs or AllISs\r\n   MAC-layer address (as defined in [ISO10589]) as the destination\r\n   address when sending an IS-IS PDU for the standard instance,\r\n   and will use one of two new multicast addresses (AllL1MI-ISs or\r\n   AllL2MI-ISs; either address will do) as the destination address\r\n   when sending an IS-IS PDU for any non-zero IID.\r\n\r\n   MI-RTRs MUST discard IS-IS PDUs received if either of the    \r\n   following is true:\r\n\r\n   o  The destination multicast address is AllL1ISs, AllL2ISs or \r\n      AllISs and the PDU contains an IID-TLV.\r\n\r\n   o  The destination multicast address is one of the two new \r\n      addresses and the PDU contains an IID-TLV with a zero value for \r\n      the IID or has no IID-TLV.\r\n\r\n   NOTE: If the multicast addresses AllL1ISs and/or AllL2ISs and/or \r\n   AllISs are improperly used to send IS-IS PDUs for non-zero IIDs, \r\n   legacy systems will interpret these PDUs as being associated with \r\n   IID #0.  This will cause inconsistencies in the LSDB in those \r\n   routers, may incorrectly maintain adjacencies, and may lead to \r\n   inconsistent DIS election.",
+    "notes": "1. While operating in point-to-point mode over broadcast circuit, MI-RTR can use any of three multicast addresses for PDUs in standard instance - AllL1ISs, AllL2ISs or AllISs.\r\n\r\n2. New multicast addresses must be used for all kinds of IS-IS PDUs, not only for IIHs\r\n\r\n3. AllL1IS and AllL2IS are replaced by AllL1ISs and AllL2ISs, respectively (according to ISO 10589:2002).",
+    "submit_date": "2015-11-02",
+    "submitter_name": "Alexander Okonnikov",
+    "verifier_id": 140,
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4521,
+    "doc-id": "RFC6822",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "2.6.2",
+    "orig_text": "   In order for an MI-RTR to interoperate over a point-to-point \r\n   circuit with a router that does NOT support this extension, the \r\n   MI-RTR MUST NOT send IS-IS PDUs for instances other than IID #0 \r\n   over the point-to-point circuit as these PDUs may affect the state \r\n   of IID #0 in the neighbor.",
+    "correct_text": "   Note: The procedure below should not be used when MI-RTR is \r\n   operating in point-to-point mode over broadcast circuit \r\n   [RFC 5309].\r\n\r\n   In order for an MI-RTR to interoperate over a point-to-point \r\n   circuit with a router that does NOT support this extension, the \r\n   MI-RTR MUST NOT send IS-IS PDUs for instances other than IID #0 \r\n   over the point-to-point circuit as these PDUs may affect the state \r\n   of IID #0 in the neighbor.",
+    "notes": "In Section 2.6.1, it clearly says \"If operating in point-to-point mode on a broadcast circuit [RFC5309]\" which reinforces that Section 2.6.2 is about point-to-point circuits and not broadcast circuits.\r\n\r\nHowever, there isn't any harm in adding a bit of clarity going forward.  This can be looked at if and when RFC 6822 is updated.",
+    "submit_date": "2015-11-02",
+    "submitter_name": "Alexander Okonnikov",
+    "verifier_id": 2,
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
