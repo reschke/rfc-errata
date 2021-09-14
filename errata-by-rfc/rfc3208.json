@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 323,
+    "doc-id": "RFC3208",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "   Options:\n\n      This field encodes binary indications of the presence and\n      significance of any options.  It also directly encodes some\n      options.\n\n      bit 0 set => One or more Option Extensions are present\n\n      bit 1 set => One or more Options are network-significant\n\n         Note that this bit is clear when OPT_FRAGMENT and/or\n         OPT_JOIN are the only options present.\n\n      bit 6 set => Packet is a parity packet for a transmission\n\t group\n      of variable sized packets (OPT_VAR_PKTLEN).  Only present\n\t when\n      OPT_PARITY is also present.\n\n      bit 7 set => Packet is a parity packet (OPT_PARITY)\n\n      Bits are numbered here from left (0 = MSB) to right (7 =\n\t LSB).\n\n      All the other options (option extensions) are encoded in\n      extensions to the PGM header.",
+    "correct_text": "   Options:\n\n      This field encodes binary indications of the presence and\n      significance of any options.  It also directly encodes some\n      options.\n\n      bit 7 set => One or more Option Extensions are present\n\n      bit 6 set => One or more Options are network-significant\n\n         Note that this bit is clear when OPT_FRAGMENT and/or\n         OPT_JOIN are the only options present.\n\n      bit 1 set => Packet is a parity packet for a transmission\n\t group\n      of variable sized packets (OPT_VAR_PKTLEN).  Only present\n\t when\n      OPT_PARITY is also present.\n\n      bit 0 set => Packet is a parity packet (OPT_PARITY)\n\n      Bits are numbered here from left (0 = MSB) to right (7 =\n\t LSB).\n\n      All the other options (option extensions) are encoded in\n      extensions to the PGM header.\n",
+    "notes": "",
+    "submit_date": "2002-09-17",
+    "submitter_name": "Lorenzo Vicisano",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1945,
+    "doc-id": "RFC3208",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1.2.5.",
+    "orig_text": "If receivers are several hops\r\n   removed from the first PGM network element, the efficacy of NAK\r\n   suppression may degrade.",
+    "correct_text": "If receivers are several hops\r\n   away from the first PGM network element, the efficacy of NAK\r\n   suppression may degrade.",
+    "notes": "This is simply a stylistic suggestion in the wording choice.",
+    "submit_date": "2009-11-23",
+    "submitter_name": "Alessandro Spinella",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
