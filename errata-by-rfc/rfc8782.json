@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6449,
+    "doc-id": "RFC8782",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 7.1,
+    "orig_text": "   The Server Name Indication (SNI) extension [RFC6066] i defines a\r\n   mechanism for a client to tell a (D)TLS server the name of the server\r\n   it wants to contact.",
+    "correct_text": "   The Server Name Indication (SNI) extension [RFC6066] defines a\r\n   mechanism for a client to tell a (D)TLS server the name of the server\r\n   it wants to contact.",
+    "notes": "extra \"i\"",
+    "submit_date": "2021-03-02",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2021-03-02 08:30:16"
+  }
+]
