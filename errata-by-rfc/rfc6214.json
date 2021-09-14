@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2854,
+    "doc-id": "RFC6214",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "The whole section about the frame format and the lack of \r\nLayer2-type, and the technical choice behind it.",
+    "correct_text": "RFC 6274, section 3.1 explicitely forbids this technique and \r\nrequires that an IP implementation checks the version number, \r\nwhich will prevent RFC 6214 to work.",
+    "notes": "Yes, I know that this RFC was published on April 1st... Nevertheless, this is an interesting technical point.\r\n\n --VERIFIER NOTES-- \nRFC 6274 was published in July 2011, three months after RFC 6214.  \r\nFurther, RFC 6274 is only Informational. The recommendation that you \r\nmention asserts that \"in practice different versions of IP are \r\nidentified by a different Protocol Type (e.g., EtherType in the case \r\nof Ethernet) number in the link-layer protocol header.\" That assertion \r\nis untrue of conforming implementations of RFC 6214, which, apparently, \r\nthe authors of RFC 6274 failed to consider.",
+    "submit_date": "2011-07-06",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3566,
+    "doc-id": "RFC6214",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Metadata",
+    "orig_text": "RFC 6214 updates RFC 1149, in a similar way to RFC 2549 updating \r\nRFC 1149.  But there is no metadata in RFC 6214 stating that it \r\nupdates RFC 1149.\r\n",
+    "correct_text": "\"Updates: 1149\"\r\n",
+    "notes": "I discovered this defect while trying to find what was described to me as \"the IPv6 update to 'avian carriers'\".  So actual people are inconvenienced by this defect.",
+    "submit_date": "2013-03-26",
+    "submitter_name": "Dale Worley",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4323,
+    "doc-id": "RFC6214",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "8.  Security",
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "New Physical and Link layer problem have been discovered and should be addressed in this RFC, and they are:\r\n1. Avian IP carriers are competing for air space with Unmanned Aerial Vehicle (UAV), and as such have a higher probability of packet collision at Layer 1 has increase in retransmissions.\r\n2. On path Avian IP carrier dropouts, caused by draughts, may also lead to a connection loss, and increase in retransmission.",
+    "submit_date": "2015-04-01",
+    "submitter_name": "Joe Klein",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4668,
+    "doc-id": "RFC6214",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "In some countries you are be required to obtain a proper license from authorities to keep some kind of birds. It should be addressed in RFC.\r\n\r\nExample: http://www.afcd.gov.hk/english/publications/publications_press/pr1037.html\r\n\"Unauthorised keeping of five kinds of poultry -chickens, ducks, geese, pigeons and quails – is an offence...\"",
+    "submit_date": "2016-04-14",
+    "submitter_name": "YC Lee",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
