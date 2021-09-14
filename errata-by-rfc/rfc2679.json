@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 398,
+    "doc-id": "RFC2679",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "   Then the 50th percentile would be 110 msec, since 90 msec and 100\r\n   msec are smaller and 110 msec and 'undefined' are larger.",
+    "correct_text": "   Then the 50th percentile would be 110 msec, since 90 msec and 100\r\n   msec are smaller and 500 msec and 'undefined' are larger.  See\r\n   Section 11.3 of [1] for computing percentiles.",
+    "notes": " See the list of samples immediately preceding that paragraph.",
+    "submit_date": "2002-11-18",
+    "submitter_name": "Andrew Main",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
