@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4418,
+    "doc-id": "RFC5843",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 1.1,
+    "orig_text": "   Digest: SHA-256=MWVkMWQxYTRiMzk5MDQ0MzI3NGU5NDEyZTk5OWY1ZGFmNzgyZTJlO\r\n   DYzYjRjYzFhOTlmNTQwYzI2M2QwM2U2MQ==",
+    "correct_text": "   Digest: SHA-256=HtHRpLOZBEMnTpQS6Zn12veC4uhjtMwamfVAwmPQPmE=",
+    "notes": "The example SHA-256 message digest in the original document is not base64(sha256(M)), but it is base64(hexlify(sha256(M))).\r\nTherefore the example is incorrect and misleading,\r\nthe digest is much longer than it sould be.\r\n\r\nThat base64 encoding of binary hash digest has to be used,\r\ninstead of the base64 encoding of the hexlified hash,\r\ncan be verified by checking RFC3230 section 4.2.",
+    "submit_date": "2015-07-17",
+    "submitter_name": "Michal Bozon",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
