@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5557,
+    "doc-id": "RFC8505",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "This specification updates RFC 6775 -- the Low-Power Wireless\r\n   Personal Area Network (6LoWPAN) Neighbor Discovery specification --\r\n   to clarify the role of the protocol as a registration technique and\r\n   simplify the registration operation in 6LoWPAN routers, as well as to\r\n   provide enhancements to the registration capabilities and mobility\r\n   detection for different network topologies, including the Routing\r\n   Registrars performing routing for host routes and/or proxy Neighbor\r\n   Discovery in a low-power network.",
+    "correct_text": "This specification updates RFC 6775 -- the Low-Power Wireless\r\n   Personal Area Network (6LoWPAN) Neighbor Discovery specification --\r\n   to clarify the role of the protocol as a registration technique,\r\n   to simplify the registration operation in 6LoWPAN routers, and to\r\n   provide enhancements to the registration capabilities and mobility\r\n   detection for different network topologies, including the Routing\r\n   Registrars performing routing for host routes and/or proxy Neighbor\r\n   Discovery in a low-power network.",
+    "notes": "Change wording to flow in a smooth way.\r\n\r\n-----\r\n\r\nFrom https://www.ietf.org/about/groups/iesg/statements/processing-rfc-errata/\r\n\r\n\"Changes which are simply stylistic issues or simply make things read better should be Hold for Document Update. \"",
+    "submit_date": "2018-11-20",
+    "submitter_name": "Devin Edmison",
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2021-04-29 14:01:43"
+  },
+  {
+    "errata_id": 5574,
+    "doc-id": "RFC8505",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "9.1.",
+    "orig_text": "ARO Status",
+    "correct_text": "Bit",
+    "notes": "Title of the first column in table 2 should be ‘Bit’ as opposed to ‘ARO Status’.\r\n",
+    "submit_date": "2018-12-11",
+    "submitter_name": "Pascal Thubert",
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2021-04-29 13:54:37"
+  }
+]
