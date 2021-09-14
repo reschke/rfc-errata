@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 566,
+    "doc-id": "RFC1033",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "           SRI.COM.  NS\r\n*Here-->>  KL.SRI.COM.  KL.SRI.COM.  A 10.1.0.2.",
+    "correct_text": "            SRI.COM.     NS  KL.SRI.COM.  \r\n*Here-->>   KL.SRI.COM.  A   10.1.0.2.",
+    "notes": "  You can refer to RR \"NS  (Name Server)\" on Page 6 in the same RFC for the reason.\n --VERIFIER NOTES-- \n   The status of this document is UNKNOWN. This means that it is so old, that it should not be used as a reference. There is really no way to know if the syntax that you point out was valid in 1987, when the document was published.\r\n\r\nMaybe we should transition the document to HISTORIC?",
+    "submit_date": "2002-05-05",
+    "submitter_name": "\"CFeng\"",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
