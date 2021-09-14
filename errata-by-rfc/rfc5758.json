@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2013,
+    "doc-id": "RFC5758",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3, last para",
+    "orig_text": "|  Conforming CA implementations that ECDSA signatures in certificates\r\n   or CRLs MAY generate such ECDSA signatures in accordance with all the\r\n   requirements and recommendations in [X9.62] or [SEC1] if they have a\r\n   stated policy that requires conformance to [X9.62] or [SEC1].\r\n",
+    "correct_text": "|  Conforming CA implementations that generate ECDSA signatures in\r\n   certificates or CRLs MAY generate such ECDSA signatures in accordance\r\n   with all the requirements and recommendations in [X9.62] or [SEC1] if\r\n   they have a stated policy that requires conformance to [X9.62] or\r\n   [SEC1].",
+    "notes": "Rationale: missing verb, \"generate\";\r\n  cf. similar text immediately above in the same Section\r\n  and the last two paragraphs of Section 2.",
+    "submit_date": "2010-01-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 111,
+    "verifier_name": "Pasi Eronen",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
