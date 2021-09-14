@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2041,
+    "doc-id": "RFC5582",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7.1,
+    "orig_text": "Each tree can map a location described by either civic or geographic\r\ncoordinates, but not both, for one type of service (such as\r\n'sos.police', 'sos.fire' or 'counseling') and one location profile,\r\nalthough nothing prevents re-using the same servers for multiple,\r\ndifferent services or both types of coordinates.  The collection of\r\nall trees for one service and location profile is known as a forest.\r\n",
+    "correct_text": "Each tree can map a location described by civic and/or geographic\r\ncoordinates, for one type of service (such as 'sos.police', 'sos.fire' or\r\n'counseling'), although nothing prevents re-using the same servers for\r\nmultiple, different services.  The collection of all trees for one service \r\nis known as a forest.\r\n",
+    "notes": "Trees may have mapping data in multiple location profiles, not only in a single profile. In particular, according to RFC 5222, a LoST server must understand civic and geographic coordinates. Furthermore, there is no mechanism to discover LoST servers based on the location profile.",
+    "submit_date": "2010-02-12",
+    "submitter_name": "Karl Heinz Wolf",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2042,
+    "doc-id": "RFC5582",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 8,
+    "orig_text": "   To facilitate orientation among the trees, we introduce a forest\r\n   guide (FG), which keeps track of the coverage regions of all the\r\n   trees for one service and location profile.  \r\n",
+    "correct_text": "   To facilitate orientation among the trees, we introduce a forest\r\n   guide (FG), which keeps track of the coverage regions of all the\r\n   trees for one service.  \r\n",
+    "notes": "Trees may have mapping data in multiple location profiles, not only in a single profile. In particular, according to RFC 5222, a LoST server must understand civic and geographic coordinates. Furthermore, there is no mechanism to discover LoST servers based on the location profile.",
+    "submit_date": "2010-02-12",
+    "submitter_name": "Karl Heinz Wolf",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2043,
+    "doc-id": "RFC5582",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   resolver:  A resolver is contacted by a seeker, consults a forest\r\n      mapping server, and then resolves the query using an appropriate\r\n      tree.  Resolvers may cache query results.\r\n\r\n\r\n   tree:  A tree consists of a self-contained hierarchy of authoritative\r\n      mapping servers for a particular service.  Each tree exports its\r\n      coverage region to the forest mapping servers.\r\n",
+    "correct_text": "   resolver:  A resolver is contacted by a seeker, consults a forest\r\n      guide, and then resolves the query using an appropriate\r\n      tree.  Resolvers may cache query results.\r\n\r\n\r\n   tree:  A tree consists of a self-contained hierarchy of authoritative\r\n      mapping servers for a particular service.  Each tree exports its\r\n      coverage region to the forest guide.\r\n",
+    "notes": "The server should be correctly referred to as \"forest guide\", there is no \"forest mapping server\" in the architecture.",
+    "submit_date": "2010-02-12",
+    "submitter_name": "Karl Heinz Wolf",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
