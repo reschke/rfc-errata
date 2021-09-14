@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2105,
+    "doc-id": "RFC5320",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.3.3, pg.19",
+    "orig_text": "      +-------------------------+ -\r\n      |                         |   ~ Outer */SEAL/*/IPv4 hdrs~   |\r\n      |                         |   |\r\n      +-------------------------+   |\r\n      |      ICMPv4 Header      |   |\r\n      |(Dest Unreach; Frag Need)|   |\r\n      +-------------------------+   |\r\n      |                         |    > Up to 576 bytes\r\n      ~    IP/*/SEAL/*/IPv4     ~   |\r\n      ~ hdrs of packet/fragment ~   |\r\n      |                         |   |\r\n      +-------------------------+   |\r\n      |                         |   |\r\n      ~ Data of packet/fragment ~   |\r\n      |                         |   /\r\n      +-------------------------+ -\r\n\r\n       Figure 3: SEAL-Encapsulated ICMPv4 Fragmentation Needed Message",
+    "correct_text": "      +-------------------------+ -\r\n|     |                         |   \\\r\n|     ~ Outer */SEAL/*/IPv4 hdrs~   |\r\n      |                         |   |\r\n      +-------------------------+   |\r\n      |      ICMPv4 Header      |   |\r\n      |(Dest Unreach; Frag Need)|   |\r\n      +-------------------------+   |\r\n      |                         |    > Up to 576 bytes\r\n      ~    IP/*/SEAL/*/IPv4     ~   |\r\n      ~ hdrs of packet/fragment ~   |\r\n      |                         |   |\r\n      +-------------------------+   |\r\n      |                         |   |\r\n      ~ Data of packet/fragment ~   |\r\n      |                         |   /\r\n      +-------------------------+ -\r\n\r\n       Figure 3: SEAL-Encapsulated ICMPv4 Fragmentation Needed Message\r\n",
+    "notes": "(Most likely an nroff-related problem with the trailing backslash!)\r\n\r\nYes; clearly the diagram needs to be tidied up.",
+    "submit_date": "2010-04-02",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 2,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
