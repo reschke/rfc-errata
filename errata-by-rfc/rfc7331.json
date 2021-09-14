@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4214,
+    "doc-id": "RFC7331",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Various",
+    "orig_text": "bfdSessionTable, bfdSessionPerfTable ",
+    "correct_text": "bfdSessTable, bfdSessPerfTable",
+    "notes": "Throughout the document, bfdSessionTable and bfdSessionPerfTable are used in various text.  The underlying MIB OBJECT-TYPEs are bfdSessTable and bfdSessPerfTable.  While these discrepancies occur within the MIB module itself, they do not do so in any component that impacts compilation of the MIB module.",
+    "submit_date": "2014-12-30",
+    "submitter_name": "Jeffrey Haas",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4441,
+    "doc-id": "RFC7331",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.5,
+    "orig_text": "Given bfdSessInterface, bfdSessSrcAddrType, bfdSessSrcAddr,\r\nbfdSessDstAddrType, and bfdSessSrcAddrType, the BFD Session IP\r\nMapping Table maps to an associated BFD session found in the\r\nbfdSessionTable.",
+    "correct_text": "Given bfdSessInterface, bfdSessSrcAddrType, bfdSessSrcAddr,\r\nbfdSessDstAddrType, and bfdSessDstAddr, the BFD Session IP\r\nMapping Table maps to an associated BFD session found in the\r\nbfdSessionTable.",
+    "notes": "Duplicate bfdSessSrcAddrType but missing bfdSessDstAddr\r\n\r\n(Alvaro Retana): the MIB Module itself has the correct description.",
+    "submit_date": "2015-08-09",
+    "submitter_name": "Rui Lin",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
