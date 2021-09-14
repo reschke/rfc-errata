@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 4724,
+    "doc-id": "RFC7574",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 1.3,
+    "orig_text": "swarm ID\r\nUnique identifier for a swarm of peers, in PPSPP a sequence of\r\nbytes. For video on demand with content integrity protection\r\nenabled, the identifier is the so-called root hash of a Merkle\r\nhash tree over the content. For live streaming, the swarm ID is\r\na public key.",
+    "correct_text": "swarm ID\r\nUnique identifier for a swarm of peers, in PPSPP a sequence of\r\nbytes. For video on demand, the identifier is the so-called root hash\r\nof a Merkle hash tree over the content. For live streaming, the \r\nswarm ID is a public key.",
+    "notes": "According to chapter 5 and chapter 6.1, it seems that it is not mandatory to use content integrity protection scheme.\r\nThe definition of swarm ID in the original text does not define how the ID is used in environment with the content integrity protection disabled.\r\nIt is possible to add new description on how swarm ID is defined in the content integrity protection scheme is disabled. \r\nOr, it is possible to remove the parts regarding content integrity protection.\r\n\r\nWe propose to remove \"with content integrity protection enabled\" part.\r\n\r\nSpencer: confirmed in conversations with Victor Grishchenko <victor.grishchenko@gmail.com> on the PPSP mailing list.",
+    "submit_date": "2016-07-01",
+    "submitter_name": "Sung Hei Kim, Chang Kyu Lee",
+    "verifier_id": 137,
+    "verifier_name": "Spencer Dawkins",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4725,
+    "doc-id": "RFC7574",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "PPSPP can use different methods for protecting the integrity of the\r\ncontent while it is being distributed via the peer-to-peer network.\r\nMore specifically, PPSPP can use different methods for receiving\r\npeers to detect whether a requested chunk has been maliciously\r\nmodified by the sending peer. In benign environments, content\r\nintegrity protection can be disabled.\r\n\r\nFor static content, PPSPP currently defines one method for protecting\r\nintegrity, called the Merkle Hash Tree scheme. If PPSPP operates\r\nover the Internet, this scheme MUST be used. If PPSPP operates in a\r\nbenign environment, this scheme MAY be used. So the scheme is\r\nmandatory to implement, to satisfy the requirement of strong security\r\nfor an IETF protocol [RFC3365]. An extended version of the scheme is\r\nused to efficiently protect dynamically generated content (live\r\nstreams), as explained below and in Section 6.1.",
+    "correct_text": "PPSPP can use different methods for protecting the integrity of the\r\ncontent while it is being distributed via the peer-to-peer network.\r\nMore specifically, PPSPP can use different methods for receiving\r\npeers to detect whether a requested chunk has been maliciously\r\nmodified by the sending peer.\r\n\r\nFor static content, PPSPP currently defines one method for protecting\r\nintegrity, called the Merkle Hash Tree scheme.\r\nThe scheme is mandatory to implement, to satisfy the requirement of \r\nstrong security for an IETF protocol [RFC3365]. An extended version\r\nof the scheme is used to efficiently protect dynamically generated\r\ncontent (live streams), as explained below and in Section 6.1.",
+    "notes": "RFC 7574 (PPSP-PP) defines how the peers exchange chunks regarding content integrity protection scheme. It describes the relationship of the DATA and INTEGRITY messages.\r\nBut, it does not describes how peers exchange chunks when the content integrity protection scheme is disabled.\r\nThus, to the readers, it seems that content integrity protection scheme is very important part of PPSP-PP and must be used in order to implement PPSP-PP.\r\nI think the RFC 7574 (PPSP-PP) should be changed to clearly express that the content integrity protection scheme must be used in PPSP-PP.\r\nThe proposed changes is to remove options regarding the use of content integrity protection.\r\n\r\nSpencer: confirmed in conversations with Victor Grishchenko <victor.grishchenko@gmail.com> on the PPSP mailing list.",
+    "submit_date": "2016-07-01",
+    "submitter_name": "Sung Hei Kim, Chang Kyu Lee",
+    "verifier_id": 137,
+    "verifier_name": "Spencer Dawkins",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4726,
+    "doc-id": "RFC7574",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6.1,
+    "orig_text": "In the \"Unified Merkle Tree\" method, PPSPP combines the Merkle Hash\r\nTree scheme for static content with signatures to unify the video-on-\r\ndemand and live streaming scenarios. The use of Merkle hash trees\r\nreduces the number of signing and verification operations, hence\r\nproviding a similar signature amortization to the approach described\r\nin [SIGMCAST]. If PPSPP operates over the Internet, the \"Unified\r\nMerkle Tree\" method MUST be used. If the protocol operates in a\r\nbenign environment, the \"Unified Merkle Tree\" method MAY be used. So\r\nthis method is mandatory to implement.",
+    "correct_text": "In the \"Unified Merkle Tree\" method, PPSPP combines the Merkle Hash\r\nTree scheme for static content with signatures to unify the video-on-\r\ndemand and live streaming scenarios. The use of Merkle hash trees\r\nreduces the number of signing and verification operations, hence\r\nproviding a similar signature amortization to the approach described\r\nin [SIGMCAST].",
+    "notes": "RFC 7574 (PPSP-PP) defines how the peers exchange chunks regarding content integrity protection scheme. It describes the relationship of the DATA and INTEGRITY messages.\r\nBut, it does not describes how peers exchange chunks when the content integrity protection scheme is disabled.\r\nThus, to the readers, it seems that content integrity protection scheme is very important part of PPSP-PP and must be used in order to implement PPSP-PP.\r\nI think the RFC 7574 (PPSP-PP) should be changed to clearly express that the content integrity protection scheme must be used in PPSP-PP.\r\nThe proposed changes is to remove options regarding the use of content integrity protection.\r\n\r\nSpencer: confirmed in conversations with Victor Grishchenko <victor.grishchenko@gmail.com> on the PPSP mailing list.",
+    "submit_date": "2016-07-01",
+    "submitter_name": "Sung Hei Kim, Chang Kyu Lee",
+    "verifier_id": 137,
+    "verifier_name": "Spencer Dawkins",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4880,
+    "doc-id": "RFC7574",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7.5,
+    "orig_text": "   A peer MUST include the content integrity method used by a swarm.\r\n   The code for this option is 3.  Defined values are listed in Table 4.\r\n\r\n                   +--------+-------------------------+\r\n                   | Method | Description             |\r\n                   +--------+-------------------------+\r\n                   | 0      | No integrity protection |\r\n                   | 1      | Merkle Hash Tree        |\r\n                   | 2      | Sign All                |\r\n                   | 3      | Unified Merkle Tree     |\r\n                   | 4-255  | Unassigned              |\r\n                   +--------+-------------------------+\r\n\r\n            Table 4: PPSPP Content Integrity Protection Methods",
+    "correct_text": "   A peer MUST include the content integrity method used by a swarm.\r\n   The code for this option is 3.  Defined values are listed in Table 4.\r\n\r\n                   +--------+-------------------------+\r\n                   | Method | Description             |\r\n                   +--------+-------------------------+\r\n                   | 0      | Unassigned              |\r\n                   | 1      | Merkle Hash Tree        |\r\n                   | 2      | Sign All                |\r\n                   | 3      | Unified Merkle Tree     |\r\n                   | 4-255  | Unassigned              |\r\n                   +--------+-------------------------+\r\n\r\n            Table 4: PPSPP Content Integrity Protection Methods",
+    "notes": "As stated in the first sentence of chapter 7.5, “A peer MUST include the content integrity method used by a swarm.”, “No integrity protection” must not be one of the option for PPSPP content integrity protection method. Or, IETF 7574 must define PPSP-PP that does not use the integrity protection method.\r\n\r\nThe proposed is to remove option of “No integrity protection”  in Table 4.\r\n\r\nSpencer: confirmed in conversations with Victor Grishchenko <victor.grishchenko@gmail.com> on the PPSP mailing list.",
+    "submit_date": "2016-12-07",
+    "submitter_name": "Sung Hei Kim, Chang Kyu Lee",
+    "verifier_id": 137,
+    "verifier_name": "Spencer Dawkins",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
