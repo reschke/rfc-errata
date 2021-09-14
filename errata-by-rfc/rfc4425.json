@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 96,
+    "doc-id": "RFC4425",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "99\r\nInformative References say:",
+    "orig_text": "   [14] Handley, M., Schulzrinne, H., Schooler, E., and J. Rosenberg,\r\n        \"SIP: Session Initiation Protocol\", RFC 2543, March 1999.",
+    "correct_text": "   [14] Rosenberg, J., Schulzrinne, H., Camarillo, G., Johnston, A., Peterson, J., \r\n        Sparks, R., Handley, M., and E. Schooler, \"SIP: Session Initiation \r\n        Protocol\", RFC 3261, June 2002.",
+    "notes": "\r\nInformative reference points to RFC 2543, but this has been outdated by RFC 3261.\r\nRFC 4425 gives an Informative Reference [14] to the SIP\r\nspecification, used only once, in section 4.7; but the\r\ncitation in section 10.2 points to the far outdated RFC 2543\r\nthat has been superseded by RFC 3261 on Jul  2  2002.\r\nBecause this obsolescence has happened so long ago, I have\r\nconjectured that it must have been ignored purposely following\r\nsubtle considerations, and it is not an editorial oversight.",
+    "submit_date": "2006-03-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
