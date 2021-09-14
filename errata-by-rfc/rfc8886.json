@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 6298,
+    "doc-id": "RFC8886",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.1.1",
+    "orig_text": "openssl ecparam -out privatekey.key -name prime256v1 -genkey",
+    "correct_text": "openssl ecparam -out key.pem -name prime256v1 -genkey",
+    "notes": "The rest of the appendix expects the name key.pem.",
+    "submit_date": "2020-10-05",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6299,
+    "doc-id": "RFC8886",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.2.2",
+    "orig_text": " openssl smime -encrypt -aes-256-cbc -in SN19842256.cfg \\\r\n -out SN19842256.enc \\ \r\n -outform PEM SN19842256.crt",
+    "correct_text": "No corrected text, I think it requires more changes in the previous \r\ncommand.\r\n",
+    "notes": "The command in the RFC fails with:\r\n\r\nError creating PKCS#7 structure\r\n140616744621440:error:21082096:PKCS7 routines:PKCS7_RECIP_INFO_set:encryption not supported for this key type:crypto/pkcs7/pk7_lib.c:487:\r\n140616744621440:error:21073078:PKCS7 routines:PKCS7_encrypt:error adding recipient:crypto/pkcs7/pk7_smime.c:458:\r\n\r\nA rapid glance in some online discussions seem to indicate that you cannot S/MIME encrypt with elliptic curves.\r\n\r\nWith RSA for the key, the command in the RFC works fine.",
+    "submit_date": "2020-10-05",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6300,
+    "doc-id": "RFC8886",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.3.2",
+    "orig_text": "   $ openssl smime -decrypt -in SN19842256.enc -inform pkcs7\\\r\n      -out config.cfg -inkey key.pem\r\n",
+    "correct_text": "   $ openssl smime -decrypt -in SN19842256.enc -inform PEM\\\r\n      -out config.cfg -inkey key.pem\r\n",
+    "notes": "Otherwise, OpenSSL fails with:\r\n\r\nsmime: Invalid format \"pkcs7\" for -inform\r\nsmime: Use -help for summary.",
+    "submit_date": "2020-10-05",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
