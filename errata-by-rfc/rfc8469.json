@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6082,
+    "doc-id": "RFC8469",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "Thus, if the source MAC address of an Ethernet frame carried over\r\nthe PW without a control word present begins with 0x4 or 0x6, it\r\ncould be mistaken for an IPv4 or IPv6 packet.  This could,\r\ndepending on the configuration and topology of the MPLS network,\r\nlead to a situation where all packets for a given PW do not follow\r\nthe same path.",
+    "correct_text": "Thus, if the destination MAC address of an Ethernet frame carried over\r\nthe PW without a control word present begins with 0x4 or 0x6, it\r\ncould be mistaken for an IPv4 or IPv6 packet.  This could,\r\ndepending on the configuration and topology of the MPLS network,\r\nlead to a situation where all packets for a given PW do not follow\r\nthe same path.",
+    "notes": "The first nibble of an Ethernet frame is the first nibble of the destination MAC address, not the source MAC address.  The erroneous packet reordering occurs for traffic traveling toward the device with the 0x4... or 0x6... MAC address",
+    "submit_date": "2020-04-09",
+    "submitter_name": "Michal Dolegowski",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2020-04-10 12:00:31"
+  }
+]
