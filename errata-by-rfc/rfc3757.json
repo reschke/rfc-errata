@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4018,
+    "doc-id": "RFC3757",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "A SEP key either used to generate a\r\n   DS RR or is distributed to resolvers that use the key as the root of\r\n   a trusted subtree",
+    "correct_text": "A SEP key _is_ either used to generate a\r\n   DS RR or is distributed to resolvers that use the key as the root of\r\n   a trusted subtree",
+    "notes": "I am not a native english speaker so I may be wrong... But the first part of the sentence without a verb puzzles me.\r\n\r\nI know that the RFC is theorically obsolete but RFC 4034 is very short on this secure entry point (SEP) and defers to the RFC 3757 it obsoletes.",
+    "submit_date": "2014-06-19",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 2,
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
