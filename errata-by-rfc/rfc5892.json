@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3312,
+    "doc-id": "RFC5892",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "A and A.1",
+    "orig_text": "In A:\r\n\r\nCode point:\r\n\r\nThe code point, or code points, to which this rule is to be\r\napplied.  Normally, this implies that if any of the code points in\r\na label is as defined, then the rules should be applied.  If\r\nevaluated to True, the code point is OK as used; if evaluated to\r\nFalse, it is not OK.\r\n\r\nIn A.1:\r\n\r\nRule Set:\r\n  False;\r\n  If Canonical_Combining_Class(Before(cp)) .eq.  Virama Then True;\r\n  If RegExpMatch((Joining_Type:{L,D})(Joining_Type:T)*\\u200C\r\n    (Joining_Type:T)*(Joining_Type:{R,D})) Then True;\r\n",
+    "correct_text": "In A:\r\n\r\nCode point:\r\n\r\nThe code point, or code points, to which this rule is to be\r\napplied.  Normally, this implies that if any of the code points in\r\na label is as defined, then the rules should be applied.  If\r\nevaluated to True, the code point is OK as used; if evaluated to\r\nFalse, it is not OK.\r\n\r\nFor the rule to be evaluated to True for the label, it MUST be \r\nevaluated separately for every occurrence of the Code point in the \r\nlabel; each of those evaluations must result in True.\r\n\r\nIn A.1:\r\n\r\nRule Set:\r\n  False;\r\n  If Canonical_Combining_Class(Before(cp)) .eq.  Virama Then True;\r\n  If cp .eq. \\u200C And RegExpMatch((Joining_Type:{L,D})(Joining_Type:T)*cp\r\n    (Joining_Type:T)*(Joining_Type:{R,D})) Then True;\r\n",
+    "notes": "The original text did not make it clear whether the actual rule is to be applied once for every occurrence of the code point in the label. This is a regular expression that can be interpreted in multiple ways, plus it does not take into account the case where more than one U+200C exists in a label.",
+    "submit_date": "2012-08-09",
+    "submitter_name": "Patrik Fältström",
+    "verifier_id": 2,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
