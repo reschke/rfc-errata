@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2783,
+    "doc-id": "RFC3998",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 8.1,
+    "orig_text": "8.1.  'hold-new-jobs' Value\r\n\r\n\r\n   'hold-new-jobs': The operator has issued the Hold-New-Jobs operation\r\n      (see section 3.3.1) or other means, but the output-device(s) are\r\n      taking an appreciable time to stop.  Later, when all output has\r\n      stopped, the \"printer-state\" becomes 'stopped', and the 'paused'\r\n      value replaces the 'moving-to-paused' value in the \"printer-\r\n      state-reasons\" attribute.  This value MUST be supported if the\r\n      Hold-New-Jobs operation is supported and the implementation takes\r\n      significant time to pause a device in certain circumstances.\r\n",
+    "correct_text": "8.1.  'hold-new-jobs' Value\r\n\r\n\r\n   'hold-new-jobs': The operator has issued the Hold-New-Jobs operation\r\n      (see section 3.3.1) or has initiated the holding of new jobs by \r\n      other means. This value indicates that all Jobs subsequently \r\n      submitted to the Printer will be placed into the ‘pending-held’ \r\n      state.  Thus all newly accepted jobs will be automatically held \r\n      by the Printer.  This “printer-state-reasons” value will be removed \r\n      when the Operator issues the Release-Held-New-Jobs Operation or \r\n      releases the holding of new jobs by other means. \r\n",
+    "notes": "This is a cut and paste error. \r\nNote that the definition of the Hold-New-Jobs operation (3.3.1) states:\r\n\r\n   \"When the Printer completes all the 'pending' and 'processing' jobs,\r\n   it enters the 'idle' state as usual.  An operator monitoring Printer\r\n   state changes will know when the Printer has completed all current\r\n   jobs because the Printer enters the 'idle' state.\"\r\n\r\nThus the Printer does not enter the ‘stopped’ state as currently indicated in the text.  It is the Pause-Printer \r\nand Pause-Printer-After-Current-Job operations that move the state of the Printer to stopped’ and put the \r\n‘moving-to-paused’ or ‘paused’ values into “printer-state-reasons”.",
+    "submit_date": "2011-04-18",
+    "submitter_name": "Peter Zehler",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
