@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5641,
+    "doc-id": "RFC8296",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2.2.3",
+    "orig_text": "   By requiring the use of a distinct codepoint for \"non-MPLS BIER\", we\r\n   allow for deployment scenarios where non-MPLS BIER can coexist with\r\n   non-BIER MPLS.  The BIFT-id values used by the former will not\r\n   conflict with MPLS label values used by the latter.",
+    "correct_text": "   By requiring the use of a distinct codepoint for \"non-MPLS BIER\", we\r\n   allow for deployment scenarios where non-MPLS BIER can coexist with\r\n   MPLS BIER.  The BIFT-id values used by the former will not\r\n   conflict with MPLS label values used by the latter.",
+    "notes": "There are \"MPLS BIER\" and \"BIER-MPLS\" in this RFC.\r\nThe \"MPLS BIER\" is the right text here for comparison.",
+    "submit_date": "2019-02-21",
+    "submitter_name": "Jingrong Xie",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 12:31:00"
+  }
+]
