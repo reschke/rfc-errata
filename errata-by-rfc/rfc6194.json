@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3683,
+    "doc-id": "RFC6194",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "When n = 160, as is the case for SHA-1, it will\r\n   take 2^106 computations to find a second pre-image in a 60-byte\r\n   message.",
+    "correct_text": "When n = 160, as is the case for SHA-1, the estimated computational\r\n complexity of finding a second preimage of any given message of \r\nabout 2^60 bytes in length is 2^106 (compression function \r\nexecutions) which is significantly less than 2^160. ",
+    "notes": "Clarification.\r\n\r\nspt: I replaced 2^55 blocks with 2^60 bytes after some consultation with Lily and Quynh.",
+    "submit_date": "2013-07-15",
+    "submitter_name": "Quynh Hung Dang",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
