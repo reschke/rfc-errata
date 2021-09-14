@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6301,
+    "doc-id": "RFC8281",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "     <PCE-initiated-lsp-request> ::= (<PCE-initiated-lsp-instantiation>|\r\n                                      <PCE-initiated-lsp-deletion>)\r\n\r\n     <PCE-initiated-lsp-instantiation> ::= <SRP>\r\n                                           <LSP>\r\n                                           [<END-POINTS>]\r\n                                           <ERO>\r\n                                           [<attribute-list>]\r\n\r\n     <PCE-initiated-lsp-deletion> ::= <SRP>\r\n                                      <LSP>\r\n",
+    "correct_text": "     <PCE-initiated-lsp-request> ::= (<PCE-initiated-lsp-instantiation>|\r\n                                      <PCE-initiated-lsp-deletion-or-reclamation>)\r\n\r\n     <PCE-initiated-lsp-instantiation> ::= <SRP>\r\n                                           <LSP>\r\n                                           [<END-POINTS>]\r\n                                           <ERO>\r\n                                           [<attribute-list>]\r\n\r\n     <PCE-initiated-lsp-deletion-or-reclamation> ::= <SRP>\r\n                                                     <LSP>\r\n",
+    "notes": "Update needed to solve ambiguity for any extra object included after SRP and LSP objects in reclaim delegation request, which is coming from:\r\n\r\nhttps://tools.ietf.org/html/rfc8281#section-6\r\nA PCE (either the original or one of its backups) sends a PCInitiate\r\n   message that includes just the SRP and LSP objects and carries the\r\n   PLSP-ID of the LSP it wants to take control of.",
+    "submit_date": "2020-10-06",
+    "submitter_name": "Samuel Sidor",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2020-11-02 09:27:30"
+  }
+]
