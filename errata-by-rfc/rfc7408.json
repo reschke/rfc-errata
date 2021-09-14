@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5662,
+    "doc-id": "RFC7408",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3 (page 20)",
+    "orig_text": "               <!-- Extension RFC 7408 -->\r\n               <xsd:attribute name=\"access\" use=\"optional\"\r\n                  default=\"read-write\">\r\n                  <xsd:simpleType>\r\n                     <xsd:list itemType=\"accessModeType\"/>\r\n                  </xsd:simpleType>\r\n               </xsd:attribute>\r\n               <!-- Extension RFC 7408 -->\r\n",
+    "correct_text": "               <!-- Extension RFC 7408 -->\r\n               <xsd:attribute name=\"access\" use=\"optional\"\r\n                  default=\"read-write\">\r\n                  <xsd:simpleType>\r\n                     <xsd:list itemType=\"accessModeType\"/>\r\n                  </xsd:simpleType>\r\n               </xsd:attribute>\r\n               <!-- /Extension RFC 7408 -->\r\n",
+    "notes": "¨/¨ missing.",
+    "submit_date": "2019-03-17",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2020-07-21 08:17:32"
+  }
+]
