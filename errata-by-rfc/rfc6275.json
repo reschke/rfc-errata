@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 3235,
+    "doc-id": "RFC6275",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "The mobile node may also accept packets from several care-of\r\naddresses, such as when it is moving but still reachable at the\r\nprevious link.\r\n",
+    "correct_text": "The mobile node may also accept packets for several care-of\r\naddresses, such as when it is moving but still reachable at the\r\nprevious link.\r\n",
+    "notes": "Looks like a typo (\"from\" typed, instead of \"for\"), but affects the technical meaning.  I am happy for this erratum to be changed to Type: Editorial.",
+    "submit_date": "2012-05-30",
+    "submitter_name": "Alastair Galloway",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5083,
+    "doc-id": "RFC6275",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "Section 7.2 of RFC6275 introduces a new flag, called the R bit. This seems to update RFC 4861 section 4.6.2. However, there is no mention in RFC6275 or in RFC4861 that this happened.",
+    "submit_date": "2017-08-10",
+    "submitter_name": "Mikael Abrahamsson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5695,
+    "doc-id": "RFC6275",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "[none]",
+    "correct_text": "Updates: 4302 [in RFC header]",
+    "notes": "Section 11.3.2 says:\r\n      The treatment of destination options described in RFC 4302 is\r\n      extended as follows.  The AH authentication data MUST be\r\n      calculated... [etc.]\r\nThis is a change to the AH algorithm and should be flagged as a formal update to RFC 4302.",
+    "submit_date": "2019-04-16",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5898,
+    "doc-id": "RFC6275",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": null,
+    "correct_text": "It should say:\r\n\r\nUpdates: 4861 [in RFC header]\r\n",
+    "notes": "RFC4861 Section 6.2.1 says that \r\n\"MaxRtrAdvInterval ..MUST be no less than 4 seconds\"\r\nand \r\n\"MinRtrAdvInterval...MUST MUST be no less than 3 seconds\"\r\n\r\nRFC6275 Section 7.5.  changes those requirements to:\r\n\"Routers supporting mobility SHOULD be able to be configured with a\r\n   smaller MinRtrAdvInterval value and MaxRtrAdvInterval value to allow\r\n   sending of unsolicited multicast Router Advertisements more often.\r\n   The minimum allowed values are:\r\n\r\n   o  MinRtrAdvInterval 0.03 seconds\r\n\r\n   o  MaxRtrAdvInterval 0.07 seconds\r\n\"\r\nso it  should be flagged as a formal update to RFC4861.",
+    "submit_date": "2019-11-08",
+    "submitter_name": "Jen Linkova",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
