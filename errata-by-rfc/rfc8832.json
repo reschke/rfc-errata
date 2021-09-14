@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6411,
+    "doc-id": "RFC8832",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "5.  Message Formats\r\n\r\n   Every Data Channel Establishment Protocol message starts with a one\r\n   byte field called \"Message Type\" which indicates the type of the\r\n   message.  The corresponding values are managed by IANA (see\r\n   Section 8.2.1).",
+    "correct_text": "5.  Message Formats\r\n\r\n   Every Data Channel Establishment Protocol message starts with a one\r\n   byte field called \"Message Type\" which indicates the type of the\r\n   message.  The corresponding values are managed by IANA (see\r\n   Section 8.2.1).\r\n\r\n   All integer fields in an Data Channel Establishment Protocol message\r\n   MUST be transmitted in network byte order, unless otherwise stated.",
+    "notes": "The byte order of integer fields in the protocol messages is not defined.",
+    "submit_date": "2021-01-25",
+    "submitter_name": "Victor Boivie",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
