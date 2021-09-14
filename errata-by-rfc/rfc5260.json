@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1836,
+    "doc-id": "RFC5260",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A",
+    "orig_text": "int jday(int year, int month, int day)\r\n{\r\n    int j, c, ya;\r\n\r\n    if (month > 2)\r\n        month -= 3;\r\n    else\r\n    {\r\n        month += 9;\r\n        year--;\r\n    }\r\n    c = year / 100;\r\n    ya = year - c * 100;\r\n    return (c * 146097 / 4 + ya * 1461 / 4 + (month * 153 + 2) / 5 +\r\n            day + 1721119);\r\n}\r\n\r\nvoid jdate(int j, int *year, int *month, int *day)\r\n{\r\n    int y, m, d;\r\n\r\n    j -= 1721119;\r\n    y = (j * 4 - 1) / 146097;\r\n    j = j * 4 - y * 146097 - 1;\r\n    d = j / 4;\r\n    j = (d * 4 + 3) / 1461;\r\n    d = d * 4 - j * 1461 + 3;\r\n    d = (d + 4) / 4;\r\n    m = (d * 5 - 3) / 153;\r\n    d = d * 5 - m * 153 - 3;\r\n    *day = (d + 5) / 5;\r\n    *year = y * 100 + j;\r\n    if (m < 10)\r\n        *month = m + 3;\r\n    else\r\n    {\r\n        *month = m - 9;\r\n        *year += 1;\r\n    }\r\n}",
+    "correct_text": "int jday(int year, int month, int day)\r\n{\r\n    int c, ya;\r\n\r\n    if (month > 2)\r\n        month -= 3;\r\n    else\r\n    {\r\n        month += 9;\r\n        year--;\r\n    }\r\n    c = year / 100;\r\n    ya = year - c * 100;\r\n    return (c * 146097 / 4 + ya * 1461 / 4 + (month * 153 + 2) / 5 +\r\n            day + (1721119 - 2400001));\r\n}\r\n\r\nvoid jdate(int j, int *year, int *month, int *day)\r\n{\r\n    int y, m, d;\r\n\r\n    j -= (1721119 - 2400001);\r\n    y = (j * 4 - 1) / 146097;\r\n    j = j * 4 - y * 146097 - 1;\r\n    d = j / 4;\r\n    j = (d * 4 + 3) / 1461;\r\n    d = d * 4 - j * 1461 + 3;\r\n    d = (d + 4) / 4;\r\n    m = (d * 5 - 3) / 153;\r\n    d = d * 5 - m * 153 - 3;\r\n    *day = (d + 5) / 5;\r\n    *year = y * 100 + j;\r\n    if (m < 10)\r\n        *month = m + 3;\r\n    else\r\n    {\r\n        *month = m - 9;\r\n        *year += 1;\r\n    }\r\n}",
+    "notes": "The sample Julian day and date routines are coded to use regular Julian dates, not the modified Julian dates specified in the RFC. The above modification adds the necessary conversion factors for modified Julian days. An unused variable (j) was also removed.",
+    "submit_date": "2009-08-22",
+    "submitter_name": "Ned Freed",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6349,
+    "doc-id": "RFC5260",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 6.1,
+    "orig_text": "     require [\"date\", \"relational\", \"index\"];\r\n     if date :value \"gt\" :index 2 :zone \"-0500\" \"received\"\r\n             \"iso8601\" \"2007-02-26T09:00:00-05:00\",\r\n     { redirect \"aftercutoff@example.org\"; }\r\n",
+    "correct_text": "     require [\"date\", \"relational\", \"index\"];\r\n     if date :value \"gt\" :index 2 :zone \"-0500\" \"received\"\r\n             \"iso8601\" \"2007-02-26T09:00:00-05:00\"\r\n     { redirect \"aftercutoff@example.org\"; }\r\n",
+    "notes": "There is a stray comma at the end of the date test.",
+    "submit_date": "2020-12-06",
+    "submitter_name": "Ken Murchison",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
