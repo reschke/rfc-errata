@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4863,
+    "doc-id": "RFC4752",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1 - 3.3",
+    "orig_text": "conf_flag",
+    "correct_text": "conf_req_flag",
+    "notes": "The three sections 3.1, 3.2 and 3.3 refer to a flag \"conf_flag\" which does not exist in the GSS_Wrap call as specified in RFC 2743 (https://tools.ietf.org/html/rfc2743#page-65). The correct name is \"conf_req_flag\".\r\n\r\nI also looked in the previous version of RFC 2743 -> RFC 2078 but the same applies there.",
+    "submit_date": "2016-11-13",
+    "submitter_name": "Lars Francke",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5532,
+    "doc-id": "RFC4752",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "   with the first octet containing a bit-mask specifying the security\r\n   layers supported by the server and the second through fourth octets\r\n   containing in network byte order the maximum size output_token the\r\n   server is able to receive (which MUST be 0 if the server does not\r\n   support any security layer).",
+    "correct_text": "   with the first octet containing a bit-mask specifying the security\r\n   layers supported by the server and the second through fourth octets\r\n   containing in network byte order the maximum size output_message the\r\n   server is able to receive (which MUST be 0 if the server does not\r\n   support any security layer).",
+    "notes": "‘output_token’ should be 'output_message' here, since 'output_token' is an output of GSS_Init_sec_context while here we are talking about the maximum data length that GSS_Unwrap (GSS_Wrap of the oppsite side) can handle",
+    "submit_date": "2018-10-18",
+    "submitter_name": "Borun Song",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
