@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1838,
+    "doc-id": "RFC4191",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "   Default router preferences and preferences for more-specific routes\r\n   are encoded the same way.\r\n\r\n   Preference values are encoded as a two-bit signed integer, as\r\n   follows:\r\n\r\n      01      High\r\n      00      Medium (default)\r\n      11      Low\r\n      10      Reserved - MUST NOT be sent\r\n\r\n   Note that implementations can treat the value as a two-bit signed\r\n   integer.\r\n\r\n",
+    "correct_text": "   Default router preferences and preferences for more-specific routes\r\n   are encoded the same way.\r\n\r\n   Preference values are encoded in 2 bits, as\r\n   follows:\r\n\r\n      01      High\r\n      00      Medium (default)\r\n      11      Low\r\n      10      Reserved - MUST NOT be sent\r\n\r\n   Note that implementations can treat the value as a two-bit signed\r\n   integer.\r\n",
+    "notes": "The characterization of route preferences as a 2-bit integer is extremely confusing.  Fortunately, -(0) is not used, but even so there seems to be little rationale for looking treating the preference as a signed rather than unsigned value.",
+    "submit_date": "2009-08-24",
+    "submitter_name": "Glen Zorn",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
