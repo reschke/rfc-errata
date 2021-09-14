@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 276,
+    "doc-id": "RFC3418",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "99In the text, it says:  ",
+    "orig_text": "   6.1.  Informative References",
+    "correct_text": "   6.2.  Informative References\n",
+    "notes": "",
+    "submit_date": "2003-08-22",
+    "submitter_name": "Glenn M. Keeni",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6219,
+    "doc-id": "RFC3418",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "sysServices",
+    "orig_text": "For example, a node which performs only routing functions would have a value of 4 (2^(3-1)).",
+    "correct_text": "For example, a node which performs only routing functions would have a value of 4 (2^(4-1)).",
+    "notes": "Typo in the example formula.\n --VERIFIER NOTES-- \nThe formula in the original document is correct. The \"3\" in the calculation refers to the OSI layer that routing functions occur at.",
+    "submit_date": "2020-07-02",
+    "submitter_name": "Kevin Seymour",
+    "verifier_id": 166,
+    "verifier_name": "Robert Wilton",
+    "update_date": "2020-07-03 06:36:05"
+  }
+]
