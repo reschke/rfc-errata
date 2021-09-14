@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3319,
+    "doc-id": "RFC6706",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "global",
+    "orig_text": "No comparison/contrast to Next-Hop Reachability Protocol (RFC 2332) is provided.  ",
+    "correct_text": "A paragraph or more detailing the differences between these two approaches would be welcome and help reduced confusion.",
+    "notes": "There seems to be a strong similarity betweeen AERO and NHRP in terms of overall function.\n --VERIFIER NOTES-- \nA discussion and clarification wrt NHRP, and I understand how that might enrich the work on Aero.\r\n\r\nHowever, the Errata Reporting system is not the right way to raise this issue.\r\nhttp://www.rfc-editor.org/status_type_desc.html describes the two types of\r\nErrata:\r\nTechnical: An error in the technical content.\r\nEditorial: A spelling, grammar, punctuation, or syntax error that does not\r\naffect the technical meaning.\r\nThe IESG statement at http://www.ietf.org/iesg/statement/errata-processing.html\r\ngives a more detailed view of what constitutes Errata.\r\n\r\nThe correct way to advance this particular issue is through email with the\r\nauthor (possibly also copying an IETF discussion mailing list) and then, if\r\nappropriate through the publication of an Internet-Draft to capture the\r\ndiscussion or to revise this RFC with the discussion included.",
+    "submit_date": "2012-08-15",
+    "submitter_name": "Mark Ford",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
