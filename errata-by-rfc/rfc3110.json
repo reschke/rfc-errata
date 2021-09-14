@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2811,
+    "doc-id": "RFC3110",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "Leading zero bytes are permitted in the RSA/SHA1 algorithm signature.",
+    "correct_text": "Leading zero bytes MUST be added to the RSA/SHA1 algorithm signature \r\nso that the signature size in bytes is equal to the size of n in bytes.",
+    "notes": "The Original Text implies that zero-padding of RSA signaturs is optional, however the underlying standard requires zero padding, http://tools.ietf.org/html/rfc2437#section-8.1.1\r\n\r\n\"4. Convert the signature representative s to a signature S of length k octets: S = I2OSP (s, k)\"\r\n\r\nwhere k is the length of the modulus in bytes. If the extra bytes are not added, standard RSA libraries will fail to verify the signature about 1% of the time when the padding occurs.",
+    "submit_date": "2011-05-21",
+    "submitter_name": "George Barwood",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4502,
+    "doc-id": "RFC3110",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "conservative choice would be 65537 (F4, the fourth fermat number).\r\n",
+    "correct_text": "conservative choice would be 65537 (F4, the fifth Fermat number).\r\n",
+    "notes": "Numbering of Fermat numbers starts from zero. F4 and 65537 agree, but F4 is fifth Fermat number in the series, not fourth.",
+    "submit_date": "2015-10-14",
+    "submitter_name": "Mikko Rantanen",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
