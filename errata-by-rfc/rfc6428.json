@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3629,
+    "doc-id": "RFC6428",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.5.3",
+    "orig_text": "The length is the length of the\r\nfollowing data: the Global_ID, Node Identifier, and Attachment\r\nCircuit ID (AC_ID) are as per [9].\r\n",
+    "correct_text": "The length is the length in octets of the \r\ndata following the length field.  The Global_ID, Node Identifier, \r\nand Attachment Circuit ID (AC_ID) are as per [9].\r\n",
+    "notes": "Original text gave the impression that the length related to only three fields, but it actually applies to all data following the Length field. It should also be noted that the length is counted in octets.",
+    "submit_date": "2013-05-20",
+    "submitter_name": "Alan Davey",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4415,
+    "doc-id": "RFC6428",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "text",
+    "orig_text": "bfd.MinRxInterval",
+    "correct_text": "bfd.RequiredMinRxInterval",
+    "notes": "Throughout the text document refers to bfd.MinRxInterval even though RFC 5880 refers to this state variable as bfd.RequiredMinRxInterval.",
+    "submit_date": "2015-07-14",
+    "submitter_name": "Greg Mirsky",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6296,
+    "doc-id": "RFC6428",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3.7,
+    "orig_text": "In coordinated mode, an implementation SHOULD NOT reset\r\nbfd.RemoteDiscr until it is exiting the DOWN state.",
+    "correct_text": "In coordinated mode, an implementation SHOULD reset\r\nbfd.RemoteDiscr upon transitioning to the DOWN state, \r\ndue to period of a Detection Time passing without the\r\nreceipt of a valid, authenticated BFD packet from the\r\nremote system.",
+    "notes": "This section seems to imply that when a BFD session, running in coordinated mode, experiences Control Detection Timer expiry, then it SHOULD retain the remote discriminator value *and* SHOULD also transmit the same value in Down packets.\r\nHowever, in the case when the remote system, configured in Passive role, has its discriminator gets changed (say, after a system reboot which had caused the Detection Timer expiry), it may reject these packets as the received Your Discriminator value is no longer valid for the current session.\r\nSo the BFD session would never come back to Up state.\r\n\r\nIn a second scenario (unrelated to above one), if the local system is configured in Passive role and experiences Control Detection Timer expiry, it may continue transmitting Down packets since the bfd.RemoteDiscr is not reset to zero.\n --VERIFIER NOTES-- \n   This should be addressed by the working group (e.g., updating or revising the RFC).",
+    "submit_date": "2020-09-29",
+    "submitter_name": "Sudipta Das",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2021-02-26 13:36:24"
+  }
+]
