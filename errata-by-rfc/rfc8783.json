@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6496,
+    "doc-id": "RFC8783",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 7.3,
+    "orig_text": "   A DOTS client can also issue a GET request with a \"content\" query\r\n   parameter set to 'non-config' to exclusively retrieve non-\r\n   configuration data bound to a given ACL as shown in Figure 30.  A\r\n   response to this GET request is shown in Figure 31.\r\n\r\n     GET /restconf/data/ietf-dots-data-channel:dots-data\\\r\n         /dots-client=paL8p4Zqo4SLv64TLPXrxA/acls\\\r\n         /acl=test-acl-ipv6-udp?content=non-config HTTP/1.1\r\n     Host: example.com\r\n     Accept: application/yang-data+json",
+    "correct_text": "   A DOTS client can also issue a GET request with a \"content\" query\r\n   parameter set to 'nonconfig' to exclusively retrieve non-\r\n   configuration data bound to a given ACL as shown in Figure 30.  A\r\n   response to this GET request is shown in Figure 31.\r\n\r\n     GET /restconf/data/ietf-dots-data-channel:dots-data\\\r\n         /dots-client=paL8p4Zqo4SLv64TLPXrxA/acls\\\r\n         /acl=test-acl-ipv6-udp?content=nonconfig HTTP/1.1\r\n     Host: example.com\r\n     Accept: application/yang-data+json",
+    "notes": "RFC8040 defines this value for the \"content\" Query Parameter (RFC 4.8.1):\r\n\r\n    | nonconfig | Return only non-configuration descendant data nodes |",
+    "submit_date": "2021-03-26",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
