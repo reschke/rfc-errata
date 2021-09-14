@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5326,
+    "doc-id": "RFC8314",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 7.3,
+    "orig_text": "   Historically, port 465 was briefly registered as the \"smtps\" port.\r\n   This registration made no sense, as the SMTP transport MX\r\n   infrastructure has no way to specify a port, so port 25 is always\r\n   used.  As a result, the registration was revoked and was subsequently\r\n   reassigned to a different service.  In hindsight, the \"smtps\"\r\n   registration should have been renamed or reserved rather than\r\n   revoked.  Unfortunately, some widely deployed mail software\r\n   interpreted \"smtps\" as \"submissions\" [RFC6409] and used that port for\r\n   email submission by default when an end user requested security\r\n   during account setup.  If a new port is assigned for the submissions\r\n",
+    "correct_text": "   Historically, port 465 was briefly registered as the \"smtps\" port.\r\n   This registration was misleading because the \"SMTP relay\" service\r\n   registered as \"smtp\" on port 25 can not use a different port because\r\n   the SMTP transport MX infrastructure has no way to specify a port.\r\n   As a result, the registration was revoked and was subsequently\r\n   reassigned to a different service. In hindsight, the \"smtps\"\r\n   registration should have been reserved or renamed to \"submissions\"\r\n   (to parallel the \"submission\" SMTP service on port 587 [RFC6409])\r\n   rather than revoked. Some widely deployed mail user agent software\r\n   used the \"smtps\" port for the \"submissions\" service when an end user\r\n   requested security during account setup.",
+    "notes": "The \"made no sense\" statement is technically and factually incorrect. Not only is implicit TLS SMTP submission service on port 465 deployed and used, but the rest of the document recommends using it (thus contradicting the \"made no sense\" statement). When two ports provide the same service in both cleartext and implicit TLS, the naming convention is to use an \"s\" suffix for the implicit TLS port. So the problem with the \"smtps\" was it violated that naming convention.\r\n\r\nThe proposed errata corrects the technical/factual error and clarifies the distinction between the two different services (SMTP submission & SMTP relay) that both use SMTP.",
+    "submit_date": "2018-04-13",
+    "submitter_name": "Chris Newman",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
