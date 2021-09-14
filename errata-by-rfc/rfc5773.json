@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2675,
+    "doc-id": "RFC5773",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.9, pg.41",
+    "orig_text": "   o  The policies that can be implemented using BGP are designed for\r\n      control of traffic exchange between operators, not for controlling\r\n      paths within a domain.  Policies for BGP are most conveniently\r\n|     expressed in Routing Policy Support Language (RPSL) [RFC2622] and\r\n      this could be extended if thought desirable to include additional\r\n      policy information.",
+    "correct_text": "   o  The policies that can be implemented using BGP are designed for\r\n      control of traffic exchange between operators, not for controlling\r\n      paths within a domain.  Policies for BGP are most conveniently\r\n|     expressed in Routing Policy Specification Language (RPSL)\r\n      [RFC2622] and this could be extended if thought desirable to\r\n      include additional policy information.",
+    "notes": "Rationale:  Cf. the title of RFC 2622 !",
+    "submit_date": "2010-12-20",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
