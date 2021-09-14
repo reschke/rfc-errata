@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1731,
+    "doc-id": "RFC5283",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6.1, Fig.1",
+    "orig_text": "[[ Top part of Figure 1 (page 6): ]]\r\n\r\n                        Area \"B\"\r\n\r\n                 Level 2 / Backbone area\r\n              +--------------------------+\r\n     Area \"A\" |                          |  Area \"C\"\r\n              |                          |\r\n|    Level 1  |                          |  Level 1 / area\r\n              |        P1                |\r\n   +----------+                          +-------------+\r\n",
+    "correct_text": "                        Area \"B\"\r\n\r\n                 Level 2 / Backbone area\r\n              +--------------------------+\r\n     Area \"A\" |                          |  Area \"C\"\r\n              |                          |\r\n|    Level 1  |                          |  Level 1\r\n              |        P1                |\r\n   +----------+                          +-------------+\r\n",
+    "notes": "Rationale: balance the annotation, avoid replicated \"area\"\r\n-- keep for update! --",
+    "submit_date": "2009-03-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1732,
+    "doc-id": "RFC5283",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "7.2, pg.8",
+    "orig_text": "|         [...]  Currently, with most routers implementations, ...\r\n                                            ^",
+    "correct_text": "|         [...]  Currently, with most router implementations, ...",
+    "notes": "Typo/grammar; keep for update!",
+    "submit_date": "2009-03-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
