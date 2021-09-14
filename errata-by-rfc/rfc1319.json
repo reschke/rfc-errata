@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 554,
+    "doc-id": "RFC1319",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "   Padding is performed as follows: \"i\" bytes of value \"i\" are appended\n   to the message so that the length in bytes of the padded message\n   becomes congruent to 0, modulo 16. At least one byte and at most 16\n   16 bytes are appended.",
+    "correct_text": "   Padding is performed as follows: \"i\" bytes of value \"i\" are appended\n   to the message so that the length in bytes of the padded message\n   becomes congruent to 0, modulo 16. At least one byte and at most \n   16 bytes are appended.\n",
+    "notes": "",
+    "submit_date": "2002-01-30",
+    "submitter_name": "Jem Berkes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 555,
+    "doc-id": "RFC1319",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "      ...\n      /* Process each 16-word block. */\n      For i = 0 to N/16-1 do\n\n         /* Checksum block i. */\n         For j = 0 to 15 do\n            Set c to M[i*16+j].\n            Set C[j] to S[c xor L].\n            Set L to C[j].\n          end /* of loop on j */\n       end /* of loop on i */\n\n   The 16-byte checksum C[0 ... 15] is appended to the message. Let\n   M[0\n   with checksum), where N' = N + 16.",
+    "correct_text": "      ...\n      /* Process each 16-word block. */\n      For i = 0 to N/16-1 do\n\n         /* Checksum block i. */\n         For j = 0 to 15 do\n            Set c to M[i*16+j].\n            Set C[j] to C[j] xor S[c xor L].\n            Set L to C[j].\n          end /* of loop on j */\n       end /* of loop on i */\n\n   The 16-byte checksum C[0 ... 15] is appended to the (padded)\n   message.\n   Let M[0..N'-1] be the message with padding and checksum appended,\n   where N' = N + 16.\n",
+    "notes": "",
+    "submit_date": "2002-02-11",
+    "submitter_name": "David Hopwood",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3575,
+    "doc-id": "RFC1319",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "      Set L to 0.\r\n\r\n      /* Process each 16-word block. */\r\n      For i = 0 to N/16-1 do\r\n\r\n         /* Checksum block i. */",
+    "correct_text": "      Set L to 0.\r\n\r\n      /* Process each 16-byte block. */\r\n      For i = 0 to N/16-1 do\r\n\r\n         /* Checksum block i. */",
+    "notes": "The comment should note that this section of the algorithm operates on a 16 byte -- rather than 16 word -- block.",
+    "submit_date": "2013-03-29",
+    "submitter_name": "Andrew Clark",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3576,
+    "doc-id": "RFC1319",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.4,
+    "orig_text": "   Do the following:\r\n\r\n      /* Process each 16-word block. */\r\n      For i = 0 to N'/16-1 do",
+    "correct_text": "   Do the following:\r\n\r\n      /* Process each 16-byte block. */\r\n      For i = 0 to N'/16-1 do",
+    "notes": "The comment should note that this section of the algorithm operates on a 16 byte -- rather than 16 word -- block.",
+    "submit_date": "2013-03-29",
+    "submitter_name": "Andrew Clark",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
