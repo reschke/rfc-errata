@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2272,
+    "doc-id": "RFC1633",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.1.3",
+    "orig_text": "Although receiver-initiated reservation is the natural choice\r\n         for multicast sessions, the justification for receiver\r\n         initiateion may appear weaker for unicast sessions, where the\r\n         sender may be the logical session initiator.",
+    "correct_text": "Although receiver-initiated reservation is the natural choice\r\n         for multicast sessions, the justification for receiver\r\n         initiation may appear weaker for unicast sessions, where the\r\n         sender may be the logical session initiator.\r\n",
+    "notes": "initiateion -> initiation",
+    "submit_date": "2010-05-18",
+    "submitter_name": "jonsimchol",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2273,
+    "doc-id": "RFC1633",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.1.3",
+    "orig_text": "RSVP uses receiver-initiation of rservations [RSVP93b].  A\r\n         receiver is assumed to learn the senders' offered flowspecs by\r\n         a higher-level mechanism (\"out of band\"), it then generates its\r\n         own desired flowspec and propagates it towards the senders,\r\n         making reservations in each router along the way.\r\n",
+    "correct_text": "RSVP uses receiver-initiation of reservations [RSVP93b].  A\r\n         receiver is assumed to learn the senders' offered flowspecs by\r\n         a higher-level mechanism (\"out of band\"), it then generates its\r\n         own desired flowspec and propagates it towards the senders,\r\n         making reservations in each router along the way.\r\n",
+    "notes": "rservations -> reservations",
+    "submit_date": "2010-05-18",
+    "submitter_name": "jonsimchol",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
