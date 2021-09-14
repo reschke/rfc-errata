@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5251,
+    "doc-id": "RFC7905",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4. Security",
+    "orig_text": "   Poly1305 is designed to ensure that forged messages are rejected with\r\n   a probability of 1-(n/2^107), where n is the maximum length of the\r\n   input to Poly1305.  In the case of (D)TLS, this means a maximum\r\n   forgery probability of about 1 in 2^93.",
+    "correct_text": "   Poly1305 is designed to ensure that forged messages are rejected with\r\n   a probability of 1-(n/2^106), where n is the maximum length of the\r\n   input to Poly1305.  In the case of (D)TLS, this means a maximum\r\n   forgery probability of about 1 in 2^92.",
+    "notes": "The security claimed on poly1305 is slightly beyond what was proven by the designer (see https://cr.yp.to/mac/poly1305-20050329.pdf), and the trivial forgery attempt with a message of length 1 succeeds with probability 2^{-106}.",
+    "submit_date": "2018-02-01",
+    "submitter_name": "Xavier Bonnetain",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
