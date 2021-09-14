@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2286,
+    "doc-id": "RFC5728",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "REVISION \"200907201200Z\"\r\nDESCRIPTION\r\n\"Revision of this MIB module, following MIB doctor review\r\nand adjustments based on the MIB authoring guidelines\r\nfrom the IETF.\"\r\n::= { transmission 239 }\r\n",
+    "correct_text": "REVISION \"201002161200Z\"\r\nDESCRIPTION \r\n    \"Revision of the SatLabs DVB-RCS MIB module.\r\n    This version is published as RFC 5728.\"\r\nREVISION \"200907201200Z\"\r\nDESCRIPTION\r\n    \"Revision of this MIB module, following MIB doctor review\r\n    and adjustments based on the MIB authoring guidelines\r\n    from the IETF.\"\r\n::= { transmission 239 }",
+    "notes": "DESCRIPTION clause for the LAST-UPDATED version of the MIB is missing.",
+    "submit_date": "2010-05-21",
+    "submitter_name": "Stephane Combes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2287,
+    "doc-id": "RFC5728",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.4.2",
+    "orig_text": "Both dvbRcsRcstNetwork.dvbRcsNetworkLanIpAddress (Traffic) ",
+    "correct_text": "Both dvbRcsRcstNetwork.dvbRcsNetworkLanInetAddress (Traffic) \r\n",
+    "notes": "typo",
+    "submit_date": "2010-05-21",
+    "submitter_name": "Stephane Combes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
