@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1743,
+    "doc-id": "RFC4385",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4, 4.1, 4.2",
+    "orig_text": "The sequence number mechanism described here uses a circular unsigned\r\n16-bit number space that excludes the value zero.\r\n...\r\no The sequence number that follows 65535 (maximum unsigned 16-bit\r\n  number) is one.\r\n...\r\no If the sequence number on the packet is zero, the sequence\r\n  integrity of the packets cannot be determined.  In this case, the\r\n  received packet is considered to be in order.",
+    "correct_text": "The sequence number mechanism for all PW types except the TDM PWs \r\nSAToP [RFC4553], CESoPSN [RFC5086], and TDMoIP [RFC5087] use a \r\ncircular unsigned 16-bit number space that excludes the value zero. \r\nThe sequence numbers for TDM PWs include the value zero.\r\n...\r\no For all non-TDM PWs the sequence number that follows 65535 \r\n(maximum unsigned 16-bit number) is one.\r\n...\r\no If the sequence number on a non-TDM-PW packet is zero, the sequence\r\n  integrity of the packets cannot be determined.  In this case, the\r\n  received packet is considered to be in order.",
+    "notes": "The fact that the TDM PWs always require sequence number and do not give a zero value special meaning was well-known and documented in the relevant RFCs. However, this was forgotten in this document and has caused confusion to implementers.",
+    "submit_date": "2009-03-26",
+    "submitter_name": "Yaakov (J) Stein",
+    "verifier_id": 2,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2021-04-08 10:14:22"
+  }
+]
