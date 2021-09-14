@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1082,
+    "doc-id": "RFC2142",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "MAILBOX        SERVICE             SPECIFICATIONS\r\n[...]\r\nUSENET         NNTP                [RFC977]\r\nNEWS           NNTP                Synonym for USENET\r\n",
+    "correct_text": "MAILBOX        SERVICE             SPECIFICATIONS\r\n[...]\r\nUSENET         NNTP                [RFC1849]\r\nNEWSMASTER     NNTP                Synonym for USENET\r\n",
+    "notes": "RFC 977 (obsoleted by RFC 3977) as well as RFC 1036 (obsoleted by RFC.ietf-usefor-usefor) don't specify rôle accounts USENET or NEWS.\r\n\r\nSection 1 states that \"Other protocols have defacto standards for well known mailbox names, such as <USENET@domain> for NNTP (see [RFC977])\", however the IETF USEFOR WG didn't add just as little as an informative reference to RFC 2142.\r\n\r\nIESG NOTE (2010-09-15): The foregoing text is corrupted, however the intent is clearly that [son-of-1036] is the proper reference for the USENET mailbox convention; note that in March 2010 [son-of-1036] was published as RFC 1849. --Peter Saint-Andre",
+    "submit_date": "2007-11-20",
+    "submitter_name": "Frank Ellermann",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1763,
+    "doc-id": "RFC2142",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "Most organizations do not need to support the full set of mailbox names defined\r\nhere, since not every organization will implement the all of the associated\r\n                                                  ^^^\r\nservices.",
+    "correct_text": "Most organizations do not need to support the full set of mailbox names defined\r\nhere, since not every organization will implement all of the associated services.",
+    "notes": "",
+    "submit_date": "2009-04-15",
+    "submitter_name": "Nick Levinson",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1764,
+    "doc-id": "RFC2142",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1 & 2",
+    "orig_text": "top level domain",
+    "correct_text": "organization's principal domain name",
+    "notes": "1. The phrase \"top level domain\" seems to mean 'second-level and top level domains together', and perhaps 'third- to top level domains together' in cases like <example.co.uk>. It is erroneous now that _top level domain_ (_TLD_) is specifically only what comes after the last dot in a domain, and nonreserved TLDs are so registered at IANA.org.\r\n\r\n2. I would rather someone else propose replacement phrasing.\r\n\r\n3. This is submitted 2009-04-16.\r\n\r\nEDITOR'S NOTE (2010-09-15): This matter was discussed on the app-discuss and dnsext mailing lists, and consensus emerged on the phrase \"organization's principal domain name\". --Peter Saint-Andre",
+    "submit_date": "2009-04-15",
+    "submitter_name": "Nick Levinson",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
