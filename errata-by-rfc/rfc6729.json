@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3337,
+    "doc-id": "RFC6729",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "In Section 6, the \"state\" clause is added to the Additional-\r\n   Registered-Clauses IANA sub-registry.  The ABNF for this clause is:\r\n\r\n      State = CFWS \"state\" FWS queue-state-keyword [ \"/\" value ]\r\n...\r\n\r\n",
+    "correct_text": null,
+    "notes": "Clarification needed:  Does this \"state\" clause keyword place before, after, or in either order with the \"priority\" clause keyword specified in RFC 6710?  RFC 5321 does not specify an order for additional \"Received:\" header clauses defined after its publication.  The order of additional clauses may need to be defined for proper parsing to determine validity of messages for spam classification or determination of other subversive purposes (as invalid values may indicate bad messages).\r\n\r\n(See also the note filed in errata #1 filed for RFC 6710.)\n --VERIFIER NOTES-- \nRFC 5321 gives no indication that the order of clauses in the Additional-Registered-Clauses group matters, and, indeed, the order should not matter.  Each clause has a unique (registered) atom, and they can be parsed unambiguously from those.   ",
+    "submit_date": "2012-09-06",
+    "submitter_name": "D. Stussy",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
