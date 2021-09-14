@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2252,
+    "doc-id": "RFC3945",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 11.2,
+    "orig_text": "   One can classify LSPs into one of a small set of service levels.\r\n   Among other things, these service levels define the reliability\r\n   characteristics of the LSP.  The service level associated with a\r\n   given LSP is mapped to one or more P&R schemes during LSP\r\n   establishment.  An advantage that mapping is that an LSP may use\r\n   different P&E schemes in different segments of a network (e.g., some\r\n   links may be span protected, whilst other segments of the LSP may\r\n   utilize ring protection).  These details are likely to be service\r\n   provider specific.\r\n",
+    "correct_text": "   One can classify LSPs into one of a small set of service levels.\r\n   Among other things, these service levels define the reliability\r\n   characteristics of the LSP.  The service level associated with a\r\n   given LSP is mapped to one or more P&R schemes during LSP\r\n   establishment.  An advantage that mapping is that an LSP may use\r\n   different P&R schemes in different segments of a network (e.g., some\r\n   links may be span protected, whilst other segments of the LSP may\r\n   utilize ring protection).  These details are likely to be service\r\n   provider specific.\r\n",
+    "notes": "Mistype error\r\nThe change is...\r\ns/P&E/P&R/ in the 6th line",
+    "submit_date": "2010-05-12",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
