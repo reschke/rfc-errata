@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 196,
+    "doc-id": "RFC4010",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "    P[i]          The ith plaintext key data block\r\n     C[i]          The ith ciphertext data block\r\n     A             The 64-bit integrity check register\r\n     R[i]          An array of 64-bit registers where\r\n                   i = 0, 1, 2, ..., n\r\n     A[t], R[i][t] The contents of registers A and R[i] after\r\n                   encryption step t.",
+    "correct_text": "    P[i]          The ith (64-bit) plaintext key data block\r\n                  where i = 1, 2, ..., n\r\n    C[i]          The ith (64-bit) ciphertext data block\r\n                  where i = 0, 1, 2, ..., n\r\n     A             The 64-bit integrity check register\r\n     R[i]          An array of 64-bit registers where\r\n                  i = 1, 2, ..., n\r\n     A[t], R[t][i] The contents of registers A and R[i] after\r\n                   encryption step t.",
+    "notes": "",
+    "submit_date": "2005-02-28",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3865,
+    "doc-id": "RFC4010",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A.",
+    "orig_text": "     SeedEncryptionAlgorithmInCMS\r\n         { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)\r\n           pkcs9(9) smime(16) modules(0) id-mod-cms-seed(24) }\r\n",
+    "correct_text": "     SeedEncryptionAlgorithmInCMS\r\n         { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)\r\n           pkcs9(9) smime(16) modules(0) id-mod-cms-seed(25) }\r\n",
+    "notes": "The value assigned for id-mod-cms-seed in 25, not 24.  This error will not impact interoperability, but it could impact developers using some ASN.1 tools.",
+    "submit_date": "2014-01-10",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
