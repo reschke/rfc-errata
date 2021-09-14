@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4806,
+    "doc-id": "RFC7934",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "3.  Benefits of Providing Multiple Addresses\r\n\r\n   Today, there are many host functions that require more than one IP\r\n   address to be available to the host, including:\r\n\r\n   o  Privacy addressing to prevent tracking by off-network hosts\r\n      [RFC4941].\r\n\r\n ...",
+    "correct_text": "3.  Benefits of Providing Multiple Addresses\r\n\r\n   Today, there are many host functions that require more than one IP\r\n   address to be available to the host, including:\r\n\r\n   o  Privacy addressing to prevent tracking by off-network hosts\r\n      [RFC4941].\r\n\r\n...\r\n\r\n   o  Other potential use cases such as those described in [RFC1681].",
+    "notes": "Somewhat trivial errata, a reference to RFC1681, \" On Many Addresses per Host\", would be good to credit Steve's early thoughts, and those which probably in part lead to [TARP]. No urgency to update, a note to include it if this RFC is ever updated.",
+    "submit_date": "2016-09-20",
+    "submitter_name": "Mark Smith",
+    "verifier_id": 135,
+    "verifier_name": "Joel Jaeggli",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
