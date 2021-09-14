@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5910,
+    "doc-id": "RFC7958",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "2.1.2",
+    "orig_text": "The validFrom and validUntil attributes in the KeyDigest element\r\n   specify the range of times that the KeyDigest element can be used as\r\n   a trust anchor.  Note that the KeyDigest element is optional; if it\r\n   is not given, the trust anchor can be used until a KeyDigest element\r\n   covering the same DNSKEY record, but having a validUntil attribute,\r\n   is trusted by the relying party.  Relying parties SHOULD NOT use a\r\n   KeyDigest outside of the time range given in the validFrom and\r\n   validUntil attributes.",
+    "correct_text": "The validFrom and validUntil attributes in the KeyDigest element\r\n   specify the range of times that the KeyDigest element can be used as\r\n   a trust anchor.  Note that the validUntil element is optional; if it\r\n   is not given, the trust anchor can be used until a KeyDigest element\r\n   covering the same DNSKEY record, but having a validUntil attribute,\r\n   is trusted by the relying party.  Relying parties SHOULD NOT use a\r\n   KeyDigest outside of the time range given in the validFrom and\r\n   validUntil attributes.",
+    "notes": "The text after the ';' is difficult to read. I am not sure what is should say.\n --VERIFIER NOTES-- \nThe text does take a little effort to parse, but is correct as written.\r\nIt says validUntil is optional:\r\nIF validUntil not given\r\n   DO FOREVER\r\n       use trust anchor\r\n       IF ( (NewKeyDigest covers same DNSKEY record) &&\r\n               (NewKeyDigest has a validUntil) &&\r\n                 (NewKeyDigest is trusted by relying party) )\r\n            exit\r\n       ENDIF\r\n   ENDDO",
+    "submit_date": "2019-11-15",
+    "submitter_name": "John Dickinson",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-11-22 06:04:47"
+  },
+  {
+    "errata_id": 5932,
+    "doc-id": "RFC7958",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.1.2",
+    "orig_text": "  Note that the KeyDigest element is optional; if it\r\n  is not given, the trust anchor can be used until a KeyDigest element\r\n  covering the same DNSKEY record, but having a validUntil attribute,\r\n  is trusted by the relying party.\r\n",
+    "correct_text": "  Note that the validUntil attribute of the KeyDigest element is\r\n  optional. If the relying party is using a trust anchor that has a\r\n  KeyDigest element that does not have a validUntil attribute, it can\r\n  change to a trust anchor with a KeyDigest element that does have a\r\n  validUntil attribute, as long as that trust anchor's validUntil\r\n  attribute is in the future and the DNSKEY elements of the KeyDigest\r\n  are the same as the previous trust anchor.",
+    "notes": "It is the validUntil attribute that is optional, not the KeyDigest element. Also, it was noted that the sentence did not clearly explain the logic.",
+    "submit_date": "2019-12-11",
+    "submitter_name": "Paul Hoffman",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2020-01-26 13:26:04"
+  }
+]
