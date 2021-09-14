@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4106,
+    "doc-id": "RFC7260",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.5.2",
+    "orig_text": "   IANA has created the \"OAM Sub-TLVs\" sub-registry of the \"RSVP-TE OAM\r\n   Configuration Registry\" as follows:\r\n\r\n   Range       | Note                         | Registration Procedures\r\n   ------------+------------------------------|------------------------\r\n   0-31        | Generic Sub-TLVs             | IETF Review\r\n   32-65534    | Technology-specific Sub-TLVs | IETF Review\r\n   65535-65536 | Experimental Sub-TLVs        | Reserved for\r\n               |                              |   Experimental Use\r\n\r\n   IANA has populated the registry as follows:\r\n\r\n      Sub-TLV Type | Description                   | Reference\r\n      -------------+-------------------------------+----------\r\n          0        | Reserved                      | [RFC7260]\r\n          1        | OAM Function Flags Sub-TLV    | [RFC7260]\r\n          2-65534  | Unassigned                    |\r\n      65535-65536  | Reserved for Experimental Use | [RFC7260]\r\n\r\n",
+    "correct_text": "    IANA has created the \"OAM Sub-TLVs\" sub-registry of the \"RSVP-TE OAM\r\n    Configuration Registry\" as follows:\r\n\r\n    Range       | Note                         | Registration Procedures\r\n    ------------+------------------------------|------------------------\r\n    0-31        | Generic Sub-TLVs             | IETF Review\r\n    32-65533    | Technology-specific Sub-TLVs | IETF Review\r\n    65534-65535 | Experimental Sub-TLVs        | Reserved for\r\n                |                              |   Experimental Use\r\n\r\n    IANA has populated the registry as follows:\r\n\r\n       Sub-TLV Type | Description                   | Reference\r\n       -------------+-------------------------------+----------\r\n           0        | Reserved                      | [RFC7260]\r\n           1        | OAM Function Flags Sub-TLV    | [RFC7260]\r\n           2-65533  | Unassigned                    |\r\n       65534-65535  | Reserved for Experimental Use | [RFC7260]\r\n",
+    "notes": "Because the Type field is two octets long the value 65536 is unrealizable.\r\nNevertheless, it was the intention of the working group to assign to values as experimental.",
+    "submit_date": "2014-09-08",
+    "submitter_name": "Gregory Mirsky",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
