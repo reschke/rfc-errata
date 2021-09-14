@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2965,
+    "doc-id": "RFC3464",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Appendix E",
+    "orig_text": "Simple DSN\r\n\r\n   This is a simple DSN issued after repeated attempts to deliver a\r\n   message failed.  In this case, the DSN is issued by the same MTA from\r\n   which the message was originated.\r\n\r\n   Date: Thu, 7 Jul 1994 17:16:05 -0400 From: Mail Delivery Subsystem\r\n   <MAILER-DAEMON@CS.UTK.EDU> Message-Id:\r\n   <199407072116.RAA14128@CS.UTK.EDU> Subject: Returned mail: Cannot\r\n   send message for 5 days To: <owner-info-mime@cs.utk.edu> MIME-\r\n   Version: 1.0 Content-Type: multipart/report; report-type=delivery-\r\n   status;\r\n          boundary=\"RAA14128.773615765/CS.UTK.EDU\"\r\n\r\n   --RAA14128.773615765/CS.UTK.EDU",
+    "correct_text": "Simple DSN\r\n\r\n   This is a simple DSN issued after repeated attempts to deliver a\r\n   message failed.  In this case, the DSN is issued by the same MTA from\r\n   which the message was originated.\r\n\r\n   Date: Thu, 7 Jul 1994 17:16:05 -0400 \r\n   From: Mail Delivery Subsystem <MAILER-DAEMON@CS.UTK.EDU> \r\n   Message-Id: <199407072116.RAA14128@CS.UTK.EDU> \r\n   Subject: Returned mail: Cannot send message for 5 days \r\n   To: <owner-info-mime@cs.utk.edu> \r\n   MIME-Version: 1.0 \r\n   Content-Type: multipart/report; report-type=delivery-status;\r\n          boundary=\"RAA14128.773615765/CS.UTK.EDU\"\r\n\r\n   --RAA14128.773615765/CS.UTK.EDU",
+    "notes": "Apparently an unintended \"Reformat Paragraph\" of the top level message header.",
+    "submit_date": "2011-09-09",
+    "submitter_name": "Bill McQuillan",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
