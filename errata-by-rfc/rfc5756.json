@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2021,
+    "doc-id": "RFC5756",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1, last para",
+    "orig_text": "   This document also replaces incorrect references to the\r\n   publicKeyAlgorithms field in Section 3 with references to the\r\n   parameters field in the subjectPublicKeyInfo algorithm field.\r\n|  Section 3 also rewords the second and third paragraphs for clarity.\r\n          ^^^",
+    "correct_text": "   This document also replaces incorrect references to the\r\n|  publicKeyAlgorithms field in Section 3 of [RFC4055] with references\r\n   to the parameters field in the subjectPublicKeyInfo algorithm field.\r\n|  Section 2 also rewords the second and third paragraph in Section 3\r\n|  of [RFC4055] for clarity.",
+    "notes": "Rationale: Clarification\r\n  Confusion between section numbers in 2 different documents\r\n  (per late text change).\r\nResolution:\r\n  More details added for clarification, wrong section number corrected.",
+    "submit_date": "2010-01-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 111,
+    "verifier_name": "Pasi Eronen",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
