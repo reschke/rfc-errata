@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 4495,
+    "doc-id": "RFC7616",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.9.1.",
+    "orig_text": "   Both client and\r\n   server know that the username for this document is \"Mufasa\" and the\r\n   password is \"Circle of Life\" (with one space between each of the\r\n   three words).",
+    "correct_text": "   Both client and\r\n   server know that the username for this document is \"Mufasa\" and the \r\n   password is \"Circle of Life\" (with one space between \r\n   each of the three words and non-capital o in word of).",
+    "notes": "In RFC 2617, the password was \"Circle Of Life\" with capital O in the word \"Of\". Also, RFC 7616 section 3.4.5 mentions the password \"Circle Of Life\" with capital O in the word \"Of\". It can be difficult to notice a non-capital o from an example password as it is elsewhere capital O.",
+    "submit_date": "2015-10-09",
+    "submitter_name": "Tuomo Untinen",
+    "verifier_id": 2,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4897,
+    "doc-id": "RFC7616",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.9.2",
+    "orig_text": "3.9.2.  Example with SHA-512-256, Charset, and Userhash\r\n\r\n   The following example assumes that an access-protected document is\r\n   being requested from the server via a GET request.  The URI for the\r\n   request is \"http://api.example.org/doe.json\".  Both client and server\r\n   know the userhash of the username, support the UTF-8 character\r\n   encoding scheme, and use the SHA-512-256 algorithm.  The username for\r\n   the request is a variation of \"Jason Doe\", where the 'a' actually is\r\n   Unicode code point U+00E4 (\"LATIN SMALL LETTER A WITH DIAERESIS\"),\r\n   and the first 'o' is Unicode code point U+00F8 (\"LATIN SMALL LETTER O\r\n   WITH STROKE\"), leading to the octet sequence using the UTF-8 encoding\r\n   scheme:\r\n\r\n      J  U+00E4 s  U+00F8 n      D  o  e\r\n      4A C3A4   73 C3B8   6E 20 44  6F 65\r\n\r\n   The password is \"Secret, or not?\".\r\n\r\n   The first time the client requests the document, no Authorization\r\n   header field is sent, so the server responds with:\r\n\r\n   HTTP/1.1 401 Unauthorized\r\n   WWW-Authenticate: Digest\r\n       realm=\"api@example.org\",\r\n       qop=\"auth\",\r\n       algorithm=SHA-512-256,\r\n       nonce=\"5TsQWLVdgBdmrQ0XsxbDODV+57QdFR34I9HAbC/RVvkK\",\r\n       opaque=\"HRPCssKJSGjCrkzDg8OhwpzCiGPChXYjwrI2QmXDnsOS\",\r\n       charset=UTF-8,\r\n       userhash=true\r\n\r\n\r\n\r\n\r\n\r\nShekh-Yusef, et al.          Standards Track                   [Page 19]\r\n\f\r\nRFC 7616            HTTP Digest Access Authentication     September 2015\r\n\r\n\r\n   The client can prompt the user for the required credentials and send\r\n   a new request with following Authorization header field:\r\n\r\n   Authorization: Digest\r\n       username=\"488869477bf257147b804c45308cd62ac4e25eb717\r\n          b12b298c79e62dcea254ec\",\r\n       realm=\"api@example.org\",\r\n       uri=\"/doe.json\",\r\n       algorithm=SHA-512-256,\r\n       nonce=\"5TsQWLVdgBdmrQ0XsxbDODV+57QdFR34I9HAbC/RVvkK\",\r\n       nc=00000001,\r\n       cnonce=\"NTg6RKcb9boFIAS3KrFK9BGeh+iDa/sm6jUMp2wds69v\",\r\n       qop=auth,\r\n       response=\"ae66e67d6b427bd3f120414a82e4acff38e8ecd9101d\r\n          6c861229025f607a79dd\",\r\n       opaque=\"HRPCssKJSGjCrkzDg8OhwpzCiGPChXYjwrI2QmXDnsOS\",\r\n       userhash=true\r\n\r\n   If the client cannot provide a hashed username for any reason, the\r\n   client can try a request with this Authorization header field:\r\n\r\n   Authorization: Digest\r\n       username*=UTF-8''J%C3%A4s%C3%B8n%20Doe,\r\n       realm=\"api@example.org\",\r\n       uri=\"/doe.json\",\r\n       algorithm=SHA-512-256,\r\n       nonce=\"5TsQWLVdgBdmrQ0XsxbDODV+57QdFR34I9HAbC/RVvkK\",\r\n       nc=00000001,\r\n       cnonce=\"NTg6RKcb9boFIAS3KrFK9BGeh+iDa/sm6jUMp2wds69v\",\r\n       qop=auth,\r\n       response=\"ae66e67d6b427bd3f120414a82e4acff38e8ecd9101d\r\n          6c861229025f607a79dd\",\r\n       opaque=\"HRPCssKJSGjCrkzDg8OhwpzCiGPChXYjwrI2QmXDnsOS\",\r\n       userhash=false\r\n",
+    "correct_text": "3.9.2.  Example with SHA-512-256, Charset, and Userhash\r\n\r\n   The following example assumes that an access-protected document is\r\n   being requested from the server via a GET request.  The URI for the\r\n   request is \"http://api.example.org/doe.json\".  Both client and server\r\n   know the userhash of the username, support the UTF-8 character\r\n   encoding scheme, and use the SHA-512-256 algorithm.  The username for\r\n   the request is a variation of \"Jason Doe\", where the 'a' actually is\r\n   Unicode code point U+00E4 (\"LATIN SMALL LETTER A WITH DIAERESIS\"),\r\n   and the first 'o' is Unicode code point U+00F8 (\"LATIN SMALL LETTER O\r\n   WITH STROKE\"), leading to the octet sequence using the UTF-8 encoding\r\n   scheme:\r\n\r\n      J  U+00E4 s  U+00F8 n      D  o  e\r\n      4A C3A4   73 C3B8   6E 20 44  6F 65\r\n\r\n   The password is \"Secret, or not?\".\r\n\r\n   The first time the client requests the document, no Authorization\r\n   header field is sent, so the server responds with:\r\n\r\n   HTTP/1.1 401 Unauthorized\r\n   WWW-Authenticate: Digest\r\n       realm=\"api@example.org\",\r\n       qop=\"auth\",\r\n       algorithm=SHA-512-256,\r\n       nonce=\"5TsQWLVdgBdmrQ0XsxbDODV+57QdFR34I9HAbC/RVvkK\",\r\n       opaque=\"HRPCssKJSGjCrkzDg8OhwpzCiGPChXYjwrI2QmXDnsOS\",\r\n       charset=UTF-8,\r\n       userhash=true\r\n\r\n\r\n\r\n\r\n\r\nShekh-Yusef, et al.          Standards Track                   [Page 19]\r\n\f\r\nRFC 7616            HTTP Digest Access Authentication     September 2015\r\n\r\n\r\n   The client can prompt the user for the required credentials and send\r\n   a new request with following Authorization header field:\r\n\r\n   Authorization: Digest\r\n       username=\"793263caabb707a56211940d90411ea4a575adeccb\r\n          7e360aeb624ed06ece9b0b\",\r\n       realm=\"api@example.org\",\r\n       uri=\"/doe.json\",\r\n       algorithm=SHA-512-256,\r\n       nonce=\"5TsQWLVdgBdmrQ0XsxbDODV+57QdFR34I9HAbC/RVvkK\",\r\n       nc=00000001,\r\n       cnonce=\"NTg6RKcb9boFIAS3KrFK9BGeh+iDa/sm6jUMp2wds69v\",\r\n       qop=auth,\r\n       response=\"3798d4131c277846293534c3edc11bd8a5e4cdcbff78\r\n          b05db9d95eeb1cec68a5\",\r\n       opaque=\"HRPCssKJSGjCrkzDg8OhwpzCiGPChXYjwrI2QmXDnsOS\",\r\n       userhash=true\r\n\r\n   If the client cannot provide a hashed username for any reason, the\r\n   client can try a request with this Authorization header field:\r\n\r\n   Authorization: Digest\r\n       username*=UTF-8''J%C3%A4s%C3%B8n%20Doe,\r\n       realm=\"api@example.org\",\r\n       uri=\"/doe.json\",\r\n       algorithm=SHA-512-256,\r\n       nonce=\"5TsQWLVdgBdmrQ0XsxbDODV+57QdFR34I9HAbC/RVvkK\",\r\n       nc=00000001,\r\n       cnonce=\"NTg6RKcb9boFIAS3KrFK9BGeh+iDa/sm6jUMp2wds69v\",\r\n       qop=auth,\r\n       response=\"3798d4131c277846293534c3edc11bd8a5e4cdcbff78\r\n          b05db9d95eeb1cec68a5\",\r\n       opaque=\"HRPCssKJSGjCrkzDg8OhwpzCiGPChXYjwrI2QmXDnsOS\",\r\n       userhash=false\r\n",
+    "notes": "If the SHA512/256 algorithm first mentioned in Section 3.2 is to be implemented as defined in FIPS 180.4 Section 6.7 the values of username and response need to be corrected.\r\n\r\nChanges start at page 19 of the RFC.\r\n\r\nI created this as technical errata since the current values given in the example are for a SHA512/256 algorithm implemented as described in Section 7 of both FIPS 180-3 and FIPS 180-4",
+    "submit_date": "2016-12-29",
+    "submitter_name": "Chaim Geretz",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5801,
+    "doc-id": "RFC7616",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.7,
+    "orig_text": "   This specification defines the following algorithms:\r\n\r\n   o  SHA2-256 (mandatory to implement)\r\n\r\n   o  SHA2-512/256 (as a backup algorithm)\r\n\r\n   o  MD5 (for backward compatibility).\r\n",
+    "correct_text": "   This specification defines the following algorithms:\r\n\r\n   o  SHA-256 (mandatory to implement)\r\n\r\n   o  SHA-512/256 (as a backup algorithm)\r\n\r\n   o  MD5 (for backward compatibility).\r\n",
+    "notes": "The SHA-2 family of algorithms are conventionally referred to using just \"SHA-\" and the bit strength, not \"SHA2-\" and the bit strength.",
+    "submit_date": "2019-08-06",
+    "submitter_name": "Franck MOURRE",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5803,
+    "doc-id": "RFC7616",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "A",
+    "orig_text": "   o  Adds support for two new algorithms, SHA2-256 as mandatory and\r\n      SHA2-512/256 as a backup, and defines the proper algorithm\r\n      negotiation.  The document keeps the MD5 algorithm support but\r\n      only for backward compatibility.",
+    "correct_text": "   o  Adds support for two new algorithms, SHA-256 as mandatory and\r\n      SHA-512/256 as a backup, and defines the proper algorithm\r\n      negotiation.  The document keeps the MD5 algorithm support but\r\n      only for backward compatibility.",
+    "notes": "The SHA-2 family of algorithms are conventionally referred to using just \"SHA-\" and the bit strength, not \"SHA2-\" and the bit strength.",
+    "submit_date": "2019-08-06",
+    "submitter_name": "Franck MOURRE",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
