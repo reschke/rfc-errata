@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4536,
+    "doc-id": "RFC5412",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "7.2.3",
+    "orig_text": "The AC Name with Index message element is sent by the AC to the WTP\r\n   to configure preferred ACs.  The number of instances where this\r\n   message element would be present is equal to the number of ACs\r\n   configured on the WTP.\r\n\r\n       0                   1\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |     Index     |   AC Name...\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n   Type:   90 for AC Name with Index\r\n\r\n   Length:   5\r\n\r\n   Index:   The index of the preferred server (e.g., 1=primary,\r\n      2=secondary).\r\n\r\n   AC Name:   A variable-length ASCII string containing the AC's name.",
+    "correct_text": null,
+    "notes": "This entire section is in the wrong location or needs to be revised. Section 7.2 is the definition for Configure Request, which is suppose to be a message sent from the WTP to the AC. But here at 7.2.3, this message element clearly states it is an element to be sent from the AC to the WTP. Does this section belong in the Configure Response section instead?\r\n\r\n[This section does seem to be in the wrong place.  However, moving it will need to wait fo a new (revised) RFC.  ISE, July 2017]",
+    "submit_date": "2015-11-18",
+    "submitter_name": "Tony Deng",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
