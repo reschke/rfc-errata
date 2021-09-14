@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4574,
+    "doc-id": "RFC7541",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A.",
+    "orig_text": "   Table 1 lists the predefined header fields that make up the static\r\n   table and gives the index of each entry.\r\n",
+    "correct_text": "   Table 1 lists the predefined header fields that make up the static\r\n   table and gives the index of each entry.\r\n\r\n   This list of predefined header fields is NOT sorted.\r\n",
+    "notes": "The list of header fields actually is sorted except for one field. The field with index 19 should be between the fields with index 14 and 15).\r\n\r\nThat is why it gives the false impression that an implementer may use binary search algorithm to look up for header fields (while encoding) in order to retrieve their index numbers.\r\n\r\nI highly encourage to at either move that field up or at least clarify that this list (even though it looks sorted), it is not.",
+    "submit_date": "2015-12-31",
+    "submitter_name": "Christian Parpart",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5094,
+    "doc-id": "RFC7541",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.1,
+    "orig_text": "Integers are used to represent name indexes, header field indexes,\r\nor string lengths.",
+    "correct_text": "Integers are used to represent name indexes, header field indexes,\r\nstring lengths, or dynamic table size.",
+    "notes": "Section 5.1 says, Integer encodings that exceed implementation limits — in value or octet length — MUST be treated as decoding errors.\r\n\r\nSection 6.3 is using HPACK integer to represent value of dynamic table size. This size can be more larger than index or string length. \r\n\r\nThis change make user who implement integer encoding/decoding can figure out a proper integer value limit for each condition.",
+    "submit_date": "2017-08-24",
+    "submitter_name": "Xue Fei",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
