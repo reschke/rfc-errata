@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2732,
+    "doc-id": "RFC5237",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "   This document replaces the RFC 2780 Section 4.3 rule [RFC2780] with\r\n   the following:\r\n\r\n      IANA allocates values from the IPv4 Protocol name space following\r\n      an IESG Approval or Standards Action process.\r\n\r\n   This document also makes an implicit change to the rule for the IPv6\r\n   Next Header field in Section 5.3 of RFC 2780.  That rule refers to\r\n   the rule in Section 4.3 of the same RFC.  From now on, this reference\r\n   should be understood to refer to the rule revised here, i.e., without\r\n   the Expert Review option.\r\n",
+    "correct_text": "   This document replaces the RFC 2780 Section 4.3 rule [RFC2780] with\r\n   the following:\r\n\r\n      IANA allocates values from the IPv4 Protocol name space following\r\n      an IESG Approval or Standards Action process [RFC5226].\r\n\r\n   This document also makes an implicit change to the rule for the IPv6\r\n   Next Header field in Section 5.3 of RFC 2780.  That rule refers to\r\n   the rule in Section 4.3 of the same RFC.  From now on, this reference\r\n   should be understood to refer to the rule revised here, i.e., without\r\n   the Expert Review option.\r\n",
+    "notes": "The reference to RFC 5226 is probably missing here.",
+    "submit_date": "2011-02-23",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
