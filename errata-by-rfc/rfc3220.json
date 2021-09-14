@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 320,
+    "doc-id": "RFC3220",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "99\r\nIn Section 3.6.1.2 (after current page 41), insert the following text:",
+    "orig_text": "   The Lifetime field is chosen as follows:\r\n\r\n    -  If the mobile node is registering with a foreign agent, the\r\n       Lifetime SHOULD NOT exceed the value in the Registration Lifetime\r\n       field of the Agent Advertisement message received from the\r\n       foreign agent.  When the method by which the care-of address is\r\n       learned does not include a Lifetime, the default ICMP Router\r\n       Advertisement Lifetime (1800 seconds) MAY be used.\r\n\r\n    -  The mobile node MAY ask a home agent to delete a particular\r\n       mobility binding, by sending a Registration Request with the\r\n       care-of address for this binding, with the Lifetime field set to\r\n       zero (Section 3.8.2).\r\n\r\n    -  Similarly, a Lifetime of zero is used when the mobile node\r\n       deregisters all care-of addresses, such as upon returning home.\r\n\r\n   The Home Address field MUST be set to the mobile node's home address,\r\n   if this information is known.  Otherwise, the Home Address MUST be\r\n   set to zeroes.\r\n\r\n   The Home Agent field MUST be set to the address of the mobile node's\r\n   home agent, if the mobile node knows this address.  Otherwise, the\r\n   mobile node MAY use dynamic home agent address resolution to learn\r\n   the address of its home agent.  In this case, the mobile node MUST\r\n   set the Home Agent field to the subnet-directed broadcast address\r\n   of the mobile node's home network.  Each home agent receiving such\r\n   a Registration Request with a broadcast destination address MUST\r\n   reject the mobile node's registration and SHOULD return a rejection\r\n   Registration Reply indicating its unicast IP address for use by the\r\n   mobile node in a future registration attempt.\r\n\r\n   The Care-of Address field MUST be set to the value of the particular\r\n   care-of address that the mobile node wishes to (de)register.  In the\r\n   special case in which a mobile node wishes to deregister all care-of\r\n   addresses, it MUST set this field to its home address.\r\n\r\n   The mobile node chooses the Identification field in accordance with\r\n   the style of replay protection it uses with its home agent.  This is\r\n   part of the mobility security association the mobile node shares with\r\n   its home agent.  See Section 5.7 for the method by which the mobile\r\n   node computes the Identification field.\r\n\r\n\r\n3.6.1.3. Extensions\r\n\r\n   This section describes the ordering of any mandatory and any optional\r\n   Extensions that a mobile node appends to a Registration Request.\r\n   This following ordering MUST be followed:",
+    "correct_text": "",
+    "notes": "\n --VERIFIER NOTES-- \nRFC 3220 has been obsoleted by RFC 3344.   ",
+    "submit_date": "2002-04-23",
+    "submitter_name": "\"Charles E. Perkins\"",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 321,
+    "doc-id": "RFC3220",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 5.7,
+    "orig_text": "   Whatever method is used, the low-order 32 bits of the Identification\r\n   MUST be copied unchanged from the Registration Request to the Reply.\r\n   The foreign agent uses those bits (and the mobile node's home\r\n   address) to match Registration Requests with corresponding replies.\r\n   of any Registration Reply are identical to the bits it sent in the\r\n   Registration Request.",
+    "correct_text": "   Whatever method is used, the low-order 32 bits of the Identification\r\n   MUST be copied unchanged from the Registration Request to the Reply.\r\n   The foreign agent uses those bits (and the mobile node's home\r\n   address) to match Registration Requests with corresponding replies.\r\n   The mobile node MUST verify that the low-order 32 bits of any Registration \r\n   Reply are identical to the bits it sent in the Registration Request.",
+    "notes": "\n --VERIFIER NOTES-- \nRFC 3220 has been obsoleted by RFC 3344.   ",
+    "submit_date": "2002-04-23",
+    "submitter_name": "\"Charles E. Perkins\"",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 842,
+    "doc-id": "RFC3220",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "Correction 2: to be inserted before the line on page 74\r\n\tstarting \"of any Registration...\"\r\n\r\n========================================================================\r\n      The mobile node MUST verify that the low-order 32 bits\r\n========================================================================",
+    "correct_text": "[see above]",
+    "notes": "from pending\n --VERIFIER NOTES-- \nRFC 3220 has been obsoleted by RFC 3344.   ",
+    "submit_date": "2002-04-23",
+    "submitter_name": "\"Charles E. Perkins\"",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
