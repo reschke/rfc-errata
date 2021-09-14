@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 5670,
+    "doc-id": "RFC8228",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 13,
+    "orig_text": "In this document, the symbol \"r-n\" means \"a reflexive \r\n(identity) mapping of type 'n'\".",
+    "correct_text": "In this document, the symbol \"r-k\" means \"a reflexive\r\n(identity) mapping of type 'k'\".",
+    "notes": "The notation \"r-n\" is used a few lines later for \"r-neither\". Therefore, a different letter needs to be used for a generic placeholder for all types. \"k\" seems appropriate.",
+    "submit_date": "2019-03-23",
+    "submitter_name": "Asmus Freytag",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5671,
+    "doc-id": "RFC8228",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 17,
+    "orig_text": "The following shows such an example resulting in conflicting \r\nreflexive variants:",
+    "correct_text": "The following shows such an example resulting in conflicting \r\nvariant dispositions:",
+    "notes": "typo",
+    "submit_date": "2019-03-23",
+    "submitter_name": "Asmus Freytag",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6107,
+    "doc-id": "RFC8228",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 14,
+    "orig_text": "Because no variant label with any code point outside the repertoire\r\n   could ever be allocated, the only logical choice for the non-\r\n   reflexive mappings to out-of-repertoire code points is \"blocked\".",
+    "correct_text": "Because no variant label with any code point outside the repertoire\r\n   would ever be allocated in this example, the only logical choice for the non-\r\n   reflexive mappings to out-of-repertoire code points is \"blocked\".",
+    "notes": "As written the sentence makes an absolute claim that isn't in accordance with RFC7940. While not usual, there are circumstances where allowing allocatable variants for a code point that has a reflexive \"out-of-repertoire-var\" mapping may make sense. Therefore, the statement needs to be read as restricted to the specific scenario or example under discussion.",
+    "submit_date": "2020-04-14",
+    "submitter_name": "Asmus Freytag",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-04-14 14:08:18"
+  }
+]
