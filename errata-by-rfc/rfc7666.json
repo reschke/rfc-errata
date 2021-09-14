@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4710,
+    "doc-id": "RFC7666",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.2 IANA MIB",
+    "orig_text": "IANAStorageMediaType ::= TEXTUAL-CONVENTION\r\n       STATUS       current\r\n       DESCRIPTION\r\n               \"The media type of a storage device:\r\n\r\n               unknown(1)     The media type is unknown, e.g., because\r\n                              the implementation failed to obtain the\r\n                              media type from the hypervisor.\r\n\r\n               other(2)       The media type is other than those\r\n                              defined in this conversion.",
+    "correct_text": "IANAStorageMediaType ::= TEXTUAL-CONVENTION\r\n       STATUS       current\r\n       DESCRIPTION\r\n               \"The media type of a storage device:\r\n\r\n                 other(1)       The media type is other than those\r\n                                defined in this conversion.\r\n\r\n                 unknown(2)     The media type is unknown, e.g., because\r\n                                the implementation failed to obtain the\r\n                                media type from the hypervisor.\r\n",
+    "notes": "Inversion of other and unknown integer values in the description of the IANAStorageMediaType TEXTUAL-CONVENTION.\r\n\r\nFIrst referenced at IANA  RT as [IANA #913286] Incoherency in IANA-STORAGE-MEDIA-TYPE-MIB",
+    "submit_date": "2016-06-15",
+    "submitter_name": "jean-marie Kubek",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
