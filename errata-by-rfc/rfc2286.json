@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 463,
+    "doc-id": "RFC2286",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "99In the Appendix: ",
+    "orig_text": "/* The HMAC_SHA1 transform looks like:",
+    "correct_text": "/* The HMAC_RMD160 transform looks like:\r\n\r\n ",
+    "notes": "",
+    "submit_date": "2002-09-17",
+    "submitter_name": "Kevin Springle",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 627,
+    "doc-id": "RFC2286",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "99In the Appendix: ",
+    "orig_text": "    /* if key is longer than 64 bytes reset it to key=SHA1(key) */",
+    "correct_text": "   /* if key is longer than 64 bytes reset it to key=RMD160(key) */",
+    "notes": "\r\n",
+    "submit_date": "2002-09-17",
+    "submitter_name": "Kevin Springle",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
