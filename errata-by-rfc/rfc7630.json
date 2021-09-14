@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4509,
+    "doc-id": "RFC7630",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "8 and 10",
+    "orig_text": "snmpModules 235",
+    "correct_text": "mib-2 235",
+    "notes": "IANA registered snmpUsmHmacSha2MIB under mib-2.235 (as advised by the MIB doctors), but the document mentions snmpModules.235 ",
+    "submit_date": "2015-10-20",
+    "submitter_name": "Johannes Merkle",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
