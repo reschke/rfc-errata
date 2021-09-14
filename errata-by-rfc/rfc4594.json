@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4910,
+    "doc-id": "RFC4594",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.8,
+    "orig_text": "It can be assumed that this class will consume any available\r\nbandwidth and that packets traversing congested links may\r\nexperience higher queuing delays or packet loss.",
+    "correct_text": "This class is expected to consist of TCP traffic and\r\nother traffic with a TCP-like response to available bandwidth\r\nand network bottlenecks; therefore, it can be assumed that this traffic\r\nwill consume any bandwidth available to the class and that packets\r\ntraversing congested links may experience higher queuing\r\ndelays and/or packet loss.",
+    "notes": "This errata adds some explanation to a sentence in the description of the High-Throughput Data Service Class.  The original sentence was misread to imply less than best effort service as part of work on WiFi mapping of Diffserv.  That implication is incorrect, e.g., as indicated by the AF1x DSCP marking recommendation.  The added explanation was agreed to with the WiFi Diffserv draft authors as sufficient to avoid any implication that less than best effort service is appropriate for this traffic service class.",
+    "submit_date": "2017-01-18",
+    "submitter_name": "David Black",
+    "verifier_id": 2,
+    "verifier_name": "Mirja Kühlewind",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
