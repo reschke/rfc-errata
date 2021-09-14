@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6370,
+    "doc-id": "RFC8304",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "   GET_ECN:  The GET_ECN primitive is a network-layer function that\r\n      returns the value of the ECN field in the IP header of a received\r\n      UDP datagram.  Section 3.1.5 of [RFC8085] states that a UDP\r\n      receiver \"MUST check the ECN field at the receiver for each UDP\r\n      datagram that it receives on this port\", requiring the UDP\r\n      receiver API to pass the received ECN field up to the application\r\n      layer to enable appropriate congestion feedback.",
+    "correct_text": "   GET_ECN:  The GET_ECN primitive is a network-layer function that\r\n      returns the value of the ECN field in the IP header of a received\r\n      UDP datagram.  Section 3.1.7 of [RFC8085] states that a UDP\r\n      receiver \"MUST check the ECN field at the receiver for each UDP\r\n      datagram that it receives on this port\", requiring the UDP\r\n      receiver API to pass the received ECN field up to the application\r\n      layer to enable appropriate congestion feedback.",
+    "notes": "Incorrect reference to RFC 8085",
+    "submit_date": "2020-12-26",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2021-01-19 15:42:38"
+  },
+  {
+    "errata_id": 6371,
+    "doc-id": "RFC8304",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "   ERROR_REPORT:  The ERROR_REPORT event informs an application of \"soft\r\n      errors\", including the arrival of an ICMP or ICMPv6 error message.\r\n      Section 4.1.4 of the requirements for Internet hosts [RFC1122]\r\n      states that \"UDP MUST pass to the application layer all ICMP error\r\n      messages that it receives from the IP layer.\"  For example, this\r\n      event is required to implement ICMP-based Path MTU Discovery\r\n      [RFC1191] [RFC8201].  UDP applications must perform a CONNECT to\r\n      receive ICMP errors.\r\n",
+    "correct_text": "   ERROR_REPORT:  The ERROR_REPORT event informs an application of \"soft\r\n      errors\", including the arrival of an ICMP or ICMPv6 error message.\r\n      Section 4.1.3.3 of the requirements for Internet hosts [RFC1122]\r\n      states that \"UDP MUST pass to the application layer all ICMP error\r\n      messages that it receives from the IP layer.\"  For example, this\r\n      event is required to implement ICMP-based Path MTU Discovery\r\n      [RFC1191] [RFC8201].  UDP applications must perform a CONNECT to\r\n      receive ICMP errors.\r\n",
+    "notes": "Incorrect reference to RFC 1122",
+    "submit_date": "2020-12-26",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2021-01-19 15:47:13"
+  }
+]
