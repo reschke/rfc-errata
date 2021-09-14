@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2983,
+    "doc-id": "RFC3381",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "4.1 job-collation-type (type2 enum)\r\n\r\n   Job Collation includes sheet collation and document collation.  Sheet\r\n   collation is defined to be the ordering of sheets within a document\r\n   copy.  Document collation is defined to be the ordering of document\r\n   copies within a multi-document job.  The value of the \"job-\r\n   collation-type\" is affected by the value of the \"sheet-collate\" Job\r\n   Template attribute (see section 3.1), if supplied and supported.\r\n\r\n   The Standard enum values are:\r\n\r\n      '1' 'other':  not one of the defined values\r\n\r\n      '2' 'unknown':  the collation type is unknown\r\n\r\n      '3' 'uncollated-sheets':  No collation of the sheets within each\r\n                    document copy, i.e., each sheet of a document that\r\n                    is to produce multiple copies, is replicated before\r\n                    the next sheet in the document is processed and\r\n                    stacked.  If the device has an output bin collator,\r\n                    the 'uncollated-sheets(3)' value may actually\r\n",
+    "correct_text": "4.1 job-collation-type (type2 enum|other|unknown)\r\n\r\n   Job Collation includes sheet collation and document collation.  Sheet\r\n   collation is defined to be the ordering of sheets within a document\r\n   copy.  Document collation is defined to be the ordering of document\r\n   copies within a multi-document job.  The value of the \"job-\r\n   collation-type\" is affected by the value of the \"sheet-collate\" Job\r\n   Template attribute (see section 3.1), if supplied and supported.\r\n\r\n   The Standard enum values are:\r\n\r\n      '3' 'uncollated-sheets':  No collation of the sheets within each\r\n                    document copy, i.e., each sheet of a document that\r\n                    is to produce multiple copies, is replicated before\r\n                    the next sheet in the document is processed and\r\n                    stacked.  If the device has an output bin collator,\r\n                    the 'uncollated-sheets(3)' value may actually\r\n",
+    "notes": "\"other\" and \"unknown\" are out-of-band values, per RFC 2911 section 4.1:\r\n\r\n   Note: SNMP MIBs use '2' for 'unknown' which corresponds to the IPP\r\n   \"out-of-band\" value 'unknown'.  See the description of the \"out-of-\r\n   band\" values at the beginning of Section 4.1.  Therefore, attributes\r\n   of type 'enum' start at '3'.",
+    "submit_date": "2011-10-03",
+    "submitter_name": "Michael Sweet",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
