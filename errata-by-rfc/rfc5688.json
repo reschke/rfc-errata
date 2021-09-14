@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1997,
+    "doc-id": "RFC5688",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "a)   document title:\r\n\r\n     A Session Initiation Protocol (SIP) Media Feature Tag for MIME\r\n                          Application Subtypes\r\n\r\nb)   Abstract\r\n\r\n   The caller preferences specification for the Session Initiation\r\n   Protocol (SIP) allows a caller to express preferences that the call\r\n   be routed to a User Agent (UA) with particular capabilities.\r\n   Similarly, a specification exists to allow a UA to indicate its\r\n   capabilities in a registration.  Amongst those capabilities are the\r\n|  type of media streams the agent supports, described as top-level MIME\r\n|  types.  The 'application' MIME type is used to describe a broad range\r\n   of stream types, and it provides insufficient granularity as a\r\n   capability.  This specification allows a UA to indicate which\r\n   application subtypes the agent supports.\r\n\r\nc)  Section 3, 1st para\r\n\r\n   The 'sip.app-subtype' media feature tag is of type token with a case-\r\n   insensitive equality relationship.  Its value can be any registered\r\n|  or private MIME application subtype compliant to the subtype-name\r\n   grammar defined in [RFC4288].  [...]\r\n\r\n[[ see also subsequent errata note covering another issue as well ! ]]\r\n\r\nd)  Section 3, 3rd para\r\n\r\n   It is important to note that this media feature tag is only\r\n   indicating the streaming media types that a user agent is capable of\r\n   supporting.  It says nothing about the functionality provided by the\r\n|  user agent itself or the MIME types that the agent can send or\r\n   receive in SIP messages or emails.  For example, let us assume that a\r\n   SIP user agent is capable of supporting a chess game.  The game is\r\n   played by each user sending chess moves as binary objects over UDP\r\n|  between a pair of user agents.  Those objects have a MIME type of\r\n   \"application/example\".  [...]\r\n\r\ne)  Section 3, 4th para\r\n\r\n   A consequence of this is that, as new streaming media type formats\r\n   are defined (such as game stream formats, whiteboard session formats,\r\n   and so on), they SHOULD be defined using the SDP application stream\r\n|  and utilize a MIME application subtype.\r\n\r\nf)  Section 6, 4th para\r\n\r\n   Summary of the media feature indicated by this tag:  This feature tag\r\n|     indicates the MIME application subtypes supported by the agent for\r\n      purposes of streaming media.",
+    "correct_text": "a)\r\n        A Session Initiation Protocol (SIP) Media Feature Tag for\r\n                      'Application' Media Subtypes\r\n\r\nb)\r\n\r\n   The caller preferences specification for the Session Initiation\r\n   Protocol (SIP) allows a caller to express preferences that the call\r\n   be routed to a User Agent (UA) with particular capabilities.\r\n   Similarly, a specification exists to allow a UA to indicate its\r\n   capabilities in a registration.  Amongst those capabilities are the\r\n|  type of media streams the agent supports, described as top-level media\r\n|  types.  The 'application' media type is used to describe a broad range\r\n   of stream types, and it provides insufficient granularity as a\r\n   capability.  This specification allows a UA to indicate which\r\n   application subtypes the agent supports.\r\n\r\nc)\r\n\r\n   The 'sip.app-subtype' media feature tag is of type token with a case-\r\n   insensitive equality relationship.  Its value can be any registered\r\n|  or private 'application' media subtype compliant to the subtype-name\r\n   grammar defined in [RFC4288].  [...]\r\n\r\nd)\r\n   It is important to note that this media feature tag is only\r\n   indicating the streaming media types that a user agent is capable of\r\n   supporting.  It says nothing about the functionality provided by the\r\n|  user agent itself or the media types that the agent can send or\r\n   receive in SIP messages or emails.  For example, let us assume that a\r\n   SIP user agent is capable of supporting a chess game.  The game is\r\n   played by each user sending chess moves as binary objects over UDP\r\n|  between a pair of user agents.  Those objects have a media type of\r\n   \"application/example\".  [...]\r\n\r\ne)\r\n\r\n   A consequence of this is that, as new streaming media type formats\r\n   are defined (such as game stream formats, whiteboard session formats,\r\n   and so on), they SHOULD be defined using the SDP application stream\r\n|  and utilize an 'application' media subtype.\r\n\r\nf)\r\n\r\n   Summary of the media feature indicated by this tag:  This feature tag\r\n|     indicates the 'application' media subtypes supported by the agent\r\n      for purposes of streaming media.",
+    "notes": "Rationale:\r\n  The subject of the RFC is SIP, not e-Mail, the 3rd letter in \"MIME\".\r\n  Therefore, the RFC should better follow the explanations given in\r\n  RFC 4288, which places the original concepts from MIME that have\r\n  proven generally useful into a more general context and strongly\r\n  recommends talking about \"media types\" and \"media subtypes\".\r\n  That reasoning similarly holds for Media Features, which for\r\n  obvious reasons not have been denoted \"MIME Features\".",
+    "submit_date": "2010-01-10",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1998,
+    "doc-id": "RFC5688",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1, 4th para",
+    "orig_text": "   RFC 3840 defines media feature tags for each and every top-level\r\n   media type, including 'application'.  This media type covers an\r\n   extremely broad range of subtypes -- multiplayer games of all sorts,\r\n   shared whiteboards and application sharing, and so on.  With audio\r\n|  and video, where there is often a common codec supported by agents\r\n   (i.e., a common subtype).  [...]",
+    "correct_text": "   RFC 3840 defines media feature tags for each and every top-level\r\n   media type, including 'application'.  This media type covers an\r\n   extremely broad range of subtypes -- multiplayer games of all sorts,\r\n   shared whiteboards and application sharing, and so on.  With audio\r\n|  and video, there is often a common codec supported by agents (i.e.,\r\n   a common subtype).  [...]",
+    "notes": "Rationale: grammar; the original sentence sounds incomplete.\r\n  Therefore, strike \"where\".",
+    "submit_date": "2010-01-10",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1999,
+    "doc-id": "RFC5688",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3, 1st para",
+    "orig_text": "   The 'sip.app-subtype' media feature tag is of type token with a case-\r\n   insensitive equality relationship.  Its value can be any registered\r\n|  or private MIME application subtype compliant to the subtype-name\r\n   grammar defined in [RFC4288].  When included in the Contact header\r\n   field of a REGISTER request, an agent SHOULD include all application\r\n   subtypes that it can support as streaming formats.  An application\r\n|  subtype is supported if the user agent would be capable of processing\r\n   a Session Description Protocol (SDP) [RFC4566] offer [RFC3264] that\r\n   contained that subtype as a format in the m-line of the SDP.\r\n",
+    "correct_text": "   The 'sip.app-subtype' media feature tag is of type token with a case-\r\n   insensitive equality relationship.  Its value can be any registered\r\n|  or private 'application' media subtype compliant to the subtype-name\r\n   grammar defined in [RFC4288].  When included in the Contact header\r\n   field of a REGISTER request, an agent SHOULD include all application\r\n   subtypes that it can support as streaming formats.  An application\r\n|  subtype is supported if the user agent would be capable of accepting\r\n   a Session Description Protocol (SDP) [RFC4566] offer [RFC3264] that\r\n   contained that subtype as a format in the m-line of the SDP.\r\n",
+    "notes": "Rationale:\r\n\r\nFor clarity, the whole paragraph is shown here, including both changes.\r\n\r\n  a) editorial; see GLOBAL Errata note, EID=1997.\r\n\r\n  b) technical: the ability of \"processing\" an SDP offer does not\r\n     mean the ability to _accept_ it.  The latter reasonably seems\r\n     to be synonymous to \"supporting\" the feature contained therein,\r\n     but the former isn't.  Therefore,  s/processing/accepting/ .",
+    "submit_date": "2010-01-10",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
