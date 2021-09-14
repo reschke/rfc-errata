@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 247,
+    "doc-id": "RFC3647",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99On page 68, it says:\n",
+    "orig_text": "   ------------------------------------------------------\n   4.6.6 Archive Collection System\n         (Internal or External)                 5.5.6\n   ------------------------------------------------------\n   4.6.6 Procedures to Obtain and\n         Verify Archive Information             5.5.7\n   ------------------------------------------------------",
+    "correct_text": "   ------------------------------------------------------\n   4.6.6 Archive Collection System\n         (Internal or External)                 5.5.6\n   ------------------------------------------------------\n   4.6.7 Procedures to Obtain and\n         Verify Archive Information             5.5.7\n   ------------------------------------------------------\n",
+    "notes": "",
+    "submit_date": "2004-04-21",
+    "submitter_name": "Daniel Montpetit",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3299,
+    "doc-id": "RFC3647",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.1,
+    "orig_text": "A CP within this category often makes sets requirements\r\nappropriate for a certain \"level of assurance\" provided\r\nby certificates, relative to certificates issued pursuant\r\nto related CPs.",
+    "correct_text": "A CP within this category often sets requirements\r\nappropriate for a certain \"level of assurance\" provided\r\nby certificates, relative to certificates issued pursuant\r\nto related CPs.",
+    "notes": "r/makes sets/sets",
+    "submit_date": "2012-07-28",
+    "submitter_name": "Mezzetti, Gustavo",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
