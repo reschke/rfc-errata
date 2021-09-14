@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 361,
+    "doc-id": "RFC2919",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "The syntax of the List-Id header follows:\r\n\r\n   list-id-header = \"List-ID:\" [phrase] \"<\" list-id \">\" CRLF",
+    "correct_text": "The syntax of the List-Id header follows:\r\n\r\n   list-id-header = \"List-Id:\" [phrase] \"<\" list-id \">\" CRLF",
+    "notes": " In order to bring it in line with the examples, and with common usage (by\r\nthe RFC, the List-ID is correct) most mail readers use the example and\r\ndo not consider the LHS case insensitive, since the RFC says:\r\n\r\nThe list header fields are subject to the encoding and character restrictions for mail headers as described in [RFC822].\r\n\r\nRFC822, while it says that most headers are character insensitive, does\r\nnot mandate that, and RFC 2919 only mandates that the List-Id: header is\r\nsubject to *encoding* and *character restrictions*, and does not say it\r\nneeds to adhere to case insensitivity.\r\n\r\nTherefore, the proposed change above will bring things more in line with common\r\nusage.\n --VERIFIER NOTES-- \nHeader field names are case insensitive per use of string literals from RFC 2234.",
+    "submit_date": "2002-08-08",
+    "submitter_name": "Trish Lynch",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2499,
+    "doc-id": "RFC2919",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2 and 3",
+    "orig_text": "[DRUMS]",
+    "correct_text": "[RFC2822]",
+    "notes": "When going from draft-chandhok-listid-04.txt to the RFC, various references were updated. The [DRUMS] reference to 2822 was updated to [RFC2822] within the References section, but was not changed within the text.",
+    "submit_date": "2010-08-23",
+    "submitter_name": "Tony Hansen",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3951,
+    "doc-id": "RFC2919",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "   The syntax of the List-Id header follows:\r\n\r\n   list-id-header = \"List-ID:\" [phrase] \"<\" list-id \">\" CRLF",
+    "correct_text": "   The syntax of the List-Id header follows:\r\n\r\n   list-id-header = \"List-ID:\" [phrase / CFWS] \"<\" list-id \">\" CRLF\r\n",
+    "notes": "This change is needed to conform with the second and fifth examples\r\ngiven just after the syntax definition.  Without it, the case \"List-ID: <list.example.com>\" (with a space after \"List-ID:\") would not be valid; only \"List-ID:<list.example.com>\" (without a space) would be, especially since it states that \"the List-Id header does not allow free insertion of whitespace and comments around tokens.\"",
+    "submit_date": "2014-04-03",
+    "submitter_name": "Peter Occil",
+    "verifier_id": 127,
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
