@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 4537,
+    "doc-id": "RFC5917",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Introduction",
+    "orig_text": "This document specifies the clearance sponsor attribute.  It is\r\n   included in public key certificates [RFC5280] and attribute\r\n   certificates [RFC5755].  This attribute is only meaningful as a\r\n   companion of the clearance attribute [RFC5755] [RFC5912].  The\r\n   clearance sponsor is the entity (e.g., agency, department, or\r\n   organization) that granted the clearance to the subject named in the\r\n   certificate.  For example, the clearance sponsor for a subject\r\n   asserting the Amoco clearance values [RFC3114] could be\r\n   \"Engineering\".\r\n",
+    "correct_text": "This document specifies the clearance sponsor attribute.  It is\r\n   included in public key certificates [RFC5280] and attribute\r\n   certificates [RFC5755].  This attribute is only meaningful as a\r\n   companion of the clearance attribute [RFC5755] [RFC5913].  The\r\n   clearance sponsor is the entity (e.g., agency, department, or\r\n   organization) that granted the clearance to the subject named in the\r\n   certificate.  For example, the clearance sponsor for a subject\r\n   asserting the Amoco clearance values [RFC3114] could be\r\n  \"Engineering\".\r\n\r\nRFC 5913 should be added to the references:\r\n\r\n   [RFC5913]  Turner, S. and S. Chokhani, \"Clearance Attribute and\r\n                        Authority Clearance Constraints Certificate Extension\",\r\n                        RFC 5913, June 2010.\r\n",
+    "notes": "The first paragraph in the section references RFC 5912. As far as I can see, it should really reference RFC 5913 (Clearance Attribute and Authority Clearance Constraints - Certificate Extension).",
+    "submit_date": "2015-11-18",
+    "submitter_name": "Lars Wilhelmsen",
+    "verifier_id": 2,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4558,
+    "doc-id": "RFC5917",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "IMPORTS\r\n\r\n   -- Imports from New PKIX ASN.1 [RFC5912]\r\n\r\n     DirectoryString\r\n       PKIX1Explicit-2009\r\n         { iso(1) identified-organization(3) dod(6) internet(1)\r\n           security(5) mechanisms(5) pkix(7) id-mod(0)\r\n           id-pkix1-explicit-02(51) }",
+    "correct_text": "IMPORTS\r\n\r\n   -- Imports from New PKIX ASN.1 [RFC5912]\r\n\r\n     DirectoryString\r\n       FROM PKIX1Explicit-2009\r\n         { iso(1) identified-organization(3) dod(6) internet(1)\r\n           security(5) mechanisms(5) pkix(7) id-mod(0)\r\n           id-pkix1-explicit-02(51) }",
+    "notes": "Missing \"FROM\" in import statement.\n --VERIFIER NOTES-- \n   While the FROM is indeed missing, there is another error in this text that was reported in eid5883; since that report fully supersedes this one, this errata report is redundant.  \"Rejected\" is the least bad state in which to leave such a report.",
+    "submit_date": "2015-12-07",
+    "submitter_name": "Lars Wilhelmsen",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-10-25 22:47:33"
+  },
+  {
+    "errata_id": 5883,
+    "doc-id": "RFC5917",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "     DirectoryString\r\n       PKIX1Explicit-2009\r\n         { iso(1) identified-organization(3) dod(6) internet(1)\r\n           security(5) mechanisms(5) pkix(7) id-mod(0)\r\n           id-pkix1-explicit-02(51) }",
+    "correct_text": "     DirectoryString\r\n       FROM PKIX1Explicit-2009\r\n         { iso(1) identified-organization(3) dod(6) internet(1)\r\n           security(5) mechanisms(5) pkix(7) id-mod(0)\r\n           id-mod-pkix1-explicit-02(51) }",
+    "notes": "As already reported in eid4558, the \"FROM\" is missing.  In addition, \"-mod\" is missing from the text portion of the object identifier.",
+    "submit_date": "2019-10-25",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-10-25 22:44:30"
+  },
+  {
+    "errata_id": 5884,
+    "doc-id": "RFC5917",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "   at-clearanceSponsor ATTRIBUTE ::= {\r\n     TYPE                   DirectoryString { ub-clearance-sponsor }\r\n                            ( WITH COMPONENTS { utf8String PRESENT } )\r\n     EQUALITY MATCHING RULE caseIgnoreMatch\r\n     IDENTIFIED BY          id-clearanceSponsor\r\n   }\r\n",
+    "correct_text": "   at-clearanceSponsor ATTRIBUTE ::= {\r\n     TYPE                   DirectoryString { ub-clearance-sponsor }\r\n                            ( WITH COMPONENTS { uTF8String PRESENT } )\r\n     EQUALITY MATCHING RULE caseIgnoreMatch\r\n     IDENTIFIED BY          id-clearanceSponsor\r\n   }\r\n",
+    "notes": "The DirectoryString that is imported from RFC 5912 uses a different capitalization for \"uTF8String\".  They need to be the same for the ASN.1 module to compile properly.",
+    "submit_date": "2019-10-25",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-10-25 22:39:01"
+  }
+]
