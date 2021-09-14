@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 76,
+    "doc-id": "RFC4506",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "(1) Section 6.2, page 18 - typo (word omission)\r\n\r\nThe words in the 9th line of the text,\r\n\r\n    [...] \"followed by one or hexadecimal digits\" [...]\r\n\r\nshould say:\r\n\r\n    [...] \"followed by one or more hexadecimal digits\" [...]\r\n                             ^^^^^^\r\n\r\n(2) Section 8, 2nd paragraph (page 22) - typo\r\n\r\nThe RFC says:\r\n\r\n   Care must be take to properly encode and decode data to avoid\r\n   attacks.  [...]\r\n\r\nit should say:\r\n                    vv\r\n   Care must be taken to properly encode and decode data to avoid\r\n   attacks.  [...]\r\n\r\n\r\n(3) Subtle inconsistency between Section 6.1 and Section 6.2\r\n\r\nOn page 17, Section 6.1 states the Notational Convention:\r\n\r\n   (2) Terminal symbols are strings of characters surrounded by\r\n       double quotes.\r\n       ^^^^^^\r\nNevertheless, throughout the new Section 6.2 (on page 18), all\r\nterminal symbols, e.g. the \"generalized digits\" -- the terminals\r\nto build octal, decimal, and hexadecimal constants, are specified\r\nas characters surrounded by *single* quotes.\r\n                             ^^^^^^\r\nAlthough this style perhaps was inspired by the `C` language,\r\nIMHO, its use is inconsistent in that context.",
+    "correct_text": "",
+    "notes": "from pending",
+    "submit_date": "2006-05-24",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6382,
+    "doc-id": "RFC4506",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 6.3,
+    "orig_text": "      declaration:\r\n           type-specifier identifier\r\n         | type-specifier identifier \"[\" value \"]\"\r\n         | type-specifier identifier \"<\" [ value ] \">\"\r\n         | \"opaque\" identifier \"[\" value \"]\"\r\n         | \"opaque\" identifier \"<\" [ value ] \">\"\r\n         | \"string\" identifier \"<\" [ value ] \">\"\r\n         | type-specifier \"*\" identifier\r\n         | \"void\"\r\n\r\n[...]\r\n\r\n      struct-body:\r\n         \"{\"\r\n            ( declaration \";\" )\r\n            ( declaration \";\" )*\r\n         \"}\"\r\n\r\n[...]\r\n\r\n      type-def:\r\n           \"typedef\" declaration \";\"\r\n         | \"enum\" identifier enum-body \";\"\r\n         | \"struct\" identifier struct-body \";\"\r\n         | \"union\" identifier union-body \";\"",
+    "correct_text": "None",
+    "notes": "This grammar permits statements like:\r\n\r\ntypedef void;\r\nstruct foo { void; };\r\n\r\nrpcgen doesn't allow this, failing with the following error message:\r\n\r\nvoids allowed only inside union and program definitions with one argument",
+    "submit_date": "2021-01-08",
+    "submitter_name": "Ed Schouten",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
