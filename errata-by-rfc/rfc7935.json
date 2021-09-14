@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5737,
+    "doc-id": "RFC7935",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "algorithm (which is an AlgorithmIdentifier type):\r\n   The object identifier for RSA PKCS #1 v1.5 with SHA-256 MUST be\r\n   used in the algorithm field, as specified in Section 5 of\r\n   [RFC4055].  The value for the associated parameters from that\r\n   clause MUST also be used for the parameters field.",
+    "correct_text": "algorithm (which is an AlgorithmIdentifier type):\r\n   The object identifier for RSA (rsaEncryption) MUST be used for the\r\n   algorithm field, as specified in Section 3.2 of [RFC3370]. The value\r\n   for the associated parameters from that clause MUST also be used for\r\n   the parameters field.",
+    "notes": "The field described in the paragraph belongs to a public key. The way I understand it, particularly due to the inclusion of a digest, \"RSA PKCS #1 v1.5 with SHA-256\" (sha256WithRSAEncryption) is not really a public key algorithm identifier; it's a signature algorithm identifier.\r\n\r\n(Courtesy of Russ Housley) rsaEncryption also allows the public key to be used with PKCS#1 v1.5, RSASSA-PSS, and RSAES-OAEP.\r\n\r\nAll existing RPKI readers and writers that I've seen, as well as the global RPKI repository certificates themselves, currently use rsaEncryption as the public key algorithm of subjectPublicKeyInfo. Therefore, this change should also reflect existing practice.\n --VERIFIER NOTES-- \nAny changes to normative statements require WG consensus.  In this case, rfc7935 has been updated twice.  Discussion should happen in the sidrops WG.",
+    "submit_date": "2019-05-24",
+    "submitter_name": "Alberto Leiva Popper",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
