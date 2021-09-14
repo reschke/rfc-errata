@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5449,
+    "doc-id": "RFC7986",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.9 COLOR Pr",
+    "orig_text": "Description:   ...The value is a case-insensitive color name taken from\r\nthe CSS3 set of names, defined in Section 4.3 of [W3C.REC-css3-color-\r\n20110607].\r\n\r\nExample:  The following is an example of this property:\r\n   COLOR:turquoise",
+    "correct_text": "Description:   ...The value is either a case-insensitive color name\r\ntaken from the CSS3 set of names, defined in Section 4.3 of [W3C.REC-\r\ncss3-color-20110607], or a lower-cased rgb() functional notation with\r\nabsolute values specified in Section 4.2.1 of the same document.\r\n\r\nExamples:  The following are examples of this property:\r\n   COLOR:turquoise\r\n   COLOR:rgb(61\\,211\\,68)",
+    "notes": "draft-daboo-icalendar-extensions-07 removed the possibily to have RGB colours for COLOR.\r\n\r\nCSS3 included color names, that browsers at that time suppored, originating from X11's rgb.txt.  The color names and values were randomly chosen.  The minimal distance between the colors isn't consistent.  One motivation for creating a color name were hardware capabilities - an argument which isn't valid for 20 years now.  There is no reason to limit the number of possible values for COLOR.  A user interface for choosing a named color has either to offer the user the possibility to choose from a pre-filled list of colors, which could clutter the interface, or let the user choose any RGB color and narrow it later to the closest color with CSS3 name.  This narrowing isn't trivial and performing it seems like having an RFC running in itself.",
+    "submit_date": "2018-08-03",
+    "submitter_name": "Дилян Палаузов",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
