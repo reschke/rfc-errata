@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6493,
+    "doc-id": "RFC8341",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.5.2",
+    "orig_text": "All the same rules as an instance-identifier apply,\r\nexcept that predicates for keys are optional.  If a key\r\npredicate is missing, then the node-instance-identifier\r\nrepresents all possible server instances for that key.",
+    "correct_text": "All the same rules as an instance-identifier apply,\r\nexcept that predicates for keys are optional.  If a key\r\npredicate is missing, then the node-instance-identifier\r\nrepresents all possible server instances for that key.\r\n\r\nSpecifying prefixes for the node names is OPTIONAL. If a prefix is not specified the node-instance-identifier represents all possible server instances.",
+    "notes": "For the typedef node-instance-identifier (and the leaf path) it is not clear whether the value should or should not include prefixes?\r\n \r\nhttps://tools.ietf.org/html/rfc7950#section-9.13.2 states\r\n\"All node names in an instance-identifier value MUST be qualified with\r\n   explicit namespace prefixes\"\r\n\r\nhttps://tools.ietf.org/html/rfc7950#section-14 - instance-identifier rule\r\nindicates the prefixes are optional.\r\n\r\nWhichever is the correct answer it should be explicitly stated.\r\nIf prefixes are optional and we have 2 leaves with the same path except the namespace/prefix I assume both are referenced (effected) by the nacm rule. Correct?\r\n\r\nActually this is a bit misleading also in RFC7950.\n --VERIFIER NOTES-- \nThe required behavior is specified via section 9.13.2 of RFC 7950.\r\n\r\nThe ABNF for instance-identifier in RFC 7950 could be clearer to indicate that explicit prefixes are required, but either way the rules in section 9.13.2 of RFC 7950 for instance identifiers cannot be ignored.",
+    "submit_date": "2021-03-24",
+    "submitter_name": "Balazs Lengyel",
+    "verifier_id": 166,
+    "verifier_name": "Robert Wilton",
+    "update_date": "2021-04-07 08:21:19"
+  }
+]
