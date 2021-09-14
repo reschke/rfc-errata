@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 467,
+    "doc-id": "RFC2252",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6.33,
+    "orig_text": "        ruleidentifiers = ruleidentifier |",
+    "correct_text": "        ruleidentifiers = ruleidentifier /",
+    "notes": "\r\n",
+    "submit_date": "2003-10-15",
+    "submitter_name": "Mark Wahl",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 591,
+    "doc-id": "RFC2252",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": "           [ \"EQUALITY\" woid              ; Matching Rule name\r\n           [ \"ORDERING\" woid              ; Matching Rule name",
+    "correct_text": "           [ \"EQUALITY\" woid ]            ; Matching Rule name\r\n           [ \"ORDERING\" woid ]            ; Matching Rule name",
+    "notes": "",
+    "submit_date": "2003-10-15",
+    "submitter_name": "Mark Wahl",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
