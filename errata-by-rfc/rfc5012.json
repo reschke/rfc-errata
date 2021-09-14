@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1259,
+    "doc-id": "RFC5012",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "8, pg.19",
+    "orig_text": "   Ma14.  Resilience to mapping server failure:  The mapping protocol\r\n      MUST support a mechanism that enables the client to fail over to\r\n      different (replica) mapping server.\r\n",
+    "correct_text": "   Ma14.  Resilience to mapping server failure:  The mapping protocol\r\n|     MUST support a mechanism that enables the client to fail over to a\r\n      different (replica) mapping server.\r\n",
+    "notes": "insert missing \"a\"",
+    "submit_date": "2008-01-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1260,
+    "doc-id": "RFC5012",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": "   Ma15.  Traceable resolution:  The mapping protocol SHOULD support the\r\n|     ability of the mapping client to be able to determine the entity\r\n      or entities that provided the emergency address resolution\r\n      information.\r\n",
+    "correct_text": "   Ma15.  Traceable resolution:  The mapping protocol SHOULD support the\r\n|     ability of the mapping client to determine the entity or entities\r\n      that provided the emergency address resolution information.\r\n",
+    "notes": "double replication :  ability to   <->  to be able to    :-)\n --VERIFIER NOTES-- \nPartial report repeated in errata 1263   ",
+    "submit_date": "2008-01-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1263,
+    "doc-id": "RFC5012",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "8 (p.19)",
+    "orig_text": "   Ma15.  Traceable resolution:  The mapping protocol SHOULD support the\r\n|     ability of the mapping client to be able to determine the entity\r\n      or entities that provided the emergency address resolution\r\n      information.\r\n",
+    "correct_text": "   Ma15.  Traceable resolution:  The mapping protocol SHOULD support the\r\n|     ability of the mapping client to determine the entity or entities\r\n      that provided the emergency address resolution information.\r\n",
+    "notes": "\"double replication\":  ability to   <->  to be able to   :-)\r\n\r\nNote:\r\nThe previous entry of this same Errata Entry has been truncated\r\ninadvertently -- please remove it.",
+    "submit_date": "2008-01-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
