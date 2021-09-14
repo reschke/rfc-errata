@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 345,
+    "doc-id": "RFC3036",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "\r\nA reference for [Dobb] is missing.\r\n\r\nRationale:\r\nIn section 2.9.1, there is a mention of a problem\r\nwith MD5. The text refers to [Dobb] but the\r\nreference section contains no citation.\r\n\n --VERIFIER NOTES-- \nRFC3036 has been obsoleted by RFC5036.\r\nThe text that gives rise to this issue is a direct quote from RFC 2385. That reference should be explored to determine the full implications of the text.",
+    "submit_date": "2006-04-13",
+    "submitter_name": "Barbara Denny",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 346,
+    "doc-id": "RFC3036",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.5.1.2.2",
+    "orig_text": "   If the TLV type is >= 0x8000 (high order bit 1) the TLV is\n   silently dropped.  Section \"Unknown TLV in Known Message Type\"\n   elaborates on this behavior.",
+    "correct_text": "",
+    "notes": "There is no section with this title.  The sentence in question should\nhave been deleted.  It refers to a section that was deleted in a\nversion of the I-D that led to the RFC.\n",
+    "submit_date": "2001-02-01",
+    "submitter_name": "Elena Taguer",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1837,
+    "doc-id": "RFC3036",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "\r\nA reference for [Dobb] is missing.\r\n\r\nRationale:\r\nIn section 2.9.1, there is a mention of a problem\r\nwith MD5. The text refers to [Dobb] but the\r\nreference section contains no citation.\r\n\n --VERIFIER NOTES-- \nRFC 3036 has been obsoleted by RFC 5036.\r\n\r\nThe text at issue is a quote from another RFC. That RFC can be inspected to find the full context.",
+    "submit_date": "2006-04-13",
+    "submitter_name": "Barbara Denny",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
