@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2132,
+    "doc-id": "RFC5826",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5, pg.15",
+    "orig_text": "[[ bottom lines of page 15: ]]\r\n\r\n                     [...].  The routing protocol(s) MUST deny service\r\n|  to any node that has not clearly established trust with the HC-LLN.\r\n",
+    "correct_text": "                     [...].  The routing protocol(s) MUST deny service\r\n|  to any node that has not clearly established trust with the LLN.\r\n",
+    "notes": "Rationale: The abbreviation \"HC-LLN\" is not defined in the document.\r\n  (Editorial oversight; keep for update!)",
+    "submit_date": "2010-04-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
