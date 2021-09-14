@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5704,
+    "doc-id": "RFC8586",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 1.2,
+    "orig_text": "   This specification uses the Augmented Backus-Naur Form (ABNF)\r\n   notation of [RFC5234] with a list extension, defined in Section 7 of\r\n   [RFC7230], that allows for compact definition of comma-separated\r\n   lists using a '#' operator (similar to how the '*' operator indicates\r\n   repetition).  Additionally, it uses a token (OWS), uri-host, and port\r\n   rules from [RFC7230] and the parameter rule from [RFC7231].",
+    "correct_text": "   This specification uses the Augmented Backus-Naur Form (ABNF)\r\n   notation of [RFC5234] with a list extension, defined in Section 7 of\r\n   [RFC7230], that allows for compact definition of comma-separated\r\n   lists using a '#' operator (similar to how the '*' operator indicates\r\n   repetition).  Additionally, it uses the token, OWS, uri-host and port\r\n   rules from [RFC7230] and the parameter rule from [RFC7231].",
+    "notes": "The last sentence apparently was mangled during AUTH48. The correct version is from draft-ietf-httpbis-cdn-loop-02. \"token\", \"OWS\", \"uri-host\" and \"port\" are all ABNF rules.",
+    "submit_date": "2019-04-25",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
