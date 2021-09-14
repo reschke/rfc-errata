@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6664,
+    "doc-id": "RFC7020",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "In cases where LIRs span multiple regions, those LIRs have established relationships with multiple RIRs. ",
+    "correct_text": "In cases where LIRs span multiple regions, those LIRs have often established relationships with multiple RIRs.\r\n\r\nAlternatetively:\r\n\r\nIn cases where LIRs span multiple regions, those LIRs often have established relationships with multiple RIRs.",
+    "notes": "The statement about LIRs in multiple regions using multiple RIRs is remains likely for many instances but not universally - particularly given the inter-RIR transfer policies adopted since RFC7020's initial publication.",
+    "submit_date": "2021-08-23",
+    "submitter_name": "John Currran",
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2021-08-24 15:21:49"
+  }
+]
