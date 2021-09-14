@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2654,
+    "doc-id": "RFC3830",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6.1,
+    "orig_text": " *  CS ID map info (16 bits): identifies the crypto session(s) for\r\n      which the SA should be created.  The currently defined map type is\r\n      the SRTP-ID (defined in Section 6.1.1).",
+    "correct_text": " *  CS ID map info (variable length): identifies the crypto session(s) for\r\n      which the SA should be created.  The currently defined map type is\r\n      the SRTP-ID (defined in Section 6.1.1).",
+    "notes": "dear editors,\r\n  I guess this should be an error. After googling, I found at least one extension draft(MIKEY-TICKET) had also recognized the problem.  \r\n  If I have mistaken, I would like to hear your clarification.",
+    "submit_date": "2010-12-02",
+    "submitter_name": "wu yongming",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4638,
+    "doc-id": "RFC3830",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4.2.8",
+    "orig_text": "   The timestamp is as defined in NTP [NTP], i.e., a 64-bit number in\r\n   seconds relative to 0h on 1 January 1900.  An implementation MUST be\r\n   aware of (and take into account) the fact that the counter will\r\n   overflow approximately every 136th year.  It is RECOMMENDED that the\r\n   time always be specified in UTC.\r\n",
+    "correct_text": "   The timestamp is as defined in NTP [NTP], i.e., a 64-bit number in\r\n   seconds relative to 0h on 1 January 1900.  It is RECOMMENDED that the\r\n   time always be specified in UTC.\r\n",
+    "notes": "A 32-bt number of seconds overflows in about 136.1 years. A 64-bit number of seconds will, for all practical purposes, not overflow.\r\n\r\n(The use in Section 4.2.3 is of a 64 bit number, not a 32 bit number, so 64 bits is correct.)\n --VERIFIER NOTES-- \n   Only 32 bits of the 64 count seconds. That's clear from the referenced NTP spec.",
+    "submit_date": "2016-03-15",
+    "submitter_name": "Christopher Dearlove",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
