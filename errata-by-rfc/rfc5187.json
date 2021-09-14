@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1453,
+    "doc-id": "RFC5187",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.2 / 7.2",
+    "orig_text": "a)\r\nThe last paragraph of Section 3.2 (on top of page 5) says:\r\n\r\n|  Many implementations currently use the interface's MIB-II IfIndex\r\n|  [MIB-INTF] for Interface ID.  The persistence of Interface ID across\r\n|  reboots is described in section 3.1.5 of [MIB-PERS].\r\n\r\nb)\r\nSection 7.2 (on page 6) says:\r\n\r\n|  [MIB-INTF]     McCloghrie, K. and M. Rose, \"Management Information\r\n|                 Base for network management of TCP/IP-based internets:\r\n|                 MIB-II\", STD 17, RFC 1213, March 1991.\r\n\r\n|  [MIB-PERS]     McCloghrie, K. and F. Kastenholz, \"The Interfaces\r\n                  Group MIB\", RFC 2863, June 2000.\r\n",
+    "correct_text": "a)\r\n\r\n|  Many implementations currently use the interface's SNMP MIB IfIndex\r\n|  [MIB-INTF] for Interface ID.  The persistence of Interface ID across\r\n   reboots is described in section 3.1.5 of [MIB-INTF].\r\n\r\nb)\r\n\r\n|  [MIB-INTF]     McCloghrie, K. and F. Kastenholz, \"The Interfaces\r\n                  Group MIB\", RFC 2863, June 2000.\r\n",
+    "notes": "Unfortunately, the IETF maintains the questionable 'luxury' of\r\ntwo sets of Network Management Standards, where the second one\r\nactually has obsoleted the former one.\r\n\r\nAlthough all parts of RFC 1213 have either been obsoleted by\r\nnewer standards or deliberately been deprecated together with\r\nthe legacy protocols they were intended to support, STD 17\r\n(RFC 1213) [as well as STD 16] have been resurrected in\r\nrfcxx00.txt, including its latest RFC edition, RFC 5000.\r\n\r\nIn particular (omitting all intermediate RFCs now obsoleted as well),\r\n-  the basic part of RFC 1213 (\"host group\") has been replaced\r\n   by the SNMP MIB module in part 8 of STD 62, RFC 3418,\r\n-  the \"interface group\" has been obsoleted by RFC 2863,\r\n-  the \"IP group\" has been obsoleted by RFC 4293,\r\n-  the IP forwarding table has been obsoleted by RFC 4292,\r\n-  the \"TCP group\" has been obsoleted by RFC 4022,\r\n-  the \"UDP group\" has been obsoleted by RFC 4113.\r\n\r\nReferences to \"MIB-II\" and RFC 1213 are the source of frequent\r\nconfusion.\r\nTherefore, new RFCs, in particular STANDARDS TRACK RFCs, should\r\nnot quote RFC 1213 any more.\r\n\r\nIt is observed current policy of the MIB Doctors to have all new\r\nIETF documents defining MIB modules refer to the newer standards;\r\nbut RFC 5187, not defining a MIB module, apparently has not\r\nundergone MIB Doctor review.  Nevertheless, the confusing\r\nreference to \"MIB-II\" and a document outdated since many years\r\nshould have been avoided here as well.",
+    "submit_date": "2008-06-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
