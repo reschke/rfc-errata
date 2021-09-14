@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3044,
+    "doc-id": "RFC4035",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Updates",
+    "orig_text": "Updates: 1034, 1035, 2136, 2181, 2308, 3225,                   M. Larson\r\n         3007, 3597, 3226                                       VeriSign\r\n",
+    "correct_text": "Updates: 1034, 1035, 2136, 2181, 2308, 3225,                   M. Larson\r\n         3597, 3226                                             VeriSign\r\n",
+    "notes": "4033, 4034 and 4035 all list 3007 as being updated but none update 3007",
+    "submit_date": "2011-12-07",
+    "submitter_name": "Mark Andrews",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5226,
+    "doc-id": "RFC4035",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.4.1",
+    "orig_text": "   The need for special processing by a security-aware name server only\r\n   arises when all the following conditions are met:\r\n\r\n   o  The name server has received a query for the DS RRset at a zone\r\n      cut.\r\n\r\n   o  The name server is authoritative for the child zone.\r\n\r\n   o  The name server is not authoritative for the parent zone.\r\n\r\n   o  The name server does not offer recursion.",
+    "correct_text": "   The need for special processing by a security-aware name server only\r\n   arises when all the following conditions are met:\r\n\r\n   o  The name server has received a query for the DS RRset at a zone\r\n      cut.\r\n\r\n   o  The name server is authoritative for the child zone.\r\n\r\n   o  The name server is not authoritative for any zone above the\r\n      child's apex.\r\n\r\n   o  The name server does not offer recursion.",
+    "notes": "The original text is ambiguous in the face of an authoritative server having zones C.B.A. and A. but not B.A., and could cause DS queries for C to return a NODATA at C's apex, instead of the desired referral to B. which would allow resolution to continue correctly.",
+    "submit_date": "2018-01-04",
+    "submitter_name": "Peter van Dijk",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
