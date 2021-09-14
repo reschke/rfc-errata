@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3610,
+    "doc-id": "RFC5575",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "   If a given component type within a prefix in unknown, the prefix in\r\n   question cannot be used for traffic filtering purposes by the\r\n   receiver.  Since a flow specification has the semantics of a logical\r\n   AND of all components, if a component is FALSE, by definition it\r\n   cannot be applied.  However, for the purposes of BGP route\r\n   propagation, this prefix should still be transmitted since BGP route\r\n   distribution is independent on NLRI semantics.",
+    "correct_text": "   If a given component type within a prefix is unknown, the prefix in\r\n   question cannot be used for traffic filtering purposes by the\r\n   receiver.  Since a flow specification has the semantics of a logical\r\n   AND of all components, if a component is FALSE, by definition it\r\n   cannot be applied.  However, for the purposes of BGP route\r\n   propagation, this prefix should still be transmitted since BGP route\r\n   distribution is independent of NLRI semantics.",
+    "notes": "Two minor typos:\r\n- If a given component type within a prefix _in_ unknown\r\n- independent _on_",
+    "submit_date": "2013-04-30",
+    "submitter_name": "Sergey Antipov",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4482,
+    "doc-id": "RFC5575",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4 (page 11)",
+    "orig_text": "   An example of a flow specification encoding for: \"all packets to\r\n   10.0.1/24 from 192/8 and port {range [137, 139] or 8080}\".\r\n\r\n   +------------------+----------+-------------------------+\r\n   | destination      | source   | port                    |\r\n   +------------------+----------+-------------------------+\r\n   | 0x01 18 0a 01 01 | 02 08 c0 | 04 03 89 45 8b 91 1f 90 |\r\n   +------------------+----------+-------------------------+",
+    "correct_text": "   An example of a flow specification encoding for: \"all packets to\r\n   10.1.1/24 from 192/8 and port {range [137, 139] or 8080}\".\r\n\r\n   +------------------+----------+-------------------------+\r\n   | destination      | source   | port                    |\r\n   +------------------+----------+-------------------------+\r\n   | 0x01 18 0a 01 01 | 02 08 c0 | 04 03 89 45 8b 91 1f 90 |\r\n   +------------------+----------+-------------------------+\r\n\r\nOR:\r\n\r\n   An example of a flow specification encoding for: \"all packets to\r\n   10.0.1/24 from 192/8 and port {range [137, 139] or 8080}\".\r\n\r\n   +------------------+----------+-------------------------+\r\n   | destination      | source   | port                    |\r\n   +------------------+----------+-------------------------+\r\n   | 0x01 18 0a 00 01 | 02 08 c0 | 04 03 89 45 8b 91 1f 90 |\r\n   +------------------+----------+-------------------------+",
+    "notes": "The prefix stated in the text, does not match the one encoded in the example.\r\n\r\n10.0.1/24 should be 10.1.1/24 to match the example, or alternatively the example should change from:\r\n0x01 18 0a 01 01\r\nto:\r\n0x01 18 0a 00 01",
+    "submit_date": "2015-09-25",
+    "submitter_name": "Wesley Eddy",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5043,
+    "doc-id": "RFC5575",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7,
+    "orig_text": "        +--------+--------------------+--------------------------+\r\n        | type   | extended community | encoding                 |\r\n        +--------+--------------------+--------------------------+\r\n        | 0x8006 | traffic-rate       | 2-byte as#, 4-byte float |\r\n        | 0x8007 | traffic-action     | bitmask                  |\r\n        | 0x8008 | redirect           | 6-byte Route Target      |\r\n        | 0x8009 | traffic-marking    | DSCP value               |\r\n        +--------+--------------------+--------------------------+\r\n\r\n   Traffic-rate:  The traffic-rate extended community is a non-\r\n      transitive extended community across the autonomous-system\r\n      boundary and uses following extended community encoding:",
+    "correct_text": "\r\n        +--------+--------------------+--------------------------+\r\n        | type   | extended community | encoding                 |\r\n        +--------+--------------------+--------------------------+\r\n        | 0x8006 | traffic-rate       | 2-byte as#, 4-byte float |\r\n        | 0x8007 | traffic-action     | bitmask                  |\r\n        | 0x8008 | redirect           | 6-byte Route Target      |\r\n        | 0x8009 | traffic-marking    | DSCP value               |\r\n        +--------+--------------------+--------------------------+\r\n\r\n   Traffic-rate:  The traffic-rate extended community\r\n      uses following extended community encoding:",
+    "notes": "The traffic rate type is allocated in the Transitive Experimental Range (https://www.iana.org/assignments/bgp-extended-communities/bgp-extended-communities.xhtml#bgp-extended-communities-10) but the text declares it non-transitive.\r\n\r\n=====\r\n[Alvaro Retana]\r\n\r\nI am marking this report as Verified knowing that the issue is already being addressed in rfc5575bis.",
+    "submit_date": "2017-06-20",
+    "submitter_name": "Jan Matejka",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
