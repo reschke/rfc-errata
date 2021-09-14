@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2682,
+    "doc-id": "RFC5424",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6.2.1.",
+    "orig_text": " 15             clock daemon (note 2)\r\n(...)\r\n Table 1.  Syslog Message Facilities\r\n\r\n",
+    "correct_text": " 15             clock daemon\r\n(...)\r\n Table 1.  Syslog Message Facilities\r\n",
+    "notes": "Note 2 isn't present in this document. It's an artefact from RFC 3164.",
+    "submit_date": "2011-01-07",
+    "submitter_name": "VicTor Smirnoff",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4967,
+    "doc-id": "RFC5424",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.2.1",
+    "orig_text": "4             security/authorization messages\r\n10            security/authorization messages",
+    "correct_text": "\"10             security/authorization messages\" should be removed",
+    "notes": "There is a double entry in the facility list.",
+    "submit_date": "2017-03-14",
+    "submitter_name": "Muhammad Usman",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5010,
+    "doc-id": "RFC5424",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.1,
+    "orig_text": "This document guards against the technical issues outlined in UTR36 by\r\nREQUIRING \"shortest form\" encoding for syslog applications.",
+    "correct_text": "\"Shortest Form\" encoding is REQUIRED for syslog applications to guard\r\nagainst the technical issues outlined in UTR36.",
+    "notes": "\"REQUIRING\" is not a RFC 2119 keyword.",
+    "submit_date": "2017-05-05",
+    "submitter_name": "Job Snijders",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6647,
+    "doc-id": "RFC5424",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.2.1",
+    "orig_text": "4             security/authorization messages\r\n10            security/authorization messages\r\n",
+    "correct_text": "4             security/authorization messages (note 1)\r\n10            security/authorization messages (note 1)\r\n\r\nNote 1 - Various operating systems have been found to utilize\r\n         facilities 4 and 10 for security/authorization\r\n         messages which seem to be similar.\r\n",
+    "notes": "Not including the note (adapted from the one in RFC3164) causes errata like the one with ID 4967 to be erroneously reported.",
+    "submit_date": "2021-07-23",
+    "submitter_name": "Anonymous User",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
