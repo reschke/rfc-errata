@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4356,
+    "doc-id": "RFC7292",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "99Appendix B.2 says:",
+    "orig_text": "   6.  For i=1, 2, ..., c, do the following:\r\n\r\n       A.  Set A2=H^r(D||I). (i.e., the r-th hash of D||1,\r\n           H(H(H(... H(D||I))))\r\n\r\n       B.  Concatenate copies of Ai to create a string B of length v\r\n           bits (the final copy of Ai may be truncated to create B).",
+    "correct_text": "   6.  For i=1, 2, ..., c, do the following:\r\n\r\n       A.  Set A_i=H^r(D||I). (i.e., the r-th hash of D||I,\r\n           H(H(H(... H(D||I))))\r\n\r\n       B.  Concatenate copies of A_i to create a string B of length v\r\n           bits (the final copy of A_i may be truncated to create B).",
+    "notes": "Step 6A explains a number of rounds of hashing D concatenated with I, however the i.e. clause shows concatenating D with 1 in one place. Also, Step 6A has been changed from \"A2\" to \"A_i\", and Step 6B has been changed from \"Ai\" to \"A_i\". \r\n\r\n[David Thompson sent additional corrections, which have been incorporated above.]",
+    "submit_date": "2015-05-05",
+    "submitter_name": "Will Bond",
+    "verifier_id": 2,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4832,
+    "doc-id": "RFC7292",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "B.4",
+    "orig_text": "pbeWithSHAAnd128BitRC4           OBJECT IDENTIFIER ::= {pkcs-12PbeIds 1}\r\npbeWithSHAAnd40BitRC4            OBJECT IDENTIFIER ::= {pkcs-12PbeIds 2}\r\npbeWithSHAAnd3-KeyTripleDES-CBC  OBJECT IDENTIFIER ::= {pkcs-12PbeIds 3}\r\npbeWithSHAAnd2-KeyTripleDES-CBC  OBJECT IDENTIFIER ::= {pkcs-12PbeIds 4}\r\npbeWithSHAAnd128BitRC2-CBC       OBJECT IDENTIFIER ::= {pkcs-12PbeIds 5}\r\npbewithSHAAnd40BitRC2-CBC        OBJECT IDENTIFIER ::= {pkcs-12PbeIds 6}",
+    "correct_text": "pbeWithSHAAnd128BitRC4           OBJECT IDENTIFIER ::= {pkcs-12PbeIds 1}\r\npbeWithSHAAnd40BitRC4            OBJECT IDENTIFIER ::= {pkcs-12PbeIds 2}\r\npbeWithSHAAnd3-KeyTripleDES-CBC  OBJECT IDENTIFIER ::= {pkcs-12PbeIds 3}\r\npbeWithSHAAnd2-KeyTripleDES-CBC  OBJECT IDENTIFIER ::= {pkcs-12PbeIds 4}\r\npbeWithSHAAnd128BitRC2-CBC       OBJECT IDENTIFIER ::= {pkcs-12PbeIds 5}\r\npbeWithSHAAnd40BitRC2-CBC        OBJECT IDENTIFIER ::= {pkcs-12PbeIds 6}",
+    "notes": "All the other OID names have a camelcase With. The last one, however (pbewithSHAAnd40BitRC2-CBC), has a lowercase with.",
+    "submit_date": "2016-10-15",
+    "submitter_name": "Jim Wigginton",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5795,
+    "doc-id": "RFC7292",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "   pkcs-12PbeParams ::= SEQUENCE {\r\n       salt        OCTET STRING,\r\n       iterations  INTEGER\r\n   }",
+    "correct_text": "   Pkcs-12PbeParams ::= SEQUENCE {\r\n       salt        OCTET STRING,\r\n       iterations  INTEGER\r\n   }",
+    "notes": "ASN.1 types must begin with a capital letter.\r\n\r\nThis might have been caught earlier if the parameters structure were included in the ASN.1 module, which is part of Appendix D.",
+    "submit_date": "2019-07-28",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
