@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5306,
+    "doc-id": "RFC8280",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "5.2.3.4.1.",
+    "orig_text": "Likewise, user invisibility so that communication can\r\noccur while users don't notify all buddies and other servers of their\r\navailability is not part of the formal protocol and has only been\r\nadded as an extension within the XML stream rather than enforced by\r\nthe protocol.",
+    "correct_text": null,
+    "notes": "The sentence is not correct and thus misleading. XMPP imposes no restriction on communication depending on your own presence status. It is perfectly fine to communicate with someone *without* notifying \"all buddies and other servers\" of your availability.\n --VERIFIER NOTES-- \n   The RFC's editors concluded that accepting the erratum would not add value.  IRTF Chair agrees.",
+    "submit_date": "2018-03-26",
+    "submitter_name": "Florian Schmaus",
+    "verifier_id": 113,
+    "verifier_name": "Allison Mankin (IRTF Chair)",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5307,
+    "doc-id": "RFC8280",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "5.2.3.4.1.",
+    "orig_text": "While the\r\nprotocol does not specify that the resource must be exposed by the\r\nclient's server to remote users, in practice this has become the\r\ndefault behavior.",
+    "correct_text": null,
+    "notes": "The sentence is incorrect. The resource is exposed to the remote user in standard 1:1 chats, since servers are required to stamp the 'from' value with the full JID as per RFC 6120 §  8.1.2.1 (stanza-attribute-from-stamp conformance requirement).\r\nNote that the situation is different in groupchats: The resource is not required to be exposed, but when MUC is used, the presence in the channel also reveals the overall presence of the user. This is however, likely to change with future MUC replacement protocols.\r\nI'd also like to point out that RFC 6120 § 13.10.2. and RFC 6121 § 11. discuss the security considerations and provide guidance in order to prevent those leaks\n --VERIFIER NOTES-- \nThe RFC's editors concluded that accepting the erratum would not add value.  IRTF Chair agrees.   ",
+    "submit_date": "2018-03-26",
+    "submitter_name": "Florian Schmaus",
+    "verifier_id": 113,
+    "verifier_name": "Allison Mankin (IRTF Chair)",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
