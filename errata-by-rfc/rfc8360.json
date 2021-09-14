@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5638,
+    "doc-id": "RFC8360",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.2.4.4",
+    "orig_text": "   7.  Compute the VRS-IP and VRS-AS set values as indicated below:\r\n\r\n       *  If the IP Address Delegation extension is present in\r\n          certificate x and x=1, set the VRS-IP to the resources found\r\n          in this extension.\r\n\r\n       *  If the IP Address Delegation extension (...)\r\n\r\n       *  If the IP Address Delegation extension (...)\r\n\r\n       *  If the IP Address Delegation extension is present in\r\n          certificate x and x=1, set the VRS-IP to the resources found\r\n          in this extension.\r\n\r\n       *  If the AS Identifier Delegation extension (...)\r\n\r\n       *  If the AS Identifier Delegation extension (...)",
+    "correct_text": "   7.  Compute the VRS-IP and VRS-AS set values as indicated below:\r\n\r\n       *  If the IP Address Delegation extension is present in\r\n          certificate x and x=1, set the VRS-IP to the resources found\r\n          in this extension.\r\n\r\n       *  If the IP Address Delegation extension (...)\r\n\r\n       *  If the IP Address Delegation extension (...)\r\n\r\n       *  If the AS Identifier Delegation extension is present in\r\n          certificate x and x=1, set the VRS-AS to the resources found\r\n          in this extension.\r\n\r\n       *  If the AS Identifier Delegation extension (...)\r\n\r\n       *  If the AS Identifier Delegation extension (...)",
+    "notes": "There seems to be a copy-paste error.\r\n\r\nThere are two bullet points explaining the initialization of VRS-IP, and none explaining the initialization of VRS-AS.\r\n\r\nAll the evidence suggests that the two extensions (IP Address Delegation and AS Identifier Delegation) are meant to be handled similarly, so I believe that the last three bullet points are supposed to perfectly mirror the first three.",
+    "submit_date": "2019-02-13",
+    "submitter_name": "Alberto Leiva Popper",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5870,
+    "doc-id": "RFC8360",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.2.3",
+    "orig_text": "       ext-pe-autonomousSysIds-v2 EXTENSION ::= {\r\n         SYNTAX ASIdentifiers\r\n         IDENTIFIED BY id-pe-autonomousSysIds-v2\r\n       }\r\n\r\n       id-pe-autonomousSysIds OBJECT IDENTIFIER ::= { id-pe 29 }",
+    "correct_text": "       ext-pe-autonomousSysIds-v2 EXTENSION ::= {\r\n         SYNTAX ASIdentifiers\r\n         IDENTIFIED BY id-pe-autonomousSysIds-v2\r\n       }\r\n\r\n       id-pe-autonomousSysIds-v2 OBJECT IDENTIFIER ::= { id-pe 29 }",
+    "notes": "The \"-v2\" is missing from the identifier.  It is needed for the ASN.1 module to compile properly.",
+    "submit_date": "2019-10-04",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-10-08 12:16:19"
+  }
+]
