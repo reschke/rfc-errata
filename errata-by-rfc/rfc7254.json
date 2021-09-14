@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5303,
+    "doc-id": "RFC7254",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "         gsma-urn-char         = ALPHA / DIGIT\r\n                                 / \"-\" / \".\" / \"_\" / \"%\" / \":\"\r\n",
+    "correct_text": "         gsma-urn-char         = ALPHA / DIGIT\r\n                                 / \"-\" / \".\" / \"_\" / pct-encoded / \":\"\r\n",
+    "notes": "As written, the RFC allows the URN to contain a \"%\" without consideration of the following characters, which is contrary to the syntax of URNs.  Where the grammar shows \"%\", it really wants \"pct-encoded\".  Though you'll probably have to update the references to provide the definition of pct-encoded -- that seems to have been introduced in RFC 3986.",
+    "submit_date": "2018-03-26",
+    "submitter_name": "Dale R. Worley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
