@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 25,
+    "doc-id": "RFC4673",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "hundredths of a second",
+    "correct_text": "centiseconds",
+    "notes": "Why not use the common ISO-standard unit-multiple name, \"centiseconds\" (abbreviation: \"cs\"), instead of the long-winded \"hundredths of a second\" ?\r\n\r\nThis applies to the UNITS and the DESCRIPTION clause of\r\n  - radiusDynAuthServerCounterDiscontinuity  (RFC 4673, page 17),\r\n\r\nfrom pending\r\n\r\n--VERIFIER COMMENT--\r\nwell, yes, centiseconds can be used as well but both terms are the same.",
+    "submit_date": "2006-11-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Stefaan De Cnodder",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 885,
+    "doc-id": "RFC4673",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "I am surprised that the 'OID anchor' of the RADIUS-DYNAUTH-xxx-MIB\r\nmodules does not match the OID hierarchy used in the other RADIUS\r\nMIB modules published/updated concurrently.\r\nI would have expected the new RADIUS MIB modules to be assigned OIDs\r\nin the following, hierarchical way (using abbreviated notation):\r\n\r\n  radiusMIB                  { mib-2 67 }  -- legacy, assigned by IANA\r\n  radiusDynAuth              { radiusMIB 3 }       -- new\r\n  RADIUS-DYNAUTH-CLIENT-MIB  { radiusDynAuth 1 }   -- new\r\n  RADIUS-DYNAUTH-SERVER-MIB  { radiusDynAuth 2 }   -- new\r\n\r\ninstead of obtaining separate IANA assignments for the MIB module\r\nOIDs, directly under mib-2.\r\n\r\nHas there been a strong reason for this deviation from the established\r\npattern?",
+    "correct_text": null,
+    "notes": "from pending\r\n\r\n--VERIFIER COMMENT--\r\nYes, there is a strong reason for it. In fact original in the first\r\nversions of the draft, it was as follows:\r\n\r\n    radiusDynamicAuthorization    OBJECT IDENTIFIER ::= { radiusMIB 3 }\r\n\r\n    radiusDynAuthServerMIBObjects OBJECT IDENTIFIER ::=\r\n                                          { radiusDynAuthServerMIB 1 }\r\n\r\n    radiusDynAuthServer           OBJECT IDENTIFIER ::=\r\n                                   { radiusDynAuthServerMIBObjects 1 }\r\n\r\n\r\ncheck\r\nhttp://www.watersprings.org/pub/id/draft-decnodder-radext-dynauth-server-mib-00.txt\r\n\r\nThe reason for not doing so was that this was more difficult to\r\nmaintain. It was discussed at the mailinglist but I should search in the\r\narchives to find it back.",
+    "submit_date": "2006-11-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Stefaan De Cnodder",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 888,
+    "doc-id": "RFC4673",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "severe MIB module structural problem\r\n-- issue instantiated similarly in both RFC 4672 and 4673\r\n\r\nLet's start with RFC 4672 and the RADIUS-DYNAUTH-CLIENT-MIB module.\r\n\r\nOn page 5 of RFC 4672, two module-global scalar objects are specified;\r\nthe DESCRIPTION clause of the\r\nradiusDynAuthClientDisconInvalidServerAddresses OBJECT-TYPE says:\r\n\r\n                                           [...].  This counter may\r\n                 experience a discontinuity when the DAC module\r\n                 (re)starts, as indicated by the value of\r\n                 radiusDynAuthClientCounterDiscontinuity.\"\r\n\r\nand the literally same sentence appears again in the DESCRIPTION\r\nclause of the radiusDynAuthClientCoAInvalidServerAddresses OBJECT-TYPE.\r\n\r\nThis would make sense iff radiusDynAuthClientCounterDiscontinuity\r\nwould have been defined as another module-global scalar MIB object.\r\nBut unfortunately, radiusDynAuthClientCounterDiscontinuity is a\r\ntabular row object in the radiusDynAuthServerTable, with separate\r\ninstances for every radiusDynAuthServerIndex instantiated there.\r\nSo, which object instance should be taken for reference ???\r\nMoreover, should ever the radiusDynAuthServerTable be empty,\r\nno such CounterDiscontinuity objects would be instantiated,\r\ninvalidating the semantical integrity of the MIB module.\r\n\r\nThus, let's take a closer look at the DESCRIPTION clause of the\r\nradiusDynAuthClientCounterDiscontinuity OBJECT-TYPE, on page 17\r\nof the RFC:\r\n\r\n          DESCRIPTION\r\n                \"The time (in hundredths of a second) since the\r\n                 last counter discontinuity.  A discontinuity may\r\n                 be the result of a reinitialization of the DAC\r\n                 module within the managed entity.\"\r\n\r\nIt remains unclear which scope was intended, i.e. whether \"the last\r\ncounter discontinuity\" was meant to just cover the counters within\r\nthe same conceptual row of the table, of it was meant to cover all\r\nthe counter objects in the MIB module.\r\nIf the former interpretation is to be accepted, the references\r\nto this object from the scalar objects' DESCRIPTIONS quoted above\r\nwould be severely ambiguous.\r\nIn case of the latter interpretation, the semantics of this object\r\nindeed do not depend in any way on the conceptual row, i.e. the\r\nrelated radiusDynAuthServerIndex instance; but if an object of\r\nthe same semantics appears in every table row instantiated, all\r\nof its instances must have the same value at any point in time.\r\nHence, the object with that semantics should have been modeled\r\nas a module-global scalar object, and not as a tabular object !!!\r\n\r\nIMHO, such a single, module-global scalar object would perhaps be\r\nsufficient for the desired purpose.\r\n\r\nIn a similar way, the module-global scalar counters in the\r\nRADIUS-DYNAUTH-SERVER-MIB module,\r\nradiusDynAuthServerDisconInvalidClientAddresses and\r\nadiusDynAuthServerCoAInvalidClientAddresses,\r\nas specified on page 6 of RFC 4673, refer to the object,\r\nradiusDynAuthServerCounterDiscontinuity,\r\nwhich turns out to be a tabular row object in the\r\nradiusDynAuthClientTable, not another scalar object,\r\nthus leading to the same kind of ambiguity.\r\n\r\nTaken altogether, the specifications are ambigous and will certainly\r\nlead to interoperability problems.\r\n\r\nI strongly propose to revise these MIB module specifications as\r\nsoon as possible.",
+    "correct_text": null,
+    "notes": "from pending\r\n\r\n--VERIFIER COMMENT--\r\nseems to be correct. The scalars do not have a discontinuity object.\r\nThat sentence should be removed or either an object has to be added. It\r\nseems that the other mibs like RFC4668 also does not have such an object\r\nfor the scalars while it has a discontinuity timer for the objects in\r\nthe table... It should be for all or for none I would think.",
+    "submit_date": "2006-11-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Stefaan De Cnodder",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 891,
+    "doc-id": "RFC4673",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "[[DESCRIPTION clause of the radiusDynAuthServCoAUserSessChanged on page 15]]\r\n\r\n       DESCRIPTION\r\n             \"The number of user sessions authorization\r\n              changed for the CoA-Requests received from this\r\n              Dynamic Authorization Client.",
+    "correct_text": "       DESCRIPTION\r\n|            \"The number of user sessions with authorization\r\n              changed for the CoA-Requests received from this\r\n              Dynamic Authorization Client.  [...]",
+    "notes": "word omission\r\n\r\nfrom pending",
+    "submit_date": "2006-11-06",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
