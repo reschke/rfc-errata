@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 8,
+    "doc-id": "RFC4782",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.3,
+    "orig_text": "   The QS Nonce in the\r\n   Response is set to the received value of the QS Nonce in the Quick-\r\n   Start Option.",
+    "correct_text": "   The QS Nonce in the\r\n   Response is set to the received value of the QS Nonce in the Quick-\r\n   Start Option.\r\n\r\n   If the TCP host has sufficient receive buffer space, it could\r\n   estimate the required buffer space as the product of the approved\r\n   Quick-Start rate and the round-trip time, and advertise a receive\r\n   window based on this required buffer space.  This receive window\r\n   should allow the other TCP host to fully use the approved Quick-Start\r\n   Request.\r\n\r\n   If the TCP host doesn't know the round-trip time, the TCP host\r\n   could use an estimate of the round-trip time in calculating the\r\n   required buffer space.  Alternately, the TCP host could base the\r\n   advertised receive window on the available buffer space, without\r\n   calculating the buffer space required for the other TCP host to\r\n   fully use the approved Quick-Start Request.\r\n\r\n   If the Quick-Start Response is sent in a SYN/ACK packet, then\r\n   window scaling of the receive window is not allowed [RFC1323];\r\n   if necessary, the TCP host could send a scaled receive window\r\n   in a separate ACK packet following the SYN/ACK packet.",
+    "notes": "Clarification regarding the receive window.\r\n\r\nfrom pending",
+    "submit_date": "2007-04-10",
+    "submitter_name": "Michael Scharf",
+    "verifier_id": 99,
+    "verifier_name": "Sally Floyd",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 604,
+    "doc-id": "RFC4782",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.4,
+    "orig_text": "The TCP host SHOULD set its congestion window cwnd to QS-cwnd only if\r\nQS-cwnd is greater than cwnd; otherwise, QS-cwnd is ignored.",
+    "correct_text": "The TCP host SHOULD set its congestion window cwnd to QS-cwnd\r\nonly if QS-cwnd is greater than cwnd; otherwise, QS-cwnd is\r\nignored. In either case, the sender can transmit up to the\r\nminimum of the cwnd and the receiver's advertised window rwnd,\r\nas specified in [RFC2581].",
+    "notes": "Clarification regarding the receive window.\r\n\r\nfrom pending",
+    "submit_date": "2007-04-10",
+    "submitter_name": "Michael Scharf",
+    "verifier_id": 99,
+    "verifier_name": "Sally Floyd",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2034,
+    "doc-id": "RFC4782",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 12.1,
+    "orig_text": "   IPv6 Option Number [RFC2460]:\r\n\r\n   HEX         act  chg  rest\r\n   ---         ---  ---  -----\r\n     6          00   1   00110     Quick-Start",
+    "correct_text": "   IPv6 Option Number [RFC2460]:\r\n\r\n   HEX         act  chg  rest\r\n   ---         ---  ---  -----\r\n    26          00   1   00110     Quick-Start",
+    "notes": "In IANA web page http://www.iana.org/assignments/ipv6-parameters values are sorted following rest field, by HEX contains the complete value. The errors appears also in the IANA database.",
+    "submit_date": "2010-02-08",
+    "submitter_name": "Laurent Toutain",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
