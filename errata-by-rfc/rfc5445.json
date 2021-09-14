@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1717,
+    "doc-id": "RFC5445",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "9, pg.16",
+    "orig_text": "last paragraph at the bottom of page 16:\r\n\r\n   This document assigns the Under-Specified FEC Encoding ID 128 under\r\n   the ietf:rmt:fec:encoding name-space (which was previously assigned\r\n|  by [RFC3452]) to \"Small Block, Large Block, and Please note that we\r\n|  have added a comma between large block and expandable throughout this\r\n|  document (RFC Editor style is to include a comme before the last item\r\n|  of a series).  If you do not object, we will ask IANA to include this\r\n|  comma in their registry for consistency. --> Expandable FEC Codes\" as\r\n   specified in Section 4 above.\r\n\r\n",
+    "correct_text": "   This document assigns the Under-Specified FEC Encoding ID 128 under\r\n   the ietf:rmt:fec:encoding name-space (which was previously assigned\r\n|  by [RFC3452]) to \"Small Block, Large Block, and Expandable FEC Codes\"\r\n   as specified in Section 4 above.\r\n",
+    "notes": "Apparently an xml source flaw carried over to final version.",
+    "submit_date": "2009-03-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
