@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4802,
+    "doc-id": "RFC7520",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "5.7.5",
+    "orig_text": "The figure 150 is:\r\n\r\n   {\r\n     \"protected\": \"eyJhbGciOiJBMjU2R0NNS1ciLCJpdiI6IktrWVQwR1hfMm\r\n         pIbGZxTl8iLCJraWQiOiIxOGVjMDhlMS1iZmE5LTRkOTUtYjIwNS0yYj\r\n         RkZDFkNDMyMWQiLCJ0YWciOiJrZlBkdVZRM1QzSDZ2bmV3dC0ta3N3Ii\r\n         wiZW5jIjoiQTEyOENCQy1IUzI1NiJ9\",\r\n     \"encrypted_key\": \"lJf3HbOApxMEBkCMOoTnnABxs_CvTWUmZQ2ElLvYNo\r\n         k\",\r\n     \"iv\": \"gz6NjyEFNm_vm8Gj6FwoFQ\",\r\n     \"ciphertext\": \"Jf5p9-ZhJlJy_IQ_byKFmI0Ro7w7G1QiaZpI8OaiVgD8E\r\n         qoDZHyFKFBupS8iaEeVIgMqWmsuJKuoVgzR3YfzoMd3GxEm3VxNhzWyW\r\n         tZKX0gxKdy6HgLvqoGNbZCzLjqcpDiF8q2_62EVAbr2uSc2oaxFmFuIQ\r\n         HLcqAHxy51449xkjZ7ewzZaGV3eFqhpco8o4DijXaG5_7kp3h2cajRfD\r\n         gymuxUbWgLqaeNQaJtvJmSMFuEOSAzw9Hdeb6yhdTynCRmu-kqtO5Dec\r\n         4lT2OMZKpnxc_F1_4yDJFcqb5CiDSmA-psB2k0JtjxAj4UPI61oONK7z\r\n         zFIu4gBfjJCndsZfdvG7h8wGjV98QhrKEnR7xKZ3KCr0_qR1B-gxpNk3\r\n         xWU\",\r\n     \"tag\": \"NvBveHr_vonkvflfnUrmBQ\"\r\n   }\r\n\r\nBut the protected header in the figure 145 is:\r\n\r\n   eyJhbGciOiJBMjU2R0NNS1ciLCJraWQiOiIxOGVjMDhlMS1iZmE5LTRkOTUtYj\r\n   IwNS0yYjRkZDFkNDMyMWQiLCJ0YWciOiJrZlBkdVZRM1QzSDZ2bmV3dC0ta3N3\r\n   IiwiaXYiOiJLa1lUMEdYXzJqSGxmcU5fIiwiZW5jIjoiQTEyOENCQy1IUzI1Ni\r\n   J9\r\n\r\nAnd the figure 147 indicates the tag is \"DKW7jrb4WaRSNfbXVPlT5g\".",
+    "correct_text": "The figure 150 should be:\r\n\r\nThe figure 150 is:\r\n\r\n   {\r\n     \"protected\": \"eyJhbGciOiJBMjU2R0NNS1ciLCJraWQiOiIxOGVjMDhlMS\r\n      1iZmE5LTRkOTUtYjIwNS0yYjRkZDFkNDMyMWQiLCJ0YWciOiJrZlBkdVZRM\r\n      1QzSDZ2bmV3dC0ta3N3IiwiaXYiOiJLa1lUMEdYXzJqSGxmcU5fIiwiZW5j\r\n      IjoiQTEyOENCQy1IUzI1NiJ9\",\r\n     \"encrypted_key\": \"lJf3HbOApxMEBkCMOoTnnABxs_CvTWUmZQ2ElLvYNo\r\n         k\",\r\n     \"iv\": \"gz6NjyEFNm_vm8Gj6FwoFQ\",\r\n     \"ciphertext\": \"Jf5p9-ZhJlJy_IQ_byKFmI0Ro7w7G1QiaZpI8OaiVgD8E\r\n         qoDZHyFKFBupS8iaEeVIgMqWmsuJKuoVgzR3YfzoMd3GxEm3VxNhzWyW\r\n         tZKX0gxKdy6HgLvqoGNbZCzLjqcpDiF8q2_62EVAbr2uSc2oaxFmFuIQ\r\n         HLcqAHxy51449xkjZ7ewzZaGV3eFqhpco8o4DijXaG5_7kp3h2cajRfD\r\n         gymuxUbWgLqaeNQaJtvJmSMFuEOSAzw9Hdeb6yhdTynCRmu-kqtO5Dec\r\n         4lT2OMZKpnxc_F1_4yDJFcqb5CiDSmA-psB2k0JtjxAj4UPI61oONK7z\r\n         zFIu4gBfjJCndsZfdvG7h8wGjV98QhrKEnR7xKZ3KCr0_qR1B-gxpNk3\r\n         xWU\",\r\n     \"tag\": \"DKW7jrb4WaRSNfbXVPlT5g\"\r\n   }",
+    "notes": "Wrong JSON Flattened Representation",
+    "submit_date": "2016-09-13",
+    "submitter_name": "Florent Morselli",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-12-10 09:31:13"
+  }
+]
