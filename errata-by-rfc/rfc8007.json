@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 5053,
+    "doc-id": "RFC8007",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.2.3",
+    "orig_text": "| canceling |\r\n| canceled  |",
+    "correct_text": "| cancelling |\r\n| cancelled  |\r\n",
+    "notes": "In the final editing phase, I believe it was agreed that text would use the American spelling with 1 \"l\", but that the actual status strings would use 2 \"l\"s.  In sections 2.3, 4.3, 4.5, and Appendix A, the quoted status strings all use 2 \"l\"s.  The first column of the table in section 5.2.3 is providing the JSON string values, which should match the quoted status strings in sections 2.3, 4.3, 4.5, and Appendix A and have 2 \"l\"s.",
+    "submit_date": "2017-06-27",
+    "submitter_name": "Kevin J. Ma",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2021-01-22 07:11:03"
+  },
+  {
+    "errata_id": 5054,
+    "doc-id": "RFC8007",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.2.7",
+    "orig_text": "| ecanceled    |",
+    "correct_text": "| ecancelled   |\r\n\r\n",
+    "notes": "In the final editing phase, I believe it was agreed that text would use the American spelling with 1 \"l\", but that the status strings would use 2 \"l\"s.  This should apply to the error codes as well.  The first column of the table in section 5.2.7 is providing the Error Code values, which like the status code strings in sections 2.3, 4.3, 4.5, 5.2.3, and Appendix A, should have 2 \"l\"s.  Note: The IANA registry has the error code as \"ecancelled\" with 2 \"l\"s.  http://www.iana.org/assignments/cdni-parameters/cdni-parameters.xhtml#error-codes\r\n\r\nNote: This errata also applies to Appendix A.",
+    "submit_date": "2017-06-27",
+    "submitter_name": "Kevin J. Ma",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2021-01-22 07:11:40"
+  },
+  {
+    "errata_id": 5064,
+    "doc-id": "RFC8007",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.2.5",
+    "orig_text": "6.2.5.  Deleting Trigger Status Resources\r\n\r\n   The uCDN can delete completed and failed Trigger Status Resources to\r\n   reduce the size of the collections, as described in Section 4.4.  For\r\n   example, to delete the \"preposition\" request from earlier examples:\r\n",
+    "correct_text": "6.2.5.  Canceling or Deleting Trigger Status Resources\r\n\r\n   The uCDN can cancel pending or active Trigger Status Resource\r\n   processing, as described in Section 4.3.  For example, to cancel\r\n   the \"preposition\" request from earlier examples:\r\n\r\n   REQUEST:\r\n\r\n     POST /triggers HTTP/1.1\r\n     User-Agent: example-user-agent/0.1\r\n     Host: dcdn.example.com\r\n     Accept: */*\r\n     Content-Type: application/cdni; ptype=ci-trigger-command\r\n     Content-Length: 91\r\n\r\n     {\r\n       \"cancel\" : [ \"https://dcdn.example.com/triggers/0\" ],\r\n       \"cdn-path\" : [ \"AS64496:1\" ]\r\n     }\r\n\r\n   RESPONSE:\r\n\r\n     HTTP/1.1 200 OK\r\n     Content-Length: 0\r\n     Server: example-server/0.1\r\n     Date: Wed, 04 May 2016 08:50:00 GMT\r\n\r\n   The uCDN can also delete completed and/or failed Trigger Status\r\n   Resources to reduce the size of the collections, as described in\r\n   Section 4.4.  For example, to delete the \"preposition\" request from\r\n   earlier examples:\r\n",
+    "notes": "There is no example for canceling a trigger.  Section 4.3 does not specify what the response payload should be for cancel responses.  An explicit example would help clarify the intent of an empty response.  A cancel example probably warrants its own section, but for the purposes of simplifying this errata, it has been combined with the delete example.",
+    "submit_date": "2017-07-07",
+    "submitter_name": "Kevin J. Ma",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2021-01-22 07:13:05"
+  },
+  {
+    "errata_id": 6385,
+    "doc-id": "RFC8007",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "   When a CI/T Trigger Command is accepted, the uCDN MUST create a new\r\n   Trigger Status Resource that will convey a specification of the CI/T\r\n   Command and its current status.  The HTTP response to the dCDN MUST\r\n   have status code 201 and MUST convey the URI of the Trigger Status\r\n   Resource in the Location header field [RFC7231].",
+    "correct_text": "   When a CI/T Trigger Command is accepted, the dCDN MUST create a new\r\n   Trigger Status Resource that will convey a specification of the CI/T\r\n   Command and its current status.  The HTTP response to the uCDN MUST\r\n   have status code 201 and MUST convey the URI of the Trigger Status\r\n   Resource in the Location header field [RFC7231].",
+    "notes": "There has been an accidental switch between \"uCDN\" and \"dCDN\" terms in this statement. If my understanding is correct, when the uCDN post a CI/T command to the dCDN, the latter must create a trigger status resource and returns in the response (HTTP code 201) “Location” header the URI of that status resource.",
+    "submit_date": "2021-01-12",
+    "submitter_name": "Guillaume Bichot",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2021-01-22 07:14:26"
+  }
+]
