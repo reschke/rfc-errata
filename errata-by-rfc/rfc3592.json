@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3742,
+    "doc-id": "RFC3592",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 3.5,
+    "orig_text": "increase the UAS count by 10 when it\r\ndetermines that available time has been entered.",
+    "correct_text": "increase the UAS count by 10 when it\r\ndetermines that unavailable time has been entered.",
+    "notes": "the word \"available\" should be changed to \"unavailable\";",
+    "submit_date": "2013-10-04",
+    "submitter_name": "Anshul Chandra",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
