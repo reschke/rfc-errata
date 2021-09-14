@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2687,
+    "doc-id": "RFC3405",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "         To: register@URI.ARPA\r\n         From: The IETF URN Working Group\r\n\r\n         Key: urn\r\n         Authority: RFC2141\r\n         Record: urn     IN NAPTR 0 0 \"\" \"\" \"/^urn:([^:]+)/\\\\2/i\" .",
+    "correct_text": "         To: register@URI.ARPA\r\n         From: The IETF URN Working Group\r\n\r\n         Key: urn\r\n         Authority: RFC2141\r\n         Record: urn     IN NAPTR 0 0 \"\" \"\" \"/^urn:([^:]+)/\\\\1/i\" .",
+    "notes": "The uncorrected, original text contains a regular expression which is invalid -- it includes a back-reference \\2 with no corresponding second enclosure. The correction is to make the back-reference \\1, i.e. a reference to the single enclosure present in the regular expression.",
+    "submit_date": "2011-01-20",
+    "submitter_name": "Joe Abley",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2688,
+    "doc-id": "RFC3405",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "      http    IN NAPTR 100 100 \"\" \"\"  \"/http:\\\\/\\\\/([^\\\\/:]+)/\\\\2/i\" .",
+    "correct_text": "      http    IN NAPTR 100 100 \"\" \"\"  \"/http:\\\\/\\\\/([^\\\\/:]+)/\\\\1/i\" .",
+    "notes": "The uncorrected, original text contains a regular expression which is invalid -- it includes a back-reference (\\2) with no corresponding second enclosure. The correction is to make the back-reference \\1, i.e. a reference to the single enclosure present in the regular expression.",
+    "submit_date": "2011-01-20",
+    "submitter_name": "Joe Abley",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2842,
+    "doc-id": "RFC3405",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3; 12",
+    "orig_text": "3. Registration Policies\r\n\r\n   The creation of a given URI scheme or URN namespace id (NID) follows\r\n   the appropriate registration documents for those spaces.  URI schemes\r\n   follow \"Registration Procedures for URL Scheme Names\" (RFC 2717)\r\n   [10].  URN namespace ids follow \"URN Namespace Definition Mechanisms\"\r\n   (RFC 2611) (or updates thereto) [9].\r\n\r\n3.1 URI.ARPA Registration\r\n\r\n3.1.1 Only Schemes in the IETF Tree Allowed\r\n\r\n   In order to be inserted into the URI.ARPA zone, the subsequent URI\r\n   scheme MUST be registered under the IETF URI tree.  The requirements\r\n   for this tree are specified in [10].\r\n\r\n[ . . . ]\r\n\r\n   [9]   Faltstrom, P., Iannella, R., Daigle, L. and D. van Gulik, \"URN\r\n         Namespace Definition Mechanisms\", BCP 33, RFC 2611, October\r\n         1998.\r\n\r\n   [10]  Petke, R. and I. King, \"Registration Procedures for URL Scheme\r\n         Names\", BCP 35, RFC 2717, January 1999.",
+    "correct_text": "3. Registration Policies\r\n\r\n   The creation of a given URI scheme or URN namespace id (NID) follows\r\n   the appropriate registration documents for those spaces.  URI schemes\r\n   follow \"Guidelines and Registration Procedures for New URI Schemes\" \r\n   (RFC 4395) [10].  URN namespace ids follow \"Uniform Resource Names (URN)\r\n   Namespace Definition Mechanisms\" (RFC 3406) (or updates thereto) [9].\r\n\r\n3.1 URI.ARPA Registration\r\n\r\n3.1.1 Only Schemes in the IETF Tree Allowed\r\n\r\n   In order to be inserted into the URI.ARPA zone, the subsequent URI\r\n   scheme's specification MUST be first approved by IESG (formerly known\r\n   as IETF Tree URI schemes, per [11]).\r\n\r\n\r\n[ . . . ]\r\n\r\n   [9]   Daigle, L., van Gulik, D., Iannella, R., and P. Faltstrom,\r\n         \"Uniform Resource Names (URN) Namespace Definition Mechanisms\",\r\n         BCP 66, RFC 3406, October 2002.\r\n\r\n   [10]  Hansen, T., Hardie, T., and L. Masinter, \"Guidelines and\r\n         Registration Procedures for New URI Schemes\", BCP 35, RFC 4395,\r\n         February 2006.\r\n\r\n   [11]  Petke, R. and I. King, \"Registration Procedures for URL Scheme\r\n         Names\", BCP 35, RFC 2717, January 1999.",
+    "notes": "RFC 4395 eliminated URI schemes trees; this erratum is to incorporate this change.  Moreover, references are updated.\n --VERIFIER NOTES-- \nThis erratum is rejected in accordance with <http://www.ietf.org/iesg/statement/errata-processing.html>. In particular, this erratum \"proposes a change to the RFC that should be done by publishing a new RFC that replaces the current RFC\". Therefore, \"if the change is to be considered for future updates of the document, it should be proposed using channels other than the errata process, such as a WG mailing list\".",
+    "submit_date": "2011-06-23",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2971,
+    "doc-id": "RFC3405",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "n/a",
+    "orig_text": "N/A",
+    "correct_text": "N/A",
+    "notes": "This erratum report is to let the readers of RFC 3405 know that after register-uri and register-urn lists were restored in September 2011, new list archives may be found at <http://mm.icann.org/pipermail/register-uri/> and <http://mm.icann.org/pipermail/register-urn/> rather than IANA site.\r\n\r\n --VERIFIER NOTES-- \r\nThis report does not consist of an erratum against the specification.   ",
+    "submit_date": "2011-09-15",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 2,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
