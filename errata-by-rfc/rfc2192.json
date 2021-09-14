@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 483,
+    "doc-id": "RFC2192",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 12,
+    "orig_text": "     imessagelist     = enc_mailbox [ \"?\" enc_search ] [uidvalidity]",
+    "correct_text": "     imessagelist     = enc_mailbox [uidvalidity] [ \"?\" enc_search ]",
+    "notes": "Wrong order of fields",
+    "submit_date": "2005-02-09",
+    "submitter_name": "Chris Newman",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
