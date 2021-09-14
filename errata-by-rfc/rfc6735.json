@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3859,
+    "doc-id": "RFC6735",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "ALRP-Value                             617  3.4.2     Unsigned32",
+    "correct_text": "ALRP-Value                             617  3.4.2     Unsigned8",
+    "notes": "Conflicts with section 3.4.2, which says \"The ALRP-Value AVP (AVP Code 617) is of type Unsigned8\"\n --VERIFIER NOTES-- \nIn accordance with the DIME chairs: The introduction of new data types would imply a new version of the Base protocol..\r\n\r\n  \"In the event that a new Basic AVP Data Format is needed,\r\n   a new version of this RFC MUST be created.\" \r\n\r\nA bis document is required.",
+    "submit_date": "2014-01-02",
+    "submitter_name": "Hyungho Kim",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
