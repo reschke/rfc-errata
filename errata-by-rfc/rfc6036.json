@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2585,
+    "doc-id": "RFC6036",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2.5,
+    "orig_text": "   84% support or plan DNS Authentication, Authorization, Accounting,\r\n   and Auditing (AAAA) queries over IPv6, and all but one of these\r\n   include reverse DNS lookup for IPv6.",
+    "correct_text": "   84% support or plan DNS AAAA queries over IPv6, and all but one of\r\n   these include reverse DNS lookup for IPv6.\r\n",
+    "notes": "AAAA is not an acronym in this context; it is an RR type.",
+    "submit_date": "2010-10-27",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
