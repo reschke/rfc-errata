@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5850,
+    "doc-id": "RFC7906",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "   id-enumeratedRestrictiveAttributes OBJECT IDENTIFIER ::=\r\n     { 2 16 840 1 101 2 1 8 3 4 }\r\n\r\n   id-enumeratedPermissiveAttributes OBJECT IDENTIFIER ::=\r\n     { 2 16 840 1 101 2 1 8 3 1 }\r\n\r\n   EnumeratedTag ::= SEQUENCE {\r\n     tagName          OBJECT IDENTIFIER,\r\n     attributeList    SET OF SecurityAttribute }\r\n\r\n   SecurityAttribute ::= INTEGER (0..MAX)\r\n",
+    "correct_text": "   id-enumeratedRestrictiveAttributes OBJECT IDENTIFIER ::=\r\n     { 2 16 840 1 101 2 1 8 3 4 }\r\n\r\n   id-enumeratedPermissiveAttributes OBJECT IDENTIFIER ::=\r\n     { 2 16 840 1 101 2 1 8 3 1 }\r\n\r\n   EnumeratedTag ::= SEQUENCE {\r\n     tagName          OBJECT IDENTIFIER,\r\n     attributeList    SET OF SecurityAttribute }\r\n\r\n    id-informativeAttributes OBJECT IDENTIFIER ::=\r\n      { 2 16 840 1 101 2 1 8 3 3 }\r\n\r\n    InformativeTag ::= SEQUENCE {\r\n      tagName     OBJECT IDENTIFIER,\r\n      attributes  FreeFormField }\r\n\r\n    FreeFormField ::= CHOICE {\r\n      bitSetAttributes    BIT STRING,\r\n      securityAttributes  SET OF SecurityAttribute }\r\n\r\n   SecurityAttribute ::= INTEGER (0..MAX)\r\n",
+    "notes": "RFC 7906, Section 17.1 includes the definition of the Informative Tag, but it does not appear in the ASN.1 module in Appendix A.  This change adds the Informative Tag to the ASN.1 module.",
+    "submit_date": "2019-08-29",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2021-06-01 13:10:56"
+  }
+]
