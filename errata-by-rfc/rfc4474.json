@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 1055,
+    "doc-id": "RFC4474",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "   The verifier processes this certificate\r\n   in the usual ways, including checking that it has not expired, that\r\n   the chain is valid back to a trusted certification authority (CA),\r\n   and that it does not appear on revocation lists.  Once the\r\n   certificate is acquired, it MUST be validated following the\r\n   procedures in RFC 3280 [9].",
+    "correct_text": "   The verifier processes this certificate in the usual ways,\r\n   including checking that it has not expired, that the chain is valid\r\n   back to a trusted certification authority (CA), and that it does\r\n   not appear on revocation lists.  To fetch certificate chains, the\r\n   certificate can use the SubjectInfoAccess and techniques such as\r\n   RFC 4387 can be used to retrieve the chain.  Once the certificate\r\n   is acquired, it MUST be validated following the procedures in RFC\r\n   3280 [9].",
+    "notes": "insert a new sentence",
+    "submit_date": "2007-07-12",
+    "submitter_name": "Cullen Jennings",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1056,
+    "doc-id": "RFC4474",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "   This document introduces a new logical role for SIP entities called a\r\n   server.",
+    "correct_text": "   This document introduces a new logical role for SIP entities called a\r\n   verifier.",
+    "notes": "change server to verifier.",
+    "submit_date": "2007-07-12",
+    "submitter_name": "Cullen Jennings",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1057,
+    "doc-id": "RFC4474",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 10.1,
+    "orig_text": "   Content-Length: 147",
+    "correct_text": "   Content-Length: ...",
+    "notes": "There are two places where this occurs in section 10.1.",
+    "submit_date": "2007-07-12",
+    "submitter_name": "Cullen Jennings",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1058,
+    "doc-id": "RFC4474",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 9,
+    "orig_text": "   Identity = \"Identity\" HCOLON signed-identity-digest\r\n   signed-identity-digest = LDQUOT 32LHEX RDQUOT",
+    "correct_text": "   Identity = \"Identity\" HCOLON signed-identity-digest\r\n   signed-identity-digest = quoted-string",
+    "notes": "",
+    "submit_date": "2007-07-12",
+    "submitter_name": "Cullen Jennings",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
