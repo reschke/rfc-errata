@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 806,
+    "doc-id": "RFC3454",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "C. Prohibition tables\r\n\r\n   The tables in this appendix consist of lines with one prohibited code\r\n   point per line.  The format of the lines are the value of the code\r\n   point, a semicolon, and a comment which is the name of the code\r\n   point.",
+    "correct_text": "[see Notes]",
+    "notes": "This is not true as the tables in this appendix consist of lines with\r\none prohibited code point _range_ per line.  The format of the lines\r\nare the value of the starting code point of the range, a hyphen,\r\nthe value of the ending code point of the range, a semicolon,\r\nand a comment which is the informal name of the range in square brackets.\r\nIf the range contains only one code point, then the hyphen and the ending\r\ncode point value are omitted, and the comment contains the name of\r\nthe code point without brackets.\r\n\r\nfrom pending",
+    "submit_date": "2006-04-27",
+    "submitter_name": "Sergiusz Wolicki",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2686,
+    "doc-id": "RFC3454",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "The list of characters to add to the mapping table can determined \r\nby the following algorithm:",
+    "correct_text": "The list of characters to add to the mapping table can be determined \r\nby the following algorithm:",
+    "notes": "A small omission of a single word: \"be\" is missing.",
+    "submit_date": "2011-01-20",
+    "submitter_name": "Jehan Pagès",
+    "verifier_id": 2,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4577,
+    "doc-id": "RFC3454",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "   Some characters are only useful in line-based text, and are otherwise\r\n   invisible and ignored.\r\n\r\n   00AD; SOFT HYPHEN\r\n   1806; MONGOLIAN TODO SOFT HYPHEN\r\n   200B; ZERO WIDTH SPACE\r\n   2060; WORD JOINER\r\n   FEFF; ZERO WIDTH NO-BREAK SPACE",
+    "correct_text": "   Some characters are only useful in line-based text, and are otherwise\r\n   invisible and ignored.\r\n\r\n   00AD; SOFT HYPHEN\r\n   200B; ZERO WIDTH SPACE\r\n   2060; WORD JOINER\r\n   FEFF; ZERO WIDTH NO-BREAK SPACE",
+    "notes": "This issue has been reported to the unicode consortium (http://www.unicode.org/L2/L2015/15277-pubrev.html), according to which: U+1806 is not a control character; RFC 3454 is mistaken in mapping it to nothing, since the character always has a distinct visual appearance; For more information about the character, see page 528 of Core Specification, Version 8.0.",
+    "submit_date": "2016-01-04",
+    "submitter_name": "Loïc Jonas Etienne",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
