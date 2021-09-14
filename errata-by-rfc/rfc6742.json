@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3413,
+    "doc-id": "RFC6742",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.2.3.",
+    "orig_text": "host1.example.com. IN L32 10 10.1.02.0\r\nhost1.example.com. IN L32 20 10.1.04.0\r\nhost2.example.com. IN L32 10 10.1.08.0",
+    "correct_text": "host1.example.com. IN L32 10 10.1.2.0\r\nhost1.example.com. IN L32 20 10.1.4.0\r\nhost2.example.com. IN L32 10 10.1.8.0",
+    "notes": "\"As L32 values have the same syntax and semantics as IPv4 routing\r\n prefixes, when displayed for human readership, the values are\r\n presented in the same dotted-decimal format as IPv4 addresses.  An\r\n example of this syntax is shown above.\"\r\n\r\nIf this is the case I don't get the prefixed 0. Is it octal? Which clashes with the description, or is there some hidden meaning for using an extra 0.\r\nThe other example in 2.2.3 also uses these ip4 addresses.\r\n\r\n----\r\nFrom the authors:\r\n----\r\n It was not the intention of the authors to include the \r\n additional zero prefix in the third byte of the IP address.  \r\n\r\n Although the published text was not identical to the authors'\r\n intent, we believe that the numerical values presented in the \r\n examples are still correct. However, the use of the zero in \r\n this way is not conventional.  \r\n\r\n It is worth nothing that RFC-990, page 5, for example, \r\n explicitly says the IP address of the string \"010.003.000.052\" \r\n is equal to the IP address of the string \"10.3.0.52\".  The BNF \r\n and specifications of RFC-1034 and RFC-1035 does not contradict \r\n that, as far as we can tell.\r\n\r\n We do note that inet_aton(3)/inet_ntoa(3) (and associated API) \r\n of the C programming language *does* use a leading zero to flag\r\n an octal number. This is also likely to be true for some other \r\n languages, e.g. python's inet_aton() API. However, this use of\r\n a leading zero to indicate octal is not always true.  For example,\r\n the Java language InetAddress object API ignores the leading zero \r\n and treats the number as decimal.\r\n\r\n So, at the very least, the example in its present form could cause\r\n confusion, while the suggested correction would leave the example \r\n as being clear and unambiguous.\r\n\r\n The authors are grateful to Miek Gieben for spotting the ambiguity\r\n and suggesting a correction.",
+    "submit_date": "2012-11-18",
+    "submitter_name": "Miek Gieben",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
