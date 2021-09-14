@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5180,
+    "doc-id": "RFC8253",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.4,
+    "orig_text": "       *  PCEPS implementations MUST, at a minimum, support negotiation\r\n          of the TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 [RFC6460] and\r\n          SHOULD support TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 as\r\n          well.  ...",
+    "correct_text": "       *  PCEPS implementations MUST, at a minimum, support negotiation\r\n          of the TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 [RFC5289] and\r\n          SHOULD support TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 as\r\n          well.  ...",
+    "notes": "RFC 6460 makes reference to the TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 and TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 ciphersuites, but it does not define them.  These ciphersuites are defined in RFC 5289.",
+    "submit_date": "2017-11-06",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
