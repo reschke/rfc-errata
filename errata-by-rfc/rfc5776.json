@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2155,
+    "doc-id": "RFC5776",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.2.1,pg.52",
+    "orig_text": "|  o  direct time synchronization response: Upon receiving a response, a\r\n      receiver who has no pending request MUST immediately drop the\r\n      packet.  If this receiver has previously issued a request, he\r\n|     first checks the Group MAC (if applicable), then the \"t_r\" field,\r\n|     to be sure it is a response to his request, and finally the\r\n      digital signature.  A replayed packet will be dropped during these\r\n      verifications, without compromising the TESLA component.\r\n",
+    "correct_text": "|  o  Direct time synchronization response: Upon receiving a response, a\r\n      receiver who has no pending request MUST immediately drop the\r\n      packet.  If this receiver has previously issued a request, he\r\n|     first checks the \"t_r\" field, to be sure it is a response to his \r\n|     request, then the Group MAC (if applicable), and finally the\r\n      digital signature.  A replayed packet will be dropped during these\r\n      verifications, without compromising the TESLA component.\r\n",
+    "notes": "Rationale:\r\na) [supplemental, editorial] capitalization after preceding full stop;\r\nb) conflict with reasonable specification in section 4.2.2.1:\r\n   the \"t_r\" field match with an 'open' request is a very lightweight\r\n   operation, and an attacker needs to be on-path and fast or *very*\r\n   lucky to happen to pass this check; so performing the more costly\r\n   Group MAC verification operation _only_ if the packet \"t_r\" matches\r\n   an open request significantly reduces  the workload an attacker can\r\n   impose on the receiver; thus, the order of operations specified in\r\n   Section 4.2.2.1 is an important detail of the overall anti-DoS\r\n   strategy and should not be contradicted by the Security\r\n   Considerations section.",
+    "submit_date": "2010-04-09",
+    "submitter_name": "ALfred Hoenes",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2156,
+    "doc-id": "RFC5776",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.3.2",
+    "orig_text": "[[  first paragraph  ]]\r\n\r\n   The bootstrap information message (with the in-band bootstrap scheme)\r\n|  and direct time synchronization response message (with the indirect\r\n   time synchronization scheme) both need to be signed by the sender.\r\n   [...]",
+    "correct_text": "   The bootstrap information message (with the in-band bootstrap scheme)\r\n|  and direct time synchronization response message (with the direct\r\n   time synchronization scheme) both need to be signed by the sender.\r\n   [...]",
+    "notes": "Rationale: most likely a typo, but confusing:\r\nwhy would the _indirect_ schem use the _direct_ scheme's messages?",
+    "submit_date": "2010-04-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
