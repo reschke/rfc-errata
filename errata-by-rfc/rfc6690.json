@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3751,
+    "doc-id": "RFC6690",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "   URI-Reference  = <defined in [RFC3986]>\r\n ",
+    "correct_text": "   URI-reference  = <defined in [RFC3986]>\r\n ",
+    "notes": "Although RFC5234 does specify that rule names are case-insensitive, URI-reference is \"misspelled\" URI-Reference throughout ABNF rules in section 2.  It is correct in the remainder of the text.\r\n\r\n----- Verifier notes -----\r\nAn unimportant typo that will not cause confusion for anyone.\r\nWe can change it if/when the document is updated.",
+    "submit_date": "2013-10-15",
+    "submitter_name": "Peter A. Bigot",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5254,
+    "doc-id": "RFC6690",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "relation-types = relation-type\r\n                   / DQUOTE relation-type *( 1*SP relation-type ) DQUOTE",
+    "correct_text": "relation-types = reg-rel-type\r\n               / DQUOTE relation-type *( 1*SP relation-type ) DQUOTE\r\n",
+    "notes": "As defined originally \"relation-types\" may consist of a \"URI\".  RFC 3986 defines URI to allow semi-colons in various places.  For example, \"http://;\" seems to be a valid URI.  Unfortunately, that makes parsing a link-param list ambiguous since its elements are separated by semicolons.\r\n\r\nThe proposed fix to to allow \"ext-rel-type\" (i.e., \"URI\") to appear only inside a quoted relation-type list.",
+    "submit_date": "2018-02-03",
+    "submitter_name": "David Mosberger",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
