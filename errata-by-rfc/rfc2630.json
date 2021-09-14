@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 406,
+    "doc-id": "RFC2630",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "12.2.2",
+    "orig_text": "The RSA signature algorithm is defined in RFC 2347 [NEWPKCS#1].  RFC\r\n2347 specifies the use of the RSA signature algorithm with the SHA-1\r\nand MD5 message digest algorithms.",
+    "correct_text": "The RSA signature algorithm is defined in RFC 2437 [NEWPKCS#1].  RFC\r\n2437 specifies the use of the RSA signature algorithm with the SHA-1\r\nand MD5 message digest algorithms.",
+    "notes": "",
+    "submit_date": "2000-12-26",
+    "submitter_name": "Joseph Baran",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 658,
+    "doc-id": "RFC2630",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Reference",
+    "orig_text": "NEWPKCS#1  Kaliski, B., \"PKCS #1: RSA Encryption, Version 2.0\",\r\n           RFC 2347, October 1998.",
+    "correct_text": "NEWPKCS#1  Kaliski, B., \"PKCS #1: RSA Encryption, Version 2.0\",\r\n           RFC 2437, October 1998.\r\n",
+    "notes": "",
+    "submit_date": "2000-12-26",
+    "submitter_name": "Joseph Baran",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
