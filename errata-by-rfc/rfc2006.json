@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5509,
+    "doc-id": "RFC2006",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": " mipSecNotifcationsGroup NOTIFICATION-GROUP\r\n        NOTIFICATIONS { mipAuthFailure }\r\n        STATUS      current\r\n        DESCRIPTION\r\n                \"The notification related to security violations.\"\r\n        ::= { mipGroups 13 }",
+    "correct_text": " mipSecNotificationsGroup NOTIFICATION-GROUP\r\n        NOTIFICATIONS { mipAuthFailure }\r\n        STATUS      current\r\n        DESCRIPTION\r\n                \"The notification related to security violations.\"\r\n        ::= { mipGroups 13 }",
+    "notes": "'i' missing in mipSecNotifcationsGroup",
+    "submit_date": "2018-09-29",
+    "submitter_name": "Glenn Mansfield Keeni",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
