@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1842,
+    "doc-id": "RFC3811",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "       MplsExtendedTunnelId ::= TEXTUAL-CONVENTION\r\n          STATUS        current\r\n          DESCRIPTION\r\n             \"A unique identifier for an MPLS Tunnel.  This may\r\n              represent an IPv4 address of the ingress or egress\r\n              LSR for the tunnel.  This value is derived from the\r\n              Extended Tunnel Id in RSVP or the Ingress Router ID\r\n              for CR-LDP.\"\r\n          REFERENCE\r\n             \"RSVP-TE: Extensions to RSVP for LSP Tunnels,\r\n              [RFC3209].\r\n\r\n              Constraint-Based LSP Setup using LDP, [RFC3212].\"\r\n          SYNTAX  Unsigned32(0..4294967295)",
+    "correct_text": "       MplsExtendedTunnelId ::= TEXTUAL-CONVENTION\r\n          STATUS        current\r\n          DESCRIPTION\r\n             \"A unique identifier for an MPLS Tunnel.  This may\r\n              represent an IPv4 address of the ingress or egress\r\n              LSR for the tunnel for an IPv4 network.  For IPv6\r\n              this represents an IPv4 address of the ingress or\r\n              egress LSR for the tunnel for an IPv6 network.\r\n              This value is derived from the\r\n              Extended Tunnel Id in RSVP or the Ingress Router ID\r\n              for CR-LDP.\"\r\n          REFERENCE\r\n             \"RSVP-TE: Extensions to RSVP for LSP Tunnels,\r\n              [RFC3209].\r\n\r\n              Constraint-Based LSP Setup using LDP, [RFC3212].\"\r\n          SYNTAX  OCTET STRING(SIZE(16))",
+    "notes": "The Syntax is wrong. This change will require the new TC to be used through out the MPLS MIB modules. A MIB http://potaroo.net/ietf/idref/draft-manral-mpls-rfc3811bis/ was written for the purpose.\n --VERIFIER NOTES-- \nAlthough only a few lines of text are proposed for modification, this change would make a technically un-interoperable change to existing implementations. Therefore it should be handled by discussion in the working group and a new RFC if there is consensus. I am rejecting the erratum.   ",
+    "submit_date": "2009-08-27",
+    "submitter_name": "Vishwas Manral",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1882,
+    "doc-id": "RFC3811",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "MplsLabel",
+    "orig_text": "              * The Generalized-MPLS (GMPLS) label contains a\r\n                value greater than 2^24-1 and used in GMPLS\r\n                as defined in [RFC3471].\"\r\n",
+    "correct_text": "              * The Generalized-MPLS (GMPLS) label may contain\r\n                a value greater than 2^24-1 and is used in\r\n                GMPLS as defined in [RFC3471].\"\r\n",
+    "notes": "The orriginal text implied that GMPLS labels could only be greater than\r\n(2^24 - 1). In fact all label alues are supported.",
+    "submit_date": "2009-09-16",
+    "submitter_name": "Vishwas Manral",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
