@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4556,
+    "doc-id": "RFC6474",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.3,
+    "orig_text": "DEATHDATE;19531015T231000Z",
+    "correct_text": "DEATHDATE:19531015T231000Z",
+    "notes": "A typo when declaring the third DEATHDATE property example: It is a colon, not a semi-colon.",
+    "submit_date": "2015-12-07",
+    "submitter_name": "Sylvain Berfini",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4557,
+    "doc-id": "RFC6474",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "BIRTHPLACE;VALUE=uri:geo:46.769307,-71.283079",
+    "correct_text": "BIRTHPLACE;VALUE=uri:geo:46.769307\\,-71.283079",
+    "notes": "Section 3.4 in RFC 6350 states that all property values must have COMMA characters escaped with a BACKSLASH character. The BIRTHPLACE property value in the example contains a comma. Therefore it must be escaped with a backslash.",
+    "submit_date": "2015-12-07",
+    "submitter_name": "Sylvain Berfini",
+    "verifier_id": 2,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4559,
+    "doc-id": "RFC6474",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.2,
+    "orig_text": "DEATHPLACE;VALUE=uri:geo:41.731944,-49.945833",
+    "correct_text": "DEATHPLACE;VALUE=uri:geo:41.731944\\,-49.945833",
+    "notes": "Section 3.4 in RFC 6350 states that all property values must have COMMA characters escaped with a BACKSLASH character. The DEATHPLACE property value in the example contains a comma. Therefore it must be escaped with a backslash.",
+    "submit_date": "2015-12-07",
+    "submitter_name": "Sylvain Berfini",
+    "verifier_id": 2,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
