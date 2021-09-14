@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3624,
+    "doc-id": "RFC5908",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "[...]\r\nThe currently defined time source suboptions are\r\nNTP_OPTION_SRV_ADDR, NTP_OPTION_SRV_MC_ADDR, and NTP_OPTION_SRV_FQDN.\r\n[...]",
+    "correct_text": "[...]\r\nThe currently defined time source suboptions are\r\nNTP_SUBOPTION_SRV_ADDR, NTP_SUBOPTION_MC_ADDR, and NTP_SUBOPTION_SRV_FQDN.\r\n[...]",
+    "notes": "It does not appear clearly if the type of error must be technical or editorial.\r\n\r\nThe three suboptions are defined in the sections 4.1, 4.2 and 4.3. Their names are differents of those used in second paragraph of the section 4.\r\n\r\nIana standardized the 4.1, 4.2 and 4.3 names. see:\r\nhttp://www.iana.org/assignments/bootp-dhcp-parameters/bootp-dhcp-parameters.xml\r\n[...]\r\nValue\tName\t\t\tReference\r\n1\tNTP_SUBOPTION_SRV_ADDR\t[RFC5908]\r\n2\tNTP_SUBOPTION_MC_ADDR\t[RFC5908]\r\n3\tNTP_SUBOPTION_SRV_FQDN\t[RFC5908]\r\n[...]",
+    "submit_date": "2013-05-16",
+    "submitter_name": "Francois-Xavier Le Bail",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
