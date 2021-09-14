@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1897,
+    "doc-id": "RFC5623",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "4.1,",
+    "orig_text": "a) Section 4.1, 2nd paragraph (bottom of page 10):\r\n\r\n   A VNT Manager (VNTM) is defined as a functional element that manages\r\n   and controls the VNT.  The PCE and VNT Manager are distinct\r\n|  functional elements that may or may not be collocated.\r\n                                                ^^\r\n\r\nb) Section 4.2.4, trailing Note below Table 1 (on page 22):\r\n\r\n   * Note that, in case of NSM-VNTM cooperation (separate flavor) and\r\n     single PCE inter-layer path computation, the PCE function used by\r\n|    NMS and VNTM may be collocated, but it will operate on separate\r\n     TEDs.\r\n                           ^^",
+    "correct_text": "a)\r\n\r\n   A VNT Manager (VNTM) is defined as a functional element that manages\r\n   and controls the VNT.  The PCE and VNT Manager are distinct\r\n|  functional elements that may or may not be co-located.\r\n\r\nb)\r\n\r\n   * Note that, in case of NSM-VNTM cooperation (separate flavor) and\r\n     single PCE inter-layer path computation, the PCE function used by\r\n|    NMS and VNTM may be co-located, but it will operate on separate\r\n     TEDs.\r\n ",
+    "notes": "Rationale:\r\n  \"collocated\" and \"co-located\" (or \"colocated\") have very different\r\n  semantics!  The latter seems to be the appropriate choice: two\r\n  logical entites (or subsystems) are located within the same system.\r\n  The former means \"arranged/placed/sorted *somehow*, in the proper\r\n  way\", without emphasis on neighborship or common enclosement.\n --VERIFIER NOTES-- \nEmail discussions with the RFC Editor yielded the following answer that appears to set the editorial standard for this word within RFCs going forward.\r\n\r\nAccording to this text, the RFC is correct.\r\n----\r\nThis particular word is accepted in many forms.  Historically, we have\r\ndefaulted to co-located when spelled inconsistently within a document.\r\nHowever, we do not apply this uniformly across the series because\r\nthere are so many accepted forms of the word.  For example:\r\n\r\nWebster's Dictionary has entries for colocate (1965) and\r\ncollocate (1513), but there is no entry for co-locate.  \r\n\r\nWebopeida only recognizes co-location.\r\n\r\nWikipedia lists \r\n\r\nColocation/collocation may refer to:\r\n\r\n    * Colocation (business), the placement of several entities in a\r\n      single location.\r\n    * The provision of computing services in a third-party colocation\r\n      centre.\r\n    * Collocation, in corpus linguistics, a sequence of words that\r\n      often occur together.\r\n    * Collocation method, used in maths to solve differential and\r\n      integral equations.\r\n\r\nAdditionally, the topic is discussed with no clear answer.  For\r\nexample, see \r\nhttp://www.webhostingtalk.com/archive/index.php/t-17495.html.  \r\n\r\nOur editor looked up \"collocation\" in Webster's, and believed that it\r\nwas correct, as it is defined as:\r\n\r\n   to set or arrange in a place or position; especially : to set side\r\n   by side \r\n\r\nIf we notice multiple spellings within a document, we tend to default\r\nto \"co-locate\", but if the document consistently uses \"collocation\" or\r\n\"colocation\", we do not change the spelling.\r\n",
+    "submit_date": "2009-09-30",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1898,
+    "doc-id": "RFC5623",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.2.2,pg.14",
+    "orig_text": "     Step 4:  H1 initiates higher-layer signaling using the computed\r\n|             explicit router of H2-L1-L2-H3-H4.\r\n                            ^",
+    "correct_text": "     Step 4:  H1 initiates higher-layer signaling using the computed\r\n|             explicit route of H2-L1-L2-H3-H4.\r\n",
+    "notes": "Rationale: confusing typo.",
+    "submit_date": "2009-09-30",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
