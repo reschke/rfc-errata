@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 5158,
+    "doc-id": "RFC8216",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.3.4.1",
+    "orig_text": "The value is a quoted-string that specifies an ordered, backslash-\r\nseparated (\"/\") list of parameters.",
+    "correct_text": "The value is a quoted-string that specifies an ordered, forward slash-\r\nseparated (\"/\") list of parameters.",
+    "notes": "Confirmed by authors that this is a forward slash.",
+    "submit_date": "2017-10-17",
+    "submitter_name": "Daniel Tashjian",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5263,
+    "doc-id": "RFC8216",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 12.2,
+    "orig_text": "   [SampleEnc]\r\n              Apple Inc., \"MPEG-2 Stream Encryption Format for HTTP Live\r\n              Streaming\",\r\n              <https://developer.apple.com/library/ios/documentation/\r\n              AudioVideo/Conceptual/HLS_Sample_Encryption/>.",
+    "correct_text": "   [SampleEnc]\r\n              Apple Inc., \"MPEG-2 Stream Encryption Format for HTTP Live\r\n              Streaming\",\r\n              <https://developer.apple.com/library/content/\r\n              documentation/AudioVideo/Conceptual/HLS_Sample_Encryption/\r\n              Encryption/Encryption.html>.\r\n",
+    "notes": "The [SampleEnc] reference is currently a broken link.",
+    "submit_date": "2018-02-20",
+    "submitter_name": "Sebastian Hubbard",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6430,
+    "doc-id": "RFC8216",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 11.2,
+    "orig_text": "[M3U]      Nullsoft, Inc., \"The M3U Playlist format, originally\r\n           invented for the Winamp media player\",\r\n           <https://en.wikipedia.org/w/\r\n           index.php?title=M3U7amp;oldid=786631666>.\r\n",
+    "correct_text": "[M3U]      \"M3U (MP3 URL)\", <https://en.wikipedia.org/wiki/M3U>.",
+    "notes": "The original reference is to an archived page, and the reference title includes subjective opinion about the reference.\r\nThe new reference is current, stable, and avoids opinion.",
+    "submit_date": "2021-02-14",
+    "submitter_name": "Ahmet Katranci",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2021-02-16 09:46:53"
+  }
+]
