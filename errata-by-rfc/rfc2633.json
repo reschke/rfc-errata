@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 405,
+    "doc-id": "RFC2633",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.5,
+    "orig_text": "   This may be useful in an environment were automatic signature\n   verification is desired, as no private key material is required to\n   verify a signature.",
+    "correct_text": "   This may be useful in an environment where automatic signature\n   verification is desired, as no private key material is required to\n   verify a signature.\n",
+    "notes": "",
+    "submit_date": "2003-03-12",
+    "submitter_name": "Joni Yrjana",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5019,
+    "doc-id": "RFC2633",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "id-aa-encrypKeyPref OBJECT IDENTIFIER ::= {id-aa 11}\r\n",
+    "correct_text": "id-aa-encrypKeyPref [sic] OBJECT IDENTIFIER ::= {id-aa 11}",
+    "notes": "encryp isn't a word, it's a typo. Unfortunately, like http's (rfc1945) referer [sic] before it, this is now part of the API.\r\n\r\nThis error should be highlighted (as rfc2068 does for referer [sic]) so that people are aware that the natural spelling doesn't apply.\r\n\r\nIf it's possible for a revised RFC to be published suggesting the correct spelling w/ a way for clients/servers to handle the old spelling, that would be nice, but based on precedent, that seems unlikely.\r\n\r\n---\r\nAs AD, this discussion needs to be continued and possibly with a different draft.  As such, I am marking this as hold for document update and listing it as editorial so that there are no n the wire changes at this time with this errata.\r\n----\r\nThere was quite a bit of on list discussion that should be reviewed for any future changes.\r\n\r\nOne summary from the discussion:\r\nhe mailing list participants are copied on these errata to get their opinion in order to inform the AD how to dispose of the errata.  Most folks are just making their opinions known.\r\n\r\n1) The next thing that folks look at is whether it’s technical or not.  Debate ensues, but generally technical errata are those that affect interoperability.  This one I don’t think does because there are no changes to the bits on the wire.\r\n\r\n2) And, well folks want to get lots of changes, but the change has to run through the consensus process (back to mailing list input).\r\n\r\nSo to the import bit:\r\n\r\nAs I see it, there are two ways to get the note incorporated:\r\n\r\n1. Write a draft that adds the note; this seems a bit heavy weight for what you are trying to do.\r\n\r\n2. Apply the note to the latest RFC/draft that obsoletes RFC 2633; I guess you went for upstream, but generally the IETF applies changes to the latest/greatest RFC/draft.  That obsoletes chain is: RFC 3851 obsoleted RFC 2633, RFC 3851 was obsoleted by RFC 5751, and draft-ietf-lamps-rfc5751-bis is about to obsolete RFC 5751.  Luckily, draft-ietf-lamps-rfc5751-bis isn’t yet an RFC so there’s an option to have the note added there.\r\n\r\nAny objections to adding a note in draft-ietf-lamps-rfc5751-bis along the same lines as the note for receipentKeyId?",
+    "submit_date": "2017-05-14",
+    "submitter_name": "Josh Soref",
+    "verifier_id": 2,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
