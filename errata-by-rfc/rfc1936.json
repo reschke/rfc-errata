@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 530,
+    "doc-id": "RFC1936",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "            4-bit carry-lookahead 2's complement adder:\n                    a,b : input data\n                    p   : carry propagate, where pi = ai*bi = (ai)(bi)\n                    g   : carry generate, where gi = ai + bi",
+    "correct_text": "             4-bit carry-lookahead 2's complement adder:\n                    a,b : input data\n                    p   : carry propagate, where pi = ai + bi\n                    g   : carry generate, where gi = ai*bi = (ai)(bi)",
+    "notes": "Note:  This change affects only page 4; the PLD code is known correct.\n",
+    "submit_date": "2005-05-11",
+    "submitter_name": "Joe Touch",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
