@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5057,
+    "doc-id": "RFC7774",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "DM_IMAX (unsigned 8-bit integer):  DATA_MESSAGE_IMAX.  The actual\r\n      maximum timeout is described as a number of doublings of\r\n      DATA_MESSAGE_IMIN, as described in [RFC6206], Section 4.1.\r\n      0 and 0xff are reserved and MUST NOT be used.\r\n\r\n",
+    "correct_text": "DM_IMAX (unsigned 8-bit integer):  DATA_MESSAGE_IMAX.  The actual\r\n      maximum timeout is described as a number of doublings of\r\n      DATA_MESSAGE_IMIN, as described in [RFC6206], Section 4.1.\r\n      0xff is reserved and MUST NOT be used.",
+    "notes": "RFC6206\r\nThe maximum interval size, Imax, is described as a number of\r\n      doublings of the minimum interval size.\r\n\r\nRFC7731\r\nDATA_MESSAGE_IMAX  - The maximum Trickle timer interval, as defined\r\n      in [RFC6206], for MPL Data Message transmissions.\r\n      DATA_MESSAGE_IMAX has a default value equal to DATA_MESSAGE_IMIN.\r\nalso\r\n   The default MPL parameters specify a forwarding strategy that\r\n   utilizes both proactive and reactive techniques.  Using these default\r\n   values, an MPL Forwarder proactively transmits any new MPL Data\r\n   Messages it receives and then uses MPL Control Messages to trigger\r\n   additional MPL Data Message retransmissions where message drops are\r\n   detected.  Setting DATA_MESSAGE_IMAX to the same value as\r\n   DATA_MESSAGE_IMIN in this case is acceptable, since subsequent MPL\r\n   Data Message retransmissions are triggered by MPL Control Messages,\r\n   where CONTROL_MESSAGE_IMAX is greater than CONTROL_MESSAGE_IMIN.\r\n\r\nFor DATA_MESSAGE_IMAX == DATA_MESSAGE_IMIN implies DM_IMAX=0.  0 is a valid value for DM_IMAX.\r\n\r\n=====\r\n[Alvaro Retana] \r\n\r\nThe pointer to rfc7731 seems to indicate that the description for is incorrect. However, this document uses Normative language to define the DM_IMAX parameter. \r\n\r\nI am then not marking this report as Verified, but as \"Hold for Document Update\", which means that when this document is updated, the validity should be considered then. [1] \r\n\r\n[1] https://www.ietf.org/iesg/statement/errata-processing.html \r\n",
+    "submit_date": "2017-06-29",
+    "submitter_name": "James K.",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5063,
+    "doc-id": "RFC7774",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "   C_T_EXP (unsigned 16-bit integer):\r\n      CONTROL_MESSAGE_TIMER_EXPIRATIONS.  0 and 0xffff are reserved and\r\n      MUST NOT be used.",
+    "correct_text": "   C_T_EXP (unsigned 16-bit integer):\r\n      CONTROL_MESSAGE_TIMER_EXPIRATIONS.  0xffff is reserved and\r\n      MUST NOT be used.",
+    "notes": "[RFC 7731] states:\r\n\r\n9.3.  MPL Data Message Processing\r\n\r\n   o  If the MPL Control Message Trickle timer is not running and\r\n      CONTROL_MESSAGE_TIMER_EXPIRATIONS is non-zero, the MPL Forwarder\r\n      MUST initialize and start the MPL Control Message Trickle timer.\r\n\r\n10.2.  MPL Control Message Transmission\r\n\r\n   An MPL Forwarder transmits MPL Control Messages using the Trickle\r\n   algorithm.  An MPL Forwarder maintains a single Trickle timer for\r\n   each MPL Domain.  When CONTROL_MESSAGE_TIMER_EXPIRATIONS is 0, the\r\n   MPL Forwarder does not execute the Trickle algorithm and does not\r\n   transmit MPL Control Messages.\r\n\r\nThus, 0 is a valid configuration for C_T_EXP to disable Reactive Forwarding.\r\n\r\n=====\r\n[Alvaro Retana]\r\n\r\nThe pointer to rfc7731 seems to indicate that the description for CONTROL_MESSAGE_TIMER_EXPIRATIONS is incorrect.  However, this document uses Normative language to define the C_T_EXP parameter.\r\n\r\nI am then not marking this report as Verified, but as \"Hold for Document Update\", which means that when this document is updated, the validity should be considered then. [1]\r\n\r\n[1] https://www.ietf.org/iesg/statement/errata-processing.html",
+    "submit_date": "2017-07-06",
+    "submitter_name": "James K.",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
