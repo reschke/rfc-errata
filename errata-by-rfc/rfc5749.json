@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2087,
+    "doc-id": "RFC5749",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2., pg. 4",
+    "orig_text": "   DSUSRK\r\n      Domain-Specific Usage-Specific Root Key.  A root key that is\r\n|     derived from the DSRK; see [RFC5295].\r\n",
+    "correct_text": "   DSUSRK\r\n      Domain-Specific Usage-Specific Root Key.  A root key that is\r\n|     derived from a DSRK; see [RFC5295].\r\n",
+    "notes": "Rationale: There can be different DSRKs (cf. Figure 1 on page 6);\r\nhence use of the definite article here could be confusing.",
+    "submit_date": "2010-03-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2088,
+    "doc-id": "RFC5749",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6.2,2nd para",
+    "orig_text": "                              [...].  EAP-Initiate/Re-auth-Start\r\n|  messages send to the peer will be silently dropped by the peer\r\n   causing further waste of resources.\r\n",
+    "correct_text": "                              [...].  EAP-Initiate/Re-auth-Start\r\n|  messages sent to the peer will be silently dropped by the peer\r\n   causing further waste of resources.\r\n",
+    "notes": null,
+    "submit_date": "2010-03-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
