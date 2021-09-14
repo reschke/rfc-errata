@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3317,
+    "doc-id": "RFC2960",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "6.3.1",
+    "orig_text": "       RTTVAR <- (1 - RTO.Beta) * RTTVAR + RTO.Beta * |SRTT - R'| SRTT\r\n       <- (1 - RTO.Alpha) * SRTT + RTO.Alpha * R'",
+    "correct_text": "       RTTVAR <- (1 - RTO.Beta) * RTTVAR + RTO.Beta * |SRTT - R'|, and\r\n       SRTT <- (1 - RTO.Alpha) * SRTT + RTO.Alpha * R'",
+    "notes": "Currently, it looks like the second equation is part of the first one.\n --VERIFIER NOTES-- \nRFC 2960 is obsolete.  It has been replaced by RFC 4960.   ",
+    "submit_date": "2012-08-14",
+    "submitter_name": "Sergey Antipov",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
