@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5384,
+    "doc-id": "RFC7855",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "3.3.1.1.1",
+    "orig_text": "      C1k has a link to C2j iff k = j.\r\n\r\n         The core nodes of a given region are directly connected.\r\n         Inter-region links only connect core nodes of the same plane.\r\n\r\n      {C1k has a link to C1j} iff {C2k has a link to C2j}.",
+    "correct_text": "      C1k has a link to C2j if k = j.\r\n\r\n         The core nodes of a given region are directly connected.\r\n         Inter-region links only connect core nodes of the same plane.\r\n\r\n      {C1k has a link to C1j} if {C2k has a link to C2j}.",
+    "notes": "Does \"iff\" mean something special that is different to \"if\" or is this a typo? If the former, should it be called out in a glossary?\n --VERIFIER NOTES-- \n\"iff\" means \"if and only if\"\r\nThis abreviation is part of the RFC Editor's well known ones.\r\nPlease see: https://www.rfc-editor.org/materials/abbrev.expansion.txt",
+    "submit_date": "2018-06-08",
+    "submitter_name": "James Bensley",
+    "verifier_id": 160,
+    "verifier_name": "Martin Vigoureux",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5385,
+    "doc-id": "RFC7855",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "   Hence, the policy is instantiated in the packet header and does not\r\n   requires any policy state in midpoints and tail-ends.",
+    "correct_text": "   Hence, the policy is instantiated in the packet header and does not\r\n   require any policy state in midpoints and tail-ends.",
+    "notes": "require/requires - singular/plural.\r\nVerifier Notes: subject/verb agreement error.",
+    "submit_date": "2018-06-08",
+    "submitter_name": "James Bensley",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
