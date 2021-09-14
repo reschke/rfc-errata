@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1718,
+    "doc-id": "RFC5454",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.1, pg.5",
+    "orig_text": "   Prefix Length\r\n\r\n      A sixteen-byte field containing the Mobile IPv6 Network Prefix;\r\n      all insignificant (low-order) bits (beyond the Prefix Length) MUST\r\n      be set to 0 by the originator of the option and ignored by the\r\n      receiver.\r\n\r\n   Mobile IPv6 Network Prefix\r\n\r\n      A sixteen-byte field containing the Mobile IPv6 Network Prefix\r\n",
+    "correct_text": "   Prefix Length\r\n\r\n|     Indicates the prefix length of the prefix included in the Mobile\r\n|     IPv6 Network Prefix field.  A value of 255 indicates that a link-\r\n|     local address is included in the Mobile IPv6 Network Prefix field.\r\n\r\n   Mobile IPv6 Network Prefix\r\n\r\n|     A sixteen-byte field containing the Mobile IPv6 Network Prefix;\r\n|     all insignificant (low-order) bits (beyond the Prefix Length) MUST\r\n|     be set to 0 by the originator of the option and ignored by the\r\n|     receiver.",
+    "notes": "The replacement text apparently has been placed into the wrong\r\nfield explanation.\r\nThe text presented for \"Prefix Length\" is the text that should\r\nbe specified for \"Mobile IPv6 Network Prefix\"; the correct text\r\nfor \"Prefix Length\" (as shown above) is borrowed from Section 2.2.",
+    "submit_date": "2009-03-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1719,
+    "doc-id": "RFC5454",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "2.2, pg.7",
+    "orig_text": "   The following values are defined for use as a Code value in the above\r\n   extension:\r\n\r\n|     0 registration accepted, IPv6 to be tunneled to HoA\r\n\r\n|     1 registration accepted, IPv6 to be tunneled to CoA\r\n\r\n      8 registration rejected, reason unspecified\r\n\r\n      9 registration rejected, administratively prohibited\r\n",
+    "correct_text": "   The following values are defined for use as a Code value in the above\r\n   extension:\r\n\r\n|     0 registration accepted, IPv6 will be tunneled to HoA\r\n\r\n|     1 registration accepted, IPv6 will be tunneled to CoA\r\n\r\n      8 registration rejected, reason unspecified\r\n\r\n      9 registration rejected, administratively prohibited\r\n",
+    "notes": "Rationale: The extension described in this section is sent\r\nfrom the Home Agent to the Mobile Node and reflects the decisions\r\nmade by the Home Agent. \"to be tunnelled\" could be misunderstood;\r\nthe text should better be stated as a confirmation; hence s/to/will/.\n --VERIFIER NOTES-- \nThe wording clearly conveys the action of tunneling the extension.   ",
+    "submit_date": "2009-03-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1720,
+    "doc-id": "RFC5454",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.6,pp.13/14",
+    "orig_text": "   When IPv6 runs over an IPv4 tunnel, the IPv6 tunnel endpoints can\r\n   treat the IPv4 tunnel as a single hop link as defined in [RFC4213].\r\n   The two tunnel endpoints, e.g., mobile node and home agent, MUST\r\n   configure link-local IPv6 addresses as defined in Section 3.7 of\r\n   [RFC4213], while they MUST also adhere to the neighbor discovery\r\n   requirements of the same specification, Section 3.8, and the hop\r\n|  limit requirements of Section 3.3.\r\n",
+    "correct_text": "   When IPv6 runs over an IPv4 tunnel, the IPv6 tunnel endpoints can\r\n   treat the IPv4 tunnel as a single hop link as defined in [RFC4213].\r\n   The two tunnel endpoints, e.g., mobile node and home agent, MUST\r\n   configure link-local IPv6 addresses as defined in Section 3.7 of\r\n   [RFC4213], while they MUST also adhere to the neighbor discovery\r\n   requirements of the same specification, Section 3.8, and the hop\r\n|  limit requirements of Section 3.3 in [RFC4213].\r\n",
+    "notes": "Rationale: The text should also make clear to which document\r\n(this RFC or RFC 4213) the last section number given refers.\r\nPointing to RFC 4213 twice (but not in the final case) could be\r\nmisunderstood, in particular due to the presence of the comma in\r\nfront of the \"and\" in a two-item list.",
+    "submit_date": "2009-03-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
