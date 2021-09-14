@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4631,
+    "doc-id": "RFC2182",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.3,
+    "orig_text": "     + While positive DNS results are usually cached, the lack of a\r\n       result is not cached.  Thus, unnecessary inability to resolve\r\n       creates an undesirable load on the net.",
+    "correct_text": "     + While positive DNS results are usually cached, the lack of a\r\n       result will either be cached with less frequency or not at all,\r\n       depending on a server's caching behaviours and the\r\n       operator's local configuration.  Thus, unnecessary inability to\r\n       resolve creates an undesirable load on the net.",
+    "notes": "BCP 16 predates RFC 2308 (Negative Caching of DNS Queries), and the blanket statement that \"lack of a result is not cached\" is inaccurate by modern standards.\r\n\r\nAD Note: \r\n\r\n1) The errata has been moved to editorial, as the outcome \"undesirable load on the net\" is the same.\r\n\r\n2) The errata itself has been moved to hold for update. Change in deployment and technology over time will always affect documents already published. The Errata text is not spurious, and does add clarification but does not impact interoperability.",
+    "submit_date": "2016-03-02",
+    "submitter_name": "Andrew Boling",
+    "verifier_id": 146,
+    "verifier_name": "Terry Manderson",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
