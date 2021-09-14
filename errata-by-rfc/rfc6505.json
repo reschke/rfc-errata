@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3659,
+    "doc-id": "RFC6505",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.2.2.4",
+    "orig_text": "   id2:  an identifier for either a connection or a conference.  The\r\n      identifier MUST conform to the syntax defined in Section 15.1 of\r\n      [RFC6230].  The attribute is mandatory.\r\n",
+    "correct_text": "   id2:  an identifier for either a connection or a conference.  The\r\n      identifier MUST conform to the syntax defined in Appendix A.1 of\r\n      [RFC6230].  The attribute is mandatory.\r\n",
+    "notes": null,
+    "submit_date": "2013-06-17",
+    "submitter_name": "Joël Repiquet",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
