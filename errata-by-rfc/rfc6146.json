@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4756,
+    "doc-id": "RFC6146",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.5.3",
+    "orig_text": "If the NAT64 filters on its IPv4 interface, then the NAT64 checks\r\nto see if the incoming packet is allowed according to the Address-\r\nDependent Filtering rule.  To do this, it searches for a Session\r\nTable Entry with an STE source IPv4 address equal to X, an STE\r\nICMPv4 Identifier equal to i2, and a STE destination IPv4 address\r\nequal to Y.  If such an entry is found (there may be more than\r\none), packet processing continues.  Otherwise, the packet is\r\ndiscarded.  If the packet is discarded, then an ICMP error message\r\nMAY be sent to the original sender of the packet.  The ICMP error\r\nmessage, if sent, has Type 3 (Destination Unreachable) and Code 13\r\n(Communication Administratively Prohibited).\r\n\r\nIn case the packet is not discarded in the previous processing\r\nsteps (either because the NAT64 is not filtering or because the\r\npacket is compliant with the Address-Dependent Filtering rule),\r\nthen the NAT64 searches for a Session Table Entry (...)",
+    "correct_text": "The NAT64 then searches for a Session Table Entry (...)",
+    "notes": "The statement \"there may be more than one\" is incorrect; the triplet (X,i2,Y) constitutes the whole ICMP session's v4 identifier. Considering that, the whole paragraph tends to fall apart.\r\n\r\nThe point of Address-Dependent Filtering (ADF) is to provide a means to allow or disallow IPv4-started \"sibling\" connections. If there is an ongoing connection whose binding state is\r\n\r\n\tBIB entry: (*,*)       <--> (T,t)\r\n\tSession: (*,*),(*,*) <--> (T,t),(Z,z)\r\n\r\n(Left side is v6, right side is v4. This is the same notation as the RFC; see for example https://tools.ietf.org/html/rfc6146#section-3.5.1; '*' is anything/irrelevant)\r\n\r\nThen ADF dictates whether the v4 endpoint is allowed to create the following new session (using the same BIB entry):\r\n\r\n\tSession: (*,*),(*,*) <--> (T,t),(Z,m)\r\n\r\n(where 'z' is not equal to 'm')\r\n\r\nADF works in UDP/TCP because t and z/m are separate variables. This is not the case in ICMP:\r\n\r\n\tBIB entry: (*,*)       <--> (T,t)\r\n\tSession: (*,*,*)     <--> (T,t,Z)\r\n\r\nIf only one ICMP triplet can match, there is no room for \"sibling\" ICMP \"connections\" that share a \"source\" IPv4 identifier but not a \"destination\" IPv4 identifier like TCP and UDP do. The two pings will share both BIB entry and v4 endpoint address and therefore also share the session. The NAT64 is incapable of telling the two pings apart, and therefore cannot filter one of them.\r\n\r\nThere is no such thing as \"Address-Dependent Filtering\" on ICMP.",
+    "submit_date": "2016-08-02",
+    "submitter_name": "Alberto Leiva Popper",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2021-01-13 06:41:50"
+  }
+]
