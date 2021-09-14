@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1839,
+    "doc-id": "RFC2876",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7,
+    "orig_text": "300b 0609 6086 4801 6502 0101 0400",
+    "correct_text": "300b 0609 6086 4801 6502 0101 04",
+    "notes": "The SMIMECapability for SKIPJACK should be 300b 0609 6086 4801 6502 0101 04, which is the DER encoding of the id-fortezzaConfidentialityAlgorithm OID.  The extra 00 should not be included.",
+    "submit_date": "2009-08-25",
+    "submitter_name": "Sean Turner",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
