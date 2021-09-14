@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6214,
+    "doc-id": "RFC5524",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6,
+    "orig_text": "This document defines the URLFETCH=BINARY IMAP capability.  IANA has added it to the registry accordingly.",
+    "correct_text": "This document defines the URLAUTH=BINARY IMAP capability.  IANA is asked to replace URLFETCH=BINARY with URLAUTH=BINARY in the IMAP registry.",
+    "notes": "This document talks about URLAUTH=BINARY.  Mentioning URLFETCH=BINARY in the IANA section was not intended.",
+    "submit_date": "2020-06-24",
+    "submitter_name": "Дилян Палаузов",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-06-25 12:23:28"
+  }
+]
