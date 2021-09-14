@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2730,
+    "doc-id": "RFC6045",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.  -Page 59",
+    "orig_text": " <xs:element name=\"TrafficType\" default=\"Attack\">\r\n",
+    "correct_text": " <xs:element name=\"TrafficType\">\r\n",
+    "notes": "A default should not have been included for TrafficType in the schema.",
+    "submit_date": "2011-02-23",
+    "submitter_name": "Kathleen Moriarty",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
