@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5479,
+    "doc-id": "RFC8265",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "   A userpart is allowed to contain only code\r\n   points that are allowed by the PRECIS IdentifierClass defined in\r\n   Section 4.2 of [RFC8264] and thus consists almost exclusively of\r\n   letters and digits.\r\n",
+    "correct_text": "   A userpart is allowed to contain only code\r\n   points that are allowed by the PRECIS IdentifierClass defined in\r\n   Section 4.2 of [RFC8264] (with respect to the userpart containing\r\n   them, not to the username as a whole) and thus consists almost \r\n   exclusively of letters and digits.",
+    "notes": "Because certain characters in IdentifierClass are CONTEXTO and are not valid unless the whole string doesn't contain certain other characters (an example is ARABIC-INDIC DIGITS), it is unclear whether the context-specific rules apply to the whole username or to individual userparts.  However, section 3.5 strongly suggests that usernames (as opposed to userparts) are the matter of a higher-level protocol than this RFC.  As a result, this erratum adds the text in parentheses to clarify that context-specific rules apply to individual userparts.",
+    "submit_date": "2018-08-26",
+    "submitter_name": "Peter Occil",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
