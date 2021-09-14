@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3166,
+    "doc-id": "RFC6482",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "...EE certificate's IP address delegation extension.",
+    "correct_text": "...EE certificate's IP address delegation extension.  The EE certificate\r\nMUST NOT use \"inherit\" elements as described in [RFC3779].",
+    "notes": "Having spoken to the authors, the authors' intent was to disallow \"inherit\" in ROA EE certificates in order to simplify validation of ROAs.  Implementers agree, and as of March 2012, the three public validator implementations already enforce this.\r\n\r\nThis erratum simply states it explicitly, whereas the original text might be misread as leaving room for indirectly-specified resources via \"inherit\".\r\n\r\nThis errata was discussed by the WG, please see SIDR list archive.",
+    "submit_date": "2012-03-25",
+    "submitter_name": "Andrew Chi",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5609,
+    "doc-id": "RFC6482",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Table of Contents",
+    "orig_text": "   5. Security Considerations .........................................5\r\n   6. Acknowledgments .................................................6\r\n   7. References ......................................................6\r\n      7.1. Normative References .......................................6\r\n      7.2. Informative References .....................................6",
+    "correct_text": "   5. Security Considerations .........................................5\r\n   6. IANA Considerations .............................................6\r\n   7. Acknowledgments .................................................6\r\n   8. References ......................................................6\r\n      8.1. Normative References .......................................6\r\n      8.2. Informative References .....................................6",
+    "notes": "The Table of Contents omits the \"IANA Considerations\" section, which should be section 6, which consequently causes the numbered sections to be follow be labeled incorrectly.",
+    "submit_date": "2019-01-20",
+    "submitter_name": "John Kristoff",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5881,
+    "doc-id": "RFC6482",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "   END\r\n",
+    "correct_text": "   id-ct-routeOriginAuthz OBJECT IDENTIFIER ::= { 1 2 840 113549 1 9 16 1 24 }\r\n\r\n   END\r\n",
+    "notes": "The object identifier for the ROA content type is mentioned in the document, but it is not included in the ASN.1 Module.",
+    "submit_date": "2019-10-23",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-10-24 11:04:55"
+  }
+]
