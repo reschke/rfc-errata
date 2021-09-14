@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2547,
+    "doc-id": "RFC5994",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "a)\r\n\r\nMPLS EXP field\r\n\r\nb)\r\n\r\nEXP-Inferred-PSC LSP (E-LSP)",
+    "correct_text": "a)\r\n\r\nMPLS Traffic Class field\r\n\r\nb)\r\n\r\nExplicitly TC-encoded-PSC LSP (E-LSP)",
+    "notes": "Rationale:\r\n  RFC 5462 has carefully changed the terminology and updated RFCs 3032\r\n  and 3270 (among others); it has given a detailed explantion why this\r\n  needs to be done and confirmed that all future RFCs should\r\n  unconditionally use the updated terms.\r\n  See in particular Sections 2.1 and 2.2 of RFC 5462 for the updates to\r\n  RFC 3032 and RFC 3270 (respectively) that are relevant for this RFC.\r\n\r\n  Ironically, RFC 5994 cites RFC 5462, yet uses the obsolete terms. Sigh!",
+    "submit_date": "2010-10-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
