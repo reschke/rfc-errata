@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3170,
+    "doc-id": "RFC2898",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "   Other cryptographic techniques based on passwords, such as password-\r\n   based key entity authentication and key establishment protocols",
+    "correct_text": "   Other cryptographic techniques based on passwords, such as password-\r\n   based entity authentication and key establishment protocols",
+    "notes": "\"key entity authentication\" appears to be a typo.  Or, at least, missing a hyphen.",
+    "submit_date": "2012-03-29",
+    "submitter_name": "nobody@example.invalid",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3324,
+    "doc-id": "RFC2898",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "A.2",
+    "orig_text": "   The fields of type PKDF2-params have the following meanings:\r\n",
+    "correct_text": "   The fields of type PBKDF2-params have the following meanings:\r\n",
+    "notes": null,
+    "submit_date": "2012-08-16",
+    "submitter_name": "Simon Josefsson",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4966,
+    "doc-id": "RFC2898",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 5.1,
+    "orig_text": "                   DK = Tc<0..dkLen-1>",
+    "correct_text": "                   DK = T_c<0..dkLen-1>",
+    "notes": "The referenced variable Tc does not exist.",
+    "submit_date": "2017-03-13",
+    "submitter_name": "Huu Nguyen",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
