@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5584,
+    "doc-id": "RFC8223",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.3.2",
+    "orig_text": "1. The S-bit of the TAC is set to 1 or 0 to advertise or withdraw it.",
+    "correct_text": "1. The E-bit of the TAC is set to 1 or 0 to advertise or withdraw it.",
+    "notes": "My understanding of this RFC suggests that in order to Advertize or Withdraw TAC , the bit E in TAC is used. In Point # 1 of section 2.3.2, it is mentioned that bit S is used. Looks this is Editorial mistake.",
+    "submit_date": "2018-12-27",
+    "submitter_name": "Jayant Bhardwaj",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
