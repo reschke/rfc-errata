@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3190,
+    "doc-id": "RFC5547",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "Section 9.1., paragraph 7:\r\nOLD:\r\n\r\n    --boundary71\r\n    Content-Type: application/sdp\r\n    Content-Length: [length of SDP]\r\n\r\nNEW:\r\n\r\n    --boundary71\r\n    Content-Type: application/sdp\r\n\r\n\r\nSection 9.1., paragraph 9:\r\nOLD:\r\n\r\n    --boundary71\r\n    Content-Type: image/jpeg\r\n    Content-Transfer-Encoding: binary\r\n    Content-ID: <id2@alicepc.example.com>\r\n    Content-Length: [length of image]\r\n    Content-Disposition: icon\r\n\r\nNEW:\r\n\r\n    --boundary71\r\n    Content-Type: image/jpeg\r\n    Content-Transfer-Encoding: binary\r\n    Content-ID: <id2@alicepc.example.com>\r\n    Content-Disposition: icon\r\n\r\n\r\nSection 9.2., paragraph 24:\r\nOLD:\r\n\r\n    --boundary71\r\n    Content-Type: application/sdp\r\n    Content-Length: [length of SDP]\r\n\r\nNEW:\r\n\r\n    --boundary71\r\n    Content-Type: application/sdp\r\n\r\n\r\nSection 9.2., paragraph 26:\r\nOLD:\r\n\r\n    --boundary71\r\n    Content-Type: image/jpeg\r\n    Content-Transfer-Encoding: binary\r\n    Content-ID: <id3@alicepc.example.com>\r\n    Content-Length: [length of image]\r\n    Content-Disposition: icon\r\n\r\nNEW:\r\n\r\n    --boundary71\r\n    Content-Type: image/jpeg\r\n    Content-Transfer-Encoding: binary\r\n    Content-ID: <id3@alicepc.example.com>\r\n    Content-Disposition: icon\r\n",
+    "correct_text": null,
+    "notes": "A Content-Length header is shown for a body-part within a multipart body. But Content-Length is an HTTP/SIP header, not a IANA-registered MIME header and should therefore not appear at that location in valid examples. The length of a body part within a multipart body is determined by MIME framing. A Content-Length header found for a body-part within a multipart body is meaningless and should be ignored.\r\n\r\nThis was discussed on both the SIP Implementors and SIP Core mailing lists.",
+    "submit_date": "2012-04-12",
+    "submitter_name": "Bruno CHATRAS",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
