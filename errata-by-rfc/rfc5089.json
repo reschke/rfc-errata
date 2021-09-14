@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1265,
+    "doc-id": "RFC5089",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2 (p.4 bot.)",
+    "orig_text": "   TLV: Type-Length-Variable data encoding.\r\n",
+    "correct_text": "   TLV: Type-Length-Value data encoding.\r\n",
+    "notes": "Wrong expansion of acronym;\r\ncf. RFC 3359 and RFC-Ed. file \"abbrev.expansion.txt\".",
+    "submit_date": "2008-01-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1268,
+    "doc-id": "RFC5089",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.2 mid-p.8",
+    "orig_text": "   Pref-Y field: PCE's preference for inter-layer TE LSP computation.\r\n       ^^",
+    "correct_text": "   PrefY field: PCE's preference for inter-layer TE LSP computation.\r\n       ^",
+    "notes": "May be confusing.\r\n\r\nRestore consistency with artwork on the same page as well as subsequent\r\ntext (and RFC 5088 as well).\r\n\r\n\r\nFurther minor typographical flaws in this RFC,\r\nnoted here for quality control purposes:\r\n\r\na) Section 4.2, 2nd paragraph:\r\n              ... more than once only ...\r\n   should be\r\n              ... more than once, only ...\r\n   (as in RFC 5088);\r\n\r\nb) Section 9.1: missing white space after the5 bullets (dash characters),\r\n   cf. RFC 5088;\r\n\r\nc) Section 11.2: orphaned punctuation in '[PCEP]' entry --\r\n   cf. footnote in Editorial Errata Report for RFC 5088.",
+    "submit_date": "2008-01-13",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
