@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3853,
+    "doc-id": "RFC4231",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 4.4,
+    "orig_text": "   Key            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n                  aaaaaaaa                          (20 bytes)\r\n   Data =         dddddddddddddddddddddddddddddddd\r\n                  dddddddddddddddddddddddddddddddd\r\n                  dddddddddddddddddddddddddddddddd\r\n                  dddd                              (50 bytes)\r\n",
+    "correct_text": "   Key  =         aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n                  aaaaaaaa                          (20 bytes)\r\n   Data =         dddddddddddddddddddddddddddddddd\r\n                  dddddddddddddddddddddddddddddddd\r\n                  dddddddddddddddddddddddddddddddd\r\n                  dddd                              (50 bytes)\r\n",
+    "notes": "Notice the equal sign missing after \"Key\"\r\n\r\nspt: This is clearly editorial and no implementer is going to be confused by this so I marked it hold for document update.",
+    "submit_date": "2013-12-30",
+    "submitter_name": "Antonio Bueno",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
