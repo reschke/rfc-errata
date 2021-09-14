@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 5117,
+    "doc-id": "RFC8058",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.3,
+    "orig_text": "Content-Type: multipart/form-data; boundary=---FormBoundaryjWmhtjORrn\r\n",
+    "correct_text": "Content-Type: multipart/form-data; boundary=-FormBoundaryjWmhtjORrn ",
+    "notes": null,
+    "submit_date": "2017-09-15",
+    "submitter_name": "Gerald W. Lester",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5558,
+    "doc-id": "RFC8058",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 8.3,
+    "orig_text": "Content-Length: 124",
+    "correct_text": "Content-Length: 126",
+    "notes": "The entity body of the message should have the sequence of carriage return and line feed after the final boundary marker. The inclusion of these two control codes would bring the count of octets of bits to 126, not 124. Given that the sequence of carriage return and line feed should have no associated glyphs, no change is needed at the end of the example.\n --VERIFIER NOTES-- \nJohn R Levine wrote:\r\n\r\nI believe this one is wrong and 124 is the correct length.  It would be \r\n126 if you put a \\r\\n after the -- at the end of the last MIME separator. \r\nIf the problem were that we'd left out the carriage returns, there are \r\nfour lines so the (wrong) length would have been 120.",
+    "submit_date": "2018-11-22",
+    "submitter_name": "Etan Wexler",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5559,
+    "doc-id": "RFC8058",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 8.3,
+    "orig_text": "   Header in Email\r\n\r\n   List-Unsubscribe:\r\n       <mailto:listrequest@example.com?subject=unsubscribe>,\r\n       <https://example.com/unsubscribe.html/opaque123456789>\r\n   List-Unsubscribe-Post: List-Unsubscribe=One-Click\r\n\r\n\r\n   Resulting POST request\r\n\r\n   POST /unsubscribe.html/opaque=123456789 HTTP/1.1\r\n                                ^",
+    "correct_text": "   Header in Email\r\n\r\n   List-Unsubscribe:\r\n       <mailto:listrequest@example.com?subject=unsubscribe>,\r\n       <https://example.com/unsubscribe.html/opaque123456789>\r\n   List-Unsubscribe-Post: List-Unsubscribe=One-Click\r\n\r\n\r\n   Resulting POST request\r\n\r\n   POST /unsubscribe.html/opaque123456789 HTTP/1.1",
+    "notes": "The extraneous equality sign (“=”) between “opaque” and “123456789” appears in the target of the HTTP message but not in the “https” URI in the “List-Unsubscribe” field of the mail snippet.",
+    "submit_date": "2018-11-22",
+    "submitter_name": "Etan Wexler",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
