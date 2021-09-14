@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2680,
+    "doc-id": "RFC4363",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "MIB",
+    "orig_text": "> Dear IETF Person-in-Charge,\r\n>\r\n>      We found that Q-BRIDGE-MIB (RFC 2674) had its content corrected\r\n> using the RFC 4363.\r\n>\r\n>      While this kind of update and grammatical correction is a good\r\n> thing,\r\n> we found that:\r\n>\r\n> << old (\"which\" as correlative pronoun)\r\n>        \"The number of valid frames received by this port from\r\n>        its segment which were classified as belonging to this\r\n>        VLAN which were discarded due to VLAN related reasons.\r\n>        Specifically, the IEEE 802.1Q counters for Discard\r\n>        Inbound and Discard on Ingress Filtering.\"\r\n> >>\r\n>\r\n> << new (\"that\" as correlative pronoun)\r\n>        \"The number of valid frames received by this port from\r\n>        its segment that were classified as belonging to this\r\n>        VLAN and that were discarded due to VLAN-related reasons.\r\n>        Specifically, the IEEE 802.1Q counters for Discard\r\n>        Inbound and Discard on Ingress Filtering.\"\r\n> >>\r\n>\r\n>      According to our education, \"which\" is correct, and \"that\" is\r\n> only\r\n> colloquial.  But Microsoft Word seems to reject the use of \"which\" in\r\n> such\r\n> situations, and it may have mis-lead IETF into thinking that the Q-\r\n> BRIDGE-MIB\r\n> should remove \"which\" and use \"that\", which is a pity.\r\n>\r\n>      Thanks.\r\n>\r\n>                                        Qiyao #3165 &#37758;&#21855;&#22575;&#12288;&#19978;\r\n> --------------------------------------------------------------------------\r\n> *Zhong* Qiyao, Xinzhu, Tajvano ~{VSFtR\"~}\r\n> Greg 2009.12.13-19\r\n> --------------------------------------------------------------------------",
+    "correct_text": null,
+    "notes": "Many places.\n --VERIFIER NOTES-- \n   Please see http://www.chicagomanualofstyle.org/CMS_FAQ/Whichvs.That/Whichvs.That01.html for details\r\n\r\n                        Ron Bonica",
+    "submit_date": "2011-01-04",
+    "submitter_name": "*Zhong* Qiyao",
+    "verifier_id": 105,
+    "verifier_name": "Ron Bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
