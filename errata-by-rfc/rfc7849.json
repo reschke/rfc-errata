@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4702,
+    "doc-id": "RFC7849",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "   This document defines a profile that is a superset of the connection\r\n   to IPv6 cellular networks defined in the IPv6 for Third Generation\r\n   Partnership Project (3GPP) Cellular Hosts document.  This document\r\n   defines a profile that is a superset of the connections to IPv6\r\n   cellular networks defined in \"IPv6 for Third Generation Partnership\r\n   Project (3GPP) Cellular Hosts\" (RFC 7066).\r\n\r\n   Both mobile hosts and mobile devices with the capability to share\r\n   their 3GPP mobile connectivity are in scope.\r\n",
+    "correct_text": "   This document defines a profile that is a superset of the connection \r\n   to IPv6 cellular networks defined in \"IPv6 for Third Generation  \r\n   Partnership Project (3GPP) Cellular Hosts\" (RFC 7066).  This document \r\n   defines an IPv6 profile that a number of operators recommend in order \r\n   to connect 3GPP mobile devices to an IPv6-only or dual-stack wireless \r\n   network (including a 3GPP cellular network) with a special focus on \r\n   IPv4 service continuity features. \r\n\r\n   Both mobile hosts and mobile devices with the capability to share \r\n   their 3GPP mobile connectivity are in scope.  ",
+    "notes": "The first occurrence seems to be an older duplicate.",
+    "submit_date": "2016-05-28",
+    "submitter_name": "Denis Ovsienko",
+    "verifier_id": 2,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
