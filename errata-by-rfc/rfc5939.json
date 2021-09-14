@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3545,
+    "doc-id": "RFC5939",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.4.1",
+    "orig_text": "     a=acap:2 a=pcfg:1 t=1 a=1   ;Not allowed to embed \"pcfg\"\r\n",
+    "correct_text": "     a=acap:2 pcfg:1 t=1 a=1   ;Not allowed to embed \"pcfg\"\r\n",
+    "notes": "The existing text, with \"a=\" before \"pcfg\", is outright syntactically incorrect per the syntax in the first paragraph of the section.  The correction is needed for the text to be the intended demonstration of a semantic error.",
+    "submit_date": "2013-03-11",
+    "submitter_name": "Dale Worley",
+    "verifier_id": 2,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5042,
+    "doc-id": "RFC5939",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": "m=audio 59000 UDP/TLS/RTP/AVP 98",
+    "correct_text": "m=audio 59000 UDP/TLS/RTP/SAVP 98",
+    "notes": "The example missed an S in the mine type. The list of allowed types is at https://www.iana.org/assignments/sdp-parameters/sdp-parameters.xhtml#sdp-parameters-2 and UDP/TLS/RTP/AVP  is not a registered device. Because this is over TLS, it is a SRTP (not RTP) and should use SAVP not AVP.",
+    "submit_date": "2017-06-16",
+    "submitter_name": "Typo in example",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
