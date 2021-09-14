@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 14,
+    "doc-id": "RFC4705",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 11,
+    "orig_text": "   [IKEv2]    Kaufman, C., \"The Internet Key Exchange (IKEv2) Protocol\",\n              RFC 2306, December 2005.                ",
+    "correct_text": "   [IKEv2]    Kaufman, C., \"The Internet Key Exchange (IKEv2) Protocol\",\n              RFC 4306, December 2005.\n",
+    "notes": "\n",
+    "submit_date": "2006-11-01",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1920,
+    "doc-id": "RFC4705",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "   [GCM]      McGrew, D. and J. Viega, \"The Galois/Counter Mode of\r\n              Operation (GCM)\", Submission to NIST.\r\n              http://csrc.nist.gov/CryptoToolkit/modes/proposedmodes/\r\n              gcm/gcm-spec.pdf, January 2004.  [Soon: NIST SP 800-38D.]",
+    "correct_text": "[GCM]      Dworkin, M. \"Recommendation for Block Cipher Modes\r\nof Operation: Galois/Counter Mode (GCM) and GMAC\", NIST Special\r\nPublication 800-38D, November 2007.",
+    "notes": "The original link is dead.",
+    "submit_date": "2009-10-20",
+    "submitter_name": "Paul Hoffman",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
