@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2845,
+    "doc-id": "RFC1738",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "scheme         = 1*[ lowalpha | digit | \"+\" | \"-\" | \".\" ]\r\n\r\n[ . . . ]\r\n\r\nhostname       = *[ domainlabel \".\" ] toplabel\r\ndomainlabel    = alphadigit | alphadigit *[ alphadigit | \"-\" ] alphadigit\r\ntoplabel       = alpha | alpha *[ alphadigit | \"-\" ] alphadigit\r\n\r\n[ . . . ]\r\n\r\nuser           = *[ uchar | \";\" | \"?\" | \"&\" | \"=\" ]\r\npassword       = *[ uchar | \";\" | \"?\" | \"&\" | \"=\" ]\r\n\r\n[ . . . ]\r\n\r\nfpath          = fsegment *[ \"/\" fsegment ]\r\nfsegment       = *[ uchar | \"?\" | \":\" | \"@\" | \"&\" | \"=\" ]\r\n\r\n[ . . . ]\r\n\r\nhpath          = hsegment *[ \"/\" hsegment ]\r\nhsegment       = *[ uchar | \";\" | \":\" | \"@\" | \"&\" | \"=\" ]\r\nsearch         = *[ uchar | \";\" | \":\" | \"@\" | \"&\" | \"=\" ]\r\n\r\n[ . . . ]\r\n\r\ngroup          = alpha *[ alpha | digit | \"-\" | \".\" | \"+\" | \"_\" ]\r\narticle        = 1*[ uchar | \";\" | \"/\" | \"?\" | \":\" | \"&\" | \"=\" ] \"@\" host\r\n\r\n[ . . . ]\r\n\r\nppath          = psegment *[ \"/\" psegment ]\r\npsegment       = *[ uchar | \"?\" | \":\" | \"@\" | \"&\" | \"=\" ]\r\nfieldspec      = \";\" fieldname \"=\" fieldvalue\r\nfieldname      = *[ uchar | \"?\" | \":\" | \"@\" | \"&\" ]\r\nfieldvalue     = *[ uchar | \"?\" | \":\" | \"@\" | \"&\" ]",
+    "correct_text": "scheme         = 1*( lowalpha | digit | \"+\" | \"-\" | \".\" )\r\n\r\n[ . . . ]\r\n\r\nhostname       = *( domainlabel \".\" ) toplabel\r\ndomainlabel    = alphadigit | alphadigit *( alphadigit | \"-\" ) alphadigit\r\ntoplabel       = alpha | alpha *( alphadigit | \"-\" ) alphadigit\r\n\r\n[ . . . ]\r\n\r\nuser           = *( uchar | \";\" | \"?\" | \"&\" | \"=\" )\r\npassword       = *( uchar | \";\" | \"?\" | \"&\" | \"=\" )\r\n\r\n[ . . . ]\r\n\r\nfpath          = fsegment *( \"/\" fsegment )\r\nfsegment       = *( uchar | \"?\" | \":\" | \"@\" | \"&\" | \"=\" )\r\n\r\n[ . . . ]\r\n\r\nhpath          = hsegment *( \"/\" hsegment )\r\nhsegment       = *( uchar | \";\" | \":\" | \"@\" | \"&\" | \"=\" )\r\nsearch         = *( uchar | \";\" | \":\" | \"@\" | \"&\" | \"=\" )\r\n\r\n[ . . . ]\r\n\r\ngroup          = alpha *( alpha | digit | \"-\" | \".\" | \"+\" | \"_\" )\r\narticle        = 1*( uchar | \";\" | \"/\" | \"?\" | \":\" | \"&\" | \"=\" ) \"@\" host\r\n\r\n[ . . . ]\r\n\r\nppath          = psegment *( \"/\" psegment )\r\npsegment       = *( uchar | \"?\" | \":\" | \"@\" | \"&\" | \"=\" )\r\nfieldspec      = \";\" fieldname \"=\" fieldvalue\r\nfieldname      = *( uchar | \"?\" | \":\" | \"@\" | \"&\" )\r\nfieldvalue     = *( uchar | \"?\" | \":\" | \"@\" | \"&\" )",
+    "notes": "Given this is BNF of RFC 822 construction <n>*<m>[element] is incorrect, as RFC 822 defines:\r\n\r\n>   2.5. [RULE]: OPTIONAL\r\n>     \r\n>    Square brackets enclose optional elements; \"[foo  bar]\"   is\r\n>    equivalent to \"*1(foo bar)\".\r\n\r\nand therefore [] construction is illegal in the aforementioned one.  My proposal is to replace all occurrences of [] construction where they are used in the meaning of () with the legal-as-per-822 one.\n --VERIFIER NOTES-- \n   This specification does not use the BNF syntax from RFC 822. Please refer\r\n   to the first paragraph of Section 5:\r\n\r\n   ###\r\n\r\n   This is a BNF-like description of the Uniform Resource Locator\r\n   syntax, using the conventions of RFC822, except that \"|\" is used to\r\n   designate alternatives, and brackets [] are used around optional or\r\n   repeated elements. Briefly, literals are quoted with \"\", optional\r\n   elements are enclosed in [brackets], and elements may be preceded\r\n   with <n>* to designate n or more repetitions of the following\r\n   element; n defaults to 0.\r\n\r\n   ###\r\n\r\n   The definitions follow the syntax used in this document. Thus\r\n   the report is incorrect.",
+    "submit_date": "2011-06-26",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4917,
+    "doc-id": "RFC1738",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2.2,
+    "orig_text": "the chararacter which has that octet as its code within the US-ASCII\r\n[20] coded character set.",
+    "correct_text": "the character which has that octet as its code within the US-ASCII\r\n[20] coded character set.",
+    "notes": "The word \"character\" is misspelled as \"chararacter.\"",
+    "submit_date": "2017-01-26",
+    "submitter_name": "Stephan Casas",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5118,
+    "doc-id": "RFC1738",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "gopherurl      = \"gopher://\" hostport [ / [ gtype [ selector\r\n                 [ \"%09\" search [ \"%09\" gopher+_string ] ] ] ] ]\r\n",
+    "correct_text": "gopherurl      = \"gopher://\" hostport [ \"/\" [ gtype [ selector\r\n                 [ \"%09\" search [ \"%09\" gopher+_string ] ] ] ] ]\r\n",
+    "notes": "The slash after the first square bracket open should be quoted because it is a literal slash, as evidenced in the example in section 3.4.1:\r\n\r\n3.4.1. Gopher URL syntax\r\n\r\n      gopher://<host>:<port>/<gopher-path>",
+    "submit_date": "2017-09-15",
+    "submitter_name": "literal slash needed in gopher BNF",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
