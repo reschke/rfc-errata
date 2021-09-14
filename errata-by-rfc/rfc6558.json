@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5561,
+    "doc-id": "RFC6558",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "       require [\"mime\", \"fileinto\", \"convert\"];\r\n       if header :mime :anychild :contenttype\r\n                 \"Content-Type\" \"image/tiff\"\r\n       {\r\n        if (convert \"image/tiff\" \"image/jpeg\" [\"pix-x=320\",\"pix-y=240\"])\r\n        {\r\n         fileinto \"INBOX.pics\";\r\n        }\r\n       }",
+    "correct_text": "       require [\"mime\", \"fileinto\", \"convert\"];\r\n       if header :mime :anychild :contenttype\r\n                 \"Content-Type\" \"image/tiff\"\r\n       {\r\n        if convert \"image/tiff\" \"image/jpeg\" [\"pix-x=320\",\"pix-y=240\"]\r\n        {\r\n         fileinto \"INBOX.pics\";\r\n        }\r\n       }",
+    "notes": "the if condition is wrapped in parentheses which is invalid sieve syntax.\r\n\r\nAccording to RFC 5288 a test has to start with and alpha numerical identifier. \r\n\r\nWhich is not true in this case. Either the parentheses need to be removed or any \"anyof\" or \"allof\" needs to be added.",
+    "submit_date": "2018-11-25",
+    "submitter_name": "Thomas Schmid",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
