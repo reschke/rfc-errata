@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3905,
+    "doc-id": "RFC1361",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "(original NTP described in RFC-959) messages are no longer supported.",
+    "correct_text": "(original NTP described in RFC-958) messages are no longer supported.\r\n",
+    "notes": "RFC959 is the FTP protocol, not NTP version 0 (RFC958).  It should be noted that RFC 1361 is obsolete.",
+    "submit_date": "2014-02-18",
+    "submitter_name": "J. Stals",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
