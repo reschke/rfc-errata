@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3682,
+    "doc-id": "RFC5416",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.4.",
+    "orig_text": "The AC will signal the update to the GTK using an IEEE 802.11\r\nConfiguration Request message, including an IEEE 802.11 Update WLAN\r\nmessage element with the new GTK, its index, the Transmit Sequence\r\nCounter (TSC) for the Group Key and the Key Status set to 3 (begin\r\nGTK update).\r\n...\r\nWhen the AC has completed the GTK update to all\r\nSTAs in the BSS, the AC MUST transmit an IEEE 802.11 Configuration\r\nRequest message including an IEEE 802.11 Update WLAN message element\r\ncontaining the new GTK, its index, and the Key Status set to 4 (GTK\r\nupdate complete).",
+    "correct_text": "The AC will signal the update to the GTK using an IEEE 802.11\r\nConfiguration Request message, including an IEEE 802.11 Update WLAN\r\nmessage element with the new GTK, its index, the Transmit Sequence\r\nCounter (TSC) for the Group Key and the Key Status set to 2 (begin\r\nGTK update).\r\n...\r\nWhen the AC has completed the GTK update to all\r\nSTAs in the BSS, the AC MUST transmit an IEEE 802.11 Configuration\r\nRequest message including an IEEE 802.11 Update WLAN message element\r\ncontaining the new GTK, its index, and the Key Status set to 3 (GTK\r\nupdate complete).",
+    "notes": "Key Status field is defined as follows:\r\n2 -  The value of 2 indicates that the AC will begin rekeying the\r\n     GTK with the STA's in the BSS.  It is only valid when IEEE\r\n     802.11 is enabled as the security policy for the BSS.\r\n\r\n3 -  The value of 3 indicates that the AC has completed rekeying\r\n     the GTK and broadcast packets no longer need to be duplicated\r\n     and transmitted with both GTK's.",
+    "submit_date": "2013-07-15",
+    "submitter_name": "Bulavskiy Dmitriy",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
