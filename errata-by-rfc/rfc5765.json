@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2512,
+    "doc-id": "RFC5765",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "1.1, pg. 6",
+    "orig_text": "   The content of this document was partially derived from the article\r\n   \"Peer-to-peer Overlays for Real-Time Communication: Security Issues\r\n|  and Solutions,\" published in IEEE Surveys & Tutorials, Vol. 11, No.\r\n   1, and originally authored by Dhruv Chopra, Henning Schulzrinne,\r\n   Enrico Marocco, and Emil Ivov.\r\n",
+    "correct_text": "   The content of this document was partially derived from the article\r\n   \"Peer-to-peer Overlays for Real-Time Communication: Security Issues\r\n|  and Solutions\", published in IEEE Surveys & Tutorials, Vol. 11, No.\r\n   1, and originally authored by Dhruv Chopra, Henning Schulzrinne,\r\n   Enrico Marocco, and Emil Ivov.\r\n",
+    "notes": "Rationale:  Non-use of \"rational quotation\"; the comma is not part\r\n  of the title of the quoted article.\r\n\r\nNote:\r\n  A general editing nit recurring numerous times throughout the RFC\r\n  is the inadvertent treatment of \"et al.\" as the end of a sentence,\r\n  with _two_ space characters inserted after it; thus:\r\n\r\n       s/et al.  /et al. /g  !\n --VERIFIER NOTES-- \nRejected after IRSG discussion.      ",
+    "submit_date": "2010-09-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
