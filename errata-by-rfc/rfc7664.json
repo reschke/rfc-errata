@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5455,
+    "doc-id": "RFC7664",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.4,
+    "orig_text": "The Commit Exchange consists of an exchange of data that is the\r\n   output of the random function, H(), the key confirmation key, and the\r\n   two scalars and two elements exchanged in the Commit Exchange.",
+    "correct_text": "The Confirm Exchange consists of an exchange of data that is the\r\n   output of the random function, H(), the key confirmation key, and the\r\n   two scalars and two elements exchanged in the Commit Exchange.",
+    "notes": "The sentence is explaining what will be exchanged in the Confirm Exchange but incorrectly calls it the Commit Exchange (seems like an editorial oversight)",
+    "submit_date": "2018-08-12",
+    "submitter_name": "Darshak Thakore",
+    "verifier_id": 163,
+    "verifier_name": "Colin Perkins",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5754,
+    "doc-id": "RFC7664",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.2.2",
+    "orig_text": "      do {\r\n        base = H(max(Alice,Bob) | min(Alice,Bob) | password | counter)\r\n        temp = KDF-n(seed, \"Dragonfly Hunting And Pecking\")\r\n        seed = (temp mod (p - 1)) + 1",
+    "correct_text": "      do {\r\n        base = H(max(Alice,Bob) | min(Alice,Bob) | password | counter)\r\n        temp = KDF-n(base, \"Dragonfly Hunting And Pecking\")\r\n        seed = (temp mod (p - 1)) + 1",
+    "notes": "A variable \"seed\" is passed to the function KDF-n before defined. It should be the variable \"base\" instead of \"seed\". The variable \"base\" is passed to KDF-n in Figure 1.\r\n\r\nVerified by Kenny Paterson and Dan Harkins, June 2019. ",
+    "submit_date": "2019-06-16",
+    "submitter_name": "Araki Makoto",
+    "verifier_id": 163,
+    "verifier_name": "Colin Perkins",
+    "update_date": "2020-06-06 05:49:02"
+  }
+]
