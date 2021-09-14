@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2069,
+    "doc-id": "RFC5275",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "CMC-CONTROL, EXTENDED-FAILURE-INFO\r\nFROM EnrollmentMessageSyntax\r\n    { iso(1) identified-organization(3) dod(4) internet(1) security(5)\r\n    mechansims(5) pkix(7) id-mod(0) id-mod-cmc2002-02(53) }",
+    "correct_text": "CMC-CONTROL, EXTENDED-FAILURE-INFO\r\nFROM EnrollmentMessageSyntax\r\n    { iso(1) identified-organization(3) dod(6) internet(1) security(5)\r\n    mechanisms(5) pkix(7) id-mod(0) id-mod-cmc2002-02(53) }",
+    "notes": "We corrected the object identifier to place it into the correct tree in RFC 5272, this means that it needs to get corrected here were it is imported.",
+    "submit_date": "2010-03-06",
+    "submitter_name": "Jim Schaad",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5943,
+    "doc-id": "RFC5275",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.1",
+    "orig_text": "   GLOwnerInfo ::= SEQUENCE {\r\n     glOwnerName     GeneralName,\r\n     glOwnerAddress  GeneralName,\r\n     certificate     Certificates OPTIONAL }",
+    "correct_text": "   GLOwnerInfo ::= SEQUENCE {\r\n     glOwnerName     GeneralName,\r\n     glOwnerAddress  GeneralName,\r\n     certificates    Certificates OPTIONAL }",
+    "notes": "The definition of GLOwnerInfo in Section 3.1.1 does not match the ASN.1 module or the discussion that follows.  Changing \"certificate\" to \"certificates\" resolves this problem.",
+    "submit_date": "2019-12-21",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-12-24 12:20:56"
+  }
+]
