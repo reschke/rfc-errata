@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 479,
+    "doc-id": "RFC2213",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "            TimeInterval, TEXTUAL-CONVENTION, RowStatus,\r\n            TruthValue                               FROM SNMPv2-TC",
+    "correct_text": "            TimeInterval, TEXTUAL-CONVENTION, RowStatus,\r\n            TruthValue, TestAndIncr            FROM SNMPv2-TC\r\n",
+    "notes": "",
+    "submit_date": "2005-09-12",
+    "submitter_name": "Orly Nicklass",
+    "verifier_id": 129,
+    "verifier_name": "Wesley Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
