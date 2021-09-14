@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5176,
+    "doc-id": "RFC7301",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "IANA Considerations",
+    "correct_text": "+Protocol:  HTTP/1.0\r\n+Protocol:  HTTP/0.9",
+    "notes": "RFC does not register ALPN identifiers for http/0.9 or http/1.0.",
+    "submit_date": "2017-11-02",
+    "submitter_name": "Ilya Grigorik",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
