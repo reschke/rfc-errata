@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 138,
+    "doc-id": "RFC4294",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "(1) Page 7, Section 4.4\r\n\r\nThe RFC 4294 text says:\r\n\r\n  4.4.  ICMP for the Internet Protocol Version 6 (IPv6) - RFC 2463\r\n\r\n     ICMPv6 [RFC-2463] MUST be supported.\r\n\r\nIt should say:\r\n\r\n  4.4.  ICMP for the Internet Protocol Version 6 (IPv6) - RFC 4443\r\n\r\n     ICMPv6 [RFC-4443] MUST be supported.\r\n\r\nThe title of Section 4.4 in the Table of Contents should be\r\nadapted accordingly.\r\n\r\nRationale: RFC 4443 (replacing and obsoleting RFC 2463) has been\r\npublished exactly 3 weeks before RFC 4294, and hence should be\r\nused as the currently valid reference.\r\n\r\n\r\n(2) Page 7, Section 4.5.1\r\n\r\nRFC 4294 says:\r\n\r\n  4.5.1.  IP Version 6 Addressing Architecture - RFC 3513\r\n\r\n     The IPv6 Addressing Architecture [RFC-3513] MUST be supported as\r\n     updated by [RFC-3879].\r\n\r\nIt should say:\r\n\r\n  4.5.1.  IP Version 6 Addressing Architecture - RFC 4291\r\n\r\n     The IPv6 Addressing Architecture [RFC-4291] MUST be supported.\r\n\r\nRationale: RFC 4291 (replacing and obsoleting RFC 3513, and thereby\r\nincorporating RFC 3879) has been published more than 8 weeks before\r\nRFC 4294, and hence should be used as the currently valid reference.\r\n\r\n\r\n(3) Page 8, Section 5.1\r\n\r\nRFC 4294 says:\r\n\r\n     DNS is described in [RFC-1034], [RFC-1035], [RFC-3152], [RFC-3363],\r\n     and [RFC-3596].  [...]\r\n\r\nIt should say:\r\n\r\n     DNS is described in [RFC-1034], [RFC-1035], [RFC-3363], and\r\n     [RFC-3596].  [...]\r\n\r\nAnd subsequently, where RFC 4294 says,\r\n\r\n  -  reverse addressing in ip6.arpa using PTR records [RFC-3152];\r\n\r\nit should say:\r\n\r\n  -  reverse addressing in ip6.arpa using PTR records [RFC-3596];\r\n\r\nRationale: RFC 3152 has been obsoleted and incorporated into RFC 3596.\r\n\r\n\r\n(4) Page 10, Section 6.1.1\r\n\r\nRFC 4294 says:\r\n\r\n  6.1.1.  Transition Mechanisms for IPv6 Hosts and Routers - RFC 2893\r\n\r\nIt should say:\r\n\r\n  6.1.1.  Transition Mechanisms for IPv6 Hosts and Routers - RFC 4213\r\n\r\nRationale: RFC 4213 (replacing and obsoleting RFC 2893) has been\r\npublished more than 6 months before RFC 4294, and hence should be\r\nused consistently as the currently valid reference.  (The text body\r\nof the section has been updated accordingly, before publication.)\r\n\r\n\r\n(5) Page 11, Section 8.2\r\n\r\nRFC 4294 says:\r\n\r\n  8.2.  Security Protocols\r\n\r\n     ESP [RFC-4303] MUST be supported.  AH [RFC-4302] MUST be supported.\r\n\r\nIt should say:\r\n\r\n  8.2.  Security Protocols\r\n\r\n     ESP [RFC-4303] MUST be supported.  AH [RFC-4302] MAY be supported.\r\n\r\nRationale: The new IPsec RFCs purposely have changed the requirement\r\nlevel for AH.  From RFC 4301, page 9, 1st paragraph of Section 3.2 :\r\n\r\n               [...]  IPsec implementations MUST support ESP and MAY\r\n   support AH. (Support for AH has been downgraded to MAY because\r\n   experience has shown that there are very few contexts in which ESP\r\n   cannot provide the requisite security services.  Note that ESP can be\r\n   used to provide only integrity, without confidentiality, making it\r\n   comparable to AH in most contexts.)\r\n\r\nIn Section 13, RFC 4301 lists the differences from RFC 2401,\r\nand it states on page 74:\r\n\r\n   o Support for AH in both IPv4 and IPv6 is no longer required.\r\n\r\nRFC 4294 does not give any arguments to override these statements.\r\n\r\n(The IPsec references in RFC 4294 apparently have been changed\r\n shortly before publication without due adaptation of the text.)\r\n\r\n\r\n(6) Section 12.1, Normative References :\r\n\r\n- The reference [RFC-2463] should be replaced by a reference to\r\n  RFC 4443 according to item (1) above.\r\n\r\n- The reference [RFC-3152] (last item on page 14) should be deleted.\r\n  That RFC has been obsoleted long time ago, and the material has been\r\n  incorporated into RFC 3596 (see the entry [RFC-3596] on page 15)\r\n  according to item (3) above.\r\n\r\n- The reference [RFC-3513] should be replaced by an entry [RFC-4291],\r\n  containing the proper reference to RFC 4291, according to item (2)\r\n  above.\r\n\r\n- The reference [RFC-3879] is not needed any more according to\r\n  item (2) above; the material from RFC 3879 has been incorporated\r\n  into RFC 4291, the successor of RFC 3513 -- see item (2) above.",
+    "correct_text": "",
+    "notes": "from pending\n --VERIFIER NOTES-- \nThis RFC is obsolete and new implementations should be referring to RFC 6434.   ",
+    "submit_date": "2006-04-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 139,
+    "doc-id": "RFC4294",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "   Those nodes are NOT RECOMMENDED to support the experimental A6 and\r\n   DNAME Resource Records [RFC-3363].\r\n",
+    "correct_text": "   Those nodes are NOT RECOMMENDED to support the experimental A6\r\n   Resource Records [RFC-3363].\r\n",
+    "notes": "",
+    "submit_date": "2006-04-11",
+    "submitter_name": "Mark Andrews",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1915,
+    "doc-id": "RFC4294",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.2,
+    "orig_text": "5.3.3.  Use of Router Advertisements in Managed Environments\r\n",
+    "correct_text": "5.2.3.  Use of Router Advertisements in Managed Environments\r\n",
+    "notes": null,
+    "submit_date": "2009-10-14",
+    "submitter_name": "Thorsten Ulbricht",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1939,
+    "doc-id": "RFC4294",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 12.1,
+    "orig_text": "   [RFC-3484]     Frye, R., Levi, D., Routhier, S., and B. Wijnen,\r\n                  \"Coexistence between Version 1, Version 2, and Version\r\n                  3 of the Internet-standard Network Management\r\n                  Framework\", BCP 74, RFC 3584, August 2003.",
+    "correct_text": "   [RFC-3484]     Draves, R., \"Default Address Selection for Internet\r\n                  Protocol version 6 (IPv6)\", RFC 3484, February\r\n                  2003.",
+    "notes": "wrong reference",
+    "submit_date": "2009-11-03",
+    "submitter_name": "Thorsten Ulbricht",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
