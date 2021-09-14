@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 290,
+    "doc-id": "RFC3369",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 12.2,
+    "orig_text": "    AttributeCertificateVersion1\n        { iso(1) member-body(2) us(840) rsadsi(113549)\n          pkcs(1) pkcs-9(9) smime(16) modules(0) v1AttrCert(15) }\n\n    DEFINITIONS EXPLICIT TAGS ::=\n    BEGIN",
+    "correct_text": "",
+    "notes": "The tagging should be EXPLICIT instead of IMPLICIT.\n\n\n",
+    "submit_date": "2004-03-12",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 291,
+    "doc-id": "RFC3369",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "99Several object identifiers (OIDs) have been omitted from the ASN.1 module in section 12.1; however, these OIDs are fully discussed in the body of the document. On page 46 of RFC 3369, the following object identifiers need to be inserted before the end o",
+    "orig_text": "       -- Content Type Object Identifiers\n \n       id-ct-contentInfo OBJECT IDENTIFIER ::= { iso(1) member-body(2)\n          us(840) rsadsi(113549) pkcs(1) pkcs9(9) smime(16) ct(1) 6 }\n \n       id-data OBJECT IDENTIFIER ::= { iso(1) member-body(2)\n          us(840) rsadsi(113549) pkcs(1) pkcs7(7) 1 }\n \n       id-signedData OBJECT IDENTIFIER ::= { iso(1) member-body(2)\n          us(840) rsadsi(113549) pkcs(1) pkcs7(7) 2 }\n \n       id-envelopedData OBJECT IDENTIFIER ::= { iso(1) member-body(2)\n          us(840) rsadsi(113549) pkcs(1) pkcs7(7) 3 }\n \n       id-digestedData OBJECT IDENTIFIER ::= { iso(1) member-body(2)\n          us(840) rsadsi(113549) pkcs(1) pkcs7(7) 5 }\n \n       id-encryptedData OBJECT IDENTIFIER ::= { iso(1) member-body(2)\n          us(840) rsadsi(113549) pkcs(1) pkcs7(7) 6 }\n \n       id-ct-authData OBJECT IDENTIFIER ::= { iso(1) member-body(2)\n          us(840) rsadsi(113549) pkcs(1) pkcs-9(9) smime(16) \n          ct(1) 2 }\n",
+    "correct_text": "",
+    "notes": "",
+    "submit_date": "2003-03-03",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 292,
+    "doc-id": "RFC3369",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 13,
+    "orig_text": "   [CMSALG]    Housley, R., \"Cryptographic Message Syntax (CMS)\n               Algorithms\", RFC 3269, August 2002.",
+    "correct_text": "   [CMSALG]    Housley, R., \"Cryptographic Message Syntax (CMS)\n               Algorithms\", RFC 3370, August 2002.\n",
+    "notes": "",
+    "submit_date": "2003-01-23",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
