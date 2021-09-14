@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3124,
+    "doc-id": "RFC2825",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.3,
+    "orig_text": "   Also, the Simple Network Management Protocol (SNMP) uses the textual\r\n   representation defined in [RFC2579].  While that specification does\r\n   allow for UTF-8-based domain names, an informal survey of deployed\r\n   implementations of software libraries being used to build SNMP-\r\n   compliant software uncovered the fact that few (if any) implement it.\r\n",
+    "correct_text": "   Also, the Simple Network Management Protocol (SNMP) uses the textual\r\n   representation defined in [RFC2579].  That specification does not\r\n   allow for UTF-8-based domain names, and an informal survey of deployed\r\n   implementations of software libraries being used to build SNMP-\r\n   compliant software confirmed the fact that few (if any) implement \r\n   it.\r\n",
+    "notes": "RFC2579 is pretty clear about ASCII-only here.  Whereas using SnmpAdminString in RFC2571 could allow for UTF-8 in the interest of i18n, that is not what is being discussed here.",
+    "submit_date": "2012-02-16",
+    "submitter_name": "Gabriel Montenegro",
+    "verifier_id": 4,
+    "verifier_name": "IAB-Chair",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
