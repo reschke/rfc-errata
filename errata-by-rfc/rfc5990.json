@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2529,
+    "doc-id": "RFC5990",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4, pg.9",
+    "orig_text": "   Within the CMS, algorithms are identified by object identifiers\r\n|  (OIDs).  With one exception, all of the OIDs used in this document\r\n   were assigned in other IETF documents, in ISO/IEC standards\r\n   documents, by the National Institute of Standards and Technology\r\n   (NIST), and in Public-Key Cryptography Standards (PKCS) documents.\r\n   The two exceptions are the ASN.1 module's identifier (see Appendix\r\n|  B.3) and id-rsa-kem that are both assigned in this document.  The\r\n|  module object identifiers are defined in an arc delegated by the\r\n   former company RSA Data Security Inc. to the S/MIME Working Group.\r\n   When the S/MIME Working Group closes, this arc and its registration\r\n   procedures will be transferred to IANA.",
+    "correct_text": "   Within the CMS, algorithms are identified by object identifiers\r\n|  (OIDs).  With two exceptions, all of the OIDs used in this document\r\n   were assigned in other IETF documents, in ISO/IEC standards\r\n   documents, by the National Institute of Standards and Technology\r\n   (NIST), and in Public-Key Cryptography Standards (PKCS) documents.\r\n   The two exceptions are the ASN.1 module's identifier (see Appendix\r\n|  B.3) and id-rsa-kem that are both assigned in this document.  Both\r\n|  object identifiers are defined in an arc delegated by the\r\n   former company RSA Data Security Inc. to the S/MIME Working Group.\r\n   When the S/MIME Working Group closes, this arc and its registration\r\n   procedures will be transferred to IANA.",
+    "notes": "Rationale:\r\n  Alignment with Appendix B: _two_ exceptions, both from same arc.",
+    "submit_date": "2010-09-23",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
