@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3787,
+    "doc-id": "RFC3345",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "      1) Ra has the following installed in its BGP table, with the path\r\n         learned via AS2 marked best:",
+    "correct_text": "      1) Ra has the following installed in its BGP table, with the path\r\n         learned via AS10 marked best:",
+    "notes": "The above text is related to a discussion of topology depicted in Figure 1. This figure does not have AS2 at all. The text should refer to AS10 instead.",
+    "submit_date": "2013-11-05",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
