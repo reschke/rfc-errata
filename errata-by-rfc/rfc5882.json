@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4812,
+    "doc-id": "RFC5882",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "10.1.2",
+    "orig_text": "   IS-IS may be used to support only one data protocol, or multiple data\r\n   protocols.  [ISIS] specifies a common topology for multiple data\r\n   protocols, but work is under way to support multiple topologies.  If\r\n   multiple topologies are used to support multiple data protocols (or\r\n   multiple classes of service of the same data protocol), the topology-\r\n   specific path associated with a failing BFD session should no longer\r\n   be advertised in IS-IS Label Switched Paths (LSPs) in order to signal\r\n   a lack of connectivity.",
+    "correct_text": "   IS-IS may be used to support only one data protocol, or multiple data\r\n   protocols.  [ISIS] specifies a common topology for multiple data\r\n   protocols, but work is under way to support multiple topologies.  If\r\n   multiple topologies are used to support multiple data protocols (or\r\n   multiple classes of service of the same data protocol), the topology-\r\n   specific path associated with a failing BFD session should no longer\r\n   be advertised in IS-IS Link State Packets (LSPs) in order to signal\r\n   a lack of connectivity.",
+    "notes": "In the context of this section (that discusses usage of BFD sessions for detection of failure of an IS-IS adjacency) the abbreviation \"LSP\" should be expanded as \"Link State Packet\" and not as \"Label Switched Path\". \r\n\r\nFrom my POV this is an editorial erratum since I believe the readers of the RFC understand what the authors wanted to say.",
+    "submit_date": "2016-09-27",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
