@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2752,
+    "doc-id": "RFC4509",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "RFC header",
+    "orig_text": null,
+    "correct_text": "Updates: 4035",
+    "notes": "This document should update RFC 4035 because the statement in section 3, \"Validator implementations SHOULD ignore DS RRs containing SHA-1 digests if DS RRs with SHA-256 digests are present in the DS RRset\", modifies the rules for authenticating referrals in RFC 4035 section 5.2.",
+    "submit_date": "2011-03-23",
+    "submitter_name": "Matt McCutchen",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
