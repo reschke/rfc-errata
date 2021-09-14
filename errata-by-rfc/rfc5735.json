@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2092,
+    "doc-id": "RFC5735",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "7., 2nd para",
+    "orig_text": "|  It should also be noted that some of these address spaces may be used\r\n   legitimately outside a single administrative domain, and may appear\r\n   on the global Internet.  [...]",
+    "correct_text": "|  It should also be noted that some of these address blocks may be used\r\n   legitimately outside a single administrative domain, and may appear\r\n   on the global Internet.  [...]",
+    "notes": "Rationale: Consistent use of terminology\r\n (cf. Abstract, Sections 3 through 5, 1st para of same section).",
+    "submit_date": "2010-03-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2093,
+    "doc-id": "RFC5735",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "   Address blocks that were reserved for a special purpose in RFC 3330\r\n   but are no longer reserved for any special purpose and are available\r\n|  for allocation are no longer listed in Sections 4 or 5.  The\r\n   following blocks have become available:\r\n",
+    "correct_text": "   Address blocks that were reserved for a special purpose in RFC 3330\r\n   but are no longer reserved for any special purpose and are available\r\n|  for allocation are no longer listed in Sections 3 and 4.  The\r\n   following blocks have become available:\r\n",
+    "notes": "Rationale: Adjust internal references.\r\n\r\nFurther:\r\n Under the above introduction, the 6th and 7th bullet are misplaced;\r\n they do not refer to address blocks that \"bave become available\" and\r\n are no longer listed, they mention _newly assigned_ address blocks.\r\n\r\nThus, to avoid confusion, the final part of the Appendix,\r\n\r\n   -  191.255.0.0/16 is not reserved and is subject to future allocation\r\n      by a RIR for assignment in the normal manner.\r\n\r\n   -  198.51.100.0/24 is assigned as \"TEST-NET-2\" for use in\r\n      documentation and example code.\r\n\r\n   -  203.0.113.0/24 is assigned as \"TEST-NET-3\" for use in\r\n      documentation and example code.\r\n\r\n   -  223.255.255.0/24 is not reserved and is subject to future\r\n      allocation by an RIR for assignment in the normal manner.\r\n\r\nshould better say:\r\n\r\n   -  191.255.0.0/16 is not reserved and is subject to future allocation\r\n      by a RIR for assignment in the normal manner.\r\n\r\n   -  223.255.255.0/24 is not reserved and is subject to future\r\n      allocation by an RIR for assignment in the normal manner.\r\n\r\n   Two address blocks were reserved for special purpose since RFC 3330\r\n   and have been added to Sections 3 and 4:\r\n\r\n   -  198.51.100.0/24 is assigned as \"TEST-NET-2\" for use in\r\n      documentation and example code.\r\n\r\n   -  203.0.113.0/24 is assigned as \"TEST-NET-3\" for use in\r\n      documentation and example code.",
+    "submit_date": "2010-03-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
