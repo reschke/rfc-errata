@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1753,
+    "doc-id": "RFC2229",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "   dqstring    =  <\"> *(dqtext/quoted-pair) <\">\r\n   dqtext      =  <any CHAR except <\">, \"\\\", and CTLs>\r\n   sqstring    =  <'> *(dqtext/quoted-pair) <'>\r\n   sqtext      =  <any CHAR except <'>, \"\\\", and CTLs>\r\n   quoted-pair =  \"\\\" CHAR\r\n",
+    "correct_text": "   dqstring    =  <\"> *(dqtext/quoted-pair) <\">\r\n   dqtext      =  <any CHAR except <\">, \"\\\", and CTLs>\r\n   sqstring    =  <'> *(sqtext/quoted-pair) <'>\r\n   sqtext      =  <any CHAR except <'>, \"\\\", and CTLs>\r\n   quoted-pair =  \"\\\" CHAR\r\n",
+    "notes": "As it stands, the original specification would allow an sqstring of 'Bob's Garage' to be valid when that is not intended. [Approver Note: this appears to be a copy-and-paste error.]",
+    "submit_date": "2009-04-02",
+    "submitter_name": "Matthew Luckie",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
