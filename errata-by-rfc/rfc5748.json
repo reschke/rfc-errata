@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2741,
+    "doc-id": "RFC5748",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99In the Document Header",
+    "orig_text": "Internet Engineering Task Force (IETF)                          J. Jeong\r\nRequest for Comments: 5748                                        H. Kim\r\nCategory: Informational                                         H. Jeong\r\nISSN: 2070-1721                                                   Y. Won\r\n                                        Korea Internet & Security Agency\r\n                                                             August 2010\r\n",
+    "correct_text": "Internet Engineering Task Force (IETF)                           S. Yoon\r\nRequest for Comments: 5748                                      J. Jeong\r\nCategory: Informational                                           H. Kim\r\nISSN: 2070-1721                                                 H. Jeong\r\n                                                                  Y. Won\r\n                                        Korea Internet & Security Agency\r\n                                                             August 2010\r\n",
+    "notes": "Reported by S. Yoon\r\n\r\nThe RFC Editor mistakenly removed the author's name when formatting the document to include the updated document header.\r\n\r\nThe \"Authors' Addresses\" section and related database entries are correct.",
+    "submit_date": "2011-03-04",
+    "submitter_name": "RFC Editor",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
