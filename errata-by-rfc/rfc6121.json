@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3391,
+    "doc-id": "RFC6121",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3.2.1.",
+    "orig_text": "   Juliet's server replies with an unavailable notification, mirroring\r\n   the 'id' of Rome's presence probe because there is no 'id' to\r\n   preserve from an available notification that her client has sent.\r\n",
+    "correct_text": "   Juliet's server replies with an unavailable notification, mirroring\r\n   the 'id' of Romeo's presence probe because there is no 'id' to\r\n   preserve from an available notification that her client has sent.\r\n",
+    "notes": "Minor typo: \"Rome's\" should be \"Romeo's\"",
+    "submit_date": "2012-10-21",
+    "submitter_name": "Todd Lucas",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5058,
+    "doc-id": "RFC6121",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "2.1.6",
+    "orig_text": "   2.  A receiving client MUST ignore the stanza unless it has no 'from'\r\n       attribute (i.e., implicitly from the bare JID of the user's\r\n       account) or it has a 'from' attribute whose value matches the\r\n       user's bare JID <user@domainpart>.",
+    "correct_text": "   2.  A receiving client MUST ignore the stanza unless it has no 'from'\r\n       attribute (i.e., implicitly from the bare JID of the user's\r\n       account) or it has a 'from' attribute whose value matches either\r\n       the user's bare JID <user@domainpart> or the address of an entity\r\n       authorized performing roster pushes.",
+    "notes": "RFC 6121 § 2.1.6 2. specifies that roster pushes have to origin from the \"user's account\", i.e., no 'from' attribute or 'from' attribute matching the user's bare JID. However the Security Warning in the same section states that\r\n\r\n      ... this specification allows entities other than the user's server to\r\n      maintain roster information, which means that a roster push might\r\n      include a 'from' address other than the bare JID of the user's\r\n      account.  Therefore, the client MUST check the 'from' address to\r\n      verify that the sender of the roster push is authorized to update\r\n      the roster.\r\n\r\nwhich contradicts what is specified in § 2.1.6 2.\r\n\r\nVerifier note: This seems more than editorial, and probably needs some discussion about third party authorizations. I will set the status to \"Held for Document Update\"",
+    "submit_date": "2017-07-02",
+    "submitter_name": "Florian Schmaus",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
