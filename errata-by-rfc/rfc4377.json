@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 109,
+    "doc-id": "RFC4377",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "   One-hop Delay:             The fixed delay experienced by a packet to\r\n                              reach the next hop resulting from the of\r\n                              the propagation latency, the transmission\r\n                              latency, and the processing latency.",
+    "correct_text": "   One-hop Delay:             The fixed delay experienced by a packet to\r\n                              reach the next hop resulting from the sum\r\n                              of the propagation latency, the\r\n                              transmission latency, and the processing\r\n                              latency.",
+    "notes": "Fix word omission. Insert \"sum\"\r\n",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 676,
+    "doc-id": "RFC4377",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "   Furthermore, the automation of path liveliness is desired in cases\r\n   where large numbers of LSPs might be tested.  [...]",
+    "correct_text": "|  Furthermore, the automation of path liveliness testing is desired in\r\n   cases where large numbers of LSPs might be tested.  [...]",
+    "notes": "Fix word omission. Insert \"testing\"\r\n",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 677,
+    "doc-id": "RFC4377",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.11.1",
+    "orig_text": "      (1) At an ingress LSR, accounting of traffic through LSPs that\r\n|         begin at each egress in question.\r\n          ^^^^^\r\n\r\n      (2) At an intermediate LSR, accounting of traffic through LSPs for\r\n|         each pair of ingress to egress.\r\n                               ^^ \r\n            v\r\n|     (3) At egress LSR, accounting of traffic through LSPs for each\r\n          ingress.",
+    "correct_text": "      (1) At an ingress LSR, accounting of traffic through LSPs that\r\n|         end at each egress in question.\r\n\r\n      (2) At an intermediate LSR, accounting of traffic through LSPs for\r\n|         each pair of ingress and egress.\r\n\r\n|     (3) At an egress LSR, accounting of traffic through LSPs for each\r\n          ingress.",
+    "notes": "Fix wrong wording in bullet (1) [s/begin/end/]\r\n\r\nMinor typos in bullets (2) and (3).\r\n",
+    "submit_date": "2006-08-12",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3753,
+    "doc-id": "RFC4377",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99In the Authors' Addresses, it says:",
+    "orig_text": "Comments should be made directly to the MPLS mailing list\r\nat mpls@lists.ietf.org.",
+    "correct_text": "",
+    "notes": "This report has been modified from the original report submitted.\r\n\r\n'@lists.ietf.org' was changed to '@ietf.org' in the year 2005 so that comments should be made directly to the MPLS mailing list at mpls@ietf.org.\r\n\r\nHowever, this type of statement is typically removed from Internet-Drafts when they are published as RFCs, and it was only the presence of this statement in an unusual place in the document that caused it to be retained. \r\n\r\nTherefore, this statement should be removed in entirety.",
+    "submit_date": "2013-10-15",
+    "submitter_name": "RFC Editor",
+    "verifier_id": 2,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
