@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5441,
+    "doc-id": "RFC7634",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "   When negotiating the ChaCha20-Poly1305 algorithm for use in IKE or\r\n   IPsec, the value ENCR_CHACHA20_POLY1305 (28) should be used in the\r\n   transform substructure of the SA payload as the ENCR (type 1)\r\n   transform ID.  As with other AEAD algorithms, INTEG (type 3)\r\n   transform substructures MUST NOT be specified, or just one INTEG\r\n   transform MAY be included with value NONE (0).",
+    "correct_text": "   When negotiating the ChaCha20-Poly1305 algorithm for use in IKE or\r\n   IPsec, the value ENCR_CHACHA20_POLY1305 (28) should be used in the\r\n   transform substructure of the SA payload as the ENCR (type 1)\r\n   transform ID.\r\n   As with other transforms that use a fixed-length key, the Key Length\r\n   attribute MUST NOT be specified.\r\n   As with other AEAD algorithms, INTEG (type 3)\r\n   transform substructures MUST NOT be specified, or just one INTEG\r\n   transform MAY be included with value NONE (0).",
+    "notes": "Reading both RFC7634 and RFC7539 there seems to be a single fixed-length key of 256-bits. \r\nHence, I think https://tools.ietf.org/html/rfc7296#section-3.3.5:\r\n   o  The Key Length attribute MUST NOT be used with transforms that use\r\n      a fixed-length key.  For example, this includes ENCR_DES,\r\n      ENCR_IDEA,...\r\napplies (my intent is to clarify this).",
+    "submit_date": "2018-07-26",
+    "submitter_name": "Andrew Cagney",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
