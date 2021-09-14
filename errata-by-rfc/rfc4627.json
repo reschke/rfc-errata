@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 607,
+    "doc-id": "RFC4627",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.2,
+    "orig_text": "      object = begin-object [ member *( value-separator member ) ]\r\n      end-object\r\n",
+    "correct_text": "      object = begin-object [ member *( value-separator member ) ]\r\n               end-object\r\n",
+    "notes": "(edited by Alexey): Wrong indentation on the second line of the ABNF production, otherwise this is not legal ABNF.\r\n\r\n",
+    "submit_date": "2007-10-17",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3159,
+    "doc-id": "RFC4627",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 2.5,
+    "orig_text": "         string = quotation-mark *char quotation-mark\r\n\r\n         char = unescaped /\r\n                escape (\r\n                    %x22 /          ; \"    quotation mark  U+0022\r\n                    %x5C /          ; \\    reverse solidus U+005C\r\n                    %x2F /          ; /    solidus         U+002F\r\n                    %x62 /          ; b    backspace       U+0008\r\n                    %x66 /          ; f    form feed       U+000C\r\n                    %x6E /          ; n    line feed       U+000A\r\n                    %x72 /          ; r    carriage return U+000D\r\n                    %x74 /          ; t    tab             U+0009\r\n                    %x75 4HEXDIG )  ; uXXXX                U+XXXX\r\n\r\n         escape = %x5C              ; \\\r\n\r\n         quotation-mark = %x22      ; \"\r\n\r\n         unescaped = %x20-21 / %x23-5B / %x5D-10FFFF",
+    "correct_text": "         string = quotation-mark *char quotation-mark\r\n\r\n         char = unescaped /\r\n                escape (\r\n                    %x22 /          ; \"    quotation mark  U+0022\r\n                    %x5C /          ; \\    reverse solidus U+005C\r\n                    %x62 /          ; b    backspace       U+0008\r\n                    %x66 /          ; f    form feed       U+000C\r\n                    %x6E /          ; n    line feed       U+000A\r\n                    %x72 /          ; r    carriage return U+000D\r\n                    %x74 /          ; t    tab             U+0009\r\n                    %x75 4HEXDIG )  ; uXXXX                U+XXXX\r\n\r\n         escape = %x5C              ; \\\r\n\r\n         quotation-mark = %x22      ; \"\r\n\r\n         unescaped = %x20-21 / %x23-5B / %x5D-10FFFF",
+    "notes": "There is a contradiction regarding solidus(/, %2F) character - it belongs to both escaped character and unescaped character. To solve this,delete following line:\r\n\r\n         %x2F /          ; /    solidus         U+002F\r\n\r\nThe reason it should belong to unescaped character is clear. There's no gain by escape it.\r\n\r\nThe author has replied as follows:\r\n\r\nThere is no problem here. There is no requirement that there be a single encoding for each codepoint. \"/\" and \"\\/\" are both allowed and both produce the same result. The second form was [provided] to allow insertion into HTML, where \"</script>\" interacts badly, but \"<\\/script>\" does not. \r\n\r\nTherefore, this report is rejected.\n --VERIFIER NOTES-- \n   ",
+    "submit_date": "2012-03-20",
+    "submitter_name": "James S. Chi",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3607,
+    "doc-id": "RFC4627",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "   A JSON text can be safely passed into JavaScript's eval() function\r\n   (which compiles and executes a string) if all the characters not\r\n   enclosed in strings are in the set of characters that form JSON\r\n   tokens.  This can be quickly determined in JavaScript with two\r\n   regular expressions and calls to the test and replace methods.\r\n\r\n      var my_JSON_object = !(/[^,:{}\\[\\]0-9.\\-+Eaeflnr-u \\n\\r\\t]/.test(\r\n             text.replace(/\"(\\\\.|[^\"\\\\])*\"/g, ''))) &&\r\n         eval('(' + text + ')');\r\n",
+    "correct_text": "[OBSOLETE]",
+    "notes": "Executing the following code in Microsoft Internet Explorer 9\r\n\r\n  var text = \"\\\r\n  +{ \\\"valueOf\\\": self[\\\"location\\\"],\\\r\n  \\\"toString\\\": [][\\\"join\\\"],\\\r\n  0: \\\"javascript:alert('EXPLOIT')\\\",\\\r\n  \\\"length\\\": 1\\\r\n  }\"\r\n\r\n  var my_JSON_object = !(/[^,:{}\\[\\]0-9.\\-+Eaeflnr-u \\n\\r\\t]/.test(\r\n         text.replace(/\"(\\\\.|[^\"\\\\])*\"/g, ''))) &&\r\n     eval('(' + text + ')');\r\n\r\nresults in an \"alert\" message of \"EXPLOIT\", i.e. part of the data is executed as if it was executable code, which the validation code in the RFC is supposed to rule out.\r\n\r\nCredit is due to Stefano Di Paola's http://blog.mindedsecurity.com/2011/08/ye-olde-crockford-json-regexp-is.html article, and possibly others the reporter does not know of.\r\n\r\n----- NOTES FROM THE DOCUMENT AUTHOR -----\r\nThat section is completely obsolete. The recommendation now is to not use eval at all, and instead use JSON.parse.\r\n\r\nThat section should be replaced entirely with language independent advice on proper encoding and decoding, including avoidance of concatenation to construct JSON texts.\r\n\r\n----- NOTES FROM THE VERIFIER -----\r\nThe resolution of this is more involved than can be handled by errata, and a document update is planned soon... so this will be \"held for document update.\"  It's important to note that the premise is correct: the \"eval()\" mechanism is NOT RECOMMENDED, and this text will be entirely replaced when the document is updated.",
+    "submit_date": "2013-04-27",
+    "submitter_name": "Bjoern Hoehrmann",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
