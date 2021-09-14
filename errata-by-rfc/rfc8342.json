@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5362,
+    "doc-id": "RFC8342",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "The convention adopted by the interfaces\r\n   data model [RFC8343] and the IP data model [RFC8344] was to use two\r\n   separate branches rooted at the root of the data tree: one branch for\r\n   configuration data objects and one branch for operational state data\r\n   objects.\r\n",
+    "correct_text": "The convention adopted by the interfaces\r\n   data model [RFC7223] and the IP data model [RFC7277] was to use two\r\n   separate branches rooted at the root of the data tree: one branch for\r\n   configuration data objects and one branch for operational state data\r\n   objects.\r\n",
+    "notes": "The duplication of definition and separation of operational state data and configuration data happened in RFC7223 and RFC7277. RFC8343 and RFC8344 have corrected this using NMDA architecture.\r\n\r\nThe Informative References section should point to RFCs 7223 and 7277.",
+    "submit_date": "2018-05-17",
+    "submitter_name": "Rohit R Ranade",
+    "verifier_id": 158,
+    "verifier_name": "Ignas Bagdonas",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5514,
+    "doc-id": "RFC8342",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "C.1",
+    "orig_text": "   <system\r\n       xmlns=\"urn:example:system\"\r\n       xmlns:or=\"urn:ietf:params:xml:ns:yang:ietf-origin\">\r\n\r\n     <hostname or:origin=\"or:learned\">bar.example.com</hostname>\r\n\r\n     <interface or:origin=\"or:intended\">\r\n       <name>eth0</name>\r\n       <auto-negotiation>\r\n         <enabled or:origin=\"or:default\">true</enabled>\r\n         <speed>1000</speed>\r\n       </auto-negotiation>\r\n       <speed>100</speed>\r\n       <address>\r\n         <ip>2001:db8::10</ip>\r\n         <prefix-length>64</prefix-length>\r\n       </address>\r\n       <address or:origin=\"or:learned\">\r\n         <ip>2001:db8::1:100</ip>\r\n         <prefix-length>64</prefix-length>\r\n       </address>\r\n     </interface>\r\n\r\n     <interface or:origin=\"or:system\">\r\n       <name>lo0</name>\r\n       <address>\r\n         <ip>::1</ip>\r\n         <prefix-length>128</prefix-length>\r\n       </address>\r\n     </interface>\r\n\r\n   </system>",
+    "correct_text": "   <system\r\n       xmlns=\"urn:example:system\"\r\n       xmlns:or=\"urn:ietf:params:xml:ns:yang:ietf-origin\"\r\n       or:origin=\"or:intended\">\r\n\r\n     <hostname or:origin=\"or:learned\">bar.example.com</hostname>\r\n\r\n     <interface or:origin=\"or:intended\">\r\n       <name>eth0</name>\r\n       <auto-negotiation>\r\n         <enabled or:origin=\"or:default\">true</enabled>\r\n         <speed>1000</speed>\r\n       </auto-negotiation>\r\n       <speed>100</speed>\r\n       <address>\r\n         <ip>2001:db8::10</ip>\r\n         <prefix-length>64</prefix-length>\r\n       </address>\r\n       <address or:origin=\"or:learned\">\r\n         <ip>2001:db8::1:100</ip>\r\n         <prefix-length>64</prefix-length>\r\n       </address>\r\n     </interface>\r\n\r\n     <interface or:origin=\"or:system\">\r\n       <name>lo0</name>\r\n       <address>\r\n         <ip>::1</ip>\r\n         <prefix-length>128</prefix-length>\r\n       </address>\r\n     </interface>\r\n\r\n   </system>",
+    "notes": "There was no \"origin\" attribute to the \"system\" top-level container, though it is a configuration node.\r\nAs per the extension definition \"The origin for any top-level configuration data nodes must be specified.\"\r\n\r\nTo choose an extension for top-level container in such cases, I would prefer one of the origin of its children and used \"intended\". , instead of \"unknown\".\r\n\r\nThis has already been discussed in the mail chain, but also mentioned here to help readers in future.",
+    "submit_date": "2018-10-05",
+    "submitter_name": "Rohit R Ranade",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
