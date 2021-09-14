@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 129,
+    "doc-id": "RFC4309",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "On page 6, the second paragraph of Section 5 says:\r\n\r\n   Sequence Numbers are conveyed canonical network byte order.  Extended\r\n   Sequence Numbers are conveyed canonical network byte order, placing\r\n   the high-order 32 bits first and the low-order 32 bits second.\r\n   Canonical network byte order is fully described in RFC 791, Appendix\r\n   B.\r\n\r\nThe text should perhaps better say:\r\n\r\n   Sequence Numbers are conveyed in canonical network byte order.\r\n   Extended Sequence Numbers are conveyed in canonical network byte\r\n   order, placing the high-order 32 bits first and the low-order 32 bits\r\n   second.  Canonical network byte order is fully described in RFC 791,\r\n   Appendix B.\r\n\r\nThe second half-sentence of the second sentence might even be considered\r\nredundant, fully comprised by the term 'canonical network byte order',\r\nand hence be omitted entirely.  Doing that, and following the maxim of\r\n\"making RFC text as simple as possible\", the above text might be\r\nabreviated to say:\r\n\r\n   Sequence Numbers and Extended Sequence Numbers are conveyed in\r\n   canonical network byte order.  Canonical network byte order is fully\r\n   described in RFC 791, Appendix B.\r\n\r\nFinally, considering that the SPI is a 32-bit number and covered by\r\nthe same ordering rule as well, the text might - even shorter - say:\r\n\r\n   All fields are conveyed in canonical network byte order.  Canonical\r\n   network byte order is fully described in RFC 791, Appendix B.\r\n\r\nPlease decide whether the initial text correction deserves an\r\nErrata Note, possibly including the additional enhancement(s).",
+    "correct_text": "",
+    "notes": "word omissions - and opportunity to simplify the text\r\n\r\nNOTE (2006-02-13)\r\nI do not think that any of these will lead to confusion or\r\ninteroperability concerns.  Thus, I do not think that they warrant \r\nthe time and other resources need to generate Errata.\r\nRuss Housley\r\n\r\nfrom pending",
+    "submit_date": "2006-02-03",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 130,
+    "doc-id": "RFC4309",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "99\r\nPage heading says:",
+    "orig_text": "RFC 4309           Using AEC CCM Mode with IPsec ESP       December 2005",
+    "correct_text": "RFC 4309           Using AES CCM Mode with IPsec ESP       December 2005",
+    "notes": "\r\nIn RFC 4309 the page headings have a typo AES is misspelled as AEC.",
+    "submit_date": "2006-01-05",
+    "submitter_name": "Aaron Cohen",
+    "verifier_id": 111,
+    "verifier_name": "Pasi Eronen",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
