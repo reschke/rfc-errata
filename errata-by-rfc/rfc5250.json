@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2981,
+    "doc-id": "RFC5250",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "Section 7 describes Opaque type allocation and assignment.",
+    "correct_text": "Section 9 describes Opaque type allocation and assignment.",
+    "notes": "Section 7 was the \"IANA Considerations\" section in the previous RFC, 2370.\r\nIANA Considerations are included in Section 9 of this document.\r\n\r\n===\r\n\r\nThe reporter is correct in his report of the error and its root cause. However this error is unlikely to cause implementation or interoperability issues and can thus wait to be fixed when the RFC is revised. ",
+    "submit_date": "2011-09-28",
+    "submitter_name": "Gary Cote",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2982,
+    "doc-id": "RFC5250",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "A.2",
+    "orig_text": "See section 7 of this document for a description of Opaque type allocation and assignment.\r\n",
+    "correct_text": "See section 9 of this document for a description of Opaque type allocation and assignment.\r\n",
+    "notes": "Section 7 was the \"IANA Considerations\" section in the previous RFC, 2370.\r\n\r\nIANA Considerations are included in Section 9 of this document.\r\n\r\n===\r\n\r\nThe reporter is correct in his report of the error and its root cause. However this error is unlikely to cause implementation or interoperability issues and can thus wait to be fixed when the RFC is revised.",
+    "submit_date": "2011-09-28",
+    "submitter_name": "Gary Cote",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5287,
+    "doc-id": "RFC5250",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "inter-area procedures described in Section 6 of this document.",
+    "correct_text": "inter-area procedures described in Section 5 of this document.",
+    "notes": "Inter-Area Considerations are discussed in Section 5, not Section 6.",
+    "submit_date": "2018-03-14",
+    "submitter_name": "Angelos Vassiliou",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
