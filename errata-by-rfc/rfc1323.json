@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2278,
+    "doc-id": "RFC1323",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1.1,
+    "orig_text": "           Section 4 introduces a new TCP option, \"Timestamps\", and then\r\n           defines a mechanism using this option that allows nearly\r\n           every segment, including retransmissions, to be timed at\r\n           negligible computational cost.  We use the mnemonic RTTM\r\n           (Round Trip Time Measurement) for this mechanism, to\r\n           distinguish it from other uses of the Timestamps option.\r\n\r\n",
+    "correct_text": "           Section 3.2 introduces a new TCP option, \"Timestamps\", and then\r\n           defines a mechanism using this option that allows nearly\r\n           every segment, including retransmissions, to be timed at\r\n           negligible computational cost.  We use the mnemonic RTTM\r\n           (Round Trip Time Measurement) for this mechanism, to\r\n           distinguish it from other uses of the Timestamps option.\r\n\r\n",
+    "notes": "Incorrect reference to Section 4.",
+    "submit_date": "2010-05-19",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3685,
+    "doc-id": "RFC1323",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "         This option is an offer, not a promise; both sides must send\r\n         Window Scale options in their SYN segments to enable window\r\n         scaling in either direction.  If window scaling is enabled,\r\n         then the TCP that sent this option will right-shift its true\r\n         receive-window values by 'shift.cnt' bits for transmission in\r\n         SEG.WND.  The value 'shift.cnt' may be zero (offering to scale,\r\n         while applying a scale factor of 1 to the receive window).\r\n",
+    "correct_text": "         This option is an offer, not a promise; both sides must send\r\n         Window Scale options in their SYN segments to enable window\r\n         scaling in either direction.  If window scaling is enabled,\r\n         then the TCP that sent this option will left-shift its true\r\n         receive-window values by 'shift.cnt' bits for transmission in\r\n         SEG.WND.  The value 'shift.cnt' may be zero (offering to scale,\r\n         while applying a scale factor of 1 to the receive window).\r\n",
+    "notes": "This need to be left shift\n --VERIFIER NOTES-- \nThe text in RFC 1323 is correct. ",
+    "submit_date": "2013-07-16",
+    "submitter_name": "Arul Kumar Chellappan",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4346,
+    "doc-id": "RFC1323",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 2.3,
+    "orig_text": "      Since the max window is 2**S (where S is the scaling shift count)\r\n      times at most 2**16 - 1 (the maximum unscaled window), the maximum\r\n      window is guaranteed to be < 2*30 if S <= 14.  Thus, the shift\r\n      count must be limited to 14 (which allows windows of 2**30 = 1\r\n      Gbyte).  If a Window Scale option is received with a shift.cnt\r\n      value exceeding 14, the TCP should log the error but use 14\r\n      instead of the specified value.\r\n",
+    "correct_text": "      Since the max window is 2**S (where S is the scaling shift count)\r\n      times at most 2**16 - 1 (the maximum unscaled window), the maximum\r\n      window is guaranteed to be < 2**30 if S <= 14.  Thus, the shift\r\n      count must be limited to 14 (which allows windows of 2**30 = 1\r\n      Gbyte).  If a Window Scale option is received with a shift.cnt\r\n      value exceeding 14, the TCP should log the error but use 14\r\n      instead of the specified value.\r\n",
+    "notes": "Typo in the 3rd line: the window should be less than 2 to the power of 30, instead of 2 multiplied by 30.",
+    "submit_date": "2015-04-24",
+    "submitter_name": "Niels Laukens",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
