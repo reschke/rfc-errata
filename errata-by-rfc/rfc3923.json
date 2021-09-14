@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2770,
+    "doc-id": "RFC3923",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "   3.  The method MUST follow the required procedures (including the\r\n       specific algorithms) defined in [CPIM] and [CPP].  In particular,\r\n       these documents specify:\r\n\r\n       *  Signing MUST use [SMIME] signatures with [CMS] SignedData.\r\n\r\n       *  Encryption MUST use [SMIME] encryption with [CMS]\r\n          EnvelopeData.\r\n          ^^^^^^^^^^^^",
+    "correct_text": "   3.  The method MUST follow the required procedures (including the\r\n       specific algorithms) defined in [CPIM] and [CPP].  In particular,\r\n       these documents specify:\r\n\r\n       *  Signing MUST use [SMIME] signatures with [CMS] SignedData.\r\n\r\n       *  Encryption MUST use [SMIME] encryption with [CMS]\r\n          EnvelopedData.\r\n",
+    "notes": null,
+    "submit_date": "2011-04-08",
+    "submitter_name": "Adam Wos",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
