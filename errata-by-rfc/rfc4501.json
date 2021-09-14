@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 78,
+    "doc-id": "RFC4501",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   In particular, the \"dnsname\" field of the DNS URI is to be\r\n   considered an internationalized domain name (IDN) unaware\r\n   domain name slot, in the terminology of RFC 3940 [14].",
+    "correct_text": "   In particular, the \"dnsname\" field of the DNS URI is to be\r\n   considered an internationalized domain name (IDN) unaware\r\n   domain name slot, in the terminology of RFC 3490 [14].",
+    "notes": "Reference 14 is RFC 3490 not RFC 3940.",
+    "submit_date": "2006-05-23",
+    "submitter_name": "Yitzchak M. Gottlieb",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
