@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5539,
+    "doc-id": "RFC8180",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "(...)\r\n\r\n   The Rank computation is described in Section 4.1 of [RFC6552].  A\r\n   node's Rank (see Figure 4 for an example) is computed by the\r\n   following equations:\r\n\r\n      R(N) = R(P) + rank_increment\r\n\r\n      rank_increment = (Rf*Sp + Sr) * MinHopRankIncrease\r\n\r\n(...)\r\n\r\n   This section illustrates the use of OF0 (see Figure 4).  We have:\r\n\r\n      rank_increment = ((3*numTx/numTxAck)-2)*minHopRankIncrease = 512\r\n",
+    "correct_text": "(...)\r\n\r\n   The Rank computation is described in Section 4.1 of [RFC6552].  A\r\n   node's Rank (see Figure 4 for an example) is computed by the\r\n   following equations:\r\n\r\n      R(N) = R(P) + rank_increase\r\n\r\n      rank_increase = (Rf*Sp + Sr) * MinHopRankIncrease\r\n\r\n(...)\r\n\r\n   This section illustrates the use of OF0 (see Figure 4).  We have:\r\n\r\n      rank_increase = ((3*numTx/numTxAck)-2)*minHopRankIncrease = 512\r\n",
+    "notes": "s/rank_increment/rank_increase/\r\n\r\nIt'd be better to use \"rank_increase\" as the variable name for consistency, which is used in Section 4.1 of RFC 6552 (https://tools.ietf.org/html/rfc6552#section-4.1):\r\n\r\n[excerpt from RFC 6552]\r\n\r\n   The step_of_rank Sp that is computed for that link is multiplied by\r\n   the rank_factor Rf and then possibly stretched by a term Sr that is\r\n   less than or equal to the configured stretch_of_rank.  The resulting\r\n   rank_increase is added to the Rank of preferred parent R(P) to obtain\r\n   that of this node R(N):\r\n\r\n   R(N) = R(P) + rank_increase where:\r\n\r\n   rank_increase = (Rf*Sp + Sr) * MinHopRankIncrease",
+    "submit_date": "2018-10-29",
+    "submitter_name": "Yasuyuki Tanaka",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
