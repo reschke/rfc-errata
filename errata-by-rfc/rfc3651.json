@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3966,
+    "doc-id": "RFC3651",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "       <NamingAuthority> = *(<NamingAuthority>  \".\") <NAsegment>\r\n",
+    "correct_text": "       <NamingAuthority> = *(<NAsegment>  \".\") <NAsegment>",
+    "notes": "Strictly speaking, this is an editorial change because the corrected\r\nBNF generates the same strings as the original BNF.  But the corrected\r\nBNF is far easier for the reader to understand; it matches how people\r\nthink about the syntax.",
+    "submit_date": "2014-04-16",
+    "submitter_name": "Dale Worley",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
