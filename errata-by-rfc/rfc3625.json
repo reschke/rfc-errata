@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 249,
+    "doc-id": "RFC3625",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "    VRAT            = %x76 %x72 %x61 %x74",
+    "correct_text": "",
+    "notes": "This rule is important because without it, it isn't clear whether the \n\"vrat\" string is capitalized (like \"RIFF\" and \"QLCM\") or not (like \n\"fmt \" and \"data\").",
+    "submit_date": "2005-08-30",
+    "submitter_name": "Richard Walters",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3383,
+    "doc-id": "RFC3625",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   rate-map-table  = 8rate-map-entry\r\n",
+    "correct_text": "   rate-map-table  = *rate-map-entry\r\n",
+    "notes": "I believe this is a simple typo specifying that there are num-rates number of rate-map-entries\r\n\r\nYes.  Something like n-rate-map-entries would be even clearer (* implies a pointer to me)",
+    "submit_date": "2012-10-18",
+    "submitter_name": "Tom Ritter",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5135,
+    "doc-id": "RFC3625",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   FMT             = %x66 %x6D %x74 %x20\r\n\r\n   LABL            = %x6C %x61 %x62 %x6C\r\n\r\n   OFFS            = %x6F %x66 %x66 %x73\r\n\r\n   DATA            = %x64 %x61 %x74 %x61\r\n\r\n   CNFG            = %x63 %x6E %x66 %x67\r\n\r\n   TEXT            = %x74 %x65 %x78 %x74",
+    "correct_text": "The values for FMT, LABL, OFFS, DATA, CNFG and TEXT all specify\r\nlower-case text values, not upper-case.",
+    "notes": "We can reduce the number of bad implementations by adding a small note mentioning that some of these values are lower case.  The values appear at first glance to all be upper-case.  A hasty implementer might carelessly use upper case values here instead of the correct lower-case values.\r\n\r\n=ISE Note=\r\nThe observation is correct (that these six labels use lower case text values and that a careless implementer might miss that fact), but there is no editorial error in the document.\r\nA future revision of this document might add such a note.",
+    "submit_date": "2017-10-03",
+    "submitter_name": "Peter Smith",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2021-06-01 13:08:45"
+  }
+]
