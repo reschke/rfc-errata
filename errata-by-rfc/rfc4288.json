@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 141,
+    "doc-id": "RFC4288",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.2.2",
+    "orig_text": "    A Media type of \"image\" indicates that the content specifies or more\r\n    separate images that require appropriate hardware to display. ...",
+    "correct_text": "    A Media type of \"image\" indicates that the content specifies one or\r\n    more separate images that require appropriate hardware to display.\r\n    ...\r\n",
+    "notes": "",
+    "submit_date": "2005-12-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 818,
+    "doc-id": "RFC4288",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "Two small editorial issues:\r\n\r\n- Perhaps as an artifact of the conversion of text from an existing\r\n  RFC to a revised memo in I-D format and finally back to RFC format,\r\n  along with repeated re-pagination, it can be observed from time to\r\n  time that there appear unexpected blank lines in RFC text which\r\n  visually break sentences apart.  This recurring arifact has hit\r\n  RFC 4288 near the top of its pages #8 and #10.",
+    "correct_text": "[not submitted]",
+    "notes": "I assume you're referring to the break between \"linear\" and \"sequence\". I agree\r\nit should not have been there.\r\n\r\nfrom pending",
+    "submit_date": "2005-12-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
