@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4146,
+    "doc-id": "RFC7161",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.2.2.1",
+    "orig_text": "4.2.2.1.  Proxy Binding Update Message\r\n\r\n   As result of the new defined flag, the PBU message format is updated\r\n   as follows:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n                                     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n                                     |           Sequence #          |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |A|H|L|K|M|R|P|S|   Reserved    |            Lifetime           |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                                                               |\r\n     .                                                               .\r\n     .                          Mobility Options                     .\r\n     .                                                               .\r\n     |                                                               |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "correct_text": "4.2.2.1.  Proxy Binding Update Message\r\n\r\n   As result of the new defined flag, the PBU message format is updated\r\n   as follows:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n                                     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n                                     |           Sequence #          |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |A|H|L|K|M|R|P|F|T|B|S| Reserved|            Lifetime           |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                                                               |\r\n     .                                                               .\r\n     .                          Mobility Options                     .\r\n     .                                                               .\r\n     |                                                               |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "notes": "There is a mistake in the flags portion of the PBU/PBA messages.\r\nIt seems to be overlapping with flags defined in RFC5845. RFC5555. Both the specs were published many years before RFC7161. \r\n\r\nBinding Update Flags\r\n\r\nRegistration Procedure(s)\r\nStandards Action or IESG Approval\r\nReference\r\n[RFC5213]\r\nAvailable Formats\r\n\r\nCSV\r\nFlag \tValue \tReference \r\nA\t0x8000\t[RFC6275]\r\nH\t0x4000\t[RFC6275]\r\nL\t0x2000\t[RFC6275]\r\nK\t0x1000\t[RFC6275]\r\nM\t0x0800\t[RFC4140]\r\nR\t0x0400\t[RFC3963]\r\nP\t0x0200\t[RFC5213]\r\nF\t0x0100\t[RFC5555]\r\nT\t0x0080\t[RFC5845]\r\nB\t0x0040\t[RFC6602]\r\nS\t0x0020\t[RFC7161]\r\n\r\n\r\nCompare Section 6.2 of RFC 5845 and Section 4.2.2.1 of RFC 7161.",
+    "submit_date": "2014-10-28",
+    "submitter_name": "Sri Gundavelli",
+    "verifier_id": 2,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4147,
+    "doc-id": "RFC7161",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.2.2.2",
+    "orig_text": "4.2.2.2.  Proxy Binding Acknowledgement Message\r\n\r\n   As result of the new defined flag, the PBA message format is updated\r\n   as follows:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n                                     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n                                     |    Status     |K|R|P|S| Rsrvd |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |           Sequence #          |           Lifetime            |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                                                               |\r\n     .                                                               .\r\n     .                        Mobility Options                       .\r\n     .                                                               .\r\n     |                                                               |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "correct_text": "4.2.2.2.  Proxy Binding Acknowledgement Message\r\n\r\n   As result of the new defined flag, the PBA message format is updated\r\n   as follows:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n                                     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n                                     |    Status     |K|R|P|T|B|S|Res|\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |           Sequence #          |           Lifetime            |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |                                                               |\r\n     .                                                               .\r\n     .                        Mobility Options                       .\r\n     .                                                               .\r\n     |                                                               |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "notes": "There is an error in the flags portion of the PBA.\r\n\r\nBinding Acknowledgment Flags\r\n\r\nRegistration Procedure(s)\r\nStandards Action or IESG Approval\r\nReference\r\n[RFC5213]\r\nAvailable Formats\r\n\r\nCSV\r\nFlag \tValue \tReference \r\nK\t0x80\t[RFC6275]\r\nR\t0x40\t[RFC3963]\r\nP\t0x20\t[RFC5213]\r\nT\t0x10\t[RFC5845]\r\nB\t0x08\t[RFC6602]\r\nS\t0x04\t[RFC7161]\r\n\r\n\r\nCompare Section 6.3 of RFC 5845 and Section 4.2.2.2 of RFC 7161. ",
+    "submit_date": "2014-10-28",
+    "submitter_name": "Sri Gundavelli",
+    "verifier_id": 2,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
