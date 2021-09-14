@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1787,
+    "doc-id": "RFC4643",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "user-pass-char = B-CHAR\r\n\r\nNOTE: a server implementation MAY parse AUTHINFO USER and AUTHINFO\r\nPASS specially so as to allow white space to be used within the\r\nusername or password.  Such implementations accept the additional\r\nsyntax (making these two items inconsistent with \"token\" in Section\r\n9.8 of [NNTP]):\r\n\r\nuser-pass-char =/ SP / TAB",
+    "correct_text": "user-pass-char = CTRL / %x21-FF\r\n\r\nNOTE: a server implementation MAY parse AUTHINFO USER and AUTHINFO\r\nPASS specially so as to allow white space to be used within the\r\nusername or password.  Such implementations accept the additional\r\nsyntax (making these two items inconsistent with \"token\" in Section\r\n9.8 of [NNTP]):\r\n\r\nuser-pass-char =/ SP / TAB",
+    "notes": "RFC 3977 defines B-CHAR in section 9.8 as:\r\n\r\n B-CHAR     = CTRL / TAB / SP / %x21-FF\r\n\r\nIt already contains TAB (%x09) and SP (%x20).  Therefore, we have\r\nto define user-pass-char as any byte character except NUL, TAB, LF, CR\r\nand SP.  Otherwise, the note does not make sense.\r\n\r\n--- RFC Editor Note ---\r\nThis report was updated 2009-12-07 per a request from Julien Élie.",
+    "submit_date": "2009-05-24",
+    "submitter_name": "Antti-Juhani Kaijanaho",
+    "verifier_id": 2,
+    "verifier_name": "Lisa Dusseault",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
