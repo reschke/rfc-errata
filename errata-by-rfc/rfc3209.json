@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2669,
+    "doc-id": "RFC3209",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.3.3.1",
+    "orig_text": "The path between a loose node and its preceding node MAY include other network nodes that are not part of the strict node or its preceding abstract node.\r\n\r\n",
+    "correct_text": "The path between a loose node and its preceding node MAY include other network nodes that are not part of the loose node or its preceding abstract node.\r\n",
+    "notes": "Narration incorrectly refers to \"strict\" node while describing \"loose\" node.",
+    "submit_date": "2010-12-10",
+    "submitter_name": "Mahesh",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4733,
+    "doc-id": "RFC3209",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3.2",
+    "orig_text": "   To formalize the discussion, we call each group of nodes an abstract\r\n   node.  Thus, we say that an explicit route is a specification of a\r\n   set of abstract nodes to be traversed.  If an abstract node consists\r\n   of only one node, we refer to it as a simple abstract node.\r\n",
+    "correct_text": "   To formalize the discussion, we call each group of nodes an abstract\r\n   node.  Thus, we say that an explicit route is a specification of a\r\n   sequence of abstract nodes to be traversed.  If an abstract node \r\n   consists of only one node, we refer to it as a simple abstract node.\r\n",
+    "notes": "s/set/sequence\r\n\r\nA set implies ordering of abstract nodes is NOT important.\r\nA sequence implies ordering of abstract nodes IS important.\r\n\r\nIn the rest of RFC 3209, this distinction is maintained, but not\r\nin this paragraph.",
+    "submit_date": "2016-07-06",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
