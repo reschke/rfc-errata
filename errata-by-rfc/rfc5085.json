@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4693,
+    "doc-id": "RFC5085",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "8.3.1",
+    "orig_text": "8.3.1.  Control Message Attribute Value Pairs (AVPs)\r\n\r\n   An additional AVP Attribute is specified in Section 6.3.1.  It was\r\n   defined by IANA as described in Section 2.2 of [RFC3438].",
+    "correct_text": "8.3.1.  Control Message Attribute Value Pairs (AVPs)\r\n\r\n   An additional AVP Attribute is specified in Section 6.3.1.  It was\r\n   defined by IANA as described in Section 2.1 of [RFC3438].",
+    "notes": "The correct section of RFC 3438 is 2.1 instead of 2.2",
+    "submit_date": "2016-05-13",
+    "submitter_name": "Carlos Pignataro",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
