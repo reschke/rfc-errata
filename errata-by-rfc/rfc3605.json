@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1050,
+    "doc-id": "RFC3605",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "   rtcp-attribute =  \"a=rtcp:\" port  [nettype space addrtype space\r\n                         connection-address] CRLF",
+    "correct_text": "   rtcp-attribute =  \"a=rtcp:\" port  [space nettype space addrtype space\r\n                         connection-address] CRLF\r\n",
+    "notes": "There must be a space between \"port\" and \"nettype\".",
+    "submit_date": "2007-09-13",
+    "submitter_name": "Alexandre Machado",
+    "verifier_id": 107,
+    "verifier_name": "Cullen Jennings",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2292,
+    "doc-id": "RFC3605",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 1,
+    "orig_text": "The session invitation protocol (SIP, [RFC3261])",
+    "correct_text": "The session initiation protocol (SIP, [RFC3261])",
+    "notes": "SIP stand for Session Initiation Protocol, not invitation.",
+    "submit_date": "2010-05-30",
+    "submitter_name": "linear",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
