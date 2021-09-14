@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 98,
+    "doc-id": "RFC4409",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "Issues with References:\r\n\r\na) Section 12 of RFC 4409 contains the entry:\r\n\r\n   [ESMTP]           Klensin, J., Freed, N., Rose, M., Stefferud, E.,\r\n                     and D. Crocker, \"SMTP Service Extensions\", STD 10,\r\n                     RFC 1869, November 1995.\r\n\r\n   `STD 10` in fact should be `(ex) STD 10` according to rfcxx00.txt .\r\n   The material from RFC 1869 has been incorporated into RFC 2821,\r\n   and RFC 1869 has been reclassified to Historic.\r\n\r\n   Therefore, this reference should not have been listed as a\r\n   Normative Reference.  The Ref. to RFC 2821 in fact catches all.\r\n\r\n\r\n   Section 12 of RFC 4409, under [SMTP-MTA] also contains the entry:\r\n\r\n                     Partridge, C., \"Mail routing and the domain\r\n                     system\", STD 10, RFC 974, January 1986.\r\n\r\n   `STD 10` in fact should better have been `(ex) STD 14` --\r\n   rfcxx00.txt says: \"Now Historic.\"                  ^^\r\n\r\n   The non-obsolete material from RFC 974 has been incorporated\r\n   into RFC 2821 and RFC 974 has been reclassified as Historic.\r\n\r\n   Therefore, this reference should not have been listed as a\r\n   Normative Reference.  The Ref. to RFC 2821 in fact catches all.\r\n\r\n\r\n   Finally, the subsequent entry,\r\n\r\n                     Braden, R., \"Requirements for Internet Hosts -\r\n                     Application and Support\", STD 3, RFC 1123, October\r\n                     1989.\r\n\r\n   also is not needed any more, because the SMTP related material\r\n   in RFC 1123 has been revised and incorporated into RFC 2821\r\n   as well.  The Ref. to RFC 2821 in fact catches all.\r\n\r\n\r\nb) Section 13 of RFC 4409, under [MESSAGE-FORMAT] contains the entry:\r\n\r\n                     Braden, R., \"Requirements for Internet Hosts -\r\n                     Application and Support\", STD 3, RFC 1123, October\r\n                     1989.\r\n\r\n   Similarly to the last item above, the IMF related material from\r\n   RFC 1233 has been revised and incorporated into RFC 2822; thus\r\n   this Ref. is not really needed any more.\r\n   The Ref. to RFC 2822 in fact catches all.\r\n\r\n\r\nc) Section 13 of RFC 4409 contains the entry:\r\n\r\n   [IPSEC]           Kent, S. and R. Atkinson, \"Security Architecture\r\n                     for the Internet Protocol\", RFC 2401, November\r\n                     1998.\r\n\r\n   This Ref. was already outdated at the time of publication of\r\n   RFC 4409; it should point to the current IPSEC Architecture\r\n   document, RFC 4301 !\r\n\r\n   BTW:\r\n   This apparently is a `viral` legacy issue -- RFC 2476 also\r\n   contained an outdated Ref., to the predecessor of RFC 2401 !",
+    "correct_text": "",
+    "notes": "",
+    "submit_date": "2006-05-16",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1078,
+    "doc-id": "RFC4409",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "NO-SOLICITING  Notification of no soliciting MAY       [Msg-Track]\r\n",
+    "correct_text": "NO-SOLICITING  Notification of no soliciting MAY       [No-soliciting]\r\n\r\nAnd a new reference in Section 13:\r\n\r\n   [No-soliciting] C. Malamud, \"A No Soliciting Simple Mail Transfer\r\n                   Protocol (SMTP) Service Extension\", RFC 3865,\r\n                   September 2004.",
+    "notes": "Section 13 says:\r\n\r\n   [Msg-Track]       Allman, E. and T. Hansen, \"SMTP Service Extension\r\n                     for Message Tracking\", RFC 3885, September 2004.\r\n\r\nWhich is not correct for NO-SOLICITING, which is defined in RFC 3865",
+    "submit_date": "2006-06-26",
+    "submitter_name": "Stephane Bortzmeyer",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2393,
+    "doc-id": "RFC4409",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "The list of SMTP extensions provided on page 10 of RFC 4409\r\nunfortunately is incomplete.  As far as I can see, the following\r\nRFCs with SMTP extensions predate the publication of RFC 4409:\r\n\r\n  o  RFC 2645  -- ATRN\r\n  o  RFC 2852  -- DELIVERBY\r\n  o  RFC 3865 (+ RFC 4095)  -- NO-SOLICITING\r\n  o  RFC 4141  -- CONPERM, CONNEG\r\n[ o  RFC 4405 ]\r\n",
+    "correct_text": "",
+    "notes": "Quickly browsing these RFCs, I found that only RFC 4405 has\r\nfollowed the specification in Section 7 of RFC 2476 (literally\r\ncarried over to RFC 4409):\r\n\r\n   Future SMTP extensions SHOULD explicitly specify if they are valid on\r\n   the Submission port.\r\n\r\nand contains a definitive statement to this end.\r\nRFC 4405 therefore arguably might be excluded from the list.\r\n\r\nIt would have been useful to have a complete list, with the\r\nproper applicability keywords for the above SMTP extensions.\r\n",
+    "submit_date": "2006-05-16",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 121,
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
