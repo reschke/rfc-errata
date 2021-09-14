@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3733,
+    "doc-id": "RFC6570",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "2.4.1",
+    "orig_text": "Prefix modifiers are not applicable to variables that have composite \r\nvalues.",
+    "correct_text": "Prefix modifiers are neither applicable to variables that have\r\ncomposite values, nor to a value which is a list of values or an\r\nassociative array of (name, value) pairs.",
+    "notes": "It is not specified, what \"{list:1}\" with list=[\"red\",\"green\",\"blue\"] produces,\r\nsee discussion here https://github.com/uri-templates/uritemplate-test/pull/27\n --VERIFIER NOTES-- \n   The spec defines...\r\n\r\n   In Level 4 templates, a variable may have a composite value in the\r\n   form of a list of values or an associative array of (name, value)\r\n   pairs.  Such value types are not directly indicated by the template\r\n   syntax, but they do have an impact on the expansion process\r\n   (Section 3.2.1).\r\n\r\n...just three paragraphs above that sentence.  Hence, a list is a composite\r\nvalue and the quoted sentence below says that prefix modifiers are not\r\napplicable to them.",
+    "submit_date": "2013-09-23",
+    "submitter_name": "Franz X Antesberger",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
