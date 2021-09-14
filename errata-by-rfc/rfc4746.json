@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 10,
+    "doc-id": "RFC4746",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.3.7",
+    "orig_text": "   Consequently, EAP-PAX requires the use of a\r\n   Diffie-Hellman group with modulus larger than 3000.  ",
+    "correct_text": "   Consequently, EAP-PAX requires the use of a\r\n   Diffie-Hellman group with modulus larger than 3000 bits. \r\n",
+    "notes": "Provide units.",
+    "submit_date": "2006-11-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 11,
+    "doc-id": "RFC4746",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "   These 52+L octets are then attached to the packet as the payload.",
+    "correct_text": "   These 54+L octets are then attached to the packet as the payload.",
+    "notes": "Correction based on preceding text (page 16) and Figure 8\r\n",
+    "submit_date": "2006-11-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 954,
+    "doc-id": "RFC4746",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "(1)  [typo]\r\n\r\nOn page 6 of RFC 4746, the 1st paragraph of Section 2.1 says:\r\n\r\n   PAX_STD is a simple nonce-based authentication using the strong\r\n   long-term key.  [...]\r\n\r\nIt should say:\r\n\r\n|  PAX_STD is a simple nonce-based authentication using a strong\r\n   long-term key.  [...]\r\n\r\n\r\n(2)  [missing article]\r\n\r\nWithin Section 2.2, near the bottom of page 8, RFC 4746 says:\r\n\r\n   When using EAP-PAX with Wireless LAN, clients SHOULD validate that\r\n   the certificate's wlanSSID extension matches the SSID of the network\r\n   to which it is currently authenticating.\r\n\r\nIt should say:\r\n\r\n|  When using EAP-PAX with a Wireless LAN, clients SHOULD validate that\r\n   the certificate's wlanSSID extension matches the SSID of the network\r\n   to which it is currently authenticating.\r\n\r\n\r\n(3)  [missing article]\r\n\r\nOn page 9, the 1st paragraph of Section 2.3 says:\r\n\r\n   Messages PAX_STD-2, PAX_STD-3, PAX_SEC-4, PAX_SEC-5, and PAX_ACK\r\n   contain optional component ADE.  [...]\r\n\r\nIt should say:\r\n\r\n   Messages PAX_STD-2, PAX_STD-3, PAX_SEC-4, PAX_SEC-5, and PAX_ACK\r\n|  contain an optional component ADE.  [...]\r\n\r\n\r\n(4)  [extraneous word]\r\n\r\nThe 2nd paragraph of Section 4, at the bottom of page 19, says:\r\n\r\n                                          [...].  Also note that the\r\n   security of PAX can be proved using under the Random Oracle model.\r\n\r\nIt should say:\r\n                                          [...].  Also note that the\r\n|  security of PAX can be proved under the Random Oracle model.\r\n",
+    "correct_text": "",
+    "notes": "Corrects minor editorial errors.",
+    "submit_date": "2006-11-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 100,
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
