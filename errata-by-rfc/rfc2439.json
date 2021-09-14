@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3964,
+    "doc-id": "RFC2439",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4.8.2",
+    "orig_text": " In either case then:\r\n\r\n     1.  set t-updated = t-now\r\n\r\n     2.  insert into a reuse list (see Section 4.8.6)",
+    "correct_text": " In either case then:\r\n\r\n     1.  set t-updated = t-now\r\n",
+    "notes": "The route which is unreachable should NOT be inserted into the reuse-list. reuse-list (as per explanation in Section 4.8.7) is used for fast evaluation of routes which have been suppressed long enough and can be potentially used again. The \"unreachability/withdrawal\" of route is never suppressed and never needs to be re-evaluated in future.\n --VERIFIER NOTES-- \n   RFC 2439 isn't the easiest to read, but this erratum is not correct. Despite its name, the \"reuse list\" as described in S. 4.8.7 is used for processing timer-driven events in general, including freeing up damping structures (\"histories\"). Quoting from S. 4.8.7, \"Handling Reuse Timer Events\":\r\n\r\n                      all of the routes in the first queue will be\r\n   available for immediate reuse if reachable or the history entry could\r\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n   be disposed of if unreachable.\r\n   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nIf you have any doubt that \"history\" means \"damping structure\", take a look at S. 4.8.2:\r\n\r\n   If there is no previous stability history (the damping structure\r\n   pointer is zero), then:\r\n\r\nPresumably, you're clear on why histories for unreachable routes need to be maintained to begin with.",
+    "submit_date": "2014-04-15",
+    "submitter_name": "Gunjan Bansal",
+    "verifier_id": 140,
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
