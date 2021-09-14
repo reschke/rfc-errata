@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2844,
+    "doc-id": "RFC5780",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 7.5,
+    "orig_text": "RESPONSE-PORT is a 16-bit unsigned integer in network byte order \r\nfollowed by 2 bytes of padding. Allowable values of RESPONSE-PORT \r\nare 0-65536.",
+    "correct_text": "RESPONSE-PORT is a 16-bit unsigned integer in network byte order \r\nfollowed by 2 bytes of padding. Allowable values of RESPONSE-PORT \r\nare 0-65535.",
+    "notes": "The 16-bit unsigned int range is 0-65535 (0x0000 - 0xffff).  65536 can't be represented inside a a 16-bit.",
+    "submit_date": "2011-06-25",
+    "submitter_name": "John Selbie",
+    "verifier_id": 2,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2939,
+    "doc-id": "RFC5780",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 9.1,
+    "orig_text": "Section 9.1\r\n   ...\r\n   0x802c: OTHER-ADDRESS\r\n   ",
+    "correct_text": null,
+    "notes": "The document contradicts itself, one place (section 7.4) saying that OTHER-ADDRESS has the same value as CHANGED-ADDRESS did, and the other place (section 9.1) giving a new value, which matches the IANA registry.  The statement explaining why it has the same value (which it doesn't) should be removed.",
+    "submit_date": "2011-08-17",
+    "submitter_name": "John Selbie",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4327,
+    "doc-id": "RFC5780",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.6,
+    "orig_text": "This test apples to UDP and TCP, but not TLS over TCP connections.",
+    "correct_text": "This test applies to UDP and TCP, but not TLS over TCP connections.",
+    "notes": "\"apples\" should be \"applies\".",
+    "submit_date": "2015-04-03",
+    "submitter_name": "Xinbang Hu",
+    "verifier_id": 137,
+    "verifier_name": "Spencer Dawkins",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
