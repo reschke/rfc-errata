@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4029,
+    "doc-id": "RFC6855",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "   Once an IMAP client has enabled UTF-8 support with the \"ENABLE\r\n   UTF8=ACCEPT\" command, it MUST NOT issue a \"SEARCH\" command that\r\n   contains a charset specification.  If an IMAP server receives such a\r\n   \"SEARCH\" command in that situation, it SHOULD reject the command with\r\n   a \"BAD\" response (due to the conflicting charset labels).\r\n",
+    "correct_text": "   Once an IMAP client has enabled UTF-8 support with the \"ENABLE\r\n   UTF8=ACCEPT\" command, it MUST NOT issue a \"SEARCH\" command that\r\n   contains a charset specification. If an IMAP server receives such a\r\n   \"SEARCH\" command in that situation, it SHOULD reject the command with\r\n   a \"BAD\" response (due to the conflicting charset labels). This also\r\n   applies to any IMAP command or extension that includes an optional\r\n   charset label and associated strings in the command arguments,\r\n   including the MULTISEARCH extension. For commands with a mandatory\r\n   charset field, such as SORT and THREAD, servers SHOULD reject charset\r\n   values other than UTF-8 with a “BAD” response (due to the conflicting\r\n   charset labels).",
+    "notes": "This is a straightforward extrapolation of the existing text, but a literal reading of the existing text is silent about how to deal with this situation.",
+    "submit_date": "2014-06-27",
+    "submitter_name": "Chris Newman",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
