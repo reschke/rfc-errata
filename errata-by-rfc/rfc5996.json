@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2707,
+    "doc-id": "RFC5996",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.6,
+    "orig_text": "[...] and also MUST be capable of being configured to send and accept the \r\nHash and URL format (with HTTP URLs)",
+    "correct_text": "[...] and also MUST be capable of being configured to send and accept the \r\ntwo Hash and URL formats (with HTTP URLs)",
+    "notes": "This change from the original RFC 4306 text was made late in the process, responding to the Gen-Art reviewer comment. Factually, the document (earlier in the same section) defines two Hash and URL formats, making this sentence a clear inconsistency. The erratum is flagged as Technical because the text is normative.",
+    "submit_date": "2011-02-06",
+    "submitter_name": "Yaron Sheffer",
+    "verifier_id": 2,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3036,
+    "doc-id": "RFC5996",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "      [...] Of the notifications defined in this document, the SPI is\r\n      included only with INVALID_SELECTORS and REKEY_SA.\r\n\r\n",
+    "correct_text": "      [...] Of the notifications defined in this document, the SPI is\r\n      included only with INVALID_SELECTORS, REKEY_SA and CHILD_SA_NOT_FOUND.\r\n",
+    "notes": "Original text was carried over from RFC4306 and contradicts with the text in section 2.25, which clearly says that SPI field in CHILD_SA_NOT_FOUND notification is populated. Notification CHILD_SA_NOT_FOUND was not defined in RFC4306, and the whole section 2.25 is new to RFC5996.",
+    "submit_date": "2011-11-26",
+    "submitter_name": "Valery Smyslov",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3718,
+    "doc-id": "RFC5996",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.15.3",
+    "orig_text": "A client can be assigned an IPv6 address using the\r\nINTERNAL_IP6_ADDRESS Configuration payload. A minimal exchange might\r\nlook like this:\r\n\r\nCP(CFG_REQUEST) =\r\nINTERNAL_IP6_ADDRESS()\r\nINTERNAL_IP6_DNS()\r\nTSi = (0, 0-65535, :: - FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF)\r\nTSr = (0, 0-65535, :: - FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF)\r\n\r\nCP(CFG_REPLY) =\r\nINTERNAL_IP6_ADDRESS(2001:DB8:0:1:2:3:4:5/64)\r\nINTERNAL_IP6_DNS(2001:DB8:99:88:77:66:55:44)\r\nTSi = (0, 0-65535, 2001:DB8:0:1:2:3:4:5 - 2001:DB8:0:1:2:3:4:5)\r\nTSr = (0, 0-65535, :: - FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF)",
+    "correct_text": "CP(CFG_REPLY) =\r\nINTERNAL_IP6_ADDRESS(2001:DB8:0:1:2:3:4:5/64)\r\nINTERNAL_IP6_DNS(2001:DB8:99:88:77:66:55:44)\r\nTSi = (0, 0-65535, 2001:DB8:0:1:2:3:4:5 - 2001:DB8:0:1:2:3:4:5)\r\nTSr = (0, 0-65535, 2001:DB8:0:1:: - 2001:DB8:0:1:FFFF:FFFF:FFFF:FFFF)",
+    "notes": "The INTERNAL_IP6_ADDRESS returned in the CFG_REPLY is a 64 bit subnet, but the TSr returned in the CFG_REPLY shows a 0 bit subnet instead of the 64 bit subnet.\r\n\r\nKathleen told me to reject this! (Based on ipsecme list discussion.)\n --VERIFIER NOTES-- \nKathleen told me to!",
+    "submit_date": "2013-09-04",
+    "submitter_name": "Gerald Smith",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
