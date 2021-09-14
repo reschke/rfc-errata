@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1816,
+    "doc-id": "RFC5568",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.4.2",
+    "orig_text": "Type: 17",
+    "correct_text": "Type: 34 ",
+    "notes": "The Type value for the Mobility Header IPv6 Address/Prefix option should have been updated to 34 upon IANA assignment.",
+    "submit_date": "2009-07-23",
+    "submitter_name": "Rajeev Koodli",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1943,
+    "doc-id": "RFC5568",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.2.1.2",
+    "orig_text": "   Upon receiving an HI message, the NAR MUST respond with a Handover\r\n   Acknowledge message.  If the 'S' flag is set in the HI message, the\r\n   NAR SHOULD include the New Care-of Address option and a Code 3.\r\n\r\n",
+    "correct_text": "   Upon receiving an HI message, the NAR MUST respond with a Handover\r\n   Acknowledge message.  If the 'S' flag is set in the HI message, the\r\n   NAR SHOULD include the New Care-of Address option and a Code 2.\r\n\r\n",
+    "notes": "Code 2 is used in assigned addressing. Some Codes were cleaned up in 5068/5568, but this was not reflected in above text",
+    "submit_date": "2009-11-19",
+    "submitter_name": "Rajeev Koodli",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1944,
+    "doc-id": "RFC5568",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.4.6",
+    "orig_text": "2: NCoA is invalid, use the supplied NCoA.  The supplied NCoA\r\n(in the form of an IP Address Option) MUST be present following\r\nthe Reserved field.\r\n\r\n\r\n\r\n\r\n",
+    "correct_text": "2: NCoA is invalid, use the supplied NCoA. The supplied NCoA \r\n(an IPv6 Address of 16 octets) MUST be present following the \r\nReserved field.\r\n",
+    "notes": "Clarifies that an IPv6 address is included (and not IPv6 address/prefix option)",
+    "submit_date": "2009-11-19",
+    "submitter_name": "Rajeev Koodli",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
