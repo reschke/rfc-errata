@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2075,
+    "doc-id": "RFC5738",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4, 3rd para",
+    "orig_text": "   IMAP servers that do not advertise the \"UTF8=APPEND\" or \"UTF8=ONLY\"\r\n|  capability SHOULD reject an APPEND command that includes any 8-bit in\r\n|  the message headers with a \"NO\" response.\r\n",
+    "correct_text": "   IMAP servers that do not advertise the \"UTF8=APPEND\" or \"UTF8=ONLY\"\r\n|  capability SHOULD reject an APPEND command that includes any 8-bit\r\n|  character in message header fields with a \"NO\" response.\r\n\r\nor:\r\n\r\n   IMAP servers that do not advertise the \"UTF8=APPEND\" or \"UTF8=ONLY\"\r\n|  capability SHOULD reject an APPEND command that includes any 8-bit\r\n|  character in a message header with a \"NO\" response.\r\n",
+    "notes": "Rationale: improved language and precise terminology",
+    "submit_date": "2010-03-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2076,
+    "doc-id": "RFC5738",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "8, 4th para",
+    "orig_text": "|  Up-conversion of MIME header encoding of the following headers MUST\r\n   also be implemented: Subject, Date ([RFC5322] comments only),\r\n   Comments, Keywords, and Content-Description.\r\n",
+    "correct_text": "|  Up-conversion of MIME header encoding of the following header fields\r\n   MUST also be implemented: Subject, Date ([RFC5322] comments only),\r\n   Comments, Keywords, and Content-Description.\r\n",
+    "notes": "Rationale: precise use of IETF standard terminology.\r\n\r\nNote:  Further nits in this RFC (keep for update):\r\n\r\n-  Section 5, last line\r\n\r\n      ... Section 2.3 of SASLprep RFC 4013 [RFC4013].\r\n\r\n   should better say: \r\n\r\n      ... Section 2.3 of SASLprep (RFC 4013 [RFC4013]).\r\n\r\n-  Section 10 (2 instances):\r\n\r\n      This adds ...\r\n\r\n   should better say:\r\n\r\n      This RFC adds ...\r\n\r\n-  Section 12.1 -- unexpected line break in Ref. [RFC2231] :\r\n\r\n   [RFC2231]  Freed, N. and K. Moore, \"MIME Parameter Value and Encoded\r\n              Word Extensions:\r\n              Character Sets, Languages, and Continuations\", RFC 2231,\r\n              November 1997.\r\n\r\n   should say:\r\n\r\n   [RFC2231]  Freed, N. and K. Moore, \"MIME Parameter Value and Encoded\r\n              Word Extensions: Character Sets, Languages, and\r\n              Continuations\", RFC 2231, November 1997.",
+    "submit_date": "2010-03-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
