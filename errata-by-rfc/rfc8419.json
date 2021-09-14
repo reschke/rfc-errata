@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5869,
+    "doc-id": "RFC8419",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.3,
+    "orig_text": "      hashalgs  OBJECT IDENTIFIER  ::=  { joint-iso-itu-t(2)\r\n                              country(16) us(840) organization(1)\r\n                              gov(101) csor(3) nistalgorithm(4) 2 }",
+    "correct_text": "      hashAlgs  OBJECT IDENTIFIER  ::=  { joint-iso-itu-t(2)\r\n                              country(16) us(840) organization(1)\r\n                              gov(101) csor(3) nistalgorithm(4) 2 }",
+    "notes": "The \"hashAlgs\" requires a capital letter for the other definitions in the section.",
+    "submit_date": "2019-10-02",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
