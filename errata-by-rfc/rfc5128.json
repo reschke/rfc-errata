@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1403,
+    "doc-id": "RFC5128",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.2,last par",
+    "orig_text": "   A variety of current peer-to-peer applications implement this\r\n   technique.  Its main limitation, of course, is that it only works so\r\n   long as only one of the communicating peers is behind a NAT device.\r\n|  If the NAT device is EIM-NAT, the public client can contact external\r\n|  server S to determine the specific public endpoint from which to\r\n|  expect Client-A-originated connection and allow connections from just\r\n|  those endpoints.  If the NAT device is EIM-NAT, the public client can\r\n   contact the external server S to determine the specific public\r\n   endpoint from which to expect connections originated by client A, and\r\n   allow connections from just that endpoint.  If the NAT device is not\r\n   EIM-NAT, the public client cannot know the specific public endpoint\r\n   from which to expect connections originated by client A.  In the\r\n   increasingly common case where both peers can be behind NATs, the\r\n   Connection Reversal method fails.  [...]",
+    "correct_text": "   A variety of current peer-to-peer applications implement this\r\n   technique.  Its main limitation, of course, is that it only works so\r\n   long as only one of the communicating peers is behind a NAT device.\r\n   If the NAT device is EIM-NAT, the public client can contact the\r\n   external server S to determine the specific public endpoint from\r\n   which to expect connections originated by client A, and allow\r\n   connections from just that endpoint.  If the NAT device is not\r\n   EIM-NAT, the public client cannot know the specific public endpoint\r\n   from which to expect connections originated by client A.  In the\r\n   increasingly common case where both peers can be behind NATs, the\r\n   Connection Reversal method fails.  [...]",
+    "notes": "Location is mid-page 11.\r\n\r\nRationale and background:\r\n\r\nThe reporter once had suggested replacement text to improve the\r\nreadability of the third and fourth sentence in this paragraph.\r\nThese LC comments have been accepted, but inadvertently, the\r\nthird original sentence has been left in the text, followed\r\nby its intended replacement.\r\n\r\nNote that the similar replacement of the next sentence\r\n(\"If the NAT device is not ...\") has been performed properly.\r\n\r\nThe above correction removes the original, less legible draft\r\nversion of the other sentence.",
+    "submit_date": "2008-03-31",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
