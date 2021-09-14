@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3906,
+    "doc-id": "RFC6192",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "A.1",
+    "orig_text": "[...]\r\n   ip access-list extended DNS\r\n    permit udp 198.51.100.0 0.0.0.252 eq domain any\r\n   ipv6 access-list DNSv6\r\n    permit udp 2001:DB8:100:1::/64 eq domain any\r\n    permit tcp 2001:DB8:100:1::/64 eq domain any\r\n   ip access-list extended NTP\r\n    permit udp 198.51.100.4 255.255.255.252 any eq ntp\r\n   ipv6 access-list NTPv6\r\n    permit udp 2001:DB8:100:2::/64 any eq ntp\r\n   ip access-list extended SSH\r\n    permit tcp 198.51.100.128 0.0.0.128 any eq 22\r\n   ipv6 access-list SSHv6\r\n    permit tcp 2001:DB8:100:3::/64 any eq 22\r\n   ip access-list extended SNMP\r\n    permit udp 198.51.100.128 0.0.0.128 any eq snmp\r\n[...]\r\n",
+    "correct_text": "[...]\r\n   ip access-list extended DNS\r\n    permit udp 198.51.100.0 0.0.0.3 eq domain any\r\n   ipv6 access-list DNSv6\r\n    permit udp 2001:DB8:100:1::/64 eq domain any\r\n    permit tcp 2001:DB8:100:1::/64 eq domain any\r\n   ip access-list extended NTP\r\n    permit udp 198.51.100.4 0.0.0.3 any eq ntp\r\n   ipv6 access-list NTPv6\r\n    permit udp 2001:DB8:100:2::/64 any eq ntp\r\n   ip access-list extended SSH\r\n    permit tcp 198.51.100.128 0.0.0.127 any eq 22\r\n   ipv6 access-list SSHv6\r\n    permit tcp 2001:DB8:100:3::/64 any eq 22\r\n   ip access-list extended SNMP\r\n    permit udp 198.51.100.128 0.0.0.127 any eq snmp\r\n[...]",
+    "notes": "The bitfield masks in the Cisco Configuration example  in section A.1 look incorrect.  The authors may have intended the following meanings:\r\n\r\nip access-list extended DNS\r\n  all hosts between 198.51.100.0 and 198.51.100.3 instead of all addresses in the range 198.51.100.0/24 which are evenly divisible by 4\r\n\r\nip access-list extended NTP\r\n  all hosts between 198.51.100.4 and 198.51.100.7 instead of all addresses in the range 0.0.0.0/0 which are evenly divisible by 4\r\n\r\nip access-list extended SSH\r\n  all hosts between 198.51.100.128 and 198.51.100.255 instead of 198.51.100.128/32\r\n\r\nip access-list extended SNMP\r\n  all hosts between 198.51.100.128 and 198.51.100.255 instead of 198.51.100.128/32",
+    "submit_date": "2014-03-02",
+    "submitter_name": "Nick Hilliard",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4705,
+    "doc-id": "RFC6192",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A.1",
+    "orig_text": "   ipv6 access-list EBGPv6\r\n    permit tcp host 2001:DB8:100::25 eq bgp any\r\n    permit tcp host 2001:DB8:100::25 any eq bgp\r\n    permit tcp host 2001:DB8:100::27 eq bgp any\r\n    permit tcp host 2001:DB8:100::27 any eq bgp\r\n    permit tcp host 2001:DB8:100::29 eq bgp any\r\n    permit tcp host 2001:DB8:100::29 any eq bgp\r\n    permit tcp host 2001:DB8:100::31 eq bgp any\r\n    permit tcp host 2001:DB8:100::31 any eq bgp\r\n   ip access-list extended DNS\r\n    permit udp 198.51.100.0 0.0.0.252 eq domain any\r\n   ipv6 access-list DNSv6\r\n    permit udp 2001:DB8:100:1::/64 eq domain any\r\n    permit tcp 2001:DB8:100:1::/64 eq domain any\r\n   ip access-list extended NTP",
+    "correct_text": "   ipv6 access-list EBGPv6\r\n    permit tcp host 2001:DB8:100::25 eq bgp any\r\n    permit tcp host 2001:DB8:100::25 any eq bgp\r\n    permit tcp host 2001:DB8:100::27 eq bgp any\r\n    permit tcp host 2001:DB8:100::27 any eq bgp\r\n    permit tcp host 2001:DB8:100::29 eq bgp any\r\n    permit tcp host 2001:DB8:100::29 any eq bgp\r\n    permit tcp host 2001:DB8:100::31 eq bgp any\r\n    permit tcp host 2001:DB8:100::31 any eq bgp\r\n   ip access-list extended DNS\r\n    permit udp 198.51.100.0 0.0.0.252 eq domain any\r\n    permit tcp 198.51.100.0 0.0.0.252 eq domain any\r\n   ipv6 access-list DNSv6\r\n    permit udp 2001:DB8:100:1::/64 eq domain any\r\n    permit tcp 2001:DB8:100:1::/64 eq domain any\r\n   ip access-list extended NTP",
+    "notes": "DNS is transported sometimes over UDP and sometimes over TCP. The Cisco example fails to demonstrate this behaviour in the case of IPv4. The Cisco example clearly shows this behaviour in the case of IPv6.\r\n\r\nThe Juniper example in Section A.2 should be amended in the same fashion, however I'm unfamiliar with the proper JunOS syntax.",
+    "submit_date": "2016-06-07",
+    "submitter_name": "Trond Endrestøl",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4851,
+    "doc-id": "RFC6192",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A.2",
+    "orig_text": "   term ebgp-reply {\r\n                   from {\r\n                       source-prefix-list {\r\n                           EBGP-NEIGHBORS;\r\n                       }\r\n                       protocol tcp;\r\n                       port bgp;\r\n                   }\r\n                   then accept;\r\n               }",
+    "correct_text": "   term ebgp-reply {\r\n                   from {\r\n                       source-prefix-list {\r\n                           EBGP-NEIGHBORS;\r\n                       }\r\n                       protocol tcp;\r\n                       tcp-established;\r\n                       source-port bgp;\r\n                   }\r\n                   then accept;\r\n               }\r\n\r\n",
+    "notes": "There is a security question in that firewall relating to bgp reply.\r\nAny neighbor that fakes a tcp source port to 179 can access any router port, for example, ssh.\r\nNeed to add the line tcp-established. Would also be better to add source-port bgp since bgp protocol uses the 179 port to destination. Add the fix to all bgps, including ipv6.",
+    "submit_date": "2016-11-01",
+    "submitter_name": "Hugo Leonardo Canalli",
+    "verifier_id": 135,
+    "verifier_name": "joel jaeggli",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
