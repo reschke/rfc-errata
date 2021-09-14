@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 6253,
+    "doc-id": "RFC8461",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "CRLF-separated key/value pairs",
+    "correct_text": "LF- or CRLF-separated key/value pairs",
+    "notes": "Rationale:\r\n\r\n1. The definition of 'sts-policy-term' in the grammar explicitly allows use of either CRLF or bare LF.\r\n\r\n2. On page 8, one of the example says \"<CRLF>\" explicitly at the end of the first line, while the second line of that example and all lines of the other example have neither \"<CRLF>\" nor \"<LF>\" appended to them.   That makes it ambiguous whether those lines are terminated by LF or by CRLF.",
+    "submit_date": "2020-08-08",
+    "submitter_name": "Daniel Shahaf",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6285,
+    "doc-id": "RFC8461",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "sts-field-delim = *WSP \";\" *WSP",
+    "correct_text": "sts-field-delim = \";\" *WSP",
+    "notes": "The following text appears within the same section:\r\n\r\n> If multiple TXT records for \"_mta-sts\" are returned by the resolver, records that do not begin with \"v=STSv1;\" are discarded.\r\n\r\nThe current definition of sts-field-delim is incompatible with that instruction.  Either the instruction needs to be changed, a new delimiter needs to be defined that doesn't permit whitespace before the semicolon, or sts-field-delim needs to be modified.",
+    "submit_date": "2020-09-10",
+    "submitter_name": "Paul Buonopane",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6525,
+    "doc-id": "RFC8461",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 4.2,
+    "orig_text": "The certificate presented by the receiving MTA MUST not be expired",
+    "correct_text": "The certificate presented by the receiving MTA MUST NOT be expired",
+    "notes": "NOT should be capitalized.",
+    "submit_date": "2021-04-10",
+    "submitter_name": "Kaspar Etter",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
