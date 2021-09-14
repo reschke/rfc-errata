@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1697,
+    "doc-id": "RFC5449",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "A., 2nd para",
+    "orig_text": "   The following terminology will be used in describing the heuristics:\r\n   D(Y) is the degree of a 1-hop neighbor, router Y (where Y is a member\r\n|  of N(i), defined as the number of neighbors of router Y, EXCLUDING\r\n   all the members of N(i) and EXCLUDING the router performing the\r\n   computation.  The proposed heuristic can then be described as\r\n   follows.  Begin with an empty Flooding-MPR set.  Then:\r\n\r\n",
+    "correct_text": "   The following terminology will be used in describing the heuristics:\r\n   D(Y) is the degree of a 1-hop neighbor, router Y (where Y is a member\r\n|  of N(i)), defined as the number of neighbors of router Y, EXCLUDING\r\n   all the members of N(i) and EXCLUDING the router performing the\r\n   computation.  The proposed heuristic can then be described as\r\n   follows.  Begin with an empty Flooding-MPR set.  Then:\r\n\r\n",
+    "notes": "A missing matching ')' makes the text very ambiguous and confusing.",
+    "submit_date": "2009-03-01",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
