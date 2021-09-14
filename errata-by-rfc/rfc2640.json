@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5444,
+    "doc-id": "RFC2640",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3.1",
+    "orig_text": "        C> LANG fr\r\n        S> 200 Le response sera changez au francais\r\n\r\n        C> feat\r\n        S> 211- <quelconque descriptif texte>\r\n        S>  ...\r\n        S>  LANG EN;FR*\r\n        S>  ...\r\n        S> 211 end",
+    "correct_text": "        C> LANG fr\r\n        S> 200 Les réponses seront en français\r\n\r\n        C> feat\r\n        S> 211- <texte descriptif quelconque>\r\n        S>  ...\r\n        S>  LANG EN;FR*\r\n        S>  ...\r\n        S> 211 end",
+    "notes": "I'm natively speaking French, and the original text is not correct.\r\nIn particular, some words stayed in English, and word order is not the same in French.\r\n\r\nThe correction make the hypothesis that UTF-8 is allowed in reply messages, which is not specified in the RFC (see other errata).",
+    "submit_date": "2018-07-28",
+    "submitter_name": "David LAMBERT",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5445,
+    "doc-id": "RFC2640",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "The RFC talks about UTF-8 for paths, but not about response messages.\r\nThe LANG command specified in the RFC can lead servers to send reply messages containing character outside of the ASCII character set.\r\nIt should specify that UTF-8 should also be used for reply messages.\n --VERIFIER NOTES-- \n   \r\nSection 4.1 says:\r\n\r\n   This specification RECOMMENDS that the server\r\n   default language be English encoded using ASCII. This text may be\r\n   augmented by text from other languages. Once negotiated, server-PI\r\n   MUST return server messages and textual part of command responses in\r\n   the negotiated language and encoded in UTF-8.",
+    "submit_date": "2018-07-28",
+    "submitter_name": "David LAMBERT",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
