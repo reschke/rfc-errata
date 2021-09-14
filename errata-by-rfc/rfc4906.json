@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1034,
+    "doc-id": "RFC4906",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "               0x8008   CEM [CEM]",
+    "correct_text": "               0x0008   CEM [CEM]",
+    "notes": "This is a typo in the VC Type assignment list in this document.\r\n\r\nThe correct value (0x0008) is in the IANA MPLS Pseudowire Types Registry\r\nand in the CEM specification (RFC5143)",
+    "submit_date": "2007-08-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1035,
+    "doc-id": "RFC4906",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 99,
+    "orig_text": "(1)  Abstract -- another erroneous acronym expansion\r\n\r\nIn the Abstract of RFC 4906,\r\n\r\n      \"Synchronized Optical Network (SONET)\"\r\n               ^^^^\r\nshould say:\r\n\r\n      \"Synchronous Optical Network (SONET)\"\r\n               ^^^\r\n\r\n\r\n(2)  Section 5.2.1 -- missing punctuation\r\n\r\nSection 5.2.1 (on page 6 of RFC 4906) says:\r\n\r\n   ATM AAL5 Common Part Convergence Sublayer - Service Data Units\r\n|  (CPCS-SDUs) are encapsulated according to [RFC4905] ATM AAL5 CPCS-SDU\r\n   mode.  [...]\r\n                                                      ^\r\nIt should say:\r\n\r\n   ATM AAL5 Common Part Convergence Sublayer - Service Data Units\r\n|  (CPCS-SDUs) are encapsulated according to [RFC4905], ATM AAL5 CPCS-\r\n   SDU mode.  [...]\r\n                                                      ^^\r\n\r\n(3)  [[posted separately.]]\r\n\r\n\r\n(4)  Section 6.1 -- missing punctuation\r\n\r\nOn mid-page 11, the explanation for 'Payload Bytes' says:\r\n\r\n        A 2-octet value indicating the number of TDM payload octets\r\n|       contained in all packets on the CEM stream from 48 to 1,023\r\n        octets.  [...]\r\n                                                  ^\r\nIt should says:\r\n\r\n        A 2-octet value indicating the number of TDM payload octets\r\n|       contained in all packets on the CEM stream, from 48 to 1,023\r\n        octets.  [...]\r\n                                                  ^^\r\n\r\n(5)  Section 9 -- punctuation\r\n\r\nOn page 18, the [ANSI.T1.105] entry of Section 9 does not use the\r\n'rational quotation' style requested for RFCs in all related\r\ndocuments (RFC Author guides).\r\nThe RFC says:\r\n\r\n   [ANSI.T1.105] American National Standards Institute, \"Synchronous\r\n|                Optical Network Formats,\" ANSI T1.105-1995.\r\n                                        ^^\r\nIt should say:\r\n\r\n   [ANSI.T1.105] American National Standards Institute, \"Synchronous\r\n|                Optical Network Formats\", ANSI T1.105-1995.\r\n                                        ^^\r\n",
+    "correct_text": "",
+    "notes": "",
+    "submit_date": "2007-08-17",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
