@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5948,
+    "doc-id": "RFC7932",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.5,
+    "orig_text": "   Note that a code of 16 that follows an immediately preceding 16\r\n   modifies the previous repeat count, which becomes the new repeat\r\n   count.  The same is true for a 17 following a 17.  A sequence of\r\n   three or more 16 codes in a row or three of more 17 codes in a row is\r\n   possible, modifying the count each time.  Only the final repeat count\r\n   is used.  The modification only applies if the same code follows.  A\r\n   16 repeat does not modify an immediately preceding 17 count nor vice\r\n   versa.\r\n",
+    "correct_text": "   Note that a code of 16 that follows an immediately preceding 16\r\n   modifies the previous repeat count, which becomes the new repeat\r\n   count.  The same is true for a 17 following a 17.  A sequence of\r\n   three or more 16 codes in a row or three or more 17 codes in a row is\r\n   possible, modifying the count each time.  Only the final repeat count\r\n   is used.  The modification only applies if the same code follows.  A\r\n   16 repeat does not modify an immediately preceding 17 count nor vice\r\n   versa.\r\n",
+    "notes": "\"three of more\" should be \"three or more\"",
+    "submit_date": "2019-12-28",
+    "submitter_name": "Bret Abel",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-12-30 18:00:19"
+  }
+]
