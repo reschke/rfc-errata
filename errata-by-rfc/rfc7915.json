@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4818,
+    "doc-id": "RFC7915",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "Example contains following IPv4-to-IPv6 translations:\r\n   192.0.2.33   -> 2001:db8:1c0:2:21::\r\n   198.51.100.2 -> 2001:db8:1c6:3364:2::\r\n",
+    "correct_text": "The correct translations are:\r\n   192.0.2.33   -> 2001:db8:1c0:2:2100::\r\n   198.51.100.2 -> 2001:db8:1c6:3364:200::",
+    "notes": "\n --VERIFIER NOTES-- \n   \r\nThis errata should be rejected. RFC7915 is correct as published.\r\n\r\nWhen using 40-bit translation prefixes (as RFC7915 appendix A does),\r\nbits 64 thru 71 is zero while the eight least significant bits of the\r\nIPv4 address is stored in bits 72 thru 79 of the resulting\r\nIPv4-embedded IPv6 address.\r\n\r\nThe errata appears to based on the false assumption that the entire 32\r\nbits of the IPv4 address should be stored in bits 40-71 of the\r\nresulting IPv4-embedded IPv6 address.\r\n\r\nRelevant quotes from RFC6052 section 2.2:\r\n\r\n>    +--+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+\r\n>    |PL| 0-------------32--40--48--56--64--72--80--88--96--104---------|\r\n>    +--+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+\r\n>    |40|     prefix        |v4(24)     | u |(8)| suffix                |\r\n>    +--+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+\r\n\r\n>   The IPv4 address is encoded following the prefix, most significant\r\n>   bits first.  Depending of the prefix length, the 4 octets of the\r\n>   address may be separated by the reserved octet \"u\", whose 8 bits MUST\r\n>   be set to zero.  In particular:\r\n\r\n>   o  When the prefix is 40 bits long, 24 bits of the IPv4 address are\r\n>      encoded in positions 40 to 63, with the remaining 8 bits in\r\n>      position 72 to 79.\r\n",
+    "submit_date": "2016-10-04",
+    "submitter_name": "Wrong IPv4-to-IPv6 translations",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
