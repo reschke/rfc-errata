@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 415,
+    "doc-id": "RFC2579",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7.1.1",
+    "orig_text": "   \"The RowStatus textual convention is used to manage the\n   creation and deletion of conceptual rows, and is used as the\n   value of the SYNTAX clause for the status column of a\n   conceptual row (as described in Section 7.7.1 of [2].)",
+    "correct_text": "   \"The RowStatus textual convention is used to manage the\n   creation and deletion of conceptual rows, and is used as the\n   value of the SYNTAX clause for the status column of a\n   conceptual row (as described in Section 7.1.12 of [2].)\n",
+    "notes": "",
+    "submit_date": "2001-12-07",
+    "submitter_name": "Juergen Schoenwaelder",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 416,
+    "doc-id": "RFC2579",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99The DateAndTime textual convention did not originally define a special\nvalue which can be used in situations where a DateAndTime value is\nunknown or for some other reason not available. Several MIB modules on\nthe IETF standards-track use the value '0000",
+    "orig_text": "              2       3    month                     1..12\n              3       4    day                       1..31",
+    "correct_text": "              2       3    month                 0 | 1..12\n              3       4    day                   0 | 1..31\n",
+    "notes": "\n",
+    "submit_date": "2004-07-27",
+    "submitter_name": "Juergen Schoenwaelder",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 417,
+    "doc-id": "RFC2579",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "RFC 2579 lists an invalid range for the year in the DateAndTime TC:\n\n            field  octets  contents                  range\n            -----  ------  --------                  -----\n              1      1-2   year*                     0..65536",
+    "correct_text": "            field  octets  contents                  range\n            -----  ------  --------                  -----\n              1      1-2   year*                     0..65535\n",
+    "notes": "",
+    "submit_date": "2001-07-31",
+    "submitter_name": "Juergen Schoenwaelder",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
