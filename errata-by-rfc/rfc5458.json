@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1746,
+    "doc-id": "RFC5458",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "[[ at the bottom of page 5 / top of page 6 ]]\r\n\r\n   TS: Transport Stream [ISO-MPEG2].  A method of transmission at the\r\n   MPEG-2 layer using TS Packets; it represents Layer 2 of the ISO/OSI\r\n   reference model.  See also TS Logical Channel and TS Multiplex.\r\n                              ^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\n<< page break >>\r\n\r\n   TS Multiplex: In this document, ...\r\n\r\n",
+    "correct_text": "   TS: Transport Stream [ISO-MPEG2].  A method of transmission at the\r\n   MPEG-2 layer using TS Packets; it represents Layer 2 of the ISO/OSI\r\n   reference model.  See also TS Logical Channel and TS Multiplex.\r\n\r\n   TS Logical Channel: Transport Stream Logical Channel.  In this\r\n   document, this term identifies a channel at the MPEG-2 level\r\n   [ISO-MPEG2].  It exists at level 2 of the ISO/OSI reference model.\r\n   All packets sent over a TS Logical Channel carry the same PID value\r\n   (this value is unique within a specific TS Multiplex).  The term\r\n   \"Stream\" is defined in MPEG-2 [ISO-MPEG2] to describe the content\r\n   carried by a specific TS Logical Channel (see ULE Stream).  Some PID\r\n   values are reserved (by MPEG-2) for specific signalling.  Other\r\n   standards (e.g., ATSC, DVB) also reserve specific PID values.\r\n\r\n   TS Multiplex: In this document, ...\r\n\r\n",
+    "notes": "The quoted keyword explanation for \"TS Logical Channel\" \r\nis missing in Section 2.\r\n\r\nAuthors/Verifiers:\r\n  Please restore the entry and fill in the missing Corrected Text.",
+    "submit_date": "2009-03-30",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 134,
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1747,
+    "doc-id": "RFC5458",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "10.2, pg.17",
+    "orig_text": "   [GSE]       TS 102 606, \"Digital Video Broadcasting (DVB); Generic\r\n               Stream Encapsulation (GSE) Protocol, \"European\r\n|              Telecommunication Standards, Institute (ETSI), 2007.\r\n                                          ^^",
+    "correct_text": "   [GSE]       TS 102 606, \"Digital Video Broadcasting (DVB); Generic\r\n               Stream Encapsulation (GSE) Protocol, \"European\r\n|              Telecommunication Standards Institute (ETSI), 2007.\r\n                                          ^",
+    "notes": "Rationale: distorting spurious comma.\r\n\r\nThe immediately preceding entry ('[ETSI-DAT]') is correct\r\nin this respect, but it lacks the publication year.",
+    "submit_date": "2009-03-30",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
