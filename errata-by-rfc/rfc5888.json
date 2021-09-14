@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2313,
+    "doc-id": "RFC5888",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "9.2.1",
+    "orig_text": "9.2.1.  Example\r\n\r\n   The example below shows how the callee refuses a media stream offered\r\n   by the caller by setting its port number to zero.  The \"mid\" value\r\n   corresponding to that media stream is removed from the \"group\" value\r\n   in the answer.\r\n\r\n   SDP description in the INVITE from caller to callee:\r\n\r\n          [...]\r\n\r\n|  SDP description in the INVITE from callee to caller:\r\n\r\n          [...]\r\n",
+    "correct_text": "9.2.1.  Example\r\n\r\n   The example below shows how the callee refuses a media stream offered\r\n   by the caller by setting its port number to zero.  The \"mid\" value\r\n   corresponding to that media stream is removed from the \"group\" value\r\n   in the answer.\r\n\r\n   SDP description in the INVITE from caller to callee:\r\n\r\n          [...]\r\n\r\n|  SDP description in the \"200 OK\" from callee to caller:\r\n\r\n          [...]\r\n",
+    "notes": "Rationale: In the scenario described by the prose,\r\n  the SDP answer is carried in the non-provisional \r\n  response to the INVITE, in this case a \"200 OK\",\r\n  not in another INVITE.  The latter (using a re-INVITE)\r\n  is a different scenario.  (Note that a re-INVITE would\r\n  likely contain an SDP offer, where port 0 is not allowed.)",
+    "submit_date": "2010-06-24",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2314,
+    "doc-id": "RFC5888",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 9.3,
+    "orig_text": "   A client that understands \"group\" and \"mid\", but does not want to use\r\n   these SDP features in a particular session, may still want to\r\n   indicate that it supports these features.  To indicate this support,\r\n|  a client can add an \"a=3Dgroup\" line with no identification-tags for\r\n   every semantics value it understands.\r\n",
+    "correct_text": "   A client that understands \"group\" and \"mid\", but does not want to use\r\n   these SDP features in a particular session, may still want to\r\n   indicate that it supports these features.  To indicate this support,\r\n|  a client can add an \"a=group\" line with no identification-tags for\r\n   every semantics value it understands.\r\n",
+    "notes": "Rationale:\r\n  There's no need for quoted-printable encoding of the\r\n  \"=\" character in the running RFC text!\r\n  (Cf. other parts of the RFC.)",
+    "submit_date": "2010-06-24",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4357,
+    "doc-id": "RFC5888",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "8.4.1",
+    "orig_text": "          v=0\r\n          o=Laura 289083124 289083124 IN IP4 seven.example.com\r\n          c=IN IP4 192.0.2.1\r\n          t=0 0\r\n          a=group:FID 1 2\r\n          m=audio 30000 RTP/AVP 0\r\n          a=mid:1\r\n          m=audio 20000 RTP/AVP 97\r\n          c=IN IP4 192.0.2.2\r\n          a=rtpmap:97 telephone-events\r\n          a=mid:2\r\n",
+    "correct_text": "          v=0\r\n          o=Laura 289083124 289083124 IN IP4 seven.example.com\r\n          c=IN IP4 192.0.2.1\r\n          t=0 0\r\n          a=group:FID 1 2\r\n          m=audio 30000 RTP/AVP 0\r\n          a=mid:1\r\n          m=audio 20000 RTP/AVP 97\r\n          c=IN IP4 192.0.2.2\r\n          a=rtpmap:97 telephone-event\r\n          a=mid:2\r\n",
+    "notes": "Minor typo on page 10.  Per RFC 4733, the rtpmap entry should use the media type \"telephone-event\" not \"telephone-events\".",
+    "submit_date": "2015-05-06",
+    "submitter_name": "Jeff Poole",
+    "verifier_id": 2,
+    "verifier_name": "Alissa Cooper",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
