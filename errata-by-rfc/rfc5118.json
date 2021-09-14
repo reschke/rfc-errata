@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1311,
+    "doc-id": "RFC5118",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.3, 1st par",
+    "orig_text": "                                                  [...], the intended port\r\n   number becomes the last octet of the reference.",
+    "correct_text": "                                                  [...], the intended port\r\n   number becomes the last octet pair of the reference.",
+    "notes": "Each hexadecimal group in a literal IPv6 address encodes two octets\r\nof the IPv6 address -- cf. RFC 4291 !",
+    "submit_date": "2008-02-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 107,
+    "verifier_name": "Cullen Jennings",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
