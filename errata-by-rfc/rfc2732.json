@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1422,
+    "doc-id": "RFC2732",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Page 2",
+    "orig_text": "A literal address is incorrectly rendered as a URL:\r\n\r\nLiteral:\r\n      1080:0:0:0:8:800:200C:4171\r\n\r\nAs rendered as a URL:\r\n      http://[1080:0:0:0:8:800:200C:417A]/index.html\r\n",
+    "correct_text": "Should be:\r\n      http://[1080:0:0:0:8:800:200C:4171]/index.html\r\n\r\n",
+    "notes": "Larry Masinter & I verified this errata",
+    "submit_date": "2008-05-13",
+    "submitter_name": "Paul Suhler",
+    "verifier_id": 101,
+    "verifier_name": "Lisa Dusseault",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
