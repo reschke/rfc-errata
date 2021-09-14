@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1084,
+    "doc-id": "RFC1535",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Public vs...",
+    "orig_text": "   it it is possible to \"intercept\" the search by matching against an",
+    "correct_text": "   it is possible to \"intercept\" the search by matching against an",
+    "notes": null,
+    "submit_date": "2007-11-27",
+    "submitter_name": "Justin Pryzby",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1085,
+    "doc-id": "RFC1535",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Solution(s)",
+    "orig_text": "starburst,astro.DESERTU.EDU,",
+    "correct_text": "starburst.astro.DESERTU.EDU,\r\n\r\n(only 90% sure about this change)",
+    "notes": null,
+    "submit_date": "2007-11-27",
+    "submitter_name": "Justin Pryzby",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4781,
+    "doc-id": "RFC1535",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Solution(s)",
+    "orig_text": "Given user@a.b.c.d. connecting to host those same two\r\ntries would appear as:\r\n\r\n   x.b.c.d.  and x.\r\n",
+    "correct_text": "Given user@a.b.c.d. connecting to host x those same two\r\ntries would appear as:\r\n\r\n   x.b.c.d.  and x.\r\n",
+    "notes": "The original example text in section \"Solution(s)\" does not list the specific host the user@a.b.c.d. wants to connect to. From the search items listed next, I would suspect that the user wants to connect to host \"x\". However, I'm not exactly sure. In any case, it would be helpful to clarify the text with respect to the search list given next.",
+    "submit_date": "2016-08-18",
+    "submitter_name": "Harald Albrecht",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
