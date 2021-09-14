@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5747,
+    "doc-id": "RFC8558",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "Intermediate path elements should not add visible signals that\r\n      identify the user, origin node, or origin network [RFC8164].",
+    "correct_text": "Intermediate path elements should not add visible signals that\r\n      identify the user, origin node, or origin network [RFC8165].",
+    "notes": "I do not see the relationship between RFC 8164 and the recommendation given. I guess it should be RFC 8165 which fits much better.",
+    "submit_date": "2019-06-05",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
