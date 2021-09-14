@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3794,
+    "doc-id": "RFC1774",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "   To allow graceful coexistence with EGP and OSPF, BGP provides support\r\n   for carrying both EGP and OSPF derived exterior routes BGP also\r\n   allows to carry statically defined exterior routes or routes derived\r\n   by other IGP information.",
+    "correct_text": "   To allow graceful coexistence with EGP and OSPF, BGP provides support\r\n   for carrying both EGP and OSPF derived exterior routes. BGP also\r\n   allows to carry statically defined exterior routes or routes derived\r\n   by other IGP information.",
+    "notes": "This is a run-on sentence, missing \".\".",
+    "submit_date": "2013-11-10",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
