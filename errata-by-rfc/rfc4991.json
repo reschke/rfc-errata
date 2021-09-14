@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1011,
+    "doc-id": "RFC4991",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 10,
+    "orig_text": "Section 10 (on page 10) is confusing due to missing appropriate\r\nstructuring, misleadingly joining the two distinct registrations.\r\n\r\nThe RFC says (I have omitted blank lines in the bullets for the\r\nsake of better readability in the context of this message):\r\n\r\n------\r\n10.  IANA Considerations\r\n\r\n10.1.  XML Namespace URN Registration\r\n\r\n   This document makes use of the XML namespace and schema registry\r\n   specified in XML_URN [7].  Accordingly, the following registrations\r\n   have been made by IANA:\r\n\r\n   o  XML Namespace URN/URI:\r\n      *  urn:ietf:params:xml:ns:iris-transport\r\n\r\n   o  Contact:\r\n      *  Andrew Newton <andy@hxr.us>\r\n\r\n   o  XML:\r\n      *  None\r\n\r\n   o  XML Schema URN/URI:\r\n      *  urn:ietf:params:xml:schema:iris-transport\r\n\r\n   o  Contact:\r\n      *  Andrew Newton <andy@hxr.us>\r\n\r\n   o  XML:\r\n      *  The XML Schema specified in Section 3\r\n------\r\n\r\nPerhaps, it should better say:\r\n\r\n------\r\n10.  IANA Considerations\r\n\r\n   This document makes use of the XML namespace and schema registry\r\n   specified in XML_URN [7].  Accordingly, the following registrations\r\n   have been made by IANA:\r\n\r\n10.1.  XML Namespace URN Registration\r\n\r\n   o  XML Namespace URN/URI:\r\n      *  urn:ietf:params:xml:ns:iris-transport\r\n\r\n   o  Contact:\r\n      *  Andrew Newton <andy@hxr.us>\r\n\r\n   o  XML:\r\n      *  None\r\n\r\n10.2.  XML Schema URN/URI Registration\r\n\r\n   o  XML Schema URN/URI:\r\n      *  urn:ietf:params:xml:schema:iris-transport\r\n\r\n   o  Contact:\r\n      *  Andrew Newton <andy@hxr.us>\r\n\r\n   o  XML:\r\n      *  The XML Schema specified in Section 3\r\n------\r\n\r\nFurthermore, all occurrences of \"URN/URI\" might better have been\r\nshortened to \"URN\" there, for brevity and clarity.",
+    "correct_text": "",
+    "notes": "",
+    "submit_date": "2007-09-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2285,
+    "doc-id": "RFC4991",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "The XML Schema presented in Section 3 contains, in the lower half\r\nof page 4, the following type declaration:\r\n\r\n   <complexType name=\"octetsType\">\r\n     <choice>\r\n|      <element name=\"exceedsMaximum\">\r\n|        <complexType/>\r\n|      </element>\r\n       <element name=\"octets\" type=\"positiveInteger\" />\r\n     </choice>\r\n   </complexType>\r\n",
+    "correct_text": "   <complexType name=\"octetsType\">\r\n     <choice>\r\n|      <element name=\"exceedsMaximum\" />\r\n       <element name=\"octets\" type=\"positiveInteger\" />\r\n     </choice>\r\n   </complexType>\r\n",
+    "notes": "Source: apps",
+    "submit_date": "2007-09-09",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
