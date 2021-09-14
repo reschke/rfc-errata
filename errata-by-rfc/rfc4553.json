@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1048,
+    "doc-id": "RFC4553",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "There are two distinct \"PWE3 Pseudowire Type\" namespaces maintained\r\nby IANA:\r\n\r\n  - the 'L2TPv3 Pseudowire Types' subregistry of the\r\n    \"l2tp-parameters\" registry, rooted in RFC 3831, and\r\n\r\n  - the 'MPLS Pseudowire Type' subregistry of the \"pwe3-parameters\"\r\n    registry, rooted in RFC 4446.\r\n\r\nFrom the text of RFC 4553, it might be concluded that it was intended\r\nto make identical PW type allocations in both subregistries for SAToP,\r\nas has been done before in a similar manner in PWE3 RFCs dealing with\r\n\"<any> over MPLS PWs\" and \"<any> over L2TPv3 PWs\".\r\n\r\nBut the IANA Considerations (Section 11) of RFC 4553 simply state,\r\n\r\n   Allocation of PW types for the corresponding SAToP PWs is defined in\r\n   [RFC4446].\r\n\r\n... and RFC 4446 has only registered the following assignments for SAToP\r\nover MPLS:\r\n\r\n   0x0011  Structure-agnostic E1 over Packet                [SAToP]\r\n   0x0012  Structure-agnostic T1 (DS1) over Packet          [SAToP]\r\n   0x0013  Structure-agnostic E3 over Packet                [SAToP]\r\n   0x0014  Structure-agnostic T3 (DS3) over Packet          [SAToP]\r\n\r\nLooking into the two IANA registries quoted above, it can be seen\r\nthat indeed only \"pwe3-parameters\" contains these assignments,\r\nwhereas they are not listed in \"l2tp-parameters\".\r\n\r\nApparently, this has been overseen by all parties involved!\r\n\r\nIf this conclusion applies, you should urgently:\r\n\r\n(1) submit an Author's RFC Errata Note for RFC 4553 to the RFC-Ed\r\n    with an amendment to Section 11, e.g.:\r\n\r\n    IANA should perform the same assignemnts in the L2TPv3 Pseudowire\r\n    Type subregistry.\r\n\r\n(2) Request this action from IANA.",
+    "correct_text": "",
+    "notes": "\n --VERIFIER NOTES-- \n   The IANA registry has been updated to correctly reflect the assignment of PW types 0x0011 to 0x0014 to RFC4553. Signalling of TDM PWS over L2TPv3 was not specified until RFC5611, thus L2TPv3 PW type assignments were out of scope of RFC4553.\r\n\r\nThese IANA assignments would not be re-requested in a future version of this document and an implementer would not be misled by the existing IANA text, thus\r\nreject seems to be the most appropriate state for this erratum.",
+    "submit_date": "2007-03-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
