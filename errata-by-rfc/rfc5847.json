@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2302,
+    "doc-id": "RFC5847",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.1, pg. 5",
+    "orig_text": "   A PMIPv6 node (MAG or LMA) matches every received Heartbeat Response\r\n   to the Heartbeat Request sent using the sequence number.  Before\r\n   sending the next Heartbeat Request, it increments a local variable\r\n<< page break >>\r\n|  MISSING_HEARTBEAT if it has not received a Heartbeat Response for the\r\n|  previous request.  When this local variable MISSING_HEARTBEAT exceeds\r\n   a configurable parameter MISSING_HEARTBEATS_ALLOWED, the PMIPv6 node\r\n   concludes that the peer PMIPv6 node is not reachable.  If a Heartbeat\r\n!  Response message is received, the MISSING_HEARTBEATS counter is\r\n   reset.",
+    "correct_text": "   A PMIPv6 node (MAG or LMA) matches every received Heartbeat Response\r\n   to the Heartbeat Request sent using the sequence number.  Before\r\n   sending the next Heartbeat Request, it increments a local variable\r\n|  MISSING_HEARTBEATS if it has not received a Heartbeat Response for \r\n|  the previous request.  When this local variable MISSING_HEARTBEATS \r\n   exceeds a configurable parameter MISSING_HEARTBEATS_ALLOWED, the\r\n   PMIPv6 node concludes that the peer PMIPv6 node is not reachable.\r\n   If a Heartbeat Response message is received, the MISSING_HEARTBEATS\r\n   counter is reset.",
+    "notes": "Rationale:\r\n  The RFC text varies between singular and plural form of the name\r\n  of the local variable.  A single name is necessary for consistency.\r\n  Paraphrasing from MIB doctor guidelines, counter variables should \r\n  always be in plural form.  Additionally, the related configurable\r\n  parameter is called \"MISSING_HEARTBEATS_ALLOWED \" in the RFC.\r\n  Therefore, \"MISSING_HEARTBEATS\" is chosen above as the appropriate\r\n  form and the instances of \"MISSING_HEARTBEAT\" are changed to the\r\n  plural form.",
+    "submit_date": "2010-06-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
