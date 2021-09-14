@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4390,
+    "doc-id": "RFC3514",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "this permit easy encoding",
+    "correct_text": "this permits easy encoding",
+    "notes": "permit -> permits.  Singular verb form instead of plural",
+    "submit_date": "2015-06-10",
+    "submitter_name": "-",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5309,
+    "doc-id": "RFC3514",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "Routers that are not intended as as security devices SHOULD NOT",
+    "correct_text": "Routers that are not intended as security devices SHOULD NOT",
+    "notes": "Duplicated word.",
+    "submit_date": "2018-03-28",
+    "submitter_name": "micheal65536",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6552,
+    "doc-id": "RFC3514",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "        Insecure systems MAY chose to crash, be penetrated, etc.",
+    "correct_text": "        Insecure systems MAY choose to crash, be penetrated, etc.",
+    "notes": "'Chose' is the past tense, and what is desired here is the future tense 'choose'.\r\n\r\n-- verifier note --\r\nWhile the submitter SHOULD have posted this on April the 1st for an April Fools' Day RFC. For added fun, the errata is verified by an non-English speaker...",
+    "submit_date": "2021-04-20",
+    "submitter_name": "Joe Peterson",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-04-20 04:03:26"
+  }
+]
