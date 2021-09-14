@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6164,
+    "doc-id": "RFC8709",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6,
+    "orig_text": "6.  Signature Format\r\n\r\n   The \"ssh-ed25519\" key format has the following encoding:\r\n\r\n   string  \"ssh-ed25519\"\r\n\r\n   string  signature\r\n\r\n   Here, 'signature' is the 64-octet signature produced in accordance\r\n   with [RFC8032], Section 5.1.6.\r\n\r\n   The \"ssh-ed448\" key format has the following encoding:\r\n\r\n   string  \"ssh-ed448\"\r\n\r\n   string  signature\r\n\r\n   Here, 'signature' is the 114-octet signature produced in accordance\r\n   with [RFC8032], Section 5.2.6.",
+    "correct_text": "6.  Signature Format\r\n\r\n   The \"ssh-ed25519\" signature format has the following encoding:\r\n\r\n   string  \"ssh-ed25519\"\r\n\r\n   string  signature\r\n\r\n   Here, 'signature' is the 64-octet signature produced in accordance\r\n   with [RFC8032], Section 5.1.6.\r\n\r\n   The \"ssh-ed448\" signature format has the following encoding:\r\n\r\n   string  \"ssh-ed448\"\r\n\r\n   string  signature\r\n\r\n   Here, 'signature' is the 114-octet signature produced in accordance\r\n   with [RFC8032], Section 5.2.6.",
+    "notes": "s/key format/signature format/",
+    "submit_date": "2020-05-11",
+    "submitter_name": "HARUYAMA Seigo",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2020-05-15 23:32:56"
+  }
+]
