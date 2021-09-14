@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3144,
+    "doc-id": "RFC6140",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "<none -- new text being added>",
+    "correct_text": "<Insert following new paragraph between existing 2nd and 3rd paragraph>\r\n\r\nThe registrar MUST populate the Contact header field of the 200 (OK) response\r\nto REGISTER only with the explicitly registered Contact URIs identified in the\r\nREGISTER request (i.e., for bulk number registration, the Contact URIs\r\ncontaining the “bnc” parameter). The Contact header field of the 200 (OK)\r\nresponse MUST NOT contain the multiple contact addresses that are implicitly\r\ncreated by the bulk number registration procedure. ",
+    "notes": "The proposed text clarifies how the MUST statement in RFC 3261 section 10.3 item-8 applies in the case of bulk number registration.\r\n\r\nRFC 3261 section 10.3 item-8 says ...\r\n8. The registrar returns a 200 (OK) response.  The response MUST\r\n   contain Contact header field values enumerating all current\r\n   bindings.  <... text deleted...>\r\n\r\nFor bulk number registration, this means that the Contact header field in the 200 (OK) response to REGISTER contains the Contact URI with the \"bnc\" parameter, and not the multiple derived contact URIs that are bound to the multiple E.164 numbers associated with the registering PBX.",
+    "submit_date": "2012-03-01",
+    "submitter_name": "David Hancock",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
