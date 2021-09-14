@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1812,
+    "doc-id": "RFC4013",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.3,
+    "orig_text": "This profile specifies the following characters as prohibited input:\r\n",
+    "correct_text": "This profile specifies the following characters as prohibited output:\r\n",
+    "notes": "Per RFC 3454, the check for prohibited characters is done after the \"Map\" and \"Normalize\" steps. Characters listed here are actually allowed as inputs if they get removed by the \"Map\" or \"Normalize\" steps.",
+    "submit_date": "2009-07-18",
+    "submitter_name": "Alexey Melnikov",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3697,
+    "doc-id": "RFC4013",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "Indicator whether or not this is the newest version of the\r\nprofile: This is the first version of the SASPprep profile.",
+    "correct_text": "Indicator whether or not this is the newest version of the\r\nprofile: This is the first version of the SASLprep profile.",
+    "notes": "\"SASLprep\" has been erroneously misspelled \"SASPprep\".",
+    "submit_date": "2013-08-17",
+    "submitter_name": "Giovanni Cannata",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
