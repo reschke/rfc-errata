@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1978,
+    "doc-id": "RFC5717",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "App. A, p.16",
+    "orig_text": "    <!-- reply to <partial-lock> -->\r\n\r\n    <xs:complexType name=\"contentPartInPartialLockReplyType\">\r\n        <xs:annotation>\r\n            <xs:documentation>\r\n                The content of the reply to a successful\r\n                partial-lock request MUST conform to this complex type.\r\n            </xs:documentation>\r\n        </xs:annotation>\r\n        <xs:sequence>\r\n            <xs:element name=\"lock-id\" type=\"lock-id-type\">\r\n              <xs:annotation>\r\n                <xs:documentation>\r\n|                 Identifies the lock to be released.  Must be the value\r\n|                 received in the response to a partial-lock operation.\r\n                </xs:documentation>\r\n              </xs:annotation>\r\n            </xs:element>\r\n            [...]",
+    "correct_text": "    <!-- reply to <partial-lock> -->\r\n\r\n    <xs:complexType name=\"contentPartInPartialLockReplyType\">\r\n        <xs:annotation>\r\n            <xs:documentation>\r\n                The content of the reply to a successful\r\n                partial-lock request MUST conform to this complex type.\r\n            </xs:documentation>\r\n        </xs:annotation>\r\n        <xs:sequence>\r\n            <xs:element name=\"lock-id\" type=\"lock-id-type\">\r\n              <xs:annotation>\r\n                <xs:documentation>\r\n|                 Identifies the lock, if granted.  This lock-id must\r\n|                 be used in the partial-unlock operation.\r\n                </xs:documentation>\r\n              </xs:annotation>\r\n            </xs:element>\r\n            [...]",
+    "notes": "Rationale:\r\n  The clause in the RFC apparently has been copied from page 15\r\n  (bottom part), where the partialUnLockType is getting defined,\r\n  without the necessary changes in semantics for the context of\r\n  the reply to a partial-lock operation.\r\n  The replacement text has been crafted in the spirit of the\r\n  corresponding description in the YANG module in Appendix B.",
+    "submit_date": "2009-12-28",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2657,
+    "doc-id": "RFC5717",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "Step 6 - Lock user Joe\r\n\r\n   <nc:rpc\r\n     xmlns:nc=\"urn:ietf:params:xml:ns:netconf:base:1.0\"\r\n     xmlns=\"urn:ietf:params:xml:ns:netconf:partial-lock:1.0\"\r\n         message-id=\"104\">\r\n     <partial-lock>\r\n       <select xmlns:usr=\"http://example.com/users\">\r\n|         /usr:top/usr:users/user[usr:name=\"Joe\"]\"\r\n       </select>\r\n     </partial-lock>\r\n   </nc:rpc>\r\n\r\n   The NETCONF server grants the partial lock.  The scope of this second\r\n   lock includes only the <user> node with name Joe.  The lock protects\r\n   all data below this particular <user> node.\r\n\r\n   Step 7 - Receive lock\r\n\r\n   <nc:rpc-reply\r\n     xmlns:nc=\"urn:ietf:params:xml:ns:netconf:base:1.0\"\r\n     xmlns=\"urn:ietf:params:xml:ns:netconf:partial-lock:1.0\"\r\n     message-id=\"104\">\r\n       <lock-id>2</lock-id>\r\n       <locked-node xmlns:usr=\"http://example.com/users\">\r\n|           /usr:top/usr:users/user[usr:name=\"Joe\"]\"\r\n       </locked-node>\r\n   </nc:rpc-reply>\r\n",
+    "correct_text": "Step 6 - Lock user Joe\r\n\r\n   <nc:rpc\r\n     xmlns:nc=\"urn:ietf:params:xml:ns:netconf:base:1.0\"\r\n     xmlns=\"urn:ietf:params:xml:ns:netconf:partial-lock:1.0\"\r\n         message-id=\"104\">\r\n     <partial-lock>\r\n       <select xmlns:usr=\"http://example.com/users\">\r\n|         /usr:top/usr:users/usr:user[usr:name=\"Joe\"]\"\r\n       </select>\r\n     </partial-lock>\r\n   </nc:rpc>\r\n\r\n   The NETCONF server grants the partial lock.  The scope of this second\r\n   lock includes only the <user> node with name Joe.  The lock protects\r\n   all data below this particular <user> node.\r\n\r\n   Step 7 - Receive lock\r\n\r\n   <nc:rpc-reply\r\n     xmlns:nc=\"urn:ietf:params:xml:ns:netconf:base:1.0\"\r\n     xmlns=\"urn:ietf:params:xml:ns:netconf:partial-lock:1.0\"\r\n     message-id=\"104\">\r\n       <lock-id>2</lock-id>\r\n       <locked-node xmlns:usr=\"http://example.com/users\">\r\n|           /usr:top/usr:users/usr:user[usr:name=\"Joe\"]\"\r\n       </locked-node>\r\n   </nc:rpc-reply>\r\n",
+    "notes": "The instance identifier /usr:top/usr:users/user[usr:name=\"Joe\"]\" must be replaced with /usr:top/usr:users/usr:user[usr:name=\"Joe\"]\"\n --VERIFIER NOTES-- \nThe solution for this errata is contained in errata #2746 proposed by Mehmet Ersue which is Verified.   ",
+    "submit_date": "2010-12-02",
+    "submitter_name": "B Viswanath Reddy",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2746,
+    "doc-id": "RFC5717",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "   Step 6 - Lock user Joe\r\n\r\n   <nc:rpc\r\n     xmlns:nc=\"urn:ietf:params:xml:ns:netconf:base:1.0\"\r\n     xmlns=\"urn:ietf:params:xml:ns:netconf:partial-lock:1.0\"\r\n         message-id=\"104\">\r\n     <partial-lock>\r\n       <select xmlns:usr=\"http://example.com/users\">\r\n         /usr:top/usr:users/user[usr:name=\"Joe\"]\"\r\n       </select>\r\n     </partial-lock>\r\n   </nc:rpc>\r\n\r\n   The NETCONF server grants the partial lock.  The scope of this second\r\n   lock includes only the <user> node with name Joe.  The lock protects\r\n   all data below this particular <user> node.\r\n\r\n   Step 7 - Receive lock\r\n\r\n   <nc:rpc-reply\r\n     xmlns:nc=\"urn:ietf:params:xml:ns:netconf:base:1.0\"\r\n     xmlns=\"urn:ietf:params:xml:ns:netconf:partial-lock:1.0\"\r\n     message-id=\"104\">\r\n       <lock-id>2</lock-id>\r\n       <locked-node xmlns:usr=\"http://example.com/users\">\r\n           /usr:top/usr:users/user[usr:name=\"Joe\"]\"\r\n       </locked-node>\r\n   </nc:rpc-reply>\r\n",
+    "correct_text": "   Step 6 - Lock user Joe\r\n\r\n   <nc:rpc\r\n     xmlns:nc=\"urn:ietf:params:xml:ns:netconf:base:1.0\"\r\n     xmlns=\"urn:ietf:params:xml:ns:netconf:partial-lock:1.0\"\r\n         message-id=\"104\">\r\n     <partial-lock>\r\n        <select xmlns:usr=\"http://example.com/users\">\r\n          /usr:top/usr:users/usr:user[usr:name=\"Joe\"]\r\n        </select>\r\n     </partial-lock>\r\n   </nc:rpc>\r\n\r\n   The NETCONF server grants the partial lock.  The scope of this second\r\n   lock includes only the <user> node with name Joe.  The lock protects\r\n   all data below this particular <user> node.\r\n\r\n   Step 7 - Receive lock\r\n\r\n   <nc:rpc-reply\r\n     xmlns:nc=\"urn:ietf:params:xml:ns:netconf:base:1.0\"\r\n     xmlns=\"urn:ietf:params:xml:ns:netconf:partial-lock:1.0\"\r\n     message-id=\"104\">\r\n       <lock-id>2</lock-id>\r\n        <locked-node xmlns:usr=\"http://example.com/users\">\r\n            /usr:top/usr:users/usr:user[usr:name=\"Joe\"]\r\n        </locked-node>\r\n   </nc:rpc-reply>\r\n",
+    "notes": "- Appendix C is non-normative.\r\n- The instance identifier: /usr:top/usr:users/user[usr:name=\"Joe\"]\" \r\nmust be replaced with:     /usr:top/usr:users/usr:user[usr:name=\"Joe\"]",
+    "submit_date": "2011-03-09",
+    "submitter_name": "Mehmet Ersue",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
