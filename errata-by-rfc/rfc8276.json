@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5195,
+    "doc-id": "RFC8276",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   Baloo, the file indexing and search framework for Key Distribution\r\n   Exchange (KDE), has moved to storing metadata such as tags, ratings,\r\n   and comments in file system xattrs instead of a custom database for\r\n   simplicity.  Starting with KDE Plasma 5.1, NFS is no longer supported\r\n   due to its lack of xattr support [KDE].\r\n",
+    "correct_text": "   Baloo, the file indexing and search framework for K Desktop\r\n   Environment (KDE), has moved to storing metadata such as tags,\r\n   ratings, and comments in file system xattrs instead of a custom\r\n   database for simplicity.  Starting with KDE Plasma 5.1, NFS is no\r\n   longer supported due to its lack of xattr support [KDE].\r\n",
+    "notes": null,
+    "submit_date": "2017-12-05",
+    "submitter_name": "Mantas Mikulenas",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
