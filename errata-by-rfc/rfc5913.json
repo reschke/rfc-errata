@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5890,
+    "doc-id": "RFC5913",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Section 3",
+    "orig_text": "     id-pe-authorityClearanceConstraints OBJECT IDENTIFIER ::= {\r\n       iso(1) identified-organization(3) dod(6) internet(1) security(5)\r\n       mechanisms(5) pkix(7) pe(1) 21 }",
+    "correct_text": "   id-pe-clearanceConstraints OBJECT IDENTIFIER ::=\r\n     { iso(1) identified-organization(3) dod(6) internet(1) security(5)\r\n       mechanisms(5) pkix(7) pe(1) 21 }",
+    "notes": "Section 3 and Appendix A use different names for the object identifier.  They should match.  This change treats the complete ASN.1 module from Appendix A as the canonical version.",
+    "submit_date": "2019-10-31",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-11-05 10:53:35"
+  }
+]
