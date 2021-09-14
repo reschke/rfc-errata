@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2477,
+    "doc-id": "RFC5935",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7, pg.11",
+    "orig_text": "   In accordance with RFC 3688 [RFC3688], the IANA XML registry has been\r\n   updated with the following namespace and schema registrations\r\n   associated with this document:\r\n\r\n   o  urn:ietf:params:xml:ns:smi:base:1.0\r\n\r\n|  o  urn:ietf:params:xml:schema:base:1.0",
+    "correct_text": "   In accordance with RFC 3688 [RFC3688], the IANA XML registry has been\r\n   updated with the following namespace and schema registrations\r\n   associated with this document:\r\n\r\n   o  urn:ietf:params:xml:ns:smi:base:1.0\r\n\r\n|  o  urn:ietf:params:xml:schema:smi:base:1.0\r\n",
+    "notes": "Rationale: \"smi:\" component missing in schema registration;\r\n  Section 7.2 provides the correct URI.\r\n  The registry entry at IANA is correct as well.\r\n\r\nRemark:\r\n  Also, the ASCII transliteration of the last name of the submitter\r\n  of this note is misspelled in the last paragraph of Section 8.",
+    "submit_date": "2010-08-19",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
