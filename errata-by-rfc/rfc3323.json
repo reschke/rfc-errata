@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5184,
+    "doc-id": "RFC3323",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2 Expre...",
+    "orig_text": "Privacy-hdr  =  \"Privacy\" HCOLON priv-value *(\";\" priv-value)\r\n",
+    "correct_text": "Privacy-hdr  =  \"Privacy\" HCOLON priv-value *(\",\" priv-value)\r\n",
+    "notes": "RFC3261 says, \r\n\r\nSpecifically, any SIP header whose grammar is of the form\r\n\r\n      header  =  \"header-name\" HCOLON header-value *(COMMA header-value)\r\n\r\n   allows for combining header fields of the same name into a comma-\r\n   separated list.\r\n\r\nSo, RFC3323 conflicts RFC3261.",
+    "submit_date": "2017-11-16",
+    "submitter_name": "DONG O YI",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
