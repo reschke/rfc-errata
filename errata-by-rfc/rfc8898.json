@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6495,
+    "doc-id": "RFC8898",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "1.4.2",
+    "orig_text": "   The registrar validates the access token.  If the access token is a\r\n   reference token, the registrar MAY perform an introspection\r\n   [RFC7662], as in steps [4] and [5], in order to obtain more\r\n   information about the access token and its scope, per [RFC7662].\r\n   Otherwise, after the registrar validates the token, it inspects its\r\n   claims and acts upon it.",
+    "correct_text": "   The registrar validates the access token.  If the access token is a\r\n   reference token, the registrar MAY perform an introspection\r\n   [RFC7662], as in steps [3] and [4], in order to obtain more\r\n   information about the access token and its scope, per [RFC7662].\r\n   Otherwise, after the registrar validates the token, it inspects its\r\n   claims and acts upon it.",
+    "notes": "As you can see figure 2, introspection is processed in steps [3] and [4].",
+    "submit_date": "2021-03-26",
+    "submitter_name": "EungRok Lee",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
