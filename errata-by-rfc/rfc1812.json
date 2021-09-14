@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 537,
+    "doc-id": "RFC1812",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 11,
+    "orig_text": "   ROUTE:4.\r\n        Lougheed, K., and Y.  Rekhter, \"A Border Gateway Protocol 3\r\n        (BGP-3)\", RFC 1267, cisco, T.J. Watson Research Center, IBM\r\n        Corp., October 1991.",
+    "correct_text": "   ROUTE:4.\r\n        Rekhter, Y. and T. Li, \"A Border Gateway Protocol 4 (BGP-4)\", \r\n        RFC 1771, March 1995.\r\n",
+    "notes": "",
+    "submit_date": "2005-05-12",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 538,
+    "doc-id": "RFC1812",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.3.1",
+    "orig_text": "   Although it was not designed as an exterior gateway protocol, RIP\r\n   (described in Section [7.2.4]) is sometimes used for inter-AS\r\n   routing.",
+    "correct_text": "   Although it was not designed as an exterior gateway protocol, RIP\r\n   (described in Appendix F.2) is sometimes used for inter-AS\r\n   routing.",
+    "notes": "",
+    "submit_date": "2005-05-12",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2704,
+    "doc-id": "RFC1812",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3.3.6",
+    "orig_text": "A router MUST be prepared to receive, reassemble and echo an ICMP Echo Request\r\ndatagram at least as the maximum of 576 and the MTUs of all the connected networks.",
+    "correct_text": "A router MUST be prepared to receive, reassemble and echo an ICMP Echo Request\r\ndatagram at least as large as the maximum of 576 and the MTUs of all the\r\nconnected networks.",
+    "notes": null,
+    "submit_date": "2011-02-03",
+    "submitter_name": "Jeffrey Smith",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5553,
+    "doc-id": "RFC1812",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3.3.4",
+    "orig_text": "When a router is forwarding a packet and the TTL field of the packet\r\nis reduced to 0, the requirements of section [5.2.3.8] apply.\r\n",
+    "correct_text": "When a router is forwarding a packet and the TTL field of the packet\r\nis reduced to 0, the requirements of section [5.3.1] apply.",
+    "notes": null,
+    "submit_date": "2018-11-15",
+    "submitter_name": "Stefan Marksteiner",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
