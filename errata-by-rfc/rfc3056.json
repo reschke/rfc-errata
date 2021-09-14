@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 341,
+    "doc-id": "RFC3056",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.3,
+    "orig_text": "then\r\napply any security checks (see Section 8);",
+    "correct_text": "then\r\napply any security checks (see Section 9);",
+    "notes": "",
+    "submit_date": "2002-11-20",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 697,
+    "doc-id": "RFC3056",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 5.3,
+    "orig_text": "apply any security checks (see Section 8);",
+    "correct_text": "apply any security checks (see Section 9);\r\n",
+    "notes": "\r\n",
+    "submit_date": "2002-11-20",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2070,
+    "doc-id": "RFC3056",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "   The motivation for this method is to allow isolated IPv6 domains or\r\n   hosts, attached to an IPv4 network which has no native IPv6 support,\r\n   to communicate with other such IPv6 domains or hosts with minimal\r\n   manual configuration, before they can obtain natuve IPv6\r\n   connectivity. ",
+    "correct_text": "   The motivation for this method is to allow isolated IPv6 domains or\r\n   hosts, attached to an IPv4 network which has no native IPv6 support,\r\n   to communicate with other such IPv6 domains or hosts with minimal\r\n   manual configuration, before they can obtain native IPv6\r\n   connectivity. ",
+    "notes": "s/natuve/native/",
+    "submit_date": "2010-03-09",
+    "submitter_name": "Vishwas Manral",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
