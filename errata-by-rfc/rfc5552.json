@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1994,
+    "doc-id": "RFC5552",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.4,
+    "orig_text": "session.connection.redirect:  This array is populated by information\r\n      contained in the History-Info [RFC4244] header in the initial\r\n      INVITE or is otherwise undefined.  Each entry (hi-entry) in the\r\n      History-Info header is mapped, in reverse order, into an element\r\n      of the session.connection.redirect array.",
+    "correct_text": "session.connection.redirect:  This array is populated by information\r\n      contained in the History-Info [RFC4244] header in the initial\r\n      INVITE or is otherwise undefined.  Each entry (hi-entry) in the\r\n      History-Info header is mapped, in order appeared in the History-Info header, into an element of the session.connection.redirect array.",
+    "notes": "The elements in the History info header is designed as a tree-like structure from the origination to the destination where each forwarding proxy appends to the end of the header and add an index. The original RFC text requires that the elements to be shown in VXML session.connection.redirect array in reverse order and this is incorrect based on the definition of session.connection.redirect. The first element in the array should be the original called number which maps to index=1 in history-info, and the last element should be the last redirected number which is the last element in history-info.\r\n\r\n--- From reviewer Dale Worley ---\r\n\r\nThe definition of session.connection.redirect from the VXML 2.0\r\nspecification (http://www.w3.org/TR/2004/REC-voicexml20-20040316/) is:\r\n\r\n   session.connection.redirect\r\n\tThis variable is an array representing the connection redirection\r\n\tpaths. The first element is the original called number, the last\r\n\telement is the last redirected number. Each element of the array\r\n\tcontains a uri, pi (presentation information), si (screening\r\n\tinformation), and reason property. The reason property can be\r\n\teither \"unknown\", \"user busy\", \"no reply\", \"deflection during\r\n\talerting\", \"deflection immediate response\", \"mobile subscriber not\r\n\treachable\".\r\n\r\nAs such, copying the History-Info values into\r\nsession.connection.redirect in the same order is somewhat more\r\ncorrect, as the first History-Info value should be the original\r\nrequest-URI.  But History-Info may contain other values other than the\r\nones that are ancestral to the INVITE containing it, and assembling\r\nthe correct redirection sequence may require some additional\r\nprocessing.  Also, the definition of History-Info is being updated\r\n(draft-ietf-sipcore-rfc4244bis) to provide better recording of\r\nredirection sequences.  Documenting how to extract the redirection\r\nsequence in a way that would work in all cases is a significant piece\r\nof work.\r\n\r\nCurrently, the best straightforward specification is to map the\r\nelements in forward order:\r\n\r\nsession.connection.redirect:  This array is populated by information\r\n    contained in the History-Info [RFC4244] header in the initial\r\n    INVITE or is otherwise undefined.  Each entry (hi-entry) in the\r\n    History-Info header is mapped, in order, into an element of the\r\n    session.connection.redirect array.",
+    "submit_date": "2010-01-04",
+    "submitter_name": "Henry Lum",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
