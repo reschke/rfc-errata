@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2599,
+    "doc-id": "RFC4552",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "In order to provide authentication to OSPFv3, implementations MUST\r\nsupport ESP and MAY support AH.\r\n",
+    "correct_text": "In order to provide authentication to OSPFv3, implementations MUST\r\nsupport AH and MAY support ESP.",
+    "notes": "Authentication can be provided by an implementation that supports AH only.\r\n --VERIFIER NOTES-- \r\n   This was discussed on the OSPF list: http://www.ietf.org/mail-archive/web/ospf/current/msg05827.html and the conclusion was that the errata should be rejected.",
+    "submit_date": "2010-11-02",
+    "submitter_name": "John W. O'Brien",
+    "verifier_id": 2,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
