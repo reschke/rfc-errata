@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4368,
+    "doc-id": "RFC3463",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3.4,
+    "orig_text": "X.3.2\r\n[...]\r\nExamples of such conditions include an immanent shutdown, ",
+    "correct_text": "X.3.2\r\n[...]\r\nExamples of such conditions include an imminent shutdown, ",
+    "notes": "This is an obvious typographic or editorial error.  I understand that a correction to the relevant IANA registry is in progress, so this erratum is to preserve consistency and provide a marker in case the RFC is ever revised.  \r\n\r\nThis issue was noticed in the process of reviewing IANA actions that affected this code but not the phrase in question.  Alex van den Bogaerdt <alex@vandenbogaerdt.nl> found and reported this issue independently and at just about the same time.  Chris Newman, Expert Reviewer for the corresponding IANA registry, suggested filing the erratum.",
+    "submit_date": "2015-05-15",
+    "submitter_name": "John Klensin",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
