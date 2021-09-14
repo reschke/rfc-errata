@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2666,
+    "doc-id": "RFC6010",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A.1",
+    "orig_text": "   ct-Any CONTENT-TYPE ::= {NULL IDENTIFIED BY id-ct-anyContentType }\r\n",
+    "correct_text": "   ct-Any CONTENT-TYPE ::= {TYPE NULL IDENTIFIED BY id-ct-anyContentType }\r\n",
+    "notes": "This errata is filed to deal with the change made to RFC 5911.  The addition of the TYPE key word allows for a type to be omitted.  It may be that the authors will want to take advantage of this and remove the \"TYPE NULL\" from the object defined and say that there is no ASN.1 type associated with this object identifier.",
+    "submit_date": "2010-12-09",
+    "submitter_name": "Jim Schaad",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
