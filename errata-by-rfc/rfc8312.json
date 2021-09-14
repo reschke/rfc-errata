@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5907,
+    "doc-id": "RFC8312",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": " +--------+----------+-----------+------------+-----------+----------+\r\n   |   Loss |  Average |   Average |      CUBIC |     CUBIC |    CUBIC |\r\n   | Rate P |    TCP W |   HSTCP W |   (C=0.04) |   (C=0.4) |    (C=4) |\r\n   +--------+----------+-----------+------------+-----------+----------+\r\n   |  10^-2 |       12 |        12 |         12 |        12 |       12 |\r\n   |  10^-3 |       38 |        38 |         38 |        38 |       59 |\r\n   |  10^-4 |      120 |       263 |        120 |       187 |      333 |\r\n   |  10^-5 |      379 |      1795 |        593 |      1054 |     1874 |\r\n   |  10^-6 |     1200 |     12279 |       3332 |      5926 |    10538 |\r\n   |  10^-7 |     3795 |     83981 |      18740 |     33325 |    59261 |\r\n   |  10^-8 |    12000 |    574356 |     105383 |    187400 |   333250 |\r\n   +--------+----------+-----------+------------+-----------+----------+\r\n\r\n                                  Table 1",
+    "correct_text": " +--------+----------+-----------+------------+-----------+----------+\r\n   |   Loss |  Average |   Average |      CUBIC |     CUBIC |    CUBIC |\r\n   | Rate P |    TCP W |   HSTCP W |   (C=0.04) |   (C=0.4) |    (C=4) |\r\n   +--------+----------+-----------+------------+-----------+----------+\r\n   |  10^-2 |       12 |        12 |          3 |         6 |       11 |\r\n   |  10^-3 |       38 |        38 |         19 |        33 |       59 |\r\n   |  10^-4 |      120 |       263 |        120 |       187 |      333 |\r\n   |  10^-5 |      379 |      1795 |        593 |      1054 |     1874 |\r\n   |  10^-6 |     1200 |     12279 |       3332 |      5926 |    10538 |\r\n   |  10^-7 |     3795 |     83981 |      18740 |     33325 |    59261 |\r\n   |  10^-8 |    12000 |    574356 |     105383 |    187400 |   333250 |\r\n   +--------+----------+-----------+------------+-----------+----------+\r\n\r\n                                  Table 1",
+    "notes": "The CUBIC average window sizes for 10^2 and 10^3 are incorrect in the original text using expression 6.\n --VERIFIER NOTES-- \nSee Section 4.2. on how Cubic calculates the congestion window in TCP-Friendly Region.",
+    "submit_date": "2019-11-14",
+    "submitter_name": "Elliott Ecton",
+    "verifier_id": 153,
+    "verifier_name": "Mirja Kühlewind",
+    "update_date": "2020-03-04 03:05:25"
+  },
+  {
+    "errata_id": 5909,
+    "doc-id": "RFC8312",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "   +--------+-----------+-----------+------------+-----------+---------+\r\n   |   Loss |   Average |   Average |      CUBIC |     CUBIC |   CUBIC |\r\n   | Rate P |     TCP W |   HSTCP W |   (C=0.04) |   (C=0.4) |   (C=4) |\r\n   +--------+-----------+-----------+------------+-----------+---------+\r\n   |  10^-2 |        12 |        12 |         12 |        12 |      12 |\r\n   |  10^-3 |        38 |        38 |         38 |        38 |      38 |\r\n   |  10^-4 |       120 |       263 |        120 |       120 |     120 |\r\n   |  10^-5 |       379 |      1795 |        379 |       379 |     379 |\r\n   |  10^-6 |      1200 |     12279 |       1200 |      1200 |    1874 |\r\n   |  10^-7 |      3795 |     83981 |       3795 |      5926 |   10538 |\r\n   |  10^-8 |     12000 |    574356 |      18740 |     33325 |   59261 |\r\n   +--------+-----------+-----------+------------+-----------+---------+\r\n\r\n                                  Table 2",
+    "correct_text": "   +--------+-----------+-----------+------------+-----------+---------+\r\n   |   Loss |   Average |   Average |      CUBIC |     CUBIC |   CUBIC |\r\n   | Rate P |     TCP W |   HSTCP W |   (C=0.04) |   (C=0.4) |   (C=4) |\r\n   +--------+-----------+-----------+------------+-----------+---------+\r\n   |  10^-2 |        12 |        12 |          1 |         1 |       2 |\r\n   |  10^-3 |        38 |        38 |          3 |         6 |      11 |\r\n   |  10^-4 |       120 |       263 |         19 |        33 |      59 |\r\n   |  10^-5 |       379 |      1795 |        105 |       187 |     333 |\r\n   |  10^-6 |      1200 |     12279 |        593 |      1054 |    1874 |\r\n   |  10^-7 |      3795 |     83981 |       3332 |      5926 |   10538 |\r\n   |  10^-8 |     12000 |    574356 |      18740 |     33325 |   59261 |\r\n   +--------+-----------+-----------+------------+-----------+---------+\r\n\r\n                                  Table 2",
+    "notes": "The average window size for the CUBIC columns were mostly incorrect in table 2. Corrected them using expression 6\n --VERIFIER NOTES-- \nSee Section 4.2. on how Cubic calculates the congestion window in TCP-Friendly Region.",
+    "submit_date": "2019-11-14",
+    "submitter_name": "Elliott Ecton",
+    "verifier_id": 153,
+    "verifier_name": "Mirja Kühlewind",
+    "update_date": "2020-03-04 03:10:26"
+  }
+]
