@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5548,
+    "doc-id": "RFC6330",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.3.2",
+    "orig_text": "   o  Transfer Length (F): 40-bit unsigned integer.  A non-negative\r\n      integer that is at most 946270874880.  This is the transfer length\r\n      of the object in units of octets.\r\n\r\n...\r\n\r\n      NOTE: The limit of 946270874880 on the transfer length is a\r\n      consequence of the limitation on the symbol size to 2^^16-1, the\r\n      limitation on the number of symbols in a source block to 56403,\r\n      and the limitation on the number of source blocks to 2^^8.\r\n",
+    "correct_text": "   o  Transfer Length (F): 40-bit unsigned integer.  A non-negative\r\n      integer that is at most 942574504275.  This is the transfer length\r\n      of the object in units of octets.\r\n\r\n...\r\n\r\n      NOTE: The limit of 942574504275 on the transfer length is a\r\n      consequence of the limitation on the symbol size to 2^^16-1, the\r\n      limitation on the number of symbols in a source block to 56403,\r\n      and the limitation on the number of source blocks to 2^^8-1.\r\n",
+    "notes": "Section 3.3.3 defines the number of source blocks (Z) as an unsigned 8-bit integer, whose maximum value is 2^^8-1 (255), and not 2^^8.  This in turn changes the limit on the transfer length, which is now 56403*(2^^16-1)*(2^^8-1) = 942574504275.",
+    "submit_date": "2018-11-07",
+    "submitter_name": "Eugene Kim",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2020-06-02 06:26:20"
+  }
+]
