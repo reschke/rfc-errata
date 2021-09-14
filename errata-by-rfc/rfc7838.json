@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6480,
+    "doc-id": "RFC7838",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "Formally, an alternative service is identified by the combination of:\r\n\r\n   o  An Application Layer Protocol Negotiation (ALPN) protocol name, as\r\n      per [RFC7301]",
+    "correct_text": "Formally, an alternative service is identified by the combination of:\r\n\r\n   o  An Application-Layer Protocol Negotiation (ALPN) protocol name, as\r\n      per [RFC7301]",
+    "notes": "RFC 7301 seems to formally use the hyphenated version. Most relevant to RFC 7838 is the ALPN ID registry, which RFC 7301 states:\r\n\r\n   This document establishes a registry for protocol identifiers\r\n   entitled \"Application-Layer Protocol Negotiation (ALPN) Protocol IDs\"",
+    "submit_date": "2021-03-12",
+    "submitter_name": "Lucas Pardue",
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2021-03-15 03:56:18"
+  },
+  {
+    "errata_id": 6481,
+    "doc-id": "RFC7838",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 2.4,
+    "orig_text": "   Furthermore, if the connection to the alternative service fails or is\r\n   unresponsive, the client MAY fall back to using the origin or another\r\n   alternative service.  Note, however, that this could be the basis of\r\n   a downgrade attack, thus losing any enhanced security properties of\r\n   the alternative service.",
+    "correct_text": " ¯\\_(ツ)_/¯",
+    "notes": "Alt-Svc fall back is described in section 2.4 and mentions security properties, so I was expecting to see something about fall back in the security considerations. This might be implicitly covered by Section 9.3 but it could potentially be made more clear.\n --VERIFIER NOTES-- \nGeneral clarifications and request for improvements to the RFC in a possible future update of the document should be proposed using channels other than the errata process, such as the WG mailing list.",
+    "submit_date": "2021-03-13",
+    "submitter_name": "Lucas Pardue",
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2021-03-15 04:12:52"
+  }
+]
