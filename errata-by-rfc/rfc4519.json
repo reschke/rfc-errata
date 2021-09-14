@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 70,
+    "doc-id": "RFC4519",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "99\r\nAppendix A says:",
+    "orig_text": "      18. Removed Section 2.4 (Source).  Replaced the source table with\r\n          explicit references for each definition.",
+    "correct_text": "      18. Removed Section 4 (Source).  Replaced the source table with\r\n          explicit references for each definition.",
+    "notes": "",
+    "submit_date": "2006-07-07",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1761,
+    "doc-id": "RFC4519",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "3.10.  'organizationalRole'\r\n\r\n   The 'organizationalRole' object class is the basis of an entry that\r\n   represents a job, function, or position in an organization.\r\n   (Source: X.521 [X.521])\r\n\r\n      ( 2.5.6.8 NAME 'organizationalRole'\r\n         SUP top\r\n         STRUCTURAL\r\n         MUST cn\r\n         MAY ( x121Address $ registeredAddress $ destinationIndicator $\r\n               preferredDeliveryMethod $ telexNumber $\r\n               teletexTerminalIdentifier $ telephoneNumber $\r\n               internationalISDNNumber $ facsimileTelephoneNumber $\r\n               seeAlso $ roleOccupant $ preferredDeliveryMethod $\r\n               street $ postOfficeBox $ postalCode $ postalAddress $\r\n               physicalDeliveryOfficeName $ ou $ st $ l $\r\n               description ) )",
+    "correct_text": "3.10.  'organizationalRole'\r\n\r\n   The 'organizationalRole' object class is the basis of an entry that\r\n   represents a job, function, or position in an organization.\r\n   (Source: X.521 [X.521])\r\n\r\n      ( 2.5.6.8 NAME 'organizationalRole'\r\n         SUP top\r\n         STRUCTURAL\r\n         MUST cn\r\n         MAY ( x121Address $ registeredAddress $ destinationIndicator $\r\n               preferredDeliveryMethod $ telexNumber $\r\n               teletexTerminalIdentifier $ telephoneNumber $\r\n               internationalISDNNumber $ facsimileTelephoneNumber $\r\n               seeAlso $ roleOccupant $ \r\n               street $ postOfficeBox $ postalCode $ postalAddress $\r\n               physicalDeliveryOfficeName $ ou $ st $ l $\r\n               description ) )",
+    "notes": "Any object classes that include the preferredDeliveryMethod twice should be either redefined, by including it only once, OR provide an explicit reference about how it should be interpreted by the implementations; such examples are:\r\norganizationalRole (3.10)\r\nresidentialPerson (3.13)\r\n\r\nNote that this error has been affecting OpenLDAP implementations at least \r\nsince year 2002; with the side-effect that imported ldif data would disappear:\r\nhttp://www.openldap.org/lists/ietf-ldapbis/200207/msg00002.html\r\nIt is surprising that it has remained unaddressed during so many years.\r\n\r\nAlso, Kurt Zeilinga has proposed to adopt the following (sufficient) rule:\r\n\"that implementations SHOULD be (and are) ignoring the redundant listing\".\n --VERIFIER NOTES-- \nKurt Zeilenga said:\r\n\r\nThis issue was raised to the LDAPbis WG at the time it was working on the I-D which became RFC 4519 yet RFC 4519 did not include the suggested change.   Simply put, there was insufficient support of the suggested change at that time.\r\n\r\nThe change is also bad in that in removes one of the examples of multiple listed attributes, a rarely used but still valid (for historical reasons) of X.500/LDAP schema descriptions, and hence may lead to implementations not supporting this feature and by doing so causing interop problems.\r\n",
+    "submit_date": "2009-04-10",
+    "submitter_name": "Fotis Georgatos",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
