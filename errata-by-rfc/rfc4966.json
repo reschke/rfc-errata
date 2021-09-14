@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1306,
+    "doc-id": "RFC4966",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "[RFC3498] ",
+    "correct_text": "[RFC3948]",
+    "notes": "All citations of [RFC3498] are intended to be [RFC3948]",
+    "submit_date": "2008-01-29",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 105,
+    "verifier_name": "Ron Bonica",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3142,
+    "doc-id": "RFC4966",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "Unless UDP encapsulation is used for IPsec [RFC3498], traffic using\r\nIPsec AH (Authentication Header), in transport and tunnel mode, and\r\nIPsec ESP (Encapsulating Security Payload), in transport mode, is\r\nunable to be carried through NAT-PT without terminating the security\r\nassociations on the NAT-PT, due to their usage of cryptographic\r\nintegrity protection.",
+    "correct_text": "IPsec traffic using AH (Authentication Header) [RFC4302] in both\r\ntransport and tunnel modes cannot be carried through NAT-PT without\r\nterminating the security associations on the NAT-PT, due to the\r\ninclusion of IP header fields in the scope of AH's cryptographic\r\nintegrity protection [RFC3715].  In addition, IPsec traffic using\r\nESP (Encapsulating Security Payload) [RFC4303] in transport mode\r\ngenerally uses UDP encapsulation [RFC3948] for NAT traversal\r\n(including NAT-PT traversal) in order to avoid the problems\r\ndescribed in [RFC3715].\r\n",
+    "notes": "This RFC4966 text was copied into draft-ietf-behave-64-analysis-06.\r\nGen-ART review of that draft found that the statement was incorrect\r\nfor ESP.  The correct explanations of the problems (in great detail)\r\ncan be found in RFC 3715.",
+    "submit_date": "2012-02-29",
+    "submitter_name": "David L. Black",
+    "verifier_id": 105,
+    "verifier_name": "Ron Bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
