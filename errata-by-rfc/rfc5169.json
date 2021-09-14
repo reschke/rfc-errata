@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1399,
+    "doc-id": "RFC5169",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "6.3,pg.10/11",
+    "orig_text": "   CAPWAP currently has no means to support roaming between ACs in an\r\n   enterprise network.  The proposed work on EAP efficient re-\r\n|  authentication addresses is an inter-authenticator handover problem\r\n   from an EAP perspective, which applies during handover between ACs.\r\n   [...]",
+    "correct_text": "   CAPWAP currently has no means to support roaming between ACs in an\r\n   enterprise network.  The proposed work on EAP efficient re-\r\n|  authentication addresses an inter-authenticator handover problem\r\n   from an EAP perspective, which applies during handover between ACs.\r\n   [...]",
+    "notes": "Two verbs back-ro-back.",
+    "submit_date": "2008-03-31",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
