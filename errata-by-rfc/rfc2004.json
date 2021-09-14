@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2840,
+    "doc-id": "RFC2004",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "    0                   1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |   Protocol    |S|  reserved   |        Header Checksum        |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |                 Original Destination Address                  |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   :            (if present) Original Source Address               :\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n ",
+    "correct_text": "    0                   1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |                 Original Destination Address                  |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   :            (if present) Original Source Address               :\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |   Protocol    |S|  reserved   |        Header Checksum        |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n ",
+    "notes": "given that:\r\n- The ip4 header has variable size ( >20 octets )\r\n- The suggested extra header has variable size ( 8 or 12 octets )\r\n- The S bit to distinguish the suggested header size is located\r\n  inside the second octet of the suggested header\r\n- The only size information is about the sum of both headers\r\n\r\nThe implication is that the S bit cannot be located.\r\n\r\nMy opinion to correct this problem is just to change \r\nthe order of elements inside the suggested header.\n --VERIFIER NOTES-- \nThe proposed change is a protocol modification and must go through the standardization process.   ",
+    "submit_date": "2011-06-17",
+    "submitter_name": "Francesco Balzarini",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
