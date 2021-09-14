@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 288,
+    "doc-id": "RFC3372",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "References to Figures 3, 5, and 7 should refer to Figures 2, 3, and 4, respectively.\n",
+    "submit_date": "2002-09-22",
+    "submitter_name": "Feng Zhang",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4719,
+    "doc-id": "RFC3372",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "   In Figure 2 a VoIP cloud serves as a transit network for telephone\r\n   calls originating in a pair of LECs, where SIP is employed as the\r\n   VoIP protocol used to set up and tear down these VoIP calls.",
+    "correct_text": "   In Figure 1 a VoIP cloud serves as a transit network for telephone\r\n   calls originating in a pair of LECs, where SIP is employed as the\r\n   VoIP protocol used to set up and tear down these VoIP calls.",
+    "notes": "References to Figure 2; should refer to Figure 1 instead as Figure 2 depicts a different scenario.",
+    "submit_date": "2016-06-24",
+    "submitter_name": "Victor Gabriel Lopez Loyda",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
