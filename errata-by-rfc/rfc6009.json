@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2545,
+    "doc-id": "RFC6009",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 7.2,
+    "orig_text": "   # Send a copy to my cell phone to be delivered before 10PM\r\n   if currentdate :value \"lt\"\r\n                  :comparator \"i;ascii-numeric\" \"hour\" \"22\"\r\n   {\r\n       if currentdate :matches \"date\" \"*\" {set \"date\" \"${0}\";}\r\n       if currentdate :matches \"zone\" \"*\" {set \"zone\" \"${0}\";}\r\n|      redirect :copy :bytimeabsolute \"${date}T20:00:00${zone}\"\r\n                :bymode \"return\" \"cellphone@example.com\";\r\n   }\r\n",
+    "correct_text": "   # Send a copy to my cell phone to be delivered before 10PM\r\n   if currentdate :value \"lt\"\r\n                  :comparator \"i;ascii-numeric\" \"hour\" \"22\"\r\n   {\r\n       if currentdate :matches \"date\" \"*\" {set \"date\" \"${0}\";}\r\n       if currentdate :matches \"zone\" \"*\" {set \"zone\" \"${0}\";}\r\n|      redirect :copy :bytimeabsolute \"${date}T22:00:00${zone}\"\r\n                :bymode \"return\" \"cellphone@example.com\";\r\n   }\r\n",
+    "notes": "Rationale:  \"10PM\" corresponds to  T22:00:00 , not  T20:00:00 .",
+    "submit_date": "2010-10-05",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
