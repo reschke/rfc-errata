@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1704,
+    "doc-id": "RFC5462",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.3, pg.7",
+    "orig_text": "In the updated text for RFC 5129, section 2, bullet 5:\r\n\r\n     ... TC-capable, ...\r\n         ^^",
+    "correct_text": "     ... ECN-capable, ...\r\n         ^^^",
+    "notes": "Rationale: \r\nPresumed editing flaw introduces undefined term; \"ECN-capable\"\r\noccurs in the same paragraph, \"TC-capable\" nowhere else!  ==> This\r\nextraneous change of the original RFC 5129 text should be backed out.",
+    "submit_date": "2009-03-03",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
