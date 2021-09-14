@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3274,
+    "doc-id": "RFC4654",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.3,
+    "orig_text": "If a loss interval, A, is determined to have started with packet\r\nsequence number S_A and the next loss interval, B, started with\r\npacket sequence number S_B, then the number of packets in loss\r\ninterval A is given by (S_B - S_A).\r\n",
+    "correct_text": "If a loss event, A, is determined to have started with packet\r\nsequence number S_A and the next loss event, B, started with\r\npacket sequence number S_B, then the number of packets in the loss\r\ninterval between A and B is given by (S_B - S_A).\r\n",
+    "notes": null,
+    "submit_date": "2012-07-02",
+    "submitter_name": "Dongwook Kim",
+    "verifier_id": 129,
+    "verifier_name": "Wesley Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
