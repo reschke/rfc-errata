@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 3913,
+    "doc-id": "RFC5764",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5.1.2",
+    "orig_text": "Arriving packets may be of types RTP, DTLS, or STUN [RFC5389].\r\n...\r\n                   |       B < 2   -+--> forward to STUN\r\n...\r\nIf the value of this byte is 0 or 1, then the packet is STUN.",
+    "correct_text": "Arriving packets may be of types RTP, DTLS, or STUN [RFC5389].  \r\nSTUN messages with methods identifiers of 1280 or higher cannot \r\nbe demultiplexed.\r\n...\r\n                   |       B < 20  -+--> forward to STUN\r\n...\r\nIf the value of this byte is less than 20, then the packet is STUN.",
+    "notes": "This is a tricky one. We can't distinguish all STUN message types,\r\nbecause - at least in theory - new message types >= 1280 can be added\r\nto STUN, which could collide with DTLS.\r\n\r\nPlease see Section 7 of RFC 7983 for the change that addresses this problem more\r\nholistically and *differently* than above.",
+    "submit_date": "2014-03-06",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 2,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3971,
+    "doc-id": "RFC5764",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.1.3",
+    "orig_text": "   If the client detects a nonzero-length MKI in the server's response\r\n   that is different than the one the client offered, then the client\r\n   MUST abort the handshake and SHOULD send an invalid_parameter alert.",
+    "correct_text": "   If the client detects a nonzero-length MKI in the server's response\r\n   that is different than the one the client offered, then the client\r\n   MUST abort the handshake and SHOULD send an illegal_parameter alert.",
+    "notes": "invalid_parameter isn't defined anywhere; this probably means illegal_parameter(47), which is defined in RFC 5246.",
+    "submit_date": "2014-04-22",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4788,
+    "doc-id": "RFC5764",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": "   which are assigned as shown below.  The per-association context value\n   is empty.",
+    "correct_text": "   which are assigned as shown below.  No per-association context value\r\n   is used.",
+    "notes": "This code is somewhat ambiguous, though the better interpretation is probably that you should use a zero-length context (arm 2 of https://tools.ietf.org/html/rfc5705#section-4). However, real implementations do not seem to use the exporter value, so we need to resolve this in that direction.",
+    "submit_date": "2016-08-30",
+    "submitter_name": "Eric Rescorla",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4873,
+    "doc-id": "RFC5764",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "5.1.1",
+    "orig_text": "When the mechanism described in this document is in\r\neffect, this is modified so that data written by upper-level protocol\r\nclients of DTLS is assumed to be RTP/RTP and is encrypted using SRTP\r\nrather than the standard TLS record encoding.",
+    "correct_text": "When the mechanism described in this document is in\r\neffect, this is modified so that data written by upper-level protocol\r\nclients of DTLS is assumed to be RTP/RTCP and is encrypted using SRTP\r\nrather than the standard TLS record encoding.",
+    "notes": "Section 5.1 notes that RTP or RTCP can be sent over the channel, so \"RTP/RTP\" should be \"RTP/RTCP\".",
+    "submit_date": "2016-11-30",
+    "submitter_name": "Peter Wu",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
