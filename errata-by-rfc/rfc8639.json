@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6211,
+    "doc-id": "RFC8639",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 7,
+    "orig_text": "   A specification for a transport MUST identify any encodings that are\r\n   supported.  If a configured subscription's transport allows different\r\n   encodings, the specification MUST identify the default encoding.\r\n",
+    "correct_text": "   A specification for a transport MUST identify any encodings that are\r\n   supported.  If a configured subscription's transport allows different\r\n   encodings, the specification MUST identify the default encoding, or\r\n   provide a mechanism whereby supported encodings can be discovered.\r\n",
+    "notes": "https://mailarchive.ietf.org/arch/msg/netconf/XBpoFqtRynfc0zaRggMEiEMBW2M/",
+    "submit_date": "2020-06-22",
+    "submitter_name": "kent watsen",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6366,
+    "doc-id": "RFC8639",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "  feature subtree {\r\n    description\r\n      \"This feature indicates support for YANG subtree filtering.\";\r\n    reference\r\n      \"RFC 6241: Network Configuration Protocol (NETCONF),\r\n                 Section 6\";\r\n  }\r\n\r\n  feature supports-vrf {\r\n    description\r\n      \"This feature indicates that a publisher supports VRF\r\n       configuration for configured subscriptions.  VRF support for\r\n       dynamic subscriptions does not require this feature.\";\r\n    reference\r\n      \"RFC 8529: YANG Data Model for Network Instances,\r\n                 Section 6\";\r\n  }",
+    "correct_text": "  feature subtree {\r\n    description\r\n      \"This feature indicates support for YANG subtree filtering.\";\r\n    reference\r\n      \"RFC 6241: Network Configuration Protocol (NETCONF),\r\n                 Section 6\";\r\n  }\r\n\r\n  feature supports-vrf {\r\n    description\r\n      \"This feature indicates that a publisher supports VRF\r\n       configuration for configured subscriptions.  VRF support for\r\n       dynamic subscriptions does not require this feature.\";\r\n    reference\r\n      \"RFC 8529: YANG Data Model for Network Instances,\r\n                 Section 6\";\r\n  }",
+    "notes": "In the HTML version the two hyperlinks \"Section 6\" (for 'subtree' feature and for 'supports-vrf' feature) point to wrong RFCs.\n\n --VERIFIER NOTES-- \nThis is regarding the link generated in the rfc2html output, not the RFC itself (https://www.rfc-editor.org/rfc/rfc8639.txt).  ",
+    "submit_date": "2020-12-24",
+    "submitter_name": "Muly Ilan",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2021-01-19 11:22:56"
+  }
+]
