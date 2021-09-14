@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3988,
+    "doc-id": "RFC6946",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "...MUST NOT be discarded upon receipt of... ",
+    "correct_text": "...MUST be discarded upon receipt of... ",
+    "notes": "\n --VERIFIER NOTES-- \nThe text in the RFC is correct.  Atomic fragments should not affect the re-assembly of legitimate fragments present in the re-assembly buffer.   ",
+    "submit_date": "2014-05-15",
+    "submitter_name": "Panos Kampanakis",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
