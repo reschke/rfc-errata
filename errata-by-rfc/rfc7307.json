@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5145,
+    "doc-id": "RFC7307",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3.2",
+    "orig_text": "   The format of this sub-TLV is similar to the LDP IPv4 FEC sub-TLV as\r\n   defined in [RFC4379].  In addition to \"IPv4 prefix\" and \"Prefix\r\n   Length\" fields, this new sub-TLV also specifies the MT-ID (Multi-\r\n   Topology ID).  The Length for this sub-TLV is 5.",
+    "correct_text": "   The format of the MT LDP IPv4 prefix sub-TLV (type 31) is similar to\r\n   the LDP IPv4 prefix sub-TLV (type 1) as defined in [RFC4379].  In\r\n   addition to the \"IPv4 prefix\" and \"Prefix Length\" fields already\r\n   defined in the LDP IPv4 prefix sub-TLV, the new MT LDP IPv4 prefix\r\n   sub-TLV also specifies the MT-ID (Multi-Topology ID) field.  While\r\n   the length of the LDP IPv4 prefix sub-TLV is 5 (and does not include\r\n   the trailing MBZ bytes), the length of this new MT LDP IPv6 prefix \r\n   sub-TLV is 8 (and does include the internal MBZ byte).",
+    "notes": "The original text uses \"this sub-TLV\" in ways that can be ambiguous. In particular, the final sentence \"The Length for this sub-TLV is 5.\" is incorrect if \"this sub-TLV\" refers to the topic of the section, i.e., \"MT LDP IPv4 FEC Sub-TLV\", but is correct if \"this sub-TLV\" refers to the LDP IPv4 prefix sub-TLV defined in RFC4379/RFC8029. The revised text is suggested to remove the ambiguities. Adrian Farrell provided the bulk of the suggested revisions.\r\n\r\nIn addition, the sub-TLV names are changed to match the names that were registered in the IANA registry, to aid those trying to find the registry entries.",
+    "submit_date": "2017-10-05",
+    "submitter_name": "Sandra Murphy",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2021-02-26 14:11:56"
+  },
+  {
+    "errata_id": 5146,
+    "doc-id": "RFC7307",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.3.3",
+    "orig_text": "   The format of this sub-TLV is similar to the LDP IPv6 FEC sub-TLV as\r\n   defined in [RFC4379].  In addition to the \"IPv6 prefix\" and \"Prefix\r\n   Length\" fields, this new sub-TLV also specifies the MT-ID (Multi-\r\n   Topology ID).  The Length for this sub-TLV is 17.",
+    "correct_text": "   The format of the MT LDP IPv6 prefix sub-TLV (type 32) is similar to\r\n   the LDP IPv6 prefix sub-TLV (type 2) as defined in [RFC4379].  In\r\n   addition to the \"IPv6 prefix\" and \"Prefix Length\" fields already\r\n   defined in the LDP IPv6 prefix sub-TLV, the new MT LDP IPv6 prefix \r\n   sub-TLV also specifies the MT-ID (Multi-Topology ID) field.  While\r\n   the length of the LDP IPv6 prefix sub-TLV is 17 (and does not include\r\n   the trailing MBZ bytes), the length of this new MT LDP IPv6 prefix\r\n   sub-TLV is 20 (and does include the internal MBZ byte).",
+    "notes": "The original text uses \"this sub-TLV\" in ways that can be ambiguous. In particular, the final sentence \"The Length for this sub-TLV is 17.” is incorrect if \"this sub-TLV\" refers to the topic of the section, i.e., \"MT LDP IPv6 FEC Sub-TLV\", but is correct if \"this sub-TLV\" refers to the LDP IPv6 prefix sub-TLV defined in RFC4379/RFC8029. The revised text is suggested to remove the ambiguities. Adrian Farrell provided the bulk of the suggested revisions.\r\n\r\nIn addition, the sub-TLV names are changed to match the names that were registered in the IANA registry, to aid those trying to find the registry entries.",
+    "submit_date": "2017-10-05",
+    "submitter_name": "Sandra Murphy",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2021-02-26 14:12:25"
+  }
+]
