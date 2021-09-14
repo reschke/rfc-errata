@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1798,
+    "doc-id": "RFC5202",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.1.2",
+    "orig_text": "Conversely, a recipient MUST be prepared to handle received transport\r\nparameters that contain more than six Suite IDs.",
+    "correct_text": "Conversely, a recipient MUST be prepared to handle received transform\r\nparameters that contain more than six Suite IDs.",
+    "notes": "The section describes the ESP \"transform\", not \"transport\", parameter.",
+    "submit_date": "2009-06-29",
+    "submitter_name": "Ari Keränen",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
