@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 119,
+    "doc-id": "RFC4343",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "   The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\r\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\r\n   document are to be interpreted as described in [RFC2119].",
+    "correct_text": "   The key words \"MUST\" and \"MAY\" in this document are to be\r\n   interpreted as described in [RFC2119].\r\n",
+    "notes": "\r\nOther than in the above-quoted sentence, there are no\r\ninstances of \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", SHOULD\",\r\n\"SHOULD NOT\", \"RECOMMENDED\", or \"OPTIONAL\" in the RFC (and the\r\ninstances above surely cannot be interpreted as described in RFC\r\n2119; they are mere labels in the context of that sentence).\n --VERIFIER NOTES-- \nThe keyword paragraph is standard, and although words are mentioned that are later not used, this is not an error.   ",
+    "submit_date": "2006-02-26",
+    "submitter_name": "Bruce Lilly",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2647,
+    "doc-id": "RFC4343",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "   (\".\"), which can be expressed as and \\046 or \\.  It is advisable to\r\n",
+    "correct_text": "   (\".\"), which can be expressed as \\046 or \\.  It is advisable to\r\n",
+    "notes": null,
+    "submit_date": "2010-11-29",
+    "submitter_name": "Sam Bretheim",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5112,
+    "doc-id": "RFC4343",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "comparisons on name lookup for DNS queries should be case insensitive",
+    "correct_text": "comparisons on name lookup for DNS queries must be case insensitive",
+    "notes": "--- Original report ---\r\nSome authoritative DNS servers and/or mitigation devices/software silently drop queries that have uppercase letters in them.  Furthermore, the clarification of the case insensitive comparison in the following two sentences after that particular sentence use the term MUST.  I suspect some readers of the RFC are reading the word \"should\" and aren't reading the rest of the paragraph.\r\n\r\n---- WK Update ----\r\nThe full quote is: \"According to the original DNS design decision, comparisons on name\r\n   lookup for DNS queries should be case insensitive [STD13]. \", and the title of this (RFC4343) is \"Domain Name System (DNS) Case Insensitivity Clarification\" -- seeing as the whole point of this document is to clarify the original spec, I think that readers will read the RFC2119 bits.\r\n\r\nHowever, I do agree that this could be better worded, and future updates of this document should probably reword this to make it clearer. ",
+    "submit_date": "2017-09-12",
+    "submitter_name": "Rich Tom",
+    "verifier_id": 2,
+    "verifier_name": "Warren Kumari",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6361,
+    "doc-id": "RFC4343",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "No \"case conversion\" or \"case folding\" is done during such output operations, thus \"preserving\" case.",
+    "correct_text": "?",
+    "notes": "Whose case is preserved? The case of the label in the DNS query or the case of the label in the DNS database? In other words, if there is a DNS record for ietf.org and I query IETF.org, should the DNS response say ietf.org or IETF.org? I would expect it's the former so that the DNS administrator can inform the DNS requester about the preferred capitalization but I can't figure this out on the basis of the RFC. Does output case preservation refer to something else? All I observe is that tools like dig return the latter when I run 'dig IETF.org'. Maybe an errata is not the right place to ask for clarification but given the name of the RFC, I would expect to find a clear answer to this question in the RFC.\r\n\r\n-- verifier note --\r\nAfter discussion with the RFC author and the errata author, the conclusion is that the RFC isn't wrong but is arguably unclear for some readers.",
+    "submit_date": "2020-12-22",
+    "submitter_name": "Kaspar Etter",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2021-01-04 05:41:29"
+  }
+]
