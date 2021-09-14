@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3762,
+    "doc-id": "RFC5015",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.5.3.1.",
+    "orig_text": "      Best-Offer\r\n         Used by the DF to record the identity and advertised metrics of\r\n         the router that has made the last offer, for use when sending\r\n         the Path message.\r\n",
+    "correct_text": "      Best-Offer\r\n         Used by the DF to record the identity and advertised metrics of\r\n         the router that has made the last offer, for use when sending\r\n         the Pass message.\r\n",
+    "notes": "typo: Path message should be Pass message",
+    "submit_date": "2013-10-22",
+    "submitter_name": "Christopher Brown",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
