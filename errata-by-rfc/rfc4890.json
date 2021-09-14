@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2706,
+    "doc-id": "RFC4890",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix B.",
+    "orig_text": "   if [ \"$STATE_ENABLED\" -eq \"1\" ]\r\n   then\r\n     # Allow incoming time exceeded code 0 messages\r\n     # only for existing sessions\r\n     for inner_prefix in $INNER_PREFIXES\r\n     do\r\n       ip6tables -A icmpv6-filter -m state -p icmpv6 \\\r\n            -d $inner_prefix \\\r\n            --state ESTABLISHED,RELATED --icmpv6-type packet-too-big \\\r\n            -j ACCEPT\r\n     done\r\n   else\r\n     # Allow incoming time exceeded code 0 messages\r\n     for inner_prefix in $INNER_PREFIXES\r\n     do\r\n       ip6tables -A icmpv6-filter -p icmpv6 -d $inner_prefix \\\r\n            --icmpv6-type ttl-zero-during-transit -j ACCEPT\r\n     done\r\n   fi\r\n",
+    "correct_text": "   if [ \"$STATE_ENABLED\" -eq \"1\" ]\r\n   then\r\n     # Allow incoming time exceeded code 0 messages\r\n     # only for existing sessions\r\n     for inner_prefix in $INNER_PREFIXES\r\n     do\r\n       ip6tables -A icmpv6-filter -m state -p icmpv6 \\\r\n            -d $inner_prefix \\\r\n            --state ESTABLISHED,RELATED --icmpv6-type ttl-zero-during-transmit \\\r\n            -j ACCEPT\r\n     done\r\n   else\r\n     # Allow incoming time exceeded code 0 messages\r\n     for inner_prefix in $INNER_PREFIXES\r\n     do\r\n       ip6tables -A icmpv6-filter -p icmpv6 -d $inner_prefix \\\r\n            --icmpv6-type ttl-zero-during-transit -j ACCEPT\r\n     done\r\n   fi\r\n",
+    "notes": "Not sure if this is really editorial as it is in the example code, not the main RFC.\r\n\r\nIn any case, the example incorrectly specifies an icmpv6 type in one code path.",
+    "submit_date": "2011-02-06",
+    "submitter_name": "Phil Whineray",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3985,
+    "doc-id": "RFC4890",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "if [ \"$STATE_ENABLED\" -eq \"1\" ]\r\nthen\r\n  # Allow incoming time exceeded code 0 messages\r\n  # only for existing sessions\r\n  for inner_prefix in $INNER_PREFIXES\r\n  do\r\n    ip6tables -A icmpv6-filter -m state -p icmpv6 \\\r\n         -d $inner_prefix \\\r\n         --state ESTABLISHED,RELATED --icmpv6-type packet-too-big \\\r\n         -j ACCEPT\r\n  done\r\nelse\r\n  # Allow incoming time exceeded code 0 messages\r\n  for inner_prefix in $INNER_PREFIXES\r\n  do\r\n    ip6tables -A icmpv6-filter -p icmpv6 -d $inner_prefix \\\r\n         --icmpv6-type ttl-zero-during-transit -j ACCEPT\r\n  done\r\nfi",
+    "correct_text": "if [ \"$STATE_ENABLED\" -eq \"1\" ]\r\nthen\r\n  # Allow incoming time exceeded code 0 messages\r\n  # only for existing sessions\r\n  for inner_prefix in $INNER_PREFIXES\r\n  do\r\n    ip6tables -A icmpv6-filter -m state -p icmpv6 \\\r\n     -d $inner_prefix \\\r\n     --state ESTABLISHED,RELATED --icmpv6-type ttl-zero-during-transit \\\r\n     -j ACCEPT\r\n  done\r\nelse\r\n  # Allow incoming time exceeded code 0 messages\r\n  for inner_prefix in $INNER_PREFIXES\r\n  do\r\n    ip6tables -A icmpv6-filter -p icmpv6 -d $inner_prefix \\\r\n         --icmpv6-type ttl-zero-during-transit -j ACCEPT\r\n  done\r\nfi",
+    "notes": "RFC 4890 Errata ID 2706 states that icmpv6-type packet-too-big should\r\nstate icmpv6-type ttl-zero-during-transmit. This should read\r\nttl-zero-during-transit.",
+    "submit_date": "2014-05-13",
+    "submitter_name": "James Robertson",
+    "verifier_id": 135,
+    "verifier_name": "Joel Jaeggli",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
