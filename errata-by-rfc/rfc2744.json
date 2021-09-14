@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1620,
+    "doc-id": "RFC2744",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5.15,
+    "orig_text": "   Since some application-level protocols may wish to use tokens emitted\r\n   by gss_wrap() to provide \"secure framing\", implementations must\r\n   support derivation of MICs from zero-length messages.",
+    "correct_text": "   Since some application-level protocols may wish to use tokens emitted\r\n   by gss_get_mic() to provide \"secure framing\", implementations must\r\n   support derivation of MICs from zero-length messages.",
+    "notes": null,
+    "submit_date": "2008-11-25",
+    "submitter_name": "Ben Harris",
+    "verifier_id": 2,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3810,
+    "doc-id": "RFC2744",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": " ,",
+    "correct_text": " *,",
+    "notes": "The author of draft-ietf-cat-gssv2-cbind (which became RFC2744) switched to a different formatting process between versions 05 and 06 of that draft.  This inadvertently introduced errors into the function prototypes in the example gssapi.h header, removing the asterisk which indicates that an argument is of pointer type from pointer arguments which are not the last argument in the argument list of their respective function.  All sixty-eight occurrences of <space><comma> in Appendix A should be replaced by the sequence <space><asterisk><comma> as a fix.  Additionally, the minor_status argument of gss_export_name() is not caught by this pattern, but also should be changed from scalar to pointer type in order for all function prototypes in the header to be corrected (\"OM_uint32,\" becomes \"OM_uint32 *,\").  As another concrete example, at the top of page 91, the first argument to gss_acquire_cred should change from \"OM_uint32 ,             /*  minor_status */\" to \"OM_uint32 *,             /*  minor_status */\".",
+    "submit_date": "2013-11-22",
+    "submitter_name": "Benjamin Kaduk",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
