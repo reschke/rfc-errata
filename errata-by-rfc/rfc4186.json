@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 171,
+    "doc-id": "RFC4186",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 8.1,
+    "orig_text": "   Length\r\n\r\n         Indicates the length of this attribute in multiples of four\r\n         bytes.  The maximum length of an attribute is 1024 bytes.  The\r\n         length includes the Attribute Type and Length bytes.",
+    "correct_text": "   Length\r\n\r\n         Indicates the length of this attribute in multiples of four\r\n         bytes.  The maximum length of an attribute is 1020 bytes.  The\r\n         length includes the Attribute Type and Length bytes.",
+    "notes": "  As there is no offset defined, the maximum encoded Length value\r\n  of 255 corresponds to a total of 4*255 = 1020 octets.\r\n\r\nNote:\r\n  Other protocols incorporate an offset of -1 in similar cases, e.g.,\r\n  when a TLV Length field comprises the length of the 'T' and 'L',\r\n  also removing the artificially designed-in error case (Length=0),\r\n  that otherwise must be checked for by all implementations!\r\n  Some people speak of bad protocol design when encountering\r\n  Length fields that do not indicate the true length of an object\r\n  value proper, which might be zero.\r\n\r\nfrom pending",
+    "submit_date": "2006-11-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Henry Haverinen",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 956,
+    "doc-id": "RFC4186",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 10.14,
+    "orig_text": "   The value field of the AT_MAC attribute contains two reserved bytes\r\n   followed by a keyed message authentication code (MAC).  The MAC is\r\n|  calculated over the whole EAP packet and concatenated with optional\r\n   message-specific data, with the exception that the value field of the\r\n   MAC attribute is set to zero when calculating the MAC.",
+    "correct_text": "   The value field of the AT_MAC attribute contains two reserved bytes\r\n   followed by a keyed message authentication code (MAC).  The MAC is\r\n|  calculated over the whole EAP packet, concatenated with optional\r\n   message-specific data, with the exception that the value field of the\r\n   MAC attribute is set to zero when calculating the MAC.",
+    "notes": "  \"The MAC is calculated ... and concatenated ...\"\r\ncould easily be misunderstood.\r\nFrom the context it can be concluded that the potential ambiguity\r\nshould be resolved and clarified by omitting the word 'and',\r\nand replacing it by a comma.\r\n\r\nfrom pending",
+    "submit_date": "2006-11-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Henry Haverinen",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 957,
+    "doc-id": "RFC4186",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "(1) [[posted separately.]]\r\n(2) [[posted separately.]]\r\n\r\n(3)  [missing article]\r\n\r\nWithin Section 1, the 2nd paragraph on page 5 says:\r\n\r\n   EAP-SIM specifies optional support for protecting the privacy of\r\n   subscriber identity using the same concept as the GSM, which uses\r\n   pseudonyms/temporary identifiers.  [...]\r\n\r\nIt should say:\r\n\r\n|  EAP-SIM specifies optional support for protecting the privacy of the\r\n   subscriber identity using the same concept as the GSM, which uses\r\n   pseudonyms/temporary identifiers.  [...]\r\n\r\n\r\n(4)  [missing article]\r\n\r\nSection 2, near the bottom of page 6, says:\r\n\r\n   Fast Re-authentication Username\r\n\r\n         The username portion of fast re-authentication identity,\r\n         i.e., not including any realm portions.\r\n\r\nIt should say:\r\n\r\n   Fast Re-authentication Username\r\n\r\n|        The username portion of the fast re-authentication identity,\r\n         i.e., not including any realm portions.\r\n\r\n\r\n(5)  [missing article]\r\n\r\nThe first paragraph of Section 4.2.3, on page 19, says:\r\n\r\n   If EAP-SIM peer is started upon receiving an EAP-Request/Identity\r\n   message, then the peer MAY use an EAP-SIM identity in the EAP-\r\n   Response/Identity packet.  [...]\r\n\r\nIt should say:\r\n\r\n|  If the EAP-SIM peer is started upon receiving an EAP-Request/Identity\r\n   message, then the peer MAY use an EAP-SIM identity in the EAP-\r\n   Response/Identity packet.  [...]\r\n\r\n\r\n(6)  [missing article]\r\n\r\nThe Section title (on page 19 and in the ToC),\r\n                                            v\r\n4.2.4.  Server Operation in the Beginning of EAP-SIM Exchange\r\n\r\nshould better say:\r\n                                            vvvv\r\n4.2.4.  Server Operation in the Beginning of an EAP-SIM Exchange\r\n\r\n\r\n(7)  [misleading continuation indicator]\r\n\r\nIn Section 4.3.6, Figure 7 (on page 29) contains for lines that\r\nmight erroneously be misunderstod to indicate the omission of\r\nsome protocol steps (which is not the case).\r\nI suspect that this is an artifact from a draft version where\r\nFigure 7 was split over two pages; after joining the parts,\r\nthese continuation indicators have become ambiguous, and hence\r\nshould be deleted.\r\n\r\nOn mid-page 29, the lines:\r\n\r\n       |     EAP-Request/SIM/Start                             |\r\n       |     (AT_FULLAUTH_ID_REQ, AT_VERSION_LIST)             |\r\n       |<------------------------------------------------------|\r\n       |                                                       |\r\n       :                                                       :\r\n       :                                                       :\r\n       :                                                       :\r\n       :                                                       :\r\n       |EAP-Response/SIM/Start                                 |\r\n       |(AT_IDENTITY with a pseudonym identity, AT_NONCE_MT,   |\r\n       | AT_SELECTED_VERSION)                                  |\r\n       |------------------------------------------------------>|\r\n\r\nshould say:\r\n\r\n       |     EAP-Request/SIM/Start                             |\r\n       |     (AT_FULLAUTH_ID_REQ, AT_VERSION_LIST)             |\r\n       |<------------------------------------------------------|\r\n       |                                                       |\r\n       |EAP-Response/SIM/Start                                 |\r\n       |(AT_IDENTITY with a pseudonym identity, AT_NONCE_MT,   |\r\n       | AT_SELECTED_VERSION)                                  |\r\n       |------------------------------------------------------>|\r\n\r\n\r\n(8)  [grammar / articles]\r\n\r\nWithin Section 5.3, the text on top of page 32,\r\n\r\n   If the EAP server supports fast re-authentication, it MAY include the\r\n|  skippable AT_NEXT_REAUTH_ID attribute in the encrypted data of\r\n   EAP-Request/SIM/Challenge message (Section 9.3).  This attribute\r\n   contains a new fast re-authentication identity for the next fast\r\n   re-authentication.  The attribute also works as a capability flag\r\n|  that, indicating that the server supports fast re-authentication, and\r\n   that the server wants to continue using fast re-authentication within\r\n   the current context.  The peer MAY ignore this attribute, in which\r\n   case it MUST use full authentication next time.  If the peer wants to\r\n   use re-authentication, it uses this fast re-authentication identity\r\n|  on next authentication.  Even if the peer has a fast\r\n   re-authentication identity, [...]\r\n\r\nshould say:\r\n\r\n   If the EAP server supports fast re-authentication, it MAY include the\r\n|  skippable AT_NEXT_REAUTH_ID attribute in the encrypted data of the\r\n   EAP-Request/SIM/Challenge message (Section 9.3).  This attribute\r\n   contains a new fast re-authentication identity for the next fast\r\n   re-authentication.  The attribute also works as a capability flag,\r\n|  indicating that the server supports fast re-authentication, and\r\n   that the server wants to continue using fast re-authentication within\r\n   the current context.  The peer MAY ignore this attribute, in which\r\n   case it MUST use full authentication next time.  If the peer wants to\r\n   use re-authentication, it uses this fast re-authentication identity\r\n|  on the next authentication.  Even if the peer has a fast\r\n   re-authentication identity, [...]\r\n\r\n\r\n(9)  [misleading continuation indicator, again]\r\n\r\nRepetition of the issue described in item (7) above:\r\n\r\nIn Section 5.4, in Figure 8 (on page 35), the 4 lines:\r\n\r\n       :                                                       :\r\n       :                                                       :\r\n       :                                                       :\r\n       :                                                       :\r\n\r\nshould be deleted, because these might erroneously be misunderstood\r\nas indicating the omission of some protocol steps.\r\n\r\n\r\n(10)  [missing article]\r\n\r\nIn Section 7, the paragraph at the bottom of page 43 says:\r\n\r\n   The notation n*Kc in the formula above denotes the n Kc values\r\n   concatenated.  The Kc keys are used in the same order as the RAND\r\n|  challenges in AT_RAND attribute.  NONCE_MT denotes the NONCE_MT value\r\n   (not the AT_NONCE_MT attribute, but only the nonce value).  The\r\n   Version List includes the 2-byte-supported version numbers from\r\n   AT_VERSION_LIST, in the same order as in the attribute.  [...]\r\n\r\nIt should say:\r\n\r\n   The notation n*Kc in the formula above denotes the n Kc values\r\n   concatenated.  The Kc keys are used in the same order as the RAND\r\n|  challenges in the AT_RAND attribute.  NONCE_MT denotes the NONCE_MT\r\n   value (not the AT_NONCE_MT attribute, but only the nonce value).\r\n   The Version List includes the 2-byte-supported version numbers from\r\n   AT_VERSION_LIST, in the same order as in the attribute.  [...]\r\n",
+    "correct_text": "",
+    "notes": "from pending",
+    "submit_date": "2006-11-26",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 99,
+    "verifier_name": "Henry Haverinen",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1576,
+    "doc-id": "RFC4186",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 6.1,
+    "orig_text": "Within this section, the 3rd paragraph on page 38 says:\r\n\r\n   The receipt of a notification code with the S bit set to one (values\r\n|  32768...65536) does not imply failure.  Notification code \"Success\"\r\n   (32768) has been reserved as a general notification code to indicate\r\n   successful authentication.\r\n\r\n",
+    "correct_text": "   The receipt of a notification code with the S bit set to one (values\r\n|  32768...65535) does not imply failure.  Notification code \"Success\"\r\n   (32768) has been reserved as a general notification code to indicate\r\n   successful authentication.\r\n",
+    "notes": "Within this section, 2nd paragraph on page 38, values start from 0, so they end at 65535 (2^16 - 1).",
+    "submit_date": "2008-10-16",
+    "submitter_name": "Guy Lespade",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
