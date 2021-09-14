@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4099,
+    "doc-id": "RFC5531",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "This document describes the Open Network Computing (ONC) Remote\r\nProcedure Call (RPC) version 2 protocol as it is currently deployed\r\nand accepted.",
+    "correct_text": null,
+    "notes": "The document doesn't describe UDP and TCP port number 111, which is used to make initial connection for RCP services discovery and port mapping. Port mapping is an essential part of protocol without which ONC RPC services can't work.\r\n\r\nRFC doesn't describe 111 is hardcoded number or can be changed. Doesn't say that servers typically listen on both UDP and TCP 111 (Linux nfs-kernel-server).\r\n --VERIFIER NOTES-- \r\nThis RFC is solely describing the RPC protocol and not the underlying transport that might be used. ",
+    "submit_date": "2014-09-05",
+    "submitter_name": "anatoly techtonik",
+    "verifier_id": 2,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4849,
+    "doc-id": "RFC5531",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99Appendix C says:",
+    "orig_text": "   RPCSEC_GSS      6               /* GSS-based RPC security for auth,\r\n                                      integrity and privacy, RPC 5403 */",
+    "correct_text": "   RPCSEC_GSS      6               /* GSS-based RPC security for auth,\r\n                                      integrity and privacy, RFC 5403 */",
+    "notes": "\"RPC 5403\" should be \"RFC 5403\".",
+    "submit_date": "2016-10-31",
+    "submitter_name": "RFC Editor",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6255,
+    "doc-id": "RFC5531",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 9,
+    "orig_text": "         union reply_body switch (reply_stat stat) {\r\n         case MSG_ACCEPTED:\r\n            accepted_reply areply;\r\n         case MSG_DENIED:\r\n            rejected_reply rreply;\r\n         } reply;",
+    "correct_text": "         union reply_body switch (reply_stat stat) {\r\n         case MSG_ACCEPTED:\r\n            accepted_reply areply;\r\n         case MSG_DENIED:\r\n            rejected_reply rreply;\r\n         };",
+    "notes": "The XDR grammar doesn't allow stating this:\r\n\r\nunion type_name switch (...) { ...} member_name;\r\n\r\nYou only have these two forms:\r\n\r\nunion type_name switch (...) { ...};\r\nunion switch (...) { ...} member_name;",
+    "submit_date": "2020-08-12",
+    "submitter_name": "Ed Schouten",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
