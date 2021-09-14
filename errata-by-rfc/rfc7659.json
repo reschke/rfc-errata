@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5705,
+    "doc-id": "RFC7659",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "This notification is triggered when an address pool's usage\r\nbecomes less than or equal to the value of the\r\nnatv2PoolThresholdUsageLow object for that pool, unless the\r\nnotification has been disabled by setting the value of the\r\nthreshold to -1.  It is reported subject to the rate\r\nlimitation specified by natv2PortMapNotificationInterval.",
+    "correct_text": "This notification is triggered when an address pool's usage\r\nbecomes less than or equal to the value of the\r\nnatv2PoolThresholdUsageLow object for that pool, unless the\r\nnotification has been disabled by setting the value of the\r\nthreshold to -1.  It is reported subject to the rate\r\nlimitation specified by natv2PoolNotificationInterval.",
+    "notes": "Description is pointing on nonexistent object natv2PortMapNotificationInterval. It should be natv2PoolNotificationInterval.",
+    "submit_date": "2019-04-25",
+    "submitter_name": "Igor Ryzhov",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5706,
+    "doc-id": "RFC7659",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "This notification is triggered when an address pool's usage\r\nbecomes greater than or equal to the value of the\r\nnatv2PoolThresholdUsageHigh object for that pool, unless\r\nthe notification has been disabled by setting the value of\r\nthe threshold to -1.  It is reported subject to the rate\r\nlimitation specified by natv2PortMapNotificationInterval.",
+    "correct_text": "This notification is triggered when an address pool's usage\r\nbecomes greater than or equal to the value of the\r\nnatv2PoolThresholdUsageHigh object for that pool, unless\r\nthe notification has been disabled by setting the value of\r\nthe threshold to -1.  It is reported subject to the rate\r\nlimitation specified by natv2PoolNotificationInterval.",
+    "notes": "Description is pointing on nonexistent object natv2PortMapNotificationInterval. It should be natv2PoolNotificationInterval.",
+    "submit_date": "2019-04-25",
+    "submitter_name": "Igor Ryzhov",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
