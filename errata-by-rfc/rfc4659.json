@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4087,
+    "doc-id": "RFC4659",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "No \"updates\" metadata reference to update RFC4364",
+    "correct_text": "This document updates RFC4364 (and associated metadata links)",
+    "notes": "RFC4659 provides an extension to the standard defined in RFC4364 to add IPv6 support to a standard that was originally IPv4-only. This metadata link will make it clearer for implementers that both standards are necessary for a full implementation.\n --VERIFIER NOTES-- \nConsidering the definition of \"updates\", the normal terms of an errata report, and the discussion on the Bess mailing list I am rejecting this. \r\n\r\nThis should not be construed as meaning that IPv6 support is not critically important: BGP/MPLS VPNs should, of course, be fully functional in IPv6 networks.",
+    "submit_date": "2014-08-18",
+    "submitter_name": "Wesley George",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
