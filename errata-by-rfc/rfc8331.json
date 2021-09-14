@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5310,
+    "doc-id": "RFC8331",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2, Figure 1",
+    "orig_text": "Data_Count=0x84\r\n\r\nData_Count=0x105",
+    "correct_text": "Data_Count=0x104\r\n\r\nData_Count=0x205",
+    "notes": "In the example described in section 2, the first ANC packet is said to have 4 User_Data_Words, and the second packet is said to have 5 User_Data_Words.  The values in Figure 1 for the Data_Count fields do not have the correct parity bits according to the definition of Data_Count described in section 2.1.\r\n\r\n4 = 0b0000'0100, with parity bits 0b01'0000'0100 = 0x104\r\n\r\n5 = 0b0000'0101, with parity bits 0b10'0000'0101 = 0x205",
+    "submit_date": "2018-03-28",
+    "submitter_name": "Anthony Malizia",
+    "verifier_id": 2,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
