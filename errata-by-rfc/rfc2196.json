@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 482,
+    "doc-id": "RFC2196",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "99On page 21, it says:",
+    "orig_text": "A firewall is any one of several mechanisms used to control and watch\r\naccess to and from a network for the purpose of protecting it.  A\r\nfirewall acts as a gateway through which all traffic to and from the\r\nprotected network and/or systems passes.  Firewalls help to place\r\nlimitations on the amount and type of communication that takes place\r\nbetween the protected network and the another network (e.g., the\r\nInternet, or another piece of the site's network).",
+    "correct_text": "A firewall is any one of several mechanisms used to control and watch\r\naccess to and from a network for the purpose of protecting it.  A\r\nfirewall acts as a gateway through which all traffic to and from the\r\nprotected network and/or systems passes.  Firewalls help to place\r\nlimitations on the amount and type of communication that takes place\r\nbetween the protected network and another network (e.g., the\r\nInternet, or another piece of the site's network).",
+    "notes": "removed extraneous \"the\".",
+    "submit_date": "2004-10-13",
+    "submitter_name": "IETF Secretariat",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2167,
+    "doc-id": "RFC2196",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2.3.6",
+    "orig_text": "   Some sites choose to co-locate FTP with a Web\r\n   server, since the two protocols share common security considerations\r\n   However, the the practice isn't recommended, especially when the FTP\r\n   service allows the deposit of files (see section on WWW above). \r\n",
+    "correct_text": "   Some sites choose to co-locate FTP with a Web\r\n   server, since the two protocols share common security considerations.\r\n   However, this practice isn't recommended, especially when the FTP\r\n   service allows the deposit of files (see section on WWW above).\r\n",
+    "notes": "added a period after \"considerations\".",
+    "submit_date": "2010-04-21",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2674,
+    "doc-id": "RFC2196",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.1",
+    "orig_text": "   The plan should also address how incident will be handled.  Chapter 5\r\n   provides an in-depth discussion of this topic, but it is important\r\n   for each site to define classes of incidents and corresponding\r\n   responses.  For example, sites with firewalls should set a threshold\r\n   on the number of attempts made to foil the firewall before triggering\r\n   a response?  Escallation levels should be defined for both attacks\r\n   and responses.  Sites without firewalls will have to determine if a\r\n   single attempt to connect to a host constitutes an incident? What\r\n   about a systematic scan of systems?\r\n",
+    "correct_text": "   The plan should also address how incident will be handled.  Chapter 5\r\n   provides an in-depth discussion of this topic, but it is important\r\n   for each site to define classes of incidents and corresponding\r\n   responses.  For example, sites with firewalls should set a threshold\r\n   on the number of attempts made to foil the firewall before triggering\r\n   a response?  Escalation levels should be defined for both attacks\r\n   and responses.  Sites without firewalls will have to determine if a\r\n   single attempt to connect to a host constitutes an incident? What\r\n   about a systematic scan of systems?\r\n",
+    "notes": "Escallation -> Escalation",
+    "submit_date": "2010-12-19",
+    "submitter_name": "Alexandre Dulaunoy",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
