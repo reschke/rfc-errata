@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1708,
+    "doc-id": "RFC2598",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "A.3.1",
+    "orig_text": "   We chose these two since they\"re the best and worst cases,\r\n   respectively, for jitter and we wanted to supply rough guidelines for\r\n   EF implementers choosing to use WRR or similar mechanisms.\r\n",
+    "correct_text": "   We chose these two since they're the worst and best cases,\r\n   respectively, for jitter and we wanted to supply rough guidelines for\r\n   EF implementers choosing to use WRR or similar mechanisms.\r\n",
+    "notes": "Fix double-quotes to apostrophe and note order of \"best\" and \"worst\"",
+    "submit_date": "2009-03-06",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 129,
+    "verifier_name": "Wes Eddy",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
