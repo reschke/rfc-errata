@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4561,
+    "doc-id": "RFC7568",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "Since it was released in 1996, the SSLv3 protocol [RFC6101] has been\r\n   subject to a long series of attacks, both on its key exchange\r\n   mechanism and on the encryption schemes it supports.  Despite being\r\n   replaced by TLS 1.0 [RFC2246] in 1999, and subsequently TLS 1.1 in\r\n   2002 [RFC4346] and 1.2 in 2006 [RFC5246], availability of these\r\n   replacement versions has not been universal.  As a result, many\r\n   implementations of TLS have permitted the negotiation of SSLv3.\r\n\r\n   The predecessor of SSLv3, SSL version 2, is no longer considered\r\n   sufficiently secure [RFC6176].  SSLv3 now follows.",
+    "correct_text": "Since it was released in 1996, the SSLv3 protocol [RFC6101] has been\r\n   subject to a long series of attacks, both on its key exchange\r\n   mechanism and on the encryption schemes it supports.  Despite being\r\n   replaced by TLS 1.0 [RFC2246] in 1999, and subsequently TLS 1.1 in\r\n   2006 [RFC4346] and 1.2 in 2008 [RFC5246], availability of these\r\n   replacement versions has not been universal.  As a result, many\r\n   implementations of TLS have permitted the negotiation of SSLv3.\r\n\r\n   The predecessor of SSLv3, SSL version 2, is no longer considered\r\n   sufficiently secure [RFC6176].  SSLv3 now follows.",
+    "notes": "TLS 1.1 was first drafted in 2002, but not published until 2006. Similarly, TLS 1.2 was drafted in 2006, but not published until 2008.",
+    "submit_date": "2015-12-08",
+    "submitter_name": "Richard Petrie",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
