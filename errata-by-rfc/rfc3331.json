@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1425,
+    "doc-id": "RFC3331",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.3.4.1,p.53",
+    "orig_text": "a)\r\n|     The SDT Identifier is a 32-bit unsigned value which may only be\r\n      significant to 12 or 14 bits depending on the SS7 variant which is\r\n      supported by the MTP Level 3 at the ASP.  Insignificant SDT\r\n      Identifier bits are coded 0.\r\n\r\nb)\r\n|     The SDL Identifier is a 32-bit unsigned value which may only be\r\n      significant to 12 or 14 bits depending on the SS7 variant which\r\n      is supported by the MTP Level 3 at the ASP.  Insignificant SDLI\r\n      bits are coded 0.\r\n",
+    "correct_text": "a)\r\n|     The SDT Identifier is a 16-bit unsigned value which may only be\r\n      significant to 12 or 14 bits depending on the SS7 variant which is\r\n      supported by the MTP Level 3 at the ASP.  Insignificant SDT\r\n      Identifier bits are coded 0.\r\n\r\nb)\r\n|     The SDL Identifier is a 16-bit unsigned value which may only be\r\n      significant to 12 or 14 bits depending on the SS7 variant which\r\n      is supported by the MTP Level 3 at the ASP.  Insignificant SDLI\r\n      bits are coded 0.\r\n",
+    "notes": "In both cases, the field width \"32-bit\" in the text does not match\r\nthe parameter breakdown in the immediately preceding artwork.\r\nThe above corrections are based on the assumption that the figures\r\nare correct and the text is in error.",
+    "submit_date": "2008-05-16",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1426,
+    "doc-id": "RFC3331",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.3.2.6,p.35",
+    "orig_text": "   The sending node defines the Heartbeat Data field contents.  It may\r\n   include a Heartbeat Sequence Number and/or time stamp, or other\r\n   implementation specific details.\r\n\r\n   The receiver of a Heartbeat message does not process this field as it\r\n   is only of significance to the sender.  The receiver echoes the\r\n   content of the Heartbeat Data in a BEAT ACK message.\r\n",
+    "correct_text": "   The receiver of a Heartbeat message echoes the content of the\r\n   Heartbeat Data field contained therein without further processing\r\n   in the Heartbeat Data field of the Heartbeat Ack message.\r\n",
+    "notes": "Apparently, the quoted text has been copied from 3.3.2.5 without\r\nperforming the appropriate rewording to accommodate the context\r\nof 3.3.2.6 (BEAT ACK message).",
+    "submit_date": "2008-05-16",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
