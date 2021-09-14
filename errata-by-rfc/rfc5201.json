@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1799,
+    "doc-id": "RFC5201",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5.2.",
+    "orig_text": "   Parameters numbered between 1024-2047 are reserved.  Parameters\r\n   numbered between 2048-4095 are used for parameters related to HIP\r\n   transform types.  Parameters numbered between 4096 and (2^16 - 2^12)\r\n   61439 are reserved.  Parameters numbered between 61440-62463 are used\r\n   for signatures and signed MACs.  Parameters numbered between 62464-\r\n   63487 are used for parameters that fall outside of the signed area of\r\n   the packet.  Parameters numbered between 63488-64511 are used for\r\n   rendezvous and other relaying services.  Parameters numbered between\r\n   64512-65535 are reserved.",
+    "correct_text": "(for the correct values, see: http://www.iana.org/assignments/hip-parameters/hip-parameters.xhtml#hip-parameters-3)",
+    "notes": "The parameter number ranges are not in sync with the actual IANA assignments.",
+    "submit_date": "2009-06-30",
+    "submitter_name": "Ari Keränen",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4319,
+    "doc-id": "RFC5201",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   HIP implementations MUST support the Rivest Shamir Adelman (RSA/SHA1)\r\n",
+    "correct_text": "   HIP implementations MUST support the Rivest Shamir Adleman (RSA/SHA1)\r\n",
+    "notes": "Misspelling of one of the inventors' names.",
+    "submit_date": "2015-03-31",
+    "submitter_name": "Paul Hoffman",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
