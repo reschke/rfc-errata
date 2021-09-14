@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3978,
+    "doc-id": "RFC3516",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.3,
+    "orig_text": "If the domain of the decoded data is \"8bit\" and the data does\r\nnot contain the NUL octet, the server SHOULD return the data in\r\na <string> instead of a <literal8>; this allows the client to\r\ndetermine if the \"8bit\" data contains the NUL octet without\r\nhaving to explicitly scan the data stream for for NULs.",
+    "correct_text": "If the domain of the decoded data is \"8bit\" and the data does\r\nnot contain the NUL octet, the server SHOULD return the data in\r\na <string> instead of a <literal8>; this allows the client to\r\ndetermine if the \"8bit\" data contains the NUL octet without\r\nhaving to explicitly scan the data stream for NULs.",
+    "notes": "Typo: duplication of \"for\".",
+    "submit_date": "2014-04-29",
+    "submitter_name": "Michael Slusarz",
+    "verifier_id": 126,
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
