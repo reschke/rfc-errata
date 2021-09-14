@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 1512,
+    "doc-id": "RFC5337",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Heading",
+    "orig_text": "Updates: 3461, 3464, 3798",
+    "correct_text": "Updates: 3461, 3462, 3464, 3798",
+    "notes": "Within Section 4, the text in the RFC on page 8 clearly updates the\r\ndefinition of the multipart/report media type defined in RFC 3642.\r\nThis should be made visible in the front matter and the metadata\r\nof the RFC.",
+    "submit_date": "2008-09-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 101,
+    "verifier_name": "Lisa Dusseault",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1513,
+    "doc-id": "RFC5337",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4, pg.7",
+    "orig_text": "|  text-fixed = %d1-9 /      ; Any Unicode character except for NUL,\r\n|              %d11 /       ; CR and LF, encoded in UTF-8\r\n               %d12 /\r\n               %d14-127\r\n     ; Same as <text> from [RFC2822], but without <obs-text>.\r\n     ; If/when RFC 2822 is updated to disallow <obs-text>,\r\n     ; this should become just <text>\r\n     ; Also, if/when RFC 2822 is updated to disallow control characters\r\n     ; this should become a reference to RFC 2822upd instead.\r\n\r\n   utf8-text = text-fixed / UTF8-non-ascii",
+    "correct_text": "|  text-fixed = %d1-9 /     ; Any US-ASCII character except for NUL,\r\n|               %d11 /      ; CR and LF\r\n                %d12 /\r\n                %d14-127\r\n     ; Same as <text> from [RFC2822], but without <obs-text>.\r\n     ; If/when RFC 2822 is updated to disallow <obs-text>,\r\n     ; this should become just <text>\r\n     ; Also, if/when RFC 2822 is updated to disallow control characters\r\n     ; this should become a reference to RFC 2822upd instead.\r\n\r\n   utf8-text = text-fixed / UTF8-non-ascii",
+    "notes": "The long comment as well as the subsequent definition of\r\n<utf8-text> shows that the inline comment in the first two\r\nlines must be in error.\r\nThe replacement inline comment is the translation of the\r\nABNF (assumed to be correct) to english text.",
+    "submit_date": "2008-09-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1514,
+    "doc-id": "RFC5337",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4, pg. 8",
+    "orig_text": "a)\r\n    MIME type                 [[one instance]], and\r\n\r\nb)\r\n    MIME types                [[two instances]]",
+    "correct_text": "a)\r\n    media type  \r\n\r\nb)\r\n    media types   ",
+    "notes": "Correct usage of established IETF terminology;\r\nsee RFC 4288 (et al.) for rationale.",
+    "submit_date": "2008-09-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1515,
+    "doc-id": "RFC5337",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5, 3rd para",
+    "orig_text": "   The MDN specification also defines the Disposition-Notification-To\r\n|  header, which is an address header and thus follows the same 8-bit\r\n|  rules as other address headers such as \"From\" and \"To\" when used in a\r\n   UTF-8 header message.",
+    "correct_text": "   The MDN specification also defines the Disposition-Notification-To\r\n|  header field, which is an address header field and thus follows the\r\n|  same 8-bit rules as other address header fields such as \"From\" and\r\n   \"To\" when used in a UTF-8 header message.",
+    "notes": "Long-standing terminology established in the IEFT should be applied\r\nin this paragraph as well, making the precise distinction between a\r\n\"header\" and the \"header fields\" it it comprised of (other parts of \r\nthe document already do it the right way).",
+    "submit_date": "2008-09-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
