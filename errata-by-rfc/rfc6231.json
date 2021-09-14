@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 3151,
+    "doc-id": "RFC6231",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4.5,
+    "orig_text": "   | 433  | Unsupported   | request contains      |                    |\r\n   |      | collect and   | <collect> and         |                    |\r\n   |      | record        | <record> elements and |                    |\r\n   |      | capability    | the MS does support   |                    |\r\n   |      |               | these operations      |                    |\r\n   |      |               | simultaneously.       |                    |\r\n",
+    "correct_text": "   | 433  | Unsupported   | request contains      |                    |\r\n   |      | collect and   | <collect> and         |                    |\r\n   |      | record        | <record> elements and |                    |\r\n   |      | capability    | the MS does not       |                    |\r\n   |      |               | support these         |                    |\r\n   |      |               | operations            |                    |\r\n   |      |               | simultaneously.       |                    |\r\n",
+    "notes": "Typo discovered in 6231-iana draft. Need anti-sense of description.",
+    "submit_date": "2012-03-07",
+    "submitter_name": "Eric Burger",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
