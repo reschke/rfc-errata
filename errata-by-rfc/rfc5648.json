@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1904,
+    "doc-id": "RFC5648",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "6.2, pg.25",
+    "orig_text": "a)\r\nIn Section 4.3, the description of the 'Care-of Address' field\r\nin the Binding Identifier Mobility Option specifies:\r\n\r\n   Care-of Address\r\n\r\n      If a Binding Identifier mobility option is included in a Binding\r\n      Update for the home registration, either IPv4 or IPv6 care-of\r\n      addresses for the corresponding BID can be stored in this field.\r\n      For the binding registration to correspondent nodes (i.e., route\r\n      optimization), only IPv6 care-of addresses can be stored in this\r\n      field.  If no address is specified in this field, the length of\r\n!     this field MUST be zero (i.e., not appear in the option).  If the\r\n!     option is included in any messages other than a Binding Update,\r\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n!     the length of this field MUST also be zero.\r\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nb)\r\nContrary to the \"MUST\" in the last line, Section 6.2 of the RFC says,\r\non mid-page 25, where it elaborates on Binding Acknowledgement messages:\r\n\r\n   If all the above operations are successfully completed and the 'A'\r\n   flag is set in the Binding Update, a Binding Acknowledgement\r\n   containing the Binding Identifier mobility options MUST be sent to\r\n!  the mobile node.  Whenever a Binding Acknowledgement is sent, all the\r\n                                ^^^^^^^^^^^^^^^^^^^^^^^\r\n!  Binding Identifier mobility options stored in the Binding Update MUST\r\n!  be copied to the Binding Acknowledgement except the Status field.\r\n!  The Care-of Address field in each Binding Identifier mobility option,\r\n|  however, MAY be omitted, because the mobile node can match a\r\n            ^^^\r\n!  corresponding Binding Update List entry using the BID.\r\n\r\n\r\n",
+    "correct_text": "a)\r\n<< no change >>\r\n\r\nb)\r\n   If all the above operations are successfully completed and the 'A'\r\n   flag is set in the Binding Update, a Binding Acknowledgement\r\n   containing the Binding Identifier mobility options MUST be sent to\r\n   the mobile node.  Whenever a Binding Acknowledgement is sent, all the\r\n   Binding Identifier mobility options stored in the Binding Update MUST\r\n   be copied to the Binding Acknowledgement except the Status field.\r\n   The Care-of Address field in each Binding Identifier mobility option,\r\n|  however, MUST be omitted, because the mobile node can match a\r\n   corresponding Binding Update List entry using the BID.\r\n",
+    "notes": "Rationale:\r\n  The inconsistency is described with the Original Text.\r\n  The Corrected Text proposed gives preference to the requirement\r\n  from Section 4.3, which seems to be reasonable for efficiency\r\n  and consistent with other parts of the specification.",
+    "submit_date": "2009-10-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
