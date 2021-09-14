@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5418,
+    "doc-id": "RFC8398",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "   This non-normative example demonstrates using SmtpUTF8Mailbox as an\r\n   otherName in GeneralName to encode the email address\r\n   \"u+8001u+5E2B@example.com\".\r\n\r\n      The hexadecimal DER encoding of the email address is:\r\n      A022060A 2B060105 05070012 0809A014 0C12E880 81E5B8AB 40657861\r\n      6D706C65 2E636F6D\r\n\r\n      The text decoding is:\r\n        0  34: [0] {\r\n        2  10:   OBJECT IDENTIFIER '1 3 6 1 5 5 7 0 18 8 9'\r\n       14  20:   [0] {\r\n       16  18:     UTF8String '..@example.com'\r\n             :     }\r\n             :   }\r\n\r\n                                 Figure 2\r\n\r\n   The example was encoded on the OSS Nokalva ASN.1 Playground and the\r\n   above text decoding is an output of Peter Gutmann's \"dumpasn1\"\r\n   program.\r\n",
+    "correct_text": "   This non-normative example demonstrates using SmtpUTF8Mailbox as an\r\n   otherName in GeneralName to encode the email address\r\n   \"u+533Bu+751F@u+5927u+5B66.example.com\".\r\n\r\n   The hexadecimal DER encoding of the block is:\r\n   a0330608 2b060105 05070809 a0270c25 c3a5c28c c2bbc3a7 c294c29f \r\n   40c3a5c2 a4c2a7c3 a5c2adc2 a62e6578 616d706c 652e636f 6d\r\n\r\n\r\n   The text decoding is:\r\n     2  51: [0] {\r\n     4   8:   OBJECT IDENTIFIER '1 3 6 1 5 5 7 8 9'\r\n    14  39:   [0] {\r\n    16  37:     UTF8String '..@...example.com'\r\n          :     }\r\n          :   }\r\n\r\n                                 Figure 2\r\n\r\n   The example was encoded on the OSS Nokalva ASN.1 Playground and the\r\n   above text decoding is an output of Peter Gutmann's \"dumpasn1\"\r\n   program.",
+    "notes": "The OID used in Appendix B does not match the OID for id-on-SmtpUTF8Mailbox defined in \"Appendix A.  ASN.1 Module\" and is not mentioned anywhere in the RFC.",
+    "submit_date": "2018-07-11",
+    "submitter_name": "Belyavskiy Dmitry",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
