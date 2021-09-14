@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1539,
+    "doc-id": "RFC5301",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "2, pg.3",
+    "orig_text": "                         [...].  Another possible drawback might be the\r\n   added complexity of DNS.  Also, some DNS implementations might not\r\n|  support A and PTR records for Connection Network Service (CLNS)\r\n   Network Service Access Points (NSAPs).\r\n",
+    "correct_text": "                         [...].  Another possible drawback might be the\r\n   added complexity of DNS.  Also, some DNS implementations might not\r\n|  support A and PTR records for Connectionless-mode Network Service (CLNS)\r\n   Network Service Access Points (NSAPs).\r\n",
+    "notes": "Location is 2nd paragraph of Section 2, on top of page 3.\r\n\r\nRationale: Align with correct term in ISO/IEC 8348 clause 7",
+    "submit_date": "2008-10-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1540,
+    "doc-id": "RFC5301",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "7, pg.4",
+    "orig_text": "   This document specifies TLV 137, \"Dynamic Name\".  This TLV has\r\n|  already been allocated and reserved [RFC2763].  As such, no new\r\n|  actions are required on the part of IANA.\r\n",
+    "correct_text": "   This document specifies TLV 137, \"Dynamic Name\".  This TLV has\r\n|  already been allocated and reserved [RFC2763].  IANA has updated\r\n|  the registry to reference this document for TLV 137.\r\n",
+    "notes": "Rationale:\r\nRFC 5226, section 5.2 lists references in IANA Registries\r\nas subject to maintenance, and hence to be covered by IANA\r\nConsiderations sections in I-Ds / RFCs.  Hence, re-parenting\r\nof registrations should be explicitely mentioned there, in\r\norder to avoid registries to become outdated/incomplete\r\nover time, as has happened repeatedly in the past.\r\n\r\nFortunately, in this case IANA has operated intelligently\r\nand updated the Ref. in the registry without being requested\r\nexplicitely.  Thanks to IANA!\r\n\r\nNevertheless, I suggest to document this issue in an Errata Note\r\nin order to remind future authors of the possible drawbacks of\r\nnot including update instructions for already existing registrations\r\nin their IANA Considerations.\n --VERIFIER NOTES-- \n   This errata provided no additional information needed by an implementer of RFC5301.",
+    "submit_date": "2008-10-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
