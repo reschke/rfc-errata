@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3778,
+    "doc-id": "RFC4456",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "The Non-Client peer must be fully meshed but the Client\r\n   peers need not be fully meshed.",
+    "correct_text": "The Non-Client peers must be fully meshed but the Client\r\n   peers need not be fully meshed.",
+    "notes": "This is a typo. Figure 4 shows multiple Non-Client peers.\r\nBut the text is referring to \"The Non-Client peer\". It should be\r\n\"The Non-Client peers\".",
+    "submit_date": "2013-10-30",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3898,
+    "doc-id": "RFC4456",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "ORIGINATOR_ID\r\n\r\n   ORIGINATOR_ID is a new optional, non-transitive BGP attribute of Type\r\n   code 9.  This attribute is 4 bytes long and it will be created by an\r\n   RR in reflecting a route.  This attribute will carry the BGP\r\n   Identifier of the originator of the route in the local AS.  A BGP\r\n   speaker SHOULD NOT create an ORIGINATOR_ID attribute if one already\r\n   exists.  A router that recognizes the ORIGINATOR_ID attribute SHOULD\r\n   ignore a route received with its BGP Identifier as the ORIGINATOR_ID.\r\n\r\n\r\nCLUSTER_LIST\r\n\r\n   CLUSTER_LIST is a new, optional, non-transitive BGP attribute of Type\r\n   code 10.  It is a sequence of CLUSTER_ID values representing the\r\n   reflection path that the route has passed.\r\n\r\n   When an RR reflects a route, it MUST prepend the local CLUSTER_ID to\r\n   the CLUSTER_LIST.  If the CLUSTER_LIST is empty, it MUST create a new\r\n   one.  Using this attribute an RR can identify if the routing\r\n   information has looped back to the same cluster due to\r\n   misconfiguration.  If the local CLUSTER_ID is found in the\r\n   CLUSTER_LIST, the advertisement received SHOULD be ignored.\r\n",
+    "correct_text": null,
+    "notes": "Although the guideline exists for the \"egress\" reflected routes (RR should create ORIGINATOR_ID if none exists, prepend its own ClusterId in CLUSTER_LIST), there is no guideline on how the routes received from iBGP peers be treated if \"only one\" attribute (ORIGINATOR_ID or CLUSTER_LIST) is present. \r\nShould such routes be dropped (Considering them as a malformed routes ?)\n --VERIFIER NOTES-- \nThis is a question that should be addressed to the IDR WG.\r\n\r\nAny new guideline that results should be considered for publication in an RFC. Technical changes of the type requested are outside the scope of the Errata process.",
+    "submit_date": "2014-02-23",
+    "submitter_name": "Gunjan Bansal",
+    "verifier_id": 122,
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
