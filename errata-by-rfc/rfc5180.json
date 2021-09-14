@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1752,
+    "doc-id": "RFC5180",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "The IANA has allocated 2001:0200::/48 for IPv6 benchmarking, which\r\nis a 48-bit prefix from the RFC 4773 pool.",
+    "correct_text": "The IANA has assigned 2001:0002::/48 for IPv6 benchmarking, which\r\nis a 48-bit prefix from the RFC 4773 pool.",
+    "notes": "There was an error in the assigned prefix.  This should have been 2001:0002::/48.  The previous prefix is actually NOT part of the RFC 4773 pool.",
+    "submit_date": "2009-04-02",
+    "submitter_name": "Michelle Cotton",
+    "verifier_id": 2,
+    "verifier_name": "Ron Bonica",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3953,
+    "doc-id": "RFC5180",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "Nevertheless, for each evaluated device, it\r\nis recommended to perform as many of the applicable tests described\r\nin Section 6 as possible.\r\n",
+    "correct_text": "Nevertheless, for each evaluated device, it\r\nis recommended to perform as many of the applicable tests described\r\nin Section 7 as possible.",
+    "notes": null,
+    "submit_date": "2014-04-07",
+    "submitter_name": "Fernando Gont",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
