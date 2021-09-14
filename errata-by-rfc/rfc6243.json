@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4687,
+    "doc-id": "RFC6243",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "A.1",
+    "orig_text": "     typedef status-type {\r\n        description \"Interface status\";\r\n        type enumeration {\r\n          enum ok;\r\n          enum 'waking up';\r\n          enum 'not feeling so good';\r\n          enum 'better check it out';\r\n          enum 'better call for help';\r\n        }\r\n        default ok;\r\n     }\r\n",
+    "correct_text": "     typedef status-type {\r\n        description \"Interface status\";\r\n        type enumeration {\r\n          enum up;\r\n          enum 'waking up';\r\n          enum 'not feeling so good';\r\n          enum 'better check it out';\r\n          enum 'better call for help';\r\n        }\r\n        default up;\r\n     }\r\n",
+    "notes": "The examples in appendix A use the value 'up' and not the value 'ok'.",
+    "submit_date": "2016-05-08",
+    "submitter_name": "Muly Ilan",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4688,
+    "doc-id": "RFC6243",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.5.2",
+    "orig_text": "   If the operation attribute contains the value 'create', and the data\r\n   node already exists in the target configuration datastore, then the\r\n   server MUST return an <rpc-error> response with an 'invalid-value'\r\n   error-tag.",
+    "correct_text": "   If the operation attribute contains the value 'create', and the data\r\n   node already exists in the target configuration datastore, then the\r\n   server MUST return an <rpc-error> response with an 'data-exists'\r\n   error-tag.",
+    "notes": "According to RFC6241 section 7.2 the behavior for the 'create' operation is: \" If the configuration data exists, an <rpc-error> element is returned with an <error-tag> value of \"data-exists\". \"",
+    "submit_date": "2016-05-08",
+    "submitter_name": "Muly Ilan",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5289,
+    "doc-id": "RFC6243",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.5.1",
+    "orig_text": "taken from the ’with-defaults-type’ typedef in Section 5.",
+    "correct_text": "taken from the ’with-defaults-mode’ typedef in Section 5.",
+    "notes": "Text reference typedef \"with-defaults-type\" does not exist in Section 5 and even in ietf-netconf-with-defaults.yang\r\nRather it is named typedef “with-defaults-mode”\r\n\r\n[ WK: Verified, with agreement of authors. ]",
+    "submit_date": "2018-03-20",
+    "submitter_name": "Ganesh Sivasankaran",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
