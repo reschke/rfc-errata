@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5646,
+    "doc-id": "RFC6152",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "Naturally, the usual SMTP data-stuffing algorithm applies, so that a\r\ncontent that contains the five-character sequence of\r\n<CR> <LF> <DOT> <CR> <LF>\r\nor a content that begins with the three-character sequence of\r\n<DOT> <CR> <LF>\r\ndoes not prematurely terminate the transfer of the content.",
+    "correct_text": "Naturally, the usual SMTP data-stuffing algorithm applies, so that a\r\ncontent that contains the five-character sequence of\r\n<CR> <LF> <DOT> <CR> <LF>\r\nor a content that begins with the three-character sequence of\r\n<DOT> <CR> <LF>\r\nwould prematurely terminate the transfer of the content.",
+    "notes": "RFC 5321, section 4.5.2: \r\nWithout some provision for data transparency, the character sequence \"<CRLF>.<CRLF>\" ends the mail text and cannot be sent by the user.\n --VERIFIER NOTES-- \n   The text is referring to original, unprocessed text, and is saying that the example strings will \"naturally\" have \"the usual SMTP data stuffing algorithm\" applied to them.  As a result, the existence of these strings in the original data will not terminate the transfer because they will be data-stuffed and will no longer appear as termination strings.\r\n\r\nThe text is correct as written, and the suggested rewrite incorrectly negates the meaning.",
+    "submit_date": "2019-03-04",
+    "submitter_name": "HE Zhixiang",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2021-03-01 09:48:10"
+  }
+]
