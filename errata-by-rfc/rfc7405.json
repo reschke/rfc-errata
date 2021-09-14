@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5334,
+    "doc-id": "RFC7405",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "2.2.  ABNF Definition of ABNF - char-val\r\n\r\n         char-val       =  case-insensitive-string /\r\n                           case-sensitive-string\r\n\r\n         case-insensitive-string =\r\n                           [ \"%i\" ] quoted-string\r\n\r\n         case-sensitive-string =\r\n                           \"%s\" quoted-string\r\n\r\n         quoted-string  =  DQUOTE *(%x20-21 / %x23-7E) DQUOTE\r\n                                ; quoted string of SP and VCHAR\r\n                                ;  without DQUOTE",
+    "correct_text": "2.2.  ABNF Definition of ABNF - char-val\r\n\r\n         char-val       =  case-insensitive-string /\r\n                           case-sensitive-string\r\n\r\n         case-insensitive-string =\r\n                                DQUOTE *(%x20-21 / %x23-7E) DQUOTE\r\n                                ; quoted string of SP and VCHAR\r\n                                ;  without DQUOTE\r\n\r\n         case-sensitive-string  =\r\n                                QUOTE *(%x20-26 / %x28-7E) QUOTE\r\n                                ; quoted string of SP and VCHAR\r\n                                ;  without QUOTE\r\n\r\n         QUOTE       = %x27     ; '",
+    "notes": "Use  \"%s' / '%i' hard to write. In addition to writing more characters, there are the following problems:\r\n\r\n         rule = (%s\"if\" / %s\"elif\") condition (%s\"then\" / LF)\r\n\r\nWhy not use single quotes directly?\r\n\r\n         rule = ('if' / 'elif') condition ('then' / LF)\r\n\r\nEven if single quotation marks cannot be used, the workaround can be complicated:\r\n\r\n         rule = %s( \"if\" / \"elif\" ) condition (%s\"then\" / LF)",
+    "submit_date": "2018-04-25",
+    "submitter_name": "YU HengChun",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
