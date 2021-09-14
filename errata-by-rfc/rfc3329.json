@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2169,
+    "doc-id": "RFC3329",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "The 200 OK response (6) for the INVITE and the ACK (7) are also sent\r\n   over the TLS connection.  The ACK will contain the same Security-\r\n   Verify header field as the INVITE (3).",
+    "correct_text": "The 200 OK response (6) for the INVITE and the ACK (7) are also sent\r\n   over the TLS connection.",
+    "notes": "RFC3329 Section 2.6, Table 1: Summary of Header Usage. indicates that Security-Client, Security-Server, Security-Verify are \"Not applicable\" to the SIP ACK request.\r\n\r\nRFC 3261 says (section 20) \"Not applicable\" means that the header\r\n   field MUST NOT be present in a request.  If one is placed in a\r\n   request by mistake, it MUST be ignored by the UAS receiving the\r\n   request.",
+    "submit_date": "2010-04-23",
+    "submitter_name": "Peter Dawes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2170,
+    "doc-id": "RFC3329",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": "The second INVITE (4) and the ACK (8) contain a Security-Verify\r\n   header field that mirrors the Security-Server header field received\r\n   in the 421.",
+    "correct_text": "The second INVITE (4) contains a Security-Verify\r\n   header field that mirrors the Security-Server header field received\r\n   in the 421.",
+    "notes": "RFC 3329 Section 2.6, Table 1: Summary of Header Usage. indicates that Security-Client, Security-Server, Security-Verify are \"Not applicable\" to the SIP ACK request.\r\n\r\nRFC 3261 says \"Not applicable\" means that the header field MUST NOT be present in a request.  If one is placed in a request by mistake, it MUST be ignored by the UAS receiving the request.\"",
+    "submit_date": "2010-04-23",
+    "submitter_name": "Peter Dawes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3799,
+    "doc-id": "RFC3329",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "spivalue           = 10DIGIT; 0 to 4294967295\r\n",
+    "correct_text": "spivalue           = 1*10DIGIT; 0 to 4294967295\r\n",
+    "notes": "The number string does not have to have 10 digit characters if the number is not 10 digits in length.",
+    "submit_date": "2013-11-13",
+    "submitter_name": "Hadriel Kaplan",
+    "verifier_id": 123,
+    "verifier_name": "Gonzalo Camarillo",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3800,
+    "doc-id": "RFC3329",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "mech-parameters    = ( algorithm / protocol /mode /\r\n                             encrypt-algorithm / spi /\r\n                             port1 / port2 )\r\nencrypt-algorithm  = \"ealg\" EQUAL ( \"des-ede3-cbc\" / \"null\" )\r\nspi                = \"spi\" EQUAL spivalue\r\nport1              = \"port1\" EQUAL port\r\nport2              = \"port2\" EQUAL port\r\n",
+    "correct_text": "mech-parameters    = ( algorithm / protocol /mode /\r\n                             encrypt-algorithm / spi-c / spi-s /\r\n                             port-c / port-s )\r\nencrypt-algorithm  = \"ealg\" EQUAL ( \"des-ede3-cbc\" / \r\n                             \"aes-cbc\" / \"null\" )\r\nspi-c              = \"spi-c\" EQUAL spivalue\r\nspi-s              = \"spi-s\" EQUAL spivalue\r\nport-c             = \"port-c\" EQUAL port\r\nport-s             = \"port-s\" EQUAL port\r\n",
+    "notes": "3GPP 33.203 has different ABNF than the Appendix in this RFC.  Note the \"spi-c\", \"spi-s\", \"port-c\", \"port-s\" parameter names instead of \"spi\", \"port1\", or \"port2\".  And a new algorithm token of \"aes-cbc\" as well.\n --VERIFIER NOTES-- \nThe ABNF changes described here would have required substantial changes to the remainder of Appendix A.  If the reporter wishes to make this update, he should submit an Internet-draft that updates this RFC.",
+    "submit_date": "2013-11-13",
+    "submitter_name": "Hadriel Kaplan",
+    "verifier_id": 136,
+    "verifier_name": "Richard Barnes",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
