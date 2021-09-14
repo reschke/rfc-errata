@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 608,
+    "doc-id": "RFC3958",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 6.5,
+    "orig_text": "iana-registered-protocol  = ALPHA *31ALPHANUM",
+    "correct_text": "Maybe:\r\n\r\niana-registered-protocol  = ALPHA *31ALPHANUM\r\nALPHANUM =  ALPHA / DIGIT",
+    "notes": "The ALPHANUM production is missing from the grammar (and is not in\r\nRFC 4234 either).\r\n\r\nAlexey: this was obsoleted by Erratum # 2106.\r\n\n --VERIFIER NOTES-- \nObsoleted by Erratum # 2106, which fixed this properly.\r\n",
+    "submit_date": "2007-10-17",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2106,
+    "doc-id": "RFC3958",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6.5,
+    "orig_text": "iana-registered-protocol  = ALPHA *31ALPHANUM\r\n",
+    "correct_text": "iana-registered-protocol  = ALPHA *31ALPHANUMSYM\r\n",
+    "notes": "Previous erratum suggested the fix was to add an ALPHANUM production, but the correct fix is to change ALPHANUM to ALPHANUMSYM in this production.",
+    "submit_date": "2010-04-02",
+    "submitter_name": "Leslie Daigle",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4451,
+    "doc-id": "RFC3958",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2.2,
+    "orig_text": "   example.com.\r\n   ;;       order pref flags\r\n   IN NAPTR 100   10   \"\"    \"WP:whois++\"      ( ; service\r\n                             \"\"                  ; regexp\r\n                             bunyip.example.     ; replacement\r\n                                               )\r\n   IN NAPTR 100   20   \"s\"   \"WP:ldap\"         ( ; service\r\n                             \"\"                  ; regexp\r\n                            _ldap._tcp.myldap.example.com. ; replacement\r\n                                               )\r\n   IN NAPTR 200   10   \"\"    \"EM:protA\"        ( ; service\r\n                             \"\"                  ; regexp\r\n                             someisp.example.    ; replacement\r\n                                               )\r\n   IN NAPTR 200   30   \"a\"   \"EM:protB\"          ; service\r\n                             \"\"                  ; regexp\r\n                             myprotB.example.com.; replacement\r\n                                               )\r\n",
+    "correct_text": "   example.com.\r\n   ;;       order pref flags\r\n   IN NAPTR 100   10   \"\"    \"WP:whois++\"      ( ; service\r\n                             \"\"                  ; regexp\r\n                             bunyip.example.     ; replacement\r\n                                               )\r\n   IN NAPTR 100   20   \"s\"   \"WP:ldap\"         ( ; service\r\n                             \"\"                  ; regexp\r\n                            _ldap._tcp.myldap.example.com. ; replacement\r\n                                               )\r\n   IN NAPTR 200   10   \"\"    \"EM:protA\"        ( ; service\r\n                             \"\"                  ; regexp\r\n                             someisp.example.    ; replacement\r\n                                               )\r\n   IN NAPTR 200   30   \"a\"   \"EM:protB\"        ( ; service\r\n                             \"\"                  ; regexp\r\n                             myprotB.example.com.; replacement\r\n                                               )\r\n",
+    "notes": "Not so familiar with BIND syntax, but by appearance, the last entry seems to be missing a beginning parenthesis. There is another similar omission in section 4.2 (thinkingcat.example definition, this time missing an ending parenthesis).",
+    "submit_date": "2015-08-19",
+    "submitter_name": "Frans Oilinki",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
