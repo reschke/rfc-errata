@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 265,
+    "doc-id": "RFC3492",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6.4,
+    "orig_text": "   where maxint is the greatest integer for which maxint + 1 cannot be\n   represented.",
+    "correct_text": "   where maxint is the maximum value of an integer variable.\n",
+    "notes": "",
+    "submit_date": "2003-04-28",
+    "submitter_name": "Adam Costello",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3026,
+    "doc-id": "RFC3492",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 7.1,
+    "orig_text": "   (I) Russian (Cyrillic):\r\n       U+043F u+043E u+0447 u+0435 u+043C u+0443 u+0436 u+0435 u+043E\r\n       u+043D u+0438 u+043D u+0435 u+0433 u+043E u+0432 u+043E u+0440\r\n       u+044F u+0442 u+043F u+043E u+0440 u+0443 u+0441 u+0441 u+043A\r\n       u+0438\r\n       Punycode: b1abfaaepdrnnbgefbaDotcwatmq2g4l",
+    "correct_text": "   (I) Russian (Cyrillic):\r\n       U+043F u+043E u+0447 u+0435 u+043C u+0443 u+0436 u+0435 u+043E\r\n       u+043D u+0438 u+043D u+0435 u+0433 u+043E u+0432 u+043E u+0440\r\n       u+044F u+0442 u+043F u+043E u+0440 u+0443 u+0441 u+0441 u+043A\r\n       u+0438\r\n       Punycode: b1abfaaepdrnnbgefbadotcwatmq2g4l",
+    "notes": "The uppercase `D` in the encoded string appears to be a typo.",
+    "submit_date": "2011-11-11",
+    "submitter_name": "Mathias Bynens",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
