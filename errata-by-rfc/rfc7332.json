@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4108,
+    "doc-id": "RFC7332",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "If the received request did not contain a Max-Forwards header field,\r\none MUST be created in any request generated in the UAC side, as\r\ndescribed for proxies in Section 16.6, Step 3 of [RFC3261].",
+    "correct_text": "If B2BUA creates a request as a result of processing a\r\nincoming response, Max-Forwards MUST be added in any request\r\ngenerated in the UAC side, as described for proxies in\r\nSection 16.6, Step 3 of [RFC3261].",
+    "notes": "Max-Forward is mandatory for Request as per RFC 3261. So this case is possible only on response processing.\n --VERIFIER NOTES-- \n   The existing text is correct. The fact that Max-Forwards is required to be present in a request does not invalidate text that says what to do if it is not.",
+    "submit_date": "2014-09-11",
+    "submitter_name": "Chozhan A",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
