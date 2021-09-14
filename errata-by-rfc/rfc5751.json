@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 2031,
+    "doc-id": "RFC5751",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.4.3.2",
+    "orig_text": "   The micalg parameter allows for one-pass processing when the\r\n   signature is being verified.  The value of the micalg parameter is\r\n   dependent on the message digest algorithm(s) used in the calculation\r\n   of the Message Integrity Check.  If multiple message digest\r\n   algorithms are used, they MUST be separated by commas per [MIME-\r\n   SECURE].  The values to be placed in the micalg parameter SHOULD be\r\n   from the following:\r\n\r\n      Algorithm   Value Used\r\n\r\n      MD5         md5\r\n      SHA-1       sha-1\r\n      SHA-224     sha-224\r\n      SHA-256     sha-256\r\n      SHA-384     sha-384\r\n      SHA-512     sha-512\r\n      Any other   (defined separately in algorithm profile or \"unknown\"\r\n                   if not defined)\r\n\r\n   (Historical note: some early implementations of S/MIME emitted and\r\n   expected \"rsa-md5\", \"rsa-sha1\", and \"sha1\" for the micalg parameter.)\r\n   Receiving agents SHOULD be able to recover gracefully from a micalg\r\n   parameter value that they do not recognize.  Future names for this\r\n   parameter will be consistent with the IANA \"Hash Function Textual\r\n   Names\" registry.",
+    "correct_text": null,
+    "notes": "This revision creates a backward compatibility issue with S/MIME v2, S/MIME v3 and S/MIME v3.1 agents.  In each of the previous (obsoleted) standards, they all refer to the micalg for SHA-1 as \"sha1\" and not \"sha-1\".\r\n\r\nThe historical note should mean that v3.2 agents will recognize \"sha1\" as emitted by earlier implementations, but these implementations are unlikely to recognize the micalg value of \"sha-1\" emitted by a v3.2 agent.\r\n\r\nAll previous standards state that receiving agents SHOULD be able to handle this situation gracefully, but when these agents fail to recognize a micalg value, they can no longer perform a \"one-pass processing\". Given that this parameter is \"required\", the most likely implication is that they will fail to verify the signature.\r\n\r\nTo ensure interoperability with clients supporting previous versions, the micalg for SHA-1 MUST remain as \"sha1\", and receiving agents SHOULD also accept \"sha-1\".\r\n\r\nThe micalg parameters values have always been defined as \"SHOULD\", but for interoperability they should be declared as \"MUST\".\n --VERIFIER NOTES-- \nThese changes were introduced for alignment with the names in the IANA \"Hash Function Textual Names\" registry.  Given that the requirements is a SHOULD and the note explains the situation, I do not consider this text in error.",
+    "submit_date": "2010-02-01",
+    "submitter_name": "Derek Edson",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2143,
+    "doc-id": "RFC5751",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.2.2",
+    "orig_text": "      Name                   CMS Type                Inner Content\r\n      enveloped-data         EnvelopedData           id-data\r\n      signed-data            SignedData              id-data\r\n      certs-only             SignedData              none\r\n      compressed-data        CompressedData          id-data",
+    "correct_text": "      Name                   CMS Type                Inner Content\r\n      enveloped-data         EnvelopedData           id-data\r\n      signed-data            SignedData              id-data\r\n      certs-only             SignedData              id-data\r\n      compressed-data        CompressedData          id-data",
+    "notes": "The inner content type is not an optional field.  Some inner content type MUST be included, id-data is the correct inner content type to be specified.\r\n\r\nThe balance of the required information is in section 3.7.  It is possible that the fact that id-data is used as the encapsulated content type should be added to the section Step 1 in 3.7",
+    "submit_date": "2010-04-08",
+    "submitter_name": "Jim Schaad",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2708,
+    "doc-id": "RFC5751",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.4.3.3",
+    "orig_text": "Content-Type: multipart/signed;\r\nprotocol=\"application/pkcs7-signature\";\r\nmicalg=sha1; boundary=boundary42",
+    "correct_text": "Content-Type: multipart/signed;\r\nprotocol=\"application/pkcs7-signature\";\r\nmicalg=sha-1; boundary=boundary42",
+    "notes": "In this version we updated the strings associated with the micalg parameter, however the example was not updated to use the correct new value.",
+    "submit_date": "2011-02-06",
+    "submitter_name": "Jim Schaad",
+    "verifier_id": 112,
+    "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4273,
+    "doc-id": "RFC5751",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Global",
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "RFC 5751 contains several S/MIME sample messages, prefixed with the text \"A sample message would be\".  These samples aren't actually valid S/MIME messages but merely contain 141 bytes of random garbage.  In other words the S/MIME \"sample messages\" aren't actually sample messages.",
+    "submit_date": "2015-02-18",
+    "submitter_name": "Peter Gutmann",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
