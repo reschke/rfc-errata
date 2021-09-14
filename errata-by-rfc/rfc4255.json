@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 693,
+    "doc-id": "RFC4255",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "The RDATA for a SSHFP RR consists of an algorithm number, fingerprint\r\ntype and the fingerprint of the public host key.\r\n\r\n        1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3\r\n        0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |   algorithm   |    fp type    |                               /",
+    "correct_text": "[not submitted]",
+    "notes": "Section 3.1 has a packet format picture, and the upper row of bit \r\nnumbers seems to have been shifted to the left.\r\n\r\nfrom pending",
+    "submit_date": "2006-02-10",
+    "submitter_name": "Sam Weiler",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6266,
+    "doc-id": "RFC4255",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.1",
+    "orig_text": "   This algorithm number octet describes the algorithm of the public\r\n   key.  The following values are assigned:\r\n\r\n          Value    Algorithm name\r\n          -----    --------------\r\n          0        reserved\r\n          1        RSA\r\n          2        DSS\r\n\r\n   Reserving other types requires IETF consensus [4].",
+    "correct_text": "   This algorithm number octet describes the algorithm of the public\r\n   key.  The following values are assigned:\r\n\r\n          Value    Algorithm name\r\n          -----    --------------\r\n          0        reserved\r\n          1        RSA\r\n          2        DSA\r\n\r\n   Reserving other types requires IETF consensus [4].",
+    "notes": "The algorithm with value 2 is given as DSS in section 3.1.1, but as DSA in section 5",
+    "submit_date": "2020-08-26",
+    "submitter_name": "Jonathan Neuschäfer",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2020-08-29 19:25:58"
+  },
+  {
+    "errata_id": 6267,
+    "doc-id": "RFC4255",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": null,
+    "correct_text": "Updated by: 6594, 7479, 8709",
+    "notes": "RFCs 6594, 7479, 8709 update the IANA registries \"SSHFP RR Types for public key algorithms\" and \"SSHFP RR type for fingerprint types\", that were originally described in RFC 4255. These RFCs thus (arguably) update RFC 4255. It would be helpful to have such an \"Updated by\" noticed in the header of RFC 4255.\n --VERIFIER NOTES-- \nArguably, those RFCs do not update RFC 4255, given that much of the point of having an IANA registry is to be able to allocate new values without updating the original document.  I do not believe there is a convention of using an Updates relationship solely to indicate that a codepoint has been allocated from an IANA registry.",
+    "submit_date": "2020-08-26",
+    "submitter_name": "Jonathan Neuschäfer",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2020-08-29 19:25:30"
+  },
+  {
+    "errata_id": 6621,
+    "doc-id": "RFC4255",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "   The RDATA of the presentation format of the SSHFP resource record\r\n   consists of two numbers (algorithm and fingerprint type) followed by\r\n   the fingerprint itself, presented in hex, e.g.:\r\n\r\n       host.example.  SSHFP 2 1 123456789abcdef67890123456789abcdef67890\r\n\r\n   The use of mnemonics instead of numbers is not allowed.",
+    "correct_text": "   The RDATA of the presentation format of the SSHFP resource record\r\n   consists of two numbers (algorithm and fingerprint type) followed by\r\n   the fingerprint itself, presented in hex, e.g.:\r\n\r\n       host.example.  SSHFP 2 1 123456789abcdef67890123456789abcdef67890\r\n\r\n   The use of mnemonics instead of numbers is not allowed. Whitespace is\r\n   allowed within the hexadecimal text.",
+    "notes": "Many (most?) other DNS RFC's, for example RFC 4034, explicitly mention that whitespace is allowed in such encoded fields, whether hex or base64. RFC 4255 does not address this, so can be interpreted either way. For consistency and ease of implementation, I recommend allowing whitespace.\r\n\r\nMy proposed corrected text was copied verbatim from RFC 4034, and could possibly be edited to match the RFC 4255 text better, for example using \"hex\" instead of \"hexadecimal text\".",
+    "submit_date": "2021-06-25",
+    "submitter_name": "Shane Kerr",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2021-07-18 18:47:17"
+  }
+]
