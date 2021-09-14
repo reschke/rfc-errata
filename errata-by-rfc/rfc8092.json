@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4962,
+    "doc-id": "RFC8092",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "   Duplicate BGP Large Community values MUST NOT be transmitted.  A\r\n   receiving speaker MUST silently remove redundant BGP Large Community\r\n   values from a BGP Large Community attribute.\r\n",
+    "correct_text": "   Duplicate BGP Large Community values MUST NOT be transmitted.  A\r\n   receiving speaker MUST silently remove redundant BGP Large Community\r\n   values from a BGP Large Communities attribute.\r\n",
+    "notes": "Typo\r\n====\r\nThere are two mote instances where the name of the attribute is also mentioned as \"BGP Large Community attribute\", and not \"BGP Large Communities Attribute” as defined in Section 3.\r\n\r\nI am changing the status to \"Held for Document Update\", which means that \"The erratum is not a necessary update to the RFC. However, any future update of the document might consider this erratum, and determine whether it is correct and merits including in the update.\" [1]\r\n\r\n- Alvaro.\r\n[1] https://www.ietf.org/iesg/statement/errata-processing.html ",
+    "submit_date": "2017-03-09",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
