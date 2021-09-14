@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 5664,
+    "doc-id": "RFC8520",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "Universal Resource Locator\r\n\r\nUniversal Resource Name",
+    "correct_text": "Uniform Resource Locator\r\n\r\nUniform Resource Name",
+    "notes": "Note that there are multiple instances throughout the document.\r\n\r\nThere haven't been UNIVERSAL resource locators, identifiers, or names for twenty years.    I've labeled these as technical errata because they refer to something that doesn't exist.",
+    "submit_date": "2019-03-18",
+    "submitter_name": "Leslie Daigle",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5702,
+    "doc-id": "RFC8520",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 16,
+    "orig_text": "   implementors should take into\r\n   account what other information they are advertising through\r\n   mechanisms such as Multicast DNS (mDNS) [RFC6872]",
+    "correct_text": "   implementors should take into\r\n   account what other information they are advertising through\r\n   mechanisms such as Multicast DNS (mDNS) [RFC6762]",
+    "notes": "Incorrect reference for Multicast DNS (mDNS).",
+    "submit_date": "2019-04-22",
+    "submitter_name": "Stuart Cheshire",
+    "verifier_id": 158,
+    "verifier_name": "Ignas Bagdonas",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6295,
+    "doc-id": "RFC8520",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "For example, if one saw the line \"manufacturer\" : \"flobbidy.example.com\",\r\nthen all Things that registered with a MUD URL that contained flobbity.example.com in its authority section would match.",
+    "correct_text": "For example, if one saw the line \"manufacturer\" : \"flobbity.example.com\",\r\nthen all Things that registered with a MUD URL that contained flobbity.example.com in its authority section would match.",
+    "notes": "Taken at face value it implies somehow a MUD Manager knows about a relationship between two different names flobbidy.example.com and flobbity.example.com in an unexplained way, the correction removes this confusion.",
+    "submit_date": "2020-09-23",
+    "submitter_name": "Nick Lamb",
+    "verifier_id": 166,
+    "verifier_name": "Rob Wilton",
+    "update_date": "2020-09-24 03:53:32"
+  }
+]
