@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 228,
+    "doc-id": "RFC3813",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "mplsLsrModuleReadOnlyCompliance",
+    "orig_text": "    OBJECT       mplsInSegmentNPop\r\n    SYNTAX       Integer32 (1..1)\r\n    MIN-ACCESS   read-only\r\n    DESCRIPTION \"Write access is not required.  This object\r\n                 SHOULD be set to 1 if it is read-only.",
+    "correct_text": "    OBJECT       mplsInSegmentNPop\r\n    SYNTAX       Integer32 (1)\r\n    MIN-ACCESS   read-only\r\n    DESCRIPTION \"Write access is not required.  This object\r\n                 SHOULD be set to 1 if it is read-only.",
+    "notes": "Ref: RFC 2578, section 11.1:\r\n\r\n                 - when a pair of values is specified, the first value\r\n                   must be less than the second value.\r\n",
+    "submit_date": "2005-02-13",
+    "submitter_name": "Michael Kirkham",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 229,
+    "doc-id": "RFC3813",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "99\r\nDescription says:",
+    "orig_text": "       \"For creating, modifying, and deleting this row.\r\n        When a row in this table has a row in the active(1)\r\n        state, no objects in this row except this object\r\n        and the mplsXCStorageType can be modified. \"",
+    "correct_text": "       \"For creating, modifying, and deleting this row.\r\n        When a row in this table has a row in the active(1)\r\n        state, no objects in this row except this object, the \r\n        mplsXCStorageType and the mplsXCAdminStatus can be modified.\"",
+    "notes": "",
+    "submit_date": "2004-11-17",
+    "submitter_name": "Stefan Winter",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
