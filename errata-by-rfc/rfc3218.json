@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5072,
+    "doc-id": "RFC3218",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "   [PKCS-1-v2]   Kaliski, B., \"PKCS #1: RSA Encryption, Version 2.0\",\r\n                 RFC 2347, October 1998.\r\n",
+    "correct_text": "   [PKCS-1-v2]   Kaliski, B. and J. Staddon, \"PKCS #1: RSA Cryptography\r\n                 Specifications Version 2.0\", RFC 2437, October 1998.\r\n",
+    "notes": "RFC 2347 is \"TFTP Option Extension\", unrelated to PKCS.\r\n-----\r\nVerifier Notes: Transposition of the RFC number and incorrect author and title have been updated in the corrected text.  ",
+    "submit_date": "2017-07-25",
+    "submitter_name": "Kalle Olavi Niemitalo",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
