@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4093,
+    "doc-id": "RFC4108",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": null,
+    "correct_text": "id-aa-fwPkgMessageDigest OBJECT IDENTIFIER ::= {\r\n        iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs9(9)\r\n        smime(16) aa(2) 41 }\r\nand \r\nFirmwarePackageMessageDigest ::= SEQUENCE {\r\n        algorithm AlgorithmIdentifier,\r\n        msgDigest OCTET STRING }\r\nfrom section 2.2.10 do not appear in the ASN.1 module.",
+    "notes": "\r\n\r\nYes the two items are missing from the ASN.1 module at the end of the document.",
+    "submit_date": "2014-09-03",
+    "submitter_name": "George Taylor",
+    "verifier_id": 141,
+    "verifier_name": "Kathleen Moriarty",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
