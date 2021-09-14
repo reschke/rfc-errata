@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4610,
+    "doc-id": "RFC6352",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 8.7,
+    "orig_text": "The request MUST include a Depth: 0 header; however, the actual\r\n      scope of the REPORT is determined as described above.",
+    "correct_text": "The request MUST include a Depth: 1 header; however, the actual\r\n      scope of the REPORT is determined as described above.",
+    "notes": "All examples of a addressbook-multiget query use Depth: 1 header, but the 8.7 section says it must be Depth: 0. I believe the mistake is in the documentation.",
+    "submit_date": "2016-02-02",
+    "submitter_name": "Sylvain Berfini",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4784,
+    "doc-id": "RFC6352",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 10.4,
+    "orig_text": "attributes can be used on each variant of the\r\nCALDAV:address-data XML element.",
+    "correct_text": "attributes can be used on each variant of the\r\nCARDDAV:address-data XML element.",
+    "notes": "The address-data element is located in the CARDDAV namespace.",
+    "submit_date": "2016-08-20",
+    "submitter_name": "Ricki Hirner",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
