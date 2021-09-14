@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 4144,
+    "doc-id": "RFC4762",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "   In a VPLS, we use a VCID (which, when using the PWid FEC, has been\r\n   substituted with a more general identifier (AGI), to address\r\n   extending the scope of a VPLS) to identify an emulated LAN segment.\r\n   Note that the VCID as specified in [RFC4447] is a service identifier,\r\n   identifying a service emulating a point-to-point virtual circuit.  In\r\n   a VPLS, the VCID is a single service identifier, so it has global\r\n   significance across all PEs involved in the VPLS instance.",
+    "correct_text": "   In a VPLS, we use a PWID (which, when using the Generalized PW ID \r\n   FEC, has been substituted with a more general identifier (AGI), \r\n   to address\r\n   extending the scope of a VPLS) to identify an emulated LAN segment.\r\n   Note that the PWID as specified in [RFC4447] is a service identifier,\r\n   identifying a service emulating a point-to-point virtual circuit.  In\r\n   a VPLS, the PWID is a single service identifier, so it has global\r\n   significance across all PEs involved in the VPLS instance.",
+    "notes": "1. The problematic text follows a diagram depicting the PWID FEC (a.k.a. FEC-128) as it appears in RFC 4447. This diagram includes a 32-bit PWID field, but there is no VCID field. Nor is VCID mentioned anywhere in RFC 4447 - it has been used in the original Martini drafts but has then been replaced by PWID. \r\n\r\n2. According to RFC 4447, AGI is used only in the Generalized PW ID FEC (a.k.a. FEC-129) but not in the PWID FEC (a.k.a. FEC-128).",
+    "submit_date": "2014-10-23",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4834,
+    "doc-id": "RFC4762",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 9.1,
+    "orig_text": "For\r\n   example, if a customer site A, is shut down, eventually the other PEs\r\n   should unlearn A's MAC address.",
+    "correct_text": "For example, if a customer site is shut down, eventually the other PEs\r\nshould unlearn the MAC address(es) of this site.",
+    "notes": "Prakash noted the customer site name is not mentioned in example. Suggested naming the site (A1) gives clear info than just stating \"customer site A\".\r\nAfter discussion with the Chairs and Authors, the above text was agreed.",
+    "submit_date": "2016-10-18",
+    "submitter_name": "Prakash Ragunathan",
+    "verifier_id": 149,
+    "verifier_name": "Deborah Brungard",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
