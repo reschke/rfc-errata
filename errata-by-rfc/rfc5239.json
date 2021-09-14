@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 1450,
+    "doc-id": "RFC5239",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "8.4, pg.27",
+    "orig_text": "The 5th and the 6th paragraph on pg.27 both contain the clause:\r\n\r\n   ...\r\n   When using SDP offer/answer exchange to negotiate ...",
+    "correct_text": "Both instances should say\r\neither:\r\n\r\n   ...\r\n   When using SDP offer/answer exchanges to negotiate ...\r\n                                       ^\r\nor (less preferable):\r\n\r\n   ...\r\n   When using SDP an offer/answer exchange to negotiate ...\r\n                  ^^^",
+    "notes": "Grammar",
+    "submit_date": "2008-06-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1451,
+    "doc-id": "RFC5239",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "9.3,1st para",
+    "orig_text": "                                           [...].  This kind of\r\n|  operation is called \"1st party signaling\" and they do not affect the\r\n   state of other participants in the conference.\r\n",
+    "correct_text": "                                           [...].  This kind of\r\n|  operation is called \"1st party signaling\" and it does not affect the\r\n   state of other participants in the conference.\r\n                                                 ^^^^^^^",
+    "notes": "Grammar: \"they do\" does not match \"This kind of operation\".",
+    "submit_date": "2008-06-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1452,
+    "doc-id": "RFC5239",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "9.6,2nd para",
+    "orig_text": "   Figure 15 provides an example of one user \"Alice\" who's chairing a\r\n   fixed length conference with \"Bob\" and \"Carol\".  The configuration is\r\n|  such that only the chair is providing a warning when there are only\r\n                                     ^^^\r\n   10 minutes left in the conference.  At that time, \"Alice\" is moved\r\n   into a sidebar created by the conferencing system and only \"Alice\"\r\n   receives the announcement.\r\n",
+    "correct_text": "   Figure 15 provides an example of one user \"Alice\" who's chairing a\r\n   fixed length conference with \"Bob\" and \"Carol\".  The configuration is\r\n|  such that only the chair is provided a warning when there are only\r\n                                     ^^\r\n   10 minutes left in the conference.  At that time, \"Alice\" is moved\r\n   into a sidebar created by the conferencing system and only \"Alice\"\r\n   receives the announcement.\r\n",
+    "notes": "Typo distorting the proper sense of the text.\r\nSee also Figure 15 -- the warning is sent *to* \"Alice\".",
+    "submit_date": "2008-06-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4120,
+    "doc-id": "RFC5239",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 8.4,
+    "orig_text": "   ...\r\n   A media session within a conferencing system can have any number of\r\n   floors (0 or more) that are represented by the conference identifier.\r\n   When using SDP offer/answer exchange to negotiate a floor control\r\n   connection with the focus using the call signaling interface, the\r\n   unique conference identifier is contained in the 'floorid' SDP\r\n   attribute, as defined in [RFC4583], e.g., a=floorid:1 m-stream:10 .\r\n   Each 'floorid' attribute, representing a unique floor, has an\r\n   'm-stream' tag containing one or more identifiers.  The identifiers\r\n   represent individual SDP media sessions (as defined using 'm=' from\r\n   SDP) using the SDP 'Label' attribute, as defined in [RFC4574].",
+    "correct_text": "   ...   \r\n   A media session within a conferencing system can have any number of\r\n   floors (0 or more) that are represented by the conference identifier.\r\n   When using SDP offer/answer exchange to negotiate a floor control\r\n   connection with the focus using the call signaling interface, the\r\n   unique conference identifier is contained in the 'floorid' SDP\r\n   attribute, as defined in [RFC4583], e.g., a=floorid:1 mstrm:10 .\r\n   Each 'floorid' attribute, representing a unique floor, has an\r\n   'mstrm' tag containing one or more identifiers.  The identifiers\r\n   represent individual SDP media sessions (as defined using 'm=' from\r\n   SDP) using the SDP 'Label' attribute, as defined in [RFC4574].",
+    "notes": "In section 6 of the RFC4583 the ABNF for the \"floorid\" attribute is: floor-id-attribute = \"a=floorid:\" token [\" mstrm:\" token *(SP token)]\r\n\r\nThe text string \"mstrm\" is used to reference the media stream rather than \"m-stream\" that appears in this section.",
+    "submit_date": "2014-09-21",
+    "submitter_name": "Christian Groves",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
