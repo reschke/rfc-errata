@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6431,
+    "doc-id": "RFC8843",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 15,
+    "orig_text": "A media recipient informs the media sender about the identification-\r\ntag associated with an \"m=\" section through the use of a 'id'\r\nattribute [RFC5888].",
+    "correct_text": "A media recipient informs the media sender about the identification-\r\ntag associated with an \"m=\" section through the use of a 'mid'\r\nattribute [RFC5888].",
+    "notes": "As you can see In section 2. Terminology, Identification-tag is a unique token value that is used to identify an \"m=\" section.  The SDP **'mid'** attribute [RFC5888] in an \"m=\" section carries the unique identification-tag assigned to that \"m=\" section. I think the 'm' is missing.",
+    "submit_date": "2021-02-16",
+    "submitter_name": "EungRok Lee",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2021-02-17 08:10:22"
+  },
+  {
+    "errata_id": 6437,
+    "doc-id": "RFC8843",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 9.2,
+    "orig_text": "   *  If the packet has a MID, and the packet's extended sequence number\r\n      is greater than that of the last MID update, as discussed in\r\n      [RFC7941], Section 4.2.2, update the MID associated with the RTP\r\n      stream to match the MID carried in the RTP packet, and then update\r\n      the mapping tables to include an entry that maps the SSRC of that\r\n      RTP stream to the \"m=\" section for that MID.",
+    "correct_text": "   *  If the packet has a MID, and the packet's extended sequence number\r\n      is greater than that of the last MID update, as discussed in\r\n      [RFC7941], Section 4.2.6, update the MID associated with the RTP\r\n      stream to match the MID carried in the RTP packet, and then update\r\n      the mapping tables to include an entry that maps the SSRC of that\r\n      RTP stream to the \"m=\" section for that MID.",
+    "notes": "In RFC7941 section \"4.2.2. MTU and Packet Expansion\", it doesn't mention about extended sequence number of packets. Section \"4.2.6. Update Flaps\" describes how to update SDES item using extended sequence number.",
+    "submit_date": "2021-02-23",
+    "submitter_name": "EungRok Lee",
+    "verifier_id": 164,
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2021-09-01 07:06:39"
+  }
+]
