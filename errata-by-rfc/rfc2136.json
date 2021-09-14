@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 2805,
+    "doc-id": "RFC2136",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "1.1.1",
+    "orig_text": "   1.1.1. Two RRs are considered equal if their NAME, CLASS, TYPE,\r\n   RDLENGTH and RDATA fields are equal.  Note that the time-to-live\r\n   (TTL) field is explicitly excluded from the comparison.",
+    "correct_text": "   1.1.1. Two RRs are considered equal if their NAME, CLASS, TYPE,\r\n   RDLENGTH and RDATA fields are equal.  Compressed names in the RDATA\r\n   must be decompressed before comparison. Note that the time-to-live\r\n   (TTL) field is explicitly excluded from the comparison.",
+    "notes": "Name compression depends on the context of the RR so RDATA cannot correctly be compared bytewise without taking this into account.",
+    "submit_date": "2011-05-09",
+    "submitter_name": "Tony Finch",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4469,
+    "doc-id": "RFC2136",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.4.2.2",
+    "orig_text": "   3.4.2.2. Any Update RR whose CLASS is the same as ZCLASS is added to\r\n   the zone.  In case of duplicate RDATAs (which for SOA RRs is always\r\n   the case, and for WKS RRs is the case if the ADDRESS and PROTOCOL\r\n   fields both match), the Zone RR is replaced by Update RR.  If the\r\n   TYPE is SOA and there is no Zone SOA RR, or the new SOA.SERIAL is\r\n   lower (according to [RFC1982]) than or equal to the current Zone SOA\r\n   RR's SOA.SERIAL, the Update RR is ignored.  In the case of a CNAME\r\n   Update RR and a non-CNAME Zone RRset or vice versa, ignore the CNAME\r\n   Update RR, otherwise replace the CNAME Zone RR with the CNAME Update\r\n   RR.\r\n",
+    "correct_text": "   3.4.2.2. Any Update RR whose CLASS is the same as ZCLASS is added to\r\n   the zone.  In case of duplicate RDATAs (which for SOA RRs is always\r\n   the case, and for WKS RRs is the case if the ADDRESS and PROTOCOL\r\n   fields both match), the Zone RR is replaced by Update RR.  If the\r\n   TYPE is SOA and there is no Zone SOA RR, or the new SOA.SERIAL is\r\n   lower (according to [RFC1982]) than or equal to the current Zone SOA\r\n   RR's SOA.SERIAL, the Update RR is ignored.  In the case of a CNAME\r\n   Update RR and a non-CNAME Zone RRset or vice versa, ignore the\r\n   Update RR, otherwise replace the CNAME Zone RR with the CNAME Update\r\n   RR.\r\n",
+    "notes": "In the vice versa case it it not a CNAME Update RR, just a plain Update RR.   Removing the word \"CNAME\" make the sentence cover both cases as intended.",
+    "submit_date": "2015-09-09",
+    "submitter_name": "Mark Andrews",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
