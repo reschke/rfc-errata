@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5178,
+    "doc-id": "RFC6218",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.3,
+    "orig_text": "MAC = MAC-ALG(Key, Type + Identifier + Length + Attributes)\r\n               where ’+’ represents concatenation",
+    "correct_text": "MAC = HASH-ALG(Key, Type + Identifier + Length + Attributes)\r\n               where ’+’ represents concatenation",
+    "notes": "HASH-ALG is the name of a free variable for the hash algorithm.",
+    "submit_date": "2017-11-06",
+    "submitter_name": "Yogesh Kumar Bansal",
+    "verifier_id": 157,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
