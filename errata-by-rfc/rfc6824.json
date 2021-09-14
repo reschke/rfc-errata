@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3578,
+    "doc-id": "RFC6824",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "  Note that new subflows MUST NOT be established (using\r\n   the process documented in Section 3.2) until a Digital Signature\r\n   Standard (DSS) option has been successfully received across the path\r\n   (as documented in Section 3.3).\r\n",
+    "correct_text": "  Note that new subflows MUST NOT be established (using\r\n   the process documented in Section 3.2) until a Data Sequence\r\n   Signal (DSS) option has been successfully received across the path\r\n   (as documented in Section 3.3).\r\n",
+    "notes": "In this document DSS is indicated as short for both \"Digital Signature Standard\" and \"Data Sequence Signal\". I guess the reference to \"Digital Signature Standard\" was a mistake.",
+    "submit_date": "2013-04-01",
+    "submitter_name": "Kasper Dupont",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4129,
+    "doc-id": "RFC6824",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "B.1.1.",
+    "orig_text": "MPTCP.Checksum (flag):  This flag is set to true if at least one of\r\n      the hosts has set the C bit in the MP_CAPABLE options exchanged\r\n      during connection establishment, and is set to false otherwise.\r\n      If this flag is set, the checksum must be computed in all DSS\r\n      options.",
+    "correct_text": "MPTCP.Checksum (flag):  This flag is set to true if at least one of\r\n      the hosts has set the A bit in the MP_CAPABLE options exchanged\r\n      during connection establishment, and is set to false otherwise.\r\n      If this flag is set, the checksum must be computed in all DSS\r\n      options.",
+    "notes": "Checksum is not on bit \"C\", but instead on bit \"A\". There are no other instances of referring on bit \"C\" as the checksum. Bit \"C\" is unassigned in this version.\r\n\r\nOther instances of bit \"A\" as checksum:\r\n* Section 3.1. Connection Initiation, p. 16 f.\r\n* Section 8. IANA Considerations, Table 3: MPTCP Handshake Algorithms, p. 56",
+    "submit_date": "2014-10-11",
+    "submitter_name": "Friedrich Haussmann",
+    "verifier_id": 133,
+    "verifier_name": "Martin Stiemerling",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
