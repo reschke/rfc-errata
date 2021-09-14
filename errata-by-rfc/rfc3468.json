@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 695,
+    "doc-id": "RFC3468",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "99The header says:",
+    "orig_text": "Network Working Group                                       L. Andersson\r\nRequest for Comments: 3468                                    Consultant\r\nCategory: Informational                                       G. Swallow\r\n                                                           Cisco Systems\r\n                                                           February 2003",
+    "correct_text": "Network Working Group                                       L. Andersson\r\nRequest for Comments: 3468                                    Consultant\r\nUpdates: 3212, 3472, 3475, 3476                               G. Swallow\r\nCategory: Informational                                    Cisco Systems\r\n                                                           February 2003",
+    "notes": "RFC3468 documents the MPLS WG's decision to ice CR-LDP. \r\nHowever, RFC3468 is not marked as updating RFC3212 (CR-LDP base spec) in the registry.\r\n\r\nThe RFCs updated by 3468 are:\r\n3212, 3472, 3475, 3476\r\n\r\n[Note that the RFC Editor index has been updated accordingly, but the document itself remains incorrect.]\r\n\r\nOriginally sent by Adrian Farrel.\r\n\r\nfrom pending",
+    "submit_date": "2004-10-23",
+    "submitter_name": "Alex Zinin",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
