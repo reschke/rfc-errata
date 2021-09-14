@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5402,
+    "doc-id": "RFC8326",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "C.2.2.",
+    "orig_text": "      4.  If, for any reason, RR3 processes the withdraw generated in\r\n          step 3 before processing the update generated in step 2, RR3\r\n          transiently suffers from unreachability for the affected\r\n          prefix.",
+    "correct_text": "      4.  If, for any reason, RR2 processes the withdraw generated in\r\n          step 3 before processing the update generated in step 2, RR2\r\n          transiently suffers from unreachability for the affected\r\n          prefix.",
+    "notes": "The original text names RR3, but it should be RR2. This becomes evident when one works through the example using a diagram.",
+    "submit_date": "2018-06-21",
+    "submitter_name": "John Scudder",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
