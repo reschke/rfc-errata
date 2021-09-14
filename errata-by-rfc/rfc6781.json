@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 4844,
+    "doc-id": "RFC6781",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.1.2",
+    "orig_text": "   initial:  Initial version of the zone.  The parental DS points to\r\n      DNSKEY_K_1.  Before the rollover starts, the child will have to\r\n      verify what the TTL is of the DS RR that points to DNSKEY_K_1 --\r\n      it is needed during the rollover, and we refer to the value as\r\n      TTL_DS.\r\n\r\n   new DNSKEY:  During the \"new DNSKEY\" phase, the zone administrator\r\n      generates a second KSK, DNSKEY_K_2.  The key is provided to the\r\n      parent, and the child will have to wait until a new DS RR has been\r\n      generated that points to DNSKEY_K_2.  After that DS RR has been\r\n      published on all servers authoritative for the parent's zone, the\r\n      zone administrator has to wait at least TTL_DS to make sure that\r\n      the old DS RR has expired from caches.\r\n\r\n   DS change:  The parent replaces DS_K_1 with DS_K_2.",
+    "correct_text": "initial:  Initial version of the zone.  The parental DS points to\r\n    DNSKEY_K_1.  Before the rollover starts, the child will have to\r\n    verify what the TTL is of the DS RR that points to DNSKEY_K_1 --\r\n    it is needed during the rollover, and we refer to the value as\r\n    TTL_DS.  Also, we refer to the TTL value of the DNSKEY_K_1 RR as\r\n    TTL_DNSKEY.\r\n\r\nnew DNSKEY:  During the \"new DNSKEY\" phase, the zone administrator\r\n    generates a second KSK, DNSKEY_K_2.  The new DNSKEY RRSet that\r\n    includes DNSKEY_K_2 is published at the child.  After waiting at\r\n    least TTL_DNSKEY, DNSKEY_K_2 (or the DS RR generated from it, that\r\n    is DS_K_2) is provided to the parent.\r\n\r\nDS change:  The parent replaces DS_K_1 with DS_K_2.  After that DS RR\r\n    has been published on all servers authoritative for the parent's\r\n    zone, the zone administrator has to wait at least TTL_DS to make\r\n    sure that the old DS RR has expired from caches.",
+    "notes": "I just corrected what is fundamentally flawed. RFC 7583 section 3.3.1 provides a much detailed explanation of the process.",
+    "submit_date": "2016-10-26",
+    "submitter_name": "Marcos Sanz",
+    "verifier_id": 135,
+    "verifier_name": "Joel Jaeggli",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5174,
+    "doc-id": "RFC6781",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix B.",
+    "orig_text": "   is reduced to the following representation:\r\n\r\n            SOA_2005092303\r\n            RRSIG_Z_14(SOA_2005092303)\r\n            DNSKEY_K_14\r\n            DNSKEY_Z_15\r\n            RRSIG_K_14(DNSKEY)\r\n            RRSIG_Z_15(DNSKEY)\r\n\r\nThe rest of the zone data has the same signature as the SOA record,\r\n   i.e., an RRSIG created with DNSKEY_K_14.\r\n",
+    "correct_text": "   is reduced to the following representation:\r\n\r\n            SOA_2005092303\r\n            RRSIG_Z_14(SOA_2005092303)\r\n            DNSKEY_Z_14\r\n            DNSKEY_K_15\r\n            RRSIG_Z_14(DNSKEY)\r\n            RRSIG_K_15(DNSKEY)\r\n\r\nThe rest of the zone data has the same signature as the SOA record,\r\n   i.e., an RRSIG created with DNSKEY_K_15.",
+    "notes": "Note: K and Z were swapped. \r\n",
+    "submit_date": "2017-10-29",
+    "submitter_name": "Andreas Cudok",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5276,
+    "doc-id": "RFC6781",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.1.4",
+    "orig_text": "   ----------------------------------------------------------------\r\n    new DS               DNSKEY removal       RRSIGs removal\r\n   ----------------------------------------------------------------\r\n   Parent:\r\n    SOA_1 ------------------------------------------------------->\r\n    RRSIG_par(SOA) ---------------------------------------------->\r\n    DS_K_2 ------------------------------------------------------>\r\n    RRSIG_par(DS_K_2) ------------------------------------------->\r\n\r\n   Child:\r\n    -------------------> SOA_3                SOA_4\r\n    -------------------> RRSIG_Z_10(SOA)\r\n    -------------------> RRSIG_Z_11(SOA)      RRSIG_Z_11(SOA)\r\n\r\n    ------------------->\r\n    -------------------> DNSKEY_K_2           DNSKEY_K_2\r\n    ------------------->\r\n    -------------------> DNSKEY_Z_11          DNSKEY_Z_11\r\n    ------------------->\r\n    -------------------> RRSIG_K_2(DNSKEY)    RRSIG_K_2(DNSKEY)\r\n   ----------------------------------------------------------------\r\n\r\n        Figure 8: Stages of Deployment during an Algorithm Rollover",
+    "correct_text": "   ----------------------------------------------------------------\r\n    new DS               DNSKEY removal       RRSIGs removal\r\n   ----------------------------------------------------------------\r\n   Parent:\r\n    SOA_1 ------------------------------------------------------->\r\n    RRSIG_par(SOA) ---------------------------------------------->\r\n    DS_K_2 ------------------------------------------------------>\r\n    RRSIG_par(DS_K_2) ------------------------------------------->\r\n\r\n   Child:\r\n    -------------------> SOA_3                SOA_4\r\n    -------------------> RRSIG_Z_10(SOA)\r\n    -------------------> RRSIG_Z_11(SOA)      RRSIG_Z_11(SOA)\r\n\r\n    ------------------->\r\n    -------------------> DNSKEY_K_2           DNSKEY_K_2\r\n    ------------------->\r\n    -------------------> DNSKEY_Z_11          DNSKEY_Z_11\r\n    -------------------> RRSIG_K_1(DNSKEY)\r\n    -------------------> RRSIG_K_2(DNSKEY)    RRSIG_K_2(DNSKEY)\r\n   ----------------------------------------------------------------\r\n\r\n        Figure 8: Stages of Deployment during an Algorithm Rollover",
+    "notes": "This is about Figure 8 on page 30.\r\n\r\nThe figure should have the signature of the old KSK, called RRSIG_K_1(DNSKEY) in the \"DNSKEY removal\" step.\r\n\r\nBecause a conservative validator may have the DNSKEY RRset cached that includes DNSKEY_K_1, DNSKEY_K_2, DNSKEY_Z_1, and DNSKEY_Z_2.",
+    "submit_date": "2018-03-06",
+    "submitter_name": "Matthijs Mekking",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
