@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1329,
+    "doc-id": "RFC1042",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "Frame Format",
+    "orig_text": "      The minimum packet size used with ARP is 24 octets, which is 20\r\n      (ARP with 2 octet hardware addresses and 4 octet protocol\r\n      addresses) + 8 (LLC+SNAP header) = 24 octets (not including the\r\n      MAC header).\r\n",
+    "correct_text": "      The minimum packet size used with ARP is 28 octets, which is 20\r\n      (ARP with 2 octet hardware addresses and 4 octet protocol\r\n      addresses) + 8 (LLC+SNAP header) = 28 octets (not including the\r\n      MAC header).\r\n",
+    "notes": null,
+    "submit_date": "2008-02-25",
+    "submitter_name": "Mark Taunton",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1330,
+    "doc-id": "RFC1042",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "Frame Format",
+    "orig_text": "      In typical situations, the packet size used with ARP is 32 octets,\r\n      which is 28 (ARP with 6 octet hardware addresses and 4 octet\r\n      protocol addresses) + 8 (LLC+SNAP header) = 32 octets (not\r\n      including the MAC header).\r\n\r\n",
+    "correct_text": "      In typical situations, the packet size used with ARP is 36 octets,\r\n      which is 28 (ARP with 6 octet hardware addresses and 4 octet\r\n      protocol addresses) + 8 (LLC+SNAP header) = 36 octets (not\r\n      including the MAC header).\r\n\r\n",
+    "notes": "Further instance of arithmetic error, previously reported in the preceding paragraph.",
+    "submit_date": "2008-02-25",
+    "submitter_name": "Mark Taunton",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
