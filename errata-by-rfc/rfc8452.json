@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 5854,
+    "doc-id": "RFC8452",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "...mulX_POLYVAL of it is 3931819bf271fada0503eb52574ca5f2.",
+    "correct_text": "...mulX_POLYVAL of it is 3931819bf271fada0503eb52574ca572.",
+    "notes": "The last hex byte is typoed (f2, should be 72).\r\n\r\nConfirmed this was the case on the CFRG mailing list (2019-09-05)",
+    "submit_date": "2019-09-05",
+    "submitter_name": "Tony Arcieri",
+    "verifier_id": 163,
+    "verifier_name": "Colin Perkins",
+    "update_date": "2020-06-06 06:17:56"
+  }
+]
