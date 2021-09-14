@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 3935,
+    "doc-id": "RFC5792",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "Each PA-TNC message may\r\ncontain one or more attributes associated with the functional\r\ncomponent identified in the component type (PA Subtype) of the\r\nPosture Broker (PB) protocol.",
+    "correct_text": "Each PA-TNC message may\r\ncontain zero or more attributes associated with the functional\r\ncomponent identified in the component type (PA Subtype) of the\r\nPosture Broker (PB) protocol.",
+    "notes": "Section 4 of RFC 5792 says “A PA-TNC message MUST contain a PA-TNC header (defined in section 3.6. followed by a sequence of zero or more PA-TNC attributes.” This contradicts the text in section 3.1, which says “one or more”. The correct text is “zero or more”. There’s no reason why a PA-TNC message containing zero attributes should be prohibited. For PA-TNC messages with some PA subtypes, an empty message containing no attributes may be enough.",
+    "submit_date": "2014-03-27",
+    "submitter_name": "Steve Hanna",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3936,
+    "doc-id": "RFC5792",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3.4,
+    "orig_text": "As depicted in section 3.2, a PA-TNC message consists of a PA-TNC\r\nheader followed by a sequence of one or more attributes.\r\n",
+    "correct_text": "As depicted in section 3.2, a PA-TNC message consists of a PA-TNC\r\nheader followed by a sequence of zero or more attributes.\r\n",
+    "notes": "Section 4 of RFC 5792 says “A PA-TNC message MUST contain a PA-TNC header (defined in section 3.6. followed by a sequence of zero or more PA-TNC attributes.” This contradicts the text in section 3.4, which says “one or more”. The correct text is “zero or more”. There’s no reason why a PA-TNC message containing zero attributes should be prohibited. For PA-TNC messages with some PA subtypes, an empty message containing no attributes may be enough.",
+    "submit_date": "2014-03-27",
+    "submitter_name": "Steve Hanna",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
