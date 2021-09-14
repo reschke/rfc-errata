@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 3117,
+    "doc-id": "RFC3312",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 8,
+    "orig_text": "The port number of every \"m=\" line MUST be set to zero, but the connection address is arbitrary.\r\n\r\nThe desired status line corresponding to the precondition that\r\ntriggered the failure MUST use the \"failure\" strength-tag, as shown\r\nin the example below:\r\n\r\n      m=audio 20000 RTP/AVP 0\r\n      a=des:qos failure e2e send\r\n\r\n",
+    "correct_text": "The port number of every \"m=\" line MUST be set to zero, but the connection address is arbitrary.\r\n\r\nThe desired status line corresponding to the precondition that\r\ntriggered the failure MUST use the \"failure\" strength-tag, as shown\r\nin the example below:\r\n\r\n      m=audio 0 RTP/AVP 0\r\n      a=des:qos failure e2e send\r\n",
+    "notes": "The G711U codec's payload type 0 that appears in the m-line, probably led to the typo error with the incorrect port number (20000 instead of 0).",
+    "submit_date": "2012-02-08",
+    "submitter_name": "Beis Grigorios",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3119,
+    "doc-id": "RFC3312",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 9,
+    "orig_text": "m=audio 20000 RTP/AVP 0\r\na=des:foo unknown e2e send\r\n",
+    "correct_text": "m=audio 0 RTP/AVP 0\r\na=des:foo unknown e2e send\r\n",
+    "notes": "Same typo as Errata ID: 3117. The port number must be set to zero.",
+    "submit_date": "2012-02-09",
+    "submitter_name": "Beis Grigorios",
+    "verifier_id": 118,
+    "verifier_name": "Robert Sparks",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4883,
+    "doc-id": "RFC3312",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 11,
+    "orig_text": "Therefore, a user agent\r\n   including preconditions in the SDP MUST support the PRACK and UPDATE\r\n   methods. Consequently, it MUST include the \"100rel\" [7] tag in the\r\n   Supported header field and SHOULD include an Allow header field with\r\n   the \"UPDATE\" tag [5].",
+    "correct_text": "Therefore, a user agent\r\n   including preconditions in the SDP MUST support the PRACK and UPDATE\r\n   methods. Consequently, it MUST include the \"100rel\" [7] tag in the\r\n   Supported header field and MUST include an Allow header field with\r\n   the \"UPDATE\" tag [5].",
+    "notes": "As stated in first line in the mentioned paragraph, the user agent MUST support the UPDATE method, hence even in Allow header field also, UPDATE method MUST be included.\r\n\r\nAs per RFC 2119\r\n\"SHOULD -This word, or the adjective \"RECOMMENDED\", mean that there\r\n   may exist valid reasons in particular circumstances to ignore a\r\n   particular item, but the full implications must be understood and\r\n   carefully weighed before choosing a different course.   \"\r\n\r\nHere in precondition case, whether any chance of ignoring the UPDATE method happens ?\r\n\r\nAs per RFC 3261 \r\nSection 8.2.1 states -\r\n\"The Allow header field MUST list the set of methods supported by the UAS\r\n   generating the message. ... If the method is one supported by the server, processing continues.\"\r\n\r\nand also in RFC 3261 Sections 20.5 states-\r\n\"All methods, including ACK and CANCEL, understood by the UA MUST be\r\n   included in the list of methods in the Allow header field, when\r\n   present.\"",
+    "submit_date": "2016-12-12",
+    "submitter_name": "Shraddha Soni",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4884,
+    "doc-id": "RFC3312",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 7,
+    "orig_text": "If a peer has requested confirmation on a particular stream, an agent\r\n   MUST mark that stream with a flag in its local status table. ",
+    "correct_text": "If a peer has requested confirmation on a particular stream, an agent \r\n   MUST mark that stream with a flag in its local status table.  ",
+    "notes": "The only place in RFC, where 'agent' is mentioned instead of 'User Agent'. Use of 'User agent' is more appropriate in SIP context as per RFC 3261. \r\nUnable to submit the errata when corrected text is mentioned as \"user agent\" Hence pasting same text in original text. Have submitted feedback online for the webpage issue.",
+    "submit_date": "2016-12-12",
+    "submitter_name": "Shraddha Soni",
+    "verifier_id": 147,
+    "verifier_name": "Ben Campbell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
