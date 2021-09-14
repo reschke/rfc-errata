@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4059,
+    "doc-id": "RFC7257",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "N/A - this is about some missing MIB objects that should be there",
+    "correct_text": "N/A - this is hardly the right place to define missing MIB objects",
+    "notes": "As per RFC 4762 (which defines at least one of the two VPLS types for which this RFC defines Management Information Base), Virtual Switching Instance (VSI)(a local representation of a given VPLS instance within a given PE) is connected to CE devices via Attachment Circuits (AC). Hence I would expect that Management Information Base for VPLS would provide for some representation of ACs that perform this function for a given VSI.\r\n\r\nHowever, this RFC does not even mention attachment circuits in any way.\r\n\r\nI have tried to raise this issue with the WG and the authors. One of the authors has replied (see http://www.ietf.org/mail-archive/web/l2vpn/current/msg04539.html) that \"ACs are attached to the VPLS instances and are represented as IfMIB entries\". However, neither Interfaces MIB nor any of its key elements (e.g., ifIndex) are mentioned in this RFC.\n --VERIFIER NOTES-- \nThe errata system isn't to be used for recording future work or major defects in RFCs. These need to be taken to the relevant mailing lists (in this case pals@ietf.org) and progressed with Internet-Drafts.\r\n\r\nThis concern could probably be addressed through a new MIB module that augments the on in RFC 7257.",
+    "submit_date": "2014-07-23",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
