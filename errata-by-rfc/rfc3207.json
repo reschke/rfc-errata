@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 324,
+    "doc-id": "RFC3207",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": null,
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "The document is missing a reference: </ORIG>   [MIME-SEC] Galvin, J., Murphy, S., Crocker, S., and Freed, N.,\n               \"Security Multiparts for MIME: Multipart/Signed and\n               Multipart/Encrypted\", RFC 1847, October 1995.\n</CORR>\n",
+    "submit_date": "2002-02-13",
+    "submitter_name": "Simon Josefsson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4442,
+    "doc-id": "RFC3207",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "Appendix",
+    "orig_text": "   -  Section 5 and 7: More discussion of the man-in-the-middle attacks\r\n   -  Section 5: Additional discussion of when a server should and\r\n      should not advertise the STARTTLS extension\r\n   -  Section 5: Changed the requirements on SMTP clients after\r\n      receiving a 220 response.\r\n   -  Section 5.1: Clarified description of verifying certificates.\r\n   -  Section 5.3: Added the section on \"STARTTLS on the Submission\r\n      Port\"\r\n   -  Section 6: Bug fix in the example to indicate that the client\r\n      needs to issue a new EHLO command, as already is described in\r\n      section 5.2.\r\n   -  Section 7: Clarification of the paragraph on acceptable degree of\r\n      privacy. Significant change to the discussion of how to avoid a\r\n      man-in-the-middle attack.\r\n   -  Section A: Update reference from RFC 821 to RFC 2821.\r\n",
+    "correct_text": "   -  Section 4 and 6: More discussion of the man-in-the-middle attacks\r\n   -  Section 4: Additional discussion of when a server should and\r\n      should not advertise the STARTTLS extension\r\n   -  Section 4: Changed the requirements on SMTP clients after\r\n      receiving a 220 response.\r\n   -  Section 4.1: Clarified description of verifying certificates.\r\n   -  Section 4.3: Added the section on \"STARTTLS on the Submission\r\n      Port\"\r\n   -  Section 5: Bug fix in the example to indicate that the client\r\n      needs to issue a new EHLO command, as already is described in\r\n      section 4.2.\r\n   -  Section 5: Clarification of the paragraph on acceptable degree of\r\n      privacy. Significant change to the discussion of how to avoid a\r\n      man-in-the-middle attack.\r\n   -  Section 7: Update reference from RFC 821 to RFC 2821.\r\n",
+    "notes": "The appendix lists the changes as they apply to the sections of rfc 2487, but the links in https://tools.ietf.org/html/rfc3207#page-8 point back to the section numbers in RFC 3207.  Either the section numbers referred to should be RFC 3207 numbers (the correction i'm proposing here), or the links within the HTML version should point back to RFC 2487 instead.\n --VERIFIER NOTES-- \nThe tools-based HTML rendering is not the definitive version, and the errata system is not for recording problems with that version. There's no error in http://www.rfc-editor.org/rfc/rfc3207.txt",
+    "submit_date": "2015-08-10",
+    "submitter_name": "Daniel Kahn Gillmor",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
