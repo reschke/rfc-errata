@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": 454,
+    "doc-id": "RFC2392",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "   example, \"cid:foo4%25foo1@bar.net\" corresponds to\n\n     Content-ID: <foo4%25foo1@bar.net>",
+    "correct_text": "   example, \"cid:foo4%25foo1@bar.net\" corresponds to\n\n     Content-ID: <foo4%foo1@bar.net>\n",
+    "notes": "",
+    "submit_date": "2002-03-07",
+    "submitter_name": "Bruce Lilly",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3382,
+    "doc-id": "RFC2392",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "Content-Type: multipart/related; boundary=\"boundary-example-1\";\r\n                   type=Text/HTML\r\n\r\n--boundary-example 1\r\n     Content-Type: Text/HTML; charset=US-ASCII",
+    "correct_text": "Content-Type: multipart/related; boundary=\"boundary-example-1\";\r\n                   type=Text/HTML\r\n\r\n--boundary-example-1\r\n     Content-Type: Text/HTML; charset=US-ASCII",
+    "notes": "Missing dash in first boundary string.  I omitted the page break that was between the Content-Type header and the boundary.",
+    "submit_date": "2012-10-17",
+    "submitter_name": "Thomas Lane",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6175,
+    "doc-id": "RFC2392",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "However, in many systems that store messages,\r\nbody parts are not indexed independently\r\ntheir context (message).",
+    "correct_text": "However, in many systems that store messages,\r\nbody parts are not indexed independently of\r\ntheir context (message).",
+    "notes": "The word \"of\" is missing after \"independently\" in \"independently their context\".",
+    "submit_date": "2020-05-16",
+    "submitter_name": "Michael Witten (mfwitten)",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-05-16 09:59:05"
+  },
+  {
+    "errata_id": 6176,
+    "doc-id": "RFC2392",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "--boundary-example-1\r\n\r\nContent-ID: <foo4*foo1@bar.net>\r\nContent-Type: IMAGE/GIF\r\nContent-Transfer-Encoding: BASE64",
+    "correct_text": "--boundary-example-1\r\nContent-ID: <foo4*foo1@bar.net>\r\nContent-Type: IMAGE/GIF\r\nContent-Transfer-Encoding: BASE64",
+    "notes": "There should not be  a blank line between \"--boundary-example-1\"\r\nand \"Content-ID: <foo4*foo1@bar.net>\". See the syntax provided\r\nby the BNF term \"multipart-body\" in RFC 2046.",
+    "submit_date": "2020-05-16",
+    "submitter_name": "Michael Witten (mfwitten)",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2020-05-16 10:14:01"
+  }
+]
