@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4620,
+    "doc-id": "RFC5515",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.",
+    "orig_text": "   The following AVPs MUST be present in the CSUN:\r\n\r\n      Message Type\r\n\r\n      Connect Speed Update (more than one may be present in the CSUN)\r\n\r\n   Note that the LAC MUST NOT include a Connect Speed Update AVP for\r\n   which it did not send a Connect Speed Update Enable AVP in the prior\r\n   Incoming-Call-Request (ICRQ) control message for the session.",
+    "correct_text": "   The following AVPs MUST be present in the CSUN:\r\n\r\n      Message Type\r\n\r\n      Connect Speed Update (more than one may be present in the CSUN)\r\n\r\n   If a CSUN message contains two or more Connect Speed Update AVPs\r\n   (as updates for two or more sessions in the tunnel), the Session ID\r\n   of the L2TP control message MUST be 0.  It is because a CSUN message\r\n   with several Connect Speed Update AVPs is related to several sessions\r\n   in the tunnel, rather than to a single session. \r\n\r\n   Note that the LAC MUST NOT include a Connect Speed Update AVP for\r\n   which it did not send a Connect Speed Update Enable AVP in the prior\r\n   Incoming-Call-Request (ICRQ) control message for the session.\r\n",
+    "notes": "The suggested additional MUST requirement is important for LAC-LNS\r\noperation in order to avoid arbitrary, opposite and conflicting\r\ninterpretations and implementations of the RFC5515 on LAC and LNS.",
+    "submit_date": "2016-02-17",
+    "submitter_name": "Jewgenij Bytschkow",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
