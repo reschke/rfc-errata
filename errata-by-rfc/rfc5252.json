@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 1489,
+    "doc-id": "RFC5252",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1,1st para",
+    "orig_text": "{at the end of the first paragraph, line 2 on page 8}\r\n\r\n    ... advertised by a specific TE.\r\n                                 ^",
+    "correct_text": "    ... advertised by a specific PE.\r\n                                 ^",
+    "notes": "distorting typo:   TE = Traffic Engineering,\r\n                   PE = Provider Edge {Router}",
+    "submit_date": "2008-08-15",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3310,
+    "doc-id": "RFC5252",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "   L1VPN Info TLV\r\n      A single TLV, as defined in Section 3.2, MUST be present.  If more\r\n      than one L1VPN Info TLV is present, only the first TLV is\r\n      processed and the others MUST be ignored on receipt.\r\n\r\n",
+    "correct_text": "   L1VPN Info TLV\r\n      A single TLV, as defined in Section 2.2, MUST be present.  If more\r\n      than one L1VPN Info TLV is present, only the first TLV is\r\n      processed and the others MUST be ignored on receipt.\r\n\r\n",
+    "notes": null,
+    "submit_date": "2012-08-07",
+    "submitter_name": "Kris Michielsen",
+    "verifier_id": 119,
+    "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
