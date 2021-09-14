@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 5023,
+    "doc-id": "RFC8164",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "This mechanism not a replacement for \"https\"\r\nURIs; it is vulnerable to active attacks.\r\n",
+    "correct_text": "This mechanism is not a replacement for \"https\"\r\nURIs; it is vulnerable to active attacks.\r\n",
+    "notes": "This sentence is in the Abstract. It misses the verb \"is\".\r\n\r\nAlexey: This is correct, but it is unlikely to confuse readers.",
+    "submit_date": "2017-05-19",
+    "submitter_name": "Xiaoyin Liu",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 5490,
+    "doc-id": "RFC8164",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "in order minimize the delays that might be incurred.",
+    "correct_text": "in order to minimize the delays that might be incurred.",
+    "notes": "Grammar only.",
+    "submit_date": "2018-09-04",
+    "submitter_name": "Steven Meixner",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
