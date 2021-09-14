@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4568,
+    "doc-id": "RFC7564",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "Preparation entails only ensuring that the characters in an\r\nindividual string are allowed by the underlying PRECIS string\r\nclass.",
+    "correct_text": "Preparation entails applying some or none of the rules specified for a\r\nparticular string class or profile thereof to an individual string, and\r\nensuring that characters in the resulting string are allowed by the\r\nunderlying PRECIS string class.",
+    "notes": "The original text makes it sound like preparation is ONLY validating that the characters in a string are allowed in the underlying PRECIS string class, however, some profiles (for example, see the UsernameCaseMapped profile) specify that some of the rules must be applied first (in the case of UsernameCaseMapped, preparation includes first applying the Width rule).",
+    "submit_date": "2015-12-20",
+    "submitter_name": "Sam Whited",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
