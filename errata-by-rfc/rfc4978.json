@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1014,
+    "doc-id": "RFC4978",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": 99,
+    "orig_text": "RFC 4978 vs. RFC 5032 -- mismatch in UPDATES clauses\r\n\r\nWithin two weeks, two RFCs have been published specifying amendments\r\nto the IMAP protocol:\r\n\r\n  o  RFC 4978  -- COMPRESS\r\n\r\n  o  RFC 5032  -- WITHIN Search\r\n\r\nBoth IMAP extensions are similarly structured and arguably RFC 4978\r\nmodifies IMAP behaviour specified in RFC 3501 (and other IMAP\r\nextension specifications: IMAP TLS and SASL) to a much greater extent\r\nthan RFC 5032 does.\r\n\r\nNevertheless and surprisingly, only RFC 5032 has the line,\r\n  Updates: 3501\r\nin its document header and hence in its RFC index metadata.\r\n\r\nThis is apparently inconsistent.\r\n\r\nAn update to the RFC metadata incoporating the relation\r\n     \"RFC 4978 updates RFC 3501\"\r\nwould be welcome as well.",
+    "correct_text": "",
+    "notes": "",
+    "submit_date": "2007-09-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1803,
+    "doc-id": "RFC4978",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 3,
+    "orig_text": "        C: b login arnt tnra\r\n        S: b OK Logged in as arnt\r\n        C: c compress deflate\r\n|       S: d OK DEFLATE active\r\n           ^\r\n",
+    "correct_text": "        C: b login arnt tnra\r\n        S: b OK Logged in as arnt\r\n        C: c compress deflate\r\n|       S: c OK DEFLATE active\r\n           ^\r\n",
+    "notes": "The tag in the reply from the server MUST match the tag in the\r\ncommand sent by the client.\r\n",
+    "submit_date": "2007-09-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 116,
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 4478,
+    "doc-id": "RFC4978",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "IMAP protoco",
+    "orig_text": "RFC 4978 vs. RFC 5032 -- mismatch in UPDATES clauses\r\n\r\nWithin two weeks, two RFCs have been published specifying amendments\r\nto the IMAP protocol:\r\n\r\n  o  RFC 4978  -- COMPRESS\r\n\r\n  o  RFC 5032  -- WITHIN Search\r\n\r\nBoth IMAP extensions are similarly structured and arguably RFC 4978\r\nmodifies IMAP behaviour specified in RFC 3501 (and other IMAP\r\nextension specifications: IMAP TLS and SASL) to a much greater extent\r\nthan RFC 5032 does.\r\n\r\nNevertheless and surprisingly, only RFC 5032 has the line,\r\n  Updates: 3501\r\nin its document header and hence in its RFC index metadata.\r\n\r\nThis is apparently inconsistent.\r\n\r\nAn update to the RFC metadata incoporating the relation\r\n     \"RFC 4978 updates RFC 3501\"\r\nwould be welcome as well.\r\nReport New Errata",
+    "correct_text": "TBD following modifications",
+    "notes": "Both IMAP extensions are similarly structured and arguably RFC 4978\r\nmodifies IMAP behaviour specified in RFC 3501 (and other IMAP\r\nextension specifications: IMAP TLS and SASL) to a much greater extent\r\nthan RFC 5032 does.\r\n\r\nNevertheless and surprisingly, only RFC 5032 has the line,\r\n  Updates: 3501\r\nin its document header and hence in its RFC index metadata.\r\n\r\nThis is apparently inconsistent.\r\n\r\nAn update to the RFC metadata incoporating the relation\r\n     \"RFC 4978 updates RFC 3501\"\r\nwould be welcome as well.\r\nReport New Errata\n --VERIFIER NOTES-- \nFirst, errata isn't meant to be used for RFC metadata.\r\n\r\nSecond, the reason that RFC 5032 \"updates\" 3501 is that the grammar for the IMAP SEARCH command isn't set up to be extensible, so adding search terms is an update to the base.  In contrast, adding IMAP commands generally isn't.\r\n\r\nExcept that, yes, we have been inconsistent with that over time.",
+    "submit_date": "2015-09-19",
+    "submitter_name": "poima fuimaono",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
