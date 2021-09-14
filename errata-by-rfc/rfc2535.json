@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6529,
+    "doc-id": "RFC2535",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.3.1",
+    "orig_text": "   The syntax of a SIG resource record (signature) is described in\r\n   Section 4.  It cryptographicly binds the RRset being signed to the\r\n   signer and a validity interval.\r\n",
+    "correct_text": "   The syntax of a SIG resource record (signature) is described in\r\n   Section 4.  It cryptographically binds the RRset being signed to the\r\n   signer and a validity interval.\r\n",
+    "notes": "cryptographicly should be cryptographically",
+    "submit_date": "2021-04-12",
+    "submitter_name": "John Samuels",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2021-04-13 22:47:01"
+  }
+]
