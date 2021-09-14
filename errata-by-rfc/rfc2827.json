@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 372,
+    "doc-id": "RFC2827",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 9,
+    "orig_text": "   [9]  Thanks to: Craig Huegen; See:\r\n        http://www.quadrunner.com/~chuegen/smurf.txt.",
+    "correct_text": "   [9]  Thanks to: Craig Huegen; See:\r\n        http://www.pentics.net/denial-of-service/white-papers/smurf.html.",
+    "notes": " Tried to preserve the old URL, but could not. \n --VERIFIER NOTES-- \nAccording to the RFC editor: \r\n\r\nThe URL was correct at the time of publication, so we don't consider\r\nthis an erratum.  That is, we don't believe errata should be used\r\nto update things that were true at the time of publication.  I think\r\nusing the errata in this way muddies the system. \r\n\r\nAdditionally, using Google search\r\non \"Craig Huegen\" returns a link to \"Index of Craig Huegen's\r\nDenial-of-Service papers and presentations\", which seems sufficient.\r\n\r\n",
+    "submit_date": "2002-11-20",
+    "submitter_name": "Craig A. Huegen",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2244,
+    "doc-id": "RFC2827",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "By mentioning the method, he was concerned about encouraging it's use.",
+    "correct_text": "By mentioning the method, he was concerned about encouraging its use.",
+    "notes": "/it's/ s/'//",
+    "submit_date": "2010-04-28",
+    "submitter_name": "Justin Pryzby",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
