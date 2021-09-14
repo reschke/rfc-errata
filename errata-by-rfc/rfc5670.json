@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 1968,
+    "doc-id": "RFC5670",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "A.2",
+    "orig_text": "   A token bucket with the following parameters:\r\n\r\n      *  PCN-excess-rate: token rate of token bucket (bits/second)\r\n\r\n|     *  BS_etm: depth of TB in token bucket (bits)\r\n\r\n      *  lastUpdate: time the token bucket was last updated (seconds)\r\n\r\n      *  F_etm: amount of tokens in token bucket (bits)",
+    "correct_text": "   A token bucket with the following parameters:\r\n\r\n      *  PCN-excess-rate: token rate of token bucket (bits/second)\r\n\r\n|     *  BS_etm: depth of token bucket (bits)\r\n\r\n      *  lastUpdate: time the token bucket was last updated (seconds)\r\n\r\n      *  F_etm: amount of tokens in token bucket (bits)",
+    "notes": "Rationale: \"TB\" does not appear anywhere else in the document.\r\n  The RFC text looks like a shift in terminology has not been\r\n  performed consistently.  Dropping \"TB in\" seems appropriate\r\n  and consistent in style with the surrounding text.",
+    "submit_date": "2009-12-21",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 113,
+    "verifier_name": "Lars Eggert",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
