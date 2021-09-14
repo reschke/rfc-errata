@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4367,
+    "doc-id": "RFC6839",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "Encoding considerations:\r\n\r\n      Per [RFC4627], JSON is allowed to be represented using UTF-8,\r\n      UTF-16, or UTF-32.  When JSON is written in UTF-8, JSON is 8bit\r\n      compatible ([RFC2045]).  When JSON is written in UTF-16 or UTF-32,\r\n      JSON is binary ([RFC2045]).",
+    "correct_text": "Encoding considerations:  binary as per section 11 of RFC 7159",
+    "notes": "RFC 7159, section 11 specifies that encoding for JSON is binary.\n --VERIFIER NOTES-- \nThis does not qualify as an erratum, but do see the mailing list discussion that starts here:\r\nhttp://www.ietf.org/mail-archive/web/apps-discuss/current/msg14321.html",
+    "submit_date": "2015-05-15",
+    "submitter_name": "Yakov Shafranovich",
+    "verifier_id": 130,
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
