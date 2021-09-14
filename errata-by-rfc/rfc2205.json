@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4732,
+    "doc-id": "RFC2205",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A.5",
+    "orig_text": "      Error Value\r\n\r\n           A two-octet field containing additional information about the\r\n                error.  Its contents depend upon the Error Type.",
+    "correct_text": "       Error Value\r\n\r\n           A two-octet field containing additional information about the\r\n                error.  Its contents depend upon the Error Code.",
+    "notes": "s/Error Type/Error Code\r\n\r\n\"Error Type\" is neither defined nor used elsewhere in RFC 2205.",
+    "submit_date": "2016-07-06",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": 114,
+    "verifier_name": "Magnus Westerlund",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
