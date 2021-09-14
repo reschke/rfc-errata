@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 2753,
+    "doc-id": "RFC2626",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 3.6,
+    "orig_text": "3.6 \"Network News\"\r\n\r\n\r\n   There does exist a problem in both NNTP, RFC 977, and the Usenet News\r\n   Message Format, RFC 10336.  They both specify two-digit year format.\r\n   A working group has been formed to update the network news protocols\r\n   in general, and addressing this problem is on their list of work\r\n   items.\r\n",
+    "correct_text": "3.6 \"Network News\"\r\n\r\n\r\n   There does exist a problem in both NNTP, RFC 977, and the Usenet News\r\n   Message Format, RFC 1036.  They both specify two-digit year format.\r\n   A working group has been formed to update the network news protocols\r\n   in general, and addressing this problem is on their list of work\r\n   items.\r\n",
+    "notes": "s/RFC 10336/RFC 1036",
+    "submit_date": "2011-03-25",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 105,
+    "verifier_name": "Ron Bonica",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2754,
+    "doc-id": "RFC2626",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "2; 5.1; 6",
+    "orig_text": "{1 - Section 2}\r\n\r\n[...] It should also be noted that the research was performd on RFCs 1\r\n   through 2128.  At that time the IESG was charted with not allowing [...]\r\n\r\n\r\n{2 - Section 5.1}\r\n\r\n5.1 Fixed Solution\r\n\r\n   A number of organizations and groups have suggested a fixed solution\r\n   to the problem of two digit years.  Given a two-digit year YY, if YY\r\n   is greater than or equal to 50, the year shall be interpreted as\r\n   19YY; and where YY is less than 50, the year shall be intrepreted as\r\n   20YY.\r\n\r\n\r\n{3 - Section 6}\r\n\r\n6. Methodology\r\n\r\n   The first task was dividing the types of RFC's into logical groups\r\n   rather than the strict numeric publishing order.  Sixteen specific\r\n   areas were identified.  They are: \"Autoconfiguration\" , \"Directory\r\n   Services\", \"Disk Sharing\", \"Games and Chat\" ,\"Information Services &\r\n   File Transfer\", \"Network & Transport Layer\", \"Electronic Mail\",\r\n   \"NTP\", Name Serving\", \"Network Management\", \"News\", \"Real Time\r\n   Services\", \"Routing\", \"Security\", \"Virtual Terminal\", and \"Other\".\r\n   In addition to these categories, many hundreds of RFC's were\r\n   immediately eliminated based on content.  That is not to say that all\r\n   Informational RFC's were not considered, many did contain some\r\n   technical content or overview whichdemanded scrutiny.\r\n\r\n",
+    "correct_text": "{1 - Section 2}\r\n\r\n[...] It should also be noted that the research was performed on RFCs 1\r\n   through 2128.  At that time the IESG was charted with not allowing [...]\r\n\r\n\r\n{2 - Section 5.1}\r\n\r\n5.1 Fixed Solution\r\n\r\n   A number of organizations and groups have suggested a fixed solution\r\n   to the problem of two digit years.  Given a two-digit year YY, if YY\r\n   is greater than or equal to 50, the year shall be interpreted as\r\n   19YY; and where YY is less than 50, the year shall be interpreted as\r\n   20YY.\r\n\r\n\r\n{3 - Section 6}\r\n\r\n6. Methodology\r\n\r\n   The first task was dividing the types of RFC's into logical groups\r\n   rather than the strict numeric publishing order.  Sixteen specific\r\n   areas were identified.  They are: \"Autoconfiguration\" , \"Directory\r\n   Services\", \"Disk Sharing\", \"Games and Chat\" ,\"Information Services &\r\n   File Transfer\", \"Network & Transport Layer\", \"Electronic Mail\",\r\n   \"NTP\", Name Serving\", \"Network Management\", \"News\", \"Real Time\r\n   Services\", \"Routing\", \"Security\", \"Virtual Terminal\", and \"Other\".\r\n   In addition to these categories, many hundreds of RFC's were\r\n   immediately eliminated based on content.  That is not to say that all\r\n   Informational RFC's were not considered, many did contain some\r\n   technical content or overview which demanded scrutiny.\r\n\r\n",
+    "notes": "{1} A typo in \"performed\".\r\n{2} A typo in \"interpreted\".\r\n{3} A typo in \"which demanded\".",
+    "submit_date": "2011-03-25",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 105,
+    "verifier_name": "Ron Bonica",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 2755,
+    "doc-id": "RFC2626",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "12.1; 12.2",
+    "orig_text": "{1 - Section 12.1}\r\n\r\n12.1 Summary\r\n\r\n   The RFC's which were categorized into this group were the Internet\r\n   Protocol (IP) versions four and six, the Transmission Control\r\n   Protocol (TCP), the User Datagram Protocol (UDP), the Point-to-Point\r\n   Protocol (PPP) and its extensions, Internet Control Message Protocol\r\n   (ICMP), the Address Resolution Protocol (ARP) and Remote Procedure\r\n   Call (RPC) protocol.  A variety of less known protocols were also\r\n   examined.\r\n\r\n   After careful review of the nearly 400 RFC's in this catagory, no\r\n   millennium or year 2000 problems were found.\r\n\r\n\r\n{2 - Section 12.2}\r\n\r\n   [...]\r\n\r\n   RFC 2097 on the PPP NetBIOS Frame Control Protocol discuesses several\r\n   timer and timeouts in Section 2.1, none of which suffers from a year\r\n   2000 problem.\r\n\r\n   [...]\r\n\r\n   RFC 791 on the Internet Protocol defines a packet type 68 which is an\r\n   Internet Timestamp, which defines a 32-bit field which contains the\r\n   number of milliseconds since midnght UT.",
+    "correct_text": "{1 - Section 12.1}\r\n\r\n12.1 Summary\r\n\r\n   The RFC's which were categorized into this group were the Internet\r\n   Protocol (IP) versions four and six, the Transmission Control\r\n   Protocol (TCP), the User Datagram Protocol (UDP), the Point-to-Point\r\n   Protocol (PPP) and its extensions, Internet Control Message Protocol\r\n   (ICMP), the Address Resolution Protocol (ARP) and Remote Procedure\r\n   Call (RPC) protocol.  A variety of less known protocols were also\r\n   examined.\r\n\r\n   After careful review of the nearly 400 RFC's in this category, no\r\n   millennium or year 2000 problems were found.\r\n\r\n\r\n{2 - Section 12.2}\r\n\r\n   [...]\r\n\r\n   RFC 2097 on the PPP NetBIOS Frame Control Protocol discusses several\r\n   timer and timeouts in Section 2.1, none of which suffers from a year\r\n   2000 problem.\r\n\r\n   [...]\r\n\r\n   RFC 791 on the Internet Protocol defines a packet type 68 which is an\r\n   Internet Timestamp, which defines a 32-bit field which contains the\r\n   number of milliseconds since midnight UT.",
+    "notes": "{1} A typo in \"category\".\r\n{2} 1) A typo in \"discusses\";\r\n    2) A typo in \"midnight\".",
+    "submit_date": "2011-03-25",
+    "submitter_name": "Mykyta Yevstifeyev",
+    "verifier_id": 105,
+    "verifier_name": "Ron Bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
