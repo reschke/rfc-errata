@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 2685,
+    "doc-id": "RFC6081",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 9,
+    "orig_text": "   Trailer Type  Usage                              Reference\r\n   ------------  ---------------------------------  ---------\r\n      0x01       Nonce Trailer                      RFC 6081\r\n      0x02       Random Port Trailer                RFC 6081\r\n      0x03       Alternate Address Trailer          RFC 6081\r\n      0x04       Neighbor Discovery Option Trailer  RFC 6081",
+    "correct_text": "   Trailer Type  Usage                              Reference\r\n   ------------  ---------------------------------  ---------\r\n      0x01       Nonce Trailer                      RFC 6081\r\n      0x03       Alternate Address Trailer          RFC 6081\r\n      0x04       Neighbor Discovery Option Trailer  RFC 6081\r\n      0x05       Random Port Trailer                RFC 6081",
+    "notes": "Section 4.5 is correct, and (normatively) defines the Random Port Trailer as having Trailer Type 0x05.  However, the IANA Considerations section incorrectly lists it (informatively) as 0x02.",
+    "submit_date": "2011-01-18",
+    "submitter_name": "Dave Thaler",
+    "verifier_id": 131,
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
