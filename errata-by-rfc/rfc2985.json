@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 356,
+    "doc-id": "RFC2985",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "99The Table of Contents says:",
+    "orig_text": "5.6  Attributes defined in S/MIMIE .............................. 18",
+    "correct_text": "5.6  Attributes defined in S/MIME ..............................  18\r\n",
+    "notes": "",
+    "submit_date": "2000-12-13",
+    "submitter_name": "Robert Moskowitz",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3769,
+    "doc-id": "RFC2985",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.2.1",
+    "orig_text": "   emailAddress ATTRIBUTE ::= {\r\n           WITH SYNTAX IA5String (SIZE(1..pkcs-9-ub-emailAddress))\r\n           EQUALITY MATCHING RULE pkcs9CaseIgnoreMatch\r\n           ID pkcs-9-at-emailAdress\r\n   }\r\n",
+    "correct_text": "   emailAddress ATTRIBUTE ::= {\r\n           WITH SYNTAX IA5String (SIZE(1..pkcs-9-ub-emailAddress))\r\n           EQUALITY MATCHING RULE pkcs9CaseIgnoreMatch\r\n           ID pkcs-9-at-emailAddress\r\n   }\r\n",
+    "notes": "The ASN.1 is correct in Appendix A: ASN.1 Module.\r\n\r\nspt: For those who missed it there is a \"d\" missing from the pkcs-9-at-emailAddress in the original text. As it's in the text and not the module, I'll mark this as hold for document as well as reclassifying it as editorial.",
+    "submit_date": "2013-10-27",
+    "submitter_name": "Sean Leonard",
+    "verifier_id": 124,
+    "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
