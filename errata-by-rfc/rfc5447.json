@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 1695,
+    "doc-id": "RFC5447",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "7.1, pg.13",
+    "orig_text": "|  The following new AVPs are to be allocated from RADIUS Attribute Type\r\n   space [RFC2865] so that they are RADIUS backward-compatible (AVP Code\r\n   values between 0-255):\r\n\r\n",
+    "correct_text": "                          vvvvvvvvv                vvvv\r\n|  The following new AVPs have been allocated from the RADIUS Attribute\r\n   Type space [RFC2865] so that they are RADIUS backward-compatible (AVP\r\n   Code values between 0-255):\r\n",
+    "notes": "Location: second text paragraph in Section 7.1.\r\n\r\nRationale:\r\n  Wrong temporal relationship (plus missing article);\r\n  as in the first paragraph of the section, the action IANA\r\n  _has performed_ in conjunction with the publication of the RFC\r\n  should have been recorded in the RFC text.",
+    "submit_date": "2009-02-23",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 1934,
+    "doc-id": "RFC5447",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "4.2.4",
+    "orig_text": "   The MIP6-Home-Link-Prefix AVP (AVP Code 125) is of type OctetString\r\n   and contains the Mobile IPv6 home network prefix information in a\r\n   network byte order. ",
+    "correct_text": "   The MIP6-Home-Link-Prefix AVP (AVP Code 125) is of type OctetString\r\n   and contains the Mobile IPv6 home network prefix information in\r\n   network byte order. ",
+    "notes": "AFAIK there's only one network byte order.",
+    "submit_date": "2009-10-26",
+    "submitter_name": "Glen Zorn",
+    "verifier_id": 106,
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3034,
+    "doc-id": "RFC5447",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.2.5",
+    "orig_text": "The following examples show how the LOCAL_HOME_AGENT_ASSIGNMENT\r\n(referred to as LOCAL-bit in the examples) capability and the MIP-\r\nAgent-Info AVP ",
+    "correct_text": "The following examples show how the LOCAL_HOME_AGENT_ASSIGNMENT\r\n(referred to as LOCAL-bit in the examples) capability and the MIP6-\r\nAgent-Info AVP ",
+    "notes": "There is no such thing as the \"MIP-Agent-Info\" AVP, it should be \"MIP6-Agent-Info\"",
+    "submit_date": "2011-11-22",
+    "submitter_name": "Romain Kuntz",
+    "verifier_id": 105,
+    "verifier_name": "ron bonica",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
