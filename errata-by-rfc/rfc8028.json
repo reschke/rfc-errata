@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6035,
+    "doc-id": "RFC8028",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": null,
+    "correct_text": "In the context of this document, it is clear that the prefix information becomes more associated with the sending router, than with the link as a whole. As such, the PIO lifetimes should be interpreted to indicate the view of the router sending the Router Advertisement, as opposed to absolute information about a prefix.\r\n\r\nFor example, if two routers (say, Router A and Router B), advertise the prefix 2001:db8::/64 as:\r\n\r\n* Router A:\r\nA=1, L=1, PIO: 2001:db8::/64, Valid Lifetime=0, Preferred Lifetime=0\r\n\r\n* Router B:\r\nA=1, L=1, PIO: 2001:db8::/64, Valid Lifetime=X, Preferred Lifetime=Z\r\n\r\nthen, addresses should be configured/maintained with a Valid Lifetime of X, and a Preferred Lifetime of Z. Furthermore, the prefix should be considered on-link with a Valid Lifetime of X.  And Router B should be employed as the preferred next hop for packets sourced from the prefix 2001:db8::/64, since it advertises the prefix with a non-zero Valid Lifetime and non-zero Preferred Lifetime (as opposed to Router A).\r\n\r\nAs long as one router on the local subnet considers a prefix to be Valid (and possibly Preferred), the prefix should be considered Valid (and Preferred, if applicable). Similarly, as long as one router on the local subnet considers the prefix to be on-link and/or usable for auto-configuration, the prefix should be considered as such.\r\n",
+    "notes": "This is not a bug in RFC 8028, but rather a clarification on what's likely a desired behavior. As such, and if considered appropriate, this errata is meant to be \"held for document update\".\r\n\r\nI would like to thank Fred Baker and Brian Carpenter for taking the time to answer my questions on RFC 8028.",
+    "submit_date": "2020-04-01",
+    "submitter_name": "Fernando Gont",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2020-04-01 08:15:08"
+  }
+]
