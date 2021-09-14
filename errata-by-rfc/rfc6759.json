@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": 3909,
+    "doc-id": "RFC6759",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.1.8",
+    "orig_text": "   Description:\r\n    Specifies if the Application ID is based on peer-to-peer\r\n    technology.  Possible values are { \"yes\", \"y\", 1 },\r\n    { \"no\", \"n\", 2 }, and { \"unassigned\", \"u\", 0 }.\r\n",
+    "correct_text": "   Description:\r\n    Specifies if the Application ID is based on peer-to-peer\r\n    technology.  Possible values are { \"yes\", \"y\", 1 },\r\n    { \"no\", \"n\", 2 }, and { \"unassigned\", \"u\", 0 }.\r\n\r\n    Note that 0, 1, and 2 above are integer values; as UTF-8 \r\n    characters they are U+0000(NUL), U+0001(SOH), and U+0002(STX). \r\n    WARNING: the overloading of a string value with an integer \r\n    representation that can take the value 0 requires careful \r\n    handling on collectors and exporters which use this value\r\n    to signify the end of a string.",
+    "notes": "Added clarifying text.  The difference between a quoted and unquoted\r\ndigit (1 vs \"1\") is extremely subtle and easily missed.  \r\n\r\nSee, for example,\r\nhttp://www.ietf.org/mail-archive/web/ipfix/current/msg07151.html.",
+    "submit_date": "2014-03-03",
+    "submitter_name": "Andrew Feren",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3910,
+    "doc-id": "RFC6759",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.1.9",
+    "orig_text": "   Description:\r\n     Specifies if the Application ID is used as a tunnel technology.\r\n     Possible values are { \"yes\", \"y\", 1 }, { \"no\", \"n\", 2 },\r\n     and { \"unassigned\", \"u\", 0 }.\r\n",
+    "correct_text": "   Description:\r\n     Specifies if the Application ID is used as a tunnel technology.\r\n     Possible values are { \"yes\", \"y\", 1 }, { \"no\", \"n\", 2 },\r\n     and { \"unassigned\", \"u\", 0 }.\r\n \r\n     Note that 0, 1, and 2 above are integer values; as UTF-8 \r\n     characters they are U+0000(NUL), U+0001(SOH), and U+0002(STX). \r\n     WARNING: the overloading of a string value with an integer \r\n     representation that can take the value 0 requires careful \r\n     handling on collectors and exporters which use this value\r\n     to signify the end of a string.\r\n",
+    "notes": "Added clarifying text.  The difference between a quoted and unquoted\r\ndigit (1 vs \"1\") is extremely subtle and easily missed.  \r\n\r\nSee, for example,\r\nhttp://www.ietf.org/mail-archive/web/ipfix/current/msg07151.html.",
+    "submit_date": "2014-03-03",
+    "submitter_name": "Andrew Feren",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 3911,
+    "doc-id": "RFC6759",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.1.10",
+    "orig_text": "   Description:\r\n    Specifies if the Application ID is an encrypted networking\r\n    protocol.  Possible values are { \"yes\", \"y\", 1 },\r\n    { \"no\", \"n\", 2 }, and { \"unassigned\", \"u\", 0 }.\r\n",
+    "correct_text": "   Description:\r\n    Specifies if the Application ID is an encrypted networking\r\n    protocol.  Possible values are { \"yes\", \"y\", 1 },\r\n    { \"no\", \"n\", 2 }, and { \"unassigned\", \"u\", 0 }.\r\n\r\n    Note that 0, 1, and 2 above are integer values; as UTF-8 \r\n    characters they are U+0000(NUL), U+0001(SOH), and U+0002(STX). \r\n    WARNING: the overloading of a string value with an integer \r\n    representation that can take the value 0 requires careful \r\n    handling on collectors and exporters which use this value\r\n    to signify the end of a string.\r\n",
+    "notes": "Added clarifying text.  The difference between a quoted and unquoted\r\ndigit (1 vs \"1\") is extremely subtle and easily missed.  \r\n\r\nSee, for example,\r\nhttp://www.ietf.org/mail-archive/web/ipfix/current/msg07151.html.",
+    "submit_date": "2014-03-03",
+    "submitter_name": "Andrew Feren",
+    "verifier_id": 132,
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
