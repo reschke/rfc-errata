@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 4571,
+    "doc-id": "RFC7633",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": 2.2,
+    "orig_text": "2.2.  TLS Feature, X.509 Extension\r\n\r\n   In order to avoid the confusion that would occur in attempting to\r\n   specify an X.509 extension describing the use of TLS extensions, in\r\n   this document the term \"extension\" is reserved to refer to X.509v3\r\n   extensions and the term \"TLS feature extension\" is used to refer to\r\n   what the TLS specification [RFC5246] refers to as an \"extension\".\r\n",
+    "correct_text": "2.2.  TLS Feature, X.509 Extension\r\n\r\n   In order to avoid the confusion that would occur in attempting to\r\n   specify an X.509 extension describing the use of TLS extensions, in\r\n   this document the term \"TLS feature extension\" is used to refer to\r\n   the X.509 extension specified in this document.\r\n",
+    "notes": "(There is no platonically correct version of the text, as the problem is with the entire RFC.)\r\n\r\nVirtually every instance of the term \"TLS feature extension\" in the RFC refers to the X.509 extension. The sole instance of it referring to TLS extensions is the first paragraph of section 3.\r\n\r\nOf the uses of the simple term \"extension,\" the first two paragraphs of Section 3 contain the only three uses consistent with 2.2. The other three (\"choose to have a certificate issued with this extension\",\"critical extensions MUST reject the certificate\",\"key usage extension\") refer to X.509 extensions.\n --VERIFIER NOTES-- \nIssue was discussed during AD eval and IESG eval so this is not an error.\r\nAn anonymously submitted erratum is also odd.\r\n",
+    "submit_date": "2015-12-28",
+    "submitter_name": "Anonymous",
+    "verifier_id": 128,
+    "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
