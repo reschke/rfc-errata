@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 223,
+    "doc-id": "RFC3834",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "   A Service Responder MAY deliver the response to the address(es) from\n   the >From field, or to another address from the request payload,\n   provided this behavior is precisely defined in the specification for\n   that service. ",
+    "correct_text": "   A Service Responder MAY deliver the response to the address(es) from\n   the From field, or to another address from the request payload,\n   provided this behavior is precisely defined in the specification for\n   that service. ",
+    "notes": "\n\n",
+    "submit_date": "2004-09-01",
+    "submitter_name": "Bruce Lilly",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  }
+]
