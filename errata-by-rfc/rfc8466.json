@@ -88,5 +88,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6683,
+    "doc-id": "RFC8466",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "5.10.2.1",
+    "orig_text": "   QoS classification rules are handled by \"qos-classification-policy\".\r\n   qos-classification-policy is an ordered list of rules that match a\r\n   flow or application and set the appropriate target CoS\r\n   (target-class-id).  The user can define the match using a\r\n   more specific flow definition (based on Layer 2 source and\r\n   destination MAC addresses, cos, dscp, cos-id, color-id, etc.).  A\r\n   \"color-id\" will be assigned to a service frame to identify its QoS\r\n   profile conformance.  A service frame is \"green\" if it is conformant\r\n   with the \"committed\" rate of the bandwidth profile.  A service frame\r\n   is \"yellow\" if it exceeds the \"committed\" rate but is conformant with\r\n   the \"excess\" rate of the bandwidth profile.  Finally, a service frame\r\n   is \"red\" if it is conformant with neither the \"committed\" rate nor\r\n   the \"excess\" rate of the bandwidth profile.",
+    "correct_text": "   QoS classification rules are handled by \"qos-classification-policy\".\r\n   qos-classification-policy is an ordered list of rules that match a\r\n   flow or application and set the appropriate target CoS\r\n   (target-class-id).  The user can define the match using a\r\n   more specific flow definition (based on Layer 2 source and\r\n   destination MAC addresses, dscp, color-type, etc.).  A\r\n   \"color-type\" will be assigned to a service frame to identify its QoS\r\n   profile conformance.  A service frame is \"green\" if it is conformant\r\n   with the \"committed\" rate of the bandwidth profile.  A service frame\r\n   is \"yellow\" if it exceeds the \"committed\" rate but is conformant with\r\n   the \"excess\" rate of the bandwidth profile.  Finally, a service frame\r\n   is \"red\" if it is conformant with neither the \"committed\" rate nor\r\n   the \"excess\" rate of the bandwidth profile.",
+    "notes": "There is no \"color-id\" under \"qos-classification-policy\". The text should refer to \"color-type\" given that the \"qos-classification-policy\" substree is as follows:\r\n\r\n        +--rw service\r\n        |  +--rw qos {qos}?\r\n        |  |  +--rw qos-classification-policy\r\n        |  |  |  +--rw rule* [id]\r\n        |  |  |     +--rw id                   string\r\n        |  |  |     +--rw (match-type)?\r\n        |  |  |     |  +--:(match-flow)\r\n        |  |  |     |  |  +--rw match-flow\r\n        |  |  |     |  |     +--rw dscp?           inet:dscp\r\n        |  |  |     |  |     +--rw dot1q?          uint16\r\n        |  |  |     |  |     +--rw pcp?            uint8\r\n        |  |  |     |  |     +--rw src-mac?        yang:mac-address\r\n        |  |  |     |  |     +--rw dst-mac?        yang:mac-address\r\n        |  |  |     |  |     +--rw color-type?     identityref\r\n        |  |  |     |  |     +--rw target-sites*\r\n        |  |  |     |  |     |               svc-id {target-sites}?\r\n        |  |  |     |  |     +--rw any?            empty\r\n        |  |  |     |  |     +--rw vpn-id?         svc-id\r\n        |  |  |     |  +--:(match-application)\r\n        |  |  |     |     +--rw match-application?   identityref\r\n        |  |  |     +--rw target-class-id?     string\r\n\r\nThe same applies for \"cos\" and \"cos-id\". \r\n\r\nThe corrected text uses \"color-type\" instead of \"color-id\" and removes \"cos\" and \"cos-id\" from the flow definition examples.",
+    "submit_date": "2021-09-14",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
