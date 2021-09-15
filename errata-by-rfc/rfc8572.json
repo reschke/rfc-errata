@@ -28,5 +28,35 @@
     "verifier_id": 2,
     "verifier_name": "Rob Wilton",
     "update_date": "2021-06-21 13:03:08"
+  },
+  {
+    "errata_id": 6684,
+    "doc-id": "RFC8572",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.1,
+    "orig_text": "   The DHCPv4 server MAY include a single instance of the\r\n   OPTION_V4_SZTP_REDIRECT option in DHCP messages it sends.  Servers\r\n   MUST NOT send more than one instance of the OPTION_V4_SZTP_REDIRECT\r\n   option.",
+    "correct_text": "   The DHCPv4 server MAY include a single instance or multiple instances of the\r\n   OPTION_V4_SZTP_REDIRECT option in DHCP messages it sends.",
+    "notes": "The original text contradicts the statement in the same section:\r\n   \"If the length of the 'bootstrap-server-list' field is too large to\r\n   fit into a single option, then OPTION_V4_SZTP_REDIRECT MUST be split\r\n   into multiple instances of the option according to the process\r\n   described in [RFC3396].\"",
+    "submit_date": "2021-09-14",
+    "submitter_name": "Alex Krichevsky",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6685,
+    "doc-id": "RFC8572",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.3,
+    "orig_text": "   Each URI entry in the bootstrap-server-list is structured as follows:\r\n\r\n    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-...-+-+-+-+-+-+-+\r\n    |       uri-length              |          URI                  |\r\n    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-...-+-+-+-+-+-+-+\r\n\r\n    * uri-length: 2 octets long; specifies the length of the URI data.\r\n    * URI: URI of the SZTP bootstrap server.",
+    "correct_text": "Multiple URI entries can be specified in a comma-separated list.",
+    "notes": "Most of DHCP servers can be configured only with ASCII string for options.",
+    "submit_date": "2021-09-14",
+    "submitter_name": "Alex Krichevsky",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
