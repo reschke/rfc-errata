@@ -17,16 +17,16 @@
   {
     "errata_id": 6687,
     "doc-id": "RFC3998",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": 4.1,
     "orig_text": "This OPTIONAL operation is a create job operation that allows a\r\nclient to re-process a copy of a job that had been retained in the\r\nqueue after processing was completed, canceled, or aborted (see\r\n[RFC2911], section 4.3.7.2).  This operation is the same as the\r\n",
     "correct_text": "This DEPRECATED operation is a create job operation that allows a\r\nclient to re-process a copy of a job that had been retained in the\r\nqueue after processing was completed, canceled, or aborted (see\r\n[RFC2911], section 4.3.7.2).  This operation is the same as the\r\n",
-    "notes": "This operation has been deprecated by the IPP workgroup. The recommended replacement is the Resubmit-Job operation defined in PWG 5100.11.",
+    "notes": "This operation has been deprecated by the IPP workgroup. The recommended replacement is the Resubmit-Job operation defined in PWG 5100.11.\n --VERIFIER NOTES-- \nThis sort of change to update for events since the time of publication is not appropriate for an erratum; errata are intended solely to indicate errors in a document that were errors at the time of publication. A revision of the document or a new document with an \"Updates:\" relationship would be more appropriate ways to indicate that the situation has changed.",
     "submit_date": "2021-09-16",
     "submitter_name": "Michael Sweet",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2021-09-17 02:41:09"
   }
 ]
