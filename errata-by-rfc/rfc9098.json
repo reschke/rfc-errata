@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6689,
+    "doc-id": "RFC9098",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 7.2,
+    "orig_text": "  If a forwarding router cannot determine consistent n-tuples for\r\n   calculating flow hashes, data streams are more likely to end up being\r\n   distributed unequally across ECMP and load-shared links.  This may\r\n   lead to packet drops or reduced performance.",
+    "correct_text": "[None]",
+    "notes": "The paragraph seems to belong to 7.1 (ECMP and load blanacing) since it is not related to the subject in 7.2 (ACL and filtering). But there is a very similar paragraph in 7.1 so the best solution is probably to delete the whole paragraph.",
+    "submit_date": "2021-09-20",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
