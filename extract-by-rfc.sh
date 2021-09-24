@@ -6,7 +6,7 @@ git pull
 
 ls $dirname/rfc*json | cut -d/ -f2 | cut -c 4- | cut -d . -f1 > existing-errata.txt
 
-(cat existing.errata ; jq '.[]."doc-id"' $1 | tr -d '"' ) | sort -n | uniq | while read rfc
+(cat existing-errata.txt ; jq '.[]."doc-id"' $1 | tr -d '"' ) | sort -n | uniq | while read rfc
 do
   num=$(echo $rfc | cut -c4-)
   fn=$dirname/rfc$num.json
