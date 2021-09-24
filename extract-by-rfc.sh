@@ -24,8 +24,8 @@ done
 # remove files not written to
 find $dirname/*json -not -newer $1 | while read fn
 do
-  rm $fn
-  git remove $fn || echo "json already removed"
+  rm -v $fn
+  git rm -f $fn || echo "json already removed"
   git commit $fn -m "remove $fn" || echo "$fn unchanged"
 done
 
