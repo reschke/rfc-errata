@@ -22,4 +22,5 @@ do
 done
 
 # write back
-echo git push || echo "nothing to commit"
+git commit $dirname/rfc*json -m "auto update" || echo unchanged
+git push || echo "nothing to commit"
