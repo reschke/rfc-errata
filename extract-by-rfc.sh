@@ -21,13 +21,5 @@ do
   git commit $fn -m "update rfc$num" || echo "$num unchanged"
 done
 
-# remove files not written to
-find $dirname/*json -not -newer $1 | while read fn
-do
-  rm -v $fn
-  git rm -f $fn || echo "json already removed"
-  git commit $fn -m "remove $fn" || echo "$fn unchanged"
-done
-
 # write back
 echo git push || echo "nothing to commit"
