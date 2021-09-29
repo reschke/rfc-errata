@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6697,
+    "doc-id": "RFC8257",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.3,
+    "orig_text": "The below pseudocode follows after DCTCP.Alpha is updated on ACK processing. This is wrong as cwnd should only be reduced using DCTCP.Alpha when ECE is received. \r\n\r\n9. Rather than always halving the congestion window as described in\r\n       [RFC3168], the sender SHOULD update cwnd as follows:\r\n\r\n          cwnd = cwnd * (1 - DCTCP.Alpha / 2)",
+    "correct_text": "Instead, a new paragraph for Congestion Response to ECN feedback would be much clearer. First start with RFC 3168's response to ECE and then provide DCTCP's response to ECE.\r\n\r\nI am thinking splitting section 3.3 into two sub-sections - \r\n3.3.1 Computation of DCTCP.Alpha\r\n3.3.2 Congestion Response to ECE at sender\r\n\r\n",
+    "notes": "Although RFC 8257 refers to RFC 3168 congestion window halving at step 9, but it is confusing to put it right after step 8.",
+    "submit_date": "2021-09-28",
+    "submitter_name": "Vidhi Goel",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
