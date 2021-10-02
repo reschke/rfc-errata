@@ -103,5 +103,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6699,
+    "doc-id": "RFC8466",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "                  container lacp {\r\n                    if-feature \"lacp\";\r\n                    leaf enabled {\r\n                      type boolean;\r\n                      default \"false\";\r\n                      description\r\n                        \"LACP on/off.  By default, LACP is disabled.\";\r\n                    }\r\n                    leaf mode {\r\n                      type neg-mode;\r\n                      description\r\n                        \"LACP mode.  LACP modes have active mode and\r\n                         passive mode ('false').  'Active mode' means\r\n                         initiating the auto-speed negotiation and\r\n                         trying to form an Ethernet channel with the\r\n                         other end.  'Passive mode' means not initiating\r\n                         the negotiation but responding to LACP packets\r\n                         initiated by the other end (e.g., full duplex\r\n                         or half duplex).\";\r\n                    }\r\n\r\n",
+    "correct_text": "\r\n                  container lacp {\r\n                    if-feature \"lacp\";\r\n                    leaf enabled {\r\n                      type boolean;\r\n                      default \"false\";\r\n                      description\r\n                        \"LACP on/off.  By default, LACP is disabled.\";\r\n                    }\r\n                    leaf mode {\r\n                      type identityref {\r\n                        base lacp-mode;\r\n                      }\r\n                      description\r\n                        \"LACP mode. LACP modes have active mode and\r\n                         passive mode ('false').  'Active mode' means\r\n                         initiating the auto-speed negotiation and\r\n                         trying to form an Ethernet channel with the\r\n                         other end.  'Passive mode' means not initiating\r\n                         the negotiation but responding to LACP packets\r\n                         initiated by the other end (e.g., full duplex\r\n                         or half duplex).\";\r\n                    }\r\n\r\n\r\nAlso, make this change: \r\n\r\nOLD:\r\n\r\n           |  +--rw lag-interfaces {lag-interface}?\r\n           |  |  +--rw lag-interface* [index]\r\n           |  |     +--rw index    string\r\n           |  |     +--rw lacp {lacp}?\r\n           |  |        +--rw enabled?           boolean\r\n           |  |        +--rw mode?              neg-mode\r\n\r\nNEW:\r\n\r\n           |  +--rw lag-interfaces {lag-interface}?\r\n           |  |  +--rw lag-interface* [index]\r\n           |  |     +--rw index    string\r\n           |  |     +--rw lacp {lacp}?\r\n           |  |        +--rw enabled?           boolean\r\n           |  |        +--rw mode?              identityref\r\n",
+    "notes": "The LACP mode can be set to active or passive, which is not what neg-mode is supposed to cover. lacp-mode identity should be used, instead.",
+    "submit_date": "2021-10-01",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": "2021-10-01 08:59:39"
   }
 ]
