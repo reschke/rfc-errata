@@ -268,5 +268,20 @@
     "verifier_id": 159,
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2020-05-30 14:52:46"
+  },
+  {
+    "errata_id": 6702,
+    "doc-id": "RFC4226",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.2,
+    "orig_text": "The Key (K), the Counter (C), and Data values are hashed high-order byte first.",
+    "correct_text": "When hashing, the Key (K) value is provided in little-endian format while the Counter (C) value is in big-endian format.",
+    "notes": "This byte reversal for the Counter (movingFactor) value is indeed demonstrated in the RFC's reference implementation code within Appendix C but this fact is not mentioned within RFC text body.\r\n\r\n byte[] text = new byte[8];\r\n           for (int i = text.length - 1; i >= 0; i--) {\r\n               text[i] = (byte) (movingFactor & 0xff);\r\n               movingFactor >>= 8;\r\n           }\r\n\r\n\r\nThis specific issue is called out in a related wikipedia article: \r\nhttps://en.wikipedia.org/wiki/HMAC-based_one-time_password: \"counter must be big endian\"\r\n\r\n\r\nThis can also be verified by looking at archived source of Google Authenticator on GitHub: https://github.com/google/google-authenticator/blob/51781910ae2bb1abf8ac51b290272f86f3651235/mobile/ios/Classes/OTPGenerator.m\r\n\r\nRelated code snippet:\r\n(counter = NSSwapHostLongLongToBig(counter);)\r\n\r\n\r\nFreeOTP also reverses the byte order of the counter\r\nhttps://github.com/freeotp/freeotp-android/blob/eb2f12f33a38235433fd83e0ad3eb15affae871f/app/src/main/java/org/fedorahosted/freeotp/Token.java\r\n\r\ncode comment \"// Encode counter in network byte order\"\r\nThe code uses a Byte buffer which defaults to big_endian order.",
+    "submit_date": "2021-10-03",
+    "submitter_name": "Darian Miller",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
