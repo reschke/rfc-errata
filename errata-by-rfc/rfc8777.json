@@ -32,16 +32,16 @@
   {
     "errata_id": 6688,
     "doc-id": "RFC8777",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 5,
     "orig_text": "   +-------+---------------------------------------+\r\n   | 3     | A wire-encoded domain name is present |\r\n   +-------+---------------------------------------+\r\n   | 4-255 | Unassigned                            |\r\n   +-------+---------------------------------------+\r\n\r\n      Table 2: Initial Contents of the \"Relay Type\r\n                    Field\" Registry\r\n\r\n   Values 0, 1, 2, and 3 are further explained in Sections 4.2.3 and\r\n   4.2.4.  Relay type numbers 4 through 255 can be assigned with a\r\n   policy of Specification Required (as described in [RFC8126]).",
     "correct_text": "   +-------+---------------------------------------+\r\n   | 3     | A wire-encoded domain name is present |\r\n   +-------+---------------------------------------+\r\n   | 4-127 | Unassigned                            |\r\n   +-------+---------------------------------------+\r\n\r\n      Table 2: Initial Contents of the \"Relay Type\r\n                    Field\" Registry\r\n\r\n   Values 0, 1, 2, and 3 are further explained in Sections 4.2.3 and\r\n   4.2.4.  Relay type numbers 4 through 127 can be assigned with a\r\n   policy of Specification Required (as described in [RFC8126]).",
-    "notes": "Relay Type is a 7 bit field, the MS bit of the wire-format  octet contains the D-bit.",
+    "notes": "Relay Type is a 7 bit field, the MS bit of the wire-format  octet contains the D-bit.\r\n\r\n[Update: 2021-10-05 - AD: Confirmed that you can't fit 8 bits into a 7 bit field - see: https://mailarchive.ietf.org/arch/msg/mboned/cdzHm6Uxwuua5zsOONHtK-RmdU8/ ]",
     "submit_date": "2021-09-19",
     "submitter_name": "Dick Franks",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2021-10-05 10:00:02"
   }
 ]
