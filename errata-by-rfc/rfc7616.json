@@ -58,5 +58,20 @@
     "verifier_id": 159,
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6704,
+    "doc-id": "RFC7616",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.4.1",
+    "orig_text": "3.4.1.  Response\r\n\r\n   If the qop value is \"auth\" or \"auth-int\":\r\n\r\n         response = <\"> < KD ( H(A1), unq(nonce)\r\n                                      \":\" nc\r\n                                      \":\" unq(cnonce)\r\n                                      \":\" unq(qop)\r\n                                      \":\" H(A2)\r\n                             ) <\">\r\n\r\n   See below for the definitions for A1 and A2.",
+    "correct_text": "3.4.1.  Response\r\n\r\n   If the qop value is \"auth\" or \"auth-int\":\r\n\r\n         response = <\"> < KD ( H(A1), unq(nonce)\r\n                                      \":\" nc\r\n                                      \":\" unq(cnonce)\r\n                                      \":\" unq(qop)\r\n                                      \":\" H(A2)\r\n                             ) > <\">\r\n\r\n   See below for the definitions for A1 and A2.",
+    "notes": "The open angle bracket following the initial double quote, probably needs a matching close angle bracket before the final double quote. This typographical error appears to have been copied from section 3.2.2.1 of RFC 2617, but the close angle bracket does appear in the corresponding single line of text in section 2.1.2 of RFC 2069 that defines the response-digest production there. However, it's not clear to me that the angle brackets contribute to the clarity of the response production here, so simply removing the unmatched open might be a better solution.",
+    "submit_date": "2021-10-05",
+    "submitter_name": "Bruce Florman",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
