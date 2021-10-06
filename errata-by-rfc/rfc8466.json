@@ -118,5 +118,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2021-10-01 08:59:39"
+  },
+  {
+    "errata_id": 6703,
+    "doc-id": "RFC8466",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 8,
+    "orig_text": "                  leaf pbs {\r\n                    type uint64;\r\n                    units \"bps\";\r\n                    description\r\n                      \"Peak Burst Size.  It is measured in bytes per\r\n                       second.\";\r\n                  }",
+    "correct_text": "                  leaf pbs {\r\n                    type uint64;\r\n                    units \"Bytes per Second\";\r\n                    description\r\n                      \"Peak Burst Size.\";\r\n                  }",
+    "notes": "There is a mismatch between the units statement and the description text. \r\n\r\nThe corrected text assumes that the description reflects the intent. This is the meaning assumed in draft-ietf-opsawg-l2nm",
+    "submit_date": "2021-10-05",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
