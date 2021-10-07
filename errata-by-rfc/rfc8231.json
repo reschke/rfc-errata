@@ -107,16 +107,16 @@
   {
     "errata_id": 6627,
     "doc-id": "RFC8231",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": 6.4,
     "orig_text": "  <request>::= <RP>\r\n                      <END-POINTS>\r\n                      [<LSP>]\r\n                      [<LSPA>]\r\n                      [<BANDWIDTH>]\r\n                      [<metric-list>]\r\n                      [<RRO>[<BANDWIDTH>]]\r\n                      [<IRO>]\r\n                      [<LOAD-BALANCING>]",
     "correct_text": "  <request>::= <RP>\r\n                      <END-POINTS>\r\n                      [<LSP>]\r\n                      [<CLASSTYPE>]\r\n                      [<LSPA>]\r\n                      [<BANDWIDTH>]\r\n                      [<metric-list>]\r\n                      [<RRO>[<BANDWIDTH>]]\r\n                      [<IRO>]\r\n                      [<LOAD-BALANCING>]",
-    "notes": "RFC 5455 defines the CLASSTYPE object and specifies that the CLASSTYPE object MUST\r\n   be inserted after the END-POINT objects. RFC 8231 defines the LSP object and specifies that  the LSP object MUST be inserted after the END-POINTS object. Hence, it is not clear if CLASSTYPE or LSP goes after END-POINTS. Hence, to disambiguate and avoid interoperability issues, the proposal is to include the CLASSTYPE object in the updated grammar. The order would be <END-POINTS>[<LSP>][<CLASSTYPE>]",
+    "notes": "RFC 5455 defines the CLASSTYPE object and specifies that the CLASSTYPE object MUST\r\n   be inserted after the END-POINT objects. RFC 8231 defines the LSP object and specifies that  the LSP object MUST be inserted after the END-POINTS object. Hence, it is not clear if CLASSTYPE or LSP goes after END-POINTS. Hence, to disambiguate and avoid interoperability issues, the proposal is to include the CLASSTYPE object in the updated grammar. The order would be <END-POINTS>[<LSP>][<CLASSTYPE>]\n --VERIFIER NOTES-- \nSee also the mail thread at https://mailarchive.ietf.org/arch/msg/pce/UmqIZSDtRqe7yC5v0wHU64mrGuI/ for more discussion and detail.\r\n\r\nIn https://mailarchive.ietf.org/arch/msg/pce/VUM5GymISrBiPgoUEVH8IkaM3tU/, the AD at the time (Adrian) rejected erratum 3672, which is similar to this one in that it complains about ambiguous ordering and asks for a fix. Adrian ends his rejection comment with \r\n\r\n“In rejecting this Errata report I note that the reported error is not a typo,\r\nbut a deliberate decision of the authors and working group. The fix, therefore,\r\nif it is to be applied needs to be achieved through a consensus document.”\r\n\r\nAFAICT this reasoning applies equally in the current case. Actually, it applies even more so, because the WG was offered draft-cmfg-pce-pcep-grammar-02 and didn’t do anything with it, which implies no consensus was demonstrated to go forward with a solution to the identified problem. \r\n\r\nTherefore, I'm also rejecting this erratum. The right way forward is for the WG to take on this problem.",
     "submit_date": "2021-07-01",
     "submitter_name": "Oscar Gonzalez de Dios",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 171,
+    "verifier_name": "John Scudder",
+    "update_date": "2021-10-06 09:49:44"
   }
 ]
