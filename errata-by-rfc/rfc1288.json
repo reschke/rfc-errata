@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6706,
+    "doc-id": "RFC1288",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.3,
+    "orig_text": "   The Finger query specification is defined:\r\n\r\n        {Q1}    ::= [{W}|{W}{S}{U}]{C}\r\n\r\n        {Q2}    ::= [{W}{S}][{U}]{H}{C}\r\n\r\n        {U}     ::= username\r\n\r\n        {H}     ::= @hostname | @hostname{H}\r\n\r\n        {W}     ::= /W\r\n\r\n        {S}     ::= <SP> | <SP>{S}\r\n\r\n        {C}     ::= <CRLF>",
+    "correct_text": "   The Finger query specification is defined:\r\n\r\n        {Q1}    ::= [{W}{S}][{U}]{C}\r\n\r\n        {Q2}    ::= [{W}{S}][{U}]{H}{C}\r\n\r\n        {U}     ::= username\r\n\r\n        {H}     ::= @hostname | @hostname{H}\r\n\r\n        {W}     ::= /W\r\n\r\n        {S}     ::= <SP> | <SP>{S}\r\n\r\n        {C}     ::= <CRLF>",
+    "notes": "Query format one is intended to do a FINGER request, optionally supplying a username and optionally supplying a \"/W \". These optional switches are orthogonal; you can specify one or the other or both.\r\n\r\nThe original BNF makes the /W switch mandatory when supplying a user name.\r\n\r\nI've checked the source code for several Finger server implementations; they all accept /W as optional.",
+    "submit_date": "2021-10-11",
+    "submitter_name": "Peter Smith",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
