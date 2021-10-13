@@ -287,7 +287,7 @@
   {
     "errata_id": 6655,
     "doc-id": "RFC7950",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "10.6.1.1",
     "orig_text": "   leaf flags {\r\n       type bits {\r\n         bit UP;\r\n         bit PROMISCUOUS\r\n         bit DISABLED;\r\n       }\r\n      }",
@@ -295,8 +295,8 @@
     "notes": "The missing semicolon makes the YANG snippet invalid.",
     "submit_date": "2021-08-06",
     "submitter_name": "Viktor Leijon",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 166,
+    "verifier_name": "Rob Wilton",
+    "update_date": "2021-10-12 06:58:05"
   }
 ]
