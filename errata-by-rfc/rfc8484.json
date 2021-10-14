@@ -28,5 +28,20 @@
     "verifier_id": 2,
     "verifier_name": null,
     "update_date": "2020-04-01 12:15:17"
+  },
+  {
+    "errata_id": 6708,
+    "doc-id": "RFC8484",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 10,
+    "orig_text": "The use of Online Certificate\r\n   Status Protocol (OCSP) [RFC6960] servers or Authority Information\r\n   Access (AIA) for Certificate Revocation List (CRL) fetching (see\r\n   Section 4.2.2.1 of [RFC5280]) are examples of how this deadlock can\r\n   happen.",
+    "correct_text": "The use of Online Certificate Status Protocol (OCSP) [RFC6960] servers, Certificate Revocation List (CRL) distribution points (see Section 4.2.1.13 of [RFC5280]), or Authority Information Access (AIA) to retrieve issuer certificates (see Section 4.2.2.1 of [RFC5280]) are examples of how this deadlock can happen.",
+    "notes": "The OCSP part is fine, but the AIA piece is wrong.\r\n\r\nFor context, there are three different ways (to my knowledge) that a client might make outbound connections in order to validate or build a certification path.\r\n\r\n1. CRL - clients fetch CRLs from the designated location.  This rarely happens any more as it is grossly inefficient, but it does still happen in some usages.\r\n\r\n2. OCSP - clients query OCSP for the status of a certificate.\r\n\r\n3.  AIA chasing - this is where the TLS handshake doesn't include the full set of certificates required to validate the end-entity certificate, but the certificate includes a URL for that certificate.\r\n\r\nAIA itself is a multi-purpose field.  It can include multiple elements, one of which is the identity of an OCSP responder (the same one used in (2) above) and the other being the one used in (3).  It does not include CRL distribution points, as the text implies.",
+    "submit_date": "2021-10-14",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
