@@ -13,5 +13,20 @@
     "verifier_id": 153,
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6710,
+    "doc-id": "RFC8095",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.11.1",
+    "orig_text": "Error detection and verification of the protocol control information\r\nrelies on the on the underlying transport (e.g., UDP checksum).",
+    "correct_text": "Error detection and verification of the protocol control information\r\nrelies on the underlying transport (e.g., UDP checksum).",
+    "notes": "There is a redundant \"on the\".",
+    "submit_date": "2021-10-15",
+    "submitter_name": "Jie Zhang",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
