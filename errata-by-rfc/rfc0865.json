@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6713,
+    "doc-id": "RFC0865",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "TCP Based Character Generator Service\r\n[and]\r\nUDP Based Character Generator Service",
+    "correct_text": "TCP Based Quote of the Day Service\r\n[and]\r\nUDP Based Quote of the Day Service",
+    "notes": "RFC 865 was probably written by taking RFC 864 (for the chargen protocol) and replacing \"Character Generator\" with \"Quote of the Day\", but these two section titles were missed.",
+    "submit_date": "2021-10-17",
+    "submitter_name": "Edwin Balani",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
