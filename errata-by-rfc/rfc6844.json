@@ -223,5 +223,20 @@
     "verifier_id": 156,
     "verifier_name": "EKR",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6715,
+    "doc-id": "RFC6844",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 3,
+    "orig_text": "If the domain name holder specifies one or more iodef properties, a\r\ncertificate issuer MAY report invalid certificate requests to that\r\naddress.",
+    "correct_text": "If the domain name holder specifies one or more iodef properties, a\r\ncertificate issuer MAY report invalid certificate requests to those\r\naddresses.",
+    "notes": "\"address\" should be plural.",
+    "submit_date": "2021-10-18",
+    "submitter_name": "Jaime Hablutzel",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
