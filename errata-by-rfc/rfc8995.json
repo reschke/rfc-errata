@@ -43,5 +43,20 @@
     "verifier_id": 2,
     "verifier_name": null,
     "update_date": "2021-07-27 13:39:06"
+  },
+  {
+    "errata_id": 6716,
+    "doc-id": "RFC8995",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.8.3",
+    "orig_text": "A registrar MAY be configured to ignore (i.e., override\r\nthe above policy) the history of the device, but it is RECOMMENDED\r\nthat this only be configured if hardware-assisted (i.e., Transport\r\nPerformance Metrics (TPM) anchored) Network Endpoint Assessment (NEA)\r\n[RFC5209] is supported.",
+    "correct_text": "A registrar MAY be configured to ignore (i.e., override\r\nthe above policy) the history of the device, but it is RECOMMENDED\r\nthat this only be configured if hardware-assisted (i.e., Trusted \r\nPlatform Module (TPM) anchored) Network Endpoint Assessment (NEA)\r\n [RFC5209] is supported.",
+    "notes": "The logical expansion of 'TPM' in this parenthetical example is the Trusted Platform Module.",
+    "submit_date": "2021-10-19",
+    "submitter_name": "Max Pritikin",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2021-10-19 16:22:11"
   }
 ]
