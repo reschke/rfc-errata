@@ -103,20 +103,5 @@
     "verifier_id": 130,
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 6712,
-    "doc-id": "RFC2047",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": 5,
-    "orig_text": "In this case the set of characters that may be used in a \"Q\"-encoded\r\n'encoded-word' is restricted to: <upper and lower case ASCII\r\nletters, decimal digits, \"!\", \"*\", \"+\", \"-\", \"/\", \"=\", and \"_\"\r\n(underscore, ASCII 95.)>.",
-    "correct_text": "In this case the set of characters that may be used in a \"Q\"-encoded\r\n'encoded-text' is restricted to: <upper and lower case ASCII\r\nletters, decimal digits, \"!\", \"*\", \"+\", \"-\", \"/\", \"=\", and \"_\"\r\n(underscore, ASCII 95.)>.",
-    "notes": "The definition of 'encoded-word' is:\r\nencoded-word = \"=?\" charset \"?\" encoding \"?\" encoded-text \"?=\"\r\n\r\n\"?\" characters being part of the definition, it would be impossible to fulfill the restrictions which don't allow \"?\" at this point.",
-    "submit_date": "2021-10-15",
-    "submitter_name": "Maria Scott",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
   }
 ]
