@@ -148,5 +148,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6719,
+    "doc-id": "RFC6265",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.1",
+    "orig_text": "max-age-av        = \"Max-Age=\" non-zero-digit *DIGIT",
+    "correct_text": "max-age-av           = \"Max-Age=\" non-negative-integer\r\nnon-negative-integer = zero-digit / (non-zero-digit *DIGIT)\r\nzero-digit           = %x30",
+    "notes": "In section 5.2.2, there is the following text on the value of the max-age:\r\n\r\n> Let delta-seconds be the attribute-value converted to an integer.\r\n>\r\n>   If delta-seconds is less than or equal to zero (0), let expiry-time\r\n>   be the earliest representable date and time.\r\n\r\nIf max-age is an integer greater than 0, then the entire sentence is meaningless. It is a common practice to use max-age=0 to expire a cookie immediately. I think that the ABNF is incorrect. However, I don't see any reason to permit negative values.",
+    "submit_date": "2021-10-22",
+    "submitter_name": "Philip Gladstone",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
