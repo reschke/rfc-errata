@@ -223,5 +223,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6721,
+    "doc-id": "RFC7208",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.4,
+    "orig_text": "       550 5.7.1 SPF MAIL FROM check failed:\r\n       550 5.7.1 The domain example.com explains:\r\n       550 5.7.1 Please see http://www.example.com/mailpolicy.html\r\n",
+    "correct_text": "       550-5.7.1 SPF MAIL FROM check failed:\r\n       550-5.7.1 The domain example.com explains:\r\n       550 5.7.1 Please see http://www.example.com/mailpolicy.html\r\n",
+    "notes": "In addition, RFC 7208 does not give an example of rejection based on the HELO argument.",
+    "submit_date": "2021-10-25",
+    "submitter_name": "Ale Vesely",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
