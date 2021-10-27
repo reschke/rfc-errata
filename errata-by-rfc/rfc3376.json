@@ -73,5 +73,20 @@
     "verifier_id": 148,
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6725,
+    "doc-id": "RFC3376",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.4,
+    "orig_text": "8.4. Group Membership Interval\r\n\r\n   The Group Membership Interval is the amount of time that must pass\r\n   before a multicast router decides there are no more members of a\r\n   group or a particular source on a network.\r\n\r\n   This value MUST be ((the Robustness Variable) times (the Query\r\n   Interval)) plus (one Query Response Interval).\r\n\r\n",
+    "correct_text": "8.4. Group Membership Interval\r\n\r\n   The Group Membership Interval is the amount of time that must pass\r\n   before a multicast router decides there are no more members of a\r\n   group or a particular source on a network.\r\n\r\n   This value MUST be ((the Robustness Variable) times (the Query\r\n   Interval)) plus (2 * Query Response Interval).",
+    "notes": "A router resuming querier role (when current querier dies off) waits for other querier timer value to be expired. This value is ((the Robustness Variable) times (the Query Interval)) plus (one half of one Query Response Interval). This value by default comes as (2 * 125 + 10/2) = 255. Whereas GMI comes as (2 * 125 + 10) = 260. A group learnt with this value will have its group timer value set to expire from anywhere from 260 + 10 (min 260, max 270 due to random response from host in the interval of max response time delay after a query). Now a new router resuming a querier role will generate query after 255 sec. At this point of time the group timer left will be in the range of (260 - 255) 5sec to (270 - 255 ) 15sec. Since the query response can come anywhere between 10sec, Groups whose timer value is less will expire and will result in traffic drop. Therefore it is recommended to increase the default GMI value by one extra Query Response Interval. That is - ((the Robustness Variable) times (the Query\r\n   Interval)) plus (2 * Query Response Interval).",
+    "submit_date": "2021-10-27",
+    "submitter_name": "Nasir Ahmed",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
