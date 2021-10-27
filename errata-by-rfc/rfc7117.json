@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6724,
+    "doc-id": "RFC7117",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7.2.2.4",
+    "orig_text": "   If the received Inter-AS A-D route carries the PMSI Tunnel attribute\r\n   with the Tunnel Identifier set to RSVP-TE P2MP LSP, then the ASBR\r\n   that originated the route MUST establish an RSVP-TE P2MP LSP with the\r\n   local PE/ASBR as a leaf.  This LSP MAY have been established before\r\n   the local PE/ASBR receives the route, or it MAY be established after\r\n   the local PE receives the route.\r\n",
+    "correct_text": "   If the received Inter-AS A-D route carries the PMSI Tunnel attribute\r\n   with the Tunnel Type set to RSVP-TE P2MP LSP, then the ASBR\r\n   that originated the route MUST establish an RSVP-TE P2MP LSP with the\r\n   local PE/ASBR as a leaf.  This LSP MAY have been established before\r\n   the local PE/ASBR receives the route, or it MAY be established after\r\n   the local PE receives the route.\r\n",
+    "notes": "There is a defined Tunnel Type for RSVP-TE P2MP LSP, whereas the Tunnel Identifier field has a more complicated structure that depends on the Tunnel Type.",
+    "submit_date": "2021-10-26",
+    "submitter_name": "Benjamin Kaduk",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
