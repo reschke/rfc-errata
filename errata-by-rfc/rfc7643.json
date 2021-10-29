@@ -223,5 +223,20 @@
     "verifier_id": 130,
     "verifier_name": "Barry Leiba",
     "update_date": "2021-02-23 05:58:02"
+  },
+  {
+    "errata_id": 6727,
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "8.7.2",
+    "orig_text": "      {\r\n        \"name\" : \"description\",\r\n        \"type\" : \"string\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The schema's human-readable name.  When\r\n          applicable, service providers MUST specify the name,\r\n          e.g., 'User'.\",\r\n        \"required\" : false,\r\n        \"caseExact\" : false,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"none\"\r\n      },",
+    "correct_text": "      {\r\n        \"name\" : \"description\",\r\n        \"type\" : \"string\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The schema's human-readable description.  When\r\n          applicable, service providers MUST specify the description.\",\r\n        \"required\" : false,\r\n        \"caseExact\" : false,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"none\"\r\n      },",
+    "notes": "The previous description was that for the \"name\" attribute. Updated to the standard text for the \"description\" attribute.",
+    "submit_date": "2021-10-28",
+    "submitter_name": "Will Springer",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
