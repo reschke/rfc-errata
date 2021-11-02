@@ -223,5 +223,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6729,
+    "doc-id": "RFC7489",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "   3.  Search the public suffix list for the name that matches the\r\n       largest number of labels found in the subject DNS domain.  Let\r\n       that number be \"x\".",
+    "correct_text": "   3.  Search the ICANN DOMAINS section of the public suffix list for\r\n       the name that matches the largest number of labels found in the\r\n       subject DNS domain.  Let that number be \"x\".",
+    "notes": "The PSL includes both public and private domains.  RFC 7489 should have limited name matching to the public, ICANN DOMAINS section of the PSL.  As an example, using the current PSL, the organizational domain for example.s3.dualstack.ap-northeast-1.amazonaws.com is example.s3.dualstack.ap-northeast-1.amazonaws.com, not amazonaws.com since it is listed in the private section of the PSL.  This is clearly the wrong result.",
+    "submit_date": "2021-11-01",
+    "submitter_name": "Scott Kitterman",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
