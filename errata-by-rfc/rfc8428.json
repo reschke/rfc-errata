@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6728,
+    "doc-id": "RFC8428",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": 11,
+    "orig_text": "SenML-Pack = [1* record]\r\n\r\n   record = {\r\n     ? bn => tstr,        ; Base Name\r\n     ? bt => numeric,     ; Base Time\r\n     ? bu => tstr,        ; Base Units\r\n     ? bv => numeric,     ; Base Value\r\n     ? bs => numeric,     ; Base Sum\r\n     ? bver => uint,      ; Base Version\r\n     ? n => tstr,        ; Name\r\n     ? u => tstr,        ; Units\r\n     ? s => numeric,     ; Sum\r\n     ? t => numeric,     ; Time\r\n     ? ut => numeric,    ; Update Time\r\n     ? ( v => numeric // ; Numeric Value\r\n         vs => tstr //   ; String Value\r\n         vb => bool //   ; Boolean Value\r\n         vd => binary-value ) ; Data Value\r\n     * key-value-pair\r\n   }",
+    "correct_text": "SenML-Pack = [1* record]\r\n\r\n   record = {\r\n     ? bn => tstr,        ; Base Name\r\n     ? bt => numeric,     ; Base Time\r\n     ? bu => tstr,        ; Base Units\r\n     ? bv => numeric,     ; Base Value\r\n     ? bs => numeric,     ; Base Sum\r\n     ? bver => uint,      ; Base Version\r\n     ? n => tstr,        ; Name\r\n     ? u => tstr,        ; Units\r\n     ? s => numeric,     ; Sum\r\n     ? t => numeric,     ; Time\r\n     ? ut => numeric,    ; Update Time\r\n     ? ( v => numeric // ; Numeric Value\r\n         vs => tstr //   ; String Value\r\n         vb => bool //   ; Boolean Value\r\n         vd => binary-value ), ; Data Value\r\n     * key-value-pair\r\n   }",
+    "notes": "It would show good style to set the comma even though it's not required.",
+    "submit_date": "2021-11-01",
+    "submitter_name": "Veijo Pesonen",
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2021-11-01 08:28:12"
+  }
+]
