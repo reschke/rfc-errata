@@ -13,5 +13,35 @@
     "verifier_id": 148,
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-07-21 14:11:36"
+  },
+  {
+    "errata_id": 6730,
+    "doc-id": "RFC8175",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 12.4,
+    "orig_text": "The Peer Offer Signal completes the discovery process; see Section 7.1.",
+    "correct_text": "The UDP source port and destination port MUST be set to the UDP destination port and source port, respectively, of the UDP packet containing the associated Peer Discovery Signal. The Peer Offer Signal completes the discovery process; see Section 7.1.",
+    "notes": "The original text did not specify any requirement about the source or destination UDP port number of the Peer Offer signal.\n --VERIFIER NOTES-- \nWhile this is a valid report, it is a duplicate of Errata ID: 6472.  I am then marking this one as Rejected.",
+    "submit_date": "2021-11-03",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2021-11-05 14:25:13"
+  },
+  {
+    "errata_id": 6731,
+    "doc-id": "RFC8175",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 12.4,
+    "orig_text": "The Peer Offer Signal completes the discovery process; see Section 7.1.",
+    "correct_text": "The UDP source port and destination port MUST be set to the UDP destination port and source port, respectively, of the UDP packet containing the associated Peer Discovery Signal. The Peer Offer Signal completes the discovery process; see Section 7.1.",
+    "notes": "The original text did not specify any requirement about the source or destination UDP port number of the Peer Offer signal.\n --VERIFIER NOTES-- \n While this is a valid report, it is a duplicate of Errata ID: 6472.  I am then marking this one as Rejected.",
+    "submit_date": "2021-11-03",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2021-11-05 14:25:36"
   }
 ]
