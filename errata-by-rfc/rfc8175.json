@@ -2,7 +2,7 @@
   {
     "errata_id": 6472,
     "doc-id": "RFC8175",
-    "errata_status_code": "Held for Document Update",
+    "errata_status_code": "Reported",
     "errata_type_code": "Technical",
     "section": "12.4, para 2",
     "orig_text": "A Peer Offer Signal MUST be encoded within a UDP packet.  The IP source and destination fields in the packet MUST be set by swapping the values received in the Peer Discovery Signal.  The Peer Offer Signal completes the discovery process; see Section 7.1.",
@@ -10,9 +10,9 @@
     "notes": "The original text will not result in a valid unicast IP packet.\r\n\r\n=====\r\nAD Note:  The original text is clearly wrong.  There has been discussion in the WG about the proper wording for the \"corrected text\", but no definitive conclusion has been reached.  More discussion is clearly needed so I am marking this report as Held for Document Update.  \r\n\r\nhttps://mailarchive.ietf.org/arch/msg/manet/HB6vBIID1cE93IVmOX2Q4bPfhjk/",
     "submit_date": "2021-03-10",
     "submitter_name": "Rick Taylor",
-    "verifier_id": 148,
+    "verifier_id": 2,
     "verifier_name": "Alvaro Retana",
-    "update_date": "2021-07-21 14:11:36"
+    "update_date": "2021-11-11 03:19:39"
   },
   {
     "errata_id": 6730,
