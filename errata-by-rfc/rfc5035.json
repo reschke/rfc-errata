@@ -88,5 +88,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6735,
+    "doc-id": "RFC5035",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "        ESSCertIDv2 ::=  SEQUENCE {\r\n            hashAlgorithm           AlgorithmIdentifier\r\n                   DEFAULT {algorithm id-sha256},\r\n            certHash                 Hash,\r\n            issuerSerial             IssuerSerial OPTIONAL\r\n        }",
+    "correct_text": "        ESSCertIDv2 ::=  SEQUENCE {\r\n            hashAlgorithm           AlgorithmIdentifier\r\n                   DEFAULT {id-sha256},\r\n            certHash                 Hash,\r\n            issuerSerial             IssuerSerial OPTIONAL\r\n        }",
+    "notes": "No value assignment for 'algorithm' exists, and the definition of id-sha256 already contains the full object identifier.\n --VERIFIER NOTES-- \n   Errata rejected per request from Russ Housley",
+    "submit_date": "2021-11-12",
+    "submitter_name": "Ernst Lawende",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2021-11-12 14:40:34"
   }
 ]
