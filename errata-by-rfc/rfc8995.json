@@ -58,5 +58,20 @@
     "verifier_id": 155,
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2021-10-19 16:22:11"
+  },
+  {
+    "errata_id": 6736,
+    "doc-id": "RFC8995",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 5.5,
+    "orig_text": "MASA implementations SHOULD anticipate future media ntypes but, \r\nof course, will simply fail the request if those types are not \r\nyet known.",
+    "correct_text": "MASA implementations SHOULD anticipate future media types but, \r\nof course, will simply fail the request if those types are not \r\nyet known.",
+    "notes": "\"ntypes\" is not a word",
+    "submit_date": "2021-11-13",
+    "submitter_name": "Michael Richardson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
