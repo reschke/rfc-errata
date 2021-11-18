@@ -47,17 +47,17 @@
   {
     "errata_id": 6025,
     "doc-id": "RFC8439",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 8439,
-    "orig_text": "From Section 3 (re implementation advice for Poly1305):\r\n\r\nA constant-time but not optimal approach would be to naively implement the arithmetic operations for 288-bit integers, because even a naive implementation will not exceed 2^288 in the multiplication of (acc+block) and r.\r\n",
+    "section": 3,
+    "orig_text": "A constant-time but not optimal approach would be to naively implement the arithmetic operations for 288-bit integers, because even a naive implementation will not exceed 2^288 in the multiplication of (acc+block) and r.\r\n",
     "correct_text": "It is possible to create a constant-time, but not optimal, implementation by implementing arithmetic operations for 256-bit integers, because even a naive implementation will not exceed 2^256 in the multiplication of (acc+block) and r (note that we have r < 2^124 because r is \"clamped\").\r\n",
-    "notes": "There are two issues 1) 288 bits is too big, and 2) a naive implementation of 288 bit integer arithmetic isn't necessarily constant time.\r\n\r\nre #1:  288 seems to be tied to the machine int size and assumes 32-bit integers (288 is nine 32-bit integers).  It is probably better to give a number independent of the machine int size.\r\n\r\nYou can compute Poly1305 using 255 bit arithmetic.\r\n\r\nPadded blocks of the message are in the range 2^8, 2^8 +1,..., 2^129 -1.\r\n\r\nAssuming that the partial reduction step always reduces the accumulator to 130 bits, we have acc < 2^130, so acc+block < 2^131.\r\n\r\nr is a 16 byte value, but some of its bits are \"clampled\", so we have r < 2^124.\r\n\r\nThus (acc+block)*r < 2^255; so we can get by with 255 bit big-integer arithmetic (probably 256 bits is more convenient to work with). \r\n\r\nre #2:  big-integer arithmetic can be implemented in constant time, but perhaps not in a obvious or naive way.  Keeping things constant time seems to depend on the characteristics of the underlying processor.",
+    "notes": "There are two issues 1) 288 bits is too big, and 2) a naive implementation of 288 bit integer arithmetic isn't necessarily constant time.\r\n\r\n#1:  288 seems to be tied to the machine int size and assumes 32-bit integers (288 is nine 32-bit integers).  It is probably better to give a number independent of the machine int size. It is possible to compute Poly1305 using 255 bit arithmetic. Padded blocks of the message are in the range 2^8, 2^8 +1,..., 2^129 -1. Assuming that the partial reduction step always reduces the accumulator to 130 bits, we have acc < 2^130, so acc+block < 2^131. r is a 16 byte value, but some of its bits are \"clampled\", so we have r < 2^124. Thus (acc+block)*r < 2^255; so we can get by with 255 bit big-integer arithmetic (probably 256 bits is more convenient to work with). \r\n\r\n#2:  big-integer arithmetic can be implemented in constant time, but perhaps not in a obvious or naive way.  Keeping things constant time seems to depend on the characteristics of the underlying processor.",
     "submit_date": "2020-03-21",
     "submitter_name": "James Muir",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 168,
+    "verifier_name": "Stanislav Smyshlyaev",
+    "update_date": "2021-11-16 23:30:55"
   },
   {
     "errata_id": 6257,
