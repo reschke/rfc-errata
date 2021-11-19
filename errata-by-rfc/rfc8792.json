@@ -2,16 +2,16 @@
   {
     "errata_id": 6739,
     "doc-id": "RFC8792",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "7.1.2",
     "orig_text": "Exceptionally long lines MAY be folded multiple times.",
     "correct_text": "Exceptionally long lines MAY be folded multiple times.",
-    "notes": "The \"MAY\" in this text lacks a bcp14 XML tag. This is apparent in the non-text renderings.",
+    "notes": "The \"MAY\" in this text lacks a bcp14 XML tag. This is apparent in the non-text renderings.\r\n\r\n--VERIFIER NOTES--\r\nThis also applies to section 8.1.2",
     "submit_date": "2021-11-18",
     "submitter_name": "Martin Thomson",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2021-11-18 18:38:55"
   }
 ]
