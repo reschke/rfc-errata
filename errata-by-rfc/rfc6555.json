@@ -28,5 +28,20 @@
     "verifier_id": 135,
     "verifier_name": "Joel Jaeggli",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6745,
+    "doc-id": "RFC6555",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.6,
+    "orig_text": "   Web browsers implement a same-origin policy [RFC6454] that causes\r\n   subsequent connections to the same hostname to go to the same IPv4\r\n   (or IPv6) address as the previous successful connection.  This is\r\n   done to prevent certain types of attacks.\r\n\r\n   The same-origin policy harms user-visible responsiveness if a new\r\n   connection fails (e.g., due to a transient event such as router\r\n   failure or load-balancer failure).  While it is tempting to use Happy\r\n   Eyeballs to maintain responsiveness, web browsers MUST NOT change\r\n   their same-origin policy because of Happy Eyeballs, as that would\r\n   create an additional security exposure.",
+    "correct_text": "<This section should be removed>",
+    "notes": "This entire section should be deleted.  Same-Origin policy has nothing to do with what IP connections to the same hostname go to.  Two connections to the same host are same origin even if they're using different IPs.  Happy Eyeballs is free to use whatever IP for a hostname it wants for an origin, and Same-Origin policy will not be violated.",
+    "submit_date": "2021-11-19",
+    "submitter_name": "Matthew Menke",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
