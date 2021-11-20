@@ -358,5 +358,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6746,
+    "doc-id": "RFC6350",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "TZ:-0500",
+    "correct_text": "TZ;VALUE=utc-offset:-0500\r\nor\r\nTZ:EST",
+    "notes": "As specified in section 6.5.1.: \"The default is a single text value. It can also be reset to a single URI or utc-offset value.\" Accordingly, the \"utc-offset\" value data-type should be explicitely set or the property value should be interpreted as text.\r\n\r\nThe section 6.5.1. further states that \"utc-offset values SHOULD NOT be used\" so probably using the timezone as an example is more consistent.",
+    "submit_date": "2021-11-19",
+    "submitter_name": "b4D8",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
