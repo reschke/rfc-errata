@@ -43,5 +43,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6743,
+    "doc-id": "RFC8214",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "          Ethernet                                          Ethernet\r\n          Native   |<--------- EVPN Instance ----------->|  Native\r\n          Service  |                                     |  Service\r\n          (AC)     |     |<-PSN1->|       |<-PSN2->|     |  (AC)\r\n             |     V     V        V       V        V     V  |\r\n             |     +-----+      +-----+  +-----+   +-----+  |\r\n      +----+ |     | PE1 |======|ASBR1|==|ASBR2|===| PE3 |  |    +----+\r\n      |    |-------+-----+      +-----+  +-----+   +-----+-------|    |\r\n      | CE1| |                                              |    |CE2 |\r\n      |    |-------+-----+      +-----+  +-----+   +-----+-------|    |\r\n      +----+ |     | PE2 |======|ASBR3|==|ASBR4|===| PE4 |  |    +----+\r\n           ^       +-----+      +-----+  +-----+   +-----+          ^\r\n           |   Provider Edge 1        ^        Provider Edge 2      |\r\n           |                          |                             |\r\n           |                          |                             |\r\n           |              EVPN Inter-provider point                 |\r\n           |                                                        |\r\n           |<---------------- Emulated Service -------------------->|\r\n\r\n                   Figure 3: EVPN-VPWS Deployment Model\r\n",
+    "correct_text": "          Ethernet                                          Ethernet\r\n          Native   |<--------- EVPN Instance ----------->|  Native\r\n          Service  |                                     |  Service\r\n          (AC)     |     |<-PSN1->|       |<-PSN2->|     |  (AC)\r\n             |     V     V        V       V        V     V  |\r\n             |     +-----+      +-----+  +-----+   +-----+  |\r\n      +----+ |     | PE1 |======|ASBR1|==|ASBR2|===| PE3 |  |    +----+\r\n      |    |-------+-----+      +-----+  +-----+   +-----+-------|    |\r\n      | CE1| |                                              |    |CE2 |\r\n      |    |-------+-----+      +-----+  +-----+   +-----+-------|    |\r\n      +----+ |     | PE2 |======|ASBR3|==|ASBR4|===| PE4 |  |    +----+\r\n           ^       +-----+      +-----+  +-----+   +-----+       ^\r\n           |   Provider Edge 1        ^        Provider Edge 2   |\r\n           |                          |                          |\r\n           |                          |                          |\r\n           |              EVPN Inter-provider point              |\r\n           |                                                     |\r\n           |<---------------- Emulated Service ----------------->|\r\n\r\n                   Figure 3: EVPN-VPWS Deployment Model\r\n",
+    "notes": "The right-hand end of the Emulated Service should be aligned with the provider-facing AC port on CE2 and not  placed in the middle of CE2.\r\nAlthough this may appear to be a minor editorial issue, the technical consequences are significant.",
+    "submit_date": "2021-11-19",
+    "submitter_name": "Adrian Farrel",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
