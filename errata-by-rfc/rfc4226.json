@@ -283,5 +283,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6756,
+    "doc-id": "RFC4226",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.3,
+    "orig_text": "Let OffsetBits be the low-order 4 bits of String[19]",
+    "correct_text": "Let OffsetBits be the low-order 4 bits of the last byte of String",
+    "notes": "This change does not affect the computation for 20-byte HMAC-SHA-1 digests.  However when using the HMAC-SHA-256 or HMAC-SHA-512 functions as suggested in RFC-6238, the 19th byte and the last byte may differ.\r\n\r\nThe proposed change matches the reference implementations of both RFC-4226 and RFC-6238 and removes potential ambiguity as to whether implementations should use the 19th byte or the last byte of the digest to determine the offset for dynamic truncation.",
+    "submit_date": "2021-11-28",
+    "submitter_name": "Nicholas Gaya",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
