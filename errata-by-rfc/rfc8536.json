@@ -28,5 +28,20 @@
     "verifier_id": 130,
     "verifier_name": "Barry Leiba",
     "update_date": "2021-02-21 06:38:36"
+  },
+  {
+    "errata_id": 6757,
+    "doc-id": "RFC8536",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "B.3",
+    "orig_text": "   | 064    | 00 00 00 03  | isutccnt         | 1                      |\r\n   | 068    | 00 00 00 03  | isstdcnt         | 1                      |\r\n   | 072    | 00 00 00 00  | isleapcnt        | 0                      |\r\n   | 076    | 00 00 00 03  | timecnt          | 1                      |\r\n   | 080    | 00 00 00 03  | typecnt          | 1                      |\r\n   | 084    | 00 00 00 08  | charcnt          | 4                      |\r\n",
+    "correct_text": "   | 064    | 00 00 00 01  | isutccnt         | 1                      |\r\n   | 068    | 00 00 00 01  | isstdcnt         | 1                      |\r\n   | 072    | 00 00 00 00  | isleapcnt        | 0                      |\r\n   | 076    | 00 00 00 01  | timecnt          | 1                      |\r\n   | 080    | 00 00 00 01  | typecnt          | 1                      |\r\n   | 084    | 00 00 00 04  | charcnt          | 4                      |\r\n",
+    "notes": "The numbers 1 and 4 are incorrectly encoded as big-endian 32-bit integer values. I'm guessing that the example originally used more data and was then trimmed down (from 3 to 1 for isutccnt, isstdcnt, timecnt, and typecnt, and from 8 to 4 for charcnt) but the integer encodings were never updated.",
+    "submit_date": "2021-11-28",
+    "submitter_name": "Carl Gay",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
