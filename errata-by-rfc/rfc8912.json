@@ -28,5 +28,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6762,
+    "doc-id": "RFC8912",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "10.1.4",
+    "orig_text": "   RTLoss:  This metric assesses the estimated loss count for TCP\r\n      packets constituting a single connection, exchanged between two\r\n      hosts.  We consider the measurement of round-trip delay based on a\r\n      single OP [RFC7011] somewhere in the network.  The output is the\r\n      estimated loss count for the measurement interval.\r\n",
+    "correct_text": "   RTLoss:  This metric assesses the estimated loss count for TCP\r\n      packets constituting a single connection, exchanged between two\r\n      hosts.  We consider the measurement of loss count based on a\r\n      single OP [RFC7011] somewhere in the network.  The output is the\r\n      estimated loss count for the measurement interval.\r\n",
+    "notes": "This is where loss count is measured, not round-trip delay.\n --VERIFIER NOTES-- \nFrom Al Morton: Sorry, but the original text is correct. In this case we have a RT loss *estimate* conducted in the context of (and using the same packets as) the RT Delay measurements described for TCP. We considered this text carefully before publication.",
+    "submit_date": "2021-11-30",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2021-11-30 15:17:01"
   }
 ]
