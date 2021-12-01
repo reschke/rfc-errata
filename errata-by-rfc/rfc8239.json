@@ -13,5 +13,20 @@
     "verifier_id": 155,
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6763,
+    "doc-id": "RFC8239",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "Last iteration: Ingress port 1 sending line rate to egress\r\nport 2, ingress port 3 sending line rate to egress port 4, etc.\r\nIngress port N-1 and port N will oversubscribe, at 1% of line\r\nrate, egress port N-3 and port N-2, respectively. Measure the\r\nbuffer size value by multiplying the number of extra frames\r\nsent by the frame size for each egress port.",
+    "correct_text": "Last iteration: Ingress port 1 sending line rate to egress\r\nport 2, ingress port 3 sending line rate to egress port 4, etc.\r\nIngress port N-1 and port N will oversubscribe, at 1% of line\r\nrate, egress port N-4 and port N-3, respectively. Measure the\r\nbuffer size value by multiplying the number of extra frames\r\nsent by the frame size for each egress port.",
+    "notes": "If\r\n#1, 1->2, 3->4, 5->6, 7->8, ... and N-1->2, N->3\r\n#2, 1->2, 3->4, 5->6, 7->8, ... and N-1->4, N->5\r\n\r\nThen\r\n#last, 1->2, 3->4, 5->6, 7->8, ... and N-1->N-4, N->N-3\r\n\r\nOtherwise, the general equation won't satisfy #1 and #2",
+    "submit_date": "2021-11-30",
+    "submitter_name": "Leonard Yu",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
