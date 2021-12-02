@@ -17,7 +17,7 @@
   {
     "errata_id": 6758,
     "doc-id": "RFC8912",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.4.2",
     "orig_text": "   Percent_LossRatio:  The numeric value of the result is expressed in\r\n      units of lost packets to total packets times 100%, as a positive\r\n      value of type decimal64 with fraction digits = 9 (see Section 9.3\r\n      of [RFC6020]) with a resolution of 0.0000000001.\r\n\r\n",
@@ -25,9 +25,9 @@
     "notes": "An extra 0 in the value of the resolution of the loss ratio.\r\n\r\nThe error is repeated in sections 7.4.2.6, 8.4.2.6, 9.4.2.4",
     "submit_date": "2021-11-28",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2021-12-01 09:10:56"
   },
   {
     "errata_id": 6762,
