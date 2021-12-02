@@ -268,5 +268,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6769,
+    "doc-id": "RFC6376",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.2,
+    "orig_text": "An example of such an attack includes altering the MIME structure,\r\nexploiting lax HTML parsing in the MUA, and defeating duplicate\r\nmessage detection algorithms.\r\n",
+    "correct_text": "In case of MIME structures, the value of l= should cover all of the\r\nbody, including the terminating boundary and the epilogue, so that\r\naltering the structure is not feasible.  In any case, if l= is set and\r\nContent-Type is not signed, an attacker can replace it with a multipart\r\ntype and thus relegate the original body to the role of a MIME preamble.\r\n",
+    "notes": "Duplicate message detection algorithms should consider Message-ID.  When they compare the body, they should be sophisticated enough to recognize specific key fields, for example to avoid accumulating duplicate values of financial transactions.",
+    "submit_date": "2021-12-01",
+    "submitter_name": "Ale Vesely",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
