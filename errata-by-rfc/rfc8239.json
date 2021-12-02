@@ -28,5 +28,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6768,
+    "doc-id": "RFC8239",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "3) Measure maximum port pair buffer sizes.\r\n\r\n      o  First iteration: Ingress port 1 sending line rate to egress\r\n         port 2, ingress port 3 sending line rate to egress port 4, etc.\r\n         Ingress port N-1 and port N will oversubscribe, at 1% of line\r\n         rate, egress port 2 and port 3, respectively.  Measure the\r\n         buffer size value by multiplying the number of extra frames\r\n         sent by the frame size for each egress port.\r\n\r\n      o  Second iteration: Ingress port 1 sending line rate to egress\r\n         port 2, ingress port 3 sending line rate to egress port 4, etc.\r\n         Ingress port N-1 and port N will oversubscribe, at 1% of line\r\n         rate, egress port 4 and port 5, respectively.  Measure the\r\n         buffer size value by multiplying the number of extra frames\r\n         sent by the frame size for each egress port.\r\n\r\n      o  Last iteration: Ingress port 1 sending line rate to egress\r\n         port 2, ingress port 3 sending line rate to egress port 4, etc.\r\n         Ingress port N-1 and port N will oversubscribe, at 1% of line\r\n         rate, egress port N-3 and port N-2, respectively.  Measure the\r\n         buffer size value by multiplying the number of extra frames\r\n         sent by the frame size for each egress port.",
+    "correct_text": "3) Measure maximum port pair buffer sizes.\r\n\r\n      o  First iteration: Ingress port 1 sending line rate to egress\r\n         port 2, ingress port 3 sending line rate to egress port 4, etc.\r\n         Ingress port N-1 and port N will oversubscribe, at 1% of line\r\n         rate, egress port 1 and port 2, respectively.  Measure the\r\n         buffer size value by multiplying the number of extra frames\r\n         sent by the frame size for each egress port.\r\n\r\n      o  Second iteration: Ingress port 1 sending line rate to egress\r\n         port 2, ingress port 3 sending line rate to egress port 4, etc.\r\n         Ingress port N-1 and port N will oversubscribe, at 1% of line\r\n         rate, egress port 3 and port 4, respectively.  Measure the\r\n         buffer size value by multiplying the number of extra frames\r\n         sent by the frame size for each egress port.\r\n\r\n      o  Last iteration: Ingress port 1 sending line rate to egress\r\n         port 2, ingress port 3 sending line rate to egress port 4, etc.\r\n         Ingress port N-1 and port N will oversubscribe, at 1% of line\r\n         rate, egress port N-3 and port N-2, respectively.  Measure the\r\n         buffer size value by multiplying the number of extra frames\r\n         sent by the frame size for each egress port.",
+    "notes": "The oversubscribed ports are a pair of ingress and egress ports. The oversubscribed ports in the texts describing the first are port 2 & 3, which are incorrect, should be port 1 & 2. The oversubscribed ports in the texts describing the second are port 4 & 5, which are incorrect, should be port 3 & 4.",
+    "submit_date": "2021-12-01",
+    "submitter_name": "Leonard Yu",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
