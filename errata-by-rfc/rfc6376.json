@@ -212,17 +212,17 @@
   {
     "errata_id": 5839,
     "doc-id": "RFC6376",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.4.2",
     "orig_text": "   o  Delete all WSP characters at the end of each unfolded header field\r\n      value.",
-    "correct_text": "   o  Delete all WSP characters just before the CRLF at the end of \r\n      each unfolded header field value.",
-    "notes": "A prior step in this section suggests that header field values include the trailing CRLF.  If that is the case, then a header field value can't end with WSP, which suggests that this step is incorrectly specified.  The correction I give here restores the apparent intent of this step.",
+    "correct_text": "   o  Delete the SP character, if present, at the end of each unfolded\r\n      header field value before its final CRLF",
+    "notes": "A prior step in this section suggests that header field values include the trailing CRLF.  If that is the case, then a header field value can't end with WSP, which suggests that this step is incorrectly specified.  The correction I give here restores the apparent intent of this step.\r\n\r\n[MSK: The corrected text was modified after discussion on the WG mailing list.]",
     "submit_date": "2019-08-18",
     "submitter_name": "Peter Occil",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 164,
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2021-12-02 08:17:23"
   },
   {
     "errata_id": 6076,
@@ -242,7 +242,7 @@
   {
     "errata_id": 6254,
     "doc-id": "RFC6376",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": 5.4,
     "orig_text": null,
@@ -250,9 +250,9 @@
     "notes": "The \"INFORMATIVE OPERATIONS NOTE\" early in Section 5.4 appears to be in conflict with Section 5.4.1.  They appear to cover the same issue, namely what header fields to use for the signature, but they seem to give different advice.  (Though not formally an erratum, there is also the matter of thinking that what is shown the the recipient is relevant...) /d",
     "submit_date": "2020-08-08",
     "submitter_name": "Dave Crocker",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 164,
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2021-12-02 08:17:47"
   },
   {
     "errata_id": 6674,
@@ -272,7 +272,7 @@
   {
     "errata_id": 6769,
     "doc-id": "RFC6376",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": 8.2,
     "orig_text": "An example of such an attack includes altering the MIME structure,\r\nexploiting lax HTML parsing in the MUA, and defeating duplicate\r\nmessage detection algorithms.\r\n",
@@ -280,8 +280,8 @@
     "notes": "Duplicate message detection algorithms should consider Message-ID.  When they compare the body, they should be sophisticated enough to recognize specific key fields, for example to avoid accumulating duplicate values of financial transactions.",
     "submit_date": "2021-12-01",
     "submitter_name": "Ale Vesely",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 164,
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2021-12-02 08:13:28"
   }
 ]
