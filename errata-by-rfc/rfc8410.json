@@ -92,8 +92,8 @@
   {
     "errata_id": 6738,
     "doc-id": "RFC8410",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": 7,
     "orig_text": "   OneAsymmetricKey ::= SEQUENCE {\r\n      version Version,\r\n      privateKeyAlgorithm PrivateKeyAlgorithmIdentifier,\r\n      privateKey PrivateKey,\r\n      attributes [0] IMPLICIT Attributes OPTIONAL,\r\n      ...,\r\n      [[2: publicKey [1] IMPLICIT PublicKey OPTIONAL ]],\r\n      ...\r\n   }",
     "correct_text": "   OneAsymmetricKey ::= SEQUENCE {\r\n      version Version,\r\n      privateKeyAlgorithm PrivateKeyAlgorithmIdentifier,\r\n      privateKey PrivateKey,\r\n      attributes [0] Attributes OPTIONAL,\r\n      ...,\r\n      [[2: publicKey [1] PublicKey OPTIONAL ]],\r\n      ...\r\n   }",
@@ -102,6 +102,6 @@
     "submitter_name": "Daniel Minder",
     "verifier_id": 159,
     "verifier_name": "Benjamin Kaduk",
-    "update_date": "2021-11-25 13:01:06"
+    "update_date": "2021-12-03 12:00:22"
   }
 ]
