@@ -28,5 +28,20 @@
     "verifier_id": 155,
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2021-04-19 14:14:22"
+  },
+  {
+    "errata_id": 6772,
+    "doc-id": "RFC8552",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "   Only global underscored node names are registered in the \"Underscored\r\n   and Globally Scoped DNS Node Names\" registry.  From the example\r\n   above, that would mean _service1, _service2, _service3, _service 4,\r\n   and _authority would be listed in the IANA registry.",
+    "correct_text": "   Only global underscored node names are registered in the \"Underscored\r\n   and Globally Scoped DNS Node Names\" registry.  From the example\r\n   above, that would mean _service1, _service2, _service3, _service4,\r\n   and _authority would be listed in the IANA registry.",
+    "notes": "Typographical error with an unwanted space character between \"_service\" and \"4\"",
+    "submit_date": "2021-12-03",
+    "submitter_name": "Robert Royals",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
