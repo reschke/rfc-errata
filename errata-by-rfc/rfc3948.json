@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6774,
+    "doc-id": "RFC3948",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "This protocol specification defines methods to encapsulate and\r\n   decapsulate ESP packets inside UDP packets for traversing Network\r\n   Address Translators (NATs) (see [RFC3715], section 2.2, case i).  The\r\n   UDP port numbers are the same as those used by IKE traffic, as\r\n   defined in [RFC3947].",
+    "correct_text": "This protocol specification defines methods to encapsulate and\r\n   decapsulate ESP packets inside UDP packets for traversing Network\r\n   Address Translators (NATs) (see [RFC3715], section 2.2, case j).  The\r\n   UDP port numbers are the same as those used by IKE traffic, as\r\n   defined in [RFC3947].",
+    "notes": "Original text says:\"(see [RFC3715], section 2.2, case i)\", it should be case j.",
+    "submit_date": "2021-12-04",
+    "submitter_name": "warren.wang",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
