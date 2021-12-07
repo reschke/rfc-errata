@@ -677,7 +677,7 @@
   {
     "errata_id": 6775,
     "doc-id": "RFC0793",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": 3.3,
     "orig_text": "  Note that when the receive window is zero no segments should be\r\n  acceptable except ACK segments.  Thus, it is be possible for a TCP to\r\n  maintain a zero receive window while transmitting data and receiving\r\n  ACKs.  However, even when the receive window is zero, a TCP must\r\n  process the RST and URG fields of all incoming segments.",
@@ -685,8 +685,8 @@
     "notes": "s/it is be/it is/",
     "submit_date": "2021-12-05",
     "submitter_name": "Eugene Adell",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2021-12-06 17:04:09"
   }
 ]
