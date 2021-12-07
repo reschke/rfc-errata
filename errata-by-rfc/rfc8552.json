@@ -32,7 +32,7 @@
   {
     "errata_id": 6772,
     "doc-id": "RFC8552",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": 2,
     "orig_text": "   Only global underscored node names are registered in the \"Underscored\r\n   and Globally Scoped DNS Node Names\" registry.  From the example\r\n   above, that would mean _service1, _service2, _service3, _service 4,\r\n   and _authority would be listed in the IANA registry.",
@@ -40,8 +40,23 @@
     "notes": "Typographical error with an unwanted space character between \"_service\" and \"4\"",
     "submit_date": "2021-12-03",
     "submitter_name": "Robert Royals",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2021-12-06 15:11:24"
+  },
+  {
+    "errata_id": 6777,
+    "doc-id": "RFC8552",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "   IANA has established the \"Underscored and Globally Scoped DNS Node\r\n   Names\" registry.  This section describes the registry, the\r\n   definitions, the initial entries, the use of_ta and _example, and the",
+    "correct_text": "   IANA has established the \"Underscored and Globally Scoped DNS Node\r\n   Names\" registry.  This section describes the registry, the\r\n   definitions, the initial entries, the use of _ta and _example, and the",
+    "notes": "There should be a space character between \"of\" and \"_ta\" in \"of_ta\".",
+    "submit_date": "2021-12-06",
+    "submitter_name": "Robert Royals",
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2021-12-06 09:15:25"
   }
 ]
