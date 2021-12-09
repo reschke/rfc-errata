@@ -73,5 +73,20 @@
     "verifier_id": 159,
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-09-01 08:43:59"
+  },
+  {
+    "errata_id": 6779,
+    "doc-id": "RFC7296",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "1.1.1",
+    "orig_text": "Each endpoint would announce the set of addresses\r\n   \"behind\" it, and packets would be sent in tunnel mode where the inner\r\n   IP header would contain the IP addresses of the actual endpoints.",
+    "correct_text": "Each tunnel endpoint would announce the set of addresses\r\n   \"behind\" it, and packets would be sent in tunnel mode where the inner\r\n   IP header would contain the IP addresses of the actual endpoints.",
+    "notes": "\"Each tunnel endpoint\" will make it easy to understand.",
+    "submit_date": "2021-12-08",
+    "submitter_name": "warren.wang",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
