@@ -77,16 +77,16 @@
   {
     "errata_id": 6779,
     "doc-id": "RFC7296",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "1.1.1",
-    "orig_text": "Each endpoint would announce the set of addresses\r\n   \"behind\" it, and packets would be sent in tunnel mode where the inner\r\n   IP header would contain the IP addresses of the actual endpoints.",
-    "correct_text": "Each tunnel endpoint would announce the set of addresses\r\n   \"behind\" it, and packets would be sent in tunnel mode where the inner\r\n   IP header would contain the IP addresses of the actual endpoints.",
-    "notes": "\"Each tunnel endpoint\" will make it easy to understand.",
+    "orig_text": "   In this scenario, neither endpoint of the IP connection implements\r\n   IPsec, but network nodes between them protect traffic for part of the\r\n   way.  Protection is transparent to the endpoints, and depends on\r\n   ordinary routing to send packets through the tunnel endpoints for\r\n   processing.  Each endpoint would announce the set of addresses\r\n   \"behind\" it, and packets would be sent in tunnel mode where the inner\r\n   IP header would contain the IP addresses of the actual endpoints.\r\n",
+    "correct_text": "   In this scenario, neither endpoint of the IP connection implements\r\n   IPsec, but network nodes between them protect traffic for part of the\r\n   way.  Protection is transparent to the endpoints, and depends on\r\n   ordinary routing to send packets through the tunnel endpoints for\r\n   processing.  Each tunnel endpoint would announce the set of addresses\r\n   \"behind\" it, and packets would be sent in tunnel mode where the inner\r\n   IP header would contain the IP addresses of the actual endpoints.\r\n",
+    "notes": "\"Each tunnel endpoint\" will make it easy to understand which entity is announcing the set of addresses.",
     "submit_date": "2021-12-08",
     "submitter_name": "warren.wang",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2021-12-10 19:07:19"
   }
 ]
