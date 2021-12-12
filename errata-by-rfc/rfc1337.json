@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6782,
+    "doc-id": "RFC1337",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.4,
+    "orig_text": "    3.         ... <SEQ=400><ACK=101><CTL=SYN,ACK><W=800>  <-- SYN-RCVD\r\n\r\n    4.  SYN-SENT    <-- <SEQ=300><ACK=123><CTL=ACK> ... (old duplicate)\r\n\r\n    5.  SYN-SENT    --> <SEQ=123><CTL=RST>                   --> LISTEN\r\n\r\n    6.  ESTABLISHED <-- <SEQ=400><ACK=101><CTL=SYN,ACK><W=900> ...\r\n\r\n[...]\r\n\r\n      The key to the failure in Figure 4 is that the RST segment 5 is\r\n      acceptable to TCP B in SYN-RECEIVED state, because the sequence\r\n      space of the earlier connection that produced this old duplicate\r\n      overlaps the new connection space.  Thus, <SEQ=123> in segment #5\r\n      falls within TCP B's receive window [101,900).",
+    "correct_text": "    3.         ... <SEQ=400><ACK=101><CTL=SYN,ACK><W=800>  <-- SYN-RCVD\r\n\r\n    4.  SYN-SENT    <-- <SEQ=300><ACK=123><CTL=ACK> ... (old duplicate)\r\n\r\n    5.  SYN-SENT    --> <SEQ=123><CTL=RST>                   --> LISTEN\r\n\r\n    6.  ESTABLISHED <-- <SEQ=400><ACK=101><CTL=SYN,ACK><W=800> ...\r\n\r\n[...]\r\n\r\n      The key to the failure in Figure 4 is that the RST segment 5 is\r\n      acceptable to TCP B in SYN-RECEIVED state, because the sequence\r\n      space of the earlier connection that produced this old duplicate\r\n      overlaps the new connection space.  Thus, <SEQ=123> in segment #5\r\n      falls within TCP B's receive window [101,901).\r\n\r\n",
+    "notes": "I see two problems here.\r\n\r\nFirst, line 6 is the arrival of segment sent at line 3, so it should have the same advertised window.\r\n\r\nSecond, in the following paragraph it is said that B's receive window is [101,900), which is consistent neither with line 3 (W=800) nor line 6 (W=900).\r\n\r\nI guess (that's just a guess) the author meant W=800 in both lines 3 and 6, and made an off-by-one error in B receive's window.  If it starts at 101 and has 800 for size, it is [101,901)",
+    "submit_date": "2021-12-11",
+    "submitter_name": "Christophe Deleuze",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
