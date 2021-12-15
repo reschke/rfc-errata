@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6783,
+    "doc-id": "RFC8906",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "8.2.3",
+    "orig_text": "as unknown EDNS options are supposed to be ignored by the\r\n   server (Section 6.1.1 of [RFC6891]).\r\n",
+    "correct_text": "as unknown EDNS options are supposed to be ignored by the\r\n   server (Section 6.1.2 of [RFC6891]).\r\n",
+    "notes": "Reference to the section in RFC 6891 is incorrect. There's no information on what to do with unknown options in RFC 6891 section 6.1.1.",
+    "submit_date": "2021-12-14",
+    "submitter_name": "Mukund Sivaraman",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2021-12-14 13:00:21"
+  }
+]
