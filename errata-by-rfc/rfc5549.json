@@ -13,5 +13,20 @@
     "verifier_id": 148,
     "verifier_name": "Alvaro Retana",
     "update_date": "2020-08-24 09:43:18"
+  },
+  {
+    "errata_id": 6786,
+    "doc-id": "RFC5549",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "   A BGP speaker MUST only advertise to a BGP peer the IPv4 or VPN-IPv4\r\n   NLRI with an IPv6 Next Hop if the BGP speaker has first ascertained\r\n   via BGP Capability Advertisement that the BGP peer supports the\r\n   Extended Next Hop Encoding capability for the relevant AFI/SAFI pair.\r\n",
+    "correct_text": "   A BGP speaker MUST only advertise to a BGP peer the IPv4 or VPN-IPv4\r\n   NLRI with an IPv6 Next Hop if the BGP speaker has first ascertained\r\n   via BGP Capability Advertisement that the BGP peer supports the\r\n   Extended Next Hop Encoding capability for the relevant AFI/SAFI pair.\r\n   \r\n   IPv4 or VPN-IPv4 NLRI with an IPv6 Next Hop SHOULD be treated as \r\n   malformed if it received from a BGP speaker that has not sent BGP \r\n   Capability Advertisement for the relevant AFI/SAFI pair.   \r\n",
+    "notes": "The behavior was not explicitly mentioned.",
+    "submit_date": "2021-12-17",
+    "submitter_name": "Mike Dubrovsky",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
