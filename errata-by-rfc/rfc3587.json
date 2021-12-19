@@ -2,16 +2,16 @@
   {
     "errata_id": 5153,
     "doc-id": "RFC3587",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
     "section": 3,
     "orig_text": "    | 3 |     45 bits         |  16 bits  |       64 bits              |\r\n    +---+---------------------+-----------+----------------------------+\r\n    |001|global routing prefix| subnet ID |       interface ID         |\r\n    +---+---------------------+-----------+----------------------------+",
     "correct_text": "    | 3 |     45 bits         |  16 bits  |       64 bits              |\r\n    +---+---------------------+-----------+----------------------------+\r\n    |001|                     | subnet ID |       interface ID         |\r\n    +---+---------------------+-----------+----------------------------+\r\n    |<-global routing prefix->|",
-    "notes": "In the last figure of Section 3. Address Format, the global routing prefix should inlcude the prefix 001 in order to be consistent with the first two figures in the same section.",
+    "notes": "In the last figure of Section 3. Address Format, the global routing prefix should inlcude the prefix 001 in order to be consistent with the first two figures in the same section.\r\n\r\n=====\r\n\r\nAlternatively, the description of the 45 bits within the diagram might be updated to clarify these are the /remaining bits/ of the global routing prefix.",
     "submit_date": "2017-10-12",
     "submitter_name": "ZHANG Hongyuan",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2021-12-18 14:21:34"
   }
 ]
