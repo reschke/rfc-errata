@@ -13,5 +13,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6789,
+    "doc-id": "RFC3782",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 6.1,
+    "orig_text": "If the Cumulative Acknowledgement field didn’t cover more than\r\n\"recover\", check to see if the congestion window is greater than\r\nSMSS bytes and the difference between highest_ack and\r\nprev_highest_ack is at most 4*SMSS bytes. If true, duplicate\r\nACKs indicate a lost segment (proceed to Step 1A in Section 3).\r\nOtherwise, duplicate ACKs likely result from unnecessary\r\nretransmissions (proceed to Step 1B in Section 3).",
+    "correct_text": "If the Cumulative Acknowledgement field didn’t cover more than\r\n\"recover\", check to see if the congestion window is greater than\r\nSMSS bytes and the difference between highest_ack and\r\nprev_highest_ack is at most 3*SMSS bytes. If true, duplicate\r\nACKs indicate a lost segment (proceed to Step 1A in Section 3).\r\nOtherwise, duplicate ACKs likely result from unnecessary\r\nretransmissions (proceed to Step 1B in Section 3).",
+    "notes": "RFC3782 references to Gur03 and GF04 papers as to the initial sources\r\nof the heuristics both ACK-based and Timestamp-based. Neither of those\r\npapers nor Gur03 nor GF04 defines difference between highest_ack and previous_highest_ack\r\nof at least 4*SMSS bytes upon receiving the third duplicate ACK as an indication \r\nof droped retransmitted segment. Instead, section III of GF04 says:\r\n\r\n\"The acknowledgment heuristic is based on an observation that if the \r\nTCP sender unnecessarily retransmits at least three adjacent packets,\r\nthere will be a jump by at least four segments in a cumulative \r\nacknowledgment field. The sender will have correctly retransmitted at least\r\none packet, to advance the cumulative acknowledgment field, and \r\nunnecessarily retransmitted at least three more to result in three duplicate\r\nacknowledgments. Following the advancement of the cumulative acknowledgment\r\nfield, the sender stores the value of the previous cumulative acknowledgment\r\nas prev_highest_ack and stores the latest cumulative acknowledgment as\r\nhighest_ack. Upon receiving the third duplicate acknowledgment,\r\nthe sender invokes a Fast Retransmit if its congestion window is greater\r\nthan one MSS (Maximum Segment Size), and the difference between highest_ack\r\nand prev_highest_ack is at most three MSS.\"\r\n\r\nAccording to GF04 if TCP sender in absence of any droped acknowledgments upon receiving\r\nthe third duplicate ACK has difference between highest_ack and prev_highest ack values \r\nof at most/i.e. no more than 3*SMSS bytes then this is explicite indication of droped retransmitted\r\nsegment and leads TCP sender to invoke Fast Retransmit, but current description of ACK-based\r\nheuristic in RFC3782 section 6.1 in part of: \"if the congestion window is greater than\r\nSMSS bytes and the difference between highest_ack and\r\nprev_highest_ack is at most 4*SMSS bytes. If true, duplicate\r\nACKs indicate a lost segment (proceed to Step 1A in Section 3)\", makes TCP sender to treat\r\ndifference between highest_ack and prev_highest_ack of 4SMSS bytes upon receiving 3rd\r\nduplicate ACK as indication of lost retransmitted segment but again according to GF04 this is NOT so, \r\nand makes TCP sender to invoke Fast Retransmit when in fact those three duplicate acknowledgments \r\nindicate unnecessarily retransmitted segments and have in their acknowledgment fields sequence \r\nnumber which receiver expects to receive next but which sender has NOT sent yet, so Fast Retransmit \r\nhas no point in this case.",
+    "submit_date": "2021-12-19",
+    "submitter_name": "Clive Bloom",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
