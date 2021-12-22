@@ -28,5 +28,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6790,
+    "doc-id": "RFC8601",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "   [DKIM]     Crocker, D., Ed., Hansen, T., Ed., and M. Kucherawy, Ed.,\r\n              \"DomainKeys Identified Mail (DKIM) Signatures\", STD 76,\r\n              RFC 6376, DOI 10.17487/RFC6376, September 2011,\r\n              <https://www.rfc-editor.org/info/rfc6376>.",
+    "correct_text": "   [DKIM]     Crocker, D., Ed., Hansen, T., Ed., and M. Kucherawy, Ed.,\r\n              \"DomainKeys Identified Mail (DKIM) Signatures\", STD 76,\r\n              RFC 6376, DOI 10.17487/RFC6376, September 2011,\r\n              <https://www.rfc-editor.org/info/rfc6376>.",
+    "notes": "In the next revision, this reference should be moved from Section 8.2, informative references, to Section 8.1, normative references.  In Section 2.2, formal definition, the definition for domain-name is taken from RFC 6376, so it's not merely informative.",
+    "submit_date": "2021-12-21",
+    "submitter_name": "Scott Kitterman",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
