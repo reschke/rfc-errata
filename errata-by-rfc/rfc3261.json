@@ -478,5 +478,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6793,
+    "doc-id": "RFC3261",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.1.1.5",
+    "orig_text": "The CSeq header field serves as a way to identify and order\r\n   transactions.  It consists of a sequence number and a method.  The\r\n   method MUST match that of the request.  For non-REGISTER requests\r\n   outside of a dialog, the sequence number value is arbitrary.  The\r\n   sequence number value MUST be expressible as a 32-bit unsigned\r\n   integer and MUST be less than 2**31.  As long as it follows the above\r\n   guidelines, a client may use any mechanism it would like to select\r\n   CSeq header field values.",
+    "correct_text": "The CSeq header field serves as a way to identify and order\r\n   transactions.  It consists of a sequence number and a method.  The\r\n   method MUST match that of the request.  For non-REGISTER requests\r\n   outside of a dialog, the sequence number value is arbitrary. For requests with its credentials after receiving a\r\n   401 (Unauthorized) or 407 (Proxy Authentication Required) response,\r\n  the CSeq header field value MUST increment. The\r\n   sequence number value MUST be expressible as a 32-bit unsigned\r\n   integer and MUST be less than 2**31.  As long as it follows the above\r\n   guidelines, a client may use any mechanism it would like to select\r\n   CSeq header field values.",
+    "notes": "For more clarity and more understanding, It would be nice to have a quiet bit of update in RFC 3261 section 8.1.1.5. Because, the word \"arbitrary\" in the CSeq value may be confused with the same value as before.",
+    "submit_date": "2021-12-21",
+    "submitter_name": "Mojtaba Esfandiari.S",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
