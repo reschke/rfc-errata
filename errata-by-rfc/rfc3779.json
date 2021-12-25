@@ -62,7 +62,7 @@
   {
     "errata_id": 6792,
     "doc-id": "RFC3779",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix B",
     "orig_text": "   30 3d                       Extension {\r\n      06 08 2b06010505070107     extnID        1.3.6.1.5.5.7.1.7\r\n      01 01 ff                   critical\r\n      04 2e                      extnValue {\r\n         30 2c                     IPAddrBlocks {\r\n            30 10                    IPAddressFamily {\r\n               04 03 0001 01           addressFamily: IPv4 Unicast\r\n                                       IPAddressChoice\r\n               30 09                     addressesOrRanges {\r\n                                           IPAddressOrRange\r\n                  03 02 00 0a                addressPrefix    10/8\r\n                                           IPAddressOrRange\r\n                  03 03 04 b010              addressPrefix    172.16/12\r\n                                         } -- addressesOrRanges\r\n                                     } -- IPAddressFamily\r\n            30 07                    IPAddressFamily {\r\n               04 03 0001 02           addressFamily: IPv4 Multicast\r\n                                       IPAddressChoice\r\n               05 00                     inherit from issuer\r\n                                     } -- IPAddressFamily\r\n            30 0f                    IPAddressFamily {\r\n               04 02 0002              addressFamily: IPv6\r\n                                       IPAddressChoice\r\n               30 09                     addressesOrRanges {\r\n                                           IPAddressOrRange\r\n                  03 07 00 200100000002      addressPrefix   2001:0:2/47\r\n                                         } -- addressesOrRanges\r\n                                     } -- IPAddressFamily\r\n                                   } -- IPAddrBlocks\r\n                                 } -- extnValue\r\n                                  } -- Extension",
@@ -70,8 +70,8 @@
     "notes": "b010 represents 176.16/12, the hex representation of 172 is ac, so it should be ac10.\r\n\r\nThe IPv6 addressPrefix in question is 2001:0:2/48, not 2001:0:2/47, as explained in the text before the example.",
     "submit_date": "2021-12-21",
     "submitter_name": "Theo Buehler",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2021-12-24 20:15:17"
   }
 ]
