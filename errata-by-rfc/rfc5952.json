@@ -107,17 +107,17 @@
   {
     "errata_id": 4900,
     "doc-id": "RFC5952",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "4.2.2.",
     "orig_text": "Handling One 16-Bit 0 Field\r\n\r\nThe symbol \"::\" MUST NOT be used to shorten just one 16-bit 0 field.\r\n   For example, the representation 2001:db8:0:1:1:1:1:1 is correct, but\r\n   2001:db8::1:1:1:1:1 is not correct.",
     "correct_text": "But Section 2.2.  Zero Compression\r\nsays:\r\n\r\n'A special syntax is available to compress the zeros.  The use of\r\n      \"::\" indicates one or more groups of 16 bits of zeros.'\r\n\r\n   It is possible to select whether or not to omit just one 16-bit 0\r\n   field.\r\n\r\n      2001:db8:aaaa:bbbb:cccc:dddd::1\r\n\r\n      2001:db8:aaaa:bbbb:cccc:dddd:0:1",
-    "notes": "In 2.2 :: for only one 16-bit 0 filed :: is used\r\n4.2.2 says MUST NOT -RFC 2119 says\r\n2. MUST NOT   This phrase, or the phrase \"SHALL NOT\", mean that the\r\n   definition is an absolute prohibition of the specification.",
+    "notes": "In 2.2 :: for only one 16-bit 0 filed :: is used\r\n4.2.2 says MUST NOT -RFC 2119 says\r\n2. MUST NOT   This phrase, or the phrase \"SHALL NOT\", mean that the\r\n   definition is an absolute prohibition of the specification.\n --VERIFIER NOTES-- \nValid versus canonical forms; see https://www.rfc-editor.org/errata/eid4986 for links to further discussion.",
     "submit_date": "2017-01-10",
     "submitter_name": "Michael Krzyzaniak",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2021-12-26 18:08:02"
   },
   {
     "errata_id": 4985,
@@ -137,17 +137,17 @@
   {
     "errata_id": 4986,
     "doc-id": "RFC5952",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": 2.2,
     "orig_text": "'A special syntax is available to compress the zeros. The use of\r\n\"::\" indicates one or more groups of 16 bits of zeros.'\r\n",
     "correct_text": "'A special syntax is available to compress the zeros. The use of\r\n\"::\" indicates two or more groups of 16 bits of zeros.'\r\n\r\n",
-    "notes": "\"indicates one\" should be written as \"indicates two\"\r\n\r\n for example:\r\n'A special syntax is available to compress the zeros. The use of\r\n\"::\" indicates two or more groups of 16 bits of zeros.'\r\n\r\n2001:db8:aaaa:bbbb:cccc::1\r\n\r\n2001:db8:aaaa:bbbb:cccc:0:0:1",
+    "notes": "\"indicates one\" should be written as \"indicates two\"\r\n\r\n for example:\r\n'A special syntax is available to compress the zeros. The use of\r\n\"::\" indicates two or more groups of 16 bits of zeros.'\r\n\r\n2001:db8:aaaa:bbbb:cccc::1\r\n\r\n2001:db8:aaaa:bbbb:cccc:0:0:1\n --VERIFIER NOTES-- \nRFC 4291, section 2.2, #2 is clear that the current text is valid.  Section 4.2.2 contains a specific recommendation for the defined canonical form in this situation.  The canonical form is (must be) valid, but not all valid forms are canonical (of necessity :-).\r\n\r\nTo reach the working group discussion see this thread: https://mailarchive.ietf.org/arch/msg/ipv6/41x17WLwxBoS6AAtH6p0nuC84sk/",
     "submit_date": "2017-03-31",
     "submitter_name": "Julian de Prado",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2021-12-26 18:05:21"
   },
   {
     "errata_id": 6272,
