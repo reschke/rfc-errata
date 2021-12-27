@@ -28,5 +28,20 @@
     "verifier_id": 153,
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2020-03-06 05:08:13"
+  },
+  {
+    "errata_id": 6798,
+    "doc-id": "RFC7323",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "The Timestamps option may appear in any data or <ACK> segment, adding\r\n\r\nThe timestamp clock may be derived from a system clock that is\r\n\r\nA random offset may be added to the timestamp clock on a per-",
+    "correct_text": "The Timestamps option MAY appear in any data or <ACK> segment, adding\r\n\r\nThe timestamp clock MAY be derived from a system clock that is\r\n\r\nA random offset MAY be added to the timestamp clock on a per-",
+    "notes": "several \"MAY\"s were incorrectly written as non RFC 2119 \"may\"s",
+    "submit_date": "2021-12-26",
+    "submitter_name": "Yaakov Stein",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
