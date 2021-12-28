@@ -163,5 +163,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6800,
+    "doc-id": "RFC2046",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.4",
+    "orig_text": "                                    In the case where one of the\r\n   alternatives is itself of type \"multipart\" and contains unrecognized\r\n   sub-parts, the user agent may choose either to show that alternative,\r\n   an earlier alternative, or both.\r\n\r\n",
+    "correct_text": "                                    In the case where one of the\r\n   alternatives is itself of type \"multipart\" and contains unrecognized\r\n   sub-parts, the user agent may choose to either show that alternative,\r\n   show an earlier alternative, or let the user choose which alternative\r\n   to show.\r\n",
+    "notes": "The quoted sentence conflicts with the following sentence later in the same section:\r\n\r\n                  What is most critical, however, is that the user not\r\n   automatically be shown multiple versions of the same data.  Either\r\n   the user should be shown the last recognized version or should be\r\n   given the choice.\r\n\r\nI assume the correction should be as proposed, but other options are conceivable.",
+    "submit_date": "2021-12-27",
+    "submitter_name": "Daniel Shahaf",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
