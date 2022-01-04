@@ -133,5 +133,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6806,
+    "doc-id": "RFC5912",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "   pk-rsa PUBLIC-KEY ::= {\r\n    IDENTIFIER rsaEncryption\r\n    KEY RSAPublicKey\r\n    PARAMS TYPE NULL ARE absent\r\n    -- Private key format not in this module --\r\n    CERT-KEY-USAGE {digitalSignature, nonRepudiation,\r\n    keyEncipherment, dataEncipherment, keyCertSign, cRLSign}\r\n   }",
+    "correct_text": "   pk-rsa PUBLIC-KEY ::= {\r\n    IDENTIFIER rsaEncryption\r\n    KEY RSAPublicKey\r\n    PARAMS TYPE NULL ARE required\r\n    -- Private key format not in this module --\r\n    CERT-KEY-USAGE {digitalSignature, nonRepudiation,\r\n    keyEncipherment, dataEncipherment, keyCertSign, cRLSign}\r\n   }",
+    "notes": "Section 2.3.1 of RFC 3279 states \"(t)he parameters field MUST have ASN.1 type NULL for this algorithm identifier.\"",
+    "submit_date": "2022-01-03",
+    "submitter_name": "Carl Wallace",
+    "verifier_id": 159,
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2022-01-03 18:27:38"
   }
 ]
