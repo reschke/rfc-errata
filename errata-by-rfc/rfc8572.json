@@ -88,5 +88,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6807,
+    "doc-id": "RFC8572",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 3.3,
+    "orig_text": "   When unencrypted, the ownership voucher artifact is as defined in\r\n   [RFC8366].  As described, it is a CMS structure whose topmost content\r\n   type MUST be the OID id-signedData (1.2.840.113549.1.7.2), whose\r\n   eContentType MUST be OID id-ct-animaJSONVoucher\r\n   (1.2.840.113549.1.9.16.1), or the OID id-data (1.2.840.113549.1.7.1).\r\n   When the OID id-data is used, the encoding (JSON, XML, etc.) SHOULD\r\n   be communicated externally.  In either case, the associated content\r\n   is an octet string containing ietf-voucher data in the expected\r\n   encoding.\r\n\r\n   When encrypted, the topmost content type of the ownership voucher\r\n   artifact's CMS structure MUST be the OID id-envelopedData\r\n   (1.2.840.113549.1.7.3), and the encryptedContentInfo's content type\r\n   MUST be the OID id-signedData (1.2.840.113549.1.7.2), whose\r\n   eContentType MUST be OID id-ct-animaJSONVoucher\r\n   (1.2.840.113549.1.9.16.1), or the OID id-data (1.2.840.113549.1.7.1).\r\n   When the OID id-data is used, the encoding (JSON, XML, etc.) SHOULD\r\n   be communicated externally.  In either case, the associated content\r\n   is an octet string containing ietf-voucher data in the expected\r\n   encoding.",
+    "correct_text": "   When unencrypted, the ownership voucher artifact is as defined in\r\n   [RFC8366].  As described, it is a CMS structure whose topmost content\r\n   type MUST be the OID id-signedData (1.2.840.113549.1.7.2), whose\r\n   eContentType MUST be OID id-ct-animaJSONVoucher\r\n   (1.2.840.113549.1.9.16.1.40), or the OID id-data (1.2.840.113549.1.7.1).\r\n   When the OID id-data is used, the encoding (JSON, XML, etc.) SHOULD\r\n   be communicated externally.  In either case, the associated content\r\n   is an octet string containing ietf-voucher data in the expected\r\n   encoding.\r\n\r\n   When encrypted, the topmost content type of the ownership voucher\r\n   artifact's CMS structure MUST be the OID id-envelopedData\r\n   (1.2.840.113549.1.7.3), and the encryptedContentInfo's content type\r\n   MUST be the OID id-signedData (1.2.840.113549.1.7.2), whose\r\n   eContentType MUST be OID id-ct-animaJSONVoucher\r\n   (1.2.840.113549.1.9.16.1.40), or the OID id-data (1.2.840.113549.1.7.1).\r\n   When the OID id-data is used, the encoding (JSON, XML, etc.) SHOULD\r\n   be communicated externally.  In either case, the associated content\r\n   is an octet string containing ietf-voucher data in the expected\r\n   encoding.",
+    "notes": "The OID for id-ct-animaJSONVoucher is 1.2.840.113549.1.9.16.1.40.",
+    "submit_date": "2022-01-04",
+    "submitter_name": "Lijun Liao",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
