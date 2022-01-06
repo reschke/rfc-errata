@@ -13,5 +13,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6808,
+    "doc-id": "RFC4568",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 9.2,
+    "orig_text": "srtp-crypto-suite   = \"AES_CM_128_HMAC_SHA1_32\" /\r\n                            \"F8_128_HMAC_SHA1_32\" /\r\n                            \"AES_CM_128_HMAC_SHA1_80\" /\r\n                            srtp-crypto-suite-ext\r\n",
+    "correct_text": "srtp-crypto-suite   = \"AES_CM_128_HMAC_SHA1_32\" /\r\n                            \"F8_128_HMAC_SHA1_80\" /\r\n                            \"AES_CM_128_HMAC_SHA1_80\" /\r\n                            srtp-crypto-suite-ext\r\n",
+    "notes": "Section 6.2.3 uses 80 bit for F8 (IANA registration)",
+    "submit_date": "2022-01-05",
+    "submitter_name": "Fritz",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
