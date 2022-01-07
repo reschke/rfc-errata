@@ -373,5 +373,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6812,
+    "doc-id": "RFC6350",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.2.7",
+    "orig_text": "   Examples:\r\n\r\n     GENDER:M\r\n     GENDER:F\r\n     GENDER:M;Fellow\r\n     GENDER:F;grrrl\r\n     GENDER:O;intersex\r\n     GENDER:;it's complicated",
+    "correct_text": "   Examples:\r\n\r\n     GENDER:M\r\n     GENDER:F\r\n     GENDER:M;Transgender Man\r\n     GENDER:F;Transfeminine\r\n     GENDER:O;Intersex\r\n     GENDER:;Agender",
+    "notes": "This errata replaces the imaginary gender identities with examples of actual diverse gender identities.",
+    "submit_date": "2022-01-06",
+    "submitter_name": "Emily Love Mills (she/her)",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
