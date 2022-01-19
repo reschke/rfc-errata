@@ -32,7 +32,7 @@
   {
     "errata_id": 4004,
     "doc-id": "RFC6931",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.3.11",
     "orig_text": "2.3.11.  RSA-SHA224\r\n\r\nIdentifier:\r\n     http://www.w3.org/2007/05/xmldsig-more#rsa-sha224\r\n\r\n  This implies the PKCS#1 v1.5 padding algorithm [RFC3447] as described\r\n  in Section 2.3.1, but with the ASN.1 BER SHA-224 algorithm designator\r\n  prefix.  An example of use is\r\n\r\n  <SignatureMethod\r\n     Algorithm=\"http://www.w3.org/2007/05/xmldsig-more#rsa-sha224\" />\r\n\r\n  Because it takes about the same effort to calculate a SHA-224 message\r\n  digest as it does a SHA-256 message digest, it is suggested that\r\n  RSA-SHA256 be used in preference to RSA-SHA224 where possible.",
@@ -40,8 +40,8 @@
     "notes": "RFC 6931 should be corrected to use the same identifier for RSA-SHA224 as is used in the W3C Recommendation \"XML Signature Syntax and Processing Version 1.1? normative section 6.4.2 ( http://www.w3.org/TR/2013/REC-xmldsig-core1-20130411/#sec-PKCS1 ). \r\n\r\nThis same identifier is also specified in the W3C Note \"XML Security Algorithm Cross-Reference? section 3.2 ( http://www.w3.org/TR/2013/NOTE-xmlsec-algorithms-20130411/#RSA )\r\n\r\nAt least two shipping code implementations use this value from the W3C Recommendation ; to enable interoperability, avoid confusion and be consistent with the published Recommendation RFC 6931 should be updated to be consistent.\r\n\r\nPlease note that the revision affects both the identifier URL and the Algorithm attribute value in the 2.3.11 section which is why the entire section is given in the Original and Corrected text above.",
     "submit_date": "2014-05-29",
     "submitter_name": "Frederick Hirsch",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-18 10:29:27"
   }
 ]
