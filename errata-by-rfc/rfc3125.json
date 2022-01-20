@@ -2,7 +2,7 @@
   {
     "errata_id": 5901,
     "doc-id": "RFC3125",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A.1",
     "orig_text": "CommitmentType ::= SEQUENCE {\r\n        identifier                      CommitmentTypeIdentifier,\r\n        fieldOfApplication      [0] FieldOfApplication OPTIONAL,\r\n        semantics                       [1] DirectoryString OPTIONAL }",
@@ -10,14 +10,14 @@
     "notes": "The definition of CommitmentTypeIdentifier is missing from the ASN.1 module.  RFC 3126 shows that it is an object identifier.",
     "submit_date": "2019-11-12",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-19 18:00:58"
   },
   {
     "errata_id": 5902,
     "doc-id": "RFC3125",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A.2",
     "orig_text": "CommitmentType ::= SEQUENCE {\r\n        identifier                      CommitmentTypeIdentifier,\r\n        fieldOfApplication      [0] FieldOfApplication OPTIONAL,\r\n        semantics               [1] DirectoryString OPTIONAL }",
@@ -25,8 +25,8 @@
     "notes": "The CommitmentTypeIdentifier definition is missing from the ASN.1 module.  RFC 3126 shows that it is an object identifier.",
     "submit_date": "2019-11-12",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-19 17:59:08"
   }
 ]
