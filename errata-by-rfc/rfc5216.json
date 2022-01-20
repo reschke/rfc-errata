@@ -122,7 +122,7 @@
   {
     "errata_id": 6357,
     "doc-id": "RFC5216",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": 5.1,
     "orig_text": "   [3] Section 5 of BCP 86 [RFC3766] offers advice on the required RSA\r\n   or Diffie-Hellman (DH) module and Digital Signature Algorithm (DSA)\r\n   subgroup size in bits, for a given level of attack resistance in\r\n   bits.  For example, a 2048-bit RSA key is recommended to provide\r\n   128-bit equivalent key strength.  The National Institute of Standards\r\n   and Technology (NIST) also offers advice on appropriate key sizes in\r\n   [SP800-57].",
@@ -130,8 +130,8 @@
     "notes": "RSA and DH computations are parameterized by their moduli, with singular \"modulus\" (not \"module\").",
     "submit_date": "2020-12-16",
     "submitter_name": "Benjamin Kaduk",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-19 14:33:45"
   }
 ]
