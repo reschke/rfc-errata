@@ -47,7 +47,7 @@
   {
     "errata_id": 5897,
     "doc-id": "RFC2631",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.1.2",
     "orig_text": "     KeySpecificInfo ::= SEQUENCE {\r\n       algorithm OBJECT IDENTIFIER,\r\n       counter OCTET STRING SIZE (4..4) }",
@@ -55,9 +55,9 @@
     "notes": "The addition of '(' and ')' are needed for an ASN.1 compiler to accept the syntax without raising an error.",
     "submit_date": "2019-11-07",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-19 14:25:17"
   },
   {
     "errata_id": 5954,
