@@ -2,7 +2,7 @@
   {
     "errata_id": 5351,
     "doc-id": "RFC7970",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 2.16,
     "orig_text": "The attributes of the iodef:ExtensionType type are:\r\n\r\n   name\r\n      Optional.  STRING.  A free-form name of the field or data element.\r\n\r\n   dtype\r\n      Required.  ENUM.  The data type of the element content.  The\r\n      default value is \"string\".  These values are maintained in the\r\n      \"ExtensionType-dtype\" IANA registry per Section 10.2.\r\n\r\n      1.   boolean.  The element content is of type BOOLEAN.\r\n\r\n      2.   byte.  The element content is of type BYTE.\r\n\r\n      3.   bytes.  The element content is of type HEXBIN.\r\n\r\n      4.   character.  The element content is of type CHARACTER.\r\n\r\n      5.   date-time.  The element content is of type DATETIME.\r\n\r\n      6.   ntpstamp.  Same as date-time.\r\n\r\n      7.   integer.  The element content is of type INTEGER.\r\n\r\n      8.   portlist.  The element content is of type PORTLIST.\r\n\r\n      9.   real.  The element content is of type REAL.\r\n\r\n      10.  string.  The element content is of type STRING.\r\n\r\n      11.  file.  The element content is a base64-encoded binary file\r\n           encoded as a BYTE[] type.\r\n\r\n      12.  path.  The element content is a file-system path encoded as a\r\n           STRING type.\r\n\r\n      13.  frame.  The element content is a Layer 2 frame encoded as a\r\n           HEXBIN type.\r\n\r\n      14.  packet.  The element content is a Layer 3 packet encoded as a\r\n           HEXBIN type.\r\n\r\n      15.  ipv4-packet.  The element content is an IPv4 packet encoded\r\n           as a HEXBIN type.\r\n\r\n      16.  ipv6-packet.  The element content is an IPv6 packet encoded\r\n           as a HEXBIN type.\r\n\r\n      17.  url.  The element content is of type URL.\r\n\r\n      18.  csv.  The element content is a comma-separated value (CSV)\r\n           list per Section 2 of [RFC4180] encoded as a STRING type.\r\n\r\n      19.  winreg.  The element content is a Microsoft Windows registry\r\n           key encoded as a STRING type.\r\n\r\n      20.  xml.  The element content is XML.  See Section 5.2.\r\n\r\n      21.  ext-value.  A value used to indicate that this attribute is\r\n           extended and the actual value is provided using the\r\n           corresponding ext-* attribute.  See Section 5.1.1.",
@@ -10,9 +10,9 @@
     "notes": "Section 2.5.2 (explanation of HEXBIN and HEXBIN[] types) says:\r\n\" A binary octet encoded as a character tuple consistent of two\r\n   hexadecimal digits is represented in the information model by the\r\n   HEXBIN data type.  A sequence of these octets is of the HEXBIN[] data\r\n   type.\r\n   The HEXBIN and HEXBIN[] data types are implemented in the data model\r\n   as an \"xs:hexBinary\" type per Section 3.2.15 of [W3C.SCHEMA.DTYPES].\"\r\n\r\nIf I am reading that section correctly, HEXBIN is for hex-encoded things that decode to exactly one byte, while HEXBIN[] is for hex-encoded things that decode to one or more bytes. Thus, things that may decode to multiple bytes should be HEXBIN[], not HEXBIN. \r\n\r\nThe extension types in Section 2.16  that are currently HEXBIN should probably be HEXBIN[]. The name \"bytes\" implies decoding to multiple bytes (so it should be HEXBIN[]). Frames and packets (regardless of layer) tend to be multiple bytes long (so they should be HEXBIN[] as well).",
     "submit_date": "2018-05-07",
     "submitter_name": "Logan Widick",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-19 17:04:29"
   },
   {
     "errata_id": 5398,
@@ -107,17 +107,17 @@
   {
     "errata_id": 5583,
     "doc-id": "RFC7970",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 8,
     "orig_text": "    <xs:simpleType name=\"action-type\">\r\n      <xs:restriction base=\"xs:NMTOKEN\">\r\n        <xs:enumeration value=\"nothing\"/>\r\n        <xs:enumeration value=\"contact-source-site\"/>\r\n        <xs:enumeration value=\"contact-target-site\"/>\r\n        <xs:enumeration value=\"contact-sender\"/>\r\n        <xs:enumeration value=\"investigate\"/>\r\n        <xs:enumeration value=\"block-host\"/>\r\n        <xs:enumeration value=\"block-network\"/>\r\n        <xs:enumeration value=\"block-port\"/>\r\n        <xs:enumeration value=\"rate-limit-host\"/>\r\n        <xs:enumeration value=\"rate-limit-network\"/>\r\n        <xs:enumeration value=\"rate-limit-port\"/>\r\n        <xs:enumeration value=\"redirect-traffic\"/>\r\n        <xs:enumeration value=\"honeypot\"/>\r\n        <xs:enumeration value=\"upgrade-software\"/>\r\n        <xs:enumeration value=\"rebuild-asset\"/>\r\n        <xs:enumeration value=\"harden-asset\"/>\r\n        <xs:enumeration value=\"remediate-other\"/>\r\n        <xs:enumeration value=\"status-triage\"/>\r\n        <xs:enumeration value=\"status-new-info\"/>\r\n        <xs:enumeration value=\"watch-and-report\"/>\r\n        <xs:enumeration value=\"defined-coa\"/>",
     "correct_text": "    <xs:simpleType name=\"action-type\">\r\n      <xs:restriction base=\"xs:NMTOKEN\">\r\n        <xs:enumeration value=\"nothing\"/>\r\n        <xs:enumeration value=\"contact-source-site\"/>\r\n        <xs:enumeration value=\"contact-target-site\"/>\r\n        <xs:enumeration value=\"contact-sender\"/>\r\n        <xs:enumeration value=\"investigate\"/>\r\n        <xs:enumeration value=\"block-host\"/>\r\n        <xs:enumeration value=\"block-network\"/>\r\n        <xs:enumeration value=\"block-port\"/>\r\n        <xs:enumeration value=\"rate-limit-host\"/>\r\n        <xs:enumeration value=\"rate-limit-network\"/>\r\n        <xs:enumeration value=\"rate-limit-port\"/>\r\n        <xs:enumeration value=\"redirect-traffic\"/>\r\n        <xs:enumeration value=\"honeypot\"/>\r\n        <xs:enumeration value=\"upgrade-software\"/>\r\n        <xs:enumeration value=\"rebuild-asset\"/>\r\n        <xs:enumeration value=\"harden-asset\"/>\r\n        <xs:enumeration value=\"remediate-other\"/>\r\n        <xs:enumeration value=\"status-triage\"/>\r\n        <xs:enumeration value=\"status-new-info\"/>\r\n        <xs:enumeration value=\"watch-and-report\"/>\r\n        <xs:enumeration value=\"training\"/>\r\n        <xs:enumeration value=\"defined-coa\"/>",
-    "notes": "the mainbody text in Section 3.1.5 allows the action attribute to have \"training\" value, but the schema was inconsistent. The inconsistency was solved by the errata.",
+    "notes": "The narrative text in Section 3.1.5 defined an enumerated value of \"training\" for the action attribute, but the schema omitted it.",
     "submit_date": "2018-12-25",
     "submitter_name": "Takeshi Takahashi",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-19 16:58:42"
   },
   {
     "errata_id": 5590,
