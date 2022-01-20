@@ -17,7 +17,7 @@
   {
     "errata_id": 6235,
     "doc-id": "RFC4616",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": 1,
     "orig_text": "   The PLAIN mechanism should not be used without adequate data security\r\n   protection as this mechanism affords no integrity or confidentiality\r\n   protections itself.  The mechanism is intended to be used with data\r\n   security protections provided by application-layer protocol,\r\n   generally through its use of Transport Layer Security ([TLS])\r\n   services.",
@@ -25,8 +25,8 @@
     "notes": "Missing \"an\" in \"an application-layer protocol\".",
     "submit_date": "2020-07-24",
     "submitter_name": "Benjamin Kaduk",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-19 14:31:41"
   }
 ]
