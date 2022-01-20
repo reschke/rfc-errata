@@ -17,17 +17,17 @@
   {
     "errata_id": 3965,
     "doc-id": "RFC6931",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.2 and 4.1",
     "orig_text": "   2006/12/xmlc12n11#                  [CANON11]  Canonicalization\r\n   2006/12/xmlc14n11#WithComments      [CANON11]  Canonicalization\r\n",
-    "correct_text": "   2006/12/xmlc14n11#                  [CANON11]  Canonicalization\r\n   2006/12/xmlc14n11#WithComments      [CANON11]  Canonicalization\r\n",
-    "notes": "[CANON11] referencing to <http://www.w3.org/TR/2008/REC-xml-c14n11-20080502/>\r\nonly talks about c14n and not c12n.\r\n\r\nIf this is not a flaw but done purposely, there should be a not about it.\r\n\r\nI could not find the original definitions for xmlc12n11 and xmlc14n11.\r\nThey are not in the referenced document.\r\n(And google only shows copies of this rfc.)\r\n\r\nFor stability reasons it may be better to not change/correct this, as it may be already in use.\r\nSo a note about this discrepance may be appropriate. Or a reference to the document defining those uris.",
+    "correct_text": "   2006/12/xmlc12n11#   {Bad}          [CANON11]\r\n   2006/12/xmlc14n11#                  [CANON11]\r\n",
+    "notes": "As explained in Appendix B of draft-eastlake-rfc6931bis-xmlsec-uris:\r\n\r\n   [RFC6931] included two bad URIs as shown below. \"{Bad}\" in the\r\n   indexes (Sections 4.1 and 4.2) indicates such a bad value.\r\n   Implementations SHOULD only generate the correct URI but SHOULD\r\n   understand both the correct and erroneous URI.\r\n\r\n   2006/12/xmlc12n11#\r\n       Appears in the indices (Section 4.1 and 4.2] of [RFC6931] when it\r\n       should be \"2006/12/xmlc14n11#\" (i.e., the \"12\" inside \"xmlc12n11\"\r\n       should have been \"14\"). This is [Err3965] and is corrected in\r\n       this document.\r\n\r\n==[ Original Text\r\n--[ corrected text\r\n   2006/12/xmlc14n11#                  [CANON11]  Canonicalization\r\n   2006/12/xmlc14n11#WithComments      [CANON11]  Canonicalization\r\n\r\n-- [notes\r\n[CANON11] referencing to <http://www.w3.org/TR/2008/REC-xml-c14n11-20080502/>\r\nonly talks about c14n and not c12n.\r\n\r\nIf this is not a flaw but done purposely, there should be a not about it.\r\n\r\nI could not find the original definitions for xmlc12n11 and xmlc14n11.\r\nThey are not in the referenced document.\r\n(And google only shows copies of this rfc.)\r\n\r\nFor stability reasons it may be better to not change/correct this, as it may be already in use.\r\nSo a note about this discrepance may be appropriate. Or a reference to the document defining those uris.",
     "submit_date": "2014-04-15",
     "submitter_name": "Axel Puhlmann",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-19 14:14:56"
   },
   {
     "errata_id": 4004,
