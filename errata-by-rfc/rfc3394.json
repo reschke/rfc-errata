@@ -62,16 +62,16 @@
   {
     "errata_id": 5777,
     "doc-id": "RFC3394",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2.2.1",
     "orig_text": "   1) Initialize variables.\r\n\r\n       Set A0 to an initial value (see 2.2.3)\r\n       For i = 1 to n\r\n            R[0][i] = P[i]",
     "correct_text": "   1) Initialize variables.\r\n\r\n       Set A[0] to an initial value (see 2.2.3)\r\n       For i = 1 to n\r\n            R[0][i] = P[i]",
-    "notes": null,
+    "notes": "An array subscript notation should be used for A[] ",
     "submit_date": "2019-07-10",
     "submitter_name": "Charles Timko",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-20 06:44:41"
   }
 ]
