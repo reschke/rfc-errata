@@ -32,7 +32,7 @@
   {
     "errata_id": 4846,
     "doc-id": "RFC5754",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "section 3.2",
     "orig_text": "   The SMIMECapabilities attribute value indicates support for one of\r\n|  the DSA signature algorithms in a SEQUENCE with the capabilityID\r\n   field containing the object identifier sha*WithRSAEncryption (where *\r\n   is 224, 256, 384, or 512) with NULL parameters.  ",
@@ -40,8 +40,8 @@
     "notes": "The section 3.2 is related to RSA.",
     "submit_date": "2016-10-28",
     "submitter_name": "Annie Yousar",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-20 06:31:28"
   }
 ]
