@@ -538,5 +538,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6820,
+    "doc-id": "RFC8446",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 6.2,
+    "orig_text": "unsupported_extension:  Sent by endpoints receiving any handshake\r\n      message containing an extension known to be prohibited for\r\n      inclusion in the given handshake message, or including any\r\n      extensions in a ServerHello or Certificate not first offered in\r\n      the corresponding ClientHello or CertificateRequest. ",
+    "correct_text": "unsupported_extension:  Sent by endpoints receiving any handshake\r\n      message containing an extension in a ServerHello or Certificate\r\n      not first offered in the corresponding ClientHello or \r\n      CertificateRequest.",
+    "notes": "The definition of the unsupported_extension alert in section 6.2 contradicts the statements in section 4.2:\r\n\r\n        If an implementation receives an extension\r\n        which it recognizes and which is not specified for the message in\r\n        which it appears, it MUST abort the handshake with an\r\n   \"illegal_parameter\" alert.\r\n\r\nWhile this might not be inconsistent due to the \"abort the handshake with an X alert\" specification at the beginning of section 6.2, it might lead to confusion. (see https://mailarchive.ietf.org/arch/msg/tls/hGOGWZRMg718mWqOZ06LwjV9360/).",
+    "submit_date": "2022-01-21",
+    "submitter_name": "Leander Schwarz",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
