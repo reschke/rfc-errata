@@ -58,5 +58,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6821,
+    "doc-id": "RFC8391",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.5",
+    "orig_text": "\"Note that the checksum may reach a maximum integer value of len_1 * (w - 1) * 2^8\"",
+    "correct_text": "\"Note that the checksum may reach a maximum integer value of len_1 * (w - 1)\"",
+    "notes": "The \"* 2^8\" appears to be a mistake. If the checksum integers could reach those values, the checksum field would overflow, which would potentially allow an attacker to forge a message.\r\n\r\nIn reality, the correct maximum is just \"len_1 * (w - 1)\"",
+    "submit_date": "2022-01-24",
+    "submitter_name": "Peter Gordon",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
