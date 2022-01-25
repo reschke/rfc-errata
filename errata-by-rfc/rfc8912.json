@@ -3,16 +3,16 @@
     "errata_id": 6755,
     "doc-id": "RFC8912",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "5.3.5",
     "orig_text": "5.3.5.  Runtime Parameters and Data Format\r\n\r\n   Src:  The IP address of the host in the Src Role (format\r\n      ipv4-address-no-zone value for IPv4 or ipv6-address-no-zone value\r\n      for IPv6; see Section 4 of [RFC6991]).\r\n",
     "correct_text": "5.3.5.  Runtime Parameters and Data Format\r\n\r\n   Runtime Parameters are input factors that must be determined,\r\n   configured into the measurement system, and reported with the results\r\n   for the context to be complete.\r\n\r\n   Src:  The IP address of the host in the Src Role (format\r\n      ipv4-address-no-zone value for IPv4 or ipv6-address-no-zone value\r\n      for IPv6; see Section 4 of [RFC6991]).\r\n",
-    "notes": "Skipped paragraph.",
+    "notes": "Skipped paragraph.\r\n\r\n=======\r\n01/24/22: RFC Editor changed type to technical and asked the TSV ADs to review",
     "submit_date": "2021-11-27",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 99,
+    "verifier_id": 2,
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2022-01-24 14:55:29"
   },
   {
     "errata_id": 6758,
