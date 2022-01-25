@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6822,
+    "doc-id": "RFC3610",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.2,
+    "orig_text": "First two octets   Followed by       Comment\r\n    -----------------  ----------------  -------------------------------\r\n    0x0000             Nothing           Reserved\r\n    0x0001 ... 0xFEFF  Nothing           For 0 < l(a) < (2^16 - 2^8)\r\n    0xFF00 ... 0xFFFD  Nothing           Reserved\r\n    0xFFFE             4 octets of l(a)  For (2^16 - 2^8) <= l(a) < 2^32\r\n    0xFFFF             8 octets of l(a)  For 2^32 <= l(a) < 2^64",
+    "correct_text": "First two octets   Followed by       Comment\r\n    -----------------  ----------------  -------------------------------\r\n    0x0000             Nothing           Reserved\r\n    0x0001 ... 0xFEFF  Nothing           For 0 < l(a) < (2^16 - 2^8)\r\n    0xFF00 ... 0xFFFD  Nothing           Reserved\r\n    0xFFFE             4 octets of l(a)  For (2^16 - 2^8) <= l(a) < 2^32\r\n    0xFFFF             6 octets of l(a)  For 2^32 <= l(a) < 2^64",
+    "notes": "The total size of the length field encoded according to the table in seciton 2.2 is 8 octets. The first column defines the first two octets. The second column defines the following octets, which in case of the first two octets being 0xFFFF is 6 octets, not 8 octets.",
+    "submit_date": "2022-01-24",
+    "submitter_name": "Juergen Koeppel",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
