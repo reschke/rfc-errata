@@ -167,16 +167,16 @@
   {
     "errata_id": 6773,
     "doc-id": "RFC2119",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": 5,
     "orig_text": "MAY   This word, or the adjective \"OPTIONAL\", mean that an item is\r\n   truly optional.  One vendor may choose to include the item because a\r\n   particular marketplace requires it or because the vendor feels that\r\n   it enhances the product while another vendor may omit the same item.",
     "correct_text": "MAY   This word, or the adjective \"OPTIONAL\", mean that an item is\r\n   truly optional. One vendor may choose to include the item because a\r\n   particular marketplace requires it or because the vendor feels that\r\n   it enhances the product while another vendor may omit the same item.",
-    "notes": "There is a double space before \"One vendor may choose to include\".",
+    "notes": "There is a double space before \"One vendor may choose to include\".\n --VERIFIER NOTES-- \nThis report doesn't add clarity or improve readabilty.   We don't recommend errata be used to \"correct\" the number of spaces between sentences.",
     "submit_date": "2021-12-03",
     "submitter_name": "Michał Bieńkowski",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-01-27 21:52:08"
   }
 ]
