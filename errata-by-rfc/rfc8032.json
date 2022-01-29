@@ -32,32 +32,32 @@
   {
     "errata_id": 5758,
     "doc-id": "RFC8032",
-    "errata_status_code": "Rejected",
+    "errata_status_code": "Reported",
     "errata_type_code": "Technical",
     "section": "5.1.",
     "orig_text": "                          (p+3)/8      3        (p-5)/8\r\n                 x = (u/v)        = u v  (u v^7)         (mod p)",
     "correct_text": "                          (p+3)/8          (p-5)/8\r\n                 x = (u/v)        = u (u v)         (mod p)",
-    "notes": "\n --VERIFIER NOTES-- \nThe original text was correct (verified by Nick Sullivan).",
+    "notes": " --VERIFIER NOTES-- \r\nThe original text was correct (verified by Nick Sullivan).\r\n01/28/2022: RFC Editor changed status to Reported per discussion with Stanislav V. Smyshlyaev.",
     "submit_date": "2019-06-21",
     "submitter_name": "Franck Rondepierre",
-    "verifier_id": 168,
+    "verifier_id": 2,
     "verifier_name": "Stanislav Smyshlyaev",
-    "update_date": "2021-10-25 22:42:25"
+    "update_date": "2022-01-28 15:09:22"
   },
   {
     "errata_id": 5759,
     "doc-id": "RFC8032",
-    "errata_status_code": "Rejected",
+    "errata_status_code": "Reported",
     "errata_type_code": "Technical",
     "section": "5.2.",
     "orig_text": "                          (p+1)/4    3            (p-3)/4\r\n                 x = (u/v)        = u  v (u^5 v^3)         (mod p)",
     "correct_text": "                          (p+1)/4            (p-3)/4\r\n                 x = (u/v)        =  u (u v)         (mod p)",
-    "notes": "\n --VERIFIER NOTES-- \nThe original text was correct (verified by Nick Sullivan).",
+    "notes": " --VERIFIER NOTES-- \r\nThe original text was correct (verified by Nick Sullivan).\r\n01/28/2022: RFC Editor changed status to Reported per discussion with Stanislav V. Smyshlyaev.",
     "submit_date": "2019-06-21",
     "submitter_name": "Franck Rondepierre",
-    "verifier_id": 168,
+    "verifier_id": 2,
     "verifier_name": "Stanislav Smyshlyaev",
-    "update_date": "2021-10-25 22:43:37"
+    "update_date": "2022-01-28 15:10:24"
   },
   {
     "errata_id": 5930,
