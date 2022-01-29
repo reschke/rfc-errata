@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6824,
+    "doc-id": "RFC0823",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "[10] Rosen,  E.,  \"Exterior  Gateway  Protocol,\"  IEN-209,   Bolt\r\n          Beranek and Newman Inc., August 1982.",
+    "correct_text": "[10] Rosen,  E.,  \"Exterior  Gateway  Protocol,\"  IEN-209,   Bolt\r\n          Beranek and Newman Inc., August 1982, not issued.",
+    "notes": "RFC823 references IEN-209, which was not issued, and won't be (https://www.rfc-editor.org/ien/scanned/ien209.pdf).  I encourage discussion of whether it should reference RFC827 instead.",
+    "submit_date": "2022-01-28",
+    "submitter_name": "Greg Skinner",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
