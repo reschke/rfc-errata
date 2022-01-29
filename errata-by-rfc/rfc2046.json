@@ -153,16 +153,16 @@
     "errata_id": 6776,
     "doc-id": "RFC2046",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "5.1.1",
     "orig_text": "NOTE:  The CRLF preceding the boundary delimiter line is conceptually\r\n   attached to the boundary so that it is possible to have a part that\r\n   does not end with a CRLF (line  break).  Body parts that must be\r\n   considered to end with line breaks, therefore, must have two CRLFs\r\n   preceding the boundary delimiter line, the first of which is part of\r\n   the preceding body part, and the second of which is part of the\r\n   encapsulation boundary.",
     "correct_text": "NOTE:  The CRLF preceding the boundary delimiter line is conceptually\r\n   attached to the boundary so that it is possible to have a part that\r\n   does not end with a CRLF (line  break).  Body parts that must be\r\n   considered to end with line breaks, therefore, must have two CRLFs\r\n   preceding the boundary delimiter line, the first of which is part of\r\n   the preceding body part, and the second of which is part of the\r\n   encapsulation boundary.\r\n\r\nThe requirement that the encapsulation boundary begins  with\r\na  CRLF  implies  that  the  body of a multipart entity must\r\nitself begin with a CRLF before the first encapsulation line\r\n--  that  is, if the \"preamble\" area is not used, the entity\r\nheaders must be followed by TWO CRLFs.  This is  indeed  how\r\nsuch  entities  should be composed.  A tolerant mail reading\r\nprogram, however, may interpret a  body  of  type  multipart\r\nthat  begins  with  an encapsulation line NOT initiated by a\r\nCRLF  as  also  being  an  encapsulation  boundary,  but   a\r\ncompliant  mail  sending  program  must  not  generate  such\r\nentities.",
     "notes": "Recommend re-introducing the wording from the original RFC (1341) regarding preceding CRLF and the first delimiter line. Current RFC is ambiguous about handling the initial line without it.",
     "submit_date": "2021-12-05",
     "submitter_name": "Brian Antos",
-    "verifier_id": 99,
+    "verifier_id": 2,
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2022-01-28 16:23:08"
   },
   {
     "errata_id": 6800,
