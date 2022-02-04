@@ -253,5 +253,35 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6832,
+    "doc-id": "RFC6733",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.1.4",
+    "orig_text": "DIAMETER_OUT_OF_SPACE 4002\r\n\r\n      A Diameter node received the accounting request but was unable to\r\n      commit it to stable storage due to a temporary lack of space.",
+    "correct_text": "DIAMETER_OUT_OF_SPACE 4002\r\n\r\n      A Diameter node received the request but was unable to\r\n      commit it to stable storage due to a temporary lack of space.",
+    "notes": "Original text signifies accounting application explicitly. It can be any of Accounting or Authorization.",
+    "submit_date": "2022-02-03",
+    "submitter_name": "Kshitij Dutt",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6833,
+    "doc-id": "RFC6733",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.4,
+    "orig_text": "The following Application Id values are defined:\r\n\r\n         Diameter common message       0\r\n         Diameter base accounting      3\r\n         Relay                         0xffffffff",
+    "correct_text": "The following Application Id values are defined:\r\n\r\n         Diameter common message       0\r\n         Diameter base accounting      3\r\n         Relay                         0xffffff",
+    "notes": "I presume relay application ID should be 0xffffff decimal equivalent of which is 16777215.\r\nInstead 0xffffffff decimal translates to 4294967295.\r\n\r\nThis is assumption.",
+    "submit_date": "2022-02-03",
+    "submitter_name": "Kshitij Dutt",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
