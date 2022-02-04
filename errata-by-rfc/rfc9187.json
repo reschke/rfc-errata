@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6827,
+    "doc-id": "RFC9187",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "The following C code is provided as a verified example of SNE from 16\r\nto 32 bits.",
+    "correct_text": "The following C code is provided as a verified example of SNE from 32\r\nto 64 bits.",
+    "notes": "The code takes 32 bits sequence numbers and extends them to 64 bits.",
+    "submit_date": "2022-02-02",
+    "submitter_name": "Erik Auerswald",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6828,
+    "doc-id": "RFC9187",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "char *prompt = \"Input hex numbers only (0x is optional)\\n\\n\")",
+    "correct_text": "char *prompt = \"Input hex numbers only (0x is optional)\\n\\n\"",
+    "notes": "The closing parenthesis at the end of the line is a syntax error for the C programming language:\r\n\r\n$ cc compute_sne.c \r\ncompute_sne.c: In function ‘main’:\r\ncompute_sne.c:78:64: error: expected ‘,’ or ‘;’ before ‘)’ token",
+    "submit_date": "2022-02-02",
+    "submitter_name": "Erik Auerswald",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
