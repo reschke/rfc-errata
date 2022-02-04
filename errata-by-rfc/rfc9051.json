@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6826,
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "   18.  RFC822, RFC822.HEADER, and RFC822.TEXT FETCH data items were\r\n        deprecated.  Clients should use the corresponding BODY[]\r\n        variants instead.",
+    "correct_text": "   18.  RFC822, RFC822.HEADER, and RFC822.TEXT FETCH data items were\r\n        removed. Clients should use the corresponding BODY[]\r\n        variants instead.",
+    "notes": "Contrary to the original text, these data items are not deprecated but they were completely removed from the text of the RFC. As far as I see other deprecated items are not removed completely but moved to a '...obsolete...' token in the formal syntax.",
+    "submit_date": "2022-02-02",
+    "submitter_name": "Hontvári Levente",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
