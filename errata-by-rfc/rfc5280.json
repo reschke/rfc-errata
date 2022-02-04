@@ -253,5 +253,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6830,
+    "doc-id": "RFC5280",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A.1",
+    "orig_text": "-- Note - upper bounds on string types, such as TeletexString, are\r\n-- measured in characters.  Excepting PrintableString or IA5String, a\r\n-- significantly greater number of octets will be required to hold\r\n-- such a value.  As a minimum, 16 octets, or twice the specified\r\n-- upper bound, whichever is the larger, should be allowed for\r\n-- TeletexString.  For UTF8String or UniversalString at least four\r\n-- times the upper bound should be allowed.",
+    "correct_text": "-- Note - upper bounds on string types, such as TeletexString, are\r\n-- measured in characters.  Excepting PrintableString or IA5String, a\r\n-- significantly greater number of octets will be required to hold\r\n-- such a value.  As a minimum, 16 octets, or twice the specified\r\n-- upper bound, whichever is the larger, should be allowed for\r\n-- TeletexString.  For UTF8String or UniversalString, four\r\n-- times the upper bound should be allowed.",
+    "notes": "\"at least four times\" is likely a holdover from RFC 3280, as the same text exists in that RFC. In RFC 3280, the definition of UTF-8 in UTF8String was normatively referencing RFC 2279, which allowed for a maximum of 6 octets to represent a single Unicode character in UTF-8. However, RFC 5280 was updated to normatively reference RFC 3629, which restricts the allowed set of characters in a UTF-8 string to match those allowed in UTF-16 (i.e., the BMP and 16 supplementary planes as opposed to all 32k planes). As a result, the maximum length for a single RFC 3629 UTF-8 character is 4 octets, rendering the guidance of \"at least four times\" wholly unnecessary; \"four times\" is sufficient in all cases.",
+    "submit_date": "2022-02-02",
+    "submitter_name": "Corey Bonnell",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
