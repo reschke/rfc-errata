@@ -73,5 +73,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-01-27 15:49:38"
+  },
+  {
+    "errata_id": 6834,
+    "doc-id": "RFC8995",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.5,
+    "orig_text": "   *  version\r\n\r\n   *  Status\r\n\r\n   *  Reason\r\n\r\n   *  reason-context",
+    "correct_text": "   *  version\r\n\r\n   *  status\r\n\r\n   *  reason\r\n\r\n   *  reason-context",
+    "notes": "The CDDL models in section 5.7 and 5.9.4 define the key values with lowercase first character; and the examples in those sections use the same. It seems that during final editing it was forgotten to update Section 8.5.",
+    "submit_date": "2022-02-03",
+    "submitter_name": "Esko Dijk",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
