@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6829,
+    "doc-id": "RFC9073",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 7.1,
+    "orig_text": "      partprop     = *(\r\n                     ;\r\n                     ; The following are REQUIRED\r\n                     ; but MUST NOT occur more than once.\r\n                     ;\r\n                     participanttype / uid /\r\n                     ;\r\n                     ; The following are OPTIONAL\r\n                     ; but MUST NOT occur more than once.\r\n                     ;\r\n                     calendaraddress / created / description / dtstamp /\r\n                     geo / last-mod / priority / seq /\r\n                     status / summary / url /\r\n                     ;\r\n                     ; The following are OPTIONAL\r\n                     ; and MAY occur more than once.\r\n                     ;\r\n                     attach / categories / comment\r\n                     contact / location / rstatus / related /\r\n                     resources / strucloc / strucres /\r\n                     styleddescription / sdataprop / iana-prop\r\n                     ;\r\n                     )\r\n",
+    "correct_text": "      partprop     = *(\r\n                     ;\r\n                     ; The following are REQUIRED\r\n                     ; but MUST NOT occur more than once.\r\n                     ;\r\n                     participanttype / uid /\r\n                     ;\r\n                     ; The following are OPTIONAL\r\n                     ; but MUST NOT occur more than once.\r\n                     ;\r\n                     calendaraddress / created / description / dtstamp /\r\n                     geo / last-mod / priority / seq /\r\n                     status / summary / url /\r\n                     ;\r\n                     ; The following are OPTIONAL\r\n                     ; and MAY occur more than once.\r\n                     ;\r\n                     attach / categories / comment\r\n                     contact / location / rstatus / related /\r\n                     resources /\r\n                     styleddescription / sdataprop / iana-prop\r\n                     ;\r\n                     )\r\n",
+    "notes": "'structloc' and 'structres' are not defined in this document.  These are leftover artifacts from a draft version of this specification and were replaced by 'locationc' and 'resourcec'",
+    "submit_date": "2022-02-02",
+    "submitter_name": "Ken Murchison",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
