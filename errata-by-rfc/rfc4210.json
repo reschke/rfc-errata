@@ -62,17 +62,17 @@
   {
     "errata_id": 5201,
     "doc-id": "RFC4210",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "Appendix D.4",
     "orig_text": "   Initialization Response -- ip\r\n\r\n   Field                Value\r\n\r\n   sender               CA name\r\n     -- the name of the CA who produced the message\r\n   messageTime          present\r\n     -- time at which CA produced message\r\n   protectionAlg        MS_MAC_ALG\r\n     -- only MAC protection is allowed for this response",
     "correct_text": "   Initialization Response -- ip\r\n\r\n   Field                Value\r\n\r\n   sender               CA name\r\n     -- the name of the CA who produced the message\r\n   messageTime          present\r\n     -- time at which CA produced message\r\n   protectionAlg        MSG_MAC_ALG\r\n     -- only MAC protection is allowed for this response",
-    "notes": "In Appendix D.2 it is denoted as MSG_MAC_ALG",
+    "notes": "There is a typo in Appendix D.4 -- \"MS_MAC_ALG\" should be \"MSG_MAC_ALG\"",
     "submit_date": "2017-12-12",
     "submitter_name": "Simon Edänge",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-02-04 10:17:37"
   },
   {
     "errata_id": 5731,
