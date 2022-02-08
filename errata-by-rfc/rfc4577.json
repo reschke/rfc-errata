@@ -58,5 +58,20 @@
     "verifier_id": 160,
     "verifier_name": "Martin Vigoureux",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6840,
+    "doc-id": "RFC4577",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.2.4",
+    "orig_text": "[...] If they are in different domains, and\r\n   if routes from one are distributed into the other, the routes will\r\n   appear as intra-network routes, which may not be what is intended.)",
+    "correct_text": "[...] If they are in different domains, and\r\n   if routes from one are distributed into the other, the routes will\r\n   appear as inter-network routes, which may not be what is intended.)",
+    "notes": "Inter-intra typo. Inter-network routes are used between the OSPF instances with the same Domain ID. With different Domain IDs, external-AS routes are applicable.",
+    "submit_date": "2022-02-07",
+    "submitter_name": "Igor Malyushkin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
