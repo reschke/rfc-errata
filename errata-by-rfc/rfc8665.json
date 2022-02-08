@@ -2,7 +2,7 @@
   {
     "errata_id": 6838,
     "doc-id": "RFC8665",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": 6.1,
     "orig_text": "            B-Flag:  Backup Flag.  If set, the Adj-SID refers to an\r\n               adjacency that is eligible for protection (e.g., using IP\r\n               Fast Reroute or MPLS-FRR (MPLS-Fast Reroute) as described\r\n               in Section 2.1 of [RFC8402].",
@@ -10,8 +10,8 @@
     "notes": "I don't see any section 2.1 in RFC 8402. Reference of section 2.1 of RFC 8402 seems incorrect. It should be section 3.4 as per my understanding. Kindly fix it if possible.",
     "submit_date": "2022-02-05",
     "submitter_name": "Praveen Kumar",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 171,
+    "verifier_name": "John Scudder",
+    "update_date": "2022-02-07 10:17:46"
   }
 ]
