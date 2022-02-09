@@ -238,5 +238,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6843,
+    "doc-id": "RFC8555",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.3,
+    "orig_text": "Because many web servers\r\nallocate a default HTTPS virtual host to a particular low-privilege\r\ntenant user in a subtle and non-intuitive manner, the challenge must\r\nbe completed over HTTP, not HTTPS.\r\n",
+    "correct_text": "Because many web servers\r\nallocate a default HTTPS virtual host to a particular low-privilege\r\ntenant user in a subtle and non-intuitive manner, the challenge must\r\nbe initiated over HTTP, not HTTPS.",
+    "notes": "Completing the entire http-01 challenge over HTTP is unnecessary. The threat of default HTTPS virtual hosts is remediated by \"initiating\" the http-01 challenge over HTTP. Validation servers which redirect from HTTP to HTTPS should be permitted following the rest of the guidance within Section 10, Security Considerations.",
+    "submit_date": "2022-02-08",
+    "submitter_name": "James Kasten",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
