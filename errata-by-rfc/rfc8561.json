@@ -3,15 +3,15 @@
     "errata_id": 6842,
     "doc-id": "RFC8561",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "Annex A.3",
     "orig_text": " \"name\": \"RLT-A:CT-2\",\r\n...\r\n           \"tx-frequency\": 10618000,\r\n",
     "correct_text": " \"name\": \"RLT-A:CT-2\",\r\n...\r\n           \"tx-frequency\": 10728000,\r\n",
     "notes": "A.3 describes the XPIC configuration. The tx-frequency for the two CTs under XPIC configuration should be the same, both should be 10728000.\r\n\r\nThis should be a copy&paste error from A.2 2+0 configuration.",
     "submit_date": "2022-02-08",
     "submitter_name": "Ye Min",
-    "verifier_id": 99,
+    "verifier_id": 2,
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2022-02-09 15:15:23"
   }
 ]
