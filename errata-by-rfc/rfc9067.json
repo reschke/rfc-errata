@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 6844,
+    "doc-id": "RFC9067",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "7.2. grouping prefix",
+    "orig_text": "       leaf mask-length-upper {\r\n         type uint8 {\r\n           range \"1..128\";\r\n         }\r\n",
+    "correct_text": "       leaf mask-length-upper {\r\n         type uint8 {\r\n           range \"0..128\";\r\n         }\r\n",
+    "notes": "With the original definition, it is not possible to specify an exact match for the default routes (0.0.0.0/0 and ::/0) which is a valid use case.\r\n\r\n=====  AD Note ====\r\nThis report is valid, but the resolution requires an update to the YANG model and not just a text correction.",
+    "submit_date": "2022-02-10",
+    "submitter_name": "Kris Lambrechts",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-02-11 11:04:10"
+  },
+  {
+    "errata_id": 6845,
+    "doc-id": "RFC9067",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "7.2.",
+    "orig_text": "               list prefix-list {\r\n                 key \"ip-prefix mask-length-lower mask-length-upper\";\r\n                 description\r\n                   \"List of prefixes in the prefix set.\";\r\n                 uses prefix;\r\n               }\r\n",
+    "correct_text": "               list prefix {\r\n                 key \"ip-prefix mask-length-lower mask-length-upper\";\r\n                 description\r\n                   \"List of prefixes in the prefix set.\";\r\n                 uses prefix;\r\n               }\r\n",
+    "notes": "The name of this list is not natural and makes instance data hard to read. This is very apparent in the example in Appendix B.  Policy Examples\n --VERIFIER NOTES-- \n   From the WG discussion: \"This is a rather subjective comment since at this YANG data node is, in fact, a list. Also, it is a moot point since changing this would be a non-backward compatible YANG change.\"",
+    "submit_date": "2022-02-10",
+    "submitter_name": "Kris Lambrechts",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-02-11 10:55:44"
+  }
+]
