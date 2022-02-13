@@ -163,5 +163,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6848,
+    "doc-id": "RFC4291",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Apendix A",
+    "orig_text": "Note: [EUI-64] actually defines 0xFF and 0xFF as the bits to be\r\n         inserted to create an IEEE EUI-64 identifier from an IEEE MAC-\r\n         48 identifier.",
+    "correct_text": "Note: [EUI-64] actually defines 0xFF and 0xFE as the bits to be\r\n         inserted to create an IEEE EUI-64 identifier from an IEEE MAC-\r\n         48 identifier.",
+    "notes": "Just seems to be a typo",
+    "submit_date": "2022-02-12",
+    "submitter_name": "Fabrice Verrac",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
