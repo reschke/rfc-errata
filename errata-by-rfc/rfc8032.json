@@ -32,32 +32,32 @@
   {
     "errata_id": 5758,
     "doc-id": "RFC8032",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.1.",
     "orig_text": "                          (p+3)/8      3        (p-5)/8\r\n                 x = (u/v)        = u v  (u v^7)         (mod p)",
     "correct_text": "                          (p+3)/8          (p-5)/8\r\n                 x = (u/v)        = u (u v)         (mod p)",
-    "notes": " --VERIFIER NOTES-- \r\nThe original text was correct (verified by Nick Sullivan).\r\n01/28/2022: RFC Editor changed status to Reported per discussion with Stanislav V. Smyshlyaev.",
+    "notes": " --VERIFIER NOTES-- \r\nThe original text was correct (verified by Nick Sullivan).\r\n01/28/2022: RFC Editor changed status to Reported per discussion with Stanislav V. Smyshlyaev.\r\n02/15/2022: The status is changed to \"Held for Document Update\" by Stanislav Smyshlyaev. The proposed formulas are correct as well (for the specific case of the EdDSA parameters) and provide a slight efficiency gain.",
     "submit_date": "2019-06-21",
     "submitter_name": "Franck Rondepierre",
-    "verifier_id": 2,
+    "verifier_id": 168,
     "verifier_name": "Stanislav Smyshlyaev",
-    "update_date": "2022-01-28 15:09:22"
+    "update_date": "2022-02-14 21:42:01"
   },
   {
     "errata_id": 5759,
     "doc-id": "RFC8032",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.2.",
     "orig_text": "                          (p+1)/4    3            (p-3)/4\r\n                 x = (u/v)        = u  v (u^5 v^3)         (mod p)",
     "correct_text": "                          (p+1)/4            (p-3)/4\r\n                 x = (u/v)        =  u (u v)         (mod p)",
-    "notes": " --VERIFIER NOTES-- \r\nThe original text was correct (verified by Nick Sullivan).\r\n01/28/2022: RFC Editor changed status to Reported per discussion with Stanislav V. Smyshlyaev.",
+    "notes": " --VERIFIER NOTES-- \r\nThe original text was correct (verified by Nick Sullivan).\r\n01/28/2022: RFC Editor changed status to Reported per discussion with Stanislav V. Smyshlyaev.\r\n02/15/2022: The status is changed to \"Held for Document Update\" by Stanislav Smyshlyaev. The proposed formulas are correct as well (for the specific case of the EdDSA parameters) and provide a slight efficiency gain.",
     "submit_date": "2019-06-21",
     "submitter_name": "Franck Rondepierre",
-    "verifier_id": 2,
+    "verifier_id": 168,
     "verifier_name": "Stanislav Smyshlyaev",
-    "update_date": "2022-01-28 15:10:24"
+    "update_date": "2022-02-14 21:42:49"
   },
   {
     "errata_id": 5930,
@@ -115,6 +115,21 @@
     "notes": "Section 2 uses a separate notation, [n]X, for point multiplication, so this operation should use the brackets.",
     "submit_date": "2020-12-02",
     "submitter_name": "David Benjamin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 6851,
+    "doc-id": "RFC8032",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 8.7,
+    "orig_text": "   As an API consideration, this means that any Initialize Update\r\n   Finalize (IFU) verification interface is prone to misuse.",
+    "correct_text": "   As an API consideration, this means that any Initialize Update\r\n   Finalize (IUF) verification interface is prone to misuse.",
+    "notes": "Typo in acronym.",
+    "submit_date": "2022-02-15",
+    "submitter_name": "Martin Thomson",
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
