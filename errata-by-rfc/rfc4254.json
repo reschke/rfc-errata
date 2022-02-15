@@ -28,5 +28,20 @@
     "verifier_id": 128,
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6850,
+    "doc-id": "RFC4254",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.1,
+    "orig_text": "Requests for assignments of new SSH_MSG_CHANNEL_OPEN 'reason code'\r\nvalues (and associated 'description' text) in the range of 0x00000005\r\nto 0xFDFFFFFF MUST be done through the IETF CONSENSUS method, as\r\ndescribed in [RFC2434].  The IANA will not assign Channel Connection\r\nFailure 'reason code' values in the range of 0xFE000000 to\r\n0xFFFFFFFF.  Channel Connection Failure 'reason code' values in that\r\nrange are left for PRIVATE USE, as described in [RFC2434].\r\n\r\n",
+    "correct_text": "Requests for assignments of new SSH_MSG_CHANNEL_OPEN_FAILURE 'reason code'\r\nvalues (and associated 'description' text) in the range of 0x00000005\r\nto 0xFDFFFFFF MUST be done through the IETF CONSENSUS method, as\r\ndescribed in [RFC2434].  The IANA will not assign Channel Connection\r\nFailure 'reason code' values in the range of 0xFE000000 to\r\n0xFFFFFFFF.  Channel Connection Failure 'reason code' values in that\r\nrange are left for PRIVATE USE, as described in [RFC2434].\r\n",
+    "notes": "The 'reason code' is present on SSH_MSG_CHANNEL_OPEN_FAILURE message to denote cause of the failure while original text attributes it to SSH_MSG_CHANNEL_OPEN by mistake.",
+    "submit_date": "2022-02-14",
+    "submitter_name": "Hamid Nazari",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2022-02-14 14:48:43"
   }
 ]
