@@ -223,5 +223,20 @@
     "verifier_id": 157,
     "verifier_name": "Adrian Farrel",
     "update_date": "2020-10-29 14:58:56"
+  },
+  {
+    "errata_id": 6852,
+    "doc-id": "RFC7868",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.8.6.3",
+    "orig_text": "This TLV is used to provide community tags for specific IPv4 destinations.",
+    "correct_text": "This TLV is used to provide community tags for specific IPv6 destinations.",
+    "notes": "It is under the IPv6 section of the RFC. IPv4 and IPv6 sections are really similiar and consecutively written, so its highly probable that after copy pasting the common information for both IPv4 and IPv6 to each other, forget to change that part from IPv4 to IPv6.",
+    "submit_date": "2022-02-15",
+    "submitter_name": "Eren Elçin",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-02-15 13:16:10"
   }
 ]
