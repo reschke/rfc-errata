@@ -238,5 +238,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-02-15 13:16:10"
+  },
+  {
+    "errata_id": 6853,
+    "doc-id": "RFC7868",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.9.3.8.1.",
+    "orig_text": "Next-Hop Address: An IPv4 address represented by four 8-bit values\r\n      (total 4 octets).  If the value is zero (0), the IPv6 address from\r\n      the received IPv4 header is used as the next hop for the route.\r\n      Otherwise, the specified IPv4 address will be used.",
+    "correct_text": "Next-Hop Address: An IPv4 address represented by four 8-bit values\r\n      (total 4 octets).  If the value is zero (0), the IPv4 address from\r\n      the received IPv4 header is used as the next hop for the route.\r\n      Otherwise, the specified IPv4 address will be used.",
+    "notes": "The address format in this Packet format at this section of the RFC is made for IPv4 type addresses. So, \"IPv6 address from the received IPv4 header\" should be \"IPv4 address from the received IPv4 header\".",
+    "submit_date": "2022-02-16",
+    "submitter_name": "Eren Elçin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
