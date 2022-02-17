@@ -133,5 +133,20 @@
     "verifier_id": 148,
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6854,
+    "doc-id": "RFC6487",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.8.1",
+    "orig_text": "   The Basic Constraints extension field is a critical extension in the\r\n   resource certificate profile, and MUST be present when the subject is\r\n   a CA, and MUST NOT be present otherwise.\r\n\r\n   The issuer determines whether the \"cA\" boolean is set.",
+    "correct_text": "   The Basic Constraints extension field is a critical extension in the\r\n   resource certificate profile, and MUST be present when the subject is\r\n   a CA, and MUST NOT be present otherwise.\r\n\r\n   If this extension is present, then the \"cA\" field MUST be true.",
+    "notes": "The original text is contradictory. If the basicConstraints extension is prohibited in end-entity certificates, then it follows that whenever the extension is present in a certificate, that certificate is a CA certificate. If the certificate is a CA certificate, then the \"cA\" boolean MUST be true in all cases. It is nonsensical to allow a \"cA\" field value of false.",
+    "submit_date": "2022-02-16",
+    "submitter_name": "Corey Bonnell",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
