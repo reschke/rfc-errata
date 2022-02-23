@@ -13,5 +13,20 @@
     "verifier_id": 4,
     "verifier_name": "IAB-Chair",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6858,
+    "doc-id": "RFC5741",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.2.2",
+    "orig_text": "In one place:\r\n\r\n   \"Suggested initial text, for current streams, is provided below.\"\r\n\r\nIn another place:\r\n\r\n   \"The text that follows is stream dependent -- these are suggested\r\n   initial values and may be updated by stream definition document\r\n   updates.\"",
+    "correct_text": "In the first instance:\r\n   \"Initial mandatory text, for current streams, is provided below.\"\r\n\r\nIn the second instance:\r\n   \"The text that follows is stream dependent -- these are the initial\r\n   mandatory text values.  These stream-dependent mandatory text values \r\n   MAY be updated by stream definition document updates.  This text \r\n   MUST NOT be revised or expanded on a document-by-document basis.\"",
+    "notes": "Status of this Memo",
+    "submit_date": "2022-02-22",
+    "submitter_name": "Kokkiknamtan",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
