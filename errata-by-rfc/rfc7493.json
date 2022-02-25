@@ -13,5 +13,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6861,
+    "doc-id": "RFC7493",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "   Object member names, and string values in arrays and object members,\r\n   MUST NOT include code points that identify Surrogates or\r\n   Noncharacters as defined by [UNICODE].",
+    "correct_text": "   Object member names, and string values,\r\n   MUST NOT include code points that identify Surrogates or\r\n   Noncharacters as defined by [UNICODE].",
+    "notes": "The expression “string values in arrays and object members” is overly qualified, excluding cases where the *entire message* is a string value, which should clearly be covered also. So the qualification “in arrays and object members” should be removed.\r\n\r\nSupporting citations:\r\n\r\nRFC 7493, section 2: “An I-JSON message is a JSON text, as defined by RFC 7159.”\r\n\r\nRFC 7159, section 2: “A JSON text is a serialized value.  Note that certain previous specifications of JSON constrained a JSON text to be an object or an array. […]”\r\n\r\nRFC 7159, section 2:\r\n\r\n      JSON-text = ws value ws\r\n\r\nRFC 7159, section 3:\r\n\r\n      value = false / null / true / object / array / number / string",
+    "submit_date": "2022-02-25",
+    "submitter_name": "Chris Morgan",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
