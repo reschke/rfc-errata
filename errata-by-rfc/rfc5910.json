@@ -13,5 +13,20 @@
     "verifier_id": 116,
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6863,
+    "doc-id": "RFC5910",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3, 5.1.2, 5.2.1",
+    "orig_text": "\r\n   <secDNS:dsData>\r\n     <secDNS:keyTag>12345</secDNS:keyTag>\r\n     <secDNS:alg>3</secDNS:alg>\r\n     <secDNS:digestType>1</secDNS:digestType>\r\n     <secDNS:digest>49FD46E6C4B45C55D4AC</secDNS:digest>\r\n     <secDNS:keyData>\r\n       <secDNS:flags>257</secDNS:flags>\r\n       <secDNS:protocol>3</secDNS:protocol>\r\n       <secDNS:alg>1</secDNS:alg>\r\n       <secDNS:pubKey>AQPJ////4Q==</secDNS:pubKey>\r\n     </secDNS:keyData>\r\n    </secDNS:dsData>",
+    "correct_text": "\r\n   <secDNS:dsData>\r\n     <secDNS:keyTag>12345</secDNS:keyTag>\r\n     <secDNS:alg>3</secDNS:alg>\r\n     <secDNS:digestType>1</secDNS:digestType>\r\n     <secDNS:digest>49FD46E6C4B45C55D4AC</secDNS:digest>\r\n     <secDNS:keyData>\r\n       <secDNS:flags>257</secDNS:flags>\r\n       <secDNS:protocol>3</secDNS:protocol>\r\n       <secDNS:alg>3</secDNS:alg>\r\n       <secDNS:pubKey>AQPJ////4Q==</secDNS:pubKey>\r\n     </secDNS:keyData>\r\n    </secDNS:dsData>",
+    "notes": "The DS alg value must match the underlying (inside) DNSKEY alg value.\r\n\r\nFrom RFC 5910 respectively:\r\n   -  A <secDNS:alg> element that contains an algorithm value as\r\n      described in Section 5.1.2 of RFC 4034 [RFC4034].\r\nand\r\n   -  A <secDNS:alg> element that contains an algorithm number field\r\n      value as described in Section 2.1.3 of RFC 4034 [RFC4034].\r\n\r\nSection 5.1.2 of RFC 4034 says:\r\nThe algorithm number used by the DS RR is identical to the algorithm\r\n   number used by RRSIG and DNSKEY RRs.\r\n\r\n\r\nThe three occurrences are just examples so do not change the meaning of the specification, yet incorrect examples can create confusion.",
+    "submit_date": "2022-02-25",
+    "submitter_name": "Patrick Mevzek",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
