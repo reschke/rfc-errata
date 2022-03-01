@@ -388,5 +388,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-02-09 14:55:15"
+  },
+  {
+    "errata_id": 6864,
+    "doc-id": "RFC6350",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.1.3",
+    "orig_text": "SOURCE:ldap://ldap.example.com/cn=Babs%20Jensen,%20o=Babsco,%20c=US",
+    "correct_text": "SOURCE:ldap://ldap.example.com/cn=Babs%20Jensen\\,%20o=Babsco\\,%20c=US",
+    "notes": "Section 3.4 states that all property values must have COMMA characters escaped with a BACKSLASH character. The SOURCE property value in the example contains a comma. Therefore it must be escaped with a backslash.",
+    "submit_date": "2022-02-27",
+    "submitter_name": "James Benner",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
