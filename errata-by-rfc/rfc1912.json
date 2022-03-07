@@ -13,5 +13,20 @@
     "verifier_id": 2,
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6869,
+    "doc-id": "RFC1912",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 1912,
+    "orig_text": "mime-charset-chars = ALPHA / DIGIT /\r\n            \"!\" / \"#\" / \"$\" / \"%\" / \"&\" /\r\n            \"'\" / \"+\" / \"-\" / \"^\" / \"_\" /\r\n            \"`\" / \"{\" / \"}\" / \"~\"          ",
+    "correct_text": "mime-charset-chars = ALPHA / DIGIT /\r\n            \"!\" / \"#\" / \"$\" / \"%\" / \"&\" /\r\n            \"+\" / \"-\" / \"^\" / \"_\" / \"`\" /\r\n            \"{\" / \"}\" / \"~\"",
+    "notes": "I believe this is how everyone got in through a digital conversation and didn’t let anyone through but malware that why I calibrated out and started slow recovery.",
+    "submit_date": "2022-03-06",
+    "submitter_name": "Jesus Alvarado",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
