@@ -13,5 +13,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-01-27 15:44:58"
+  },
+  {
+    "errata_id": 6874,
+    "doc-id": "RFC7285",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 14.2,
+    "orig_text": "                   +-------------+---------------------+\r\n                   | Identifier  | Intended Semantics  |\r\n                   +-------------+---------------------+\r\n                   | routingcost | See Section 6.1.1.1 |\r\n                   | priv:       | Private use         |\r\n                   +-------------+---------------------+\r\n\r\n                        Table 3: ALTO Cost Metrics",
+    "correct_text": "                   +-------------+---------------------+\r\n                   | Identifier  | Intended Semantics  |\r\n                   +-------------+---------------------+\r\n                   | routingcost | See Section 6.1.1.1 |\r\n                   +-------------+---------------------+\r\n\r\n                        Table 3: ALTO Cost Metrics",
+    "notes": "priv: is not a cost metric but a prefix",
+    "submit_date": "2022-03-08",
+    "submitter_name": "Mohamed BOUCADAIR",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2022-03-08 13:37:08"
   }
 ]
