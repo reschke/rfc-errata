@@ -28,5 +28,20 @@
     "verifier_id": 2,
     "verifier_name": null,
     "update_date": "2022-03-08 13:37:08"
+  },
+  {
+    "errata_id": 6876,
+    "doc-id": "RFC7285",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 14.3,
+    "orig_text": "                    +------------+--------------------+\r\n                    | Identifier | Intended Semantics |\r\n                    +------------+--------------------+\r\n                    | pid        | See Section 7.1.1  |\r\n                    | priv:      | Private use        |\r\n                    +------------+--------------------+\r\n \r\n                   Table 4: ALTO Endpoint Property Types\r\n",
+    "correct_text": "                    +------------+--------------------+\r\n                    | Identifier | Intended Semantics |\r\n                    +------------+--------------------+\r\n                    | pid        | See Section 7.1.1  |\r\n                    +------------+--------------------+\r\n \r\n                   Table 4: ALTO Endpoint Property Types\r\n",
+    "notes": "priv: is not an identifier, but a prefix.",
+    "submit_date": "2022-03-09",
+    "submitter_name": "Mohamed BOUCADAIR",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2022-03-09 13:18:53"
   }
 ]
