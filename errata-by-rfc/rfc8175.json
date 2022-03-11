@@ -43,5 +43,20 @@
     "verifier_id": 148,
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-11-05 14:25:36"
+  },
+  {
+    "errata_id": 6877,
+    "doc-id": "RFC8175",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "12.2.",
+    "orig_text": "All status code values less than 100 have a failure mode of 'Continue'; all other status codes have a failure mode of 'Terminate'.",
+    "correct_text": "All status code values less than 128 have a failure mode of 'Continue'; all other status codes have a failure mode of 'Terminate'.",
+    "notes": "\"Table 2: DLEP Status Codes\" indicates that all status code values less than 128 have failure mode 'Continue'.",
+    "submit_date": "2022-03-10",
+    "submitter_name": "Izar",
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-03-10 06:40:26"
   }
 ]
