@@ -73,5 +73,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2021-08-04 14:07:51"
+  },
+  {
+    "errata_id": 6879,
+    "doc-id": "RFC0020",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "where as UCLA uses X'OD' or 0/13 (carriage return).",
+    "correct_text": "where as UCLA uses X'0D' or 0/13 (carriage return).",
+    "notes": "x'0d', not x'od'",
+    "submit_date": "2022-03-12",
+    "submitter_name": "studentmain",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
