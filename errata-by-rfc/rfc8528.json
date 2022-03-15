@@ -13,20 +13,5 @@
     "verifier_id": 158,
     "verifier_name": "Ignas Bagdonas",
     "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 6857,
-    "doc-id": "RFC8528",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
-    "section": "A.2",
-    "orig_text": "  {\r\n     \"ietf-interfaces:interfaces\": {\r\n       \"interface\": [\r\n         {\r\n           \"name\": \"eth0\",\r\n           \"type\": \"iana-if-type:ethernetCsmacd\",\r\n           \"enabled\": false,\r\n           \"ietf-logical-network-element:bind-lne-name\": \"eth0\"\r\n         }\r\n       ]\r\n     },\r\n",
-    "correct_text": " {\r\n     \"ietf-interfaces:interfaces\": {\r\n       \"interface\": [\r\n         {\r\n           \"name\": \"eth0\",\r\n           \"type\": \"iana-if-type:ethernetCsmacd\",\r\n           \"enabled\": false,\r\n           \"ietf-logical-network-element:bind-lne-name\": \"lne-1\"\r\n         }\r\n       ]\r\n     },\r\n",
-    "notes": "leafref is for an LNE name, not an interface name",
-    "submit_date": "2022-02-22",
-    "submitter_name": "Kokkiknamtan",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
   }
 ]
