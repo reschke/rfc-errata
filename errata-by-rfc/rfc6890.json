@@ -73,5 +73,35 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6881,
+    "doc-id": "RFC6890",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.2.2",
+    "orig_text": "   Tables 1 though 16, below, represent entries with which IANA has\r\n   initially populated the IPv4 Special-Purpose Address Registry.",
+    "correct_text": "   Tables 1 through 16, below, represent entries with which IANA has\r\n   initially populated the IPv4 Special-Purpose Address Registry.",
+    "notes": "obvious typo on word \"through\"",
+    "submit_date": "2022-03-14",
+    "submitter_name": "Eugene Adell",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-03-14 14:53:07"
+  },
+  {
+    "errata_id": 6882,
+    "doc-id": "RFC6890",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.2.3",
+    "orig_text": "   Tables 17 through 28, below, represent entries with which the IANA\r\n   has initially populated the IPv6 Special-Purpose Address Registry.",
+    "correct_text": "   Tables 17 through 29, below, represent entries with which the IANA\r\n   has initially populated the IPv6 Special-Purpose Address Registry.",
+    "notes": "The last table (29) entry was populated at the same time than some others (loopback for example, RFC 4291)",
+    "submit_date": "2022-03-14",
+    "submitter_name": "Eugene Adell",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-03-14 15:04:02"
   }
 ]
