@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6886,
+    "doc-id": "RFC8640",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A. 4.",
+    "orig_text": " <rpc message-id=\"601\" xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n   <establish-subscription\r\n     xmlns=\"urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications\">\r\n     <stream>NETCONF</stream>\r\n     <stream-xpath-filter xmlns=\"urn:ietf:params:xml:ns:yang:ietf-vrrp\">\r\n       /vrrp-protocol-error-event[\r\n          vrrp:protocol-error-reason=\"vrrp:checksum-error\"]\r\n     </stream-xpath-filter>\r\n   </establish-subscription>\r\n </rpc>",
+    "correct_text": " <rpc message-id=\"601\" xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n   <establish-subscription\r\n     xmlns=\"urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications\">\r\n     <stream>NETCONF</stream>\r\n     <stream-xpath-filter xmlns:vrrp=\"urn:ietf:params:xml:ns:yang:ietf-vrrp\">\r\n       /vrrp:vrrp-protocol-error-event[\r\n          derived-from-or-self(vrrp:protocol-error-reason, \"vrrp:checksum-error\")]\r\n     </stream-xpath-filter>\r\n   </establish-subscription>\r\n </rpc>",
+    "notes": "The original example put <stream-xpath-filter> element in a wrong namespace, never defined a namespace binding for prefix \"vrrp\" and checked a value of type identityref by treating it as an XPath string literal (instead of using the XPath function from RFC 7950, which is allowed by type definition of leaf \"stream-xpath-filter\").",
+    "submit_date": "2022-03-16",
+    "submitter_name": "Jernej Tuljak",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
