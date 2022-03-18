@@ -32,7 +32,7 @@
   {
     "errata_id": 5765,
     "doc-id": "RFC7170",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2.2",
     "orig_text": "   M\r\n\r\n      Mandatory, set to one (1)\r\n",
@@ -40,9 +40,9 @@
     "notes": "Authority-ID TLV is used only as an Outer TLV (in TEAP/Start) and Section 4.3.1 mandates all Outer TLVs to be marked as optional (\"Outer TLVs MUST be marked as optional\"). As such, Section 4.2.2 is incorrect in claiming the Authority-ID TLV to use M=1.",
     "submit_date": "2019-06-28",
     "submitter_name": "Jouni Malinen",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-03-17 17:02:32"
   },
   {
     "errata_id": 5767,
@@ -137,16 +137,16 @@
   {
     "errata_id": 6157,
     "doc-id": "RFC7170",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2.9",
     "orig_text": "  Status\r\n\r\n      The Status field is one octet.  This indicates the result if the\r\n      server does not process the action requested by the peer.",
     "correct_text": "  Status\r\n\r\n      The Status field is one octet.  This indicates the result if the\r\n      party who receives this TLV does not process the action.",
-    "notes": "The status field is carried in the \"Request-Action\" frame.  As is repeatedly stated in the chapeau of the section, the frame can be sent either by the server or the peer.",
+    "notes": "The status field is carried in the \"Request-Action\" frame.  As is stated at the start of the section, the frame can be sent either by the server or the peer.",
     "submit_date": "2020-05-04",
     "submitter_name": "Eliot Lear",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-03-17 16:54:30"
   }
 ]
