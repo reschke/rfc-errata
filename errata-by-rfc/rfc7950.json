@@ -313,5 +313,20 @@
     "verifier_id": 166,
     "verifier_name": "Rob Wilton",
     "update_date": "2022-02-22 07:19:32"
+  },
+  {
+    "errata_id": 6885,
+    "doc-id": "RFC7950",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 11,
+    "orig_text": "   A definition in a published module may be revised in any of the\r\n   following ways:\r\n\r\n   o  An \"enumeration\" type may have new enums added, provided the old\r\n      enums's values do not change.  Note that inserting a new enum\r\n      before an existing enum or reordering existing enums will result\r\n      in new values for the existing enums, unless they have explicit\r\n      values assigned to them.\r\n\r\n   o  A \"bits\" type may have new bits added, provided the old bit\r\n      positions do not change.  Note that inserting a new bit before an\r\n      existing bit or reordering existing bits will result in new\r\n      positions for the existing bits, unless they have explicit\r\n      positions assigned to them.",
+    "correct_text": "See Notes.",
+    "notes": "When server is exposing updated yang model as mentioned in Section 11, particularly with enums, bits having new items - client systems that are not updated to use the new yang module will not be able to recognize and use the new values.\r\n\r\nThis is problematic when there are multiple clients and those systems are getting updated to catch up with yang changes over time. Updated \"Client A\" recognizing new enum and using it (update datastore with new value using edit-config), will make, old/not-yet-updated \"Client B\" to encounter the new value (received as response of get-config) that it cannot work with.\r\n\r\nSo, the \"backward compatible\" ways of updating a yang module should consider \"multiple clients\" scenario and make recommendations in such a way that clients are not forced to update all at once.\n --VERIFIER NOTES-- \nThe document text accurately represents the consensus of the WG at the time that it was published.  Hence, this errata is beyond the scope of what changes could be considered as part of the errata process, such a change would need to happen via a new or updated RFC.",
+    "submit_date": "2022-03-16",
+    "submitter_name": "R Kaja Mohideen",
+    "verifier_id": 166,
+    "verifier_name": "Rob Wilton",
+    "update_date": "2022-03-17 03:10:24"
   }
 ]
