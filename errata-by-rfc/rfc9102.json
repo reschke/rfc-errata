@@ -2,7 +2,7 @@
   {
     "errata_id": 6860,
     "doc-id": "RFC9102",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 12,
     "orig_text": "   IANA has made the following assignment in the \"TLS ExtensionType\r\n   Values\" registry:\r\n\r\n      +=======+================+=========+=============+===========+\r\n      | Value | Extension Name | TLS 1.3 | Recommended | Reference |\r\n      +=======+================+=========+=============+===========+\r\n      |    59 | dnssec_chain   | CH      | No          | RFC 9102  |\r\n      +-------+----------------+---------+-------------+-----------+\r\n",
@@ -10,8 +10,8 @@
     "notes": "In TLS1.3, the dnssec_chain extension appears in the Certificate message from the server. Hence \"CT\" needs to be added to the \"TLS 1.3\" column.",
     "submit_date": "2022-02-24",
     "submitter_name": "Shumon Huque",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 157,
+    "verifier_name": "Eliot Lear (ISE)",
+    "update_date": "2022-03-16 23:23:21"
   }
 ]
