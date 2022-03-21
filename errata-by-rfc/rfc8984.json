@@ -2,22 +2,22 @@
   {
     "errata_id": 6872,
     "doc-id": "RFC8984",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.4.3.",
     "orig_text": "   \"private\":  The details of the object are hidden; only the basic time\r\n      and metadata are shared.  The following properties MAY be shared;\r\n      any other properties MUST NOT be shared:\r\n\r\n      *  @type\r\n\r\n      *  created\r\n\r\n      *  due\r\n\r\n      *  duration\r\n\r\n      *  estimatedDuration\r\n\r\n      *  freeBusyStatus\r\n\r\n      *  privacy\r\n\r\n      *  recurrenceOverrides (Only patches that apply to another\r\n         permissible property are allowed to be shared.)\r\n\r\n      *  sequence\r\n\r\n      *  showWithoutTime\r\n\r\n      *  start\r\n\r\n      *  timeZone\r\n\r\n      *  timeZones\r\n\r\n      *  uid\r\n\r\n      *  updated",
-    "correct_text": "   \"private\":  The details of the object are hidden; only the basic time\r\n      and metadata are shared.  The following properties MAY be shared;\r\n      any other properties MUST NOT be shared:\r\n\r\n      *  @type\r\n\r\n      *  created\r\n\r\n      *  due\r\n\r\n      *  duration\r\n\r\n      *  estimatedDuration\r\n\r\n      *  excludedRecurrenceRules\r\n\r\n      *  freeBusyStatus\r\n\r\n      *  privacy\r\n\r\n      *  recurrenceOverrides (Only patches that apply to another\r\n         permissible property are allowed to be shared.)\r\n\r\n      *  recurrenceRules\r\n\r\n      *  sequence\r\n\r\n      *  showWithoutTime\r\n\r\n      *  start\r\n\r\n      *  timeZone\r\n\r\n      *  timeZones\r\n\r\n      *  uid\r\n\r\n      *  updated",
-    "notes": "Adds the recurrenceRules and excludedRecurrenceRules properties to the list of allowed properties of private events.\r\n\r\nOnly the combination of recurrence rules, excluded recurrence rules and recurrence overrides allows to generate the full recurrence set for this event.\r\n\r\nOmitting the properties was an oversight during the initial publication of this RFC.",
+    "correct_text": "   \"private\":  The details of the object are hidden; only the basic time\r\n      and metadata are shared.  The following properties MAY be shared;\r\n      any other properties MUST NOT be shared:\r\n \r\n      *  @type\r\n \r\n      *  created\r\n \r\n      *  due\r\n \r\n      *  duration\r\n \r\n      *  estimatedDuration\r\n \r\n      *  excluded\r\n \r\n      *  excludedRecurrenceRules\r\n \r\n      *  freeBusyStatus\r\n \r\n      *  privacy\r\n \r\n      *  recurrenceId\r\n \r\n      *  recurrenceIdTimeZone\r\n \r\n      *  recurrenceOverrides (Only patches that apply to another\r\n         permissible property are allowed to be shared.)\r\n \r\n      *  recurrenceRules\r\n \r\n      *  sequence\r\n \r\n      *  showWithoutTime\r\n \r\n      *  start\r\n \r\n      *  timeZone\r\n \r\n      *  timeZones\r\n \r\n      *  uid\r\n \r\n      *  updated",
+    "notes": "Adds the excluded, excludedRecurrenceRules, recurrenceId, recurrenceIdTimeZone and recurrenceRules properties to the list of shared properties of private events.\r\n \r\nOnly the combination of all recurrence properties allows to generate the full recurrence set for the event.\r\n \r\nOmitting the properties was an oversight during the initial publication of this RFC.",
     "submit_date": "2022-03-07",
     "submitter_name": "Robert Stepanek",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2022-03-20 06:07:39"
   },
   {
     "errata_id": 6873,
     "doc-id": "RFC8984",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.3.2.",
     "orig_text": "Identifies the time zone of the main JSCalendar object, of which this\r\nJSCalendar object is a recurrence instance.  This property MUST be\r\nset if the \"recurrenceId\" property is set.  It MUST NOT be set if the\r\n\"recurrenceId\" property is not set.",
@@ -25,8 +25,8 @@
     "notes": "A recurrence instance may be in floating time, in which case the value of the \"recurrenceIdTimeZone\" property is null. As null is the default value of the \"recurrenceIdTimeZone\" property, it is NOT required to be set if \"recurrenceId\" is set.",
     "submit_date": "2022-03-07",
     "submitter_name": "Robert Stepanek",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2022-03-20 08:51:57"
   }
 ]
