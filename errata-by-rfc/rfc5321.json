@@ -212,16 +212,16 @@
   {
     "errata_id": 6561,
     "doc-id": "RFC5321",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.1.2.",
     "orig_text": "Domain         = sub-domain *(\".\" sub-domain)",
     "correct_text": "Domain         = sub-domain *(\".\" sub-domain)[.]\r\n",
-    "notes": "RFC-1034 section 3.1 say \" Since a complete domain name ends with the root label, this leads to a printed form which ends in a dot.\" and also say 'a character string which represents a complete domain name (often called \"absolute\"). For example, \"poneria.ISI.EDU.\" '.\r\n It is necessary to allow a dot at the end of the domain name.",
+    "notes": "RFC-1034 section 3.1 say \" Since a complete domain name ends with the root label, this leads to a printed form which ends in a dot.\" and also say 'a character string which represents a complete domain name (often called \"absolute\"). For example, \"poneria.ISI.EDU.\" '.\r\n It is necessary to allow a dot at the end of the domain name.\n --VERIFIER NOTES-- \nAs reported by John C Klensin in https://mailarchive.ietf.org/arch/msg/iesg/sAzZQpgOkD75eKQiS-RlWrmPhDk/ : The syntax used in SMTP predates RFC 1034.   This possible change was discussed in the DRUMS WG when RFC 2821 was being assembled and rejected as likely to cause harm with existing implementations.  If he recalls, that topic was revisited in the YAM WG that developed RFC 5321 with the conclusion to not reopen it.\r\n\r\nSo it is a substantive matter and not an editorial change and hence, as an erratum, it is rejected.",
     "submit_date": "2021-04-27",
     "submitter_name": "Seiichi Hamada",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2022-03-25 02:31:13"
   }
 ]
