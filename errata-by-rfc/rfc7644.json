@@ -88,5 +88,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6893,
+    "doc-id": "RFC7644",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.5.2",
+    "orig_text": "HTTP/1.1 403 Forbidden\r\n\r\n  {\r\n    \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:Error\"],\r\n    \"detail\":\r\n          \"Query filter involving 'name' is restricted or confidential\",\r\n    \"scimType\": \"sensitive\",\r\n    \"status\": \"404\"\r\n  }\r\n",
+    "correct_text": "HTTP/1.1 403 Forbidden\r\n\r\n  {\r\n    \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:Error\"],\r\n    \"detail\":\r\n          \"Query filter involving 'name' is restricted or confidential\",\r\n    \"scimType\": \"sensitive\",\r\n    \"status\": \"403\"\r\n  }\r\n",
+    "notes": "The error \"status\" value in the figure is wrong. It should be \"403\", consistent with the normative text and the HTTP Status at the start of the figure.",
+    "submit_date": "2022-03-24",
+    "submitter_name": "Phil Hunt",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-03-25 13:49:46"
   }
 ]
