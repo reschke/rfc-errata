@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6898,
+    "doc-id": "RFC1403",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 1403,
+    "orig_text": "Publication Format(s) : TEXT\r\nReported By: Alfred Hoenes\r\nDate Reported: 2008-03-31\r\nHeld for Document Update by: Magnus Westerlund\r\n\r\nSection 3.2,last par says:\r\n\r\n   A variety of current peer-to-peer applications implement this\r\n   technique.  Its main limitation, of course, is that it only works so\r\n   long as only one of the communicating peers is behind a NAT device.\r\n|  If the NAT device is EIM-NAT, the public client can contact external\r\n|  server S to determine the specific public endpoint from which to\r\n|  expect Client-A-originated connection and allow connections from just\r\n|  those endpoints.  If the NAT device is EIM-NAT, the public client can\r\n   contact the external server S to determine the specific public\r\n   endpoint from which to expect connections originated by client A, and\r\n   allow connections from just that endpoint.  If the NAT device is not\r\n   EIM-NAT, the public client cannot know the specific public endpoint\r\n   from which to expect connections originated by client A.  In the\r\n   increasingly common case where both peers can be behind NATs, the\r\n   Connection Reversal method fails.  [...]\r\nIt should say:\r\n\r\n   A variety of current peer-to-peer applications implement this\r\n   technique.  Its main limitation, of course, is that it only works so\r\n   long as only one of the communicating peers is behind a NAT device.\r\n   If the NAT device is EIM-NAT, the public client can contact the\r\n   external server S to determine the specific public endpoint from\r\n   which to expect connections originated by client A, and allow\r\n   connections from just that endpoint.  If the NAT device is not\r\n   EIM-NAT, the public client cannot know the specific public endpoint\r\n   from which to expect connections originated by client A.  In the\r\n   increasingly common case where both peers can be behind NATs, the\r\n   Connection Reversal method fails.  [...]\r\nNotes:\r\n\r\nLocation is mid-page 11.\r\n\r\nRationale and background:\r\n\r\nThe reporter once had suggested replacement text to improve the\r\nreadability of the third and fourth sentence in this paragraph.\r\nThese LC comments have been accepted, but inadvertently, the\r\nthird original sentence has been left in the text, followed\r\nby its intended replacement.\r\n\r\nNote that the similar replacement of the next sentence\r\n(\"If the NAT device is not ...\") has been performed properly.\r\n\r\nThe above correction removes the original, less legible draft\r\nversion of the other sentence.",
+    "correct_text": "The problem is it wasn’t a old version that hit something alpha’s won’t talk about and more I held back from doing more of those tests google chrome hmmm.2012",
+    "notes": "Yahoo pornhub chrome any ideas why I said federal contract different I wouldn’t sub contract one person because in the being no one would of seen the smart world coming in…! Sad",
+    "submit_date": "2022-03-28",
+    "submitter_name": "Jesus Manuel Alvarado",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
