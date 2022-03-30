@@ -28,5 +28,20 @@
     "verifier_id": 155,
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6899,
+    "doc-id": "RFC8407",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "   o  License -- verify that the document contains the Simplified BSD\r\n      License in each YANG module or submodule.  Some guidelines related\r\n      to this requirement are described in Section 3.1.  Make sure that\r\n      the correct year is used in all copyright dates.  Use the approved\r\n      text from the latest TLP document, which can be found at:",
+    "correct_text": "   o  License -- verify that the document contains the Revised BSD\r\n      License in each YANG module or submodule.  Some guidelines related\r\n      to this requirement are described in Section 3.1.  Make sure that\r\n      the correct year is used in all copyright dates.  Use the approved\r\n      text from the latest TLP document, which can be found at:",
+    "notes": "https://trustee.ietf.org/documents/trust-legal-provisions/tlp-5/ says:\r\n\r\n==\r\nNote: in prior versions of these provisions, the software license was erroneously called the “Simplified BSD License” rather than the “Revised BSD License”, and many documents that refer to these provisions copied the erroneous name. The IETF Trust corrected the error on September 21, 2021. The license text itself was always that of the Revised BSD License and has not changed.\r\n==",
+    "submit_date": "2022-03-29",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
