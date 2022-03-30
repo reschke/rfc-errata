@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6900,
+    "doc-id": "RFC8345",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "\"network-id\": \"otn-hc\",",
+    "correct_text": "\"network-id\": \"foo:otn-hc\",",
+    "notes": "This is to match the network-id type:\r\n\r\n     typedef network-id {\r\n       type inet:uri;\r\n       description\r\n         \"Identifier for a network.  The precise structure of the\r\n          network-id will be up to the implementation.  The identifier\r\n          SHOULD be chosen such that the same network will always be\r\n          identified through the same identifier, even if the data model\r\n          is instantiated in separate datastores.  An implementation MAY\r\n          choose to capture semantics in the identifier -- for example,\r\n          to indicate the type of network.\";\r\n     }",
+    "submit_date": "2022-03-29",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
