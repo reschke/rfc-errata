@@ -22,11 +22,11 @@
     "section": 2.1,
     "orig_text": "  Where the initial EAP-Request sent by the NAS is for an\r\n  authentication Type (4 or greater), the peer MAY respond with a Nak\r\n  indicating that it would prefer another authentication method that is\r\n  not implemented locally.  \r\n",
     "correct_text": "  Where the initial EAP-Request sent by the NAS is for an\r\n  authentication Type (4 or greater), the peer MAY respond with a Nak\r\n  indicating that it would prefer another authentication method. In this\r\n  case, the NAS should send an Access-Request encapsulating the\r\n  received EAP-Response/Nak.  This allows a peer to suggest another\r\n  EAP method where the NAS is configured to send a default EAP\r\n  type (such as MD5-Challenge) which may not be appropriate.",
-    "notes": "Remove the \"not\".  The NAK should be requesting an authentication which is implemented, instead of preferring one which is NOT implemented.",
+    "notes": "Clarify what happens when a NAK is received and correct the \"not\" in the original text.",
     "submit_date": "2020-08-20",
     "submitter_name": "Alan DeKok",
     "verifier_id": 157,
     "verifier_name": "Eliot Lear",
-    "update_date": "2022-03-31 21:47:12"
+    "update_date": "2022-04-01 07:40:15"
   }
 ]
