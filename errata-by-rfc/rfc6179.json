@@ -1,17 +1,1 @@
-[
-  {
-    "errata_id": 6908,
-    "doc-id": "RFC6179",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": 15413995030,
-    "orig_text": "Section 1 says:\r\n\r\n   RFC 4346 [TLS1.1], and later RFC 5246 [TLS1.2], explicitly warned\r\n   implementers that the \"ability to send version 2.0 CLIENT-HELLO\r\n   messages will be phased out with all due haste\".  This document\r\n   accomplishes this by updating the backward compatibility sections\r\n   found in TLS [TLS1.0][TLS1.1][TLS1.2].\r\nIt should say:\r\n\r\n   RFC 2246 [TLS1.0], and later RFC 4346 [TLS1.1], then RFC 5246\r\n   [TLS1.2] explicitly warned implementers that the \"ability to send\r\n   version 2.0 CLIENT-HELLO messages will be phased out with all due\r\n   haste\". This document accomplishes this by updating the backward\r\n   compatibility sections found in TLS [TLS1.0][TLS1.1][TLS1.2].",
-    "correct_text": "Section 1 says:\r\n\r\n   RFC 4346 [TLS1.1], and later RFC 5246 [TLS1.2], explicitly warned\r\n   implementers that the \"ability to send version 2.0 CLIENT-HELLO\r\n   messages will be phased out with all due haste\".  This document\r\n   accomplishes this by updating the backward compatibility sections\r\n   found in TLS [TLS1.0][TLS1.1][TLS1.2].\r\nIt should say:\r\n\r\n   RFC 2246 [TLS1.0], and later RFC 4346 [TLS1.1], then RFC 5246\r\n   [TLS1.2] explicitly warned implementers that the \"ability to send\r\n   version 2.0 CLIENT-HELLO messages will be phased out with all due\r\n   haste\". This document accomplishes this by updating the backward\r\n   compatibility sections found in TLS [TLS1.0][TLS1.1][TLS1.2].",
-    "notes": "No but not that still have a lot more than you think is it still just at a 3 areas good",
-    "submit_date": "2022-03-31",
-    "submitter_name": "Jesus Alvarado",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
-  }
-]
+[]
