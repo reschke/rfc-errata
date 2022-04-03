@@ -73,5 +73,20 @@
     "verifier_id": 166,
     "verifier_name": "Robert Wilton",
     "update_date": "2021-03-24 02:45:35"
+  },
+  {
+    "errata_id": 6915,
+    "doc-id": "RFC2865",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "      The Value field is zero or more octets and contains information\r\n      specific to the Attribute.",
+    "correct_text": "      The Value field is one or more octets and contains information\r\n      specific to the Attribute.",
+    "notes": "Section \"5. Attributes\" is ambiguous when it talks about the attribute value size:\r\n\r\nFirst it says: \"The Value field is zero or more octets\", then it provides 5 possible value data types none of which allows a zero length value. For 'text' type it says: \"Text of length zero (0) MUST NOT be sent; omit the entire attribute instead\" and the same for 'string' type.\r\n\r\nSection \"5.26. Vendor-Specific\" also says about the value of a vendor-specific attribute \"The String field is one or more octets\".\r\n\r\nThus the RFC allows empty values for attributes in general but prohibits for any declared types of the attributes.",
+    "submit_date": "2022-04-02",
+    "submitter_name": "Oleg Pekar",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
