@@ -193,5 +193,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6914,
+    "doc-id": "RFC5234",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5234,
+    "orig_text": "ublication Format(s) : TEXT\r\nReported By: Daniel van Vugt\r\nDate Reported: 2011-09-12\r\nVerifier Name: Pete Resnick\r\nDate Verified: 2013-01-28\r\n\r\nSection 4 says:\r\n\r\nelements       =  alternation *c-wsp\r\nIt should say:\r\n\r\nelements       =  alternation *WSP\r\nNotes:\r\n\r\nThe grammar in section 4 of RFC 5234 is ambiguous. This was discovered by my own parsing code when trying to parse the ABNF grammar with itself. The ambiguity can be seen in a simplified form using the following 10 characters of input:\r\n\r\nInput: X = Y \\r \\n ; Z \\r \\n\r\nOffset: 0 1 2 3 4 5 6 7 8 9 \r\n\r\nMy parser finds these two (ambiguous) solutions...\r\n\r\nSOLUTION 1:\r\n\r\nrulelist @ 0 len 10\r\nrule @ 0 len 10\r\nrulename @ 0 len 1 \"X\"\r\nALPHA @ 0 len 1\r\nstar_c_wsp @ 1 len 0\r\ndefined_as @ 1 len 1\r\nstar_c_wsp @ 2 len 0\r\nelements @ 2 len 4\r\nalternation @ 2 len 1\r\nconcatenation @ 2 len 1\r\nrepetition @ 2 len 1\r\nelement @ 2 len 1\r\nrulename @ 2 len 1 \"Y\"\r\nALPHA @ 2 len 1\r\nstar_c_wsp @ 3 len 3\r\nc_wsp @ 3 len 3\r\nc_nl @ 3 len 2\r\nCRLF @ 3 len 2\r\nCR @ 3 len 1\r\nLF @ 4 len 1\r\nWSP @ 5 len 1\r\nSP @ 5 len 1\r\nc_nl @ 6 len 4\r\ncomment @ 6 len 4 \";Z\r\n\"\r\nWSP_or_VCHAR @ 7 len 1\r\nVCHAR @ 7 len 1\r\nCRLF @ 8 len 2\r\nCR @ 8 len 1\r\nLF @ 9 len 1\r\n",
+    "correct_text": "ublication Format(s) : TEXT\r\nReported By: Daniel van Vugt\r\nDate Reported: 2011-09-12\r\nVerifier Name: Pete Resnick\r\nDate Verified: 2013-01-28\r\n\r\nSection 4 says:\r\n\r\nelements       =  alternation *c-wsp\r\nIt should say:\r\n\r\nelements       =  alternation *WSP\r\nNotes:\r\n\r\nThe grammar in section 4 of RFC 5234 is ambiguous. This was discovered by my own parsing code when trying to parse the ABNF grammar with itself. The ambiguity can be seen in a simplified form using the following 10 characters of input:\r\n\r\nInput: X = Y \\r \\n ; Z \\r \\n\r\nOffset: 0 1 2 3 4 5 6 7 8 9 \r\n\r\nMy parser finds these two (ambiguous) solutions...\r\n\r\nSOLUTION 1:\r\n\r\nrulelist @ 0 len 10\r\nrule @ 0 len 10\r\nrulename @ 0 len 1 \"X\"\r\nALPHA @ 0 len 1\r\nstar_c_wsp @ 1 len 0\r\ndefined_as @ 1 len 1\r\nstar_c_wsp @ 2 len 0\r\nelements @ 2 len 4\r\nalternation @ 2 len 1\r\nconcatenation @ 2 len 1\r\nrepetition @ 2 len 1\r\nelement @ 2 len 1\r\nrulename @ 2 len 1 \"Y\"\r\nALPHA @ 2 len 1\r\nstar_c_wsp @ 3 len 3\r\nc_wsp @ 3 len 3\r\nc_nl @ 3 len 2\r\nCRLF @ 3 len 2\r\nCR @ 3 len 1\r\nLF @ 4 len 1\r\nWSP @ 5 len 1\r\nSP @ 5 len 1\r\nc_nl @ 6 len 4\r\ncomment @ 6 len 4 \";Z\r\n\"\r\nWSP_or_VCHAR @ 7 len 1\r\nVCHAR @ 7 len 1\r\nCRLF @ 8 len 2\r\nCR @ 8 len 1\r\nLF @ 9 len 1\r\nTxt not same in a [diff]",
+    "notes": "That’s if you think a Big Bang through a digital conversation in math shorten is funny to use. Oh and the 3rd contract for the three emails well I didn’t sub and still no answer from people that didn’t work right United state’s does that to everyone…. So when you guys can get the terms right no one has a job but cybercrime… and it’s the contract monkey Dk martinez for a reason that I am tired of code of conduct and bylaws and more screwed everyone over equal opportunity in the USA no their is not they hate and kill smart people…",
+    "submit_date": "2022-04-02",
+    "submitter_name": "Jesus Alvarado",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
