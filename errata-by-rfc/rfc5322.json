@@ -388,5 +388,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6920,
+    "doc-id": "RFC5322",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "and interpreted as US-ASCII [ANSI.X3-4.1986] characters.  For brevity, this document sometimes refers to this range of characters as simply \"US-ASCII characters\".",
+    "correct_text": "and interpreted as ASCII [ANSI.X3-4.1986] characters.  For brevity, this document sometimes refers to this range of characters as simply \"ASCII characters\".",
+    "notes": "The choice of \"US-ASCII\" as a charset name reflected circumstances at the time, but it was not then and has never been the name of a coded character set, much less the one specified in the various versions of what is now ANSI INCITS 4-1986[R2017].  The common name of the latter, both specified in the Standard and in common practice, is \"ASCII\" without any further qualification.   \"For brevity\", \"ASCII\" is not only more accurate, but shorter.   While the correction is being made, it would be wise to change the citation anchor to \"[ASCII]\" or, if necessary for some reason, \"[ASCII1986]\".  The odd punctuation used in \"[ANSI.X3-4.1986]\" to refer to ANSI X3.4-1986 is just unnecessarily confusing.\r\n\r\n(this erratum is being reported more or less at the request of the editor of RFC 5322 and its successor)",
+    "submit_date": "2022-04-05",
+    "submitter_name": "John Klensin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
