@@ -88,20 +88,5 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
-  },
-  {
-    "errata_id": 6917,
-    "doc-id": "RFC1321",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": 1321,
-    "orig_text": "Type: Technical\r\nPublication Format(s) : TEXT\r\nReported By: Matt Borland\r\nDate Reported: 2001-01-19\r\nIn Section A.4:\r\n   #define MD MD5\r\nIt should say:\r\n   #define MD 5\r\n\r\nErrata ID: 551\r\nStatus: Verified\r\nType: Technical\r\nPublication Format(s) : TEXT\r\nReported By: Gregory Smith\r\nDate Reported: 2002-06-14\r\nSection 3.4 says:\r\n   /* Round 3. */\r\n   /* Let [abcd k s t] denote the operation\r\n        a = b + ((a + H(b,c,d) + X[k] + T[i]) <<< s). */\r\n   /* Do the following 16 operations. */\r\nIt should say:\r\n   /* Round 3. */\r\n   /* Let [abcd k s i] denote the operation\r\n        a = b + ((a + H(b,c,d) + X[k] + T[i]) <<< s). */\r\n   /* Do the following 16 operations. */\r\nErrata ID: 552\r\nStatus: Verified\r\nType: Technical\r\nPublication Format(s) : TEXT\r\nReported By: Michael Amling\r\nDate Reported: 2000-04-12\r\nSection 3.4 says:\r\n   the each bit of F(X,Y,Z) will be independent\r\nIt should say:\r\n   then each bit of F(X,Y,Z) will be independent\r\n\r\nErrata ID: 553\r\nStatus: Verified\r\nType: Technical\r\nPublication Format(s) : TEXT\r\nReported By: Gennaro Prota\r\nDate Reported: 2006-11-15\r\nVerifier Name: Tim Polk\r\nDate Verified: 2010-04-19\r\nAppendix A says:\r\n  printf\r\n (\"MD%d time trial. Digesting %d %d-byte blocks ...\", MD,\r\n  TEST_BLOCK_LEN, TEST_BLOCK_COUNT);\r\nIt should say:\r\n  printf\r\n (\"MD%d time trial. Digesting %d %d-byte blocks ...\", MD,\r\n  TEST_BLOCK_COUNT, TEST_BLOCK_LEN);\r\nErrata ID: 585\r\nStatus: Verified\r\nType: Technical\r\nPublication Format(s) : TEXT\r\nReported By: Gregory Smith\r\nDate Reported: 2002-06-14\r\nSection 3.4 says:\r\n/* Round 4. */\r\n   /* Let [abcd k s t] denote the operation\r\n        a = b + ((a + I(b,c,d) + X[k] + T[i]) <<< s). */\r\nIt should say:\r\n/* Round 4. */\r\n   /* Let [abcd k s i] denote the operation\r\n        a = b + ((a + I(b,c,d) + X[k] + T[i]) <<< s). */\r\nStatus: Reported (1)\r\nRFC 1321, \"The MD5 Message-Digest Algorithm\", April 1992\r\nSource of RFC: pem (sec)\r\nErrata ID: 6193\r\nStatus: Reported\r\nType: Technical\r\nPublication Format(s) : TEXT\r\nReported By: User\r\nDate Reported: 2020-05-29\r\nSection A.4 says:\r\n  printf\r\n (\"Speed = %ld bytes/second\\n\",\r\n  (long)TEST_BLOCK_LEN * (long)TEST_BLOCK_COUNT/(endTime-startTime));\r\nIt should say:\r\n if(endTime-startTime)\r\n printf\r\n (\"Speed = %ld bytes/second\\n\",\r\n  (long)TEST_BLOCK_LEN * (long)TEST_BLOCK_COUNT/(endTime-startTime));\r\nNotes:\r\nThe result of endTime-startTime may be zero. The result is a division by zero. This check prevents this.",
-    "correct_text": "The mathematical problems in there won’t fit with that hex code you think is in there. Check fuctions of real person and he thinks. And the formats for that I won’t show online.",
-    "notes": "Clean the rest of the f and t test to bring a function of the computer up and I used a computer in California and broke down on a with a test antivirus program for mobile.",
-    "submit_date": "2022-04-03",
-    "submitter_name": "Jesus Alvarado",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
   }
 ]
