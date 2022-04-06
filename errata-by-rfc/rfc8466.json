@@ -133,5 +133,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6922,
+    "doc-id": "RFC8466",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.5.2.1",
+    "orig_text": "                  <svc-bandwidth>\r\n                     <bandwidth>\r\n                       <direction>input-bw</direction>\r\n                        <type>bw-per-cos</type>\r\n                         <cir>450000000</cir>\r\n                         <cbs>20000000</cbs>\r\n                         <eir>1000000000</eir>\r\n                         <ebs>200000000</ebs>\r\n                     </bandwidth>\r\n                    </svc-bandwidth>",
+    "correct_text": "                  <svc-bandwidth>\r\n                     <bandwidth>\r\n                       <direction>input-bw</direction>\r\n                        <type>bw-per-cos</type>\r\n                        <cos-id>10</cos-id>\r\n                         <cir>450000000</cir>\r\n                         <cbs>20000000</cbs>\r\n                         <eir>1000000000</eir>\r\n                         <ebs>200000000</ebs>\r\n                     </bandwidth>\r\n                    </svc-bandwidth>",
+    "notes": "* Note 1: cos-id must be included as per the following:\r\n\r\n                  leaf cos-id {\r\n                    when \"derived-from-or-self(../type, \"\r\n                       + \"'l2vpn-svc:bw-per-cos')\" {\r\n                      description\r\n                        \"Relevant when the bandwidth type is set to\r\n                         'bw-per-cos'.\";\r\n                    }\r\n                    type uint8;\r\n                    description\r\n                      \"Identifier of the CoS, indicated by DSCP or a\r\n                       CE-VLAN CoS (802.1p) value in the service frame.\r\n                       If the bandwidth type is set to 'bw-per-cos',\r\n                       the CoS ID MUST also be specified.\";\r\n                  }\r\n\r\n* Note 2: More changes are needed because the current structure does not allow to specify multiple cos-ids.",
+    "submit_date": "2022-04-05",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
