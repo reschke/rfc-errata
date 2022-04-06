@@ -403,5 +403,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6921,
+    "doc-id": "RFC5322",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "composed of characters with values in the range of 1 through 127 and interpreted as US-ASCII [ANSI.X3-4.1986] characters.",
+    "correct_text": "composed of ASCII characters [RFC20] with values in the range from 0/1 to 7/15.\r\n\r\n   --OR--\r\n\r\ncomposed of octets with decimal values in the range from 1 through 127 and interpreted as US-ASCII [ANSI.X3-4.1986] characters.",
+    "notes": "See previous erratum about \"US-ASCII\" versus \"ASCII\" or \"RFC20\" and apply as needed to the suggested text.  \r\n\r\nWhile there are several ways to fix the problem being reported here, the \"range of 1 through 127\" has no meaning without some qualification as to what the numbers mean.  One could infer from the original form that the range is interpreted according to something in the standard, but that standard, unlike, e.g., Unicode, never uses a linear sequence of numbers to refer to code points, only the Column/Row notation shown above (plus, of course, the actual seven-bit binary coding).",
+    "submit_date": "2022-04-05",
+    "submitter_name": "John Klensin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
