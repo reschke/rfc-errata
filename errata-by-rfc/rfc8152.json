@@ -123,15 +123,15 @@
     "errata_id": 6909,
     "doc-id": "RFC8152",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": 3.1,
     "orig_text": "Generic_Headers = (\r\n    ? 1 => int / tstr,  ; algorithm identifier\r\n    ? 2 => [+label],    ; criticality\r\n    ? 3 => tstr / int,  ; content type\r\n    ? 4 => bstr,        ; key identifier\r\n    ? 5 => bstr,        ; IV\r\n    ? 6 => bstr         ; Partial IV\r\n)",
     "correct_text": "Generic_Headers = (\r\n    ? 1 => int / tstr,  ; algorithm identifier\r\n    ? 2 => [+label],    ; criticality\r\n    ? 3 => tstr / int,  ; content type\r\n    ? 4 => bstr,        ; key identifier\r\n    ? ( 5 => bstr //    ; IV\r\n        6 => bstr )     ; Partial IV\r\n)",
     "notes": "Section 3.1 says: \"The \"Initialization Vector\" and \"Partial Initialization Vector\" header parameters MUST NOT both be present in the same security layer.\"",
     "submit_date": "2022-03-31",
     "submitter_name": "Thomas Fossati",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-04-05 13:56:47"
   }
 ]
