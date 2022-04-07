@@ -32,16 +32,16 @@
   {
     "errata_id": 6862,
     "doc-id": "RFC2326",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": 3.6,
     "orig_text": "     The syntax conforms to ISO 8601. The npt-sec notation is optimized\r\n     for automatic generation, the ntp-hhmmss notation for consumption\r\n     by human readers.",
     "correct_text": "     The syntax conforms to ISO 8601. The npt-sec notation is optimized\r\n     for automatic generation, the npt-hhmmss notation for consumption\r\n     by human readers.",
-    "notes": "A typo, ntp-hhmmss → npt-hhmmss.",
+    "notes": "A typo, ntp-hhmmss → npt-hhmmss.\n --VERIFIER NOTES-- \n Already addressed in rfc7826",
     "submit_date": "2022-02-25",
     "submitter_name": "Chris Morgan",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-04-06 15:02:41"
   }
 ]
