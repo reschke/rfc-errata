@@ -2,16 +2,16 @@
   {
     "errata_id": 6817,
     "doc-id": "RFC8890",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "1, 4.3",
     "orig_text": "such as (but not limited to) end users, network ...\r\n\r\nincluding (but not limited to) [RFC7754] on filtering, [RFC7258] ...",
     "correct_text": "such as end users, network ...\r\n\r\nincluding [RFC7754] on filtering, [RFC7258] ...",
-    "notes": "Remove redundant, faux legalese \"(but not limited to)\".  Nothing about \"such as\" and \"including\" indicates that the following list of examples are exhaustive: just that they are members of a set.",
+    "notes": "Remove redundant, faux legalese \"(but not limited to)\".  Nothing about \"such as\" and \"including\" indicates that the following list of examples are exhaustive: just that they are members of a set.\n --VERIFIER NOTES-- \nThis is not a correction and it does not affect the readability of the document.",
     "submit_date": "2022-01-13",
     "submitter_name": "John Hickinbottom",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-04-06 14:46:51"
   }
 ]
