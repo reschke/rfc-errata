@@ -32,16 +32,16 @@
   {
     "errata_id": 6899,
     "doc-id": "RFC8407",
-    "errata_status_code": "Held for Document Update",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "Appendix A",
     "orig_text": "   o  License -- verify that the document contains the Simplified BSD\r\n      License in each YANG module or submodule.  Some guidelines related\r\n      to this requirement are described in Section 3.1.  Make sure that\r\n      the correct year is used in all copyright dates.  Use the approved\r\n      text from the latest TLP document, which can be found at:",
     "correct_text": "   o  License -- verify that the document contains the Revised BSD\r\n      License in each YANG module or submodule.  Some guidelines related\r\n      to this requirement are described in Section 3.1.  Make sure that\r\n      the correct year is used in all copyright dates.  Use the approved\r\n      text from the latest TLP document, which can be found at:",
-    "notes": "https://trustee.ietf.org/documents/trust-legal-provisions/tlp-5/ says:\r\n\r\n==\r\nNote: in prior versions of these provisions, the software license was erroneously called the “Simplified BSD License” rather than the “Revised BSD License”, and many documents that refer to these provisions copied the erroneous name. The IETF Trust corrected the error on September 21, 2021. The license text itself was always that of the Revised BSD License and has not changed.\r\n==\r\n --VERIFIER NOTES--\r\nHeld for document update by John Levine (Temporary RFC Series Project Manager and member of the IETF Trust).",
+    "notes": "https://trustee.ietf.org/documents/trust-legal-provisions/tlp-5/ says:\r\n\r\n==\r\nNote: in prior versions of these provisions, the software license was erroneously called the “Simplified BSD License” rather than the “Revised BSD License”, and many documents that refer to these provisions copied the erroneous name. The IETF Trust corrected the error on September 21, 2021. The license text itself was always that of the Revised BSD License and has not changed.\r\n==\r\n --VERIFIER NOTES--\r\nVerified per discussion with John Levine and individuals in the netmod WG.  “Simplified” is what was used when RFC 8407 was published.  However, this RFC is providing guidance for authors and reviewers of future documents.",
     "submit_date": "2022-03-29",
     "submitter_name": "Mohamed Boucadair",
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
-    "update_date": "2022-03-30 14:30:01"
+    "update_date": "2022-04-06 14:00:23"
   }
 ]
