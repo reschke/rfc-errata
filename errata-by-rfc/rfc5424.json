@@ -58,5 +58,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6927,
+    "doc-id": "RFC5424",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 6,
+    "orig_text": "SD-NAME         = 1*32PRINTUSASCII\r\n                  ; except '=', SP, ']', %d34 (\")\r\n...\r\n\r\nPRINTUSASCII    = %d33-126",
+    "correct_text": "SD-NAME         = 1*32PRINTUSASCII\r\n                  ; except '=', SP, ']', %d34 (\")\r\n...\r\nPRINTUSASCII    = %d32-126",
+    "notes": "When excluding SP %d32 from PRINTUSASCII, then it does not make sense to state \"except ..SP ..\"\r\nThere are more issues with the grammar:\r\nSD_NAME forbids ']', but it should also forbid '['",
+    "submit_date": "2022-04-07",
+    "submitter_name": "Ulrich Windl",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
