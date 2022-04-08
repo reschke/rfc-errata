@@ -62,7 +62,7 @@
   {
     "errata_id": 6926,
     "doc-id": "RFC5880",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "6.8.6",
     "orig_text": "Set bfd.RemoteState to the value of the State (Sta) field.",
@@ -70,8 +70,8 @@
     "notes": "The variable bfd.RemoteState is not defined in section 6.8.1 and is only mentioned once in the entire document. It is likely a typo and a similarly named bfd.RemoteSessionState was meant instead.",
     "submit_date": "2022-04-06",
     "submitter_name": "Glebs Ivanovskis",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-04-07 13:09:47"
   }
 ]
