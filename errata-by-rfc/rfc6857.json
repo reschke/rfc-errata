@@ -43,5 +43,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6930,
+    "doc-id": "RFC6857",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.8",
+    "orig_text": "The <addr-spec> element that contains non-ASCII strings may appear in two forms as:\r\n\r\n   \"<\" addr-spec \">\"\r\n\r\n   or\r\n\r\n   addr-spec\r\n\r\n   Rewrite both as:\r\n\r\n   ENCODED-WORD \" :;\"\r\n",
+    "correct_text": "The <addr-spec> element that contains non-ASCII strings may appear in two forms as:\r\n\r\n   \"<\"  local-part \"@\" domain \">\"\r\n\r\n   or\r\n\r\n   local-part \"@\" domain\r\n\r\n   If the <local-part> contains non-ASCII characters, rewrite both to:\r\n\r\n   ENCODED-WORD \"@\" domain\r\n\r\n   If the <domain> contains non-ASCII characters in any of its labels, they MUST appear in A-label form as described in Section 3.1.6.\r\n\r\nIf the <addr-spec> is part of a <mailbox> specification that contains a <display-name>, the display name should be handled as per the discussion in Section 3.1.5 and the <mailbox> and <addr-spec> containing non-ASCII characters  MUST appear as\r\n\r\n   DISPLAY-NAME \"<\" ENCODED-WORD \"@\" domain \">\"\r\n\r\nfor consistency with RFC 5322.\r\n",
+    "notes": "Recommend \"Hold for document update\" and see the extensive comments on Erratum 6573.\r\n\r\nThe text above, while correct, is fairly horrible and might make the confusion between the requirements of Sections 3.1.5 and 3.1.8 even worse.  A complete rewrite of this section and possibly 3.1.5 would be a better fix.   Note the prohibition on Encoded Words in <addr-spec> in RFC 2047, which requires updating.   Also note that the \" :;\" construction, which is correct in Section 3.1.7, does not belong in the above.\r\n\r\nIt also not clear to me why, under some principle of minimal change, the brackets should not be just left alone if they appear in the original with no adjacent display-name.",
+    "submit_date": "2022-04-10",
+    "submitter_name": "John Klensin",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
