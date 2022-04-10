@@ -73,5 +73,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6929,
+    "doc-id": "RFC5890",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5890,
+    "orig_text": "Because A-labels (the form actually used in the\r\nDNS) are potentially much more compressed than UTF-8 (and UTF-8 is,\r\nin general, more compressed that UTF-16 or UTF-32), U-labels that\r\nobey all of the relevant symmetry (and other) constraints of these\r\ndocuments  may be quite a bit longer, potentially up to 252 characters\r\n(Unicode code points).\r\n",
+    "correct_text": "Because A-labels (the form actually used in the\r\nDNS) are potentially much more compressed than UTF-8 (and UTF-8 is,\r\nin general, more compressed that UTF-16 or UTF-32), U-labels that\r\nobey all of the relevant symmetry (and other) constraints of these\r\ndocuments  may be quite a bit longer, potentially up to 252 characters\r\n(Unicode code points).\r\nBut in the encode (Unicode) they both need the process that some don’t understand in a wrap and curl. To different but same meaning in the most different way.",
+    "notes": "I had a ion encoding working bigger in a math calculation.",
+    "submit_date": "2022-04-09",
+    "submitter_name": "Jesus Alvarado",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
