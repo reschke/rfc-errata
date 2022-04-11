@@ -7,11 +7,26 @@
     "section": "Appendix A",
     "orig_text": "The public keys are generated from this using the formula in\r\nSection 2:\r\n\r\npub_i = X25519(d_i, G) =\r\n             48 d5 dd d4 06 12 57 ba 16 6f a3 f9 bb db 74 f1\r\n             a4 e8 1c 08 93 84 fa 77 f7 90 70 9f 0d fb c7 66\r\n\r\npub_r = X25519(d_r, G) =\r\n             0b e7 c1 f5 aa d8 7d 7e 44 86 62 67 32 98 a4 43\r\n             47 8b 85 97 45 17 9e af 56 4c 79 c0 ef 6e ee 25\r\n\r\nAnd this is the value of the Key Exchange Data field in the Key\r\nExchange payload described in Section 3.1.  The shared value is\r\ncalculated as in Section 2:\r\n\r\nSHARED_SECRET = X25519(d_i, pub_r) = X25519(d_r, pub_i) =\r\n             c7 49 50 60 7a 12 32 7f-32 04 d9 4b 68 25 bf b0\r\n             68 b7 f8 31 9a 9e 37 08-ed 3d 43 ce 81 30 c9 50\r\n",
     "correct_text": "The public keys are generated from this using the formula in\r\nSection 2:\r\n\r\npub_i = X25519(d_i, G) =\r\n             a7 07 b3 bc 0f 37 56 fc 0a cf 33 55 85 c5 f7 7b\r\n             9f 29 ff a4 24 70 14 af 84 70 5b eb 50 46 26 29\r\n\r\npub_r = X25519(d_r, G) =\r\n             0e 57 7e 11 5d 6c 08 59 b8 51 36 d2 1b 1c fd 74\r\n             67 9f 91 14 61 1d 79 c6 81 ba d0 8a 7e 1f 0a 04\r\n\r\nAnd this is the value of the Key Exchange Data field in the Key\r\nExchange payload described in Section 3.1.  The shared value is\r\ncalculated as in Section 2:\r\n\r\nSHARED_SECRET = X25519(d_i, pub_r) = X25519(d_r, pub_i) =\r\n             d6 8d 8c ea fd 2c d3 ce 25 34 43 33 c8 9e 35 54\r\n             9e 0f c6 1a 98 87 39 34 b1 8a 18 70 f0 3a 17 0c\r\n",
-    "notes": "The test vector values given both for the public keys and for the shared secret are wrong. It turns out that they were derived from the unchanged random input, instead of d_X. An explanation could be that a first text version did not include the fixing of the random bits and that after inserting the respective paragraph (introducing fixed_X and d_X), it was forgotten to update pub_X and SHARED_SECRET.\r\n\r\nThis discrepancy came to my attention when testing the Yubikey 5 hardware and comparing it with the NaCl library and RFC8031. While the NaCl library works as expected, it is disturbing to see that the Yubikey can only be made to produce the desired (above and corrected) shared secret if you let it compute X25519(fixed_i,pub_r). That is, the secret must be presented to the Yubikey in big-endian format which could be \"inspired\" by the (not very detailed) Smartcard spec 3.4.1 that refers to ANSI X9.62 where curve parameters, prefixed with 0x04, are encoded in big-endian order - clearly the ANSI encoding is not useful here as we only need one parameter u. I wonder whether RFC8031 should spell out that input parameters (d_X and pub_X) SHOULD be presented in encoded form (and thus little-endian), hence putting manufacturers in charge of documenting any deviation.",
+    "notes": "The test vector values given both for the public keys and for the shared secret are wrong. It turns out that they were derived from the unchanged random input, instead of d_X. An explanation could be that a first text version did not include the fixing of the random bits and that after inserting the respective paragraph (introducing fixed_X and d_X), it was forgotten to update pub_X and SHARED_SECRET.\r\n\r\nPaul Wouters: endian issue mentioned in notes split into separate errata",
     "submit_date": "2020-11-17",
     "submitter_name": "Christian Tschudin",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 173,
+    "verifier_name": "Paul Wouters",
+    "update_date": "2022-04-10 17:30:15"
+  },
+  {
+    "errata_id": 6931,
+    "doc-id": "RFC8031",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Global",
+    "orig_text": "",
+    "correct_text": "",
+    "notes": "A discrepancy came to my attention when testing the Yubikey 5 hardware and comparing it with the NaCl library and RFC8031. While the NaCl library works as expected, it is disturbing to see that the Yubikey can only be made to produce the desired (above and corrected) shared secret if you let it compute X25519(fixed_i,pub_r). That is, the secret must be presented to the Yubikey in big-endian format which could be \"inspired\" by the (not very detailed) Smartcard spec 3.4.1 that refers to ANSI X9.62 where curve parameters, prefixed with 0x04, are encoded in big-endian order - clearly the ANSI encoding is not useful here as we only need one parameter u. I wonder whether RFC8031 should spell out that input parameters (d_X and pub_X) SHOULD be presented in encoded form (and thus little-endian), hence putting manufacturers in charge of documenting any deviation.",
+    "submit_date": "2020-11-17",
+    "submitter_name": "Christian Tschudin",
+    "verifier_id": 173,
+    "verifier_name": "Paul Wouters",
+    "update_date": "2022-04-10 17:29:03"
   }
 ]
