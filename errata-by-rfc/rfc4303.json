@@ -77,7 +77,7 @@
   {
     "errata_id": 4798,
     "doc-id": "RFC4303",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": 2,
     "orig_text": "         * If tunnel mode is being used, then the IPsec implementation\r\n           can add Traffic Flow Confidentiality (TFC) padding (see\r\n           Section 2.4)  after the Payload Data and before the Padding\r\n           (0-255 bytes) field.",
@@ -85,14 +85,14 @@
     "notes": "Section 2.4 refers to padding for Encryption. It is section 2.7 which refers to Traffic Flow Confidentiality (TFC) Padding",
     "submit_date": "2016-09-09",
     "submitter_name": "Antonios Atlasis",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 173,
+    "verifier_name": "Paul Wouters",
+    "update_date": "2022-04-10 17:00:03"
   },
   {
     "errata_id": 4799,
     "doc-id": "RFC4303",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": 2.6,
     "orig_text": "   To facilitate the rapid generation and discarding of the padding\r\n   traffic in support of traffic flow confidentiality (see Section 2.4),\r\n   the protocol value 59 (which means \"no next header\") MUST be used to\r\n   designate a \"dummy\" packet.",
@@ -100,23 +100,23 @@
     "notes": "Section 2.4 refers to padding for Encryption. It is section 2.7 which refers to Traffic Flow Confidentiality (TFC) Padding.",
     "submit_date": "2016-09-09",
     "submitter_name": "Antonios Atlasis",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 173,
+    "verifier_name": "Paul Wouters",
+    "update_date": "2022-04-10 17:32:07"
   },
   {
     "errata_id": 6559,
     "doc-id": "RFC4303",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.1.1",
-    "orig_text": "\r\n                  AFTER APPLYING ESP\r\n             -------------------------------------------------\r\n       IPv4  |orig IP hdr  | ESP |     |      |   ESP   | ESP|\r\n             |(any options)| Hdr | TCP | Data | Trailer | ICV|\r\n             -------------------------------------------------",
-    "correct_text": "\r\n                  AFTER APPLYING ESP\r\n             ----------------------------------------------------\r\n       IPv4  |updated IP hdr  | ESP |     |      |   ESP   | ESP|\r\n             |(any options)   | Hdr | TCP | Data | Trailer | ICV|\r\n             ----------------------------------------------------",
-    "notes": "\"orig\" implies that the IP header is left as-is, while in fact the \"protocol\" field and the \"total length\" and the checksum must be updated. There IS appropriate text explaining this in RFC 3948 \"The Total Length, Protocol, and Header Checksum (for IPv4) fields in the IP header are edited to match the resulting IP packet.\" but this text is missing here.\r\n\r\nWe have encountered an implementation that does not update the \"total length\" and the implementer claims that this is mandated by RFC 4303.",
+    "orig_text": "                  AFTER APPLYING ESP\r\n             -------------------------------------------------\r\n       IPv4  |orig IP hdr  | ESP |     |      |   ESP   | ESP|\r\n             |(any options)| Hdr | TCP | Data | Trailer | ICV|\r\n             -------------------------------------------------",
+    "correct_text": "                  AFTER APPLYING ESP\r\n             ----------------------------------------------------\r\n       IPv4  |updated IP hdr  | ESP |     |      |   ESP   | ESP|\r\n             |(any options)   | Hdr | TCP | Data | Trailer | ICV|\r\n             ----------------------------------------------------",
+    "notes": "\"orig\" implies that the IP header is left as-is, while in fact the \"protocol\" field and the \"total length\" and the checksum must be updated. There IS appropriate text explaining this in RFC 3948 \"The Total Length, Protocol, and Header Checksum (for IPv4) fields in the IP header are edited to match the resulting IP packet.\" but this text is missing here.\r\n\r\nWe have encountered an implementation that does not update the \"total length\" and the implementer claims that this is mandated by RFC 4303.\r\n\r\nPaul / Tero:\r\n\r\nThis is updating the figure in RFC4303 (ESP) and should use \"updated IP hdr\" instead of \"orig IP header\", as the specification does in fact modify the protocol, total length and checksum fields.\r\n\r\nIn any potential future document update, text should be added that explains which fields are updated similar to what is done in the RFC3948:\r\n\r\n       The Total Length, Protocol, and Header Checksum (for IPv4) fields\r\n       in the IP header are edited to match the resulting IP packet.\r\n\r\nAs ESP is still used the IPsecME WG might want to make a RFC4303bis at some point and this fix should then be included. Perhaps the WG should think about moving it from proposed standard to internet standard at one point.\r\n",
     "submit_date": "2021-04-25",
     "submitter_name": "Yaakov Stein",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 173,
+    "verifier_name": "Paul Wouters",
+    "update_date": "2022-04-10 16:59:04"
   }
 ]
