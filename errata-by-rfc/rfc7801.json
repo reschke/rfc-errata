@@ -18,15 +18,15 @@
     "errata_id": 6928,
     "doc-id": "RFC7801",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": 4.2,
     "orig_text": "   l(a_15,...,a_0) = nabla(148*delta(a_15) + 32*delta(a_15) +\r\n   133*delta(a_13) + 16*delta(a_12) + 194*delta(a_11) +\r\n   192*delta(a_10) + 1*delta(a_9) + 251*delta(a_8) + 1*delta(a_7) +\r\n   192*delta(a_6) + 194*delta(a_5) + 16*delta(a_4) + 133*delta(a_3) +\r\n   32*delta(a_2) + 148*delta(a_1) +1*delta(a_0)),",
     "correct_text": "   l(a_15,...,a_0) = nabla(148*delta(a_15) + 32*delta(a_14) +\r\n   133*delta(a_13) + 16*delta(a_12) + 194*delta(a_11) +\r\n   192*delta(a_10) + 1*delta(a_9) + 251*delta(a_8) + 1*delta(a_7) +\r\n   192*delta(a_6) + 194*delta(a_5) + 16*delta(a_4) + 133*delta(a_3) +\r\n   32*delta(a_2) + 148*delta(a_1) +1*delta(a_0)),",
     "notes": "While I do not have access to the original GOST R 34.12-2015, I believe from implementations I've seen that '32*delta(a_15)' on the first line should be '32*delta(a_14)', unless a_15 is meant to be used twice and a_14 is to be discarded.",
     "submit_date": "2022-04-09",
     "submitter_name": "Martin Vaaden",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-04-13 11:34:22"
   }
 ]
