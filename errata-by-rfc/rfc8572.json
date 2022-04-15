@@ -103,5 +103,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-04-06 14:25:21"
+  },
+  {
+    "errata_id": 6933,
+    "doc-id": "RFC8572",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "section-7.2",
+    "orig_text": "   Content-Type: application/yang.data+xml",
+    "correct_text": "   Content-Type: application/yang-data+xml",
+    "notes": "Note the diff: \"yang.data\" vs \"yang-data\"\r\n\r\nThere are 5 occurrences of the same errata in Section7.2.\r\n\r\nAs per RESTCONF Protocol [rfc8040] valid Media Types are:\r\na) application/yang-data+xml\r\nb) application/yang-data+json\r\n\r\nReferences:\r\nhttps://datatracker.ietf.org/doc/html/rfc8040#section-11.3\r\nhttps://www.iana.org/assignments/media-types/media-types.xhtml",
+    "submit_date": "2022-04-14",
+    "submitter_name": "Dimitris Athanasopoulos",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-04-14 14:46:42"
   }
 ]
