@@ -2,7 +2,7 @@
   {
     "errata_id": 6919,
     "doc-id": "RFC8182",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.4.2",
     "orig_text": "   o  When a Relying Party encounters a \"withdraw\" element, or a\r\n      \"publish\" element where an object is replaced, in a delta that it\r\n      retrieves from a Repository Server, it MUST verify that the object\r\n      to be withdrawn or replaced was retrieved from this same\r\n      Repository Server before applying the appropriate action.  Failing\r\n      to do so will leave the Relying Party vulnerable to malicious\r\n      Repository Servers instructing it to delete or change arbitrary\r\n      objects.\r\n\r\n",
@@ -10,8 +10,8 @@
     "notes": "Text taken from RFC8181. For <publish> elements in RRDP deltas, the same process described in RFC8181 applies; \"the hash of a publish MUST match to overwrite the existing file\"\r\n\r\n(This gap in the specification was independently spotted by C.J. around the same time)",
     "submit_date": "2022-04-04",
     "submitter_name": "Ties de Kock",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-04-18 13:37:02"
   }
 ]
