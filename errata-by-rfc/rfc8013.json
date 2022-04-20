@@ -28,5 +28,20 @@
     "verifier_id": 148,
     "verifier_name": "Alvaro Retana",
     "update_date": "2020-07-21 08:08:23"
+  },
+  {
+    "errata_id": 6938,
+    "doc-id": "RFC8013",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.1",
+    "orig_text": "Caution needs to be exercised on how low the resulting reported link MTU could be: for IPv4 packets, the minimum size is 64 octets [RFC791] and for IPv6 the minimum size is 1280 octets [RFC2460].",
+    "correct_text": "Caution needs to be exercised on how low the resulting reported link MTU could be: for IPv4 the recommended minimum size is 576 octets [RFC1122] and for IPv6 the minimum size is 1280 octets [RFC2460].",
+    "notes": "The original text mixed minimum packet size with minimum MTU size.",
+    "submit_date": "2022-04-19",
+    "submitter_name": "Pedro Tammela",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
