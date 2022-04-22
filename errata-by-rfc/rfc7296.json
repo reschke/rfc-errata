@@ -88,5 +88,20 @@
     "verifier_id": 159,
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-12-10 19:07:19"
+  },
+  {
+    "errata_id": 6940,
+    "doc-id": "RFC7296",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.1,
+    "orig_text": "o SPI Size (1 octet) - Length in octets of the SPI as defined by the\r\n IPsec protocol ID or zero if no SPI is applicable. For a\r\n notification concerning the IKE SA, the SPI Size MUST be zero and\r\n the field must be empty.\r\n",
+    "correct_text": "o SPI Size (1 octet) - Length in octets of the SPI as defined by the\r\n IPsec protocol ID or zero if no SPI is applicable. For a\r\n notification concerning the IKE SA, the SPI Size MUST be zero and\r\n the SPI field must be empty.\r\n",
+    "notes": "the field must be empty -> the SPI field must be empty\r\n\r\nso for a notification concerning the IKE SA, the Protocol ID field still shall be zero?(According to the last sentence of Protocol ID section:\"If the SPI field is empty, this field MUST be sent as zero and MUST be ignored on receipt\".)",
+    "submit_date": "2022-04-21",
+    "submitter_name": "warren.wang",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2022-04-21 14:40:26"
   }
 ]
