@@ -73,5 +73,20 @@
     "verifier_id": 162,
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-01-20 06:44:41"
+  },
+  {
+    "errata_id": 6942,
+    "doc-id": "RFC3394",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2.1,
+    "orig_text": "R[i]          An array of 64-bit registers where\r\n                       i = 0, 1, 2, ..., n\r\nA[t], R[i][t] The contents of registers A and R[i] after encryption\r\n                       step t.",
+    "correct_text": "R[i]          An array of 64-bit registers where\r\n                       i = 1, 2, ..., n\r\nA[t], R[t][i] The contents of registers A and R[i] after encryption\r\n                       step t.",
+    "notes": "1) There are n 64-bit registers indexed R[1] to R[n] in the algorithms in section 2.2.\r\n2) The notation of the algorithms in section 2.2 dereference R[][] using the step as the first index, and the index of the register from 1 to n as the second index",
+    "submit_date": "2022-04-25",
+    "submitter_name": "Samuel Lee",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
