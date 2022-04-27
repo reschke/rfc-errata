@@ -77,16 +77,16 @@
   {
     "errata_id": 5731,
     "doc-id": "RFC4210",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "N/A",
     "correct_text": "N/A",
     "notes": "In appendixes D.4, D.5, E.5 and E.6, the recipient field of requests and the sender field of responses are specified as \"the name of the CA\". It is no problem for CA which signs the CMP response.\r\n\r\nHowever, as best practice, the CA's private key which is used to sign the certificates, is NOT RECOMMENDED to sign/decrypt the communication messages. In this case, another entity (private key + certificate) is used to decrypt the incoming messages and sign the outgoing ones.\r\n\r\nThe text and comment for the fields \"recipient\" in requests and \"sender\" in responses need to be corrected to the case described above. If you think the original text and comment are correct, then we need instruction on how to handle this case.",
     "submit_date": "2019-05-22",
     "submitter_name": "Lijun Liao",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-04-26 19:03:57"
   }
 ]
