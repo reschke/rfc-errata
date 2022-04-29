@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6946,
+    "doc-id": "RFC9116",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "   unsigned       =  *line (contact-field eol) ; one or more required\r\n                     *line (expires-field eol) ; exactly one required\r\n                     *line [lang-field eol] *line ; exactly one optional\r\n                     ; order of fields within the file is not important\r\n                     ; except that if contact-field appears more\r\n                     ; than once, the order of those indicates\r\n                     ; priority (see Section 3.5.3)",
+    "correct_text": "   unsigned       =  *line (contact-field eol) ; one or more required\r\n                     *line (expires-field eol) ; exactly one required\r\n                     *line [lang-field eol] *line ; exactly one optional\r\n                     ; order of fields within the file is not important\r\n                     ; except that if contact-field appears more\r\n                     ; than once, the order of those indicates\r\n                     ; priority (see Section 2.5.3)",
+    "notes": "Reference to Section 2.5.3 (describing ordering semantics of the Contact field) mistakenly given in ABNF comments as \"Section 3.5.3\"",
+    "submit_date": "2022-04-28",
+    "submitter_name": "Edwin Balani",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-04-28 13:46:22"
+  }
+]
