@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6948,
+    "doc-id": "RFC5698",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix C and D",
+    "orig_text": "        version          INTEGER               DEFAULT   {v1(1)},",
+    "correct_text": "        version          INTEGER  { v1(1) }    DEFAULT   v1,",
+    "notes": "The syntax for version in the TBSPolicy structure is incorrect.  The replacement line works in both Appendix C (Informative) and Appendix D (Normative).",
+    "submit_date": "2022-04-29",
+    "submitter_name": "Russ Housley",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
