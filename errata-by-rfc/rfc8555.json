@@ -253,5 +253,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6950,
+    "doc-id": "RFC8555",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "token (required, string):  A random value that uniquely identifies\r\n      the challenge.  This value MUST have at least 128 bits of entropy.",
+    "correct_text": "token (required, string):  A random value that uniquely identifies\r\n      the challenge.  This value MUST have at least 128 bits of entropy, which in the \r\n      base64url alphabet means a minimum string length of 22 characters if the full\r\n      scope of the base64url alphabet is in use in the token, by:\r\n                        log2(64^22) = 132 bits of entropy\r\n\r\n",
+    "notes": "This standards-track document doesn't specify the string ramifications for entropy; I'd expect it to be called out to implementers, just the once, and then referred to later at other tokens.\r\n\r\nIf entropy is log2 the number of possible characters (64 if full base64url set of chars is in use) then \r\nlog2 (64^21) = 126\r\nlog2 (64^22) = 132\r\n\r\nso a minimum of 22 characters are needed to get a minimum of 128 bits of entropy in the token.\r\n\r\nBut, if the random value is specified using a subset of the base64url, say because the implementer doesn't like or use CAPITALS or (most likely) the punctuation symbols, then the token must necessarily be longer to meet the local implementer entropy requirement (though just losing only the punctuation marks means you're still good and meet the requirement with 22 characters). Not sure that matters so much on the wire.\r\n\r\nI also have editing nits about base64url being defined clearly in ABNF just for Replay-Nonce:, but then both 'base64 alphabet' and 'base64url alphabet' are in use in the document, and base64url references are to RFC4648 via RFC7515, but those are to Base64url, not to base64url... it all seems a bit inconsistent editingwise. So all the references to 'base64 alphabet' should be to 'base64url alphabet' as defined in the doc, but it should really be 'Base64url alphabet' to be consistent with references?\r\n\r\n(I really think that it should have been called 'Base-64_url alphabet' way back when to enphasise the punctuation use, but that ship has sailed.)\r\n\r\nTo me, 'base64 alphabet' is the a-zA-Z subset of base64... I think the document could be much clearer in this regard, and I hope any doc revisions taking into account all the other errata raised consider this too.\r\n\r\nMy thanks to Lee Maguire for pointing much of this out.",
+    "submit_date": "2022-05-02",
+    "submitter_name": "Lloyd Wood",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
