@@ -328,5 +328,20 @@
     "verifier_id": 166,
     "verifier_name": "Rob Wilton",
     "update_date": "2022-03-17 03:10:24"
+  },
+  {
+    "errata_id": 6952,
+    "doc-id": "RFC7950",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "10.4.2.1",
+    "orig_text": "       augment \"/interface\" {\r\n         when 'derived-from-or-self(type, \"exif:fast-ethernet\");\r\n         // Fast-Ethernet-specific definitions here\r\n       }",
+    "correct_text": "       augment \"/interface\" {\r\n         when 'derived-from-or-self(type, \"exif:fast-ethernet\")';\r\n         // Fast-Ethernet-specific definitions here\r\n       }",
+    "notes": "single quote to end complete string is missing",
+    "submit_date": "2022-05-03",
+    "submitter_name": "Andy Bierman",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
