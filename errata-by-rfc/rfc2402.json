@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6953,
+    "doc-id": "RFC2402",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2. (6)",
+    "orig_text": "2.6  Authentication Data\r\n\r\n   This is a variable-length field that contains the Integrity Check\r\n   Value (ICV) for this packet.  The field must be an integral multiple\r\n   of 32 bits in length.  The details of the ICV computation are\r\n   described in Section 3.3.2 below.  This field may include explicit\r\n   padding.  This padding is included to ensure that the length of the\r\n   AH header is an integral multiple of 32 bits (IPv4) or 64 bits\r\n   (IPv6).  All implementations MUST support such padding.  Details of\r\n   how to compute the required padding length are provided below.  The\r\n   authentication algorithm specification MUST specify the length of the\r\n   ICV and the comparison rules and processing steps for validation.\r\n",
+    "correct_text": "2.6  Authentication Data\r\n\r\n   This is a variable-length field that contains the Integrity Check\r\n   Value (ICV) for this packet.  The field must be an integral multiple\r\n   of 32 bits in length.  The details of the ICV computation are\r\n   described in Section 3.3.3 below.  This field may include explicit\r\n   padding.  This padding is included to ensure that the length of the\r\n   AH header is an integral multiple of 32 bits (IPv4) or 64 bits\r\n   (IPv6).  All implementations MUST support such padding.  Details of\r\n   how to compute the required padding length are provided below.  The\r\n   authentication algorithm specification MUST specify the length of the\r\n   ICV and the comparison rules and processing steps for validation.\r\n",
+    "notes": "The section referenced for ICV computation is currently 3.3.2 (Sequence Number Generation). I believe this to be an error, and that 3.3.3 (Integrity Check Value Calculation) was the intended reference.",
+    "submit_date": "2022-05-03",
+    "submitter_name": "J Foster",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
