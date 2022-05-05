@@ -332,7 +332,7 @@
   {
     "errata_id": 6952,
     "doc-id": "RFC7950",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "10.4.2.1",
     "orig_text": "       augment \"/interface\" {\r\n         when 'derived-from-or-self(type, \"exif:fast-ethernet\");\r\n         // Fast-Ethernet-specific definitions here\r\n       }",
@@ -340,8 +340,8 @@
     "notes": "single quote to end complete string is missing",
     "submit_date": "2022-05-03",
     "submitter_name": "Andy Bierman",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-05-04 14:35:37"
   }
 ]
