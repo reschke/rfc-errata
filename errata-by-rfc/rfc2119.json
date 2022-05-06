@@ -178,5 +178,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-01-27 21:52:08"
+  },
+  {
+    "errata_id": 6954,
+    "doc-id": "RFC2119",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6. of all scripts",
+    "orig_text": "6. Guidance in the use of these Imperatives\r\n\r\n   Imperatives of the type defined in this memo must be used with care\r\n   and sparingly.  In particular, they MUST only be used where it is\r\n   actually required for interoperation or to limit behavior which has\r\n   potential for causing harm (e.g., limiting retransmisssions)  For\r\n   example, they must not be used to try to impose a particular method\r\n   on implementors where the method is not required for\r\n   interoperability.\r\n\r\n{This part: (e.g., limiting retransmisssions); is the focus.}",
+    "correct_text": "In-line html has an errata by Davidson, Malcolm about the extra S in retransmission. (Good Job to Malcom! (I would also like to make editors aware that is in only corrected in the, in-line html.  The error of the extra -s in the word retransmissions is still present in all of the other documents.)  \r\n\r\nThe problem I would like to bring to the attention of the minds of the world, is \r\nstill that same word, retransmissions and I'm concerned that it has been looked at and still over looked.   It should be simply \"transmissions\" or, but NOT RECOMENDED; \"re-transmissions\".  (I will explain.) ",
+    "notes": "The base word \"transmission\" (which is already a compound word.) in the plural form, shows more than one, present tense, and also future tense.  Therefore the re- prefix is redundant in the word.  It actually retards the word making it null.  Without the hyphen it is an entirely different compound word that may not even exist yet.  The -s making it plural is plenty to make this sentence complete and accurate.  There is no need for the re- prefix but if you must it should be hyphenated.  Thank you!",
+    "submit_date": "2022-05-05",
+    "submitter_name": "aaron wuescher",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
