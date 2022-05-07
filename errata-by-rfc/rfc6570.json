@@ -17,16 +17,16 @@
   {
     "errata_id": 6937,
     "doc-id": "RFC6570",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 2.1,
     "orig_text": "   literals      =  %x21 / %x23-24 / %x26 / %x28-3B / %x3D / %x3F-5B\r\n                   /  %x5D / %x5F / %x61-7A / %x7E / ucschar / iprivate\r\n                   /  pct-encoded\r\n                        ; any Unicode character except: CTL, SP,\r\n                        ;  DQUOTE, \"'\", \"%\" (aside from pct-encoded),\r\n                        ;  \"<\", \">\", \"\\\", \"^\", \"`\", \"{\", \"|\", \"}\"",
     "correct_text": "   literals      =  %x21 / %x23-24 / %x26-3B / %x3D / %x3F-5B\r\n                   /  %x5D / %x5F / %x61-7A / %x7E / ucschar / iprivate\r\n                   /  pct-encoded\r\n                        ; any Unicode character except: CTL, SP,\r\n                        ;  DQUOTE, \"%\" (aside from pct-encoded),\r\n                        ;  \"<\", \">\", \"\\\", \"^\", \"`\", \"{\", \"|\", \"}\"\r\n\r\nNote: using single quotes \"'\" in literals could limit the interoperability with content like HTML.",
-    "notes": "Discussed with the RFC authors here https://github.com/uri-templates/uritemplate-test/issues/51\r\n\r\nsuperseded https://www.rfc-editor.org/errata/eid6934",
+    "notes": "Discussed with the RFC authors here https://github.com/uri-templates/uritemplate-test/issues/51",
     "submit_date": "2022-04-18",
     "submitter_name": "Vincent Biret",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2022-05-06 04:10:05"
   }
 ]
