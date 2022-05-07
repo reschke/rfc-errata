@@ -62,17 +62,17 @@
   {
     "errata_id": 6416,
     "doc-id": "RFC6890",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.2.2",
     "orig_text": "              +----------------------+----------------------------+\r\n              | Attribute            | Value                      |\r\n              +----------------------+----------------------------+\r\n              | Address Block        | 0.0.0.0/8                  |\r\n              | Name                 | \"This host on this network\"|\r\n              | RFC                  | [RFC1122], Section 3.2.1.3 |\r\n              | Allocation Date      | September 1981             |\r\n              | Termination Date     | N/A                        |\r\n              | Source               | True                       |\r\n              | Destination          | False                      |\r\n              | Forwardable          | False                      |\r\n              | Global               | False                      |\r\n              | Reserved-by-Protocol | True                       |\r\n              +----------------------+----------------------------+\r\n\r\n                    Table 1: \"This host on this network\"",
     "correct_text": "              +----------------------+----------------------------+\r\n              | Attribute            | Value                      |\r\n              +----------------------+----------------------------+\r\n              | Address Block        | 0.0.0.0/8                  |\r\n              | Name                 | \"This network\"             |\r\n              | RFC                  | [RFC1122], Section 3.2.1.3 |\r\n              | Allocation Date      | September 1981             |\r\n              | Termination Date     | N/A                        |\r\n              | Source               | True                       |\r\n              | Destination          | False                      |\r\n              | Forwardable          | False                      |\r\n              | Global               | False                      |\r\n              | Reserved-by-Protocol | True                       |\r\n              +----------------------+----------------------------+\r\n\r\n                          Table 1: \"This network\"",
-    "notes": "RFC1122 states that 0.0.0.0/32 is \"this host on this network\" while 0.0.0.0/8 is \"this network\".",
+    "notes": "RFC1122 states that 0.0.0.0/32 is \"this host on this network\" while 0.0.0.0/8 is \"this network\".\n --VERIFIER NOTES-- \n   -- verifier note --\r\nThis errata is a duplicate of errata 6404, which is verified.",
     "submit_date": "2021-01-21",
     "submitter_name": "Thomas",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2022-05-06 04:35:40"
   },
   {
     "errata_id": 6881,
@@ -103,5 +103,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-03-14 15:04:02"
+  },
+  {
+    "errata_id": 6956,
+    "doc-id": "RFC6890",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2.2",
+    "orig_text": "              +----------------------+----------------------------+\r\n              | Attribute            | Value                      |\r\n              +----------------------+----------------------------+\r\n              | Address Block        | 0.0.0.0/8                  |\r\n              | Name                 | \"This host on this network\"|\r\n              | RFC                  | [RFC1122], Section 3.2.1.3 |\r\n              | Allocation Date      | September 1981             |\r\n              | Termination Date     | N/A                        |\r\n              | Source               | True                       |\r\n              | Destination          | False                      |\r\n              | Forwardable          | False                      |\r\n              | Global               | False                      |\r\n              | Reserved-by-Protocol | True                       |\r\n              +----------------------+----------------------------+\r\n\r\n                    Table 1: \"This host on this network\"",
+    "correct_text": "              +----------------------+----------------------------+\r\n              | Attribute            | Value                      |\r\n              +----------------------+----------------------------+\r\n              | Address Block        | 0.0.0.0/8                  |\r\n              | Name                 | \"This network\"             |\r\n              | RFC                  | [RFC1122], Section 3.2.1.3 |\r\n              | Allocation Date      | September 1981             |\r\n              | Termination Date     | N/A                        |\r\n              | Source               | True                       |\r\n              | Destination          | False                      |\r\n              | Forwardable          | False                      |\r\n              | Global               | False                      |\r\n              | Reserved-by-Protocol | True                       |\r\n              +----------------------+----------------------------+\r\n\r\n                          Table 1: \"This network\"",
+    "notes": "RFC1122 states that 0.0.0.0/32 is \"this host on this network\" while 0.0.0.0/8 is \"this network\".",
+    "submit_date": "2021-01-21",
+    "submitter_name": "Thomas",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
