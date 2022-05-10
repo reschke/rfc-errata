@@ -18,15 +18,15 @@
     "errata_id": 6955,
     "doc-id": "RFC7915",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": 4.5,
     "orig_text": "Calculating an IPv6 checksum and forwarding the packet (which has performance implications).",
     "correct_text": "Calculating an UDP checksum and forwarding the packet (which has performance implications).",
     "notes": "IPv6 doesn't have a checksum. The text appears to refer to the UDP checksum",
     "submit_date": "2022-05-06",
     "submitter_name": "Dan Gilboa Waizman",
-    "verifier_id": 99,
+    "verifier_id": 2,
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2022-05-09 16:06:19"
   }
 ]
