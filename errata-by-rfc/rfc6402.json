@@ -47,7 +47,7 @@
   {
     "errata_id": 6571,
     "doc-id": "RFC6402",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A.1",
     "orig_text": "         pendInfo               PendInfo,\r\n         extendedFailInfo       SEQUENCE {",
@@ -55,8 +55,8 @@
     "notes": "The ASN.1 module will not compile properly without a tag on one of these elements.  The ASN.1 module in Appendix A.2 has a tag in this spot.",
     "submit_date": "2021-05-04",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-05-09 17:17:07"
   }
 ]
