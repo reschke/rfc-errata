@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6957,
+    "doc-id": "RFC8668",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 5,
+    "orig_text": "The name of the IANA registry for Sub-TLVs for TLVs 22, 23, 141, 222,\r\nand 223 has been changed to include sub-TLV 25.",
+    "correct_text": "The name of the IANA registry for Sub-TLVs for TLVs 22, 23, 141, 222,\r\nand 223 has been changed to include TLV 25.",
+    "notes": "25 is top-level TLV. By mistake, it is written as sub-TLV.",
+    "submit_date": "2022-05-09",
+    "submitter_name": "Praveen Kumar",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
