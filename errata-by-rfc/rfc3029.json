@@ -17,7 +17,7 @@
   {
     "errata_id": 6444,
     "doc-id": "RFC3029",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix E",
     "orig_text": "  GeneralName, PolicyInformation\r\n  FROM PKIX1Implicit88 {iso(1) identified-organization(3)\r\n  dod(6) internet(1) security(5) mechanisms(5) pkix(7)\r\n  id-mod(0) id-pkix1-implicit-88(2)}",
@@ -25,9 +25,9 @@
     "notes": "The ASN.1 Module uses GeneralName and GeneralNames, but only one of them is IMPORTed.  The suggested fix IMPORTS both of GeneralName and GeneralNames.",
     "submit_date": "2021-02-26",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 162,
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-05-09 17:14:45"
   },
   {
     "errata_id": 6445,
