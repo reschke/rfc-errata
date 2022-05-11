@@ -17,16 +17,16 @@
   {
     "errata_id": 6866,
     "doc-id": "RFC8632",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 6,
     "orig_text": "      container older-than {\r\n        presence \"Age specification\";\r\n        description\r\n          \"Matches the 'last-status-change' leaf in the alarm.\";\r\n        choice age-spec {\r\n",
     "correct_text": "      container older-than {\r\n        presence \"Age specification\";\r\n        description\r\n          \"Matches the 'last-changed' leaf in the alarm.\";\r\n        choice age-spec {\r\n",
-    "notes": "There is no last-status-change leaf in alarm (and it seems there never was).",
+    "notes": "There is no last-status-change leaf in alarm (and it seems there never was).\r\n\r\nSee also https://mailarchive.ietf.org/arch/msg/ccamp/wmCgk0DQq0lG6S_e59W-MKW8EOQ/",
     "submit_date": "2022-03-04",
     "submitter_name": "Reshad Rahman",
-    "verifier_id": 2,
-    "verifier_name": "RFC Editor",
-    "update_date": "2022-03-04 10:07:18"
+    "verifier_id": 171,
+    "verifier_name": "John Scudder",
+    "update_date": "2022-05-10 08:58:20"
   }
 ]
