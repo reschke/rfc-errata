@@ -73,5 +73,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6972,
+    "doc-id": "RFC7914",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "At the current time, r=8 and p=1 appears to yield good results, but as memory latency and CPU parallelism increase, it is likely that the optimum values for both r and p will increase.",
+    "correct_text": "At the current time, r=8 and p=1 appears to yield good results, but as memory latency decrease and CPU parallelism increase, it is likely that the optimum values for both r and p will increase.",
+    "notes": "The wording in itself is a bit unclear, but the phrase \"but as memory latency and CPU parallelism increase\" might be interpreted as \"but as memory latency increase and CPU parallelism increase\", which in combination with the following phrase \"it is likely that the optimum values for both r and p will increase\" is inconsistent with how scrypt operates. All other things being equal (including but not limited to the parameters used and CPU or ASIC performance), the scrypt algorithm have an inverse-proportional relationship to memory latency, especially if the low-latency memory can contain all of the temporary computational data the algorithm needs.",
+    "submit_date": "2022-05-11",
+    "submitter_name": "Gacel Perfinian",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
