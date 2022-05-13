@@ -2,7 +2,7 @@
   {
     "errata_id": 6941,
     "doc-id": "RFC9180",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 6.1,
     "orig_text": "In many cases, applications encrypt only a single message\r\nto a recipient's public key. This section provides templates\r\nfor HPKE APIs that implement stateless \"single-shot\"\r\nencryption and decryption using APIs specified in\r\nSections 5.1.1 and 5.2:\r\n",
@@ -10,8 +10,8 @@
     "notes": "5.1.1 -> 5.1: I think the description of the single-shot APIs should refer to the entire HPKE modes hence Section 5.1, instead of Section 5.1.1 which is about the base mode only.",
     "submit_date": "2022-04-21",
     "submitter_name": "CJ",
-    "verifier_id": 2,
-    "verifier_name": null,
-    "update_date": "2022-04-29 13:32:24"
+    "verifier_id": 168,
+    "verifier_name": "Stanislav Smyshlyaev",
+    "update_date": "2022-05-12 04:02:03"
   }
 ]
