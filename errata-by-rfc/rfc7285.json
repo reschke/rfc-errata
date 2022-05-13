@@ -17,31 +17,31 @@
   {
     "errata_id": 6874,
     "doc-id": "RFC7285",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 14.2,
     "orig_text": "                   +-------------+---------------------+\r\n                   | Identifier  | Intended Semantics  |\r\n                   +-------------+---------------------+\r\n                   | routingcost | See Section 6.1.1.1 |\r\n                   | priv:       | Private use         |\r\n                   +-------------+---------------------+\r\n\r\n                        Table 3: ALTO Cost Metrics",
-    "correct_text": "                   +-------------+---------------------+\r\n                   | Identifier  | Intended Semantics  |\r\n                   +-------------+---------------------+\r\n                   | routingcost | See Section 6.1.1.1 |\r\n                   +-------------+---------------------+\r\n\r\n                        Table 3: ALTO Cost Metrics",
+    "correct_text": "                   +-------------+---------------------+\r\n                   | Identifier  | Intended Semantics  |\r\n                   +-------------+---------------------+\r\n                   | routingcost | See Section 6.1.1.1 |\r\n                   +-------------+---------------------+\r\n\r\n                        Table 3: ALTO Cost Metrics\r\n\r\nNote: Identifiers prefixed with \"priv:\" are\r\nreserved for Private Use (see Section 10.6)",
     "notes": "priv: is not a cost metric but a prefix",
     "submit_date": "2022-03-08",
     "submitter_name": "Mohamed BOUCADAIR",
-    "verifier_id": 2,
-    "verifier_name": null,
-    "update_date": "2022-03-08 13:37:08"
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2022-05-12 15:09:37"
   },
   {
     "errata_id": 6876,
     "doc-id": "RFC7285",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 14.3,
     "orig_text": "                    +------------+--------------------+\r\n                    | Identifier | Intended Semantics |\r\n                    +------------+--------------------+\r\n                    | pid        | See Section 7.1.1  |\r\n                    | priv:      | Private use        |\r\n                    +------------+--------------------+\r\n \r\n                   Table 4: ALTO Endpoint Property Types\r\n",
-    "correct_text": "                    +------------+--------------------+\r\n                    | Identifier | Intended Semantics |\r\n                    +------------+--------------------+\r\n                    | pid        | See Section 7.1.1  |\r\n                    +------------+--------------------+\r\n \r\n                   Table 4: ALTO Endpoint Property Types\r\n",
+    "correct_text": "                    +------------+--------------------+\r\n                    | Identifier | Intended Semantics |\r\n                    +------------+--------------------+\r\n                    | pid        | See Section 7.1.1  |\r\n                    +------------+--------------------+\r\n \r\n                   Table 4: ALTO Endpoint Property Types\r\n\r\n Note: Identifiers prefixed with \"priv:\" are\r\n reserved for Private Use (see Section 10.8.2.)\r\n",
     "notes": "priv: is not an identifier, but a prefix.",
     "submit_date": "2022-03-09",
     "submitter_name": "Mohamed BOUCADAIR",
-    "verifier_id": 2,
-    "verifier_name": null,
-    "update_date": "2022-03-09 13:18:53"
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2022-05-12 15:09:50"
   }
 ]
