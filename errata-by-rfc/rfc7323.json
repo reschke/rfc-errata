@@ -32,16 +32,16 @@
   {
     "errata_id": 6798,
     "doc-id": "RFC7323",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "The Timestamps option may appear in any data or <ACK> segment, adding\r\n\r\nThe timestamp clock may be derived from a system clock that is\r\n\r\nA random offset may be added to the timestamp clock on a per-",
     "correct_text": "The Timestamps option MAY appear in any data or <ACK> segment, adding\r\n\r\nThe timestamp clock MAY be derived from a system clock that is\r\n\r\nA random offset MAY be added to the timestamp clock on a per-",
-    "notes": "several \"MAY\"s were incorrectly written as non RFC 2119 \"may\"s",
+    "notes": "several \"MAY\"s were incorrectly written as non RFC 2119 \"may\"s\n --VERIFIER NOTES-- \n   These examples are non-normative. The first is explanatory, and the other two are examples of ways to meet the requirement.",
     "submit_date": "2021-12-26",
     "submitter_name": "Yaakov Stein",
-    "verifier_id": 2,
-    "verifier_name": "RFC Editor",
-    "update_date": "2022-02-09 14:01:19"
+    "verifier_id": 167,
+    "verifier_name": "Martin Duke",
+    "update_date": "2022-05-13 14:13:18"
   }
 ]
