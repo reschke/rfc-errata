@@ -28,5 +28,20 @@
     "verifier_id": 116,
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6974,
+    "doc-id": "RFC4519",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.13,
+    "orig_text": "3.13.  'residentialPerson'\r\n\r\n   The 'residentialPerson' object class is the basis of an entry that\r\n   includes a person's residence in the representation of the person.\r\n   (Source: X.521 [X.521])\r\n\r\n      ( 2.5.6.10 NAME 'residentialPerson'\r\n         SUP person\r\n         STRUCTURAL\r\n         MUST l\r\n         MAY ( businessCategory $ x121Address $ registeredAddress $\r\n               destinationIndicator $ preferredDeliveryMethod $\r\n               telexNumber $ teletexTerminalIdentifier $\r\n               telephoneNumber $ internationalISDNNumber $\r\n               facsimileTelephoneNumber $ preferredDeliveryMethod $\r\n               street $ postOfficeBox $ postalCode $ postalAddress $\r\n               physicalDeliveryOfficeName $ st $ l ) )",
+    "correct_text": "3.13.  'residentialPerson'\r\n\r\n   The 'residentialPerson' object class is the basis of an entry that\r\n   includes a person's residence in the representation of the person.\r\n   (Source: X.521 [X.521])\r\n\r\n      ( 2.5.6.10 NAME 'residentialPerson'\r\n         SUP person\r\n         STRUCTURAL\r\n         MUST l\r\n         MAY ( businessCategory $ x121Address $ registeredAddress $\r\n               destinationIndicator $ preferredDeliveryMethod $\r\n               telexNumber $ teletexTerminalIdentifier $\r\n               telephoneNumber $ internationalISDNNumber $\r\n               facsimileTelephoneNumber $ preferredDeliveryMethod $\r\n               street $ postOfficeBox $ postalCode $ postalAddress $\r\n               physicalDeliveryOfficeName $ st ) )",
+    "notes": "The \"l\" attributeType (a.k.a \"localityName\", as defined in section 2.16 of this same document) is defined in this class in ambiguous fashion.  \"l\" is declared as both required (MUST) and permitted (MAY). It should be removed from the MAY clause.\r\n\r\nIt is also worth pointing out this flaw is limited solely to this RFC, as the original residentialPerson definition defined within the ITU-T X.521 document (section 6.10) is indeed correct.  The \"localityName\" attribute type is not listed in ambiguous fashion.",
+    "submit_date": "2022-05-17",
+    "submitter_name": "Jesse Coretta",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
