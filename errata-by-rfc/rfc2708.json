@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 6975,
+    "doc-id": "RFC2708",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.4.3.3",
+    "orig_text": "Content-Type: multipart/signed;\r\nprotocol=\"application/pkcs7-signature\";\r\nmicalg=sha1; boundary=boundary42",
+    "correct_text": "Content-Type: multipart/signed;\r\nprotocol=\"application/pkcs7-signature\";\r\nmicalg=sha-1; boundary=boundary42",
+    "notes": "In this version we updated the strings associated with the micalg parameter, however the example was not updated to use the correct new value.",
+    "submit_date": "2022-05-18",
+    "submitter_name": "Jake",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
