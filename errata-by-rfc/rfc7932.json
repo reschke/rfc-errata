@@ -13,5 +13,20 @@
     "verifier_id": 159,
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-12-30 18:00:19"
+  },
+  {
+    "errata_id": 6977,
+    "doc-id": "RFC7932",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 9.3,
+    "orig_text": "      Block type code for next distance block type, appears only if\r\n         NBLTYPESD >= 2 and the previous distance block count is zero\r\n\r\n      Block count code + extra bits for next distance block count,\r\n         appears only if NBLTYPESD >= 2 and the previous distance block\r\n         count is zero",
+    "correct_text": "      Block type code for next distance block type, appears only if\r\n         NBLTYPESD >= 2 and the previous distance block count is zero\r\n         and the distance code is not an implicit 0, as indicated by\r\n         the insert-and-copy length code\r\n\r\n      Block count code + extra bits for next distance block count,\r\n         appears only if NBLTYPESD >= 2 and the previous distance block\r\n         count is zero and the distance code is not an implicit 0, as\r\n         indicated by the insert-and-copy length code",
+    "notes": "Corrected to match section 10 and the reference implementation, which do not update the distance block count when the distance is implicitly 0.",
+    "submit_date": "2022-05-21",
+    "submitter_name": "Sean Bartell",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
