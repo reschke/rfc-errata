@@ -2,7 +2,7 @@
   {
     "errata_id": 6500,
     "doc-id": "RFC8148",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": 14.1,
     "orig_text": "      Change controller:  The IESG <ietf@ietf.org>\r\n",
@@ -10,6 +10,21 @@
     "notes": "The current text has the email address of the \"IETF discuss\" list for the IESG, which is incorrect.",
     "submit_date": "2021-03-29",
     "submitter_name": "Lars Eggert",
+    "verifier_id": 164,
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2022-05-22 21:26:48"
+  },
+  {
+    "errata_id": 6978,
+    "doc-id": "RFC8148",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "15.1. Normative Ref",
+    "orig_text": "               <https://www.apcointl.org/\r\n              resources/telematics/aacn-and-veds.html>",
+    "correct_text": "           https://www.apcointl.org/resources/telematics/aacnveds/\r\n           veds-scheme-a-supporting-documentation/",
+    "notes": "The URL was changed during the RFC preparation process.",
+    "submit_date": "2022-05-23",
+    "submitter_name": "Randall Gellens",
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
