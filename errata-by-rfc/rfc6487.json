@@ -137,16 +137,16 @@
   {
     "errata_id": 6854,
     "doc-id": "RFC6487",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.8.1",
     "orig_text": "   The Basic Constraints extension field is a critical extension in the\r\n   resource certificate profile, and MUST be present when the subject is\r\n   a CA, and MUST NOT be present otherwise.\r\n\r\n   The issuer determines whether the \"cA\" boolean is set.",
-    "correct_text": "   The Basic Constraints extension field is a critical extension in the\r\n   resource certificate profile, and MUST be present when the subject is\r\n   a CA, and MUST NOT be present otherwise.\r\n\r\n   If this extension is present, then the \"cA\" field MUST be true.",
-    "notes": "The original text is contradictory. If the basicConstraints extension is prohibited in end-entity certificates, then it follows that whenever the extension is present in a certificate, that certificate is a CA certificate. If the certificate is a CA certificate, then the \"cA\" boolean MUST be true in all cases. It is nonsensical to allow a \"cA\" field value of false.",
+    "correct_text": "   The Basic Constraints extension field is critical and MUST be present \r\n   when the \"cA\" field is TRUE, otherwise it MUST NOT be present.",
+    "notes": "See discussion at https://mailarchive.ietf.org/arch/msg/sidrops/dPCiDz_pDR68G4cTC8W7X5LTE5o/\n\nThe original text is tautological -- Since according to RFC 5280 §4.2.1.9 the \"cA\" boolean MUST be set when the subject is a CA, and MUST NOT be set when the subject is not a CA, then it's axiomatic that \n\ncA boolean set <=> Basic Constraints field present <=> subject is a CA\n\nAlthough the original text is not strictly speaking wrong, it's potentially misleading since it could be read as implying that it's possible to have the cA boolean FALSE in a CA certificate, which is not so.",
     "submit_date": "2022-02-16",
     "submitter_name": "Corey Bonnell",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 171,
+    "verifier_name": "John Scudder",
+    "update_date": "2022-05-24 10:40:38"
   }
 ]
