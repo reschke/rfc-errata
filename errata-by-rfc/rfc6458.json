@@ -163,5 +163,20 @@
     "verifier_id": 167,
     "verifier_name": "Martin Duke",
     "update_date": "2020-04-27 15:05:05"
+  },
+  {
+    "errata_id": 6980,
+    "doc-id": "RFC6458",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 8,
+    "orig_text": "The field opt specifies which SCTP socket option to get.  It can get\r\nany socket option currently supported that requests information\r\n(either read/write options or read-only) such as\r\n\r\n   SCTP_RTOINFO\r\n\r\n   SCTP_ASSOCINFO\r\n\r\n   SCTP_PRIMARY_ADDR\r\n\r\n   SCTP_PEER_ADDR_PARAMS\r\n\r\n   SCTP_DEFAULT_SEND_PARAM\r\n\r\n   SCTP_MAX_SEG\r\n\r\n   SCTP_AUTH_ACTIVE_KEY\r\n\r\n   SCTP_DELAYED_SACK\r\n\r\n   SCTP_MAX_BURST\r\n\r\n   SCTP_CONTEXT\r\n\r\n   SCTP_EVENT\r\n\r\n   SCTP_DEFAULT_SNDINFO\r\n\r\n   SCTP_DEFAULT_PRINFO\r\n\r\n   SCTP_STATUS\r\n\r\n   SCTP_GET_PEER_ADDR_INFO\r\n\r\n   SCTP_PEER_AUTH_CHUNKS\r\n\r\n   SCTP_LOCAL_AUTH_CHUNKS\r\n",
+    "correct_text": "The field opt specifies which SCTP socket option to get.  It can get\r\nany socket option currently supported that requests information\r\n(either read/write options or read-only) such as\r\n\r\n   SCTP_RTOINFO\r\n\r\n   SCTP_ASSOCINFO\r\n\r\n   SCTP_PRIMARY_ADDR\r\n\r\n   SCTP_PEER_ADDR_PARAMS\r\n\r\n   SCTP_DEFAULT_SEND_PARAM\r\n\r\n   SCTP_MAXSEG\r\n\r\n   SCTP_AUTH_ACTIVE_KEY\r\n\r\n   SCTP_DELAYED_SACK\r\n\r\n   SCTP_MAX_BURST\r\n\r\n   SCTP_CONTEXT\r\n\r\n   SCTP_EVENT\r\n\r\n   SCTP_DEFAULT_SNDINFO\r\n\r\n   SCTP_DEFAULT_PRINFO\r\n\r\n   SCTP_STATUS\r\n\r\n   SCTP_GET_PEER_ADDR_INFO\r\n\r\n   SCTP_PEER_AUTH_CHUNKS\r\n\r\n   SCTP_LOCAL_AUTH_CHUNKS\r\n",
+    "notes": "The constant SCTP_MAX_SEG is not defined. It should be SCTP_MAXSEG.",
+    "submit_date": "2022-05-24",
+    "submitter_name": "Michael Tüxen",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-05-24 15:17:42"
   }
 ]
