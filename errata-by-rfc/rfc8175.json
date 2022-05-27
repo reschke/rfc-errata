@@ -2,17 +2,17 @@
   {
     "errata_id": 6472,
     "doc-id": "RFC8175",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "12.4, para 2",
     "orig_text": "A Peer Offer Signal MUST be encoded within a UDP packet.  The IP source and destination fields in the packet MUST be set by swapping the values received in the Peer Discovery Signal.  The Peer Offer Signal completes the discovery process; see Section 7.1.",
-    "correct_text": "A Peer Offer Signal MUST be encoded within a UDP packet. If the Modem is not including IPv4 and IPv6 Connection Point Data Items in the Peer Offer Signal, then the IP source field in the packet MUST be set to the unicast address the router must use when connecting the DLEP TCP session, otherwise any valid local address MUST be used.  The IP destination field in the packet MUST be set to the IP source field value received in the Peer Discovery Signal.  The Peer Offer Signal completes the discovery process; see Section 7.1.",
-    "notes": "The original text will not result in a valid unicast IP packet.\r\n\r\n=====\r\nAD Note:  The original text is clearly wrong.  There has been discussion in the WG about the proper wording for the \"corrected text\", but no definitive conclusion has been reached.  More discussion is clearly needed so I am marking this report as Held for Document Update.  \r\n\r\nhttps://mailarchive.ietf.org/arch/msg/manet/HB6vBIID1cE93IVmOX2Q4bPfhjk/",
+    "correct_text": "A Peer Offer Signal MUST be encoded within a UDP packet. The IP source and destination fields (addresses and ports) in the packet MUST be set by swapping the values received in the Peer Discovery Signal, with the exception that the new source address on the Offer Signal, which was the well-known destination address, becomes a local IP from the DLEP modem. The source port remains the well-known port from the Peer Discovery Signal. The Peer Offer signal contains zero or more connection points as described in 13.2 and 13.3 completes the discovery process; see Section 7.1 ",
+    "notes": "The original text will not result in a valid unicast IP packet.\r\n\r\n=====\r\nAD Note:  The original text is clearly wrong.  There has been discussion in the WG about the proper wording for the \"corrected text\".  Given that the current text results in an invalid packet, I am marking this report as Verified.\r\n\r\nhttps://mailarchive.ietf.org/arch/msg/manet/h8Sa924gn6ZmAZ7XNp-5UUrZlAY/",
     "submit_date": "2021-03-10",
     "submitter_name": "Rick Taylor",
-    "verifier_id": 2,
+    "verifier_id": 148,
     "verifier_name": "Alvaro Retana",
-    "update_date": "2021-11-11 03:19:39"
+    "update_date": "2022-05-26 12:31:27"
   },
   {
     "errata_id": 6730,
