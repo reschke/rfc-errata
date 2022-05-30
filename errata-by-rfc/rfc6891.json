@@ -13,5 +13,20 @@
     "verifier_id": 134,
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6982,
+    "doc-id": "RFC6891",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 4.3,
+    "orig_text": "Traditional DNS messages are limited to 512 octets in size when sent over UDP [RFC1035]. Fitting the increasing amounts of data that can be transported in DNS in this 512-byte limit is becoming more difficult. For instance, inclusion of DNSSEC records frequently requires a much larger response than a 512-byte message can hold.",
+    "correct_text": "Traditional DNS messages are limited to 512-bytes in size when sent over UDP [RFC1035]. Fitting the increasing amounts of data that can be transported in DNS in this 512-byte limit is becoming more difficult. For instance, inclusion of DNSSEC records frequently\r\n requires a much larger response than a 512-byte message can hold.",
+    "notes": "In the original text, it says: DNS messages are limited to 512 octets in size, but it should be 512 bytes not octets.\r\n\r\n\n --VERIFIER NOTES-- \n   Most RFCs use \"octets\" and \"bytes\" as equivalent (even if I personally prefer \"octets\").",
+    "submit_date": "2022-05-29",
+    "submitter_name": "Avninder Sran",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2022-05-29 21:56:28"
   }
 ]
