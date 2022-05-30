@@ -77,7 +77,7 @@
   {
     "errata_id": 6618,
     "doc-id": "RFC2131",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": 3.1,
     "orig_text": "                Server          Client          Server\r\n            (not selected)                    (selected)\r\n\r\n                  v               v               v\r\n                  |               |               |\r\n                  |     Begins initialization     |\r\n                  |               |               |\r\n                  | _____________/|\\____________  |\r\n                  |/DHCPDISCOVER | DHCPDISCOVER  \\|\r\n                  |               |               |\r\n              Determines          |          Determines\r\n             configuration        |         configuration\r\n                  |               |               |\r\n                  |\\             |  ____________/ |\r\n                  | \\________    | /DHCPOFFER     |\r\n                  | DHCPOFFER\\   |/               |\r\n                  |           \\  |                |\r\n                  |       Collects replies        |\r\n                  |             \\|                |\r\n                  |     Selects configuration     |\r\n                  |               |               |\r\n                  | _____________/|\\____________  |\r\n                  |/ DHCPREQUEST  |  DHCPREQUEST\\ |\r\n                  |               |               |\r\n                  |               |     Commits configuration\r\n                  |               |               |\r\n                  |               | _____________/|\r\n                  |               |/ DHCPACK      |\r\n                  |               |               |\r\n                  |    Initialization complete    |\r\n                  |               |               |\r\n                  .               .               .\r\n                  .               .               .\r\n                  |               |               |\r\n                  |      Graceful shutdown        |\r\n                  |               |               |\r\n                  |               |\\ ____________ |\r\n                  |               | DHCPRELEASE  \\|\r\n                  |               |               |\r\n                  |               |        Discards lease\r\n                  |               |               |\r\n                  v               v               v\r\n     Figure 3: Timeline diagram of messages exchanged between DHCP\r\n               client and servers when allocating a new network address\r\n\r\n\r\n\r\n",
@@ -85,8 +85,8 @@
     "notes": "alignment",
     "submit_date": "2021-06-22",
     "submitter_name": "Rubén L.M.",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2022-05-29 22:07:27"
   }
 ]
