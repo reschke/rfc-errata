@@ -103,5 +103,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 6984,
+    "doc-id": "RFC3665",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.2,
+    "orig_text": "   F5 INVITE Proxy 1 -> Proxy 2\r\n\r\n   INVITE sip:bob@biloxi.example.com SIP/2.0\r\n   Via: SIP/2.0/TCP ss1.atlanta.example.com:5060;branch=z9hG4bK2d4790.1\r\n   Via: SIP/2.0/TCP client.atlanta.example.com:5060;branch=z9hG4bK74bf9\r\n    ;received=192.0.2.101\r\n   Max-Forwards: 69\r\n\r\n   F7 INVITE Proxy 2 -> Bob\r\n\r\n   INVITE sip:bob@client.biloxi.example.com SIP/2.0\r\n   Via: SIP/2.0/TCP ss2.biloxi.example.com:5060;branch=z9hG4bK721e4.1\r\n   Via: SIP/2.0/TCP ss1.atlanta.example.com:5060;branch=z9hG4bK2d4790.1\r\n    ;received=192.0.2.111\r\n   Via: SIP/2.0/TCP client.atlanta.example.com:5060;branch=z9hG4bK74bf9\r\n    ;received=192.0.2.101\r\n   Max-Forwards: 68\r\n\r\n   F16 ACK Proxy 1 -> Proxy 2\r\n\r\n   ACK sip:bob@client.biloxi.example.com SIP/2.0\r\n   Via: SIP/2.0/TCP ss1.atlanta.example.com:5060;branch=z9hG4bK2d4790.1\r\n   Via: SIP/2.0/TCP client.atlanta.example.com:5060;branch=z9hG4bK74b76\r\n    ;received=192.0.2.101\r\n   Max-Forwards: 69\r\n\r\n   F17 ACK Proxy 2 -> Bob\r\n\r\n   ACK sip:bob@client.biloxi.example.com SIP/2.0\r\n   Via: SIP/2.0/TCP ss2.biloxi.example.com:5060;branch=z9hG4bK721e4.1\r\n\r\n   Via: SIP/2.0/TCP ss1.atlanta.example.com:5060;branch=z9hG4bK2d4790.1\r\n    ;received=192.0.2.111\r\n   Via: SIP/2.0/TCP client.atlanta.example.com:5060;branch=z9hG4bK74b76\r\n    ;received=192.0.2.101\r\n   Max-Forwards: 68\r\n   From: Alice <sip:alice@atlanta.example.com>;tag=9fxced76sl\r\n",
+    "correct_text": "the branch id in the topmost Via header(s) in the F16 F17 messages shouldn't be the same as the via headers added in F5 F7 messages.\r\n\r\nthe ACK message shall only copy the same branch id in Via if it's for non-200 ok responses. \r\n\r\nthis example deviates from the description in RFC 3261 chapter 16.6",
+    "notes": "the branch id in the topmost Via header(s) in the F16 F17 messages shouldn't be the same as the via headers added in F5 F7 messages.\r\n\r\nthe ACK message shall only copy the same branch id in Via if it's for non-200 ok responses. \r\n\r\nthis example deviates from the description in RFC 3261 chapter 16.6",
+    "submit_date": "2022-05-31",
+    "submitter_name": "Xiaoxi Li",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
