@@ -62,16 +62,16 @@
   {
     "errata_id": 6575,
     "doc-id": "RFC8610",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.2.3",
-    "orig_text": "Where a major type of 6 (Tag) is used, the type\r\n   of the tagged item can be specified by appending it in parentheses.",
-    "correct_text": "Where a major type of 6 (Tag) is used, the type of the tagged item can be specified by appending it in parentheses. Additionally,\r\nfor major type 6 the value of the argument, not the additional info is what follows the dot.",
-    "notes": "The text at the top of page 50 is correct. The examples in 2.2.3 are also correct.",
+    "orig_text": "   Where a major type of 6 (Tag) is used, the type\r\n   of the tagged item can be specified by appending it in parentheses.",
+    "correct_text": "   Where a major type of 6 (Tag) is used, the type \r\n   of the tagged item can be specified by appending it in parentheses.\r\n   Additionally, for major type 6 the value of the argument, not the \r\n   additional info is what follows the dot.",
+    "notes": "The text at the top of page 50 is correct. The examples in 2.2.3 are also correct.\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/cbor/0fhPGMaG1-TPmKlgKnP7iA2lb9M/ for discussion in the working group.",
     "submit_date": "2021-05-06",
     "submitter_name": "Laurence Lundblade",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2022-06-01 15:03:14"
   }
 ]
