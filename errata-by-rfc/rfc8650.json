@@ -43,5 +43,20 @@
     "verifier_id": 166,
     "verifier_name": "Rob Wilton",
     "update_date": "2021-01-05 02:06:05"
+  },
+  {
+    "errata_id": 6985,
+    "doc-id": "RFC8650",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.1.1.",
+    "orig_text": "HTTP status code - 200\r\n\r\n{\r\n   \"id\": 22,\r\n   \"uri\": \"https://example.com/restconf/subscriptions/22\"\r\n}",
+    "correct_text": "HTTP status code - 200\r\n\r\n{\r\n   \"ietf-subscribed-notifications:output\": {\r\n      \"id\": 22,\r\n      \"ietf-restconf-subscribed-notifications:uri\":\r\n         \"https://example.com/restconf/subscriptions/22\"\r\n   }\r\n   \r\n}",
+    "notes": "Original text for Figure 4 does not comply with RFC8040, Section 3.6.2. Encoding Operation Resource Output Parameters.",
+    "submit_date": "2022-06-01",
+    "submitter_name": "Jernej Tuljak",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
