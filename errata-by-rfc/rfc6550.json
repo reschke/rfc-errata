@@ -178,5 +178,20 @@
     "verifier_id": 148,
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-04-22 13:55:13"
+  },
+  {
+    "errata_id": 6987,
+    "doc-id": "RFC6550",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.7.6",
+    "orig_text": "Reserved: 7-bit unused field.  The field MUST be initialized to zero\r\n      by the sender and MUST be ignored by the receiver.",
+    "correct_text": "Reserved: 8-bit unused field.  The field MUST be initialized to zero\r\n      by the sender and MUST be ignored by the receiver.",
+    "notes": "Figure 24 clearly shows that the Reserved field of DODAG Configuration options is 8 bits long.",
+    "submit_date": "2022-06-09",
+    "submitter_name": "Robbe Elsas",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
