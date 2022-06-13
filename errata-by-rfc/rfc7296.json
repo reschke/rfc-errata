@@ -94,14 +94,14 @@
     "doc-id": "RFC7296",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 3.1,
+    "section": 0.1,
     "orig_text": "o SPI Size (1 octet) - Length in octets of the SPI as defined by the\r\n IPsec protocol ID or zero if no SPI is applicable. For a\r\n notification concerning the IKE SA, the SPI Size MUST be zero and\r\n the field must be empty.\r\n",
     "correct_text": "o SPI Size (1 octet) - Length in octets of the SPI as defined by the\r\n IPsec protocol ID or zero if no SPI is applicable. For a\r\n notification concerning the IKE SA, the SPI Size MUST be zero and\r\n the SPI field must be empty.\r\n",
-    "notes": "the field must be empty -> the SPI field must be empty\r\n\r\nso for a notification concerning the IKE SA, the Protocol ID field still shall be zero?(According to the last sentence of Protocol ID section:\"If the SPI field is empty, this field MUST be sent as zero and MUST be ignored on receipt\".)",
+    "notes": "the field must be empty -> the SPI field must be empty\r\n\r\nadditional question: so for a notification concerning the IKE SA, the Protocol ID field still shall be zero?\r\n\r\nYes, for IKE SA notifications the SPI can be seen from the header, thus there is no point of repeating the SPIs in notify payload. The Protocol ID field of the notification payload indicates which type of SPI is inside the notification payload, thus if there is no SPI in there, then there is no point of having Protocol ID either.\r\n",
     "submit_date": "2022-04-21",
     "submitter_name": "warren.wang",
-    "verifier_id": 2,
+    "verifier_id": 173,
     "verifier_name": null,
-    "update_date": "2022-04-21 14:40:26"
+    "update_date": "2022-06-12 17:52:34"
   }
 ]
