@@ -43,5 +43,20 @@
     "verifier_id": 124,
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6998,
+    "doc-id": "RFC1320",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "A.3",
+    "orig_text": "/* MD4 finalization. Ends an MD4 message-digest operation, writing the\r\n     the message digest and zeroizing the context.\r\n */",
+    "correct_text": "/* MD4 finalization. Ends an MD4 message-digest operation, writing the\r\n   message digest and zeroizing the context.\r\n */",
+    "notes": "\"the the\" grammar mistake",
+    "submit_date": "2022-06-18",
+    "submitter_name": "Alok Menghrajani",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
