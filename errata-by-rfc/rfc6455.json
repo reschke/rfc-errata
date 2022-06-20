@@ -208,5 +208,20 @@
     "verifier_id": 2,
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6997,
+    "doc-id": "RFC6455",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3, 9.1",
+    "orig_text": "      extension-param = token [ \"=\" (token | quoted-string) ]\r\n           ; When using the quoted-string syntax variant, the value\r\n           ; after quoted-string unescaping MUST conform to the\r\n           ; 'token' ABNF.",
+    "correct_text": "      extension-param = token [ \"=\" (token | quoted-string) ]\r\n",
+    "notes": "The text reads as if any quoted-string which was supplied as a value has to follow the same rules as a token. That precludes the use of any token separators inside a quoted-string which is the whole reason why quoted-string exists as explained in RFC 2616:\r\n\r\n   Many HTTP/1.1 header field values consist of words separated by LWS\r\n   or special characters. These special characters MUST be in a quoted\r\n   string to be used within a parameter value (as defined in section\r\n   3.6).",
+    "submit_date": "2022-06-17",
+    "submitter_name": "Daniel Egger",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
