@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7002,
+    "doc-id": "RFC9173",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "A.4.4.1",
+    "orig_text": "This BCB has two targets: the payload block and BIB.",
+    "correct_text": "This BCB has two targets: the payload block and BIB. \r\n\r\nNOTE: This example implies using a single Initialization Vector (IV) for\r\ntwo separate encryptions (a BIB and the payload). This violates the \r\nrequirement in Section 4.3.1 that the \"initialization vector ... MUST \r\nNOT be reused for multiple encryptions using the same encryption key.\". \r\nWhen using the BCB-AES-GCM security context containing a specified \r\nInitialization Vector, each BCB should have only one security target.  \r\n",
+    "notes": "This is listed as \"editorial\" and not technical because the error appears in a non-normative portion of the document.",
+    "submit_date": "2022-06-21",
+    "submitter_name": "Ed Birrane",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
