@@ -58,5 +58,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 6999,
+    "doc-id": "RFC6787",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 9.2,
+    "orig_text": "S->C:   MRCP/2.0 ... INTERPRETATION-COMPLETE 543266 200 COMPLETE\r\n           Channel-Identifier:32AECB23433801@speechrecog\r\n           Completion-Cause:000 success\r\n           Content-Type:application/nlsml+xml\r\n           Content-Length:...\r\n\r\n           <?xml version=\"1.0\"?>\r\n           <result xmlns=\"urn:ietf:params:xml:ns:mrcpv2\"\r\n                   xmlns:ex=\"http://www.example.com/example\"\r\n                   grammar=\"session:request1@form-level.store\">\r\n               <interpretation>\r\n                   <instance name=\"Person\">\r\n                       <ex:Person>\r\n                           <ex:Name> Andre Roy </ex:Name>\r\n                       </ex:Person>\r\n                   </instance>\r\n                   <input>   may I speak to Andre Roy </input>\r\n               </interpretation>\r\n           </result>",
+    "correct_text": "S->C:   MRCP/2.0 ... INTERPRETATION-COMPLETE 543266 COMPLETE\r\n           Channel-Identifier:32AECB23433801@speechrecog\r\n           Completion-Cause:000 success\r\n           Content-Type:application/nlsml+xml\r\n           Content-Length:...\r\n\r\n           <?xml version=\"1.0\"?>\r\n           <result xmlns=\"urn:ietf:params:xml:ns:mrcpv2\"\r\n                   xmlns:ex=\"http://www.example.com/example\"\r\n                   grammar=\"session:request1@form-level.store\">\r\n               <interpretation>\r\n                   <instance name=\"Person\">\r\n                       <ex:Person>\r\n                           <ex:Name> Andre Roy </ex:Name>\r\n                       </ex:Person>\r\n                   </instance>\r\n                   <input>   may I speak to Andre Roy </input>\r\n               </interpretation>\r\n           </result>",
+    "notes": "event-line does *not* include a status-code.",
+    "submit_date": "2022-06-20",
+    "submitter_name": "Andreas Häber",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2022-06-20 14:00:46"
   }
 ]
