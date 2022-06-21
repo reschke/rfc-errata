@@ -1,17 +1,1 @@
-[
-  {
-    "errata_id": 6996,
-    "doc-id": "RFC6995",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "global",
-    "orig_text": "10.1.  General Policy\",\r\n\"10.3.  Rights and Permissions\",\r\n\"10.3.1.  All Contributions\",\r\n\"10.3.2. Standards Track Documents\", or\r\n\"10.4.  Notices\"",
-    "correct_text": "\"10.1   General Policy\",\r\n\"10.3   Rights and Permissions\",\r\n\"10.3.1   All Contributions\",\r\n\"10.3.2  Standards Track Documents\", or\r\n\"10.4   Notices\"",
-    "notes": "When a top-level section is introduced, its number is followed by a period. For example, section 1 begins with \"1. INTRODUCTION\", and section 14 begins with \"14. DEFINITIONS OF TERMS\". This is consistent.\r\n\r\nWhen a subsection is introduced, its number usually not followed by a period, but it sometimes is. For example, section 3.3 begins with \"3.3 Requirement Levels\", but section 10.1 begins with \"10.1. General Policy\". This is inconsistent. These inconsistencies are also in the Table of Contents.\r\n\r\n--- VERIFIER NOTES ---\r\nThese slight formatting inconsistencies do not cause any confusion for a reader. If this document is updated, they will be automatically corrected through the use of the xml2rfc toolchain, so this erratum does not need to be held for document update.\r\n\r\n--VERIFIER NOTES--",
-    "submit_date": "2022-06-17",
-    "submitter_name": "keep",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
-  }
-]
+[]
