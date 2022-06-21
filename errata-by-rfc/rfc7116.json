@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7000,
+    "doc-id": "RFC7116",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 3.2,
+    "orig_text": "Section 3.2:\r\nThe CBHE specification [RFC6260] defines concepts of 'Node Number' and 'Service Number' that require registries managed by IANA.\r\n\r\nSection 3.2.1:\r\nIANA has set up a registry to manage CBHE Node Numbers.  This registry, titled \"CBHE Node Numbers\", has been added to the list of registries associated with the Bundle Protocol.\r\n\r\nSection 3.2.2:\r\nIANA has set up a registry to manage CBHE Service Numbers.  This registry, titled   \"CBHE Service Numbers\", has been added to the list of registries associated with the Bundle Protocol.\r\n\r\n",
+    "correct_text": "Section 3.2:\r\nThe CBHE specification [RFC6260] defines concepts of 'Node Number' and 'Service Number' associated with the IPN naming scheme that require registries managed by IANA.\r\n\r\nSection 3.2.1:\r\nIANA has set up a registry to manage IPN Scheme Node Numbers.  This registry, titled \"IPN Node Numbers\", has been added to the list of registries associated with the Bundle Protocol.\r\n\r\nSection 3.2.2:\r\nIANA has set up a registry to manage IPN Scheme Service Numbers.  This registry, titled   \"IPN Service Numbers\", has been added to the list of registries associated with the Bundle Protocol.\r\n",
+    "notes": "The Compressed Bundle Header Encoding (CBHE) RFC6260 defines node numbers and service numbers for the IPN naming scheme. Therefore, the registries created by RFC7116 should have been titled \"IPN Node Numbers\" and \"IPN Service Numbers\" instead of \"CBHE Node Numbers\" and \"CBHE Service Numbers\". \r\n\r\nThe IANA registries should be renamed, replacing CBHE with IPN to reflect this. This clarification is particularly important as BPv7 (RFC9171) can use the IPN naming scheme but does not have a concept of CBHE.",
+    "submit_date": "2022-06-21",
+    "submitter_name": "Ed Birrane",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
