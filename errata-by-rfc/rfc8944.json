@@ -2,7 +2,7 @@
   {
     "errata_id": 6951,
     "doc-id": "RFC8944",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": 4,
     "orig_text": "augment \"/nw:networks/nw:network\" {\r\n when '/nw:networks/nw:network/nw:network-types/l2t:l2-topology' {\r\n   description\r\n     \"Augmentation parameters apply only for networks\r\n      with L2 topology.\";\r\n }\r\n description\r\n   \"Configuration parameters for the L2 network\r\n    as a whole.\";\r\n uses l2-topology-attributes;\r\n}\r\naugment \"/nw:networks/nw:network/nw:node\" {\r\n when '/nw:networks/nw:network/nw:network-types/l2t:l2-topology' {\r\n   description\r\n     \"Augmentation parameters apply only for networks\r\n      with L2 topology.\";\r\n }\r\n description\r\n   \"Configuration parameters for L2 at the node\r\n    level.\";\r\n uses l2-node-attributes;\r\n}\r\naugment \"/nw:networks/nw:network/nt:link\" {\r\n when '/nw:networks/nw:network/nw:network-types/l2t:l2-topology' {\r\n   description\r\n     \"Augmentation parameters apply only for networks\r\n      with L2 topology.\";\r\n }\r\n description\r\n   \"Augments L2 topology link information.\";\r\n uses l2-link-attributes;\r\n}\r\naugment \"/nw:networks/nw:network/nw:node/nt:termination-point\" {\r\n when '/nw:networks/nw:network/nw:network-types/l2t:l2-topology' {\r\n   description\r\n     \"Augmentation parameters apply only for networks\r\n      with L2 topology.\";\r\n }\r\n description\r\n   \"Augments L2 topology termination point information.\";\r\n uses l2-termination-point-attributes;\r\n}",
@@ -10,8 +10,8 @@
     "notes": "With absolute XPaths on the augmentations, the meaning becomes “augment nw:network with l2-topology-attributes if ANY network in the list of networks has l2t:l2-topology”. \r\nWith that meaning, the following json snippet passes validation when it should not. \r\nIt has 2 instances of ietf-network, one at L2 and one at L3. L2 attributes are WRONGLY added to the L3 network and L3 node.\r\n\r\n{\r\n  \"ietf-network:networks\": {\r\n    \"network\": [\r\n      {\r\n        \"network-id\": \"l2-network\",\r\n        \"network-types\": {\r\n          \"ietf-l2-topology:l2-topology\": {}\r\n        },\r\n        \"node\": [\r\n          {\r\n            \"node-id\": \"l2-node\"\r\n          }\r\n        ]\r\n      },\r\n      {\r\n        \"network-id\": \"l3-network\",\r\n        \"network-types\": {\r\n          \"ietf-l3-unicast-topology:l3-unicast-topology\": {}\r\n        },\r\n        \"ietf-l2-topology:l2-topology-attributes\": {\r\n          \"name\": \"L2Topology\"\r\n        },\r\n        \"node\": [\r\n          {\r\n            \"node-id\": \"l3-node\",\r\n            \"ietf-l2-topology:l2-node-attributes\" : {\r\n              \"name\": \"l2-node-name\",\r\n              \"management-address\": [\r\n                \"1.1.1.1\"\r\n              ],\r\n              \"management-mac\": \"11:22:33:aa:bb:cc\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n}\r\n\r\nWith relative XPaths as suggested, the meaning becomes “augment only if THIS network has l2t:l2-topology” and the json snippet above fails validation, as it should.",
     "submit_date": "2022-05-03",
     "submitter_name": "Mohammed Riyas Valiyapalathingal",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-06-22 13:23:03"
   }
 ]
