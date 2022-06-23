@@ -553,5 +553,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-02-09 14:45:02"
+  },
+  {
+    "errata_id": 7003,
+    "doc-id": "RFC8446",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.6.1.",
+    "orig_text": "At any time after the server has received the client Finished message, it MAY send a NewSessionTicket message.",
+    "correct_text": "At any time after the server has received both a \"psk_key_exchange_modes\" extension and a Finished message, it MAY send a NewSessionTicket message.\r\n\r\n",
+    "notes": "Section 4.2.9. demands \r\n\r\nIn order to use PSKs, clients MUST also send a \"psk_key_exchange_modes\" extension.\r\n\r\nHence, an additional restriction is needed in Section 4.6.1.",
+    "submit_date": "2022-06-22",
+    "submitter_name": "Ben Smyth",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
