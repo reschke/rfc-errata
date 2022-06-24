@@ -73,5 +73,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7005,
+    "doc-id": "RFC7616",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.9.1",
+    "orig_text": "uri=\"/dir/index.html\",",
+    "correct_text": "uri=\"http://www.example.org/dir/index.html\",",
+    "notes": "[1] In Section 3.4, uri -> The Effective Request URI (Section 5.5 of [RFC7230]) of the HTTP request;\r\n\r\n[2] In Section 5.5 of [RFC7230]: The components of the effective request URI, once determined as above, can be combined into absolute-URI form by concatenating the scheme, \"://\", authority, and combined path and query component\r\n\r\n[3] uri=\"/dir/index.html\" is an absolute-path, not an Effective Request URI",
+    "submit_date": "2022-06-23",
+    "submitter_name": "Patrick Ni",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
