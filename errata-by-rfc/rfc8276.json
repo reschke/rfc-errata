@@ -13,5 +13,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7004,
+    "doc-id": "RFC8276",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "8.4.5",
+    "orig_text": "   | LISTXATTRS  | NFS4ERR_ACCESS, NFS4ERR_DEADSESSION, NFS4ERR_DELAY, |\r\n   |             | NFS4ERR_INVAL, NFS4ERR_IO, NFS4ERR_MOVED,           |\r\n   |             | NFS4ERR_NAMETOOLONG, NFS4ERR_NOFILEHANDLE,          |\r\n   |             | NFS4ERR_NOTSUPP, NFS4ERR_NOXATTR,                   |\r\n   |             | NFS4ERR_OP_NOT_IN_SESSION, NFS4ERR_PERM,            |\r\n   |             | NFS4ERR_REP_TOO_BIG, NFS4ERR_REP_TOO_BIG_TO_CACHE,  |\r\n   |             | NFS4ERR_REQ_TOO_BIG, NFS4ERR_RETRY_UNCACHED_REP,    |\r\n   |             | NFS4ERR_SERVERFAULT, NFS4ERR_STALE,  ",
+    "correct_text": "   | LISTXATTRS  | NFS4ERR_ACCESS, NFS4ERR_DEADSESSION, NFS4ERR_DELAY, |\r\n   |             | NFS4ERR_INVAL, NFS4ERR_IO, NFS4ERR_MOVED,           |\r\n   |             | NFS4ERR_NAMETOOLONG, NFS4ERR_NOFILEHANDLE,          |\r\n   |             | NFS4ERR_NOTSUPP, NFS4ERR_NOXATTR,                   |\r\n   |             | NFS4ERR_OP_NOT_IN_SESSION, NFS4ERR_PERM,            |\r\n   |             | NFS4ERR_REP_TOO_BIG, NFS4ERR_REP_TOO_BIG_TO_CACHE,  |\r\n   |             | NFS4ERR_REQ_TOO_BIG, NFS4ERR_RETRY_UNCACHED_REP,    |\r\n   |             | NFS4ERR_SERVERFAULT, NFS4ERR_STALE, NFS4ERR_TOOSMALL",
+    "notes": "Section 8.4.3.3. DESCRIPTION says about NFS4ERR_TOOSMALL status code:\r\n\r\n\"If the server is unable\r\n   to return a single xattr name within the maxcount limit, the error\r\n   NFS4ERR_TOOSMALL will be returned to the client.\"\r\n   \r\nBut this status code not specified  in section 8.4.5.  Valid Errors for LISTXATTRS operation.",
+    "submit_date": "2022-06-23",
+    "submitter_name": "Yuri Radchenko",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
