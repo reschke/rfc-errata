@@ -133,5 +133,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7006,
+    "doc-id": "RFC6030",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 4.1,
+    "orig_text": "      ValueMAC:  The <ValueMAC> element is populated with a Message\r\n         Authentication Code (MAC) generated from the encrypted value in\r\n         case the encryption algorithm does not support integrity\r\n         checks.  The example shown in Figure 2 illustrates the usage of\r\n         the <Data> element with two child elements, namely <Secret> and\r\n         <Counter>.  Both elements carry a plaintext value within the\r\n         <PlainValue> child element.\r\n",
+    "correct_text": "      ValueMAC:  The <ValueMAC> element is populated with a Message\r\n         Authentication Code (MAC) generated from the encrypted value in\r\n         case the encryption algorithm does not support integrity\r\n         checks.\r\n\r\n      The example shown in Figure 2 illustrates the usage of the <Data>\r\n      element with one child element <Secret>.  This element carries a\r\n      plaintext value within the <PlainValue> child element.\r\n",
+    "notes": "There are two issues:\r\n- the comment about the example should be in a standalone paragraph and not as a continuation of the explanation for ValueMAC\r\n-  the example in Figure 2 does *not* include <Counter>. The correction might be done to Figure 2, adding an XML fragment for <Counter> inside <Data>.",
+    "submit_date": "2022-06-26",
+    "submitter_name": "Flavio Poletti",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
