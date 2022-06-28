@@ -28,5 +28,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7007,
+    "doc-id": "RFC8276",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.4.5",
+    "orig_text": "   | LISTXATTRS  | NFS4ERR_ACCESS, NFS4ERR_DEADSESSION, NFS4ERR_DELAY, |\r\n   |             | NFS4ERR_INVAL, NFS4ERR_IO, NFS4ERR_MOVED,           |\r\n   |             | NFS4ERR_NAMETOOLONG, NFS4ERR_NOFILEHANDLE,          |\r\n   |             | NFS4ERR_NOTSUPP, NFS4ERR_NOXATTR,                   |\r\n   |             | NFS4ERR_OP_NOT_IN_SESSION, NFS4ERR_PERM,            |\r\n   |             | NFS4ERR_REP_TOO_BIG, NFS4ERR_REP_TOO_BIG_TO_CACHE,  |\r\n   |             | NFS4ERR_REQ_TOO_BIG, NFS4ERR_RETRY_UNCACHED_REP,    |\r\n   |             | NFS4ERR_SERVERFAULT, NFS4ERR_STALE,                 |\r\n   |             | NFS4ERR_TOO_MANY_OPS, NFS4ERR_WRONG_TYPE            |",
+    "correct_text": "   | LISTXATTRS  | NFS4ERR_ACCESS, NFS4ERR_DEADSESSION, NFS4ERR_DELAY, |\r\n   |             | NFS4ERR_INVAL, NFS4ERR_IO, NFS4ERR_MOVED,           |\r\n   |             | NFS4ERR_NAMETOOLONG, NFS4ERR_NOFILEHANDLE,          |\r\n   |             | NFS4ERR_NOTSUPP, NFS4ERR_NOXATTR,                   |\r\n   |             | NFS4ERR_OP_NOT_IN_SESSION, NFS4ERR_PERM,            |\r\n   |             | NFS4ERR_REP_TOO_BIG, NFS4ERR_REP_TOO_BIG_TO_CACHE,  |\r\n   |             | NFS4ERR_REQ_TOO_BIG, NFS4ERR_RETRY_UNCACHED_REP,    |\r\n   |             | NFS4ERR_SERVERFAULT, NFS4ERR_STALE,                 |\r\n   |             | NFS4ERR_TOO_MANY_OPS, NFS4ERR_WRONG_TYPE,           |\r\n   |             | NFS4ERR_BAD_COOKIE                                  |",
+    "notes": "rfc says \r\n\"The handling of a cookie is similar to that of the READDIR operation.\" \r\n(8.4.3.4.)\r\n\r\nIt would be useful to include NFS4ERR_BAD_COOKIE status code into the list of LISTXATTRS statuses, 8.4.5.  Valid Errors.\r\n\r\nNFS for Linux included this status code. \r\nsee https://bugzilla.redhat.com/show_bug.cgi?id=2101371",
+    "submit_date": "2022-06-27",
+    "submitter_name": "Yuri Radchenko",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
