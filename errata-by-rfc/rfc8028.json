@@ -13,5 +13,35 @@
     "verifier_id": 2,
     "verifier_name": null,
     "update_date": "2020-04-01 08:15:08"
+  },
+  {
+    "errata_id": 7009,
+    "doc-id": "RFC8028",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Abstract",
+    "orig_text": "However, the selection of the source address for a\r\npacket is done before the first-hop router for that packet is chosen.",
+    "correct_text": "However, the selection of the source address for a\r\npacket is done in some cases before the first-hop router\r\nfor that packet is chosen.",
+    "notes": "This change recognizes the fact that while server applications commonly\r\nbind to a specific source address before sending a packet, client\r\napplications commonly do not do so. (Also see following erratum.)",
+    "submit_date": "2022-06-30",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 7010,
+    "doc-id": "RFC8028",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 3.3,
+    "orig_text": "There is an interaction with Default Address Selection [RFC6724].",
+    "correct_text": "There is an interaction with Default Address Selection [RFC6724] in the\r\ncase that an application does not explicitly specify the source address\r\nto be used.",
+    "notes": "This change recognizes the fact that while server applications commonly\r\nbind to a specific source address before sending a packet, client\r\napplications commonly do not do so. (See previous erratum)",
+    "submit_date": "2022-06-30",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
