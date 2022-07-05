@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7012,
+    "doc-id": "RFC8877",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4.2,
+    "orig_text": "   Wraparound:\r\n      This time format wraps around every 2^(32) seconds, which is\r\n      roughly 136 years.  The next wraparound will occur in the year\r\n      2036.\r\n",
+    "correct_text": "   Wraparound:\r\n      This time format wraps around every 2^(32) seconds, which is\r\n      roughly 136 years.  The next wraparound will occur in the year\r\n      2106.\r\n",
+    "notes": "1970+136=2106, not 2036",
+    "submit_date": "2022-07-04",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
