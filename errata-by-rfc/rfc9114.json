@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7014,
+    "doc-id": "RFC9114",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3.1",
+    "orig_text": "   \":path\":  Contains the path and query parts of the target URI (the\r\n      \"path-absolute\" production and optionally a ? character (ASCII\r\n      0x3f) followed by the \"query\" production; see Sections 3.3 and 3.4\r\n      of [URI].",
+    "correct_text": "   \":path\":  Contains the path and query parts of the target URI (the\r\n      \"absolute-path\" production and optionally a ? character (ASCII\r\n      0x3f) followed by the \"query\" production; see Section 4.1 of\r\n      [HTTP] and Section 3.4 of [URI].",
+    "notes": "There is a conflict between RFC 9114 and RFCs 9110,9112,9113. RFC 9114 disallows paths that start with \"//\" whereas the others allow them. Research seems to indicate that this was not intentional. More details on the mailing list discussion: https://lists.w3.org/Archives/Public/ietf-http-wg/2022JulSep/0014.html",
+    "submit_date": "2022-07-06",
+    "submitter_name": "David Schinazi",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
