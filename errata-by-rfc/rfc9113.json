@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7013,
+    "doc-id": "RFC9113",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 6.1,
+    "orig_text": "      |  Note: An endpoint that learns of stream closure after sending\r\n      |  all data can close a stream by sending a STREAM frame with a\r\n      |  zero-length Data field and the END_STREAM flag set.  This is\r\n      |  only possible if the endpoint does not send trailers, as the\r\n      |  END_STREAM flag appears on a HEADERS frame in that case; see\r\n      |  Section 8.1.",
+    "correct_text": "      |  Note: An endpoint that learns of stream closure after sending\r\n      |  all data can close a stream by sending a DATA frame with a\r\n      |  zero-length Data field and the END_STREAM flag set.  This is\r\n      |  only possible if the endpoint does not send trailers, as the\r\n      |  END_STREAM flag appears on a HEADERS frame in that case; see\r\n      |  Section 8.1.",
+    "notes": "Since STREAM frame is not defined in HTTP/2, I assume this is a DATA frame. This is probably a typo, possibly confused with the QUIC specification.",
+    "submit_date": "2022-07-06",
+    "submitter_name": "Moto Ishizawa",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-07-06 13:33:28"
+  }
+]
