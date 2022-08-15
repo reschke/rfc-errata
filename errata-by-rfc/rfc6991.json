@@ -28,5 +28,20 @@
     "verifier_id": 132,
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7062,
+    "doc-id": "RFC6991",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": 4,
+    "orig_text": "     typedef ipv4-address-no-zone {\r\n       type inet:ipv4-address {\r\n         pattern '[0-9\\.]*';\r\n       }\r\n       description\r\n         \"An IPv4 address without a zone index.  This type, derived from\r\n          ipv4-address, may be used in situations where the zone is\r\n          known from the context and hence no zone index is needed.\";\r\n     }",
+    "correct_text": "     typedef ipv4-address-no-zone {\r\n       type inet:ipv4-address {\r\n         pattern '(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.){3}'\r\n         +  '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])';\r\n       }\r\n       description\r\n         \"An IPv4 address without a zone index.  This type, derived from\r\n          ipv4-address, may be used in situations where the zone is\r\n          known from the context and hence no zone index is needed.\";\r\n     }",
+    "notes": "As per RFC 4001, dotted decimal format of IPv4 address is typically written in decimal digits, formatted as four 8-bit fields that are separated by periods.\n --VERIFIER NOTES-- \nSince the ipv4-address-no-zone type is derived from the ipv4-address\r\ntype and the ipv4-address type has the detailed pattern, there is no\r\nneed to repeat the details. An ipv4-address value has to satisfy both\r\nthe ipv4-address-no-zone pattern and the ipv4-address pattern.\r\n",
+    "submit_date": "2022-07-29",
+    "submitter_name": "Mazhar Rana",
+    "verifier_id": 166,
+    "verifier_name": "Rob Wilton",
+    "update_date": "2022-07-29 15:43:07"
   }
 ]
