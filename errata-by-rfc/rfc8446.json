@@ -568,5 +568,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7073,
+    "doc-id": "RFC8446",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4.4,
+    "orig_text": "These messages are encrypted under keys derived from the [sender]_handshake_traffic_secret.",
+    "correct_text": "These messages are encrypted under keys derived from the [sender]_handshake_traffic_secret, except for post-handshake authentication",
+    "notes": "There's an exception",
+    "submit_date": "2022-08-06",
+    "submitter_name": "Ben Smyth",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
