@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7081,
+    "doc-id": "RFC8754",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.1",
+    "orig_text": "A reduced SRH does not contain the first segment of the related SR\r\nPolicy (the first segment is the one already in the DA of the IPv6\r\nheader), and the Last Entry field is set to n-2, where n is the\r\nnumber of elements in the SR Policy.\r\n",
+    "correct_text": "A reduced SRH does not contain the first segment of the related SR\r\nPolicy (the first segment is the one already in the DA of the IPv6\r\nheader), and the Last Entry field is set to n-2, where n is the\r\nnumber of elements in the SR Policy.\r\n\r\nWhen an SRH includes TLVs and only one 128-bit Segment, the reduced\r\nSRH MUST NOT be used to avoid errors of SRH TLV processing defined\r\nin section 2.1. \r\n",
+    "notes": "When only one single Segment is included in the SRH, the last entry will be 0 forever, so a segment endpoint node cannot specify whether the last Segment is included or removed from the SRH. \r\n\r\nAs defined in section 2.1, only when the header length of SRH larger then (0+1)*2, the TLVs will be processed. \r\n1.\tWhen the Segment is removed, Segment Lefts = Last Entry = 0, each segment endpoint node will skip the bytes 8-16, and then process the following bytes following the TLV processing rules, which will cause errors.\r\n2.\tWhen the segment is not removed, Segment Lefts = Last Entry = 0, each segment endpoint will process the TLVs correctly from byte 8+16. \r\n\r\nChoosing option 2 can avoid processing error of SRH TLVs and be compatible with the current hardware implementation. Thus option 1 MUST be avoid in implementation.",
+    "submit_date": "2022-08-11",
+    "submitter_name": "Tianran Zhou",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
