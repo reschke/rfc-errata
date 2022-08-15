@@ -208,5 +208,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7019,
+    "doc-id": "RFC3986",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "B",
+    "orig_text": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?",
+    "correct_text": "^(([^:/?#]+):#)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?",
+    "notes": "Added the missing '#\" delimiter.\n --VERIFIER NOTES-- \nIn rejecting this Errata report I note that the reported error is not an error, but a deliberate decision of the authors and working group. The change, therefore, if it is to be applied needs to be achieved through a consensus document and definitely not via an errata report.",
+    "submit_date": "2022-07-10",
+    "submitter_name": "Tim McSweeney",
+    "verifier_id": 170,
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2022-07-12 03:42:42"
   }
 ]
