@@ -17,7 +17,7 @@
   {
     "errata_id": 7011,
     "doc-id": "RFC7595",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": 3,
     "orig_text": "[RFC3986] defines the overall syntax for URIs as:\r\n\r\n               URI = scheme \":\" hier-part [ \"?\" query ] [ \"#\" fragment ]\r\n\r\n   A scheme definition cannot override the overall syntax for URIs. ",
@@ -25,8 +25,8 @@
     "notes": "There are two instances here where [RFC3986] is incorrectly referenced by using the word 'overall' and should instead be replaced with the term 'generic' as it is uses the identical example from https://datatracker.ietf.org/doc/html/rfc3986#section-3",
     "submit_date": "2022-07-01",
     "submitter_name": "Timothy McSweeney",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 164,
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2022-08-10 14:02:21"
   }
 ]
