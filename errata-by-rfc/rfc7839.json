@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7016,
+    "doc-id": "RFC7839",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.4.1",
+    "orig_text": "   Length\r\n      4\r\n\r\n   Operator-Identifier\r\n      The Operator-Identifier is a variable-length Private Enterprise\r\n      Number (PEN) ...",
+    "correct_text": "   Length\r\n      4\r\n\r\n   Operator-Identifier\r\n      The Operator-Identifier is a 32-bit Private Enterprise\r\n      Number (PEN) ...",
+    "notes": "Either the length is 4, and the contents are 32-bits.  Or the length is >1, and the length is variable.\r\n\r\nMy guess is that the intention is to have a fixed length.  The variable-length encoding from RFC 6757 is likely not needed here.\r\n\r\n\r\n*** verifier note ***\r\nSee Bernie Volz's reply in https://mailarchive.ietf.org/arch/msg/dhcwg/Y4yaYwaqxS0B2nWw5f4xER2fSMk/",
+    "submit_date": "2022-07-07",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": 161,
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2022-07-12 05:31:43"
+  }
+]
