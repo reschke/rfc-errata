@@ -73,5 +73,35 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-04-07 13:09:47"
+  },
+  {
+    "errata_id": 7082,
+    "doc-id": "RFC5880",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.7.3",
+    "orig_text": "Otherwise (bfd.AuthSeqKnown is 0), bfd.AuthSeqKnown MUST be set to\r\n1, and bfd.RcvAuthSeq MUST be set to the value of the received\r\nSequence Number field.\r\n\r\nReplace the contents of the Auth Key/Digest field with the\r\nauthentication key selected by the received Auth Key ID field.  If\r\nthe MD5 digest of the entire BFD Control packet is equal to the\r\nreceived value of the Auth Key/Digest field, the received packet\r\nMUST be accepted.  Otherwise (the digest does not match the Auth\r\nKey/Digest field), the received packet MUST be discarded.",
+    "correct_text": "Replace the contents of the Auth Key/Digest field with the\r\nauthentication key selected by the received Auth Key ID field.  If\r\nthe MD5 digest of the entire BFD Control packet is not equal to the\r\nreceived value of the Auth Key/Digest field, the received packet\r\nMUST be discarded.\r\n\r\nOtherwise, the packet MUST be accepted, bfd.AuthSeqKnown MUST be set to\r\n1, and bfd.RcvAuthSeq MUST be set to the value of the received\r\nSequence Number field.",
+    "notes": "1. Don't manipulate bfd.AuthSeqKnown and bfd.RcvAuthSeq before Auth Key/Digest check.\r\n2. Explicitly mention what bfd.AuthSeqKnown and bfd.RcvAuthSeq must be set to in both cases (bfd.AuthSeqKnown is 0 and bfd.AuthSeqKnown is 1).\r\n\r\nBased on email exchange: https://mailarchive.ietf.org/arch/msg/rtg-bfd/lDxFfNpqo4kwuNEUY0AbjMBb8JU/",
+    "submit_date": "2022-08-12",
+    "submitter_name": "Glebs Ivanovskis",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 7083,
+    "doc-id": "RFC5880",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.7.4",
+    "orig_text": "Otherwise (bfd.AuthSeqKnown is 0), bfd.AuthSeqKnown MUST be set to\r\n1, bfd.RcvAuthSeq MUST be set to the value of the received\r\nSequence Number field, and the received packet MUST be accepted.\r\n\r\nReplace the contents of the Auth Key/Hash field with the\r\nauthentication key selected by the received Auth Key ID field.  If\r\nthe SHA1 hash of the entire BFD Control packet is equal to the\r\nreceived value of the Auth Key/Hash field, the received packet\r\nMUST be accepted.  Otherwise (the hash does not match the Auth\r\nKey/Hash field), the received packet MUST be discarded.",
+    "correct_text": "Replace the contents of the Auth Key/Hash field with the\r\nauthentication key selected by the received Auth Key ID field.  If\r\nthe SHA1 hash of the entire BFD Control packet is not equal to the\r\nreceived value of the Auth Key/Hash field, the received packet\r\nMUST be discarded.\r\n\r\nOtherwise, the packet MUST be accepted, bfd.AuthSeqKnown MUST be set to\r\n1, and bfd.RcvAuthSeq MUST be set to the value of the received\r\nSequence Number field.",
+    "notes": "1. Don't manipulate bfd.AuthSeqKnown and bfd.RcvAuthSeq before Auth Key/Hash check.\r\n2. Explicitly mention what bfd.AuthSeqKnown and bfd.RcvAuthSeq must be set to in both cases (bfd.AuthSeqKnown is 0 and bfd.AuthSeqKnown is 1).\r\n\r\nBased on email exchange: https://mailarchive.ietf.org/arch/msg/rtg-bfd/lDxFfNpqo4kwuNEUY0AbjMBb8JU/",
+    "submit_date": "2022-08-12",
+    "submitter_name": "Glebs Ivanovskis",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
