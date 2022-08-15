@@ -343,5 +343,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2022-05-04 14:35:37"
+  },
+  {
+    "errata_id": 7021,
+    "doc-id": "RFC7950",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 11,
+    "orig_text": "A definition in a published module may be revised in any of the\r\n   following ways:\r\n\r\n   o  An \"enumeration\" type may have new enums added, provided the old\r\n      enums's values do not change.  Note that inserting a new enum\r\n      before an existing enum or reordering existing enums will result\r\n      in new values for the existing enums, unless they have explicit\r\n      values assigned to them.",
+    "correct_text": "A definition in a published module may be revised in any of the\r\n   following ways:\r\n\r\n   o  The \"revision-date\" substatement of an existing \"import\" statement \r\n      may get a changed argument.\r\n\r\n\r\n   o  An \"enumeration\" type may have new enums added, provided the old\r\n      enums's values do not change.  Note that inserting a new enum\r\n      before an existing enum or reordering existing enums will result\r\n      in new values for the existing enums, unless they have explicit\r\n      values assigned to them.",
+    "notes": "In section 5.1.1 it is stated that a module may be republished with an updated \"import\" \r\nstatement. This is needed, otherwise a user of the revision-date statement (inside an import) would never be able to migrate to a newer version of the imported module.\r\n\r\nHowever in section 11.  Updating a Module   this change is not listed in the list of allowed updates, thus it is forbidden.",
+    "submit_date": "2022-07-12",
+    "submitter_name": "Balazs Lengyel",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
