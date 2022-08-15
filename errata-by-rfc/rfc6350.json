@@ -403,5 +403,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7061,
+    "doc-id": "RFC6350",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8,
+    "orig_text": "    TEL;VALUE=uri;TYPE=\"work,voice\";PREF=1:tel:+1-418-656-9254;ext=102\r\n    TEL;VALUE=uri;TYPE=\"work,cell,voice,video,text\":tel:+1-418-262-6501\r\n",
+    "correct_text": "    TEL;VALUE=uri;TYPE=work,voice;PREF=1:tel:+1-418-656-9254;ext=102\r\n    TEL;VALUE=uri;TYPE=work,cell,voice,video,text:tel:+1-418-262-6501\r\n",
+    "notes": "While the given TYPE parameters are grammatically correct, in their current form they don't portray what I believe to be the intent of the example.  In their current form, both TYPE parameters have just a single value because of the quoting.  Since TYPE can be multi-valued, I believe the intent of the example was for these parameters to have 3 and 5 values respectively which is accomplished by the corrected text.\r\n\r\nUnfortunately, even though examples are only informative (the ABNF is always normative), the mistake in the example has led to implementations in the wild that perform the same quoting but also assume that the parameter should be treated as multi-valued.",
+    "submit_date": "2022-07-29",
+    "submitter_name": "Ken Murchison",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
