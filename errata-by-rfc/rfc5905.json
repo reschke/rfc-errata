@@ -257,17 +257,17 @@
   {
     "errata_id": 4504,
     "doc-id": "RFC5905",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7.2,
+    "section": 7.3,
     "orig_text": "   LI Leap Indicator (leap): 2-bit integer warning of an impending leap\r\n   second to be inserted or deleted in the last minute of the current\r\n   month with values defined in Figure 9.\r\n\r\n           +-------+----------------------------------------+\r\n           | Value | Meaning                                |\r\n           +-------+----------------------------------------+\r\n           | 0     | no warning                             |\r\n           | 1     | last minute of the day has 61 seconds  |\r\n           | 2     | last minute of the day has 59 seconds  |\r\n",
     "correct_text": "   LI Leap Indicator (leap): 2-bit integer warning of an impending leap\r\n   second to be inserted or deleted in the last minute of the current\r\n   day with values defined in Figure 9.\r\n\r\n           +-------+----------------------------------------+\r\n           | Value | Meaning                                |\r\n           +-------+----------------------------------------+\r\n           | 0     | no warning                             |\r\n           | 1     | last minute of the day has 61 seconds  |\r\n           | 2     | last minute of the day has 59 seconds  |\r\n",
     "notes": "There is an inconsistency (day vs month) between the LI description and the description of values in the Figure 9.  Few paragraphs before that text there is: Except for a minor variation when using the IPv6 address family, these fields are backwards compatible with NTPv3.\r\n\r\nIf it was month instead of day it would not be compatible with RFC 1305 (NTPv3) and RFC 4330 (SNTPv4), which were obsoleted by RFC 5905.",
     "submit_date": "2015-10-15",
     "submitter_name": "Miroslav Lichvar",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2022-07-27 08:02:31"
   },
   {
     "errata_id": 4505,
@@ -287,17 +287,17 @@
   {
     "errata_id": 4680,
     "doc-id": "RFC5905",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "6, Fig 3",
     "orig_text": "       0                   1                   2                   3\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                           Era Number                          |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                           Era Offset                          |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                                                               |\r\n      |                           Fraction                            |\r\n      |                                                               |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n                              NTP Date Format",
     "correct_text": "       0                   1                   2                   3\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                           Era Number                          |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                           Era Offset                          |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                                                               |\r\n      +                           Fraction                            +\r\n      |                                                               |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n                              NTP Date Format",
-    "notes": "This allows to better appreciate only two 32b rows really form the Fraction part, leading to an overall type length of 128b instead of 160b as it could otherwise be misunderstood in the original figure.",
+    "notes": "This allows to better appreciate only two 32b rows really form the Fraction part, leading to an overall type length of 128b instead of 160b as it could otherwise be misunderstood in the original figure.\r\n\r\n---\r\n\r\nThe \"+\" vs \"|\" on the Fraction line would seem to improve consistency with packet layouts in other documents.",
     "submit_date": "2016-04-29",
     "submitter_name": "Riccardo Brama",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2022-07-27 08:13:09"
   },
   {
     "errata_id": 5020,
@@ -310,24 +310,24 @@
     "notes": "The corresponding code line in A.5.1.1. agrees with this correction:\r\n\r\noffset = (LFP2D(r->rec - r->org) + LFP2D(r->dst - r->xmt)) / 2;\r\n\r\ntaking Figure 7 into account:\r\n\r\n| org       | T1         | origin timestamp      |\r\n| rec       | T2         | receive timestamp     |\r\n| xmt       | T3         | transmit timestamp    |\r\n| dst       | T4         | destination timestamp |",
     "submit_date": "2017-05-15",
     "submitter_name": "Ferenc Wágner",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 2,
+    "verifier_name": "Erik Kline",
+    "update_date": "2022-07-28 07:49:41"
   },
   {
     "errata_id": 5104,
     "doc-id": "RFC5905",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "7.3, Fig 8",
     "orig_text": "      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                          Key Identifier                       |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                                                               |\r\n      |                            dgst (128)                         |\r\n      |                                                               |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
-    "correct_text": "      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                          Key Identifier                       |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                                                               |\r\n      |                       Message Digest (128)                    |\r\n      |                                                               |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
-    "notes": "As the text before the figure explains, the last field is called \"Message Digest\", which is consistent with the rest of the document. In this document \"dgst\" and \"mac\" mean two protocol variables associated with this packet field.",
+    "correct_text": "      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                          Key Identifier                       |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |                                                               |\r\n      |                       Message Digest (128)                    |\r\n      |                                                               |\r\n      |                                                               |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "notes": "As the text before the figure explains, the last field is called \"Message Digest\", which is consistent with the rest of the document. In this document \"dgst\" and \"mac\" mean two protocol variables associated with this packet field.\r\n\r\n---\r\n\r\nNote: edited to clarify 4 32bit words, rather than 3 rows.",
     "submit_date": "2017-08-30",
     "submitter_name": "Denis Ovsienko",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2022-07-27 08:17:40"
   },
   {
     "errata_id": 5189,
@@ -437,17 +437,17 @@
   {
     "errata_id": 6423,
     "doc-id": "RFC5905",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": 6,
     "orig_text": "| 1 Jan 1972  | 41,317     | 0   | 2,272,060,800 | First day UTC    |",
     "correct_text": "| 1 Jan 1972  | 41,317     | 0   | 2,272,060,800 | First day \"modern\" UTC |",
-    "notes": "The initial definition of UTC was introduced in 1963 with CCIR Recommendation 374. The time standard specified that seconds had a varying duration. In 1970, CCIR Recommendation 460 introduced the current definition of UTC, using leap seconds, which was implemented on the first second of 1972. Consult D. McCarthy's \"Note on Coordinated Universal Time\" (numbered CCTF/09-32 by the Consultative Committee for Time and Frequency of the BIPM) for more information.",
+    "notes": "The initial definition of UTC was introduced in 1963 with CCIR Recommendation 374. The time standard specified that seconds had a varying duration. In 1970, CCIR Recommendation 460 introduced the current definition of UTC, using leap seconds, which was implemented on the first second of 1972. Consult D. McCarthy's \"Note on Coordinated Universal Time\" (numbered CCTF/09-32 by the Consultative Committee for Time and Frequency of the BIPM) for more information.\r\n\r\n---\r\n\r\nThere may perhaps be more precise terminology than \"modern\", but this point should be addressed by a document that updates or replaces this one.",
     "submit_date": "2021-02-07",
     "submitter_name": "Stijn van Drongelen",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2022-07-27 08:30:52"
   },
   {
     "errata_id": 6524,
