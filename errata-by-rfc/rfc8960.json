@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 7059,
+    "doc-id": "RFC8960",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.5,
+    "orig_text": "        augment \"/rt:routing/rt:ribs/rt:rib/rt:routes/rt:route/\"\r\n              + \"rt:next-hop/rt:next-hop-options/rt:simple-next-hop\" {\r\n          description\r\n            \"Augments the 'simple-next-hop' case in IP unicast routes.\";\r\n          uses nhlfe-single-contents {\r\n            when \"/rt:routing/rt:ribs/rt:rib/rt:routes/rt:route\"\r\n               + \"/mpls:mpls-enabled = 'true'\";\r\n          }\r\n        }\r\n",
+    "correct_text": "        augment \"/rt:routing/rt:ribs/rt:rib/rt:routes/rt:route/\"\r\n              + \"rt:next-hop/rt:next-hop-options/rt:simple-next-hop\" {\r\n          description\r\n            \"Augments the 'simple-next-hop' case in IP unicast routes.\";\r\n          uses nhlfe-single-contents {\r\n            when \"../../../mpls:mpls-enabled = 'true'\";\r\n          }\r\n        }\r\n",
+    "notes": "The original YANG statements make the \"uses\" statement apply to all rt:rib and all rt:route instances as soon as there is at least one instance that has mpls:mpls-enabled set to true. I suspect this is not the author's intent.\r\n\r\nThe corrected YANG statements make the \"uses\" statement only apply to the specific route instances that have mpls:mpls-enabled set to true. There are also other ways to fix this issue.",
+    "submit_date": "2022-07-29",
+    "submitter_name": "Jan Lindblad",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 7060,
+    "doc-id": "RFC8960",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.5,
+    "orig_text": "  augment \"/rt:routing/rt:ribs/rt:rib/rt:routes/rt:route/\"\r\n        + \"rt:next-hop/rt:next-hop-options/rt:next-hop-list/\"\r\n        + \"rt:next-hop-list/rt:next-hop\" {\r\n    description\r\n      \"This leaf augments the 'next-hop-list' case of IP unicast\r\n       routes.\";\r\n    uses nhlfe-multiple-contents {\r\n      when \"/rt:routing/rt:ribs/rt:rib/rt:routes/rt:route\"\r\n         + \"/mpls:mpls-enabled = 'true'\";\r\n    }\r\n  }\r\n",
+    "correct_text": "  augment \"/rt:routing/rt:ribs/rt:rib/rt:routes/rt:route/\"\r\n        + \"rt:next-hop/rt:next-hop-options/rt:next-hop-list/\"\r\n        + \"rt:next-hop-list/rt:next-hop\" {\r\n    description\r\n      \"This leaf augments the 'next-hop-list' case of IP unicast\r\n       routes.\";\r\n    uses nhlfe-multiple-contents {\r\n      when \"../../../../../mpls:mpls-enabled = 'true'\";\r\n    }\r\n  }\r\n",
+    "notes": "The original YANG statements make the \"uses\" statement apply to all rt:rib and all rt:route instances as soon as there is at least one instance that has mpls:mpls-enabled set to true. I suspect this is not the author's intent.\r\n\r\nThe corrected YANG statements make the \"uses\" statement only apply to the specific route instances that have mpls:mpls-enabled set to true. There are also other ways to fix this issue.",
+    "submit_date": "2022-07-29",
+    "submitter_name": "Jan Lindblad",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
