@@ -43,5 +43,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7050,
+    "doc-id": "RFC8276",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 1,
+    "orig_text": "   This document discusses (in Section 5) the reasons that NFSv4-named\r\n   attributes, as currently standardized in [RFC5661], are unsuitable\r\n   for representing xattrs.  Instead, it describes a separate protocol\r\n",
+    "correct_text": "   This document discusses (in Section 6) the reasons that NFSv4-named\r\n   attributes, as currently standardized in [RFC5661], are unsuitable\r\n   for representing xattrs.  Instead, it describes a separate protocol\r\n",
+    "notes": "The reference to the discussion of named attributes has the wrong section number.",
+    "submit_date": "2022-07-26",
+    "submitter_name": "Anton Rang",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-07-26 13:27:31"
   }
 ]
