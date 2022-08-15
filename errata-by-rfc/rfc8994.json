@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7071,
+    "doc-id": "RFC8994",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.2.2",
+    "orig_text": "   The acp-node-name in Figure 2 is the ABNF definition (\"Augmented BNF\r\n   for Syntax Specifications: ABNF\" [RFC5234]) of the ACP Node Name.  An\r\n   ACP certificate MUST carry this information.  It MUST contain an\r\n   otherName field in the X.509 Subject Alternative Name extension, and\r\n   the otherName MUST contain an AcpNodeName as described in\r\n   Section 6.2.2.",
+    "correct_text": "   The acp-node-name in Figure 2 is the ABNF definition (\"Augmented BNF\r\n   for Syntax Specifications: ABNF\" [RFC5234]) of the ACP Node Name.  An\r\n   ACP certificate MUST carry this information.  It MUST contain an\r\n   otherName field in the X.509 Subject Alternative Name extension, and\r\n   the otherName MUST contain an AcpNodeName as described in\r\n   Section 6.2.2.1.",
+    "notes": "David von Oheimb discovered [1] that section 6.2.2 is self-referential and incorrect regarding the section reference to the ASN.1 module.\r\n\r\nThe correct section number is 6.2.2.1.\r\n\r\n[1] https://mailarchive.ietf.org/arch/msg/spasm/-ymZk94KFzzolZSsJh6HONnypXQ/",
+    "submit_date": "2022-08-04",
+    "submitter_name": "Corey Bonnell",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
