@@ -118,5 +118,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7070,
+    "doc-id": "RFC8410",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 10.2,
+    "orig_text": "   -----BEGIN CERTIFICATE-----\r\n   MIIBLDCB36ADAgECAghWAUdKKo3DMDAFBgMrZXAwGTEXMBUGA1UEAwwOSUVURiBUZX\r\n   N0IERlbW8wHhcNMTYwODAxMTIxOTI0WhcNNDAxMjMxMjM1OTU5WjAZMRcwFQYDVQQD\r\n   DA5JRVRGIFRlc3QgRGVtbzAqMAUGAytlbgMhAIUg8AmJMKdUdIt93LQ+91oNvzoNJj\r\n   ga9OukqY6qm05qo0UwQzAPBgNVHRMBAf8EBTADAQEAMA4GA1UdDwEBAAQEAwIDCDAg\r\n   BgNVHQ4BAQAEFgQUmx9e7e0EM4Xk97xiPFl1uQvIuzswBQYDK2VwA0EAryMB/t3J5v\r\n   /BzKc9dNZIpDmAgs3babFOTQbs+BolzlDUwsPrdGxO3YNGhW7Ibz3OGhhlxXrCe1Cg\r\n   w1AH9efZBw==\r\n   -----END CERTIFICATE-----\r\n",
+    "correct_text": "A corrected encoding of the certificate.",
+    "notes": "In addition to the mis-encoding described in 6936, there are additional misencodings. The critical field of X.509 extensions have `DEFAULT FALSE` (per RFC 5280). Default field values shall not be encoded in a DER sequence, but in the certificate encoding presented there these critical fields are encoded.",
+    "submit_date": "2022-08-02",
+    "submitter_name": "Alex Gaynor",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
