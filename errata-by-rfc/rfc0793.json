@@ -688,5 +688,20 @@
     "verifier_id": 2,
     "verifier_name": "RFC Editor",
     "update_date": "2021-12-06 17:04:09"
+  },
+  {
+    "errata_id": 7051,
+    "doc-id": "RFC0793",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 3.9,
+    "orig_text": "        This step should be reached only if the ACK is ok, or there is\r\n        no ACK, and it the segment did not contain a RST.\r\n",
+    "correct_text": "        This step should be reached only if the ACK is ok, or there is\r\n        no ACK, and if the segment did not contain a RST.\r\n",
+    "notes": "Page 67: it -> if",
+    "submit_date": "2022-07-28",
+    "submitter_name": "Merlin Büge",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-07-28 15:35:22"
   }
 ]
