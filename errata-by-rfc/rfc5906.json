@@ -92,7 +92,7 @@
   {
     "errata_id": 6402,
     "doc-id": "RFC5906",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix J",
     "orig_text": "   CertificateSerialNumber\r\n   SET { ::= INTEGER\r\n           Validity ::= SEQUENCE {\r\n                   notBefore              UTCTime,\r\n                   notAfter               UTCTime\r\n           }\r\n   }",
@@ -100,8 +100,8 @@
     "notes": "The original ASN.1 will not compile.",
     "submit_date": "2021-01-20",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2022-07-27 08:36:21"
   }
 ]
