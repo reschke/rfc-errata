@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7080,
+    "doc-id": "RFC8416",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.4.2",
+    "orig_text": "   The above is expressed as a value of the \"bgpsecAssertions\" member,\r\n   as an array of zero or more objects.  Each object MUST contain one\r\n   each of all of the following members:\r\n\r\n   o  An \"asn\" member, whose value is a number.\r\n\r\n   o  An \"SKI\" member, whose value is the Base64 encoding without\r\n      trailing '=' (Section 5 of [RFC4648]) of the certificate's Subject\r\n      Key Identifier as described in Section 4.8.2 of [RFC6487] (This is\r\n      the value of the ASN.1 OCTET STRING without the ASN.1 tag or\r\n      length fields.)\r\n\r\n   o  A \"routerPublicKey\" member, whose value is the Base64 encoding\r\n      without trailing '=' (Section 5 of [RFC4648]) of the equivalent to\r\n      the subjectPublicKeyInfo value of the router certificate's public\r\n      key, as described in [RFC8208].  This is the full ASN.1 DER\r\n      encoding of the subjectPublicKeyInfo, including the ASN.1 tag and\r\n      length values of the subjectPublicKeyInfo SEQUENCE.\r\n",
+    "correct_text": "   The above is expressed as a value of the \"bgpsecAssertions\" member,\r\n   as an array of zero or more objects.  Each object MUST contain one\r\n   each of all of the following members:\r\n\r\n   o  An \"asn\" member, whose value is a number.\r\n\r\n   o  An \"SKI\" member, whose value is the Base64 encoding without\r\n      trailing '=' (Section 5 of [RFC4648]) of the certificate's Subject\r\n      Key Identifier as described in Section 4.8.2 of [RFC6487] (This is\r\n      the value of the ASN.1 OCTET STRING without the ASN.1 tag or\r\n      length fields.)\r\n\r\n   o  A \"routerPublicKey\" member, whose value is the Base64 encoding\r\n      without trailing '=' (Section 5 of [RFC4648]) of the equivalent to\r\n      the subjectPublicKeyInfo value of the router certificate's public\r\n      key, as described in [RFC8208].  This is the full ASN.1 DER\r\n      encoding of the subjectPublicKeyInfo, including the ASN.1 tag and\r\n      length values of the subjectPublicKeyInfo SEQUENCE.\r\n\r\n   In addition, each object MAY contain one optional \"comment\" member,\r\n   whose value is a string.\r\n",
+    "notes": "The \"comment\" member is allowed to appear in every other structure defined by the document, and was clearly intended to be allowed here too, since it appears in the examples presented in sections 3.4.2 and 3.5",
+    "submit_date": "2022-08-10",
+    "submitter_name": "Ben Maddison",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
