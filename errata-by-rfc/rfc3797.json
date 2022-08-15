@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7030,
+    "doc-id": "RFC3797",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "Step 2 of section 4 says:\r\n   Order the values from each source from smallest to the largest\r\n   and concatenate them and suffix the result with a \"/\".\r\n\r\nThe \"Resultant Key String\" in section 6, shows the numbers with a period after each number:\r\n  9319./2.5.8.10.12./9.18.26.34.41.45./",
+    "correct_text": "Step 2 of section 4 should say\r\n  Order the values from each source from smallest to largest, append a\r\n  \".\" after each value, and concatenate them and suffix the result\r\n  with a \"/\"",
+    "notes": "Seems easiest to fix the description, otherwise the worked example is wrong.",
+    "submit_date": "2022-07-19",
+    "submitter_name": "Rich Salz",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
