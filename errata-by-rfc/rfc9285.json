@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7078,
+    "doc-id": "RFC9285",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 4,
+    "orig_text": "   QR codes have a limited ability to store binary data.  In practice,\r\n   binary data have to be encoded in characters according to one of the\r\n   modes already defined in the standard for QR codes.  The easiest mode\r\n   to use in called Alphanumeric mode (see Section 7.3.4 and Table 2 of\r\n   [ISO18004].  Unfortunately Alphanumeric mode uses 45 different\r\n   characters which implies neither Base32 nor Base64 are very effective\r\n   encodings.",
+    "correct_text": "   QR codes have a limited ability to store binary data.  In practice,\r\n   binary data have to be encoded in characters according to one of the\r\n   modes already defined in the standard for QR codes.  The easiest mode\r\n   to use in called Alphanumeric mode (see Section 7.3.4 and Table 2 of\r\n   [ISO18004]).  Unfortunately Alphanumeric mode uses 45 different\r\n   characters which implies neither Base32 nor Base64 are very effective\r\n   encodings.",
+    "notes": "Missing closing bracket.",
+    "submit_date": "2022-08-10",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-08-10 14:11:02"
+  }
+]
