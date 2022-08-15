@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7058,
+    "doc-id": "RFC9132",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5.3,
+    "orig_text": "              uses data-channel:target {\r\n                when \"/dots-signal/scope/conflict-information/\"\r\n                   + \"conflict-cause = 'overlapping-targets'\";\r\n              }\r\n",
+    "correct_text": "              uses data-channel:target {\r\n                when \"../conflict-cause = 'overlapping-targets'\";\r\n              }\r\n",
+    "notes": "The original YANG statements make the \"uses\" statement apply to all \"list scope\" instances as soon as there is at least one \"scope\" instance that has \"conflict-cause\" set to \"overlapping-targets\". I suspect this is not the author's intent.\r\n\r\nThe corrected YANG statements make the \"uses\" statement only apply to the specific \"scope\" instances that have \"conflict-cause\" set to \"overlapping-targets\". There are also other ways to fix this issue.",
+    "submit_date": "2022-07-29",
+    "submitter_name": "Jan Lindblad",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
