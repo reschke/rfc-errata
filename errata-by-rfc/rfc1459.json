@@ -103,5 +103,20 @@
     "verifier_id": 130,
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7029,
+    "doc-id": "RFC1459",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.3.2",
+    "orig_text": ":MODE WiZ -w                    ; turns reception of WALLOPS messages\r\n                                off for WiZ.",
+    "correct_text": "MODE WiZ -w                     ; turns reception of WALLOPS messages\r\n                                off for WiZ.",
+    "notes": ":MODE WiZ -w is a WiZ message from MODE, but WiZ is not an IRC command.",
+    "submit_date": "2022-07-19",
+    "submitter_name": "wizzwizz4",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
