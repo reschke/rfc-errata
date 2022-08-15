@@ -13,5 +13,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7022,
+    "doc-id": "RFC4120",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.2.6.2",
+    "orig_text": "checksumtype",
+    "correct_text": "cksumtype",
+    "notes": "The field is named \"cksumtype\" according to section 5.2\r\n\r\n --VERIFIER NOTES--\r\nCorrection - The field is named in section 5.2.9.\r\n",
+    "submit_date": "2022-07-13",
+    "submitter_name": "Gabriel Potter",
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-07-27 13:21:22"
   }
 ]
