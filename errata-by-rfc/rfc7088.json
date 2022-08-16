@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7089,
+    "doc-id": "RFC7088",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 7.1,
+    "orig_text": "The client SHOULD create a \"code_verifier\" with a minimum of 256 bits\r\nof entropy.  This can be done by having a suitable random number\r\ngenerator create a 32-octet sequence.  The octet sequence can then be\r\nbase64url-encoded to produce a 43-octet URL safe string to use as a\r\n\"code_challenge\" that has the required entropy.\r\n",
+    "correct_text": "The client SHOULD create a \"code_verifier\" with a minimum of 256 bits\r\nof entropy.  This can be done by having a suitable random number\r\ngenerator create a 32-octet sequence.  The octet sequence can then be\r\nbase64url-encoded to produce a 43-octet URL safe string to use as a\r\n\"code_verifier\" that has the required entropy.\r\n",
+    "notes": "The \"32-octet sequence\" referenced in the original text seems to be inconsistent with Section 4.1, which states that the minimum length of the code_verifier is 43 characters. It would be consistent by changing \"code_challenge\" to \"code_verifier\".Instructions:\r\n-------------\r\nThis erratum is currently posted as \"Reported\". If necessary, please\r\nuse \"Reply All\" to discuss whether it should be verified or\r\nrejected. When a decision is reached, the verifying party \r\ncan log in to change the status and edit the report, if necessary.",
+    "submit_date": "2022-08-15",
+    "submitter_name": "Bigbit",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
