@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7090,
+    "doc-id": "RFC5702",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 8.2,
+    "orig_text": "8.2.  Signature Type Downgrade Attacks\r\n\r\n   Since each RRSet MUST be signed with each algorithm present in the\r\n   DNSKEY RRSet at the zone apex (see Section 2.2 of [RFC4035]), a\r\n   malicious party cannot filter out the RSA/SHA-2 RRSIG and force the\r\n   validator to use the RSA/SHA-1 signature if both are present in the\r\n   zone.  This should provide resilience against algorithm downgrade\r\n   attacks, if the validator supports RSA/SHA-2.",
+    "correct_text": "[none]",
+    "notes": "The section is incorrect in its entirety. Although the requirement on signers does exist, there is no related requirement for validators to check that all signature algorithms are present. RFC6840 5.11 (which I do realise is newer than RFC5702) re-states this explicitly, where RFC4035 merely implied this distinction.",
+    "submit_date": "2022-08-15",
+    "submitter_name": "Peter van Dijk",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
