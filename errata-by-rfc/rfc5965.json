@@ -43,5 +43,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7091,
+    "doc-id": "RFC5965",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 2,
+    "orig_text": "   e.  Except as discussed below, each feedback report MUST be related\r\n       to only a single email message.  Summary and aggregate formats\r\n       are outside of the scope of this specification.\r\n",
+    "correct_text": "   e.  Except when using the Incidents field (see below),\r\n       each feedback report MUST be related\r\n       to only a single email message.  Summary and aggregate formats\r\n       are outside of the scope of this specification.\r\n",
+    "notes": "There doesn't seem to be another discussion of similarity.",
+    "submit_date": "2022-08-16",
+    "submitter_name": "Alessandro Vesely",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
