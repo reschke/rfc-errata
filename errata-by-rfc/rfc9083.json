@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": 7093,
+    "doc-id": "RFC9083",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 4.1,
+    "orig_text": "The data structure named \"rdapConformance\" is an array of strings,\r\neach providing a hint as to the specifications used in the construction\r\nof the response.",
+    "correct_text": "The data structure named \"rdapConformance\" is an array of strings,\r\neach identifying a registered specification used in the construction\r\nof the response.\r\n",
+    "notes": "The original text uses the word \"hint\", which some people have interpreted to mean \"not normative\" and/or \"can be ignored\". This misinterpretation will likely cause significant misunderstanding of the technical specification and might result in faulty implementations if not corrected. The intention and meaning of this sentence is more clearly specified with the corrected text, noting that the array of string identifiers is directly associated with the set of specifications used to construct an RDAP response.",
+    "submit_date": "2022-08-17",
+    "submitter_name": "Scott Hollenbeck",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 7094,
+    "doc-id": "RFC9083",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2.1,
+    "orig_text": "If The Registry of the Moon desires to express information not found\r\nin this specification, it might select \"lunarNIC\" as its identifying\r\nprefix and insert, as an example, the member named\r\n\"lunarNIC_beforeOneSmallStep\" to signify registrations occurring\r\nbefore the first moon landing and the member named\r\n\"lunarNIC_harshMistressNotes\" that contains other descriptive text.\r\n\r\nConsider the following JSON response with JSON names, some of which\r\nshould be ignored by clients without knowledge of their meaning.\r\n\r\n{\r\n  \"handle\" : \"ABC123\",\r\n  \"lunarNIC_beforeOneSmallStep\" : \"TRUE THAT!\",\r\n  \"remarks\" :\r\n  [\r\n    {\r\n      \"description\" :\r\n      [\r\n        \"She sells sea shells down by the sea shore.\",\r\n        \"Originally written by Terry Sullivan.\"\r\n      ]\r\n    }\r\n  ],\r\n  \"lunarNIC_harshMistressNotes\" :\r\n  [\r\n    \"In space,\",\r\n    \"nobody can hear you scream.\"\r\n  ]\r\n}\r\nFigure 2",
+    "correct_text": "If The Registry of the Moon desires to express information not found\r\nin this specification, it might select \"lunarNIC_level_0\" as its\r\nidentifying prefix and insert, as an example, the member named\r\n\"lunarNIC_level_0_beforeOneSmallStep\" to signify registrations occurring\r\nbefore the first moon landing and the member named\r\n\"lunarNIC_level_0_harshMistressNotes\" that contains other descriptive\r\ntext.\r\n\r\nConsider the following JSON response with JSON names, some of which\r\nshould be ignored by clients without knowledge of their meaning.\r\n\r\n{\r\n  \"handle\" : \"ABC123\",\r\n  \"lunarNIC_level_0_beforeOneSmallStep\" : \"TRUE THAT!\",\r\n  \"remarks\" :\r\n  [\r\n    {\r\n      \"description\" :\r\n      [\r\n        \"She sells sea shells down by the sea shore.\",\r\n        \"Originally written by Terry Sullivan.\"\r\n      ]\r\n    }\r\n  ],\r\n  \"lunarNIC_level_0_harshMistressNotes\" :\r\n  [\r\n    \"In space,\",\r\n    \"nobody can hear you scream.\"\r\n  ]\r\n}\r\nFigure 2",
+    "notes": "The original text uses the string identifier \"lunarNIC\" as the prefix for an example extension. This is inconsistent with the example given in Section 4.1, where \"lunarNIC_level_0\" is used as an example of a registered identifier for an RDAP extension. This inconsistency can lead implementers to believe that the registered identifier and the extension prefix can be inconsistent, when the intent of the specification is that they should be consistent. This inconsistency can cause significant misunderstanding of the technical specification and might result in faulty implementations if not corrected. Changing the examples in Section 2.1 aligns the text with the example in Section 4.1, demonstrating that the extension prefix and the registered identifier should be one and the same.",
+    "submit_date": "2022-08-17",
+    "submitter_name": "Scott Hollenbeck",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
