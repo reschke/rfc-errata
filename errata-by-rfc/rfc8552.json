@@ -62,17 +62,17 @@
   {
     "errata_id": 7064,
     "doc-id": "RFC8552",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.1.2.",
     "orig_text": " | URI        | _acct                 | [RFC6118]     |",
     "correct_text": " | URI        | _acct                 | [RFC7566]     |",
-    "notes": "Wrong reference. Note that is also has an impact to the IANA registry: https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#underscored-globally-scoped-dns-node-names",
+    "notes": "Wrong reference. Note that is also has an impact to the IANA registry: https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#underscored-globally-scoped-dns-node-names\r\n\r\n---\r\nReaders are encouraged to read the below email thread (and may also want to read RFC6118 for additional information):\r\nhttps://mailarchive.ietf.org/arch/msg/dnsop/TuoV8FmCf1l_pKr500Fo0AI8tVM/\r\n\r\n",
     "submit_date": "2022-08-02",
     "submitter_name": "Bernie Hoeneisen",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 155,
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2022-08-19 17:10:47"
   },
   {
     "errata_id": 7065,
