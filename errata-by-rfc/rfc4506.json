@@ -28,5 +28,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7101,
+    "doc-id": "RFC4506",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3,",
+    "orig_text": "Enumerations have the same representation as signed integers.\r\nEnumerations are handy for describing subsets of the integers.\r\nEnumerated data is declared as follows:\r\n\r\n    enum { name-identifier = constant, ... } identifier;\r\n\r\nFor example, the three colors red, yellow, and blue could be\r\ndescribed by an enumerated type:\r\n\r\n    enum { RED = 2, YELLOW = 3, BLUE = 5 } colors;",
+    "correct_text": "...\r\n\r\n    enum identifier { name-identifier = constant, ... } ;\r\n         ^^^^^^^^^^\r\n\r\n...\r\n\r\n    enum colors { RED = 2, YELLOW = 3, BLUE = 5 } ;\r\n         ^^^^^^ ",
+    "notes": "The grammar for this definition, as specified in 6.3, is:\r\n\r\n    type-def:\r\n           \"typedef\" declaration \";\"\r\n         | \"enum\" identifier enum-body \";\"\r\n         | \"struct\" identifier struct-body \";\"\r\n         | \"union\" identifier union-body \";\"\r\n\r\nIt is unclear whether the original intent was for identifies to precede or succeed the definition bodies. The example in section 7 shows: enum filekind { ... }\r\n\r\nAnd several RFCs which depend on 4506 have also followed that pattern, such as this example from RFC 5531, section 8.2: enum auth_flavor { ... }",
+    "submit_date": "2022-08-21",
+    "submitter_name": "Dylan Allbee",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
