@@ -2,17 +2,17 @@
   {
     "errata_id": 6910,
     "doc-id": "RFC9225",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4. Best Current",
     "orig_text": "6. In fact, assume all internal inputs also are the result of bugs.\r\n",
     "correct_text": "6. In fact, assume all internal inputs also are the result of bugs.\r\n\r\n7. If the bug population increases after each subsequent software \r\nrelease, it is generally RECOMMENDED to deploy a Software Bug [BOMbs],\r\nand return when the air has cleared.\r\n\r\n[BOMbs] National Telecommunications and Information Administration,\r\nUnited States Department of Commerce, 2021, https://ntia.gov/SBOM",
-    "notes": "Extend the RFC to include another best practice, associated with BOMbs.",
+    "notes": "Extend the RFC to include another best practice, associated with BOMbs.\n --VERIFIER NOTES-- \nThanks for your thoughts.  Follow-ups to this RFC are welcome, but must stand on their own merit.",
     "submit_date": "2022-04-01",
     "submitter_name": "Joe Klein",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 157,
+    "verifier_name": "Eliot Lear (ISE)",
+    "update_date": "2022-08-20 23:24:31"
   },
   {
     "errata_id": 6911,
