@@ -78,15 +78,15 @@
     "errata_id": 7096,
     "doc-id": "RFC7748",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "# section A.1 sage code:\r\n\r\n       for A in xrange(3, int(1e9)):\r\n           if (A-2) % 4 != 0:\r\n             continue\r\n\r\n# section A.3 sage code:\r\n\r\n       for uInt in range(1, 1e3):\r\n         u = F(uInt)",
     "correct_text": "# section A.1 sage code:\r\n\r\n       for A in xsrange(3, int(1e9)):\r\n           if (A-2) % 4 != 0:\r\n             continue\r\n\r\n# section A.3 sage code:\r\n\r\n       for uInt in xsrange(1, int(1e3)):\r\n         u = F(uInt)",
     "notes": "\"xrange\" is not recognized by Sage with python 3, so the script from section A.1 fails with a syntax error (using \"xrange\" likely worked fine for Sage with python 2).  The suggested changes in A.3 are just for consistency.",
     "submit_date": "2022-08-18",
     "submitter_name": "James Muir",
-    "verifier_id": 99,
+    "verifier_id": 2,
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2022-08-22 14:59:43"
   }
 ]
