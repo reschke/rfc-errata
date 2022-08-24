@@ -13,5 +13,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7102,
+    "doc-id": "RFC8754",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 2,
+    "orig_text": "Segments Left:  Defined in [RFC8200], Section 4.4.",
+    "correct_text": "Segments Left:  Defined in [RFC8200], Section 4.4.\r\nSpecifically, for the SRH, the number of segments \r\nremaining in the Segment List.",
+    "notes": "RFC8754 describes “The encoding of IPv6 segments in the SRH” where IPv6 segments are defined in RFC8402.  RFC8402 describes binding SIDs and adjacency SIDs for SRv6. Both these SID types identify more than a single explicitly listed intermediate node to be visited. \r\nThe current definition of Segments Left only indicates it is defined in RFC8200, and RFC8200 defines it as “Number of route  segments remaining, i.e., number of explicitly listed intermediate nodes still to be visited before reaching the final destination”.\r\n\r\nPrevious versions of draft-ietf-6man-segment-routing-header (0-11) referenced RFC2460/RFC8200 and described the Segments Left field by use in the SRH; as an index into the Segment List. This was removed in later versions (12/13) to consolidate the use of segments left to be specific to the segment processed (now section 4.3.1).  However, that removed the definition of its meaning in the SRH which led to the current issue.\r\n\r\nThe corrected text restores the meaning of Segments Left for the SRH in relation to Segment List (which is not defined in RFC8200), while still leaving its use during segment processing to the segment definition (section 4.3.1 or future documents).",
+    "submit_date": "2022-08-23",
+    "submitter_name": "Darren Dukes",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
