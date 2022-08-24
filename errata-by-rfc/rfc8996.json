@@ -13,5 +13,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7103,
+    "doc-id": "RFC8996",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "<a href=\"https://www.rfc-editor.org/rfc/rfc%E2%80%8B%204162\"\r\nclass=\"eref\">​ 4162</a>",
+    "correct_text": "<a href=\"https://www.rfc-editor.org/rfc/rfc4162\"\r\nclass=\"eref\">​4162</a>",
+    "notes": "(Note: the line wrapping here is mine; the errata tool assumes that this is text, so it won't accept long lines.)\r\n\r\nThe text for this specification is OK, but the HTML rendering has some hard-to-notice errors in the \"Updates\" field in the metadata block that is being caused by errors in the XML source.\r\n\r\nThe XML source includes a number of Unicode zero width space characters (U+200B) after commas in the rfc@updates attribute.  xml2rfc is unable to handle these characters correctly, treating them - and the space that follows - as part of the RFC number.  It generates the bad link as you see above.\r\n\r\nThis can be addressed in xml2rfc, maybe, but this is probably not XML we want to permit.",
+    "submit_date": "2022-08-24",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
