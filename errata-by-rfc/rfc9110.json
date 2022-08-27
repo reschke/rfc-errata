@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7105,
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "B.1.",
+    "orig_text": "B.1.  Changes from RFC 2818\r\n\r\n   None.",
+    "correct_text": "B.1.  Changes from RFC 2818\r\n\r\n   The use of CN-ID has been deprecated.",
+    "notes": "In RFC2818:\r\n\r\n   If a subjectAltName extension of type dNSName is present, that MUST\r\n   be used as the identity. Otherwise, the (most specific) Common Name\r\n   field in the Subject field of the certificate MUST be used.\r\n\r\nCN-ID may be used (when a subjectAltName of type dNSName is not present).\r\n\r\nIn RFC9110:\r\n\r\n   A reference identity of type CN-ID MUST NOT be used by clients.\r\n\r\nCN-ID is not used at all.  It is a change from RFC2818.",
+    "submit_date": "2022-08-26",
+    "submitter_name": "Tomoyuki Sahara",
+    "verifier_id": 2,
+    "verifier_name": null,
+    "update_date": "2022-08-26 13:51:08"
+  }
+]
