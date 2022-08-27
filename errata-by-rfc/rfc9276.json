@@ -2,7 +2,7 @@
   {
     "errata_id": 7104,
     "doc-id": "RFC9276",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": 2.2,
     "orig_text": "Smaller zones, or large\r\nbut relatively static zones, are encouraged to not use the opt-opt\r\nflag and to take advantage of DNSSEC's authenticated denial of\r\nexistence.\r\n",
@@ -10,8 +10,8 @@
     "notes": "There is a typo, \"opt-opt\" should be \"opt-out\".",
     "submit_date": "2022-08-26",
     "submitter_name": "Stefan Ubbink",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-08-26 13:59:02"
   }
 ]
