@@ -302,17 +302,17 @@
   {
     "errata_id": 5020,
     "doc-id": "RFC5905",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": 8,
     "orig_text": "theta = T(B) - T(A) = 1/2 * [(T2-T1) + (T3-T4)]",
     "correct_text": "theta = T(B) - T(A) = 1/2 * [(T2-T1) + (T4-T3)]",
-    "notes": "The corresponding code line in A.5.1.1. agrees with this correction:\r\n\r\noffset = (LFP2D(r->rec - r->org) + LFP2D(r->dst - r->xmt)) / 2;\r\n\r\ntaking Figure 7 into account:\r\n\r\n| org       | T1         | origin timestamp      |\r\n| rec       | T2         | receive timestamp     |\r\n| xmt       | T3         | transmit timestamp    |\r\n| dst       | T4         | destination timestamp |",
+    "notes": "The corresponding code line in A.5.1.1. agrees with this correction:\r\n\r\noffset = (LFP2D(r->rec - r->org) + LFP2D(r->dst - r->xmt)) / 2;\r\n\r\ntaking Figure 7 into account:\r\n\r\n| org       | T1         | origin timestamp      |\r\n| rec       | T2         | receive timestamp     |\r\n| xmt       | T3         | transmit timestamp    |\r\n| dst       | T4         | destination timestamp |\n --VERIFIER NOTES-- \nAs noted this thread:\r\n\r\n    https://mailarchive.ietf.org/arch/msg/ntp/AR7k0IP2PMgXdq2bknx6Eiz4upE/\r\n\r\n'''\r\nTheta is \"the offset of B relative to A\". The proposed revision is\r\n\r\n   1/2 * [(T2-T1) + (T4-T3)]\r\n\r\nExample: Let's assume that B and A are exactly synced to UTC and that the\r\nnetwork delay is 50msec in each direction.\r\n\r\n    T2-T1 is the NTP mode 3 request delay (including network delay).\r\n\r\nThis gives 50 msec\r\n    T4-T3 is the NTP mode 4 response delay (including network delay).\r\n\r\nThis gives 50 msec.\r\n\r\nThe proposed revision gives 100msec/2 = RTT/2, not the expected offset of\r\nzero.\r\n\r\nThe RFC5905 formula seems correct.\r\n\r\n    theta = T(B) - T(A) = 1/2 * [(T2-T1) + (T3-T4)]\r\n\r\nbut might have been clearer had it been written:\r\n\r\n    theta = T(B) - T(A) = 1/2 * [(T2-T1) - (T4-T3)]\r\n'''",
     "submit_date": "2017-05-15",
     "submitter_name": "Ferenc Wágner",
-    "verifier_id": 2,
+    "verifier_id": 165,
     "verifier_name": "Erik Kline",
-    "update_date": "2022-07-28 07:49:41"
+    "update_date": "2022-08-29 15:39:08"
   },
   {
     "errata_id": 5104,
@@ -347,7 +347,7 @@
   {
     "errata_id": 5600,
     "doc-id": "RFC5905",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": 10,
     "orig_text": "   Let the first stage offset in the sorted list be theta_0; then, for\r\n   the other stages in any order, the jitter is the RMS average\r\n\r\n                          +-----                 -----+^1/2\r\n                          |  n-1                      |\r\n                          |  ---                      |\r\n                  1       |  \\                     2  |\r\n      psi   =  -------- * |  /    (theta_0-theta_j)   |\r\n                (n-1)     |  ---                      |\r\n                          |  j=1                      |\r\n                          +-----                 -----+",
@@ -355,9 +355,9 @@
     "notes": "The formula to calculate jitter \"psi\" in section \"10.  Clock Filter Algorithm\" is incorrect, and also inconsistent with the formulate to calculate \"psi_s\" in section \"11.2.2.  Cluster Algorithm\".\r\n\r\n\"psi\" is defined as RMS average, so the term 1/(n-1) should be within [ ]^1/2 block.",
     "submit_date": "2019-01-15",
     "submitter_name": "Takashi Nakamoto",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2022-08-29 16:26:05"
   },
   {
     "errata_id": 5601,
@@ -467,7 +467,7 @@
   {
     "errata_id": 6550,
     "doc-id": "RFC5905",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "A.5.2",
     "orig_text": "        for (i = 0; i < NSTAGE; i++) {\r\n                p->disp += f[i].disp / (2 ^ (i + 1));\r\n                p->jitter += SQUARE(f[i].offset - f[0].offset);\r\n        }",
@@ -475,8 +475,8 @@
     "notes": "^ is the xor operator in C, not the exponent operator.  2 xor (i+1) will be zero when i == 1, causing a division by zero error.",
     "submit_date": "2021-04-17",
     "submitter_name": "Perry Lorier",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 165,
+    "verifier_name": "Erik Kline",
+    "update_date": "2022-08-29 16:08:00"
   }
 ]
