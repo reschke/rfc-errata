@@ -13,5 +13,20 @@
     "verifier_id": 153,
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2020-03-04 03:00:52"
+  },
+  {
+    "errata_id": 7108,
+    "doc-id": "RFC8033",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "5.1 & 10.2",
+    "orig_text": "5.1.  ECN Support\r\n\r\n   PIE MAY support ECN by marking (rather than dropping) ECN-capable\r\n   packets [ECN].  ...\r\n\r\n...\r\n\r\n\r\n\r\n10.2.  Informative References\r\n...\r\n\r\n   [ECN]      Briscoe, B., Kaippallimalil, J., and P. Thaler,\r\n              \"Guidelines for Adding Congestion Notification to\r\n              Protocols that Encapsulate IP\", Work in Progress,\r\n              draft-ietf-tsvwg-ecn-encap-guidelines-07, July 2016.\r\n...",
+    "correct_text": "5.1.  ECN Support\r\n\r\n   PIE MAY support ECN by marking (rather than dropping) ECN-capable\r\n   packets [RFC3168].  ...\r\n\r\n...\r\n\r\n\r\n\r\n10.2.  Informative References\r\n...\r\n\r\n   [RFC3168]      Ramakrishnan, K., Floyd, S., and D. Black, \r\n                  \"The Addition of Explicit Congestion Notification \r\n                  (ECN) to IP\", RFC 3168, DOI 10.17487/RFC3168, \r\n                  September 2001, <https://www.rfc-editor.org/info/rfc3168>.\r\n...",
+    "notes": "The reference provided for ECN points to the incorrect IETF document.",
+    "submit_date": "2022-08-31",
+    "submitter_name": "Greg White",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
