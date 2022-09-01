@@ -13,5 +13,35 @@
     "verifier_id": 2,
     "verifier_name": null,
     "update_date": "2022-08-26 13:51:08"
+  },
+  {
+    "errata_id": 7107,
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.5.1",
+    "orig_text": "For example, the chunked transfer coding in HTTP/1.1\r\nallows a trailer section to be sent after the content\r\n(Section 7.1.2 of [HTTP/1.1]).",
+    "correct_text": "For example, the chunked transfer coding in HTTP/1.1\r\nallows a trailer section to be sent after the content\r\n(Section ?.?.? of [HTTP/1.1]).",
+    "notes": "Section 7.1.2 does not exist. It isn't clear to me which section is the intended target of the reference.",
+    "submit_date": "2022-08-31",
+    "submitter_name": "James Synge",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": 7109,
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "15.4.9",
+    "orig_text": "   The 308 (Permanent Redirect) status code indicates that the target\r\n   resource has been assigned a new permanent URI and any future\r\n   references to this resource ought to use one of the enclosed URIs.",
+    "correct_text": "   The 308 (Permanent Redirect) status code indicates that the target\r\n   resource has been assigned a new permanent URI and any future\r\n   references to this resource ought to use one of the enclosed URIs.\r\n   The user agent MUST NOT change the request method if it performs\r\n   an automatic redirection to that URI.\r\n\r\nand/or add note as is present in RFC 7538, e.g.:\r\n\r\n      Note: This status code is similar to 301 (Moved Permanently)\r\n      (Section 15.4.2), except that it does not allow changing\r\n      the request method from POST to GET.",
+    "notes": "The current text in this section for 308 Permanent Redirect does not include any mention of the user agent not changing the request method. I am suggesting that similar wording be used as in 15.4.8.  307 Temporary Redirect and/or a note added similar to the one present in RFC 7538 but excluded from this section's current text. Whichever is chosen, it would be good to make the wording/notes consistent across both the 307 and 308 status code sections.",
+    "submit_date": "2022-08-31",
+    "submitter_name": "Gary Wilson Jr.",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
