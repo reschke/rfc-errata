@@ -238,5 +238,20 @@
     "verifier_id": 130,
     "verifier_name": "Barry Leiba",
     "update_date": "2021-03-08 09:39:49"
+  },
+  {
+    "errata_id": 7111,
+    "doc-id": "RFC1034",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "insure\r\n",
+    "correct_text": "ensure\r\n",
+    "notes": "Section 3.6.2 uses both ensure and insure to mean the same thing, which is to guarantee or make certain. Sections 4.1, 4.2.2, and 5.3.3 all use the insure form.\r\n\r\nGenerally, insure is used in the financial sense, with making certain being a secondary definition. At the very least, consistency in the same paragraph of 3.6.2 would be cleaner.",
+    "submit_date": "2022-09-01",
+    "submitter_name": "Stephan Garland",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
