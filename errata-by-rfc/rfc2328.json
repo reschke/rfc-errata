@@ -358,5 +358,20 @@
     "verifier_id": 171,
     "verifier_name": "John Scudder",
     "update_date": "2022-05-09 14:02:32"
+  },
+  {
+    "errata_id": 7112,
+    "doc-id": "RFC2328",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": 10.2,
+    "orig_text": "        NegotiationDone\r\n            The Master/Slave relationship has been negotiated, and DD\r\n            sequence numbers have been exchanged.  This signals the\r\n            start of the sending/receiving of Database Description\r\n            packets.  For more information on the generation of this\r\n            event, consult Section 10.8.",
+    "correct_text": "        NegotiationDone\r\n            The Master/Slave relationship has been negotiated, and DD\r\n            sequence numbers have been exchanged.  This signals the\r\n            start of the sending/receiving of Database Description\r\n            packets.  For more information on the generation of this\r\n            event, consult Section 10.6.",
+    "notes": "The generation of the NegotiationDone event is specified in Section 10.6 (not Section 10.8).\r\n\r\n(Also discussed at https://mailarchive.ietf.org/arch/msg/lsr/NZMWapi62sJuExnBZFBBMdW169k/)",
+    "submit_date": "2022-09-01",
+    "submitter_name": "Renato Westphal",
+    "verifier_id": 171,
+    "verifier_name": "John Scudder",
+    "update_date": "2022-09-01 14:36:54"
   }
 ]
