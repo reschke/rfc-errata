@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7118,
+    "doc-id": "RFC9286",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "fileList           SEQUENCE SIZE (0..MAX) OF FileAndHash",
+    "correct_text": "fileList           SEQUENCE SIZE (1..MAX) OF FileAndHash",
+    "notes": "Section 7 specifies \" A CA's manifest will always contain at least one entry\"; therefor, a fileList sequence of size 0 is invalid.",
+    "submit_date": "2022-09-03",
+    "submitter_name": "Job Snijders",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
