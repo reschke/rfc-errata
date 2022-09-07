@@ -2,16 +2,16 @@
   {
     "errata_id": 7054,
     "doc-id": "RFC9094",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": 3,
     "orig_text": "  augment \"/nw:networks/nw:network/nw:node/tet:te\"\r\n        + \"/tet:te-node-attributes\" {\r\n    when '/nw:networks/nw:network/nw:network-types'\r\n       + '/tet:te-topology/wsont:wson-topology' {\r\n      description\r\n        \"Augmentation parameters apply only for networks with\r\n         WSON topology type.\";\r\n    }\r\n",
     "correct_text": "  augment \"/nw:networks/nw:network/nw:node/tet:te\"\r\n        + \"/tet:te-node-attributes\" {\r\n    when '../../../nw:network-types/tet:te-topology/'\r\n       + 'wsont:wson-topology' {\r\n      description\r\n        \"Augmentation parameters apply only for networks with\r\n         WSON topology type.\";\r\n    }\r\n",
-    "notes": "The original YANG statements make the augmentation apply to all nw:networks as soon as there is at least one nw:network that is of wsont:wson-topology. This is clearly not the author's intent, as proven by the text in the description statement.\r\n\r\nThe corrected YANG statements make the augmentation only apply to the specific nw:networks that are of wsont:wson-topology type. There are also other ways to fix this issue.",
+    "notes": "The original YANG statements make the augmentation apply to all nw:networks as soon as there is at least one nw:network that is of wsont:wson-topology. This is clearly not the author's intent, as proven by the text in the description statement.\r\n\r\nThe corrected YANG statements make the augmentation only apply to the specific nw:networks that are of wsont:wson-topology type. There are also other ways to fix this issue.\r\n\r\n(See also discussion at https://mailarchive.ietf.org/arch/msg/ccamp/9-8jHMSqp_Lqdu0XMuVkh8HaJN8/)",
     "submit_date": "2022-07-29",
     "submitter_name": "Jan Lindblad",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 171,
+    "verifier_name": "John Scudder",
+    "update_date": "2022-09-06 14:38:03"
   }
 ]
