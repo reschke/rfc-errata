@@ -2,46 +2,46 @@
   {
     "errata_id": 7055,
     "doc-id": "RFC8542",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": 4,
     "orig_text": "augment \"/nw:networks/nw:network/nw:node\" {\r\n  when '/nw:networks/nw:network/nw:network-types/'\r\n     + 'fabric:fabric-network' {\r\n    description\r\n      \"Augmentation parameters apply only for networks\r\n       with fabric topology\";\r\n  }\r\n",
     "correct_text": "augment \"/nw:networks/nw:network/nw:node\" {\r\n  when '../nw:network-types/fabric:fabric-network' {\r\n    description\r\n      \"Augmentation parameters apply only for networks\r\n       with fabric topology\";\r\n  }\r\n",
-    "notes": "The original YANG statements make the augmentation apply to all nw:networks as soon as there is at least one nw:network that is of fabric:fabric-network topo. This is clearly not the author's intent, as proven by the text in the description statement.\r\n\r\nThe corrected YANG statements make the augmentation only apply to the specific nw:networks that are of fabric topology. There are also other ways to fix this issue.",
+    "notes": "The original YANG statements make the augmentation apply to all nw:networks as soon as there is at least one nw:network that is of fabric:fabric-network topo. This is clearly not the author's intent, as proven by the text in the description statement.\r\n\r\nThe corrected YANG statements make the augmentation only apply to the specific nw:networks that are of fabric topology. There are also other ways to fix this issue.\r\n\r\n===\r\n[AD Note] I believe that the original intent was as shown in the corrected text.  However, the resolution is not straightforward, and an update may require further consideration in light of the current rules (rfc7950).  Therefore, I am marking this report as \"Hold for Document Update\" [1].\r\n\r\n[1] https://www.ietf.org/about/groups/iesg/statements/processing-errata-ietf-stream/",
     "submit_date": "2022-07-29",
     "submitter_name": "Jan Lindblad",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-09-07 06:26:44"
   },
   {
     "errata_id": 7056,
     "doc-id": "RFC8542",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": 4,
     "orig_text": "augment \"/nw:networks/nw:network/nw:node/nt:termination-point\" {\r\n  when '/nw:networks/nw:network/nw:network-types/'\r\n     + 'fabric:fabric-network' {\r\n    description\r\n      \"Augmentation parameters apply only for networks\r\n       with fabric topology\";\r\n  }\r\n",
     "correct_text": "augment \"/nw:networks/nw:network/nw:node/nt:termination-point\" {\r\n  when '../../nw:network-types/fabric:fabric-network' {\r\n    description\r\n      \"Augmentation parameters apply only for networks\r\n       with fabric topology\";\r\n  }\r\n",
-    "notes": "The original YANG statements make the augmentation apply to all nw:networks as soon as there is at least one nw:network that is of fabric:fabric-network topo. This is clearly not the author's intent, as proven by the text in the description statement.\r\n\r\nThe corrected YANG statements make the augmentation only apply to the specific nw:networks that are of fabric topology. There are also other ways to fix this issue.",
+    "notes": "The original YANG statements make the augmentation apply to all nw:networks as soon as there is at least one nw:network that is of fabric:fabric-network topo. This is clearly not the author's intent, as proven by the text in the description statement.\r\n\r\nThe corrected YANG statements make the augmentation only apply to the specific nw:networks that are of fabric topology. There are also other ways to fix this issue.\r\n\r\n===\r\n[AD Note] I believe that the original intent was as shown in the corrected text.  However, the resolution is not straightforward, and an update may require further consideration in light of the current rules (rfc7950).  Therefore, I am marking this report as \"Hold for Document Update\" [1].\r\n\r\n[1] https://www.ietf.org/about/groups/iesg/statements/processing-errata-ietf-stream/",
     "submit_date": "2022-07-29",
     "submitter_name": "Jan Lindblad",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-09-07 06:31:52"
   },
   {
     "errata_id": 7057,
     "doc-id": "RFC8542",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "augment \"/nws:networks/nws:network/nws:node\" {\r\n  when '/nws:networks/nws:network/nws:network-types'\r\n     + '/sfabric:fabric-network' {\r\n    description\r\n      \"Augmentation parameters apply only for\r\n       networks with fabric topology.\";\r\n  }\r\n",
     "correct_text": "augment \"/nws:networks/nws:network/nws:node\" {\r\n  when '../nws:network-types/sfabric:fabric-network' {\r\n    description\r\n      \"Augmentation parameters apply only for\r\n       networks with fabric topology.\";\r\n  }\r\n",
-    "notes": "The original YANG statements make the augmentation apply to all nws:networks as soon as there is at least one nws:network that is of sfabric:fabric-network topo. This is clearly not the author's intent, as proven by the text in the description statement.\r\n\r\nThe corrected YANG statements make the augmentation only apply to the specific nws:networks that are of fabric topology. There are also other ways to fix this issue.",
+    "notes": "The original YANG statements make the augmentation apply to all nws:networks as soon as there is at least one nws:network that is of sfabric:fabric-network topo. This is clearly not the author's intent, as proven by the text in the description statement.\r\n\r\nThe corrected YANG statements make the augmentation only apply to the specific nws:networks that are of fabric topology. There are also other ways to fix this issue.\r\n\r\n===\r\n[AD Note] I believe that the original intent was as shown in the corrected text.  However, the resolution is not straightforward, and an update may require further consideration in light of the current rules (rfc7950).  Therefore, I am marking this report as \"Hold for Document Update\" [1].\r\n\r\n[1] https://www.ietf.org/about/groups/iesg/statements/processing-errata-ietf-stream/",
     "submit_date": "2022-07-29",
     "submitter_name": "Jan Lindblad",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 148,
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-09-07 06:29:51"
   }
 ]
