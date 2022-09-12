@@ -13,5 +13,20 @@
     "verifier_id": 124,
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7125,
+    "doc-id": "RFC4134",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "B",
+    "orig_text": "***5.2.bin***\r\n\r\n|* Example 5.2.bin\r\n|>5.2.bin\r\n|MIIBZQYJKoZIhvcNAQcDoIIBVjCCAVICAQIxggEAMIG9AgEAMCYwEjEQMA4GA1UEAxMHQ2\r\n|FybFJTQQIQRjRrx4AAVrwR024uzV1x0DANBgkqhkiG9w0BAQEFAASBgJQmQojGi7Z4IP+C\r\n|VypBmNFoCDoEp87khtgyff2N4SmqD3RxPx+8hbLQt9i3YcMwcap+aiOkyqjMalT03VUC0X\r\n|BOGv+HYI3HBZm/aFzxoq+YOXAWs5xlGerZwTOc9j6AYlK4qXvnztR5SQ8TBjlzytm4V7zg\r\n|+TGrnGVNQBNw47Ewoj4CAQQwDQQLTWFpbExpc3RSQzIwEAYLKoZIhvcNAQkQAwcCAToEGH\r\n|cUr5MSJ/g9HnJVHsQ6X56VcwYb+OfojTBJBgkqhkiG9w0BBwEwGgYIKoZIhvcNAwIwDgIC\r\n|AKAECJwE0hkuKlWhgCBeKNXhojuej3org9Lt7n+wWxOhnky5V50vSpoYRfRRyw==\r\n|<5.2.bin",
+    "correct_text": "***5.2.bin***\r\n\r\n|* Example 5.2.bin\r\n|>5.2.bin\r\n|MIIBIwYJKoZIhvcNAQcDoIIBFDCCARACAQAxgcAwgb0CAQAwJjASMRAwDgYDVQQDEwdDYX\r\n|JsUlNBAhBGNGvHgABWvBHTbi7NXXHQMA0GCSqGSIb3DQEBAQUABIGAhUK+4wsu5Q8JqiTK\r\n|3trB0wm4Jysly9Vx+8mc2/CybqCKXxydSu2YnRU5JgEaLmvwRDmJNzxvx0phCwsnd6r51J\r\n|ek0iE/wj8g1NwQ6dY/ANucgkfWfpb/Em6HhKC67YEPVm2mHeurw7ehufhfi8wbSuUUNgZh\r\n|0MdkX2lnkalQ7tgwSAYJKoZIhvcNAQcBMBkGCCqGSIb3DQMCMA0CAToECOhwgeLvxRVXgC\r\n|AGUwp7jVwWDczVdtaLWdZFjBoaDOYe895DVgCbQIw4XQ==\r\n|<5.2.bin",
+    "notes": "The base64 encoding in the Appending B doesn't correspond to the data in the section 5.2. Provided base64 was generated using data in the section 5.2 instead.",
+    "submit_date": "2022-09-11",
+    "submitter_name": "Dmitry Baryshkov",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
