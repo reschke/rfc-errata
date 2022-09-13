@@ -107,16 +107,16 @@
   {
     "errata_id": 7122,
     "doc-id": "RFC7644",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.5.2",
     "orig_text": "   The \"path\" attribute is described by the following ABNF syntax rule:\r\n\r\n                   PATH = attrPath / valuePath [subAttr]\r\n\r\n                      Figure 7: SCIM PATCH PATH Rule\r\n\r\n   The ABNF rules \"attrPath\", \"valuePath\", and \"subAttr\" are defined in\r\n   Section 3.4.2.2.  The \"valuePath\" rule allows specific values of a\r\n   complex multi-valued attribute to be selected.",
     "correct_text": "   The \"path\" attribute is described by the following ABNF syntax rule:\r\n\r\n                   PATH = attrPath / valuePath [subAttr] / attrExp\r\n\r\n                      Figure 7: SCIM PATCH PATH Rule\r\n\r\n   The ABNF rules \"attrPath\", \"valuePath\", \"subAttr\", and \"attrExp\" are \r\n   defined in Section 3.4.2.2. The \"valuePath\" rule allows specific \r\n   values of a complex multi-valued attribute to be selected.",
-    "notes": "In section 3.5.2.2. (Remove Operation), states:\r\n\r\n\"If the target location is a multi-valued attribute and a complex\r\nfilter is specified comparing a \"value\", the values matched by the\r\nfilter are removed.  If no other values remain after removal of\r\nthe selected values, the multi-valued attribute SHALL be\r\nconsidered unassigned.\"\r\n\r\nThis means it should be possible to create a filter that selects a value from a multi-valued attribute that is not complex. Writing such a filter seems impossible without having \"attrExp\" as a possible legal PATH.\r\n\r\nIn section 3.4.2.2.  (Filtering) there is an example that shows how such a filter could look for a multi-valued attribute, i.e.:\r\n\r\nfilter=\r\n schemas eq \"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\"\r\n\r\nThis would also work for a path filter, e.g.:\r\n\r\n{\r\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\r\n  \"Operations\":[{\r\n    \"op\":\"remove\",\r\n    \"path\":\"schemas eq \\\"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\\\"\"\r\n  }]\r\n}",
+    "notes": "In section 3.5.2.2. (Remove Operation), states:\r\n\r\n\"If the target location is a multi-valued attribute and a complex\r\nfilter is specified comparing a \"value\", the values matched by the\r\nfilter are removed.  If no other values remain after removal of\r\nthe selected values, the multi-valued attribute SHALL be\r\nconsidered unassigned.\"\r\n\r\nThis means it should be possible to create a filter that selects a value from a multi-valued attribute that is not complex. Writing such a filter seems impossible without having \"attrExp\" as a possible legal PATH.\r\n\r\nIn section 3.4.2.2.  (Filtering) there is an example that shows how such a filter could look for a multi-valued attribute, i.e.:\r\n\r\nfilter=\r\n schemas eq \"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\"\r\n\r\nThis would also work for a path filter, e.g.:\r\n\r\n{\r\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\r\n  \"Operations\":[{\r\n    \"op\":\"remove\",\r\n    \"path\":\"schemas eq \\\"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\\\"\"\r\n  }]\r\n}\r\n\r\n[AD Note: The document reflects consensus of the working group at the time of publication, but on review it is believed that any future update work in this space should consider this erratum.]",
     "submit_date": "2022-09-08",
     "submitter_name": "Egil Hansen",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 164,
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2022-09-12 09:13:03"
   }
 ]
