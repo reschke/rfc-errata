@@ -2,7 +2,7 @@
   {
     "errata_id": 7126,
     "doc-id": "RFC9142",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "1.2.1",
     "orig_text": "The curve25519 and curve488 security-level numbers are in [RFC7748].",
@@ -10,8 +10,8 @@
     "notes": "\"curve488\" should be \"curve448\". (From context, this is unlikely to cause significant confusion for readers, since \"Curve488\" does not represent a well-known primitive and is not mentioned in the reference, whereas Curve448 is well-known and referred to in the reference and elsewhere in this document.)",
     "submit_date": "2022-09-12",
     "submitter_name": "Jacob Nevins",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-09-13 14:56:50"
   }
 ]
