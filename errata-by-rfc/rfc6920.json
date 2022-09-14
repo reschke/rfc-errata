@@ -13,5 +13,20 @@
     "verifier_id": 130,
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7129,
+    "doc-id": "RFC6920",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 8.1,
+    "orig_text": "\r\n   The following ni URI is generated from the text \"Hello World!\" (12\r\n   characters without the quotes), using the sha-256 algorithm shown\r\n   with and without an authority field:\r\n\r\n   ni:///sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n\r\n   ni://example.com/sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n",
+    "correct_text": "\r\n   The following ni URI is generated from the text \"Hello World!\" (12\r\n   characters without the quotes), using the sha-256 algorithm shown\r\n   with and without an authority field:\r\n\r\n   ni://example.com/sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n\r\n   ni:///sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n",
+    "notes": "Make example consistent with the \"with and without\" language.",
+    "submit_date": "2022-09-13",
+    "submitter_name": "Venkatesh",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
