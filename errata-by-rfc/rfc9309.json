@@ -13,5 +13,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7128,
+    "doc-id": "RFC9309",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.2.2.",
+    "orig_text": "   For example:\r\n\r\n   +==================+=======================+=======================+\r\n   | Path             | Encoded Path          | Path to Match         |\r\n   +==================+=======================+=======================+\r\n   | /foo/bar?baz=quz | /foo/bar?baz=quz      | /foo/bar?baz=quz      |\r\n   +------------------+-----------------------+-----------------------+\r\n   | /foo/bar?baz=    | /foo/bar?baz=         | /foo/bar?baz=         |\r\n   | https://foo.bar  | https%3A%2F%2Ffoo.bar | https%3A%2F%2Ffoo.bar |\r\n   +------------------+-----------------------+-----------------------+\r\n   | /foo/bar/        | /foo/bar/%E3%83%84    | /foo/bar/%E3%83%84    |\r\n   | U+E38384         |                       |                       |\r\n   +------------------+-----------------------+-----------------------+\r\n   | /foo/            | /foo/bar/%E3%83%84    | /foo/bar/%E3%83%84    |\r\n   | bar/%E3%83%84    |                       |                       |\r\n   +------------------+-----------------------+-----------------------+\r\n   | /foo/            | /foo/bar/%62%61%7A    | /foo/bar/baz          |\r\n   | bar/%62%61%7A    |                       |                       |\r\n   +------------------+-----------------------+-----------------------+",
+    "correct_text": "   For example:\r\n\r\n   +==================+=======================+=======================+\r\n   | Path             | Encoded Path          | Path to Match         |\r\n   +==================+=======================+=======================+\r\n   | /foo/bar?baz=quz | /foo/bar?baz=quz      | /foo/bar?baz=quz      |\r\n   +------------------+-----------------------+-----------------------+\r\n   | /foo/bar?baz=    | /foo/bar?baz=         | /foo/bar?baz=         |\r\n   | https://foo.bar  | https%3A%2F%2Ffoo.bar | https%3A%2F%2Ffoo.bar |\r\n   +------------------+-----------------------+-----------------------+\r\n   | /foo/bar/        | /foo/bar/%E3%83%84    | /foo/bar/%E3%83%84    |\r\n   | U+30C4           |                       |                       |\r\n   +------------------+-----------------------+-----------------------+\r\n   | /foo/            | /foo/bar/%E3%83%84    | /foo/bar/%E3%83%84    |\r\n   | bar/%E3%83%84    |                       |                       |\r\n   +------------------+-----------------------+-----------------------+\r\n   | /foo/            | /foo/bar/%62%61%7A    | /foo/bar/baz          |\r\n   | bar/%62%61%7A    |                       |                       |\r\n   +------------------+-----------------------+-----------------------+",
+    "notes": "The \"Path\" component of third example seems to indicate Unicode codepoint, rather than UTF-8 encoded hexadecimal. If it was, the correct codepoint for %E3%83%84 is U+30C4, or ツ (in Unicode form).",
+    "submit_date": "2022-09-13",
+    "submitter_name": "Yoshiro Yoneya",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
