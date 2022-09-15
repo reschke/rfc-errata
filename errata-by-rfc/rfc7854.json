@@ -43,5 +43,20 @@
     "verifier_id": 155,
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": 7133,
+    "doc-id": "RFC7854",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 5,
+    "orig_text": "   In BMP's normal operating mode, after the BMP session is up, Route\r\n   Monitoring messages are used to provide a snapshot of the Adj-RIB-In\r\n   of each monitored peer.  This is done by sending all routes stored in\r\n   the Adj-RIB-In of those peers using standard BGP Update messages,\r\n   encapsulated in Route Monitoring messages.  There is no requirement\r\n   on the ordering of messages in the peer dumps.  When the initial dump\r\n   is completed for a given peer, this MUST be indicated by sending an\r\n   End-of-RIB marker for that peer (as specified in Section 2 of\r\n   [RFC4724], plus the BMP encapsulation header).  See also Section 9.\r\n",
+    "correct_text": "Regrettably, there is no straightforward correction. Please see the notes for details.",
+    "notes": "BMP is specified in the indicated text as sending \"an End-of-RIB marker for that peer\". The problem is that End-of-RIB (EoR) markers aren't specified in RFC 4724 as being per-peer, but per address family (AF), thus it doesn't make sense to talk about sending a single EoR to indicate BMP completion, except in the special case where BMP is only transporting routes for a single address family. \r\n\r\nThis problem also occurs in Section 3.3:\r\n\r\n   encapsulated in Route Monitoring messages.  Once it has sent all the\r\n   routes for a given peer, it MUST send an End-of-RIB message for that\r\n   peer; when End-of-RIB has been sent for each monitored peer, the\r\n   initial table dump has completed.  (A monitoring station that only\r\n   wants to gather a table dump could close the connection once it has\r\n   gathered an End-of-RIB or Peer Down message corresponding to each\r\n   Peer Up message.)\r\n\r\nbut the underlying fault is in Section 5, so that's what I've referenced above.\r\n\r\nThere are various fixes that could be applied. Some of them include:\r\n\r\n1. Remove all references to EoR. Don't require that an EoR be sent in §5, don't talk about what to do with it in §3.3. I'm not very fond of this option, its only merit is that it's simple to specify the textual changes.\r\n\r\n2. Update §5 to note that an EoR has to be sent per AF, and update §3.3 similarly, including in the parenthetical comment noting that the station would have to gather an EoR per AF that's supported on the session.\r\n\r\n3. Introduce a new BMP message \"end of initial BMP convergence\" to provide the functionality. Probably this would be in addition to the fixes in #2, since it's still useful to know that a given AF dump has completed. But introduction of the new message would provide a simpler and probably more reliable way for the monitoring station to know that BMP-level synchronization had completed.\r\n\r\nIt seems to me that the best way to address this will be with either a new spec that updates RFC 7854, or an rfc7854bis. For this reason, I suggest this erratum should be verified as \"hold for document update\", since the solution requires more WG discussion and consensus than an erratum can provide.\r\n\r\nThis issue was first reported by Vincent Bernat in https://mailarchive.ietf.org/arch/msg/idr/FOEcdxtI03CdgDrn497NBFSpz-s/, and see also https://mailarchive.ietf.org/arch/msg/grow/o16w8s5Ba9J4MdIipbxIqDiZrCI/",
+    "submit_date": "2022-09-14",
+    "submitter_name": "John Scudder",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
