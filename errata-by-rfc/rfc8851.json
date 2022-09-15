@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7132,
+    "doc-id": "RFC8851",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 10,
+    "orig_text": "rid-id            = 1*(alpha-numeric / \"-\" / \"_\")",
+    "correct_text": "rid-id            = 1*255(alpha-numeric)",
+    "notes": "The BNF should be consistent with the rules for the RtpStreamId/RepairedRtpStreamId SDES from RFC 8852 section 3:\r\n\r\n\"As with all SDES items, RtpStreamId and RepairedRtpStreamId are limited to a total of 255 octets in length. RtpStreamId and RepairedRtpStreamId are constrained to contain only alphanumeric characters. For avoidance of doubt, the only allowed byte values for these IDs are decimal 48 through 57, 65 through 90, and 97 through 122.\"",
+    "submit_date": "2022-09-14",
+    "submitter_name": "Byron Campen",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
