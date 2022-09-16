@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": 7134,
+    "doc-id": "RFC9252",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 6.4,
+    "orig_text": "                  +---------------------------------------+\r\n                  |  RD (8 octets)                        |\r\n                  +---------------------------------------+\r\n                  |  Ethernet Tag ID (4 octets)           |\r\n                  +---------------------------------------+\r\n                  |  IP Address Length (1 octet)          |\r\n                  +---------------------------------------+\r\n                  |  Originating Router's IP Address      |\r\n                  |          (4 or 16 octets)             |\r\n                  +---------------------------------------+\r\n\r\n                        Figure 10: EVPN Route Type 4\r\n",
+    "correct_text": "                  +---------------------------------------+\r\n                  |  RD (8 octets)                        |\r\n                  +---------------------------------------+\r\n                  |Ethernet Segment Identifier (10 octets)|\r\n                  +---------------------------------------+\r\n                  |  IP Address Length (1 octet)          |\r\n                  +---------------------------------------+\r\n                  |  Originating Router's IP Address      |\r\n                  |          (4 or 16 octets)             |\r\n                  +---------------------------------------+\r\n\r\n                        Figure 10: EVPN Route Type 4\r\n",
+    "notes": "The 2nd field in the figure should be \"Ethernet Segment Identifier\" of size 10 octets instead of the \"Ethernet Tag ID\" of size 4 octets.\r\n\r\nRFC7432 is the EVPN specification for Ethernet Segment Route (Type 4) and hence the format in section 7.4 of RFC7432 is the correct one.\r\nRFC9252 has an error when showing the encoding format of this EVPN Route Type 4 as a reminder in Figure 10 in section 6.4. \r\n\r\nThis is an editorial error.",
+    "submit_date": "2022-09-15",
+    "submitter_name": "Ketan Talaulikar",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
+  }
+]
