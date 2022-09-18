@@ -73,5 +73,20 @@
     "verifier_id": 167,
     "verifier_name": "Martin Duke",
     "update_date": "2021-01-25 07:19:42"
+  },
+  {
+    "errata_id": 7135,
+    "doc-id": "RFC5925",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": 7.3,
+    "orig_text": ">> A TCP-AO implementation MUST allow for configuration of the\r\n   behavior of segments with TCP-AO but that do not match an MKT.  The\r\n   initial default of this configuration SHOULD be to silently accept\r\n   such connections.  If this is not the desired case, an MKT can be\r\n   included to match such connections, or the connection can indicate\r\n   that TCP-AO is required.  Alternately, the configuration can be\r\n   changed to discard segments with the AO option not matching an MKT.",
+    "correct_text": ">> A TCP-AO implementation MUST allow for configuration of the\r\n   behavior of segments with TCP-AO but that do not match any MKT or \r\n   no MKT is available. The initial default of this configuration \r\n   SHOULD be to silently accept such connections. In this mode of \r\n   operation, both the endpoints will not perform TCP-AO validation.\r\n   If this is not the desired case, an MKT can be included to match such \r\n   connections, or the connection can indicate that TCP-AO is required. \r\n   Alternately, the configuration can be changed to discard segments\r\n   with the AO option not matching an MKT.",
+    "notes": "The RFC does not clearly draw out the distinction between treatment of segments with TCP-AO and without TCP-AO option.\r\nNote that in the case of MKT mismatch as per existing RFC text, if either endpoint does TCP-AO validation, the session would not get established.",
+    "submit_date": "2022-09-16",
+    "submitter_name": "Venkatesh Natarajan",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
