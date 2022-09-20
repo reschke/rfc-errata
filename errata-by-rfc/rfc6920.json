@@ -17,16 +17,16 @@
   {
     "errata_id": 7129,
     "doc-id": "RFC6920",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": 8.1,
-    "orig_text": "\r\n   The following ni URI is generated from the text \"Hello World!\" (12\r\n   characters without the quotes), using the sha-256 algorithm shown\r\n   with and without an authority field:\r\n\r\n   ni:///sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n\r\n   ni://example.com/sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n",
-    "correct_text": "\r\n   The following ni URI is generated from the text \"Hello World!\" (12\r\n   characters without the quotes), using the sha-256 algorithm shown\r\n   with and without an authority field:\r\n\r\n   ni://example.com/sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n\r\n   ni:///sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n",
-    "notes": "Make example consistent with the \"with and without\" language.",
+    "orig_text": "   The following ni URI is generated from the text \"Hello World!\" (12\r\n   characters without the quotes), using the sha-256 algorithm shown\r\n   with and without an authority field:\r\n\r\n   ni:///sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n\r\n   ni://example.com/sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n",
+    "correct_text": "   The following ni URI is generated from the text \"Hello World!\" (12\r\n   characters without the quotes), using the sha-256 algorithm shown\r\n   with and without an authority field:\r\n\r\n   ni://example.com/sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n\r\n   ni:///sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk\r\n",
+    "notes": "Make example consistent with the \"with and without\" language.\r\n\r\n --VERIFIER NOTES--\r\nThis has been marked as held for document update per author input: co-authors […] concluded that indeed it would be more clear if the order of the examples was changed as suggested by the report.",
     "submit_date": "2022-09-13",
     "submitter_name": "Venkatesh",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": 2,
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-09-19 14:16:04"
   }
 ]
