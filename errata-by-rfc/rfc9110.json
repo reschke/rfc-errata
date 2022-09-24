@@ -43,5 +43,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7138,
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "12.5.1",
+    "orig_text": "The media type quality factor associated with a given type is \r\ndetermined by finding the media range with the highest precedence \r\nthat matches the type. For example,\r\n\r\nAccept: text/*;q=0.3, text/plain;q=0.7, text/plain;format=flowed,\r\n       text/plain;format=fixed;q=0.4, */*;q=0.5\r\n\r\nwould cause the following values to be associated:\r\n\r\nTable 5: \r\n\r\nMedia Type\t                Quality Value\r\ntext/plain;format=flowed\t      1\r\ntext/plain\t                     0.7\r\ntext/html\t                     0.3\r\nimage/jpeg\t                     0.5\r\ntext/plain;format=fixed\t             0.4\r\ntext/html;level=3\t             0.7",
+    "correct_text": "The media type quality factor associated with a given type is \r\ndetermined by finding the media range with the highest precedence \r\nthat matches the type. For example,\r\n\r\nAccept: text/*;q=0.3, text/plain;q=0.7, text/plain;format=flowed,\r\n       text/plain;format=fixed;q=0.4, */*;q=0.5\r\n\r\nwould cause the following values to be associated:\r\n\r\nTable 5: \r\n\r\nMedia Type\t                Quality Value\r\ntext/plain;format=flowed\t      1\r\ntext/plain\t                     0.7\r\ntext/html\t                     0.3\r\nimage/jpeg\t                     0.5\r\ntext/plain;format=fixed\t             0.4\r\ntext/html;level=3\t             0.3",
+    "notes": "To illustrate how the media type quality factor associated with a given type is determined, the following example is given: \r\n\r\nAccept: text/*;q=0.3, text/plain;q=0.7, text/plain;format=flowed, text/plain;format=fixed;q=0.4, */*;q=0.5\r\n\r\nThe last row of the result table (table 5) presenting the values to be associated cannot be deduced (MediaType: text/html;level=3, Quality Value: 0.7), since only \"text/*;q=0.3\" and \"*/*;q=0.5\" are possible values and as explained in the RFC \"text/*;q=0.3\" should take precedence. \r\n\r\nIn section 5.3.2 of RFC7231, a similar example is given, where the last row of the table is correct (text/html;level=3 | 0.7) since in that example the accept header contains (text/html;q=0.7).",
+    "submit_date": "2022-09-23",
+    "submitter_name": "Yousouf Taghzouti",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
