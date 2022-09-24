@@ -13,5 +13,20 @@
     "verifier_id": 99,
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": 7139,
+    "doc-id": "RFC8659",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": 4.2,
+    "orig_text": "   parameters = (parameter *WSP \";\" *WSP parameters) / parameter\r\n   parameter = tag *WSP \"=\" *WSP value\r\n   tag = (ALPHA / DIGIT) *( *(\"-\") (ALPHA / DIGIT))\r\n   value = *(%x21-3A / %x3C-7E)",
+    "correct_text": "   parameters = (parameter *WSP \";\" *WSP parameters) / parameter\r\n   parameter = parameter-tag *WSP \"=\" *WSP parameter-value\r\n   parameter-tag = (ALPHA / DIGIT) *( *(\"-\") (ALPHA / DIGIT))\r\n   parameter-value = *(%x21-3A / %x3C-7E)",
+    "notes": "1. Original text uses \"tag\" and \"value\" in the ABNF is ambiguous or conflicting with the usage of \"tag\" and \"value\" in terms \"Property Tag\" and \"Property Value\" (which are in the main CAA context).\r\n\r\n2. The text for \"tag\" (meaning Property Tag) in 4.1.1 reads:\r\n\r\n   Tag:  A non-zero-length sequence of ASCII letters and numbers in\r\n      lowercase.\r\n\r\n3. The Tag definition above does not have an ABNF definition. This can (and does) lead to confusion for implementers.\r\n\r\nThe above change to the ABNF removes the ambiguity, without changing the meaning of the ABNF itself.",
+    "submit_date": "2022-09-23",
+    "submitter_name": "Brian Dickson",
+    "verifier_id": 99,
+    "verifier_name": null,
+    "update_date": null
   }
 ]
