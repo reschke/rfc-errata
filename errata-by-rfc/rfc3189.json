@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 326,
+    "errata_id": "326",
     "doc-id": "RFC3189",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "      a=fmtp:113 encode=SD-VCR/525-60\r\n      a=fmtp:113 audio=none",
     "correct_text": "     a=fmtp:113 encode=SD-VCR/525-60 audio=none",
     "notes": "",
     "submit_date": "2005-03-10",
     "submitter_name": "Stephen Casner",
-    "verifier_id": 107,
+    "verifier_id": "107",
     "verifier_name": "Cullen Jennings",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 756,
+    "errata_id": "756",
     "doc-id": "RFC3189",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "      a=fmtp: 112 encode=SD-VCR/525-60\r\n      a=fmtp: 112 audio=bundled\r\n      a=fmtp: 113 encode=306M/525-60\r\n      a=fmtp: 113 audio=bundled",
     "correct_text": "      a=fmtp:112 encode=SD-VCR/525-60 audio=bundled\r\n      a=fmtp:113 encode=306M/525-60 audio=bundled",
     "notes": "from pending",
     "submit_date": "2005-03-10",
     "submitter_name": "Stephen Casner",
-    "verifier_id": 107,
+    "verifier_id": "107",
     "verifier_name": "Cullen Jennings",
     "update_date": "2019-09-10 09:09:03"
   }
