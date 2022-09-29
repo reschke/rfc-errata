@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 187,
+    "errata_id": "187",
     "doc-id": "RFC4113",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": "99\r\nDESCRIPTION clause of 'udpEndpointRemotePort' says:",
+    "section": "\r\nDESCRIPTION clause of 'udpEndpointRemotePort' says:",
     "orig_text": "       The remote port number for this UDP endpoint.  If\r\n       datagrams from any remote system are to be accepted,\r\n       this value is zero.",
     "correct_text": "       The remote port number for this UDP endpoint.  If\r\n       datagrams from any remote port are to be accepted,\r\n       this value is zero.\r\n",
     "notes": "",
     "submit_date": "2005-06-20",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 767,
+    "errata_id": "767",
     "doc-id": "RFC4113",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "The DESCRIPTION clause of 'udpEndpointRemoteAddressType',\r\n    at the bottom of page 10,\r\n\r\n       \"The address type of udpEndpointRemoteAddress.  Only\r\n       IPv4, IPv4z, IPv6, and IPv6z addresses are expected, or\r\n       unknown(0) if datagrams for all remote IP addresses are\r\n       accepted. ...\"     ",
     "correct_text": "       \"The address type of udpEndpointRemoteAddress.  Only\r\n       IPv4, IPv4z, IPv6, and IPv6z addresses are expected, or\r\n       unknown(0) if datagrams from all remote IP addresses are\r\n       accepted. ...\"\r\n                               ^^^^      \r\n",
     "notes": "from pending",
     "submit_date": "2005-06-20",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
