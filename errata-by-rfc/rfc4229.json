@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 161,
+    "errata_id": "161",
     "doc-id": "RFC4229",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "\r\nReference tags for RFC 2109 [5] should be replaced by reference tags for RFC 2965 [15].\r\n\r\nRationale:\r\nRFC 2109 [5] has been obsoleted by RFC 2965 [15], and the latter\r\napparently contains the current specification for the Set-Cookie\r\n(and the Set-Cookie2) Header Field.\r\n\r\nNevertheless, the registration for 'Set-Cookie' in Subsection\r\n2.1.96 of RFC 4229 (on page 36) refers to RFC 2109 [5] as the\r\nnormative Specification document.\r\n\r\nI suspect that this particular Registration should be updated\r\nimmediately to point to RFC 2965 [15] .\r\n",
     "submit_date": "2006-01-18",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 837,
+    "errata_id": "837",
     "doc-id": "RFC4229",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "(2)\r\n\r\nRFC 2068 [4] has been obsoleted by RFC 2616 [11], and the latter\r\npurposely has omitted a few elements of HTTP from the former\r\nspecification because of \"detected problems\" and/or \"lack of\r\nimplementation\" -- cf. Section 19.6 of RFC 2616.\r\nThus, there is no more current specification for these elements.\r\nAccording to my understanding that means that these elements\r\neffectively have been deprecated by RFC 2616.\r\n\r\nAmong those (deprecated) elements of HTTP 1.1 are the HTTP Header\r\nFields:\r\n         -  Content-Base\r\n         -  Content-Version\r\n         -  Derived-From\r\n         -  Keep-Alive\r\n         -  Link\r\n         -  Public\r\n         -  URI\r\n\r\nAs expected, the Registrations for these HTTP Header Fields, as\r\npresented in RFC 4229, consistently all refer to RFC 2068 [4] as\r\nthe (obsolete) 'Specification document' -- but, very surprisingly,\r\nthe registered 'Status' entries for these Header Fields all contain:\r\n\"standard\" instead of \"deprecated\".\r\n\r\nAccording to my understanding of IETF procedures, a feature or\r\nprotocol element must not be named \"standard\" if its specification\r\nhas been officially obsoleted / deprecated by a Standards Track RFC.\r\n\r\nHence, IMHO the IANA Registrations for the above mentioned HTTP\r\nHeader Fields (Subsections 2.1.{21,33,41,59,62,89,108} of RFC 4229\r\nshould be immediately corrected to contain 'Status: deprecated\".\r\n",
     "correct_text": "[see above]",
     "notes": "(Note: A status of \"deprecated\" still allows standards conformant\r\nimplementations to implement any such feature or protocol element\r\nfor the sake of backwards compatibility!)\n --VERIFIER NOTES-- \n   This is not an appropriate subject for an erratum. \r\n   Please take this up with the IANA or, better yet, \r\n   write an Internet-Draft. --Peter Saint-Andre",
     "submit_date": "2006-01-18",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }
