@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 7020,
+    "errata_id": "7020",
     "doc-id": "RFC7951",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6.8,
+    "section": "6.8",
     "orig_text": "An \"identityref\" value is represented as a string -- the name of an\r\nidentity.  If the identity is defined in a module other than the leaf\r\nnode containing the identityref value, the namespace-qualified form\r\n(Section 4) MUST be used.  Otherwise, both the simple and namespace-\r\nqualified forms are permitted.",
     "correct_text": "An \"identityref\" value is represented as a string -- the name of an\r\nidentity.  If the identity is defined in a module other than the leaf or\r\nleaf-list node containing the identityref value, the namespace-qualified\r\nform (Section 4) MUST be used.  Otherwise, both the simple and namespace-\r\nqualified forms are permitted.",
     "notes": "The original text omitted leaf-list nodes, which may also be of \"identityref\" type.",
     "submit_date": "2022-07-11",
     "submitter_name": "Jernej Tuljak",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
