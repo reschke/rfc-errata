@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1606,
+    "errata_id": "1606",
     "doc-id": "RFC3863",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.4,
+    "section": "4.4",
     "orig_text": "         <xs:pattern value=\"0(.[0-9]{0,3})?\"/>\r\n         <xs:pattern value=\"1(.0{0,3})?\"/>\r\n",
     "correct_text": "         <xs:pattern value=\"0(\\.[0-9]{0,3})?\"/>\r\n         <xs:pattern value=\"1(\\.0{0,3})?\"/>\r\n",
     "notes": "As given, the pattern would allow values such as \"09\", which is not the intention.  The metacharacter '.' needs to be escaped.",
     "submit_date": "2008-11-18",
     "submitter_name": "Kevin Braun",
-    "verifier_id": 101,
+    "verifier_id": "101",
     "verifier_name": "Lisa Dusseault",
     "update_date": "2019-09-10 09:09:03"
   }
