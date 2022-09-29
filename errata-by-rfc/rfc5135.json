@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1318,
+    "errata_id": "1318",
     "doc-id": "RFC5135",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": "99In the Abstract, it says:",
+    "section": "In the Abstract, it says:",
     "orig_text": "   This document specifies requirements for a for a Network Address\r\n   Translator (NAT) and ...",
     "correct_text": "   This document specifies requirements for a Network Address\r\n   Translator (NAT) and ...\r\n",
     "notes": "word replication (added in AUTH48!)",
     "submit_date": "2008-02-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1319,
+    "errata_id": "1319",
     "doc-id": "RFC5135",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Location is end of Section 4.1, near the bottom of page 6.\r\nThis correction also needs to be applied to the re-statement\r\nof REQ-7 in Section 5 (mid-page 10).\r\n\r\nRationale:\r\nThe basic \"strategic\" document for CIDR notation now is BCP 122,\r\nRFC 4632, and that document clearly states (in section 3.1, at\r\nthe bottom of page 5):\r\n                                                           vvvvvvv\r\n|          [...]  In CIDR notation, a prefix is shown as a 4-octet\r\n   quantity, just like a traditional IPv4 address or network number,\r\n   followed by the \"/\" (slash) character, followed by a decimal value\r\n   between 0 and 32 that describes the number of significant bits.\r\n\r\nAlso being a BCP, RFC 5135 should follow this rule.",
     "submit_date": "2008-02-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1320,
+    "errata_id": "1320",
     "doc-id": "RFC5135",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "Rationale: see preceding entry",
     "submit_date": "2008-02-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   }
