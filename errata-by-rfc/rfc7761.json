@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5342,
+    "errata_id": "5342",
     "doc-id": "RFC7761",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,27 +10,27 @@
     "notes": "The normal keepalive period for the KAT(S,G) defaults to 210 seconds. However, at the RP, the keepalive period must be at least the Register_Suppression_Time, or the RP may time out the (S,G) state before the next Null-Register arrives. Thus, the KAT(S,G) is set to max(Keepalive_Period, RP_Keepalive_Period) when a Register-Stop is sent.\r\n\r\n====\r\nNote that the text above comes from §4.11.",
     "submit_date": "2018-04-28",
     "submitter_name": "Frank Hua Li",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5343,
+    "errata_id": "5343",
     "doc-id": "RFC7761",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4.11,
+    "section": "4.11",
     "orig_text": "4.11 Page 128: \r\nThe normal keepalive period for the KAT(S,G) defaults to 210 seconds.\r\nHowever, at the RP, the keepalive period must be at least the\r\nRegister_Suppression_Time, or the RP may time out the (S,G) state\r\nbefore the next Null-Register arrives. Thus, the KAT(S,G) is set to\r\nmax(Keepalive_Period, RP_Keepalive_Period) when a Register-Stop\r\nis sent.",
     "correct_text": "If the pseudo code in 4.4.2 page 43 is correct, the text should be:\r\nThe normal keepalive period for the KAT(S,G) defaults to 210 seconds.\r\nHowever, at the RP, the keepalive period must be at least the\r\nRegister_Suppression_Time, or the RP may time out the (S,G) state\r\nbefore the next Null-Register arrives. Thus, the KAT(S,G) is set to\r\nRP_Keepalive_Period when a Register-Stop\r\nis sent.",
     "notes": "4.11 Page 128: 4.11 Page 128: \r\nThe normal keepalive period for the KAT(S,G) defaults to 210 seconds.\r\nHowever, at the RP, the keepalive period must be at least the\r\nRegister_Suppression_Time, or the RP may time out the (S,G) state\r\nbefore the next Null-Register arrives. Thus, the KAT(S,G) is set to\r\nmax(Keepalive_Period, RP_Keepalive_Period) when a Register-Stop\r\nis sent.\r\n\r\nFrank's Note: This statement contradicts with pseudo code in 4.4.2 page 43. \r\nIn page 43, the KeepaliveTimer(S,G) is set to \r\nRP_Keepalive_Period instead of max(Keepalive_Period, RP_Keepalive_Period).\r\nquote from page 43:\r\nif ( SPTbit(S,G) OR SwitchToSptDesired(S,G) ) {\r\n if ( sentRegisterStop == TRUE ) {\r\n  set KeepaliveTimer(S,G) to RP_Keepalive_Period;\r\n } else {\r\n  set KeepaliveTimer(S,G) to Keepalive_Period;\r\n }\r\n}\n --VERIFIER NOTES-- \n   See Errata ID 5342.",
     "submit_date": "2018-04-28",
     "submitter_name": "Frank Hua Li",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5367,
+    "errata_id": "5367",
     "doc-id": "RFC7761",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "The normal keepalive period for the KAT(S,G) defaults to 210 seconds. However, at the RP, the keepalive period must be at least the Register_Suppression_Time, or the RP may time out the (S,G) state before the next Null-Register arrives. Thus, the KAT(S,G) is set to max(Keepalive_Period, RP_Keepalive_Period) when a Register-Stop is sent.\r\n\r\n====\r\nNote that the text above comes from §4.11.\r\n\r\n===\r\nPlease also refer to Errata ID 5342.",
     "submit_date": "2018-05-24",
     "submitter_name": "Frank Hua Li",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }
