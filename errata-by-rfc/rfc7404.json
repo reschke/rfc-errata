@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4182,
+    "errata_id": "4182",
     "doc-id": "RFC7404",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "Telnet [RFC0495]",
     "correct_text": "Telnet [RFC0854]",
     "notes": "Isn't STD 8 (RFC 854) the official telnet specification?",
     "submit_date": "2014-11-16",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 135,
+    "verifier_id": "135",
     "verifier_name": "joel jaeggli",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4183,
+    "errata_id": "4183",
     "doc-id": "RFC7404",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "Hardware dependency: LLAs have usually been based on 64-bit Extended\r\nUnique Identifiers (EUI-64); hence, they change when the Message\r\nAuthentication Code (MAC) address is changed.",
     "correct_text": "Hardware dependency: LLAs have usually been based on 64-bit Extended\r\nUnique Identifiers (EUI-64); hence, they change when the Media\r\nAccess Control (MAC) address is changed.",
     "notes": null,
     "submit_date": "2014-11-16",
     "submitter_name": "Andreas Cudok",
-    "verifier_id": 135,
+    "verifier_id": "135",
     "verifier_name": "joel jaeggli",
     "update_date": "2019-09-10 09:09:03"
   }
