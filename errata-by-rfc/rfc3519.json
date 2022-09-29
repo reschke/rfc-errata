@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1481,
+    "errata_id": "1481",
     "doc-id": "RFC3519",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "3.2 UDP Tunnel Reply Extension\r\n\r\n   This extension is a non-skippable extension.  It is sent in reply to\r\n   a UDP Tunnel Request extension, and indicates whether or not the HA\r\n   will use MIP UDP tunnelling for the current mobility binding.  The\r\n   format of this extension is as shown below.\r\n\r\n    0                   1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |     Type      |    Length     |    Sub-Type   |  Reply Code   |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |F|        Reserved             |     Keepalive Interval        |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n   Type                44\r\n\r\n   Length              6.  Length in bytes of this extension, not\r\n                       including the Type and Length bytes.\r\n\r\n   Sub-Type            0\r\n\r\n   Reply Code          Indicates whether the HA assents or declines\r\n                       to use UDP tunnelling for the current mobility\r\n                       binding.  See Section 3.2.1 below.",
     "correct_text": null,
     "notes": "In  RFC 3519 paragraph 3.2, the UDP Tunnel Reply Extension is specified as a non-skippable with type = 44. However the extension is specified in the \"Short Extension Format\", which should be used for skippable extensions according to RFC 3344 paragraph 1.11.\n --VERIFIER NOTES-- \nRFC 3344 paragraph 1.11 specifies that the short extension format\r\nmust be used by skippable extensions. It doesn't say mean that the format is only used by skippable extensions (i.e., the short extension format can be used by non-skippable extensions).",
     "submit_date": "2008-08-06",
     "submitter_name": "Manish Yadav",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
