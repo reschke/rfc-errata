@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5392,
+    "errata_id": "5392",
     "doc-id": "RFC8225",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "It is mentioned that “iat” should be set based on issuance of JWT (which would be when PASSPorT is constructed). OTOH, it is also stated that it MUST indicate the date and time of the origination of the personal communication. The former seems to be  the right approach as what we would like to protect against cut-and-paste attacks is the PASSPorT in the context of a particular communication session. The times for these two events are not necessarily the same/close enough to be considered the same.\r\n\r\nRFC7519 JSON Web Token (JWT)\r\n \r\n4.1.6.  \"iat\" (Issued At) Claim\r\n \r\n   The \"iat\" (issued at) claim identifies the time at which the JWT was\r\n   issued.  This claim can be used to determine the age of the JWT.  Its\r\n   value MUST be a number containing a NumericDate value.  Use of this\r\n   claim is OPTIONAL.\r\n \r\nThis text clearly states that “iat” is for the generation time of JWS.",
     "submit_date": "2018-06-14",
     "submitter_name": "Invalid \"iat\" content",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5985,
+    "errata_id": "5985",
     "doc-id": "RFC8225",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 7.1,
+    "section": "7.1",
     "orig_text": "eyJkZXN0Ijp7InVyaSI6WyJzaXA6YWxpY2VAZXhhbXBsZS5jb20iXX0sImlhdCI\r\n6IjE0NDMyMDgzNDUiLCJvcmlnIjp7InRuIjoiMTIxNTU1NTEyMTIifX0",
     "correct_text": "eyJkZXN0Ijp7InVyaSI6WyJzaXA6YWxpY2VAZXhhbXBsZS5jb20iXX0sImlhdCI\r\n6MTQ0MzIwODM0NSwib3JpZyI6eyJ0biI6IjEyMTU1NTUxMjEyIn19Cg",
     "notes": "The \"iat\" claim in the example's JWT payload is incorrectly encoded as a string (with double-quotes around its value), instead of a number (without double-quotes).\r\nWRONG: Base64url( ... \"iat\":\"1443208345\", ... ) = ... 6IjE0NDMyMDgzNDUiLCJv ...\r\nRIGHT: Base64url( ... \"iat\":1443208345,   ... ) = ... 6MTQ0MzIwODM0NSwi ...\r\n\r\nThe same example appears in Appendix A, where it is correct. I assume the JWS signature in section 7.1 should also be replaced with the value from Appendix A.",
     "submit_date": "2020-02-20",
     "submitter_name": "James Manger",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
