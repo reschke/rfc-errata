@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6811,
+    "errata_id": "6811",
     "doc-id": "RFC9000",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "It is not sufficiently clear that the (implied) sequence number for the preferred_address transport parameter is taken from the sequence only when the transport parameter is present.\r\n\r\nThe original text might be read to imply that the first NEW_CONNECTION_ID frame always starts with 2, though maybe only at a server.  The proposed addition is much more explicit.",
     "submit_date": "2022-01-06",
     "submitter_name": "Martin Thomson",
-    "verifier_id": 172,
+    "verifier_id": "172",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2022-02-18 02:18:41"
   }
