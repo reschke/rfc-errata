@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1541,
+    "errata_id": "1541",
     "doc-id": "RFC5302",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Rationale:\r\nEach of the two restrictions mentioned in the initial part\r\nof the quoted paragraph indeed excludes 4 possibilities\r\nof the original set of 16 combinations.  However, these\r\nrestrictions are not exclusive; they overlap in one case,\r\nthus reducing the number of forbidden combinations to 7.\r\n\r\nTherefore, we are left with *9* different types of combinations.\r\n\r\nThis can also be seen from the subsequent list of 12 items\r\n(unfortunately, the numbering of these has been lost on the way\r\nfrom RFC 2966 to its successor).  That list contains 3 pairs of\r\nentries, i.e. 6 entries that contain the wording\r\n   \"These prefixes cannot be distinguished from ... routes.\" ,\r\nthus reducing the number of distinguishable cases from 12 to 9.\r\n\r\nVirtually restoring the list item numbering as (1) ... (12),\r\nthe following table shows a decision matrix:\r\n\r\n   +----------------------+---------------+-------------------+\r\n   | Metric  U/D  \\ Level |      L1       |        L2         |\r\n   |  Type   Bit   \\ TLV# |  128  |  130  |   128   |   130   |\r\n   +----------------------+-------+-------+---------+---------+\r\n   |          0           |  (1)  |  (2)  | (3),(5) | (4),(6) |\r\n   |  Int   --------------+-------+-------+---------+---------+\r\n   |          1           |  (7)  |  (8)  |   N/A   |   N/A   |\r\n   +----------------------+-------+-------+---------+---------+\r\n   |          0           |  N/A  |  (9)  |   N/A   |(10),(11)|\r\n   |  Ext   --------------+-------+-------+---------+---------+\r\n   |          1           |  N/A  | (12)  |   N/A   |   N/A   |\r\n   +----------------------+-------+-------+---------+---------+",
     "submit_date": "2008-10-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1542,
+    "errata_id": "1542",
     "doc-id": "RFC5302",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,22 +25,22 @@
     "notes": "Rationale: inconsistent, too colloquial verbiage.",
     "submit_date": "2008-10-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3994,
+    "errata_id": "3994",
     "doc-id": "RFC5302",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "L2->L1 inter-area external routes with external metric:  These are\r\n      advertised in L1 LSPs, in TLV 130.  The up/down bit is set to one,\r\n      metric-type is external metric.  These IP prefixes are learned via\r\n      L2 routing, and were derived during the L1 SPF computation from\r\n      prefixes advertised in L2 LSPs in TLV 130 with external metrics.\r\n",
     "correct_text": "L2->L1 inter-area external routes with external metric:  These are\r\n      advertised in L1 LSPs, in TLV 130.  The up/down bit is set to one,\r\n      metric-type is external metric.  These IP prefixes are learned via\r\n      L2 routing, and were derived during the L2 SPF computation from\r\n      prefixes advertised in L2 LSPs in TLV 130 with external metrics.\r\n",
     "notes": "The following part has been corrected:\r\n\r\n\"These IP prefixes are learned via\r\n      L2 routing, and were derived during the L1 (should be L2) SPF computation from\r\n      prefixes advertised in L2 LSPs in TLV 130 with external metrics.\"\r\n\r\nThe IP prefixes which are learned via L2 routing were derived during L2 SPF computation instead of L1 SPF computation from prefixes advertised in L2 LSPs. As these prefixes were originally advertised in L2 area hence the SPF for these prefixes should  run on the L2 LSPs and eventually the prefixes derived through L2 LSP should be leaked into L1 area.",
     "submit_date": "2014-05-20",
     "submitter_name": "Amit Kalita",
-    "verifier_id": 140,
+    "verifier_id": "140",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
   }
