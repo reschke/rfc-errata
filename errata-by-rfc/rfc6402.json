@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3860,
+    "errata_id": "3860",
     "doc-id": "RFC6402",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The ASN.1 modules in Appendix A.1 and Appendix A.2 use the same module identifier.  This correction fixes this situation, and aligns with the module identifiers assignments.",
     "submit_date": "2014-01-05",
     "submitter_name": "Russ Housley",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3943,
+    "errata_id": "3943",
     "doc-id": "RFC6402",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Both Name and SubjectAltName use the same tag (SEQUENCE) so it is not possible to distinguish between the two fields without having a tag on one of them.  This fix adds an (arbitrarily chosen) tag so that it is possible to differentiate the two fields.",
     "submit_date": "2014-04-02",
     "submitter_name": "Jim Schaad",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-12-16 15:49:56"
   },
   {
-    "errata_id": 5931,
+    "errata_id": "5931",
     "doc-id": "RFC6402",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "id-kp-cmcRA and id-kp-cmcArchive are supposed to be different values.  This change matches what is already in Appendix A.2.",
     "submit_date": "2019-12-07",
     "submitter_name": "Russ Housley",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-12-10 21:50:26"
   },
   {
-    "errata_id": 6571,
+    "errata_id": "6571",
     "doc-id": "RFC6402",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "The ASN.1 module will not compile properly without a tag on one of these elements.  The ASN.1 module in Appendix A.2 has a tag in this spot.",
     "submit_date": "2021-05-04",
     "submitter_name": "Russ Housley",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-05-09 17:17:07"
   }
