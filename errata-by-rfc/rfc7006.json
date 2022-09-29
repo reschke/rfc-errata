@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3738,
+    "errata_id": "3738",
     "doc-id": "RFC7006",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 6.1,
+    "section": "6.1",
     "orig_text": "6.1.  New SDP Attributes\r\n\r\n   IANA has registered new attributes in the \"att-field (both session\r\n   and media level)\" subregistry of the \"Session Description Protocol\r\n   (SDP) Parameters\" registry, according to the following registration\r\n   form:\r\n\r\nAttribute name: bcap\r\nLong form name: Bandwidth Capability\r\nType of attribute: Both media and session level\r\nSubject to charset: No\r\nPurpose: Negotiate session or media-level bandwidths\r\nAppropriate values: See RFC 7066, Section 3.1.1\r\nContact name: Miguel A. Garcia\r\nMiguel.A.Garcia@ericsson.com\r\n\r\nAttribute name: ccap\r\nLong form name: Connection Data Capability\r\nType of attribute: Both media and session level\r\nSubject to charset: No\r\nPurpose: Negotiate media-level connection data\r\nAppropriate values: See RFC 7066, Section 3.1.2\r\nContact name: Miguel A. Garcia\r\nMiguel.A.Garcia@ericsson.com\r\n\r\n\r\nAttribute name: icap\r\nLong form name: Title Capability\r\nType of attribute: Both media and session level\r\nSubject to charset: Yes\r\nPurpose: Negotiate human-readable information\r\ndescribing the session or media\r\nAppropriate values: See RFC 7066, Section 3.1.3\r\nContact name: Miguel A. Garcia\r\nMiguel.A.Garcia@ericsson.com\r\n",
     "correct_text": "6.1.  New SDP Attributes\r\n\r\n   IANA has registered new attributes in the \"att-field (both session\r\n   and media level)\" subregistry of the \"Session Description Protocol\r\n   (SDP) Parameters\" registry, according to the following registration\r\n   form:\r\n\r\nAttribute name: bcap\r\nLong form name: Bandwidth Capability\r\nType of attribute: Both media and session level\r\nSubject to charset: No\r\nPurpose: Negotiate session or media-level bandwidths\r\nAppropriate values: See RFC 7006, Section 3.1.1\r\nContact name: Miguel A. Garcia\r\nMiguel.A.Garcia@ericsson.com\r\n\r\nAttribute name: ccap\r\nLong form name: Connection Data Capability\r\nType of attribute: Both media and session level\r\nSubject to charset: No\r\nPurpose: Negotiate media-level connection data\r\nAppropriate values: See RFC 7006, Section 3.1.2\r\nContact name: Miguel A. Garcia\r\nMiguel.A.Garcia@ericsson.com\r\n\r\n\r\nAttribute name: icap\r\nLong form name: Title Capability\r\nType of attribute: Both media and session level\r\nSubject to charset: Yes\r\nPurpose: Negotiate human-readable information\r\ndescribing the session or media\r\nAppropriate values: See RFC 7006, Section 3.1.3\r\nContact name: Miguel A. Garcia\r\nMiguel.A.Garcia@ericsson.com\r\n",
     "notes": "The Appropriate values for the three New SDP Attributes have cited an incorrect RFC.\r\nIt should be RFC 7006, rather than RFC 7066.",
     "submit_date": "2013-09-25",
     "submitter_name": "pearl liang",
-    "verifier_id": 123,
+    "verifier_id": "123",
     "verifier_name": "Gonzalo Camarillo",
     "update_date": "2019-09-10 09:09:03"
   }
