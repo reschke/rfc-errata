@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1634,
+    "errata_id": "1634",
     "doc-id": "RFC3143",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The whole subsection needs to be removed. There is no requirement in RFC2616 for proxies to generate a 501 status for unknown methods.\r\n\r\nMark Nottingham wrote: I don't think that deleting this section is the right answer; some interception proxies *do* prevent the introduction of new methods; it's just the text about 501 that's wrong.\r\n",
     "submit_date": "2008-12-13",
     "submitter_name": "Julian Reschke",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }
