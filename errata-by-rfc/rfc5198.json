@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1401,
+    "errata_id": "1401",
     "doc-id": "RFC5198",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Logical inconsistency:\r\nSPACE is not contained in the enumeration in the first sentence;\r\nthus, it is no *exception* to that rule, and the published text\r\ndoes not make proper sense.",
     "submit_date": "2008-03-31",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1402,
+    "errata_id": "1402",
     "doc-id": "RFC5198",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "The only relevant discussion of \"C1 Controls\" in the document\r\nis in bullet 3 within the same section, on the preceding page.\r\nHence, \"below\" is misleading for the reader and needs to be\r\nreplaced to correctly say \"above\".\r\n",
     "submit_date": "2008-03-31",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3991,
+    "errata_id": "3991",
     "doc-id": "RFC5198",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "Logical inconsistency:\r\nSPACE is not contained in the enumeration in the first sentence;\r\nthus, it is no *exception* to that rule, and the published text\r\ndoes not make proper sense.\n --VERIFIER NOTES-- \nThe part of this erratum which says:\r\n\r\n\tIt SHOULD NOT appear in identifiers.  When used in more\r\n\tgeneral strings, it should be used with caution because\r\n\tUnicode supports a number of other spacing characters\r\n\t(see, e.g., NO-BREAK SPACE (U+00A0) and the collection\r\n\tof characters in the range 2000..200B that may or may\r\n\tnot be considered equivalent depending on the\r\n\tnormalization and other rules used.\r\n\r\nwhile possibly true, is not appropriate for an erratum. It is a substantive change.",
     "submit_date": "2008-03-31",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   }
