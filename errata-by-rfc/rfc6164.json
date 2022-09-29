@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 3422,
+    "errata_id": "3422",
     "doc-id": "RFC6164",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 6,
+    "section": "6",
     "orig_text": "   (b)  Addresses in which the rightmost 64 bits are assigned the\r\n        highest 128 values (i.e., ffff:ffff:ffff:ff7f to ffff:ffff:ffff:\r\n        ffff) SHOULD NOT be used as unicast addresses, to avoid\r\n        colliding with reserved subnet anycast addresses [RFC2526].",
     "correct_text": "   (b)  Addresses in which the rightmost 64 bits are assigned the\r\n        highest 128 values (i.e., ffff:ffff:ffff:ff80 to ffff:ffff:ffff:\r\n        ffff) SHOULD NOT be used as unicast addresses, to avoid\r\n        colliding with reserved subnet anycast addresses [RFC2526].",
     "notes": "The highest 128 values start at ffff:ffff:ffff:ff80, not ffff:ffff:ffff:ff7f.",
     "submit_date": "2012-11-29",
     "submitter_name": "Benjamin Cama",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5080,
+    "errata_id": "5080",
     "doc-id": "RFC6164",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "The solution described in RFC6164 updates RFC4291 because it violates the requirement of RFC4291 section 2.5.1 for the IIDs to be 64-bit long and be constructed from EUI-64 format.\r\n\r\nPlease feel free to reconfirm with 6man WG. In Prague, the suggestion was made that all documents introducing solutions that are not compliant with this requirement must be tracked as updated to RFC6164. When i asked on the list recently, i was given the suggestion to file an Errata as i am doing right now.\r\n\r\nNote that i think that i do not think that \"just wait for rfc4291bis\" would be a good answer to this errata because rfc6164 of course predates it, and even more so, correct proedural tracking of rfc4291 updates can potentially help the process of getting to rfc4291bis.",
     "submit_date": "2017-08-08",
     "submitter_name": "toerless Eckert",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
