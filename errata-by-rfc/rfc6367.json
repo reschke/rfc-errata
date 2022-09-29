@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3601,
+    "errata_id": "3601",
     "doc-id": "RFC6367",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "CipherSuite TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256        = {0xC0,0x8D};",
     "correct_text": "CipherSuite TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256        = {0xC0,0x8E};",
     "notes": null,
     "submit_date": "2013-04-20",
     "submitter_name": "Clement Zeller",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }
