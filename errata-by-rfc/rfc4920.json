@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1460,
+    "errata_id": "1460",
     "doc-id": "RFC4920",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": null,
     "submit_date": "2008-06-27",
     "submitter_name": "Lou Berger",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4480,
+    "errata_id": "4480",
     "doc-id": "RFC4920",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 6.2,
+    "section": "6.2",
     "orig_text": "For types 10 and 23, the Value field has the format:\r\n\r\n       0                   1                   2                   3\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |   Length      |     IS-IS Area Identifier                     |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      ~                     IS-IS Area Identifier (continued)         ~\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n       Length\r\n\r\n          Length of the actual (non-padded) IS-IS Area Identifier in\r\n          octets.  Valid values are from 2 to 11 inclusive.",
     "correct_text": "For types 10 and 23, the Value field has the format:\r\n\r\n       0                   1                   2                   3\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |   Length      |     IS-IS Area Identifier                     |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      ~                     IS-IS Area Identifier (continued)         ~\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n       Length\r\n\r\n          Length of the actual (non-padded) IS-IS Area Identifier in\r\n          octets.  Valid values are from 1 to 13 inclusive.",
     "notes": "IS-IS area IDs can vary from 1 to 13 bytes in length (max NSAP length is 20, minus 1 byte for NSEL, minus 6 bytes for SysID).\r\n\r\n*Noted by Jonathan Hardwick in another document that was using the same data.",
     "submit_date": "2015-09-20",
     "submitter_name": "Dhruv Dhody",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2019-09-10 09:09:03"
   }
