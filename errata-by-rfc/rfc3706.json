@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1626,
+    "errata_id": "1626",
     "doc-id": "RFC3706",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "   The disadvantage of this scheme is the reliance upon the peer to\r\n   demonstrate liveliness.  To this end, peer B might never be\r\n   interested in peer A's liveliness.  Nonetheless, if A is interested\r\n   B's liveliness, B must be aware of this, and maintain the necessary\r\n   state information to send periodic HELLOs to A.  The disadvantage of",
     "correct_text": "   The disadvantage of this scheme is the reliance upon the peer to\r\n   demonstrate liveliness.  To this end, peer B might never be\r\n   interested in peer A's liveliness.  Nonetheless, if A is interested in\r\n   B's liveliness, B must be aware of this, and maintain the necessary\r\n   state information to send periodic HELLOs to A.  The disadvantage of",
     "notes": "Add \"in\" to make \"interested in B's liveliness\".",
     "submit_date": "2008-12-03",
     "submitter_name": "Joel Faber",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   }
