@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 570,
-    "doc-id": "RFC0894",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": "99In Section Frame Format: ",
-    "orig_text": "   The minimum length of the data field of a packet sent over an\n   Ethernet is 1500 octets, thus the maximum length of an IP datagram\n   sent over an Ethernet is 1500 octets.",
-    "correct_text": "   The maximum length of the data field of a packet sent over an\n   Ethernet is 1500 octets, thus the maximum length of an IP datagram\n   sent over an Ethernet is 1500 octets.\n",
-    "notes": "",
-    "submit_date": "2001-03-28",
-    "submitter_name": "Gerald Park",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 5141,
+    "errata_id": "5141",
     "doc-id": "RFC0894",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +10,22 @@
     "notes": "",
     "submit_date": "2017-10-04",
     "submitter_name": "Orestes Leal Rodriguez",
-    "verifier_id": 2,
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "570",
+    "doc-id": "RFC0894",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "In Section Frame Format: ",
+    "orig_text": "   The minimum length of the data field of a packet sent over an\n   Ethernet is 1500 octets, thus the maximum length of an IP datagram\n   sent over an Ethernet is 1500 octets.",
+    "correct_text": "   The maximum length of the data field of a packet sent over an\n   Ethernet is 1500 octets, thus the maximum length of an IP datagram\n   sent over an Ethernet is 1500 octets.\n",
+    "notes": "",
+    "submit_date": "2001-03-28",
+    "submitter_name": "Gerald Park",
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
