@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6467,
+    "errata_id": "6467",
     "doc-id": "RFC1172",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -10,7 +10,7 @@
     "notes": "it is in Example part of link quality page 25\r\n\r\ni am pretty sure that 10 minus 3 is not equal to 16. \r\nHopping that i understood well things here(i'm french :) )\n --VERIFIER NOTES-- \nActually the real error is that in the example the In-Rx-Packets maths should be \"19 - 3 = 16\", since the second report from A to B has In-Rx-Packets = 19 (not 10 as mistakenly entered on the computation line).\r\n\r\nThis RFC has been obsoleted by two others (RFCs 1331, 1332) which do not appear to contain this text.",
     "submit_date": "2021-03-09",
     "submitter_name": "bacquet guillaume",
-    "verifier_id": 165,
+    "verifier_id": "165",
     "verifier_name": "Erik Kline",
     "update_date": "2022-02-13 00:24:39"
   }
