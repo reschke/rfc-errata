@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6085,
+    "errata_id": "6085",
     "doc-id": "RFC8011",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "First, the \"keyword\" syntax is applicable to values of enumerations according to Section 5.1.5 stating\r\n\r\n   Each value has an associated 'keyword' name.\r\n\r\nHowever, Section 5.4.15 is declaring some enum-type attribute with names per integer value using uppercase letters in violation of Section 5.1.4. Those names are commonly used all over the specification and thus it is rather common to assume those values are meant to be keyword-compliant names of given enumeration.\r\n\r\nSecond, Section 5.1.4 is stating\r\n\r\n    The first character MUST be a lowercase letter.\r\n\r\nreferring to \"a\"-\"z\" according to enumeration of accepted characters given right before that. In opposition to that statement 5.4.14 is declaring\r\n\r\n    The following standard 'keyword' values are defined in this document:\r\n\r\n    * '1.0' [..]\r\n    * '1.1' [..]\r\n\r\nNeither of the two \"keywords\" start with a lowercase letter.",
     "submit_date": "2020-04-10",
     "submitter_name": "Thomas Urban",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2020-10-08 14:21:26"
   },
   {
-    "errata_id": 6617,
+    "errata_id": "6617",
     "doc-id": "RFC8011",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "'referenced-uri-scheme-supported' --> 'reference-uri-scheme-supported'",
     "submit_date": "2021-06-22",
     "submitter_name": "Smith Kennedy",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-06-22 21:34:20"
   }
