@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4352,
+    "errata_id": "4352",
     "doc-id": "RFC6773",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "There was a processing error when generating the table of contents.",
     "submit_date": "2015-04-29",
     "submitter_name": "Paul Hoffman",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4655,
+    "errata_id": "4655",
     "doc-id": "RFC6773",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "Network optimisations for DCCP-STP and UDP may need to be updated to \r\nallow these optimisations to take advantage of DCCP-UDP.",
     "correct_text": "Network optimisations for DCCP-STD and UDP may need to be updated to \r\nallow these optimisations to take advantage of DCCP-UDP.",
     "notes": "\"DCCP-STP\" is nowhere defined, and so is presumably a typo for \"DCCP-STD\".",
     "submit_date": "2016-04-05",
     "submitter_name": "Timothy Pederick",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-12-19 07:35:12"
   }
