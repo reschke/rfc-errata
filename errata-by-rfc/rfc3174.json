@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 328,
+    "errata_id": "328",
     "doc-id": "RFC3174",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": "99In the Reference Section, it says:\n",
+    "section": "In the Reference Section, it says:\n",
     "orig_text": "   [FIPS 180-1] \"Secure Hash Standard\", United States of American,\n                National Institute of Science and Technology, Federal\n                Information Processing Standard (FIPS) 180-1, April\n                1993.",
     "correct_text": "   [FIPS 180-1] \"Secure Hash Standard\", United States of America,\n                National Institute of Science and Technology, Federal\n                Information Processing Standard (FIPS) 180-1, April\n                1993.",
     "notes": "\n\"United States of American\" changed to \"United States of America\"",
     "submit_date": "2004-03-20",
     "submitter_name": "Christian Staudenmayer",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 329,
+    "errata_id": "329",
     "doc-id": "RFC3174",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7.2,
+    "section": "7.2",
     "orig_text": "    /*\r\n     *  Initialize the first 16 words in the array W\r\n     */\r\n    for(t = 0; t < 16; t++)\r\n    {\r\n        W[t] = context->Message_Block[t * 4] << 24;\r\n        W[t] |= context->Message_Block[t * 4 + 1] << 16;\r\n        W[t] |= context->Message_Block[t * 4 + 2] << 8;\r\n        W[t] |= context->Message_Block[t * 4 + 3];\r\n    }",
     "correct_text": "    /*\r\n     *  Initialize the first 16 words in the array W\r\n     */\r\n    for(t = 0; t < 16; t++)\r\n    {\r\n        W[t] = (uint32_t)(context->Message_Block[t * 4]) << 24;\r\n        W[t] |= (uint32_t)(context->Message_Block[t * 4 + 1]) << 16;\r\n        W[t] |= context->Message_Block[t * 4 + 2] << 8;\r\n        W[t] |= context->Message_Block[t * 4 + 3];\r\n    }",
     "notes": "Note that Message_Block is an array of \"integers of >= 16 bits\" as described in \"sha1.h\" but W[] is an array of unsigned 32-bit integers.\r\n\r\nWhile this works fine in many compilers, some compilers (e.g. Dynamic C v9.25) processing the line:\r\n\r\n        W[t] = context->Message_Block[t * 4] << 24;\r\n\r\nwill take the 16 bit integer \"context->Message_Block[t * 4]\" and shift it left 24 bits, and then assign the resulting (still) 16 bit integer to the 32 bit integer W[t].\r\n\r\nThis will lead to a different (and undesired) result than the intended behavior of first promoting the 16 bit integer \"context->Message_Block[t * 4]\" to a 32 bit integer, and *then* shifting that 32 bit integer left 24 times, and storing the result in W[t].\r\n\r\nThe solution is to use an explicit cast. The last two lines of code in the for loop can remain as they are, as they will not suffer from the above problem and do not need the explicit cast.\r\n ",
     "submit_date": "2006-06-01",
     "submitter_name": "Ben Davis",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }
