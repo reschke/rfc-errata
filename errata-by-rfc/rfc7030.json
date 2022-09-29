@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4384,
+    "errata_id": "4384",
     "doc-id": "RFC7030",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "1. The AttrOrOID CHOICE was started with a '(' versus a '{'.\r\n\r\n2. Attribute{} is a parameterized type and you are missing the parameter reference within the AttrOrOID CHOICE for \"attribute\".\r\n\r\n3. You need to define or reference the object set to be used in #2.\r\n\r\nHighly recommend you create an ASN.1 Module as part of this specification.  This will make it clear which specifications (and the versions there of) you are importing types from (i.e. Attribute{}) and the tagging that should be used (module level).  If you need to define a new object set for #3 then this new module would be the perfect home for it.",
     "submit_date": "2015-06-02",
     "submitter_name": "Pierce Leonberger",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2020-08-19 12:58:54"
   },
   {
-    "errata_id": 5107,
+    "errata_id": "5107",
     "doc-id": "RFC7030",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "EST, which is an HTTP-based protocol, erroneous used CTE.  This errata addresses this error.\r\n\r\nNote that the text was reviewed by a RAI AD as well as multiple EST implementors.",
     "submit_date": "2017-09-07",
     "submitter_name": "Sean Turner",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2020-08-19 12:59:42"
   },
   {
-    "errata_id": 5108,
+    "errata_id": "5108",
     "doc-id": "RFC7030",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "The current text is somewhat unclear as to what content-type needs to be used for the human-readable error.  There are many human-readable content-types, but \"text/plain\" seems to be the most sensible.\r\n\r\nNote that the MUST was reduced to a must because no content-type is specified.",
     "submit_date": "2017-09-07",
     "submitter_name": "Sean Turner",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2020-08-19 13:00:37"
   },
   {
-    "errata_id": 5779,
+    "errata_id": "5779",
     "doc-id": "RFC7030",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Content-Type: multipart/mixed ; boundary=estServerExampleBoundary\r\n\r\nThe ; has a space, believe it or not, we implemented it that way.\r\n\r\nContent-Type: multipart/mixed; boundary=estServerExampleBoundary",
     "submit_date": "2019-07-13",
     "submitter_name": "Simon Edänge",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5904,
+    "errata_id": "5904",
     "doc-id": "RFC7030",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "Verifier Notes: Marked verified by the RFC Editor at the request of Roman Danyliw.\r\n--------------------\r\n\r\nContent-Transfer-Encoding is not a valid HTTP header. RFC 7030 is not compliant with RFC 2616.\r\n\r\n- \"MIME Content-Transfer-Encoding: base64\" => Base64 Basic with CRLFs\r\n- \"HTTP Transfer-Encoding: base64\" => Base64 Basic without CRLFs\r\n\r\nThis is traceable from RFC 7030 (EST) through RFC 2818 (TLS) to RFC 2616 (HTTP).\r\n\r\n- RFC 7030 (EST): EST specifies how to transfer messages securely via HTTP over TLS (HTTPS) [RFC2818]\r\n- RFC 2818 (TLS): HTTP [RFC2616] was originally used in the clear on the Internet.\r\n- RFC 2616 (HTTP): HTTP does not use the Content-Transfer-Encoding (CTE) field of RFC 2045.\r\n- RFC 2616 (HTTP): HTTP/1.1 introduces the Transfer-Encoding header field (section 14.41).\r\n\r\nRFC 7030 sections affected are:\r\n\r\n- All references to Content-Transfer-Encoding are not valid: Sections 4.1.3, 4.3.1, 4.3.2, 4.4.2, 4.5.2, A.1, A.2, A.3, and A.4.\r\n- All references to RFC 2045 are not valid: Sections 4.1.3, 4.3.1, 4.3.2, 4.4.2, 4.5.2, and 7.1.\r\n- All references to \"base64\" need to be updated or removed: Sections 3.5, 4.1.3, 4.3.1, 4.3.2, 4.4.2, 4.5.2, and 7.1.\r\n\r\nRFC 7030 fix options:\r\n\r\nOption #1: Change all references from Content-Transfer-Encoding to Transfer-Encoding. A caveat is that \"base64\" has a different meaning in HTTP (no CRLFs) vs MIME (includes CRLFs).\r\n\r\nOption #2: Remove all references to Content-Transfer-Encoding and base64. Responses would be transmitted as binary. This allows the response to be transported more efficiently without base64 size bloat, and it allows optional use of Content-Length header so the response can be parsed more efficiently knowing the length ahead of time.",
     "submit_date": "2019-11-12",
     "submitter_name": "Justin Cranford",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Roman Danyliw",
     "update_date": "2020-11-13 12:52:03"
   },
   {
-    "errata_id": 5926,
+    "errata_id": "5926",
     "doc-id": "RFC7030",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -85,7 +85,7 @@
     "notes": "EST examples in appendix A.1 through A.4 have incorrect \"Content-Length\". That header is mutually exclusive with \"Transfer-Encoding\" according to HTTP 1.1 RFC 2616. If a clients receives both headers, \"Transfer-Encoding\" header takes precedence and the erroneous \"Content-Length\" header must be ignored.\r\n\r\nHTTP 1.1 RFC 2616 Section 4.4 (https://tools.ietf.org/html/rfc2616#section-4.4)\r\n\r\n3.If a Content-Length header field (section 14.13) is present, its\r\n     decimal value in OCTETs represents both the entity-length and the\r\n     transfer-length. The Content-Length header field MUST NOT be sent\r\n     if these two lengths are different (i.e., if a Transfer-Encoding\r\n     header field is present). If a message is received with both a\r\n     Transfer-Encoding header field and a Content-Length header field,\r\n     the latter MUST be ignored.\r\n\r\n\r\nEST RFC 7030 is non-compliant with HTTP 1.1 RFC 2616.\r\n\r\nPlease remove erroneous \"Content-Length\" header from all affected EST response examples in Appendixes A.1 through to A.4. This is incorrect and misleading.\r\n\r\nPlease make this fix at same time the erroneous \"Content-Transfer-Encoding\" header is corrected to be \"Transfer-Encoding\", as reported in a different errata.",
     "submit_date": "2019-12-03",
     "submitter_name": "Justin Cranford",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
