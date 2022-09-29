@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 5061,
+    "errata_id": "5061",
     "doc-id": "RFC7848",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 2.2,
+    "section": "2.2",
     "orig_text": "      *  One or more <mark:protection> elements that contain the\r\n         countries and region of the country where the mark is\r\n         protected.  The <mark:protection> element contains the\r\n         following child elements:\r\n\r\n         +  A <mark:cc> element that contains the two-character code of\r\n            the country in which the mark is protected.  This is a two-\r\n            character code from [ISO3166-2].\r\n\r\n         +  An OPTIONAL <mark:region> element that contains the name of\r\n            a city, state, province, or other geographic region of\r\n            <mark:country> in which the mark is protected.\r\n\r\n         +  Zero or more OPTIONAL <mark:ruling> elements that contain\r\n            the two-character code of the national territory in which\r\n            the statute or treaty is applicable.  This is a two-\r\n            character code from [ISO3166-2].\r\n\r\n         +  Zero or more OPTIONAL <mark:label> elements; see definition\r\n            in the <mark:trademark> section above.",
     "correct_text": "      *  One or more <mark:protection> elements that contain the\r\n         countries and region of the country where the mark is\r\n         protected.  The <mark:protection> element contains the\r\n         following child elements:\r\n\r\n         +  A <mark:cc> element that contains the two-character code of\r\n            the country in which the mark is protected.  This is a two-\r\n            character code from [ISO3166-2].\r\n\r\n         +  An OPTIONAL <mark:region> element that contains the name of\r\n            a city, state, province, or other geographic region of\r\n            <mark:country> in which the mark is protected.\r\n\r\n         +  Zero or more OPTIONAL <mark:ruling> elements that contain\r\n            the code from [ISO3166-2] of the national territory in which\r\n            the statute or treaty is applicable.\r\n\r\n      *  Zero or more OPTIONAL <mark:label> elements; see definition\r\n         in the <mark:trademark> section above.",
     "notes": "ISO 3166-2 subdivisions are not strictly two-character codes, but can be numeric or contain more than two characters, so the description of the <mark:ruling> element needs to be changed.\r\n\r\nAdditionally, the indentation of the <mark:label> element makes it appear as a child of <mark:protection>, which is in contradiction to the XML schema on pages 17 and 18.",
     "submit_date": "2017-07-06",
     "submitter_name": "Nicos Gollan",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5062,
+    "errata_id": "5062",
     "doc-id": "RFC7848",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The RFC mistakenly references ISO 3166-2 for general country codes which is incorrect. Country codes are defined in ISO 3166-1, the 2-character codes used throughout this document in ISO 3166-1 alpha-2, administrative subdivisions in ISO 3166-2. The actual content of the citation points to the general standards \"family\" already.",
     "submit_date": "2017-07-06",
     "submitter_name": "Nicos Gollan",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
