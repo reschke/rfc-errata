@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4337,
+    "errata_id": "4337",
     "doc-id": "RFC6680",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 7.5,
+    "section": "7.5",
     "orig_text": "   This function outputs the value(s) associated with a given GSS name\r\n   object for a given name attribute.",
     "correct_text": "   This function outputs the value(s) associated with a given GSS name\r\n   object for a given name attribute.  It is permitted to block pending\r\n   network interactions when the attr input is not an attribute which\r\n   would be included in the attrs output of a call to GSS_Inquire_name()\r\n   on the same name input.\r\n",
     "notes": "RFC 6680 makes no mention of blocking or not blocking on network interaction, though RFC 2743 does.  This seems like the most reasonable interpretation of what is currently in RFC 6680.  Calls which are not explicitly permitted to block are assumed to be not permitted to block.",
     "submit_date": "2015-04-18",
     "submitter_name": "Benjamin Kaduk",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
