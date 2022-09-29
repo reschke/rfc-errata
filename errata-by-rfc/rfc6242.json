@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5305,
+    "errata_id": "5305",
     "doc-id": "RFC6242",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "   This document also recommends that SSH servers be configurable to\r\n   allow access to the \"netconf\" SSH subsystem over other ports.  Use of\r\n   that configuration option without corresponding changes to firewall\r\n   or network device configuration may unintentionally result in the\r\n   ability for nodes outside of the firewall or other administrative\r\n   boundaries to gain access to the \"netconf\" SSH subsystem.\r\n",
     "correct_text": "   This document also recommends that SSH servers be configurable to\r\n   allow access to the \"netconf\" SSH subsystem over other ports.  Use of\r\n   that configuration option without corresponding changes to firewall\r\n   or network device configuration may unintentionally result in the\r\n   inability for nodes outside of the firewall or other administrative\r\n   boundaries to gain access to the \"netconf\" SSH subsystem.\r\n",
     "notes": "ability -> inability\n --VERIFIER NOTES-- \nIt was discussed among reporter, document authors, and WG members and the conclusion was that the original text in the document is technically correct. \r\n\r\nEmail discussion: \r\nhttps://mailarchive.ietf.org/arch/msg/netconf/xMBJjW9Sn5xzXZYhwVbRM0Im1fg\r\n ",
     "submit_date": "2018-03-26",
     "submitter_name": "HengyingFan",
-    "verifier_id": 158,
+    "verifier_id": "158",
     "verifier_name": "Ignas Bagdonas",
     "update_date": "2019-09-10 09:09:03"
   }
