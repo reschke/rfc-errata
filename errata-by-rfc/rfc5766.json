@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 3854,
+    "errata_id": "3854",
     "doc-id": "RFC5766",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 11,
+    "section": "11",
     "orig_text": "0x4000 through 0x7FFF: These values are the allowed channel\r\nnumbers (16,383 possible values).",
     "correct_text": "0x4000 through 0x7FFF: These values are the allowed channel\r\nnumbers (16,384 possible values).",
     "notes": "Section 11.2: The channel number is in the range 0x4000 through 0x7FFE\r\n(inclusive);\r\nSince both the values are inclusive it should be 16384 = (0x7FFF-0x4000 + 1)",
     "submit_date": "2013-12-31",
     "submitter_name": "Venu",
-    "verifier_id": 137,
+    "verifier_id": "137",
     "verifier_name": "Spencer Dawkins",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4143,
+    "errata_id": "4143",
     "doc-id": "RFC5766",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "line 177 in the txt version, attempt *to* do something",
     "submit_date": "2014-10-23",
     "submitter_name": "Florian Waltersdorfer",
-    "verifier_id": 137,
+    "verifier_id": "137",
     "verifier_name": "Spencer Dawkins",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4815,
+    "errata_id": "4815",
     "doc-id": "RFC5766",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "It seems in the rest of the channel numbers allowed range definitions the values are 0x4000 through 0x7FFF. See: 11.  Channels, 18.  IANA Considerations.",
     "submit_date": "2016-09-28",
     "submitter_name": "Costin",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-12-17 07:39:49"
   },
   {
-    "errata_id": 4933,
+    "errata_id": "4933",
     "doc-id": "RFC5766",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -55,22 +55,22 @@
     "notes": "When using short-term, credentials expire after a specific amount of time (such as 5\r\nminutes)  and clients get new credentials. The restriction imposed at section 17.3.3 \r\nprevents from refreshing allocation or permission using the new credentials.\r\n\r\nThis RFC approves RFC 5389. So one can use short-term credentials.  But short-term credentials are useless if it can not be used to refresh allocation or permission.\r\n\r\n\r\nThe goal of 17.3.3 can be achieved by sending 438 with the new nonce.\n --VERIFIER NOTES-- \nSo TURN does not actually specify the usage of short-term credentials. It mandates support of long-term credentials as authentication mechanism. Also RFC 7635 (STUN for Third party Authorization) specifies how to handle expire of the access token. This is clearer in the replacement of RFC 5766 that will soon be published that specifies the following in Section 7.2:\r\n\r\n        If\r\n        the request is authenticated, the authentication MUST be done\r\n        either using the long-term credential mechanism of\r\n        [I-D.ietf-tram-stunbis] or the STUN Extension for Third-Party\r\n        Authorization [RFC7635] unless the client and server agree to\r\n        use another mechanism through some procedure outside the scope\r\n        of this document.\r\n\r\n",
     "submit_date": "2017-02-15",
     "submitter_name": "shakeeb",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2020-02-17 01:48:40"
   },
   {
-    "errata_id": 5231,
+    "errata_id": "5231",
     "doc-id": "RFC5766",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 16,
+    "section": "16",
     "orig_text": "    |<-- Refresh success response -------|             |             |\r\n    |    Transaction-Id=0x427BD3E625A85FC731DC4191     |             |\r\n    |    SOFTWARE=\"Example server, version 1.17\"       |             |\r\n    |    LIFETIME=600 (10 minutes)       |             |             |\r\n",
     "correct_text": "    |<-- Refresh success response -------|             |             |\r\n    |    Transaction-Id=0x427BD3E625A85FC731DC4191     |             |\r\n    |    SOFTWARE=\"Example server, version 1.17\"       |             |\r\n    |    LIFETIME=600 (10 minutes)       |             |             |\r\n    |    MESSAGE-INTEGRITY=...           |             |             |",
     "notes": "The last example refresh success response lacks message-integrity, incorrectly implying that the response after a stale nonce exchange does not have to be authenticated.",
     "submit_date": "2018-01-09",
     "submitter_name": "Hannes Landeholm",
-    "verifier_id": 137,
+    "verifier_id": "137",
     "verifier_name": "Spencer Dawkins",
     "update_date": "2019-09-10 09:09:03"
   }
