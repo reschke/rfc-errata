@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 22,
+    "errata_id": "22",
     "doc-id": "RFC4676",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "  option-code:  OPTION_GEOCONF_CIVIC (37)",
     "correct_text": "  option-code:  OPTION_GEOCONF_CIVIC (36)",
     "notes": "\n\n",
     "submit_date": "2006-11-02",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 23,
+    "errata_id": "23",
     "doc-id": "RFC4676",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 1,
+    "section": "1",
     "orig_text": "   In addition, if a network provides civic location information via\r\n   both DHCPv4 and DHCPv6, the information conveyed by two protocols\r\n   MUST be the same.",
     "correct_text": "   In addition, if a network provides civic location information via\r\n   both DHCPv4 and DHCPv6, the information conveyed by the two protocols\r\n   MUST be the same.\r\n",
     "notes": "",
     "submit_date": "2006-11-02",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
