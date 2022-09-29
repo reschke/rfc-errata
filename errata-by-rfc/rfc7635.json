@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4826,
+    "errata_id": "4826",
     "doc-id": "RFC7635",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 8,
+    "section": "8.",
     "orig_text": "8.  STUN Client Behavior\r\n\r\n   o  The client looks for the MESSAGE-INTEGRITY attribute in the\r\n      response.  If MESSAGE-INTEGRITY is absent or the value computed\r\n      for message integrity using mac_key does not match the contents of\r\n      the MESSAGE-INTEGRITY attribute, then the response MUST be\r\n      discarded.\r\n\r\n   o  If the access token expires, then the client MUST obtain a new\r\n      token from the authorization server and use it for new STUN\r\n      requests.",
     "correct_text": "8.  STUN Client Behavior\r\n\r\n   o  The client looks for the MESSAGE-INTEGRITY attribute in the\r\n      response.  If MESSAGE-INTEGRITY is absent or the value computed\r\n      for message integrity using mac_key does not match the contents of\r\n      the MESSAGE-INTEGRITY attribute, then the response MUST be\r\n      discarded.\r\n\r\n9.  Application (OAuth Client) Behavior\r\n\r\n   o  If the access token expires, then the Application (OAuth client) \r\n      MUST obtain a new token from the authorization server, and update\r\n      STUN client to use it for new STUN requests.\r\n\r\n   o  Application SHOULD pass only a subset of the received OAuth \r\n      parameters to the STUN client. Only parameters SHOULD be passed \r\n      that will be really needed and used by the STUN Client. \r\n      In this way, only the kid, the mac_key, and the access_token\r\n      parameters SHOULD be passed to the STUN client.\r\n      \r\n\r\n...\r\nRenumber the sections\r\n...",
     "notes": "1. Remove from STUN client behaviour the access_token renewal function, \r\nand move this function up to application level.\r\n2. Pass to STUN only that subset of the OAuth parameters, that will be really used by STUN Client.",
     "submit_date": "2016-10-10",
     "submitter_name": "Mihály Mészáros",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2021-01-14 06:00:38"
   },
   {
-    "errata_id": 4923,
+    "errata_id": "4923",
     "doc-id": "RFC7635",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,27 +25,27 @@
     "notes": "\"key\" according https://tools.ietf.org/html/draft-ietf-oauth-pop-key-distribution-02#section-4.2\r\n\"The 'key' parameter either contains a plain JWK structure or a JWK encrypted with a JWE.\"\r\n\r\nAccording Example Figure 2. \"key\" in draft-ietf-oauth-pop-key-distribution-02#section-4.2 \r\nIt seems they missed to write plain JWK MUST be base64 format.\r\nSo according the example coorected the above sentence:\r\n\r\n\"The 'key' parameter either contains a plain BASE64 ENCODED JWK structure or a JWK encrypted with a JWE.\"\r\n\r\nAnyhow in RFC7635 Appendix B. the\r\n\"key\" seems to be not in base64 (JWK) or JWE encrypted JWK format. \r\n(Base64 decoded key value string is \"Salted__\"....)",
     "submit_date": "2017-02-03",
     "submitter_name": "Mészáros Mihály",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2021-01-14 05:59:29"
   },
   {
-    "errata_id": 5059,
+    "errata_id": "5059",
     "doc-id": "RFC7635",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6.2,
+    "section": "6.2",
     "orig_text": "   key_length:  Length of the session key in octets.  The key length of\r\n      160 bits MUST be supported (i.e., only the 160-bit key is used by\r\n      HMAC-SHA-1 for message integrity of STUN messages).  The key\r\n      length facilitates the hash agility plan discussed in Section 16.3\r\n      of [RFC5389].\r\n",
     "correct_text": "   key_length:  Length of the session key in octets.",
     "notes": "RFC2104 section 2 states:\r\n\r\n   The authentication key K can be of any length up to B, the\r\n   block length of the hash function.  Applications that use keys longer\r\n   than B bytes will first hash the key using H and then use the\r\n   resultant L byte string as the actual key to HMAC.\r\n\r\nMeaning any key length is allowed. The fact that the hash output is 20 bytes doesn't mean the key needs to be 20 bytes as well.",
     "submit_date": "2017-07-05",
     "submitter_name": "Taylor Brandstetter",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5060,
+    "errata_id": "5060",
     "doc-id": "RFC7635",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "The SHA-1 block size is 512 bits, so a 256-bit key does not need to be shortened to compute a HMAC-SHA-1 hash.\r\n\r\nAlso added an example for \"if the client only supports HMAC-SHA-1\", to make the hash agility logic more clear.",
     "submit_date": "2017-07-05",
     "submitter_name": "Taylor Brandstetter",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
