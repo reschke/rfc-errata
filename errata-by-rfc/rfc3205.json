@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4299,
+    "errata_id": "4299",
     "doc-id": "RFC3205",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "This further requires that each\r\nclient know the secret to be used with each server, but it does not\r\nprovide any means of securely transmitting such secrets between the\r\nparties.",
     "correct_text": "This further requires that each\r\nclient knows the secret to be used with each server, but it does not\r\nprovide any means of securely transmitting such secrets between the\r\nparties.",
     "notes": "Grammatical mistake: each client knowS\n --VERIFIER NOTES-- \nActually, it is not a grammatical error, but is grammatically correct.  It's using the subjunctive mood, which is appropriate with \"requires\" (and other verbs, such as \"insists\", \"hopes\", and so on).  Subjunctive mood is fading in English, with a few notable exceptions (\"So be it,\" \"If I were king,\" and the like), but it's still around here and there.  In most cases, as here, the subjunctive form is only distinctive in the third person: \"This requires that he know the secret.\"",
     "submit_date": "2015-03-12",
     "submitter_name": "Anthony Yu",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
