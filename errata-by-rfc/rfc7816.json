@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4644,
+    "errata_id": "4644",
     "doc-id": "RFC7816",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "QNAME minimisation can decrease performance in some cases -- for\r\ninstance, for a deep domain name (like\r\nwww.host.group.department.example.com, where \r\nhost.group.department.example.com is hosted on example.com's name\r\nservers).  Let's assume a resolver that knows only the name servers of\r\n.example.  Without QNAME minimisation, it would send these .example name\r\nservers a query for www.host.group.department.example.com and\r\nimmediately get a specific referral or an answer, without the need for\r\nmore queries to probe for the zone cut.  For such a name, a cold\r\nresolver with QNAME minimisation will, depending on how QNAME\r\nminimisation is implemented, send more queries, one per label.  Once the\r\ncache is warm, there will be no difference with a traditional resolver.\r\nActual testing is described in [Huque-QNAME-Min].  Such deep domains are\r\nespecially common under ip6.arpa.",
     "correct_text": "QNAME minimisation can decrease performance in some cases -- for \r\ninstance, for a deep domain name (like\r\nwww.host.group.department.example.com, where \r\nhost.group.department.example.com is hosted on example.com's name\r\nservers).  Let's assume a resolver that knows only the name servers of\r\n.example.com.  Without QNAME minimisation, it would send these \r\n.example.com name servers a query for \r\nwww.host.group.department.example.com and immediately get a specific\r\nreferral or an answer, without the need for more queries to probe for\r\nthe zone cut.  For such a name, a cold resolver with QNAME minimisation\r\nwill, depending on how QNAME minimisation is implemented, send more\r\nqueries, one per label.  Once the cache is warm, there will be no\r\ndifference with a traditional resolver.  Actual testing is described in\r\n[Huque-QNAME-Min].  Such deep domains are especially common under\r\nip6.arpa.",
     "notes": "Changed \".example\" to \".example.com\".",
     "submit_date": "2016-03-24",
     "submitter_name": "Robert Edmonds",
-    "verifier_id": 135,
+    "verifier_id": "135",
     "verifier_name": "Joel Jaeggli",
     "update_date": "2019-09-10 09:09:03"
   }
