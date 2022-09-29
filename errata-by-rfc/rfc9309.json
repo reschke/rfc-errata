@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 7124,
+    "errata_id": "7124",
     "doc-id": "RFC9309",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "In the following case,\r\n/example/page/disallowed.gif MUST be used for the URI\r\nexample.com/example/page/disallow.gif.",
     "correct_text": "In the following case,\r\n/example/page/disallowed.gif MUST be used for the URI\r\nexample.com/example/page/disallowed.gif.",
     "notes": "The two file names in that sentence (\"disallowed.gif\" and \"disallow.gif\")\r\ndoesn't match.  i.e. \"ed\" is missing from the second file name.\r\n\r\nThis error renders the example given in section 5.2 incorrect.",
     "submit_date": "2022-09-10",
     "submitter_name": "Samuel K. Lam",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 7128,
+    "errata_id": "7128",
     "doc-id": "RFC9309",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The \"Path\" component of third example seems to indicate Unicode codepoint, rather than UTF-8 encoded hexadecimal. If it was, the correct codepoint for %E3%83%84 is U+30C4, or ツ (in Unicode form).",
     "submit_date": "2022-09-13",
     "submitter_name": "Yoshiro Yoneya",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
