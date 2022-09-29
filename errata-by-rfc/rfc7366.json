@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4212,
+    "errata_id": "4212",
     "doc-id": "RFC7366",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   In TLS [2] notation, the MAC calculation for TLS 1.0 without\r\n   the explicit Initialization Vector (IV) is:\r\n\r\n   MAC(MAC_write_key, seq_num +\r\n       TLSCipherText.type +\r\n       TLSCipherText.version +\r\n       TLSCipherText.length +\r\n       ENC(content + padding + padding_length));\r\n\r\n   and for TLS 1.1 and greater with an explicit IV is:\r\n\r\n   MAC(MAC_write_key, seq_num +\r\n       TLSCipherText.type +\r\n       TLSCipherText.version +\r\n       TLSCipherText.length +\r\n       IV +\r\n       ENC(content + padding + padding_length));\r\n",
     "correct_text": "Note that the length value used for the MAC computation differs from \r\nthe value of the 'uint16 length' field in the TLSCiphertext record as \r\nencoded on the wire.  The encoded TLSCiphertext record contains both \r\nthe ciphtertext and the MAC, while the MAC calculation is performed \r\nonly over the ciphertext.  The length value encoded in the \r\nTLSCiphertext record is therefore 'length' while the length value \r\nused in the MAC calculation is 'length - SecurityParameters.mac_length'.\r\n\r\nMore formally, if:\r\n\r\n  TLSCiphertext.enc_content = ENC(content + padding + padding_length)\r\n\r\nthen in TLS notation the MAC calculation for TLS 1.0 without the \r\nexplicit Initialization Vector (IV) is:\r\n\r\n   MAC(MAC_write_key, seq_num +\r\n       TLSCipherText.type +\r\n       TLSCipherText.version +\r\n       length of (TLSCiphertext.enc_content) +\r\n       TLSCiphertext.enc_content);\r\n\r\nand for TLS 1.1 and greater with an explicit IV is:\r\n\r\n   MAC(MAC_write_key, seq_num +\r\n       TLSCipherText.type +\r\n       TLSCipherText.version +\r\n       length of (IV + TLSCiphertext.enc_content) +\r\n       IV +\r\n       TLSCiphertext.enc_content);\r\n",
     "notes": "After the RFC was published a new set of implementers (who hadn't been part of the pre-publication interop testing) pointed out that the text covering the use of length values could be interpreted in two different ways.  This correction attempts to remove the ambiguity by making explicit what's MACd vs. what's encoded on the wire.",
     "submit_date": "2014-12-27",
     "submitter_name": "Peter Gutmann",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   }
