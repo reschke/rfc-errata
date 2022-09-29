@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 112,
+    "errata_id": "112",
     "doc-id": "RFC4365",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "       If these are desired, they must be provided by mechanisms that\r\n       are outside the scope of the VPN mechanisms.  For instance, the\r\n       users can use secure protocols on an end-to-end basis, e.g.,\r\n       IPsec, Secure Shell (SSH), Secure Sockets Layer (SSL), etc.\r\n\r\n",
     "correct_text": "\r\n\r\n       If these are desired, they must be provided by mechanisms that\r\n       are outside the scope of the VPN mechanisms.  For instance, the\r\n       users can use secure protocols on an end-to-end basis, e.g.,\r\n|      IPsec, Secure Shell (SSH), Transport Layer Security (TLS), etc.\r\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\n",
     "notes": "",
     "submit_date": "2006-03-20",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "ron bonica",
     "update_date": "2019-09-10 09:09:03"
   }
