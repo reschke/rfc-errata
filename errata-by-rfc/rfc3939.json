@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 208,
+    "errata_id": "208",
     "doc-id": "RFC3939",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,37 +10,37 @@
     "notes": "Informative Reference includes [RFC2806]; however, [RFC2806] has been obsoleted by [RFC3966].  All citations and references should reflect this throughout the document.\n\n",
     "submit_date": "2005-01-04",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 708,
+    "errata_id": "708",
     "doc-id": "RFC3939",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 8,
+    "section": "8",
     "orig_text": "according to BCP 90\r\n(= RFC 3864), the new IMAIL Header Fields, \"Caller-ID\" and\r\n\"Caller-Name\", as well should get formal IANA registrations listed\r\nin the RFC, using the templates from section 4.2. of RFC 3864 !\r\n",
     "correct_text": "[none submitted]",
     "notes": "Perhaps, a citation to BCP 90 would also have been appropriate.\r\n\r\nfrom pending",
     "submit_date": "2005-01-04",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 709,
+    "errata_id": "709",
     "doc-id": "RFC3939",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "Minor textual improvements:\r\n\r\na) Change the first line of section 6.1., on page 6, from\r\n\r\n  \"The intent of these headers are to record telephone number that is\r\n   sent by the analog phone system with an incoming call without\r\n   alteration or interpretation.\" ...\r\n\r\nto:\r\n\r\n| \"The intent of these headers are to record the telephone number that\r\n                                             ^^^\r\n   is sent by the analog phone system with an incoming call without\r\n   alteration or interpretation.\" ...\r\n\r\nb) In the first line of section '10. Acknowledgments', on page 9,\r\nchange:\r\n\r\n  \"The previous authors of versions of this document were Derrick Dunne\r\n   and Jason Collins.\" ...\r\n\r\nto:\r\n\r\n| \"The authors of previous versions of this document were Derrick Dunne\r\n   and Jason Collins.\" ...",
     "correct_text": "[see above]",
     "notes": "",
     "submit_date": "2005-01-04",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }
