@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4130,
+    "errata_id": "4130",
     "doc-id": "RFC1985",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "If one of the 500 level error codes (550 or 551) are sent, the client\r\nshould assume that the protocol is not supported in the remote host\r\nor that the protocol has not been implemented correctly on either the\r\nclient or server host. ",
     "correct_text": "If one of the 500 level error codes (500 or 501) is sent, the client\r\nshould assume that the protocol is not supported in the remote host\r\nor that the protocol has not been implemented correctly on either the\r\nclient or server host. ",
     "notes": "550 (mailbox unavailable) and 551 (user not local) are clearly not the codes intended here; this text is meant to refer to the two syntax error codes specified in Section 5.1.",
     "submit_date": "2014-10-13",
     "submitter_name": "Michael Slusarz",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
