@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2877,
+    "errata_id": "2877",
     "doc-id": "RFC5473",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "s/ClassOfServiceIPv4/ipClassOfService/ per IANA IPFIX registry, #5.",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2878,
+    "errata_id": "2878",
     "doc-id": "RFC5473",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "s/sourceAddressV4/sourceIPv4Address/\r\ns/destinationAddressV4/destinationIPv4Address/\r\ns/classOfServiceV4=1/ipClassOfService/\r\n\r\n- twice each.\r\n\r\nNames are per IANA's IPFIX registry.",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2880,
+    "errata_id": "2880",
     "doc-id": "RFC5473",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "s/classOfServiceIPv4/ipClassOfService/\r\n\r\nAlso, fix the alignment of the bit position numbering at the top of the figure.",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2886,
+    "errata_id": "2886",
     "doc-id": "RFC5473",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "This doc consistently uses \"commonPropertiesID\" when the field defined in [RFC5101] and IANA's IPFIX registry is \"commonPropertiesId\".\r\n\r\nNote that some of the other errata on this RFC also contain this incorrect usage.",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2893,
+    "errata_id": "2893",
     "doc-id": "RFC5473",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "s/inOctetDeltaCount/octetDeltaCount/ (three times)\r\n\r\n- including figure 10.\r\n\r\nPer [RFC5102] and IANA's IPFIX registry, the correct name is \"octetDeltaCount\".",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2894,
+    "errata_id": "2894",
     "doc-id": "RFC5473",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -85,12 +85,12 @@
     "notes": "s/inPacketDeltaCount/packetDeltaCount/ (three times)\r\n\r\n- including figure 10.\r\n\r\nPer [RFC5102] and IANA's IPFIX registry, the correct name is \"packetDeltaCount\".",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2908,
+    "errata_id": "2908",
     "doc-id": "RFC5473",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -100,22 +100,22 @@
     "notes": "s/transportSourcePort/sourceTransportPort/\r\ns/transportDestinationPort/destinationTransportPort/\r\n\r\nPer RFC5102 and IANA's IPFIX registry, the correct names are \"sourceTransportPort\" and \"destinationTransportPort\".\r\n\r\nErrata 2880 also relates to this figure.",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2911,
+    "errata_id": "2911",
     "doc-id": "RFC5473",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 10,
+    "section": "10",
     "orig_text": "   The authors would like to thank Guido Pohl for initiating this work\r\n   and for his contribution to early versions of this document.  Thanks\r\n   also to Andrew Johnson, Gehrard Muenz, Brian Trammell, and Paul\r\n   Aitken for their comments and feedback.",
     "correct_text": "   The authors would like to thank Guido Pohl for initiating this work\r\n   and for his contribution to early versions of this document.  Thanks\r\n   also to Andrew Johnson, Gerhard Muenz, Brian Trammell, and Paul\r\n   Aitken for their comments and feedback.",
     "notes": "s/Gehrard/Gerhard/\r\n\r\nTypo",
     "submit_date": "2011-08-02",
     "submitter_name": "Gerhard Muenz",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }
