@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 996,
+    "errata_id": "996",
     "doc-id": "RFC4446",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "   0x0008  SONET/SDH Circuit Emulation Service Over\r\n     MPLS [CEP]\r\n\r\n   ...\r\n\r\n   0x0010  SONET/SDH Circuit Emulation over Packet [CEP]\r\n",
     "correct_text": "   0x0008  SONET/SDH Circuit Emulation Service Over\r\n     MPLS Encapsulation [CEM]\r\n\r\n  ...\r\n\r\n   0x0010  SONET/SDH Circuit Emulation over Packet\r\n     [RFC4842]\r\n\r\n",
     "notes": "The 0x0008 value should not have been listed as\r\nallocated to [CEP], now [RFC 4842], only the 0x0010 value is\r\nprovided for [CEP].  The 0x0008 value should be associated\r\nwith \"SONET/SDH Circuit Emulation Service Over MPLS\r\nEncapsulation [CEM]\", and a corresponding informative\r\nreference for [CEM] provided.\r\n\r\nThe IANA PW Type registry has been updated to correct this\r\nerror.",
     "submit_date": "2007-10-08",
     "submitter_name": "Danny McPherson",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": "Mark Townsley",
     "update_date": "2019-09-10 09:09:03"
   }
