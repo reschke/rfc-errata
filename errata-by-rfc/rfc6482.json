@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 3166,
+    "errata_id": "3166",
     "doc-id": "RFC6482",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "...EE certificate's IP address delegation extension.",
     "correct_text": "...EE certificate's IP address delegation extension.  The EE certificate\r\nMUST NOT use \"inherit\" elements as described in [RFC3779].",
     "notes": "Having spoken to the authors, the authors' intent was to disallow \"inherit\" in ROA EE certificates in order to simplify validation of ROAs.  Implementers agree, and as of March 2012, the three public validator implementations already enforce this.\r\n\r\nThis erratum simply states it explicitly, whereas the original text might be misread as leaving room for indirectly-specified resources via \"inherit\".\r\n\r\nThis errata was discussed by the WG, please see SIDR list archive.",
     "submit_date": "2012-03-25",
     "submitter_name": "Andrew Chi",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5609,
+    "errata_id": "5609",
     "doc-id": "RFC6482",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "The Table of Contents omits the \"IANA Considerations\" section, which should be section 6, which consequently causes the numbered sections to be follow be labeled incorrectly.",
     "submit_date": "2019-01-20",
     "submitter_name": "John Kristoff",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5881,
+    "errata_id": "5881",
     "doc-id": "RFC6482",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,22 +40,22 @@
     "notes": "The object identifier for the ROA content type is mentioned in the document, but it is not included in the ASN.1 Module.",
     "submit_date": "2019-10-23",
     "submitter_name": "Russ Housley",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-10-24 11:04:55"
   },
   {
-    "errata_id": 7079,
+    "errata_id": "7079",
     "doc-id": "RFC6482",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "   Before a relying party can use a ROA to validate a routing\r\n   announcement, the relying party MUST first validate the ROA.  To\r\n   validate a ROA, the relying party MUST perform all the validation\r\n   checks specified in [RFC6488] as well as the following additional\r\n   ROA-specific validation step.\r\n\r\n   o  The IP address delegation extension [RFC3779] is present in the\r\n      end-entity (EE) certificate (contained within the ROA), and each\r\n      IP address prefix(es) in the ROA is contained within the set of IP\r\n      addresses specified by the EE certificate's IP address delegation\r\n      extension.",
     "correct_text": "   Before a relying party can use a ROA to validate a routing\r\n   announcement, the relying party MUST first validate the ROA.  To\r\n   validate a ROA, the relying party MUST perform all the validation\r\n   checks specified in [RFC6488] as well as the following additional\r\n   ROA-specific validation step.\r\n\r\n   o  The IP address delegation extension [RFC3779] is present in the\r\n      end-entity (EE) certificate (contained within the ROA), and each\r\n      IP address prefix(es) in the ROA is contained within the set of IP\r\n      addresses specified by the EE certificate's IP address delegation\r\n      extension.\r\n   o  The AS Resources extension is not used in Route Origin Authorizations\r\n      and MUST be omitted.",
     "notes": "The ROA RFC is a bit under-specified compared to other RPKI Signed Object profile definitions. (For example, RFC 8209 § 3.1.3.4 is less ambiguous on the matter of RFC3779 extensions.)\n --VERIFIER NOTES-- \nThis is a material (albeit small) change to the spec and doesn't appear to reflect the WG consensus at time of publication. Therefore rejecting, see https://mailarchive.ietf.org/arch/msg/sidr/A_2jMTLbpgpK1H0G3QsVJ44T-kE/ as well.",
     "submit_date": "2022-08-10",
     "submitter_name": "Job Snijders",
-    "verifier_id": 171,
+    "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2022-09-06 11:54:33"
   }
