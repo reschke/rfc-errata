@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1843,
+    "errata_id": "1843",
     "doc-id": "RFC1227",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "          IMPORTS\r\n                  enterprises\r\n                          FROM RFC1155-SMI\r\n                  OBJECT-TYPE\r\n                          FROM RFC1212;\r\n",
     "correct_text": "          IMPORTS\r\n                  enterprises\r\n                          FROM RFC1155-SMI\r\n                  OBJECT-TYPE\r\n                          FROM RFC1212\r\n                  DisplayString\r\n                          FROM RFC1213-MIB;\r\n",
     "notes": "The object smuxPdescription is declared as a DisplayString but that name isn't imported.\r\n\r\nI choose to take DisplayString from RFC1213-MIB since that is where it existed at the time.\n --VERIFIER NOTES-- \nSuch a change in a MIB module cannot be done by an erratum, but rather by issuing a new version of the MIB module. As this document is Historic and the MIB module is written in SMIv1, I see no need for such a change in the future. ",
     "submit_date": "2009-08-29",
     "submitter_name": "Magnus Fromreide",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }
