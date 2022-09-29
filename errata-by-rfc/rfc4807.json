@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3046,
+    "errata_id": "3046",
     "doc-id": "RFC4807",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,7 +10,7 @@
     "notes": "The text quoted includes spdIpHeaderFitlerTable, but it does not exist in the MIB definition in Section 6.  In addition, spdIpHeaderFilterTable is referenced in the tutorial of Section 5.1.2.  This oversight is either a large editorial oversight in Section 5 or a large technical oversight in Section 6.\r\n\r\nAfter discussions with the authors, spdIpHeaderFitlerEntry needs to be removed from s5 and the spdIpHeaderFitlerTable example in s5.1.2 needs to be amended.",
     "submit_date": "2011-12-08",
     "submitter_name": "Paul Clark",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }
