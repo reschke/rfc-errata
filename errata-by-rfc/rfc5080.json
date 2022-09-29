@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4476,
+    "errata_id": "4476",
     "doc-id": "RFC5080",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Message-Authenticator attribute defined in [RFC3579] is mandatory attribute for IEEE802.1x EAP User and optional attribute for other type of users. In RFC5080, the message-authenticator is used as an optional attribute. However in practice, Radius Implementation without Message-Authenticator attribute for Integrity check protection has become serious issue.\r\nThe attacker can take advantage of Access-Request packets not containing a Message-Authenticator attribute to perform authentication successfully. \r\nAlternatively,the attacker can capture the packet and delete message-authenticatorattribute.\r\nIf the server do not check the message-authenticator attribute, the attacker can pass the authentication as well.\n --VERIFIER NOTES-- \n This suggested errata would result in a normative change to the RFC, which requires consensus.  The conversation has been moved to the RADext list to see if an update to the RFC is appropriate or not.",
     "submit_date": "2015-09-17",
     "submitter_name": "Michael Wang",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4623,
+    "errata_id": "4623",
     "doc-id": "RFC5080",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "- if we're retransmitting an Accounting-Request packet, it should be acceptable\r\n to update the statistics in it.\r\n\r\n- i.e. there should not be a requirement that the content remain the same.  The \r\nAcct-Delay-Time attribute is changing, so why not other things, too?\r\n\r\n- And MRT of zero for Accounting-Request packet SHOULD NOT mean that the \r\nNAS starts a new retransmission timer every 5 minutes.\r\n\r\n- e.g. if the server is down for 20 minutes, the NAS should have *one* \r\nAccounting-Status packet in it's retransmit queue.  Not 4.",
     "submit_date": "2016-02-22",
     "submitter_name": "Alan DeKok",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }
