@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 68,
+    "errata_id": "68",
     "doc-id": "RFC4524",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)  referential inconsistency\r\n\r\nThe second paragraph of Section 1, on page 3 of RFC 4524, says:\r\n\r\n   In the years that followed, X.500 Directory Services have evolved to\r\n   incorporate new capabilities and even new protocols.  In particular,\r\n   the Lightweight Directory Access Protocol (LDAP) [RFC4510] was\r\n   introduced in the early 1990s [RFC1487], with Version 3 of LDAP\r\n   introduced in the late 1990s [RFC2251] and subsequently revised in\r\n|  2005 [RFC4510].\r\n\r\nIt should say:\r\n\r\n   In the years that followed, X.500 Directory Services have evolved to\r\n   incorporate new capabilities and even new protocols.  In particular,\r\n   the Lightweight Directory Access Protocol (LDAP) [RFC4510] was\r\n   introduced in the early 1990s [RFC1487], with Version 3 of LDAP\r\n   introduced in the late 1990s [RFC2251] and subsequently revised in\r\n|  2006 [RFC4510].\r\n      ^\r\n\r\n(Rationale: RFC 451x and RFC 452x have been published in June 2006.)\r\n\r\n\r\n(2)  typos\r\n\r\n(2a) The third paragraph of Section 1, on page 3 of RFC 4524, says:\r\n\r\n|  While much of the material in RFC 1274 has been superceded by\r\n   subsequently published ITU-T Recommendations and IETF RFCs, [...]\r\n\r\nIt should say:\r\n                                                        v\r\n|  While much of the material in RFC 1274 has been superseded by\r\n   subsequently published ITU-T Recommendations and IETF RFCs, [...]\r\n\r\n(2b) The third paragraph of Section 1.1, on page 3, says:\r\n\r\n   The description of the 'domain' object class provided in this\r\n|  document supercedes that found in RFC 2247.  That is, Section 3.4 of\r\n   this document replaces Section 5.2 of [RFC2247].\r\n\r\nIt should say:\r\n\r\n   The description of the 'domain' object class provided in this\r\n|  document supersedes that found in RFC 2247.  That is, Section 3.4 of\r\n   this document replaces Section 5.2 of [RFC2247].\r\n\r\n\r\n(3)  extraneous (duplicated) text\r\n\r\nWithin Section 3.1 of RFC 4524, the first line on page 14,\r\n\r\n   3.3.  documentSeriesExample:\r\n\r\nshould say:\r\n\r\n      Example:\r\n\r\n\r\n(4)  incomplete information\r\n\r\nWithin Appendix A of RFC 4524, I miss a note describing the fate\r\nof the 'pilotOrganization' object class (RFC 1274, Section 8.3.13).\r\n\r\nKurt:\r\n  For completeness, it would be nice if you could provide\r\n  supplementary text (similar to, and perhaps to be inserted\r\n  after, section A.3 of RFC 4524) detailing the intentions of\r\n  the authors regarding that object class.",
     "correct_text": "",
     "notes": " RFC 451x and RFC 452x have been published in June 2006.\r\n\r\nfrom pending",
     "submit_date": "2006-07-07",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }
