@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 525,
+    "errata_id": "525",
     "doc-id": "RFC2021",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": "99The DESCRIPTION of probeDownloadAction uses the wrong INTEGER definitions for downloadToPROM and downloadToRAM. \n\nOn page 92, it reads: ",
+    "section": "The DESCRIPTION of probeDownloadAction uses the wrong INTEGER definitions for downloadToPROM and downloadToRAM. \n\nOn page 92, it reads: ",
     "orig_text": "   probeDownloadAction  OBJECT-TYPE\n    SYNTAX     INTEGER {\n                  notDownloading(1),\n                  downloadToPROM(2),\n                  downloadToRAM(3)\n               }\n    MAX-ACCESS read-write\n    STATUS     current\n    DESCRIPTION\n        \"When this object is set to downloadToRAM(2) or\n        downloadToPROM(3), the device will discontinue its\n        normal operation and begin download of the image specified\n        by probeDownloadFile from the server specified by\n        probeDownloadTFTPServer using the TFTP protocol.  If\n        downloadToRAM(2) is specified, the new image is copied\n        to RAM only (the old image remains unaltered in the flash\n        EPROM).  If downloadToPROM(3) is specified\n        the new image is written to the flash EPROM\n        memory after its checksum has been verified to be correct.\n        When the download process is completed, the device will\n\twarm boot to restart the newly loaded application.\n        When the device is not downloading, this object will have\n        a value of notDownloading(1).\"\n    ::= { probeConfig 8 }",
     "correct_text": "probeDownloadAction  OBJECT-TYPE\n    SYNTAX     INTEGER {\n                  notDownloading(1),\n                  downloadToPROM(2),\n                  downloadToRAM(3)\n               }\n    MAX-ACCESS read-write\n    STATUS     current\n    DESCRIPTION\n        \"When this object is set to downloadToRAM(3) or\n        downloadToPROM(2), the device will discontinue its\n        normal operation and begin download of the image specified\n        by probeDownloadFile from the server specified by\n        probeDownloadTFTPServer using the TFTP protocol.  If\n        downloadToRAM(3) is specified, the new image is copied\n        to RAM only (the old image remains unaltered in the flash\n        EPROM).  If downloadToPROM(2) is specified\n        the new image is written to the flash EPROM\n        memory after its checksum has been verified to be correct.\n        When the download process is completed, the device will\n        warm boot to restart the newly loaded application.\n        When the device is not downloading, this object will have\n        a value of notDownloading(1).\"\n    ::= { probeConfig 8 }\n",
     "notes": "",
     "submit_date": "2002-06-25",
     "submitter_name": "Frank McKiernan",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
