@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5015,
+    "errata_id": "5015",
     "doc-id": "RFC5229",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "# Imagine the header\r\n      # Subject: [acme-users] [fwd] version 1.0 is out\r\n      if header :matches \"Subject\" \"[*] *\" {\r\n          # ${1} will hold \"acme-users\",\r\n          # ${2} will hold \"[fwd] version 1.0 is out\"\r\n          fileinfo \"INBOX.lists.${1}\"; stop;\r\n                ^\r\n      }",
     "correct_text": "# Imagine the header\r\n      # Subject: [acme-users] [fwd] version 1.0 is out\r\n      if header :matches \"Subject\" \"[*] *\" {\r\n          # ${1} will hold \"acme-users\",\r\n          # ${2} will hold \"[fwd] version 1.0 is out\"\r\n          fileinto \"INBOX.lists.${1}\"; stop;\r\n      }",
     "notes": "This suggestion corrects the spelling of the \"fileinto\" action in the example.",
     "submit_date": "2017-05-10",
     "submitter_name": "Stan Kalisch",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }
