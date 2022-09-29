@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4088,
+    "errata_id": "4088",
     "doc-id": "RFC1027",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "The gateway can then respond for host B,\r\n    saying that the network address for host B is that of the gateway\r\n    itself.",
     "correct_text": "The gateway can then respond for host A,\r\n    saying that the network address for host B is that of the gateway\r\n    itself.",
     "notes": "I'm a bit confused about the sentence :) I think there should be \"A\" instead of \"B\". Next phrase says that host A sees a reply message from gateway, therefore gateway have to send that reply message to A in the previous sentence.\n --VERIFIER NOTES-- \n   Since A and B are on separate networks, the gateway responds *on behalf of host B*.",
     "submit_date": "2014-08-19",
     "submitter_name": "Sergey Yarin",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
