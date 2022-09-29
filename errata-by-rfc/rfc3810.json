@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4773,
+    "errata_id": "4773",
     "doc-id": "RFC3810",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "A description for the Resv field is missing. Section numbering indicates that this has been lost in editing.\r\n\r\n== Alvaro Retana == \r\nYes, §5.1.6 is missing.  I think it is obvious that \"Resv\" and \"Reserved\" have the same meaning, so I'm disposing of this report to be considered when/if the document is updated.",
     "submit_date": "2016-08-11",
     "submitter_name": "Michael Lundkvist",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5977,
+    "errata_id": "5977",
     "doc-id": "RFC3810",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "I think PIM WG (which now owns this RFC) repeatedly re-confirmed in discussions that the intended interpretation of RFC3810 is that multicast receivers MUST report MLDv2 membership reports ALSO for link-local IPv6 addresses. Alas, this is still rejected by readers outside of PIM-WG, for example in current IESG review of a new new protocol spec that is stating that MLDv2 must be used to join the link-local IPv6 address of that protocol. \r\n\r\nThe problem seems to stem from the fact that there is no positively reaffirming text in MLDv2 RFC stating that MLDv2 MUST be used for all addresses scope 2..14 (except FF:01). Instead the text seems to only mentions exceptions (scope 0 and 1 and FF:01) unless i overlooked a passage explicitly reaffirming the need to use MLDv2 for scope 2.\r\n\r\nHence, this errata is editorial in nature to what i understand to be the desired meaning according to PIM-WG, but would be a technical change to what seems to be the interpretation by many implementers.",
     "submit_date": "2020-02-05",
     "submitter_name": "Toerless Eckert",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
