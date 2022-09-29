@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5449,
+    "errata_id": "5449",
     "doc-id": "RFC7986",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "draft-daboo-icalendar-extensions-07 removed the possibily to have RGB colours for COLOR.\r\n\r\nCSS3 included color names, that browsers at that time suppored, originating from X11's rgb.txt.  The color names and values were randomly chosen.  The minimal distance between the colors isn't consistent.  One motivation for creating a color name were hardware capabilities - an argument which isn't valid for 20 years now.  There is no reason to limit the number of possible values for COLOR.  A user interface for choosing a named color has either to offer the user the possibility to choose from a pre-filled list of colors, which could clutter the interface, or let the user choose any RGB color and narrow it later to the closest color with CSS3 name.  This narrowing isn't trivial and performing it seems like having an RFC running in itself.",
     "submit_date": "2018-08-03",
     "submitter_name": "Дилян Палаузов",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
