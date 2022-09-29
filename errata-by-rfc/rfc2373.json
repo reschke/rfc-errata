@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 455,
+    "errata_id": "455",
     "doc-id": "RFC2373",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": "99In the reference: ",
+    "section": "In the reference: ",
     "orig_text": "   [TRAN]    Gilligan, R., and E. Nordmark, \"Transition Mechanisms for\n             IPv6 Hosts and Routers\", RFC 1993, April 1996.",
     "correct_text": "",
     "notes": "the RFC number cited is incorrect; it should be RFC 1933. \n",
     "submit_date": "2000-10-31",
     "submitter_name": "Tim Hutchinson",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 456,
+    "errata_id": "456",
     "doc-id": "RFC2373",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": "99 It appears that the ABNF grammar for textual representations of IPv6 addresses as detailed in Appendix B of RFC 2373 is not correct in its treatment of IPv6 addresses with a trailing IPv4 address.  Specifically, section 2.2.3 of the RFC states that:",
+    "section": " It appears that the ABNF grammar for textual representations of IPv6 addresses as detailed in Appendix B of RFC 2373 is not correct in its treatment of IPv6 addresses with a trailing IPv4 address.  Specifically, section 2.2.3 of the RFC states that:",
     "orig_text": " \"::13.1.83.3\" \r\n",
     "correct_text": "      IPv6address = dcolon | hexpart\r\n\r\n      IPv4address = 1*3DIGIT \".\" 1*3DIGIT \".\" 1*3DIGIT \".\" 1*3DIGIT\r\n      IPv6prefix  = hexpart \"/\" 1*2DIGIT\r\n\r\n      dcolon  = \"::\" | \"::\" hexseq [ \":\" IPv4address ] | \"::\" [ IPv4address ]\r\n      hexpart = hexseq | hexseq \":\" IPv4address | hexseq dcolon\r\n      hexseq  = hex4 *( \":\" hex4)\r\n      hex4    = 1*4HEXDIG",
     "notes": "According to the grammar in Appendix B, this is not a valid IPv6\r\naddress; there is no provision for a double colon followed by an IPv4\r\naddress.  However, the grammar does allow for a double colon, followed by\r\na colon, followed by an IPv4 address.  In other words, \":::13.1.83.3\" is a\r\nvalid address according to the grammar and \"::13.1.83.3\" is not.\r\n\r\nI blame the discrepancy on the grammar simply because I feel that the\r\nintent of the RFC was clearly to prefer two colons over three colons\r\nbefore a trailing IPv4 address.  This seems to match the behavior of\r\nexisting applications.\n --VERIFIER NOTES-- \nThis RFC has been replaced by RFC 3513   ",
     "submit_date": "2001-07-26",
     "submitter_name": "Mark Meiss",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
