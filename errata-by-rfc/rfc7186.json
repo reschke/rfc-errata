@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4034,
+    "errata_id": "4034",
     "doc-id": "RFC7186",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 9.2,
+    "section": "9.2",
     "orig_text": "   [RFC7185]  Herberg, U., Dearlove, C., and T. Clausen, \"Integrity\r\n              Protection for the Neighborhood Discovery Protocol (NHDP)\r\n              and Optimized Link State Routing Protocol Version 2\r\n              (OLSRv2)\", RFC 7185, April 2014.\r\n",
     "correct_text": "   [RFC7183]   Herberg, U., Dearlove, C., and T. Clausen, \"Integrity\r\n               Protection for the Neighborhood Discovery Protocol (NHDP)\r\n               and Optimized Link State Routing Protocol Version 2\r\n               (OLSRv2)\", RFC 7183, April 2014.\r\n",
     "notes": "Apparently, the wrong RFC number was cited: RFC7185 is \"Rationale for the Use of Link Metrics in the Optimized Link State Routing Protocol Version 2 (OLSRv2)\"\r\n\r\nAdditionally, all references to RFC7185 in the document (Section 1 and Section 6) should read RFC7183.",
     "submit_date": "2014-07-02",
     "submitter_name": "Thomas Clausen",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4035,
+    "errata_id": "4035",
     "doc-id": "RFC7186",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "Related to errata 4034, which corrects the reference in the references section, the actual citation keys (which are RFC7185 in the document) should be corrected to [RFC7183] also. \r\n\r\nNot quite sure if this should be a separate errata or the two should be combined?\n --VERIFIER NOTES-- \nThis is rejected as a duplicate of report 4034. That report can be used to capture all of the information required.",
     "submit_date": "2014-07-03",
     "submitter_name": "Thomas Clausen",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }
