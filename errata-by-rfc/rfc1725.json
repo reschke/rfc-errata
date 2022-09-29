@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1086,
+    "errata_id": "1086",
     "doc-id": "RFC1725",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 7,
+    "section": "7",
     "orig_text": "Note that if the number of lines requested by the POP3\r\nclient is greater than than the number of lines in the\r\n                  ^^^^\r\nbody, then the POP3 server sends the entire message.",
     "correct_text": "Note that if the number of lines requested by the POP3\r\nclient is greater than the number of lines in the body,\r\nthen the POP3 server sends the entire message.",
     "notes": "Extraneous \"than\" in discussion of TOP command.",
     "submit_date": "2007-11-29",
     "submitter_name": "Joseph Bowbeer",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }
