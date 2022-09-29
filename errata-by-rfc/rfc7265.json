@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4862,
+    "errata_id": "4862",
     "doc-id": "RFC7265",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "The ENCODING=BASE64 parameter must be preserved for BINARY values; no part of the RFC allows removing it.",
     "submit_date": "2016-11-10",
     "submitter_name": "Sean Bartell",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6360,
+    "errata_id": "6360",
     "doc-id": "RFC7265",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "In RFC 5545, one of the allowable values for the VERSION property is a minimum version and a maximum version, separated by a semicolon (;).  The value type is TEXT.  When the jCal value is converted back to iCalendar, the text is subject to escape with a backslash.  This yields a result which is not valid for the VERSION property.\r\n\r\nExample:\r\n\r\n[ \"version\", {}, \"text\", \"2.0;2.9\" ]\r\n\r\nbecomes\r\n\r\nVERSION:2.0\\;2.9\r\n\r\nwhich is invalid because it contains the backslash.",
     "submit_date": "2020-12-20",
     "submitter_name": "Julian Cowley",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
