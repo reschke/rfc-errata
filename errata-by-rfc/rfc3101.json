@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4767,
+    "errata_id": "4767",
     "doc-id": "RFC3101",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "If one LSA is Type-5 and the other is Type-7, one of them would be rejected at step (2.5.(3) ( please refer to OSPF mail list: https://mailarchive.ietf.org/arch/msg/ospf/KBoh5T75o-s7n_bL1knrc6uVlTs ). If both of them are Type-7 LSAs, one of them would be flushed according 2.4: \r\n   If two NSSA routers, both\r\n   reachable from one another over the NSSA, originate functionally\r\n   equivalent Type-7 LSAs (i.e., same destination, cost and non-zero\r\n   forwarding address), then the router having the least preferred LSA\r\n   should flush its LSA.\r\n\r\nAs a result, rule (e) would never be applied and should be removed.\r\n\n --VERIFIER NOTES-- \nIt is easy to envision a topology where an ABR for an NSSA receives an NSSA-LSA from an NSSA internal router and an AS-Exernal-LSA from originating routers that do not receive each others equivalent LSAs. Furthermore, even if this were not the case, the  referenced text refers to LSAs that are both NSSA-LSAs as opposed to a\r\nmixture of an NSSA-LSA and an AS-External-LSA.\r\n",
     "submit_date": "2016-08-08",
     "submitter_name": "Chao Fu",
-    "verifier_id": 140,
+    "verifier_id": "140",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
   }
