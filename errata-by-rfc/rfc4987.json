@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 7052,
+    "errata_id": "7052",
     "doc-id": "RFC4987",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.6,
+    "section": "3.6",
     "orig_text": "Instead, they encode most of the state\r\n(and all of the strictly required) state that they would normally\r\nkeep into the sequence number transmitted on the SYN-ACK.\r\n",
     "correct_text": "Instead, they encode most of the state\r\n(and all of the strictly required state) that they would normally\r\nkeep into the sequence number transmitted on the SYN-ACK.\r\n",
     "notes": "Move the second \"state\" into the parentheses.",
     "submit_date": "2022-07-28",
     "submitter_name": "Merlin Büge",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-07-29 15:39:07"
   }
