@@ -1,36 +1,6 @@
 [
   {
-    "errata_id": 63,
-    "doc-id": "RFC4541",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": 3,
-    "orig_text": "   Additionally, if a non-Querier switch spoofs any General Queries (as\r\n   addressed in Section 2.1 above, for Spanning Tree topology changes),\r\n   the switch should use the null IP source address (::) when sending\r\n   said queries.  When such proxy queries are received, they must not be\r\n   included in the Querier election process.",
-    "correct_text": "   Additionally, if a non-Querier switch spoofs any General Queries (as\r\n   addressed in Section 2.1 above, for Spanning Tree topology changes),\r\n   the switch should use the unspecified IP source address (::) when\r\n   sending said queries.  When such proxy queries are received, they\r\n   must not be included in the Querier election process.\r\n",
-    "notes": "The term, \"null\" IP address is inappropriate, according to the current\r\nIPv6 Address Architecture document.  RFC 4541 should use the proper\r\nterm, \"unspecified\" address (cf. Section 2.5.2 of RFC 4291).\r\n\r\nfrom pending",
-    "submit_date": "2006-11-08",
-    "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
-    "verifier_name": "Morten Jagd Christensen",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 914,
-    "doc-id": "RFC4541",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Editorial",
-    "section": 3,
-    "orig_text": "   Initial allocation of IPv6 multicast addresses, as described in\r\n   [RFC3307], however, cover only the lower 32 bits of group ID.",
-    "correct_text": "   The Initial allocation of IPv6 multicast addresses, as described in\r\n   [RFC3307], however, covers only the lower 32 bits of group ID.\r\n",
-    "notes": "from pending",
-    "submit_date": "2006-11-08",
-    "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
-    "verifier_name": "Morten Jagd Christensen",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 4032,
+    "errata_id": "4032",
     "doc-id": "RFC4541",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -40,8 +10,38 @@
     "notes": "IMHO it makes no sense to forward non-IGMP datagrams to router ports if these are not members of the refering groups.\r\n\r\nConsider the following example:\r\nA IGMP snooping switch is connected to two mcast servers and some hosts. Server A is the querier, server B is the non-querier.\r\n\r\nNow with the prevailing version of RFC4541 any mcast data stream (outside 224.0.0.x, non IGMP) would be routed to the hosts which are members of the refering group (correct), but also to server A, because the switch recognizes this port as a mcast server port due to the querier function. But server A is not interested in the data streams of server B unless it joins the group. This behaviour uneccessarily loads the port of server A with bandwidth.\r\n\r\nObviously some (all?) switch models (like HP2920) show this erroneous behavior.\r\n\r\nKind Regards, Josef Felber\n --VERIFIER NOTES-- \nThe text in the RFC is correct. Router ports need to see the multicast traffic in order to correctly forward it to interested members not connected to the switch. ",
     "submit_date": "2014-06-30",
     "submitter_name": "Josef Felber",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "63",
+    "doc-id": "RFC4541",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "   Additionally, if a non-Querier switch spoofs any General Queries (as\r\n   addressed in Section 2.1 above, for Spanning Tree topology changes),\r\n   the switch should use the null IP source address (::) when sending\r\n   said queries.  When such proxy queries are received, they must not be\r\n   included in the Querier election process.",
+    "correct_text": "   Additionally, if a non-Querier switch spoofs any General Queries (as\r\n   addressed in Section 2.1 above, for Spanning Tree topology changes),\r\n   the switch should use the unspecified IP source address (::) when\r\n   sending said queries.  When such proxy queries are received, they\r\n   must not be included in the Querier election process.\r\n",
+    "notes": "The term, \"null\" IP address is inappropriate, according to the current\r\nIPv6 Address Architecture document.  RFC 4541 should use the proper\r\nterm, \"unspecified\" address (cf. Section 2.5.2 of RFC 4291).\r\n\r\nfrom pending",
+    "submit_date": "2006-11-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": "99",
+    "verifier_name": "Morten Jagd Christensen",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "914",
+    "doc-id": "RFC4541",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "   Initial allocation of IPv6 multicast addresses, as described in\r\n   [RFC3307], however, cover only the lower 32 bits of group ID.",
+    "correct_text": "   The Initial allocation of IPv6 multicast addresses, as described in\r\n   [RFC3307], however, covers only the lower 32 bits of group ID.\r\n",
+    "notes": "from pending",
+    "submit_date": "2006-11-08",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": "99",
+    "verifier_name": "Morten Jagd Christensen",
     "update_date": "2019-09-10 09:09:03"
   }
 ]
