@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3977,
+    "errata_id": "3977",
     "doc-id": "RFC6860",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   To hide a transit-only network in [OSPFv3], the IPv6 address prefixes\r\n   are omitted from the router-LSA.  Consequently, when a Designated\r\n   Router builds an intra-area-prefix-LSA referencing a network-LSA,\r\n   these IPv6 address prefixes will be omitted.",
     "correct_text": "   To hide a transit-only network in [OSPFv3], the associated IPv6\r\n   address prefixes MUST be omitted from the link-LSA. Consequently,\r\n   when a Designated Router builds an intra-area-prefix-LSA referencing\r\n   a network-LSA, these IPv6 address prefixes will be omitted.\r\n",
     "notes": "The change essentially reverts the paragraph back to the formulation from http://tools.ietf.org/html/draft-ietf-ospf-prefix-hiding-05#section-3 . Most importantly, the term \"router-LSA\" is replaced with \"link-LSA\", as there are already no prefixes carried in OSFPv3 router-LSA whatsoever, and the removal of transit-network prefixes influences link-LSAs and intra-area-prefix-LSAs. Also, the change reintroduces the keyword \"MUST\" that underlines the behavior that is crucial to the proper implementation of the feature.",
     "submit_date": "2014-04-28",
     "submitter_name": "Peter Paluch",
-    "verifier_id": 140,
+    "verifier_id": "140",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
   }
