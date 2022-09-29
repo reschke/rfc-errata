@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3041,
+    "errata_id": "3041",
     "doc-id": "RFC1365",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "   Class F-8G has the seven higher order bits set to 1111110, a 49 bit\r\n   network number and a 8 bit host address.\r\n\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |1|1|1|1|1|0|              net number                           |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |                 net number                    |  local part   |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
     "correct_text": "   Class F-8G has the seven higher order bits set to 1111110, a 49 bit\r\n   network number and a 8 bit host address.\r\n\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |1|1|1|1|1|1|0|            net number                           |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |                 net number                    |  local part   |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
     "notes": "Remaining bit patterns are unspecified but assumed to be reserved for future definition.",
     "submit_date": "2011-12-07",
     "submitter_name": "Dean Swift",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
