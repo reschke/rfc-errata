@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4695,
+    "errata_id": "4695",
     "doc-id": "RFC5890",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,27 +10,27 @@
     "notes": "The sentence should have used \"octets\" instead of \"characters\".\r\n\r\nA separate erratum was files for possible tightening of the upper bound in a future revision of this document.",
     "submit_date": "2016-05-17",
     "submitter_name": "Juan Altmayer Pizzorno",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4696,
+    "errata_id": "4696",
     "doc-id": "RFC5890",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "Because A-labels (the form actually used in the\r\nDNS) are potentially much more compressed than UTF-8 (and UTF-8 is,\r\nin general, more compressed that UTF-16 or UTF-32), U-labels that\r\nobey all of the relevant symmetry (and other) constraints of these\r\ndocuments  may be quite a bit longer, potentially up to 252 characters\r\n(Unicode code points).",
     "correct_text": "Because A-labels (the form actually used in the\r\nDNS) are potentially much more compressed than UTF-8 (and UTF-8 is,\r\nin general, more compressed that UTF-16 or UTF-32), U-labels that\r\nobey all of the relevant symmetry (and other) constraints of these\r\ndocuments  may be quite a bit longer, potentially up to 252 octets.\r\n                                                        ^^^^^^^^^^\r\n",
     "notes": "Similar to Erratum 4695.\r\n",
     "submit_date": "2016-05-17",
     "submitter_name": "Juan Altmayer Pizzorno",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4823,
+    "errata_id": "4823",
     "doc-id": "RFC5890",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,27 +40,27 @@
     "notes": "The contents of U-labels are encoded in the up to 59 ASCII characters (see 2.3.2.1 itself)\r\noutput by the Punycode algorithm in their corresponding A-labels.  The Punycode\r\ndecoder (https://tools.ietf.org/html/rfc3492#section-6.2) consumes at least one\r\nof those ASCII characters for each code point inserted into the U-label. An U-label,\r\nthus, can contain at the most 59 Unicode code points.\r\n\r\nSince U-labels are defined (in 2.3.2.1) to be expressed in a standard Unicode Encoding\r\nForm, and UTF-32, UTF-16 and UTF-8 (as revised by RFC3629) all can encode a code\r\npoint in at most 4 octets, 236 octets is an upper bound for an U-label's length.\r\n\r\nI think it should be possible to derive a tighter bound, but its rationale would likely be\r\nless straighforward.\r\n\r\nI imagine the number 252 was originally derived by multiplying 63, the maximum\r\nlength of an A-label (including the \"xn--\" prefix), by 4, the maximum number of\r\noctets needed to represent a code point.",
     "submit_date": "2016-05-17",
     "submitter_name": "Juan Altmayer Pizzorno",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4824,
+    "errata_id": "4824",
     "doc-id": "RFC5890",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "Because A-labels (the form actually used in the\r\nDNS) are potentially much more compressed than UTF-8 (and UTF-8 is,\r\nin general, more compressed that UTF-16 or UTF-32), U-labels that\r\nobey all of the relevant symmetry (and other) constraints of these\r\ndocuments may be quite a bit longer, potentially up to 252 characters\r\n(Unicode code points).",
     "correct_text": "Because A-labels (the form actually used in the\r\nDNS) are potentially much more compressed than UTF-8 (and UTF-8 is,\r\nin general, more compressed that UTF-16 or UTF-32), U-labels that\r\nobey all of the relevant symmetry (and other) constraints of these\r\ndocuments may be quite a bit longer, potentially up to 59 Unicode\r\ncode points, or up to 236 octets.",
     "notes": "(The same rationale as my report for 2.3.2.1 applies:)\r\n\r\nThe contents of U-labels are encoded in the up to 59 ASCII characters (see 2.3.2.1)\r\noutput by the Punycode algorithm in their corresponding A-labels.  The Punycode\r\ndecoder (https://tools.ietf.org/html/rfc3492#section-6.2) consumes at least one\r\nof those ASCII characters for each code point inserted into the U-label. An U-label,\r\nthus, can contain at the most 59 Unicode code points.\r\n\r\nSince U-labels are defined (in 2.3.2.1) to be expressed in a standard Unicode Encoding\r\nForm, and UTF-32, UTF-16 and UTF-8 (as revised by RFC3629) all can encode a code\r\npoint in at most 4 octets, 236 octets is an upper bound for an U-label's length.\r\n\r\nI think it should be possible to derive a tighter bound, but its rationale would likely be\r\nless straighforward.\r\n\r\nI imagine the number 252 was originally derived by multiplying 63, the maximum\r\nlength of an A-label (including the \"xn--\" prefix), by 4, the maximum number of\r\noctets needed to represent a code point.",
     "submit_date": "2016-05-17",
     "submitter_name": "Juan Altmayer Pizzorno",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5484,
+    "errata_id": "5484",
     "doc-id": "RFC5890",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -70,7 +70,7 @@
     "notes": "The term NR-LDH label is actually defined in section 2.3.1, not later in this section.",
     "submit_date": "2018-08-28",
     "submitter_name": "Peter Occil",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
