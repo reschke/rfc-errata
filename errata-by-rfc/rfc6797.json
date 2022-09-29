@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4075,
+    "errata_id": "4075",
     "doc-id": "RFC6797",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 14,
+    "section": "14",
     "orig_text": "   Without the \"includeSubDomains\" directive, HSTS is unable to protect\r\n   such Secure-flagged domain cookies.",
     "correct_text": "   Without the \"includeSubDomains\" directive, HSTS is unable to protect\r\n   such Secure-flagged domain cookies.\r\n\r\n   Even with the \"includeSubDomains\" directive, the unavailability of \r\n   an \"includeParent\" directive means that an Active MITM attacker can \r\n   perform a cookie-injection attack against an otherwise \r\n   HSTS-protected victim domain.\r\n\r\n   Consider the following scenario:\r\n\r\n    The user visits https://sub.example.com and gets a HSTS policy with\r\n    includeSubdomains set. All subsequent navigations to \r\n    sub.example.com and its subdomains will be secure.\r\n\r\n    An attacker causes the victim's browser to navigate to \r\n    http://example.com. Because the HSTS policy applies only to \r\n    sub.example.com and its superdomain matches, this insecure \r\n    navigation is not blocked by the user agent.\r\n\r\n    The attacker intercepts this insecure request and returns a \r\n    response that sets a cookie on the entire domain tree using a \r\n    Set-Cookie header.\r\n\r\n    All subsequent requests to sub.example.com carry the injected\r\n    cookie, despite the use of HSTS.",
     "notes": "To mitigate this attack, HSTS-protected websites should perform a background fetch of a resource at the first-level domain. This resource should carry a HSTS header that will apply to the entire domain and all subdomains.\n --VERIFIER NOTES-- \nThis is a valid issue, but not suitable for the errata system.  The websec working group is discussing handling this with a short document to update RFC 6797.",
     "submit_date": "2014-08-08",
     "submitter_name": "Eric Lawrence",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5204,
+    "errata_id": "5204",
     "doc-id": "RFC6797",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,22 +25,22 @@
     "notes": "- In Section 6.1 the Strict-Transport-Security is defined as follows:\r\n\r\nStrict-Transport-Security = \"Strict-Transport-Security\" \":\" [ directive ]  *( \";\" [ directive ] )\r\n\r\n - valueless Directive \"includeSubDomains\" is defined as a optional directive\r\n - a directive is definied as followed:\r\n\r\ndirective = directive-name [ \"=\" directive-value ]\r\n\r\n - so \"includeSubDomains\" is only a directive-name which is defined as \"token\"\r\n - according to \"[RFC2616], Section 2.2\" a token is any octet from 0 - 127 except CTL's (octets 0 - 31 + 127) and separators which NOT exclude '-' (octet 45)\r\n\r\n\r\nSo all Fine? Yes, BUT at [RFC6797], Section 6.1 the \"overall reuqirements for directives\", Rule 3 defines:\r\n\r\n3.  Directive names are case-insensitive.\r\n\r\nAnd there is no other specification in Section 6.1.2 or has a IANA policy definition [RFC5226] like it is defined for additionals.\r\n\r\n\r\n\r\n - That means the \"directive-name\" includeSubDomains is \"case-insensitive\"!\r\n\r\nThe \"case-sensitive\" camelized directive-name is misleading, because of many other definitions with \"-\", like seen in all examples or in Header Field itself. \r\n\r\n\r\n - to aware the clear understanding the \"directive definition\" in section 6.1.2 and ALL occurences needs to be renamend.\r\n\r\nthe minimum of renaming is \"includesubdomains\" OR \"INCLUDESUBDOMAINS\", but this is not readable anymore.\r\n- So it should be renamed like other valuless directives for Example the \"schemes-source's\" directives at \"Content-Security-Policy\", which means:\r\n\r\n\"include-sub-domains\"\r\n\r\n\r\nBest Regards\r\n\r\nNick",
     "submit_date": "2017-12-13",
     "submitter_name": "Nick Dilßner",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5372,
+    "errata_id": "5372",
     "doc-id": "RFC6797",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 8.1,
+    "section": "8.1",
     "orig_text": "o  Update the UA's cached information for the Known HSTS Host if\r\n      either or both of the max-age and includeSubDomains header field\r\n      value tokens are conveying information different than that already\r\n      maintained by the UA.",
     "correct_text": "o  Update the UA's cached information for the Known HSTS Host.",
     "notes": "Section 8.1 states:\r\n\r\n   Update the UA's cached information for the Known HSTS Host if either\r\n   or both of the max-age and includeSubDomains header field value\r\n   tokens are conveying information different than that already\r\n   maintained by the UA.\r\n\r\nThe way I understand this is that if a HSTS host keeps sending the same values to a conforming client, this should not update the information cached and hence the cached information will expire after max-age seconds have passed since the _first_reception_ of this header.\r\n\r\nHowever, section 11.2 states:\r\n\r\n   The \"constant value into the future\" approach can be accomplished by\r\n   constantly sending the same max-age value to UAs.\r\n\r\n   For example, a max-age value of 7776000 seconds is 90 days:\r\n\r\n   Strict-Transport-Security: max-age=7776000\r\n\r\n   Note that each receipt of this header by a UA will require the UA to\r\n   update its notion of when it must delete its knowledge of this Known\r\n   HSTS Host.\r\n\r\nThis seems to contradict what I quoted from section 8.1. If the server constantly sends a max-age of 7776000 and includeSubDomains is not changed (which is implicit in the example), then by 8.1 the cache\r\ninformation won't be updated.\r\n\r\nI believe that the desired implementation behavior is as described in 11.2, that is, UA must update the cached information, regardless of whether either of the max-age or includeSubDomains header field values are different from what is already maintained by the UA.",
     "submit_date": "2018-05-29",
     "submitter_name": "Claudio Saavedra",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
