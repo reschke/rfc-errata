@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5730,
+    "errata_id": "5730",
     "doc-id": "RFC6960",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The paragraph refers to the signed \"response\" where it should refer to the signed \"request\".",
     "submit_date": "2019-05-22",
     "submitter_name": "Jaime Hablutzel",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5891,
+    "errata_id": "5891",
     "doc-id": "RFC6960",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "The CRLReason is not defined in the ASN.1 module, and it should have been imported from the one that is defined in RFC 5212.  The ASN.1 compiler will generate an error without this correction.",
     "submit_date": "2019-11-02",
     "submitter_name": "Russ Housley",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-11-06 09:06:01"
   },
   {
-    "errata_id": 5929,
+    "errata_id": "5929",
     "doc-id": "RFC6960",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -40,27 +40,27 @@
     "notes": "In section 4.1.1, the standard MUST define a maximum length for Nonce or the Nonce MUST be of a defined fixed length. The current implementations that follow this standard are vulnerable to denial of service attacks since they will try to accept even the large size OCSP requests with very big nonce value and eventually will consume more memory.\n --VERIFIER NOTES-- \n   Rejected per submitter after discussion.\r\n   This is an enhancement request and will be discussed on the lamps@ietf.org mailing list.",
     "submit_date": "2019-12-06",
     "submitter_name": "Mohit Sahni",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-12-09 20:06:22"
   },
   {
-    "errata_id": 6165,
+    "errata_id": "6165",
     "doc-id": "RFC6960",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 1,
+    "section": "1",
     "orig_text": "---",
     "correct_text": "   o  Appendix B.1 provides correct KeyHash type processing description. Now SHA-1 hash must be calculated for responder's public key ASN.1 value without tag, length and unused bits.\r\n",
     "notes": "The RFC6960 changes OCSP protocol in part of KeyHash type calculation. In RFC2560 there is the description:\r\n   KeyHash ::= OCTET STRING -- SHA-1 hash of responder's public key\r\n   (excluding the tag and length fields)\r\n\r\nBut in Appendix B.1, which is the major OCSP descriptive module, stated:\r\nKeyHash ::= OCTET STRING -- SHA-1 hash of responder's public key\r\n                         -- (i.e., the SHA-1 hash of the value of the\r\n                         -- BIT STRING subjectPublicKey [excluding\r\n                         -- the tag, length, and number of unused\r\n                         -- bits] in the responder's certificate)\r\n\r\nThe difference is in what would be under SHA-1 hash. In RFC2560 KeyHash would be calculated for entire BIT STRING value, with \"unused bits\" byte (first byte in BIT STRING value), but Appendix B.1 in RFC6960 states that SHA-1 hash must be calculated for BIT STRING value without \"unused bits\".",
     "submit_date": "2020-05-11",
     "submitter_name": "Yury Strozhevsky",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 6166,
+    "errata_id": "6166",
     "doc-id": "RFC6960",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "These two descriptions of KeyHash produce different SHA-1 hashes due to different values: one is pure BIT STRING value block, with \"unused bits\" byte, but other - without \"unused byte\". Also the Appendix B.2 must be aligned with Appendix B.1 information.",
     "submit_date": "2020-05-11",
     "submitter_name": "Yury Strozhevsky",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 6167,
+    "errata_id": "6167",
     "doc-id": "RFC6960",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -85,7 +85,7 @@
     "notes": "Same explanationa as for https://www.rfc-editor.org/errata/eid6166",
     "submit_date": "2020-05-11",
     "submitter_name": "Yury Strozhevsky",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
