@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2929,
+    "errata_id": "2929",
     "doc-id": "RFC6321",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Example Inc. is used in all examples, especially in Section B.2.2, the matching XML Data. Also, the BEGIN:VCALENDAR is missing.",
     "submit_date": "2011-08-10",
     "submitter_name": "Philipp Kewisch",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2938,
+    "errata_id": "2938",
     "doc-id": "RFC6321",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "The existing text erroneously suggests that multiple values could be contained by each element.",
     "submit_date": "2011-08-15",
     "submitter_name": "Hamish Lawson",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3042,
+    "errata_id": "3042",
     "doc-id": "RFC6321",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "* the alarm properties lack the \"type-\"\r\n* dispprop and emailprop have been exchanged",
     "submit_date": "2011-12-07",
     "submitter_name": "Christian Mollekopf",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3050,
+    "errata_id": "3050",
     "doc-id": "RFC6321",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "Those values can be 0 (per RFC 5545) and xsd:positiveInteger doesn't allow that.",
     "submit_date": "2011-12-13",
     "submitter_name": "Christian Mollekopf",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3314,
+    "errata_id": "3314",
     "doc-id": "RFC6321",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "The property-tzurl pattern name is misspelled.",
     "submit_date": "2012-08-12",
     "submitter_name": "Norman Walsh",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3315,
+    "errata_id": "3315",
     "doc-id": "RFC6321",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "The type-date and type-date-time patterns are undefined in the schema.",
     "submit_date": "2012-08-12",
     "submitter_name": "Norman Walsh",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3316,
+    "errata_id": "3316",
     "doc-id": "RFC6321",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -100,12 +100,12 @@
     "notes": "That's not a valid RELAX NG pattern. It's an attempt to group \"string\" and \"data\" patterns.",
     "submit_date": "2012-08-12",
     "submitter_name": "Norman Walsh",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3679,
+    "errata_id": "3679",
     "doc-id": "RFC6321",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -115,12 +115,12 @@
     "notes": "The \"tzid\" property in the second example (p.51) is not formatted correctly.  The property value should be enclosed in a \"<text>\" element.",
     "submit_date": "2013-07-11",
     "submitter_name": "Michael Angstadt",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3892,
+    "errata_id": "3892",
     "doc-id": "RFC6321",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -130,7 +130,7 @@
     "notes": "The default value type of DTSTART is DATE-TIME. The definition of DATE-TIME makes the time portion mandatory. By declaring the value type explicitly, this solution makes the value legal and matches the xCal sample in B.1.2\r\n\r\nAnother solution is to change the property value to match the default DATE-TIME type\r\n    DTSTART:20081006T191224Z\r\nand adjust the xCal example in B.1.2 to match\r\n        <dtstart>\r\n          <date-time>2008-10-06T19:12:24Z</date-time>\r\n        </dtstart>",
     "submit_date": "2014-02-14",
     "submitter_name": "Clement Pellerin",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
