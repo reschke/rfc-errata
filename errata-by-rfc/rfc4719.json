@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4231,
+    "errata_id": "4231",
     "doc-id": "RFC4719",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "The entire Ethernet frame, without the preamble or frame check\r\nsequence (FCS), is encapsulated in L2TPv3 and is sent as a single\r\npacket by the ingress LCCE.",
     "correct_text": "The entire Ethernet frame, without the preamble and frame check\r\nsequence (FCS), is encapsulated in L2TPv3 and is sent as a single\r\npacket by the ingress LCCE.",
     "notes": "The LCCE should remove the preamble AND FCS\n --VERIFIER NOTES-- \n The without/or construct is a valid way in English to indicate that both fields are omitted during encapsulation.  ",
     "submit_date": "2015-01-12",
     "submitter_name": "Karsten Thomann",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
