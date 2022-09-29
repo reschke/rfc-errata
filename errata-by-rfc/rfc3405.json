@@ -1,36 +1,36 @@
 [
   {
-    "errata_id": 2687,
+    "errata_id": "2687",
     "doc-id": "RFC3405",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 8,
+    "section": "8",
     "orig_text": "         To: register@URI.ARPA\r\n         From: The IETF URN Working Group\r\n\r\n         Key: urn\r\n         Authority: RFC2141\r\n         Record: urn     IN NAPTR 0 0 \"\" \"\" \"/^urn:([^:]+)/\\\\2/i\" .",
     "correct_text": "         To: register@URI.ARPA\r\n         From: The IETF URN Working Group\r\n\r\n         Key: urn\r\n         Authority: RFC2141\r\n         Record: urn     IN NAPTR 0 0 \"\" \"\" \"/^urn:([^:]+)/\\\\1/i\" .",
     "notes": "The uncorrected, original text contains a regular expression which is invalid -- it includes a back-reference \\2 with no corresponding second enclosure. The correction is to make the back-reference \\1, i.e. a reference to the single enclosure present in the regular expression.",
     "submit_date": "2011-01-20",
     "submitter_name": "Joe Abley",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2688,
+    "errata_id": "2688",
     "doc-id": "RFC3405",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "      http    IN NAPTR 100 100 \"\" \"\"  \"/http:\\\\/\\\\/([^\\\\/:]+)/\\\\2/i\" .",
     "correct_text": "      http    IN NAPTR 100 100 \"\" \"\"  \"/http:\\\\/\\\\/([^\\\\/:]+)/\\\\1/i\" .",
     "notes": "The uncorrected, original text contains a regular expression which is invalid -- it includes a back-reference (\\2) with no corresponding second enclosure. The correction is to make the back-reference \\1, i.e. a reference to the single enclosure present in the regular expression.",
     "submit_date": "2011-01-20",
     "submitter_name": "Joe Abley",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2842,
+    "errata_id": "2842",
     "doc-id": "RFC3405",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "RFC 4395 eliminated URI schemes trees; this erratum is to incorporate this change.  Moreover, references are updated.\n --VERIFIER NOTES-- \nThis erratum is rejected in accordance with <http://www.ietf.org/iesg/statement/errata-processing.html>. In particular, this erratum \"proposes a change to the RFC that should be done by publishing a new RFC that replaces the current RFC\". Therefore, \"if the change is to be considered for future updates of the document, it should be proposed using channels other than the errata process, such as a WG mailing list\".",
     "submit_date": "2011-06-23",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2971,
+    "errata_id": "2971",
     "doc-id": "RFC3405",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -55,7 +55,7 @@
     "notes": "This erratum report is to let the readers of RFC 3405 know that after register-uri and register-urn lists were restored in September 2011, new list archives may be found at <http://mm.icann.org/pipermail/register-uri/> and <http://mm.icann.org/pipermail/register-urn/> rather than IANA site.\r\n\r\n --VERIFIER NOTES-- \r\nThis report does not consist of an erratum against the specification.   ",
     "submit_date": "2011-09-15",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }
