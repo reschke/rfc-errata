@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2975,
+    "errata_id": "2975",
     "doc-id": "RFC6147",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": null,
     "submit_date": "2011-09-18",
     "submitter_name": "Libor Polcak",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Wes Eddy",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3236,
+    "errata_id": "3236",
     "doc-id": "RFC6147",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 5.5,
+    "section": "5.5",
     "orig_text": "An application that wants to perform validation \r\non its own should use the CD bit.",
     "correct_text": "[Section 5.5 needs to be completely re analysed,]",
     "notes": "Section 5.5 is written around the assumption that a validating stub resolver will be setting CD=1 as well as DO=1.  There is no such requirement RFC 4035 and in fact setting both CD=1 and DO=1 leaves the stub resolver vulnerable to answers from authoritative servers for the zone that are serving a stale copy of the zone and spoofed answers being sent to the DNS64 server.\r\n\r\nNon CD=1 queries result in the DNS64 server in its recursive roll, filtering out, cryptographically bad answers.\r\n\r\nDO=1 alone should disable synthesis.\r\n --VERIFIER NOTES-- \r\nhttp://www.ietf.org/iesg/statement/errata-processing.html\r\nsays:\r\nChanges that are clearly modifications to the intended consensus, or\r\ninvolve large textual changes, should be Rejected.\r\n",
     "submit_date": "2012-05-30",
     "submitter_name": "Mark Andrews",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Wes Eddy",
     "update_date": "2019-09-10 09:09:03"
   }
