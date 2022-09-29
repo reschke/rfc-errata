@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 266,
+    "errata_id": "266",
     "doc-id": "RFC3490",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "   The ToUnicode output never contains more code points than its\n   input.\n\nThis is not true; I have constructed a counterexample.  ",
     "correct_text": "    The Punycode decoder can never output more code points than it\n    inputs, but Nameprep can, and therefore ToUnicode can.\n",
     "notes": "",
     "submit_date": "2003-04-28",
     "submitter_name": "Adam Costello",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
