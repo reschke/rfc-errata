@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5279,
+    "errata_id": "5279",
     "doc-id": "RFC3743",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "CodePoint = 4*8DIGIT  [ \"(\" Reflist \")\" ]",
     "correct_text": "CodePoint = 4*8HEXDIG  [ \"(\" Reflist \")\" ]",
     "notes": "Per RFC 5234, the definition for \"DIGIT\" in ABNF encompasses only decimal digits (i.e., 0-9), while \"HEXDIG\" includes the hexadecimal digits (i.e., 0-F).\r\n\r\nSection 4 of RFC 3743 includes example Language Variant Tables that describe the code points using hexadecimal, not decimal. Looking at tables published in IANA, they seem to use hexadecimal too. It would appear that the use of \"DIGIT\" instead of \"HEXDIGIT\" in section 5.1 was an error.",
     "submit_date": "2018-03-06",
     "submitter_name": "Francisco Arias",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
