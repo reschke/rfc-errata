@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 860,
-    "doc-id": "RFC4518",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": 2.2,
-    "orig_text": "   COMBINING GRAPHEME JOINER (U+034F) and VARIATION SELECTORs \r\n   (U+180B-180D, FF00-FE0F) code points are also mapped to nothing. ",
-    "correct_text": "   COMBINING GRAPHEME JOINER (U+034F) and VARIATION SELECTORs \r\n   (U+180B-180D, FE00-FE0F) code points are also",
-    "notes": "FF00-FE0F should be FE00-FE0F\r\n\r\nfrom pending",
-    "submit_date": "2007-02-23",
-    "submitter_name": "Stephane PERBELLINI",
-    "verifier_id": 2,
-    "verifier_name": "Kurt Zeilenga",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1757,
+    "errata_id": "1757",
     "doc-id": "RFC4518",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +10,12 @@
     "notes": null,
     "submit_date": "2009-04-05",
     "submitter_name": "Steven Legg",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1758,
+    "errata_id": "1758",
     "doc-id": "RFC4518",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,8 +25,23 @@
     "notes": null,
     "submit_date": "2009-04-05",
     "submitter_name": "Steven Legg",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "860",
+    "doc-id": "RFC4518",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.2",
+    "orig_text": "   COMBINING GRAPHEME JOINER (U+034F) and VARIATION SELECTORs \r\n   (U+180B-180D, FF00-FE0F) code points are also mapped to nothing. ",
+    "correct_text": "   COMBINING GRAPHEME JOINER (U+034F) and VARIATION SELECTORs \r\n   (U+180B-180D, FE00-FE0F) code points are also",
+    "notes": "FF00-FE0F should be FE00-FE0F\r\n\r\nfrom pending",
+    "submit_date": "2007-02-23",
+    "submitter_name": "Stephane PERBELLINI",
+    "verifier_id": "2",
+    "verifier_name": "Kurt Zeilenga",
     "update_date": "2019-09-10 09:09:03"
   }
 ]
