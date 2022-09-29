@@ -1,36 +1,36 @@
 [
   {
-    "errata_id": 104,
+    "errata_id": "104",
     "doc-id": "RFC4388",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "(1)  [word omission]\r\n\r\nThe second paragraph of section 4.2 of RFC 4388 says:\r\n\r\n   The DHCP Server MIB effort [DHCPMIB] grew out of traffic engineering\r\n   and troubleshooting activities at large DHCP installations, and is\r\n   primarily intended as a method of gathering performance statistics\r\n   about servers the load presented to them.\r\n\r\nIt should perhaps better say:\r\n\r\n   The DHCP Server MIB effort [DHCPMIB] grew out of traffic engineering\r\n   and troubleshooting activities at large DHCP installations, and is\r\n   primarily intended as a method of gathering performance statistics\r\n|  about servers and the load presented to them.\r\n                ^^^^^\r\n\r\n\r\n(2)  [improper wording]\r\n\r\nRFC 4388 repeatedly talks about\r\n\r\n   \"[an] IP address most recently accessed by a client\"\r\n                                  ^^^^^^^^^^^\r\nwhere, IMHO, it should talk about\r\n\r\n|  \"[an] IP address most recently assigned to a client\"\r\n                                  ^^^^^^^^^^^\r\nRationale:\r\n  The client may access any IP address at any time.  Such access\r\n  is mostly unrelated to the protocol described in RFC 4338.\r\n\r\nThe affected places in the text I found are:\r\n- Section 5, first paragraph of both the second and the third\r\n  bulleted items, on page 10 / 11, respectively;\r\n- Last paragraph on page 17 (within section 6.4.1).\r\n\r\n\r\n(3)  [incomplete specification]\r\n\r\nThe second paragraph of Section 6.4.1, on page 17, says:\r\n\r\n   In the event that an IP address appears in the \"ciaddr\" field of a\r\n   DHCPLEASEQUERY message, if that IP address is one managed by the DHCP\r\n   server, then that IP address MUST be set in the \"ciaddr\" field of a\r\n   DHCPLEASEUNASSIGNED message.\r\n\r\nIt should in fact say:\r\n\r\n   In the event that an IP address appears in the \"ciaddr\" field of a\r\n   DHCPLEASEQUERY message, if that IP address is one managed by the DHCP\r\n   server, then that IP address MUST be set in the \"ciaddr\" field of a\r\n|  DHCPRELEASEACTIVE or DHCPLEASEUNASSIGNED message returned.\r\n   ^^^^^^^^^^^^^^^^^^^^^                           ^^^^^^^^^\r\n\r\nRationale:\r\n  From the remaining text, it can be inferred that the \"ciaddr\"\r\n  field from the DHCPLEASEQUERY message should be copied to an\r\n  DHCPRELEASEACTIVE reply message as well -- cf. section 6.4.2.\r\n\r\nIMHO, this copy should be performed generally, i.e. also in the case\r\ndescribed by the subsequent paragraph:\r\n\r\n   If the IP address is not managed by the DHCP server, then a\r\n   DHCPLEASEUNKNOWN message must be returned.\r\n\r\nthat therefore might be amended to say:\r\n\r\n   If the IP address is not managed by the DHCP server, then a\r\n|  DHCPLEASEUNKNOWN message MUST be returned, with that IP address\r\n|  set in the \"ciaddr\" field.\r\n\r\n[The original 'must' should be a 'MUST' because the alternatives\r\nare also specified as a 'MUST' -- or else the specification would\r\nbe incomplete.]\r\n\r\nTaken together, it might be preferable to restate this fact by\r\nonly changing the first paragraph cited above as follows, and leave\r\nthe second paragraph unchanged with the exception of the 'must':\r\n\r\n   In the event that an IP address appears in the \"ciaddr\" field of a\r\n|  DHCPLEASEQUERY message, then that IP address MUST be set in the\r\n|  \"ciaddr\" field of any reply returned.\r\n\r\n|  If that IP address is one managed by the DHCP server, then it MUST\r\n|  reply with a DHCPRELEASEACTIVE or DHCPLEASEUNASSIGNED message.\r\n\r\n   If the IP address is not managed by the DHCP server, then a\r\n|  DHCPLEASEUNKNOWN message MUST be returned.\r\n\r\nPlease comment on which alternative you prefer.",
     "correct_text": "",
     "notes": "This errata has been split to 3517 and 3518.\r\n\r\nVerified status applies only to item (1).",
     "submit_date": "2006-03-02",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3516,
+    "errata_id": "3516",
     "doc-id": "RFC4388",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)  [word omission]\r\n\r\nThe second paragraph of section 4.2 of RFC 4388 says:\r\n\r\n   The DHCP Server MIB effort [DHCPMIB] grew out of traffic engineering\r\n   and troubleshooting activities at large DHCP installations, and is\r\n   primarily intended as a method of gathering performance statistics\r\n   about servers the load presented to them.\r\n\r\nIt should perhaps better say:\r\n\r\n   The DHCP Server MIB effort [DHCPMIB] grew out of traffic engineering\r\n   and troubleshooting activities at large DHCP installations, and is\r\n   primarily intended as a method of gathering performance statistics\r\n|  about servers and the load presented to them.\r\n                ^^^^^\r\n\r\n\r\n(2)  [improper wording]\r\n\r\nRFC 4388 repeatedly talks about\r\n\r\n   \"[an] IP address most recently accessed by a client\"\r\n                                  ^^^^^^^^^^^\r\nwhere, IMHO, it should talk about\r\n\r\n|  \"[an] IP address most recently assigned to a client\"\r\n                                  ^^^^^^^^^^^\r\nRationale:\r\n  The client may access any IP address at any time.  Such access\r\n  is mostly unrelated to the protocol described in RFC 4338.\r\n\r\nThe affected places in the text I found are:\r\n- Section 5, first paragraph of both the second and the third\r\n  bulleted items, on page 10 / 11, respectively;\r\n- Last paragraph on page 17 (within section 6.4.1).\r\n\r\n\r\n(3)  [incomplete specification]\r\n\r\nThe second paragraph of Section 6.4.1, on page 17, says:\r\n\r\n   In the event that an IP address appears in the \"ciaddr\" field of a\r\n   DHCPLEASEQUERY message, if that IP address is one managed by the DHCP\r\n   server, then that IP address MUST be set in the \"ciaddr\" field of a\r\n   DHCPLEASEUNASSIGNED message.\r\n\r\nIt should in fact say:\r\n\r\n   In the event that an IP address appears in the \"ciaddr\" field of a\r\n   DHCPLEASEQUERY message, if that IP address is one managed by the DHCP\r\n   server, then that IP address MUST be set in the \"ciaddr\" field of a\r\n|  DHCPRELEASEACTIVE or DHCPLEASEUNASSIGNED message returned.\r\n   ^^^^^^^^^^^^^^^^^^^^^                           ^^^^^^^^^\r\n\r\nRationale:\r\n  From the remaining text, it can be inferred that the \"ciaddr\"\r\n  field from the DHCPLEASEQUERY message should be copied to an\r\n  DHCPRELEASEACTIVE reply message as well -- cf. section 6.4.2.\r\n\r\nIMHO, this copy should be performed generally, i.e. also in the case\r\ndescribed by the subsequent paragraph:\r\n\r\n   If the IP address is not managed by the DHCP server, then a\r\n   DHCPLEASEUNKNOWN message must be returned.\r\n\r\nthat therefore might be amended to say:\r\n\r\n   If the IP address is not managed by the DHCP server, then a\r\n|  DHCPLEASEUNKNOWN message MUST be returned, with that IP address\r\n|  set in the \"ciaddr\" field.\r\n\r\n[The original 'must' should be a 'MUST' because the alternatives\r\nare also specified as a 'MUST' -- or else the specification would\r\nbe incomplete.]\r\n\r\nTaken together, it might be preferable to restate this fact by\r\nonly changing the first paragraph cited above as follows, and leave\r\nthe second paragraph unchanged with the exception of the 'must':\r\n\r\n   In the event that an IP address appears in the \"ciaddr\" field of a\r\n|  DHCPLEASEQUERY message, then that IP address MUST be set in the\r\n|  \"ciaddr\" field of any reply returned.\r\n\r\n|  If that IP address is one managed by the DHCP server, then it MUST\r\n|  reply with a DHCPRELEASEACTIVE or DHCPLEASEUNASSIGNED message.\r\n\r\n   If the IP address is not managed by the DHCP server, then a\r\n|  DHCPLEASEUNKNOWN message MUST be returned.\r\n\r\nPlease comment on which alternative you prefer.",
     "correct_text": "",
     "notes": "from pending\n --VERIFIER NOTES-- \nTool error   ",
     "submit_date": "2006-03-02",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3517,
+    "errata_id": "3517",
     "doc-id": "RFC4388",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Split from errata 104",
     "submit_date": "2006-03-02",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3518,
+    "errata_id": "3518",
     "doc-id": "RFC4388",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "Split from errata 104",
     "submit_date": "2006-03-02",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   }
