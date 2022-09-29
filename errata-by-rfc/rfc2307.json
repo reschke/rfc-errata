@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 462,
+    "errata_id": "462",
     "doc-id": "RFC2307",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "        ( nisSchema.2.4 NAME 'ipProtocol' SUP top STRUCTURAL\r\n          DESC 'Abstraction of an IP protocol. Maps a protocol number\r\n                to one or more names. The distinguished value of the cn\r\n                attribute denotes the protocol's canonical name'\r\n          MUST ( cn $ ipProtocolNumber $ description )\r\n          MAY description )",
     "correct_text": "        ( nisSchema.2.4 NAME 'ipProtocol' SUP top STRUCTURAL\r\n          DESC 'Abstraction of an IP protocol. Maps a protocol number\r\n                to one or more names. The distinguished value of the cn\r\n                attribute denotes the protocol's canonical name'\r\n          MUST ( cn $ ipProtocolNumber )\r\n          MAY description )\r\n",
     "notes": "",
     "submit_date": "2004-11-25",
     "submitter_name": "Pierre Beyssac",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }
