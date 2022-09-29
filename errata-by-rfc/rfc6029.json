@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 3097,
+    "errata_id": "3097",
     "doc-id": "RFC6029",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "In such a technique, given a cost function C, a set\r\nof vertexes V and their corresponding edges, the triangle inequality\r\nholds if for any triple {a, b, c} in V, C(a, c) is always less than\r\nor equal to C(a, g) + C(b, c).",
     "correct_text": "In such a technique, given a cost function C, a set\r\nof vertexes V and their corresponding edges, the triangle inequality\r\nholds if for any triple {a, b, c} in V, C(a, c) is always less than\r\nor equal to C(a, b) + C(b, c).",
     "notes": "A 'g' instead of a 'b' appears in the triangle inequality description.",
     "submit_date": "2012-01-27",
     "submitter_name": "Wes Eddy",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3099,
+    "errata_id": "3099",
     "doc-id": "RFC6029",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "In such a technique, given a cost function C, a set \r\nof vertexes V and their corresponding edges, the triangle inequality \r\nholds if for any triple {a, b, c} in V, C(a, c) is always less than \r\nor equal to C(a, g) + C(b, c).",
     "correct_text": "In such a technique, given a cost function C, a set \r\nof vertices V and their corresponding edges, the triangle inequality \r\nholds if for any triple {a, b, c} in V, C(a, c) is always less than \r\nor equal to C(a, b) + C(b, c).",
     "notes": "\"vertexes\" or \"vertices\" is an acceptable plural form of \"vertex\".",
     "submit_date": "2012-01-30",
     "submitter_name": "Ivica Rimac",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   }
