@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 5076,
+    "errata_id": "5076",
     "doc-id": "RFC7322",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 4.3,
+    "section": "4.3",
     "orig_text": "Every RFC must have an Abstract that provides a concise and \r\ncomprehensive overview ...\r\n[...]\r\nSimilarly, the Abstract should be complete in itself.  It will appear\r\nin isolation in publication announcements and in the online index \r\nof RFCs. Therefore, the Abstract must not contain citations.",
     "correct_text": "   (Because this document is already being revised and there are \r\n   more fundamental issues involved than simple textual changes,\r\n   the optimal fix for these issues should be left to the \r\n   discretion of the RFC Editor.)\r\n",
     "notes": "While the intent seems to me to be clear, this subsection can be read to contradict both other \"preferences\" and that intent.   For example, \"comprehensive\", when taken out of the context of the text that follows (as it appears to have recently been taken by an AD acting in official capacity [1] [2]) can be used to insist that the abstract contain copies of extracts of almost any part of a well-written document, thereby defeating the purpose of an abstract and violating the RFC Editor's historical \"no more than 13 lines\" guidance (which does not appear in this RFC).\r\n\r\nIn addition, the prohibition on citations has often been taken as a prohibition on explicit citation anchors.  But, if the intent is to be sure that abstracts are self-contained, any mention of another document by reference, without context appropriate to abstracts explaining what they document is about, is a citation.  For example, the statement (from the abstract of this document) 'This document obsoletes RFC 2223, \"Instructions to RFC Authors\"' is plausible in an abstract because it is clear to the reader what RFC 2223 is about although one could reasonably argue for different presentation.  By contract, a statement such as \"This document obsoletes RFC 4637\" should not be acceptable because it not only contains a citation (even if the explicit anchor is absent) but has no actual meaning unless the number is very well-known (i.e., meets criteria roughly equivalent to those for common abbreviations in section 3.6) or the reader tracks the citation down, violating the \"complete in itself\" principle.   If readers of this submission do not immediately recognize \"4637\" and associate it with important other issues, Q.E.D.\r\n\r\nI note that prohibitions of statements like \"This document obsoletes RFC 4637\" or \"This document makes RFC 7 Historic\"  appear to contradict popular interpretations of an IESG statement [3].  That further suggests that either this subsection is in need of further clarification or that the RFC Editor and IESG have some sorting out to do.\r\n\r\n -----\r\n[1] https://www.ietf.org/mail-archive/web/urn/current/msg03783.html\r\n[2] https://www.ietf.org/mail-archive/web/urn/current/msg03784.html\r\n[3] https://www.ietf.org/iesg/statement/designating-rfcs-as-historic-2011-06-27.html",
     "submit_date": "2017-08-02",
     "submitter_name": "John Klensin",
-    "verifier_id": 4,
+    "verifier_id": "4",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6347,
+    "errata_id": "6347",
     "doc-id": "RFC7322",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "Errata reports are not errata.  Errata are in the original text.  Errata reports are reports that indicate the reporter believes to have detected errata; there may be no actual errata, or there may actually be multiple errata touched in one report.  As is, the reference is misleading. \r\n\r\nHowever, this hasn't lead to confusion so far and many published RFCs use the current format. As such this is noted as held for document update",
     "submit_date": "2020-12-01",
     "submitter_name": "Carsten Bormann",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind (IAB chair)",
     "update_date": "2020-12-14 06:08:34"
   }
