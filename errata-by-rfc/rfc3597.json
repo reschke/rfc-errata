@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1063,
+    "errata_id": "1063",
     "doc-id": "RFC3597",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "   As a courtesy to implementors, it is hereby noted that the complete\r\n   set of such previously published RR types that contain embedded\r\n   domain names, and whose DNSSEC canonical form therefore involves\r\n   downcasing according to the DNS rules for character comparisons,\r\n   consists of the RR types NS, MD, MF, CNAME, SOA, MB, MG, MR, PTR,\r\n   HINFO, MINFO, MX, HINFO, RP, AFSDB, RT, SIG, PX, NXT, NAPTR, KX, SRV,\r\n   DNAME, and A6.",
     "correct_text": "[not supplied]",
     "notes": "Compare with RFC 4034 (section 6.2):\r\n\r\n   \"3.  if the type of the RR is NS, MD, MF, CNAME, SOA, MB, MG, MR, PTR,\r\n       HINFO, MINFO, MX, HINFO, RP, AFSDB, RT, SIG, PX, NXT, NAPTR, KX,\r\n       SRV, DNAME, A6, RRSIG, or NSEC, all uppercase US-ASCII letters in\r\n       the DNS names contained within the RDATA are replaced by the\r\n       corresponding lowercase US-ASCII letters;\"\r\n\r\nAlmost exactly the same list.  One HINFO too much is no issue,\r\nbut if this actually should be TXT it's a real typo.\r\n\r\nneither TXT nor HINFO contain domain names in RDATA, so it's a bug in both\r\nRFC 3597 and 4034, although one that doesn't hurt. One could also argue that the list lacks NSAP-PTR, but then that's as obsolete as MD ans MF.",
     "submit_date": "2005-09-13",
     "submitter_name": "Peter Koch",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
