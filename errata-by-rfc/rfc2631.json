@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1060,
+    "errata_id": "1060",
     "doc-id": "RFC2631",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "This reference is cited in Section 1, but does not appear in the\r\nReferences section. It should be added:\r\n\r\n[DH76]  W. Diffie and M. E. Hellman, \"New Directions in Cryptography\",\r\n        IEEE Transactions on Information Theory, vol. IT-22, Nov. 1976, \r\n        pp: 644-654.",
     "correct_text": "",
     "notes": null,
     "submit_date": "2007-09-13",
     "submitter_name": "Javier Ader",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2506,
+    "errata_id": "2506",
     "doc-id": "RFC2631",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The line:\r\n  U = U + (SHA1[SEED + i] XOR SHA1[(SEED + m' + i)) * 2^(160 * i)\r\nis syntactically incorrect. Closing bracket of last 'SHA1[' is missing.\r\nMoreover, when m=160 (m'=1), the loop cannot reduce to the line:\r\n  U = SHA1[SEED] XOR SHA1[(SEED + 1) mod 2^160]\r\nas it can be easily seen.",
     "submit_date": "2010-09-01",
     "submitter_name": "Yves Legrandgerard",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5480,
+    "errata_id": "5480",
     "doc-id": "RFC2631",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "The explanation of h omitted the exponentiation operator in the inline formula.",
     "submit_date": "2018-08-27",
     "submitter_name": "Charlie Zhuo",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5897,
+    "errata_id": "5897",
     "doc-id": "RFC2631",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The addition of '(' and ')' are needed for an ASN.1 compiler to accept the syntax without raising an error.",
     "submit_date": "2019-11-07",
     "submitter_name": "Russ Housley",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-01-19 14:25:17"
   },
   {
-    "errata_id": 5954,
+    "errata_id": "5954",
     "doc-id": "RFC2631",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "Validating that (g == received y) needs to be an additional exclusion to the valid range [2,p-1]. If party 'a' accepts received public key 'yb' matching 'g', then ZZ matches  public key 'ya'. i.e. if yb = 2, then xb = 1, therefore ZZ = ya^1 = ya",
     "submit_date": "2020-01-02",
     "submitter_name": "Paul Janson",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2020-01-12 20:44:09"
   },
   {
-    "errata_id": 6302,
+    "errata_id": "6302",
     "doc-id": "RFC2631",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -85,7 +85,7 @@
     "notes": "The definition of N' is not used in the document. On line 19 of the algorithm, we have \"If counter < (4096 * N) then go to 8.\". Hence, either the definition on line 3 has to be N instead of N', or it should be N' instead of N on line 19.",
     "submit_date": "2020-10-07",
     "submitter_name": "Abdullah Talayhan",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
