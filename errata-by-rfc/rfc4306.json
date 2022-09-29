@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1671,
+    "errata_id": "1671",
     "doc-id": "RFC4306",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "       --  V(ersion) (bit 4 of Flags) - This bit indicates that\r\n           the transmitter is capable of speaking a higher major\r\n           version number of the protocol than the one indicated\r\n           in the major version number field.  Implementations of\r\n           IKEv2 must clear this bit when sending and MUST ignore\r\n           it in incoming messages.\r\n",
     "correct_text": "       --  V(ersion) (bit 4 of Flags) - This bit indicates that\r\n           the transmitter is capable of speaking a higher major\r\n           version number of the protocol than the one indicated\r\n           in the major version number field.  Implementations of\r\n           IKEv2 MUST clear this bit when sending and MUST ignore\r\n           it in incoming messages.\r\n",
     "notes": null,
     "submit_date": "2009-01-28",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1672,
+    "errata_id": "1672",
     "doc-id": "RFC4306",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": null,
     "submit_date": "2009-01-29",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2190,
+    "errata_id": "2190",
     "doc-id": "RFC4306",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "The behaviour of an implementation of version 2.0 depends on the critical flag. See next paragraph.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2191,
+    "errata_id": "2191",
     "doc-id": "RFC4306",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "Difficult to understand. More explanation needed:\r\nAn implementation of IKE which is older than 2.0 does not know about the\r\ncritical bit and will skip an unknown payload. This behaviour fits to\r\ncleared critical bit.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2192,
+    "errata_id": "2192",
     "doc-id": "RFC4306",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "Logically unclear. OR means AND/OR. But here you talk about XOR.\r\nFurthermore has AND precedence before OR.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2193,
+    "errata_id": "2193",
     "doc-id": "RFC4306",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "I do not understand anything.\r\nTherefore I cannot offer a better formulation.\n --VERIFIER NOTES-- \nNo alternative text was proposed.  Note that I did forward this to the authors of draft-ietf-ipsecme-ikev2bis.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2194,
+    "errata_id": "2194",
     "doc-id": "RFC4306",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -100,12 +100,12 @@
     "notes": "According to 3.2 the critical bit has to be clear.\r\nAnd the rest is trivial: To be compliant you have to comply.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2195,
+    "errata_id": "2195",
     "doc-id": "RFC4306",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -115,12 +115,12 @@
     "notes": "The text may suggest that there may be multiple values in one\r\nConfiguration Attribute structure.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2196,
+    "errata_id": "2196",
     "doc-id": "RFC4306",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -130,12 +130,12 @@
     "notes": "typo",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2279,
+    "errata_id": "2279",
     "doc-id": "RFC4306",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -145,7 +145,7 @@
     "notes": "The RFC for AUTH_KPDK_MD5 should be 1828, not 1826 which is the first version of AH.",
     "submit_date": "2010-05-19",
     "submitter_name": "Sergiu Todirascu",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }
