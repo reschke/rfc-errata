@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3263,
+    "errata_id": "3263",
     "doc-id": "RFC3550",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Changed \r\n\r\nThe number of packets expected is defined to be the extended last sequence number received...\r\n\r\nInto\r\n\r\nThe number of packets expected is defined to be the extended highest sequence number received...",
     "submit_date": "2012-06-18",
     "submitter_name": "Pieter Demuytere",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3914,
+    "errata_id": "3914",
     "doc-id": "RFC3550",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "If the first RTP packet has a sequence number of 0, the logic will cause cycles to increase by 1, which will affect \"expected number of received packets\" calculations.\n --VERIFIER NOTES-- \nSubmitter requested rejection.",
     "submit_date": "2014-03-06",
     "submitter_name": "Hani Mustafa",
-    "verifier_id": 136,
+    "verifier_id": "136",
     "verifier_name": "Richard Barnes",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4192,
+    "errata_id": "4192",
     "doc-id": "RFC3550",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -40,22 +40,22 @@
     "notes": "Where as payload octets is defined as the total number of data octets contained in a Rtp Packet minus the 12 Header octets for Rtp Packets.\r\n\r\nPadding octets as well as octets which occur in the contributing source list should also be included as they may differ on a per packet basis and would make the total calculation invalid.\r\n\r\nDuring TCP communication any application layer header should NOT be included in the total bytes count when including the header length.\r\n\r\nAny Rtcp packet counters should include the total length of the packet (header, padding and any other data).\n --VERIFIER NOTES-- \n   Rejected based on discussion in avtcore",
     "submit_date": "2014-12-03",
     "submitter_name": "Julius Friedman",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4770,
+    "errata_id": "4770",
     "doc-id": "RFC3550",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3.",
     "orig_text": "   RTP session: An association among a set of participants\r\n      communicating with RTP.  A participant may be involved in multiple\r\n      RTP sessions at the same time.  In a multimedia session, each\r\n      medium is typically carried in a separate RTP session with its own\r\n      RTCP packets unless the the encoding itself multiplexes multiple\r\n      media into a single data stream.  A participant distinguishes\r\n      multiple RTP sessions by reception of different sessions using\r\n      different pairs of destination transport addresses, where a pair\r\n      of transport addresses comprises one network address plus a pair\r\n      of ports for RTP and RTCP.  All participants in an RTP session may\r\n      share a common destination transport address pair, as in the case\r\n      of IP multicast, or the pairs may be different for each\r\n      participant, as in the case of individual unicast network\r\n      addresses and port pairs.  In the unicast case, a participant may\r\n      receive from all other participants in the session using the same\r\n      pair of ports, or may use a distinct pair of ports for each.",
     "correct_text": "   RTP session: An association among a set of participants\r\n      communicating with RTP.  A participant may be involved in multiple\r\n      RTP sessions at the same time.  In a multimedia session, each\r\n      medium is typically carried in a separate RTP session with its own\r\n      RTCP packets unless the encoding itself multiplexes multiple\r\n      media into a single data stream.  A participant distinguishes\r\n      multiple RTP sessions by reception of different sessions using\r\n      different pairs of destination transport addresses, where a pair\r\n      of transport addresses comprises one network address plus a pair\r\n      of ports for RTP and RTCP.  All participants in an RTP session may\r\n      share a common destination transport address pair, as in the case\r\n      of IP multicast, or the pairs may be different for each\r\n      participant, as in the case of individual unicast network\r\n      addresses and port pairs.  In the unicast case, a participant may\r\n      receive from all other participants in the session using the same\r\n      pair of ports, or may use a distinct pair of ports for each.",
     "notes": "typo: double the in 5th line.",
     "submit_date": "2016-08-08",
     "submitter_name": "Petr Vaněk",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   }
