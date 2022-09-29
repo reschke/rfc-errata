@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4965,
+    "errata_id": "4965",
     "doc-id": "RFC3091",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "Ports as specified in the original text exceed 16-bit integer space, violating TCP (RFC793 3.1) and UDP (RFC768, \"Format\"). As it stands, this error prevents development of fully-compliant implementations of this protocol.\r\nNote that in this correction I have elected not to round the TCP and UDP ports in sec. 1 and 2 to 31416 - this is to better-preserve the immediate recognizability of the port as the PIgen service.\r\nAlso note that the IP multicast group address specified in sec. 3 exceeds the 32-bit address space specified in RFC 791 sec. 2.3. I have abstained from proposing a correction to this, as I could not think of an IANA-compliant address that still incorporates digits of pi.",
     "submit_date": "2017-03-12",
     "submitter_name": "Jesse Friedman",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5217,
+    "errata_id": "5217",
     "doc-id": "RFC3091",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "   An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   random distribution of digits of Pi are sent using the payload format\r\n   described in section 2.1.2. to the IP multicast group\r\n   314.159.265.359.",
     "correct_text": "   An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   random distribution of digits of Pi are sent using the payload format\r\n   described in section 2.1.2. to the IPv6 multicast group\r\n   ff0e:3141:5926:5358:9793:2384:6264:3833.",
     "notes": "314.159.265.359 is not a valid IPv4 address, because it contains octets larger than 255. Using IPv6 multicast allows 28 digits of Pi in the address and will accelerate the transition to it.",
     "submit_date": "2017-12-26",
     "submitter_name": "Luís Câmara",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
