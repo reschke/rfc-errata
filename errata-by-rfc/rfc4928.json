@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1031,
+    "errata_id": "1031",
     "doc-id": "RFC4928",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "|  It is REQUIRED, however, that applications depend upon in-order\r\n   packet delivery restrict the first nibble values to 0x0 and 0x1.",
     "correct_text": "|  It is REQUIRED, however, that applications depending upon in-order\r\n   packet delivery restrict the first nibble values to 0x0 and 0x1.",
     "notes": "The original sounds like:\r\n  It is REQUIRED that applications depend upon in-order packet delivery\r\nTherefore, the sentence should be clarified and corrected as above.",
     "submit_date": "2007-08-17",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5396,
+    "errata_id": "5396",
     "doc-id": "RFC4928",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "The example stated here seems incorrect. It talks about an L2VPN case where Ethernet frame starts immediately after the last label in the stack. But had it been an IP packet instead, the same initial 12 bytes, which is the place for MAC addresses in an Ethernet Frame, would not be the place of IP addresses, as IP addresses are placed at the end of 20-byte IP header (not start). Hence it would still be subjected to ECMP if precautions (as recommended in this RFC) are not been followed.\n --VERIFIER NOTES-- \n   This should be addressed by the working group (e.g., updating or revising the RFC).",
     "submit_date": "2018-06-18",
     "submitter_name": "Jitendra Kumar Sharma",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2021-02-26 14:07:08"
   }
