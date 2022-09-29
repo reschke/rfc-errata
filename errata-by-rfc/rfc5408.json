@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5838,
+    "errata_id": "5838",
     "doc-id": "RFC5408",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "   IBEPublicParameters ::= SEQUENCE (1..MAX) OF\r\n     IBEPublicParameter",
     "correct_text": "   IBEPublicParameters ::= SEQUENCE SIZE (1..MAX) OF\r\n     IBEPublicParameter",
     "notes": "Need to add \"SIZE\" for the ASN.1 module to compile properly.",
     "submit_date": "2019-08-18",
     "submitter_name": "Russ Housley",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
   }
