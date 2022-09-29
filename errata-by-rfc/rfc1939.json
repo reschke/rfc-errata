@@ -1,36 +1,21 @@
 [
   {
-    "errata_id": 529,
-    "doc-id": "RFC1939",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": 7,
-    "orig_text": "          The server should never reuse an\n          unique-id in a given maildrop, for as long as the entity\n          using the unique-id exists.",
-    "correct_text": "          The server should never reuse a\n          unique-id in a given maildrop for as long as the maildrop\n          exists.\n",
-    "notes": "",
-    "submit_date": "2003-11-02",
-    "submitter_name": "Bernard Treine",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1088,
+    "errata_id": "1088",
     "doc-id": "RFC1939",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 7,
+    "section": "7",
     "orig_text": "Note that if the number of lines requested by the POP3\r\nclient is greater than than the number of lines in the\r\nbody, then the POP3 server sends the entire message. \r\n",
     "correct_text": "Note that if the number of lines requested by the POP3\r\nclient is greater than the number of lines in the body,\r\nthen the POP3 server sends the entire message. \r\n",
     "notes": "Extraneous \"than\" in discussion of TOP command.",
     "submit_date": "2007-11-29",
     "submitter_name": "Joseph Bowbeer",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4852,
+    "errata_id": "4852",
     "doc-id": "RFC1939",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -40,8 +25,23 @@
     "notes": "What is written in appendix A does not match with what is written in section 3.\r\nI guess both are wrong. The length of 512 may not concern the length of an entire response, and also not the length of only the status indicator, but the length of the first line returned as an answer by the server, which contains the status indicator, but sometimes some other text too (and, of course, is terminated by CRLF).\r\nAs I'm not sure that my guess is correct, and also because I'm not very comfortable with the English language, I am not able to propose a corrected text.\n --VERIFIER NOTES-- \n   \r\nThe text is correct as written, in that a single-line response is limited to 512 octets (which is also 512 characters in US-ASCII).  The subsequent paragraph in Section 3 explains multi-line responses.",
     "submit_date": "2016-11-02",
     "submitter_name": "Claude SIMON",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "529",
+    "doc-id": "RFC1939",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "          The server should never reuse an\n          unique-id in a given maildrop, for as long as the entity\n          using the unique-id exists.",
+    "correct_text": "          The server should never reuse a\n          unique-id in a given maildrop for as long as the maildrop\n          exists.\n",
+    "notes": "",
+    "submit_date": "2003-11-02",
+    "submitter_name": "Bernard Treine",
+    "verifier_id": "99",
+    "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
 ]
