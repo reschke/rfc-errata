@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 75,
-    "doc-id": "RFC4511",
-    "errata_status_code": "Rejected",
-    "errata_type_code": "Technical",
-    "section": 99,
-    "orig_text": "(2)  Typo\r\n\r\nSection 2, on page 4, contains the paragraph:\r\n                                        v\r\n|  The term \"SASL layer\" refers to Simply Authentication and Security\r\n   Layer (SASL) services used in providing security services, as well as\r\n   associations established by these services.\r\n\r\nIt should say:\r\n                                        v\r\n|  The term \"SASL layer\" refers to Simple Authentication and Security\r\n   Layer (SASL) services used in providing security services, as well as\r\n   associations established by these services.\r\n\r\n\r\n(3)  Misrepresented relationship between ISO 10646 and Unicode\r\n\r\nSection 4.1.2 unfortunately has not corrected a misconception\r\ninitially spelled out in RFC 2251.\r\n\r\nThe first paragraph of Section 4.1.2, on page 7, says:\r\n\r\n   The LDAPString is a notational convenience to indicate that, although\r\n   strings of LDAPString type encode as ASN.1 OCTET STRING types, the\r\n|  [ISO10646] character set (a superset of [Unicode]) is used, encoded\r\n   following the UTF-8 [RFC3629] algorithm.  [...]\r\n\r\nThe (..) enclosed note on the relationship of ISO 10646 and Unicode\r\nis *not* appropriate, as far as I know:\r\n\r\nUnicode covers exactly the same character repertoire as ISO 10646,\r\nbut it *adds* a lot of *semantics* to ISO 10646.\r\nThe character repertoire synchronization between ISO 10646 and\r\nUnicode is said to hold since 1993, and it is promised for all\r\nfuture updates.\r\n(Details can be found in Section 1.4 and Appendix C of\r\nThe Unicode Standard (book and online version), verbatim\r\nidentical in the Unicode 3.0 and Unicode 4.0 versions.)\r\n\r\nIn particular, this congruence holds for Unicode 3.2.0\r\n(and the coordinated edition of ISO 10646) that has been\r\nmade the invariable base for the new LDAP specs.\r\n\r\nTherefore, the above sentence should perhaps better be\r\ncorrected to say:\r\n\r\n   The LDAPString is a notational convenience to indicate that, although\r\n   strings of LDAPString type encode as ASN.1 OCTET STRING types, the\r\n|  [ISO10646] character set (as detailed in [Unicode]) is used, encoded\r\n   following the UTF-8 [RFC3629] algorithm.  [...]\r\n\r\n(or similar).\r\n\r\n\r\n(4)  Typo (word omission)\r\n\r\nThe 3rd paragraph of Section 4.2.2, on page 18, says:\r\n\r\n   If the client receives a BindResponse where the resultCode is set to\r\n   protocolError, it is to assume that the server does not support this\r\n|  version of LDAP.  While the client may be able proceed with another\r\n   version of this protocol (which may or may not require closing and\r\n   re-establishing the transport connection), how to proceed with\r\n   another version of this protocol is beyond the scope of this\r\n   document.  Clients that are unable or unwilling to proceed SHOULD\r\n   terminate the LDAP session.\r\n\r\nIt should say:\r\n                                                 vvvv\r\n|            [...].  While the client may be able to proceed with\r\n   another version of this protocol (which may or may not require\r\n   closing and re-establishing the transport connection), how to proceed\r\n   with another version of this protocol is beyond the scope of this\r\n   document.  [...]\r\n\r\n\r\nItems (2)..(4) above might be considered for an Errata Note\r\nto be posted to the RFC Editor's \"RFC Errata\" web pages.\r\nI propose that you submit an Author's Errata Note, based on the\r\nmaterial presented above, and/or choosing alternate text for (3).",
-    "correct_text": "",
-    "notes": "In any case, these items should be noted for future reference,\r\nwhenever once another revision of these RFCs is to be produced,\r\ne.g., for advancement on the Standards Track.\r\n\r\n[note: (1) contained general comments and has been removed.]\r\n\r\nAuthor saving on file for possible revision.\r\n\r\nfrom pending",
-    "submit_date": "2006-06-23",
-    "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
-    "verifier_name": "Jim Sermersheim",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 5292,
+    "errata_id": "5292",
     "doc-id": "RFC4511",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,8 +10,23 @@
     "notes": "As currently written, the specification requires IMPLICIT tagging for the not-filter. This, according to ITU-T X.690, Section 8.14.3, Example \"Type5\", requires the [2]-tag of the not-filter to overwrite the tag of the negated filter, making reliable identification of the type of the negated filter impossible. Thus, the definition of the not-filter needs to specify EXPLICIT tagging. Alternatively, the filter could be specified as \r\n\r\nnot [2] SEQUENCE { filter Filter },\r\n\r\nor (to match the definition of \"and\" and \"or\")\r\n\r\nnot [2] SET SIZE (1..1) OF filter Filter,\r\n\r\nThis applies to both, Section 4.5.1 and Appendix B.",
     "submit_date": "2018-03-21",
     "submitter_name": "Markus Ansmann",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "75",
+    "doc-id": "RFC4511",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "",
+    "orig_text": "(2)  Typo\r\n\r\nSection 2, on page 4, contains the paragraph:\r\n                                        v\r\n|  The term \"SASL layer\" refers to Simply Authentication and Security\r\n   Layer (SASL) services used in providing security services, as well as\r\n   associations established by these services.\r\n\r\nIt should say:\r\n                                        v\r\n|  The term \"SASL layer\" refers to Simple Authentication and Security\r\n   Layer (SASL) services used in providing security services, as well as\r\n   associations established by these services.\r\n\r\n\r\n(3)  Misrepresented relationship between ISO 10646 and Unicode\r\n\r\nSection 4.1.2 unfortunately has not corrected a misconception\r\ninitially spelled out in RFC 2251.\r\n\r\nThe first paragraph of Section 4.1.2, on page 7, says:\r\n\r\n   The LDAPString is a notational convenience to indicate that, although\r\n   strings of LDAPString type encode as ASN.1 OCTET STRING types, the\r\n|  [ISO10646] character set (a superset of [Unicode]) is used, encoded\r\n   following the UTF-8 [RFC3629] algorithm.  [...]\r\n\r\nThe (..) enclosed note on the relationship of ISO 10646 and Unicode\r\nis *not* appropriate, as far as I know:\r\n\r\nUnicode covers exactly the same character repertoire as ISO 10646,\r\nbut it *adds* a lot of *semantics* to ISO 10646.\r\nThe character repertoire synchronization between ISO 10646 and\r\nUnicode is said to hold since 1993, and it is promised for all\r\nfuture updates.\r\n(Details can be found in Section 1.4 and Appendix C of\r\nThe Unicode Standard (book and online version), verbatim\r\nidentical in the Unicode 3.0 and Unicode 4.0 versions.)\r\n\r\nIn particular, this congruence holds for Unicode 3.2.0\r\n(and the coordinated edition of ISO 10646) that has been\r\nmade the invariable base for the new LDAP specs.\r\n\r\nTherefore, the above sentence should perhaps better be\r\ncorrected to say:\r\n\r\n   The LDAPString is a notational convenience to indicate that, although\r\n   strings of LDAPString type encode as ASN.1 OCTET STRING types, the\r\n|  [ISO10646] character set (as detailed in [Unicode]) is used, encoded\r\n   following the UTF-8 [RFC3629] algorithm.  [...]\r\n\r\n(or similar).\r\n\r\n\r\n(4)  Typo (word omission)\r\n\r\nThe 3rd paragraph of Section 4.2.2, on page 18, says:\r\n\r\n   If the client receives a BindResponse where the resultCode is set to\r\n   protocolError, it is to assume that the server does not support this\r\n|  version of LDAP.  While the client may be able proceed with another\r\n   version of this protocol (which may or may not require closing and\r\n   re-establishing the transport connection), how to proceed with\r\n   another version of this protocol is beyond the scope of this\r\n   document.  Clients that are unable or unwilling to proceed SHOULD\r\n   terminate the LDAP session.\r\n\r\nIt should say:\r\n                                                 vvvv\r\n|            [...].  While the client may be able to proceed with\r\n   another version of this protocol (which may or may not require\r\n   closing and re-establishing the transport connection), how to proceed\r\n   with another version of this protocol is beyond the scope of this\r\n   document.  [...]\r\n\r\n\r\nItems (2)..(4) above might be considered for an Errata Note\r\nto be posted to the RFC Editor's \"RFC Errata\" web pages.\r\nI propose that you submit an Author's Errata Note, based on the\r\nmaterial presented above, and/or choosing alternate text for (3).",
+    "correct_text": "",
+    "notes": "In any case, these items should be noted for future reference,\r\nwhenever once another revision of these RFCs is to be produced,\r\ne.g., for advancement on the Standards Track.\r\n\r\n[note: (1) contained general comments and has been removed.]\r\n\r\nAuthor saving on file for possible revision.\r\n\r\nfrom pending",
+    "submit_date": "2006-06-23",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": "2",
+    "verifier_name": "Jim Sermersheim",
     "update_date": "2019-09-10 09:09:03"
   }
 ]
