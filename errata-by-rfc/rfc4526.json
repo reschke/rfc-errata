@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 67,
+    "errata_id": "67",
     "doc-id": "RFC4526",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "   Subject: Request for LDAP Protocol Mechanism Registration Object\n   Identifier: 1.3.6.1.4.1.4203.1.5.3 Description: True/False filters\n   Person & email address to contact for further information:\n        Kurt Zeilenga <kurt@openldap.org> Usage: Feature Specification:\n   RFC 4526 Author/Change Controller: IESG Comments: none",
     "correct_text": "   Subject: Request for LDAP Protocol Mechanism Registration\r\n   Object Identifier: 1.3.6.1.4.1.4203.1.5.3\r\n   Description: True/False filters\r\n   Person & email address to contact for further information:\r\n        Kurt Zeilenga <kurt@openldap.org>\r\n   Usage: Feature\r\n   Specification: RFC 4526\r\n   Author/Change Controller: IESG\r\n   Comments: none\r\n\r\n",
     "notes": "\n --VERIFIER NOTES-- \n   Although the RFC text has unfortunate line breaks, the registration with the IANA is accurate at http://www.iana.org/assignments/ldap-parameters",
     "submit_date": "2006-07-06",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }
