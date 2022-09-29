@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4776,
+    "errata_id": "4776",
     "doc-id": "RFC5769",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "2.1.  Sample Request\r\n\r\n   This request uses the following parameters:\r\n\r\n   Software name:  \"STUN test client\" (without quotes)",
     "correct_text": "2.1.  Sample Request\r\n\r\n   This request uses the following parameters:\r\n\r\n   Software name:  \"STUN-test-client@v0.0.0\" (without quotes)",
     "notes": "https://tools.ietf.org/html/rfc5389#section-15.10 says that\r\nIts value SHOULD include manufacturer and version number.\r\nso test vector of SOFTWARE at 2.1, 2.2, 2.3 should include this.",
     "submit_date": "2016-08-12",
     "submitter_name": "software should include manufacturer and version number",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2020-06-02 06:52:12"
   }
