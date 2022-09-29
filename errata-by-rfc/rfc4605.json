@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3285,
+    "errata_id": "3285",
     "doc-id": "RFC4605",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "Note that this does not protect against an \"upstream loop\".  For\r\n   example, see the figure below:\r\n\r\n\r\n           LAN 1  --------------------------------------\r\n                  Upstream |              | Downstream\r\n                           A              B\r\n                Downstream |              | Upstream\r\n           LAN 2  --------------------------------------\r\n\r\n   B will unconditionally forward packets from LAN 1 to LAN 2, and A\r\n   will unconditionally forward packets from LAN 2 to LAN 1.  This will\r\n   cause an upstream loop.  A multicast routing protocol that employs a\r\n   tree building algorithm is required to resolve loops like this.",
     "correct_text": "Note that this does not protect against an \"upstream loop\".  For\r\n   example, see the figure below:\r\n\r\n\r\n           LAN 1  --------------------------------------\r\n                  Upstream |              | Downstream\r\n                           A              B\r\n                Downstream |              | Upstream\r\n           LAN 2  --------------------------------------\r\n\r\n   B will unconditionally forward packets from LAN 2 to LAN 1, and A\r\n   will unconditionally forward packets from LAN 1 to LAN 2.  This will\r\n   cause an upstream loop.  A multicast routing protocol that employs a\r\n   tree building algorithm is required to resolve loops like this.",
     "notes": "Multicast packets should be forwarded from Upstream to Downstream.",
     "submit_date": "2012-07-14",
     "submitter_name": "Jon Hak Song",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
