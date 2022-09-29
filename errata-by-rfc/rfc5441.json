@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1762,
+    "errata_id": "1762",
     "doc-id": "RFC5441",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 15.3,
+    "section": "15.3",
     "orig_text": "   IANA has allocated the following allocation value:\r\n\r\n      Bit number  Meaning                  Reference\r\n         4        BRPC path computation    This document\r\n                  chain unavailable\r\n",
     "correct_text": "   IANA has allocated the following allocation value:\r\n\r\n      Bit number  Meaning                  Reference\r\n         28       BRPC path computation    This document\r\n                  chain unavailable\r\n",
     "notes": "The bit number is 28.\r\n\r\nThe error was noted by Pearl Liang of IANA.",
     "submit_date": "2009-04-14",
     "submitter_name": "RFC Editor",
-    "verifier_id": 109,
+    "verifier_id": "109",
     "verifier_name": "Ross Callon",
     "update_date": "2019-09-10 09:09:03"
   }
