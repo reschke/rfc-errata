@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 6675,
+    "errata_id": "6675",
     "doc-id": "RFC5530",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 6,
+    "section": "6",
     "orig_text": "      ALERT                RFC 3501\r\n      BADCHARSET           RFC 3501",
     "correct_text": "      HASCHILDREN          RFC 3348\r\n      ALERT                RFC 3501\r\n      BADCHARSET           RFC 3501\r\n      CAPABILITY           RFC 3501",
     "notes": "When RFC 5530 created the IMAP Response Codes registry it registered all response codes that existed at the time, but missed “CAPABILITY” and “HASCHILDREN”.  This errata report notes that for the record and so IANA may correctly register those two codes.",
     "submit_date": "2021-09-01",
     "submitter_name": "Barry Leiba",
-    "verifier_id": 164,
+    "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2021-09-01 07:07:46"
   }
