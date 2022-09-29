@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4309,
+    "errata_id": "4309",
     "doc-id": "RFC6368",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "   In the traditional model, where External BGP sessions are used\r\n   between the BGP/MPLS VPN PE and CE, the PE router identifies itself\r\n   as belonging to the customer network autonomous system.",
     "correct_text": "   In the traditional model, where External BGP sessions are used\r\n   between the BGP/MPLS VPN PE and CE, the PE router identifies itself\r\n   as belonging to the provider network autonomous system.",
     "notes": null,
     "submit_date": "2015-03-20",
     "submitter_name": "Guillaume Gaulon",
-    "verifier_id": 140,
+    "verifier_id": "140",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
   }
