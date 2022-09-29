@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 428,
+    "errata_id": "428",
     "doc-id": "RFC2486",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   x           = %x00-7F\n                 ; all 127 ASCII characters, no exception",
     "correct_text": "   special     = \"<\" / \">\" / \"(\" / \")\" / \"[\" / \"]\" / \"\\\" / \".\"\n                  / \",\" / \";\" / \":\" / \"@\" / %x22  / Ctl\n                 ; %x22 is '\"'\n",
     "notes": "",
     "submit_date": "2000-08-31",
     "submitter_name": "Dale Worley",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 429,
+    "errata_id": "429",
     "doc-id": "RFC2486",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "    nai         = username / ( username \"@\" realm )\n    username    = dot-string\n    realm       = realm \".\" label",
     "correct_text": "    realm       = [realm \".\"] label\n",
     "notes": "",
     "submit_date": "2003-02-12",
     "submitter_name": "Jonathan Rosenberg",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
