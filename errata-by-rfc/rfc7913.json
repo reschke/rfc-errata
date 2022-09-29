@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6678,
+    "errata_id": "6678",
     "doc-id": "RFC7913",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "As per the Introduction section,\r\n\r\n \"As the P-Access-Network-Info header field is mainly used in networks\r\n   defined by the 3rd-Generation Partnership Project (3GPP), where new\r\n   values following the 'generic-param' rule have been defined\r\n   [TS.3GPP.24.229], the update is not considered to cause issues with\r\n   backward compatibility. \"\r\n\r\nThis is not true and there is backward compatibility issue due to change in ABNF form of extension-access-info  from  gen-value to generic-param\r\n\r\nFor eg:\r\n\r\nAs per the old RFC the following header was valid,\r\nP-Access-Network-Info: 3GPP-UTRAN-TDD; utran-cell-id-3gpp=23456789ABCDE; \"a=c\";\r\n\r\nSee the parameter \"a=c\" which was allowed as part of \"gen-value      =  token / host / quoted-string\"\r\n\r\nBut generic-param has to be in the form \r\ngeneric-param  =  token [ EQUAL gen-value ]\r\n\r\ndue to this a simple quoted string become invalid.\r\n\r\nThis causes backward compatibility of new SIP stacks and old networks.",
     "submit_date": "2021-09-06",
     "submitter_name": "Dinoop Paloli",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
