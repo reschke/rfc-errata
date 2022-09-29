@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1774,
+    "errata_id": "1774",
     "doc-id": "RFC5280",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 6.3,
+    "section": "6.3",
     "orig_text": "   For each distribution point (DP) in the certificate CRL distribution\r\n   points extension, for each corresponding CRL in the local CRL cache,\r\n   while ((reasons_mask is not all-reasons) and (cert_status is\r\n   UNREVOKED)) perform the following:\r\n\r\n      (a)  Update the local CRL cache by obtaining a complete CRL, a\r\n      delta CRL, or both, as required:\r\n",
     "correct_text": "   For each distribution point (DP) in the certificate CRL distribution\r\n   points extension, for each corresponding CRL in the local CRL cache,\r\n   while ((reasons_mask is not all-reasons) and (cert_status is\r\n   UNREVOKED)) perform the following:\r\n\r\n   (l)  Set the reasons_mask state variable to the union of\r\n        its previous value and the value of the interim_reasons_mask\r\n        state variable.\r\n\r\n      (a)  Update the local CRL cache by obtaining a complete CRL, a\r\n      delta CRL, or both, as required:",
     "notes": "This was reported in 2002 for RFC 3280, which this document obsoletes.  The correction did not make it in to RFC 5280, and therefore applies to RFC 5280 as well.\n --VERIFIER NOTES-- \nThe correction already appears as step (l), the last step in the loop.",
     "submit_date": "2009-05-04",
     "submitter_name": "Takashi Ito",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3085,
+    "errata_id": "3085",
     "doc-id": "RFC5280",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Seems to me that private-domain-name ought to be tagged IMPLICIT just like everything else?\n --VERIFIER NOTES-- \nPrivateDomainName (unlike the other tagged components) is an untagged\r\nCHOICE type.\r\n\r\n\r\nQuote from X.680:\r\n\r\n'30.8       The IMPLICIT alternative shall not be used if the type defined\r\nby \"Type\" is an untagged choice type or an untagged open type or an untagged\r\n\"DummyReference\" (see ITU-T Rec. X.683 | ISO/IEC 8824-4, 8.3).'   ",
     "submit_date": "2012-01-06",
     "submitter_name": "Jim Wigginton",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3200,
+    "errata_id": "3200",
     "doc-id": "RFC5280",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "\"positive\" and \"non-negative\" do not mean the same thing. I used the third paragraph of the section as a tie-breaker to decide which of the two terms was intended:\r\n\r\n   Note: Non-conforming CAs may issue certificates with serial numbers\r\n   that are negative or zero.  Certificate users SHOULD be prepared to\r\n   gracefully handle such certificates.",
     "submit_date": "2012-04-24",
     "submitter_name": "David Mandelberg",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3466,
+    "errata_id": "3466",
     "doc-id": "RFC5280",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Certificates do not have \"subjectAltNames\" but only \"subjectAltName extensions\", which is the correct wording that is thoroughly used in the document.",
     "submit_date": "2013-01-18",
     "submitter_name": "Annie Yousar",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3579,
+    "errata_id": "3579",
     "doc-id": "RFC5280",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "ASN.1 type references must begin with an upper case character.  Schema in A.2 is correct.",
     "submit_date": "2013-04-03",
     "submitter_name": "Timothy J. Miller",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3674,
+    "errata_id": "3674",
     "doc-id": "RFC5280",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -85,12 +85,12 @@
     "notes": "Original text refers to the non existent field \"distribution\" in DP.",
     "submit_date": "2013-06-28",
     "submitter_name": "Piyush Jain",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3693,
+    "errata_id": "3693",
     "doc-id": "RFC5280",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -100,12 +100,12 @@
     "notes": "When used with TLS and HTTP (according to RFC 2818), section 4.2.1.10, Name Constraints, is technically a NOP that doesn't constraint the CA that has this attribute because RFC 2818 mandates processing of the common name attribute in the subject distinguished name.  Consequentially, the constraint can be bypassed by issuing a certificate without a subject alternative name.  The fix is to apply the DNS name restrictions to the relevant parts of the subject distinguished name, too, as implemented here:\r\n\r\nhttps://bugzilla.mozilla.org/show_bug.cgi?id=394919\n --VERIFIER NOTES-- \nThe suggested change is not editorial; it represents a significant\r\ntechnical change. It also does not accurately reflect the intent of the WG.    ",
     "submit_date": "2013-08-12",
     "submitter_name": "Florian Weimer",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3754,
+    "errata_id": "3754",
     "doc-id": "RFC5280",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -115,12 +115,12 @@
     "notes": "typo in ASN.1 comment (\"IS\", should be \"ISO\")",
     "submit_date": "2013-10-16",
     "submitter_name": "Michal Bozon",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3986,
+    "errata_id": "3986",
     "doc-id": "RFC5280",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -130,12 +130,12 @@
     "notes": "The \"included in the signature field\" should have been \"included in the signatureValue field\".  A field called \"signature\" does exist in the 5280 structure, but it is not intended to hold the value of the result of the signature function.  The sentence was reworded for word flow (and to avoid using \"signature value\" and \"signatureValue\" in the same sentence).",
     "submit_date": "2014-05-13",
     "submitter_name": "Sandra Murphy",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4274,
+    "errata_id": "4274",
     "doc-id": "RFC5280",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -145,12 +145,12 @@
     "notes": "Appendix B.  ASN.1 Notes says that:\r\n\r\n   For many of the attribute types defined in [X.520], the\r\n   AttributeValue uses the DirectoryString type.  Of the attributes\r\n   specified in Appendix A, the name, surname, givenName, initials,\r\n   generationQualifier, commonName, localityName, stateOrProvinceName,\r\n   organizationName, organizationalUnitName, title, and pseudonym\r\n   attributes all use the DirectoryString type.  X.520 uses a\r\n   parameterized type definition [X.683] of DirectoryString to specify\r\n   the syntax for each of these attributes.  The parameter is used to\r\n   indicate the maximum string length allowed for the attribute.  In\r\n   Appendix A, in order to avoid the use of parameterized type\r\n   definitions, the DirectoryString type is written in its expanded form\r\n   for the definition of each of these attribute types.  So, the ASN.1\r\n   in Appendix A describes the syntax for each of these attributes as\r\n   being a CHOICE of TeletexString, PrintableString, UniversalString,\r\n   UTF8String, and BMPString, with the appropriate constraints on the\r\n   string length applied to each of the types in the CHOICE, rather than\r\n   using the ASN.1 type DirectoryString to describe the syntax.\r\n\r\nThere is nothing about DirectoryName type here. So comments in ASN.1 in\r\nA.1 are wrong and DirectoryName should be fixed to DirectoryString.\r\n\r\nFrom Expert PKIX reviewers:\r\nThe errata calls for changing \"DirectoryName\" to \"DirectoryString\" in the comments\r\nof the ASN.1. Nobody seems to disagree with this correction.\r\n\r\nThis message triggered a lot of discussion about whether to remove the string size limits.\r\nThat discussion ended with consensus to retain the size limits.",
     "submit_date": "2015-02-19",
     "submitter_name": "Ilya V. Matveychikov",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4847,
+    "errata_id": "4847",
     "doc-id": "RFC5280",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -160,12 +160,12 @@
     "notes": "\"Object Identifiers\" are abbreviated as \"OIDs\" and not as \"OIDS\".",
     "submit_date": "2016-10-30",
     "submitter_name": "Annie Yousar",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5802,
+    "errata_id": "5802",
     "doc-id": "RFC5280",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -175,12 +175,12 @@
     "notes": "The proposed change removes the WWW part of the description. In practice these object identifiers are used for server and client applications, but not necessarily web applications. In particular:\r\n - openssl verification considers them unconditionally even if the server is not a web server or the client a web client\r\n - There is no object identifier that can be used for protocols like SMTP, IMAP, POP3, LDAP, radius, ...; in practice all these protocols are deployed with the identifiers for WWW\r\n - Standards like common criteria assume that these object identifiers are for generic server and clients [0].\r\n\r\n[0]. https://www.niap-ccevs.org/MMO/PP/-442-/#FCS_TLSC_EXT.1.1",
     "submit_date": "2019-08-06",
     "submitter_name": "Nikos Mavrogiannopoulos",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5876,
+    "errata_id": "5876",
     "doc-id": "RFC5280",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -190,27 +190,27 @@
     "notes": "For email addresses and domain names, this section is very prescriptive:\r\n\r\n   When the subjectAltName extension contains an Internet mail address,\r\n   the address MUST be stored in the rfc822Name. \r\n...\r\n   When the subjectAltName extension contains a domain name system\r\n   label, the domain name MUST be stored in the dNSName…\r\n\r\nHowever, for IP addresses, it's possible to interpret the current wording as saying that *if* you happen to choose the iPAddress form for an IP address, then you must represent that as big-endian. I suspect this was a poor choice of wording and the intent was to say that you MUST use the iPAddress form for an IP address.",
     "submit_date": "2019-10-16",
     "submitter_name": "David Woodhouse",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-10-20 16:44:06"
   },
   {
-    "errata_id": 5938,
+    "errata_id": "5938",
     "doc-id": "RFC5280",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6.1,
+    "section": "6.1",
     "orig_text": "The primary goal of path validation is to verify the binding between\r\na subject distinguished name or a subject alternative name and\r\nsubject public key, as represented in the target certificate, based\r\non the public key of the trust anchor. In most cases, the target",
     "correct_text": "  The primary goal of path validation is to verify the binding between\r\n| a subject distinguished name and/or a subject alternative name and\r\n  subject public key, as represented in the target certificate, based\r\n  on the public key of the trust anchor. In most cases, the target",
     "notes": "The correction conforms to the first paragraph, Sec. 6, \"Certification \r\npath processing verifies the binding between the subject distinguished\r\nname and/or subject alternative name and subject public key.\" \r\n\r\nIn addition, it is not very clear in RFC 5280, given a certificate with\r\na non-empty subject DN and an SAN extension instance (critical or \r\nnon-critical), which one (the subject DN, the SAN extension,  or they \r\nboth) should be bound to the subject public key during path validation.\r\nMore explanations are needed.",
     "submit_date": "2019-12-15",
     "submitter_name": "Yuting Chen",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 5967,
+    "errata_id": "5967",
     "doc-id": "RFC5280",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -220,12 +220,12 @@
     "notes": "When you use \"access services for the issuer\" you refer to grandparent node for the certificate in certification path. But actually you mean here the parent node  in certification path (the services of the CA that has issued the certificate) and that would be  \"services of the issuer\".\n --VERIFIER NOTES-- \n\"the issuer of the certificate in which the extension appears\" is a precise indication of the parent node and does not refer to the grandparent node.",
     "submit_date": "2020-01-27",
     "submitter_name": "Maxim",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2020-02-01 21:23:49"
   },
   {
-    "errata_id": 5997,
+    "errata_id": "5997",
     "doc-id": "RFC5280",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -235,12 +235,12 @@
     "notes": "Currently, the syntax for a dNSName nameConstraint is left implicit, and thus has resulted in ambiguities in encoding and processing that have resulted in ineroperability issues.\r\n\r\nOne interpretation is that the dNSName nameConstraint must be a valid \"host name\" (as discussed in RFC 8499), which is to say must be a Fully-Qualified Domain Name in the preferred name syntax. This interpretation is supported by Section 4.2.1.6, which explicitly states that for the subjectAltName. As 4.2.1.10 does not define an exception to this (as discussed in Appendix B), the interpretation, along with the existing example, would conclude that this field uses preferred name syntax, and that \"DNS name\" here matches the \"host name\" interpretation from RFC 8499\r\n\r\nA different interpretation is that the dNSName nameConstraint uses the modified syntax similar to the URI nameConstraint. That is, it explicitly permits a leading period to indicate that one or more labels preceding is required in order to satisfy the constraint. This allows subdomains, but does not allow the base domain to match. While the language for the DNS name constraint makes it clear that a host name with no preceding period matches both that host and sub-domains, the existence of a preceding period would constraint it to only subdomains.\r\n\r\nAligning with Section 4.2.1.6 would prohibit the latter interpretation, as the preferred name syntax does not permit leading periods. Alternatively, if the latter interpretation is intended, this section would benefit from making that explicit.\r\n\r\nThis has been a source of interoperability issues, with additional information and discussion captured at:\r\n- https://github.com/golang/go/issues/16347\r\n- https://rt.openssl.org/Ticket/Display.html?id=3562\r\n\r\nWhile \"running code\" has aligned in being permissive with a leading period, implementations have gone and seemingly aligned on a third interpretation:\r\n\r\nThe syntax of a dNSName MUST be as described in Section 4.2.1.6, with the exception that it MAY contain a leading period. Any DNS name that can be constructed by simply adding zero or more labels to the left-hand side of the name, ignoring any leading period, satisfies the name constraint.\r\n\r\nThis seems to support implementations expecting the first interpretation in the certificates they receive, and seeing leading period as an encoding mistake, not an explicit desire for the second interpretation.",
     "submit_date": "2020-02-27",
     "submitter_name": "Ryan Sleevi",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2020-03-16 22:13:33"
   },
   {
-    "errata_id": 6414,
+    "errata_id": "6414",
     "doc-id": "RFC5280",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -250,12 +250,12 @@
     "notes": "In https://github.com/zmap/zlint/issues/553 there's been some disagreement and confusion about how to correctly interpret the \"or\" in the Original Text.  \"You can only set one of these three bits\" is one interpretation, and it's hard to argue that this interpretation is inconsistent with the Original Text.\r\n\r\nHowever, digitalSignature+keyEncipherment makes sense for an RSA leaf certificate, and digitalSignature+keyAgreement makes sense for an ECC leaf certificate.  Both are widely used, to enable ephemeral and non-ephemeral TLS ciphersuites in conjunction with a single server certificate.\r\n\r\nGiven that RFC5480 section 3 explicitly permits digitalSignature+keyAgreement in an ECC leaf certificate, I think it's likely that my proposed Corrected Text conveys the RFC5280 authors' intended meaning.",
     "submit_date": "2021-01-28",
     "submitter_name": "Rob Stradling",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 6830,
+    "errata_id": "6830",
     "doc-id": "RFC5280",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -265,7 +265,7 @@
     "notes": "\"at least four times\" is likely a holdover from RFC 3280, as the same text exists in that RFC. In RFC 3280, the definition of UTF-8 in UTF8String was normatively referencing RFC 2279, which allowed for a maximum of 6 octets to represent a single Unicode character in UTF-8. However, RFC 5280 was updated to normatively reference RFC 3629, which restricts the allowed set of characters in a UTF-8 string to match those allowed in UTF-16 (i.e., the BMP and 16 supplementary planes as opposed to all 32k planes). As a result, the maximum length for a single RFC 3629 UTF-8 character is 4 octets, rendering the guidance of \"at least four times\" wholly unnecessary; \"four times\" is sufficient in all cases.",
     "submit_date": "2022-02-02",
     "submitter_name": "Corey Bonnell",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
