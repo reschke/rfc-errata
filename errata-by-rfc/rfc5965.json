@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3120,
+    "errata_id": "3120",
     "doc-id": "RFC5965",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Reports can be created from info collected in SMTP transactions that don't accept a message, a scenario we didn't consider when we wrote this section.",
     "submit_date": "2012-02-14",
     "submitter_name": "John Levine",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4421,
+    "errata_id": "4421",
     "doc-id": "RFC5965",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "In the second example report, there is an empty line in the middle of the headers section of the quoted rfc822 message.  This seems wrong.",
     "submit_date": "2015-07-19",
     "submitter_name": "Simon Leinen",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5446,
+    "errata_id": "5446",
     "doc-id": "RFC5965",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -40,22 +40,22 @@
     "notes": "The TLD of the spammer's emailaddress should be `.net` as in the rest of the example.",
     "submit_date": "2018-07-30",
     "submitter_name": "Martijn van der Lee",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 7091,
+    "errata_id": "7091",
     "doc-id": "RFC5965",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "   e.  Except as discussed below, each feedback report MUST be related\r\n       to only a single email message.  Summary and aggregate formats\r\n       are outside of the scope of this specification.\r\n",
     "correct_text": "   e.  Except when using the Incidents field (see below),\r\n       each feedback report MUST be related\r\n       to only a single email message.  Summary and aggregate formats\r\n       are outside of the scope of this specification.\r\n",
     "notes": "There doesn't seem to be another discussion of similarity.",
     "submit_date": "2022-08-16",
     "submitter_name": "Alessandro Vesely",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
