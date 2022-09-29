@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 162,
+    "errata_id": "162",
     "doc-id": "RFC4227",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 9,
+    "section": "9",
     "orig_text": "   Although service provisioning is a policy matter, at a minimum, all\r\n   implementations MUST provide the following tuning profiles:\r\n\r\n   for authentication: http://iana.org/beep/SASL/DIGEST-MD5\r\n\r\n   for confidentiality: http://iana.org/beep/TLS (using the\r\n      TLS_RSA_WITH_AES_EDE_CBC_SHA cipher)\r\n\r\n   for both: http://iana.org/beep/TLS (using the\r\n      TLS_RSA_WITH_AES_EDE_CBC_SHA cipher supporting client-side\r\n      certificates)\r\n",
     "correct_text": "   Although service provisioning is a policy matter, at a minimum, all\r\n   implementations MUST provide the following tuning profiles:\r\n\r\n   for authentication: http://iana.org/beep/SASL/DIGEST-MD5\r\n\r\n   for confidentiality: http://iana.org/beep/TLS (using the\r\n      TLS_RSA_WITH_AES_128_CBC_SHA cipher)\r\n\r\n   for both: http://iana.org/beep/TLS (using the\r\n      TLS_RSA_WITH_AES_128_CBC_SHA cipher supporting client-side\r\n      certificates)\r\n",
     "notes": "--VERIFIER NOTES--\r\nIt was first reported to us by Alfred Hînes with helpful comments by Philip\r\nNesser.",
     "submit_date": "2006-02-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": "Eamon O'Tuathail",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 699,
+    "errata_id": "699",
     "doc-id": "RFC4227",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "--VERIFIER NOTES--\r\nIt was first reported to us by Alfred Hînes with helpful comments by Philip\r\nNesser.",
     "submit_date": "2006-02-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Eamon O'Tuathail",
     "update_date": "2019-09-10 09:09:03"
   }
