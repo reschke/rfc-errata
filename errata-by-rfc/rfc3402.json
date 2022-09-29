@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 7049,
+    "errata_id": "7049",
     "doc-id": "RFC3402",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "      One such case can be found in the URI\r\n      Resolution application which defines the 'p' flag which states\r\n      that the next step is 'protocol specific' and thus outside of the\r\n      scope of DDDS.",
     "correct_text": "      One such case can be found in the URI\r\n      Resolution application which defines the 'P' flag which states\r\n      that the next step is 'protocol specific' and thus outside of the\r\n      scope of DDDS.",
     "notes": "Capital \"P\" is used for the flag in the URI Resolution Application RFC3404",
     "submit_date": "2022-07-25",
     "submitter_name": "Timothy McSweeney",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
