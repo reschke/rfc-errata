@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 5700,
+    "errata_id": "5700",
     "doc-id": "RFC6956",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4.4,
+    "section": "4.4",
     "orig_text": "                  <name>IPv4HeaderLengthMismatch</name>\r\n                  <synopsis>\r\n                   Exception case: packet with header length more\r\n                   than 5 words.\r\n                  </synopsis>\r\n",
     "correct_text": "                  <name>IPv4HeaderLengthMismatch</name>\r\n                  <synopsis>\r\n                   Exception case: packet with header length less\r\n                   than 5 words.\r\n                  </synopsis>\r\n",
     "notes": "page 37\n --VERIFIER NOTES-- \n   From the forces mailing list:\r\n\r\nOn April 22, 2019 at 9:25:22 PM, Weiming Wang (wmwang@zjsu.edu.cn) wrote:\r\n\r\nHi， \r\n\r\nPackets with the header length more than 5 words are marked with Exceptional packest. Packets header with less than 5 words should be marked with Validate Error, as defined in \r\n\r\nSection 4.4 \r\n\r\n<specialValue value=\"3\"> \r\n<name>InvalidIPv4HeaderLengthSize</name> \r\n<synopsis> \r\nError case: packet with header length field in \r\nthe header less than 5 words. \r\n</synopsis> \r\n\r\n",
     "submit_date": "2019-04-19",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 12:23:29"
   },
   {
-    "errata_id": 6643,
+    "errata_id": "6643",
     "doc-id": "RFC6956",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "The FE model [RFC5812] has specified predefined (built-in) atomic data types: char, uchar, int16, uint16, int32, uint32, int64, uint64, string[N], string, byte[N], boolean, octetstring[N], float16, float32, and float64.",
     "correct_text": "The FE model [RFC5812] has specified predefined (built-in) atomic data types: char, uchar, int16, uint16, int32, uint32, int64, uint64, string[N], string, byte[N], boolean, octetstring[N], float32, and float64.",
     "notes": "According to RFC5812, floating data types can only be float32 or float64.",
     "submit_date": "2021-07-17",
     "submitter_name": "Argyrios Georgiou",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-08-12 12:23:00"
   }
