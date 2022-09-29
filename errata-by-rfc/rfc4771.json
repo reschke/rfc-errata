@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3233,
+    "errata_id": "3233",
     "doc-id": "RFC4771",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "When the receiver receives an SRTP packet, it processes the packet\r\naccording to RFC 3711 except that during authentication processing\r\nROC_local is replaced by ROC_sender (retrieved from the packet).\r\n",
     "correct_text": "When the receiver receives an SRTP packet, it processes the packet\r\naccording to RFC 3711 except that during replay check and authentication processing\r\nROC_local is replaced by ROC_sender (retrieved from the packet).\r\n",
     "notes": "While this is typo, it has the unfortunate side effect of creating a possibility for a replay attack where the attacker injects a previous message, possibly causing the receiver to loose synch on the ROC value. This is prevented if the receiver uses ROC_sender in place of ROC_local during both authentication _and_ replay check.\r\n\r\nWe thank David McGrew for spotting this error.",
     "submit_date": "2012-05-28",
     "submitter_name": "Mats Näslund",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
