@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4033,
+    "errata_id": "4033",
     "doc-id": "RFC7193",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "[RFC5751] registered the application/pkc7-mime media type.",
     "correct_text": "[RFC5751] registered the application/pkcs7-mime media type.",
     "notes": "The correct media type is application/pkcs7-mime.  \r\nThe references are correct to PKCS#7 and the RFC that establishes the media type.  This is clearly a typo, hence accepting the errata, but a change to editorial.",
     "submit_date": "2014-07-02",
     "submitter_name": "Sean Leonard",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6819,
+    "errata_id": "6819",
     "doc-id": "RFC7193",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "   digestData                  |[RFC5652] | 1.2.840.113549.1.9.16.1.5\r\n   encryptedData               |[RFC5652] | 1.2.840.113549.1.9.16.1.6\r\n   envelopedData               |[RFC5652] | 1.2.840.113549.1.9.16.1.3\r\n   signedData                  |[RFC5652] | 1.2.840.113549.1.9.16.1.2",
     "correct_text": "   digestData                  |[RFC5652] | 1.2.840.113549.1.7.5\r\n   encryptedData               |[RFC5652] | 1.2.840.113549.1.7.6\r\n   envelopedData               |[RFC5652] | 1.2.840.113549.1.7.3\r\n   signedData                  |[RFC5652] | 1.2.840.113549.1.7.2",
     "notes": "Four of the object identifiers in the table are incorrect.  The correct ones are provided above.  In addition, IANA has been notified about the error.",
     "submit_date": "2022-01-18",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
