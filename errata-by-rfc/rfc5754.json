@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2025,
+    "errata_id": "2025",
     "doc-id": "RFC5754",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,27 +10,27 @@
     "notes": "Rationale: Undetected copy&paste error, but significant\r\n   (therefore classified as Technical)",
     "submit_date": "2010-01-27",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2693,
+    "errata_id": "2693",
     "doc-id": "RFC5754",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.3,
+    "section": "3.3",
     "orig_text": "... the object identifier ecdsa-with-SHA1* (where * is \r\n224, 256, 384, or 512) with absent parameters.",
     "correct_text": "... the object identifier ecdsa-with-SHA* (where * is \r\n224, 256, 384, or 512) with absent parameters.",
     "notes": "r/ecdsa-withSHA1*/ecdsa-with-SHA*\r\nThe \"1\" shouldn't be there the algorithm names are ecdsa-with-SHA224, etc. not ecdsa-with-SHA1224.",
     "submit_date": "2011-01-28",
     "submitter_name": "Sean Turner",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4846,
+    "errata_id": "4846",
     "doc-id": "RFC5754",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "The section 3.2 is related to RSA.",
     "submit_date": "2016-10-28",
     "submitter_name": "Annie Yousar",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-01-20 06:31:28"
   }
