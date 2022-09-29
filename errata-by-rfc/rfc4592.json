@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 46,
+    "errata_id": "46",
     "doc-id": "RFC4592",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)  [improper/misleading wording]\r\n\r\nIn the explanations to the Example in Section 2.2.1, RFC 4592\r\n(near the top of page 9) says:\r\n\r\n|  The following responses would not be synthesized from any of the\r\n|  wildcards in the zone:\r\n\r\nThis wording is improper/misleading.\r\nPerhaps, the RFC should better say:\r\n\r\n|  The following queries would not cause RRs to be synthesized for the\r\n|  answer from any of the wildcards in the zone:\r\n\r\n\r\n(2)  [typo]\r\n\r\nThe last paragraph of Section 2.2.2, on page 10, says:\r\n\r\n   As RFC 1034 also defines \"an authoritative name error indicating that\r\n|  the name does not exist\" in section 4.3.1, so this apparently is not\r\n   the intent of the original definition, justifying the need for an\r\n   updated definition in the next section.\r\n\r\n\"As ..., so ...\" is redundant.\r\nThus, the RFC should say instead:\r\n\r\n   As RFC 1034 also defines \"an authoritative name error indicating that\r\n|  the name does not exist\" in section 4.3.1, this apparently is not the\r\n   intent of the original definition, justifying the need for an updated\r\n   definition in the next section.\r\n\r\n\r\n(3)  [typo]\r\n\r\nIn Section 3.3.1, the 4th paragraph, on page 12, says:\r\n\r\n   A source of synthesis does not guarantee having a RRSet to use for\r\n   synthesis.  The source of synthesis could be an empty non-terminal.\r\n\r\nIt should say:\r\n\r\n|  A source of synthesis does not guarantee having an RRSet to use for\r\n   synthesis.  The source of synthesis could be an empty non-terminal.\r\n\r\n\r\n(4)  [typo]\r\n\r\nIn Section 3.3.3, the last paragraph on page 13 says:\r\n\r\n   This is essentially the same text in part 'a' covering the processing\r\n   of CNAME RRSets.\r\n\r\nIt should say:\r\n\r\n|  This is essentially the same text as in part 'a' covering the\r\n   processing of CNAME RRSets.\r\n\r\n\r\n(5)  [incomplete change in example?]\r\n\r\nIn Section 4.4, the second-to-last paragraph on page 16 says:\r\n\r\n   The DNAME specification is not clear on whether DNAME records in a\r\n   cache are used to rewrite queries.  In some interpretations, the\r\n   rewrite occurs; in others, it does not.  Allowing for the occurrence\r\n   of rewriting, queries for \"sub.a.b.example. A\" may be rewritten as\r\n|  \"sub.foo.bar.tld. A\" by the former caching server and may be\r\n|  rewritten as \"sub.a.foo.bar.tld. A\" by the latter.  Coherency is\r\n   lost, and an operational nightmare ensues.\r\n\r\n\"tld.\" does never appear in the preceding text; apparently it has\r\nbeen replaced there by \"example.net.\"\r\nTherefore, the RFC should say instead:\r\n\r\n   The DNAME specification is not clear on whether DNAME records in a\r\n   cache are used to rewrite queries.  In some interpretations, the\r\n   rewrite occurs; in others, it does not.  Allowing for the occurrence\r\n   of rewriting, queries for \"sub.a.b.example. A\" may be rewritten as\r\n|  \"sub.foo.bar.example.net. A\" by the former caching server and may be\r\n|  rewritten as \"sub.a.foo.bar.example.net. A\" by the latter.  Coherency\r\n   is lost, and an operational nightmare ensues.\r\n",
     "correct_text": "",
     "notes": "from pending",
     "submit_date": "2006-08-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5119,
+    "errata_id": "5119",
     "doc-id": "RFC4592",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 4.7,
+    "section": "4.7",
     "orig_text": "4.7.  NSEC RRSet at a Wildcard Domain Name\r\n\r\n   Wildcard domain names in DNSSEC signed zones will have an NSEC RRSet.\r\n   Synthesis of these records will only occur when the query exactly\r\n   matches the record.  Synthesized NSEC RRs will not be harmful as they\r\n   will never be used in negative caching or to generate a negative\r\n   response [RFC2308].\r\n",
     "correct_text": "4.7.  NSEC RRSet at a Wildcard Domain Name\r\n\r\n   Wildcard domain names in DNSSEC signed zones will have an NSEC RRSet.\r\n   NSEC RRSets must not be synthesized from this wildcard NSEC.",
     "notes": "Synthesizing these records would destroy the semantics of the NSEC chain and could be very harmful if implementations would cache them and use them for \"Aggressive Use of DNSSEC-Validated Cache\" (RFC 8198).",
     "submit_date": "2017-09-21",
     "submitter_name": "Karst Koymans",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
