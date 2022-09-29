@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4430,
+    "errata_id": "4430",
     "doc-id": "RFC7600",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 6,
+    "section": "6",
     "orig_text": "(need to add the below text)",
     "correct_text": "This address is to be used only as IPv4 source of an ICMP error \r\npacket whose cause originated within a tunnel across an IPv6-only \r\ndomain. As such, it should never be used as a destination \r\n(and consequently never forwarded). When receiving an IPv4 \r\npacket with this address as source, no specific action that would \r\nreserve this address for this protocol is required (dealing as usual \r\nwith the error cause specified in the ICMP packet is sufficient).\r\n\r\n",
     "notes": "While processing the IANA Actions for this document, the authors requested that the above text be added to the IANA Considerations section.  The published version does not include this text.\r\n\r\nVerifier Notes:  The RFC Editor missed adding this text per the message from the IANA. ",
     "submit_date": "2015-07-28",
     "submitter_name": "Michelle Cotton",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4661,
+    "errata_id": "4661",
     "doc-id": "RFC7600",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "BR(s) and/or N4T64+",
     "correct_text": "BR(s) and/or NAT64+",
     "notes": "A minor typo in Figure 1 (s/N4T64+/NAT64+/).",
     "submit_date": "2016-04-10",
     "submitter_name": "Masao Uebayashi",
-    "verifier_id": 146,
+    "verifier_id": "146",
     "verifier_name": "Terry Manderson",
     "update_date": "2019-09-10 09:09:03"
   }
