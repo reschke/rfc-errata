@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1578,
+    "errata_id": "1578",
     "doc-id": "RFC5254",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "Rationale:\r\n\r\nThe original diagram was inconsistent. The proposed edits correct this inconsistency. Specifically the PEs are now labels xPE1, xPE2, xPE3 across\r\nthe page and the text is modified accordingly.\r\n\r\n\r\nThe erratum is technically correct, but since the purpose of this RFC was to establish the requirements in RFC5659 and the error does not occur in RFC5659 the problem may be classified as fixed in update.",
     "submit_date": "2008-10-24",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1792,
+    "errata_id": "1792",
     "doc-id": "RFC5254",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "Single-Segment Pseudowire (SS-PW).  \r\n\r\nA PW setup directly between two PE devices.  Each direction of an SS-PW traverses one PSN tunnel that connects the two PEs.\r\n\r\n",
     "correct_text": "Single-Segment Pseudowire (SS-PW). \r\n\r\nA PW set up directly between two T-PE devices. Each PW in one direction of a SS-PW traverses one PSN tunnel that connects the two T-PEs.\r\n",
     "notes": "The document defines two types of PE, T-PE and S-PE. An SS-PW can only exist between a pair of T-PEs, so this is an editorial rather than a technical errata.\r\n\r\nThis errata aligns the definition of SS-PW with draft-ietf-pwe3-ms-pw-arch",
     "submit_date": "2009-06-04",
     "submitter_name": "Stewart Bryant",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }
