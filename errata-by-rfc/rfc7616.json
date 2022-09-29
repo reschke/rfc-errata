@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4495,
+    "errata_id": "4495",
     "doc-id": "RFC7616",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "In RFC 2617, the password was \"Circle Of Life\" with capital O in the word \"Of\". Also, RFC 7616 section 3.4.5 mentions the password \"Circle Of Life\" with capital O in the word \"Of\". It can be difficult to notice a non-capital o from an example password as it is elsewhere capital O.",
     "submit_date": "2015-10-09",
     "submitter_name": "Tuomo Untinen",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4897,
+    "errata_id": "4897",
     "doc-id": "RFC7616",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,27 +25,27 @@
     "notes": "If the SHA512/256 algorithm first mentioned in Section 3.2 is to be implemented as defined in FIPS 180.4 Section 6.7 the values of username and response need to be corrected.\r\n\r\nChanges start at page 19 of the RFC.\r\n\r\nI created this as technical errata since the current values given in the example are for a SHA512/256 algorithm implemented as described in Section 7 of both FIPS 180-3 and FIPS 180-4",
     "submit_date": "2016-12-29",
     "submitter_name": "Chaim Geretz",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5801,
+    "errata_id": "5801",
     "doc-id": "RFC7616",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.7,
+    "section": "3.7",
     "orig_text": "   This specification defines the following algorithms:\r\n\r\n   o  SHA2-256 (mandatory to implement)\r\n\r\n   o  SHA2-512/256 (as a backup algorithm)\r\n\r\n   o  MD5 (for backward compatibility).\r\n",
     "correct_text": "   This specification defines the following algorithms:\r\n\r\n   o  SHA-256 (mandatory to implement)\r\n\r\n   o  SHA-512/256 (as a backup algorithm)\r\n\r\n   o  MD5 (for backward compatibility).\r\n",
     "notes": "The SHA-2 family of algorithms are conventionally referred to using just \"SHA-\" and the bit strength, not \"SHA2-\" and the bit strength.",
     "submit_date": "2019-08-06",
     "submitter_name": "Franck MOURRE",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5803,
+    "errata_id": "5803",
     "doc-id": "RFC7616",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "The SHA-2 family of algorithms are conventionally referred to using just \"SHA-\" and the bit strength, not \"SHA2-\" and the bit strength.",
     "submit_date": "2019-08-06",
     "submitter_name": "Franck MOURRE",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6704,
+    "errata_id": "6704",
     "doc-id": "RFC7616",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "The open angle bracket following the initial double quote, probably needs a matching close angle bracket before the final double quote. This typographical error appears to have been copied from section 3.2.2.1 of RFC 2617, but the close angle bracket does appear in the corresponding single line of text in section 2.1.2 of RFC 2069 that defines the response-digest production there. However, it's not clear to me that the angle brackets contribute to the clarity of the response production here, so simply removing the unmatched open might be a better solution.",
     "submit_date": "2021-10-05",
     "submitter_name": "Bruce Florman",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 7005,
+    "errata_id": "7005",
     "doc-id": "RFC7616",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -85,7 +85,7 @@
     "notes": "[1] In Section 3.4, uri -> The Effective Request URI (Section 5.5 of [RFC7230]) of the HTTP request;\r\n\r\n[2] In Section 5.5 of [RFC7230]: The components of the effective request URI, once determined as above, can be combined into absolute-URI form by concatenating the scheme, \"://\", authority, and combined path and query component\r\n\r\n[3] uri=\"/dir/index.html\" is an absolute-path, not an Effective Request URI",
     "submit_date": "2022-06-23",
     "submitter_name": "Patrick Ni",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
