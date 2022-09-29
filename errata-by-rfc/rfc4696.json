@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2790,
+    "errata_id": "2790",
     "doc-id": "RFC4696",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "In Figure 1:\r\n\r\nrtp_maxptime=0; guardtime=44100; render=synthetic; rinit=\"audio/asc\";\r\n\r\nIn Figure 2:\r\n\r\nrtp_ptime=0; rtp_maxptime=0; render=synthetic; rinit=\"audio/asc\";",
     "correct_text": "In Figure 1:\r\n\r\nrtp_maxptime=0; guardtime=44100; render=synthetic; rinit=audio/asc;\r\n\r\nIn Figure 2:\r\n\r\nrtp_ptime=0; rtp_maxptime=0; render=synthetic; rinit=audio/asc;",
     "notes": "The double-quotes around audio/asc in the session descriptions shown\r\nin Figures 1 and 2 should not exist; the Corrected Text version shows the\r\nlegal syntax for rinit assigns.  This bug also appears in numerous examples\r\nin RFC 4695, an RFC that will soon be obsolete, and replaced with a new\r\nRFC whose examples also have this bug fixed (I'm an author of the\r\nRFCs).  As we are not aware of implementations that use the rinit parameter,\r\nwe do not expect interoperability concerns due to the buggy examples.",
     "submit_date": "2011-04-25",
     "submitter_name": "John Lazzaro",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
