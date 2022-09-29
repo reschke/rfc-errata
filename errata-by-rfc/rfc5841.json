@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4324,
+    "errata_id": "4324",
     "doc-id": "RFC5841",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "   In more detail:\r\n\r\n           +--------+--------+--------+--------+\r\n           |00011001|00000100|00111010|00101001|\r\n           +--------+--------+--------+--------+\r\n            Kind=25  Length=4 ASCII :  ASCII )\r\n\r\n           +--------+--------+--------+--------+--------+\r\n           |00011001|00000101|00111110|00111010|01000000|\r\n           +--------+--------+--------+--------+--------+\r\n            Kind=25  Length=5 ASCII >  ACSII :  ASCII @",
     "correct_text": "   In more detail:\r\n\r\n           +--------+--------+--------+--------+\r\n           |00011001|00000100|00111010|00101001|\r\n           +--------+--------+--------+--------+\r\n            Kind=25  Length=4 ASCII :  ASCII )\r\n\r\n           +--------+--------+--------+--------+--------+\r\n           |00011001|00000101|00111110|00111010|01000000|\r\n           +--------+--------+--------+--------+--------+\r\n            Kind=25  Length=5 ASCII >  ASCII :  ASCII @",
     "notes": "Misspelled word ASCII as ACSII.",
     "submit_date": "2015-04-01",
     "submitter_name": "Jussi Judin",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5842,
+    "errata_id": "5842",
     "doc-id": "RFC5841",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The author changed her name.",
     "submit_date": "2019-08-20",
     "submitter_name": "Wren Turkal",
-    "verifier_id": 157,
+    "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }
