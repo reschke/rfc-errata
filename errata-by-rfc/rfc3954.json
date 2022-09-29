@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2096,
+    "errata_id": "2096",
     "doc-id": "RFC3954",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,37 +10,37 @@
     "notes": "Addition of \"The padding length MUST be shorter than any allowable record in the Set.\"\r\n\r\nWith small field sizes, such that the record size <= 3, it's not possible to distinguish padding from further data records (s 5.3) or options data records (s 6.2).\r\n\r\neg, with a record length of 3, three records will consume 9 octets. Three octets of padding will be added to this, giving a total length of 12 octets. The 12 octets now look like *four* records. In this case, padding is NOT appropriate.\r\n\r\nNB1 the same paragraph in section 6.1 is NOT affected, because the fixed size of the other fields dictates that the only possibility is padding of 2 octets.\r\n\r\nNB2 this situation is anticipated in IPFIX (RFC 5101), from which the additional text is taken.",
     "submit_date": "2010-03-25",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2168,
+    "errata_id": "2168",
     "doc-id": "RFC3954",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 8,
+    "section": "8",
     "orig_text": "   FLOW_SAMPLER_ID              48   1     Identifier shown\r\n                                           in \"show flow-sampler\"\r\n",
     "correct_text": "   FLOW_SAMPLER_ID              48   N     Identifier shown\r\n                                           in \"show flow-sampler\".\r\n                                           By default N is 4.",
     "notes": "Change sampler ID field size to N, defaulting to 4. NB smaller sizes may be used. The actual size may be determined from the corresponding NFv9 template.",
     "submit_date": "2010-04-22",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2979,
+    "errata_id": "2979",
     "doc-id": "RFC3954",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "   Source ID\r\n         A 32-bit value that identifies the Exporter Observation Domain.\r\n         NetFlow Collectors SHOULD use the combination of the source IP\r\n         address and the Source ID field to separate different export\r\n         streams originating from the same Exporter.",
     "correct_text": "   Source ID\r\n         A 32-bit value that identifies the Exporter Observation Domain.\r\n         NetFlow Collectors SHOULD use the combination of the source IP\r\n         address, source port, and the Source ID field to separate different export\r\n         streams originating from the same Exporter.",
     "notes": "Addition of \"source port\" to separate multiple export streams.\r\n\r\nThis is already addressed in RFC5101 (IPFIX) as so:\r\n\r\n      Collecting Processes SHOULD use the Transport Session and the\r\n      Observation Domain ID field to separate different export streams\r\n\r\nNB transport session = address + ports.",
     "submit_date": "2011-09-26",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }
