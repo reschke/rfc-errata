@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1455,
+    "errata_id": "1455",
     "doc-id": "RFC4745",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7.4,
+    "section": "7.4",
     "orig_text": "   pair.  Times are expressed in XML dateTime format.",
     "correct_text": "   pair.  Times are expressed in XML dateTime [W3C-Schema] format with a\r\n   mandatory timezone.",
     "notes": "The reference to W3C Schema is normative.  The timezone needs to be mandatory\r\nin order to ensure interoperability.  An alternative would be to reference\r\nRFC 3339 normatively.",
     "submit_date": "2008-06-16",
     "submitter_name": "Chris Newman",
-    "verifier_id": 107,
+    "verifier_id": "107",
     "verifier_name": "Cullen Jennings",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5208,
+    "errata_id": "5208",
     "doc-id": "RFC4745",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "   The access to data items needs to be matched with the rule set stored\r\n   at the PS.  Each instance of a request has different attributes\r\n   (e.g., the identity of the requestor) that are used for\r\n   authorization.  A rule in a rule set might have a number of\r\n   conditions that need to be met before executing the remaining parts\r\n   of a rule (i.e., actions and transformations).  Details about rule\r\n   matching are described in Section 10.  This document specifies only a\r\n   few conditions (i.e., identity, sphere, and validity).  Further\r\n   condition elements can be added via extensions to this document.  If\r\n   a child element of the <conditions> element is in a namespace that is\r\n   not known or not supported, then this child element evaluates to\r\n   FALSE.",
     "correct_text": "   The access to data items needs to be matched with the rule set stored\r\n   at the PS.  Each instance of a request has different attributes\r\n   (e.g., the identity of the requestor) that are used for\r\n   authorization.  A rule in a rule set might have a number of\r\n   conditions that need to be met before executing the remaining parts\r\n   of a rule (i.e., actions and transformations).  Details about rule\r\n   matching are described in Section 10.  This document specifies only a\r\n   few conditions (i.e., identity, sphere, and validity).  Further\r\n   condition elements can be added via extensions to this document.  If\r\n   a child element of the <conditions> element is in a namespace that is\r\n   not known or not supported, then this child element evaluates to\r\n   FALSE.  A rule without a <conditions> element evaluates to TRUE.\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\n(Only change is new sentence at end.)",
     "notes": "The schema in RFC 4745 (Common Policy: A Document Format for Expressing Privacy Preferences) allows the <conditions> element to be omitted.  The RFC should say that omitted <conditions> evaluates to TRUE, as the alternative (omitted <conditions> evaluating to FALSE) makes no sense.  Omitted <conditions> as TRUE allows for a rule that is always executed, while evaluating as FALSE would create a rule that is never executed, a meaningless thing.",
     "submit_date": "2017-12-14",
     "submitter_name": "Randall Gellens",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
