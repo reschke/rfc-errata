@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2723,
+    "errata_id": "2723",
     "doc-id": "RFC5763",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 5,
+    "section": "5",
     "orig_text": "The endpoint SHOULD\r\nsend the SIP message containing the offer to the offerer's SIP proxy\r\nover an integrity protected channel.  The proxy SHOULD add an\r\nIdentity header field according to the procedures outlined in\r\n[RFC4474].  The SIP message containing the offer SHOULD be sent to\r\nthe offerer's SIP proxy over an integrity protected channel.",
     "correct_text": "The endpoint SHOULD\r\nsend the SIP message containing the offer to the offerer's SIP proxy\r\nover an integrity protected channel.  The proxy SHOULD add an\r\nIdentity header field according to the procedures outlined in\r\n[RFC4474].  The SIP message containing the offer SHOULD be sent to\r\nthe answer's SIP proxy over an integrity protected channel.",
     "notes": "the original text seems to be repetitive.",
     "submit_date": "2011-02-15",
     "submitter_name": "Wu Yongming",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
