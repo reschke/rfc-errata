@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1013,
+    "errata_id": "1013",
     "doc-id": "RFC4982",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)  Section 3 -- typo ??\r\n\r\nIn the second bullet on mid-page 3, Section 3 twice talks about\r\n\"Care-off Adress\".  That is potentially misleading.\r\nThe RFC should use the proper term from Mobile IP, \"Care-of Adress\".\r\n\r\n\r\n(2)  Section 4.1\r\n\r\n(2a)  underspecification; needs clarification\r\n\r\nIn the 3rd paragraph on page 5, Section 4.1 says (on mid-page 5):\r\n\r\n                                                [...].  So for instance,\r\n   the Sec value 000 would mean that the hash function used is SHA-1 and\r\n|  the 0 bits of hash2 (as defined in RFC 3972) must be 0.  Sec value of\r\n|  001 could be that the hash function used is SHA-1 and the 16 bits of\r\n   hash2 (as defined in RFC 3972) must be zero.  [...]\r\n\r\nIt should perhaps better say, to avoid possible misinterpretation:\r\n\r\n                                                [...].  So for instance,\r\n   the Sec value 000 would mean that the hash function used is SHA-1 and\r\n|  the 0 bits of hash2 (as defined in RFC 3972) must be 0.  The Sec value\r\n|  001 could indicate that the hash function used is SHA-1 and the 16\r\n|  leftmost bits of hash2 (as defined in RFC 3972) must be zero.  [...]\r\n\r\nNote: \"leftmost\" is the essential clarification; the other changes\r\n      attempt further subordinate improvements of the language.\r\n\r\n(2b)  wording/clarification\r\n\r\nIn the middle of the last paragraph on page 5, Section 4.1 talks\r\nabout                     \"a last resource option\" .\r\nShouldn't that have been  \"a last resort option\"   ?",
     "correct_text": "",
     "notes": "",
     "submit_date": "2007-08-20",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
