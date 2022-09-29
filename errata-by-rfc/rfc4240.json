@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 154,
+    "errata_id": "154",
     "doc-id": "RFC4240",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.3,
+    "section": "3.3",
     "orig_text": "   A number of MIME registrations, which could be used here, have\r\n   parameters, for instance, video/DV.  To accommodate this, and retain\r\n   compatibility with the SIP URI structure, the MIME-type parameter\r\n   separator (semicolon, %3b) and value separator (equal, %d3) MUST be\r\n   escaped.  For example:                                 ^^^\r\n\r\n   sip:annc@ms.example.net; \\\r\n       play=file://fs.example.net//clips/my-intro.dvi; \\\r\n       content-type=video/mpeg%3bencode%d3314M-25/625-50",
     "correct_text": "   A number of MIME registrations, which could be used here, have\r\n   parameters, for instance, video/DV.  To accommodate this, and retain\r\n   compatibility with the SIP URI structure, the MIME-type parameter\r\n   separator (semicolon, %3b) and value separator (equal, %3d) MUST be\r\n   escaped.  For example:\r\n\r\n   sip:annc@ms.example.net; \\\r\n       play=file://fs.example.net//clips/my-intro.dvi; \\\r\n       content-type=video/mpeg%3bencode%3d314M-25/625-50\r\n",
     "notes": "",
     "submit_date": "2006-01-23",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 839,
+    "errata_id": "839",
     "doc-id": "RFC4240",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "(2)  [ minor textual improvement ]\r\n\r\nIn the final paragraph of section 3.3, on mid-page 11, perhaps\r\nthe words \"most anything\" should be replaced by \"almost anything\".\r\n\r\n\r\n(3)  [ textual improvement ]\r\n\r\nThe last paragraph on page 12 (within Section 4.1.) apparently\r\ncontains a plural/singular inconsistency.\r\nThe text says:\r\n                                         vvv                      vvv\r\n   The media server presents the parameters as environment variables in\r\n   the connection object.  Specifically, the parameter appears in the\r\n   connection.sip tree.                             ^^^     ^^^\r\n\r\nIt should better say:\r\n\r\n   The media server presents the parameters as environment variables in\r\n|  the connection object.  Specifically, the parameters appear in the\r\n   connection.sip tree.\r\n\r\n\r\n(4)  [ inconsistent terminology ]\r\n\r\nI suspect that section 5 contains an unintentional inconsistency\r\nin the terminology used:\r\nThe syntax element represented by the 'uniqueIdentifier' part\r\nof the example in the 9th line of Section 5 apparently is\r\nreferred to as the \"conf-id value\" in various places (once\r\non page 13, 11th text line from the bottom of the page, and\r\n4 occurrences on page 14 (text lines 3, 9, 12, and 13).\r\nBut in the 'Formal Syntax' Section 5.2., this syntactic\r\nelement is named \"instance-id\" (see bottom of page 16).\r\nIt certainly would be preferrable to always use the same\r\nterminology; you should decide which term should be used.\r\n\r\n\r\n(5)  [ editorial artifact ]\r\n\r\nThe call flow diagram on page 15 unnecessarily 'overflows'\r\nto page 16.  The two first text lines on page 16,\r\n\r\n     |       |        |                  |                   |\r\n     |       |        |                  |                   |\r\n\r\ndo not carry any useful information and might better have been\r\nsuppressed.\r\n\r\n\r\n(6)  [ mismatch between diagram and explanation ]\r\n\r\nSubsequently, near the top of page 16, the explanation of the\r\ncall flow diagram on page 15 says:\r\n\r\n   Note that the above call flow does not show any 100 TRYING messages\r\n   that would typically flow from the Application Server to the UACs;\r\n   nor does it show the ACKs from the UACs to the Application Server or\r\n   from the Application Server to the Media Server.\r\n\r\nThe latter is not true; the diagram in fact DOES show these ACKs !\r\nTherefore, this paragraph should be shortened to just say:\r\n\r\n   Note that the above call flow does not show any 100 TRYING messages\r\n   that would typically flow from the Application Server to the UACs.\r\n\r\n\r\n(7)  [ confusion between concrete and abstract parameter names ]\r\n\r\nIn the 'IANA Considerations' Section 6., on page 17, the\r\nregistered lines mix concrete (real) parameter names (like\r\n'play') with the meta-parameter name 'extension' in a way\r\nthat might mislead the reader to taking 'extension' as a\r\nconcrete parameter name as well.\r\n>From Section 3.3., it can clearly be seen that this is merely\r\na placeholder for any additional parameter that might be\r\nstandardized in the future.\r\nI'm seriously in doubt whether it is a good idea to register\r\nthis meta-parameter.  Rather, future standards defining\r\nconcrete instances for the 'extension-param' should register\r\nthose concrete parameter names.\r\n\r\nI therefore propose to delete the final line from the list,\r\n\r\n   Parameter Name    Predefined Values    Reference\r\n   --------------    -----------------    ---------\r\n      .                      .               .\r\n      .                      .               .\r\n      .                      .               .\r\n|  extension                 no           RFC 4240\r\n\r\nand from the actual IANA registration performed.\r\n\r\n\r\n(8)  [ legacy left in text? ]\r\n\r\nThe 3rd paragraph of Section 7, on page 17, says:\r\n\r\n   This document explicitly addresses this issue.  The user names\r\n   described in the text (namely annc, ivr, dialog, and conf) are\r\n   available for whatever local use a given SIP user agent or proxy\r\n   wishes for them.  [ ... ]\r\n\r\nThe user name, 'ivr', does not appear in the remainder of the text.\r\nAdmittedly omitting any detailed research, I suspect its occurrence\r\nto be an improper left-over from earlier drafts.\r\nThus, this text should say:\r\n\r\n   This document explicitly addresses this issue.  The user names\r\n|  described in the text (namely annc, dialog, and conf) are\r\n   available for whatever local use a given SIP user agent or proxy\r\n   wishes for them.  [ ... ]\r\n",
     "correct_text": "[see above]  \r\n",
     "notes": "from pending",
     "submit_date": "2006-01-23",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
