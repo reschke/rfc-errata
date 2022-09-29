@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3293,
+    "errata_id": "3293",
     "doc-id": "RFC5725",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "   o  thinning (T): 4 bits\r\n      The amount of thinning performed on the sequence-number space.\r\n      Only those packets with sequence numbers 0 mod 2^T are reported by\r\n      this block.  A value of 0 indicates that there is no thinning and\r\n      all packets are reported.  The maximum thinning is one packet in\r\n      every 32,768 (amounting to two packets within each 16-bit sequence\r\n      space).",
     "correct_text": "   o  thinning (T): 4 bits\r\n      The amount of thinning performed on the sequence-number space.\r\n      Only those packets with sequence numbers s satisfying the relation \r\n      s mod 2^T = 0 are reported by this block.  A value of 0 indicates \r\n      that there is no thinning and all packets are reported.  The maximum\r\n      thinning is one packet in every 32,768 (amounting to two packets \r\n      within each 16-bit sequence space).",
     "notes": "The original is cryptic at best.",
     "submit_date": "2012-07-25",
     "submitter_name": "Glen Zorn",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
