@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3184,
+    "errata_id": "3184",
     "doc-id": "RFC6257",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "   \"Commensurate strength\" cryptography is generally held to be a good\r\n   idea.  A combination of RSA with SHA-256 is reckoned to require a\r\n   3076-bit RSA key according to this logic.",
     "correct_text": "   \"Commensurate strength\" cryptography is generally held to be a good\r\n   idea.  A combination of RSA with SHA-256 is reckoned to require a\r\n   3072-bit RSA key according to this logic.",
     "notes": "After consulting the authors, it appears that 3076 is a typo and should be 3072.",
     "submit_date": "2012-04-10",
     "submitter_name": "Jim Wright",
-    "verifier_id": 5,
+    "verifier_id": "5",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   }
