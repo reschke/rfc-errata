@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 331,
+    "errata_id": "331",
     "doc-id": "RFC3119",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 8,
+    "section": "8",
     "orig_text": "   the encoding name SHALL be \"mp3\" (the same as the MIME subtype).",
     "correct_text": "   the encoding name SHALL be \"mpa-robust\" (the same as the MIME\n   subtype). ",
     "notes": "Appendix A:\n    \"backpointer\": the size (in bytes) of the backpointer for this\n   frame \nShould be:\n    \"backpointer\": the value (expressed in bytes) of the backpointer for\n   this frame\nAppendix A2:\n    In the function \"insertDummyADUsIfNecessary()\":\n   curADU\nShould be:\n    prevADU\nAppendix B2:\n    The two occurrences of \"32\" should be \"256\"\n\n",
     "submit_date": "2001-11-03",
     "submitter_name": "Ross Finlayson",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
