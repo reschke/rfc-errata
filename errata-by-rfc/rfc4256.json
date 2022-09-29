@@ -1,36 +1,21 @@
 [
   {
-    "errata_id": 758,
-    "doc-id": "RFC4256",
-    "errata_status_code": "Rejected",
-    "errata_type_code": "Technical",
-    "section": 3.2,
-    "orig_text": "\"Information Requests\", on page 5, RFC 4256 says:\r\n\r\n   The language tag is deprecated and SHOULD be the empty string.  It\r\n   may be removed in a future revision of this specification.  Instead,\r\n   the server SHOULD select the language used based on the tags\r\n   communicated during key exchange [SSH-TRANS].\r\n\r\n   If the language tag is not the empty string, the server SHOULD use\r\n   the specified language for any messages sent to the client as part of\r\n   this protocol.  The language tag SHOULD NOT be used for language\r\n   selection for messages outside of this protocol.  If the server does\r\n   not support the requested language, the language to be used is\r\n   implementation-dependent.",
-    "correct_text": "[see Notes]",
-    "notes": "[Replace by errata ID 1678]\r\n\r\n(These two paragraphs apparently have been copied from Section 3.1\r\nwithout change.)\r\n\r\nThis specification makes no sense here:\r\n\r\nThe Information Request is sent from the *server* to the client,\r\nand it already contains strings that *do* make use of a particular\r\nlanguage/locale.\r\n\r\nThe one and only useful interpretation of the 'language tag'\r\nin the Information Request message is that it specifies the\r\nlanguage/locale used for building the 'instruction' and 'prompt'\r\nstrings in the request.\r\nThis parallels the use of the language tag, e.g., in the\r\nDisconnection Message of the SSH Transport Layer Protocol\r\n(cf. RFC 4253, Sect. 11.1).\r\n\r\nNOTE:  The client might have announced a locale *list* in the\r\ninitial exchange, and the server should choose from that list;\r\nthe actual choice [for a particular message with text strings]\r\nneeds to be communicated to the client.\r\n\r\nNOTE:  In multi-stage authentication, the backend authentication\r\nmechanisms will be the source of all these strings, and the SSH\r\nserver might have no choice than to just report the locale used\r\nby each backend mechanism to the client; such mechanisms easily\r\ncould make use of different locales - hence the locale needs to\r\nbe announced per message from the server in this context!\r\n\r\nNOTE:  RFC 4253 recommends to send empty language tags fields in\r\nthe initial exchange; this makes the 'language tag' field in all\r\nSSH protocol messages containing text to be presented to the user\r\n*very* desirable !\r\n\r\nTherefore, the 'language tag' should also better *not* be deprecated\r\nin the SSH_MSG_USERAUTH_INFO_REQUEST message!\r\n\r\nfrom pending\n --VERIFIER NOTES-- \n   [Replaced by errata ID 1678]",
-    "submit_date": "2006-03-18",
-    "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
-    "verifier_name": "Pasi Eronen",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1678,
+    "errata_id": "1678",
     "doc-id": "RFC4256",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "   The language tag is deprecated and SHOULD be the empty string.  It\r\n   may be removed in a future revision of this specification.  Instead,\r\n   the server SHOULD select the language used based on the tags\r\n   communicated during key exchange [SSH-TRANS].\r\n\r\n   If the language tag is not the empty string, the server SHOULD use\r\n   the specified language for any messages sent to the client as part of\r\n   this protocol.  The language tag SHOULD NOT be used for language\r\n   selection for messages outside of this protocol.  If the server does\r\n   not support the requested language, the language to be used is\r\n   implementation-dependent.",
     "correct_text": "   The language tag MAY be the empty string.  If acceptable/preferable\r\n   languages were communicated during key exchange [SSH-TRANS], or in\r\n   the SSH_MSG_USERAUTH_REQUEST message, the language tag SHOULD be the\r\n   language selected by the server for the SSH_MSG_USERAUTH_INFO_REQUEST\r\n   message.",
     "notes": "As originally pointed out by Alfred Hoenes (errata ID 758), this text\r\nwas incorrectly copy-pasted from Section 3.1.\r\n\r\nThe Information Request is sent from the server to the client, and it\r\nalready contains strings that make use of the particular\r\nlanguage/locale. The language tag in this message specifies the\r\nlanguage/locale used for building the 'instruction' and 'prompt'\r\nstrings in the request. This parallels the use of the language tag\r\nin, e.g., the Disconnection Message of the SSH Transport Layer\r\nProtocol.\r\n",
     "submit_date": "2009-02-03",
     "submitter_name": "Frank Cusack",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4746,
+    "errata_id": "4746",
     "doc-id": "RFC4256",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -40,8 +25,23 @@
     "notes": "The type \"int\" is not present between the list of types present in the RFC 4251, section 5 ( \"Data Type Representations Used in the SSH Protocols\" ) . Alone it's confusing and meaningless.",
     "submit_date": "2016-07-25",
     "submitter_name": "Gabriele Bonacini",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "758",
+    "doc-id": "RFC4256",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.2",
+    "orig_text": "\"Information Requests\", on page 5, RFC 4256 says:\r\n\r\n   The language tag is deprecated and SHOULD be the empty string.  It\r\n   may be removed in a future revision of this specification.  Instead,\r\n   the server SHOULD select the language used based on the tags\r\n   communicated during key exchange [SSH-TRANS].\r\n\r\n   If the language tag is not the empty string, the server SHOULD use\r\n   the specified language for any messages sent to the client as part of\r\n   this protocol.  The language tag SHOULD NOT be used for language\r\n   selection for messages outside of this protocol.  If the server does\r\n   not support the requested language, the language to be used is\r\n   implementation-dependent.",
+    "correct_text": "[see Notes]",
+    "notes": "[Replace by errata ID 1678]\r\n\r\n(These two paragraphs apparently have been copied from Section 3.1\r\nwithout change.)\r\n\r\nThis specification makes no sense here:\r\n\r\nThe Information Request is sent from the *server* to the client,\r\nand it already contains strings that *do* make use of a particular\r\nlanguage/locale.\r\n\r\nThe one and only useful interpretation of the 'language tag'\r\nin the Information Request message is that it specifies the\r\nlanguage/locale used for building the 'instruction' and 'prompt'\r\nstrings in the request.\r\nThis parallels the use of the language tag, e.g., in the\r\nDisconnection Message of the SSH Transport Layer Protocol\r\n(cf. RFC 4253, Sect. 11.1).\r\n\r\nNOTE:  The client might have announced a locale *list* in the\r\ninitial exchange, and the server should choose from that list;\r\nthe actual choice [for a particular message with text strings]\r\nneeds to be communicated to the client.\r\n\r\nNOTE:  In multi-stage authentication, the backend authentication\r\nmechanisms will be the source of all these strings, and the SSH\r\nserver might have no choice than to just report the locale used\r\nby each backend mechanism to the client; such mechanisms easily\r\ncould make use of different locales - hence the locale needs to\r\nbe announced per message from the server in this context!\r\n\r\nNOTE:  RFC 4253 recommends to send empty language tags fields in\r\nthe initial exchange; this makes the 'language tag' field in all\r\nSSH protocol messages containing text to be presented to the user\r\n*very* desirable !\r\n\r\nTherefore, the 'language tag' should also better *not* be deprecated\r\nin the SSH_MSG_USERAUTH_INFO_REQUEST message!\r\n\r\nfrom pending\n --VERIFIER NOTES-- \n   [Replaced by errata ID 1678]",
+    "submit_date": "2006-03-18",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": "111",
+    "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   }
 ]
