@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2988,
+    "errata_id": "2988",
     "doc-id": "RFC6072",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 8,
+    "section": "8",
     "orig_text": "   The [RFC4474] authentication service defined a signature algorithm\r\n   based on SHA-1 called rsa-sha1.  This specification adds a signature\r\n   algorithm that is roughly the same but based on SHA-256 and called\r\n   rsa-sha256.",
     "correct_text": "   The [RFC4474] authentication service defined a signature algorithm\r\n   based on SHA-1 called rsa-sha1.  This specification adds a signature\r\n   algorithm that is roughly the same but based on SHA-256 and called\r\n   rsa-sha256. This is an update of RFC 4474.",
     "notes": "The Masthead doesn't indicate clearly that this RFC updates 4474 and thus the IETF tools web site doesn't indicate that 4474 is updated.\n --VERIFIER NOTES-- \nErrata should not be used for changing draft metadata (it would not change the links you are looking at on the IETF tools website for example).",
     "submit_date": "2011-10-10",
     "submitter_name": "Olle E. Johansson",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
