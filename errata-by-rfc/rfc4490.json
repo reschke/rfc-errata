@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1463,
+    "errata_id": "1463",
     "doc-id": "RFC4490",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Russian-English terminology translation bug",
     "submit_date": "2008-07-09",
     "submitter_name": "Serguei Leontiev",
-    "verifier_id": 100,
+    "verifier_id": "100",
     "verifier_name": "Russ Housley",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1464,
+    "errata_id": "1464",
     "doc-id": "RFC4490",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Russian-English terminology translation bug",
     "submit_date": "2008-07-09",
     "submitter_name": "Serguei Leontiev",
-    "verifier_id": 100,
+    "verifier_id": "100",
     "verifier_name": "Russ Housley",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1465,
+    "errata_id": "1465",
     "doc-id": "RFC4490",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Russian-English terminology translation bug",
     "submit_date": "2008-07-09",
     "submitter_name": "Serguei Leontiev",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1466,
+    "errata_id": "1466",
     "doc-id": "RFC4490",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Russian-English terminology translation bug",
     "submit_date": "2008-07-09",
     "submitter_name": "Serguei Leontiev",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1884,
+    "errata_id": "1884",
     "doc-id": "RFC4490",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -70,37 +70,37 @@
     "notes": "Rationale:\r\n- Contradiction to other parts of the document,\r\n  which use \"big-endian\" == 'network byte order'\r\n  as established in the Internet architecture.\r\n- Please also note that the ASN.1 BER/DER encoding is\r\n  based on the 'natural' byte order for left-to-right\r\n  scripts -- otherwise the intrinsically variable-length\r\n  representation used would be very complicated to deal\r\n  with in processing.\r\n- Intrduction of varying endian-ness is a likely source\r\n  of implementation issues and, consequentially,\r\n  interoperability problems.\n --VERIFIER NOTES-- \nauthors confirmed that the DigestedData digest is encoded in little-endian representation in all\r\nknown implementations.",
     "submit_date": "2009-09-17",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5089,
+    "errata_id": "5089",
     "doc-id": "RFC4490",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 12.1,
+    "section": "12.1",
     "orig_text": "   [GOSTR341194] \"Information technology. Cryptographic Data Security.\r\n                 Hashing function.\", GOST R 34.10-94, Gosudarstvennyi\r\n                 Standard of Russian Federation, Government Committee of\r\n                 the Russia for Standards, 1994. (In Russian)\r\n\r\n",
     "correct_text": "   [GOSTR341194] \"Information technology. Cryptographic Data Security.\r\n                 Hashing function.\", GOST R 34.11-94, Gosudarstvennyi\r\n                 Standard of Russian Federation, Government Committee of\r\n                 the Russia for Standards, 1994. (In Russian)\r\n\r\n",
     "notes": "Incorrect standard number.",
     "submit_date": "2017-08-18",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5099,
+    "errata_id": "5099",
     "doc-id": "RFC4490",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 12.1,
+    "section": "12.1",
     "orig_text": "   [GOST3431004] \"Information technology. Cryptographic Data Security.\r\n                 Formation and verification processes of (electronic)\r\n                 digital signature based on Asymmetric Cryptographic\r\n                 Algorithm.\", GOST 34.310-2004, Council for\r\n                 Standardization, Metrology and Certification of the\r\n                 Commonwealth of Independence States (EASC), Minsk,\r\n                 2004. (In Russian)\r\n",
     "correct_text": "   [GOST3431004] \"Information technology. Cryptographic Data Security.\r\n                 Formation and verification processes of [electronic]\r\n                 digital signature.\", GOST 34.310-2004, Council for\r\n                 Standardization, Metrology and Certification of the\r\n                 Commonwealth of Independence States (EASC), Minsk,\r\n                 2004. (In Russian)\r\n",
     "notes": "Incorrect standard name.",
     "submit_date": "2017-08-28",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   }
