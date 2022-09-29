@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 3448,
+    "errata_id": "3448",
     "doc-id": "RFC6290",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.3,
+    "section": "4.3",
     "orig_text": "   For session resumption, as specified in [RFC5723], the situation is\r\n   similar.  The responder, which is necessarily the peer that has\r\n   crashed, SHOULD send a new ticket within the protected payload of the\r\n   IKE_SESSION_RESUME exchange.  If the Initiator is also a token maker,\r\n   it needs to send a QCD_TOKEN in a separate INFORMATIONAL exchange.",
     "correct_text": "   For session resumption, as specified in [RFC5723], the situation is\r\n   similar.  The responder, which is necessarily the peer that has\r\n   crashed, SHOULD send a new QCD_TOKEN in the IKE_AUTH exchange\r\n   that immediately followes the IKE_SESSION_RESUME exchange.\r\n   If the Initiator is also a token maker, it needs to send a QCD_TOKEN in\r\n   the same IKE_AUTH exchange.\r\n",
     "notes": "Original text mixes up terms \"ticket\" (as Session Resumption ticket from RFC5723) and \"token\" (as QCD token from this RFC). As QCD token must never be sent in an unprotected message (see section 9.2 from this RFC) it cannot be sent in the IKE_SESSION_RESUME exchange because this exchange is done in clear. So, QCD token must be sent in the IKE_AUTH exchange that immediately followes the IKE_SESSION_RESUME exchange. In this case there is no need for the separate INFORMATIONAL exchange the Initiator's QCD token (if any) to be sent in, because it could be sent in the same IKE_AUTH exchange.",
     "submit_date": "2013-01-09",
     "submitter_name": "Valery Smyslov",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3449,
+    "errata_id": "3449",
     "doc-id": "RFC6290",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.1,
+    "section": "4.1",
     "orig_text": "   o  Protocol ID (1 octet) MUST be 1, as this message is related to an\r\n      IKE SA.\r\n",
     "correct_text": "   o  Protocol ID (1 octet) MUST be 0.\r\n",
     "notes": "RFC5996 (IKEv2) in section 3.10 while describing Protocol ID field in Notify Payload specifies that \"If the SPI field is empty, this field MUST be sent as zero and MUST be ignored on receipt\". As this RFC requires SPI field to be empty (later in section 4.1), Protocol ID should be zero to be consistent with RFC5996.",
     "submit_date": "2013-01-09",
     "submitter_name": "Valery Smyslov",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }
