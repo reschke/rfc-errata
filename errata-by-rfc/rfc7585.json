@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4991,
+    "errata_id": "4991",
     "doc-id": "RFC7585",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The document describes how to look up realms, but doesn't describe what to do after that.  i.e. are the lookups cached? Are the lookups done for every request that comes in?\r\n\r\nThis gives little guidance for an implementor.\r\n\r\nI suggest leveraging the \"logical AAA routing table\" described in RFC 7542 Section 3.  In short form:\r\n\r\n* a client MUST maintain a table of known dynamic realms.\r\n\r\n* the table MUST be keyed by the realm name, and the contents MUST be server-specific information as described in RFC 7542 Section 3\r\n\r\n* when a realm is being looked up, the realm SHOULD be inserted into the table with a \"pending\" flag, so subsequent requests during the lookup process do not cause additional lookups to be made\r\n\r\n* if server validation fails, the realm SHOULD be updated with a \"failed\" state and a TTL, so that subsequent requests do not cause additional lookups for a period of time.  No server information should be stored for this entry. i.e. the realm is marked as \"failed\", the corresponding server MUST NOT be marked as \"failed\".  This prevents attacks where a malicious actor could point their realm to an unknowing third-party server, and cause poorly implemented proxies to mark it \"failed\".\r\n\r\n* if server validation succeeds, the realm MUST be updated with a \"live\" state (and a TTL), so that subsequent requests go to the same server without additional lookups\r\n\r\n*  if server validation succeeds, all realms in the TLS \"subject alternative names\" presented by the server SHOULD be inserted into the realm table, all pointing to the same server definition, so that subsequent requests for those other realms do not cause additional lookups to be made.\r\n\r\n* servers which have been dynamically looked up MUST NOT be added to any global pool of servers.  i.e. the lookup is always \"realm -> server\", and not \"There's a known server at this IP address\"\r\n\r\nI thought we had a short discussion of some of these topics on RADEXT, but I can't find it in the archives.\r\n\r\nI think these comments are substantial enough to warrant \"wait for document update\".  I just wanted to ensure they weren't lost.",
     "submit_date": "2017-04-07",
     "submitter_name": "Alan DeKok",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }
