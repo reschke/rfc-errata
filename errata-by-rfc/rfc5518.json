@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2583,
+    "errata_id": "2583",
     "doc-id": "RFC5518",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7.1,
+    "section": "7.1",
     "orig_text": "If the DKIM signature contains an i= field, the domain name from\r\nthat field is used; otherwise, the domain name from the DKIM\r\nsignature d= field is used.",
     "correct_text": "The domain name from the DKIM signature d= field is used.",
     "notes": "RFC 5672 clarifies that the d= domain is the primary identity in a DKIM signature.",
     "submit_date": "2010-10-26",
     "submitter_name": "John Levine",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }
