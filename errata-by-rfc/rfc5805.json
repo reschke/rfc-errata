@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 5245,
+    "errata_id": "5245",
     "doc-id": "RFC5805",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 3.4,
+    "section": "3.4",
     "orig_text": "\r\n\"The server returns an End Transaction Response with a resultCode of\r\n   success (0) and no responseValue to indicate all the requested\r\n   updates were applied.\"",
     "correct_text": "The server returns an End Transaction Response with a resultCode of\r\n   success (0) and optionally a responseValue with updateControls, \r\nif any to indicate all the requested updates were applied.",
     "notes": "The original text mention that the responseValue should not be sent back when the commit was successful, which would makes the updateControls useless. As the caller would need to get back the controls result for each operation having a control, we need to send them back when the transaction is successful.",
     "submit_date": "2018-01-28",
     "submitter_name": "Emmanuel Lecharny",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5246,
+    "errata_id": "5246",
     "doc-id": "RFC5805",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "      txnEndRes ::= SEQUENCE {\r\n           messageID MessageID OPTIONAL,\r\n                -- msgid associated with non-success resultCode\r\n           updatesControls SEQUENCE OF updateControls SEQUENCE {\r\n                messageID MessageID,\r\n                     -- msgid associated with controls\r\n                controls  Controls\r\n           } OPTIONAL\r\n      }\r\n",
     "correct_text": "      TxnEndRes ::= SEQUENCE {\r\n           messageID MessageID OPTIONAL,\r\n                -- msgid associated with non-success resultCode\r\n           updatesControls SEQUENCE OF updateControl SEQUENCE {\r\n                messageID MessageID,\r\n                     -- msgid associated with controls\r\n                controls  Controls\r\n           } OPTIONAL\r\n      }\r\n\r\n      UpdateControl SEQUENCE {\r\n                messageID MessageID,\r\n                     -- msgid associated with controls\r\n                controls  Controls\r\n      }",
     "notes": "The type after SEQUENCE OF should be different than the name used before SEQUENCE OF, to avoid confusion. \r\n'txnEndRes' should also be 'TxnEndRes' as it's a typeReference, so it should start with a upper case, accordingly to the ASN.1 grammar specification",
     "submit_date": "2018-01-28",
     "submitter_name": "Emmanuel Lecharny",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
