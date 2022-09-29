@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4786,
+    "errata_id": "4786",
     "doc-id": "RFC6643",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 9.1,
+    "section": "9.1",
     "orig_text": "      If the current object belongs to a conceptual table,\r\n      then a sequence of leaf statements is generated for each INDEX\r\n      object of the conceptual table.  These leafs are named after the\r\n      INDEX objects and of type leafref.\r\n",
     "correct_text": "      If the current object belongs to a conceptual table,\r\n      then a sequence of leaf statements is generated for each INDEX\r\n      object of the conceptual table, except that a leaf statement is\r\n      not generated for the current object if it is also an INDEX\r\n      object. These leafs are named after the INDEX objects and of type\r\n      leafref.\r\n",
     "notes": "The original text would lead to duplicate leaf nodes if the current object is also part of the INDEX.  Section 9.2 contains an example which shows such a situation, without any duplicates.",
     "submit_date": "2016-08-24",
     "submitter_name": "Martin Björklund",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }
