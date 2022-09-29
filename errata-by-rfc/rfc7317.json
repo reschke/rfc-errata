@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4795,
+    "errata_id": "4795",
     "doc-id": "RFC7317",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 5,
+    "section": "5",
     "orig_text": "typedef crypt-hash {\r\n       type string {\r\n         pattern\r\n           '$0$.*'\r\n         + '|$1$[a-zA-Z0-9./]{1,8}$[a-zA-Z0-9./]{22}'\r\n         + '|$5$(rounds=\\d+$)?[a-zA-Z0-9./]{1,16}$[a-zA-Z0-9./]{43}'\r\n         + '|$6$(rounds=\\d+$)?[a-zA-Z0-9./]{1,16}$[a-zA-Z0-9./]{86}';\r\n       }",
     "correct_text": "typedef crypt-hash {\r\n  type string {\r\n    pattern\r\n        '\\$0\\$.*'\r\n      + '|\\$1\\$[a-zA-Z0-9./]{1,8}\\$[a-zA-Z0-9./]{22}'\r\n      + '|\\$5\\$(rounds=\\d+\\$)?[a-zA-Z0-9./]{1,16}\\$[a-zA-Z0-9./]{43}'\r\n      + '|\\$6\\$(rounds=\\d+\\$)?[a-zA-Z0-9./]{1,16}\\$[a-zA-Z0-9./]{86}';\r\n  }\r\n  ",
     "notes": "Character $ has special meaning in regular expression.\n --VERIFIER NOTES-- \nNo, \"$\" is not special in the regular expression dialect used in YANG\r\n(XML Schema).",
     "submit_date": "2016-09-05",
     "submitter_name": "Kaja Mohideen",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6245,
+    "errata_id": "6245",
     "doc-id": "RFC7317",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "\r\n         leaf-list user-authentication-order {\r\n           type identityref {\r\n             base authentication-method;\r\n           }\r\n           must '(. != \"sys:radius\" or ../../radius/server)' \r\n\r\n",
     "correct_text": "\r\n         leaf-list user-authentication-order {\r\n           type identityref {\r\n             base authentication-method;\r\n           }\r\n           must '(not(. = \"sys:radius\") or ../../radius/server)'\r\n ",
     "notes": "As indicated in https://www.w3.org/TR/1999/REC-xpath-19991116/#booleans\r\n\r\nthe following expression comparing a node-set with a string\r\n\r\n       . != \"sys:radius\"\r\n\r\nis true if at least one node in the node-set satisfies the boolean expression.\r\n\r\nThis is not the intention of the \"must\" condition.\r\n\r\nIt is necessary to use not(. = \"sys:radius\") to achieve the right intention of the check.",
     "submit_date": "2020-07-29",
     "submitter_name": "Maurizio Brigandi'",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
