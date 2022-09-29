@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 3054,
+    "errata_id": "3054",
     "doc-id": "RFC6204",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.3,
+    "section": "4.3",
     "orig_text": "   L-13:  If the delegated prefix changes, i.e., the current prefix is\r\n          replaced with a new prefix without any overlapping time\r\n          period, then the IPv6 CE router MUST immediately advertise the\r\n          old prefix with a Preferred Lifetime of zero and a Valid\r\n          Lifetime of the lower of the current Valid Lifetime and 2\r\n          hours (which must be decremented in real time) in a Router\r\n          Advertisement message as described in Section 5.5.3, (e) of\r\n          [RFC4862].",
     "correct_text": "   L-13:  If the delegated prefix changes, i.e., the current prefix is\r\n          replaced with a new prefix without any overlapping time\r\n          period, then the IPv6 CE router MUST immediately advertise the\r\n          old prefix with a Preferred Lifetime of zero and a Valid\r\n          Lifetime of either a) zero, or b) the lower of the current\r\n          Valid Lifetime and 2 hours (which must be decremented in real\r\n          time), in a Router Advertisement message as described in\r\n          Section 5.5.3, (e) of [RFC4862].",
     "notes": "The original text in L-13 prohibits implementers from transmitting Valid Lifetime = 0 whenever a prefix needs to be invalidated. It should not, because transmitting VL=0 is easier to implement than sending \"the lower of the current Valid Lifetime and 2 hours (which must be decremented in real time)\".\r\n\r\nTransmitting Valid Lifetime = 0 has the exact same effect on a host as the procedure described in the original text, i.e., it will the host to lower (but never raise) the remaining valid lifetime to 7200 seconds.",
     "submit_date": "2011-12-16",
     "submitter_name": "Tore Anderson",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "ron bonica",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3175,
+    "errata_id": "3175",
     "doc-id": "RFC6204",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "WPD-3:  The IPv6 CE router MUST be prepared to accept a delegated\r\n           prefix size different from what is given in the hint.  If the\r\n           delegated prefix is too small to address all of its\r\n           interfaces, the IPv6 CE router SHOULD log a system management\r\n           error.\r\n\r\n",
     "correct_text": "WPD-3:  The IPv6 CE router MUST be prepared to accept a delegated\r\n           prefix size different from what is given in the hint.  If the\r\n           delegated prefix is too small to address all of its\r\n           interfaces or delegated prefix size is greater than /64, the \r\n           IPv6 CE router SHOULD log a system management\r\n           error.\r\n\r\n\r\n",
     "notes": "Stateless Address Auto configuration uses 64 bit long EUI-64. If Delegated prefix size obtained on the wan side is greater than /64. This Prefix cannot be used on Lan side nodes to create SLAAC address using EUI-64\n --VERIFIER NOTES-- \n RFC 6204 is about to be obsoleted by draft-ietf-v6ops-6204bis, which entered WG last call this weekend. So, fixing 6204 won't help much.\r\n\r\nPlease post a message to the V6OPS mailing list making the point that you make in the errata. If the WG agrees, the change will be made in the bis document.  ",
     "submit_date": "2012-04-04",
     "submitter_name": "Sathyanarayana Venkataramanappa",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "RonBonica",
     "update_date": "2019-09-10 09:09:03"
   }
