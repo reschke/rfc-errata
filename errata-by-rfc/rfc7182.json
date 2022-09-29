@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5346,
+    "errata_id": "5346",
     "doc-id": "RFC7182",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 12.1,
+    "section": "12.1",
     "orig_text": "      then L > log2(NRT/P).  For example, if N is 32, R is 1000, T is\r\n      86400 (I day) and P is 10^-6, then L must be at least 52 bits.\r\n",
     "correct_text": "      then L > log2(NRT/P).  For example, if N is 32, R is 1000, T is\r\n      86400 (1 day) and P is 10^-6, then L must be at least 52 bits.\r\n",
     "notes": "A Roman numeral in this context makes it more difficult to follow.",
     "submit_date": "2018-05-03",
     "submitter_name": "Denis Ovsienko",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }
