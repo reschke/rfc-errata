@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4864,
+    "errata_id": "4864",
     "doc-id": "RFC6106",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "While the submitter's point is valid, there is not much that can be done on a per-option basis. Even if this option is sized so that it does not result in the fragmentation of the RA message, there might be other options that do. That is why the restriction for non-fragmentation is specified in a separate document and not in each document that defines an ND option.\n --VERIFIER NOTES-- \nWhile the submitter's point is valid, there is not much that can be done on a per-option basis. Even if this option is sized so that it does not result in the fragmentation of the RA message, there might be other options that do. That is why the restriction for non-fragmentation is specified in a separate document and not in each document that defines an ND option.\r\n",
     "submit_date": "2016-11-14",
     "submitter_name": "Robin Johnson",
-    "verifier_id": 152,
+    "verifier_id": "152",
     "verifier_name": "Suresh Krishnan",
     "update_date": "2019-09-10 09:09:03"
   }
