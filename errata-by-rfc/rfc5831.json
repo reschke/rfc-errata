@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 2303,
+    "errata_id": "2303",
     "doc-id": "RFC5831",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 9,
+    "section": "9",
     "orig_text": "[GOST3411]  \"Information technology.  Cryptographic Data Security.\r\n               Hashing function.\", GOST R 34.10-94, Gosudarstvennyi\r\n               Standard of Russian Federation, Government Committee of\r\n               the Russia for Standards, 1994. (In Russian)\r\n",
     "correct_text": "[GOST3411]  \"Information technology.  Cryptographic Data Security.\r\n               Hashing function.\", GOST R 34.11-94, Gosudarstvennyi\r\n               Standard of Russian Federation, Government Committee of\r\n               the Russia for Standards, 1994. (In Russian)\r\n",
     "notes": null,
     "submit_date": "2010-06-17",
     "submitter_name": "Vasily Dolmatov",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2863,
+    "errata_id": "2863",
     "doc-id": "RFC5831",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "The entries 326c6568 and 79676120 have to been swapped",
     "submit_date": "2011-07-15",
     "submitter_name": "Tino Kaufmann",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4262,
+    "errata_id": "4262",
     "doc-id": "RFC5831",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,22 +40,22 @@
     "notes": "You need to remove the double K[2]",
     "submit_date": "2015-02-05",
     "submitter_name": "Andrey Pilsky",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5739,
+    "errata_id": "5739",
     "doc-id": "RFC5831",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "      3.4 SIGMA := SIGMA (+)' M[s]",
     "correct_text": "      3.4 SIGMA := SIGMA (+)' M_s",
     "notes": "M[s] is not defined, and GOST R 34.11-94 also says M_s.",
     "submit_date": "2019-05-25",
     "submitter_name": "Vitaly Chikunov",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
