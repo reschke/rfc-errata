@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 2461,
+    "errata_id": "2461",
     "doc-id": "RFC5310",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 3.4,
+    "section": "3.4",
     "orig_text": "The authentication data for the IS-IS IIH PDUs MUST be computed after\r\nthe IS-IS Hello (IIH) has been padded to the MTU size, if padding is \r\nnot explicitly disabled.",
     "correct_text": "The authentication data for the IS-IS IIH PDUs MUST be computed after\r\nthe IS-IS Hello (IIH) has been padded to the MTU size, if padding is\r\nnot explicitly disabled.\r\n\r\nISes (routers) that implement CRYPTO_AUTH authentication and initiate LSP\r\npurges MUST remove the body of the LSP and add the authentication TLV.  ",
     "notes": "The RFC ignores the case of when an IS initiates a purge.  Purges MUST be authenticated explicitly, otherwise the default protocol machinery will leave open a trivial attack.\n --VERIFIER NOTES-- \nThis issue appears to be correct, but does not qualify as something that can be addressed through the Errata System because it is a functional change to the document, not a typo. If the WG feels that it needs to be addressed, this should be captured in a new I-D.\r\n",
     "submit_date": "2010-08-12",
     "submitter_name": "Tony Li",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2462,
+    "errata_id": "2462",
     "doc-id": "RFC5310",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 3.5,
+    "section": "3.5",
     "orig_text": "An implementation MAY have a transition mode where it includes\r\nCRYPTO_AUTH information in the PDUs but does not verify this\r\ninformation.  This is provided as a transition aid for networks in\r\nthe process of migrating to the new CRYPTO_AUTH-based authentication\r\nschemes.",
     "correct_text": "An implementation MAY have a transition mode where it includes\r\nCRYPTO_AUTH information in the PDUs but does not verify this\r\ninformation.  This is provided as a transition aid for networks in\r\nthe process of migrating to the new CRYPTO_AUTH-based authentication\r\nschemes.\r\n\r\nISes implementing CRYPTO_AUTH authentication MUST NOT accept\r\nunauthenticated purges.   ISes MUST NOT accept purges that contain\r\nTLVs other than the authentication TLV.  These restrictions are\r\nnecessary to prevent a hostile system from receiving an LSP, setting\r\nthe Remaining Lifetime field to zero, and flooding it, thereby\r\ninitiating a purge without knowing the authentication password.",
     "notes": "The RFC ignores the case of purges.  With explicit definition, purge packets would not include authentication, which would open a trivial vector for attack.\n --VERIFIER NOTES-- \nThis issue appears to be correct, but does not qualify as something that can be addressed through the Errata System because it is a functional change to the document, not a typo. If the WG feels that it needs to be addressed, this should be captured in a new I-D.   ",
     "submit_date": "2010-08-12",
     "submitter_name": "Tony Li",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }
