@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1923,
+    "errata_id": "1923",
     "doc-id": "RFC3162",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "   Address\r\n\r\n      The Address field is 16 octets.",
     "correct_text": "String\r\n\r\n  The field is 16 octets",
     "notes": "As Glen notes in:\r\n\r\nhttp://ops.ietf.org/lists/radiusext/2009/msg00540.html\r\n\r\nUsing \"ipv6 address\" for a data type in RADIUS is wrong.\r\n\r\nRFC 3162 (among others Glen wrote) contradict his current position.  Those documents use data types for the \"value\" field of RADIUS attributes that have not been defined in RFC 2865.  As such, they should either:\r\n\r\na) make it clear that they define a new data type, and be marked as \"Updates: 2865\"\r\n\r\n  or\r\n\r\nb) use the data types in RFC 2865.\r\n\r\n  Or even better, maintain an internally consistent set of beliefs, and leave RFC 3162 alone.\n --VERIFIER NOTES-- \nThe common terminology is known by RADIUS implementers. Every RADIUS implementor \"knows what this means\".  i.e. \"Address\" in RFC 2865 means \"ipaddr\", and \"Address\" in RFC 3162 means \"ipv6addr\". A change now would create further confusion. \r\n\r\n   ",
     "submit_date": "2009-10-22",
     "submitter_name": "Alan DeKok",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3217,
+    "errata_id": "3217",
     "doc-id": "RFC3162",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "3.2 Framed-Interface-Id",
     "correct_text": "2.2 Framed-Interface-Id",
     "notes": "Typo in the numbering of this section.",
     "submit_date": "2012-05-08",
     "submitter_name": "Leaf Yeh",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "RonBonica",
     "update_date": "2019-09-10 09:09:03"
   }
