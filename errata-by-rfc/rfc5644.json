@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2321,
+    "errata_id": "2321",
     "doc-id": "RFC5644",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.7,
+    "section": "2.7",
     "orig_text": "Figure 2 is ambiguous for two reasons:\r\n\r\nUse \"X\" for both types of nodes: 1) the graphic only labels intermediate nodes with \"X\" and 2) both \"nodes that are points of interest\" and \"nodes that are not points of interest\" are label \"X\" in the note following the graphic. Thus there is no difference between nodes that are points of interest and those that are not, and the distinction between the two types is not apparent\r\n\r\nThe destination node \"Dst\" has no representation in the \"Hosts\" identifier column.  the \"Dst\" label is in the same vertical column as the Hosts",
     "correct_text": "Change a subset of intermediate nodes (all currently labeled X) to \"Y\". Change the second line of the note to read \"'Y' are nodes thatare not points of interest.\r\n\r\nShift the \"Hosts column to the left to provide vertical separation for \"Dst\". Label \"Dst\" as \"K\" in the hosts column.",
     "notes": "It would be useful to clarify if the nodes that are points of interest must be contiguous or if the subset can truly be selected in an arbitrary fashion.  For a contiguous subset of point of interest nodes it is suggested that it would be useful to associate this with a higher abstract architectural construct (container) since the group might well align with a physical or administrative segment, or provider specific segment of the network.  This would aid in modeling the system for performance management applications since a one to one relationship can be created between the higher level container object and the segment object",
     "submit_date": "2010-07-09",
     "submitter_name": "Cypryan T. Klish II",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   }
