@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3411,
+    "errata_id": "3411",
     "doc-id": "RFC5003",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "\r\n     o Prefix = The 32-bit prefix is a value assigned by the provider or\r\n       it can be automatically derived from the PE's /32 IPv4 loopback\r\n       address.  Note that, for IP reachability, it is not required that\r\n       the 32-bit prefix have any association with the IPv4 address\r\n       space used in the provider's IGP or BGP.\r\n",
     "correct_text": "\r\n     o Prefix = The 32-bit prefix is a value assigned by the provider or\r\n       it can be automatically derived from the PE's router-id i.e. LSR Id.\r\n       Note that it is not required that\r\n       the 32-bit prefix is IP routable or have any association with the \r\n       IPv4 address space used in the provider's IGP or BGP. \r\n",
     "notes": "The intent of this RFC is to treat the 32bit prefix as a number that provides uniqueness in the network (within the ASN). While it can be derived from the IPv4 /32 Loopback address, it causes confusion when routers are configured with no IPv4. It is better to suggest using router-id used by LDP for calculating the LSR identifier. How is router-id calculated is outside the scope of this document.`",
     "submit_date": "2012-11-15",
     "submitter_name": "Rajiv Asati",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
