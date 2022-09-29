@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4685,
+    "errata_id": "4685",
     "doc-id": "RFC6987",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": null,
     "correct_text": "(At the end of the section)\r\n\r\nIf the stub router is located in transit area, crossed by virtual\r\nlink(s), latter will become inoperational in case the stub router is\r\non path between two virtual link endpoints - either due to only path\r\nin transit area or due to topology changes which move stub router onto\r\nthis path. ",
     "notes": "Virtual links become inoperational in case path metric between two endpoints is > 0xffff. Path metric of two or more links, one of which has MaxLinkMetric, will inevitably exceed value 0xffff.\n --VERIFIER NOTES-- \n   The suggested text is technically correct, however it is really providing additional information rather than an actual errata.   If this RFC is revised, then a discussion with the working group would be appropriate.",
     "submit_date": "2016-05-06",
     "submitter_name": "Alexander Okonnikov",
-    "verifier_id": 140,
+    "verifier_id": "140",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
   }
