@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5941,
+    "errata_id": "5941",
     "doc-id": "RFC7606",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 7.16,
+    "section": "7.16",
     "orig_text": "         An UPDATE message with a malformed ATTR_SET attribute SHALL be\r\n         handled using the approach of \"treat as withdraw\".\r\n",
     "correct_text": "         An UPDATE message with a malformed ATTR_SET attribute SHALL be\r\n         handled using the approach of \"treat-as-withdraw\".\r\n",
     "notes": "All 20 other instances of \"treat-as-withdraw\" in the document use the hyphenated form.",
     "submit_date": "2019-12-18",
     "submitter_name": "Benjamin Kaduk",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-12-18 10:10:56"
   }
