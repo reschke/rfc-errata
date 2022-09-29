@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5935,
+    "errata_id": "5935",
     "doc-id": "RFC5636",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "None of the imports from RFC 3280 are used.  The import list from RFC 3852 should not include SignedData, and it should include ContentType.  A semi-colon is needed at the end of the IMPORTS statement.",
     "submit_date": "2019-12-12",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 5936,
+    "errata_id": "5936",
     "doc-id": "RFC5636",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "A module name is needed for the module to properly compile.",
     "submit_date": "2019-12-12",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
