@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 65,
+    "errata_id": "65",
     "doc-id": "RFC4532",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "   Servers indicate their support for this extended operation by\r\n   providing a whoamiOID object identifier as a value of the\r\n   'supportedExtension' attribute type in their root DSE.  The server\r\n   SHOULD advertise this extension only when the client is willing and\r\n                                             ^^^^^^^^^^\r\n   able to perform this operation.   ",
     "correct_text": "   Servers indicate their support for this extended operation by\r\n   providing a whoamiOID object identifier as a value of the\r\n   'supportedExtension' attribute type in their root DSE.  The server\r\n   SHOULD advertise this extension only when it is willing\r\n                                             ^^\r\n   and able to perform this operation.\r\n",
     "notes": "As far as I can see, the last sentence there is misleading and\r\ndoes not match the operational scenario; and hence, it should be\r\nclarified.  According to the recommendations given, the client\r\nwill not try the operation if the OID is not offered by the server,\r\nand hence the server cannot know whether the client is willing\r\nto send the whoami Request; and in this case, the *server* will\r\nperform the operation, i.e., send the whoami Response.",
     "submit_date": "2006-07-06",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }
