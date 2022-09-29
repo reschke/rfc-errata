@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 3929,
+    "errata_id": "3929",
     "doc-id": "RFC3455",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 6.3,
+    "section": "6.3",
     "orig_text": "Therefore intermediaries participating in this mechanism MUST apply a\r\nhop-by-hop integrity protection mechanism such us IPsec or other\r\navailable mechanisms in order to prevent such attacks.",
     "correct_text": "Therefore intermediaries participating in this mechanism MUST apply a\r\nhop-by-hop integrity protection mechanism such as IPsec or other\r\navailable mechanisms in order to prevent such attacks.",
     "notes": "Ofcourse this errata doesn't alter the technical meaning, but it is nice to have documents free of spelling errors too.",
     "submit_date": "2014-03-23",
     "submitter_name": "Gagandeep Singh",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3973,
+    "errata_id": "3973",
     "doc-id": "RFC3455",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "      F6 Invite P1 -> UA\r\n           INVITE sip:user1@192.0.2.4 SIP/2.0\r\n           Via: SIP/2.0/UDP 192.0.2.10:5060;branch=z9hG4bKg48sh128\r\n           Via: SIP/2.0/UDP 192.0.2.20:5060;branch=z9hG4bK03djaoe1\r\n           To: sip:other-user@othernetwork.com\r\n           From: sip:another-user@anothernetwork.com;tag=938s0\r\n           Call-ID: 843817637684230998sdasdh09\r\n           P-Called-Party-ID: sip:user1-business@example.com\r\n           CSeq: 101 INVITE",
     "correct_text": "      F6 Invite P1 -> UA\r\n           INVITE sip:user1@192.0.2.4 SIP/2.0\r\n           Via: SIP/2.0/UDP 192.0.2.10:5060;branch=z9hG4bKg48sh128\r\n           Via: SIP/2.0/UDP 192.0.2.20:5060;branch=z9hG4bK03djaoe1\r\n           To: sip:other-user@othernetwork.com\r\n           From: sip:another-user@anothernetwork.com;tag=938s0\r\n           Call-ID: 843817637684230998sdasdh09\r\n*          P-Called-Party-ID: <sip:user1-business@example.com>\r\n           CSeq: 101 INVITE",
     "notes": "5.2 P-Called-Party-ID header syntax\r\n\r\n   The syntax of the P-Called-Party-ID header is described as follows:\r\n\r\n      P-Called-Party-ID      = \"P-Called-Party-ID\" HCOLON\r\n                               called-pty-id-spec\r\n      called-pty-id-spec     = name-addr *(SEMI cpid-param)\r\n\r\nRFC3261:\r\nname-addr      =  [ display-name ] LAQUOT addr-spec RAQUOT\r\n\r\n-> the SIP URI of the PCPI header in the example should be enclosed in angle quotes.",
     "submit_date": "2014-04-24",
     "submitter_name": "Zoltan Toth",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
