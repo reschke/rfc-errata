@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3888,
+    "errata_id": "3888",
     "doc-id": "RFC4402",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "PRF+(K, L, S) = truncate(L, T1 || T2 || .. || Tn)",
     "correct_text": "PRF+(K, L, S) = truncate(L, T0 || T1 || .. || Tn)",
     "notes": "Implementors have started the counter for the PRF+ construction at 0, not 1.",
     "submit_date": "2014-02-12",
     "submitter_name": "Benjamin Kaduk",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
