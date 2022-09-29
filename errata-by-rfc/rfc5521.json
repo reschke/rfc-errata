@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1775,
+    "errata_id": "1775",
     "doc-id": "RFC5521",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Rationale:\r\n\r\na) Technical:\r\n   The enumeration of subobject types for Attribute '0 Interface'\r\n   and '1 Node' is out of sync with the table at the top of the page\r\n   and the IANA registry (cf. Section 4.1 of this RFC, on page 13).\r\n  \r\n   The Corrected Text proposed above is based on the assumption that\r\n   the figures given originally refer to the position of the\r\n   subobjects in the table, i.e. that the subobjects in the table\r\n   once had been assigned sequential type numbers, 1 through 5;\r\n   this change seems to be technically reasonable.\r\n\r\n>>> Technical change verified by original document author and cross-checked \r\n>>> to early versions of the document.\r\n\r\nb) Editorial: For clarity, the details for the Attribute field \r\n   values should have been indented one more step, making them\r\n   visually subordinate to 'Attribute' and not appearing like\r\n   additional common fields.\r\n\r\n",
     "submit_date": "2009-05-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2705,
+    "errata_id": "2705",
     "doc-id": "RFC5521",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "This is the correct resolution consistent with the table further up the document, and with the IANA registry",
     "submit_date": "2011-02-05",
     "submitter_name": "Ramon Casellas",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3750,
+    "errata_id": "3750",
     "doc-id": "RFC5521",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "The original text did not describe the value of the X bit in \r\nPKS subobjects.",
     "submit_date": "2013-10-15",
     "submitter_name": "Dana Kutenicsova",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }
