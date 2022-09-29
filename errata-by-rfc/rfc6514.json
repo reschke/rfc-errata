@@ -1,36 +1,36 @@
 [
   {
-    "errata_id": 3801,
+    "errata_id": "3801",
     "doc-id": "RFC6514",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4.1,
+    "section": "4.1",
     "orig_text": "Usage of Intra-AS I-PMSI A-D routes is described in Section 9.2.\r\n",
     "correct_text": "Usage of Intra-AS I-PMSI A-D routes is described in Section 9.1.\r\n",
     "notes": "Section 9.2 defines Inter-AS I-PMSI A-D operation and is not the right reference to be called in Section 4.1",
     "submit_date": "2013-11-13",
     "submitter_name": "Nagendra Kumar",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3802,
+    "errata_id": "3802",
     "doc-id": "RFC6514",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "Usage of Inter-AS I-PMSI A-D routes is described in Section 9.1",
     "correct_text": "Usage of Inter-AS I-PMSI A-D routes is described in Section 9.2",
     "notes": "Section 9.1 defines Intra-AS I-PMSI A-D operation and is not the right reference to be called in Section 4.2",
     "submit_date": "2013-11-13",
     "submitter_name": "Nagendra Kumar",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5724,
+    "errata_id": "5724",
     "doc-id": "RFC6514",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "Source AS field in C-multicast route is a 4-octet field, and only an IPv4 address is possible to be filled in it. The Originating Router's IP Address can be an IPv6 address according to RFC6515.",
     "submit_date": "2019-05-20",
     "submitter_name": "Jingrong Xie",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2022-06-22 12:23:11"
   }
