@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 404,
+    "errata_id": "404",
     "doc-id": "RFC2645",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "This seems to be contrary to SMTP's theory of reply codes:\r\n\r\nA rule of thumb to determine whether a reply fits into the 4yz or the 5yz category (see below)        is that replies are 4yz if they can be successful if repeated\r\nwithout any change in command form or in properties of the sender\r\nor receiver (that is, the command is repeated identically and the\r\nreceiver does not put up a new implementation.)\r\n\r\nIf the ODMR client repeats the ATRN request in this situation, it will be rejected again. So a 550 response would be more appropriate.\r\n\r\n",
     "submit_date": "2005-08-30",
     "submitter_name": "Tony Finch",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
