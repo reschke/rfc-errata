@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 6849,
+    "errata_id": "6849",
     "doc-id": "RFC7852",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 11.7,
+    "section": "11.7",
     "orig_text": "Example(s):  TEL;VALUE=uri;TYPE=\"main,voice\";PREF=1:tel:+1-418-656-90\r\n      00",
     "correct_text": "Example(s):  TEL;VALUE=uri;TYPE=\"main-number,voice\";PREF=1:tel:+1-418-656-90\r\n      00",
     "notes": "The type value is specified as \"main-number\" but in the example is simply \"main\".",
     "submit_date": "2022-02-12",
     "submitter_name": "James Benner",
-    "verifier_id": 164,
+    "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2022-05-16 11:43:54"
   }
