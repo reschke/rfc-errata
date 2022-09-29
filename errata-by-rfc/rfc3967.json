@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 201,
+    "errata_id": "201",
     "doc-id": "RFC3967",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": "99Normative references to HMAC in future IETF Standards Track documents should always refer to FIPS-198 instead of RFC 2104.",
+    "section": "Normative references to HMAC in future IETF Standards Track documents should always refer to FIPS-198 instead of RFC 2104.",
     "orig_text": "reading the fresh RFC 3967 (== BCP 97), I found that this memo uses\r\nexamples which are well known, but not very appropriate, for the\r\ndesired purpose:\r\n\r\n(1)\r\n    HMAC [RFC2104]\r\n\r\nThis algorithm - since almost three years - is a US Federal\r\nInformation Processing Standard!\r\n\r\n( FIPS PUB 198, issued '2002 March 6' ;\r\n  to download a PDF copy (updated '2002 April 8'), see\r\n  <http://crc.nist.gov/publications/fips/index.html> )\r\n\r\nThis is an active standard published by a recognized standards body.\r\nTherefore, *Normative References* to HMAC in future IETF Standards\r\nTrack documents should always refer to FIPS-198 instead of RFC 2104 !\r\n\r\n\r\n",
     "correct_text": "[see above]",
     "notes": "Remark 1:\n  FIPS-198 in turn refers to RFC 2104 as a readily available\n  source document for the algorithm, but gives a detailed,\n  independent description of the algorithm and its application.\n\nRemark 2:\n  Expect alternative MAC algorithms like UMAC, TTMAC, EMAC,\n  and RMAC to get formally standardized soon by various Standards\n  Bodies. For example, the former three Algorithms are already\n  (since Feb. 2003) recommended for new applications to be used in\n  the public administration and economy within the European Union.\n  This has been the result of the NESSIE project - an open contest\n  similar to the AES contest of NIST's), see\n  <http://www.cryptonessie.org/> .\n\nfrom pending\n --VERIFIER NOTES-- \n2021-10-06: moved from Held for Document Update to Rejected per request from Murray Kucherawy.  This erratum was reviewed while working on a bis document.",
     "submit_date": "2005-01-00",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Russ Housley",
     "update_date": "2021-10-06 11:53:12"
   },
   {
-    "errata_id": 706,
+    "errata_id": "706",
     "doc-id": "RFC3967",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": "99Normative references to HMAC in future IETF Standards Track documents should always refer to FIPS-198 instead of RFC 2104.",
+    "section": "Normative references to HMAC in future IETF Standards Track documents should always refer to FIPS-198 instead of RFC 2104.",
     "orig_text": "(2)\r\n    MD5 [RFC1321]\r\n\r\nAccording to the contemporary cryptographic literature, protocols\r\nshould now better use SHA-xxx (xxx = [1 / ] 224 / 256 / 384 / 512)\r\nas a cryptographic hashing primitive instead of MD5.\r\n\r\nSee\r\n- FIPS PUB 180-2, issued '2002 August 1', and amended by\r\n  Change Note 1, issued '2004 February 25', for SHA-224,\r\nand\r\n- RFC 3174 (for SHA-1) and RFC 3874 (for SHA-224) -- based on above.\r\n\r\nFIPS 180-2 should be used for Normative References in future IETF\r\nStandards Track documents.\r\n\r\n\r\n",
     "correct_text": "[see above]",
     "notes": "Remark 3:\r\n  SHA-1 (as well as MD5) already is no more recommended for new\r\n  applications to be used in the public administration and economy\r\n  within the European Union, see the URL given in Remark 2 above!\r\n\r\nfrom pending\n --VERIFIER NOTES-- \n2021-10-06: moved from Held for Document Update to Rejected per request from Murray Kucherawy.  This erratum was reviewed while working on a bis document.",
     "submit_date": "2005-01-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Russ Housley",
     "update_date": "2021-10-06 11:47:32"
   }
