@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 261,
+    "errata_id": "261",
     "doc-id": "RFC3501",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "Section 2.3.1.1, page 8:\r\n        old:\r\n   A 32-bit value assigned to each message, which when used with the\r\n   unique identifier validity value (see below) forms a 64-bit value\r\n   that MUST NOT refer to any other message in the mailbox or any\r\n   subsequent mailbox with the same name forever.  Unique identifiers\r\n   [...]\r\n        new:\r\n   An unsigned 32-bit value assigned to each message, which when used\r\n   with the unique identifier validity value (see below) forms a 64-bit\r\n   value that MUST NOT refer to any other message in the mailbox or any\r\n   subsequent mailbox with the same name forever.  Unique identifiers\r\n   [...]\r\n-----\r\n\r\nSection 2.3.1.1, page 9:\r\n        old:\r\n   Associated with every mailbox are two values which aid in unique\r\n   identifier handling: the next unique identifier value and the unique\r\n   identifier validity value.\r\n        new:\r\n   Associated with every mailbox are two 32-bit unsigned values which\r\n   aid in unique identifier handling: the next unique identifier value\r\n   (UIDNEXT) and the unique identifier validity value (UIDVALIDITY).\r\n-----\r\n\r\nSection 5.1.3, page 19:\r\n        old:\r\n   All other characters (octet values 0x00-0x1f and 0x7f-0xff) are\r\n   represented in modified BASE64, with a further modification from\r\n   [UTF-7] that \",\" is used instead of \"/\".  Modified BASE64 MUST NOT be\r\n   used to represent any printing US-ASCII character which can represent\r\n   itself.\r\n        new:\r\n   All other characters (octet values 0x00-0x1f and 0x7f-0xff) are\r\n   represented in modified BASE64, with a further modification from\r\n   [UTF-7] that \",\" is used instead of \"/\".  Modified BASE64 MUST NOT be\r\n   used to represent any printing US-ASCII character which can represent\r\n   itself.  Only characters inside the modified BASE64 alphabet are          \r\n   permitted in modified BASE64 text.\r\n-----\r\n\r\nSection 5.4, page 22:\r\n        old:\r\n   If a server has an inactivity autologout timer, the duration of that\r\n   timer MUST be at least 30 minutes.  The receipt of ANY command from     \r\n   the client during that interval SHOULD suffice to reset the\r\n   autologout timer.\r\n        new:\r\n   If a server has an inactivity autologout timer that applies to\r\n   sessions after authentication, the duration of that timer MUST be at\r\n   least 30 minutes.  The receipt of ANY command from the client during\r\n   that interval SHOULD suffice to reset the autologout timer.\r\n\r\nSection 5.5, page 22:\r\n          old:\r\n        Note: UID FETCH, UID STORE, and UID SEARCH are different\r\n        commands from FETCH, STORE, and SEARCH.  If the client\r\n        sends a UID command, it must wait for a completion result     \r\n        response before sending a command with message sequence\r\n        numbers.\r\n          new:\r\n        Note: EXPUNGE responses are permitted while UID FETCH,\r\n        UID STORE, and UID SEARCH are in progress.  If the client\r\n        sends a UID command, it must wait for a completion result\r\n        response before sending a command which uses message\r\n        sequence numbers (this may include UID SEARCH).  Any\r\n        message sequence numbers in an argument to UID SEARCH       \r\n        are associated with messages prior to the effect of any     \r\n        untagged EXPUNGE returned by the UID SEARCH.\r\n-----\r\n\r\nSection 6.2.1, page 27:\r\n        old:\r\n      Once [TLS] has been started, the client MUST discard cached      \r\n      information about server capabilities and SHOULD re-issue the    \r\n      CAPABILITY command.  This is necessary to protect against man-in-\r\n      the-middle attacks which alter the capabilities list prior to\r\n      STARTTLS.  The server MAY advertise different capabilities after\r\n      STARTTLS.\r\n        new:\r\n      Once [TLS] has been started, the client MUST discard cached\r\n      information about server capabilities and SHOULD re-issue the\r\n      CAPABILITY command.  This is necessary to protect against man-in-\r\n      the-middle attacks which alter the capabilities list prior to\r\n      STARTTLS.  The server MAY advertise different capabilities, and\r\n      in particular SHOULD NOT advertise the STARTTLS capability, after\r\n      a successful STARTTLS command.\r\n-----\r\n\r\nSection 6.2.2, page 28:\r\n        old:\r\n      The authentication protocol exchange consists of a series of\r\n      server challenges and client responses that are specific to the\r\n      authentication mechanism.  A server challenge consists of a  \r\n      command continuation request response with the \"+\" token followed \r\n      by a BASE64 encoded string.  The client response consists of a    \r\n      single line consisting of a BASE64 encoded string.  If the client\r\n      wishes to cancel an authentication exchange, it issues a line\r\n      consisting of a single \"*\".  If the server receives such a  \r\n      response, it MUST reject the AUTHENTICATE command by sending a\r\n      tagged BAD response.\r\n        new:\r\n      The authentication protocol exchange consists of a series of           \r\n      server challenges and client responses that are specific to the\r\n      authentication mechanism.  A server challenge consists of a\r\n      command continuation request response with the \"+\" token followed\r\n      by a BASE64 encoded string.  The client response consists of a\r\n      single line consisting of a BASE64 encoded string.  If the client\r\n      wishes to cancel an authentication exchange, it issues a line    \r\n      consisting of a single \"*\".  If the server receives such a           \r\n      response, or if it receives an invalid BASE64 string (e.g.\r\n      characters outside the BASE64 alphabet, or non-terminal \"=\"), it\r\n      MUST reject the AUTHENTICATE command by sending a tagged BAD\r\n      response.\r\n\r\nSection 6.3.4, page 36:\r\n        old:\r\n      It is permitted to delete a name that has inferior hierarchical\r\n      names and does not have the \\Noselect mailbox name attribute.  In\r\n      this case, all messages in that mailbox are removed, and the name\r\n      will acquire the \\Noselect mailbox name attribute.\r\n        new:\r\n      It is permitted to delete a name that has inferior hierarchical \r\n      names and does not have the \\Noselect mailbox name attribute.  If\r\n      the server implementation does not permit deleting the name while\r\n      inferior hierarchical names exists the \\Noselect mailbox name\r\n      attribute is set for that name.  In any case, all messages in\r\n      that mailbox are removed by the DELETE command.\r\n-----\r\n\r\nSection 6.3.10, page 44:\r\n        old:\r\n   Responses:  untagged responses: STATUS\r\n        new:\r\n   Responses:  REQUIRED untagged response: STATUS\r\n-----\r\n\r\nSection 6.4.3, page 49:\r\n        old:\r\n      The EXPUNGE command permanently removes all messages that have the\r\n      \\Deleted flag set from the currently selected mailbox.  Before   \r\n      returning an OK to the client, an untagged EXPUNGE response is\r\n      sent for each message that is removed.\r\n        new:   \r\n      The EXPUNGE command permanently removes all messages that have the\r\n      \\Deleted flag set from the currently selected mailbox.  Before\r\n      returning an OK to the client, an untagged EXPUNGE response is\r\n      sent for each message that is removed.  Note that if any messages\r\n      with the \\Recent flag set are expunged, an untagged RECENT response\r\n      is sent after the untagged EXPUNGE(s) to update the client's count\r\n      of RECENT messages.\r\n-----\r\n\r\nSection 6.4.4, page 50:\r\n        old:\r\n      [MIME-IMB] content transfer encodings, and [MIME-HDRS] strings in\r\n      [RFC-2822]/[MIME-IMB] headers, MUST be decoded before comparing\r\n      text in a [CHARSET] other than US-ASCII.  US-ASCII MUST be     \r\n      supported; other [CHARSET]s MAY be supported.\r\n        new:\r\n      [MIME-IMB] content transfer encodings, and [MIME-HDRS] strings in \r\n      [RFC-2822]/[MIME-IMB] headers, MUST be decoded before comparing  \r\n      text.  US-ASCII MUST be supported; other [CHARSET]s MAY be supported.\r\n-----\r\n\r\nSection 6.4.4, page 50:   \r\n        old:\r\n      In all search keys that use strings, a message matches the key if      \r\n      the string is a substring of the field.  The matching is       \r\n      case-insensitive.\r\n        new:\r\n      In all search keys that use strings, a message matches the key if\r\n      the string is a substring of the associated text.  The matching is\r\n      case-insensitive.  Note that the empty string is a substring; this\r\n      is useful when doing a HEADER search.\r\n-----\r\n\r\nSection 6.4.4, page 54:\r\n        old:   \r\n               C: A284 SEARCH CHARSET UTF-8 TEXT {6}\r\n               C: XXXXXX\r\n               S: * SEARCH 43\r\n               S: A284 OK SEARCH completed\r\n        new:\r\n               C: A284 SEARCH CHARSET UTF-8 TEXT {6}\r\n               S: + Ready for literal text\r\n               C: XXXXXX\r\n               S: * SEARCH 43\r\n               S: A284 OK SEARCH completed\r\n-----\r\n\r\nSection 7.2.2, page 70:\r\n        old:\r\n      If it is not feasible for the server to determine whether or not\r\n      the mailbox is \"interesting\", or if the name is a \\Noselect name,\r\n      the server SHOULD NOT send either \\Marked or \\Unmarked.\r\n        new:\r\n      If it is not feasible for the server to determine whether or not\r\n      the mailbox is \"interesting\", the server SHOULD NOT send either\r\n      \\Marked or \\Unmarked.  The server MUST NOT send more than one of\r\n      \\Marked, \\Unmarked, and \\Noselect for a single mailbox, and MAY\r\n      send none of these.\r\n-----\r\n\r\nSection 7.4.2, page 75:\r\n        old:\r\n         body location\r\n            A string list giving the body content URI as defined in\r\n            [LOCATION].\r\n        new:\r\n         body location\r\n            A string giving the body content URI as defined in      \r\n            [LOCATION].\r\n\r\nSection 7.4.2, page 77:\r\n        old:\r\n         body location\r\n            A string list giving the body content URI as defined in\r\n            [LOCATION].\r\n        new:\r\n         body location\r\n            A string giving the body content URI as defined in       \r\n            [LOCATION].\r\n\r\n\r\nFormal Syntax, Page 84:\r\n        old:\r\nCHAR8           = %x01-ff\r\n                    ; any OCTET except NUL, %x00\r\n        new:\r\nCHAR8           = %x01-ff \r\n                    ; any OCTET except NUL, %x00\r\n\r\ncharset         = atom / quoted\r\n-----\r\n\r\nFormal Syntax, Page 89:\r\n        old:\r\nresp-text-code  = \"ALERT\" /\r\n                  \"BADCHARSET\" [SP \"(\" astring *(SP astring) \")\" ] /\r\n        new:\r\nresp-text-code  = \"ALERT\" /\r\n                  \"BADCHARSET\" [SP \"(\" charset *(SP charset) \")\" ] /\r\n-----          \r\n\r\nFormal Syntax, Page 89: \r\n        old:\r\nsearch          = \"SEARCH\" [SP \"CHARSET\" SP astring] 1*(SP search-key)\r\n        new:\r\nsearch          = \"SEARCH\" [SP \"CHARSET\" SP charset] 1*(SP search-key)\r\n-----\r\n\r\nFormal Syntax, Page 90:      \r\n        old:\r\nsequence-set    = (seq-number / seq-range) *(\",\" sequence-set)\r\n        new:\r\nsequence-set    = (seq-number / seq-range) [\",\" sequence-set]\r\n-----       \r\n\r\nFormal Syntax, Page 90:\r\n        old:\r\nstatus-att-list =  status-att SP number *(SP status-att SP number)\r\n        new:\r\nstatus-att-val  = (\"MESSAGES\" SP number) / (\"RECENT\" SP number) /    \r\n                  (\"UIDNEXT\" SP nz-number) / (\"UIDVALIDITY\" SP nz-number) /\r\n                  (\"UNSEEN\" SP number)\r\n\r\nstatus-att-list =  status-att-val *(SP status-att-val)\r\n-----\r\n\r\nIANA Considerations, Page 94:\r\n        new:\r\n    GSSAPI/Kerberos/SASL service names are registered by publishing a\r\n    standards track or IESG approved experimental RFC.  The registry\r\n    is currently located at:\r\n\r\n         http://www.iana.org/assignments/gssapi-service-names       \r\n\r\n    As this specification defines the \"imap\" service name previously\r\n    defined in RFC 1731, the registry will be updated accordingly.\r\n-----       \r\n\r\n\r\nNormative References, Page 95:\r\n        old:\r\n   [LANGUAGE-TAGS]       Alvestrand, H., \"Tags for the Identification of\r\n                         Languages\", BCP 47, RFC 3066, January 2001. \r\n        new:\r\n   [LANGUAGE-TAGS]       Alvestrand, H., \"Content Language Headers\",\r\n                         RFC 3282, May 2002.\r\n\r\n\r\nAppendix B, Page 103:    \r\n        new:\r\n   115) Add support for Content-Location to BODYSTRUCTURE.",
     "correct_text": "[see above] ",
     "notes": "from pending",
     "submit_date": "2007-06-13",
     "submitter_name": "Mark Crispin",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3032,
+    "errata_id": "3032",
     "doc-id": "RFC3501",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "There is a conflict between \"REQUIRED\" on the UNSEEN response and having no value to send.  This change documents the approach taken by existing servers.",
     "submit_date": "2011-11-15",
     "submitter_name": "Bron Gondwana",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3093,
+    "errata_id": "3093",
     "doc-id": "RFC3501",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Possibly the result of a search-and-replace, these occurrences of \"must\" and \"may\" are not RFC 2119 usages.",
     "submit_date": "2012-01-18",
     "submitter_name": "Joe Pallas",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3445,
+    "errata_id": "3445",
     "doc-id": "RFC3501",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The UIDNEXT response to a SELECT/EXAMINE command is a \"REQUIRED OK untagged response\" (see Sections 6.3.1 & 6.3.2; see also Appendix B #34).  The UIDNEXT response code requires a nz-number per the ABNF (Section 9).  Therefore the UIDNEXT value can never be \"missing\" from a SELECT/EXAMINE, and no assumptions about client behavior should be mentioned.\r\n\r\nAs currently phrased, the UIDNEXT text implies that the response MAY be missing, which is in direct conflict with the requirements in Sections 6.3.1/6.3.2 that UIDNEXT MUST always be present.  REQUIRED appears to be the proper requirement based on the previously mentioned change entry.\r\n\r\nSee discussion on the IMAP protocol discussion list (http://thread.gmane.org/gmane.mail.imap.general/3163).\n --VERIFIER NOTES-- \nLook at the paragraph above the responses in Section 6.3.1.  It says this:\r\n\r\n      The SELECT command selects a mailbox so that messages in the\r\n      mailbox can be accessed.  Before returning an OK to the client,\r\n      the server MUST send the following untagged data to the client.\r\n      Note that earlier versions of this protocol only required the\r\n      FLAGS, EXISTS, and RECENT untagged data; consequently, client\r\n      implementations SHOULD implement default behavior for missing data\r\n      as discussed with the individual item.\r\n\r\nThe text that you're suggesting removing is there very purposefully,\r\nand should NOT be removed.  That said, I think this is not very clear,\r\nand I would like to see a future document update re-word things to\r\nmake it clearer.\r\n\r\nThe point is that these are REQUIRED in the current version of the protocol,\r\nbut that because they were optional in an earlier version, and that version is\r\nnot distinguishable from this one in operation, clients SHOULD support the\r\nearlier version by taking the actions specified in the even that some or all of\r\nthese untagged OK responses are missing.",
     "submit_date": "2013-01-06",
     "submitter_name": "Michael Slusarz",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6160,
+    "errata_id": "6160",
     "doc-id": "RFC3501",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "An errata already exists for the first line above: astring replaced with charset. The 2nd line seems to have an extra word, \"to\".",
     "submit_date": "2020-05-07",
     "submitter_name": "Gene Smith",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-05-07 19:57:19"
   },
   {
-    "errata_id": 6636,
+    "errata_id": "6636",
     "doc-id": "RFC3501",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -85,22 +85,22 @@
     "notes": "RFC-3501 still refers to RFC-2822 which is obsoleted by RFC-5322. **One** example can be seen in the \"Original text\" section.\n --VERIFIER NOTES-- \n  Errata reports are for issues that were errors at the time of publication.  RFC 5322 was published after RFC 3501, so RFC 2822 was the correct reference when RFC 3501 was published.",
     "submit_date": "2021-07-10",
     "submitter_name": "TornaxO7",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-07-20 17:59:52"
   },
   {
-    "errata_id": 6637,
+    "errata_id": "6637",
     "doc-id": "RFC3501",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 9,
+    "section": "9",
     "orig_text": "envelope        = \"(\" env-date SP env-subject SP env-from SP\r\n                  env-sender SP env-reply-to SP env-to SP env-cc SP\r\n                  env-bcc SP env-in-reply-to SP env-message-id \")\"",
     "correct_text": "envelope        = \"(\" env-date SP env-subject SP env-from SP\r\n                  env-sender SP env-reply-to SP env-to SP env-cc SP\r\n                  env-bcc SP env-in-reply-to SP env-message-id SP \r\n                  env-references \")\"",
     "notes": "Section 2.3.5 says:\r\n\r\n    A parsed representation of the [RFC-2822] header of the message.\r\n    Note that the IMAP Envelope structure is not the same as an\r\n    [SMTP] envelope.\r\n\r\nAlthought RFC-2822 is obsolete by RFC-5322 now, both says that the envelope should inlcude a \"References:\" header-field but the definition of the envelope in section 9 of RFC-3501 (see the part in \"Original Text\" above) doesn't include the \"references\" field.",
     "submit_date": "2021-07-10",
     "submitter_name": "TornaxO7",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
