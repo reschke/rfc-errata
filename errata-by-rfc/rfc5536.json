@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1979,
+    "errata_id": "1979",
     "doc-id": "RFC5536",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "Rationale:\r\n  The whole RFC is precise in its use of the IETF standard terminology\r\n  as explained in Section 2.1.  This phrase is an exception; here as\r\n  well \"header\" should be \"header field\".",
     "submit_date": "2009-12-28",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 101,
+    "verifier_id": "101",
     "verifier_name": "Lisa Dusseault",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5116,
+    "errata_id": "5116",
     "doc-id": "RFC5536",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   fields          =/ *( approved /\r\n                         archive /\r\n                         control /\r\n                         distribution /\r\n                         expires /\r\n                         followup-to /\r\n                         injection-date /\r\n                         injection-info /\r\n                         lines /\r\n                         newsgroups /\r\n                         organization /\r\n                         path /\r\n                         summary /\r\n                         supersedes /\r\n                         user-agent /\r\n                         xref )\r\n",
     "correct_text": "   optional-field  = <see RFC 5322 Section 3.6.8>\r\n\r\n   news-fields     =  approved /\r\n                      archive /\r\n                      control /\r\n                      distribution /\r\n                      expires /\r\n                      followup-to /\r\n                      injection-date /\r\n                      injection-info /\r\n                      lines /\r\n                      newsgroups /\r\n                      organization /\r\n                      path /\r\n                      summary /\r\n                      supersedes /\r\n                      user-agent /\r\n                      xref\r\n\r\n   optional-field  =/    news-fields\r\n",
     "notes": "In Section 3 of RFC5536, the ABNF syntax provided does not do what is clearly intended. What is specified is:\r\n\r\n    fields          =/ *( approved /\r\n                          archive /\r\n                          control /\r\n                          distribution /\r\n                          expires /\r\n                          followup-to /\r\n                          injection-date /\r\n                          injection-info /\r\n                          lines /\r\n                          newsgroups /\r\n                          organization /\r\n                          path /\r\n                          summary /\r\n                          supersedes /\r\n                          user-agent /\r\n                          xref )\r\n\r\nand that extends RFC5322:\r\n\r\n    fields          =   *(trace\r\n                          *optional-field /\r\n                          *(resent-date /\r\n                           resent-from /\r\n                           resent-sender /\r\n                           resent-to /\r\n                           resent-cc /\r\n                           resent-bcc /\r\n                           resent-msg-id))\r\n                        *(orig-date /\r\n                        from /\r\n                        sender /\r\n                        reply-to /\r\n                        to /\r\n                        cc /\r\n                        bcc /\r\n                        message-id /\r\n                        in-reply-to /\r\n                        references /\r\n                        subject /\r\n                        comments /\r\n                        keywords /\r\n                        optional-field)\r\n\r\n    message         =   (fields / obs-fields)\r\n                        [CRLF body]\r\n\r\nThe problem is with the way things are grouped. Let me give a simpler example:\r\n\r\n    foo = *(\"a\" / \"b\") / *(\"c\" / \"d\")\r\n\r\nThis means the following are valid: ab aabb bab cd ccdd dcd\r\nBut the following are not: abcd ac\r\n\r\nI think it is clear that the latter is intended to be valid, for which the syntax would be:\r\n\r\n    foo = *(\"a\" / \"b\" / \"c\" / \"d\")\r\n\r\nIt isn't easy to do a valid syntax extension that achieves this effect \r\nbecause of way the ABNF of RFC5322 is structured. However, after offline \r\ndiscussion, we realized that RFC5322 already has an extension point for \r\nnew headers via the <optional-field> rule. Along with that, RFC3864 \r\nestablished a process for registering header fields with IANA.\r\n\r\nThe above fix is based on discussion with Pete Resnick (editor of RFC 5322), Julien ÉLIE, Alexey Melnikov and Paul Kyzivat.\r\n\r\nAn alternative fix from Paul Kyzuvat is:\r\n\r\nSo, my recommendation is that to fix this, remove from section 3 the \r\nextension of the <fields> rule:\r\n\r\n    fields          =/ *( approved / ...\r\n                          xref )\r\n\r\nInstead, simply rely on the text to specify the newly defined header \r\nfields, and the IANA registration to link them to RFC5322.\r\n",
     "submit_date": "2017-09-14",
     "submitter_name": "Paul Kyzivat",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }
