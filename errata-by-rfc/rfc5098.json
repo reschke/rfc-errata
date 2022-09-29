@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1347,
+    "errata_id": "1347",
     "doc-id": "RFC5098",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Issue:      Spurious blank line distorts grouping of example\r\n            line and turns example ineffective.\r\nCorrection: Delete the spurious line, but add a blank line\r\n            after the headline, for clarity.",
     "submit_date": "2008-03-04",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1348,
+    "errata_id": "1348",
     "doc-id": "RFC5098",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Symptom: ABNF grossly nonsensical:\r\n         ABNF comment  '; DQUOTE'  perhaps intended as non-comment;\r\n         all DQUOTEs apparently should be removed;\r\n         two identical alternatives for symbol do not make sense.\r\n\r\nCorrection is based on earlier draft versions, applying the\r\ncorrections necessary to obtain valid ABNF, yet specifying\r\nwhat probably was intended.\r\n\r\nAlternatively, the following line might be substituted above:\r\n\r\n|          symbol   = \"+\" / \"-\"",
     "submit_date": "2008-03-04",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1349,
+    "errata_id": "1349",
     "doc-id": "RFC5098",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "Incomplete specification:\r\n\r\nThe line given as 'corrected text' is missing from the tabular\r\nlistings of all (other) cases possible, in the DESCRIPTION clauses\r\nof the following three scalar MIB objects, on pp.31-33 of the RFC:\r\n   \r\n   pktcSigDevVmwiAfterDTAS\r\n   pktcSigDevVmwiAfterRPAS\r\n   pktcSigDevVmwiDTASAfterLR",
     "submit_date": "2008-03-04",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }
