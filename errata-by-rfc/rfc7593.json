@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4968,
+    "errata_id": "4968",
     "doc-id": "RFC7593",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "Authentication in eduroam is achieved by using a combination of IEEE\r\n802.1X [IEEE.802.1X] and EAP [RFC4372] (the latter carried over\r\nRADIUS for guest access; see Section 2.2).\r\n",
     "correct_text": "Authentication in eduroam is achieved by using a combination of IEEE\r\n802.1X [IEEE.802.1X] and EAP [RFC3748] (the latter carried over\r\nRADIUS for guest access; see Section 2.2).\r\n",
     "notes": "EAP is 3748, not 4372.",
     "submit_date": "2017-03-14",
     "submitter_name": "Linus Nordberg",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4969,
+    "errata_id": "4969",
     "doc-id": "RFC7593",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "EAP is 3748, not 4372.",
     "submit_date": "2017-03-14",
     "submitter_name": "Linus Nordberg",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }
