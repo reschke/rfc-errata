@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 7127,
+    "errata_id": "7127",
     "doc-id": "RFC3277",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "   As such, it is recommended that each time a router establishes an\r\n   adjacency, it will update its LSP and flood it immediately, even\r\n   before beginning database synchronization.  This will allow for the\r\n   Overload bit setting to propagate immediately, and remove the\r\n   potential for an older version of the reloaded routers LSP to be\r\n   used.\r\n",
     "correct_text": "   As such, it is recommended that each time a router establishes an\r\n   adjacency, it will update its LSP and flood it immediately, even\r\n   before beginning database synchronization.  This will allow for the\r\n   Overload bit setting to propagate immediately, and remove the\r\n   potential for an older version of the reloaded router's LSP to be\r\n   used.\r\n",
     "notes": "\"reloaded router's\" should be possessive singular.",
     "submit_date": "2022-09-12",
     "submitter_name": "John Scudder",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2022-09-12 12:05:27"
   }
