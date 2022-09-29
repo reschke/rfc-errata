@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2597,
+    "errata_id": "2597",
     "doc-id": "RFC5910",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "secDNS-1.0 -> secDNS-1.1",
     "submit_date": "2010-11-01",
     "submitter_name": "NOGUCHI Shoji",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6863,
+    "errata_id": "6863",
     "doc-id": "RFC5910",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "The DS alg value must match the underlying (inside) DNSKEY alg value.\r\n\r\nFrom RFC 5910 respectively:\r\n   -  A <secDNS:alg> element that contains an algorithm value as\r\n      described in Section 5.1.2 of RFC 4034 [RFC4034].\r\nand\r\n   -  A <secDNS:alg> element that contains an algorithm number field\r\n      value as described in Section 2.1.3 of RFC 4034 [RFC4034].\r\n\r\nSection 5.1.2 of RFC 4034 says:\r\nThe algorithm number used by the DS RR is identical to the algorithm\r\n   number used by RRSIG and DNSKEY RRs.\r\n\r\n\r\nThe three occurrences are just examples so do not change the meaning of the specification, yet incorrect examples can create confusion.",
     "submit_date": "2022-02-25",
     "submitter_name": "Patrick Mevzek",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
