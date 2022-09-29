@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3336,
+    "errata_id": "3336",
     "doc-id": "RFC6710",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "   ; New \"clause\" that can be used in the Received header field\r\n   Pri  = CFWS \"PRIORITY\" FWS priority-value\r\n             ; Complies with the <Additional-Registered-Clauses>\r\n             ; non-terminal syntax from RFC 5321.\r\n",
     "correct_text": "   ; New \"clause\" that can be used in the Received header field\r\n   Pri  = CFWS \"priority\" FWS priority-value\r\n             ; Complies with the <Additional-Registered-Clauses>\r\n             ; non-terminal syntax from RFC 5321.\r\n",
     "notes": "All the subclauses of the \"Received:\" header in RFC 5321 are lowercase (\"from\", \"by\", \"via\", \"with\", \"id\", and \"for\" - in that order).  I suggest that \"PRIORITY\" also be lower cased (\"priority\") for consistency.\r\n\r\nAdditional note:  As this is the first additional clause, it obviously trails the others defined in RFC 5321 per the ABNF syntax found there.  However, all future additional clauses should indicate their placement relative to additional clauses added to the list before them (i.e. RFC 5321 does not specify an order for the additional clauses, but each individual future RFC that proposes them should).\r\n\r\n---------------------\r\nReviewer note:\r\nMinor editorial issues that won't cause confusion go into \"Hold for Document Update.\"  So let it be written; so let it be done.",
     "submit_date": "2012-09-06",
     "submitter_name": "D. Stussy",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
