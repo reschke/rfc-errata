@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3221,
+    "errata_id": "3221",
     "doc-id": "RFC6535",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 7,
+    "section": "7",
     "orig_text": "This document recommends the socket API-layer implementation\r\noption over network layer translation, i.e., it recommends the\r\napproach introduced in RFC 2767 over the approach of RFC 3338.",
     "correct_text": "This document recommends the socket API-layer implementation \r\noption over network layer translation, i.e., it recommends the \r\napproach introduced in RFC 3338 over the approach of RFC 2767.",
     "notes": "RFC numbers are swapped in this sentence. RFC 3338 describes the socket-API layer implementation, RFC 2767 describes the alternative (network-based) implementation.",
     "submit_date": "2012-05-10",
     "submitter_name": "Etienne Dublé",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Wesley Eddy",
     "update_date": "2019-09-10 09:09:03"
   }
