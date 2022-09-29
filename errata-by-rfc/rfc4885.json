@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1041,
+    "errata_id": "1041",
     "doc-id": "RFC4885",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "                                   _____\r\n                   _           _  |     |\r\n                  |_|-|  _  |-|_|-|     |-|        _\r\n                   _  |-|_|=|  \\  |_____| |  _  |-|_|\r\n                  |_|-|     |             |-|_|-|\r\n                                             \\  |\r\n                  MNNs   MR   AR  Internet   AR    HA\r\n\r\n              Figure 6: Multihoming: MR with multiple E-faces",
     "correct_text": "[not supplied]",
     "notes": "(1) The term 'E-faces' used in the figure caption does not appear\r\n    anywhere else in the text.  I suspect this is a sluggish\r\n    contraction of the defined term, 'egress interfaces', and IMHO,\r\n    it should better have been avoided in favor of the latter.\r\n\r\n(2) The artwork does *not* visually represent in any way the\r\n    essential point pretended (and perhaps intended) to be shown\r\n    in the figure: *multiple* egress interfaces of the MR.",
     "submit_date": "2007-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
