@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3584,
+    "errata_id": "3584",
     "doc-id": "RFC0952",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": "99In the header, it says:",
+    "section": "In the header, it says:",
     "orig_text": "(none)",
     "correct_text": "Updates: RFC 952",
     "notes": "The text of RFC 1123 clearly states is updating RFC 952, but it is not called out as updating RFC 952.\r\n\r\nRFC 1123 section 2.1 states:\r\n\r\n\"The syntax of a legal Internet host name was specified in RFC-952 [DNS:4].  One aspect of host name syntax is hereby changed: the restriction on the first character is relaxed to allow either a letter or a digit.  Host software MUST support this more liberal syntax.\"\r\n",
     "submit_date": "2013-04-08",
     "submitter_name": "Matthew Gast",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   }
