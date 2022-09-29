@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 3198,
+    "errata_id": "3198",
     "doc-id": "RFC1928",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "o if ATYP is X’04’ - 20+method_dependent octets smaller",
     "correct_text": "o if ATYP is X’04’ - 22+method_dependent octets smaller",
     "notes": "RSV[2]+FRAG[1]+ATYP[1]+DST.ADDR[16]+DST.PORT[2]=22\r\nif ATYP is X’04’ [IPv6 address]",
     "submit_date": "2012-04-19",
     "submitter_name": "Andreas Cudok",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3947,
+    "errata_id": "3947",
     "doc-id": "RFC1928",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": null,
     "submit_date": "2014-04-02",
     "submitter_name": "Scott Conrad VanderWoude",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   }
