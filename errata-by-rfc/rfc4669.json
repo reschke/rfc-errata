@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 28,
+    "errata_id": "28",
     "doc-id": "RFC4669",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": "99The DESCRIPTION clause of the radiusAuthServResetTime OBJECT-TYPE declaration says:",
+    "section": "The DESCRIPTION clause of the radiusAuthServResetTime OBJECT-TYPE declaration says:",
     "orig_text": "                \"If the server has a persistent state (e.g., a process)\r\n                 and supports a 'reset' operation (e.g., can be told to\r\n                 re-read configuration files), this value will be the\r\n                 time elapsed (in hundredths of a second) since the\r\n                 server was 'reset.'",
     "correct_text": "                \"If the server has a persistent state (e.g., a process)\r\n                 and supports a 'reset' operation (e.g., can be told to\r\n                 re-read configuration files), this value will be the\r\n|                time elapsed (in centiseconds) since the\r\n|                server was 'reset'. ",
     "notes": "The original description does not conform to the 'rational quoting' style required by the RFC authoring guidelines.\r\n\r\nAlso, why not use the common ISO-standard unit-multiple name, \"centiseconds\" (abbreviation: \"cs\"), instead of the long-winded \"hundredths of a second\" ?\r\n\r\nThis also applies to the DESCRIPTION clauses of\r\n  - radiusAuthServUpTime  (RFC 4669, top of page 7),\r\n\r\nfrom pending",
     "submit_date": "2006-11-06",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 876,
+    "errata_id": "876",
     "doc-id": "RFC4669",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "misleading RFC title, including abuse of defined terms \r\n(for RFCs 4668 - 4671) \r\n\r\nmisleading RFC title, including abuse of defined terms \r\n(for RFCs 4668 - 4671)\r\n\r\nIMHO, the RFC titles, \"RADIUS ... MIB for IPv6\" are misleading.\r\nIn fact, the new RFCs extend the RADIUS MIB modules to cover\r\nIPv6, but they are not IPv6 specific!\r\nPerhaps, better wording would have been \"... for IPv4 and IPv6\".\r\n\r\nFurthermore, a very 'popular' clash of terms shines up here.\r\nAs specified in RFC 3410 and Part 1 of STD 62, RFC 3411, and\r\nre-stated in the boilerplate Section 3, \"The Internet-Standard\r\nManagement Framework\", of all four RFCs, there's just one single\r\nManagement Information Base (MIB) comprised of various \"MIB modules\".\r\nThus, throughout the titles and the text bodies of the RFCs, the\r\nproper term, \"RADIUS ... MIB module\" should be used instead of the\r\nrather sluggish \"RADIUS ... MIB\".",
     "correct_text": "",
     "notes": "from pending\n --VERIFIER NOTES-- \nno change in title is needed at this stage - ipV6 covers also ipv4n titles   ",
     "submit_date": "2006-11-06",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }
