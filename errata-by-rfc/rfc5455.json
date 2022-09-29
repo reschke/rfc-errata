@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3396,
+    "errata_id": "3396",
     "doc-id": "RFC5455",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "<request>::= <RP>\r\n             <END-POINTS>\r\n             [<CLASSTYPE>]\r\n             [<LSPA>]\r\n             [<BANDWIDTH>]\r\n             [<metric-list>]\r\n             [<RRO>]\r\n             [<IRO>]\r\n             [<LOAD-BALANCING>]",
     "correct_text": "<request>::= <RP>\r\n             <END-POINTS>\r\n             [<CLASSTYPE>]\r\n             [<LSPA>]\r\n             [<BANDWIDTH>]\r\n             [<metric-list>]\r\n             [<RRO>[<BANDWIDTH>]]\r\n             [<IRO>]\r\n             [<LOAD-BALANCING>] ",
     "notes": "Reoptimization BANDWIDTH object was allowed to appear as BANDWIDTH to RRO in PCReq message in draft-ietfd-pce-pcep-10, which became RFC5440. This change was never reflected in the history of RFC5455.",
     "submit_date": "2012-10-30",
     "submitter_name": "Dana Kutenicsova",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }
