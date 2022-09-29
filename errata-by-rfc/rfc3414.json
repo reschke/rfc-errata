@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 278,
+    "errata_id": "278",
     "doc-id": "RFC3414",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "In Section 7.3.1:\n    4) Prepend K2 to the result of the step 4 and calculate SHA digest\n      over it according to [SHA-NIST].  Take the first 12 octets of\n      the final digest - this is Message Authentication Code (MAC).\nShould be:\n    4) Prepend K2 to the result of the step 3 and calculate SHA digest\n      over it according to [SHA-NIST].  Take the first 12 octets of\n      the final digest - this is Message Authentication Code (MAC).\n\n",
     "submit_date": "2003-10-28",
     "submitter_name": "Piotr Bandur",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3612,
+    "errata_id": "3612",
     "doc-id": "RFC3414",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "The words \"User-based\" were moved to the second line but not fully removed from the first.",
     "submit_date": "2013-05-03",
     "submitter_name": "Yitzchak M. Gottlieb",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5073,
+    "errata_id": "5073",
     "doc-id": "RFC3414",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "In both cases the receiver was classified as \"authoritative\".\n --VERIFIER NOTES-- \n   The initial text says it correctly:  the sender of such a message is  authoritative",
     "submit_date": "2017-07-26",
     "submitter_name": "Fabio Costantini",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }
