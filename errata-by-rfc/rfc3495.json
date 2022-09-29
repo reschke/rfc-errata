@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4128,
+    "errata_id": "4128",
     "doc-id": "RFC3495",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,7 +10,7 @@
     "notes": "This text is not completely clear about how the realm name is to be encoded - as a 'string' or 'fqdn'.\r\n\r\nRFC 1510 states:\r\n\r\n   Kerberos realms are encoded as GeneralStrings. Realms shall not\r\n   contain a character with the code 0 (the ASCII NUL).  Most realms\r\n   will usually consist of several components separated by periods (.),\r\n   in the style of Internet Domain Names, or separated by slashes (/) in\r\n   the style of X.500 names.\r\n\r\nAnd the reference to RFC 1035 section 3.1 is \"conform to the syntax\" which isn't the same as use this encoding - though I do agree that section 3.1 is mostly about \"DNS wire encoding\". It is just the use of \"encoded\" and \"confirm to the syntax\" combination that makes this unclear.\r\n\r\nIt is believed that the intended encoding is in DNS wire format. And, this should be clarified.",
     "submit_date": "2014-10-10",
     "submitter_name": "Bernie Volz",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
