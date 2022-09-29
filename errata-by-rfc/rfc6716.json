@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4392,
+    "errata_id": "4392",
     "doc-id": "RFC6716",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "The Opus codec scales from 6 kbit/s narrowband mono speech to\r\n510 kbit/s fullband stereo music, with algorithmic delays ranging\r\nfrom 5 ms to 65.2 ms.\r\n\r\n(further in the same section)\r\n\r\nTo\r\ncompensate for the different look-ahead required by each layer, the\r\nCELT encoder input is delayed by an additional 2.7 ms.",
     "correct_text": "The Opus codec scales from 6 kbit/s narrowband mono speech to\r\n510 kbit/s fullband stereo music, with algorithmic delays ranging\r\nfrom 5 ms to 66.5 ms.\r\n\r\n(further in the same section)\r\n\r\nTo\r\ncompensate for the different look-ahead required by each layer, the\r\nCELT encoder input is delayed by an additional 4 ms.",
     "notes": "For the latter text, the delays for the CELT and SILK layers must match.  SILK has a \"5 ms look-ahead for noise shaping estimation\", and \"1.5 ms delay for sampling rate conversion\", totaling 6.5 ms.  CELT has a \"2.5 ms look-ahead due to the overlapping MDCT windows\".  Thus, the amount of delay needed to align CELT with SILK is 6.5ms - 2.5ms = 4ms.\r\n\r\nThe text at the beginning of the section must reflect this as well.  The \"algorithmic delays\" reported apparently include framing (minimum frame size 2.5ms + look-ahead delay in CELT-only mode 2.5ms = 5ms).  In that case, the maximum delay is the maximum frame size (60ms) + the maximum delay for look-ahead and resampling (6.5ms) = 66.5ms.\r\n\r\nConfirmed by author (\"Jmvalin\") at https://en.wikipedia.org/wiki/Talk:Opus_(audio_format)/Archive_1#Codec_delay_values",
     "submit_date": "2015-06-15",
     "submitter_name": "Peter Budny",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4829,
+    "errata_id": "4829",
     "doc-id": "RFC6716",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Just a small typo in the Table of Contents.",
     "submit_date": "2016-10-12",
     "submitter_name": "flacs",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4853,
+    "errata_id": "4853",
     "doc-id": "RFC6716",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "Equation should match with the one in the range decoder (section 4.1.2), however comparing the two and the reference implementation reveals the equation in section 5.1.1 to be incorrect.",
     "submit_date": "2016-11-02",
     "submitter_name": "Rostislav Pehlivanov",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   }
