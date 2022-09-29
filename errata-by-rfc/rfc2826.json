@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4523,
+    "errata_id": "4523",
     "doc-id": "RFC2826",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "The DNS type of unique naming and name-mapping system may not be\r\nideal for a number of purposes for which it was never designed, such\r\na locating information when the user doesn't precisely know the\r\ncorrect names.",
     "correct_text": "The DNS type of unique naming and name-mapping system may not be\r\nideal for a number of purposes for which it was never designed, such\r\nas locating information when the user doesn't precisely know the\r\ncorrect names.",
     "notes": "Typo: \"such a locating\" should be \"such as locating\"\r\n\r\nAlso typo in section 1.2.  It says\r\n\"any set of resources records\"\r\nand should say\r\n\"any set of resource records\"",
     "submit_date": "2015-11-05",
     "submitter_name": "Dave Thaler",
-    "verifier_id": 151,
+    "verifier_id": "151",
     "verifier_name": "Andrew Sullivan",
     "update_date": "2019-09-10 09:09:03"
   }
