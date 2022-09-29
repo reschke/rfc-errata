@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3380,
+    "errata_id": "3380",
     "doc-id": "RFC5761",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "   o  RTP payload type 80 conflicts with Receiver Summary Information\r\n      (RSI) packets defined in \"RTCP Extensions for Single-Source\r\n      Multicast Sessions with Unicast Feedback\" [6].",
     "correct_text": "   o  RTP payload type 81 conflicts with Receiver Summary Information\r\n      (RSI) packets defined in \"RTCP Extensions for Single-Source\r\n      Multicast Sessions with Unicast Feedback\" [6].",
     "notes": "Reference [6], RFC 5760 (IANA likewise), specifies that RTCP RSI has the RTCP packet type number 209, which means that it would conflict with RTP payload type 81, not 80 as stated.",
     "submit_date": "2012-10-16",
     "submitter_name": "Martin Storsjö",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
