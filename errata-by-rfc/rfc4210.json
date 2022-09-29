@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2615,
+    "errata_id": "2615",
     "doc-id": "RFC4210",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": null,
     "submit_date": "2010-11-08",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2616,
+    "errata_id": "2616",
     "doc-id": "RFC4210",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": null,
     "submit_date": "2010-11-09",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3949,
+    "errata_id": "3949",
     "doc-id": "RFC4210",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "The definition in the text is different to the one in the ASN.1 module contained in Appendix F. The correct text is assumed to be the one from Appendix F\r\n\r\nCMPCertificate is a superset of Certificate which has one element.  The new structure would allow for a new certificate type to be included.  Not sure that it would ever happen.",
     "submit_date": "2014-04-02",
     "submitter_name": "Tom Biskupic",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4078,
+    "errata_id": "4078",
     "doc-id": "RFC4210",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "The definition of CertOrEncCert in Section 5.3.4 and Appendix F of CertOrEncCert differs.\r\n\r\nThis is a change that makes no difference on the wire.  This is the same issue as errata 3949.",
     "submit_date": "2014-08-11",
     "submitter_name": "Lijun Liao",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5201,
+    "errata_id": "5201",
     "doc-id": "RFC4210",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "There is a typo in Appendix D.4 -- \"MS_MAC_ALG\" should be \"MSG_MAC_ALG\"",
     "submit_date": "2017-12-12",
     "submitter_name": "Simon Edänge",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-02-04 10:17:37"
   },
   {
-    "errata_id": 5731,
+    "errata_id": "5731",
     "doc-id": "RFC4210",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -85,7 +85,7 @@
     "notes": "In appendixes D.4, D.5, E.5 and E.6, the recipient field of requests and the sender field of responses are specified as \"the name of the CA\". It is no problem for CA which signs the CMP response.\r\n\r\nHowever, as best practice, the CA's private key which is used to sign the certificates, is NOT RECOMMENDED to sign/decrypt the communication messages. In this case, another entity (private key + certificate) is used to decrypt the incoming messages and sign the outgoing ones.\r\n\r\nThe text and comment for the fields \"recipient\" in requests and \"sender\" in responses need to be corrected to the case described above. If you think the original text and comment are correct, then we need instruction on how to handle this case.",
     "submit_date": "2019-05-22",
     "submitter_name": "Lijun Liao",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-04-26 19:03:57"
   }
