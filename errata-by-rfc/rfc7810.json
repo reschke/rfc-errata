@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5293,
+    "errata_id": "5293",
     "doc-id": "RFC7810",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "In sections 4.5, 4.6 and 4.7, a RESERVED field is in the diagram and the text.  However, the length field of each of these TLVs is 4.  The RESERVED field is thus not present and should be removed in future editions of this document.\r\n===\r\nThe discussion in the WG is here: https://mailarchive.ietf.org/arch/msg/lsr/x5DlcGmwMPf9hvgL6mofNqGpbQA/",
     "submit_date": "2018-03-22",
     "submitter_name": "Jeffrey Haas",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5486,
+    "errata_id": "5486",
     "doc-id": "RFC7810",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4.6,
+    "section": "4.6",
     "orig_text": "Available Bandwidth: This field carries the available bandwidth on a\r\n   link, forwarding adjacency, or bundled link in IEEE floating-point\r\n   format with units of bytes per second.  For a link or forwarding\r\n   adjacency, available bandwidth is defined to be residual bandwidth\r\n   (see Section 4.5) minus the measured bandwidth used for the actual\r\n   forwarding of non-RSVP-TE label switched path packets.  For a bundled\r\n   link, available bandwidth is defined to be the sum of the component\r\n   link available bandwidths minus the measured bandwidth used for the\r\n   actual forwarding of non-RSVP-TE label switched path packets.  For a\r\n   bundled link, available bandwidth is defined to be the sum of the\r\n   component link available bandwidths.",
     "correct_text": "Available Bandwidth: This field carries the available bandwidth on a\r\n   link, forwarding adjacency, or bundled link in IEEE floating-point\r\n   format with units of bytes per second.  For a link or forwarding\r\n   adjacency, available bandwidth is defined to be residual bandwidth\r\n   (see Section 4.5) minus the measured bandwidth used for the actual\r\n   forwarding of non-RSVP-TE label switched path packets.  For a bundled\r\n   link, available bandwidth is defined to be the sum of the component\r\n   link (residual) bandwidths minus the measured bandwidth used for the\r\n   actual forwarding of non-RSVP-TE label switched path packets.For a\r\n   bundled link, available bandwidth is defined to be the sum of the\r\n   component link available bandwidths.",
     "notes": "Two sentences to explain 'available bandwidth' on a bundled link, but one says \"sum of component available bandwidth minus xxx\", the other says \"sum of component available bandwidth\", is conflicting. need to change the first sentence to 'sum of component residual bandwidth minus xxx'",
     "submit_date": "2018-08-31",
     "submitter_name": "Teresa",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }
