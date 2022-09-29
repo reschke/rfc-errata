@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5567,
+    "errata_id": "5567",
     "doc-id": "RFC4419",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "     byte    SSH_MSG_KEY_DH_GEX_REQUEST\r\n",
     "correct_text": "     byte    SSH_MSG_KEX_DH_GEX_REQUEST\r\n",
     "notes": "KEY should be KEX.\r\n\r\n1. Section 5. defines \"SSH_MSG_KEX_DH_GEX_REQUEST\".\r\n2. Other messages in RFC4419 have the same prefix \"SSH_MSG_KEX_DH_GEX_\".\r\n3. RFC5656 defines two messages start with \"SSH_MSG_KEX_\".\r\n\r\nRFC8270 refers to \"SSH_MSG_KEY_DH_GEX_REQUEST\" and it should be corrected too.",
     "submit_date": "2018-12-07",
     "submitter_name": "Tomoyuki Sahara",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
