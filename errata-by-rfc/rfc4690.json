@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4896,
+    "errata_id": "4896",
     "doc-id": "RFC4690",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 8.2,
+    "section": "8.2",
     "orig_text": "[IESG-IDN]          Internet Engineering Steering Group (IESG), \"IESG\r\n                    Statement on IDN\", IESG Statements IDN Statement,\r\n                    February 2003, <http://www.ietf.org/IESG/\r\n                    STATEMENTS/IDNstatement.txt>.\r\n",
     "correct_text": "[IESG-IDN]          Internet Engineering Steering Group (IESG), \"IESG\r\n                    Statement on IDN\", IESG Statements IDN Statement,\r\n                    February 2003, <https://www.ietf.org/iesg/statement/\r\n                    idn.html>.\r\n\r\n",
     "notes": "URL of resource has changed. Original gives 'Not found'.\n --VERIFIER NOTES-- \nThe right thing to do here is make sure the original URL redirects to the right place, which is now happening.",
     "submit_date": "2016-12-27",
     "submitter_name": "Hugo Salgado",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
