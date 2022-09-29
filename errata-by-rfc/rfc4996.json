@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1288,
+    "errata_id": "1288",
     "doc-id": "RFC4996",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "RFC 4996 is very confusing regarding the ROHC packet types used.\r\nSection 2 (on top of page 5) says only 3 types are used: IR, IR-CR, and CO.\r\nThis is restated in a few places.\r\nBut significant text in RFC 4996 also details the use of the IR-DYN\r\npacket type.\r\n\r\nAccording to RFC 4995, IR-DYN is a distinct packet type.\r\n\r\nIt looks like the terminology has been floating for some time,\r\nand the text of RFC 4996 has not been adjusted to the final\r\nterminology used in RFC 4995, before publication as an RFC,\r\nalthough both RFCs have been published in a coordinated way.\r\n\r\nTo give the reader a hint on the problem, I suggest a change note\r\nfor Section 2 -- this will be posted as a separate Errata Note --\r\nand detail the other places in the text affected by this issue\r\nin an accompanying message to be evalueated by the verifiers,\r\nto avoid an email avalanche.\r\nThis report will also include other issues found not suitable for\r\nreporting via this form based system.\n --VERIFIER NOTES-- \n   Authors and WG chairs are of the opinion that it is reasonably clear that IR is both a class of packets type. So from the context it should be understandable when the class is meant rather than the specific type. And clarification would also require major changes in several docs.",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1289,
+    "errata_id": "1289",
     "doc-id": "RFC4996",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "ROHC-TCP makes use of IR-DYN packets, as can be seen in other parts\r\nof the text.\r\nAccording to RFC 4995, IR-DYN is a distinct ROHC packet type,\r\nand RFC 4995 does not contain the notion of a packet sub-type\r\nthat might have justified subsuming IR-DYN as a non-self-sustaining\r\npacket always to be included/assumed as well when talking about the\r\nIR packet type.\r\n\r\nFor more information see the GLOBAL Errata Report issued on this topic.\n --VERIFIER NOTES-- \n   Authors and WG chairs are of the opinion that it is reasonably clear that IR is both a class of packets type. So from the context it should be understandable when the class is meant rather than the specific type. And clarification would also require major changes in several docs. ",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1290,
+    "errata_id": "1290",
     "doc-id": "RFC4996",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": null,
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1291,
+    "errata_id": "1291",
     "doc-id": "RFC4996",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "6.2 definitely does not contain this information.\r\nI did not find a section that actually gives all these\r\ndetails, as could be expected.\r\n\r\nMaybe, something has been lost during the development of the document.\r\n\r\nAuthors and WG chair provided the corrected text with additional details.",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1292,
+    "errata_id": "1292",
     "doc-id": "RFC4996",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "Apparently missed edit after copy & paste.",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1293,
+    "errata_id": "1293",
     "doc-id": "RFC4996",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "Apparently missed edit after copy & paste from preceding paragraph.",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1294,
+    "errata_id": "1294",
     "doc-id": "RFC4996",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -100,27 +100,27 @@
     "notes": "See GLOBAL errata report on IR <-> IR-DYN for rationale.\n --VERIFIER NOTES-- \n   Authors and WG chairs are of the opinion that it is reasonably clear that IR is both a class of packets type. So from the context it should be understandable when the class is meant rather than the specific type. And clarification would also require major changes in several docs. ",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1295,
+    "errata_id": "1295",
     "doc-id": "RFC4996",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 7.1,
+    "section": "7.1",
     "orig_text": "7.1.  Initialization and Refresh (IR) Packets",
     "correct_text": "7.1.  Initialization and Refresh (IR and IR-DYN) Packets",
     "notes": "See GLOBAL errata report on IR <-> IR-DYN for rationale.\n --VERIFIER NOTES-- \n   Authors and WG chairs are of the opinion that it is reasonably clear that IR is both a class of packets type. So from the context it should be understandable when the class is meant rather than the specific type. And clarification would also require major changes in several docs. ",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1296,
+    "errata_id": "1296",
     "doc-id": "RFC4996",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -130,12 +130,12 @@
     "notes": "Location is last paragraph in unnumbered subsection on IR packet type.",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1297,
+    "errata_id": "1297",
     "doc-id": "RFC4996",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -145,12 +145,12 @@
     "notes": "RFC 4996 should use precise terminology established in RFC 4995\r\nand RFC 4164.\r\n\"CR\" does not appear anywhere in both RFCs (and it does not recur in\r\nRFC 4996 as well); \"IR-CR\" should be used for clarity and precision.\r\n\r\nChair reply: It should be IR-CR and there is no CR defined in the document, but I think most people will understand the sentence. Still, if/when we update this document we should make this correction. So hold for update.",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1298,
+    "errata_id": "1298",
     "doc-id": "RFC4996",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -160,12 +160,12 @@
     "notes": "ROHC-FN is intended to introduce precision.\r\nTherefore, no ad-hoc variable names should be introduced,\r\nindependent of how mnemonic their names might be.\r\n \r\nI hope that the NEW text substituted above indeed is what had been\r\nintended.\r\n \r\nSimilar corrections need to be applied on page 68 (10 instances)\r\nand on top of page 69 (one instance).",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1299,
+    "errata_id": "1299",
     "doc-id": "RFC4996",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -175,12 +175,12 @@
     "notes": "'length_len' has never been introduced.\r\nThis must be a confusing typo, invalidating the formal specification.\r\n\r\nTis same correction needs to be applied once more, near the bottom\r\nof page 69.",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1300,
+    "errata_id": "1300",
     "doc-id": "RFC4996",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -190,22 +190,22 @@
     "notes": "It does not make much sense to \"provide 2 additional bits\"\r\nfor a numerical value, and taking the *least* significant bits\r\nfor this purpose.  This way, the interpretation of the other\r\nencoded MSN bits would prematurely be changed by the presence\r\nof the MSN option.\r\nTherefore, I strongly suspect that the text is in error and\r\nshould be corrected as above.\n --VERIFIER NOTES-- \n   WG chair Calle Knutsson: This is the way we handle lsbs.",
     "submit_date": "2008-01-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3637,
+    "errata_id": "3637",
     "doc-id": "RFC4996",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 8.2,
+    "section": "8.2",
     "orig_text": "COMPRESSED rout_opt_0_replicate {\r\n    discriminator =:= '10000000'                     [ 8 ];\r\n    length        =:= irregular(8)                   [ 8 ];\r\n    value         =:=\r\n      irregular(length.UVALUE*64+48) [ length.UVALUE * 64 + 48 ];\r\n  }",
     "correct_text": "COMPRESSED rout_opt_1_replicate {\r\n    discriminator =:= '10000000'                     [ 8 ];\r\n    length        =:= irregular(8)                   [ 8 ];\r\n    value         =:=\r\n      irregular(length.UVALUE*64+48) [ length.UVALUE * 64 + 48 ];\r\n  }",
     "notes": "Incorrect Representation FN of IPv6 Route Options nomenclature\r\n --VERIFIER NOTES-- \r\n   This seems to be correct as this is referring to type 0 routing ext. headers. Nonetheless, this RFC has been obsoleted by RFC 6846. ",
     "submit_date": "2013-06-04",
     "submitter_name": "Raj Kumar",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }
