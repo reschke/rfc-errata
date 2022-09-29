@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1482,
+    "errata_id": "1482",
     "doc-id": "RFC3344",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 1.1,
+    "section": "1.10",
     "orig_text": "1.10.  Long Extension Format\r\n\r\n   This format is applicable for non-skippable extensions which carry\r\n   information more than 256 bytes.\r\n",
     "correct_text": "1.10.  Long Extension Format\r\n\r\n   This format is applicable for any extension (skippable or non-skippable) which carry information more than 256 bytes.",
     "notes": "As per description in 1.11 \r\n\"   This format is compatible with the skippable extensions defined in\r\n   section 1.9.  It is not applicable for extensions which require more\r\n   than 256 bytes of data; for such extensions, use the format described\r\n   in section 1.10.\"\r\n\r\nHowever 1.10 specifies that it is applicable to only non-skippable extensions, so what would be the format for skippable extensions of size more than 256 bytes?\r\n\r\nThe correction will specify that any extension (skippable or non-skippable) shall use long format if its length is more than 256 bytes.\n --VERIFIER NOTES-- \nPete McCann, chair of MIP4 held a discussion about this in the WG and the conclusion was that the errata should be rejected.",
     "submit_date": "2008-08-06",
     "submitter_name": "Keshav Chawla",
-    "verifier_id": 103,
+    "verifier_id": "103",
     "verifier_name": "Jari Arkko",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4629,
+    "errata_id": "4629",
     "doc-id": "RFC3344",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "   If sent periodically, the nominal interval at which Agent\r\n   Advertisements are sent SHOULD be no longer than 1/3 of the\r\n   advertisement Lifetime given in the ICMP header.  This interval MAY\r\n   be shorter than 1/3 the advertised Lifetime.  This allows a mobile\r\n   node to miss three successive advertisements before deleting the\r\n   agent from its list of valid agents.  The actual transmission time\r\n   for each advertisement SHOULD be slightly randomized [10] in order to\r\n   avoid synchronization and subsequent collisions with other Agent\r\n\r\n   Advertisements that may be sent by other agents (or with other Router\r\n   Advertisements sent by other routers).  Note that this field has no\r\n   relation to the \"Registration Lifetime\" field within the Mobility\r\n   Agent Advertisement Extension defined below.\r\n\r\n",
     "correct_text": "   If sent periodically, the nominal interval at which Agent\r\n   Advertisements are sent SHOULD be no longer than 1/3 of the\r\n   advertisement Lifetime given in the ICMP header.  This interval MAY\r\n   be shorter than 1/3 the advertised Lifetime.  This allows a mobile\r\n   node to miss three successive advertisements before deleting the\r\n   agent from its list of valid agents.  The actual transmission time\r\n   for each advertisement SHOULD be slightly randomized [10] in order to\r\n   avoid synchronization and subsequent collisions with other Agent\r\n   Advertisements that may be sent by other agents (or with other Router\r\n   Advertisements sent by other routers).  Note that this field has no\r\n   relation to the \"Registration Lifetime\" field within the Mobility\r\n   Agent Advertisement Extension defined below.\r\n\r\n",
     "notes": "Excessive empty string.",
     "submit_date": "2016-02-26",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
