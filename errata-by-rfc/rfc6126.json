@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3505,
+    "errata_id": "3505",
     "doc-id": "RFC6126",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "5.  IANA Considerations\r\n\r\n   IANA has registered the UDP port number 6697, called \"babel\", for use\r\n   by the Babel protocol.",
     "correct_text": "5.  IANA Considerations\r\n\r\n   IANA has registered the UDP port number 6696, called \"babel\", for use\r\n   by the Babel protocol.",
     "notes": "Author Juliusz Chroboczek has agreed to use the port number 6696/udp for babel as per a discussion with Nevil Brownlee.  The port number in the document therefore should be changed to 6696/udp.",
     "submit_date": "2013-03-01",
     "submitter_name": "pearl liang",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }
