@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 272,
+    "errata_id": "272",
     "doc-id": "RFC3445",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": "99Values for the key protocol octet are incorrect. They should be:",
+    "section": "Values for the key protocol octet are incorrect. They should be:",
     "orig_text": "        VALUE   Protocol\r\n\r\n          0      -reserved\r\n          1     reserved (was TLS)\r\n          2     reserved (was email)\r\n          3     dnssec\r\n          4     reserved (was IPSEC)\r\n         5-255   reserved",
     "correct_text": "",
     "notes": "Rationale: Looking at RFC2535, the values are the original assignments.  The\r\nnumbers in RFC3445 are incorrect and don't match.  I guess since the\r\nregistry was closed, they are all reserved now and no one double checked.\r\n\r\nRFC 2535 has the original correct assignments, and the registry is correct\r\nin stating that they are now all reserved.  ",
     "submit_date": "2005-02-22",
     "submitter_name": "\"Scott Rose\"",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
