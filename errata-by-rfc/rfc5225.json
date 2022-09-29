@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1421,
+    "errata_id": "1421",
     "doc-id": "RFC5225",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Apparently, a copyedit flaw (text copied from 6.6.4 insufficiently\r\nmodified).",
     "submit_date": "2008-05-13",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2703,
+    "errata_id": "2703",
     "doc-id": "RFC5225",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "There is no control field called ip_id_behavior in the document. There are two control fields related to IP-ID behavior, ip_id_behavior_innermost and ip_id_behavior_outer. For IPv6, only the ip_id_behavior_innermost field exists and its value is always IP_ID_BEHAVIOR_RANDOM according to the FN. This makes it impossible to include ip_id_behavior_outer when calculating the crc for IPv6 headers. Furthermore, since the ip_id_behavior_innermost is constant it makes no sense to include it in the crc calculation.\r\n\r\nThis errata has been verified based on discussion on the ROHC mailing list involving the authors in February, 2011.",
     "submit_date": "2011-02-03",
     "submitter_name": "Carl Knutsson",
-    "verifier_id": 129,
+    "verifier_id": "129",
     "verifier_name": "Wesley Eddy",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3185,
+    "errata_id": "3185",
     "doc-id": "RFC5225",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "rtp_version is set to 2, not to zero.\r\n\r\nSee RTP Header Fields page 115 :\r\n\r\nVersion\r\n\r\n      This field is expected to have the value two and the field is\r\n      therefore classified as STATIC-KNOWN.",
     "submit_date": "2012-04-11",
     "submitter_name": "FWX",
-    "verifier_id": 129,
+    "verifier_id": "129",
     "verifier_name": "Wes Eddy",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3248,
+    "errata_id": "3248",
     "doc-id": "RFC5225",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "checksum_coverage_dynchain(behavior) compression method (page 66) may compress the checksum_coverage field to 0 bits if behavior is set to UDP_LITE_COVERAGE_INFERRED.",
     "submit_date": "2012-06-07",
     "submitter_name": "FWX",
-    "verifier_id": 129,
+    "verifier_id": "129",
     "verifier_name": "Wesley Eddy",
     "update_date": "2019-09-10 09:09:03"
   }
