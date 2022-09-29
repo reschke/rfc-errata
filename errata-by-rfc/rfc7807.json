@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 5515,
+    "errata_id": "5515",
     "doc-id": "RFC7807",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "   o  \"type\" (string) - A URI reference [RFC3986] that identifies the\r\n      problem type.  This specification encourages that, when\r\n      dereferenced, it provide human-readable documentation for the\r\n      problem type (e.g., using HTML [W3C.REC-html5-20141028]).  When\r\n      this member is not present, its value is assumed to be\r\n      \"about:blank\".",
     "correct_text": "   o  \"type\" (string) - A URI reference [RFC3986] that identifies the\r\n      problem type.  This specification encourages that, when\r\n      dereferenced, it provide human-readable documentation for the\r\n      problem type (e.g., using HTML [W3C.REC-html5-20141028]).  When\r\n      this member is missing or null, its value is assumed to be\r\n      \"about:blank\".",
     "notes": "JSON objects with a null \"type\" are syntactically correct, but there is no information on how it should be handled.\r\n\r\n{\r\n    \"type\": null,\r\n    \"status\": 404,\r\n    \"title\": \"Not Found\"\r\n}\r\n\r\nIt makes sense to treat null as an alias of \"about:blank\" and that's how I think it should be documented.",
     "submit_date": "2018-10-05",
     "submitter_name": "Steven",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6178,
+    "errata_id": "6178",
     "doc-id": "RFC7807",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   The ability to convey problem-specific extensions allows more than\r\n   one problem to be conveyed.  For example:\r\n\r\n   HTTP/1.1 400 Bad Request\r\n   Content-Type: application/problem+json\r\n   Content-Language: en\r\n\r\n   {\r\n   \"type\": \"https://example.net/validation-error\",\r\n   \"title\": \"Your request parameters didn't validate.\",\r\n   \"invalid-params\": [ {\r\n                         \"name\": \"age\",\r\n                         \"reason\": \"must be a positive integer\"\r\n                       },\r\n                       {\r\n                         \"name\": \"color\",\r\n                         \"reason\": \"must be 'green', 'red' or 'blue'\"}\r\n                     ]\r\n   }\r\n",
     "correct_text": "   The ability to convey problem-specific extensions allows more than\r\n   one problem to be conveyed.  For example:\r\n\r\n   HTTP/1.1 400 Bad Request\r\n   Content-Type: application/problem+json\r\n   Content-Language: en\r\n\r\n   {\r\n   \"type\": \"https://example.net/validation-error\",\r\n   \"title\": \"Your request parameters didn't validate.\",\r\n   \"invalid_params\": [ {\r\n                         \"name\": \"age\",\r\n                         \"reason\": \"must be a positive integer\"\r\n                       },\r\n                       {\r\n                         \"name\": \"color\",\r\n                         \"reason\": \"must be 'green', 'red' or 'blue'\"}\r\n                     ]\r\n   }\r\n",
     "notes": "The \"invalid-params\" member in the example is named incorrectly. According to Section 4, it should contain an \"_\" rather than a \"-\" in its name:\r\n\r\n>   If such additional members are defined, their names SHOULD start with\r\n>   a letter (ALPHA, as per [RFC5234], Appendix B.1) and SHOULD consist\r\n>   of characters from ALPHA, DIGIT ([RFC5234], Appendix B.1), and \"_\"\r\n>   (so that it can be serialized in formats other than JSON), and they\r\n>   SHOULD be three characters or longer.",
     "submit_date": "2020-05-18",
     "submitter_name": "Gary Peck",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-05-18 19:34:57"
   }
