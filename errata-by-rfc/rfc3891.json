@@ -1,17 +1,32 @@
 [
   {
-    "errata_id": 213,
+    "errata_id": "213",
     "doc-id": "RFC3891",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "  INVITE sip:bob@bobster.example.org\r\n   To: <sip:bob@example.org>\r\n   From: <sip:alice@phone2.example.org>;tag=8983\r\n   Call-ID: 09870@phone2.example.org\r\n   CSeq: 1 INVITE\r\n   Contact: <sip:alice@phone2.example.org>\r\n   Require: replaces\r\n   Replaces: 425928@bobster.example.org;to-tag=7743;from-tag=6472\r\n<mailto:425928@bobster.example.org;to-tag=7743;from-tag=6472>  ",
     "correct_text": "  INVITE sip:bob@bobster.example.org\r\n   To: <sip:bob@example.org>\r\n   From: <sip:alice@phone2.example.org>;tag=8983\r\n   Call-ID: 09870@phone2.example.org\r\n   CSeq: 1 INVITE\r\n   Contact: <sip:alice@phone2.example.org>\r\n   Require: replaces\r\n   Replaces: 425928@bobster.example.org;to-tag=8983;from-tag=7743\r\n<mailto:425928@bobster.example.org;to-tag=8983;from-tag=7743>   \r\n",
     "notes": "",
     "submit_date": "2005-07-26",
     "submitter_name": "Rb Srikanth",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7141",
+    "doc-id": "RFC3891",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "section-7.1",
+    "orig_text": "SIP/2.0 180 Ringing\r\n   To: <sip:bob@example.org>;tag=6472\r\n   From: <sip:alice@example.org>;tag=7743\r\n   Call-ID: 425928@phone.example.org\r\n   CSeq: 1 INVITE\r\n   Contact: <sip:bob@bobster.example.org>\r\n\r\n   Message *3: Bob in lab -> Alice\r\n\r\n   INVITE sip:alice@phone.example.org\r\n   To: <sip:alice@example.org>\r\n   From: <sip:bob@example.org>;tag=8983\r\n   Call-ID: 09870@labpc.example.org\r\n   CSeq: 1 INVITE\r\n   Contact: <sip:bob@labpc.example.org>\r\n   Replaces: 425928@phone.example.org\r\n    ;to-tag=7743;from-tag=6472;early-only",
+    "correct_text": "SIP/2.0 180 Ringing\r\n   To: <sip:bob@example.org>;tag=6472\r\n   From: <sip:alice@example.org>;tag=7743\r\n   Call-ID: 425928@phone.example.org\r\n   CSeq: 1 INVITE\r\n   Contact: <sip:bob@bobster.example.org>\r\n\r\n   Message *3: Bob in lab -> Alice\r\n\r\n   INVITE sip:alice@phone.example.org\r\n   To: <sip:alice@example.org>\r\n   From: <sip:bob@example.org>;tag=8983\r\n   Call-ID: 09870@labpc.example.org\r\n   CSeq: 1 INVITE\r\n   Contact: <sip:bob@labpc.example.org>\r\n   Replaces: 425928@phone.example.org\r\n    ;to-tag=6472;from-tag=7743;early-only",
+    "notes": "The To and From tags are mismatched in the Replaces header",
+    "submit_date": "2022-09-28",
+    "submitter_name": "Aaron Brumpton",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
