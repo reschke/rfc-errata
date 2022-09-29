@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 174,
+    "errata_id": "174",
     "doc-id": "RFC4173",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -10,7 +10,7 @@
     "notes": "\r\nTwo normative references have been obsoleted:\r\n\r\n    RFC 2396 ( Ref. \"[Lee98]\" )\r\nand\r\n    RFC 2732 ( Ref. \"[Hinden99]\" )\r\n\r\nhave both been obsoleted by RFC 3986 == STD 66 (published in\r\nJanuary 2005) !\r\n\r\nAffected pieces of RFC 4173:\r\n- Both Ref's appear once (and together) near the bottom of\r\n  page 4 (in the 6th-to-last line).\r\n- Normative References section, bottom of page 9 + top of page 10\n --VERIFIER NOTES-- \nIndependent of the publication date, the work on the draft that\r\nbecame this RFC significantly predates publication of RFC 3986.\r\nThe references to those two RFCs are correct, and the obsoleted\r\nstatus of the RFCs can be readily determined from the RFC Editor's\r\ndatabase.   ",
     "submit_date": "2005-10-17",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   }
