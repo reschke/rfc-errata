@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3109,
+    "errata_id": "3109",
     "doc-id": "RFC5931",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Section 2.8.4.1 mentions function F() as defined in 2.2.2 but there is no\r\nfunction F() in 2.2.2.",
     "submit_date": "2012-02-06",
     "submitter_name": "Dan Harkins",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5681,
+    "errata_id": "5681",
     "doc-id": "RFC5931",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "The key exchange in EAP-pwd is dragonfly which was described in RFC 7664. During the standardization of RFC 7664, comments were received to prevent a side-channel attack against the hunting-and-pecking loop and the technique used in RFC 7664 should be done in RFC 5931 to prevent side-channel attack.",
     "submit_date": "2019-03-31",
     "submitter_name": "Dan Harkins",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
