@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 2261,
+    "errata_id": "2261",
     "doc-id": "RFC3428",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 10,
+    "section": "10",
     "orig_text": "MESSAGE sip:user2@domain.com SIP/2.0\r\nVia: SIP/2.0/TCP proxy.domain.com;branch=z9hG4bK123dsghds\r\nVia: SIP/2.0/TCP user1pc.domain.com;branch=z9hG4bK776sgdkse;\r\n                                           received=1.2.3.4\r\nMax-Forwards: 69\r\nFrom: sip:user1@domain.com;tag=49394\r\nTo: sip:user2@domain.com\r\nCall-ID: asd88asd77a@1.2.3.4\r\nCSeq: 1 MESSAGE\r\nContent-Type: text/plain\r\nContent-Length: 18\r\n\r\nWatson, come here.\r\n\r\nThe message is received by user2, displayed, and a response is\r\ngenerated, message F3, and sent to the proxy:\r\n\r\nSIP/2.0 200 OK\r\nVia: SIP/2.0/TCP proxy.domain.com;branch=z9hG4bK123dsghds;\r\n                                         received=192.0.2.1\r\nVia: SIP/2.0/TCP user1pc.domain.com;;branch=z9hG4bK776sgdkse;\r\n                                            received=1.2.3.4\r\nFrom: sip:user1@domain.com;tag=49394\r\nTo: sip:user2@domain.com;tag=ab8asdasd9\r\nCall-ID: asd88asd77a@1.2.3.4\r\nCSeq: 1 MESSAGE\r\nContent-Length: 0\r\n\r\nNote that most of the header fields are simply reflected in the\r\nresponse.  The proxy receives this response, strips off the top Via,\r\nand forwards to the address in the next Via, user1pc.domain.com, the\r\nresult being message F4:\r\n\r\nSIP/2.0 200 OK\r\nVia: SIP/2.0/TCP user1pc.domain.com;branch=z9hG4bK776sgdkse;\r\n                                           received=1.2.3.4\r\nFrom: sip:user1@domain.com;;tag=49394\r\nTo: sip:user2@domain.com;tag=ab8asdasd9\r\nCall-ID: asd88asd77a@1.2.3.4\r\nCSeq: 1 MESSAGE\r\nContent-Length: 0\r\n",
     "correct_text": "MESSAGE sip:user2@user2pc.domain.com SIP/2.0\r\nVia: SIP/2.0/TCP proxy.domain.com;branch=z9hG4bK123dsghds\r\nVia: SIP/2.0/TCP user1pc.domain.com;branch=z9hG4bK776sgdkse;\r\n                                           received=1.2.3.4\r\nMax-Forwards: 69\r\nFrom: sip:user1@domain.com;tag=49583\r\nTo: sip:user2@domain.com\r\nCall-ID: asd88asd77a@1.2.3.4\r\nCSeq: 1 MESSAGE\r\nContent-Type: text/plain\r\nContent-Length: 18\r\n\r\nWatson, come here.\r\n\r\nThe message is received by user2, displayed, and a response is\r\ngenerated, message F3, and sent to the proxy:\r\n\r\nSIP/2.0 200 OK\r\nVia: SIP/2.0/TCP proxy.domain.com;branch=z9hG4bK123dsghds;\r\n                                         received=192.0.2.1\r\nVia: SIP/2.0/TCP user1pc.domain.com;branch=z9hG4bK776sgdkse;\r\n                                           received=1.2.3.4\r\nFrom: sip:user1@domain.com;tag=49583\r\nTo: sip:user2@domain.com;tag=ab8asdasd9\r\nCall-ID: asd88asd77a@1.2.3.4\r\nCSeq: 1 MESSAGE\r\nContent-Length: 0\r\n\r\nNote that most of the header fields are simply reflected in the\r\nresponse.  The proxy receives this response, strips off the top Via,\r\nand forwards to the address in the next Via, user1pc.domain.com, the\r\nresult being message F4:\r\n\r\nSIP/2.0 200 OK\r\nVia: SIP/2.0/TCP user1pc.domain.com;branch=z9hG4bK776sgdkse;\r\n                                           received=1.2.3.4\r\nFrom: sip:user1@domain.com;tag=49583\r\nTo: sip:user2@domain.com;tag=ab8asdasd9\r\nCall-ID: asd88asd77a@1.2.3.4\r\nCSeq: 1 MESSAGE\r\nContent-Length: 0\r\n",
     "notes": "The corrected text changes F2's request-uri to reflect the binding.\r\nThe corrected text proxies received From tag instead of changing it.\r\nThe corrected text removes various extra semicolons show within example.",
     "submit_date": "2010-05-13",
     "submitter_name": "Brett Tate",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3702,
+    "errata_id": "3702",
     "doc-id": "RFC3428",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 12,
+    "section": "12",
     "orig_text": "This specification registers the MESSAGE method in the\r\nhttp://www.iana.org/assignments/sip-parameters/Method registry",
     "correct_text": "This specification registers the MESSAGE method in the\r\nhttp://www.iana.org/assignments/sip-parameters \"Methods and \r\nResponse Codes\" registry",
     "notes": null,
     "submit_date": "2013-08-20",
     "submitter_name": "Amanda Baber",
-    "verifier_id": 136,
+    "verifier_id": "136",
     "verifier_name": "Richard Barnes",
     "update_date": "2019-09-10 09:09:03"
   }
