@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3756,
+    "errata_id": "3756",
     "doc-id": "RFC6489",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "         This\r\n         request MUST include the same SIA extension that is present in\r\n         the CURRENT CA certificate.",
     "correct_text": "The AccessDescriptions with accessMethods of id-ad-caRepository in the\r\nrequest's SIA extension MUST be the same as the AccessDescriptions with\r\naccessMethods of id-ad-caRepository in the CURRENT CA certificate's SIA\r\nextension.",
     "notes": "An RFC6487-compliant CA certificate's SIA extension has AccessDescriptions for both its repository (id-ad-caRepository) and its manifest (id-ad-rpkiManifest). Section 2 of RFC6489 also states, \"While the 'current' and 'new' CA instances share a single repository publication point, each CA has its own CRL and its own manifest.\" This indicates that only the id-ad-caRepository AccessDescriptions should be identical, not the id-ad-rpkiManifest AccessDescriptions.",
     "submit_date": "2013-10-16",
     "submitter_name": "David Mandelberg",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }
