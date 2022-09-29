@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1077,
+    "errata_id": "1077",
     "doc-id": "RFC2818",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "    Matching is performed using the matching rules specified by\r\n   [RFC2459].  If more than one identity of a given type is present in\r\n   the certificate (e.g., more than one dNSName name, a match in any one\r\n   of the set is considered acceptable.) Names may contain the wildcard\r\n   character * which is considered to match any single domain name\r\n   component or component fragment. E.g., *.a.com matches foo.a.com but\r\n   not bar.foo.a.com. f*.com matches foo.com but not bar.com.",
     "correct_text": "   Matching is performed using the matching rules specified by\r\n   [RFC2459].  If more than one identity of a given type is present in\r\n   the certificate (e.g., more than one dNSName name), a match in any one\r\n   of the set is considered acceptable.  Names may contain the wildcard\r\n   character * which is considered to match any single domain name\r\n   component or component fragment. E.g., *.a.com matches foo.a.com but\r\n   not bar.foo.a.com and f*.com matches foo.com but not bar.com.",
     "notes": "The submitted errata indicated that multiple wildcards were allowed (e.g., *.*.a.com matches foo.bar.a.com but not foo.com).  This is too large of a change to make with an errata.  The Security and Application ADs feel a consensus call would be required to make that change.  Further, the current practice is to allow only one at the leftmost position.  This is being documented in draft-saintandre-tls-server-id-check-09 and its intended to be a BCP.\r\n\r\nThe errata does however correct a misplaced parentheses, and uses semi-colons to separate examples.",
     "submit_date": "2007-11-14",
     "submitter_name": "Joseph Shraibman",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }
