@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4236,
+    "errata_id": "4236",
     "doc-id": "RFC6442",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "as per section 4.4\r\n\r\nThis location error is specific to having the PIDF-LO [RFC4119]\r\n   <retransmission-allowed> element set to \"no\".  This location error is\r\n   stating it requires permission (i.e., PIDF-LO <retransmission-\r\n   allowed> element set to \"yes\")\r\n\r\nand RFC4119 section 2.2.2",
     "submit_date": "2015-01-19",
     "submitter_name": "Richard Appleton",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5027,
+    "errata_id": "5027",
     "doc-id": "RFC6442",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": " --boundary1\r\n\r\n   Content-Type: application/pidf+xml\r\n   Content-ID: <target123@atlanta.example.com>\r\n   <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n       <presence",
     "correct_text": " --boundary1\r\n\r\n   Content-Type: application/pidf+xml\r\n   Content-ID: <target123@atlanta.example.com>\r\n\r\n   <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n       <presence",
     "notes": "The PIDF-LO examples in RFC 6442 don't have an empty line between the message headers and the message body in the pidf+xml bodies.\r\n\r\nRFC 2046, section 5.1 says this about multipart MIME body parts:  \" After its boundary delimiter line, each body part then consists of a header area, a blank line, and a body area\".\r\n\r\nThis errata also applies to the example in section 5.2",
     "submit_date": "2017-05-31",
     "submitter_name": "Larry Reeder",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   }
