@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 734,
+    "errata_id": "734",
     "doc-id": "RFC3970",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The DESCRIPTION clauses of\r\n    -  teTunnelOctects and teTunnelLPOctects\r\n    -  teTunnelPackets and teTunnelLPPackets\r\nare pairwise identical, respectively.\r\n\r\nThere is no precise description of the precise meaning of\r\nthese  \"teTunnelLPxxx\"  objects.\r\nAdmittedly, one might guess from the SYNTAX clauses of these\r\nobjects that \"LP\" stands for 'lower part' -- meaning that the\r\nvalue of a \"teTunnelLPOctets\" object should always equal the\r\nvalue of the corresponding \"teTunnelOctets\" object MODULO 2^32\r\n(and similarly for the \"...Packets\" objects), but this is not\r\nstated in the text.\r\n\r\nFurthermore, unfortunately the naming of these objects does\r\nnot conform to the conventional naming style used in (almost)\r\nall IETF standards track MIB modules with High Capacity\r\ncounters, e. g.  \"xxxOctets\"  and  \"xxxHCOctets\" .\r\nThe above interpretation would be more manifest if this\r\nstandard naming convention would have been followed.\r\n\r\nNow, given that the naming of the objects cannot be changed\r\nany more, it would certainly be useful to have a textual\r\nclarification of these DESCRIPTIONs posted on the RFC Editor's\r\nRFC-Errata web page.\r\n\r\n[from pending]",
     "submit_date": "2005-02-25",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 135,
+    "verifier_id": "135",
     "verifier_name": "joel jaeggli",
     "update_date": "2019-09-10 09:09:03"
   }
