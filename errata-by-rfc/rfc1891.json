@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 535,
+    "errata_id": "535",
     "doc-id": "RFC1891",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 6.2,
+    "section": "6.2",
     "orig_text": "   DISCUSSION: RFC 1123, section 2.3.3 requires error notifications to\r\n   be sent with a NULL return address (\"reverse-path\").",
     "correct_text": "   DISCUSSION: RFC 1123, section 5.3.3 requires error notifications to\r\n   be sent with a NULL return address (\"reverse-path\"). ",
     "notes": "RFC 1123, section 2.3.3., does not exist. The correct section is 5.3.3.",
     "submit_date": "2002-10-21",
     "submitter_name": "Florian Weimer",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
