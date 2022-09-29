@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2899,
+    "errata_id": "2899",
     "doc-id": "RFC5103",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "   The location of the Observation Point(s)\r\n   with respect to the middlebox can be communicated using Options with\r\n   Observation Point as Scope and elements such as lineCardID or\r\n   samplerID.\r\n",
     "correct_text": "   The location of the Observation Point(s)\r\n   with respect to the middlebox can be communicated using Options with\r\n   Observation Point as Scope and elements such as lineCardId or\r\n   selectorId.\r\n\r\n",
     "notes": "s/lineCardID/lineCardId/\r\ns/samplerID/selectorId/\r\n\r\nPer the definitions in RFC5102, RFC5477 and IANA's IPFIX registry.",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }
