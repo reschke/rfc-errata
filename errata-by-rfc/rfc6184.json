@@ -1,36 +1,36 @@
 [
   {
-    "errata_id": 3318,
+    "errata_id": "3318",
     "doc-id": "RFC6184",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 8.1,
+    "section": "8.1",
     "orig_text": "On page 46 start from line 7: \r\n\"When max-dpb is signaled, the receiver MUST be able to decode\r\nNAL unit streams that conform to the signaled highest level,\r\nwith the exception that the MaxDpbMbs value in Table A-1 of [1]\r\nfor the signaled highest level is replaced with the value of\r\nmax-dpb * 3 / 8. Consequently, a receiver that signals max-dpb\r\n          ^^^^^\r\nMUST be capable of storing the following number of decoded\r\nframes, complementary field pairs, and non-paired fields in its\r\ndecoded picture buffer:\r\nMin(max-dpb * 3 / 8 / ( PicWidthInMbs * FrameHeightInMbs),\r\n              ^^^^^\r\n16)\"",
     "correct_text": "When max-dpb is signaled, the receiver MUST be able to decode\r\nNAL unit streams that conform to the signaled highest level,\r\nwith the exception that the MaxDpbMbs value in Table A-1 of [1]\r\nfor the signaled highest level is replaced with the value of\r\nmax-dpb * 8 / 3. Consequently, a receiver that signals max-dpb\r\n          ^^^^^\r\nMUST be capable of storing the following number of decoded\r\nframes, complementary field pairs, and non-paired fields in its\r\ndecoded picture buffer:\r\nMin(max-dpb * 8 / 3 / ( PicWidthInMbs * FrameHeightInMbs),\r\n              ^^^^^\r\n16)",
     "notes": null,
     "submit_date": "2012-08-14",
     "submitter_name": "Xiaohui Wei (Joanne)",
-    "verifier_id": 123,
+    "verifier_id": "123",
     "verifier_name": "Gonzalo Camarillo",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4713,
+    "errata_id": "4713",
     "doc-id": "RFC6184",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 8.1,
+    "section": "8.1",
     "orig_text": "profile-level-id:\r\n         A base16 [7] (hexadecimal) representation of the following\r\n         three bytes in the sequence parameter",
     "correct_text": "profile-level-id:\r\n         A base16 [7] (hexadecimal) representation of the following\r\n         six bytes in the sequence parameter",
     "notes": "profile-level-id is composed of three 2-byte length fields.",
     "submit_date": "2016-06-17",
     "submitter_name": "Iñaki Baz Castillo",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4714,
+    "errata_id": "4714",
     "doc-id": "RFC6184",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "The above statement is wrong. RFC 3264 does not mandate the same payload\r\ntype in both the offer and the answer. In fact, RFC 3264 section 5.1 states:\r\n\r\n   For sendonly RTP streams, the payload type\r\n   numbers indicate the value of the payload type field in RTP packets\r\n   the offerer is planning to send for that codec.  For sendrecv RTP\r\n   streams, the payload type numbers indicate the value of the payload\r\n   type field the offerer expects to receive, and would prefer to send.\r\n   \r\n   However, for sendonly and sendrecv streams, the answer might indicate\r\n   different payload type numbers for the same codecs, in which case,\r\n   the offerer MUST send with the payload type numbers from the answer.\n --VERIFIER NOTES-- \n   Rejected based on discussion on avtcore and payload lists. (3264 does in fact include the SHOULD).",
     "submit_date": "2016-06-17",
     "submitter_name": "Iñaki Baz Castillo",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   }
