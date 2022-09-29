@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1387,
+    "errata_id": "1387",
     "doc-id": "RFC2157",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 6.2,
+    "section": "6.2",
     "orig_text": "ESC 21 41",
     "correct_text": "ESC 22 43",
     "notes": "ESC 21 41 invokes ISO-IR 7, an unrelated C0 set.\r\nESC 22 43 invokes ISO-IR 77, the C1 set of an old ISO 6429.\r\n\r\nFor details see <http://www.itscj.ipsj.or.jp/ISO-IR/2-5.htm>\r\n(C0 sets) and <http://www.itscj.ipsj.or.jp/ISO-IR/2-6.htm> (C1).",
     "submit_date": "2008-03-25",
     "submitter_name": "Frank Ellermann",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }
