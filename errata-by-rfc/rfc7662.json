@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4764,
+    "errata_id": "4764",
     "doc-id": "RFC7662",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "OAuth registration client metadata names and descriptions are\r\nregistered by",
     "correct_text": "OAuth token introspection response parameters are registered by",
     "notes": "The original text erroneously mentions registration of client metadata names, however, this RFC 7662 is about about token introspection and this section is about registration of token introspection response parameters (client metadata name registration is RFC 7591).",
     "submit_date": "2016-08-04",
     "submitter_name": "Brian Campbell",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
