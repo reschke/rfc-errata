@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3069,
+    "errata_id": "3069",
     "doc-id": "RFC5257",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 1,
+    "section": "1",
     "orig_text": "   In order to provide optimum support for a disconnected client (one\r\n   that needs to synchronize annotations for use when offline), servers\r\n   SHOULD also support the Conditional STORE [RFC4551] extension.",
     "correct_text": "   In order to provide optimum support for a disconnected client (one\r\n   that needs to synchronize annotations for use when offline), servers\r\n   SHOULD also support the Conditional STORE [RFC4551] extension.\r\n\r\n   If the server advertises ANNOTATE and either CONDSTORE [RFC4551]\r\n   or QRESYNC [RFC5162], then the server MUST update the MODSEQ when\r\n   an annotation is modified.",
     "notes": "This probably should go to \"hold for document update\" state. It's debatable whether this is a clarification of existing text here and in section 4.5 or a technical change.",
     "submit_date": "2011-12-28",
     "submitter_name": "Chris Newman",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   }
