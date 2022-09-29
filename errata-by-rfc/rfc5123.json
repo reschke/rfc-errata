@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1366,
+    "errata_id": "1366",
     "doc-id": "RFC5123",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Rationale:\r\nAS Path presentation should consistently follow the common\r\npractice for BGP-4.\r\nRFC 5123 mixes standard and reversed AS Path notation.\r\nTo avoid confusion, all reversed AS Path notations should\r\nbe corrected.\r\n\r\nFor clarity, further instances of this issue in Sections 1.2,\r\n1.4, and 2.2 are addressed in separate Errata Notes.",
     "submit_date": "2008-03-13",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1367,
+    "errata_id": "1367",
     "doc-id": "RFC5123",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "For rationale, see previous Errata Note.",
     "submit_date": "2008-03-13",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1368,
+    "errata_id": "1368",
     "doc-id": "RFC5123",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "For rationale, see Errata Note for Section 1",
     "submit_date": "2008-03-13",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1369,
+    "errata_id": "1369",
     "doc-id": "RFC5123",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "For rationale, see Errata Note for Section 1.",
     "submit_date": "2008-03-13",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1370,
+    "errata_id": "1370",
     "doc-id": "RFC5123",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,22 +70,22 @@
     "notes": "For rationale, see Errata Note for Section 1, Errata ID: 1366",
     "submit_date": "2008-03-13",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1396,
+    "errata_id": "1396",
     "doc-id": "RFC5123",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": " While\r\n Dijkstra's Sender Policy Framework (SPF) and the Diffusing Update\r\n Algorithm (DUAL) both base their loop-free path calculations on the\r\n cost of a path",
     "correct_text": " While\r\n Dijkstra's Shortest Path First (SPF) and the Diffusing Update\r\n Algorithm (DUAL) both base their loop-free path calculations on the\r\n cost of a path",
     "notes": "This confusion with RFC 4408 is funny :-)",
     "submit_date": "2008-03-30",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }
