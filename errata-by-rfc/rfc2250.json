@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 782,
+    "errata_id": "782",
     "doc-id": "RFC2250",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.3,
+    "section": "3.3",
     "orig_text": " Payload Type: Distinct payload types should be assigned\r\n          for video elementary streams and audio elementary streams.\r\n          See [4] for payload type assignments.\r\n\r\n        M bit:  For video, set to 1 on packet containing MPEG frame\r\n          end code, 0 otherwise.  For audio, set to 1 on first packet of\r\n          a \"talk-spurt,\" 0 otherwise.\r\n\r\n        PT:  MPEG video or audio stream ID.\r\n\r\n",
     "correct_text": "[see notes]",
     "notes": "Payload Type and PT mean the same in RTP header\r\nSo, there exists a repetition.\r\n\r\nfrom pending",
     "submit_date": "2005-09-26",
     "submitter_name": "Vishal B S",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
