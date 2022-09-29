@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1805,
+    "errata_id": "1805",
     "doc-id": "RFC5555",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 8,
+    "section": "8",
     "orig_text": "      The IPv4 home address option described in Section 3.1.1 has been\r\n      assigned value 29.  This option is included in the mobility header\r\n      described in [RFC3775].\r\n\r\n      The IPv4 address acknowledgement option described in Section 3.2.1\r\n      has been assigned value 29.  This option is included in the\r\n      mobility header described in [RFC3775].\r\n",
     "correct_text": "      The IPv4 home address option described in Section 3.1.1 has been\r\n      assigned value 29.  This option is included in the mobility header\r\n      described in [RFC3775].\r\n\r\n      The IPv4 address acknowledgement option described in Section 3.2.1\r\n      has been assigned value 30.  This option is included in the\r\n      mobility header described in [RFC3775].\r\n",
     "notes": "There's an error in the IANA section of the RFC: while both the IANA registry <http://www.iana.org/assignments/mobility-parameters/> and the section of the RFC describing the option <http://tools.ietf.org/html/rfc5555#section-3.2.1> have the correct type value for the IPv4 address acknowledgement option, i.e., 30, the IANA section <http://tools.ietf.org/html/rfc5555#section-8> assigns type value 29 to both the IPv4 home address option and IPv4 address acknowledgement option.",
     "submit_date": "2009-07-08",
     "submitter_name": "Julien Laganier",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3463,
+    "errata_id": "3463",
     "doc-id": "RFC5555",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "Binding acknowledgement error status 144 is referenced in sections 4.4.2 and 4.5 to specify that MN should not use UDP encapsulation. However, there is no mention of this status number in the IANA Considerations section (section 8).",
     "submit_date": "2013-01-17",
     "submitter_name": "Romain Kuntz",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   }
