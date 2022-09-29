@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 501,
-    "doc-id": "RFC2104",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Editorial",
-    "section": 9,
-    "orig_text": "        MD5Update(&context, k_ipad, 64)      /* start with inner pad */\r\n",
-    "correct_text": "        MD5Update(&context, k_ipad, 64);     /* start with inner pad */\r\n",
-    "notes": " \r\n",
-    "submit_date": "2005-06-23",
-    "submitter_name": "Gregory Ogonowski",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 2794,
+    "errata_id": "2794",
     "doc-id": "RFC2104",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +10,12 @@
     "notes": "key_len was omitted from this test vector. The other test vectors specify both key_len and data_len.",
     "submit_date": "2011-05-02",
     "submitter_name": "Kasper Dupont",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3694,
+    "errata_id": "3694",
     "doc-id": "RFC2104",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +25,12 @@
     "notes": "This is reference [BCK1]. It is also no longer directly available at the advertised URL, though can be found on that site. Alternatively it is easily available elsewhere, by searching with the quoted corrected title (which is why this erratum may help).",
     "submit_date": "2013-08-14",
     "submitter_name": "Christopher Dearlove",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4459,
+    "errata_id": "4459",
     "doc-id": "RFC2104",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -55,23 +40,38 @@
     "notes": "The ipad = the byte 0x36 repeated 64 times, opad = the type 0x5C repeated B times and then ipad and opad XOR K after it appended to 64 byptes.\n --VERIFIER NOTES-- \n\r\nThe net effect of the suggested change would be to zero the key \r\nand make HMAC useless.",
     "submit_date": "2015-08-27",
     "submitter_name": "Bozhi ZHENG",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4809,
+    "errata_id": "4809",
     "doc-id": "RFC2104",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "Applications that use keys longer\r\n   than B bytes will first hash the key using H and then use the\r\n   resultant L byte string as the actual key to HMAC.",
     "correct_text": "Applications MUST not use keys longer than B bytes.",
     "notes": "Using this approach creates an exploitable vulnerability where there are two known K instances, one the hashed key, and the other the key itself.  As shown in the sample Java code below:\r\n\r\n    final byte[] keyBytes = KEY.getBytes();\r\n    final byte[] sha1 = HashUtil.sha1(keyBytes);\r\n    final String a = hmac_sha1(keyBytes, TEXT);\r\n    final String b = hmac_sha1(sha1, TEXT);\r\n\r\nAs demonstrated a equals b.  To cite a real world vulnerability; for all keys longer than B, using password storage configurations which store the hash of the key for integrity checks, and store the key itself in a tamper proof device, there will exist plain text keys stored on both storage systems.  Compromising a hash database should not reveal plain text secrets, which will only be true if an implementation first hashes the key and uses the resultant L byte string as the actual key to HMAC.\r\n\r\nI suggest simply not allowing keys longer than B bytes, which will greatly improve the security of the standard.\r\n\r\nVerifier notes: I started a thread [1] on the CFRG mailing list to discuss this. My reading of that thread leads me to conclude there there's consensus to not verify the erratum on the basis that the threat isn't that significant and a backwards incompatible change as would be required is not justified. However, if HMAC were to be updated in a manner that didn't require backwards compatibility then one would likely consider this. Hence marking this as \"hold for document update\"\r\n",
     "submit_date": "2016-09-23",
     "submitter_name": "Erdem Memisyazici",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "501",
+    "doc-id": "RFC2104",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "9",
+    "orig_text": "        MD5Update(&context, k_ipad, 64)      /* start with inner pad */\r\n",
+    "correct_text": "        MD5Update(&context, k_ipad, 64);     /* start with inner pad */\r\n",
+    "notes": " \r\n",
+    "submit_date": "2005-06-23",
+    "submitter_name": "Gregory Ogonowski",
+    "verifier_id": "99",
+    "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
 ]
