@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 491,
-    "doc-id": "RFC2127",
-    "errata_status_code": "Rejected",
-    "errata_type_code": "Technical",
-    "section": 99,
-    "orig_text": null,
-    "correct_text": null,
-    "notes": "All errata for these documents can be found at: http://purl.org/net/http-errata\r\n\r\n----------------------\r\nThis report was mistakenly posted based on a typo (2127 vs. 2617) \r\nin a message from 2002, and thus has been rejected. ",
-    "submit_date": "2002-03-21",
-    "submitter_name": "Larry Masinter",
-    "verifier_id": 2,
-    "verifier_name": "RFC Editor",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1952,
+    "errata_id": "1952",
     "doc-id": "RFC2127",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,8 +10,23 @@
     "notes": "Maybe this was already reported as Errata 491, which I couldn't read.\r\nAnyhow\r\n\r\nisdnMib 2 is already used as \r\nisdnMibTrapPrefix OBJECT IDENTIFIER ::= { isdnMib 2 }",
     "submit_date": "2009-12-01",
     "submitter_name": "Yigal Hachmon",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "491",
+    "doc-id": "RFC2127",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "",
+    "orig_text": null,
+    "correct_text": null,
+    "notes": "All errata for these documents can be found at: http://purl.org/net/http-errata\r\n\r\n----------------------\r\nThis report was mistakenly posted based on a typo (2127 vs. 2617) \r\nin a message from 2002, and thus has been rejected. ",
+    "submit_date": "2002-03-21",
+    "submitter_name": "Larry Masinter",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   }
 ]
