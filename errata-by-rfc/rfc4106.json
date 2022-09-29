@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1919,
+    "errata_id": "1919",
     "doc-id": "RFC4106",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 14,
+    "section": "14",
     "orig_text": "   [GCM]      McGrew, D. and J. Viega, \"The Galois/Counter Mode of\r\n              Operation (GCM)\", Submission to NIST. http://\r\n              csrc.nist.gov/CryptoToolkit/modes/proposedmodes/gcm/\r\n              gcm-spec.pdf, January 2004.",
     "correct_text": "[GCM]      Dworkin, M. \"Recommendation for Block Cipher Modes\r\nof Operation: Galois/Counter Mode (GCM) and GMAC\", NIST Special\r\nPublication 800-38D, November 2007.",
     "notes": "The previous URL is dead. According to David McGrew, SP 800-38D is an acceptable substitute for the original paper. Note that this is a normative reference for good reason: there are many details in the referred-to document that are needed to implement RFC 4106.",
     "submit_date": "2009-10-20",
     "submitter_name": "Paul Hoffman",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   }
