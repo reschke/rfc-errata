@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6609,
+    "errata_id": "6609",
     "doc-id": "RFC8684",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The example for TCP Fastopen with MPTCPv1 in RFC8684, Appendix-B.3 shows the listener sending an incorrect data-ack in its first data packet to the initiator sent immediately after its SYN-ACK.\r\nAt this point, the listener has not received the initiator's key, so it cannot generate the data-ack in it's response packets.\r\nThe correct behaviour would be to set flag 'A' to 0 and exclude sending data-ack until the initiator's key is received.",
     "submit_date": "2021-06-14",
     "submitter_name": "Krishna Khanal",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
