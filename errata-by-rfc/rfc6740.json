@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3959,
+    "errata_id": "3959",
     "doc-id": "RFC6740",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "   Instead, network-layer ILNP sessions have 4 components:\r\n\r\n   - Source Locator(s) (L_S)\r\n   - Source Identifier(s) (I_S)\r\n   - Destination Locator(s) (L_D)\r\n   - Destination Identifier(s) (L_S)\r\n\r\n   and a tuple for an ILNP session would be:\r\n\r\n      <ILNP: I_S, L_S, I_D, L_D>\r\n\r\n   The phrase \"ILNP session\" refers to an ILNP-based network-layer\r\n   session, having the 4 components in the definition above.",
     "correct_text": "   Instead, network-layer ILNP sessions have 4 components:\r\n\r\n   - Source Locator(s) (L_S)\r\n   - Source Identifier(s) (I_S)\r\n   - Destination Locator(s) (L_D)\r\n   - Destination Identifier(s) (I_D)\r\n\r\n   and a tuple for an ILNP session would be:\r\n\r\n      <ILNP: I_S, L_S, I_D, L_D>\r\n\r\n   The phrase \"ILNP session\" refers to an ILNP-based network-layer\r\n   session, having the 4 components in the definition above.",
     "notes": "The \"L_S\" for destination identifier looks like a simple typo.",
     "submit_date": "2014-04-11",
     "submitter_name": "Andrew Yourtchenko",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   }
