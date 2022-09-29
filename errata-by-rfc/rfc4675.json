@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 24,
+    "errata_id": "24",
     "doc-id": "RFC4675",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "       The String field is at least one octet in length and contains the\r\n       VLAN Name as defined in [IEEE-802.1Q] clause 12.10.2.1.3 (a).\r\n       [RFC3629] UTF-8 encoded 10646 characters are RECOMMENDED, but a\r\n       robust implementation SHOULD support the field as undistinguished\r\n       octets.",
     "correct_text": "       The String field is at least one octet in length and contains the\r\n       VLAN Name as defined in [IEEE-802.1Q] clause 12.10.2.1.3 (a).\r\n       [RFC3629] UTF-8 encoded ISO 10646 characters are RECOMMENDED, but a\r\n       robust implementation SHOULD support the field as undistinguished\r\n       octets.\r\n",
     "notes": "",
     "submit_date": "2006-09-19",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }
