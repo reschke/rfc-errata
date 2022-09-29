@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1836,
+    "errata_id": "1836",
     "doc-id": "RFC5260",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "The sample Julian day and date routines are coded to use regular Julian dates, not the modified Julian dates specified in the RFC. The above modification adds the necessary conversion factors for modified Julian days. An unused variable (j) was also removed.",
     "submit_date": "2009-08-22",
     "submitter_name": "Ned Freed",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6349,
+    "errata_id": "6349",
     "doc-id": "RFC5260",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6.1,
+    "section": "6.1",
     "orig_text": "     require [\"date\", \"relational\", \"index\"];\r\n     if date :value \"gt\" :index 2 :zone \"-0500\" \"received\"\r\n             \"iso8601\" \"2007-02-26T09:00:00-05:00\",\r\n     { redirect \"aftercutoff@example.org\"; }\r\n",
     "correct_text": "     require [\"date\", \"relational\", \"index\"];\r\n     if date :value \"gt\" :index 2 :zone \"-0500\" \"received\"\r\n             \"iso8601\" \"2007-02-26T09:00:00-05:00\"\r\n     { redirect \"aftercutoff@example.org\"; }\r\n",
     "notes": "There is a stray comma at the end of the date test.",
     "submit_date": "2020-12-06",
     "submitter_name": "Ken Murchison",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
