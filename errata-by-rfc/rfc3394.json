@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 284,
+    "errata_id": "284",
     "doc-id": "RFC3394",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "     P[i]          The ith plaintext key data block\r\n     C[i]          The ith ciphertext data block\r\n     A             The 64-bit integrity check register\r\n     R[i]          An array of 64-bit registers where\r\n                      i = 0, 1, 2, ..., n\r\n     A[t], R[i][t] The contents of registers A and R[i] after encryption\r\n                      step t.",
     "correct_text": "     P[i]          The ith (64-bit) plaintext key data block\r\n                   where i = 1, 2, ..., n\r\n     C[i]          The ith (64-bit) ciphertext data block\r\n                   where i = 0, 1, 2, ..., n\r\n     A             The 64-bit integrity check register\r\n     R[i]          An array of 64-bit registers where\r\n                   i = 1, 2, ..., n\r\n    A[t], R[t][i]  The contents of registers A and R[i] after encryption\r\n                   step t.",
     "notes": "",
     "submit_date": "2005-02-28",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3358,
+    "errata_id": "3358",
     "doc-id": "RFC3394",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "\n --VERIFIER NOTES-- \nAuthors and reporter have agreed this is incorrect and another errata will be submitted.   ",
     "submit_date": "2012-09-17",
     "submitter_name": "Dwayne Litzenberger",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3361,
+    "errata_id": "3361",
     "doc-id": "RFC3394",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "\n --VERIFIER NOTES-- \nThe two are the same.   ",
     "submit_date": "2012-09-20",
     "submitter_name": "Dwayne Litzenberger",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3671,
+    "errata_id": "3671",
     "doc-id": "RFC3394",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "This resembles a copy-paste typo, where the last portion of \"If unwrapping produces A[0]\" was not removed in the second of two sentences.\r\n\r\nI edited this based on comments from the authors.",
     "submit_date": "2013-06-26",
     "submitter_name": "Lucas Garron",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5777,
+    "errata_id": "5777",
     "doc-id": "RFC3394",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,22 +70,22 @@
     "notes": "An array subscript notation should be used for A[] ",
     "submit_date": "2019-07-10",
     "submitter_name": "Charles Timko",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-01-20 06:44:41"
   },
   {
-    "errata_id": 6942,
+    "errata_id": "6942",
     "doc-id": "RFC3394",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "R[i]          An array of 64-bit registers where\r\n                       i = 0, 1, 2, ..., n\r\nA[t], R[i][t] The contents of registers A and R[i] after encryption\r\n                       step t.",
     "correct_text": "R[i]          An array of 64-bit registers where\r\n                       i = 1, 2, ..., n\r\nA[t], R[t][i] The contents of registers A and R[i] after encryption\r\n                       step t.",
     "notes": "1) There are n 64-bit registers indexed R[1] to R[n] in the algorithms in section 2.2.\r\n2) The notation of the algorithms in section 2.2 dereference R[][] using the step as the first index, and the index of the register from 1 to n as the second index",
     "submit_date": "2022-04-25",
     "submitter_name": "Samuel Lee",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
