@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1716,
+    "errata_id": "1716",
     "doc-id": "RFC4134",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "\"From\" line of the RFC-822 message is aliceDss@examples.com, while the certificate’s SubjectAlternativeName contains Rfc822Name = AliceDSS@example.com\r\n\r\nSo the two emails are different in the host part:\r\n\r\naliceDss@examples.com\r\nAliceDSS@example.com\r\n\r\nThe wrong email (aliceDss@examples.com) is given in both cleartext examples and encoded examples.\r\n\r\nAdditionally, the Message-Id should also be from example.com not from examples.com.",
     "submit_date": "2009-03-15",
     "submitter_name": "Maxim Masiutin",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 7125,
+    "errata_id": "7125",
     "doc-id": "RFC4134",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "The base64 encoding in the Appending B doesn't correspond to the data in the section 5.2. Provided base64 was generated using data in the section 5.2 instead.",
     "submit_date": "2022-09-11",
     "submitter_name": "Dmitry Baryshkov",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
