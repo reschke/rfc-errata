@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3906,
+    "errata_id": "3906",
     "doc-id": "RFC6192",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "The bitfield masks in the Cisco Configuration example  in section A.1 look incorrect.  The authors may have intended the following meanings:\r\n\r\nip access-list extended DNS\r\n  all hosts between 198.51.100.0 and 198.51.100.3 instead of all addresses in the range 198.51.100.0/24 which are evenly divisible by 4\r\n\r\nip access-list extended NTP\r\n  all hosts between 198.51.100.4 and 198.51.100.7 instead of all addresses in the range 0.0.0.0/0 which are evenly divisible by 4\r\n\r\nip access-list extended SSH\r\n  all hosts between 198.51.100.128 and 198.51.100.255 instead of 198.51.100.128/32\r\n\r\nip access-list extended SNMP\r\n  all hosts between 198.51.100.128 and 198.51.100.255 instead of 198.51.100.128/32",
     "submit_date": "2014-03-02",
     "submitter_name": "Nick Hilliard",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4705,
+    "errata_id": "4705",
     "doc-id": "RFC6192",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "DNS is transported sometimes over UDP and sometimes over TCP. The Cisco example fails to demonstrate this behaviour in the case of IPv4. The Cisco example clearly shows this behaviour in the case of IPv6.\r\n\r\nThe Juniper example in Section A.2 should be amended in the same fashion, however I'm unfamiliar with the proper JunOS syntax.",
     "submit_date": "2016-06-07",
     "submitter_name": "Trond Endrestøl",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4851,
+    "errata_id": "4851",
     "doc-id": "RFC6192",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "There is a security question in that firewall relating to bgp reply.\r\nAny neighbor that fakes a tcp source port to 179 can access any router port, for example, ssh.\r\nNeed to add the line tcp-established. Would also be better to add source-port bgp since bgp protocol uses the 179 port to destination. Add the fix to all bgps, including ipv6.",
     "submit_date": "2016-11-01",
     "submitter_name": "Hugo Leonardo Canalli",
-    "verifier_id": 135,
+    "verifier_id": "135",
     "verifier_name": "joel jaeggli",
     "update_date": "2019-09-10 09:09:03"
   }
