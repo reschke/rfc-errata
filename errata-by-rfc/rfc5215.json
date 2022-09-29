@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1659,
+    "errata_id": "1659",
     "doc-id": "RFC5215",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Rationale:\r\n\r\nThe RFC is about an RTP *payload* format, and, according to\r\nsection 1 of the RFC, deals with Vorbis *packets* -- to be\r\nencapsulated in the RTP payload.\r\n\r\nSection 2.2 explains the RTP Payload Header vor Vorbis. Thus,\r\nthe use of \"payload\" and \"packet\" in the Original Text does\r\nnot match these definitions and hence might well be confusing.\r\nThe Corrected Text aims at placing the proper terms there.",
     "submit_date": "2009-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Cullen Jennings",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1660,
+    "errata_id": "1660",
     "doc-id": "RFC5215",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Rationale: cunfusing word twister!",
     "submit_date": "2009-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1661,
+    "errata_id": "1661",
     "doc-id": "RFC5215",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "Rationale:\r\n\r\nAccording to Section 2.2 of the RFC, the last field in the\r\nPayload Header is \"number of packets\", not \"number of the packet\"\r\n(which might be misunderstood as some kind of sequence number).\r\nIt seems to be prudent to use the precise field name.",
     "submit_date": "2009-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1662,
+    "errata_id": "1662",
     "doc-id": "RFC5215",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Rationale:\r\n\r\nConfusing use of plural: Each RTP packet contains a single \r\nstandard RTP header and a single 4-octet Vorbis header.",
     "submit_date": "2009-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1663,
+    "errata_id": "1663",
     "doc-id": "RFC5215",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "Rationale: Clarification / improved language",
     "submit_date": "2009-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1664,
+    "errata_id": "1664",
     "doc-id": "RFC5215",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -85,12 +85,12 @@
     "notes": "Rationale:\r\n\r\nThe section structure and titles do not properly match the contents\r\nof the whole section and should be corrected for clarity.\r\nBecause the applicable RFC 4288 and RFC 4855 have no entries in the\r\nReferences section of this RFC, they are quoted only informally.\r\nIn the Correcte Text, the explanatory text has been moved to up to\r\n6. and expanded accordingly to describe the whole section content.",
     "submit_date": "2009-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1665,
+    "errata_id": "1665",
     "doc-id": "RFC5215",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -100,12 +100,12 @@
     "notes": "Rationale:\r\n\r\nGrammar; there is only a single mapping (first paragraph of the section)\r\nand only a single mandatory parameter (last bullet (of 5)).",
     "submit_date": "2009-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1666,
+    "errata_id": "1666",
     "doc-id": "RFC5215",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -115,12 +115,12 @@
     "notes": "Rationale:\r\n\r\na)  There is no URI provided; the corresponding remark is misleading\r\n    and therefore has been deleted in the Corrected Text.\r\n\r\nb)  The example does not contain folded lines; one line is shown only\r\n    partially -- for brevity this is denoted as truncation, and the\r\n    confusing remarks regarding line folding have been deleted in the\r\n    Corrected Text.\r\n\r\nc)  Spurious blank lines within SDP example deleted.\r\n\r\nd)  Language regarding media types/subtypes corrected.",
     "submit_date": "2009-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1667,
+    "errata_id": "1667",
     "doc-id": "RFC5215",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -130,7 +130,7 @@
     "notes": "Rationale:\r\n\r\nThe published RFC does not make use of embedded or explicit URIs.\r\nConsequently the Security Considerations from RFC 3986 seem to be\r\nirrelevant.\r\n\r\nArguably, the ref. to [RFC4648] only applies to the SDP, not the\r\nRTP packets themselves; further text changes in support of this\r\nobservation have been set aside for brevity.\r\n\r\nNote:\r\nThe entry [RFC3986] in Section 13.1 can be deleted after the\r\nabove change.",
     "submit_date": "2009-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
