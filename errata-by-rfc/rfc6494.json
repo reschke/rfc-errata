@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3655,
+    "errata_id": "3655",
     "doc-id": "RFC6494",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "   In Sections 2, 4.9.10, and 4.9.11 of [RFC6487], it is stated that\r\n   RFC 3779 resource extensions MUST be marked as critical and MUST be\r\n   present in all resource certificates.  SEND certificates MUST include\r\n   the IP Address Delegation extension [RFC3779].  This extension MUST\r\n   include at least one address block for the IPv6 Address Family\r\n   (AFI=0002), as described in Section 4.9.10 of [RFC6487].  SEND\r\n   certificates MUST NOT have more than one IP Address Delegation\r\n   extension.",
     "correct_text": "   In Sections 2, 4.8.10, and 4.8.11 of [RFC6487], it is stated that\r\n   RFC 3779 resource extensions MUST be marked as critical and MUST be\r\n   present in all resource certificates.  SEND certificates MUST include\r\n   the IP Address Delegation extension [RFC3779].  This extension MUST\r\n   include at least one address block for the IPv6 Address Family\r\n   (AFI=0002), as described in Section 4.8.10 of [RFC6487].  SEND\r\n   certificates MUST NOT have more than one IP Address Delegation\r\n   extension.",
     "notes": "Sections 4.9.10 and 4.9.11 do not exist in RFC 6487.",
     "submit_date": "2013-06-17",
     "submitter_name": "Joël Repiquet",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
