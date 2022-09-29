@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3677,
+    "errata_id": "3677",
     "doc-id": "RFC6130",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The case currently indicated as a constraint failure, \r\nbut not by the relaxed constraint, can occur - and \r\ncorrectly - in normal operation of the protocol.",
     "submit_date": "2013-07-04",
     "submitter_name": "Christopher Dearlove",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4276,
+    "errata_id": "4276",
     "doc-id": "RFC6130",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "There is no such thing as a 2-Hop Neighbor Tuple. There is a 2-Hop Tuple (which is what is meant) but also a Neighbor Tuple (which is not meant).",
     "submit_date": "2015-02-23",
     "submitter_name": "Christopher Dearlove",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4866,
+    "errata_id": "4866",
     "doc-id": "RFC6130",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "The second statement is already contained in the first one.\r\n\r\n=====\r\nFrom Christopher Dearlove (author):\r\n\r\nit is the other paragraph that should be deleted. Because the paragraph following the two quoted paragraphs, which I copy here:\r\n\r\n   o  When determining whether to include a given piece of neighbor\r\n      information in a HELLO message, it is not sufficient to consider\r\n      whether that information has been sent in the interval of length\r\n      REFRESH_INTERVAL up to the current time.  Instead, the router MUST\r\n      consider the interval of length REFRESH_INTERVAL that will end at\r\n      the latest possible time at which the next HELLO message will be\r\n      sent on this MANET interface.  (Normally, this will be\r\n      HELLO_INTERVAL past the current time, but MAY be earlier if this\r\n      router elects to divide its neighbor information among more than\r\n      one HELLO message in order to reduce the size of its HELLO\r\n      messages.)  All neighbor information MUST be sent in this\r\n      interval, i.e., the router MUST ensure that this HELLO message\r\n      includes all neighbor information that has not already been\r\n      included in any HELLO messages sent since the start of this\r\n      interval (normally, the current time - (REFRESH_INTERVAL -\r\n      HELLO_INTERVAL)).\r\n\r\ncontains the additional information in the longer paragraph, expanded to explain what it means.\r\n\r\nThus the resolution is to delete the first paragraph:\r\n\r\nOLD:\r\n\r\n   o  For each MANET interface, within every time interval equal to the\r\n      corresponding REFRESH_INTERVAL, sent HELLO messages MUST\r\n      collectively include all of the relevant information in the\r\n      corresponding Link Set and the Neighbor Information Base.  Note\r\n      that when determining whether to include information in a HELLO\r\n      message, the sender MUST consider all times up to the latest time\r\n      when it may send its next HELLO message on this MANET interface.\r\n\r\nNEW:\r\n",
     "submit_date": "2016-11-15",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5780,
+    "errata_id": "5780",
     "doc-id": "RFC6130",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Parentheses are mistakenly typed.  s/(2)/{2}",
     "submit_date": "2019-07-14",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5785,
+    "errata_id": "5785",
     "doc-id": "RFC6130",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -70,7 +70,7 @@
     "notes": "Typo in first sentence. \"than\" should read \"that\"",
     "submit_date": "2019-07-18",
     "submitter_name": "Steve Matty",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }
