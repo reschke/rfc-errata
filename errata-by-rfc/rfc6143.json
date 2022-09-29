@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 2745,
+    "errata_id": "2745",
     "doc-id": "RFC6143",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 11,
+    "section": "11",
     "orig_text": "11. References\r\n\r\n11.1. Normative References\r\n\r\n   [RFC1950]  Deutsch, L. and J-L. Gailly, \"ZLIB Compressed Data Format\r\n              Specification version 3.3\", RFC 1950, May 1996.\r\n\r\n   [RFC1951]  Deutsch, P., \"DEFLATE Compressed Data Format Specification\r\n              version 1.3\", RFC 1951, May 1996.\r\n\r\n   [XLIBREF]  Nye, A., \"XLIB Reference Manual R5\", June 1994.\r\n\r\n11.2. Informative References\r\n\r\n   [RFC4254]  Ylonen, T. and C. Lonvick, \"The Secure Shell (SSH)\r\n              Connection Protocol\", RFC 4254, January 2006.\r\n\r\n   [RFC4301]  Kent, S. and K. Seo, \"Security Architecture for the\r\n              Internet Protocol\", RFC 4301, December 2005.\r\n\r\n   [RFC5226]  Narten, T. and H. Alvestrand, \"Guidelines for Writing an\r\n              IANA Considerations Section in RFCs\", BCP 26, RFC 5226,\r\n              May 2008.\r\n",
     "correct_text": "11. References\r\n\r\n11.1. Normative References\r\n\r\n   [RFC1950]  Deutsch, L. and J-L. Gailly, \"ZLIB Compressed Data Format\r\n              Specification version 3.3\", RFC 1950, May 1996.\r\n\r\n   [RFC1951]  Deutsch, P., \"DEFLATE Compressed Data Format Specification\r\n              version 1.3\", RFC 1951, May 1996.\r\n\r\n   [RFC5226]  Narten, T. and H. Alvestrand, \"Guidelines for Writing an\r\n              IANA Considerations Section in RFCs\", BCP 26, RFC 5226,\r\n              May 2008.\r\n\r\n   [XLIBREF]  Nye, A., \"XLIB Reference Manual R5\", June 1994.\r\n\r\n11.2. Informative References\r\n\r\n   [RFC4254]  Ylonen, T. and C. Lonvick, \"The Secure Shell (SSH)\r\n              Connection Protocol\", RFC 4254, January 2006.\r\n\r\n   [RFC4301]  Kent, S. and K. Seo, \"Security Architecture for the\r\n              Internet Protocol\", RFC 4301, December 2005.\r\n\r\n",
     "notes": "\n --VERIFIER NOTES-- \n",
     "submit_date": "2011-03-07",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4951,
+    "errata_id": "4951",
     "doc-id": "RFC6143",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "Added text \"; then the bits of each byte of the key are reversed\" is essential to implementation of a VNC client or server which interoperates with existing VNC clients or servers, but the text fails to mention this.\r\n\r\nSee https://www.vidarholen.net/contents/junk/vnc.html\r\n\r\nI confirmed the claims of the above web page while writing my own VNC server. I implemented VNC authentication without mirroring the bytes of the DES key and TigerVNC 1.5.0 could not authenticate to my VNC server. When I added code to mirror each byte of the DES key as described by the above web page, TigerVNC 1.5.0 could authenticate to my test VNC server.",
     "submit_date": "2017-02-26",
     "submitter_name": "Simon Kissane",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
