@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3105,
+    "errata_id": "3105",
     "doc-id": "RFC4086",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,27 +10,27 @@
     "notes": "As noted by Koblitz and Menezes in \"Another look at provable security II\", <http://eprint.iacr.org/2006/229.pdf>, this recommendation is based on a misinterpretation of the big-O notation. The claim about provable security is therefore misleading.",
     "submit_date": "2012-02-05",
     "submitter_name": "Florian Weimer",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3106,
+    "errata_id": "3106",
     "doc-id": "RFC4086",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4.4,
+    "section": "4.4",
     "orig_text": "(see below)",
     "correct_text": "(remove entire section)",
     "notes": "Compression is not suitable for de-skewing, even if headers are removed. For most compression algorithms, discriminators are known. For instance, in gzip output, the most significant bit of each byte is set with a frequency somewhat above 0.501 (except for small inputs). This means that the output is not uniformly distributed even when looking at isolated bytes.\r\n\r\nI recommend removal of the entire section.\n --VERIFIER NOTES-- \nI agree with the author:\r\n\r\nJust to be crystal clear, I believe there is no \"error\" here. Just a\r\njudgement call as to whether Section 4.4 should have been included. My\r\njudgement that it should be included was ratified by the IETF at the\r\ntime the RFC was approved.",
     "submit_date": "2012-02-05",
     "submitter_name": "Florian Weimer",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3426,
+    "errata_id": "3426",
     "doc-id": "RFC4086",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "a grammatical nit",
     "submit_date": "2012-12-10",
     "submitter_name": "Tony Hansen",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3427,
+    "errata_id": "3427",
     "doc-id": "RFC4086",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "a grammatical nit",
     "submit_date": "2012-12-10",
     "submitter_name": "Tony Hansen",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4960,
+    "errata_id": "4960",
     "doc-id": "RFC4086",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "Incorrect values.",
     "submit_date": "2017-03-09",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5386,
+    "errata_id": "5386",
     "doc-id": "RFC4086",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -85,7 +85,7 @@
     "notes": "This Informative Reference had the wrong century as publish date.",
     "submit_date": "2018-06-08",
     "submitter_name": "David Jonasson",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
