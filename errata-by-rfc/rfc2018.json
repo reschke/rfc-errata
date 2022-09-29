@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1610,
+    "errata_id": "1610",
     "doc-id": "RFC2018",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "   The use of time-outs as a fall-back mechanism for detecting dropped\r\n   packets is unchanged by the SACK option.  Because the data receiver\r\n   is allowed to discard SACKed data, when a retransmit timeout occurs\r\n   the data sender MUST ignore prior SACK information in determining\r\n   which data to retransmit.",
     "correct_text": "   The use of time-outs as a fall-back mechanism for detecting dropped\r\n   packets is unchanged by the SACK option.  Because the data receiver\r\n   is allowed to discard SACKed data, when a retransmit timeout occurs\r\n   the data sender SHOULD ignore prior SACK information in determining\r\n   which data to retransmit.",
     "notes": "At least one OS (Linux) violates the MUST to good effect: Even when timeout\r\ndriven, it keeps old SACK data so it can avoid retransmitting data already at\r\nthe receiver.  Thus even under severe bandwidth exhaustion, 100% of the data\r\ndelivered to the receiver causes forward progress and the system is not subject\r\nto classical congestion collapse (that is, congestion collapse from\r\nunnecessarily-retransmitted packets).\r\n\r\nWhen this draft is reopened, this text should be further refined to address a\r\nnumber of additional issues.  In particular:\r\n\r\n- It has been observed that clearing the scoreboard on timeouts sometimes\r\n  causes very inefficient network utilization, with large quantities of\r\n  duplicated data delivered to the receiver.\r\n\r\n- There is some risk of deadlock if the timeout was caused a corrupted\r\n  scoreboard or if the receiver reneges SACK blocks.  It is important that the\r\n  checks for reneging and inconsistent scoreboards are robust.  Furthermore,\r\n  there probably should be a mandatory fall back mechanism, such as requiring\r\n  classical fast retransmit and new reno behavior, or ultimately under repeated\r\n  timeouts with no forward progress, clearing the scoreboard.\r\n\r\n- Making SACK more robust in the presence of timeouts may increase the risk of\r\n  congestion collapse associated with cascaded bottlenecks, because it may\r\n  enable TCP to function under unreasonably high loss rates.",
     "submit_date": "2008-11-22",
     "submitter_name": "Matt Mathis",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6602,
+    "errata_id": "6602",
     "doc-id": "RFC2018",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "   This document does not attempt to specify in detail the congestion\r\n   control algorithms for implementations of TCP with SACK.  However,\r\n   the congestion control algorithms present in the de facto standard\r\n   TCP implementations MUST be preserved [Stevens94].  In particular, to\r\n   preserve robustness in the presence of packets reordered by the\r\n   network, recovery is not triggered by a single ACK reporting out-of-\r\n   order packets at the receiver.  Further, during recovery the data\r\n   sender limits the number of segments sent in response to each ACK.\r\n   Existing implementations limit the data sender to sending one segment\r\n   during Reno-style fast recovery, or to two segments during slow-start\r\n   [Jacobson88].  Other aspects of congestion control, such as reducing\r\n   the congestion window in response to congestion, must similarly be\r\n   preserved.",
     "correct_text": "   This document does not attempt to specify in detail the congestion\r\n   control algorithms for implementations of TCP with SACK.  However,\r\n   the congestion control algorithms present in the de facto standard\r\n   TCP implementations MUST be preserved [Stevens94].  In particular, to\r\n   preserve robustness in the presence of packets reordered by the\r\n   network, recovery is not triggered by a single ACK reporting out-of-\r\n   order packets at the receiver.  Further, during recovery the data\r\n   sender limits the number of segments sent in response to each ACK.\r\n   Existing implementations limit the data sender to sending one segment\r\n   during Reno-style recovery upon a timeout , or to two segments during slow-start\r\n   [Jacobson88].  Other aspects of congestion control, such as reducing\r\n   the congestion window in response to congestion, must similarly be\r\n   preserved.",
     "notes": "RFC 2581, Section 3.1 sets the cndw to a value of 1:\r\n   ...\r\n   Furthermore, upon a timeout cwnd MUST be set to no more than the loss\r\n   window, LW, which equals 1 full-sized segment (regardless of the\r\n   value of IW).  Therefore, after retransmitting the dropped segment\r\n   the TCP sender uses the slow start algorithm to increase the window\r\n   from 1 full-sized segment to the new value of ssthresh, at which\r\n   point congestion avoidance again takes over.\r\n\r\nWhereas in the Fast Recovery section(3.2) the cwnd is set by the following formula:\r\n   ...\r\n   The fast retransmit and fast recovery algorithms are usually\r\n   implemented together as follows.\r\n\r\n   1.  When the third duplicate ACK is received, set ssthresh to no more\r\n       than the value given in equation 3.\r\n   2.  Retransmit the lost segment and set cwnd to ssthresh plus 3*SMSS.\r\n       This artificially \"inflates\" the congestion window by the number\r\n       of segments (three) that have left the network and which the\r\n       receiver has buffered.\r\n\r\n   3.  For each additional duplicate ACK received, increment cwnd by\r\n       SMSS.  This artificially inflates the congestion window in order\r\n       to reflect the additional segment that has left the network.\r\n\r\n   4.  Transmit a segment, if allowed by the new value of cwnd and the\r\n       receiver's advertised window.\r\n\r\n   5.  When the next ACK arrives that acknowledges new data, set cwnd to\r\n       ssthresh (the value set in step 1).  This is termed \"deflating\"\r\n       the window.\r\n\r\n       This ACK should be the acknowledgment elicited by the\r\n       retransmission from step 1, one RTT after the retransmission\r\n       (though it may arrive sooner in the presence of significant out-\r\n       of-order delivery of data segments at the receiver).\r\n       Additionally, this ACK should acknowledge all the intermediate\r\n       segments sent between the lost segment and the receipt of the\r\n       third duplicate ACK, if none of these were lost.\n --VERIFIER NOTES-- \nThe sentence in question is not describing cwnd adjustment. When in Fast Recovery, a duplicate ack indeed allows the transmission of one packet to replace the one that left the network. In Slow Start, an ack allows for two packets: one to replace the old one, and one to fill the newly expanded cwnd.",
     "submit_date": "2021-06-07",
     "submitter_name": "Christian Reusch",
-    "verifier_id": 167,
+    "verifier_id": "167",
     "verifier_name": "Martin Duke",
     "update_date": "2022-05-13 11:21:18"
   }
