@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3870,
+    "errata_id": "3870",
     "doc-id": "RFC6726",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 11.1,
+    "section": "11.1",
     "orig_text": "Incremented the FLUTE protocol version from 1 to 2, due to concerns\r\n   about backwards compatibility.  For instance, the LCT header changed\r\n   between RFC 3451 and [RFC5651].  In RFC 3451, the T and R fields of\r\n   the LCT header indicate the presence of Sender Current Time and\r\n   Expected Residual Time, respectively.  In [RFC5651], these fields\r\n   MUST be set to zero and MUST be ignored by receivers (instead, the\r\n   EXT_TIME Header Extensions can convey this information if needed).\r\n   Thus, [RFC5651] is not backwards compatible with RFC 3451, even\r\n   though both use LCT version 1.  FLUTE version 1 as specified in\r\n   [RFC3926] MUST use RFC 3451.  FLUTE version 2 as specified in this\r\n   document MUST use [RFC5651].  Therefore, an implementation that\r\n   relies on [RFC3926] and RFC 3451 will not be backwards compatible\r\n   with FLUTE as specified in this document.",
     "correct_text": "Incremented the FLUTE protocol version from 1 to 2, due to concerns\r\n   about backwards compatibility.  For instance, the LCT header changed\r\n   between RFC 3451 and [RFC5651].  In RFC 3451, the T and R fields of\r\n   the LCT header indicate the presence of Sender Current Time and\r\n   Expected Residual Time, respectively.  In [RFC5651], these fields\r\n   MUST be set to zero and MUST be ignored by receivers (instead, the\r\n   EXT_TIME Header Extensions can convey this information if needed).\r\n   Thus, [RFC5651] is not backwards compatible with RFC 3451, even\r\n   though both use LCT version 1.  FLUTE version 1 as specified in\r\n   [RFC3926] SHOULD use RFC 3451.  FLUTE version 2 as specified in this\r\n   document MUST use [RFC5651].  Therefore, an implementation that\r\n   relies on [RFC3926] and RFC 3451 will not be backwards compatible\r\n   with FLUTE as specified in this document.",
     "notes": "The only change that is requested is to change \"FLUTE version 1 as specified in\r\n   [RFC3926] MUST use RFC 3451.\" to \"FLUTE version 1 as specified in\r\n   [RFC3926] SHOULD use RFC 3451. \" \r\n\r\nThis is done as there are deployments that want to use the new functionalities of LCT as defined in RFC5651, but still want to be backward compatible to FLUTE version 1. The above statement being a must prevents this. However, if there are good reasons to not move to FLUTE version 2 (as this would break backward-compatibility for existing receivers), it should be possible to use FLUTE version 1 on top of LCT RFC5651 in order to use the functionalities in RFC5651, especially the header extensions.\n --VERIFIER NOTES-- \nRFC errata are not used to debate MUST or SHOULD clauses, but to report fixes. The RMT mailingt list discussion also hinted to disagreement about this change in general. ",
     "submit_date": "2014-01-22",
     "submitter_name": "Thomas Stockhammer",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }
