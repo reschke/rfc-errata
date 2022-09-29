@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 836,
-    "doc-id": "RFC3779",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Editorial",
-    "section": "3.2.3.1",
-    "orig_text": "The ASIdentifiers type is a SEQUENCE containing one or more forms of\r\nautonomous system identifiers -- AS numbers (in the asnum element) or\r\nrouting domain identifiers (in the rdi element).  When the ASIdentifiers type\r\ncontains multiple forms of identifiers, the asnum\r\nentry MUST precede the rdi entry.  AS numbers are used by BGP, and\r\nrouting domain identifiers are specified in the IDRP [RFC1142].",
-    "correct_text": "[see Notes]",
-    "notes": "IDRP was never defined in an RFC, only by ISO 10747.\r\n\r\nfrom pending",
-    "submit_date": "2006-06-21",
-    "submitter_name": "Randy Bush",
-    "verifier_id": 2,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1886,
+    "errata_id": "1886",
     "doc-id": "RFC3779",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +10,12 @@
     "notes": "\"semicolon\" should be \"colon\"\r\nAdded reference to RFC4291.\r\nVerifier: Forward reference to RFC4291 is inappropriate.",
     "submit_date": "2009-09-21",
     "submitter_name": "Charles Bobo",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1887,
+    "errata_id": "1887",
     "doc-id": "RFC3779",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +25,12 @@
     "notes": "Section is \"Informational References\" but this doesn't fit in the Section field above.\r\nReferences were out of alphabetical order -- RFC3281 should come before RFC3513.\r\nAdded reference RFC4291",
     "submit_date": "2009-09-21",
     "submitter_name": "Charles Bobo",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2537,
+    "errata_id": "2537",
     "doc-id": "RFC3779",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +40,12 @@
     "notes": "There are a number of different issues relative to this text that need to be addressed.\r\n\r\n1.  This text implicitly change the rules for encoding a maximum value.  As an example the address 0.0.0.255 is encoded as 03 03 00 00 00 00 according to the rule \" The BIT STRING for the maximum address results from removing all the least-significant one-bits from the maximum address.\"\r\n\r\n2.  The rule in no way simplifies any comparisions of IP address blocks.  If one really wishes to simplify the comparison then one needs to change the rule for maximum addresses to remove all but the last least-signficant one-bit from the address.  However it is not clear that even this would really simplify the comparison in any significant way.\r\n\r\nIf you look at the example in 2.2.3.9 - tis is not clear how having the one bit at the top of the encoding helps make the comparisons any easier - but it satisfies the requirment that atleast one bit is a 1.  If the maximum value ws encoded as  1000 1   (0x3 0x02 0x03 0x84) - a bitwise comparision routine could make for a simplified a < b comparison (looking at only the top 5 bits of the address to be compared.)",
     "submit_date": "2010-09-30",
     "submitter_name": "Jim Schaad",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6792,
+    "errata_id": "6792",
     "doc-id": "RFC3779",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,8 +55,23 @@
     "notes": "b010 represents 176.16/12, the hex representation of 172 is ac, so it should be ac10.\r\n\r\nThe IPv6 addressPrefix in question is 2001:0:2/48, not 2001:0:2/47, as explained in the text before the example.",
     "submit_date": "2021-12-21",
     "submitter_name": "Theo Buehler",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-12-24 20:15:17"
+  },
+  {
+    "errata_id": "836",
+    "doc-id": "RFC3779",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2.3.1",
+    "orig_text": "The ASIdentifiers type is a SEQUENCE containing one or more forms of\r\nautonomous system identifiers -- AS numbers (in the asnum element) or\r\nrouting domain identifiers (in the rdi element).  When the ASIdentifiers type\r\ncontains multiple forms of identifiers, the asnum\r\nentry MUST precede the rdi entry.  AS numbers are used by BGP, and\r\nrouting domain identifiers are specified in the IDRP [RFC1142].",
+    "correct_text": "[see Notes]",
+    "notes": "IDRP was never defined in an RFC, only by ISO 10747.\r\n\r\nfrom pending",
+    "submit_date": "2006-06-21",
+    "submitter_name": "Randy Bush",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
   }
 ]
