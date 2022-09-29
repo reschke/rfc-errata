@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4374,
+    "errata_id": "4374",
     "doc-id": "RFC6868",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   When parsing iCalendar or vCard parameter values, the following\r\n   apply:\r\n\r\n   o  the character sequence ^n (U+005E, U+006E) is decoded into an\r\n      appropriate formatted line break according to the type of system\r\n      being used\r\n\r\n   o  the character sequence ^^ (U+005E, U+005E) is decoded into the ^\r\n      character (U+005E)\r\n\r\n   o  the character sequence ^' (U+005E, U+0027) is decoded into the \"\r\n      character (U+0022)\r\n\r\n   o  if a ^ (U+005E) character is followed by any character other than\r\n      the ones above, parsers MUST leave both the ^ and the following\r\n      character in place\r\n",
     "correct_text": "\r\n   When parsing iCalendar or vCard parameter values, the following\r\n   apply:\r\n\r\n   o  first all occurrences of the character sequence ^n (U+005E,\r\n      U+006E) is decoded into an appropriate formatted line break\r\n      according to the type of system being used\r\n\r\n   o  second all occurrences of the character sequence ^' (U+005E,\r\n      U+0027) is decoded into the \" character (U+0022)\r\n\r\n   o  third all occurrences of the character sequence ^^ (U+005E,\r\n      U+005E) is decoded into the ^ character (U+005E)\r\n\r\n   o  if a ^ (U+005E) character is followed by any character other than\r\n      the ones above, parsers MUST leave both the ^ and the following\r\n      character in place\r\n",
     "notes": "It is unclear how a string like: FOO=^^n should be decoded.\r\n\r\nPossibly FOO=^n  or FOO=^\\n or FOO=\\n\r\n\r\nSection 3 implies that ^n is converted first, then ^^, then ^'.  But it is not explicit.  Also this leads to a contradiction.  FOO=^^n will become FOO=\\n, not what is expected.  \r\n\r\nAn equally reasonable interpretation is to proceed from the left and convert as encountered.\r\n\r\nThe first gives FOO=\\n  the second FOO=^n. \r\n\r\nIn the absence of an explicit definition of the order of interpretation it is impossible to decide which to use.",
     "submit_date": "2015-05-21",
     "submitter_name": "Worik Stanton",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4383,
+    "errata_id": "4383",
     "doc-id": "RFC6868",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "   GEO;X-ADDRESS=\"Pittsburgh Pirates^n115 Federal St^nPitt\r\n    sburgh, PA 15212\":geo:40.446816,-80.00566",
     "correct_text": "   GEO;X-ADDRESS=\"Pittsburgh Pirates^n115 Federal St^nPitt\r\n    sburgh, PA 15212\":geo:40.446816\\,-80.00566",
     "notes": "RFC 6350 Section 3.4 states that all property values must have COMMA characters escaped with a BACKSLASH character. The GEO property value in the example contains a comma. Therefore it must be escaped with a backslash.\r\n(The GEO example in RFC 6350 is incorrect see Errata 3846)",
     "submit_date": "2015-06-01",
     "submitter_name": "Mark Wierbosch",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
