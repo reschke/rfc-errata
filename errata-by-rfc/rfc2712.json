@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5432,
+    "errata_id": "5432",
     "doc-id": "RFC2712",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -10,7 +10,7 @@
     "notes": "Errata 5409 was rejected and I was suggested to post another one at this place.\r\n\r\nRFC 2712 (Addition of Kerberos Cipher Suites to Transport Layer Security) in its Draft 01 version introduces new cipher suites values, among them three are colliding with the Fortezza cipher suites. The Draft 02 version partially corrects that, by shifting all of the Kerberos cipher suites values by two.\r\nThis omission of the third Fortezza cipher suite has never been corrected, and this remains in the same state in the final RFC 2712. As a result, the cipher suite value { 0x00, 0x1E } is now officially known as a Kerberos one.\r\n\r\nAlthough not documented themselves by any RFC, the two non conflicting Fortezza cipher suites are mentionned in the same note in the TLS protocol RFC (2246, 4346, 5246). This gives an explanation on how the Kerberos cipher suite values were chosen.",
     "submit_date": "2018-07-20",
     "submitter_name": "Eugene Adell",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
