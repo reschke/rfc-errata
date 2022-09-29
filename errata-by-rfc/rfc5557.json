@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3672,
+    "errata_id": "3672",
     "doc-id": "RFC5557",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "   The <svec-list> is changed as follows:\r\n\r\n   <svec-list> ::= <SVEC>\r\n                   [<OF>]\r\n                   [<GC>]\r\n                   [<XRO>]\r\n                   [<svec-list>]",
     "correct_text": "   The <svec-list> is changed as follows:\r\n\r\n   <svec-list> ::= <SVEC>\r\n                   [<OF>]\r\n                   [<GC>]\r\n                   [<XRO>]\r\n                   [<metric-list>]\r\n                   [<svec-list>]",
     "notes": "RFC5440 defines <svec-list>::=<SVEC>[<svec-list>]\r\nRFC5541 extend <svec-list> as follows:\r\n         <svec-list> ::= <SVEC>\r\n                         [<OF>]\r\n                         [<metric-list>]\r\n                         [<svec-list>]\r\n\r\nRFC5557 should include all the elements defined by the RFCs its extending.\r\nThe position of the metric-list may be kept after the [<OF>]\n --VERIFIER NOTES-- \nThe essence of his report is that message definitions in RFCs should include all\r\nelements of RBNF from the messages as defined in previous RFCs.\r\n\r\nDiscussion of this point in the PCE working group led to a debate about\r\nwhether the RBNF is normative and should be \"compilable\". Some hold the\r\nview that being conservative in what you send and liberal in what you \r\nreceive could only make this text normative for building messages not \r\nparsing them. Others noted that, as with RSVP, the object ordering is\r\nadvisory not mandatory except as where noted explicitly in the text.\r\n\r\nIt is also worth noting that as various documents are developed in parallel,\r\ngetting the RBNF right in the RFCs might require last-minute edits in Auth48\r\nwhich is undesirable for a host of reasons. Others observed that there is no\r\nexpectation that authors will read RFC in numeric order and that the RBNF for a\r\nnew feature in PCEP applies to how that feature is added.\r\n\r\nAll this led to http://datatracker.ietf.org/doc/draft-cmfg-pce-pcep-grammar/\r\nwhich is an experiment to determine whether it is possible to derive an\r\naggregated RBNF description for all PCEP messages. This might (if successful) go\r\non to form a type of message registry to act as a stable reference point.\r\n\r\nIn rejecting this Errata report I note that the reported error is not a typo,\r\nbut a deliberate decision of the authors and working group. The fix, therefore,\r\nif it is to be applied needs to be achieved through a consensus document.",
     "submit_date": "2013-06-27",
     "submitter_name": "Cyril Margaria",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }
