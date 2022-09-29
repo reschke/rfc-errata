@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4347,
+    "errata_id": "4347",
     "doc-id": "RFC4867",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The definition of CMR 15 as \"no mode request is present\", could be understood to suggest that other previously received CMR values remain applicable. However, this contradicts text in the subsequent paragraphs suggesting CMR=15 should be used when the \"terminal has no preference in which mode to receive\", and stating that any previously received CMR value is overridden by CMR=15.\r\n\r\nIt is thus unclear for a receiving entity that has previously received a CMR value requesting a lower AMR mode and then receives a CMR value 15 if it should continue to send using the lower AMR mode or if it can select a higher mode within the negotiated mode set based on own preferences.\r\n\r\nCMR 15 is referred to as \"NO_DATA\" in subsequent text, but \"NO_DATA\" is not well defined. This value appears in the quoted references, but these references are only quoted for CMR values 0 to 7/8.\r\n\r\nIt is also not perfectly clear if CMR=15 allows for any mode, or only modes within the negotiated mode set. However, the definition of the mode-set parameter in Clause 8.1 suggests that only modes within the negotiated mode-set can be sent when a mode-set has been negotiated.\r\n\r\nThe text \"if a terminal continuously wishes to receive frames in the same mode X, it needs to set CMR=X for all its outbound payloads\" seems to suggest that the receiver will always follow the request, although it may also choose to send lower modes, as explained in text further below.\r\n\r\nThis erratum has been discussed and endorsed by the 3GPP SA4 group before submission to IETF.",
     "submit_date": "2015-04-27",
     "submitter_name": "Thomas Belling",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4348,
+    "errata_id": "4348",
     "doc-id": "RFC4867",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,22 +25,22 @@
     "notes": "This seems to be the intention of the existing text, but is not explicitly stated. It is essential for the end-to-end mode control and interoperability with 3GPP CS networks that a peer does not send higher modes than requested.\r\n\r\nThis erratum has been discussed and endorsed by the 3GPP SA4 group before submission to IETF.",
     "submit_date": "2015-04-27",
     "submitter_name": "Thomas Belling",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4349,
+    "errata_id": "4349",
     "doc-id": "RFC4867",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 8.1,
+    "section": "8.1",
     "orig_text": "      mode-set: Restricts the active codec mode set to a subset of all\r\n               modes, for example, to be able to support transport\r\n               channels such as GSM networks in gateway use cases.\r\n               Possible values are a comma separated list of modes from\r\n               the set: 0,...,7 (see Table 1a [2]).  The SID frame type\r\n               8 and NO_DATA (frame type 15) are never included in the\r\n               mode set, but can always be used.  If mode-set is\r\n               specified, it MUST be abided, and frames encoded with\r\n               modes outside of the subset MUST NOT be sent in any RTP\r\n               payload or used in codec mode requests.  If not present,\r\n               all codec modes are allowed for the payload type.\r\n",
     "correct_text": "      mode-set: Restricts the active codec mode set to a subset of all\r\n               modes, for example, to be able to support transport\r\n               channels such as GSM networks in gateway use cases.\r\n               Possible values are a comma separated list of modes from\r\n               the set: 0,...,7 (see Table 1a [2]).  The SID frame type\r\n               8 and NO_DATA (frame type 15) are never included in the\r\n               mode set, but can always be used.  If mode-set is\r\n               specified, it MUST be abided, i.e. frames encoded with\r\n               modes outside of the subset MUST NOT be sent in any RTP\r\n               payload and codec mode requests MUST only use modes\r\n               within the mode-set or CMR=15. If the mode-set parameter\r\n               is not present, then all codec modes are allowed for the\r\n               payload type.\r\n",
     "notes": "The existing text rules out that CMR=15 is used when a mode-set has been negotiated. However, this contradicts a statement in .clause 4.3.1 that if a terminal has no preference in which mode to receive, it SHOULD set CMR=15 in all its outbound payloads.\r\n\r\nThis erratum has been discussed and endorsed by the 3GPP SA4 group before submission to IETF.",
     "submit_date": "2015-04-27",
     "submitter_name": "Thomas Belling",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   }
