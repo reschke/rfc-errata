@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3682,
+    "errata_id": "3682",
     "doc-id": "RFC5416",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "Key Status field is defined as follows:\r\n2 -  The value of 2 indicates that the AC will begin rekeying the\r\n     GTK with the STA's in the BSS.  It is only valid when IEEE\r\n     802.11 is enabled as the security policy for the BSS.\r\n\r\n3 -  The value of 3 indicates that the AC has completed rekeying\r\n     the GTK and broadcast packets no longer need to be duplicated\r\n     and transmitted with both GTK's.",
     "submit_date": "2013-07-15",
     "submitter_name": "Bulavskiy Dmitriy",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }
