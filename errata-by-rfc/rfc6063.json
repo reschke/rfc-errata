@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2697,
+    "errata_id": "2697",
     "doc-id": "RFC6063",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Erroneously entered an extra character \"I\" into Client ID value.",
     "submit_date": "2011-01-31",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2725,
+    "errata_id": "2725",
     "doc-id": "RFC6063",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,27 +25,27 @@
     "notes": "Double \"should\"",
     "submit_date": "2011-02-18",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2948,
+    "errata_id": "2948",
     "doc-id": "RFC6063",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 12.2,
+    "section": "12.2",
     "orig_text": "URI:  urn:ietf:params:xml:ns:keyprov:dskpp",
     "correct_text": "URI:  urn:ietf:params:xml:schema:keyprov:dskpp",
     "notes": "Section 12.2 is the registration for the schema not the namespace, which is in Section 12.1.  The URI for the schema ought to point to :schema: and not :ns:.  It's in the IANA registry it just needs to be updated here.",
     "submit_date": "2011-08-28",
     "submitter_name": "Sean Turner",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2999,
+    "errata_id": "2999",
     "doc-id": "RFC6063",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "The AD is carried in the <KeyProvClientHello> if sent as a result of a trigger and so is optional in the <ekyProvClientNonce>.",
     "submit_date": "2011-10-17",
     "submitter_name": "Gareth Richards",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5314,
+    "errata_id": "5314",
     "doc-id": "RFC6063",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -70,7 +70,7 @@
     "notes": "The ALG_ISO3309_CRC16 should be based on polynomial : x^16+x^12+x^5+1\r\n\r\nwidth=16  poly=0x1021  init=0x0000  refin=false  refout=false  xorout=0xffff\r\n\r\nIt should it be zero left padded",
     "submit_date": "2018-03-29",
     "submitter_name": "Walter Summonte",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
