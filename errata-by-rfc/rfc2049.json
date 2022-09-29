@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 3933,
+    "errata_id": "3933",
     "doc-id": "RFC2049",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "    (10)  Conforming user agents must be able to distinguish\r\n          encoded-words from \"text\", \"ctext\", or \"word\"s,\r\n          according to the rules in section 4, anytime they\r\n          appear in appropriate places in message headers.",
     "correct_text": "   (10)  Conforming user agents must be able to distinguish\r\n         encoded-words from \"text\", \"ctext\", or \"word\"s (see the\r\n         grammar in Section 3.3 of [RFC822]), according to\r\n         the recognition rules in Section 6 of [RFC2047],\r\n         any time they appear in appropriate places in\r\n         message headers.",
     "notes": "Section 4 of RFC 2049 was not the correct citation.",
     "submit_date": "2014-03-26",
     "submitter_name": "Peter Occil",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5470,
+    "errata_id": "5470",
     "doc-id": "RFC2049",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "    (3)   Must treat any unrecognized Content-Transfer-Encoding\r\n          as if it had a Content-Type of \"application/octet-\r\n          stream\", regardless of whether or not the actual\r\n          Content-Type is recognized.\r\n",
     "correct_text": "    (3)   Treat any MIME entity with an unrecognized\r\n          Content-Transfer-Encoding\r\n          as if it had a Content-Type of \"application/octet-\r\n          stream\", regardless of whether or not the actual\r\n          Content-Type is recognized.\r\n",
     "notes": "The original text spoke of a \"Content-Transfer-Encoding\" with a \"Content-Type\", which makes no sense.  This paragraph was probably intended instead to apply to MIME entities (messages and body parts).\r\n\r\n----- Verifier Notes -----\r\nI think most readers will understand that something like \"MIME entity with\" was intentionally elided in the existing text, but it's worth recording this for consideration when the spec is revised.",
     "submit_date": "2018-08-17",
     "submitter_name": "Peter Occil",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
