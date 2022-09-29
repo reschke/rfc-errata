@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2064,
+    "errata_id": "2064",
     "doc-id": "RFC5794",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": "99Appendix B says:",
+    "section": "Appendix B says:",
     "orig_text": "AriaModesOfOperation {\r\n   iso(1) member-body(2) korea(400) nsri(200046) algorithm (1)\r\n   symmetric-encryption-algorithm(1) asn1-module(0) alg-oids(0) }",
     "correct_text": "AriaModesOfOperation {\r\n   iso(1) member-body(2) korea(410) nsri(200046) algorithm (1)\r\n   symmetric-encryption-algorithm(1) asn1-module(0) alg-oids(0) }",
     "notes": "A typo\r\n\r\nOLD: korea(400)\r\nNEW: korea(410)",
     "submit_date": "2010-03-04",
     "submitter_name": "Jungkeun Lee",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }
