@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5353,
+    "errata_id": "5353",
     "doc-id": "RFC8103",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "   The amount of encrypted data possible in a single invocation of\r\n   AEAD_CHACHA20_POLY1305 is 2^32-1 blocks of 64 octets each, because of\r\n   the size of the block counter field in the ChaCha20 block function.\r\n   This gives a total of 247,877,906,880 octets, which is likely to be\r\n   sufficient to handle the size of any CMS content type.  Note that the\r\n   ciphertext length field in the authentication buffer will accommodate\r\n   2^64 octets, which is much larger than necessary.",
     "correct_text": "   The amount of encrypted data possible in a single invocation of\r\n   AEAD_CHACHA20_POLY1305 is 2^32-1 blocks of 64 octets each, because of\r\n   the size of the block counter field in the ChaCha20 block function.\r\n   This gives a total of 274,877,906,880 octets, which is likely to be\r\n   sufficient to handle the size of any CMS content type.  Note that the\r\n   ciphertext length field in the authentication buffer will accommodate\r\n   2^64 octets, which is much larger than necessary.",
     "notes": "The calculated total number of octets that can be encrypted in a single invocation is incorrect. See RFC Errata, Erratum ID 4858, RFC 7539.",
     "submit_date": "2018-05-10",
     "submitter_name": "Kevin Israel",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
   }
