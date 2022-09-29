@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3852,
+    "errata_id": "3852",
     "doc-id": "RFC7012",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,37 +10,37 @@
     "notes": "Although section 1.1 says : - \"Definitions of timestamp data types have been clarified.\" The edited text has removed the epoch definition, and this does not seem to have been incorporated elsewhere in the RFC. \r\n\r\nWithout a specified epoch, there is no unique definition of the timestamps. \r\n\r\nMy proposal above is to revert to the RFC5102 definitions. RFC7102 is intended to be backwards compatible with RFC5102 and thus the definitions need to be technically identical. Alternatively, if the text is now included elsewhere in RFC7012 or in another RFC, it would be helpful to the reader to provide a reference to the epoch definition in an editorial update to dateTimeX definitions in RFC7102.\n --VERIFIER NOTES-- \nReject reason: issue addressed in errata 3881",
     "submit_date": "2013-12-30",
     "submitter_name": "Stewart Bryant",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3881,
+    "errata_id": "3881",
     "doc-id": "RFC7012",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "The current encodings of these data types for use with the IPFIX \r\nprotocol are defined in [RFC7011]; encodings allowing the use of \r\nthe IPFIX Information Elements [IANA-IPFIX] with other protocols \r\nmay be defined in the future by referencing this document.",
     "correct_text": "The abstract data type definitions in this section are intended \r\nonly to define the values which can be taken by Information \r\nElements of each type. The encodings of these data types for \r\nuse with the IPFIX protocol are defined in Section 6.1 of \r\n[RFC7011]; encodings allowing the use of the IPFIX Information \r\nElements [IANA-IPFIX] with other protocols may be defined in \r\nthe future by referencing this document. Note that for timestamp \r\nencodings (sections 3.1.15 - 3.1.18), it is the responsibility of \r\nthe encoding to ensure that each representation has an \r\nunambiguous mapping to a moment in time (e.g. relative to a \r\ndefined epoch).",
     "notes": "The separation of epoch selection between ADT and encoding in 7011 and 7012 (as compared to 5101 and 5102, which they obsolete, respectively) led to it being unclear that timestamp ADTs require a fixed reference epoch for interpretation. This change clarifies the point, replacing Errata ID 3852.",
     "submit_date": "2014-02-05",
     "submitter_name": "Brian Trammell",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6564,
+    "errata_id": "6564",
     "doc-id": "RFC7012",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 7.2,
+    "section": "7.2",
     "orig_text": "   The specification\r\n   of new MPLS label types MUST be published using a well-established\r\n   and persistent publication medium.",
     "correct_text": "(Deleted)",
     "notes": "This paragraph envisaged that a new RFC be written to specify new label types in the mplsTopLabelType sub-registry.\r\n\r\nSince the publication of RFC7012, IANA has added 16 other IPFIX IE sub-registries, none of which have the same requirement. See https://www.iana.org/assignments/ipfix/ipfix.xhtml\r\n\r\nPublication in IANA's IPFIX registry should provide a clear and persistent definition. New IPFIX MPLS label type specifications should not be singled out to require persistent publication of an additional document.",
     "submit_date": "2021-04-28",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
