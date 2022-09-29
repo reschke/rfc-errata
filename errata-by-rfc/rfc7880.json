@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5211,
+    "errata_id": "5211",
     "doc-id": "RFC7880",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 6.1,
+    "section": "6.1",
     "orig_text": "   o  bfd.SessionType: This is a new state variable that describes\r\n      the type of a particular session.  Allowable values for S-BFD\r\n      sessions are:\r\n\r\n      *  SBFDInitiator - an S-BFD session on a network node that\r\n         performs a continuity test to a target entity by sending S-BFD\r\n         packets.\r\n\r\n      *  SBFDReflector - an S-BFD session on a network node that listens\r\n         for incoming S-BFD Control packets to local entities and\r\n         generates response S-BFD Control packets.\r\n\r\n   The bfd.SessionType variable MUST be initialized to the appropriate\r\n   type when an S-BFD session is created.\r\n",
     "correct_text": "   o  bfd.SessionType: This is a new state variable that describes\r\n      the type of a particular session.  Allowable values for S-BFD\r\n      sessions are:\r\n\r\n      *  SBFDNone - indicates that the BFD session is not of S-BFD type.\r\n\r\n      *  SBFDInitiator - an S-BFD session on a network node that\r\n         performs a continuity test to a target entity by sending S-BFD\r\n         packets.\r\n\r\n      *  SBFDReflector - an S-BFD session on a network node that listens\r\n         for incoming S-BFD Control packets to local entities and\r\n         generates response S-BFD Control packets.\r\n\r\n   The bfd.SessionType variable MUST be set to SBFDNone when a BFD\r\n   session other than S-BFD. The bfd.SessionType variable MUST be \r\n   initialized to the appropriate type when an S-BFD session is created.\r\n",
     "notes": "The original text leaves value of the new variable bfd.SessionType unspecified if the type of BFD session is other than S-BFD.\n --VERIFIER NOTES-- \nThis report goes beyond pointing out an error in the document. If the changes are to me made (or discussed beyond the thread related to this report), it should be done through the normal WG channels.\r\n\r\nhttps://mailarchive.ietf.org/arch/msg/rtg-bfd/dI5Y2YXBG3kACEjX5vIZgSJHVw4 ",
     "submit_date": "2017-12-16",
     "submitter_name": "Greg Mirsky",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }
