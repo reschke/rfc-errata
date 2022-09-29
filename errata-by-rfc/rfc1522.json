@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5488,
+    "errata_id": "5488",
     "doc-id": "RFC1522",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "   especials = \"(\" / \")\" / \"<\" / \">\" / \"@\" / \",\" / \";\" / \":\" / \"\r\n               <\"> / \"/\" / \"[\" / \"]\" / \"?\" / \".\" / \"=\"",
     "correct_text": "   especials = \"(\" / \")\" / \"<\" / \">\" / \"@\" / \",\" / \";\" / \":\" / \r\n               <\"> / \"/\" / \"[\" / \"]\" / \"?\" / \".\" / \"=\"",
     "notes": "this double quote at the end of the line is a mistake",
     "submit_date": "2018-09-03",
     "submitter_name": "Eugene Adell",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
