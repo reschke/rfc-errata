@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3755,
+    "errata_id": "3755",
     "doc-id": "RFC1818",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "RFC 1796 defines the \"status\" datum of RFCs.  The \"category\" datum is similar, except that \"Draft Standard\", \"Proposed Standard\", and \"Internet Standard\" statuses are merged in the \"Standards Track\" category.\r\n\r\nRFC 1818 introduces the \"Best Current Practice\" status/category, but its metadata does not state that it updates RFC 1796 and consequently RFC 1796's metadata does not state that it is updated by RFC 1818.\r\n\r\nThis lack of pointers shows up in rfc-index.txt, making it difficult to track down the current list of categories/statuses.",
     "submit_date": "2013-10-16",
     "submitter_name": "Dale Worley",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6923,
+    "errata_id": "6923",
     "doc-id": "RFC1818",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The opening parentheses was clearly forgotten by accident.",
     "submit_date": "2022-04-05",
     "submitter_name": "Robin Geuze",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-04-05 14:23:05"
   }
