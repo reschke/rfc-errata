@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2460,
+    "errata_id": "2460",
     "doc-id": "RFC4398",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "2.  The CERT Resource Record\r\n\r\n   The CERT resource record (RR) has the structure given below.  Its RR\r\n   type code is 37.\r\n\r\n                       1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3\r\n   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |             type              |             key tag           |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |   algorithm   |                                               /\r\n   +---------------+            certificate or CRL                 /\r\n   /                                                               /\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-|",
     "correct_text": "2.  The CERT Resource Record\r\n\r\n   The CERT resource record (RR) has the structure given below.  Its RR\r\n   type code is 37.\r\n\r\n                        1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |             type              |             key tag           |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |   algorithm   |                                               /\r\n   +---------------+            certificate or CRL                 /\r\n   /                                                               /\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-|",
     "notes": "In Section 2 (The CERT Resource Record) the table describing the wire format of the CERT RR is misaligned in such a way that it could lead to technical ambiguity of field positions within the packet structure.",
     "submit_date": "2010-08-07",
     "submitter_name": "Paul Freeman",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
