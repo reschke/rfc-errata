@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1032,
+    "errata_id": "1032",
     "doc-id": "RFC4919",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)  Section 1 -- minor textual flaw\r\n\r\nThe second paragraph of Section 1, on page 2 of RFC 4919, says:\r\n\r\n   This document gives an overview of LoWPANs and describes how they\r\n   benefit from IP and, in particular, IPv6 networking.  It describes\r\n|  LoWPAN requirements with regards to the IP layer and the above, and\r\n   spells out the underlying assumptions of IP for LoWPANs.  [...]\r\n\r\nPerhaps, it should better say:\r\n\r\n   This document gives an overview of LoWPANs and describes how they\r\n   benefit from IP and, in particular, IPv6 networking.  It describes\r\n|  LoWPAN requirements with regards to the IP layer and the layers\r\n   above, and spells out the underlying assumptions of IP for LoWPANs.\r\n   [...]\r\n\r\nor shorter:\r\n\r\n   This document gives an overview of LoWPANs and describes how they\r\n   benefit from IP and, in particular, IPv6 networking.  It describes\r\n|  LoWPAN requirements with regards to the IP layer and above, and\r\n   spells out the underlying assumptions of IP for LoWPANs.  [...]\r\n\r\n\r\n(2)  Section 2 -- minor indentation flaw\r\n\r\nNear the top of page 3, Section 2 of RFC 4919 contains the numbered\r\nbullet:\r\n\r\n       v\r\n|  7.  Large number of devices expected to be deployed during the\r\n        lifetime of the technology.  This number is expected to dwarf\r\n        the number of deployed personal computers, for example.\r\n\r\nThis should perhaps better have been formatted as:\r\n\r\n       vv\r\n|  7.   Large number of devices expected to be deployed during the\r\n        lifetime of the technology.  This number is expected to dwarf\r\n        the number of deployed personal computers, for example.\r\n\r\n\r\n(3)  Sections 5 and 8.2 -- misleading reference tag\r\n\r\nApparently during a last minute change before publication, an attempt\r\nhas been made to update the references to the most current versions\r\navailable, and that has resulted in the misfortunate introduction\r\ninto the text (Section 5, first line on page 8, and Section 8.2,\r\nsecond entry), of the improper and misleading reference tag,\r\n'[6LoWPAN]', in place of an appropriate and mnemonic reference tag\r\nlike '[RFC2462bis]' for to-be-RFC4862.\r\n\r\n\r\n(4)  Section 8.2 -- wrong Informative Reference given\r\n\r\nThe RFC text in Section 5 (bullet 5. on page 8) makes reference to\r\nthe SNMPv3 umbrella document, RFC 3410, using the tag '[RFC3410]'.\r\n\r\nBut in place of the proper citation of RFC 3410, Section 8.2\r\ncontains an unexpected quotation to RFC 3411, tagged '[RFC3411]';\r\nthe latter tag does not appear anywhere else in the RFC text.\r\n\r\nTherefore, the entry [RFC3411] should have been replaced by an\r\nentry [RFC3410] !\r\n",
     "correct_text": "",
     "notes": null,
     "submit_date": "2007-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1789,
+    "errata_id": "1789",
     "doc-id": "RFC4919",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "Changed 'protocol data units' to 'medium access layer frames' for clarity.\r\n\r\nChanged 'may be as small as 81 bytes' to 'may be capped in size (as small as 81 bytes)'.  We are highlighting the fact that link layer payloads can't exceed some size X, while we are also expecting IPv6 packets much larger than X bytes to be pushed down to the link layer.  (Hence the requirement for fragmentation and reassembly mechanisms at the link layer.)\r\n\r\n'minimum IPv6 packet size of 1280 octets' changed to 'minimum IPv6 MTU size of 1280 octets'.  In the IPv6 specification [RFC 2460], Section 5 'Packet Size Issues' says that the minimum allowable IPv6 MTU is 1280 octets.  This is not equivalent to saying that the minimum IPv6 packet size is 1280 bytes (as suggested in the original text in RFC 4919).",
     "submit_date": "2009-06-01",
     "submitter_name": "Jeffrey Wildman",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   }
