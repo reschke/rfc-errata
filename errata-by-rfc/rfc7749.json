@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4614,
+    "errata_id": "4614",
     "doc-id": "RFC7749",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "   <?xml version=\"1.0\"?>\r\n\r\n   <!DOCTYPE rfc [\r\n\r\n     <!-- allow later RFC 2629 reference using \"&rfc2629;\" -->\r\n     <!-- the data will be fetched from xml2rfc.ietf.org -->\r\n     <!ENTITY rfc2629 PUBLIC\r\n     \"http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2629.xml\">\r\n   ]>",
     "correct_text": "   <?xml version=\"1.0\"?>\r\n\r\n   <!DOCTYPE rfc [\r\n\r\n     <!-- allow later RFC 2629 reference using \"&rfc2629;\" -->\r\n     <!-- the data will be fetched from xml2rfc.ietf.org -->\r\n     <!ENTITY rfc2629 SYSTEM\r\n     \"http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2629.xml\">\r\n   ]>",
     "notes": "A \"PUBLIC\" entity would need an additional \"PubidLiteral\" (which could be an empty string); but it's simpler to use a \"SYSTEM\" entity instead.\r\n\r\nSee <https://www.w3.org/TR/2008/REC-xml-20081126/#sec-external-ent>.\r\n\r\n[Verified per request of J. Reschke and H. Flanagan.]",
     "submit_date": "2016-02-05",
     "submitter_name": "Julian Reschke",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4715,
+    "errata_id": "4715",
     "doc-id": "RFC7749",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The string format must prefix the style text in order for it to be recognized and used.  This means that the example given is incorrect as it will not generate the requested output.\r\n\r\nIt is possible that explanatory text to the effect of the string format being required is needed as well, however modification of the example should be sufficient.",
     "submit_date": "2016-06-20",
     "submitter_name": "Jim Schaad",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4850,
+    "errata_id": "4850",
     "doc-id": "RFC7749",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "IAB documents may or may not include a consensus statement. See https://www.rfc-editor.org/materials/status-memos.txt, numbers 9-12.",
     "submit_date": "2016-10-31",
     "submitter_name": "Heather Flanagan",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5394,
+    "errata_id": "5394",
     "doc-id": "RFC7749",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -55,7 +55,7 @@
     "notes": "replace \"draft\" by \"draft name\"",
     "submit_date": "2018-06-15",
     "submitter_name": "Julian Reschke",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
