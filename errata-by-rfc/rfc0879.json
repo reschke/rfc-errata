@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4053,
+    "errata_id": "4053",
     "doc-id": "RFC0879",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 14,
+    "section": "14",
     "orig_text": "For example, if the IP Security option (11 octets) were in use and\r\nthe IP maximum datagram size remained at 576 octets, then the TCP\r\nshould send the MSS with a value of 525 (536-11).",
     "correct_text": "For example, if the IP Security option (11 octets) were in use and\r\nthe IP maximum datagram size remained at 576 octets, then the TCP\r\nshould send the MSS with a value of 524 (536-11-1).",
     "notes": "IP and TCP header must be multiple of 4 octets.\r\n\r\nA side note: The value 11  for the IP security option is apparently copied from RFC 791 without considering that a padding to 32 bit word boundaries is required. ",
     "submit_date": "2014-07-17",
     "submitter_name": "Susumu Endoh",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }
