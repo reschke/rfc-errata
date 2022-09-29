@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5357,
+    "errata_id": "5357",
     "doc-id": "RFC8013",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,27 +10,27 @@
     "notes": "The closing parenthesis is missing.",
     "submit_date": "2018-05-13",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5358,
+    "errata_id": "5358",
     "doc-id": "RFC8013",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 6.1,
+    "section": "6.1",
     "orig_text": "   The inter-FE LFB (instance) can be positioned at the ingress of a\r\n   receiving FE.  Figure 5 illustrates an example destination FE in the\r\n   form of FE1.  In such a case, an inter-FE LFB receives, via an LFB\r\n   port in the IngressInGroup, an encapsulated Ethernet frame.\r\n   Successful processing of the packet will result in a raw packet with\r\n   associated metadata IDs going downstream to an LFB connected on OUT2.\r\n   On failure, the data is sent out EXCEPTIONOUT.\r\n",
     "correct_text": "   The inter-FE LFB (instance) can be positioned at the ingress of a\r\n   receiving FE.  Figure 5 illustrates an example destination FE in the\r\n   form of FE2.  In such a case, an inter-FE LFB receives, via an LFB\r\n   port in the IngressInGroup, an encapsulated Ethernet frame.\r\n   Successful processing of the packet will result in a raw packet with\r\n   associated metadata IDs going downstream to an LFB connected on OUT2.\r\n   On failure, the data is sent out EXCEPTIONOUT.\r\n",
     "notes": "Destination FE is FE2 not FE1.",
     "submit_date": "2018-05-13",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2020-07-21 08:08:23"
   },
   {
-    "errata_id": 6938,
+    "errata_id": "6938",
     "doc-id": "RFC8013",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "The original text mixed minimum packet size with minimum MTU size.",
     "submit_date": "2022-04-19",
     "submitter_name": "Pedro Tammela",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2022-04-20 04:01:28"
   }
