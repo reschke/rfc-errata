@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1946,
+    "errata_id": "1946",
     "doc-id": "RFC4005",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 9.2,
+    "section": "9.2",
     "orig_text": "If the Accounting-Input-Octets, Accounting-Input-Packets,\r\n   Accounting-Output-Octets, or Accounting-Output-Packets AVPs are\r\n   present, they must be translated to the corresponding RADIUS\r\n   attributes.  If the value of the Diameter AVPs do not fit\r\n   within a 32-bit RADIUS attribute, the RADIUS Acct-Input-\r\n   Gigawords and Acct-Output-Gigawords must be used.",
     "correct_text": "If the Accounting-Input-Octets, \r\n   Accounting-Output-Octets,  AVPs are\r\n   present, they must be translated to the corresponding RADIUS\r\n   attributes.  If the value of the Diameter AVPs do not fit\r\n   within a 32-bit RADIUS attribute, the RADIUS Acct-Input-\r\n   Gigawords and Acct-Output-Gigawords must be used.",
     "notes": "The last sentence of the original text causes confusion because according to RFC2869, the Acct-Input/Output-Gigawords are only overflows for the Acct-Input/Output-Octet attributes.  \r\nTHE ABOVE CORRECTION BASICALLY DOES NOT PROVIDE FOR OVERFLOW FOR THE PACKET COUNTERS.\n --VERIFIER NOTES-- \nThe working group discussion on this item led to the following text change being recommended: \r\n\r\nIf the Accounting-Input-Octets, Accounting-Input-Packets, Accounting-Output-Octets, or Accounting-Output-Packets AVPs are present, they SHOULD be translated to the corresponding RADIUS attributes.  However, if the value of the Accounting-Input-Octets AVP or Accounting-Output-Octets AVP does not fit within a 32-bit RADIUS attribute, the RADIUS Acct-Input-Gigawords and Acct-Output-Gigawords Attributes must be used.\r\n\r\nCare must be taken when interworking Diameter with RADIUS due to the fact that there is no attribute available in RADIUS to record overflows in packet counters.  One remedy that can be used is to limit the session time such that packet counter do not overflow.  Another remedy would be to ignore the packet counters altogether and just rely on the octet counters.\r\n\r\n",
     "submit_date": "2009-11-25",
     "submitter_name": "Avi Lior",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2563,
+    "errata_id": "2563",
     "doc-id": "RFC4005",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 10.1,
+    "section": "10.1",
     "orig_text": "The occurrence of route-record AVP in AAA is 0+.",
     "correct_text": "The occurrence of route-record AVP in AAA should be 0 according to AAA definition of section 3.2.",
     "notes": "In 3GPP Rx application TS 29.214, AAA command contains no route-record AVP either. So section 10.1 of RFC4005 needs to be corrected.",
     "submit_date": "2010-10-14",
     "submitter_name": "Hans Liu",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }
