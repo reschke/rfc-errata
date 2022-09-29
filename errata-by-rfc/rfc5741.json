@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3331,
+    "errata_id": "3331",
     "doc-id": "RFC5741",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,7 +10,7 @@
     "notes": "Although parts of RFC-5741 use RFC-2119 language (\"must\", \"should\", \"may\") in a very clear way, Section 3.2.2 uses ambiguous phrasing (\"suggested\") and  recently has been interpreted in different ways by different people (all of whom are experienced IETF/IRTF/RFC-Editor people).\r\n\r\nLeslie Daigle sent a note to the relevant folks that clarified the intent of this sub-section of this RFC.  Her note read, in part:\r\n%\r\n% The expectation, when writing RFC5741, was that the boilerplate was fixed.\r\n% The \"suggested text\" connotations in the document were meant to indicate \r\n% that the boilerplate might be updated in the stream definition itself, \r\n% not on a document-by-document basis.\r\n\r\nThe primary confusing/problematic sentences from RFC-5741 are copied and pasted separately into \"Original Text\" in this errata submission.  Candidate edited sentences, intended to be consistent with Leslie's clarification of the authors' intended meaning, are provided in \"Corrected Text\", but some other editorial correction might well be better/clearer.  \r\n\r\nThe primary goal of this erratum is to help ensure that any future revisions of RFC-5741, and also any future revisions of the closely related stream-dependent publication documents, are more clear about the fixed nature of \"Status of this Memo\" text.",
     "submit_date": "2012-08-30",
     "submitter_name": "RJ Atkinson",
-    "verifier_id": 4,
+    "verifier_id": "4",
     "verifier_name": "IAB-Chair",
     "update_date": "2019-09-10 09:09:03"
   }
