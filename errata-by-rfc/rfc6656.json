@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3617,
+    "errata_id": "3617",
     "doc-id": "RFC6656",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "Len = Length of the suboption (min. length of 8) (1 octet)",
     "correct_text": "Len = Length of the suboption (min. length of 1) (1 octet)",
     "notes": "RFC 6656 suggests that a DHCP Client MAY request list of previously allocated subnets from the DHCP Server in case of recovering from a restart if the Client does not have local storage in order to retain the information itself. But there will be cases when Server does not have any information to send back (this could be a new Client or this Client never spoke to this Server before). In this case, DHCP Server may decide to remain silent and discard the request. This approach will make it difficult for DHCP Client to decide if request could not reach to Server or Server did not have any information to send back. A possible approach could be to send the OFFER back to Client with Subnet-Information Suboption (without Subnet Prefix Information Block) in it. So that Client can proceed by making a request to allocate new subnets. This would require to reduce the minimum length of Subnet-Information Suboption to 1 (just include flags). Section 6 would require to be updated as well to reflect the new behavior (to respond).",
     "submit_date": "2013-05-08",
     "submitter_name": "Dushyant Raghuvanshi",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   }
