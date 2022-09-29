@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1973,
+    "errata_id": "1973",
     "doc-id": "RFC5559",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Rationale: Misalignment in Figure, breaking arrow lines.\r\n(Keep for update!)",
     "submit_date": "2009-12-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1974,
+    "errata_id": "1974",
     "doc-id": "RFC5559",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Rationale:\r\n  Incomplete expansion of acronym \"GETS\":\r\n  important word \"Emergency\" missing.",
     "submit_date": "2009-12-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1975,
+    "errata_id": "1975",
     "doc-id": "RFC5559",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Rationale:\r\n  Unpleasant and unexpected line folding -- tool (xml2rfc) issue?",
     "submit_date": "2009-12-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1976,
+    "errata_id": "1976",
     "doc-id": "RFC5559",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,37 +55,37 @@
     "notes": null,
     "submit_date": "2009-12-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3164,
+    "errata_id": "3164",
     "doc-id": "RFC5559",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "   o  Police - police, by dropping any packets received with a DSCP\r\n      indicating PCN transport that do not belong to an admitted flow.\r\n      (A prospective PCN-flow that is rejected could be blocked or\r\n      admitted into a lower-priority behaviour aggregate.)\r\n",
     "correct_text": "   o  Police - drop or re-mark to a lower-priority behaviour aggregate\r\n      i) packets received with a DSCP indicating PCN transport that do not\r\n      belong to an admitted flow and ii) packets that are part of a flow\r\n      that asked to be admitted as a PCN-flow but was rejected.\r\n",
     "notes": "In the original text the first sentence contradicts the parenthesis. It could be interpreted to mean that dropping is the only allowed policing action, whereas the parenthesis shows that downgrading was also considered appropriate.\r\n\r\nAlso the original text used the term 'blocking' as a different action to 'downgrading', whereas Section 3.6 just above this text has said '\"Blocking\" means it is dropped or downgraded to a lower-priority behaviour aggregate,...'",
     "submit_date": "2012-03-23",
     "submitter_name": "Bob Briscoe",
-    "verifier_id": 129,
+    "verifier_id": "129",
     "verifier_name": "Wes Eddy",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3565,
+    "errata_id": "3565",
     "doc-id": "RFC5559",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 10.2,
+    "section": "10.2",
     "orig_text": "   [Moncaster09-1]  Moncaster, T., Briscoe, B., and M. Menth, \"Baseline\r\n                    Encoding and Transport of Pre-Congestion\r\n                    Information\", Work in Progress, May 2009.",
     "correct_text": "   [Moncaster09-1]  Moncaster, T., Briscoe, B., and M. Menth, \"Baseline\r\n                    Encoding and Transport of Pre-Congestion\r\n                    Information\", RFC 5696, November 2009.",
     "notes": null,
     "submit_date": "2013-03-26",
     "submitter_name": "Michael Welzl",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }
