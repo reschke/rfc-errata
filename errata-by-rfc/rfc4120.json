@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4399,
+    "errata_id": "4399",
     "doc-id": "RFC4120",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6.1,
+    "section": "6.1",
     "orig_text": "All prefixes expect those beginning with used.\r\n",
     "correct_text": "??",
     "notes": "Hmmm, looks like part of the sentence ended up in /dev/null.  (Also, was \"expect\" perhaps meant to be \"except\"?)  It looks to me as though this happened between kerberos-clarifications-04 and -05.  If I had to guess, it was probably trying to say that you can roll your own private-use prefixes (beginning with \"X-\" or \"x-\"), but any other prefixes must go through the official registry process, per RFC 6111?",
     "submit_date": "2015-06-24",
     "submitter_name": "Thomas Maslen",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 7022,
+    "errata_id": "7022",
     "doc-id": "RFC4120",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The field is named \"cksumtype\" according to section 5.2\r\n\r\n --VERIFIER NOTES--\r\nCorrection - The field is named in section 5.2.9.\r\n",
     "submit_date": "2022-07-13",
     "submitter_name": "Gabriel Potter",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-07-27 13:21:22"
   }
