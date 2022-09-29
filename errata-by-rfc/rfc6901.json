@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 3981,
+    "errata_id": "3981",
     "doc-id": "RFC6901",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "See Notes",
     "correct_text": "The following two examples from section 5 are different:\r\n\r\nOriginal: \"/a~1b\"\r\nProposed: \"/a//b\"\r\n\r\nOriginal: \"/m~0n\"\r\nProposed: \"/m~n\"\r\n\r\nThe other examples are the same.",
     "notes": "The escape syntax seems weird and confusing. Rather than ~0 and ~1, why not use a repeated (double) slash to escape a slash? This is similar to how SQL escapes single quotes in string literals by using the single quote twice.\r\n\r\nWe have JSON functions in Presto (prestodb.io) that could benefit from an improved syntax (they currently use JSONPath), but I can't see understanding ~0 and ~1.\n --VERIFIER NOTES-- \nThis is a change request, not an errata report.  The suggested change isn't directly acceptable, but could well be useful input into a new version of the specification.  In any case, it's not addressing an error, but a feature change.",
     "submit_date": "2014-05-06",
     "submitter_name": "David Phillips",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5745,
+    "errata_id": "5745",
     "doc-id": "RFC6901",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 5,
+    "section": "5",
     "orig_text": "The following JSON strings evaluate to the accompanying values:\r\n\r\n    \"/i\\\\j\"      5\r\n    \"/k\\\"l\"      6",
     "correct_text": "The following JSON strings evaluate to the accompanying values:\r\n\r\n    /i\\j      5\r\n    /k\"l      6",
     "notes": "In JSON itself some special characters like the backslash and the double quote character can be escaped using a backslash. A similar escaping was not described for JSON pointers. Therefore it is not clear to me why such an escaping is needed in JSON pointers too. Maybe the additional double quotes around the example JSON pointers enforce this. In the corrected text I have stated my view on this.",
     "submit_date": "2019-06-04",
     "submitter_name": "Sven Willenbücher",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
