@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4670,
+    "errata_id": "4670",
     "doc-id": "RFC7644",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "It seems that the precedence of logical and attribute precedence is reversed? The filter filter=title sw \"M\" and userType eq \"Employee\" is meant to be interpreted as filter=(title sw \"M\") and (userType eq \"Employee\"). \r\nThis is also the \"expected\" behaviour consistent with most other languages - with the notable exception of unary \"or\" which in SCIM is disambiguated as it can only apply to a parenthesized filter expression.",
     "submit_date": "2016-04-15",
     "submitter_name": "Vassilis Michalitsis",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4690,
+    "errata_id": "4690",
     "doc-id": "RFC7644",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,27 +25,27 @@
     "notes": "Figure 1 contains the ABNF for SCIM filters. The term \"logExp\" specifies \"FILTER\" as an option which unintentionally allows recursion. A valFilter should only allow simple sub-attribute expressions and simple logic.  Nesting of valuePath (e.g. attr[a eq b and attr[c eq d]]) should not be possible.",
     "submit_date": "2016-05-10",
     "submitter_name": "Phil Hunt",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4978,
+    "errata_id": "4978",
     "doc-id": "RFC7644",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "/ServiceProviderConfig\r\n",
     "correct_text": "/ServiceProviderConfigs\r\n",
     "notes": "Per the details provided on the SCIM website http://www.simplecloud.info/#overview, the endpoint should be /ServiceProviderConfigs. A trailing \"s\" is missing. The SCIM implementations of major service providers like Facebook, Salesforce, Slack implement /ServiceProviderConfigs",
     "submit_date": "2017-03-24",
     "submitter_name": "asgs",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5050,
+    "errata_id": "5050",
     "doc-id": "RFC7644",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The example figure is incorrect. It should show the actual patch operation request body in the JSON attribute \"data\" as it would be expressed in its own HTTP request payload.  Instead it shows the values of the \"operations\" attribute. See sec 3.7 definition of \"data\".",
     "submit_date": "2017-06-23",
     "submitter_name": "Phil Hunt",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5295,
+    "errata_id": "5295",
     "doc-id": "RFC7644",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -70,27 +70,27 @@
     "notes": "The Authorization header is a request header and should not be included in a response.\r\nThe Location header is used to redirect a client to a new location or indicate the location of a new resource. Neither is the case here, so the header should be omitted.\r\n\r\nAlso, it's unclear from the text whether it's valid to respond with 204 No Content if the user was successfully added to the group.",
     "submit_date": "2018-03-22",
     "submitter_name": "Marcel van den Dungen",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6010,
+    "errata_id": "6010",
     "doc-id": "RFC7644",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "\"totalResults\":2,\r\n\"itemsPerPage\":10,",
     "correct_text": "\"totalResults\":2,\r\n\"itemsPerPage\":2,",
     "notes": "Per Section 3.4.2.4, \"itemsPerPage\" specifies the number of query results returned in a page. In Section 4 Figure 9, the page contains only 2 items, so the \"itemsPerPage\" should be 2 not 10.",
     "submit_date": "2020-03-09",
     "submitter_name": "Shelley Baker",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 6893,
+    "errata_id": "6893",
     "doc-id": "RFC7644",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -100,12 +100,12 @@
     "notes": "The error \"status\" value in the figure is wrong. It should be \"403\", consistent with the normative text and the HTTP Status at the start of the figure.",
     "submit_date": "2022-03-24",
     "submitter_name": "Phil Hunt",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-03-25 13:49:46"
   },
   {
-    "errata_id": 7122,
+    "errata_id": "7122",
     "doc-id": "RFC7644",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -115,7 +115,7 @@
     "notes": "In section 3.5.2.2. (Remove Operation), states:\r\n\r\n\"If the target location is a multi-valued attribute and a complex\r\nfilter is specified comparing a \"value\", the values matched by the\r\nfilter are removed.  If no other values remain after removal of\r\nthe selected values, the multi-valued attribute SHALL be\r\nconsidered unassigned.\"\r\n\r\nThis means it should be possible to create a filter that selects a value from a multi-valued attribute that is not complex. Writing such a filter seems impossible without having \"attrExp\" as a possible legal PATH.\r\n\r\nIn section 3.4.2.2.  (Filtering) there is an example that shows how such a filter could look for a multi-valued attribute, i.e.:\r\n\r\nfilter=\r\n schemas eq \"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\"\r\n\r\nThis would also work for a path filter, e.g.:\r\n\r\n{\r\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\r\n  \"Operations\":[{\r\n    \"op\":\"remove\",\r\n    \"path\":\"schemas eq \\\"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\\\"\"\r\n  }]\r\n}\r\n\r\n[AD Note: The document reflects consensus of the working group at the time of publication, but on review it is believed that any future update work in this space should consider this erratum.]",
     "submit_date": "2022-09-08",
     "submitter_name": "Egil Hansen",
-    "verifier_id": 164,
+    "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2022-09-12 09:13:03"
   }
