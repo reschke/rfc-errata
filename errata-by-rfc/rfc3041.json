@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2747,
+    "errata_id": "2747",
     "doc-id": "RFC3041",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -10,7 +10,7 @@
     "notes": "The \"Obsoleted by\" note is missing from the header, so by itself the RFC seems not to be obsolete.\r\n\r\n--RATIONALE--\r\nGenerally, the text versions of RFCs do not include post-publication metadata (such as \"Obsoleted by\" or \"Updated by\") because this data was not available upon publication, and RFCs do not change after publication.\r\n\r\nPost-publication metadata is available in these primary locations:\r\n - RFC search results (http://www.rfc-editor.org/rfcsearch.html)\r\n - RFC info pages\r\n - RFC index (http://www.rfc-editor.org/rfc-index.html)\r\n\r\nFor this specific RFC, this information is available on all of them:\r\n - RFC search result \r\n - RFC info page (http://www.rfc-editor.org/info/rfc3041)\r\n - RFC index \r\n\r\nIn addition there are HTML versions of RFCs available via tools.ietf.org; they are not maintained by the RFC Editor. They include an added header in a gray box, which shows post-publication metadata. In this case, the HTML version of RFC 3041 includes the data. ",
     "submit_date": "2011-03-11",
     "submitter_name": "Johannes Endres",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   }
