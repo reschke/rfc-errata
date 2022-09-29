@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1749,
+    "errata_id": "1749",
     "doc-id": "RFC5491",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,27 +10,27 @@
     "notes": "a)  The openingAngle in Figure 12 does not match the scenario\r\n    depicted in Figure 11 and described in the text on page 19.\r\n    ==>  s/20/120/\r\n\r\nb)  Missing article.\r\n\r\nHint (saving an additional Errata Note):\r\n  In Section 5.2.8 (2nd line on pg.24), another article is missing:\r\n  s/floors of building/floors of a building/",
     "submit_date": "2009-03-30",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 107,
+    "verifier_id": "107",
     "verifier_name": "Cullen Jennings",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1888,
+    "errata_id": "1888",
     "doc-id": "RFC5491",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "The PIDF format provides for an unbounded number of <tuple>,\r\n<device>, and <person> elements.  Each of these elements contains a\r\nsingle <status> element that may contain more than one <geopriv>\r\nelement as a child.  ",
     "correct_text": "The PIDF format provides for an unbounded number of <tuple>,\r\n<device>, and <person> elements.  Each of these elements may\r\ncontain more than one <geopriv> element.  ",
     "notes": "<status> only exists in <tuple> [RFC3863], not <device> or <person> [RFC4479].  The proposed text removes the problem.\r\n\r\nI believe that it was only late that someone pointed out that <status> only applied to <tuple>; this sentence obviously got missed in the edit.",
     "submit_date": "2009-09-21",
     "submitter_name": "Martin Thomson",
-    "verifier_id": 107,
+    "verifier_id": "107",
     "verifier_name": "Cullen Jennings",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1951,
+    "errata_id": "1951",
     "doc-id": "RFC5491",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "The points in Figure 7 are correct (i.e., they are in a counter-clockwise direction) but the comment labels are in the wrong order.",
     "submit_date": "2009-11-30",
     "submitter_name": "Martin Thomson",
-    "verifier_id": 107,
+    "verifier_id": "107",
     "verifier_name": "Cullen Jennings",
     "update_date": "2019-09-10 09:09:03"
   }
