@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 349,
+    "errata_id": "349",
     "doc-id": "RFC3030",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "   The following dialogue illustrates the use of the large message\n   extension to send a BINARYMIME object to two recipients using the\n   CHUNKING and PIPELINING extensions:\n\n   R: \n   R: 220 cnri.reston.va.us SMTP service ready\n   S: EHLO ymir.claremont.edu\n   R: 250-cnri.reston.va.us says hello\n   R: 250-PIPELINING\n   R: 250-BINARYMIME\n   R: 250 CHUNKING\n   S: MAIL FROM: BODY=BINARYMIME\n   S: RCPT TO:\n   S: RCPT TO:\n   R: 250 ... Sender and BINARYMIME ok\n   R: 250 ... Recipient ok\n   R: 250 ... Recipient ok\n   S: BDAT 100000\n   S: (First 10000 octets of canonical MIME message data)",
     "correct_text": "",
     "notes": "You can see the last line is missing a 0.\n",
     "submit_date": "2003-01-14",
     "submitter_name": "Emmanuel Papirakis",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
