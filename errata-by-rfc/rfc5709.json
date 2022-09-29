@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 2989,
+    "errata_id": "2989",
     "doc-id": "RFC5709",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3.",
     "orig_text": "   With the additions in this document, the currently valid algorithms\r\n   (including mode) for OSPFv2 Cryptographic Authentication include:\r\n\r\n           Keyed-MD5               (defined in RFC 2328, Appendix D)",
     "correct_text": "   With the additions in this document, the currently valid algorithms\r\n   (including mode) for OSPFv2 Cryptographic Authentication include:\r\n\r\n           Keyed-MD5               (defined in RFC 2328, Appendix D)",
     "notes": "The link 'Appendix D' referenced is incorrect. It is now 'http://tools.ietf.org/html/rfc5709#appendix-D', and it should be 'http://tools.ietf.org/html/rfc2328#appendix-D'.\r\nPay attention to the difference of the numbers in links,please.\r\n\r\n-- VERIFIER NOTES --\r\nErrata are for the RFCs as available from rfc-editor.org.",
     "submit_date": "2011-10-10",
     "submitter_name": "Dai Wenjie (David Jet)",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3585,
+    "errata_id": "3585",
     "doc-id": "RFC5709",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 3.3,
+    "section": "3.3",
     "orig_text": "(1) PREPARATION OF KEY\r\n       In this application, Ko is always L octets long.\r\n\r\n       If the Authentication Key (K) is L octets long, then Ko is equal\r\n       to K.  If the Authentication Key (K) is more than L octets long,\r\n       then Ko is set to H(K).  If the Authentication Key (K) is less\r\n       than L octets long, then Ko is set to the Authentication Key (K)\r\n       with zeros appended to the end of the Authentication Key (K),\r\n       such that Ko is L octets long.\r\n",
     "correct_text": "(1) PREPARATION OF KEY\r\n       In this application, Ko is always B octets long and is computed \r\n       as follows:\r\n\r\n       If the Authentication Key (K) is B octets long, then Ko is equal\r\n       to K.  If the Authentication Key (K) is more than B octets long,\r\n       then Ko is set to H(K) and then appended with (B-L) zeroes to \r\n       create a B octets long string Ko.  If the Authentication Key (K) \r\n       is less than B octets long, then Ko is set to the Authentication \r\n       Key (K) with zeros appended to the end of the Authentication Key \r\n       (K), such that Ko is B octets long.\r\n",
     "notes": "This is in accordance with RFC2104(HMAC: Keyed-Hashing for Message Authentication). Reproducing the relevant text below:\r\n\r\n2. Definition of HMAC\r\n\r\nThe definition of HMAC requires a cryptographic hash function, which\r\nwe denote by H, and a secret key K. We assume H to be a cryptographic\r\nhash function where data is hashed by iterating a basic compression\r\nfunction on blocks of data. We denote by B the byte-length of such\r\nblocks (B=64 for all the above mentioned examples of hash functions),\r\nand by L the byte-length of hash outputs (L=16 for MD5, L=20 for\r\nSHA-1). The authentication key K can be of any length up to B, the\r\nblock length of the hash function. Applications that use keys longer\r\nthan B bytes will first hash the key using H and then use the\r\nresultant L byte string as the actual key to HMAC. In any case the\r\nminimal recommended length for K is L bytes (as the hash output\r\nlength). See section 3 for more information on keys.\r\n\r\n\r\nAlso, according to FIPS PUB 198, section 5(HMAC SPECIFICATION) :\r\n\r\nSTEPS\r\nSTEP-BY-STEP DESCRIPTION\r\nStep 1\r\nIf the length of K = B: set K0 = K. Go to step 4.\r\nStep 2\r\nIf the length of K > B: hash K to obtain an L byte string, \r\nthen append (B-L) zeros to create a B-byte string K0 \r\n(i.e., K0 = H(K) || 00...00). Go to step 4.\r\nStep 3\r\nIf the length of K < B: append zeros to the end of K to \r\ncreate a B-byte string K0 (e.g., if K is 20 bytes in \r\nlength and B = 64, then K will be appended with 44 zero \r\nbytes 0x00).\r\nStep 4\r\nExclusive-Or K0 with ipad to produce a B-byte string: \r\nK0 ¯ ipad.\r\nStep 5\r\nAppend the stream of data 'text' to the string resulting \r\nfrom step 4: (K0 ¯ ipad) || text.\r\nStep 6\r\nApply H to the stream generated in step 5: \r\nH((K0 ¯ ipad) || text).\r\nStep 7\r\nExclusive-Or K0 with opad: K0 ¯ opad.\r\nStep 8\r\nAppend the result from step 6 to step 7: \r\n(K0 ¯ opad) || H((K0 ¯ ipad) || text).\r\nStep 9\r\nApply H to the result from step 8: \r\nH((K0 ¯ opad )|| H((K0 &#65455; ipad) || text)).\r\nStep 10\r\nSelect the leftmost t bytes of the result of step 9 as the MAC.\r\n\r\nVerifier's note:\r\nThis issue is being addressed by draft-ietf-ospf-rfc6506bis.",
     "submit_date": "2013-04-09",
     "submitter_name": "Mike Dubrovsky",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }
