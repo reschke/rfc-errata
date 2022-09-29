@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1831,
+    "errata_id": "1831",
     "doc-id": "RFC2585",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The optional parameters is ambiguous because it does not state what the version refers to. It is unlikely to be the version of PKIX, because RFC 2459 preceded this document, and the versions of the PKIX format described in RFC 2459 was 2 and 3. The authors note that we did not have a reference to the PKIX specification. Because of this, we suggest that the \"version\" parameter be ignored if present, and that no assumption of what the default of \"1\" means. Further, we suggest that \"version\" not be used when generating MIME bodies.",
     "submit_date": "2009-08-12",
     "submitter_name": "Paul Hoffman",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   }
