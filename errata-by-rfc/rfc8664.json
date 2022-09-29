@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6753,
+    "errata_id": "6753",
     "doc-id": "RFC8664",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "Later it says, when this F bit is set to 1, the NAI value is absent, so the NT field has no meaning. \r\n     F:   When this bit is set to 1, the NAI value in the subobject\r\n           body is absent.  The F bit MUST be set to 1 if NT=0;\r\n           otherwise, it MUST be set to zero.  The S and F bits MUST NOT\r\n           both be set to 1.",
     "submit_date": "2021-11-25",
     "submitter_name": "Shuping Peng",
-    "verifier_id": 171,
+    "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2022-01-10 13:14:47"
   }
