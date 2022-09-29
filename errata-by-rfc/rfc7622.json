@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4470,
+    "errata_id": "4470",
     "doc-id": "RFC7622",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.5,
+    "section": "3.5",
     "orig_text": "<king@example.com/&#x265A>;",
     "correct_text": "<king@example.com/&#x265A;>",
     "notes": "Right angle bracket arrived too soon.",
     "submit_date": "2015-09-10",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4534,
+    "errata_id": "4534",
     "doc-id": "RFC7622",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,27 +25,27 @@
     "notes": "RFC 5892 is just a list of codepoints; the rules to which it is referring (and that are referred to in the ABNF and other places in the document) are in RFC 5895.",
     "submit_date": "2015-11-14",
     "submitter_name": "Sam Whited",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4560,
+    "errata_id": "4560",
     "doc-id": "RFC7622",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.5,
+    "section": "3.5",
     "orig_text": "   | 18| <juliet@example.com/ foo>    | Leading space in resourcepart |",
     "correct_text": "[nothing]",
     "notes": "Example 18 is wrong because a leading space is currently allowed by RFC 7622 (at least, it is not disallowed by the OpaqueString profile defined in RFC 7613). It is true that leading and trailing spaces are disallowed by the Nickname profile, but we do not reference that here. This example should be removed in any updates to RFC 7622.",
     "submit_date": "2015-12-07",
     "submitter_name": "Peter Saint-Andre",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5769,
+    "errata_id": "5769",
     "doc-id": "RFC7622",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The current specification forbids the inclusion of dots (\".\") in the domainpart, since they are not allowed in NR-LDH nor U-labels. But they should be allowed, as otherwise a DNS name could never be put into an XMPP domainpart (which is commonly done).\r\n\r\n----- Verifier notes -----\r\nThis is correct as far as it goes, but there's more to the fix than this, so proper discussion, consensus, and document update are needed.  There are, for example, other dot characters that need to be allowed as well as U+002E.  The bottom line is that Florian is correct that DNS label separators need to be allowed, and the proper fix to the text is deferred to any future document update.",
     "submit_date": "2019-06-30",
     "submitter_name": "Florian Schmaus",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5789,
+    "errata_id": "5789",
     "doc-id": "RFC7622",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -70,7 +70,7 @@
     "notes": "This is a follow up and update on Errata ID #5769.  Besides allowing DNS label separators in the domainpart, this further allows codepoints not allowed in U-labels but required by the IP-literal rule of RFC6874, which is used by RFC7622 to allow IPv6 addresses in XMPP domainparts. As in the previous errata, this also drops the reference to NR-LDH labels, which I believe to be unnecessary.\r\n\r\n===== Verifier Notes =====\r\nAs with the related errata report, this is held for document update because more discussion and consensus is needed.  So this is on record for that discussion.",
     "submit_date": "2019-07-22",
     "submitter_name": "Florian Schmaus",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
