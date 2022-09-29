@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5411,
+    "errata_id": "5411",
     "doc-id": "RFC3996",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The notify-job-id attribute [RFC3995] contains the subscribed Job identifier.",
     "submit_date": "2018-06-26",
     "submitter_name": "Michael Sweet",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5413,
+    "errata_id": "5413",
     "doc-id": "RFC3996",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "The range of values allowed for the \"notify-get-interval\" attribute (0 to 2^31-1) is different from the \"ippget-event-life\" attribute (15 to 2^31-1), and implementations have ignored this requirement because it makes no sense. Furthermore, the use of MAY for larger values does not clearly capture the requirement to extend event lives in order to avoid missing notifications.",
     "submit_date": "2018-06-28",
     "submitter_name": "Michael Sweet",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }
