@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 5095,
+    "errata_id": "5095",
     "doc-id": "RFC8033",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "      if PIE->in_measurement_ == TRUE:\r\n         PIE->dq_count_ = PIE->dq_count_ + deque_pkt_size;\r\n         if PIE->dq_count_ >= DQ_THRESHOLD then\r\n            weight = DQ_THRESHOLD/2^16\r\n            PIE->avg_dq_time_ = (now - PIE->measurement_start_) *\r\n                                weight + PIE->avg_dq_time_ *\r\n                                (1 - weight);\r\n            PIE->dq_count_ = 0;\r\n            PIE->measurement_start_ = now\r\n         else\r\n            PIE->in_measurement_ = FALSE;",
     "correct_text": "      if PIE->in_measurement_ == TRUE:\r\n         PIE->dq_count_ = PIE->dq_count_ + deque_pkt_size;\r\n         if PIE->dq_count_ >= DQ_THRESHOLD then\r\n            weight = DQ_THRESHOLD/2^16\r\n            PIE->avg_dq_time_ = (now - PIE->measurement_start_) *\r\n                                weight + PIE->avg_dq_time_ *\r\n                                (1 - weight);\r\n            PIE->in_measurement_ = FALSE;",
     "notes": "There should not be an \"else\" because if PIE->dq_count_ >= DQ_THRESHOLD, this measurement is over: avg_dq_time is calculated and in_measurement is set to FALSE; otherwise dq_count has been increased before this \"if\" and now we wait for next packet. Resetting dq_count and measurement_start is not necessary because they will be set again when a new measurement begins.",
     "submit_date": "2017-08-24",
     "submitter_name": "Liang Tian",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2020-03-04 03:00:52"
   },
   {
-    "errata_id": 7108,
+    "errata_id": "7108",
     "doc-id": "RFC8033",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The reference provided for ECN points to the incorrect IETF document.",
     "submit_date": "2022-08-31",
     "submitter_name": "Greg White",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
