@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 365,
+    "errata_id": "365",
     "doc-id": "RFC2883",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "",
     "submit_date": "2004-06-21",
     "submitter_name": "Noritoshi Demizu",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6355,
+    "errata_id": "6355",
     "doc-id": "RFC2883",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "   The use of D-SACK allows the sender to detect some cases (e.g., when\r\n   no ACK packets have been lost) when a a Fast Retransmit was due to\r\n   packet reordering instead of packet loss.  This allows the TCP sender",
     "correct_text": "   The use of D-SACK allows the sender to detect some cases (e.g., when\r\n   no ACK packets have been lost) when a Fast Retransmit was due to\r\n   packet reordering instead of packet loss.  This allows the TCP sender",
     "notes": "redundant word",
     "submit_date": "2020-12-14",
     "submitter_name": "Eugene Adell",
-    "verifier_id": 167,
+    "verifier_id": "167",
     "verifier_name": "Martin Duke",
     "update_date": "2020-12-22 08:22:35"
   }
