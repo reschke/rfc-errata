@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5727,
+    "errata_id": "5727",
     "doc-id": "RFC8492",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "We believe we have found an error regarding the Password Element used in\r\nthe example in the appendix.\r\nCurve used in the example: brainpoolP256r1\r\nPE.x used in the example:\r\n29 b2 38 55 81 9f 9c 3f c3 71 ba e2 84 f0 93 a3\r\na4 fd 34 72 d4 bd 2e 9d f7 15 2d 22 ab 37 aa e6\r\n\r\nIt appears that this is not a valid point on the given curve. Using\r\nMagma (http://magma.maths.usyd.edu.au/calc/) and the values for\r\nbrainpool from https://tools.ietf.org/html/rfc5639#section-3.4 gives a\r\nLegendre Symbol of -1, indicating that y^2 is not a quadratic residue\r\nand therefore that PE.x is not a valid point on the curve. Code used:\r\n\r\na :=\r\n56698187605326110043627228396178346077120614539475214109386828188763884139993;\r\n\r\nb :=\r\n17577232497321838841075697789794520262950426058923084567046852300633325438902;\r\n\r\nx :=\r\n18859714372486306827330584431184663996963158272766618598705097205657493809894;\r\n\r\np :=\r\n76884956397045344220809746629001649093037950200943055203735601445031516197751;\r\n\r\ny2 := (x*x*x + a*x + b) mod p;\r\nls := LegendreSymbol(y2, p);\r\nprint ls;\r\n\r\nThe PE.x in the example seems to be the PRF output in the third round in\r\nthe algorithm in 4.4.1 of the RFC.\r\nIn older revisions this value was used directly as the X-Coordinate.\r\nHowever a) This has changed in newer revisions and\r\nb) The output of the first round is already a valid point and should\r\ntherefore be used instead.\r\n\r\nThe client and server seem to use a different point than the given PE.x on the curve for\r\ntheir key exchange. The actual value used can be calculated from the\r\ngiven mask:\r\nPE = (-element) * (mask^-1 mod q)\r\nActual PE.x:\r\nA7 EE 9B 10 90 C5 DE AF  AD FE A2 EC 93 50 1F B8\r\n9E A4 CC 40 2D D5 CE 03  AF 59 FB 4C D1 9B 86 9B\r\n\r\nDoing this for the client Element as well gives the same PE.\r\nUsing this PE and the given private values also results in the same\r\npremaster secret in the example.\r\n\r\nHowever, the PRF output of the first round (using the base in the\r\nexample) is:\r\nAE 80 44 FE 9A 02 7F A3  26 0C B2 4D 26 FB EC FB\r\n0C D3 1A 28 E0 08 79 98  47 6F 48 24 84 28 AA 1B\r\nA1 4C 25 3C E3 00 CF E5\r\nResulting X-Coordinate ((pwd-tmp mod (p - 1)) + 1)):\r\n00 68 6B 0D 3F C4 98 94  DD 62 1E C0 4F 92 5E 02\r\n9B 2B 15 28 ED ED CA 46  00 72 54 28 1E 9A 6E DC\r\nIn decimal:\r\n184490938790914521010164124495537968992184466437601025180409064591686528732\r\nThis gives us a Legendre Symbol of 1. This should be the correct PE to\r\nuse for the key exchange. The element of the server and client as well\r\nas the premaster and master secret have been adjusted accordingly.",
     "submit_date": "2019-05-21",
     "submitter_name": "Alexander Freiherr von Buddenbrock",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
