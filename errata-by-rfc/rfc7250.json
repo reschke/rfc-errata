@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5013,
+    "errata_id": "5013",
     "doc-id": "RFC7250",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "   IANA has allocated two new TLS extensions, client_certificate_type\r\n   and server_certificate_type, from the \"TLS ExtensionType Values\"\r\n   subregistry defined in [RFC5246].",
     "correct_text": "   IANA has allocated two new code points, 19 (0x13) and 20 (0x14), for\r\n   client_certificate_type and server_certificate_type, respectively,\r\n   in the \"TLS ExtensionType Values\" subregistry defined in [RFC5246].",
     "notes": null,
     "submit_date": "2017-05-10",
     "submitter_name": "i",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
