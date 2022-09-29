@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 371,
+    "errata_id": "371",
     "doc-id": "RFC2846",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 8,
+    "section": "8",
     "orig_text": " global-phone = \"+\" 1*( DIGIT , written-sep )",
     "correct_text": " global-phone = \"+\" 1*( DIGIT / written-sep )",
     "notes": "",
     "submit_date": "2004-05-28",
     "submitter_name": "RFC Editor",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
