@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 7014,
+    "errata_id": "7014",
     "doc-id": "RFC9114",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "There is a conflict between RFC 9114 and RFCs 9110,9112,9113. RFC 9114 disallows paths that start with \"//\" whereas the others allow them. Research seems to indicate that this was not intentional. More details on the mailing list discussion: https://lists.w3.org/Archives/Public/ietf-http-wg/2022JulSep/0014.html",
     "submit_date": "2022-07-06",
     "submitter_name": "David Schinazi",
-    "verifier_id": 172,
+    "verifier_id": "172",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2022-09-27 11:27:39"
   }
