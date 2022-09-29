@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4016,
+    "errata_id": "4016",
     "doc-id": "RFC7210",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "      SendLifetimeStart\r\n         The SendLifetimeStart field specifies the earliest date and\r\n         time in Coordinated Universal Time (UTC) at which this key\r\n         should be considered for use when sending traffic.  The format\r\n         is YYYYMMDDHHSSZ, where four digits specify the year, two\r\n         digits specify the month, two digits specify the day, two\r\n         digits specify the hour, two digits specify the minute, and two\r\n         digits specify the second.  The \"Z\" is included as a clear\r\n         indication that the time is in UTC.\r\n\r\n      SendLifeTimeEnd\r\n         The SendLifeTimeEnd field specifies the latest date and time at\r\n         which this key should be considered for use when sending\r\n         traffic.  The format is the same as the SendLifetimeStart\r\n         field.\r\n\r\n      AcceptLifeTimeStart\r\n         The AcceptLifeTimeStart field specifies the earliest date and\r\n         time in Coordinated Universal Time (UTC) at which this key\r\n         should be considered for use when processing received traffic.\r\n         The format is YYYYMMDDHHSSZ, where four digits specify the\r\n         year, two digits specify the month, two digits specify the day,\r\n         two digits specify the hour, two digits specify the minute, and\r\n         two digits specify the second.  The \"Z\" is included as a clear\r\n         indication that the time is in UTC.\r\n",
     "correct_text": "      SendLifetimeStart\r\n         The SendLifetimeStart field specifies the earliest date and\r\n         time in Coordinated Universal Time (UTC) at which this key\r\n         should be considered for use when sending traffic.  The format\r\n         is YYYYmmddHHMMSSZ, where four digits specify the year, two\r\n         digits specify the month, two digits specify the day, two\r\n         digits specify the hour, two digits specify the minute, and two\r\n         digits specify the second.  The \"Z\" is included as a clear\r\n         indication that the time is in UTC.\r\n\r\n      SendLifeTimeEnd\r\n         The SendLifeTimeEnd field specifies the latest date and time at\r\n         which this key should be considered for use when sending\r\n         traffic.  The format is the same as the SendLifetimeStart\r\n         field.\r\n\r\n      AcceptLifeTimeStart\r\n         The AcceptLifeTimeStart field specifies the earliest date and\r\n         time in Coordinated Universal Time (UTC) at which this key\r\n         should be considered for use when processing received traffic.\r\n         The format is YYYYmmddHHMMSSZ, where four digits specify the\r\n         year, two digits specify the month, two digits specify the day,\r\n         two digits specify the hour, two digits specify the minute, and\r\n         two digits specify the second.  The \"Z\" is included as a clear\r\n         indication that the time is in UTC.\r\n",
     "notes": "The date and time format in the original document omits minute even though the descriptive text indicates it should be included.",
     "submit_date": "2014-06-18",
     "submitter_name": "Denis Ovsienko",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }
