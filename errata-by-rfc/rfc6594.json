@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6174,
+    "errata_id": "6174",
     "doc-id": "RFC6594",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "s/fInternet/Internet/\r\n\r\n",
     "submit_date": "2020-05-15",
     "submitter_name": "HARUYAMA Seigo",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2020-05-15 10:13:21"
   },
   {
-    "errata_id": 6202,
+    "errata_id": "6202",
     "doc-id": "RFC6594",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "5.1.  RSA Public Key\r\n\r\n   A public key with the following value in OpenSSH format [RFC4716]\r\n   would appear as follows:\r\n",
     "correct_text": "5.1.  RSA Public Key\r\n                                                                                   \r\n   A public key with the following value in secure shell public key file\r\n   format [RFC4716] would appear as follows:\r\n",
     "notes": "RFC4716 defines secure shell public key file format, not OpenSSH format.\r\n\r\nSection 5.2 and 5.3 have the same issue.",
     "submit_date": "2020-06-03",
     "submitter_name": "IWAMOTO Kouichi",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
