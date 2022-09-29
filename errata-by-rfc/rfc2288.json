@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 775,
+    "errata_id": "775",
     "doc-id": "RFC2288",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "Once you have written RFC 2288 that defined three URN namespaces:\r\n  ISSN, ISBN, and SICI.\r\nThe IANA \"urn-namespaces\" registry does not (and probably never\r\ndid) contain any pointers to RFC 2288.\r\n\r\nMeanwhile, the 'ISSN' URN namespace definition has been restated\r\nin RFC 3044, including an IANA registration -- according to and\r\nusing the template specified in RFC 2611 (BCP 33) [that in the\r\nmeantime has been obsoleted itself by RFC 3406 (BCP 66)] --,\r\nand 'ISSN' currently appears as formal URN namespace #3 in the\r\nIANA URN namespaces registry.\r\n\r\nSimilarly, the 'ISBN' URN namespace definition has been restated\r\nin RFC 3187, including an IANA registration -- according to and\r\nusing the template specified in RFC 2611 --, and 'ISBN' currently\r\nappears as formal URN namespace #9 in the IANA registry.\r\n\r\nNow, RFC 2288 is *NOT* declared \"Obsoleted\" in the RFC index.\r\nContrary to that, the 'SICI' URN namespace does *NOT* appear\r\nin the current IANA URN namespaces registry.\r\nThus the fate of the 'SICI' namespace and the status of RFC 2288\r\nis questionable and unclear.\r\n\r\nI suspect that RFC 2288 should be considered obsoleted, and\r\n'SICI' should be considered deprecated.\r\n\r\nSo, what's to do in this case ?\r\n\r\nAccording to my understanding of the established procedures,\r\nthe Informational RFC 2288 cannot easily be re-classified as\r\nHistoric, and a specific footnote about the deprecated 'SICI'\r\nnamespace would not be easily entered into the IANA registry.\r\nTherefore, to make the situation clearly understandable for\r\neveryone, it seems easiest to have the RFC-Ed add the note\r\n   '(Obsoleted by 3044, RFC 3187)'\r\nto the RFC index entry for RFC 2288.",
     "correct_text": "[see above]",
     "notes": "from pending",
     "submit_date": "2005-09-11",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }
