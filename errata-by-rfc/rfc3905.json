@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1545,
+    "errata_id": "1545",
     "doc-id": "RFC3905",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "Department:",
     "correct_text": "Organization:",
     "notes": "Searching for IPR statements made by a particular organization is more useful than seaching for a department name within an undisclosed organization.\r\n\r\nThis erratum was rejected because one of the authors (Valerie See) states:\r\nI would (respectfully) disagree with the proposed edit. As I recall, when we authored this (I say \"we\" in the sense of the co-authors of the RFC), the reason we went with a \"department\" was to narrow things down within large companies and/or organizations. If you look at a sampling of the IPR disclosures filed with the IETF (admittedly, only from the perspective of my personal opinion), it seems to be generally true that the \"patent holder/applicant\" field has made the question of \"who\" (as in \"organization\") pretty clear.\r\n\r\nParticularly since this is only an informational RFC, stating that the use of the template it contains is optional, and given the history, I don't feel that making the fix for the errata is the right thing to do.",
     "submit_date": "2008-10-08",
     "submitter_name": "Russ Housley",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   }
