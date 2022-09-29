@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 5860,
+    "errata_id": "5860",
     "doc-id": "RFC7464",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.2,
+    "section": "2.2",
     "orig_text": "   Note that on some systems it\"s possible to input RS by typing\r\n",
     "correct_text": "   Note that on some systems it's possible to input RS by typing\r\n",
     "notes": "The contraction \"it's\" needs a single apostrophe, not a double-quote mark.",
     "submit_date": "2019-09-18",
     "submitter_name": "Benjamin Kaduk",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-23 09:26:54"
   },
   {
-    "errata_id": 5998,
+    "errata_id": "5998",
     "doc-id": "RFC7464",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "in contexts where, for example, data that is appended to log files to log files is truncated by the filesystem",
     "correct_text": "in contexts where, for example, data that is appended to log files is truncated by the filesystem",
     "notes": "the text \"to log files\" is accidentally duplicated within the sentence",
     "submit_date": "2020-03-01",
     "submitter_name": "Claes Wallin",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
