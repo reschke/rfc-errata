@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4013,
+    "errata_id": "4013",
     "doc-id": "RFC3618",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 12.2,
+    "section": "12.2",
     "orig_text": "12.2. Defined TLVs\r\n\r\n\r\n   The following TLV Types are defined:\r\n\r\n   Code                        Type\r\n   ===================================================\r\n     1                  IPv4 Source-Active\r\n     2                  IPv4 Source-Active Request\r\n     3                  IPv4 Source-Active Response\r\n     4                  KeepAlive\r\n     5                  Reserved (Previously: Notification)\r\n\r\n\r\n",
     "correct_text": "12.2. Defined TLVs\r\n\r\n\r\n   The following TLV Types are defined:\r\n\r\n   Code                        Type\r\n   ===================================================\r\n     1                  IPv4 Source-Active\r\n     2                  (Previously IPv4 Source-Active Request)\r\n     3                  (Previously IPv4 Source-Active Response)\r\n     4                  KeepAlive\r\n     5                  Reserved (Previously: Notification)",
     "notes": "Since SA caching is mandatory for all MSDP speakers, the Source-Active request and response messages are no longer necessary. They should be removed from the text to avoid confusion or include a reason as to why they are included and a description of their purpose.\n --VERIFIER NOTES-- \nThis needs to go through the standards process.  Deprecating messages in the protocol is not an errata item.",
     "submit_date": "2014-06-12",
     "submitter_name": "Ramiro Garza Rios",
-    "verifier_id": 140,
+    "verifier_id": "140",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5356,
+    "errata_id": "5356",
     "doc-id": "RFC3618",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 5.3,
+    "section": "5.3",
     "orig_text": "5.3.  SA Cache Timeout (SA-State Timer)\r\n\r\n   Each entry in an SA Cache has an associated SA-State Timer.  A\r\n   (S,G)-SA-State-Timer is started when an (S,G)-SA message is initially\r\n   received by an MSDP peer.  The timer is reset to [SG-State-Period] if\r\n   another (S,G)-SA message is received before the (S,G)-SA-State Timer\r\n   expires.  [SG-State-Period] MUST NOT be less than [SA-Advertisement-\r\n   Period] + [SA-Hold-Down-Period].",
     "correct_text": "5.3.  SA Cache Timeout (SA-State Timer)\r\n\r\n   Each entry in an SA Cache has an associated SA-State Timer.  A\r\n   (S,G)-SA-State-Timer is started when an (S,G)-SA message is initially\r\n   received by an MSDP peer.  The timer is reset to [SG-State-Period] if\r\n   another (S,G)-SA message is received before the (S,G)-SA-State Timer\r\n   expires.  [SG-State-Period] MUST NOT be less than [SA-Advertisement-\r\n   Period].\r\n\r\nOr define the [SA-Hold-Down-Period] refers to.",
     "notes": "There is no definition of [SA-Hold-Down-Period] timer in the document. We should either remove the reference of [SA-Hold-Down-Period] from 5.3 or clearly define what [SA-Hold-Down-Period] refers to. If not, this will cause confusion for implementation.\n --VERIFIER NOTES-- \n   The discussion on the WG list is here: https://mailarchive.ietf.org/arch/msg/pim/HeCvgF59HdxWMp7PYSUUteL2D5E ",
     "submit_date": "2018-05-10",
     "submitter_name": "Frank Hua Li",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }
