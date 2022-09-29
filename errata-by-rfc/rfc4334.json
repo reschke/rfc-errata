@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 122,
+    "errata_id": "122",
     "doc-id": "RFC4334",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)\r\n\r\nIn the 3rd paragraph of section 1, on page 2 RFC 4334 says:\r\n\r\n   For example, the same wireless station might use IEEE 802.1X to\r\n   authenticate to a corporate IEEE 802.11 WLAN and a public IEEE 802.11\r\n   \"hotspot.\"  [...]\r\n           ^^\r\nThe syntax error of that sentence should be corrected to say:\r\n\r\n   For example, the same wireless station might use IEEE 802.1X to\r\n   authenticate to a corporate IEEE 802.11 WLAN and a public IEEE 802.11\r\n|  \"hotspot\".  [...]\r\n           ^^\r\n\r\n(2)\r\n\r\nAt the end of the 2nd paragraph of section 5, on page 6, the RFC says:\r\n\r\n                           [...].  Whenever this SSID disclosure is a\r\n   concern, different peer certificates ought to be used for the each\r\n   WLAN.\r\n                                                         ^^^^^^^^^^^^\r\nIt should say:\r\n\r\n                           [...].  Whenever this SSID disclosure is a\r\n|  concern, different peer certificates ought to be used for each WLAN.\r\n\r\n\r\n(3)\r\n\r\nIn Section 7.1, on page 7, the Normative Reference,\r\n\r\n                                               vvv\r\n   [EAP]       Aboba, B., Blunk, L., Vollbrechtand, J., Carlson, J.,\r\n               and H. Levkowetz, \"Extensible Authentication Protocol\r\n               (EAP)\", RFC 3748, June 2004.\r\n\r\nshould say:\r\n\r\n|  [EAP]       Aboba, B., Blunk, L., Vollbrecht, J., Carlson, J., and\r\n|              H. Levkowetz, Ed., \"Extensible Authentication Protocol\r\n               (EAP)\", RFC 3748, June 2004.\r\n\r\nand on page 8, the Normative Reference,\r\n\r\n                                       v\r\n   [X.690]     ITU-T Recommendation X.660 Information Technology - ASN.1\r\n               encoding rules: Specification of Basic Encoding Rules\r\n               (BER), Canonical Encoding Rules (CER) and Distinguished\r\n               Encoding Rules (DER), 1997.\r\n\r\nshould say:\r\n                                       v\r\n|  [X.690]     ITU-T Recommendation X.690 Information Technology - ASN.1\r\n               encoding rules: Specification of Basic Encoding Rules\r\n               (BER), Canonical Encoding Rules (CER) and Distinguished\r\n               Encoding Rules (DER), 1997.",
     "correct_text": "",
     "notes": "  *  The minor item (1) is included for completeness.\r\n  *  Items (1) and (2) are inherited from RFC 3770. \r\n\r\nfrom pending",
     "submit_date": "2006-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
