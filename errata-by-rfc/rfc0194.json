@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5859,
+    "errata_id": "5859",
     "doc-id": "RFC0194",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "  +-------------+                        +--------------+\r\n  | inputstream |                        | outputstream |\r\n  +-------------+                        +--------------+\r\n             /\\                           /\r\n              \\                          /\r\n               \\                        /\r\n                \\                     \\/\r\n                +-----------------------+\r\n                |         CPU           |\r\n                +-----------------------+\r\n                       |        /\\\r\n                       |         |\r\n                       |         |\r\n                       \\/        |\r\n                +-----------------------+\r\n    Storage:    | Instruction           |\r\n                | Sequence              |\r\n                +-----------------------+\r\n                | Label Table           |\r\n                +-----------------------+\r\n                | Literal/Identifier    |\r\n                | Pool                  |\r\n                +-----------------------+\r\n                | Variable length       |\r\n                | string area           |\r\n                +-----------------------+\r\n\r\n\r\n                Fig. 1. Form Interpreter",
     "correct_text": "  +-------------+                        +--------------+\r\n  | inputstream |                        | outputstream |\r\n  +-------------+                        +--------------+\r\n             \\                           /\\\r\n              \\                          /\r\n               \\                        /\r\n               \\/                      /\r\n                +-----------------------+\r\n                |         CPU           |\r\n                +-----------------------+\r\n                       |        /\\\r\n                       |         |\r\n                       |         |\r\n                       \\/        |\r\n                +-----------------------+\r\n    Storage:    | Instruction           |\r\n                | Sequence              |\r\n                +-----------------------+\r\n                | Label Table           |\r\n                +-----------------------+\r\n                | Literal/Identifier    |\r\n                | Pool                  |\r\n                +-----------------------+\r\n                | Variable length       |\r\n                | string area           |\r\n                +-----------------------+\r\n\r\n\r\n                Fig. 1. Form Interpreter",
     "notes": "This was discovered while cross-referencing the online RFC Editor txt version to a paper original at the Computer History Museum. Reference: https://write.as/365-rfcs/rfc-194",
     "submit_date": "2019-09-14",
     "submitter_name": "Darius Kazemi",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
