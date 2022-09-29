@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3210,
+    "errata_id": "3210",
     "doc-id": "RFC2802",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The URN used in 2 instances in Section 5.2.2 has never been\r\nregistered -- not even the URN Namespace 'ietf-org' !\r\n\r\nThe Corrected Text is based on RFC 2648 and RFC 3553,\r\nbut by barely suggesting this potentially correct URN\r\n(in the spirit of these RFCs), it is still not yet\r\nregistered with IANA!\r\n\r\nSo this correction should be Held for Update, and any successor\r\nof the RFC should provide the necessary registration of this URN\r\nwith IANA.\r\n\r\nSimilarly, the other URNs used in the RFC,\r\n   urn:ibm-com:dom-hash\r\n   urn:nist-gov:sha1\r\n   urn:fips:sha1\r\n   urn:rsasdi-com:rsa-encryption\r\n   urn:X500:X509v3\r\n   urn:nist-gov:dsa\r\n   urn:ansi-org:ecdsa\r\nall are entirely hypothetical; all the URN Namespaces used\r\nthere have never been registered so far -- even 12 years after\r\nthe publication of RFC 2802.",
     "submit_date": "2012-05-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
