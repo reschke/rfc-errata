@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4238,
+    "errata_id": "4238",
     "doc-id": "RFC7413",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "A Nil cookie is a fast open option with no cookie value.  A length range of 6 to 18 bytes excludes a Nil cookie.",
     "submit_date": "2015-01-22",
     "submitter_name": "Matthew Luckie",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4239,
+    "errata_id": "4239",
     "doc-id": "RFC7413",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "A Nil fast-open option has an option length of 2.  A length field of zero would mean an invalid TCP option.",
     "submit_date": "2015-01-22",
     "submitter_name": "Matthew Luckie",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5373,
+    "errata_id": "5373",
     "doc-id": "RFC7413",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,22 +40,22 @@
     "notes": "The original language seems to imply that the cached negative response should only affect connections if they are initiated from the same source port and source IP.\r\n\r\nSince the client source port can change for subsequent TCP connections, and it's unlikely that just changing the source port would result in a successful TCP FO connection when a previous connection from a different source port failed, associating the cached negative response with the source port is probably not very useful, and could actually be detrimental to performance and reliability, depending on the implementation.\r\n\r\nIf the implementation would decide to check the source port when matching negative cached responses to a new connection, it would negatively impact performance when the source port changes, because the implementation wouldn't find a matching negative response in the cache.\r\n\r\nFurthermore, if each connection retry is made from a different source port, checking the source port when matching the cached negative responses would make the client unable to connect to the server, until all possible source ports are included in cached negative responses.\r\n\r\nThis means it's much better not recommending to associate the source port to the cached negative responses, to prevent any confusion and possible implementation issues.\r\n\r\nEither that, or add additional clarification, describing exactly how a negative cached response should be matched to a subsequent connection attempt.",
     "submit_date": "2018-05-31",
     "submitter_name": "Vladimir Nicolici",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6239,
+    "errata_id": "6239",
     "doc-id": "RFC7413",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "produces responses earlier before the handshake completes",
     "correct_text": "produces responses after the handshake completes",
     "notes": "Located on last paragraph last line of section on page 16. First line states 'not to respond with data until the handshake finishes' which contradicts the last line.\n --VERIFIER NOTES-- \n   This erratum does not correctly interpret the paragraph.\r\n\r\nThe sentence is:\r\n\"But the potential latency saving from TFO may diminish if the server application\r\n   produces responses earlier before the handshake completes.\"\r\n\r\nThe text refers to when the server response is available, not when it is sent. If the server data isn't yet available, then there is no message to withhold and therefore no performance penalty in waiting for the handshake to complete.",
     "submit_date": "2020-07-27",
     "submitter_name": "Simon khng ren hao",
-    "verifier_id": 167,
+    "verifier_id": "167",
     "verifier_name": "Martin Duke",
     "update_date": "2020-07-27 15:17:03"
   }
