@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4536,
+    "errata_id": "4536",
     "doc-id": "RFC5412",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "This entire section is in the wrong location or needs to be revised. Section 7.2 is the definition for Configure Request, which is suppose to be a message sent from the WTP to the AC. But here at 7.2.3, this message element clearly states it is an element to be sent from the AC to the WTP. Does this section belong in the Configure Response section instead?\r\n\r\n[This section does seem to be in the wrong place.  However, moving it will need to wait fo a new (revised) RFC.  ISE, July 2017]",
     "submit_date": "2015-11-18",
     "submitter_name": "Tony Deng",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }
