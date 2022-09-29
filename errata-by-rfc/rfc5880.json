@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 2530,
+    "errata_id": "2530",
     "doc-id": "RFC5880",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.3,
+    "section": "4.3",
     "orig_text": "Sequence Number\r\n\r\n      The sequence number for this packet.  For Keyed MD5\r\n      Authentication, this value is incremented occasionally.  For\r\n      Meticulous Keyed MD5 Authentication, this value is incremented for\r\n      each successive packet transmitted for a session.  This provides\r\n      protection against replay attacks.\r\n",
     "correct_text": "Sequence Number\r\n\r\n      The sequence number for this packet.  For Keyed MD5\r\n      Authentication, this value is incremented (by one) occasionally.  For\r\n      Meticulous Keyed MD5 Authentication, this value is incremented by one for\r\n      each successive packet transmitted for a session.  This provides\r\n      protection against replay attacks.\r\n",
     "notes": "This change clarifies the amount by which the sequence number is incremented. ",
     "submit_date": "2010-09-24",
     "submitter_name": "Mach Chen",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4410,
+    "errata_id": "4410",
     "doc-id": "RFC5880",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "If has received BFD Control packet with the Final (F) bit set from the\r\nremote system, the session will not gone down",
     "submit_date": "2015-07-07",
     "submitter_name": "Liu Lin",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5205,
+    "errata_id": "5205",
     "doc-id": "RFC5880",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "This is based on an email I received from Anil Kumar of Nokia (anil.kumar_t_v@nokia.com).\r\n\r\nThe language as originally written made a session timeout a no-op when in Down state.  This was a gratuitous attempt to avoid a null state transition, but had the side effect of not setting the diag code (and otherwise is no different).\r\n\r\nThis turns out to be problematic in the case where system \"A\" signals AdminDown, causing system \"B\" to respond with Down state.  If the link then fails, the existing verbiage implies that \"B\" will not report the detection timeout, even locally.\r\n\r\nIf the link fails in a unidirectional manner (such that \"B\" is deaf), B will give no indication of a timeout in its outgoing Control packets back to A (which can in fact hear them).\r\n\r\nMaking the suggested change should ensure that the diagnostic code is always set to Detection Time Expired when Control packets stop arriving, even if the far end system was previously reporting AdminDown.",
     "submit_date": "2017-12-14",
     "submitter_name": "Dave Katz",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6818,
+    "errata_id": "6818",
     "doc-id": "RFC5880",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The value of the Auth Len field is the length of the password plus 3.\n --VERIFIER NOTES-- \n   https://mailarchive.ietf.org/arch/msg/rtg-bfd/ukbCzkS8NkTWdXEPvB9mlFtIiSQ/\r\n\r\nThis erratum proposes changing “is not equal” to “is not match”. As far as I can tell would make the text less, not more, precise. ",
     "submit_date": "2022-01-15",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 171,
+    "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2022-05-09 14:08:38"
   },
   {
-    "errata_id": 6926,
+    "errata_id": "6926",
     "doc-id": "RFC5880",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "The variable bfd.RemoteState is not defined in section 6.8.1 and is only mentioned once in the entire document. It is likely a typo and a similarly named bfd.RemoteSessionState was meant instead.",
     "submit_date": "2022-04-06",
     "submitter_name": "Glebs Ivanovskis",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-04-07 13:09:47"
   },
   {
-    "errata_id": 7082,
+    "errata_id": "7082",
     "doc-id": "RFC5880",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "1. Don't manipulate bfd.AuthSeqKnown and bfd.RcvAuthSeq before Auth Key/Digest check.\r\n2. Explicitly mention what bfd.AuthSeqKnown and bfd.RcvAuthSeq must be set to in both cases (bfd.AuthSeqKnown is 0 and bfd.AuthSeqKnown is 1).\r\n\r\nBased on email exchange: https://mailarchive.ietf.org/arch/msg/rtg-bfd/lDxFfNpqo4kwuNEUY0AbjMBb8JU/\r\n\r\n(See also https://mailarchive.ietf.org/arch/msg/rtg-bfd/Ngf3Chmpy_EqNPlmuMZOslayy2E/)",
     "submit_date": "2022-08-12",
     "submitter_name": "Glebs Ivanovskis",
-    "verifier_id": 171,
+    "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2022-09-06 10:23:40"
   },
   {
-    "errata_id": 7083,
+    "errata_id": "7083",
     "doc-id": "RFC5880",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -100,7 +100,7 @@
     "notes": "1. Don't manipulate bfd.AuthSeqKnown and bfd.RcvAuthSeq before Auth Key/Hash check.\r\n2. Explicitly mention what bfd.AuthSeqKnown and bfd.RcvAuthSeq must be set to in both cases (bfd.AuthSeqKnown is 0 and bfd.AuthSeqKnown is 1).\r\n\r\nBased on email exchange: https://mailarchive.ietf.org/arch/msg/rtg-bfd/lDxFfNpqo4kwuNEUY0AbjMBb8JU/\r\n\r\n(See also https://mailarchive.ietf.org/arch/msg/rtg-bfd/Ngf3Chmpy_EqNPlmuMZOslayy2E/)",
     "submit_date": "2022-08-12",
     "submitter_name": "Glebs Ivanovskis",
-    "verifier_id": 171,
+    "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2022-09-06 10:24:31"
   }
