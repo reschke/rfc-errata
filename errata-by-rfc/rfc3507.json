@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 258,
+    "errata_id": "258",
     "doc-id": "RFC3507",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "Errata for this document can be found at:\nhttp://www.measurement-factory.com/std/icap/\n\n\n\n",
     "submit_date": "2005-07-18",
     "submitter_name": "Alex Rousskov",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5893,
+    "errata_id": "5893",
     "doc-id": "RFC3507",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 4.5,
+    "section": "4.5",
     "orig_text": "100 Continue.  If the entire encapsulated HTTP body did not fit in the preview, the ICAP client MUST send the remainder of its ICAP message, starting from the first chunk after the preview.  If the entire message fit in the preview (detected by the \"EOF\" symbol explained below), then the ICAP server MUST NOT respond with 100 Continue.",
     "correct_text": "100 Continue.  If the entire encapsulated HTTP body did not fit in the preview, the ICAP client MUST send the remainder of its ICAP message, starting from the first chunk after the preview.  If the entire message fit in the preview (detected by the \"EOF\" symbol explained below), then the ICAP client MUST ignore a 100 Continue response.",
     "notes": "Originally, the ICAP server was prohibited from sending a 100 Continue if the entire HTTP body fits in the preview.  However, the ICAP server cannot know if the entire body fits in the preview until the whole preview has been received.  An ICAP server cannot begin loop-back streaming of the HTTP transaction until the whole preview has been received, because it cannot know whether or not it is appropriate to send a \"100 Continue\" first.  This severely impacts situations where an HTTP server is producing a very slow data stream and therefore causes the preview to take a long time.\r\n\r\nThe corrected text makes it permissible for an ICAP server to blindly send a \"100 Continue\" before it knows whether or not it is appropriate, and requires the ICAP client to ignore the \"100 Continue\" in the event that it turned out to not be appropriate.\r\n\r\nA server that sends a \"100 Continue\" response before receiving the final preview chunk will be able to note the presence or absence of the ieof chunk extension when the final preview chunk later arrives, and therefore determine whether that marks the end of the ICAP request or whether to expect the client to immediately begin streaming the non-preview data.",
     "submit_date": "2019-11-04",
     "submitter_name": "Steve Hill",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
