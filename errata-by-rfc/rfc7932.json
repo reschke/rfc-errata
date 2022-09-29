@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 5948,
+    "errata_id": "5948",
     "doc-id": "RFC7932",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.5,
+    "section": "3.5",
     "orig_text": "   Note that a code of 16 that follows an immediately preceding 16\r\n   modifies the previous repeat count, which becomes the new repeat\r\n   count.  The same is true for a 17 following a 17.  A sequence of\r\n   three or more 16 codes in a row or three of more 17 codes in a row is\r\n   possible, modifying the count each time.  Only the final repeat count\r\n   is used.  The modification only applies if the same code follows.  A\r\n   16 repeat does not modify an immediately preceding 17 count nor vice\r\n   versa.\r\n",
     "correct_text": "   Note that a code of 16 that follows an immediately preceding 16\r\n   modifies the previous repeat count, which becomes the new repeat\r\n   count.  The same is true for a 17 following a 17.  A sequence of\r\n   three or more 16 codes in a row or three or more 17 codes in a row is\r\n   possible, modifying the count each time.  Only the final repeat count\r\n   is used.  The modification only applies if the same code follows.  A\r\n   16 repeat does not modify an immediately preceding 17 count nor vice\r\n   versa.\r\n",
     "notes": "\"three of more\" should be \"three or more\"",
     "submit_date": "2019-12-28",
     "submitter_name": "Bret Abel",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-12-30 18:00:19"
   },
   {
-    "errata_id": 6977,
+    "errata_id": "6977",
     "doc-id": "RFC7932",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 9.3,
+    "section": "9.3",
     "orig_text": "      Block type code for next distance block type, appears only if\r\n         NBLTYPESD >= 2 and the previous distance block count is zero\r\n\r\n      Block count code + extra bits for next distance block count,\r\n         appears only if NBLTYPESD >= 2 and the previous distance block\r\n         count is zero",
     "correct_text": "      Block type code for next distance block type, appears only if\r\n         NBLTYPESD >= 2 and the previous distance block count is zero\r\n         and the distance code is not an implicit 0, as indicated by\r\n         the insert-and-copy length code\r\n\r\n      Block count code + extra bits for next distance block count,\r\n         appears only if NBLTYPESD >= 2 and the previous distance block\r\n         count is zero and the distance code is not an implicit 0, as\r\n         indicated by the insert-and-copy length code",
     "notes": "Corrected to match section 10 and the reference implementation, which do not update the distance block count when the distance is implicitly 0.",
     "submit_date": "2022-05-21",
     "submitter_name": "Sean Bartell",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
