@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 143,
+    "errata_id": "143",
     "doc-id": "RFC4285",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "       0                   1                   2                   3\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n                       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n                       |  Option Type  | Option Length |  Subtype      |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |                  Mobility SPI                                 |",
     "correct_text": "        0                   1                   2                   3\r\n        0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n                       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n                       |  Option Type  | Option Length |  Subtype      |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |                  Mobility SPI                                 |\r\n",
     "notes": "",
     "submit_date": "2006-02-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
