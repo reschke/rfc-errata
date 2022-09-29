@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3507,
+    "errata_id": "3507",
     "doc-id": "RFC4418",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The test vector for message 'a' * 2^25 is wrong in the RFC. This is a know error already published by the author on the page http://fastcrypto.org/umac/ (direct link: http://fastcrypto.org/umac/rfc4418.errata.txt ), but I am reporting it here because it is neither shown in Errata Search nor triggers the costumary \"Errata Exist\" alert on RFC's HTML view.",
     "submit_date": "2013-03-03",
     "submitter_name": "Lucas Clemente Vella",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }
