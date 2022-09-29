@@ -1,36 +1,36 @@
 [
   {
-    "errata_id": 3752,
+    "errata_id": "3752",
     "doc-id": "RFC2418",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.2,
+    "section": "2.2",
     "orig_text": "In order\r\nto take advantage of this service, working group mailing lists\r\nMUST include the address \"wg_acronym-archive@lists.ietf.org\"\r\n(where \"wg_acronym\" is the working group acronym) in the\r\nmailing list in order that a copy of all mailing list messages\r\nbe recorded in the Secretariat's archive.  ",
     "correct_text": "In order\r\nto take advantage of this service, working group mailing lists\r\nMUST include the address \"wg_acronym-archive@ietf.org\"\r\n(where \"wg_acronym\" is the working group acronym) in the\r\nmailing list in order that a copy of all mailing list messages\r\nbe recorded in the Secretariat's archive.  ",
     "notes": "'@lists.ietf.org' was changed to '@ietf.org' in the year 2005.\r\n\r\nAlthough the RFC errata system is not typically used to update email addresses that were correct at the time of publication, this report results from discussion with Russ Housley and Jari Arkko.",
     "submit_date": "2013-10-15",
     "submitter_name": "RFC Editor",
-    "verifier_id": 169,
+    "verifier_id": "169",
     "verifier_name": "Lars Eggert",
     "update_date": "2021-03-10 23:32:15"
   },
   {
-    "errata_id": 6130,
+    "errata_id": "6130",
     "doc-id": "RFC2418",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.3,
+    "section": "3.3",
     "orig_text": "[4th paragraph in §3.3]\r\n\r\n...   \r\n   level of consensus.  The most common method used is for the working\r\n   group chair to state what he or she believes to be the consensus view\r\n   and. at the same time, requests comments from the list about the\r\n   stated conclusion.\r\n",
     "correct_text": "...   \r\n   level of consensus.  The most common method used is for the working\r\n   group chair to state what he or she believes to be the consensus view\r\n   and, at the same time, requests comments from the list about the\r\n   stated conclusion.\r\n\r\n\r\ns/and./and,",
     "notes": "Nit related to a misplaced \".\" instead of a \",\".",
     "submit_date": "2020-04-27",
     "submitter_name": "Alvaro Retana",
-    "verifier_id": 169,
+    "verifier_id": "169",
     "verifier_name": "Lars Eggert",
     "update_date": "2021-03-10 23:29:45"
   },
   {
-    "errata_id": 6787,
+    "errata_id": "6787",
     "doc-id": "RFC2418",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "From \"frameword\" to \"framework\"",
     "submit_date": "2021-12-18",
     "submitter_name": "Sky Lian",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2021-12-20 14:33:31"
   }
