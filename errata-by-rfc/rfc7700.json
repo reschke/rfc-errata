@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4570,
+    "errata_id": "4570",
     "doc-id": "RFC7700",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "An entity that performs enforcement according to this profile MUST\r\n   prepare a string as described in Section 2.2 and MUST also apply the\r\n   following rules specified in Section 2.1 in the order shown:\r\n\r\n   1.  Additional Mapping Rule\r\n   2.  Normalization Rule\r\n   3.  Directionality Rule\r\n\r\n   After all of the foregoing rules have been enforced, the entity MUST\r\n   ensure that the nickname is not zero bytes in length (this is done\r\n   after enforcing the rules to prevent applications from mistakenly\r\n   omitting a nickname entirely, because when internationalized\r\n   characters are accepted, a non-empty sequence of characters can\r\n   result in a zero-length nickname after canonicalization).\r\n",
     "correct_text": "An entity that performs enforcement according to this profile MUST\r\n   prepare a string as described in Section 2.2 and MUST also apply the\r\n   following rules specified in Section 2.1 in the order shown:\r\n\r\n   1.  Additional Mapping Rule\r\n   2.  Case Mapping Rule\r\n   3.  Normalization Rule\r\n\r\n   After all of the foregoing rules have been enforced, the entity MUST\r\n   ensure that the nickname is not zero bytes in length (this is done\r\n   after enforcing the rules to prevent applications from mistakenly\r\n   omitting a nickname entirely, because when internationalized\r\n   characters are accepted, a non-empty sequence of characters can\r\n   result in a zero-length nickname after canonicalization).\r\n",
     "notes": "There is no directionality rule to be applied during enforcement as the directionality rule is part of NFKC, the case mapping rule (as mentioned in section 2.1).",
     "submit_date": "2015-12-23",
     "submitter_name": "Sam Whited",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
