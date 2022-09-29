@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2667,
+    "errata_id": "2667",
     "doc-id": "RFC5914",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The content type is designed to be placed into a CMS SignedData object.  Since the exact same class definition (not a syntaxically identicial one) needs to be used to get object sets to work correctly, the defintion of the content type must be updated to reference the identical one defined in the CMS module.\r\n\r\nA future version should additionally note that the content type is to be added to the ContentSet object set in the CMS module.",
     "submit_date": "2010-12-09",
     "submitter_name": "Jim Schaad",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   }
