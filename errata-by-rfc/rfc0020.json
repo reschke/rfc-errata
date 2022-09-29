@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3284,
+    "errata_id": "3284",
     "doc-id": "RFC0020",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,27 +10,27 @@
     "notes": "Vint Cerf's name is spelled wrong in the footer at the bottom of each page. Not having a copy of the original, I don't know whether it was an original bug or a transcription error in 1999.  BUt it's definitely kind of amusing.",
     "submit_date": "2012-07-13",
     "submitter_name": "John Levine",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4217,
+    "errata_id": "4217",
     "doc-id": "RFC0020",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "      2 The use of the symbols in 2/2, 2/7, 2/12, 5/14, /6/0, and 7/14\r\n   as diacritical marks is described in Appendix A, A5.2\r\n      3 These characters should not be used in international interchange\r\n   without determining that there is agreement between sender and\r\n   recipient.  (See Appendix B4.)\r\n",
     "correct_text": "     2 The use of the symbols in 2/2, 2/7, 2/12, 5/14, /6/0, and 7/14\r\n   as diacritical marks is described in Appendix A, A5.2, of X3.4-1968.\r\n      3 These characters should not be used in international interchange\r\n   without determining that there is agreement between sender and\r\n   recipient.  (See Appendix B4 of X3.4-1968.)\r\n",
     "notes": "The appendixes are in the original standard, not the RFC.\r\n\r\nIn the abstract, it says \"X3, 4-\" rather than \"X3.4-\" which is surely an OCR or transcription error.",
     "submit_date": "2015-01-03",
     "submitter_name": "John Levine",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5106,
+    "errata_id": "5106",
     "doc-id": "RFC0020",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Missing parenthesis.",
     "submit_date": "2017-09-07",
     "submitter_name": "Kuba Ober",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6087,
+    "errata_id": "6087",
     "doc-id": "RFC0020",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,27 +55,27 @@
     "notes": "It seems certain that the intended meaning was \"the attached pages, which were copied from\" (where it is customary to omit the words \"which were\"). The attachment referred to consists of five sheets photocopied from USAS X3.4-1968, USA Standard Code for Information Interchange.",
     "submit_date": "2020-04-12",
     "submitter_name": "Daniel N. Strychalski",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-04-11 19:54:16"
   },
   {
-    "errata_id": 6652,
+    "errata_id": "6652",
     "doc-id": "RFC0020",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "      2 The use of the symbols in 2/2, 2/7, 2/12, 5/14, /6/0, and 7/14",
     "correct_text": "      2 The use of the symbols in 2/2, 2/7, 2/12, 5/14, 6/0, and 7/14",
     "notes": "Unnecessary slash.",
     "submit_date": "2021-07-31",
     "submitter_name": "Ivan Panchenko",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2021-08-04 14:07:51"
   },
   {
-    "errata_id": 6879,
+    "errata_id": "6879",
     "doc-id": "RFC0020",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -85,7 +85,7 @@
     "notes": "x'0d', not x'od'",
     "submit_date": "2022-03-12",
     "submitter_name": "studentmain",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-03-14 14:54:01"
   }
