@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1852,
+    "errata_id": "1852",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "[[ Location is bottom of page 27 ]]\r\n\r\nLike any other object intended to keep a snapshot of sysUpTime,\r\nthis object must have the corrresponding SYNTAX of TimeStamp\r\n(cf. pwCreateTime, on mid-page 27); a SYNTAX of TimeTicks is\r\nappropriate on;y for 'running clocks' started at a particular\r\nevent (like pwUpTime, also on pg. 27, just above pwLastChange).\r\n\r\n\r\nAlthough technically correct that the SYNTAX should be TimeStamp, this\r\nis safe because the SYNTAX of TimeStamp is TimeTicks. ",
     "submit_date": "2009-09-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1853,
+    "errata_id": "1853",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Wrong temporal relationship!",
     "submit_date": "2009-09-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1854,
+    "errata_id": "1854",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": null,
     "submit_date": "2009-09-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1855,
+    "errata_id": "1855",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "This is correct, but is thought unlikely to cause any problems",
     "submit_date": "2009-09-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1856,
+    "errata_id": "1856",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "Rationale:\r\n\r\na) RFC 4001 requests that every use of InetAddressType and\r\n   InetAddress makes explicit the coupling between the objects.\r\n   Hence, the DESCRIPTION clause(s) need to be amended.\r\n   For clarity, the Corrected text does so for both objects.\r\n\r\nb) RFC 4001 (pg. 6) specifies that an InetAddressType object of\r\n   value unknown(0) correspond to an InetAddress object\r\n   that is a zero-length string, unless unknown(0) is used to\r\n   indicate an internet address type not (yet) known (at the time\r\n   of publication of RFC 4001). All Standards Track MIB modules\r\n   making use of InetAddressType so far couple the value unknown(0)\r\n   with an InetAddress of size 0, because an unknown IP address\r\n   of a (known) specific type can be represented by the\r\n   \"unspecified address\" of that address format.\r\n   Hence, the original text should be changed.\r\n   This has been done in the perceived spirit of the conformance\r\n   specification for pwPeerAddr on mid-page 51 and page 54.\r\n\r\nThis is a correct, however, it is unlikely that \"unknown\" is ever used in an implementation. Therefore it is not critical to fix this, hence classifying as hold for document update.\r\n",
     "submit_date": "2009-09-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1857,
+    "errata_id": "1857",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -85,12 +85,12 @@
     "notes": "Rationale: Clarity of language.",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1858,
+    "errata_id": "1858",
     "doc-id": "RFC5601",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -100,12 +100,12 @@
     "notes": "Rationale: \r\nThe phrase talking about \"use\" of a value in an incoming message\r\nis potentially misleading.  The insertion of \"expected as\" should\r\ncure the issue, with minimal footprint.\n --VERIFIER NOTES-- \n   The original text clearly states the use of the object.",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1859,
+    "errata_id": "1859",
     "doc-id": "RFC5601",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -115,12 +115,12 @@
     "notes": "Rationale:\r\n\r\nThe original DESCRIPTION indicated unconditional signaling of an error, whether\r\nthe activation of unsupported FCS retention is requested or not.\r\nThis is contrary to the DESCRIPTION for pwFcsRetentionStatus.\r\n\r\n",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1860,
+    "errata_id": "1860",
     "doc-id": "RFC5601",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -130,12 +130,12 @@
     "notes": "Rationale:\r\n\r\nConfusion of terms; the role of source vs. destination port number\r\nchanges with the direction in which the packets are sent, whereas\r\nthe role of local vs. remote port number is static (from the point\r\nof view of each peer) and as such can be configured here.\r\nThe necessary clarification substitutes the proper terms for the\r\ninappropriate ones.\r\n\r\n\r\n\n --VERIFIER NOTES-- \n   The original text is clear and correct.",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1861,
+    "errata_id": "1861",
     "doc-id": "RFC5601",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -145,12 +145,12 @@
     "notes": "",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1862,
+    "errata_id": "1862",
     "doc-id": "RFC5601",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -160,12 +160,12 @@
     "notes": "",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1863,
+    "errata_id": "1863",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -175,12 +175,12 @@
     "notes": "Rationale: Added precision (cf. EID=1855).",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1864,
+    "errata_id": "1864",
     "doc-id": "RFC5601",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -190,12 +190,12 @@
     "notes": "Rationale: Clarification of potentially misleading text:\r\npwIndexMappingPeerAddr is *not* an OID by itself, it is\r\ntransformed into an OID when used as an index in the SMI.\r\nAn alternate replacement text might be:\r\n\r\n           Implementers need to be aware that if the value of\r\n|          the pwIndexMappingPeerAddr has a size of more than\r\n|          112 octets, then OIDs of column instances\r\n           in this table will have more than 128 sub-identifiers\r\n           and cannot be accessed using SNMPv1, SNMPv2c, or SNMPv3.\"\n --VERIFIER NOTES-- \n   The original text is correct and easily understood by a MIB experts.",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1865,
+    "errata_id": "1865",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -205,12 +205,12 @@
     "notes": "Rationale: cf. EID=1856",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1866,
+    "errata_id": "1866",
     "doc-id": "RFC5601",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -220,12 +220,12 @@
     "notes": "Rationale:\r\npwPeerMappingPeerAddr is an OCTET STRING, not an OID;\r\ncf. EID=1864.\n --VERIFIER NOTES-- \n      The original text is correct and easily understood by a MIB experts.",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1867,
+    "errata_id": "1867",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -235,12 +235,12 @@
     "notes": "Rationale: cf. EID=1856 and EID=1865.",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1868,
+    "errata_id": "1868",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -250,12 +250,12 @@
     "notes": "Rationale: \"this\" in the given context is likely to be understood\r\nas pointing to \"this\" RFC, RFC 5601!",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1869,
+    "errata_id": "1869",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -265,12 +265,12 @@
     "notes": "Rationale:\r\na) plural is needed;\r\nb) as for EID=1868",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1870,
+    "errata_id": "1870",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -280,12 +280,12 @@
     "notes": "Rationale: plural is needed!\r\n\r\nNote:\r\n\r\nSurprisingly, the whole definition of the Gen Fec PW ID mapping table\r\n(starting with this entry and extending down to the top of page 47)\r\nis not contained in the part of the MIB module enclosed in comments\r\n   'Reverse mapping tables'  /  'End of reverse mapping tables'\r\n(extending from top of page 40 to mid-page 43).\r\nIt would have been better to move the specification of this table\r\ninto that part as well, i.e. to its end -- irrespective of the OID\r\nvalue assigned to the pwGenFecIndexMappingTable object.",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1871,
+    "errata_id": "1871",
     "doc-id": "RFC5601",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -295,12 +295,12 @@
     "notes": "Rationale (cf. EID=1864 and EID=1866):\r\nThese objects conceptually are not OIDs; they become mapped to \r\nrelative OIDs when used as INDEX variables. The corrected text\r\nattempts this clarification with minimal textual footprint.\n --VERIFIER NOTES-- \n      The original text is correct and easily understood by a MIB experts.",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1872,
+    "errata_id": "1872",
     "doc-id": "RFC5601",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -310,12 +310,12 @@
     "notes": "Rationale: same as for EID=1858 !\n --VERIFIER NOTES-- \n   The original text looks clear",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1873,
+    "errata_id": "1873",
     "doc-id": "RFC5601",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -325,12 +325,12 @@
     "notes": "Rationale:\r\nGrammar: \"4 address sizes\" has quite different semantics than\r\n\"address size 4\" !\r\n\r\nNote:\r\n\r\nThis issue recurs on page 54, and a similar correction applies there.",
     "submit_date": "2009-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2815,
+    "errata_id": "2815",
     "doc-id": "RFC5601",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -340,12 +340,12 @@
     "notes": "psnFacingPwRxFault and psnFacingPwTxFault were replaced in RFC 5542 by psnPwRxFault and psnPwTxFault respectively",
     "submit_date": "2011-05-24",
     "submitter_name": "Daniel Cohn",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3030,
+    "errata_id": "3030",
     "doc-id": "RFC5601",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -355,22 +355,22 @@
     "notes": null,
     "submit_date": "2011-11-12",
     "submitter_name": "Stewart Bryant",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4069,
+    "errata_id": "4069",
     "doc-id": "RFC5601",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 12,
+    "section": "12",
     "orig_text": " pwAttachedPwIndex OBJECT-TYPE\r\n     SYNTAX        PwIndexOrZeroType\r\n     MAX-ACCESS    read-create\r\n     STATUS        current\r\n     DESCRIPTION\r\n         \"If the PW is attached to another PW instead of a local\r\n          native service, this item indicates the pwIndex of the\r\n          attached PW.  Otherwise, this object MUST\r\n          be set to zero.  Attachment to another PW will have no\r\n          PW specific entry in any of the service MIB modules.\"\r\n     DEFVAL { 0 }\r\n     ::= { pwEntry 10 }",
     "correct_text": " pwAttachedPwIndex OBJECT-TYPE\r\n     SYNTAX        PwIndexOrZeroType\r\n     MAX-ACCESS    read-create\r\n     STATUS        current\r\n     DESCRIPTION\r\n          \"If the PW is attached to another PW instead of a local\r\n           native service, this item indicates the pwIndex of the\r\n           attached PW.  Otherwise, this object MUST\r\n           be set to zero.  Attachment to another PW will have no\r\n           PW specific entry in any of the service MIB modules.\r\n           This object may be modified only when the value of\r\n           the associated pwAdminStatus object is down(2), and\r\n           the associated pwOperStatus object has value down(2)\r\n           or notPresent(5) such that the row in the pwTable\r\n           represents an inactive PW.\"\r\n     DEFVAL { 0 }\r\n     ::= { pwEntry 10 }",
     "notes": "Description of the pwEntry object in the same RFC states that \"The read-create objects in this table are divided into\r\n           three categories:\r\n           1) Objects that MUST NOT be changed after row activation.\r\n              These are objects that define basic properties of the\r\n              PW (for example type, destination, etc.).\r\n           2) Objects that MAY be changed when the PW is\r\n              defined as not active.  A change of these objects involves\r\n              re-signaling of the PW or it might be traffic affecting.\r\n              PW not active is defined as one of the following\r\n              conditions:\r\n                  a) The pwRowStatus is notInService(2).\r\n                  b) The pwRowStatus is notReady(3).\r\n                  c) The pwAdminStatus is down(2).\r\n           If the operator needs to change one of the values for an\r\n           active row, the operator can either set the pwRowStatus to\r\n           notInService(2) or set pwAdminStatus to down(2).\r\n           Signaling (or traffic) is initiated again upon setting\r\n           the pwRowStatus to active(1) or setting the pwAdminStatus\r\n           to up(1) or testing(3), respectively.\r\n           3) Objects that MAY be changed at any time.\"\r\n\r\nIn further states (in tthe same description) that \"By default, all the read-create objects MUST NOT be changed after row activation, unless specifically indicated in the individual object description.\"\r\n\r\npwAttachedPwIndex object is used to stitch a couple of PWs represented by two different rows in the pwTable, with the pwAttachedPwIndex value in the row representing one of them set to the pwIndex of the other one and vice versa.\r\nSince there is no way in the SMIv2 paradigm to create two rows in the same table\r\nin a single atomic operation, setting a this attribute in a pair of rows is only \r\npossible when both are created. In order to do that, read-create access mode of\r\nthe pwAttachedPwIndex object has to be interpreted as ability to set its value\r\nwhen the row represents an inactive PW. \r\nIn accordance with the quoted description, such an interpretation must be\r\nexplicitly specified in the description of this object.\r\n\r\nSuch a specification is missing in the current text, hence the default\r\ninterpretation of the read-create access mode is holds.\r\nProposed text fixes this problem.",
     "submit_date": "2014-08-05",
     "submitter_name": "Alexander (\"Sasha\") Vainshtein",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
