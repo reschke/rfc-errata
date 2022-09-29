@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4586,
+    "errata_id": "4586",
     "doc-id": "RFC7697",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 9.1,
+    "section": "9.1",
     "orig_text": "9.1.  IANA Considerations for MPLS-OAM-ID-STD-MIB\r\n\r\n   IANA has to assign the OID { mplsStdMIB 21 } to the\r\n   MPLS-OAM-ID-STD-MIB module specified in this document.\r\n",
     "correct_text": "9.1.  IANA Considerations for MPLS-OAM-ID-STD-MIB\r\n\r\n   IANA has assigned the OID { mplsStdMIB 21 } to the\r\n   MPLS-OAM-ID-STD-MIB module specified in this document.\r\n",
     "notes": "Missed by RFC Editor to change from future tense \"has to assign\" to past tense \"has assigned\".",
     "submit_date": "2016-01-09",
     "submitter_name": "Venkatesan Mahalingam",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2019-09-10 09:09:03"
   }
