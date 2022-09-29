@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 114,
+    "errata_id": "114",
     "doc-id": "RFC4352",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)\r\n\r\nIn Section 4.3.2.3 of RFC 4352, the first formula line on page 18,\r\n\r\n      TS(i) = TS(i-1) + (DISi + 1) * frame duration,    2 < i < n\r\n\r\nshould say:\r\n\r\n      TS(i) = TS(i-1) + (DISi + 1) * frame duration,    2 <= i <= n\r\n\r\n\r\n(2)\r\n\r\nThe 'Example Algorithm' in Section 4.5.1, on page 27, in the second\r\nhalf of Step 1, says:\r\n\r\n   Return recovered timestamps as\r\n   x(n) = t0 + n*L1 and associated ISF equal to isf0,\r\n   for 0 < n < (t1 - t0)/L0\r\n   goto End\r\n\r\nThis pseudocode fragment should say:\r\n\r\n   for 0 < n < (t1 - t0)/L0\r\n      Return recovered timestamps as\r\n      x(n) = t0 + n*L0 and associated ISF equal to isf0\r\n   goto End\r\n\r\n\r\n(3)\r\n\r\nIn Section 7.2, on page 32, the second item of the unnumbered list\r\nsays:\r\n\r\n   -  The media type (payload format name) is used in SDP \"a=rtpmap\" as\r\n      the encoding name.  [...]\r\n\r\nIt should say:\r\n\r\n   -  The media subtype (payload format name) is used in SDP \"a=rtpmap\"\r\n      as the encoding name.  [...]\r\n\r\n\r\n(4)\r\n\r\nWithin the second paragraph on page 33, Section 7.2.1 of RFC 4352\r\nsays:\r\n                                            [...]  As any receiver will\r\n      be capable of receiving stereo frame type and perform local mixing\r\n      within the AMR-WB+ decoder, there is normally only one reason to\r\n      restrict to mono only: to avoid spending bit-rate on data that are\r\n      not utilized if the front-end is only capable of mono.\r\n\r\nIt should say:\r\n                                            [...]  As any receiver will\r\n      be capable of receiving stereo frame types and perform local\r\n      mixing within the AMR-WB+ decoder, there is normally only one\r\n      reason to restrict to mono only: to avoid spending bit-rate on\r\n      data that are not utilized if the front-end is only capable of\r\n      mono.",
     "correct_text": "",
     "notes": "from pending",
     "submit_date": "2006-02-07",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
