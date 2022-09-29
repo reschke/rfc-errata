@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2323,
+    "errata_id": "2323",
     "doc-id": "RFC5286",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.6,
+    "section": "3.6",
     "orig_text": "   16.  If D_opt(H_h.neighbor, D) < D_opt(P_i.neighbor, D) and\r\n        D_opt(P_i.alt_next_hops, D) >= D_opt(P_i.neighbor, D), then H_h\r\n        is a downstream alternate and P_i.alt_next_hops is simply an\r\n        LFA.  Prefer H_h and goto Step 20.\r\n\r\n",
     "correct_text": "   16.  If D_opt(H_h.neighbor, D) < D_opt(S, D) and\r\n        D_opt(P_i.alt_next_hops, D) >= D_opt(S, D), then H_h\r\n        is a downstream alternate and P_i.alt_next_hops is simply an\r\n        LFA.  Prefer H_h and goto Step 20.\r\n",
     "notes": null,
     "submit_date": "2010-07-12",
     "submitter_name": "András Császár",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }
