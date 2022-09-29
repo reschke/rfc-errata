@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4686,
+    "errata_id": "4686",
     "doc-id": "RFC5443",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": null,
     "correct_text": "(At the end of the section)\r\n\r\nIn case of OSPF while router advertises maximum cost, virtual link(s)\r\nthat cross link under question, could be broken. This is because\r\nvirtual link, which underlying path has cost greater than 0xFFFF,\r\nconsidered as inoperational. As a result, virtually connected area(s)\r\ncould be isolated from backbone.",
     "notes": "In case there are two or more links on path taken by virtual link, and one of them has max link cost, path metric will exceed value 0xffff. As a result virtual link will become inoperational.\n --VERIFIER NOTES-- \n   This update requires consensus by the Working Group.",
     "submit_date": "2016-05-06",
     "submitter_name": "Alexander Okonnikov",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2019-09-10 09:09:03"
   }
