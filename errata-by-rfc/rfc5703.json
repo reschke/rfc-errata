@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 6108,
+    "errata_id": "6108",
     "doc-id": "RFC5703",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 9.2,
+    "section": "9.2",
     "orig_text": "enclose :subject \"Warning\" :text\r\n",
     "correct_text": "enclose :subject \"Warning\" text:\r\n",
     "notes": "The keyword used to signal a multi-line text string is \"text:\", NOT \":text\"",
     "submit_date": "2020-04-17",
     "submitter_name": "Ken Murchison",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-04-18 10:19:30"
   }
