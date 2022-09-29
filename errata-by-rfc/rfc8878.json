@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6441,
+    "errata_id": "6441",
     "doc-id": "RFC8878",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Each of the three tables in Appendix A contain two entries for state 0, the first of which in each case incorrectly reports the Number_Of_Bits as 0. The all-zero rows should be removed.",
     "submit_date": "2021-02-25",
     "submitter_name": "Felix Handte",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2021-03-08 09:31:31"
   },
   {
-    "errata_id": 6442,
+    "errata_id": "6442",
     "doc-id": "RFC8878",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "The offset_value in the second-to-last line in the table should be 3, not 1. This line intends to demonstrate the property described earlier in the section that when the sequence's literals_length is 0, an offset_value of 3 resolves to Repeated_Offset1 - 1 and is inserted at the head of the Repeated_Offsets. This is the behavior that is reflected in the rest of the row, which an offset_value of 1 would not trigger (the resolved offset would be 2222, not 2221, and the Repeated_Offsets would remain unchanged, as demonstrated in the 3rd row of the table).\r\n\r\n(I wrote this table and it read 3 in the version I provided to the document authors--a typo was introduced somewhere.)",
     "submit_date": "2021-02-25",
     "submitter_name": "Felix Handte",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2021-03-08 09:31:55"
   }
