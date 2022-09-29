@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 5193,
+    "errata_id": "5193",
     "doc-id": "RFC1464",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2.",
     "orig_text": "string2      `abc`           string2=``abc``         \"string2=``abc``\"",
     "correct_text": "string2      `abc`           string2=`abc`         \"string2=`abc`\"",
     "notes": "Quote:\r\n--------------------------------------------\r\nAttribute Values\r\n\r\n   All printable ASCII characters are permitted in the attribute value.\r\n   No characters need to be quoted with a \"`\".  In other words, the\r\n   first unquoted equals sign in the TXT record is the name/value\r\n   delimiter.  All subsequent characters are part of the value.\r\n\r\n   Once again, note that in most implementations the backslash character\r\n   is an active quoting character (and must, itself, be quoted).\r\n\r\n--------------------------------------------\r\n\r\n\"All subsequent characters are part of the value.\" would indicate that the part of the string  after the \"=\" character could be copied as one.\r\n The accent grave shoud not be escaped within the value.",
     "submit_date": "2017-12-02",
     "submitter_name": "Victor Toni",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5194,
+    "errata_id": "5194",
     "doc-id": "RFC1464",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2.",
     "orig_text": "   a=a          true            a`=a=true               \"a`=a=true\"\r\n   a\\=a false           a\\`=a=false             \"a\\\\`=a=false\"",
     "correct_text": "   a=a          true            a`=a=true               \"a`=a=true\"\r\n   a\\=a         false           a\\`=a=false             \"a\\\\`=a=false\"",
     "notes": "The second line needs an adjustment so that it aligns with the other lines.",
     "submit_date": "2017-12-03",
     "submitter_name": "Victor Toni",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   }
