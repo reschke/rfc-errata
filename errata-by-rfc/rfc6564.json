@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4423,
+    "errata_id": "4423",
     "doc-id": "RFC6564",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "   Any IPv6 extension headers defined in the future, keeping in mind the\r\n   restrictions specified in Section 3 and also the restrictions\r\n   specified in [RFC2460], MUST use the consistent format defined in\r\n   Figure 1.  This minimizes breakage in intermediate nodes that examine\r\n   these extension headers.",
     "correct_text": "There's a bug in the logic of this document. Essentially:\r\n\r\n   A key problem with the Uniform Format for IPv6 Extension Headers\r\n   [RFC6564] lies in that both IPv6 Extension Headers and Transport\r\n   Protocols share the same namespace (\"Next Header\" registry/\r\n   namespace).  Thus, given an \"unknown Next Header value\", it is\r\n   impossible to tell whether the aforementioned value refers to an IPv6\r\n   Extension Header that employs the aforementioned uniform format, or\r\n   an \"unknown\" upper-layer protocol (e.g. an \"unknown\" transport\r\n   protocol).  That is, while [RFC6564] specifies the syntax for the\r\n   Uniform Format for IPv6 Extension Headers, but it does not provide a\r\n   mechanism for a node to identify whether the aforementioned format is\r\n   being employed in the first place.\r\n\r\nThis problem is discussed in: draft-gont-6man-rfc6564bis.",
     "notes": "The problem is not specifically with Section 5, but rather with the logic in the document.\n --VERIFIER NOTES-- \nThe changes proposed go beyond the level of an erratum. The issue should be discussed within the 6MAN working group and a revision of 6564 published if there is consensus to do so.",
     "submit_date": "2015-07-20",
     "submitter_name": "Fernando Gont",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4807,
+    "errata_id": "4807",
     "doc-id": "RFC6564",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "This is being handled in the 2460bis work.",
     "submit_date": "2016-09-20",
     "submitter_name": "Tim Chown",
-    "verifier_id": 152,
+    "verifier_id": "152",
     "verifier_name": "Suresh Krishnan",
     "update_date": "2019-09-10 09:09:03"
   }
