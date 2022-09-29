@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3362,
+    "errata_id": "3362",
     "doc-id": "RFC6110",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The 'unique' YANG statement, which is a substatement of 'list', has the cardinality of \"0..n\". Multiple sibling 'unique' statements cannot be mapped to a single @nma:unique attribute in the hybrid schema. Therefore, an XML element, <nma:unique>, has to be used for mapping the 'unique' statement instead of the attribute, much like the it is done for the 'must' statement.\r\n\r\nThis change to the mapping of the 'unique' statement is realized by changing the text of Section 10.55. Several other sections are also affected by this change.",
     "submit_date": "2012-09-21",
     "submitter_name": "Jernej Tuljak",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }
