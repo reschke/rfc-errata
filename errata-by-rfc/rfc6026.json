@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 2536,
+    "errata_id": "2536",
     "doc-id": "RFC6026",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 7.2,
+    "section": "7.2",
     "orig_text": "   +-----------+                        +-----------+\r\n   |           |                        |           |\r\n   |  Calling  |                        |  Calling  |\r\n   |           |----------->+           |           |-----------+\r\n   +-----------+ 2xx        |           +-----------+ 2xx       |\r\n                 2xx to TU  |                         2xx to TU |\r\n                            |                                   |\r\n                            |                                   |\r\n",
     "correct_text": "   BEFORE                               AFTER\r\n\r\n   +-----------+                        +-----------+\r\n   |           |                        |           |\r\n   |  Calling  |                        |  Calling  |\r\n   |           |----------->+           |           |-----------+\r\n   +-----------+ 2xx        |           +-----------+ 2xx       |\r\n                 2xx to TU  |                         2xx to TU |\r\n                            |                                   |\r\n                            |                                   |\r\n",
     "notes": "Figures 1 and 2 contain \"BEFORE\" and \"AFTER\" labels for their respective state machines.  Figure 3 does not contain a \"BEFORE\" and \"AFTER\" label.  Although it's pretty obvious from the context that the left-side is the \"BEFORE\" case and the right-side is the \"AFTER\" case, I believe for consistency (and to make it explicit), Figure 3 should contain \"BEFORE\" and \"AFTER\" labels.",
     "submit_date": "2010-09-30",
     "submitter_name": "John Takao Collier",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2538,
+    "errata_id": "2538",
     "doc-id": "RFC6026",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "- qualified as Technical because of importance of correct pointer;\r\n- apparently this detail has been missed when the Figures in the\r\n  document have been renumbered (#5 --> #7 and #4 --> #5) to achieve\r\n  the relationship to RFC 3261 explained in Section 8 (top of page 11):\r\n\r\n                                         [...]  This document\r\n   intentionally does not contain a Figure 4 or Figure 6 so that the\r\n   labels for Figures 5 and 7 are identical to the labels of the figures\r\n   they are replacing in RFC 3261.",
     "submit_date": "2010-09-30",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2539,
+    "errata_id": "2539",
     "doc-id": "RFC6026",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "Rationale:\r\n  In RFC 3261, Section 17.1.1.2. extends to mid-page 129.\r\n  So if the quoted text is correct, the section headline\r\n  here is strongly misleading, contradicts the text, and\r\n  hence needs adjustment.\r\n  Since the textual scope of the change is at the heart of\r\n  this RFC, this Errata note is classified as Technical.",
     "submit_date": "2010-10-01",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }
