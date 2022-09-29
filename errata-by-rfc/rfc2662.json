@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5508,
+    "errata_id": "5508",
     "doc-id": "RFC2662",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 7,
+    "section": "7",
     "orig_text": "             OBJECT      adslAtucConfMinSnrMgn\r\n             MIN-ACCESS  read-wr\r\n             MIN-ACCESS  read-write\r\n             DESCRIPTION\r\n                 \"Read-write access is applicable when\r\n                  static profiles are implemented.\"\r\n",
     "correct_text": "             OBJECT      adslAtucConfMinSnrMgn\r\n             MIN-ACCESS  read-write\r\n             DESCRIPTION\r\n                 \"Read-write access is applicable when\r\n                  static profiles are implemented.\"\r\n",
     "notes": "The extra line\r\n                   MIN-ACCESS  read-wr\r\nresults in MIB compilation errors.",
     "submit_date": "2018-09-29",
     "submitter_name": "Glenn Mansfield Keeni",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   }
