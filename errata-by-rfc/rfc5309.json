@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5007,
+    "errata_id": "5007",
     "doc-id": "RFC5309",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4.3,
+    "section": "4.3",
     "orig_text": "For the ARP implementation (which checks that the subnet of the source \r\naddress of the ARP request matches the local interface address), \r\nthis check needs to be relaxed for the unnumbered p2p-over-lan circuits.",
     "correct_text": "For the ARP implementation (which checks that the subnet of the source \r\naddress of the ARP request matches the local interface address), \r\nthis check needs to be relaxed for the p2p-over-lan circuits \r\n(both numbered and unnumbered).",
     "notes": "Consider the following situation: \r\n1.\tTwo routers, R1 and R2, are connected by a physical P2P  Ethernet link\r\n2.\tOSPFv2 is enabled on the interfaces representing the endpoints of this link. \r\n3.      From the OSPF POV these interfaces:\r\no\tAre configured as P2P\r\no\tBelong to the same area\r\no\tAre assigned with IP addresses and subnet masks yielding different subnets\r\n4.    ARP check mentioned in the problematic text is not relaxed.\r\n\r\nUnder this conditions:\r\n-Both R1 and R2 will accept Hello messages sent by the other router \r\n(becase it ignores subnet in Hello messages received via P2P interfaces)\r\n- Adjacency between R1 and R2 will progress to FULL state (because all OSPFv2 messages \r\nwill be sent with AllSPFRouters multicast IPv4 address)\r\n- Unicast traffic sent by R1 to R2 (and vice versa) will be blackholed because ARP \r\nwill not resolve addresses assigned to the corresponding interfaces.\n --VERIFIER NOTES-- \nRFC 5309 introduced the possibility of supporting an unnumbered configuration on a LAN. Statements in this RFC regarding ARP concerns are therefore deliberately limited to this new configuration.\r\n\r\nFor IS-IS, RFC 3787 Section 10 discusses concerns regarding mismatched subnets on numbered links.\r\n\r\nFor OSPF it is well known that there are some existing implementations which have supported mismatched subnets for many years.\r\n\r\nAny concerns with ARP behavior  in support of mismatched subnets on numbered LANs is out of scope of RFC 5309.\r\n\r\n[https://mailarchive.ietf.org/arch/msg/isis-wg/aCFWc8KuE8xEy0-qIrN63odct1o/?qid=623f2d68947e2ec849fb2e2a7f2e6242]",
     "submit_date": "2017-04-30",
     "submitter_name": "Alexander Vainshtein",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }
