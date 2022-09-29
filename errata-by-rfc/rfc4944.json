@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4359,
+    "errata_id": "4359",
     "doc-id": "RFC4944",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "   ESC:  Specifies that the following header is a single 8-bit field for\r\n      the Dispatch value.  It allows support for Dispatch values larger\r\n      than 127.",
     "correct_text": "   ESC:  Specifies that the following header is a single 8-bit field for\r\n      the Dispatch value.  It allows support for Dispatch values larger\r\n      than 63.",
     "notes": "The (non-ESCaped) Dispatch value is a 6-bit selector. However, it used to be a 7-bit selector, which has a value at most 127. When the field became a 6-bit selector, this maximum became 63, but the referring text was never updated. \r\n\r\nFor historical reference, see an early version from IETF 67 proposing the Dispatch value within the Dispatch header as a 7-bit field:\r\n\r\nhttp://6lowpan.tzi.org/FrontPage?action=AttachFile&do=view&target=tentative-draft2-ietf-6lowpan-format-07.txt\r\n\r\n   The dispatch type is defined by a zero-bit as the first bit.  The\r\n   dispatch type and header is shown here:\r\n\r\n                        1                   2                   3\r\n    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |0|  Dispatch   |  type-specific header\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n\r\n   Dispatch               7-bit selector.  Identifies the type of header\r\n                          immediately following the Dispatch type.\r\n\r\nThe relevant slides also show this (slide 8): http://6lowpan.tzi.org/FrontPage?action=AttachFile&do=view&target=6lowpan-header-proposal-2.ppt",
     "submit_date": "2015-05-07",
     "submitter_name": "Gabriel Montenegro",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6194,
+    "errata_id": "6194",
     "doc-id": "RFC4944",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "However, in the\r\n   resultant interface identifier, the \"Universal/Local\" (U/L) bit SHALL\r\n   be set to zero in keeping with the fact that this is not a globally\r\n   unique value.",
     "correct_text": "However, in the\r\n   resultant interface identifier, the \"Universal/Local\" (U/L) bit SHALL\r\n   be set to one in keeping with the fact that this is not a globally\r\n   unique value.",
     "notes": "IEEE (see https://standards.ieee.org/content/dam/ieee-standards/standards/web/documents/tutorials/eui.pdf) states that:\r\n\"the second least significant bit of Octet 0 (the U/L bit) indicates universal (U/L=0) or local (U/L=1) administration of the address.\"\r\n\r\nThus, the U/L bit in the \"pseudo 48-bit address\" shall have its U/L bit set to one, not to zero.",
     "submit_date": "2020-05-30",
     "submitter_name": "Tommaso Pecorella",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
