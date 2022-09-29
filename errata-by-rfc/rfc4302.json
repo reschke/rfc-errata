@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 134,
+    "errata_id": "134",
     "doc-id": "RFC4302",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,27 +10,12 @@
     "notes": "",
     "submit_date": "2006-01-12",
     "submitter_name": "Vishwas Manral",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 744,
-    "doc-id": "RFC4302",
-    "errata_status_code": "Held for Document Update",
-    "errata_type_code": "Technical",
-    "section": 99,
-    "orig_text": "(1)\r\n\r\nRFC 4301, in section 13, \"Differences from RFC 2401\", in the\r\nsecond bulleted item (near the top of page 73) states:\r\n\r\n   o There is no longer a requirement to support nested SAs or \"SA\r\n     bundles\".  [...]\r\n\r\nAnd later on, on page 74:\r\n\r\n   o Support for AH in both IPv4 and IPv6 is no longer required.\r\n\r\nTherefore, the paragraph on page 10 of RFC 4302,\r\n\r\n   ESP and AH headers can be combined in a variety of modes.  The IPsec\r\n   Architecture document describes the combinations of security\r\n   associations that must be supported.\r\n                     ^^^^^^^^^^^^^^^^^\r\nentails more or less a \"NOPE\".  If something like the second\r\nsentence is still desired, it might better say, e.g.,\r\n\r\n   ESP and AH headers can be combined in a variety of modes.  The IPsec\r\n   Architecture document briefly describes the methods to configure\r\n   such combinations of security associations.\r\n\r\n\r\n(2)\r\n\r\nOn page 25, Appendix A1 presents a table classifying the IPv4 options.\r\nWithin that table, the second column is partially misaligned.\r\n\r\n\r\n(3)\r\n\r\nOn page 26, the table within Appendix A2 classifying the IPv6\r\nextension headers,\r\n\r\n       Option/Extension Name                  Reference\r\n       -----------------------------------    ---------\r\n       MUTABLE BUT PREDICTABLE -- included in ICV calculation\r\n         Routing (Type 0)                    [DH98]\r\n\r\n       BIT INDICATES IF OPTION IS MUTABLE (CHANGES UNPREDICTABLY DURING\r\n       TRANSIT)\r\n         Hop-by-Hop options                  [DH98]\r\n         Destination options                 [DH98]\r\n\r\n       NOT APPLICABLE\r\n         Fragmentation                       [DH98]\r\n\r\nperhaps would have better been formatted like:\r\n\r\n       Option/Extension Name                  Reference\r\n       -----------------------------------    ---------\r\n       MUTABLE BUT PREDICTABLE\r\n       -- included in ICV calculation\r\n         Routing (Type 0)                       [DH98]\r\n\r\n       BIT INDICATES IF OPTION IS MUTABLE\r\n       (CHANGES UNPREDICTABLY DURING TRANSIT)\r\n         Hop-by-Hop options                     [DH98]\r\n         Destination options                    [DH98]\r\n\r\n       NOT APPLICABLE\r\n         Fragmentation                          [DH98]\r\n\r\nto avoid the overlap of the columns.\r\n\r\n\r\n(4)\r\n\r\nIn Appendix B2.1, at one place on page 30, the variable\r\n\"seqh\" is mis-spelled as \"seqH\" (this is in the 6th-to-last\r\nline of Appendix B2.1).\r\n\r\n\r\n(5)\r\n\r\nAppendix B, as a whole, is a [near] duplicate of Appendix A of\r\nRFC 4303; the latter does not contain the typo from item (4)\r\nabove, and it contains extended and improved explanations in\r\nthe third subsection -- corresponding to page 32 of RFC 4302.\r\n\r\nReaders and potential implementors need to read both Appendices\r\njust to detect that they are in fact essentially the same spec.\r\n\r\nIMHO, it would have been better to avoid this re-specification,\r\nand instead have pointers to the (better, and mandatory!) ESP\r\nAppendix placed into the AH RFC.\r\nHaving a single specification always avoids disagreement or\r\ninconsistency, and it facilitates the maintenance of the spec.\r\n\r\n\r\n(6)\r\n\r\nFinally:\r\nI would have appreciated the introduction of an explicit version\r\nnumbering for AH, e.g. rename:\r\n      AH as per RFC 1826  to  AHv1,\r\n      AH as per RFC 2402  to  AHv2  or  AHv2.0,   and\r\n      AH as per RFC 4302  to  AHv3  or  AHv2.1\r\n(or similar).\r\n\r\nThis would make it easier to specify / identify versions and/or\r\nversion specific behaviour in implementations, without having\r\nto refer to the RFC numbers explicitely. (Similar numbering has\r\nproven very useful with protocols like BGP, SNMP, IMAP, POP, etc.)",
-    "correct_text": "[see above]",
-    "notes": "from pending",
-    "submit_date": "2006-03-01",
-    "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
-    "verifier_name": "Pasi Eronen",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1644,
+    "errata_id": "1644",
     "doc-id": "RFC4302",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +25,12 @@
     "notes": "Wrong numbers for figures in Section B2.",
     "submit_date": "2008-12-25",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1645,
+    "errata_id": "1645",
     "doc-id": "RFC4302",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,27 +40,27 @@
     "notes": "Wrong numbering for figures",
     "submit_date": "2008-12-26",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2157,
+    "errata_id": "2157",
     "doc-id": "RFC4302",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.5,
+    "section": "2.5",
     "orig_text": "anti-reply",
     "correct_text": "anti-replay",
     "notes": "(End of first para.) \r\nObvious, but maybe confusing to learners.",
     "submit_date": "2010-04-10",
     "submitter_name": "Carsten Bormann",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2185,
+    "errata_id": "2185",
     "doc-id": "RFC4302",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -85,12 +70,12 @@
     "notes": "grammar\n --VERIFIER NOTES-- \nThe original text is grammatically correct.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2186,
+    "errata_id": "2186",
     "doc-id": "RFC4302",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -100,12 +85,12 @@
     "notes": "grammar\n --VERIFIER NOTES-- \n   The original text is grammatically correct. ",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2187,
+    "errata_id": "2187",
     "doc-id": "RFC4302",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -115,12 +100,12 @@
     "notes": "grammar\n --VERIFIER NOTES-- \n   The original text is grammatically correct. ",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2188,
+    "errata_id": "2188",
     "doc-id": "RFC4302",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -130,12 +115,12 @@
     "notes": "This is forced two times in this RFC4302, namely before in this\r\nsection 3.3.3.2.2 and in 3.4.4 .\n --VERIFIER NOTES-- \nSection 3.4.4 deals with verification of the ICV, whereas section 3.3.3 deal with generation of an ICV. Thus discussion of padding is needed in both contexts and is not redundant. The text should remain as it is.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2189,
+    "errata_id": "2189",
     "doc-id": "RFC4302",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -145,8 +130,23 @@
     "notes": "\n --VERIFIER NOTES-- \n   There is no mention of a \"left edge sequence number counter\" in 4302.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeier",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "744",
+    "doc-id": "RFC4302",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "",
+    "orig_text": "(1)\r\n\r\nRFC 4301, in section 13, \"Differences from RFC 2401\", in the\r\nsecond bulleted item (near the top of page 73) states:\r\n\r\n   o There is no longer a requirement to support nested SAs or \"SA\r\n     bundles\".  [...]\r\n\r\nAnd later on, on page 74:\r\n\r\n   o Support for AH in both IPv4 and IPv6 is no longer required.\r\n\r\nTherefore, the paragraph on page 10 of RFC 4302,\r\n\r\n   ESP and AH headers can be combined in a variety of modes.  The IPsec\r\n   Architecture document describes the combinations of security\r\n   associations that must be supported.\r\n                     ^^^^^^^^^^^^^^^^^\r\nentails more or less a \"NOPE\".  If something like the second\r\nsentence is still desired, it might better say, e.g.,\r\n\r\n   ESP and AH headers can be combined in a variety of modes.  The IPsec\r\n   Architecture document briefly describes the methods to configure\r\n   such combinations of security associations.\r\n\r\n\r\n(2)\r\n\r\nOn page 25, Appendix A1 presents a table classifying the IPv4 options.\r\nWithin that table, the second column is partially misaligned.\r\n\r\n\r\n(3)\r\n\r\nOn page 26, the table within Appendix A2 classifying the IPv6\r\nextension headers,\r\n\r\n       Option/Extension Name                  Reference\r\n       -----------------------------------    ---------\r\n       MUTABLE BUT PREDICTABLE -- included in ICV calculation\r\n         Routing (Type 0)                    [DH98]\r\n\r\n       BIT INDICATES IF OPTION IS MUTABLE (CHANGES UNPREDICTABLY DURING\r\n       TRANSIT)\r\n         Hop-by-Hop options                  [DH98]\r\n         Destination options                 [DH98]\r\n\r\n       NOT APPLICABLE\r\n         Fragmentation                       [DH98]\r\n\r\nperhaps would have better been formatted like:\r\n\r\n       Option/Extension Name                  Reference\r\n       -----------------------------------    ---------\r\n       MUTABLE BUT PREDICTABLE\r\n       -- included in ICV calculation\r\n         Routing (Type 0)                       [DH98]\r\n\r\n       BIT INDICATES IF OPTION IS MUTABLE\r\n       (CHANGES UNPREDICTABLY DURING TRANSIT)\r\n         Hop-by-Hop options                     [DH98]\r\n         Destination options                    [DH98]\r\n\r\n       NOT APPLICABLE\r\n         Fragmentation                          [DH98]\r\n\r\nto avoid the overlap of the columns.\r\n\r\n\r\n(4)\r\n\r\nIn Appendix B2.1, at one place on page 30, the variable\r\n\"seqh\" is mis-spelled as \"seqH\" (this is in the 6th-to-last\r\nline of Appendix B2.1).\r\n\r\n\r\n(5)\r\n\r\nAppendix B, as a whole, is a [near] duplicate of Appendix A of\r\nRFC 4303; the latter does not contain the typo from item (4)\r\nabove, and it contains extended and improved explanations in\r\nthe third subsection -- corresponding to page 32 of RFC 4302.\r\n\r\nReaders and potential implementors need to read both Appendices\r\njust to detect that they are in fact essentially the same spec.\r\n\r\nIMHO, it would have been better to avoid this re-specification,\r\nand instead have pointers to the (better, and mandatory!) ESP\r\nAppendix placed into the AH RFC.\r\nHaving a single specification always avoids disagreement or\r\ninconsistency, and it facilitates the maintenance of the spec.\r\n\r\n\r\n(6)\r\n\r\nFinally:\r\nI would have appreciated the introduction of an explicit version\r\nnumbering for AH, e.g. rename:\r\n      AH as per RFC 1826  to  AHv1,\r\n      AH as per RFC 2402  to  AHv2  or  AHv2.0,   and\r\n      AH as per RFC 4302  to  AHv3  or  AHv2.1\r\n(or similar).\r\n\r\nThis would make it easier to specify / identify versions and/or\r\nversion specific behaviour in implementations, without having\r\nto refer to the RFC numbers explicitely. (Similar numbering has\r\nproven very useful with protocols like BGP, SNMP, IMAP, POP, etc.)",
+    "correct_text": "[see above]",
+    "notes": "from pending",
+    "submit_date": "2006-03-01",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": "111",
+    "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   }
 ]
