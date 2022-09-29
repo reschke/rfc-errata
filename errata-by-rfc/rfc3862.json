@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 3011,
+    "errata_id": "3011",
     "doc-id": "RFC3862",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "An Example Esing MIME multipart/signed",
     "correct_text": "An Example Using MIME multipart/signed",
     "notes": null,
     "submit_date": "2011-11-03",
     "submitter_name": "Kaushik N V S",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3625,
+    "errata_id": "3625",
     "doc-id": "RFC3862",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,22 +25,22 @@
     "notes": "All the ABNF from headers are not correct, from ABNF RFC:\r\n\r\nLiteral text is specified through the use of a string enclosed in quotation marks (\"). These strings are case-insensitive and the character set used is (US-)ASCII. Therefore the string “abc” will match “abc”, “Abc”, “aBc”, “abC”, “ABc”, “AbC”, “aBC”, and “ABC”. For a case-sensitive match the explicit characters must be defined: to match “aBc” the definition will be %d97 %d66 %d99.\r\n\r\n----------------------- Verifier notes -----------------------\r\nThis issue isn't limited to the From header, but applies throughout.  However...\r\n\r\nCustoms for specifying ABNF have become more strict since RFC 3862 was written.\r\nAt the time of its writing, it was considered acceptable to use the mechanism here:\r\nspecify the string (which would normally be case-insensitive, according to RFC 2234)\r\nand add a comment to note the case-sensitivity.  In fact, it was specifically considered\r\nmore clear to do that than to specify sequences of hex characters.  In addition to the\r\ncomments in the ABNF, this variance is noted in Sections 3 and 3.6:\r\n\r\n<<\r\n   NOTE: Specified text values MUST be used as given, using exactly the\r\n   indicated upper- and lower-case letters.  In this respect, the ABNF\r\n   usage here differs from RFC 2234 [6].\r\n>>\r\n\r\nGiven that, this is clearly not an *error* in RFC 3862, though a different  decision\r\nmight be made today, or whenever this document might be revised.\r\n\r\nI am therefore marking this report as \"held for document update\".",
     "submit_date": "2013-05-17",
     "submitter_name": "Sergio Garcia",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4065,
+    "errata_id": "4065",
     "doc-id": "RFC3862",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 4.1,
+    "section": "4.1",
     "orig_text": "   Examples:\r\n\r\n      From: Winnie the Pooh <im:pooh@100akerwood.com>\r\n\r\n      From: <im:tigger@100akerwood.com>",
     "correct_text": "   Examples:\r\n\r\n      From: \"Winnie the Pooh\" <im:pooh@100akerwood.com>\r\n\r\n      From: <im:tigger@100akerwood.com>\r\n\r\n\r\n\r\nAlso there are other From and To headers examples in\r\n which name should be double quoted:\r\n\r\n      h: From: \"MR SANDERS\" <im:piglet@100akerwood.com>\r\n      h: To: \"Depressed Donkey\" <im:eeyore@100akerwood.com>",
     "notes": "From-header = \"From\" \": \" [ Formal-name ] \"<\" URI \">\"\r\n\r\n Examples:\r\n\r\n      From: Winnie the Pooh <im:pooh@100akerwood.com>\r\n\r\nBut \r\n\r\nFormal-name  = 1*( Token SP ) / String\r\nToken        = 1*TOKENCHAR\r\nString       = DQUOTE *( Str-char / Escape ) DQUOTE\r\nNAMECHAR     = %x21 / %x23-27 / %x2a-2b / %x2d\r\n                / %x5e-60 / %x7c / %x7e\r\n                / ALPHA / DIGIT\r\n\r\n                ; Any UCS char except CTLs or SEPARATORS:\r\nTOKENCHAR    = NAMECHAR / \".\" / UCS-highç\r\n\r\nSo Winnie the Pooh is not a TOKEN but a STRING and should be quoted:\r\n\r\n      From: \"Winnie the Pooh\" <im:pooh@100akerwood.com>\n --VERIFIER NOTES-- \nThe reporter missed seeing the \"1*\" in the ABNF for Formal-name; the construct can actually contain multiple space-delimited Tokens, and those names are all valid.",
     "submit_date": "2014-07-28",
     "submitter_name": "Sergio Garcia",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }
