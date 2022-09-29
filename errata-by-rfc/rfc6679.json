@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3586,
+    "errata_id": "3586",
     "doc-id": "RFC6679",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 12.1,
+    "section": "12.1",
     "orig_text": "   The Offer:\r\n\r\n...\r\n      a=ecn-capable-rtp: ice rtp ect=0 mode=setread\r\n...\r\n\r\n   The Answer:\r\n...\r\n      a=ecn-capable-rtp: ice ect=0 mode=readonly\r\n...",
     "correct_text": "   The Offer:\r\n\r\n...\r\n      a=ecn-capable-rtp: ice,rtp ect=0; mode=setread\r\n...\r\n\r\n   The Answer:\r\n...\r\n      a=ecn-capable-rtp: ice ect=0; mode=readonly\r\n...",
     "notes": "The examples does not match the ABNF rules for the a=ecn-capaable-rtp attribute. Two issues are present, first the init method list must be comma separated with no spaces, secondly any additional parameters shall be semi colon plus space separated. Therefore both a=ecn-capable-rtp lines have been corrected. \r\n\r\nThis is primarily an editorial issues but people needs to aware of the errors in the example.",
     "submit_date": "2013-04-10",
     "submitter_name": "Magnus Westerlund",
-    "verifier_id": 123,
+    "verifier_id": "123",
     "verifier_name": "Gonzalo Camarillo",
     "update_date": "2019-09-10 09:09:03"
   }
