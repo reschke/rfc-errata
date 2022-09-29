@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6943,
+    "errata_id": "6943",
     "doc-id": "RFC5649",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The text is ambiguous about how to handle a plaintext of size 2^32 bytes. The text seems to suggest a plaintext of size 2^32 is permitted, but the description of generation/verification of the AIV does not handle this case.\r\nAs written different implementations could disagree on what constitutes a valid ciphertext.\r\n\r\nI would suggest the simplest solution is to explicitly say the maximum plaintext length is 2^32-1 (which is still much larger than any intended use case, as this should be for encrypting keying material).",
     "submit_date": "2022-04-25",
     "submitter_name": "Samuel Lee",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-04-25 10:39:33"
   }
