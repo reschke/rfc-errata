@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1036,
+    "errata_id": "1036",
     "doc-id": "RFC4905",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "IMHO, RFC 4905 contains inappropriate text copied literally from\r\nRFC 4906, in two places:\r\n   a)  at the end of the Abstract, and\r\n   b)  at the end of Section 3\r\n\r\nThe last sentence in a) says:\r\n\r\n      [...]  This document describes the so-called \"draft-martini\"\r\n   protocol, which has since been superseded by the Pseudowire Emulation\r\n   Edge to Edge Working Group specifications described in RFC 4447 and\r\n   related documents.\r\n\r\nThe last sentence in b) says:\r\n                                                           [...].  The\r\n   PWE3 Label Distribution Protocol control protocol document [RFC4447],\r\n   which is backward compatible with this document, MUST be used for all\r\n   new implementations of this protocol.\r\n\r\nRoughly, RFC 4447 is the Standards Track successor of RFC 4906;\r\nthus, both sentences are perfectly proper in the context of RFC 4906,\r\nbut they should have been replaced by more specific text matching\r\nthe technical contents of RFC 4905 and listing the corresponding\r\nStandards Track documents.\r\n",
     "correct_text": "",
     "notes": "\n --VERIFIER NOTES-- \nThis text concerned was included during the preparation of the original \"draft-martini\" drafts for publication as documents of historical interest to the IETF.\r\n\r\nThe text is harmless, and there is unlikely to be any value to the community in expending effort on corrected text.\r\n\r\nNormally an issue like this would be held for update, but there will be no update to this document.",
     "submit_date": "2007-08-17",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }
