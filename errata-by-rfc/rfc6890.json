@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3873,
+    "errata_id": "3873",
     "doc-id": "RFC6890",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The address block for IPv4-Mapped addresses is ::ffff/96 and not ::ffff:0:0/96.\r\nSee the following reference which is also given in the table:\r\nhttp://tools.ietf.org/html/rfc4291#section-2.5.5.2\n --VERIFIER NOTES-- \n   The proposed change is in error because it puts the 16 marker bits in the lowest 16 bits of the address, where the low 16 bits of the IPv4 address are supposed to go.",
     "submit_date": "2014-01-23",
     "submitter_name": "Michael Tuexen",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3879,
+    "errata_id": "3879",
     "doc-id": "RFC6890",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The global scope of TEREDO prefix (2001::/32) and Unique-Local prefix (fc00::/7) is not false.\r\nThe proposed revision is N/A with reference to each RFC.\n --VERIFIER NOTES-- \n  After discussion, we concluded that the ULA prefix change is not appropriate; a second erratum containing just the Teredo change has been submitted, so this one is not needed.",
     "submit_date": "2014-02-03",
     "submitter_name": "Masataka MAWATARI",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3921,
+    "errata_id": "3921",
     "doc-id": "RFC6890",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "I think we can treat TEREDO(2001::/32) in the same way as 6to4 (2002::/16).  Because both prefixes are used as the anycast prefix in the internet.\r\nSuitable value of TEREDO is N/A that is the same value of 6to4.\r\n\r\nSo the global scope of TEREDO prefix (2001::/32) is not false.\r\n\r\nIf there is no TEREDO prefix(2001::/32) globally, the IPv6 packets from IPv6 host can't get to TEREDO relay router.",
     "submit_date": "2014-03-17",
     "submitter_name": "Masataka MAWATARI",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6404,
+    "errata_id": "6404",
     "doc-id": "RFC6890",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "RFC1122 states that 0.0.0.0/32 is \"this host on this network\" while 0.0.0.0/8 is \"this network\".\r\n\r\n---- Verifier note ----\r\nAfter discussions with the authors, the original table must be split into TWO tables one for 0.0.0.0/8 and one for 0.0.0.0/32. IANA registry must also be updated.",
     "submit_date": "2021-01-21",
     "submitter_name": "Thomas",
-    "verifier_id": 161,
+    "verifier_id": "161",
     "verifier_name": "Éric Vyncke",
     "update_date": "2021-02-01 02:46:06"
   },
   {
-    "errata_id": 6416,
+    "errata_id": "6416",
     "doc-id": "RFC6890",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "RFC1122 states that 0.0.0.0/32 is \"this host on this network\" while 0.0.0.0/8 is \"this network\".\n --VERIFIER NOTES-- \n   -- verifier note --\r\nThis errata is a duplicate of errata 6404, which is verified.",
     "submit_date": "2021-01-21",
     "submitter_name": "Thomas",
-    "verifier_id": 161,
+    "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2022-05-06 04:35:40"
   },
   {
-    "errata_id": 6881,
+    "errata_id": "6881",
     "doc-id": "RFC6890",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -85,12 +85,12 @@
     "notes": "obvious typo on word \"through\"",
     "submit_date": "2022-03-14",
     "submitter_name": "Eugene Adell",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-03-14 14:53:07"
   },
   {
-    "errata_id": 6882,
+    "errata_id": "6882",
     "doc-id": "RFC6890",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -100,12 +100,12 @@
     "notes": "The last table (29) entry was populated at the same time than some others (loopback for example, RFC 4291)",
     "submit_date": "2022-03-14",
     "submitter_name": "Eugene Adell",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-03-14 15:04:02"
   },
   {
-    "errata_id": 6956,
+    "errata_id": "6956",
     "doc-id": "RFC6890",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -115,7 +115,7 @@
     "notes": "RFC1122 states that 0.0.0.0/32 is \"this host on this network\" while 0.0.0.0/8 is \"this network\".",
     "submit_date": "2021-01-21",
     "submitter_name": "Thomas",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
