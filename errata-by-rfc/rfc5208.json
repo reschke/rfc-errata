@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1890,
+    "errata_id": "1890",
     "doc-id": "RFC5208",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "attributes           [0]  IMPLICIT Attributes OPTIONAL }\r\n",
     "correct_text": "attributes           [0]  Attributes OPTIONAL }\r\n",
     "notes": "This change will align the text with the ASN.1 module.  Note that the ASN.1 module is an IMPLICIT module and the IMPLICIT tag on this line is unnecessary.",
     "submit_date": "2009-09-22",
     "submitter_name": "Sean Turner",
-    "verifier_id": 100,
+    "verifier_id": "100",
     "verifier_name": "Russ Housley",
     "update_date": "2019-09-10 09:09:03"
   }
