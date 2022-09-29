@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1953,
+    "errata_id": "1953",
     "doc-id": "RFC5654",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "Investment in equipment and facilities (Capital Expenditure\r\n   (CAPEX)) and Operational Expenditure (OPEX) should be minimized.\r\n",
     "correct_text": "Investment in equipment and facilities (Capital Expenditure\r\n   (CAPEX) and Operational Expenditure (OPEX) should be minimized.\r\n",
     "notes": "An unnecessary parenthesis.\n --VERIFIER NOTES-- \nOrriginal is correct.",
     "submit_date": "2009-12-02",
     "submitter_name": "Zongpeng Du",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2073,
+    "errata_id": "2073",
     "doc-id": "RFC5654",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,22 +25,22 @@
     "notes": "Dropping a control is meaningless.  The original intent may have been to say \"control messages\", but this requirement is stated in the section \"Management-Plane Operation of Protection and Restoration\"\r\n\r\nIn any case, using \"ignored\" instead of \"dropped\" fixes the problem regardless of the original intention.",
     "submit_date": "2010-03-12",
     "submitter_name": "Eric Gray",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6434,
+    "errata_id": "6434",
     "doc-id": "RFC5654",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.4,
+    "section": "2.4",
     "orig_text": "52  An MPLS-TP control plane MUST support operation of the recovery\t\r\n\t       functions described in Section 2.8.\t \t",
     "correct_text": "52  An MPLS-TP control plane MUST support operation of the recovery\t\r\n\t       functions described in Section 2.5.",
     "notes": "There is no section 2.8 in this document. During revision, section changed to 2.5.",
     "submit_date": "2021-02-20",
     "submitter_name": "Peter Goorts",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2021-02-26 13:16:44"
   }
