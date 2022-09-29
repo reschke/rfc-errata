@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 283,
-    "doc-id": "RFC3401",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Editorial",
-    "section": 5,
-    "orig_text": "Part Three: The Domain Name System (DNS) Database\" (RFC 3402) [1]",
-    "correct_text": "Part Three: The Domain Name System (DNS) Database\" (RFC 3403) [2]\r\n",
-    "notes": "",
-    "submit_date": "2005-12-29",
-    "submitter_name": "Olaf M. Kolkman",
-    "verifier_id": 116,
-    "verifier_name": "Alexey Melnikov",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 2641,
+    "errata_id": "2641",
     "doc-id": "RFC3401",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +10,12 @@
     "notes": "Rationale:\r\na) missing citations,\r\nb) grammar,\r\nc) changed order according to expected temporal order and likelyhood\r\n   and thus, to match the preceding sentence.",
     "submit_date": "2010-11-22",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2642,
+    "errata_id": "2642",
     "doc-id": "RFC3401",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,8 +25,23 @@
     "notes": "Rationale:\r\n  Missing citiation for RFC 3405 [4]; since there's no other instance\r\n  of that citation in the entire RFC, without it, the presence of\r\n  entry [4] in the References would not conform to the RFC Style Guide.",
     "submit_date": "2010-11-22",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "283",
+    "doc-id": "RFC3401",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5",
+    "orig_text": "Part Three: The Domain Name System (DNS) Database\" (RFC 3402) [1]",
+    "correct_text": "Part Three: The Domain Name System (DNS) Database\" (RFC 3403) [2]\r\n",
+    "notes": "",
+    "submit_date": "2005-12-29",
+    "submitter_name": "Olaf M. Kolkman",
+    "verifier_id": "116",
+    "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }
 ]
