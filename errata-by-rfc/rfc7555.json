@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4411,
+    "errata_id": "4411",
     "doc-id": "RFC7555",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 7,
+    "section": "7",
     "orig_text": "<ToC>\r\n7.3. Downstream Address Mapping Registry .......................25\r\n\r\n<Section 7.3>\r\n7.3. Downstream Address Mapping Registry\r\n\r\n<Section 7.4>\r\nWhen a code point is assigned that is not also assigned in the\r\nDownstream Address Mapping Registry, the code point there must be\r\nmarked \"Reserved\".\r\n\r\nSection 7.4\r\n\r\n5        Reserved                                     RFC 7555\r\n6        IPv4 Protocol Adj       4          0         RFC 7555\r\n7        IPv6 Protocol Adj      16          0         RFC 7555\r\n\r\n\r\n",
     "correct_text": "<ToC>\r\n7.3. Downstream Mapping Address Type Registry ..................25\r\n\r\n<Section 7.3>\r\n7.3. Downstream Mapping Address Type Registry\r\n\r\n<Section 7.4>\r\nWhen a code point is assigned that is not also assigned in the\r\nDownstream Mapping Address Type Registry, the code point there \r\nmust be marked \"Reserved\".\r\n\r\n<Section 7.4>\r\n5       Reserved                                   [RFC 6426, RFC 7555]\r\n6       IPv4 Protocol Adj       4          0       [RFC 7555]\r\n7       IPv6 Protocol Adj      16          0       [RFC 7555]",
     "notes": null,
     "submit_date": "2015-07-08",
     "submitter_name": "Loa Andersson",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2019-09-10 09:09:03"
   }
