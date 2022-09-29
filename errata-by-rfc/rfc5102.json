@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1307,
+    "errata_id": "1307",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7.3,
+    "section": "7.3",
     "orig_text": "*  URI: urn:ietf:params:xml:ns:ipfix-info-15\r\n\r\n  ...\r\n\r\n*  URI: urn:ietf:params:xml:schema:ipfix-info-15",
     "correct_text": "*  URI: urn:ietf:params:xml:ns:ipfix-info\r\n\r\n  ...\r\n\r\n*  URI: urn:ietf:params:xml:schema:ipfix-info",
     "notes": "Discovered by Pearl Liang of IANA.",
     "submit_date": "2008-02-04",
     "submitter_name": "RFC Editor",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1492,
+    "errata_id": "1492",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "This is for elementId=\"183\".",
     "submit_date": "2008-08-21",
     "submitter_name": "Simon Perreault",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1736,
+    "errata_id": "1736",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "The diagram is back to front.",
     "submit_date": "2009-03-24",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1737,
+    "errata_id": "1737",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The diagram is back to front.",
     "submit_date": "2009-03-24",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1738,
+    "errata_id": "1738",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "The diagram is back to front.",
     "submit_date": "2009-03-24",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1739,
+    "errata_id": "1739",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -85,27 +85,27 @@
     "notes": "The diagram is back to front.",
     "submit_date": "2009-03-24",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2879,
+    "errata_id": "2879",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "   o  Middleboxes [RFC3234] may change Flow properties, such as the\r\n      Differentiated Service Code Point (DSCP) value or the source IP\r\n      address.  If an IPFIX Observation Point is located in the path of\r\n      a Flow before one or more middleboxes that potentially modify\r\n      packets of the Flow, then it may be desirable to also report Flow\r\n      properties after the modification performed by the middleboxes.\r\n      An example is an Observation Point before a packet marker changing\r\n      a packet's IPv4 Type of Service (TOS) field that is encoded in\r\n      Information Element classOfServiceIPv4.  Then the value observed\r\n      and reported by Information Element classOfServiceIPv4 is valid at\r\n      the Observation Point, but not after the packet passed the packet\r\n      marker.  For reporting the change value of the TOS field, the\r\n      IPFIX information model uses Information Elements that have a name\r\n      prefix \"post\", for example, \"postClassOfServiceIPv4\".",
     "correct_text": "   o  Middleboxes [RFC3234] may change Flow properties, such as the\r\n      Differentiated Service Code Point (DSCP) value or the source IP\r\n      address.  If an IPFIX Observation Point is located in the path of\r\n      a Flow before one or more middleboxes that potentially modify\r\n      packets of the Flow, then it may be desirable to also report Flow\r\n      properties after the modification performed by the middleboxes.\r\n      An example is an Observation Point before a packet marker changing\r\n      a packet's IPv4 Type of Service (TOS) field that is encoded in\r\n      Information Element ipClassOfService.  Then the value observed\r\n      and reported by Information Element ipClassOfService is valid at\r\n      the Observation Point, but not after the packet passed the packet\r\n      marker.  For reporting the change value of the TOS field, the\r\n      IPFIX information model uses Information Elements that have a name\r\n      prefix \"post\", for example, \"postIpClassOfService\".",
     "notes": "s/ClassOfServiceIPv4/ipClassOfService/ (twice)\r\ns/postClassOfServiceIPv4/postIpClassOfService/ (once)\r\n\r\nAlso correct another instance of \"postClassOfServiceIPv4\" in section 5:\r\n\r\nOLD\r\n   Information Elements with a name having the \"post\" prefix, for\r\n   example, \"postClassOfServiceIPv4\"\r\nNEW\r\n   Information Elements with a name having the \"post\" prefix, for\r\n   example, \"postIpClassOfService\"\r\nEND",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2944,
+    "errata_id": "2944",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -115,12 +115,12 @@
     "notes": "The bits were originally shown in the wrong order.\r\n\r\nErrata 1737 tried to correct this by reversing the bits, but overlooked reversing the bytes.\r\n\r\nNote that the network bit numbering in the figure is exactly the reverse of the \"Bit\" value in the following table.",
     "submit_date": "2011-08-22",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2945,
+    "errata_id": "2945",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -130,12 +130,12 @@
     "notes": "The bits were originally shown in the wrong order.\r\n\r\nErrata 1738 tried to correct this by reversing the bits, but overlooked reversing the bytes.\r\n\r\nNote that the network bit numbering in the figure is exactly the reverse of the \"Bit\" value in the following table.",
     "submit_date": "2011-08-22",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2946,
+    "errata_id": "2946",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -145,12 +145,12 @@
     "notes": "The bits were originally shown in the wrong order.\r\n\r\nErrata 1739 tried to correct this by reversing the bits, but overlooked reversing the bytes.",
     "submit_date": "2011-08-22",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3101,
+    "errata_id": "3101",
     "doc-id": "RFC5102",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -160,12 +160,12 @@
     "notes": "Poor formatting of \"(re-)initialization\" in the 3rd paragraph of section 5.9",
     "submit_date": "2012-01-31",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "ron bonica",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4984,
+    "errata_id": "4984",
     "doc-id": "RFC5102",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -175,7 +175,7 @@
     "notes": "A misunderstand arose as to whether bits were assigned in host order or network order - so clarify that the bits are assigned from the least significant to the most significant, ie right-to-left rather than left-to-right.\r\n\r\nMoreover, this clarification applies to IANA's IPFIX registry.\r\n\r\nNB RFC 8038 re-uses this definition for mibIndexIndicator. Consistency between the definitions is desirable.",
     "submit_date": "2017-03-30",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }
