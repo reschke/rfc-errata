@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1052,
+    "errata_id": "1052",
     "doc-id": "RFC4957",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)  Section 3\r\n\r\nWithin Section 3, the second paragraph on page 6 says:\r\n\r\n                               [...].  Therefore, there exist cases\r\n|  where IP-layer configuration may have to change even without the IP\r\n   layer receiving a link up notification.  [...]\r\n\r\nIt should perhaps better say, adding the article:\r\n\r\n                               [...].  Therefore, there exist cases\r\n|  where the IP-layer configuration may have to change even without the\r\n   IP layer receiving a link up notification.  [...]\r\n\r\nThe last paragraph of Section 3 says:\r\n                                                     vvvvvv\r\n|  The link-layer process leading to a link up event depend on the link\r\n   technology.  [...]\r\n\r\nIt should better say:\r\n                                                     vvvvvvv\r\n|  The link-layer process leading to a link up event depends on the link\r\n   technology.  [...]\r\n\r\n\r\n(2)  Section 4\r\n\r\nIn the first paragraph of Section 4 (on page 13), the RFC says:\r\n\r\n                                      [...].  In addition, wireless\r\n   networks such as 802.11 are susceptible to an attack called the \"Evil\r\n   Twin\" attack where an attacker sets up an Access Point with the same\r\n|  SSID as a legitimate one and gets the use to connect to the fake\r\n   access point instead of the real one.  [...]\r\n                                         ^^^\r\nThe tagged word 'use' apparently should be 'user' :\r\n\r\n                                      [...].  In addition, wireless\r\n   networks such as 802.11 are susceptible to an attack called the \"Evil\r\n   Twin\" attack where an attacker sets up an Access Point with the same\r\n|  SSID as a legitimate one and gets the user to connect to the fake\r\n   access point instead of the real one.  [...]\r\n                                         ^^^^\r\n\r\n(3)  Section 7.1\r\n\r\n- In Section 7.1 (on page 14), the first entry is apparently\r\n  truncated:\r\n\r\n                                                          vvvv\r\n|  [CDMA2K]        \"cdma2000 Wireless IP Network Standard\",  ,\r\n                   December 2000.",
     "correct_text": "",
     "notes": null,
     "submit_date": "2007-08-20",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }
