@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6298,
+    "errata_id": "6298",
     "doc-id": "RFC8886",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The rest of the appendix expects the name key.pem.",
     "submit_date": "2020-10-05",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 6299,
+    "errata_id": "6299",
     "doc-id": "RFC8886",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The command in the RFC fails with:\r\n\r\nError creating PKCS#7 structure\r\n140616744621440:error:21082096:PKCS7 routines:PKCS7_RECIP_INFO_set:encryption not supported for this key type:crypto/pkcs7/pk7_lib.c:487:\r\n140616744621440:error:21073078:PKCS7 routines:PKCS7_encrypt:error adding recipient:crypto/pkcs7/pk7_smime.c:458:\r\n\r\nA rapid glance in some online discussions seem to indicate that you cannot S/MIME encrypt with elliptic curves.\r\n\r\nWith RSA for the key, the command in the RFC works fine.",
     "submit_date": "2020-10-05",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 6300,
+    "errata_id": "6300",
     "doc-id": "RFC8886",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "Otherwise, OpenSSL fails with:\r\n\r\nsmime: Invalid format \"pkcs7\" for -inform\r\nsmime: Use -help for summary.",
     "submit_date": "2020-10-05",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }
