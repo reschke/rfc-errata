@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4419,
+    "errata_id": "4419",
     "doc-id": "RFC6902",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -10,27 +10,27 @@
     "notes": "At http://tools.ietf.org/html/rfc6902#appendix-A.14 , I have a few issues:\r\n\r\n1. Even though JSON Pointer is referenced elsewhere, I think reference ought to be made here to JSON Pointer in order to clarify what meaning \"escape ordering\" has here.\r\n2. The operation indicated in this section is \"test\" which is not documented in its respective sections as returning any kind of document at all. I believe \"add\" or \"replace\" must have been the intended operation instead. And to make clear that the value of key \"~1\" would have actually been affected by such a modifying operation, the value in the result ought to differ from that in the original document.\n --VERIFIER NOTES-- \nThe example is correct, but could use clarification.  The authors have noted this and put it in their JSON Patch issues list here: https://github.com/json-patch/json-patch-tests/issues/22",
     "submit_date": "2015-07-17",
     "submitter_name": "Brett Zamir",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4460,
+    "errata_id": "4460",
     "doc-id": "RFC6902",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 4.1,
+    "section": "4.1",
     "orig_text": "   However, the object itself or an array containing it does need to\r\n   exist, and it remains an error for that not to be the case.  For\r\n   example, an \"add\" with a target location of \"/a/b\" starting with this\r\n   document:\r\n\r\n   { \"a\": { \"foo\": 1 } }\r\n\r\n   is not an error, because \"a\" exists, and \"b\" will be added to its\r\n   value.  It is an error in this document:\r\n\r\n   { \"q\": { \"bar\": 2 } }\r\n\r\n   because \"a\" does not exist.",
     "correct_text": "   However, the object itself or an array containing it does need to\r\n   exist, and it remains an error for that not to be the case.  For\r\n   example, an \"add\" with a target location of \"/a/b\" starting with this\r\n   document:\r\n\r\n   { \"a\": { \"foo\": 1 } }\r\n\r\n   is not an error, because \"a\" exists, and \"b\" will be added to its\r\n   value.  It is an error in this document:\r\n\r\n   { \"q\": { \"bar\": 2 } }\r\n\r\n   because \"a\" does not exist. Considering a target location of \"/a/1\"\r\n   it should be not be an error in this document:\r\n\r\n    { \"a\": [ \"foo\" ] }\r\n\r\n    while the same \"add\" into this document will be an error:\r\n\r\n    { \"a\": [ ] }\r\n\r\n    because \"/a/0\" does not exist.\r\n\r\n\r\n",
     "notes": "Adding to an object has such a nice example that explains the error cases. I think adding to a sequential array should have one as well.\r\n\r\nTo my understanding this is already pretty clear from RFC6901, I feel it will make the spec easier to implement if we have an example right here.\n --VERIFIER NOTES-- \nThanks for the comment, Lucas.  This is, though, not a report of an error, so as an errata report it is rejected.  It is a reasonable suggestion that we should consider if a new version of the document is done.  The comment is recorded in the JSON mailing list archive.",
     "submit_date": "2015-08-29",
     "submitter_name": "Lucas Bickel",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4596,
+    "errata_id": "4596",
     "doc-id": "RFC6902",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -40,27 +40,27 @@
     "notes": "There is a key missing piece to this RFC.  You can do { \"op\": \"add\", \"path\": \"/attr\", \"value\": \"val\"}, which will add or modify the 'attr' attribute, if it exists or not.  However, you cannot add an item to a potentially non-existing array.  Updating an array that may or may not exists, forces the client to always call GET on the resource.   See this API spec:  https://orchestrate.io/docs/apiref#keyvalue-patch  which implements the op 'append', which would solve this problem.\n --VERIFIER NOTES-- \nThis is an enhancement suggestion, not an errata report; the errata system is not for that.",
     "submit_date": "2016-01-21",
     "submitter_name": "Missing 'Append' operation",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4787,
+    "errata_id": "4787",
     "doc-id": "RFC6902",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "The \"remove\" operation removes the value at the target location.\r\n\r\nThe target location MUST exist for the operation to be successful.\r\n\r\nFor example:\r\n\r\n{ \"op\": \"remove\", \"path\": \"/a/b/c\" }\r\n\r\nIf removing an element from an array, any elements above the\r\nspecified index are shifted one position to the left.\r\n",
     "correct_text": "The \"remove\" operation removes the value at the target location.\r\n\r\nThe target location MUST exist for the operation to be successful.\r\n\r\nFor example:\r\n\r\n{ \"op\": \"remove\", \"path\": \"/a/b/c\" }\r\n\r\nIf removing an element from an array, any elements above the\r\nspecified index are shifted one position to the left.\r\n\r\nThe target location MUST NOT be a reference to the root. It is an\r\nerror in this document:\r\n\r\n{ \"op\": \"remove\", \"path\": \"\" }\r\n",
     "notes": "The semantics of { \"op\": \"remove\", \"path\": \"\" } are never specified. If we allow to remove the root element, what would the result be? It would no longer be a valid JSON document, hence I propose to explicitly require the path of the \"remove\" operation to not reference the root.\r\n\r\nMark Nottingham: This isn't an errata; it would require gaining consensus and updating the document. See also: https://github.com/json-patch/json-patch2",
     "submit_date": "2016-08-25",
     "submitter_name": "Daniel Frey",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5239,
+    "errata_id": "5239",
     "doc-id": "RFC6902",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "surplus square brackets in resulting JSON document\n --VERIFIER NOTES-- \n   The example is correct as written: the value to be added to the array is itself an array, so the new element is [\"abc\", \"def\"].",
     "submit_date": "2018-01-19",
     "submitter_name": "Grzegorz Olszewski",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-12-09 07:42:31"
   },
   {
-    "errata_id": 6351,
+    "errata_id": "6351",
     "doc-id": "RFC6902",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -85,7 +85,7 @@
     "notes": "If the patch elements included a property \"previous\" that contained the original value in case of an operation such as \"remove\" for instance, it would be easy to create the reverse operation - \"add\". In that way the path elements can be used as audit records and it is easy to revert a path or even a part of a patch, so the document is back to a previous version. All you have to do is apply the reverse patch and also add those elements to the audit trail.\r\nIs this something to consider adding to this document or is it an implementation detail?\n --VERIFIER NOTES-- \n   This is a feature request, not an errata report, so it is rejected as an errata report.  The suggested feature should be discussed on an appropriate mailing list to see if there is interest in adding this feature.",
     "submit_date": "2020-12-09",
     "submitter_name": "Palle Cogburn",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-12-09 07:36:54"
   }
