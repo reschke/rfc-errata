@@ -17,7 +17,7 @@
   {
     "errata_id": "7141",
     "doc-id": "RFC3891",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "section-7.1",
     "orig_text": "SIP/2.0 180 Ringing\r\n   To: <sip:bob@example.org>;tag=6472\r\n   From: <sip:alice@example.org>;tag=7743\r\n   Call-ID: 425928@phone.example.org\r\n   CSeq: 1 INVITE\r\n   Contact: <sip:bob@bobster.example.org>\r\n\r\n   Message *3: Bob in lab -> Alice\r\n\r\n   INVITE sip:alice@phone.example.org\r\n   To: <sip:alice@example.org>\r\n   From: <sip:bob@example.org>;tag=8983\r\n   Call-ID: 09870@labpc.example.org\r\n   CSeq: 1 INVITE\r\n   Contact: <sip:bob@labpc.example.org>\r\n   Replaces: 425928@phone.example.org\r\n    ;to-tag=7743;from-tag=6472;early-only",
@@ -25,8 +25,8 @@
     "notes": "The To and From tags are mismatched in the Replaces header",
     "submit_date": "2022-09-28",
     "submitter_name": "Aaron Brumpton",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-09-29 13:31:42"
   }
 ]
