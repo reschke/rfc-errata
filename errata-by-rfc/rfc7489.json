@@ -77,7 +77,7 @@
   {
     "errata_id": "5365",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.2.1.1",
     "orig_text": "     mail.receiver.example!example.com!1013662812!1013749130.gz\r\n",
@@ -85,9 +85,9 @@
     "notes": "The specification states that the suffix should be \"xml\" for an uncompressed file, and \"xml.gz\" for a compressed file.  The example filename is missing the \"xml\" component of the suffix",
     "submit_date": "2018-05-22",
     "submitter_name": "Gary Palmer",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear (ISE)",
+    "update_date": "2022-09-30 05:10:18"
   },
   {
     "errata_id": "5370",
@@ -107,7 +107,7 @@
   {
     "errata_id": "5371",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.2.1.1",
     "orig_text": "The aggregate data MUST be an XML file that SHOULD be subjected to\r\nGZIP compression.",
@@ -115,9 +115,9 @@
     "notes": "The term \"GZIP compression\" is not defined in the text. To clarify, maintain compatibility with future (potentially incompatible) gzip versions, and to bring the document in line with other RFCs (e.g. 3712, 6713, 6968), a reference to RFC 1952 (\"GZIP file format specification version 4.3\") should be added.\r\n\r\nThis is assuming RFC 1952 was the author's intent.",
     "submit_date": "2018-05-28",
     "submitter_name": "Cris van Pelt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear (ISE)",
+    "update_date": "2022-09-30 05:12:36"
   },
   {
     "errata_id": "5440",
@@ -152,17 +152,17 @@
   {
     "errata_id": "5552",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "10.3.",
     "orig_text": "Everything about it..",
     "correct_text": null,
-    "notes": "DMARC relies on inspecting header information. This section suggestion is not allowed by rfc5321 and contradicts it:\r\n\r\n...a relay SMTP has no need to inspect or\r\n   act upon the header section or body of the message data and MUST NOT\r\n   do so except to add its own \"Received:\" header field..\r\n\r\nSo the correct behaviour shoud be only the second option - 2xy and decide what to do after that being silent or not.",
+    "notes": "DMARC relies on inspecting header information. This section suggestion is not allowed by rfc5321 and contradicts it:\r\n\r\n...a relay SMTP has no need to inspect or\r\n   act upon the header section or body of the message data and MUST NOT\r\n   do so except to add its own \"Received:\" header field..\r\n\r\nSo the correct behaviour shoud be only the second option - 2xy and decide what to do after that being silent or not.\n --VERIFIER NOTES-- \nThe reporter has quoted from the wrong section of RFC 5321, and that that section does not discuss Message Submission Servers.",
     "submit_date": "2018-11-09",
     "submitter_name": "Borislav Petrov",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear (ISE)",
+    "update_date": "2022-09-30 05:07:58"
   },
   {
     "errata_id": "5773",
@@ -212,7 +212,7 @@
   {
     "errata_id": "6485",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "7.2.1.1.",
     "orig_text": "     dmarc-subject = %x52.65.70.6f.72.74 1*FWS       ; \"Report\"\r\n                     %x44.6f.6d.61.69.6e.3a 1*FWS    ; \"Domain:\"\r\n                     domain-name 1*FWS               ; from RFC 6376\r\n                     %x53.75.62.6d.69.74.74.65.72.3a ; \"Submitter:\"\r\n                     1*FWS domain-name 1*FWS\r\n                     %x52.65.70.6f.72.74.2d.49.44.3a ; \"Report-ID:\"\r\n                     msg-id                          ; from RFC 5322",
@@ -220,9 +220,9 @@
     "notes": "According to RFC 5322, msg-id = [CFWS] \"<\" id-left \"@\" id-right \">\" [CFWS]. The example given in Section 7.2.1.1. (<2002.02.15.1>) does not adhere to this and neither do reports in the wild. Instead of referring to the msg-id ABNF, I suggest that we refer to the dot-atom-text ABNF and include \"<\" and \">\" as ASCII characters. This also has the advantage of getting rid of CFWS. According to RFC 5322, \"comments may be included in structured field bodies\" but \"Subject\" is not a structured header field.",
     "submit_date": "2021-03-15",
     "submitter_name": "Kaspar Etter",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear (ISE)",
+    "update_date": "2022-09-30 22:03:57"
   },
   {
     "errata_id": "6729",
