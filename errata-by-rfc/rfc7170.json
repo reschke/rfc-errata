@@ -148,5 +148,20 @@
     "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-03-17 16:54:30"
+  },
+  {
+    "errata_id": "7145",
+    "doc-id": "RFC7170",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3.3",
+    "orig_text": "   The Crypto-Binding TLV MUST be exchanged and verified\r\n   before the final Result TLV exchange, regardless of whether or not\r\n   there is an inner EAP method authentication.",
+    "correct_text": "   Except as noted below, the Crypto-Binding TLV MUST be exchanged and verified\r\n   before the final Result TLV exchange, regardless of whether or not\r\n   there is an inner EAP method authentication",
+    "notes": "The text contradicts itself in the same paragraph, because it goes on to say:\r\n\r\n   The server may send the final Result TLV along with an\r\n   Intermediate-Result TLV and a Crypto-Binding TLV to indicate its\r\n   intention to end the conversation.  If the peer requires nothing more\r\n   from the server, it will respond with a Result TLV indicating success\r\n   accompanied by a Crypto-Binding TLV and Intermediate-Result TLV if\r\n   necessary.\r\n\r\nSo there are actually several legal combinations here:\r\n\r\n1. Server and peer perform a crypto-binding exchange in anticipation of later sending Result TLVs\r\n2. The server and peer combine their crypto-binding and Result TLV in the same message.\r\n3. One side initiates a crypto-binding TLV and the OTHER responds with both crypto-binding and Result TLV.\r\n\r\nThe practice seems to be to include the crypto-binding TLVs alongside Result TLVs.",
+    "submit_date": "2022-10-05",
+    "submitter_name": "Eliot Lear",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
