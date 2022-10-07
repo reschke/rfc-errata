@@ -13,5 +13,20 @@
     "verifier_id": "167",
     "verifier_name": "Martin Duke",
     "update_date": "2022-01-27 16:14:59"
+  },
+  {
+    "errata_id": "7149",
+    "doc-id": "RFC1337",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.2",
+    "orig_text": "As a result, B sends segment 6, an ACK for sequence = 640, which\r\nis 40 beyond any data sent by A.  Assume for the present that this\r\nACK arrives at A *after* A has sent segment 7a, the next full data\r\nsegment.  In that case, the ACK segment 8a acknowledges data that\r\nhas been sent, and the error goes undetected.  Another possible\r\ncontinuation after segment 6 leads to hazard H3, shown below.\r\n",
+    "correct_text": "As a result, B sends segment 6, an ACK for sequence = 640, which\r\nis 40 beyond any data sent by A.  Assume for the present that this\r\nACK arrives at A *after* A has sent segment 7a, the next full data\r\nsegment.  In that case, the ACK segment 8a acknowledges data that\r\nhas been sent, and the error goes undetected.  Another possible\r\ncontinuation after segment 6 leads to hazard H2, shown below.\r\n",
+    "notes": "The forward reference in the last sentence should be H2, not H3.",
+    "submit_date": "2022-10-06",
+    "submitter_name": "Michael Tüxen",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-10-06 14:21:48"
   }
 ]
