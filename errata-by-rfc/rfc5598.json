@@ -58,5 +58,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7150",
+    "doc-id": "RFC5598",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "Figure 5: Protocols and Services",
+    "correct_text": "Figure 5: Protocols and Services (with reporting details)",
+    "notes": "Figure 5 is careful to list each of the architectural components from an author to a recipient.  However there are multiple places in that sequence that can generate a report back to the author or originating system.  The diagram showing these is overly simplistic and for example, does not show the requisite submission or delivery agents needed for such return reporting.\r\n\r\nFixing this will require some thoughtful reworking of the diagram.",
+    "submit_date": "2022-10-08",
+    "submitter_name": "Dave Crocker",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
