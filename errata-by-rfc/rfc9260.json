@@ -2,7 +2,7 @@
   {
     "errata_id": "7147",
     "doc-id": "RFC9260",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "3.2",
     "orig_text": "          +----+--------------------------------------------------+\r\n          | 00 | Stop processing this SCTP packet and discard the |\r\n          |    | unrecognized chunk and all further chunks.       |\r\n          +----+--------------------------------------------------+\r\n          | 01 | Stop processing this SCTP packet, discard the    |\r\n          |    | unrecognized chunk and all further chunks, and   |\r\n          |    | report the unrecognized chunk in an ERROR chunk  |\r\n          |    | using the 'Unrecognized Chunk Type' error cause. |\r\n          +----+--------------------------------------------------+\r\n          | 10 | Skip this chunk and continue processing.         |\r\n          +----+--------------------------------------------------+\r\n          | 11 | Skip this chunk and continue processing, but     |\r\n          |    | report it in an ERROR chunk using the            |\r\n          |    | 'Unrecognized Chunk Type' error cause.           |\r\n          +----+--------------------------------------------------+\r\n",
@@ -10,9 +10,9 @@
     "notes": "In the rest of the document, error cause names are enclosed in double quotes, not in single quotes.",
     "submit_date": "2022-10-06",
     "submitter_name": "Michael Tüxen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-10-10 14:00:11"
   },
   {
     "errata_id": "7148",
