@@ -58,5 +58,20 @@
     "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2019-12-25 07:45:27"
+  },
+  {
+    "errata_id": "7160",
+    "doc-id": "RFC7599",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "10.1",
+    "orig_text": "Translating an IPv4 packet to carry it across the MAP domain will increase its size (typically by 20 bytes).",
+    "correct_text": "Translating an IPv4 packet to carry it across the MAP domain will increase its size (typically by 28 bytes).",
+    "notes": "In the context of MTU, it is important to account for packet fragmentation. If an IPv4 packet is fragmented, the size will increase by 28 bytes during translation. The IPv6 header is 20 bytes larger than the IPv4 header, and in addition the 8 byte IPv6 Fragmentation Header must be added.",
+    "submit_date": "2022-10-12",
+    "submitter_name": "Michael Overcash",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
