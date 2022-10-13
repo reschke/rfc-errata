@@ -17,17 +17,17 @@
   {
     "errata_id": "7107",
     "doc-id": "RFC9110",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "6.5.1",
     "orig_text": "For example, the chunked transfer coding in HTTP/1.1\r\nallows a trailer section to be sent after the content\r\n(Section 7.1.2 of [HTTP/1.1]).",
     "correct_text": "For example, the chunked transfer coding in HTTP/1.1\r\nallows a trailer section to be sent after the content\r\n(Section ?.?.? of [HTTP/1.1]).",
-    "notes": "Section 7.1.2 does not exist. It isn't clear to me which section is the intended target of the reference.",
+    "notes": "Section 7.1.2 does not exist. It isn't clear to me which section is the intended target of the reference.\n --VERIFIER NOTES-- \nErrata rejected per Julian Reschke. Section 7.1.2 does exist.\r\nSee <https://www.rfc-editor.org/rfc/rfc9112#section-7.1.2>.\r\n",
     "submit_date": "2022-08-31",
     "submitter_name": "James Synge",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-10-12 14:39:50"
   },
   {
     "errata_id": "7109",
