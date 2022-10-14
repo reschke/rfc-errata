@@ -13,5 +13,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7162",
+    "doc-id": "RFC9291",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "9",
+    "orig_text": "   'ethernet-segments' and 'vpn-services':  An attacker who is able to\r\n      access network nodes can undertake various attacks, such as\r\n      deleting a running L2VPN service, interrupting all the traffic of\r\n      a client.  In addition, an attacker may modify the attributes of a\r\n      running service (e.g., QoS, bandwidth) or an ES, leading to\r\n      malfunctioning of the service and therefore to SLA violations.  In\r\n      addition, an attacker could attempt to create an L2VPN service,\r\n      add a new network access, or intercept/redirect the traffic to a\r\n      non-authorized node.  In addition to using NACM to prevent\r\n      authorized access, such activity can be detected by adequately\r\n      monitoring and tracking network configuration changes.\r\n",
+    "correct_text": "   'ethernet-segments' and 'vpn-services':  An attacker who is able to\r\n      access network nodes can undertake various attacks, such as\r\n      deleting a running L2VPN service, interrupting all the traffic of\r\n      a client.  In addition, an attacker may modify the attributes of a\r\n      running service (e.g., QoS, bandwidth) or an ES, leading to\r\n      malfunctioning of the service and therefore to SLA violations.  In\r\n      addition, an attacker could attempt to create an L2VPN service,\r\n      add a new network access, or intercept/redirect the traffic to a\r\n      non-authorized node.  In addition to using NACM to prevent\r\n      unauthorized access, such activity can be detected by adequately\r\n      monitoring and tracking network configuration changes.\r\n",
+    "notes": "Typo in last sentence, should be \"unauthorized\".",
+    "submit_date": "2022-10-13",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7163",
+    "doc-id": "RFC9291",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "A.2",
+    "orig_text": "                      Figure 25: An Example of VPLS",
+    "correct_text": "                      Figure 25: An Example of VPWS",
+    "notes": "Typo",
+    "submit_date": "2022-10-13",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-10-13 16:24:31"
   }
 ]
