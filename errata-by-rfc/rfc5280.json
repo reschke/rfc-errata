@@ -268,5 +268,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7164",
+    "doc-id": "RFC5280",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2.5",
+    "orig_text": "   If the distributionPoint field is absent, the CRL MUST contain\r\n   entries for all revoked unexpired certificates issued by the CRL\r\n   issuer, if any, within the scope of the CRL.",
+    "correct_text": "   If the distributionPoint field is absent, the CRL MUST contain\r\n   entries for all revoked unexpired certificates issued by the CRL\r\n   issuer.",
+    "notes": "The removed phrase does not appear in the original text that this requirement is derived from, ITU-T Rec. X.509 (08/2005) Section 8.6.2.2: \"If the issuing distribution point field, the AA issuing distribution point field, and the CRL scope field are all absent, the CRL shall contain entries for all revoked unexpired public-key certificates issued by the CRL issuer.\"\r\n\r\nThe removed phrase does not serve to create a stricter requirement; rather it creates a looser requirement which allows a CRL which does contain entries for all revoked unexpired certificates *within its scope* to not include the distributionPoint field. Given that the distributionPoint field serves an important security purpose in preventing substitution attacks, it is unlikely that this loosening was the intent of the original authors.",
+    "submit_date": "2022-10-14",
+    "submitter_name": "Aaron Gable",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
