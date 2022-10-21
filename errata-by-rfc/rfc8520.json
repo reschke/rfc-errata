@@ -43,5 +43,20 @@
     "verifier_id": "166",
     "verifier_name": "Rob Wilton",
     "update_date": "2020-09-24 03:53:32"
+  },
+  {
+    "errata_id": "7173",
+    "doc-id": "RFC8520",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "Within each access list, access is permitted to packets flowing to or from the Thing that can be mapped to the domain name of \"service.bms.example.com\".",
+    "correct_text": "Within each access list, access is permitted to packets flowing to or from the Thing that can be mapped to the domain name of \"test.example.com\".",
+    "notes": "The subdomain in the Figure does not correspond to the one in the text.",
+    "submit_date": "2022-10-20",
+    "submitter_name": "Zeno Heeb",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
