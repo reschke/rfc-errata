@@ -88,5 +88,20 @@
     "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2022-05-29 22:07:27"
+  },
+  {
+    "errata_id": "7177",
+    "doc-id": "RFC2131",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.1",
+    "orig_text": "If the server has received a message through a DHCP relay agent, the server SHOULD choose an address from the interface on which the message was recieved as the 'server identifier' (unless the server has other, better information on which to make its choice).",
+    "correct_text": "If the server has received a message through a DHCP relay agent, the server SHOULD choose an address from the interface on which the message was received as the 'server identifier' (unless the server has other, better information on which to make its choice).",
+    "notes": "spelling correction\r\n\r\ns/recieved/received/",
+    "submit_date": "2022-10-22",
+    "submitter_name": "Greg Skinner",
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2022-10-22 16:32:53"
   }
 ]
