@@ -238,5 +238,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7181",
+    "doc-id": "RFC2026",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.2.4",
+    "orig_text": "   Note: Standards track specifications normally must not depend on\r\n   other standards track specifications which are at a lower maturity\r\n   level or on non standards track specifications other than referenced\r\n   specifications from other standards bodies.  (See Section 7.)\r\n\r\n",
+    "correct_text": "Move to Section 4:\r\n\r\n   Standards track specifications normally must not depend on\r\n   other standards track specifications which are at a lower maturity\r\n   level or on non standards track specifications other than referenced\r\n   specifications from other standards bodies.  (See Section 7.)\r\n\r\n",
+    "notes": "The note in §4.2.4 (Historic) applies to standards track documents in general, and not specifically to Historic documents (which are not in the Standards Track) as it seems by including it in that subsection.\r\n\r\nThe text should be moved, unchanged (except for maybe removing the leading \"Note:\") to be the last paragraph in §4 (before the start of §4.1).",
+    "submit_date": "2022-10-25",
+    "submitter_name": "Alvaro Retana",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
