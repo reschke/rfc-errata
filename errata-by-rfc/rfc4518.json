@@ -30,6 +30,21 @@
     "update_date": "2019-09-10 09:09:03"
   },
   {
+    "errata_id": "7213",
+    "doc-id": "RFC4518",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.6.1",
+    "orig_text": "   \"foo<SPACE>bar<SPACE><SPACE>\", result in the output",
+    "correct_text": "   \"foo<SPACE>bar<SPACE><SPACE>\" result in the output",
+    "notes": "Unnecessary comma.",
+    "submit_date": "2022-10-31",
+    "submitter_name": "Ivan Panchenko",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "860",
     "doc-id": "RFC4518",
     "errata_status_code": "Verified",
