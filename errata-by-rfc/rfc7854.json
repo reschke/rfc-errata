@@ -58,5 +58,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7194",
+    "doc-id": "RFC7854",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "10.8",
+    "orig_text": "   Information type values 0 through 32767 MUST be assigned using the\r\n   \"Standards Action\" policy, and values 32768 through 65530 using the\r\n   \"Specification Required\" policy, defined in [RFC5226].  Values 65531\r\n   through 65534 are Experimental, and values 0 and 65535 are Reserved.",
+    "correct_text": "   Information type values 0 through 127 MUST be assigned using the\r\n   \"Standards Action\" policy, and values 128 through 250 using the\r\n   \"Specification Required\" policy, defined in [RFC5226].  Values 251\r\n   through 254 are Experimental, and values 0 and 255 are Reserved.",
+    "notes": "In Section 4.9 Peer Down Notification. The \"Reason\" field is defined as one octet, while the IANA consideration section is defining values as 2-octets range. This errata suggests updating the IANA registry, instead of the size of the \"Reason\" field in the Peer Down Notification message to avoid breaking existing implementations that use one-octet reason.",
+    "submit_date": "2022-10-30",
+    "submitter_name": "Ahmed Elhassany",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
