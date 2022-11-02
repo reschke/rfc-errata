@@ -108,16 +108,16 @@
     "errata_id": "7192",
     "doc-id": "RFC8794",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "7.6.",
     "orig_text": "   The Date Element stores an integer in the same format as the Signed\r\n   Integer Element that expresses a point in time referenced in\r\n   nanoseconds from the precise beginning of the third millennium of the\r\n   Gregorian Calendar in Coordinated Universal Time (also known as\r\n   2001-01-01T00:00:00.000000000 UTC).  This provides a possible\r\n   expression of time from 1708-09-11T00:12:44.854775808 UTC to\r\n   2293-04-11T11:47:16.854775807 UTC.\r\n",
     "correct_text": "   The Date Element stores an integer in the same format as the Signed\r\n   Integer Element that expresses a point in time referenced in\r\n   nanoseconds from the precise beginning of the third millennium of the\r\n   Gregorian Calendar in Coordinated Universal Time (also known as\r\n   2001-01-01T00:00:00.000000000 UTC).  This provides a possible\r\n   expression of time from September 1708 to April 2293.\r\n\r\n   The integer stored represents the number of nanoseconds between the\r\n   date to express and 2001-01-01T00:00:00.000000000 UTC, not counting\r\n   leap seconds.  That is 86,400,000,000,000 nanoseconds for each day.\r\n   Conversions from other date systems should ensure leap seconds are\r\n   not counted in EBML values.\r\n\r\n   The 2001-01-01T00:00:00.000000000 UTC date also corresponds to\r\n   978307200 seconds in Unix time [POSIX].\r\n",
     "notes": "Add some notice about leap seconds not being counted as in POSIX. Remove bogus nanosecond values.\r\n\r\nSee https://github.com/ietf-wg-cellar/ebml-specification/pull/415",
     "submit_date": "2022-10-30",
     "submitter_name": "Steve Lhomme",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2022-11-01 13:34:50"
   },
   {
     "errata_id": "7193",
