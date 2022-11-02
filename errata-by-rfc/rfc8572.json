@@ -118,5 +118,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-04-14 14:46:42"
+  },
+  {
+    "errata_id": "7223",
+    "doc-id": "RFC8572",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "    4.  Loop back to Step 1\r\n",
+    "correct_text": "    4.  Loop back to Step 2\r\n",
+    "notes": "There is no need to repeat step 1.",
+    "submit_date": "2022-11-01",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
