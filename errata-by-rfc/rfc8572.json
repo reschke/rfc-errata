@@ -122,16 +122,16 @@
   {
     "errata_id": "7223",
     "doc-id": "RFC8572",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5.2",
     "orig_text": "    4.  Loop back to Step 1\r\n",
     "correct_text": "    4.  Loop back to Step 2\r\n",
-    "notes": "There is no need to repeat step 1.",
+    "notes": "There is no need to repeat step 1.\n --VERIFIER NOTES-- \nAs per Kent's (the author) clarification:\r\n\r\nPer the note beneath the diagram and the last paragraph in that section (Section 5.2), alternate config mechanisms MAY be used and they SHOULD unset the \"flag enabling SZTP bootstrapping\", which is what Step 1 tests.",
     "submit_date": "2022-11-01",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2022-11-02 04:40:10"
   }
 ]
