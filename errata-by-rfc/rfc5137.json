@@ -32,7 +32,7 @@
   {
     "errata_id": "7234",
     "doc-id": "RFC5137",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2",
     "orig_text": "      or more decoding steps to determine a Unicode code point that can\r\n      used to look up the character in a table.  That may be appropriate\r\n      in some cases where the goal is really to represent the UTF-8 form\r\n      but, in general, it just obscures desired information and makes\r\n      errors more likely and debugging harder.",
@@ -40,9 +40,9 @@
     "notes": "Missing \"be\".",
     "submit_date": "2022-11-02",
     "submitter_name": "Ivan Panchenko",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-11-03 13:48:57"
   },
   {
     "errata_id": "7235",
