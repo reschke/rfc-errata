@@ -13,5 +13,20 @@
     "verifier_id": "172",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2022-09-27 11:27:39"
+  },
+  {
+    "errata_id": "7238",
+    "doc-id": "RFC9114",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.2",
+    "orig_text": "Because this limit is applied separately by each implementation that\r\nprocesses the message, messages below this limit are not guaranteed\r\nto be accepted.\r\n",
+    "correct_text": "Because this limit is applied separately by each implementation that\r\nprocesses the message, messages above this limit are not guaranteed\r\nto be accepted.\r\n",
+    "notes": "The section 4.2.2 specifies header size constraints and notes that implementations can send a SETTINGS frame with a SETTINGS_MAX_FIELD_SECTION_SIZE identifier to set a limit on the maximum size of the message header. Since this a maximum size, the sentence that states that intermediaries aren't guaranteed to accept a message below this limit seems odd and I think it should instead say \"above this limit\".",
+    "submit_date": "2022-11-04",
+    "submitter_name": "Jaikiran Pai",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
