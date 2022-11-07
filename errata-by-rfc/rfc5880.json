@@ -103,5 +103,20 @@
     "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2022-09-06 10:24:31"
+  },
+  {
+    "errata_id": "7240",
+    "doc-id": "RFC5880",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.8.1",
+    "orig_text": "   bfd.LocalDiag\r\n\r\n      The diagnostic code specifying the reason for the most recent\r\n      change in the local session state.  This MUST be initialized to\r\n      zero (No Diagnostic).",
+    "correct_text": "[Proposed text]\r\n\r\n   bfd.LocalDiag\r\n\r\n      The diagnostic code specifying the reason for the most recent\r\n      change in the local session state.  This MUST be initialized to\r\n      zero (No Diagnostic).  It MUST also be re-initialized to zero \r\n      (No Diagnostic) when the local session state transitions to Up.",
+    "notes": "RFC 5880 at various points calls out setting the value of bfd.LocalDiag as part of state transitions.  The text defining the feature calls for it to be initialized to zero.  However, it doesn't define under what conditions it should be re-initialized to zero.\r\n\r\nOne possible place where it may be reinitialized is when the session transitions back to Up, indicating that prior issues may have been cleared.",
+    "submit_date": "2022-11-06",
+    "submitter_name": "Jeffrey Haas",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
