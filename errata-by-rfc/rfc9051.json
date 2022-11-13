@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7246",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.5.2.",
+    "orig_text": "   BINARY[<section-binary>]<<number>>\r\n      An <nstring> or <literal8> expressing the content of the specified\r\n      section after removing any encoding specified in the corresponding\r\n      Content-Transfer-Encoding header field.  If <number> is present,\r\n      it refers to the offset within the DECODED section data.\r\n",
+    "correct_text": "   BINARY[<section-binary>]\r\n      An <nstring> or <literal8> expressing the content of the specified\r\n      section after removing any encoding specified in the corresponding\r\n      Content-Transfer-Encoding header field.\r\n",
+    "notes": "While a FETCH _request_ can be \"partial\" with <...> for both BODY[] and BINARY[], only a FETCH _response_  for BODY[] can have an optional offset. A FETCH _response_ for BINARY[] cannot have an optional offset. At least according to the ABNF, which I believe is leading.\r\nSee lines 6756 and 6757:  msg-att-static = \"BODY\" section [\"<\" number \">\"] SP nstring / \"BINARY\" section-binary SP (nstring / literal8)\r\nAnd line 6987: section-binary  = \"[\" [section-part] \"]\"\r\n\r\nRFC 3516, IMAP4 Binary Content Extension, from which the original text was probably copied, appears to have the same issue but no errata.",
+    "submit_date": "2022-11-12",
+    "submitter_name": "Mechiel Lukkien",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
