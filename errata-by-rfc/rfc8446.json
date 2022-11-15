@@ -583,5 +583,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7250",
+    "doc-id": "RFC8446",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.6.1",
+    "orig_text": "   The client MAY use this PSK for future handshakes by including the\r\n   ticket value in the \"pre_shared_key\" extension in its ClientHello\r\n   (Section 4.2.11).",
+    "correct_text": "(to add)\r\n\r\n  Where the client does not support session tickets, this extension MUST be ignored.",
+    "notes": "I've seen a TLS implementation which doesn't implement session tickets.  That's fine, but the implementation doesn't *ignore* session tickets it receives.  Instead, it treats reception of the ticket as un recoverable error, and drops the TLS connection.\r\n\r\nIt's also worth adding a note to section 4.2 at the bottom of page 38.  To note that in general, f an extension isn't supported AND doesn't materially affect the TLS exchange, THEN it should be ignored.\r\n\r\ni.e. there's nothing in the spec which mentions Postel's law \"be conservative in what you send, be liberal in what you accept\".  So implementors reading this document are free to do all kinds of odd things.\r\n\r\nIn addition, the text in Section 4.2 at the bottom of page 38 says:\r\n\r\n\"\r\n      Designers\r\n      and implementors should be aware of the fact that until the\r\n      handshake has been authenticated, active attackers can modify\r\n      messages and insert, remove, or replace extensions.\r\n\"\r\n\r\nThe implicit conclusion here is that an implementation receiving extensions must sanity check them.  e.g. an attacker adding an undefined / unknown extension should not cause the entire session to be torn down.",
+    "submit_date": "2022-11-14",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
