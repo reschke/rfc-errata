@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7251",
+    "doc-id": "RFC9180",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.2.1",
+    "orig_text": "The RECOMMENDED limit for these values is 64 bytes. ",
+    "correct_text": "The RECOMMENDED limit for these values is 66 bytes. (To enable\r\nprocessing of all the test vectors in Appendix A.)\r\n",
+    "notes": "Appendix A.6.1 and others have test vectors with an IKM that is 66 octets long. Seems easier to bump the recommended value by 2, rather than invalidate the test vectors, but the latter could also be done if/when 9180 is revised. Meanwhile, no harm for implementers to know this.",
+    "submit_date": "2022-11-15",
+    "submitter_name": "Stephen Farrell",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
