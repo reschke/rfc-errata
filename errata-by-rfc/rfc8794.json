@@ -33,16 +33,16 @@
     "errata_id": "7187",
     "doc-id": "RFC8794",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "15.1.",
     "orig_text": "   Non-mandatory EBML Elements can be added in a new EBMLDocTypeVersion.\r\n   Since they are not mandatory, they won't be found in older versions\r\n   of the EBMLDocTypeVersion, just as they might not be found in newer\r\n   versions.  This causes no compatibility issue.\r\n",
     "correct_text": "   Non-mandatory EBML Elements can be added in a new DocTypeVersion.\r\n   Since they are not mandatory, they won't be found in older versions\r\n   of the DocTypeVersion, just as they might not be found in newer\r\n   versions.  This causes no compatibility issue.\r\n",
     "notes": "Use DocTypeVersion in the text rather than EBMLDocTypeVersion for more consistency.\r\n\r\nSee https://github.com/ietf-wg-cellar/ebml-specification/pull/405",
     "submit_date": "2022-10-30",
     "submitter_name": "Steve Lhomme",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2022-11-15 13:40:03"
   },
   {
     "errata_id": "7188",
