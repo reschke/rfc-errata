@@ -18,15 +18,15 @@
     "errata_id": "7254",
     "doc-id": "RFC9126",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "1.1",
     "orig_text": "POST /as/par HTTP/1.1\r\nHost: as.example.com\r\nContent-Type: application/x-www-form-urlencoded\r\n\r\n&response_type=code\r\n&client_id=CLIENT1234&state=duk681S8n00GsJpe7n9boxdzen\r\n<...>",
     "correct_text": "POST /as/par HTTP/1.1\r\nHost: as.example.com\r\nContent-Type: application/x-www-form-urlencoded\r\n\r\nresponse_type=code\r\n&client_id=CLIENT1234&state=duk681S8n00GsJpe7n9boxdzen\r\n<...>",
     "notes": "In the 'Introductory Example', the POST body to the par endpoint contains an unnecessary '&' at the start. (It's perhaps technically valid, but could potentially confuse readers.)",
     "submit_date": "2022-11-18",
     "submitter_name": "Joseph Heenan",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2022-11-21 13:58:28"
   }
 ]
