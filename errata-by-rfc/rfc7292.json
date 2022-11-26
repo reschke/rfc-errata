@@ -43,5 +43,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7257",
+    "doc-id": "RFC7292",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Appendix D.",
+    "orig_text": " -- CRLBag\r\n CRLBag ::= SEQUENCE {\r\n     crlId     BAG-TYPE.&id ({CRLTypes}),\r\n     crltValue [0] EXPLICIT BAG-TYPE.&Type ({CRLTypes}{@crlId})\r\n }",
+    "correct_text": " -- CRLBag\r\n CRLBag ::= SEQUENCE {\r\n     crlId     BAG-TYPE.&id ({CRLTypes}),\r\n     crlValue [0] EXPLICIT BAG-TYPE.&Type ({CRLTypes}{@crlId})\r\n }",
+    "notes": "There's excess `t` in `crlValue`",
+    "submit_date": "2022-11-25",
+    "submitter_name": "Takashi Kato",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
