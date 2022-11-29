@@ -32,16 +32,16 @@
   {
     "errata_id": "7256",
     "doc-id": "RFC7807",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "3.2",
     "orig_text": "Note that because extensions are effectively put into a namespace by\r\nthe problem type, it is not possible to define new \"standard\" members\r\nwithout defining a new media type.",
     "correct_text": "Note that because extensions are effectively put into a namespace by\r\nthe problem type, it is not possible to define new \"standard\" members\r\nwithout defining a new problem type.",
-    "notes": "Typo at the end of the sentence, defining extension members require defining new problem types not media types.",
+    "notes": "Typo at the end of the sentence, defining extension members require defining new problem types not media types.\n --VERIFIER NOTES-- \nIn rejecting this Errata report I note that the reported error is not a typo, but a deliberate decision of the authors and working group. ",
     "submit_date": "2022-11-23",
     "submitter_name": "Ahmed Hussein",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2022-11-28 01:09:32"
   }
 ]
