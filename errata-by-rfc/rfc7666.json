@@ -13,5 +13,20 @@
     "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7258",
+    "doc-id": "RFC7666",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3233702267",
+    "orig_text": "Search RFCs\r\nnumber, title, keyword, or author surname\r\nAdvanced Search\r\nRFC Editor\r\nRFC Errata\r\nRFC 7666, \"Management Information Base for Virtual Machines Controlled by a Hypervisor\", October 2015\r\nSource of RFC: opsawg (ops)\r\nFound 1 record.\r\n\r\nErrata ID: 4710\r\nStatus: Verified\r\nType: Editorial\r\nPublication Format(s) : TEXT\r\nReported By: jean-marie Kubek\r\nDate Reported: 2016-06-15\r\nVerifier Name: Benoit Claise\r\nDate Verified: 2016-06-17\r\nSection 6.2 IANA MIB says:\r\n\r\nIANAStorageMediaType ::= TEXTUAL-CONVENTION\r\n       STATUS       current\r\n       DESCRIPTION\r\n               \"The media type of a storage device:\r\n\r\n               unknown(1)     The media type is unknown, e.g., because\r\n                              the implementation failed to obtain the\r\n                              media type from the hypervisor.\r\n\r\n               other(2)       The media type is other than those\r\n                              defined in this conversion.\r\nIt should say:\r\n\r\nIANAStorageMediaType ::= TEXTUAL-CONVENTION\r\n       STATUS       current\r\n       DESCRIPTION\r\n               \"The media type of a storage device:\r\n\r\n                 other(1)       The media type is other than those\r\n                                defined in this conversion.\r\n\r\n                 unknown(2)     The media type is unknown, e.g., because\r\n                                the implementation failed to obtain the\r\n                                media type from the hypervisor.\r\n\r\nNotes:\r\n\r\nInversion of other and unknown integer values in the description of the IANAStorageMediaType TEXTUAL-CONVENTION.\r\n\r\nFIrst referenced at IANA RT as [IANA #913286] Incoherency in IANA-STORAGE-MEDIA-TYPE-MIB\r\n\r\nSearch for errata for other RFCs.\r\n\r\nReport New Errata\r\n\r\n\r\n\r\nIAB • IANA • IETF • IRTF • ISE • ISOC • IETF Trust\r\nReports • Privacy Statement • Site Map • Contact Us\r\n\r\n\r\nDocument Retrieval\r\nErrata\r\nFrequently Asked Questions\r\nFuture Format FAQ\r\nHistory\r\nAbout Us\r\nOther Information\r\nPublication Process\r\nPublication Queue\r\nStyle Guide\r\nAdvanced Search\r\nnumber, title, keyword, or author surname\r\n",
+    "correct_text": "Enclosure",
+    "notes": "It's not the right document",
+    "submit_date": "2022-12-01",
+    "submitter_name": "Dana Renee Hopkins",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
