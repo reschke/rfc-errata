@@ -163,5 +163,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7259",
+    "doc-id": "RFC7170",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3.2",
+    "orig_text": "   The use of EAP-FAST-GTC as defined in RFC 5421 [RFC5421] is NOT\r\n   RECOMMENDED with TEAPv1 because EAP-FAST-GTC is not compliant with\r\n   EAP-GTC defined in [RFC3748].  Implementations should instead make\r\n   use of the password authentication TLVs defined in this\r\n   specification.  The authentication server initiates password\r\n   authentication by sending a Basic-Password-Auth-Req TLV defined in\r\n   Section 4.2.14.  If the peer wishes to participate in password\r\n   authentication, then it responds with a Basic-Password-Auth-Resp TLV\r\n   as defined in Section 4.2.15 that contains the username and password.\r\n   If it does not wish to perform password authentication, then it\r\n   responds with a NAK TLV indicating the rejection of the Basic-\r\n   Password-Auth-Req TLV.  Upon receiving the response, the server\r\n   indicates the success or failure of the exchange using an\r\n   Intermediate-Result TLV.  Multiple round trips of password\r\n   authentication requests and responses MAY be used to support some\r\n   \"housecleaning\" functions such as a password or pin change before a\r\n   user is authenticated.\r\n",
+    "correct_text": "   The use of EAP-FAST-GTC as defined in RFC 5421 [RFC5421] is NOT\r\n   RECOMMENDED with TEAPv1 because EAP-FAST-GTC is not compliant with\r\n   EAP-GTC defined in [RFC3748].  Implementations should instead make\r\n   use of the password authentication TLVs defined in this\r\n   specification.  The authentication server initiates password\r\n   authentication by sending a Basic-Password-Auth-Req TLV defined in\r\n   Section 4.2.14.  If the peer wishes to participate in password\r\n   authentication, then it responds with a Basic-Password-Auth-Resp TLV\r\n   as defined in Section 4.2.15 that contains the username and password.\r\n   If it does not wish to perform password authentication, then it\r\n   responds with a NAK TLV indicating the rejection of the Basic-\r\n   Password-Auth-Req TLV.  Upon receiving the response, the server\r\n   indicates the success or failure of the exchange using an\r\n   Intermediate-Result TLV.  Multiple round trips of password\r\n   authentication requests and responses MAY be used to support some\r\n   \"housecleaning\" functions such as a password or pin change before a\r\n   user is authenticated.\r\n\r\n   If using EAP-MSCHAPv2 as an inner method, the EAP-FAST-MSCHAPv2\r\n   variant defined in [RFC5422] MUST be used.",
+    "notes": "While RFC 7170 does not really require this and would be technically correct as-is for this area, deployed implementations of EAP-TEAP seem to have used MSK/IMSK derivation for an inner EAP method in a manner that matches what was done with EAP-FAST. This could be called non-compliant, but for the sake of interoperability, it might make more sense to describe what is done in deployed implementation instead. The only technical difference here is in swapping the first and the second 16 octets of EAP-MSCHAPv2 MSK when it is used as the IMSK for EAP-TEAP.",
+    "submit_date": "2022-12-01",
+    "submitter_name": "Jouni Malinen",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
