@@ -88,5 +88,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7263",
+    "doc-id": "RFC8995",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.5",
+    "orig_text": "idevid-issuer:  The Issuer value from the pledge IDevID certificate\r\n  is included to ensure unique interpretation of the serial-number.\r\n  In the case of a nonceless (offline) voucher-request, an\r\n  appropriate value needs to be configured from the same out-of-band\r\n  source as the serial-number.\r\n",
+    "correct_text": "idevid-issuer:  The Issuer value from the pledge IDevID certificate\r\n  SHOULD BE included to ensure unique interpretation of the serial-\r\n  number.\r\n  In the case of a nonceless (offline) voucher-request, an\r\n  appropriate value MUST be configured from the same out-of-band\r\n  source as the serial-number.\r\n",
+    "notes": "The current language is no language according to RFC 2119.",
+    "submit_date": "2022-12-09",
+    "submitter_name": "Rufus Buschart",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
