@@ -223,5 +223,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7262",
+    "doc-id": "RFC6455",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.5.1",
+    "orig_text": "Following the 2-byte integer, the body MAY contain UTF-8-encoded data\r\nwith value /reason/, the interpretation of which is not defined by\r\nthis specification.  This data is not necessarily human readable but\r\nmay be useful for debugging or passing information relevant to the\r\nscript that opened the connection.  As the data is not guaranteed to\r\nbe human readable, clients MUST NOT show it to end users.",
+    "correct_text": "> Following the 2-byte integer, the body MAY contain data which MUST\r\nbe UTF-8-encoded with value /reason/, the interpretation of which is\r\nnot defined by this specification.\r\n\r\n> As the interpretation is not defined here, clients MAY show it to\r\nend users.\r\n\r\n----- OR -----\r\n\r\n> Following the 2-byte integer, the body MAY contain arbitrary data,\r\nthe interpretation of which is not defined by this specification.\r\n\r\n> As the interpretation is not defined here, clients MAY hide it\r\nfrom end users.",
+    "notes": "The RFC is unclear on whether or not close-frames can contain binary data for the /reason/.\r\n\r\nIn section 5.2, \"Application data\" is defined as \"arbitrary\".\r\n\r\nSection 5.5.1 also says about the /reason/:\r\n> This data is not necessarily human readable ...\r\n> As the data is not guaranteed to be human readable ...\r\n\r\nOk, but what if it is?\r\n\r\nAs per RFC 2119, The \"MUST NOT show it to end users\" here is not a mere suggestion.\r\nIt implies some sort of inherent danger or contract breaking that would occur if the data were \"shown\" (undefined term), as if passing along UTF-8 text in a controlled manner could cause harm to their application.\r\n\r\nDue to the \"MUST NOT\", the \"MAY contain UTF-8-encoded data\" here is ambiguous. It implies it could be something other than UTF-8, like binary data, which would be unsafe to blindly \"show\" to the \"end user\" (undefined term). There is no clear reason as to why it (emphatically) \"MUST NOT\" be shown to \"end users\".\r\n\r\nWho is the client and who is the \"end user\"? This is the only occurrence of \"end user\" in the RFC. Is the \"client\" the browser, and the \"end user\" the developer trying to debug their application, but \"MUST NOT\" see close /reason/s? In practice, the close reason is of course exposed by browsers. But then is the end user the non-developer who triggers an unexpected error on the server, and has no way to report a bug since the server's error /reason/ MUST NOT be shown to them? Why MUSTN'T it be shown? Is it because it MAY contain binary data?\r\n\r\nClarification is needed on whether or not the /reason/ can contain arbitrary binary data. And the imperative restriction on what the undefined \"end user\" can be \"shown\" should be loosened.",
+    "submit_date": "2022-12-09",
+    "submitter_name": "Demi Y",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
