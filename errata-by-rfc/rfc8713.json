@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7270",
+    "doc-id": "RFC8713",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.7.3",
+    "orig_text": "The IETF LLC Director candidate is reviewed as specified in [RFC8711].",
+    "correct_text": "The IETF LLC Director candidate is reviewed as specified in Section 6.1\r\nof [RFC8711].",
+    "notes": "This document uses \"LLC Director\" which seems to be outdated; LLC Board Member is more common.\r\n\r\nHowever, in the original text, adding a reference to the specific section is very useful.",
+    "submit_date": "2022-12-13",
+    "submitter_name": "Rich Salz",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
