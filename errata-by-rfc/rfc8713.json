@@ -43,5 +43,50 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7273",
+    "doc-id": "RFC8713",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.7.3",
+    "orig_text": "The IETF LLC Director candidate is reviewed as specified in [RFC8711].",
+    "correct_text": "The IETF LLC Director candidate is reviewed as specified in\r\nSection 6.1 of [RFC8711].",
+    "notes": "The two documents often use different terms for the same thing. Having an explicit section reference will save the reader time.",
+    "submit_date": "2022-12-14",
+    "submitter_name": "Rich Salz",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7274",
+    "doc-id": "RFC8713",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.10",
+    "orig_text": "The call for nominees must include a request for comments regarding the\r\npast performance of incumbents, which will be considered during the\r\ndeliberations of the NomCom.\r\n\r\nThe call must request that a nomination include a valid, working email\r\naddress, a telephone number, or both for the nominee. The nomination\r\nmust include the set of skills or expertise the nominator believes the\r\nnominee has that would be desirable.\r\n\r\n",
+    "correct_text": "Delete them.",
+    "notes": "The last two paragraphs in the section have not been followed by any recent committees. A possible reason for this is use of questionnaires, required by all, to contain contact information; and interviews.  In other words, \"overtaken by events.\"",
+    "submit_date": "2022-12-14",
+    "submitter_name": "Rich Salz",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7275",
+    "doc-id": "RFC8713",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "5.13",
+    "orig_text": "A nominee's consent must be written (email is acceptable) and must\r\ninclude a commitment to provide the resources necessary to fill the open\r\nposition and an assurance that the nominee will perform the duties of\r\nthe position for which they are being considered in the best interests\r\nof the IETF community.",
+    "correct_text": "Delete",
+    "notes": "This third paragraph from 5.13 is not appropriate. Recent nomcom's solicit that information during the interview and questionnaire responses.",
+    "submit_date": "2022-12-14",
+    "submitter_name": "Rich Salz",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
