@@ -118,5 +118,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7271",
+    "doc-id": "RFC6238",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "         result = Integer.toString(otp);\r\n         while (result.length() < codeDigits) {\r\n             result = \"0\" + result;\r\n         }",
+    "correct_text": "         result = Long.toString(10000000000L + otp);\r\n         result = result.substring(11 - codeDigits);",
+    "notes": "The generation of an OTP should run in constant time to ensure that an attacker can't use an observable timing discrepancy to infer the value of any of the generated digits.\r\nThis proposed correction has been applied to the pyotp and rotp implementations in https://github.com/pyauth/pyotp/pull/148 and https://github.com/mdp/rotp/pull/119",
+    "submit_date": "2022-12-14",
+    "submitter_name": "Charly Coste",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
