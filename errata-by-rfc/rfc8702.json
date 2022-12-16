@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7276",
+    "doc-id": "RFC8702",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "... id-KmacWithSHAKE128 ...\r\n\r\n... id-KmacWithSHAKE256 ...",
+    "correct_text": "... id-KMACWithSHAKE128 ...\r\n\r\n... id-KMACWithSHAKE256 ...",
+    "notes": "The ASN.1 Module in RFC 8702 defines id-KMACWithSHAKE128 and id-KMACWithSHAKE256, but the body of the document uses \"Kmac\" instead of \"KMAC\".  The different spelling appears in many places in the document.",
+    "submit_date": "2022-12-15",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
