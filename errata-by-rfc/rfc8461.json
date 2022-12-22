@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7282",
+    "doc-id": "RFC8461",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2",
+    "orig_text": "sts-policy-max-age-value = 1*10(DIGIT)",
+    "correct_text": "sts-policy-max-age-value = 1*8(DIGIT)",
+    "notes": "As described under 3.2 at point \"max_age\", the maximum lifetime of a policy may only be 31557600 seconds. Therefore 8 digits in the ABNF for \"sts-policy-max-age-value\" would be sufficient.\r\n\r\nOn the other hand, if values larger than 31557600 seconds are allowed, the text under \"max_age\" should be adjusted.",
+    "submit_date": "2022-12-21",
+    "submitter_name": "Benjamin Schwarze",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
