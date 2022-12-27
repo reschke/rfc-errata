@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7288",
+    "doc-id": "RFC8702",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.4",
+    "orig_text": "If absent, the SHAKE256 output length used in KMAC is \r\n32 or 64 bytes, respectively, \r\n",
+    "correct_text": "If absent, the SHAKE128 or SHAKE256 output length \r\nused in KMAC is 32 or 64 bytes, respectively, \r\n",
+    "notes": "The adverb 'Respectively' requires two parallel structures. SHAKE128=>32, SHAKE256=>64.",
+    "submit_date": "2022-12-26",
+    "submitter_name": "David Ireland",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
