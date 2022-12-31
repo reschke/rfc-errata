@@ -15,6 +15,21 @@
     "update_date": "2019-09-10 09:09:03"
   },
   {
+    "errata_id": "7294",
+    "doc-id": "RFC4217",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "app",
+    "orig_text": " This document\r\n  is intended to provide TLS support for FTP in a similar way to that\r\n   provided for SMTP in RFC 2487, \"SMTP Service Extension for Secure\r\n   SMTP over Transport Layer Security\", and HTTP in RFC 2817, \"Upgrading\r\n   to TLS Within HTTP/1.1.\".",
+    "correct_text": "This document\r\n   is intended to provide TLS support for FTP in a similar way to that\r\n   provided for SMTP in RFC 3207, \"SMTP Service Extension for Secure\r\n   SMTP over Transport Layer Security\", and HTTP in RFC 2817, \"Upgrading\r\n   to TLS Within HTTP/1.1.\".",
+    "notes": "Upgrade?",
+    "submit_date": "2022-12-31",
+    "submitter_name": "Mikael A",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "800",
     "doc-id": "RFC4217",
     "errata_status_code": "Verified",
