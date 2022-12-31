@@ -62,17 +62,17 @@
   {
     "errata_id": "5484",
     "doc-id": "RFC5890",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "2.3.2.1",
     "orig_text": "   For IDNA-aware applications, the three types of valid labels are\r\n   \"A-labels\", \"U-labels\", and \"NR-LDH labels\", each of which is defined\r\n   below.\r\n",
     "correct_text": "   For IDNA-aware applications, the three types of valid labels are\r\n   \"A-labels\", \"U-labels\", and \"NR-LDH labels\", each of which is defined\r\n   below and in section 2.3.1.",
-    "notes": "The term NR-LDH label is actually defined in section 2.3.1, not later in this section.",
+    "notes": "The term NR-LDH label is actually defined in section 2.3.1, not later in this section.\r\n\r\nAD note: In reality, at least from the author's perspective, \"NR-LDH\r\nlabel\" is defined in the section of that name, i.e., 2.3.2.2,\r\nwhich is \"below\" 2.3.2.1.  Whether 2.3.1 also \"defines\" it or\r\nsupplements that definition (or if 2.3.2.1 supplements what\r\n2.3.1 has to say) is a matter for debate, but it is clear that\r\nthe text cited would benefit from a reference to 2.3.1.",
     "submit_date": "2018-08-28",
     "submitter_name": "Peter Occil",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2022-12-30 14:53:08"
   },
   {
     "errata_id": "7291",
