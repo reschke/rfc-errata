@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7295",
+    "doc-id": "RFC3208",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9.2.4",
+    "orig_text": "Option Length = 12 octets",
+    "correct_text": "Option Length = 16 octets",
+    "notes": "Every option packet has a certain length including the option header itself. OPT_LENGTH, OPT_NAK_LIST and OPT_JOIN have the length correctly counted WITH the header length (4B) but OPT_FRAGMENT has 4*4B so the total length should be 16 octets.",
+    "submit_date": "2023-01-02",
+    "submitter_name": "Michal Ruprich",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
