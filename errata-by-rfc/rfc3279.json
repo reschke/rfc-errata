@@ -88,5 +88,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7296",
+    "doc-id": "RFC3279",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.3.5",
+    "orig_text": "   When the parameters are inherited, the parameters field SHALL contain\r\n   implictlyCA, which is the ASN.1 value NULL.",
+    "correct_text": "   When the parameters are inherited, the parameters field SHALL contain\r\n   implicitlyCA, which is the ASN.1 value NULL.",
+    "notes": "\"implictly\" appears to be missing an i.",
+    "submit_date": "2023-01-03",
+    "submitter_name": "Evan Pottier",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
