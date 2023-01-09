@@ -28,5 +28,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-01-06 13:50:06"
+  },
+  {
+    "errata_id": "7301",
+    "doc-id": "RFC8366",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "5.2",
+    "orig_text": "          \"The Authority Key Identifier OCTET STRING (as defined in\r\n           Section 4.2.1.1 of RFC 5280) from the pledge's IDevID\r\n",
+    "correct_text": "          \"The Authority Key Identifier OCTET STRING (as defined in\r\n           Section 4.2.1.1 of [RFC5280]) from the pledge's IDevID\r\n",
+    "notes": "The YANG module references RFC 5280 normatively, but the document does not include it as a normative reference.",
+    "submit_date": "2023-01-08",
+    "submitter_name": "Michael Richardson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
