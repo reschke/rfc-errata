@@ -88,5 +88,20 @@
     "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-06-10 07:38:37"
+  },
+  {
+    "errata_id": "7307",
+    "doc-id": "RFC8259",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "      null  = %x6e.75.6c.6c      ; null ",
+    "correct_text": "      null  = %x6e.75.6c.6c      ; null without quotation marks for numeric attributes and \"null\" for string attributes.",
+    "notes": "It is not clear how to encode null values in JSON.\r\nSome are encoding all attributes as \"null\".\r\nSome are encoding all attributes as null without quotation marks\r\nSome are encoding string attributes as \"null\" and numeric attributes as null without quotation marks.\r\nhttps://json.org is mentioning \"null\". ECMA 262  is mentioning \"null\" for string and +0F for numeric attributes. However providing zero for a number instead of null is incorrect and provides wrong results (in BI).",
+    "submit_date": "2023-01-13",
+    "submitter_name": "Maxim Iurie",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
