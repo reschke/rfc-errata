@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7304",
+    "doc-id": "RFC2606",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "example.org, ...",
+    "correct_text": "example.org, example.edu, ...",
+    "notes": "Should mention `example.edu` as one of the reserved names as well, since IANA is doing that according to Kim Davies.  The 6125bis draft uses it in some examples.",
+    "submit_date": "2023-01-13",
+    "submitter_name": "Rich Salz",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
