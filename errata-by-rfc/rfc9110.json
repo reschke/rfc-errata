@@ -58,5 +58,20 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2022-11-09 00:34:16"
+  },
+  {
+    "errata_id": "7306",
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "14.1.1",
+    "orig_text": "  ranges-specifier = range-unit \"=\" range-set\r\n  range-set        = 1#range-spec\r\n  range-spec       = int-range\r\n                   / suffix-range\r\n                   / other-range",
+    "correct_text": "  ranges-specifier = range-unit \"=\" OWS range-set\r\n  range-set        = 1#range-spec\r\n  range-spec       = int-range\r\n                   / suffix-range\r\n                   / other-range",
+    "notes": "The ABNF is inconistent with one of the examples given in 14.1.2\r\n\r\n   bytes= 0-999, 4500-5499, -1000\r\n\r\nThe bug in the ABNF was likely introduced when converting away from \"implied linear whitespace\".\r\n\r\nSee also <https://github.com/whatwg/fetch/issues/1070#issuecomment-1361800123>.",
+    "submit_date": "2023-01-13",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
