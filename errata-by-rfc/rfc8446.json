@@ -598,5 +598,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7303",
+    "doc-id": "RFC8446",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.1",
+    "orig_text": "This alert notifies the recipient that the sender will not send any more messages on this connection. ",
+    "correct_text": "This alert notifies the recipient that the sender will not send any more messages on this connection. close_notify alerts should be sent with a severity level of WARNING.",
+    "notes": "Apparently, TLS/1.0 specified these should be set to WARNING, not FATAL, but this text got lost somewhere along the way. https://github.com/pion/dtls/issues/195\r\n\r\nOpenSSL/NSS both send as WARNING, and servers that have tried sending as FATAL have encountered compatibility problems with clients which treat FATAL alerts differently than WARNING alerts: e.g. https://source.chromium.org/chromium/chromium/src/+/main:third_party/boringssl/src/ssl/tls_record.cc;l=591;drc=c0872c02015009bf3dbab0a83c0452d141e8e9cf?q=tls_open_record&ss=chromium%2Fchromium%2Fsrc",
+    "submit_date": "2023-01-12",
+    "submitter_name": "Eric Lawrence",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
