@@ -17,16 +17,16 @@
   {
     "errata_id": "5254",
     "doc-id": "RFC6690",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "relation-types = relation-type\r\n                   / DQUOTE relation-type *( 1*SP relation-type ) DQUOTE",
     "correct_text": "relation-types = reg-rel-type\r\n               / DQUOTE relation-type *( 1*SP relation-type ) DQUOTE\r\n",
-    "notes": "As defined originally \"relation-types\" may consist of a \"URI\".  RFC 3986 defines URI to allow semi-colons in various places.  For example, \"http://;\" seems to be a valid URI.  Unfortunately, that makes parsing a link-param list ambiguous since its elements are separated by semicolons.\r\n\r\nThe proposed fix to to allow \"ext-rel-type\" (i.e., \"URI\") to appear only inside a quoted relation-type list.",
+    "notes": "As defined originally \"relation-types\" may consist of a \"URI\".  RFC 3986 defines URI to allow semi-colons in various places.  For example, \"http://;\" seems to be a valid URI.  Unfortunately, that makes parsing a link-param list ambiguous since its elements are separated by semicolons.\r\n\r\nThe proposed fix to to allow \"ext-rel-type\" (i.e., \"URI\") to appear only inside a quoted relation-type list.\n --VERIFIER NOTES-- \nAlthough identifying a valid concern, this errata does not aim to clarify the original intent, but makes changes to the original RFC that were not agreed upon. The change, therefore, if it is to be applied needs to be achieved through a consensus document.",
     "submit_date": "2018-02-03",
     "submitter_name": "David Mosberger",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-01-18 01:24:43"
   }
 ]
