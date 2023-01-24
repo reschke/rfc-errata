@@ -418,5 +418,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7316",
+    "doc-id": "RFC6350",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.4",
+    "orig_text": "TITLE;ALTID=1;LANGUAGE=fr:Patron\r\nTITLE:LANGUAGE=en:Boss\r\n(Second line should probably have ALTID=1.)",
+    "correct_text": "TITLE;ALTID=1;LANGUAGE=fr:Patron\r\nTITLE;LANGUAGE=en:Boss\r\n(Second line should probably have ALTID=1.)",
+    "notes": "The colon between TITLE and LANGUAGE should be a semicolon.",
+    "submit_date": "2023-01-23",
+    "submitter_name": "Charles Burkitt",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
