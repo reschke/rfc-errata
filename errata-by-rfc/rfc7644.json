@@ -118,5 +118,20 @@
     "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2022-09-12 09:13:03"
+  },
+  {
+    "errata_id": "7319",
+    "doc-id": "RFC7644",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.4.2.2",
+    "orig_text": "     FILTER    = attrExp / logExp / valuePath / *1\"not\" \"(\" FILTER \")\"\r\n\r\n     valuePath = attrPath \"[\" valFilter \"]\"\r\n                 ; FILTER uses sub-attributes of a parent attrPath\r\n\r\n     valFilter = attrExp / logExp / *1\"not\" \"(\" valFilter \")\"",
+    "correct_text": "     FILTER    = attrExp / logExp / valuePath / *1(\"not\" SP) \"(\" FILTER \")\"\r\n\r\n     valuePath = attrPath \"[\" valFilter \"]\"\r\n                 ; FILTER uses sub-attributes of a parent attrPath\r\n\r\n     valFilter = attrExp / logExp / *1(\"not\" SP) \"(\" valFilter \")\"",
+    "notes": "Note the following example filter listed further down in section 3.4.2.2:\r\n\r\n     filter=userType ne \"Employee\" and not (emails co \"example.com\" or\r\n  emails.value co \"example.org\")\r\n\r\nThere is a space between the \"not\" and the opening parenthesis, which is not allowed in the listed ABNF grammar. The corrected text includes a mandatory space between these two tokens.\r\n\r\nIt may be desired to use `*1(\"not\" *1SP) \"(\"` instead, for backwards compatibility reasons. This would allow for an optional space after a \"not\" keyword. Or, it may be desired to instead edit the example to remove the space, preserving the original intent of the listed grammar.",
+    "submit_date": "2023-01-25",
+    "submitter_name": "James Linnell",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
