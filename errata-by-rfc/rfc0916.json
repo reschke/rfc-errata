@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7320",
+    "doc-id": "RFC0916",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3",
+    "orig_text": "Side A                                             Side",
+    "correct_text": "Side A                                             Side B",
+    "notes": "The figure in the section 3.3. \"Detecting a Half-Open Connection\", has one side missing its letter here B.",
+    "submit_date": "2023-01-25",
+    "submitter_name": "Jules Maselbas",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7321",
+    "doc-id": "RFC0916",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.3",
+    "orig_text": "If SYN was set we assume that the other end crashed and has\r\nattempted to open a new connection.  We respond by sending a\r\nlegal reset:\r\n\r\n   <SN=received AN><AN=received SN+1 modulo 2><CTL=RST, ACK>\r\n\r\nThis will cause the other end, currently in the SYN-SENT state,\r\nto close.  Flush the retransmission queue, inform the user\r\n\"Error: Connection reset\", discard the packet, delete the TCB,\r\nand go to the CLOSED state without any further processing.\r\n\r\nIf neither RST, FIN, nor SYN flags were set it is assumed that\r\nthis packet is a duplicate of one already received.  Send an\r\nACK back:\r\n",
+    "correct_text": "If the SYN flag was set but the ACK was not set then we assume\r\nthat the other end crashed and has attempted to open a new connection.\r\nWe respond by sending a legal reset:\r\n\r\n   <SN=received AN><AN=received SN+1 modulo 2><CTL=RST, ACK>\r\n\r\nThis will cause the other end, currently in the SYN-SENT state,\r\nto close.  Flush the retransmission queue, inform the user\r\n\"Error: Connection reset\", discard the packet, delete the TCB,\r\nand go to the CLOSED state without any further processing.\r\n\r\nIf neither RST nor FIN flags were set, or if SYN and ACK flags\r\nwere set, it is assumed that this packet is a duplicate of one\r\nalready received.  Send an ACK back:\r\n",
+    "notes": "Side A                                             Side B\r\n1. CLOSED                                          LISTEN\r\n2. [OPEN request]\r\n   SYN_SENT    -->  <SN=0><CTL=SYN>            --> SYN_RECEIVED\r\n3. ESTABLISHED <--  <SN=0><AN=1><CTL=SYN,ACK>  <--\r\n4.             -->  <SN=1><AN=0><CTL=ACK>      ...\r\n5.             ...  <SN=0><AN=1><CTL=SYN,ACK>  <-- (retransmit)\r\n6. (packet sent by A at 4. finally arrives to B)\r\n               ...                             --> ESTABLISHED\r\n7. (packet resent by B at 5. finally arrives to A)\r\n   CLOSED (C2) <--                             ...\r\n8.             -->  <SN=1><AN=1><CTL=RST>      --> (connection reset)\r\n\r\nThe Figure above illustrate the current issue RATP can face during the\r\nthree-way handshake, and how behavior C2 can cause a connection to be\r\nclosed immediately after being established.\r\n\r\nIn the Figure above, side A try to establish a connection with side B,\r\nwhich is in the LISTEN state.  Commented line:\r\n 1. side A is in the CLOSED state and side B is in the LISTEN state;\r\n 2. side A open a new connection and send a SYN packet and is received by\r\n    side B which enters the SYN_RECEIVED state and send back a SYN-ACK;\r\n 3. side A receive the SYN-ACK packet from B;\r\n 4. side A respond with an ACK packet and move to the ESTABLISHED state.\r\n    Meanwhile;\r\n 5. side B hasn't received yet the ACK from side A and decide to\r\n    retransmit the SYN-ACK packet;\r\n 6. side B finally receive the ACK from side A and move to the\r\n    ESTABLISHED state;\r\n 7. side A finally receive the duplicated SYN-ACK packet from side B,\r\n    execute behavior C2: the received packet doesn't have the expected\r\n    SN and has the SYN flag set, thus respond by sending a legal reset.\r\n 8. side B receive the reset and close the connection.\r\n\r\nOne solution could be to tweak the initial RTO value of side B in order\r\nto prevent sending a duplicated SYN-ACK packet, however the initial RTT\r\nvalue is likely inaccurate during the handshake.  This solution seems a\r\nbit brittle.\r\n\r\nThe second solution would be to consider that a host has crashed only if\r\nthe packet received has the SYN flag set but not the ACK flag.  The\r\nrational is that the first step during handshake is to send a packet\r\nonly containing the SYN flag, however a packet containing both ACK and\r\nSYN flags must have come after the initial handshake exchange and can\r\nbe considered as a duplicated and be dropped.\r\n\r\nI propose the following changes:\r\n[Page 29]\r\n- If SYN was set we assume that the other end crashed and has\r\n- attempted to open a new connection.  We respond by sending a\r\n- legal reset:\r\n+ If the SYN flag was set but the ACK was not set then we assume\r\n+ that the other end crashed and has attempted to open a new connection.\r\n+ We respond by sending a legal reset:\r\n\r\n[Page 30]\r\n- If neither RST, FIN, nor SYN flags were set it is assumed that\r\n- this packet is a duplicate of one already received.  Send an\r\n- ACK back:\r\n+ If neither RST nor FIN flags were set, or if SYN and ACK flags\r\n+ were set, it is assumed that this packet is a duplicate of one\r\n+ already received.  Send an ACK back:",
+    "submit_date": "2023-01-25",
+    "submitter_name": "Jules Maselbas",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
