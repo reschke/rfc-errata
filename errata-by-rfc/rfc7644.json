@@ -133,5 +133,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7322",
+    "doc-id": "RFC7644",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.4.2.2",
+    "orig_text": "    valFilter = attrExp / logExp / *1\"not\" \"(\" valFilter \")\"",
+    "correct_text": "    valFilter = attrExp / valLogExp / *1\"not\" \"(\" valFilter \")\"\r\n\r\n    valLogExp = valFilter SP (\"and\" / \"or\") SP valFilter",
+    "notes": "This is a correction to Errata 4690 for this RFC. Errata 4690 introduced the following `valLogExp`:\r\n\r\n    valLogExp = attrExp SP (\"and\" / \"or\") SP attrExp\r\n\r\nHowever, this fails to allow the following filter expression:\r\n\r\n    emails[type eq \"work\" or (type eq \"home\" and value ew \"@example.com\")]\r\n\r\nbecause 4690's `valLogExp`'s recursion into `attrExp` would not allow for the parenthetical expression. The fixed `valLogExp` correctly recurs back into `valFilter` to allow for an `attrExp`, or a joined `logExp`, or a parenthtical.\r\n\r\nWhile this example is not in the list of other exceptions in Section 3.4.2.2, the original use of `logExp` and the recurred `FILTER` would suggest that this example is within the original intent of the document.",
+    "submit_date": "2023-01-26",
+    "submitter_name": "James Linnell",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
