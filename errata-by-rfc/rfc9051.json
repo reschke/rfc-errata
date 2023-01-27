@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7323",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.4.4.4.",
+    "orig_text": "        S: B283 NO [BADCHARSET UTF-8] KOI8-R is not supported\r\n",
+    "correct_text": "        S: B283 NO [BADCHARSET (UTF-8)] KOI8-R is not supported\r\n",
+    "notes": "The BADCHARSET response code is described in 7.1 as \"Optionally followed by a parenthesized list of charsets\", and in the formal syntax as:\r\n\r\n   resp-text-code =/ \"BADCHARSET\" [SP \"(\" charset *(SP charset) \")\" ]\r\n\r\nAlthough a client's parser might use a generic resp-text-code (atom [SP 1*<any TEXT-CHAR except \"]\">]) as a fallback, the server should parenthesize even when only one charset is sent.",
+    "submit_date": "2023-01-26",
+    "submitter_name": "Nicholas Evans",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-01-26 16:50:01"
   }
 ]
