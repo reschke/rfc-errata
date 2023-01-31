@@ -62,7 +62,7 @@
   {
     "errata_id": "7324",
     "doc-id": "RFC8881",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.2.3",
     "orig_text": "   FH4_VOL_RENAME  The filehandle will expire during rename.  This\r\n      includes a rename by the requesting client or a rename by any\r\n      other client.  If FH4_VOL_ANY is set, FH4_VOL_RENAME is redundant.",
@@ -70,8 +70,8 @@
     "notes": "FH4_VOL_ANY is not defined in this document. It should be FH4_VOLATILE_ANY",
     "submit_date": "2023-01-29",
     "submitter_name": "YangJing",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-01-30 12:37:30"
   }
 ]
