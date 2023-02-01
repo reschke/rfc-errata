@@ -92,7 +92,7 @@
   {
     "errata_id": "7326",
     "doc-id": "RFC2231",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "7",
     "orig_text": "   other-sections := \"*\" (\"1\" / \"2\" / \"3\" / \"4\" / \"5\" /\r\n                          \"6\" / \"7\" / \"8\" / \"9\") *DIGIT)\r\n",
@@ -100,8 +100,8 @@
     "notes": "There is an extra parenthesis at the end of the other-section rule which does not have a matching start paren.  The intent of this rule is an asterisk followed by an integer without leading zeros.\r\n\r\nSuggested resolution: hold for document update",
     "submit_date": "2023-01-31",
     "submitter_name": "Joe Hildebrand",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-01-31 16:11:22"
   }
 ]
