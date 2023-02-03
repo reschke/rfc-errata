@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7327",
+    "doc-id": "RFC2779",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.10",
+    "orig_text": "5.1.10 A SHOULD be able to determine the status of A’s SUBSCRIPTION to B, at any time",
+    "correct_text": "5.1.10 B SHOULD be able to determine the status of A’s SUBSCRIPTION to B, at any time",
+    "notes": "Page 18, B1. B will be informed that A subscribed to B’s presence information, as long as A has not subscribed anonymously. Discussion: This essentially stands. However, B can also choose to determine A’s subscription after the fact. [Requirement 5.1.10]",
+    "submit_date": "2023-02-02",
+    "submitter_name": "Patrick Ni",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
