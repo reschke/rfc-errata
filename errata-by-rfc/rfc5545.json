@@ -523,5 +523,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7332",
+    "doc-id": "RFC5545",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3.9",
+    "orig_text": "The period start at 18:00:00 on January 1, 1997 and lasting 5\r\nhours and 30 minutes would be:\r\n\r\n19970101T180000Z/PT5H30M",
+    "correct_text": "The period start at 18:00:00 on January 1, 1997 and lasting 5\r\nhours and 30 minutes would be:\r\n\r\n19970101T180000/PT5H30M",
+    "notes": "I do not know if this is an editorial or technical issue.\r\n\r\nIf I understand the datetime value (Section 3.3.5) correct the last character should only be \"Z\" if the value is in UTC.\r\n\r\nIn the first example in section 3.3.9 UTC is explicitely mentioned but not in the second example.",
+    "submit_date": "2023-02-04",
+    "submitter_name": "Tobias Subklewe",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
