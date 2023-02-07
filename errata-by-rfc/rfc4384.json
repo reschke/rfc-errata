@@ -17,16 +17,16 @@
   {
     "errata_id": "4550",
     "doc-id": "RFC4384",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.1",
     "orig_text": "The chart at the bottom of 4.1:\r\n\r\n      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |      0x00     |      0x0008   |           0x2A7C              |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |      0x00     |      0x00     |           0x10F2              |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
     "correct_text": "      0                   1                   2                   3\r\n      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |      0x00     |      0x08     |           0x2A7C              |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n     |      0x00     |      0x00     |           0x10F2              |\r\n     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
-    "notes": "The second group has a hex value that looks like two octets: \"0x0008\". If I am interpreting the chart, extended community RFCs, and the extended community IANA registry correctly, the second group should be a single octet (i.e., \"0x08\").\r\n\r\nAlso, the same error is in the Section 4.2 chart.\r\n --VERIFIER NOTES-- \r\nThe    Transitive Two-Octet AS-Specific Extended Community Sub-Types registry specifies the low order byte as it notes:\r\n\r\nReference\r\n[RFC7153]\r\nNote\r\nThis registry contains values of the second octet (the \"Sub-Type\" \r\nfield) of an extended community when the value of the first \r\noctet (the \"Type\" field) is 0x00.\r\n\r\nso the diagram which includes both is correct but obviously somewhat hard to read since it contains both bytes. I think this proposed text ads little additional clarity.",
+    "notes": "The second group has a hex value that looks like two octets: \"0x0008\". If I am interpreting the chart, extended community RFCs, and the extended community IANA registry correctly, the second group should be a single octet (i.e., \"0x08\").\r\n\r\nAlso, the same error is in the Section 4.2 chart.\r\n\r\nWarren Kumari: I've marked this Verified, and retained the previous rejection note below for transparency.\r\n\r\nSee registry at: https://www.iana.org/assignments/bgp-extended-communities/bgp-extended-communities.xhtml#trans-two-octet-as for details, and also thread at: https://mailarchive.ietf.org/arch/msg/grow/p0NDCuSN8YfvVqG1mlyGv0b3-Ng/\r\n\r\n\r\n\r\n\r\n --PREVIOUS VERIFIER NOTES-- \r\nThe    Transitive Two-Octet AS-Specific Extended Community Sub-Types registry specifies the low order byte as it notes:\r\n\r\nReference\r\n[RFC7153]\r\nNote\r\nThis registry contains values of the second octet (the \"Sub-Type\" \r\nfield) of an extended community when the value of the first \r\noctet (the \"Type\" field) is 0x00.\r\n\r\nso the diagram which includes both is correct but obviously somewhat hard to read since it contains both bytes. I think this proposed text ads little additional clarity.",
     "submit_date": "2015-12-01",
     "submitter_name": "Warren Turkal",
-    "verifier_id": "2",
-    "verifier_name": "joel jaeggli",
-    "update_date": "2023-01-31 14:31:21"
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2023-02-06 06:51:06"
   }
 ]
