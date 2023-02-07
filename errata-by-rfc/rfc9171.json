@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7337",
+    "doc-id": "RFC9171",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "   ; Actual CBOR data embedded in a byte string, with optional tag to\r\n   indicate so.\r\n \r\n...\r\n \r\n   ; Extension block type, which does not specialize other than the\r\n   code/number\r\n\r\n...\r\n\r\n   payload-block = payload-block-structure .within canonical-block-\r\n   structure\r\n",
+    "correct_text": "   ; Actual CBOR data embedded in a byte string, with optional tag to\r\n   ; indicate so.\r\n\r\n... \r\n \r\n   ; Extension block type, which does not specialize other than the\r\n   ; code/number\r\n\r\n...\r\n\r\n   payload-block = payload-block-structure .within\r\n                   canonical-block-structure\r\n",
+    "notes": "Various line breaking events cause syntax errors while parsing Appendix B.",
+    "submit_date": "2023-02-06",
+    "submitter_name": "Carsten Bormann",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
