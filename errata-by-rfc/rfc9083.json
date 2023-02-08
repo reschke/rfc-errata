@@ -28,5 +28,20 @@
     "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2022-11-28 20:17:19"
+  },
+  {
+    "errata_id": "7340",
+    "doc-id": "RFC9083",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Appendix F",
+    "orig_text": "   *  Noted that all members of the \"events\" and \"Public IDs\" arrays are\r\n      REQUIRED.",
+    "correct_text": "   *  Noted which members of the \"events\" and \"Public IDs\" arrays are\r\n      REQUIRED.",
+    "notes": "According to the \"events\" array, not all members are REQUIRED.",
+    "submit_date": "2023-02-07",
+    "submitter_name": "Rudi Floren",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
