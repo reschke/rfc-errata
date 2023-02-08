@@ -17,17 +17,17 @@
   {
     "errata_id": "5083",
     "doc-id": "RFC6275",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "GLOBAL",
     "orig_text": null,
     "correct_text": null,
-    "notes": "Section 7.2 of RFC6275 introduces a new flag, called the R bit. This seems to update RFC 4861 section 4.6.2. However, there is no mention in RFC6275 or in RFC4861 that this happened.",
+    "notes": "Section 7.2 of RFC6275 introduces a new flag, called the R bit. This seems to update RFC 4861 section 4.6.2. However, there is no mention in RFC6275 or in RFC4861 that this happened.\r\n\r\n--- Notes ---\r\n\r\nThanks for (ahem) flagging this.\r\n\r\nRFC 8425 was produced to create an IANA registry of PIO flags and formally update RFC 4861.",
     "submit_date": "2017-08-10",
     "submitter_name": "Mikael Abrahamsson",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2023-02-07 21:43:36"
   },
   {
     "errata_id": "5695",
