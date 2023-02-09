@@ -17,7 +17,7 @@
   {
     "errata_id": "7239",
     "doc-id": "RFC8182",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.2",
     "orig_text": "Certificate Authorities that use RRDP MUST include an instance of an\r\nSIA AccessDescription extension in resource certificates they\r\nproduce, in addition to the ones defined in [RFC6487]:",
@@ -25,8 +25,8 @@
     "notes": "Between draft-ietf-sidr-delta-protocol-04 and draft-ietf-sidr-delta-protocol-05 a bit of text was removed (perhaps because it was considered redundant). But, unfortunately that snippet helped establish important context as to what types of certificates are expected to contain the id-ad-rpkiNotify accessMethod inside the Subject Information Access extension. The text that was removed:\r\n\r\n\"\"\"\r\nRelying Parties that do not support this delta protocol MUST MUST NOT\r\nreject a CA certificate merely because it has an SIA extension\r\ncontaining this new kind of AccessDescription.\r\n\"\"\"\r\n\r\nFrom the removed text is is clear that id-ad-rpkiNotify was only expected to show up on CA certificates. However, without the above text, Section 3.2 of RFC 8182 is somewhat ambiguous whether 'resource certificates' is inclusive of EE certificates or not.\r\n\r\nRFC 6487 Section 4.8.8.2 sets expectations that only id-ad-signedObject is expected to show up in the SIA of EE certificates \"Other AccessMethods MUST NOT be used for an EE certificates's SIA.\"\r\n\r\nThe ambiguity in RFC8182 led to one RIR including id-ad-rpkiNotify in the SIA of the EE certificate of all signed objects they produce (such as ROAs). The RIR indicated they'll work to remove id-ad-rpkiNotify from all EE certificates their CA implementation produces.\r\n\r\nIt should be noted that the presence of id-ad-rpkiNotify in EE certificates is superfluous; Relying Parties can't use the rpkiNotify accessMethod in EE certificates for any purpose in the validation decision tree.\r\n\r\n(Verifying this Errata does not block a future transition from rsync to https; as RFC6487 Section 4.8.8.2 leaves room for additional instances of id-ad-signedObject with non-rsync URIs)",
     "submit_date": "2022-11-04",
     "submitter_name": "Job Snijders",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2023-02-08 09:31:43"
   }
 ]
