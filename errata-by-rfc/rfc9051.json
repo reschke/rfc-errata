@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2023-01-26 16:50:01"
+  },
+  {
+    "errata_id": "7343",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "resp-cond-auth  = (\"OK\" / \"PREAUTH\") SP resp-text\r\n                    ; Authentication condition\r\n\r\nresp-cond-bye   = \"BYE\" SP resp-text\r\n\r\nresp-cond-state = (\"OK\" / \"NO\" / \"BAD\") SP resp-text\r\n                    ; Status condition\r\n\r\n...\r\n\r\nresp-text       = [\"[\" resp-text-code \"]\" SP] [text]\r\n\r\n",
+    "correct_text": "resp-cond-auth  = (\"OK\" / \"PREAUTH\") [SP resp-text]\r\n                    ; Authentication condition\r\n                    ;\r\n                    ; Servers SHOULD send the trailing SP when resp-text\r\n                    ; is empty.\r\n                    \r\n\r\nresp-cond-bye   = \"BYE\" [SP resp-text]\r\n                    ; Servers SHOULD send the trailing SP when resp-text\r\n                    ; is empty.\r\n\r\nresp-cond-state = (\"OK\" / \"NO\" / \"BAD\") [SP resp-text]\r\n                    ; Status condition\r\n                    ;\r\n                    ; Servers SHOULD send the trailing SP when resp-text\r\n                    ; is empty.\r\n\r\n...\r\n\r\n\r\nresp-text       = \"[\" resp-text-code \"]\" [SP [text]] / [text]\r\n                    ; Servers SHOULD send then trailing SP when\r\n                    ; resp-text-code is present but text is empty.",
+    "notes": "Appendix E, Changes from RFC 3501 / IMAP4rev1, item 23 states that \"resp-text ABNF non-terminal was updated to allow for empty text.\"\r\n\r\nIn the spirit of Appendix E. 23, resp-text should allow \"[\" resp-text-code \"]\" without a trailing SP.  Similarly, resp-cond-auth, resp-cond-bye, and resp-cond-state should also allow the trailing SP to be dropped when resp-text is empty.  In all of these cases, the missing SP does not change the semantics of the response, so clients should not require it to be present.  However, for compatibility with clients that strictly adhere to the formal syntax as-is, servers should conservatively send the trailing SP even when text or resp-text is empty.\r\n\r\nThis aligns with existing practice, as some existing IMAP4rev1 servers already fail to send these trailing spaces, and some liberal clients already allow them to be missing.",
+    "submit_date": "2023-02-13",
+    "submitter_name": "Nicholas Evans",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
