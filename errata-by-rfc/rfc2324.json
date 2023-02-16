@@ -88,5 +88,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7354",
+    "doc-id": "RFC2324",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6",
+    "orig_text": "   The traditional technique [CAM] was to attach a frame-grabber to a\r\n   video camera, and feed the images to a web server. This was an\r\n   appropriate application of ATM networks. In this coffee pot\r\n   installation, the Trojan Room of Cambridge University laboratories\r\n   was used to give a web interface to monitor a common coffee pot.  of\r\n   us involved in related research and, being poor, impoverished\r\n   academics, we only had one coffee filter machine between us, which\r\n   lived in the corridor just outside the Trojan Room. However, being\r\n   highly dedicated and hard-working academics, we got through a lot of\r\n   coffee, and when a fresh pot was brewed, it often didn't last long.",
+    "correct_text": "   The traditional technique [CAM] was to attach a frame-grabber to a\r\n   video camera, and feed the images to a web server. This was an\r\n   appropriate application of ATM networks. In this coffee pot\r\n   installation, the Trojan Room of Cambridge University laboratories\r\n   was used to give a web interface to monitor a common coffee pot.  Of\r\n   us involved in related research and, being poor, impoverished\r\n   academics, we only had one coffee filter machine between us, which\r\n   lived in the corridor just outside the Trojan Room. However, being\r\n   highly dedicated and hard-working academics, we got through a lot of\r\n   coffee, and when a fresh pot was brewed, it often didn't last long.",
+    "notes": "Correct lowercase letter at start of sentence",
+    "submit_date": "2023-02-15",
+    "submitter_name": "Drew DeVault",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-02-15 14:20:08"
   }
 ]
