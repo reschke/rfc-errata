@@ -1,17 +1,1 @@
-[
-  {
-    "errata_id": "7336",
-    "doc-id": "RFC9115",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "Appendix A",
-    "orig_text": "   oid = text .regexp \"([0-2])((\\.0)|(\\.[1-9][0-9]*))*\"\r\n",
-    "correct_text": "   oid = text .regexp \"([0-2])((\\\\.0)|(\\\\.[1-9][0-9]*))*\"\r\n",
-    "notes": "Backslashes need to be doubled in CDDL strings (as they are done in Appendix B).\r\n\r\nAn alternative fix would be to replace \\\\. by [.]\r\n\r\nNote that the equivalent fix is not required for\r\n\r\n   regtext = text .regexp \"([^\\*].*)|([\\*][^\\*].*)|([\\*][\\*].+)\"\r\n\r\nas the fact that the single backslashes have no effect is irrelevant here — the backslashes are not needed in the character classes [...].\r\nAs an editorial enhancement, the backslashes could be entirely removed from this line.",
-    "submit_date": "2023-02-06",
-    "submitter_name": "Carsten Bormann",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
-  }
-]
+[]
