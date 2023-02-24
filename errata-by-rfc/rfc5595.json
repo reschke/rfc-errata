@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1891,
+    "errata_id": "1891",
     "doc-id": "RFC5595",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,37 +10,37 @@
     "notes": "Simply trying the full example shows that the statement is not\r\nentirely correct.  The quoted formula reveals that only the least\r\nsignificant *3* bits are left unchanged (due to the '<<3'\r\noperation on sc[2]).  It turns out that ranges of *8* contiguous\r\nSC values are mapped to contiguous 8 port numbers but, depending\r\non the two least significant bits of sc[2], groups of 4 adjacent\r\nranges are shuffled around.  More complicated patterns arise for\r\nthe next higher level of 4-clusters of range-groups, etc.\r\nThus, the situation is not hopeless for the indicated purpose,\r\nbut much more complicated than indicated in the RFC text.\r\n\r\nI leave it as an exercise to the interested reader to figure\r\nout the details for the size of range she is interested in.\r\n\r\nA future revision of the RFC however should fix the text.",
     "submit_date": "2009-09-22",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3815,
+    "errata_id": "3815",
     "doc-id": "RFC5595",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2.2,
+    "section": "2.2",
     "orig_text": "All standards assigned Service Codes, including\r\nall values assigned by IANA, are required to use a value that may be\r\nrepresented using a subset of the ASCII character set.\r\n",
     "correct_text": "Requests for a Service Code in the IANA Considerations section of a\r\nStandards-Track specification are to be assigned from the\r\nSpecifications-Required portion of the Service Code registry.\r\nThese assignments are required to use a value that may be\r\nrepresented using a subset of the ASCII character set (see section 5).\r\n",
     "notes": "RFC 5595 did not clearly specify the intended update to RFC 4340. An update is also required to section 10.3.1 to be consistent.",
     "submit_date": "2013-11-29",
     "submitter_name": "Gorry Fairhurst",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3816,
+    "errata_id": "3816",
     "doc-id": "RFC5595",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "This document does not update the IANA allocation procedures for the\r\nDCCP Port Number and DCCP Service Codes Registries as defined in RFC\r\n4340.\r\n",
     "correct_text": "This document does not update the IANA allocation procedures for the\r\nDCCP Port Number Registry as defined in RFC 4340. Section 2.2 of\r\nthis document updated the IANA allocation procedures for the DCCP\r\nService Codes Registry by requiring Service Code assignments\r\nby a Standards-Track specification to be assigned from the\r\nSpecifications-Required portion of the Service Code registry.\r\n",
     "notes": "RFC 5595 did not clearly specify the intended update to RFC 4340.  An update is also\r\nrequired to section 10.3.1 to be consistent in RFC 6335.",
     "submit_date": "2013-11-29",
     "submitter_name": "Gorry Fairhurst",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }

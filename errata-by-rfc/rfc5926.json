@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5267,
+    "errata_id": "5267",
     "doc-id": "RFC5926",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "This section states that \"Both of these KDFs are based on the iteration-mode KDFs specified in [NIST-SP800-108].\", which is later clarified to be the \"counter mode\" KDF defined in that document. The definition of the \"Label\" input to the KDF in the original text is not clear.\r\n\r\n[NIST-SP800-108] specifies that a 0x00 octet should follow the Label. This 0x00 octet is important when the KDF does not have control over the Context given it, which is the case here -- RFC 5926 depends on the definition in RFC 5925. RFC 5925 currently declares two fixed-size inputs for the Context (See Figures 7 & 8 of RFC 5925), so the Context length differs. Also, RFC 5925 RFC could be updated over over time to include other Contexts that are variable sized. The risk of excluding 0x00 is enabling an attacker to choose a specially-crafted Context that violates the clean separation between the Label and Context arguments. Therefore, it is important to include the 0x00 octet for TCP-AO.\r\n\r\nI believe this 0x00 is implied in the specification of the string \"TCP-AO\", since conventionally many string definitions include a trailing 0x00 octet, The text should state that the 0x00 octet is present as part of the string.\r\n\r\nIf this errata does not result in adding the 0x00 octet, then its omission needs to be justified.\n --VERIFIER NOTES-- \nNIST-SP800-108 does not require the use of 0x00. It only requires that the length and order of each field be defined unambiguously. The method of providing that length unambiguously to the KDF algorithm is an implementation issue.",
     "submit_date": "2018-02-26",
     "submitter_name": "Brian Weis",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6413,
+    "errata_id": "6413",
     "doc-id": "RFC5926",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "In Input, \"len\" is described as (length of \"M' in octets), but there is no \"M\" in the input, but it is supposed to mention the length of the Input Data \"I\", so it should be (length of \"I\" in octets)",
     "submit_date": "2021-01-28",
     "submitter_name": "Ananth Rajadurai",
-    "verifier_id": 167,
+    "verifier_id": "167",
     "verifier_name": "Martin Duke",
     "update_date": "2021-02-02 13:33:31"
   }

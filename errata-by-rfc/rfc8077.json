@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5243,
+    "errata_id": "5243",
     "doc-id": "RFC8077",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 6.1,
+    "section": "6.1",
     "orig_text": "-  Group ID\r\n\r\n      An arbitrary 32-bit value that represents a group of PWs that is\r\n      used to create groups in the PW space.  The Group ID is intended\r\n      to be used as a port index or a virtual tunnel index.  To simplify\r\n      configuration, a particular PW Group ID at ingress could be part\r\n      of a Group ID assigned to the virtual tunnel for transport to the\r\n      egress router.  The Group ID is very useful for sending wildcard\r\n      label withdrawals or PW wildcard status Notification messages to\r\n      remote PEs upon physical port failure.",
     "correct_text": "-  Group ID\r\n \r\n      An arbitrary 32-bit value that represents a group of PWs that is\r\n      used to create groups in the PW space.  The Group ID is intended\r\n      to be used as a port index or a virtual tunnel index.  To simplify\r\n      configuration, a particular PW Group ID at ingress could be part\r\n      of a Group ID assigned to the virtual tunnel for transport to the\r\n      egress router.  The Group ID is very useful for sending wildcard\r\n      label withdrawals or PW wildcard status Notification messages to\r\n      remote PEs upon physical port failure or transport tunnel failure.\r\n\r\n",
     "notes": "The PW group can be created on basis of the transport tunnel index.\r\n\r\nSo  Group Id can be used to send PW wildcard status notification to remote PEs on physical port failure or Transport tunnel failure.\n --VERIFIER NOTES-- \nBased on input from the Chair and pals wg members, I have rejected this errata. This sentence is not a normative sentence, it is an example. There are no interoperability concerns with the current text.",
     "submit_date": "2018-01-25",
     "submitter_name": "JAYANT BHARDWAJ",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4054,
+    "errata_id": "4054",
     "doc-id": "RFC4084",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "The provider may impose a filtering Web proxy on the \r\nconnections; that proxy may change and redirect URLs \r\nto other sites than the one originally specified by the \r\nuser or embedded link.",
     "correct_text": "The provider may require a HTTP proxy to be used.",
     "notes": "RFC7230 Section 2 defines a Web proxy as being nominated by the client, not the network operator; operator-imposed proxies (so-called \"interception\" proxies) are not legitimate in HTTP, even if they are not uncommon.\r\n\r\nFurthermore, RFC7230 section 5.7.2 defines the constraints on the transformations HTTP proxies can make, not this document.\n --VERIFIER NOTES-- \n   the original is not wrong in the sense that it's historically appropriate. We should consider revising this document but lodging this as erratum doesn't change the intention of the original text.",
     "submit_date": "2014-07-17",
     "submitter_name": "Mark Nottingham",
-    "verifier_id": 135,
+    "verifier_id": "135",
     "verifier_name": "joel jaeggli",
     "update_date": "2019-09-10 09:09:03"
   }

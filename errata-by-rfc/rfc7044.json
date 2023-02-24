@@ -1,36 +1,36 @@
 [
   {
-    "errata_id": 4181,
+    "errata_id": "4181",
     "doc-id": "RFC7044",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 9.3,
+    "section": "9.3",
     "orig_text": "9.3. Receiving a Response with History-Info or Request Timeouts",
     "correct_text": "9.3. Receiving a Response or Request times out",
     "notes": "The title of section 9.3 is misleading in the sense that it suggests that it only applies to responses that contain the History-Info header. This is not correct, it applies to all responses when the RFC7044 applies.\n --VERIFIER NOTES-- \n   This errata indicates an editorial preference rather than an error.",
     "submit_date": "2014-11-14",
     "submitter_name": "Hans Erik van Elburg",
-    "verifier_id": 139,
+    "verifier_id": "139",
     "verifier_name": "Alissa Cooper",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4345,
+    "errata_id": "4345",
     "doc-id": "RFC7044",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 6.2,
+    "section": "6.2",
     "orig_text": "6.2.  User Agent Server (UAS) Behavior\r\n\r\n   When receiving a request, a UAS MUST follow the procedures defined in\r\n   Section 9.2.",
     "correct_text": "6.2.  User Agent Server (UAS) Behavior\r\n\r\n   When receiving a request, a UAS MUST follow the procedures defined in\r\n   Section 9.1.",
     "notes": "In fact, the subject of 9.2 is \"Sending a Request with History-Info\", according to the original text, it wants to refer to how to handle a received request in UAS, the right reference shall be section 9.1 (9.1.  Receiving a Request).",
     "submit_date": "2015-04-22",
     "submitter_name": "chao wang",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5012,
+    "errata_id": "5012",
     "doc-id": "RFC7044",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "\"If there is not a Privacy header\" is not a correct sentence. We have to use  \"If there is no Privacy header\"\n --VERIFIER NOTES-- \n   Either usage is acceptable.",
     "submit_date": "2017-05-10",
     "submitter_name": "Dinoop Paloli",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5014,
+    "errata_id": "5014",
     "doc-id": "RFC7044",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "Ambiguity exists regarding the handling of missing history info entry\r\n\r\nSection 9.1 says,\r\n\tIf the Request-URI of the incoming request does not match the hi\r\n   -targeted-to-uri in the last hi-entry (i.e., the previous SIP entity\r\n   that sent the request did not include a History-Info header field),\r\n   the SIP entity MUST add an hi-entry to the end of the cache on\r\n   behalf of the previous SIP entity\r\n  \r\n\tAccording to that, for example, if request is received with,\r\n\tRequest URI : sip:peter@example.com\r\n\tand History info :  <sip:bob@example.com>;index=1\r\n\t\t\t\t\t\t<sip:alice@example>;index=1.1\r\n\t\t\t\t\t\t<sip:jain@example>;index=1.1.1\r\n\t\t\t\t\t\t<sip:dave@example>;index=1.1.2\r\n\r\n\tThen processing entity has to add an history info in to cache on behalf of previous entity as,\r\n\tHistory info : <sip:bob@example.com>;index=1\r\n               <sip:alice@example>;index=1.1\r\n\t\t\t   <sip:jain@example>;index=1.1.1\r\n\t\t\t   <sip:dave@example>;index=1.1.2\r\n\t\t\t   <sip:peter@example.com>;index=1.1.2.1\r\n\t\t\t   \r\nBut in section 10.3 basic rules 6 states,\r\n\t\tIf the request clearly has a gap in the hi-entry\r\n       (i.e., the last hi-entry and Request-URI differ), the entity\r\n       adding an hi-entry MUST add a single index with a value of \"0\"\r\n       (i.e., the non negative integer zero) prior to adding the\r\n       appropriate index for the action to be taken. For example, if\r\n       the index of the last hi-entry in the request received was 1.1.2\r\n       and there was a missing hi-entry and the request was being\r\n       forwarded to the next hop, the resulting index will be 1.1.2.0.1.\r\n\t   \r\n\t   But as per 9.1 stated above, once an entity receive a request with missing history info\r\n\t\tit has to add an entry to cache on behalf of previous one.\r\n\t\tSo referring the previous example the added index would be 1.1.2.1\r\n\t\tAnd by applying the rule in 10.3, the index for the new request created by this entity would be 1.1.2.1.0.1 not 1.1.2.0.1",
     "submit_date": "2017-05-10",
     "submitter_name": "Dinoop Paloli",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5442,
+    "errata_id": "5442",
     "doc-id": "RFC7044",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -70,7 +70,7 @@
     "notes": "I see we have several places using \"100\" or \"non-100\". I think the correct one should be \"18x\" or \"non-18x\".\r\nOr, we can use \"1xx\" or \"non-1xx\".\r\n\r\n100 means \"100 Tring\", it's not accurate.",
     "submit_date": "2018-07-27",
     "submitter_name": "Ted Zhou",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

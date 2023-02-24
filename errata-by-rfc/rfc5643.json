@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2789,
+    "errata_id": "2789",
     "doc-id": "RFC5643",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5,
+    "section": "5",
     "orig_text": "ospfv3VirtNbrEvents OBJECT-TYPE\r\nSYNTAX Counter32\r\nMAX-ACCESS read-only\r\nSTATUS current\r\nDESCRIPTION\r\n\"The number of times this virtual link has\r\nchanged its state or an error has occurred.\r\nDiscontinuities in the value of this counter\r\ncan occur at re-initialization of the management\r\nsystem and at other times as indicated by the\r\nvalue of ospfv3DiscontinuityTime.\"\r\n::= { ospfv3VirtNbrEntry 9 }",
     "correct_text": "ospfv3VirtNbrEvents OBJECT-TYPE\r\nSYNTAX Counter32\r\nMAX-ACCESS read-only\r\nSTATUS current\r\nDESCRIPTION\r\n\"The number of times this virtual neighbor has\r\nchanged its state or an error has occurred.\r\nDiscontinuities in the value of this counter\r\ncan occur at re-initialization of the management\r\nsystem and at other times as indicated by the\r\nvalue of ospfv3DiscontinuityTime.\"\r\n::= { ospfv3VirtNbrEntry 9 }",
     "notes": null,
     "submit_date": "2011-04-25",
     "submitter_name": "Vladica Stanisic",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }

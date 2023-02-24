@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4537,
+    "errata_id": "4537",
     "doc-id": "RFC5917",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The first paragraph in the section references RFC 5912. As far as I can see, it should really reference RFC 5913 (Clearance Attribute and Authority Clearance Constraints - Certificate Extension).",
     "submit_date": "2015-11-18",
     "submitter_name": "Lars Wilhelmsen",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4558,
+    "errata_id": "4558",
     "doc-id": "RFC5917",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Missing \"FROM\" in import statement.\n --VERIFIER NOTES-- \n   While the FROM is indeed missing, there is another error in this text that was reported in eid5883; since that report fully supersedes this one, this errata report is redundant.  \"Rejected\" is the least bad state in which to leave such a report.",
     "submit_date": "2015-12-07",
     "submitter_name": "Lars Wilhelmsen",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-10-25 22:47:33"
   },
   {
-    "errata_id": 5883,
+    "errata_id": "5883",
     "doc-id": "RFC5917",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "As already reported in eid4558, the \"FROM\" is missing.  In addition, \"-mod\" is missing from the text portion of the object identifier.",
     "submit_date": "2019-10-25",
     "submitter_name": "Russ Housley",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-10-25 22:44:30"
   },
   {
-    "errata_id": 5884,
+    "errata_id": "5884",
     "doc-id": "RFC5917",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "The DirectoryString that is imported from RFC 5912 uses a different capitalization for \"uTF8String\".  They need to be the same for the ASN.1 module to compile properly.",
     "submit_date": "2019-10-25",
     "submitter_name": "Russ Housley",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-10-25 22:39:01"
   }

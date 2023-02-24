@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7338",
+    "doc-id": "RFC9338",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "           context : \"CounterSignature\" / \"CounterSignature0\" /\r\n                     \"CounterSignatureV2\" / \"CounterSignature0V2\" /,\r\n",
+    "correct_text": "           context : \"CounterSignature\" / \"CounterSignature0\" /\r\n                     \"CounterSignatureV2\" / \"CounterSignature0V2\",\r\n",
+    "notes": "A spurious slash (choice operator) causes a parsing error and needs to be removed before using the CDDL.",
+    "submit_date": "2023-02-06",
+    "submitter_name": "Carsten Bormann",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

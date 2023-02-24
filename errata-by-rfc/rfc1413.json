@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 548,
+    "errata_id": "548",
     "doc-id": "RFC1413",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 6,
+    "section": "6",
     "orig_text": "   3)   The 512 character limit on user IDs and the 64\r\n        character limit on tokens should be understood to mean\r\n        as follows: a) No new token (i.e., OPSYS or ERROR-TYPE)\r\n        token will be defined that has a length greater than 64",
     "correct_text": "   3)   The 512 character limit on user IDs and the 64\r\n        character limit on tokens should be understood to mean\r\n        as follows: a) No new token (i.e., OPSYS or ERROR-TYPE)\r\n        will be defined that has a length greater than 64",
     "notes": "",
     "submit_date": "2004-08-17",
     "submitter_name": "Tymon Rzes'niowiecki",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

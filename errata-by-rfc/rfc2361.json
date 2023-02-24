@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1255,
+    "errata_id": "1255",
     "doc-id": "RFC2361",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": "99In Appendix A, it says:",
+    "section": "In Appendix A, it says:",
     "orig_text": "  A.104   DVM",
     "correct_text": "  A.104   AC3 DVM",
     "notes": "Change to match the change being made to the IANA registry. This corrects the name so that when people search for the codepoint for the AC3 codec, they find this (which is the commonly used code point for AC3 instead of code point 0x0092)",
     "submit_date": "2008-01-11",
     "submitter_name": "Cullen Jennings",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5122,
+    "errata_id": "5122",
     "doc-id": "RFC2361",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The registration number can be no more than four hexadecimal places (i.e. two bytes) long, according to WAVE format specifications.",
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5123,
+    "errata_id": "5123",
     "doc-id": "RFC2361",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": null,
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5124,
+    "errata_id": "5124",
     "doc-id": "RFC2361",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": null,
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5125,
+    "errata_id": "5125",
     "doc-id": "RFC2361",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": null,
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5126,
+    "errata_id": "5126",
     "doc-id": "RFC2361",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -85,7 +85,7 @@
     "notes": "Codec 1401 has an ID of \"WAVE_FORMAT_ISIAUDIO_2\" according to \"mmreg.h\", from which it presumably derives. \"WAVE_FORMAT_ISIAUDIO\" is already the ID of codec 88, which appears earlier in the appendix.",
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

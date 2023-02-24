@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4132,
+    "errata_id": "4132",
     "doc-id": "RFC7386",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "define MergePatch(Target, Patch):\r\n       if Patch is an Object:\r\n         if Target is not an Object:\r\n       Target = {} # Ignore the contents and set it to an empty Object\r\n         for each Name/Value pair in Patch:\r\n       if Value is null:\r\n         if Name exists in Target:\r\n           remove the Name/Value pair from Target\r\n       else:\r\n         Target[Name] = MergePatch(Target[Name], Value)\r\n         return Target\r\n       else:\r\n         return Patch",
     "correct_text": "   define MergePatch(Target, Patch):\r\n     if Patch is an Object:\r\n       if Target is not an Object:\r\n         Target = {} # Ignore the contents and set it to an empty Object\r\n       for each Name/Value pair in Patch:\r\n         if Value is null:\r\n           if Name exists in Target:\r\n             remove the Name/Value pair from Target\r\n         else:\r\n           Target[Name] = MergePatch(Target[Name], Value)\r\n       return Target\r\n     else:\r\n       return Patch",
     "notes": "Indentation of the pseudo-code example was correct in the Internet-Drafts but was messed up in the final version. For instance, \"Target = {}\" should be under the two ifs. (Reported by James H. Manger on the appsawg mailing list.)\r\n\r\nThis is a technical erratum, rather than editorial, because the correct indentation is essential to understanding the pseudocode.",
     "submit_date": "2014-10-15",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

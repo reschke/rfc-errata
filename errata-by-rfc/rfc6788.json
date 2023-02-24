@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 7077,
+    "errata_id": "7077",
     "doc-id": "RFC6788",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6.2,
+    "section": "6.2",
     "orig_text": "The link-layer destination address of the outer IPv6 datagram containing the outer IPv6 datagram MUST be resolved using regular Neighbor Discovery procedures.",
     "correct_text": "The link-layer destination address of the outer IPv6 datagram MUST be resolved using regular Neighbor Discovery procedures.",
     "notes": "The corrected text removes the text duplication with is technically incorrect. The text may also be fixed as:\r\n\r\nThe link-layer destination address of the outer IPv6 datagram containing the tunneled Router Advertisement MUST be resolved using regular Neighbor Discovery procedures.",
     "submit_date": "2022-08-09",
     "submitter_name": "Fernando Gont",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2022-08-09 13:18:55"
   }

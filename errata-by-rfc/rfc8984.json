@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6872,
+    "errata_id": "6872",
     "doc-id": "RFC8984",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Adds the excluded, excludedRecurrenceRules, recurrenceId, recurrenceIdTimeZone and recurrenceRules properties to the list of shared properties of private events.\r\n \r\nOnly the combination of all recurrence properties allows to generate the full recurrence set for the event.\r\n \r\nOmitting the properties was an oversight during the initial publication of this RFC.",
     "submit_date": "2022-03-07",
     "submitter_name": "Robert Stepanek",
-    "verifier_id": 170,
+    "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2022-03-20 06:07:39"
   },
   {
-    "errata_id": 6873,
+    "errata_id": "6873",
     "doc-id": "RFC8984",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "A recurrence instance may be in floating time, in which case the value of the \"recurrenceIdTimeZone\" property is null. As null is the default value of the \"recurrenceIdTimeZone\" property, it is NOT required to be set if \"recurrenceId\" is set.",
     "submit_date": "2022-03-07",
     "submitter_name": "Robert Stepanek",
-    "verifier_id": 170,
+    "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2022-03-20 08:51:57"
   }

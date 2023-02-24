@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2995,
+    "errata_id": "2995",
     "doc-id": "RFC5628",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "   If the notifier includes the <temp-gruu> element, it MUST populate\r\n   the element with the most recently assigned temporary GRUU that is\r\n   associated with the instance ID and AOR of the registered contact.\r\n   It MUST also populate the element with a \"cseq\" attribute\r\n   corresponding to the first (oldest) currently active temporary GRUU\r\n   that is associated with the instance ID and AOR of the registered\r\n   contact.  The value of the \"cseq\" attribute is set to the value of\r\n   the CSeq header field of the REGISTER request that caused that first\r\n   temporary GRUU to be assigned.\r\n",
     "correct_text": "   If the notifier includes the <temp-gruu> element, it MUST populate\r\n   the element with the most recently assigned temporary GRUU that is\r\n   associated with the instance ID and AOR of the registered contact.\r\n   It MUST also populate the element with a \"first-cseq\" attribute\r\n   corresponding to the first (oldest) currently active temporary GRUU\r\n   that is associated with the instance ID and AOR of the registered\r\n   contact.  The value of the \"first-cseq\" attribute is set to the value of\r\n   the CSeq header field of the REGISTER request that caused that first\r\n   temporary GRUU to be assigned.\r\n",
     "notes": "This replaces '\"cseq\" attribute' with '\"first-cseq\" attribute.\r\nThis is almost a typo, since there is no \"cseq\" attribute of <temp-gruu>.\r\nFollowing the text as written would yield an invalid xml document.\r\n\r\nThis was reported to me by Ivo Sedlacek:\r\nhttp://www.ietf.org/mail-archive/web/sipcore/current/msg04282.html",
     "submit_date": "2011-10-13",
     "submitter_name": "Paul Kyzivat",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

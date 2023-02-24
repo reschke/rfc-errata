@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6313,
+    "errata_id": "6313",
     "doc-id": "RFC6512",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "\"no root to PE2\" does not parse and looks as a typo. \r\nAnd it is quite clear from the context that \"no route to PE2\" is intended.",
     "submit_date": "2020-10-20",
     "submitter_name": "Alexander Vainshtein",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2021-02-26 14:09:27"
   },
   {
-    "errata_id": 6754,
+    "errata_id": "6754",
     "doc-id": "RFC6512",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "\"PE1 also has this route\" refers to \"Although ASBR1 does not have a route to PE2, it does have a BGP Intra-AS Inclusive PMSI (I-PMSI) auto-discovery (A-D) route\". Intra-AS mechanisms are used for auto-discovery/binding for Non-Segmented Inter-AS Tunnels.",
     "submit_date": "2021-11-25",
     "submitter_name": "Bert Van Ael",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

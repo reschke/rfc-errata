@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 5335,
+    "errata_id": "5335",
     "doc-id": "RFC6750",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "b64token",
     "correct_text": "token68",
     "notes": "Usage of b64token is confusing. Definition is self explanatory but could be easily confused with Base64.\r\n\r\nRFC7235 defines token68. Following some old RFC draft discussions (http://w3-org.9356.n7.nabble.com/p7-rename-b64token-to-token68-to-avoid-misunderstandings-td108256.html) I found that b64token was renamed to token68.\r\n\r\nI believe it's appropriate to use naming of token68 (instead of b64token) in RFC6750. So that it is less confusing as well as refers to an existing standard.",
     "submit_date": "2018-04-26",
     "submitter_name": "Kavindu Dodanduwa",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6161,
+    "errata_id": "6161",
     "doc-id": "RFC6750",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "4.  Example Access Token Response\r\n\r\n   Typically, a bearer token is returned to the client as part of an\r\n   OAuth 2.0 [RFC6749] access token response.  An example of such a\r\n   response is:\r\n\r\n     HTTP/1.1 200 OK\r\n     Content-Type: application/json;charset=UTF-8",
     "correct_text": "4.  Example Access Token Response\r\n\r\n   Typically, a bearer token is returned to the client as part of an\r\n   OAuth 2.0 [RFC6749] access token response.  An example of such a\r\n   response is:\r\n\r\n     HTTP/1.1 200 OK\r\n     Content-Type: application/json",
     "notes": "The IANA registration (see https://tools.ietf.org/html/rfc8259#section-11) does not support any parameters for the `application/json` media type. The `charset=UTF-8` parameter used in the example is therefore non-compliant and ought to be omitted.",
     "submit_date": "2020-05-08",
     "submitter_name": "Herbert Valerio Riedel",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

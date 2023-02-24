@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1977,
+    "errata_id": "1977",
     "doc-id": "RFC3471",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "Another basic difference between traditional and non-PSC types of\r\ngeneralized MPLS LSPs, is that bandwidth allocation for an LSP can be\r\nperformed only in discrete units, see Section 3.1.3. ",
     "correct_text": "Another basic difference between traditional and non-PSC types of\r\ngeneralized MPLS LSPs, is that bandwidth allocation for an LSP can be\r\nperformed only in discrete units, see Section 3.1.2. ",
     "notes": "Fix to point to correct section number.",
     "submit_date": "2009-12-24",
     "submitter_name": "Zongpeng Du",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

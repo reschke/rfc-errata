@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4857,
+    "errata_id": "4857",
     "doc-id": "RFC6181",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5,
+    "section": "5",
     "orig_text": "The\r\n   attacker can do that by pretending that the path between IPA and IPT\r\n   is congested but that the path between IPS and IPT is not.",
     "correct_text": "The\r\n   attacker can do that by pretending that the path between IPA and IPS\r\n   is congested but that the path between IPS and IPT is not.",
     "notes": "The attacker wants to pretend that the path between IPA and the Source is congested. There is no relevant path between IPA and IPT which has to be congested.",
     "submit_date": "2016-11-09",
     "submitter_name": "Tobias Seel",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2020-03-04 02:46:33"
   }

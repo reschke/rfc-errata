@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4990,
+    "errata_id": "4990",
     "doc-id": "RFC7348",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5,
+    "section": "5",
     "orig_text": "Outer IPv4 Header:\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |Version|  IHL  |Type of Service|          Total Length         |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |         Identification        |Flags|      Fragment Offset    |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Time to Live |Protocl=17(UDP)|   Header Checksum             |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |                       Outer Source IPv4 Address               |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |                   Outer Destination IPv4 Address              |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
     "correct_text": "Outer IPv4 Header:\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |Version|  IHL  |Type of Service|          Total Length         |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |         Identification        |Flags|      Fragment Offset    |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Time to Live |Protocol=17(UDP)|   Header Checksum             |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |                       Outer Source IPv4 Address               |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |                   Outer Destination IPv4 Address              |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
     "notes": "Minor spelling mistake while writing \"procotol\"",
     "submit_date": "2017-04-06",
     "submitter_name": "Kaustubh Kelkar",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }

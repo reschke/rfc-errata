@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3002,
+    "errata_id": "3002",
     "doc-id": "RFC6325",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Comparison is primarily by priority and then by IS-IS ID. Since pseudonodes can hold nicknames, the comparison must be by seven-byte IS-IS ID, not six-byte System ID.",
     "submit_date": "2011-10-25",
     "submitter_name": "Donald E. Eastlake, 3rd",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3003,
+    "errata_id": "3003",
     "doc-id": "RFC6325",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "TRILL IS-IS MTU PDUs may be unicast as described in Section 4.3.2 of RFC 6325 and Section 5 of RFC 6327. This was not allowed for in the wording of Section 4.6.2 of RFC 6325 but is corrected above.",
     "submit_date": "2011-10-25",
     "submitter_name": "Donald E. Eastlake, 3rd",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3004,
+    "errata_id": "3004",
     "doc-id": "RFC6325",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "TRILL IS-IS MTU PDUs are IS-IS PDUs and, when multicast, must be sent to the All-IS-IS-RBridges multicast address.",
     "submit_date": "2011-10-25",
     "submitter_name": "Donald E. Eastlake, 3rd",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3052,
+    "errata_id": "3052",
     "doc-id": "RFC6325",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": null,
     "submit_date": "2011-12-15",
     "submitter_name": "Donald E. Eastlake, 3rd",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3053,
+    "errata_id": "3053",
     "doc-id": "RFC6325",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": null,
     "submit_date": "2011-12-15",
     "submitter_name": "Donald E. Eastlake, 3rd",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3508,
+    "errata_id": "3508",
     "doc-id": "RFC6325",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "Link costs can be asymmetric. The above erroneous sentence is inconsistent with the rest of 4.5.1 and normal practice. Furthermore, it is important to fix this and resolve the inconsistency because, if all RBridges in a TRILL campus do not compute the same trees, the reverse path forwarding check for multi-destination TRILL Data packet routing can erroneously discard such packets.",
     "submit_date": "2013-03-05",
     "submitter_name": "Donald E. Eastlake, 3rd",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4573,
+    "errata_id": "4573",
     "doc-id": "RFC6325",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -100,7 +100,7 @@
     "notes": "There is a paragraph in the wrong place so that it appears to apply to the wrong bit.\r\n\r\nThe second paragraph of bullet item 3 in Section 4.9.1 (the second bullet item at the top of page 72) is in the wrong place and appears to apply to the TRILL traffic disable (access port) bit. This text should instead be part of the previous bullet item and, in fact, applies to the end-station service disable (trunk port) bit.",
     "submit_date": "2015-12-30",
     "submitter_name": "Donald Eastlake, 3rd",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

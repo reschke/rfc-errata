@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4100,
+    "errata_id": "4100",
     "doc-id": "RFC2910",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,37 +10,37 @@
     "notes": "Per the PWG IPP WG discussions at the August 2014 F2F, any mention of cipher suites in RFC 2910 is inappropriate. In particular, the cipher suite mentioned is no longer mandatory in TLS/1.2.\r\n\r\n----- Verifier notes -----\r\nWhile the cipher suites listed were correct when RFC 2910 was written, the list of required/recommended cipher suites has changed since then, to the point that some what were required at the time are specifically *not* recommended now.  For that reason, RFC 2910 is in need of an update.  This errata report will serve to note that, until such time as the update is done and a new RFC is published.",
     "submit_date": "2014-09-05",
     "submitter_name": "Michael Sweet",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4101,
+    "errata_id": "4101",
     "doc-id": "RFC2910",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 5,
+    "section": "5",
     "orig_text": "   The IPP/1.1 document defines a new scheme 'ipp' as the value of a URL\r\n   that identifies either an IPP printer object or an IPP job object.\r\n   The IPP attributes using the 'ipp' scheme are specified below.\r\n   Because the HTTP layer does not support the 'ipp' scheme, a client\r\n   MUST map 'ipp' URLs to 'http' URLs, and then follows the HTTP\r\n   [RFC2616][RFC2617] rules for constructing a Request-Line and HTTP\r\n   headers.  The mapping is simple because the 'ipp' scheme implies all\r\n   of the same protocol semantics as that of the 'http' scheme\r\n   [RFC2616], except that it represents a print service and the implicit\r\n   (default) port number that clients use to connect to a server is port\r\n   631.\r\n\r\n   In the remainder of this section the term 'ipp-URL' means a URL whose\r\n   scheme is 'ipp' and whose implicit (default) port is 631. The term\r\n   'http-URL' means a URL whose scheme is 'http', and the term 'https-\r\n   URL' means a URL whose scheme is 'https',\r\n\r\n   A client and an IPP object (i.e. the server) MUST support the ipp-URL\r\n   value in the following IPP attributes.\r\n       job attributes:\r\n           job-uri\r\n           job-printer-uri\r\n       printer attributes:\r\n           printer-uri-supported\r\n       operation attributes:\r\n           job-uri\r\n           printer-uri\r\n   Each of the above attributes identifies a printer or job object. The\r\n   ipp-URL is intended as the value of the attributes in this list, and\r\n   for no other attributes. All of these attributes have a syntax type\r\n   of 'uri', but there are attributes with a syntax type of 'uri' that\r\n   do not use the 'ipp' scheme, e.g. 'job-more-info'.\r\n\r\n   If a printer registers its URL with a directory service, the printer\r\n   MUST register an ipp-URL.\r\n\r\n   User interfaces are beyond the scope of this document. But if\r\n   software exposes the ipp-URL values of any of the above five\r\n   attributes to a human user, it is REQUIRED that the human see the\r\n   ipp-URL as is.\r\n\r\n   When a client sends a request, it MUST convert a target ipp-URL to a\r\n   target http-URL for the HTTP layer according to the following rules:\r\n\r\n      1. change the 'ipp' scheme to 'http'\r\n      2. add an explicit port 631 if the URL does not contain an\r\n         explicit port. Note: port 631 is the IANA assigned Well Known\r\n         Port for the 'ipp' scheme.\r\n\r\n   The client  MUST use the target http-URL in both the HTTP Request-\r\n   Line and HTTP headers, as specified by HTTP [RFC2616] [RFC2617] .\r\n   However, the client MUST use the target ipp-URL for the value of the\r\n   \"printer-uri\" or \"job-uri\" operation attribute within the\r\n   application/ipp body of the request. The server MUST use the ipp-URL\r\n   for the value of the \"printer-uri\", \"job-uri\" or \"printer-uri-\r\n   supported\" attributes within the application/ipp body of the\r\n   response.\r\n\r\n   For example, when an IPP client sends a request directly (i.e. no\r\n   proxy) to an ipp-URL \"ipp://myhost.com/myprinter/myqueue\", it opens a\r\n   TCP connection to port 631 (the ipp implicit port) on the host\r\n   \"myhost.com\" and sends the following data:\r\n\r\n    POST /myprinter/myqueue HTTP/1.1\r\n    Host: myhost.com:631\r\n    Content-type: application/ipp\r\n    Transfer-Encoding: chunked\r\n    ...\r\n    \"printer-uri\" \"ipp://myhost.com/myprinter/myqueue\"\r\n              (encoded in application/ipp message body)\r\n    ...\r\n\r\n   As another example, when an IPP client sends the same request as\r\n   above via a proxy \"myproxy.com\", it opens a TCP connection to the\r\n   proxy port 8080 on the proxy host \"myproxy.com\" and sends the\r\n   following data:\r\n\r\n    POST http://myhost.com:631/myprinter/myqueue   HTTP/1.1\r\n    Host: myhost.com:631\r\n    Content-type: application/ipp\r\n    Transfer-Encoding: chunked\r\n    ...\r\n    \"printer-uri\" \"ipp://myhost.com/myprinter/myqueue\"\r\n              (encoded in application/ipp message body)\r\n    ...\r\n\r\n   The proxy then connects to the IPP origin server with headers that\r\n   are the same as the \"no-proxy\" example above.\r\n",
     "correct_text": "    The IPP URL scheme is defined in [RFC3510].\r\n\r\n   A client and an IPP object (i.e. the server) MUST support the ipp-URL\r\n   value in the following IPP attributes.\r\n       job attributes:\r\n           job-uri\r\n           job-printer-uri\r\n       printer attributes:\r\n           printer-uri-supported\r\n       operation attributes:\r\n           job-uri\r\n           printer-uri\r\n   Each of the above attributes identifies a printer or job object. The\r\n   ipp-URL is intended as the value of the attributes in this list, and\r\n   for no other attributes. All of these attributes have a syntax type\r\n   of 'uri', but there are attributes with a syntax type of 'uri' that\r\n   do not use the 'ipp' scheme, e.g. 'job-more-info'.\r\n\r\n   If a printer registers its URL with a directory service, the printer\r\n   MUST register an ipp-URL.\r\n\r\n   User interfaces are beyond the scope of this document. But if\r\n   software exposes the ipp-URL values of any of the above five\r\n   attributes to a human user, it is REQUIRED that the human see the\r\n   ipp-URL as is.\r\n\r\n",
     "notes": "Change inline text to a reference to the document that actually defines and registers it.\n --VERIFIER NOTES-- \nWhile this consolidation and reference to RFC 3510 makes sense, RFC 3510 was published two and a half years *after* RFC 2910... so this dos not represent an error in RFC 2910.  Any update to RFC 2910 will clearly refer to RFC 3510 for this information.",
     "submit_date": "2014-09-05",
     "submitter_name": "Michael Sweet",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4172,
+    "errata_id": "4172",
     "doc-id": "RFC2910",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.5,
+    "section": "3.5",
     "orig_text": "   a value that the parser treats atomically.  Values from 0x00 to\r\n   0x37777777 are reserved for definition in future IETF standard track\r\n   documents.  The values 0x40000000 to 0x7FFFFFFF are reserved for\r\n   vendor extensions.\r\n",
     "correct_text": "   a value that the parser treats atomically.  Values from 0x00 to\r\n   0x3FFFFFFF are reserved for definition in future IETF Standards Track\r\n   documents.  The values 0x40000000 to 0x7FFFFFFF are reserved for\r\n   vendor extensions.\r\n",
     "notes": "",
     "submit_date": "2014-11-12",
     "submitter_name": "Michael Sweet",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

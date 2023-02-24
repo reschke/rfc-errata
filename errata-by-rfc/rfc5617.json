@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2849,
+    "errata_id": "2849",
     "doc-id": "RFC5617",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "<section 6.5 missing>",
     "correct_text": "6.5.  Non-Compliant Messages\r\n\r\nBoth DKIM and ADSP are predicated on receiving valid RFC5322 messages as input.\r\nWhere, for example, a message under evaluation has multiple From fields, it is\r\nunspecified from which From field the Author Domain is to be extracted.\r\nImplementers are advised to return a result that indicates the Author Domain\r\ncould not be determined when the input message has multiple From header fields,\r\nor even more generally if the message does not comply with RFC5322.",
     "notes": "This is an issue brought up during the RFC4871bis effort.\r\n\r\nAn alternative to the above would be to make this a normative requirement rather than a Security Consideration.",
     "submit_date": "2011-06-29",
     "submitter_name": "Murray Kucherawy",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }

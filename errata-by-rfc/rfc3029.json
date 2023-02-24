@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6443,
+    "errata_id": "6443",
     "doc-id": "RFC3029",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "DigestAlgorithmIdentifier is not defined in the ASN.1 Module.  The easiest fix is to IMPORT it from the CMS ASN.1 Module.",
     "submit_date": "2021-02-26",
     "submitter_name": "Russ Housley",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-02-26 12:52:50"
   },
   {
-    "errata_id": 6444,
+    "errata_id": "6444",
     "doc-id": "RFC3029",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The ASN.1 Module uses GeneralName and GeneralNames, but only one of them is IMPORTed.  The suggested fix IMPORTS both of GeneralName and GeneralNames.",
     "submit_date": "2021-02-26",
     "submitter_name": "Russ Housley",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-05-09 17:14:45"
   },
   {
-    "errata_id": 6445,
+    "errata_id": "6445",
     "doc-id": "RFC3029",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "INTEGER must be in all capital letters for the ASN.1 Module to compile.",
     "submit_date": "2021-02-26",
     "submitter_name": "Russ Housley",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

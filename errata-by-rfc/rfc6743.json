@@ -1,17 +1,17 @@
 [
   {
-    "errata_id": 5911,
+    "errata_id": "5911",
     "doc-id": "RFC6743",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
-    "orig_text": "   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |     Type      |     Code      |           Checksum            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Num of Locs  |   Operation   |           RESERVED            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
-    "correct_text": "   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |     Type      |     Code      |           Checksum            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Num of Locs  |    RESERVED   |           RESERVED            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
-    "notes": "The Operation field is not defined, or used. The example message later on shows the field as 'RESERVED'.",
+    "section": "2.1",
+    "orig_text": "   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |     Type      |     Code      |           Checksum            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Num of Locs  |    RESERVED   |           RESERVED            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "correct_text": "   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |     Type      |     Code      |           Checksum            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Num of Locs  |   Operation   |           RESERVED            |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "notes": "In RFC 6743, Section 2.1, page 7, in the packet diagram, the first field marked \"RESERVED\" should be marked \"Operation\", as it is in the introduction for Section 2.  This was a typographical error. The definition of the \"Operation\" field and the packet format in RFC 6743, Section 2, on pages 5 through 6 are correct and complete.\r\n\r\n(The original errata suggested to change the packet header diagram in Section 2 to change the Operation field to RESERVED. After consulting with the authors, the correct fix is to correct the example in Section 2.1)",
     "submit_date": "2019-11-16",
     "submitter_name": "Rick Payne",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "163",
+    "verifier_name": "Colin Perkins",
+    "update_date": "2022-12-27 07:09:24"
   }
 ]

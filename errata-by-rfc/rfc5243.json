@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3886,
+    "errata_id": "3886",
     "doc-id": "RFC5243",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": null,
     "correct_text": "RFC 3623 \"Graceful OSPF Restart\" in section 2.2 \"When to Exit\r\nGraceful Restart\" specifies that if router recovering its LSDB\r\nafter switchover did not receive its own pre-restart Router LSA\r\nfrom neighbor helping in Graceful Restart then this should\r\nbe treated as unrecoverable change in the LSDB incompatible with\r\nthe Graceful Restart. To satisfy this verification neighbor's\r\nRouter LSA must never be optimized out of DBD exchange with a\r\nneighbor performing Graceful Restart. This may happen if the\r\nrestarting router has multiple adjacencies and has already\r\nlearned its pre-restart Router LSA from some neighbors before\r\nstarting DBD exchange with others.\r\n",
     "notes": "\n --VERIFIER NOTES-- \nThis appears to be a technical extension to the RFC and is thus outside the scope of the errata process.\r\n\r\nThe submitter should address the issue by publishing an RFC. ",
     "submit_date": "2014-02-10",
     "submitter_name": "Anton Smirnov",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }

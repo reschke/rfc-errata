@@ -1,36 +1,36 @@
 [
   {
-    "errata_id": 1409,
+    "errata_id": "1409",
     "doc-id": "RFC4458",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "     target-param      =  \"target\" EQUAL pvalue\r\n\r\n     cause-param       =  \"cause\" EQUAL Status-Code",
     "correct_text": "     target-param      =  \"target=\" pvalue\r\n\r\n     cause-param       =  \"cause=\" Status-Code",
     "notes": "The definition was too permissive and conflicted with RFC 3261 ABNF (p. 223). Since this parameter is part of the other-param of uri-parameter, only a \"=\" (i.e, no linear whitespace allowed) and not EQUAL (which allows linear whitespace).",
     "submit_date": "2008-04-16",
     "submitter_name": "Francois AUDET",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3359,
+    "errata_id": "3359",
     "doc-id": "RFC4458",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 6.1,
+    "section": "6.1",
     "orig_text": "    INVITE sip:voicemail@example.com;\\\r\n           target=sip:+15555551002%40example.com;user=phone;\\\r\n           cause=486  SIP/2.0\r\n",
     "correct_text": "    INVITE sip:voicemail@example.com;\\\r\n           target=sip:+15555551002%40example.com%3Buser=phone;\\\r\n           cause=486  SIP/2.0\r\n",
     "notes": "The \";user=phone\" characters should be part of the target parameter value.  The semicolon is not allowed in the pvalue syntax and must be escaped.\r\n\r\nThis same correction is needed in other sections as well: 6.2, 6.4.",
     "submit_date": "2012-09-19",
     "submitter_name": "Doug Sauder",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4266,
+    "errata_id": "4266",
     "doc-id": "RFC4458",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "The two redirect reasons \"Unknown\" and \"Not available\" are totally different in their meaning. In the first case the user is unknown, whereas in the second case it is a valid address but not reachable.\r\n\r\nUnfortunately 3GPP TS 24.604 \"Communication Diversion\" refers to RFC 4458 and in case of \"communication forwarding not logged in\" it therefore requests cause value 404 in the meaning of \"not available\". This cause value is mapped to \"unknown\" in interworking SIP to ISUP (3GPP TS 29.163 Table 7.4.6.2.2.4) and therefore a missed call notification cannot be sent to a subscriber which is not logged in.\r\n\r\n\"Not available\" should use the same value as \"Mobile subscriber not reachable\".",
     "submit_date": "2015-02-09",
     "submitter_name": "Franz Edler",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

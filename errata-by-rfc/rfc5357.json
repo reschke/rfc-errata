@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1586,
+    "errata_id": "1586",
     "doc-id": "RFC5357",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "The \"on\" is misleading or ambiguous; such verbiage commonly is used\r\nto denote the *source* port used to send a packet, but from the\r\ncontext (and in particular the first paragraph of  Section 3.1)\r\nit seems likely that you mean the *destination* port number here.\r\n\r\nThe corrected text aims to disambiguate/clarify/correct this.",
     "submit_date": "2008-11-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1587,
+    "errata_id": "1587",
     "doc-id": "RFC5357",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,27 +25,27 @@
     "notes": "The original description does not match the architectural model depicted\r\nin the figure in Section 1.2 (page 4), where the Server and the\r\nControl-Client are distinct entities, and the TWAMP-Control messages\r\nflow between these parties.\r\n\r\nThe proposed corrected text aims to clarify the roles.",
     "submit_date": "2008-11-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1588,
+    "errata_id": "1588",
     "doc-id": "RFC5357",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "|                                 [...].  As with OWAMP-test protocol\r\n   [RFC4656], there are three modes: unauthenticated, authenticated, and\r\n   encrypted.",
     "correct_text": "|                                 [...].  As with the OWAMP-test\r\n   protocol [RFC4656], there are three modes: unauthenticated,\r\n   authenticated, and encrypted.",
     "notes": "Missing article.",
     "submit_date": "2008-11-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1589,
+    "errata_id": "1589",
     "doc-id": "RFC5357",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The original headline is misleading; it does *not* show the general\r\non-the-wire format, which is partially hidden by encryption.\r\n\r\nThus, the headline should be amended to avoid confusion.",
     "submit_date": "2008-11-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1590,
+    "errata_id": "1590",
     "doc-id": "RFC5357",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "In the original text, it remains unclear whether this sequence number\r\nis maintained per session, per Session-Sender, or per Session-Reflector.\r\n\r\nAppendix I, in the 3rd text paragraph on page 23, seems to give\r\na hint that the Session-Reflector generated sequence numbers might\r\nhave been intended to be generated independently per *session*.\r\n\r\nSince similar behavior is not present in OWAMP, it ugently needs to\r\nbe specified in RFC 5357 to further interoperable implementations.\r\n\r\nThe corrected text proposed aims at cure this deficiency via a change\r\nwith minimal footprint.",
     "submit_date": "2008-11-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1591,
+    "errata_id": "1591",
     "doc-id": "RFC5357",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "In the second paragraph of Section 6, near the bottom of page 20,\r\nthe maximum value given is too large.  In the OWAMP specification,\r\nI could not find any indication of a bias added to the Count value,\r\nand thus the (hypothetical) range for Count is   0 .. 2**32-1 .\r\n\r\nThus, the RFC text needs to be corrected.",
     "submit_date": "2008-11-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1592,
+    "errata_id": "1592",
     "doc-id": "RFC5357",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -100,12 +100,12 @@
     "notes": "The indicated line should be deleted; it is confusing, as it\r\ncontains information on the state of the IANA registry at the\r\ntime of publication of the RFC, which is totally uncorrelated\r\nto the matter of the RFC.",
     "submit_date": "2008-11-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1593,
+    "errata_id": "1593",
     "doc-id": "RFC5357",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -115,12 +115,12 @@
     "notes": "Dependent second instance of the issue:\r\n\r\nAccording to the quoted snippet from Section 8.1, Section 8.2 again\r\nuses \"may only contain sixteen values\", which should be corrrected\r\nin the same manner.\r\n\r\n\r\nRationale:\r\n\r\nApparently, \"the first octet\" will allow *256* possible values, not 16.\r\nTherefore, without an explanation of why only 16 values are allowed,\r\nthis restriction does not make sense.\r\n\r\nIn to the lack of an explanation for the restriction, the RFC text\r\nand the IANA registry should be changed, replacing \"sixteen\" by \"256\"\r\nthroughout.\r\n\r\nAlternatively, a clarifying note would have to be supplied, in order\r\nto justify the restriction.\r\n\r\n\r\nHint: Errata Note entered on request of the responsible AD before\r\n      resolution with the authors.",
     "submit_date": "2008-11-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1594,
+    "errata_id": "1594",
     "doc-id": "RFC5357",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -130,12 +130,12 @@
     "notes": "In any way this is problematic because the term \"block\" has not been\r\nintroduced into the RFC text.  (That's also a problem for 4.2.1!)\r\n\r\nEven in the restricted context of SHA (FIPS PUB 180-2/3) and HMAC\r\n(FIPS PUB 197), the term \"block\" does not uniquely identify a\r\nspecific number of octets.\r\nFor SHA-1, SHA-224, and SHA-256, the block size is 512 bits,\r\nfor SHA-384 and SHA-512 it is 1024 bits.\r\n\r\nBut OWAMP uses a truncated version of HMAC-SHA-1 with a 128-bit MAC,\r\n(officially denoted as HMAC-SHA-1-128), and apparently that is carried\r\nover to TWAMP without mention in the RFCs.\r\n\r\nIt remains unclear from the text what precisely was intended to say.\r\n\r\n\r\nHint: Errata Note entered on request of the responsible AD before\r\n      resolution with the authors.",
     "submit_date": "2008-11-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3511,
+    "errata_id": "3511",
     "doc-id": "RFC5357",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -145,12 +145,12 @@
     "notes": "Many readers of the appendix don't understand the meaning of informative and try to interpret the TWAMP light description as a specification. To correct this problem, it is recommended to add a few more lines explaning other TWAMP light architectures are possible. The original text describes a single TWAMP light architecture and this is misleading.\n --VERIFIER NOTES-- \nErratas are not meant to be used to expand existing text beyond textual clarifications. ",
     "submit_date": "2013-03-08",
     "submitter_name": "Steve Baillargeon",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4429,
+    "errata_id": "4429",
     "doc-id": "RFC5357",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -160,12 +160,12 @@
     "notes": "The top arrow is not identified and misleading. It should be removed.\r\n\r\n2015-07-29: RFC Editor changed the Type to Technical.\r\n\r\n2016-07-04 Spencer chatted about this with Al Morton.\r\n\r\nAl said - \r\n\r\n> As I'm likely the last reachable author of TWAMP:\r\n>\r\n> In http://tools.ietf.org/html/rfc5357#section-1.2\r\n> the Logical Model of TWAMP, the communications link\r\n> between the Server and the Session-Reflector is indicated,\r\n> but also undescribed. This communication is necessary for\r\n> controlling state in the Session-Reflector, to start and\r\n> stop sessions (which resets sequence renumbering in the\r\n> Session-Reflector), for example.\r\n>\r\n> Also, section 1.2 says:\r\n>  \"Unlabeled links in the figure are unspecified by\r\n>   this document and may be proprietary protocols.\"\r\n>\r\n> Like the Figure at the bottom of Page 4 in sec 1.2,\r\n> the TWAMP-Light Figure is a re-formulation of the roles\r\n> in the Logical Model, moving the Server alongside the\r\n> Control-Client. The need for Server <-> Session-Reflector\r\n> communications still exists for the case of TWAMP-Light\r\n> operating *with* session state.\r\n\r\nIn previous discussions, Brian Trammell had suggested that unlabeled arrows should be marked  \"protocol unspecified\" or \"see section 1.2\" here to clear up the confusion.\r\n\r\nSpencer will leave this for the working group to consider if the document is updated.",
     "submit_date": "2015-07-27",
     "submitter_name": "Steve Baillargeon",
-    "verifier_id": 137,
+    "verifier_id": "137",
     "verifier_name": "Spencer Dawkins",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5045,
+    "errata_id": "5045",
     "doc-id": "RFC5357",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -175,12 +175,12 @@
     "notes": "In authenticated/encrypted mode, the minimum data segment length should be 112 octets, instead of 104 octets.",
     "submit_date": "2017-06-21",
     "submitter_name": "Xiao Min",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2020-03-04 05:22:41"
   },
   {
-    "errata_id": 5046,
+    "errata_id": "5046",
     "doc-id": "RFC5357",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -190,7 +190,7 @@
     "notes": "In authenticated/encrypted mode, the minimum data segment length of TWAMP-Test and OWAMP-Test packets is 112 octets and 48 octets respectively, so the Sender should append at least 64 octets, instead of 56 octets.",
     "submit_date": "2017-06-21",
     "submitter_name": "Xiao Min",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2019-09-10 09:09:03"
   }

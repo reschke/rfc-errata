@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2031,
+    "errata_id": "2031",
     "doc-id": "RFC5751",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "This revision creates a backward compatibility issue with S/MIME v2, S/MIME v3 and S/MIME v3.1 agents.  In each of the previous (obsoleted) standards, they all refer to the micalg for SHA-1 as \"sha1\" and not \"sha-1\".\r\n\r\nThe historical note should mean that v3.2 agents will recognize \"sha1\" as emitted by earlier implementations, but these implementations are unlikely to recognize the micalg value of \"sha-1\" emitted by a v3.2 agent.\r\n\r\nAll previous standards state that receiving agents SHOULD be able to handle this situation gracefully, but when these agents fail to recognize a micalg value, they can no longer perform a \"one-pass processing\". Given that this parameter is \"required\", the most likely implication is that they will fail to verify the signature.\r\n\r\nTo ensure interoperability with clients supporting previous versions, the micalg for SHA-1 MUST remain as \"sha1\", and receiving agents SHOULD also accept \"sha-1\".\r\n\r\nThe micalg parameters values have always been defined as \"SHOULD\", but for interoperability they should be declared as \"MUST\".\n --VERIFIER NOTES-- \nThese changes were introduced for alignment with the names in the IANA \"Hash Function Textual Names\" registry.  Given that the requirements is a SHOULD and the note explains the situation, I do not consider this text in error.",
     "submit_date": "2010-02-01",
     "submitter_name": "Derek Edson",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2143,
+    "errata_id": "2143",
     "doc-id": "RFC5751",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The inner content type is not an optional field.  Some inner content type MUST be included, id-data is the correct inner content type to be specified.\r\n\r\nThe balance of the required information is in section 3.7.  It is possible that the fact that id-data is used as the encapsulated content type should be added to the section Step 1 in 3.7",
     "submit_date": "2010-04-08",
     "submitter_name": "Jim Schaad",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2708,
+    "errata_id": "2708",
     "doc-id": "RFC5751",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "In this version we updated the strings associated with the micalg parameter, however the example was not updated to use the correct new value.",
     "submit_date": "2011-02-06",
     "submitter_name": "Jim Schaad",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4273,
+    "errata_id": "4273",
     "doc-id": "RFC5751",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "RFC 5751 contains several S/MIME sample messages, prefixed with the text \"A sample message would be\".  These samples aren't actually valid S/MIME messages but merely contain 141 bytes of random garbage.  In other words the S/MIME \"sample messages\" aren't actually sample messages.",
     "submit_date": "2015-02-18",
     "submitter_name": "Peter Gutmann",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

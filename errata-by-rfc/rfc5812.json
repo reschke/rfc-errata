@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2576,
+    "errata_id": "2576",
     "doc-id": "RFC5812",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Reference [2] used to be the reference to the I-D that became RFC 5810",
     "submit_date": "2010-10-16",
     "submitter_name": "Jamal Hadi Salim",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2577,
+    "errata_id": "2577",
     "doc-id": "RFC5812",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "\n --VERIFIER NOTES-- \nThis Erratum is rejected after consultation with the ForCES chair.\r\n\r\nThe LFB Class is unique globaly. The LFB instance is unique per LFB.\r\nThe LFB components are uniquely identified by LFB class::instance id.\r\nTherefore by inference, the LFB events, componentIDs and capabilitiyIDs\r\nare globaly unique.",
     "submit_date": "2010-10-16",
     "submitter_name": "Jamal Hadi Salim",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3371,
+    "errata_id": "3371",
     "doc-id": "RFC5812",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,27 +40,27 @@
     "notes": "Issue with frameProduced being mandatory for an output port.",
     "submit_date": "2012-10-07",
     "submitter_name": "Evangelos Haleplidis",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3487,
+    "errata_id": "3487",
     "doc-id": "RFC5812",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "                  <component access=\"read-only\" componentID=\"7\">\r\n                    <name>FEState</name>\r\n                    <synopsis>State of this FE</synopsis>\r\n                    <typeRef>FEStateValues</typeRef>\r\n                  </component>",
     "correct_text": "                  <component access=\"read-write\" componentID=\"7\">\r\n                    <name>FEState</name>\r\n                    <synopsis>State of this FE</synopsis>\r\n                    <typeRef>FEStateValues</typeRef>\r\n                  </component>",
     "notes": "FEObject FEState (component ID 7) is read-write. It was mistakenly\r\nlabelled read-only",
     "submit_date": "2013-02-18",
     "submitter_name": "Jamal Hadi Salim",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5363,
+    "errata_id": "5363",
     "doc-id": "RFC5812",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "Confusion in the notation of vendors.",
     "submit_date": "2018-05-18",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 12:18:10"
   },
   {
-    "errata_id": 5364,
+    "errata_id": "5364",
     "doc-id": "RFC5812",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -85,12 +85,12 @@
     "notes": "Invalid reference to figure 5(a) instead of figure 7(a).",
     "submit_date": "2018-05-18",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 11:51:47"
   },
   {
-    "errata_id": 5656,
+    "errata_id": "5656",
     "doc-id": "RFC5812",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -100,7 +100,7 @@
     "notes": "Incorrect reference",
     "submit_date": "2019-03-13",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2019-09-10 09:09:03"
   }

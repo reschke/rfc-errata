@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 992,
+    "errata_id": "992",
     "doc-id": "RFC3080",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "Page 8 says:\r\n\r\n   channel    = 0..2147483647\r\n   msgno      = 0..2147483647\r\n   more       = \".\" / \"*\"\r\n   seqno      = 0..4294967295\r\n   size       = 0..2147483647\r\n   ansno      = 0..2147483647\r\n\r\nIf page 8 is correct, page then 9 needs to be changed to suggested text above.\r\n\r\nfrom pending",
     "submit_date": "2007-06-13",
     "submitter_name": "Ozz Nixon",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }

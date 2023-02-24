@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4295,
+    "errata_id": "4295",
     "doc-id": "RFC7427",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Section 3 requires the use of DER:\r\nThe ASN.1 used here is the same ASN.1 used in the AlgorithmIdentifier of PKIX (see Section 4.1.1.2 of [RFC5280]), encoded using distinguished encoding rules (DER) [CCITT.X690.2002].\r\n\r\nKM: Reviewed by expert and response provided.\r\n\n --VERIFIER NOTES-- \nFrom Tero Kivinen\r\n\r\nIn the RFC 4055 the section 3.1 says that even when the\r\ndefault values are used the implementation MUST understand both\r\nformats, i.e. the case where the default value is omitted and the case\r\nwhere the default value is explicitly given:\r\n\r\nFrom RFC4055 section 3.1:\r\n\r\n      hashAlgorithm\r\n\r\n         The hashAlgorithm field identifies the hash function.  It MUST\r\n         be one of the algorithm identifiers listed in Section 2.1, and\r\n         the default hash function is SHA-1.  Implementations MUST\r\n         support SHA-1 and MAY support any of the other one-way hash\r\n         functions listed in Section 2.1.  Implementations that perform\r\n         signature generation MUST omit the hashAlgorithm field when\r\n         SHA-1 is used, indicating that the default algorithm was used.\r\n         Implementations that perform signature validation MUST\r\n         recognize both the sha1Identifier algorithm identifier and an\r\n         absent hashAlgorithm field as an indication that SHA-1 was\r\n         used.\r\n\r\nIn this case we are not actually doing either one of those options, we\r\nare not generating signature, and we are not validating them. In this\r\ndocument we are simply indicating what kind of signature will follows\r\nthis binary blob. Yes, when generating those ASN.1 objects for default\r\nvalues implementations should use the A.4.1 version, but they might\r\nalso want to understand the version specified in the A.4.2.\r\n\r\nNote, that in some cases the implementations might simply take the\r\nAlgorithmIdentifier pieces from their own certificate and not generate\r\nit at all, and this might cause them to take whatever the CA vendor\r\ngenerated for them.\r\n\r\nActually when checking for the RFC4055 I notice it says that same\r\nthing (MUST omit in generate, MUST recognize both) for everything else\r\n(hashAlgorithm, maskGenAlgorithm, and trailerField) expect for\r\nsaltLength... I do not know if this means that for saltLength we\r\nshould actually not encode the default as number or if this is just\r\nsloppy writing of the RFC4055...\r\n\r\n>    0000 : SEQUENCE\r\n>    0002 :   OBJECT IDENTIFIER  RSASSA-PSS (1.2.840.113549.1.1.10)\r\n>    000d :   SEQUENCE\r\n>\r\n>    Name = RSASSA-PSS with default parameters,\r\n>           oid = 1.2.840.113549.1.1.10\r\n>    Length = 15\r\n>    0000: 300d 0609 2a86 4886 f70d 0101 0a30 00\r\n>\r\n>\r\n> Notes\r\n> -----\r\n> Section 3 requires the use of DER:\r\n> The ASN.1 used here is the same ASN.1 used in the AlgorithmIdentifier of PKIX (see Section 4.1.1.2 of [RFC5280]), encoded using distinguished encoding rules (DER) [CCITT.X690.2002].\r\n\r\nYes, when generating them they needs to be in DER, when matching the\r\nvalues sent from the other end, the matching can be looser.\r\n\r\n\r\nThe format A.4.1 MUST be used when generating the RSASSA-PSS with default parameters, but A.4.2 can also be recognized.\r\n\r\nIf the implementation has real ASN.1 parser this is exactly what it will do automatically.",
     "submit_date": "2015-03-10",
     "submitter_name": "Annie Yousar",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4296,
+    "errata_id": "4296",
     "doc-id": "RFC7427",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "1. The maskGenAlgorithm is in fact not SHA-256 (2.16.840.1.101.3.4.2.1), but MGF1 (1.2.840.113549.1.1.8) based on SHA-256 (2.16.840.1.101.3.4.2.1).\r\n\r\n2. Section 3 requires the use of DER:\r\nThe ASN.1 used here is the same ASN.1 used in the AlgorithmIdentifier of PKIX (see Section 4.1.1.2 of [RFC5280]), encoded using distinguished encoding rules (DER) [CCITT.X690.2002].\n --VERIFIER NOTES-- \nPer Tero Kivinen:\r\n\r\n   The id-mgf1 oid is there in the example, the tool I used didn't know\r\nthe name for it thus it just printed out the oid. As this does not\r\naffect the binary object at all there is no problem in here.\r\n\r\n> 2. Section 3 requires the use of DER:\r\n> The ASN.1 used here is the same ASN.1 used in the\r\n> AlgorithmIdentifier of PKIX (see Section 4.1.1.2 of [RFC5280]),\r\n> encoded using distinguished encoding rules (DER) [CCITT.X690.2002].\r\n\r\nYes, but RFC4055 says that:\r\n\r\n      trailerField\r\n\r\n         The trailerField field is an integer.  It provides\r\n         compatibility with IEEE Std 1363a-2004 [P1363A].  The value\r\n         MUST be 1, which represents the trailer field with hexadecimal\r\n         value 0xBC.  Other trailer fields, including the trailer field\r\n         composed of HashID concatenated with 0xCC that is specified in\r\n         IEEE Std 1363a, are not supported.  Implementations that\r\n         perform signature generation MUST omit the trailerField field,\r\n         indicating that the default trailer field value was used.\r\n         Implementations that perform signature validation MUST\r\n         recognize both a present trailerField field with value 1 and an\r\n         absent trailerField field.\r\n\r\nI.e. you should recognize both formats. Yes, we could have another\r\nexample also showing the object value to used when generating these\r\nand when omitting the default values (like we do have for SHA-1).",
     "submit_date": "2015-03-10",
     "submitter_name": "Annie Yousar",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   }

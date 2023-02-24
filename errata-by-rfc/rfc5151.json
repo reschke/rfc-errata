@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1346,
+    "errata_id": "1346",
     "doc-id": "RFC5151",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 9.1,
+    "section": "9.1",
     "orig_text": "   A new bit has been allocated from the \"Attributes Flags\" sub-registry\r\n   of the \"RSVP TE Parameters\" registry.\r\n\r\n                                            vvvvvvvvv\r\n| Bit | Name                 | Attribute  | Path       | RRO | Reference\r\n  No  |                      | Flags Path | Flags Resv |     |\r\n  ----+----------------------+------------+------------+-----+----------\r\n| 4     Contiguous LSP         Yes          No           Yes   [RFC5150]\r\n                                                                   ^^^^^",
     "correct_text": "   A new bit has been allocated from the \"Attributes Flags\" sub-registry\r\n   of the \"RSVP TE Parameters\" registry.\r\n\r\n                                            vvvvvvvvv\r\n| Bit | Name                 | Attribute  | Attribute  | RRO | Reference\r\n  No  |                      | Flags Path | Flags Resv |     |\r\n  ----+----------------------+------------+------------+-----+----------\r\n| 4     Contiguous LSP         Yes          No           Yes   [RFC5151]\r\n                                                                   ^^^^",
     "notes": "a) Registry heading garbled\r\nb) RFC 5151 -- that's where we are there!\r\n\r\nHint:  The IANA registry file is *not* affected.\r\n       Apparently the error has been introduced after IANA processing,\r\n       or IANA has detected and corrected the issue when updating it.",
     "submit_date": "2008-03-04",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

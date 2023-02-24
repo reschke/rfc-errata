@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2463,
+    "errata_id": "2463",
     "doc-id": "RFC3435",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "1. Need to visit Following link :\r\nhttp://tools.ietf.org/rfc/rfc3435.txt\r\n\r\n2. Go to Appendix G:\r\n\r\nAppendix G: Example Call Flows....................................194\r\n   G.3    Connection Deletion........................................206\r\n   G.3.1  Residential Gateway to Residential Gateway.................206   \r\n\r\n3. On Page no 206 at the bottom you will see following :\r\n\r\nStep 2 - Delete Connection (dlcx) from ca to rgw2\r\n\r\n   Requests rgw2 to delete the connection \"67890af54c9\":\r\n\r\n      dlcx 2055 aaln/1@rgw1.whatever.net mgcp 1.0\r\n      c: 9876543210abcdef\r\n      i: 67890af54c9\r\n\r\nit should be rgw2 i guess.\r\n\r\n-- NOTE from reviewing AD: This change affects page 207, not page 206.",
     "submit_date": "2010-08-13",
     "submitter_name": "Vishal Grover",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4562,
+    "errata_id": "4562",
     "doc-id": "RFC3435",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The section is about a call agent restarting and the table illustrates the protocol correctly, but the table title is wrong, apparently copied from Table F.1 in Section G.1.1 Residential Gatway Restart.",
     "submit_date": "2015-12-10",
     "submitter_name": "Karl Brose",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   }

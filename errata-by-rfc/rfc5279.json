@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1516,
+    "errata_id": "1516",
     "doc-id": "RFC5279",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "a) Obviously, the original clause contradicts itself.\r\n\r\n   It is impossible that the NSS is a proper subpart of itself\r\n   as would be required by the text and the syntax shown.\r\n\r\n   The corrected text resolves this partial issue, but not the\r\n   next two issues, which still remain open.  Furthermore, for\r\n   logical consistency, \"resource type\" had to be replaced by\r\n   \"resource\" in the last line, to maintain the required\r\n   uniqueness property of '3gpp' URNs.\r\n \r\nb) Even the corrected statement merely is a simple instantiation of\r\n   the general definition in RFC 2141 (Section 2, page 1), plus\r\n   giving an alias name (<3gpp-urn>) to the NSSs of '3gpp' URNs.\r\n\r\n   However, it does not cure the apparent underspecification:\r\n\r\n   The current URN Namespace registration template per BCP 66,\r\n   RFC3406, serves for \"... providing a mechanism for disclosing \r\n   [the] structure of the URN namespace ...\" (page 11 of RFC 3406),\r\n   but the quoted clause, as it stands, does *not*\r\n   \"outline any structural features of identifiers in this namespace\"\r\n   (p. 12 of RFC 3406).\r\n",
     "submit_date": "2008-09-15",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2626,
+    "errata_id": "2626",
     "doc-id": "RFC5279",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "",
     "correct_text": "",
     "notes": "   Furthermore, the second example presented in Section 3 of RFC 5279\r\n   does not precisely match the pattern indicated in the above clause;\r\n   instead, it tries to suggest that\r\n\r\n      urn:3gpp:acme.foo-serv       \r\n\r\n   defines a '3gpp' URN\r\n\r\n      ... identified by the \"3gpp-urn\" value \"acme\".\r\n\r\n   This contradiction seems to be a hint that the authors indeed\r\n   want to define a structured NSS with <3gpp-urn> being the most\r\n   significant part, and the period character used to separate it\r\n   from a potentially following more specific part of the '3gpp' URN.\r\n   Yet, there's no syntax definition in the RFC that would support\r\n   this precisely.\r\n",
     "submit_date": "2008-09-15",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }

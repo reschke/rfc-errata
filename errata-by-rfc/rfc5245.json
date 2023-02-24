@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 2338,
+    "errata_id": "2338",
     "doc-id": "RFC5245",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 15.1,
+    "section": "15.1",
     "orig_text": "extension-att-name    = byte-string    ;from RFC 4566\r\n",
     "correct_text": "extension-att-name    = token    ;from RFC 4566\r\n",
     "notes": "\"extension-att-name\" may contain the SP (0x20) as defined for \"byte-string\" in  RFC 4566.\r\nThe 'SP' character cannot be allowed within \"extension-att-name\" as it is also used as delimiter between \"extension-att-name\" and \"extension-att-value\".",
     "submit_date": "2010-07-20",
     "submitter_name": "Reif, Frank",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3107,
+    "errata_id": "3107",
     "doc-id": "RFC5245",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Here, Agent R (ideally Agent B as per the figure 11) has generated the request, so it must receive the response. The original text may give a meaning that Agent R has to generate a response.",
     "submit_date": "2012-02-05",
     "submitter_name": "N V S Kaushik",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3149,
+    "errata_id": "3149",
     "doc-id": "RFC5245",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Section 15.3 clearly says that \"ice-mismatch\" is media-level:\r\n\r\n'\"ice-mismatch\" is a media-level\r\n attribute only, and when present in an answer, indicates that the\r\n offer arrived with a default destination for a media component that\r\n didn't have a corresponding candidate attribute.'\r\n\r\nSection Section 6.1 also implies that \"ice-mismatch\" is media-level:\r\n\r\n\"In some cases, the answer may omit a=candidate attributes for the\r\n media streams, and instead include an a=ice-mismatch attribute for\r\n one or more of the media streams in the SDP.\"",
     "submit_date": "2012-03-07",
     "submitter_name": "Marc Petit-huguenin",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3619,
+    "errata_id": "3619",
     "doc-id": "RFC5245",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -55,22 +55,22 @@
     "notes": "This feedback for improvement of ICE candidate gathering and decision process was   sent to Dr. Rosenberg on Nov 09, 2012. However, since I have not received any response from him over my next two followups and this e-mail, I thought it should be reported via this method. \r\n\r\nThis is not an error mesage, but a method to improve the candidate gathering and decision process of ICE.\n --VERIFIER NOTES-- \n   ",
     "submit_date": "2013-05-13",
     "submitter_name": "Ashish Kundu",
-    "verifier_id": 123,
+    "verifier_id": "123",
     "verifier_name": "Gonzalo Camarillo",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3952,
+    "errata_id": "3952",
     "doc-id": "RFC5245",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 15.1,
+    "section": "15.1",
     "orig_text": "priority = 1*10DIGIT\r\n",
     "correct_text": null,
     "notes": "priority = 1*10DIGIT\r\n\r\nHere the maximum value it can hold is \"9999999999\"(ten-nines)(priority is of maximum length 10 DIGIT as per grammar in sec 15.1).\r\n\r\nThe number of bits required to hold the maximum value(ten-nines) is 34. Which requires a \"double\" value instead of integer of 32 bit.\r\n\r\nCan i know why the priority is maximum of 10 DIGIT length? If possible we may decrease to 9 DIGIT, so that the value will be fit into integer of 32bit.\r\n\r\n-- VERIFIER NOTES -- \r\nThe limitation to 2^32-1 is made clear elsewhere in the text.  The ABNF does not need to enforce this constraint",
     "submit_date": "2014-04-04",
     "submitter_name": "Suresh Tummala",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Richard Barnes",
     "update_date": "2019-09-10 09:09:03"
   }

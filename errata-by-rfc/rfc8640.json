@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6886,
+    "errata_id": "6886",
     "doc-id": "RFC8640",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The original example put <stream-xpath-filter> element in a wrong namespace, never defined a namespace binding for prefix \"vrrp\" and checked a value of type identityref by treating it as an XPath string literal (instead of using the XPath function from RFC 7950, which is allowed by type definition of leaf \"stream-xpath-filter\").",
     "submit_date": "2022-03-16",
     "submitter_name": "Jernej Tuljak",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 3018,
+    "errata_id": "3018",
     "doc-id": "RFC6107",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "   If the P-flag in the Actions field in the LSP_TUNNEL_INTERFACE_ID\r\n   object in a Resv message is set (i.e., one) indicating that the LSP\r\n   is not to be advertised as a link, this TLV SHOULD NOT be present and\r\n   MUST be ignored if encountered.",
     "correct_text": "   If the P-flag in the Actions field in the LSP_TUNNEL_INTERFACE_ID\r\n   object in a Path message is set (i.e., one) indicating that the LSP\r\n   is not to be advertised as a link, this TLV SHOULD NOT be present and\r\n   MUST be ignored if encountered.",
     "notes": "The change is s/Resv/Path/",
     "submit_date": "2011-11-10",
     "submitter_name": "Alan Davey",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3412,
+    "errata_id": "3412",
     "doc-id": "RFC6107",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "s/Two/Four/",
     "submit_date": "2012-11-16",
     "submitter_name": "Kris Michielsen",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

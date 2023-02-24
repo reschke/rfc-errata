@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6472,
+    "errata_id": "6472",
     "doc-id": "RFC8175",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,42 +10,42 @@
     "notes": "The original text will not result in a valid unicast IP packet.\r\n\r\n=====\r\nAD Note:  The original text is clearly wrong.  There has been discussion in the WG about the proper wording for the \"corrected text\".  Given that the current text results in an invalid packet, I am marking this report as Verified.\r\n\r\nhttps://mailarchive.ietf.org/arch/msg/manet/h8Sa924gn6ZmAZ7XNp-5UUrZlAY/",
     "submit_date": "2021-03-10",
     "submitter_name": "Rick Taylor",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2022-05-26 12:31:27"
   },
   {
-    "errata_id": 6730,
+    "errata_id": "6730",
     "doc-id": "RFC8175",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 12.4,
+    "section": "12.4",
     "orig_text": "The Peer Offer Signal completes the discovery process; see Section 7.1.",
     "correct_text": "The UDP source port and destination port MUST be set to the UDP destination port and source port, respectively, of the UDP packet containing the associated Peer Discovery Signal. The Peer Offer Signal completes the discovery process; see Section 7.1.",
     "notes": "The original text did not specify any requirement about the source or destination UDP port number of the Peer Offer signal.\n --VERIFIER NOTES-- \nWhile this is a valid report, it is a duplicate of Errata ID: 6472.  I am then marking this one as Rejected.",
     "submit_date": "2021-11-03",
     "submitter_name": "Brian Sipos",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-11-05 14:25:13"
   },
   {
-    "errata_id": 6731,
+    "errata_id": "6731",
     "doc-id": "RFC8175",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 12.4,
+    "section": "12.4",
     "orig_text": "The Peer Offer Signal completes the discovery process; see Section 7.1.",
     "correct_text": "The UDP source port and destination port MUST be set to the UDP destination port and source port, respectively, of the UDP packet containing the associated Peer Discovery Signal. The Peer Offer Signal completes the discovery process; see Section 7.1.",
     "notes": "The original text did not specify any requirement about the source or destination UDP port number of the Peer Offer signal.\n --VERIFIER NOTES-- \n While this is a valid report, it is a duplicate of Errata ID: 6472.  I am then marking this one as Rejected.",
     "submit_date": "2021-11-03",
     "submitter_name": "Brian Sipos",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-11-05 14:25:36"
   },
   {
-    "errata_id": 6877,
+    "errata_id": "6877",
     "doc-id": "RFC8175",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,7 +55,7 @@
     "notes": "\"Table 2: DLEP Status Codes\" indicates that all status code values less than 128 have failure mode 'Continue'.",
     "submit_date": "2022-03-10",
     "submitter_name": "Izar",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2022-03-10 06:40:26"
   }

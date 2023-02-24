@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5677,
+    "errata_id": "5677",
     "doc-id": "RFC7121",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "   If the FE is unable to find an associated FE in its list of CEs, then\r\n   it MUST attempt to connect and associate with the first from the list\r\n   of all CEs and continue in a round-robin fashion until it connects\r\n   and associates with a CE or the CEFTI timer expires.\r\n",
     "correct_text": "   If the FE is unable to find an associated CE in its list of CEs, then\r\n   it MUST attempt to connect and associate with the first from the list\r\n   of all CEs and continue in a round-robin fashion until it connects\r\n   and associates with a CE or the CEFTI timer expires.\r\n",
     "notes": "First line at p. 17\r\nFE is mistakenly specified instead of CE.",
     "submit_date": "2019-03-28",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 12:26:02"
   }

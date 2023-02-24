@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1597,
+    "errata_id": "1597",
     "doc-id": "RFC5384",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Rationale:\r\n\r\nSection 3.1 of this RFC says (3rd para):\r\n   A type 1 Encoded-Source Address MUST contain at least one Join\r\n   Attribute.  The way to specify that there are no Join Attributes for\r\n   a particular tree is to use the type 0 Encoded-Source Address.\r\n\r\nHence, having *zero* attributes in encoding type 1 is explicitely\r\nforbidden.\r\n\r\nPlease alse have the IANA registry entry be corrected.",
     "submit_date": "2008-11-17",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1598,
+    "errata_id": "1598",
     "doc-id": "RFC5384",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "The notes when raised read:\r\n\r\n> Misplaced field separator (vertical bar).\r\n>\r\n> Erratum is considered 'Technical' because the text of the RFC\r\n> does not contain text that could guide the reader in\r\n> disambiguating the figure.\r\n\r\nMoving this to editorial with the note that PIM Option formats are well known.",
     "submit_date": "2008-11-17",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1599,
+    "errata_id": "1599",
     "doc-id": "RFC5384",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "Rationale: Grammar flawed.",
     "submit_date": "2008-11-17",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

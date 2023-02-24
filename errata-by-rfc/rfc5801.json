@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2768,
+    "errata_id": "2768",
     "doc-id": "RFC5801",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,37 +10,37 @@
     "notes": "There is a bug in the C interfaces for these functions.  RFC 5587 section 3.4.6 explains the problem and specifies new types to use instead.  This errata makes RFC 5801 use the corrected types.\r\n\r\nAs far as I understand, there are no technical/implementation implications caused by this change -- it merely helps the compiler check implementations better and (in some cases) it can avoid compiler warnings on application code.\r\n\r\nA similar issue was recently discussed in the Kitten WG list.",
     "submit_date": "2011-04-06",
     "submitter_name": "Simon Josefsson",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2825,
+    "errata_id": "2825",
     "doc-id": "RFC5801",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "The initiator-address-type and acceptor-address-type fields of the GSS-CHANNEL-BINDINGS structure MUST be set to 0.\r\n",
     "correct_text": "The initiator-address-type and acceptor-address-type fields of the GSS-CHANNEL-BINDINGS structure MUST be set to 255 (GSS_C_AF_NULLADDR).\r\n",
     "notes": "See RFC 2744, section 3.11, last paragraph:  \"[...] or omit addressing information, specifying GSS_C_AF_NULLADDR as the address-types\".\r\n\r\nAppendix A of RFC 2744 specifies that the value of GSS_C_AF_NULLADDR is 255.",
     "submit_date": "2011-06-07",
     "submitter_name": "Thomas Maslen",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5081,
+    "errata_id": "5081",
     "doc-id": "RFC5801",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "                                    If any padding or non-alphabet\r\n   characters are encountered, the name is not a GS2 family mechanism\r\n   name.",
     "correct_text": "                                    If any padding or non-alphanumerical\r\n   characters are encountered, the name is not a GS2 family mechanism\r\n   name.",
     "notes": null,
     "submit_date": "2017-08-09",
     "submitter_name": "Rick van Rein",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

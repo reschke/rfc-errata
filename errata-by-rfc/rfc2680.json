@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1528,
+    "errata_id": "1528",
     "doc-id": "RFC2680",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2.7,
+    "section": "2.7",
     "orig_text": "The first two sources are interrelated and could result in a test\r\npacket with finite delay being reported as lost.  Type-P-One-way-\r\nPacket-Loss is 0 if the test packet does not arrive, or if it does\r\narrive and the difference between Src timestamp and Dst timestamp is\r\ngreater than the \"reasonable period of time\", or loss threshold.  ",
     "correct_text": "The first two sources are interrelated and could result in a test\r\npacket with finite delay being reported as lost.  Type-P-One-way-\r\nPacket-Loss is 1 if the test packet does not arrive, or if it does\r\narrive and the difference between Src timestamp and Dst timestamp is\r\ngreater than the \"reasonable period of time\", or loss threshold.",
     "notes": "Type-P-One-way-Packet-Loss is 1 if the test packet does not arrive, according to section 2.4 Definition in RFC2680.",
     "submit_date": "2008-09-24",
     "submitter_name": "Wenxia Dong",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3186,
+    "errata_id": "3186",
     "doc-id": "RFC2680",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "The structure of the memo is as follows:\r\n\r\n   +  A 'singleton' analytic metric, called Type-P-One-way-Loss, is\r\n      introduced to measure a single observation of packet transmission\r\n      or loss.",
     "correct_text": "The structure of the memo is as follows:\r\n\r\n   +  A 'singleton' analytic metric, called Type-P-One-way-Packet-Loss, is\r\n      introduced to measure a single observation of packet transmission\r\n      or loss.",
     "notes": null,
     "submit_date": "2012-04-11",
     "submitter_name": "Benoit Claise",
-    "verifier_id": 129,
+    "verifier_id": "129",
     "verifier_name": "Wes Eddy",
     "update_date": "2019-09-10 09:09:03"
   }

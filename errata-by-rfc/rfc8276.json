@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 5195,
+    "errata_id": "5195",
     "doc-id": "RFC8276",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "   Baloo, the file indexing and search framework for Key Distribution\r\n   Exchange (KDE), has moved to storing metadata such as tags, ratings,\r\n   and comments in file system xattrs instead of a custom database for\r\n   simplicity.  Starting with KDE Plasma 5.1, NFS is no longer supported\r\n   due to its lack of xattr support [KDE].\r\n",
     "correct_text": "   Baloo, the file indexing and search framework for K Desktop\r\n   Environment (KDE), has moved to storing metadata such as tags,\r\n   ratings, and comments in file system xattrs instead of a custom\r\n   database for simplicity.  Starting with KDE Plasma 5.1, NFS is no\r\n   longer supported due to its lack of xattr support [KDE].\r\n",
     "notes": null,
     "submit_date": "2017-12-05",
     "submitter_name": "Mantas Mikulenas",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 7004,
+    "errata_id": "7004",
     "doc-id": "RFC8276",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Section 8.4.3.3. DESCRIPTION says about NFS4ERR_TOOSMALL status code:\r\n\r\n\"If the server is unable\r\n   to return a single xattr name within the maxcount limit, the error\r\n   NFS4ERR_TOOSMALL will be returned to the client.\"\r\n   \r\nBut this status code not specified  in section 8.4.5.  Valid Errors for LISTXATTRS operation.",
     "submit_date": "2022-06-23",
     "submitter_name": "Yuri Radchenko",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 7007,
+    "errata_id": "7007",
     "doc-id": "RFC8276",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -40,22 +40,22 @@
     "notes": "rfc says \r\n\"The handling of a cookie is similar to that of the READDIR operation.\" \r\n(8.4.3.4.)\r\n\r\nIt would be useful to include NFS4ERR_BAD_COOKIE status code into the list of LISTXATTRS statuses, 8.4.5.  Valid Errors.\r\n\r\nNFS for Linux included this status code. \r\nsee https://bugzilla.redhat.com/show_bug.cgi?id=2101371",
     "submit_date": "2022-06-27",
     "submitter_name": "Yuri Radchenko",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 7050,
+    "errata_id": "7050",
     "doc-id": "RFC8276",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "   This document discusses (in Section 5) the reasons that NFSv4-named\r\n   attributes, as currently standardized in [RFC5661], are unsuitable\r\n   for representing xattrs.  Instead, it describes a separate protocol\r\n",
     "correct_text": "   This document discusses (in Section 6) the reasons that NFSv4-named\r\n   attributes, as currently standardized in [RFC5661], are unsuitable\r\n   for representing xattrs.  Instead, it describes a separate protocol\r\n",
     "notes": "The reference to the discussion of named attributes has the wrong section number.",
     "submit_date": "2022-07-26",
     "submitter_name": "Anton Rang",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-07-26 13:27:31"
   }

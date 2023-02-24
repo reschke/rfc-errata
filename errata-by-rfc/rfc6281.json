@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4378,
+    "errata_id": "4378",
     "doc-id": "RFC6281",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "This entire RFC needs to be either updated or marked as obsolete. Terms in the text such as the URL reference to me.com are obsolete as Apple has moved on and renamed the entire product. Apple no longer uses NAT-PMP as the name for their port mapping protocol and that product has moved to version 2.\n --VERIFIER NOTES-- \n   Erratas are not used to obsolote documents or mark them as historic. ",
     "submit_date": "2015-05-28",
     "submitter_name": "Sterling Garwood",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5676,
+    "errata_id": "5676",
     "doc-id": "RFC6281",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "Following our example for alice, it queries the SRV RR for _dns-\r\nupdate-tls._udp.alice.members.me.com.  Then, the updates are sent to\r\nthe dynamic DNS server returned in the Target field of query response.\r\n\r\n...\r\n\r\nSo alice's host issues a query for\r\n_dns-llq-tls._udp.alice.members.me.com\r\nand obtains the server that provides LLQ service.",
     "correct_text": "Following our example for alice, it queries the SRV RR for _dns-\r\nupdate-tls._tcp.alice.members.me.com.  Then, the updates are sent to\r\nthe dynamic DNS server returned in the Target field of query response.\r\n\r\n...\r\n\r\nSo alice's host issues a query for\r\n_dns-llq-tls._tcp.alice.members.me.com\r\nand obtains the server that provides LLQ service.",
     "notes": "In both cases “_udp” should be replaced by “_tcp”.\r\n\r\nThe IANA service type “_dns-update-tls._tcp” is DNS Update (RFC 2136) over TLS over TCP.\r\n\r\nThe IANA service type “_dns-llq-tls._tcp” is DNS Long-Lived Queries (draft-sekar-dns-llq-03) over TLS over TCP.\r\n\r\nIn both cases RFC 6281 inadvertently used the label “_udp” instead of “_tcp”. Of course, TLS runs over TCP, not UDP. (I do know that DTLS can be used over UDP, but that is not what is being used here.)",
     "submit_date": "2019-03-27",
     "submitter_name": "Stuart Cheshire",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2020-03-04 02:52:36"
   }

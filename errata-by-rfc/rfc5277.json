@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 6770,
+    "errata_id": "6770",
     "doc-id": "RFC5277",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "4.  XML Schema for Event Notification",
     "correct_text": "Add a new section \"YANG Module for Event Notifications\".\r\n",
     "notes": "There is no YANG module for the NETCONF <notification> defined anywhere.\r\nThere is no standard YANG module for the <create-subscription> operation.\r\n\r\n1) RFC 5277 predates RFC 6020, so YANG is not normative in RFC 5277.\r\nPlease use the update in RFC 8639.\r\n\r\n2) It is not possible to model the <notification> element in YANG.\r\n\r\n3) A new RFC is required to add new functionality. This is not a bugfix\r\nsuitable for an Errata.\r\n\n --VERIFIER NOTES-- \n   ",
     "submit_date": "2021-12-01",
     "submitter_name": "Tetsuya Hasegawa",
-    "verifier_id": 166,
+    "verifier_id": "166",
     "verifier_name": "Rob Wilton",
     "update_date": "2021-12-01 09:25:58"
   }

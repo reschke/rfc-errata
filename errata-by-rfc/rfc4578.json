@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4624,
+    "errata_id": "4624",
     "doc-id": "RFC4578",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "            Type   Architecture Name\r\n            ----   -----------------\r\n              0    Intel x86PC\r\n              1    NEC/PC98\r\n              2    EFI Itanium\r\n              3    DEC Alpha\r\n              4    Arc x86\r\n              5    Intel Lean Client\r\n              6    EFI IA32\r\n              7    EFI BC\r\n              8    EFI Xscale\r\n              9    EFI x86-64\r\n",
     "correct_text": "            Type   Architecture Name\r\n            ----   -----------------\r\n              0    Intel x86PC\r\n              1    NEC/PC98\r\n              2    EFI Itanium\r\n              3    DEC Alpha\r\n              4    Arc x86\r\n              5    Intel Lean Client\r\n              6    EFI IA32\r\n              7    EFI x86-64\r\n              8    EFI Xscale\r\n              9    EFI BC\r\n",
     "notes": "The values for EFI BC and EFI x86-64 should be swapped. UEFI imeplementations use value 7 to report EFI x86-64, not value 9. The IANA registry for DHCPv6 options (http://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture) correctly reflects reality, with values 7 and 9 swapped compared to RFC 4578.",
     "submit_date": "2016-02-23",
     "submitter_name": "David Anderson",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

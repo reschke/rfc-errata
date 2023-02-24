@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6630,
+    "errata_id": "6630",
     "doc-id": "RFC8919",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "RFC 8919 defines advertising link attributes with zero\r\nlength Standard Application Bit Mask (SABM) and zero length User\r\nDefined ApplicationBit Mask (UDABM) as a means of advertising link\r\nattributes that can be used by any application. However, the text uses\r\nthe word \"permitted\", suggesting that the use of such advertisements\r\nis \"optional\". Such an interpretation could lead to interoperability\r\nissues and is not what was intended.\r\n\r\nThe replacement text below makes explicit the specific conditions when\r\nsuch advertisements MUST be used and the specific conditions under\r\nwhich they MUST NOT be used.\n --VERIFIER NOTES-- \nIt would be more appropriate to pursue this as an update or bis RFC, see discussion at https://mailarchive.ietf.org/arch/msg/lsr/_15rAwElfpGLDRxqjUuUJHiGdrQ/",
     "submit_date": "2021-07-05",
     "submitter_name": "Les Ginsberg",
-    "verifier_id": 171,
+    "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2022-05-13 17:58:08"
   }

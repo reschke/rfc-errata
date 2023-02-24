@@ -1,36 +1,21 @@
 [
   {
-    "errata_id": 222,
-    "doc-id": "RFC3852",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": 6.1,
-    "orig_text": "          IF (originatorInfo is present) AND\r\n             ((any certificates with a type of other are present) OR\r\n             (any crls with a type of other are present))\r\n          THEN version is 4\r\n          ELSE\r\n             IF ((originatorInfo is present) AND\r\n                (any version 2 attribute certificates are present)) OR\r\n                (any RecipientInfo structures include pwri) OR\r\n                (any RecipientInfo structures include ori)\r\n             THEN version is 3\r\n             ELSE\r\n                IF (originatorInfo is absent) OR\r\n                   (unprotectedAttrs is absent) OR\r\n                   (all RecipientInfo structures are version 0)\r\n                THEN version is 0\r\n                ELSE version is 2\r\n",
-    "correct_text": "          IF (originatorInfo is present) AND\r\n             ((any certificates with a type of other are present) OR\r\n             (any crls with a type of other are present))\r\n          THEN version is 4\r\n          ELSE\r\n             IF ((originatorInfo is present) AND\r\n                (any version 2 attribute certificates are present)) OR\r\n                (any RecipientInfo structures include pwri) OR\r\n                (any RecipientInfo structures include ori)\r\n             THEN version is 3\r\n             ELSE\r\n                IF (originatorInfo is absent) AND\r\n                   (unprotectedAttrs is absent) AND\r\n                   (all RecipientInfo structures are version 0)\r\n                THEN version is 0\r\n                ELSE version is 2\r\n",
-    "notes": " ",
-    "submit_date": "2005-01-22",
-    "submitter_name": "Russ Housley",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1744,
+    "errata_id": "1744",
     "doc-id": "RFC3852",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5,
+    "section": "5",
     "orig_text": "A recipient independently computes the message digest.  This message\r\ndigest and the signer's public key are used to verify the signature\r\nvalue.  The signer's public key is referenced either by an issuer\r\ndistinguished name along with an issuer-specific serial number or by\r\na subject key identifier that uniquely identifies the certificate\r\ncontaining the public key.  The signer's certificate can be included\r\nin the SignedData certificates field.",
     "correct_text": "A recipient independently computes the message digest.  This message\r\ndigest and the signer's public key are used to verify the signature\r\nvalue.  The signer's public key is referenced in one of two ways.\r\nIt can be referenced by an issuer distinguished name along with an\r\nissuer-specific serial number to uniquely identify the certificate\r\nthat contains the public key.  Alternatively, it can be referenced\r\nby a subject key identifier, which accommodates both certified and\r\nuncertified public keys.  While not required, the signer's\r\ncertificate can be included in the SignedData certificates field.\r\n",
     "notes": "The original text seems to indicate that a subjectKeyIdentifier also uniquely identifies a certificate, when in fact no certificate may exist at all. This clarification clarifies some possibly conflicting text from the CMC rfc.",
     "submit_date": "2009-03-26",
     "submitter_name": "Jan Vilhuber",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1756,
+    "errata_id": "1756",
     "doc-id": "RFC3852",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,8 +25,23 @@
     "notes": "Some people have taken the original text to mean that compound signature algorithm identifiers should not be used.  This is not the case.  Section 12.2 of RFC 2630 (the grandfather of RFC 3852) clearly requires the implementation of id-dsa-with-sha1, which is a compound signature algorithm.",
     "submit_date": "2009-04-04",
     "submitter_name": "Russ Housley",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "222",
+    "doc-id": "RFC3852",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.1",
+    "orig_text": "          IF (originatorInfo is present) AND\r\n             ((any certificates with a type of other are present) OR\r\n             (any crls with a type of other are present))\r\n          THEN version is 4\r\n          ELSE\r\n             IF ((originatorInfo is present) AND\r\n                (any version 2 attribute certificates are present)) OR\r\n                (any RecipientInfo structures include pwri) OR\r\n                (any RecipientInfo structures include ori)\r\n             THEN version is 3\r\n             ELSE\r\n                IF (originatorInfo is absent) OR\r\n                   (unprotectedAttrs is absent) OR\r\n                   (all RecipientInfo structures are version 0)\r\n                THEN version is 0\r\n                ELSE version is 2\r\n",
+    "correct_text": "          IF (originatorInfo is present) AND\r\n             ((any certificates with a type of other are present) OR\r\n             (any crls with a type of other are present))\r\n          THEN version is 4\r\n          ELSE\r\n             IF ((originatorInfo is present) AND\r\n                (any version 2 attribute certificates are present)) OR\r\n                (any RecipientInfo structures include pwri) OR\r\n                (any RecipientInfo structures include ori)\r\n             THEN version is 3\r\n             ELSE\r\n                IF (originatorInfo is absent) AND\r\n                   (unprotectedAttrs is absent) AND\r\n                   (all RecipientInfo structures are version 0)\r\n                THEN version is 0\r\n                ELSE version is 2\r\n",
+    "notes": " ",
+    "submit_date": "2005-01-22",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "99",
+    "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5053,
+    "errata_id": "5053",
     "doc-id": "RFC8007",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "In the final editing phase, I believe it was agreed that text would use the American spelling with 1 \"l\", but that the actual status strings would use 2 \"l\"s.  In sections 2.3, 4.3, 4.5, and Appendix A, the quoted status strings all use 2 \"l\"s.  The first column of the table in section 5.2.3 is providing the JSON string values, which should match the quoted status strings in sections 2.3, 4.3, 4.5, and Appendix A and have 2 \"l\"s.",
     "submit_date": "2017-06-27",
     "submitter_name": "Kevin J. Ma",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2021-01-22 07:11:03"
   },
   {
-    "errata_id": 5054,
+    "errata_id": "5054",
     "doc-id": "RFC8007",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "In the final editing phase, I believe it was agreed that text would use the American spelling with 1 \"l\", but that the status strings would use 2 \"l\"s.  This should apply to the error codes as well.  The first column of the table in section 5.2.7 is providing the Error Code values, which like the status code strings in sections 2.3, 4.3, 4.5, 5.2.3, and Appendix A, should have 2 \"l\"s.  Note: The IANA registry has the error code as \"ecancelled\" with 2 \"l\"s.  http://www.iana.org/assignments/cdni-parameters/cdni-parameters.xhtml#error-codes\r\n\r\nNote: This errata also applies to Appendix A.",
     "submit_date": "2017-06-27",
     "submitter_name": "Kevin J. Ma",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2021-01-22 07:11:40"
   },
   {
-    "errata_id": 5064,
+    "errata_id": "5064",
     "doc-id": "RFC8007",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,22 +40,22 @@
     "notes": "There is no example for canceling a trigger.  Section 4.3 does not specify what the response payload should be for cancel responses.  An explicit example would help clarify the intent of an empty response.  A cancel example probably warrants its own section, but for the purposes of simplifying this errata, it has been combined with the delete example.",
     "submit_date": "2017-07-07",
     "submitter_name": "Kevin J. Ma",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2021-01-22 07:13:05"
   },
   {
-    "errata_id": 6385,
+    "errata_id": "6385",
     "doc-id": "RFC8007",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.1,
+    "section": "4.1",
     "orig_text": "   When a CI/T Trigger Command is accepted, the uCDN MUST create a new\r\n   Trigger Status Resource that will convey a specification of the CI/T\r\n   Command and its current status.  The HTTP response to the dCDN MUST\r\n   have status code 201 and MUST convey the URI of the Trigger Status\r\n   Resource in the Location header field [RFC7231].",
     "correct_text": "   When a CI/T Trigger Command is accepted, the dCDN MUST create a new\r\n   Trigger Status Resource that will convey a specification of the CI/T\r\n   Command and its current status.  The HTTP response to the uCDN MUST\r\n   have status code 201 and MUST convey the URI of the Trigger Status\r\n   Resource in the Location header field [RFC7231].",
     "notes": "There has been an accidental switch between \"uCDN\" and \"dCDN\" terms in this statement. If my understanding is correct, when the uCDN post a CI/T command to the dCDN, the latter must create a trigger status resource and returns in the response (HTTP code 201) “Location” header the URI of that status resource.",
     "submit_date": "2021-01-12",
     "submitter_name": "Guillaume Bichot",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2021-01-22 07:14:26"
   }

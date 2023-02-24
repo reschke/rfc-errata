@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3926,
+    "errata_id": "3926",
     "doc-id": "RFC6620",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "a. According to the description on the state machine at page 19,\r\n\r\n <quote>\r\no  If an NA message containing the IPAddr as the Target Address is\r\n      received through the Validating Port P as a reply to the DAD_NS\r\n      message, then the NA is forwarded as usual and the state is\r\n      changed to VALID.  The LIFETIME is set to DEFAULT_LT.\r\n </quote>\r\n\r\nthe state change from TESTING_VP  to VALID should be triggered by the  VP_NA (NA message containing the IPAddr as the Target Address is received through the Validating Port).\r\n\r\n\r\nb. According to the description on the state machine at page 19,\r\n\r\n <quote>\r\n   o  If a data packet containing IPAddr as the source address is\r\n      received through a Trusted Port (i.e., other than port P), the\r\n      state is moved to TESTING_TP-LT, and the packet MAY be discarded.\r\n\r\n   o  If a DAD_NS is received through a Trusted Port, the packet is\r\n      forwarded as usual, and the state is moved to TESTING_TP-LT.\r\n </quote>\r\n\r\nthe state change from TESTING_VP  to TESTING_TP-LT should be triggered by the TP_DATA (data packet containing IPAddr as the source address received through a Trusted Port), or by the TP_NS (DAD_NS is received through a Trusted Port).",
     "submit_date": "2014-03-21",
     "submitter_name": "Leaf Yeh",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3927,
+    "errata_id": "3927",
     "doc-id": "RFC6620",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 2.5,
+    "section": "2.5",
     "orig_text": "   In order to provide proper\r\n   source address validation, it is critical that the information\r\n   distributed among the different FCFS SAVI devices be coherent.",
     "correct_text": "   In order to provide proper\r\n   source address validation, it is critical that the information\r\n   distributed among the different FCFS SAVI devices be not coherent.",
     "notes": "The above revision then complies with the other statements in the same paragraph:\r\n\r\n<quote>\r\nIn particular, it is important to avoid having the same source address bound to different binding anchors in different FCFS SAVI devices. Should that occur, then it would mean that two hosts are allowed to send packets with the same source address, which is what FCFS SAVI is trying to prevent.  In order to preserve the coherency of the FCFS SAVI bindings distributed among the FCFS SAVI devices within a realm, the Neighbor Discovery (ND) protocol [RFC4861] is used, in particular the Neighbor Solicitation (NS) and Neighbor Advertisement (NA) messages.\r\n</quote>\n --VERIFIER NOTES-- \nThe proposed change is incorrect.   I think you have misunderstood what the word \"coherent\" means, and this led to confusion.",
     "submit_date": "2014-03-21",
     "submitter_name": "Leaf Yeh",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   }

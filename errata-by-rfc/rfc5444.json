@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1790,
+    "errata_id": "1790",
     "doc-id": "RFC5444",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Correction to the message length, which is 55 instead of 54.",
     "submit_date": "2009-06-02",
     "submitter_name": "Yannick Lacharité",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3496,
+    "errata_id": "3496",
     "doc-id": "RFC5444",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Packet sequence number should be per interface, not per node. Uses that recognise missing packet sequence numbers only work in the corrected (intended) case.",
     "submit_date": "2013-02-25",
     "submitter_name": "Christopher Dearlove",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3497,
+    "errata_id": "3497",
     "doc-id": "RFC5444",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Corrects example TLV to have correct <tlv-flags> bits.",
     "submit_date": "2013-02-25",
     "submitter_name": "Christopher Dearlove",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4003,
+    "errata_id": "4003",
     "doc-id": "RFC5444",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Two changes of \"packet\" to \"message\". Message is consistent with the normative Section 5.2 that defines these fields (which may appear in each message, so are not uniquely defined for a packet), the text introducing these bullet points, and the remainder of these paragraphs.\r\n\r\n(Note that the original and corrected text has had indentation reduced by one space.)",
     "submit_date": "2014-05-29",
     "submitter_name": "Christopher Dearlove",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4178,
+    "errata_id": "4178",
     "doc-id": "RFC5444",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,7 +70,7 @@
     "notes": "'Message TLV Type' should read 'Address Block TLV Type'. This is likely a 'Copy-Paste' error from section 6.4.1, which stipulates a similar requirement for Message TLV Type Extension Registry creation.",
     "submit_date": "2014-11-13",
     "submitter_name": "Ronald in 't Velt",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

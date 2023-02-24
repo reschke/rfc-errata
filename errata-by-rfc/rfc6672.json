@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5297,
+    "errata_id": "5297",
     "doc-id": "RFC6672",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "The NSEC record in the original text would in no case be valid as it denies it's own existence and the existence of the RRSIG, while the text indicates that \" the validator can see that it is a  BOGUS reply from an attacker that collated existing records from the DNS to create a confusing reply\". This indicates that NSEC and RRSIG should be set in the NSEC bitmap.\r\n\r\nEdit: Thread: https://www.ietf.org/mail-archive/web/dnsext/current/msg13879.html",
     "submit_date": "2018-03-23",
     "submitter_name": "Pieter Lexis",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5298,
+    "errata_id": "5298",
     "doc-id": "RFC6672",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The NSEC record in the original text would in no case be valid as it denies it's own existence and the existence of the RRSIG, while the text indicates that \" the validator can see that it is a BOGUS reply from an attacker that collated existing records from the DNS to create a confusing reply\". This indicates that NSEC and RRSIG should be set in the NSEC bitmap\r\n\r\nEdit: Thread - https://www.ietf.org/mail-archive/web/dnsext/current/msg13879.html",
     "submit_date": "2018-03-23",
     "submitter_name": "Pieter Lexis",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   }

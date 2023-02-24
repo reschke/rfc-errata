@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2736,
+    "errata_id": "2736",
     "doc-id": "RFC5091",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "With the actual version of the RFC, the output of the algorithm 4.1.1 with the test cases input is v = 5ab5b7a6d72fa91bd01df98e29afb77f05e7b880, which doesn't correspond with the expected output.\r\n\r\nHowever, with the correction, the output is correct:\r\nv = 79317c1610c1fc018e9c53d89d59c108cd518608",
     "submit_date": "2011-02-27",
     "submitter_name": "David Núñez (University of Málaga)",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2737,
+    "errata_id": "2737",
     "doc-id": "RFC5091",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "There is a missing ')'. The same typo occurs in first line of page 40.",
     "submit_date": "2011-02-27",
     "submitter_name": "David Núñez (University of Málaga)",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2738,
+    "errata_id": "2738",
     "doc-id": "RFC5091",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "Since hashlen is the output size in bytes of the hash function, the correct limit is 256^hashlen.",
     "submit_date": "2011-02-27",
     "submitter_name": "David Núñez (University of Málaga)",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2739,
+    "errata_id": "2739",
     "doc-id": "RFC5091",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "If b is less than or equal to hashlen, then the result of the fourth step of the algorithm would always be 1, since the division will result in a number between 0 and 1.",
     "submit_date": "2011-02-27",
     "submitter_name": "David Núñez (University of Málaga)",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3228,
+    "errata_id": "3228",
     "doc-id": "RFC5091",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,37 +70,37 @@
     "notes": null,
     "submit_date": "2012-05-18",
     "submitter_name": "Richard Heylen",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3229,
+    "errata_id": "3229",
     "doc-id": "RFC5091",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "a * b = ((a_1 * b_1 - a_0 * b_0)(mod p),",
     "correct_text": "a * b = ((a_0 * b_0 - a_1 * b_1)(mod p),",
     "notes": null,
     "submit_date": "2012-05-18",
     "submitter_name": "Richard Heylen",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4335,
+    "errata_id": "4335",
     "doc-id": "RFC5091",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 201,
+    "section": "201",
     "orig_text": "e': G1' x G1'' -> G2",
     "correct_text": "e' : G1' X G1'' -> G2",
     "notes": "This is the only way to give type correctness.\r\ne: G1' x G1'' -> G2\r\nphi: G1' -> G1''\r\ne'(A, B) = e(A, phi(B))\r\nThere for B must be an element of G' so that it can be passed as input to phi(B).",
     "submit_date": "2015-04-13",
     "submitter_name": "Scott Ruoti",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

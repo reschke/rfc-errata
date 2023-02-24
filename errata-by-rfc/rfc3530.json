@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 255,
+    "errata_id": "255",
     "doc-id": "RFC3530",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "\nIn Section 9.3.2.  Data Caching and File Locking, Last Paragraph:\n\n by flushing to the server more data upon an LOCKU than is covered by \nthe locked range.\n\nShould be \"a LOCKU\"\n\n",
     "submit_date": "2004-02-03",
     "submitter_name": "Jon Bauman",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2609,
+    "errata_id": "2609",
     "doc-id": "RFC3530",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Missing comma in the LOCKT synopsis.",
     "submit_date": "2010-11-05",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2610,
+    "errata_id": "2610",
     "doc-id": "RFC3530",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "i)  The open_confirm should be removed (it is not a part of the OPEN4resok structure).\r\nii)  There is missing command between attrset and delegation.",
     "submit_date": "2010-11-05",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2613,
+    "errata_id": "2613",
     "doc-id": "RFC3530",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The 'lockowner' should be replaced by 'owner' (twice in the paragraph). The lockowner is not related to the OPEN operation. Instead, the owner (open_owner) is related.",
     "submit_date": "2010-11-08",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2614,
+    "errata_id": "2614",
     "doc-id": "RFC3530",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "The OPEN operation does not return the open_confirm value.",
     "submit_date": "2010-11-08",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2637,
+    "errata_id": "2637",
     "doc-id": "RFC3530",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "A lock can be held on already opened files only. This means that every lock state can exist only in case the accompanied open state is already there.\r\n\r\nSo if there is a lock state held by server then there must be an open state for the file too. This means that we do not need to mention the \"current lock state\" in the RFC's sentence above.\r\n\r\nNext, the delegation state is allocated only in case the delegation is granted by server to a client for a file. The delegation state is related to file and client. It is not related/tied to openowner. This means that it is not possible to test whether an openowner have any delegation states. Delegation states are simply not related to the openowner.\r\n\r\nIt is easily possible to have a client with some delegation granted with no valid openowner held by a server.",
     "submit_date": "2010-11-19",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2638,
+    "errata_id": "2638",
     "doc-id": "RFC3530",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -100,12 +100,12 @@
     "notes": "The FH4_NO_EXPIRE_WITH_OPEN should be replaced with FH4_NOEXPIRE_WITH_OPEN.",
     "submit_date": "2010-11-19",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2639,
+    "errata_id": "2639",
     "doc-id": "RFC3530",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -115,12 +115,12 @@
     "notes": "The FH4_VOL_ANY should be replaced with FH4_VOLATILE_ANY (three times).",
     "submit_date": "2010-11-19",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2663,
+    "errata_id": "2663",
     "doc-id": "RFC3530",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -130,22 +130,22 @@
     "notes": "The file opens are related to open_owners, not lockowners. The lockowner\r\nshould be replaced by open_owner in the first sentence of the paragraph above.",
     "submit_date": "2010-12-08",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3376,
+    "errata_id": "3376",
     "doc-id": "RFC3530",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 9.6,
+    "section": "9.6",
     "orig_text": "modified attributes may be returned to the server in the response\r\nto a CB_RECALL call.",
     "correct_text": "modified attributes may be returned to the server in the response\r\nto a CB_GETATTR call.",
     "notes": null,
     "submit_date": "2012-10-10",
     "submitter_name": "Kanda Motohiro",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }

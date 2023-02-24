@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4565,
+    "errata_id": "4565",
     "doc-id": "RFC7430",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "   Summary of the attack:\r\n\r\n      Type of attack: An attacker that can intercept the SYN/JOIN\r\n      message can alter the source address being added.\r\n\r\n      Type of attacker: partial-time on-path eavesdropper\r\n\r\n   Description:\r\n\r\n   The attacker is present along the path when the SYN/JOIN exchange\r\n   takes place.  This allows the attacker to add any new address it\r\n   wants to by simply substituting the source address of the SYN/JOIN\r\n   packet for one it chooses.  This vulnerability was readily identified\r\n   when designing the MPTCP security solution [RFC6181], and the threat\r\n   was considered acceptable.",
     "correct_text": "   Summary of the attack:\r\n\r\n      Type of attack: An attacker that can intercept the SYN/JOIN\r\n      message can alter the source address being added.\r\n\r\n      Type of attacker: partial-time on-path active attacker\r\n\r\n   Description:\r\n\r\n   The attacker is present along the path when the SYN/JOIN exchange\r\n   takes place.  This allows the attacker to add any new address it\r\n   wants to by simply substituting the source address of the SYN/JOIN\r\n   packet for one it chooses.  This vulnerability was readily identified\r\n   when designing the MPTCP security solution [RFC6181], and the threat\r\n   was considered acceptable.",
     "notes": "As noted in section 1, an active attacker is able to change, discard, or delay some of the packets of the MPTCP session. This coincide with the description of the SYN/JOIN attack in section 6.",
     "submit_date": "2015-12-14",
     "submitter_name": "Fabrizio Demaria",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }

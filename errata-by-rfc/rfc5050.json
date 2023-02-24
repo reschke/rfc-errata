@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1504,
+    "errata_id": "1504",
     "doc-id": "RFC5050",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Note the distinct fields:\r\n -- administrative record flags (least significant nibble of the\r\n    one-octet administrative record header, per Figure 9 on pg.37)\r\n -- status flags (first octet in the body of a bundle status report,\r\n    per Figure 11 on page 39)\r\nThe fragment bit is contained in the former, not in the latter.\r\n\r\nAttention: this same issue recurs literally in Section 6.1.2,\r\non pg. 43, below Figure 14 !",
     "submit_date": "2008-09-15",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 5,
+    "verifier_id": "5",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1505,
+    "errata_id": "1505",
     "doc-id": "RFC5050",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": null,
     "submit_date": "2008-09-15",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 5,
+    "verifier_id": "5",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1506,
+    "errata_id": "1506",
     "doc-id": "RFC5050",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,22 +40,22 @@
     "notes": "Occurs twice, in entry [BSP] and in entry [SECO].\r\n\r\n\"Work in Progress\" is mandatory per various process and IPR documents,\r\nfor referring to an Internet-Draft.",
     "submit_date": "2008-09-15",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 5,
+    "verifier_id": "5",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2694,
+    "errata_id": "2694",
     "doc-id": "RFC5050",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 10.1,
+    "section": "10.1",
     "orig_text": "[URIREG]   Hansen, T., Hardie, T., and L. Masinter, \"Guidelines and\r\n           Registration Procedures for New URI Schemes\", RFC 4395,\r\n           BCP 115, February 2006.\r\n\r\n",
     "correct_text": "[URIREG]   Hansen, T., Hardie, T., and L. Masinter, \"Guidelines and\r\n           Registration Procedures for New URI Schemes\", RFC 4395,\r\n           BCP 35, February 2006.\r\n\r\n",
     "notes": "BCP number 115 has been mistakenly assigned to RFC 4395.  RFC 4395 os BCP 35.\n --VERIFIER NOTES-- \nRejected after IRSG discussion.   ",
     "submit_date": "2011-01-28",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   }

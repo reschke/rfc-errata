@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3499,
+    "errata_id": "3499",
     "doc-id": "RFC6621",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "There are three changes:\r\n\r\nOn line 7, the first and second occurrences of x are replaced by w, and then x is given as the name of the sole member of N1(w).\r\n\r\nOn line 7B, the phrase 'delete \"N1(z)\" is dropped to be consistent with the rest of the algorithm.\r\n\r\nOn line 8 some rewording is done for clarification.\r\n\r\nThis errata prepared in consultation with Justin Dean and Gus Macker.",
     "submit_date": "2013-02-26",
     "submitter_name": "Errol Lloyd",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3640,
+    "errata_id": "3640",
     "doc-id": "RFC6621",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The initial verbal description of the E-CDS algorithm in first paragraph A.1 pg 40 is correct..as follows\r\n\r\n  1.  If an SMF router has a higher ordinal (Router Priority, Router\r\n      ID) than all of its symmetric neighbors, it elects itself to act\r\n      as a forwarder for all received multicast packets.\r\n\r\nBut LATER in A.4 pseudocode Step 4 contains a bug. N2 (2 hop neighbors are included in this step).  This pseudocode bug can cause incorrect behavior to occur.",
     "submit_date": "2013-06-06",
     "submitter_name": "Joseph Macker",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4098,
+    "errata_id": "4098",
     "doc-id": "RFC6621",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "Minimum connected dominating set [1] is the established terminology and \r\nminimal was an editorial error.\r\n\r\n[1] Sampathkumar, E.; Walikar, HB (1979), \r\n\"The connected domination number of a graph\", J. Math. Phys. Sci 13 (6): 607–613.",
     "submit_date": "2014-09-04",
     "submitter_name": "Joe Macker",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

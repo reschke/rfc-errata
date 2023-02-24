@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2584,
+    "errata_id": "2584",
     "doc-id": "RFC5782",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "Rand and Vixie created a \r\nDNS-based distribution scheme that quickly became more popular than \r\nthe original BGP distribution. ",
     "correct_text": "Eric Ziegast, who was a system administrator for Vixie Enterprises \r\nwhere the RBL was hosted, created a DNS-based distribution scheme \r\nthat quickly became more popular than the original BGP distribution.",
     "notes": "Vixie asked me to make this correction, to properly credit the inventor of DNSBLs.",
     "submit_date": "2010-10-26",
     "submitter_name": "John Levine",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   }

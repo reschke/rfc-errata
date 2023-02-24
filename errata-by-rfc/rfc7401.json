@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4408,
+    "errata_id": "4408",
     "doc-id": "RFC7401",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,27 +10,27 @@
     "notes": "This state machine figure is informative.  Normative (correct) specification for the I1-SENT to I2-SENT state transition (due to recv R1 event) is in Section 6.8.",
     "submit_date": "2015-07-03",
     "submitter_name": "Tom Henderson",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6653,
+    "errata_id": "6653",
     "doc-id": "RFC7401",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "   | TRANSPORT_FORMAT_LIST  | 2049  | Ordered   | variable             |\r\n   |                        |       | list of   |                      |\r\n   |                        |       | preferred |                      |\r\n   |                        |       | HIP       |                      |\r\n   |                        |       | transport |                      |\r\n   |                        |       | type      |                      |\r\n   |                        |       | numbers   |                      |\r\n   |                        |       |           |                      |\r\n\r\n",
     "correct_text": "   | TRANSPORT_FORMAT_LIST  | 2049  |  variable | Ordered              |\r\n   |                        |       |           | list of              |\r\n   |                        |       |           | preferred            |\r\n   |                        |       |           | HIP                  |\r\n   |                        |       |           | transport            |\r\n   |                        |       |           | type                 |\r\n   |                        |       |           | numbers              |\r\n   |                        |       |           |                      |",
     "notes": "The values in the columns are swapped.\r\n\r\n--- Verifier note ---\r\nThe erratum has been verified by Tom Henderson (co-author) https://mailarchive.ietf.org/arch/msg/hipsec/aJSEhRNShc3vXcbtlbd8V39Bfow/\r\n\r\nAs it does not prevent implementation, the erratum status is \"help for document update\"",
     "submit_date": "2021-08-03",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 161,
+    "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2021-08-05 00:00:03"
   },
   {
-    "errata_id": 6654,
+    "errata_id": "6654",
     "doc-id": "RFC7401",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "Packet name error, must be R1",
     "submit_date": "2021-08-04",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 161,
+    "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2021-08-05 01:55:39"
   }

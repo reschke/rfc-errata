@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 362,
+    "errata_id": "362",
     "doc-id": "RFC2916",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 99,
+    "section": "",
     "orig_text": "* IN NAPTR 100 10 \"u\" \"ldap+E2U\" \"!^+46(.*)$!ldap://ldap.se/cn=01!\" .",
     "correct_text": "* IN NAPTR 100 10 \"u\" \"ldap+E2U\" \"!^+46(.*)$!ldap://ldap.se/cn=0\\1!\" .\r\n",
     "notes": "",
     "submit_date": "2000-09-27",
     "submitter_name": "Dr. Carsten Bormann",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 363,
+    "errata_id": "363",
     "doc-id": "RFC2916",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": "99Erratum reported says that it should be:",
+    "section": "Erratum reported says that it should be:",
     "orig_text": "* IN NAPTR 100 10 \"u\" \"ldap+E2U\" \"!^+46(.*)$!ldap://ldap.se/cn=0\\1!\" .",
     "correct_text": "* IN NAPTR 100 10 \"u\" \"ldap+E2U\" \"!^+46(.*)$!ldap://ldap.se/cn=0\\\\1!\" .",
     "notes": "A double backslash is needed as single backslash is the escape\r\nchararacter in the presentation format of a TXT element.\r\nThe on wire format requires a single backslash which results\r\nin a double backslash in the presentation format.\r\n",
     "submit_date": "2006-04-12",
     "submitter_name": "Mark Andrews",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

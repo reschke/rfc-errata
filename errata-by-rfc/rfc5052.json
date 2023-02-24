@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1006,
+    "errata_id": "1006",
     "doc-id": "RFC5052",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "Apparently, this sections has been crafted to give a formulation of\r\nthe algorithm avoiding the distinction between various cases, and in\r\nparticular a separate formulation for the \"regular\" corner case of\r\nan object that can be partitioned exactly into blocks of equal size.\r\nThe formulae given in Section 9.1.2 make use of the standard\r\nfunctions 'ceil' and 'floor' (restated in Section 9.1), but the\r\nfinal paragraph of the section, at the bottom of page 19, tries to\r\nparaphrase the 'floor' function (see above).\r\n\r\nBTW:\r\nMany FEC schemes are only prepared to deal with encoding symbols of\r\nequal size.  To accommodate this, wouldn't it therefore have been\r\npreferable to specify padding (to full size E) of the last symbol of\r\nthe last block, for the purpose of this common, default algorithm ?\r\n\r\n\r\n--- VERIFIER NOTES ---\r\nIt is the typical case (not a non-standard case) that the object size is not\r\nan even multiple of some nice encoding source block length, and thus\r\ntypically A_small not= A_large.   Furthermore, it is the typical case that L\r\nis not a multiple of E.  Thus, what you characterize as the \"regular\" case\r\nis actually quite atypical in the real-world.\r\n\r\nAlso, any application can pad out the last source symbol of a source block\r\nif it wants if the FEC encoder/decoder can't handle it, the specification\r\ndoes not mandate a particular implementation.  On the other hand, it is\r\nunnecessary, and usually wasteful, to actually send those padding bytes over\r\nthe wire, and this specification specifies what is sent on the wire and how.\r\nThis is why it is like it is.",
     "submit_date": "2007-09-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Michael Luby",
     "update_date": "2019-09-10 09:09:03"
   }

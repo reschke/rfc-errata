@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3995,
+    "errata_id": "3995",
     "doc-id": "RFC6409",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 8.7,
+    "section": "8.7",
     "orig_text": "   NOTE: SMTP [SMTP-MTA] prohibits the use of domain name aliases in\r\n   addresses and the session-opening announcement.  As with other SMTP\r\n   requirements, RFC 5321 effectively prohibits an MSA from forwarding\r\n   such messages into the public Internet.  Nonetheless, unconditionally\r\n   resolving aliases could be harmful.  For example, if www.example.net\r\n   and ftp.example.net are both aliases for mail.example.net, rewriting\r\n   them could lose useful information.\r\n",
     "correct_text": "   NOTE: RFC 821 and RFC 1123 prohibited the use of domain name\r\n   aliases in addresses and the session-opening announcement.\r\n   Because of this it is still common for MTAs to canonicalize\r\n   domains in email addresses.  However this requirement was dropped\r\n   during the development of RFC 2821.  The current rules about \r\n   domain name aliases are set out in RFC 5321 section 2.3.5.",
     "notes": "This errata report is correct, but the above wording is not quite correct and needs to be examined carefully before a revised version goes into a revised document.",
     "submit_date": "2014-05-22",
     "submitter_name": "Tony Finch",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

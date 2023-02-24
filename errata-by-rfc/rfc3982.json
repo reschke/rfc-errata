@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1305,
+    "errata_id": "1305",
     "doc-id": "RFC3982",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "     <group\r\n       name=\"partialMatchGroup\">\r\n       <choice>\r\n         <sequence>\r\n           <element\r\n             name=\"beginsWith\">\r\n             <simpleType>\r\n               <restriction\r\n                 base=\"token\">\r\n                 <minLength\r\n                   value=\"1\"/>\r\n               </restriction>\r\n             </simpleType>\r\n           </element>\r\n           <element\r\n             minOccurs=\"0\"\r\n             name=\"endsWith\">\r\n             <simpleType>\r\n               <restriction\r\n                 base=\"token\">\r\n                 <minLength\r\n                   value=\"1\"/>\r\n               </restriction>\r\n             </simpleType>\r\n           </element>\r\n         </sequence>\r\n         <element\r\n           name=\"endsWith\">\r\n           <simpleType>\r\n             <restriction\r\n               base=\"token\">\r\n               <minLength\r\n                 value=\"1\"/>\r\n             </restriction>\r\n           </simpleType>\r\n         </element>\r\n       </choice>\r\n     </group>\r\n",
     "correct_text": "\t<group name=\"partialMatchGroup\">\r\n\t\t<choice>\r\n\t\t\t<sequence>\r\n\t\t\t\t<element name=\"beginsWith\" type=\"dreg:partialMatchComponentType\"/>\r\n\t\t\t\t<element name=\"endsWith\" type=\"dreg:partialMatchComponentType\" minOccurs=\"0\"/>\r\n\t\t\t</sequence>\r\n\t\t\t<element name=\"endsWith\" type=\"dreg:partialMatchComponentType\"/>\r\n\t\t</choice>\r\n\t</group>\r\n\t<simpleType name=\"partialMatchComponentType\">\r\n\t\t<restriction base=\"token\">\r\n\t\t\t<minLength value=\"1\"/>\r\n\t\t</restriction>\r\n\t</simpleType>",
     "notes": "The original definition of the group \"partialMatchGroup\" violates the rule of consistent element declaration in XML schema:\r\nhttp://www.w3.org/TR/2004/REC-xmlschema-1-20041028/#cos-element-consistent\r\n\r\nIn order to fix the schema without introducing any semantic changes, a type declaration has been created, which makes the schema valid and more compact.",
     "submit_date": "2008-01-29",
     "submitter_name": "Marcos Sanz",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }

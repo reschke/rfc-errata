@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2332,
+    "errata_id": "2332",
     "doc-id": "RFC4635",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "This RFC, which I authored, clearly updates the Original RFC 2845 for TSIG: It makes it MANDATORY to implement HMAC-SHA1 and HMAC-SHA256 if you claim to support TSIG. It defines a new TSIG error code, BADTRUC, and specifies when it is to be returned. This are *significant* *normative* updates to RFC 2845. The RFC index for 2845 and 4635 should be updated to show this.",
     "submit_date": "2010-07-19",
     "submitter_name": "Donald Eastlake 3rd",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4526,
+    "errata_id": "4526",
     "doc-id": "RFC4635",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "      Optional       hamc-sha384\r\n",
     "correct_text": "      Optional       hmac-sha384\r\n",
     "notes": "Simple typo (transposed characters).\r\n\r\n2018-06-21: Status changed from \"Held for Document Update\" to \"Verified\".",
     "submit_date": "2015-11-09",
     "submitter_name": "Richard Hansen",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

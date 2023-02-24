@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2103,
+    "errata_id": "2103",
     "doc-id": "RFC4857",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 8.1,
+    "section": "8.1",
     "orig_text": "8.1.  Regional Registration Flag\r\n\r\n   The only change to the Mobility Agent Advertisement Extension defined\r\n   in [RFC3344] is a flag indicating that the domain, to which the FA\r\n   generating the Agent Advertisement belongs, supports regional\r\n   registrations.  The flag is inserted after the flags defined in\r\n   [RFC3344], [RFC3024], and [RFC3519].\r\n\r\n   Regional Registration flag:\r\n\r\n        0                   1                   2                   3\r\n        0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |     Type      |    Length     |        Sequence Number        |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |           Lifetime            |R|B|H|F|M|G|r|T|U|I| reserved  |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |                  zero or more Care-of Addresses               |\r\n       |                              ...                              |\r\n\r\n   The flag is defined as follows:\r\n\r\n            Type    16 (Mobility Agent Advertisement)\r\n\r\n            I       Regional Registration.  This domain supports\r\n                    regional registration as specified in this document.\r\n\r\n",
     "correct_text": "8.1.  Regional Registration Flag\r\n\r\n   The only change to the Mobility Agent Advertisement Extension defined\r\n   in [RFC3344] is a flag indicating that the domain, to which the FA\r\n   generating the Agent Advertisement belongs, supports regional\r\n   registrations.  The flag is inserted after the flags defined in\r\n   [RFC3344], [RFC3024], [RFC3519], and [RFC3543].\r\n\r\n   Regional Registration flag:\r\n\r\n        0                   1                   2                   3\r\n        0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |     Type      |    Length     |        Sequence Number        |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |           Lifetime            |R|B|H|F|M|G|r|T|U|X|I|reserved |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |                  zero or more Care-of Addresses               |\r\n       |                              ...                              |\r\n\r\n   The flag is defined as follows:\r\n\r\n            Type    16 (Mobility Agent Advertisement)\r\n\r\n            I       Regional Registration.  This domain supports\r\n                    regional registration as specified in this document.\r\n\r\n",
     "notes": "Bit 10 was already allocated by RFC 3543.  We need to move the 'I' bit one position to the right, and also add a reference to RFC 3543 in the References section.",
     "submit_date": "2010-04-01",
     "submitter_name": "Pete McCann",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

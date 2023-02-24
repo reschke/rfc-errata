@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2855,
+    "errata_id": "2855",
     "doc-id": "RFC6120",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "There are multiple occurrences (1 each in list items 3, 4, 5, 6 & 7). All read FDQN and should read FQDN",
     "submit_date": "2011-07-06",
     "submitter_name": "Toby Moncaster",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3486,
+    "errata_id": "3486",
     "doc-id": "RFC6120",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Current text mixes up actual support of STARTTLS/TLS (which is mandated by section 5.2) with deployment/availableness of the said.",
     "submit_date": "2013-02-18",
     "submitter_name": "Marco Cirillo",
-    "verifier_id": 123,
+    "verifier_id": "123",
     "verifier_name": "Gonzalo Camarillo",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3650,
+    "errata_id": "3650",
     "doc-id": "RFC6120",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "The \"invalid-id\" error condition was removed in the changes between RFC 3920 and RFC 6120, but mistakenly not removed from the schema. The \"unsupported-feature\" error condition was added in the changes between RFC 3920 and RFC 6120, but mistakenly not added to the schema.\r\n\r\nThis bug was found by Anastasia Gornostaeva.\r\n\r\nImplementors using the schema as updated by this erratum should note that if they produce XML that includes the \"unsupported-feature\" element, then it might be rejected as invalid by implementations using the original schema.  Likewise, if they produce XML that includes the \"invalid-id\" element, then it might be rejected as invalid by implementations following the revised schema.",
     "submit_date": "2013-06-12",
     "submitter_name": "Peter Saint-Andre",
-    "verifier_id": 136,
+    "verifier_id": "136",
     "verifier_name": "Richard Barnes",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3651,
+    "errata_id": "3651",
     "doc-id": "RFC6120",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "This bug was found by Yann Leboulanger.",
     "submit_date": "2013-06-12",
     "submitter_name": "Peter Saint-Andre",
-    "verifier_id": 136,
+    "verifier_id": "136",
     "verifier_name": "Richard Barnes",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4228,
+    "errata_id": "4228",
     "doc-id": "RFC6120",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "The issue is that the definition of the referenced element 'subject' is duplicated.\r\n\r\nThis can be easily tested via a command like:\r\n\r\n$ xmllint --schema XMLSchema_1.1.xsd server.xsd --noout\r\nserver.xsd:84: element element: Schemas validity error : Element '{http://www.w3.org/2001/XMLSchema}element': Duplicate key-sequence ['subject'] in key identity-constraint '{http://www.w3.org/2001/XMLSchema}element'.\r\nserver.xsd fails to validate\r\n\r\nThe corrected text contains one possible edit how to make the XSD of the server namespace valid again. Of course, another possibility would be to remove the first definition of the 'subject' element.\r\n\r\nI've eliminated the second definition because the first one equals the one from section A.5. (Client Namespace).",
     "submit_date": "2015-01-10",
     "submitter_name": "Georg Sauthoff",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4741,
+    "errata_id": "4741",
     "doc-id": "RFC6120",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -85,7 +85,7 @@
     "notes": "If the received IQ had an empty ID then it was not valid per point 1 and clients and servers cannot key on the ID (eg. for key mapped lists of IQs pending receipt or dispatch of a reply). An appropriate error or other behavior should be defined if the 'id' is meant to be REQUIRED, otherwise, if point 3 is correct, then 'id' should not be REQUIRED.",
     "submit_date": "2016-07-13",
     "submitter_name": "Sam Whited",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4479,
+    "errata_id": "4479",
     "doc-id": "RFC7234",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 5.3,
+    "section": "5.3",
     "orig_text": "   The Expires value is an HTTP-date timestamp, as defined in \r\n   <a href=\"#section-7.1.1.1\">Section</a>\r\n   <a href=\"#section-7.1.1.1\">7.1.1.1</a> of \r\n[<a href=\"./rfc7231\" title=\"&quot;Hypertext Transfer Protocol (HTTP/1.1)\r\n   : Semantics and Content&quot;\">RFC7231</a>].",
     "correct_text": "   The Expires value is an HTTP-date timestamp, as defined in \r\n   <a href=\"./rfc7231#section-7.1.1.1\">Section</a>\r\n   <a href=\"./rfc7231#section-7.1.1.1\">7.1.1.1</a> of \r\n[<a href=\"./rfc7231\" title=\"&quot;Hypertext Transfer Protocol (HTTP/1.1)\r\n   : Semantics and Content&quot;\">RFC7231</a>].",
     "notes": "The anchor should link to RFC 7231. It links to the not-existing section in RFC 7234 itself.\n --VERIFIER NOTES-- \nThe links are not in the RFCs, but in the HTML tools rendering.  The errata system isn't for that.",
     "submit_date": "2015-09-20",
     "submitter_name": "Florian Best",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4616,
+    "errata_id": "4616",
     "doc-id": "RFC7234",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,27 +25,27 @@
     "notes": "Section 4.2.2 is titled \"Calculating Heuristic Freshness\" but is referenced in the original text when talking about status codes. This is confusing despite having a reference to Section 6.1 of RFC7231 buried within the text.\r\n\r\nThere are other references to 4.2.2 as well, but those actually talk about heuristic freshness.\n --VERIFIER NOTES-- \nSee HTTPBIS mailing list discussion.\r\n",
     "submit_date": "2016-02-08",
     "submitter_name": "Brian Chang",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4674,
+    "errata_id": "4674",
     "doc-id": "RFC7234",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5.4,
+    "section": "5.4",
     "orig_text": "   When sending a no-cache request, a client ought to include both the\r\n   pragma and cache-control directives, unless Cache-Control: no-cache\r\n   is purposefully omitted to target other Cache-Control response\r\n                                                         ^^^^^^^^\r\n   directives at HTTP/1.1 caches.",
     "correct_text": "   When sending a no-cache request, a client ought to include both the\r\n   pragma and cache-control directives, unless Cache-Control: no-cache\r\n   is purposefully omitted to target other Cache-Control request\r\n                                                         ^^^^^^^\r\n   directives at HTTP/1.1 caches.",
     "notes": "\"other Cache-Control response directives\" was probably intended to be \"other Cache-Control request directives,\" because a request cannot have response directives.",
     "submit_date": "2016-04-21",
     "submitter_name": "Vasiliy Faronov",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5564,
+    "errata_id": "5564",
     "doc-id": "RFC7234",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The original text seems to conflict with https://tools.ietf.org/html/rfc5861#section-3\r\n\r\n3.  The stale-while-revalidate Cache-Control Extension\r\n\r\n   When present in an HTTP response, the stale-while-revalidate Cache-\r\n   Control extension indicates that caches MAY serve the response in\r\n   which it appears after it becomes stale, up to the indicated number\r\n   of seconds.\r\n\r\n     stale-while-revalidate = \"stale-while-revalidate\" \"=\" delta-seconds\r\n\r\n   If a cached response is served stale due to the presence of this\r\n   extension, the cache SHOULD attempt to revalidate it while still\r\n   serving stale responses (i.e., without blocking).\r\n\r\nSee also https://stackoverflow.com/questions/53324538/rest-low-latency-how-should-i-reply-to-a-get-while-an-upload-is-pending\n --VERIFIER NOTES-- \nMark Nottingham wrote:\r\n\r\nExtensions are explicitly allowed to override requirements, and\r\nmaking this a SHOULD would be too confusing (as many would read it as\r\n\"optional\").\r\n",
     "submit_date": "2018-11-27",
     "submitter_name": "Bruce Adams",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6279,
+    "errata_id": "6279",
     "doc-id": "RFC7234",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -70,7 +70,7 @@
     "notes": "The examples of directives that prohibit stale responses includes \"no-store\", but the definitions of \"no-store\" in 5.2.1.5 and 5.2.2.3 don't prohibit serving stale responses, and there is no other mention in RFC 7234 (or elsewhere) of \"no-store\" prohibiting serving stale responses.\r\n\r\nIf a \"no-store\" request directive is intended to prohibit serving stale responses, 5.2.1.5 should say so. (The question is meaningless for \"no-store\" response directives, since those should never be found in a cache.)",
     "submit_date": "2020-09-04",
     "submitter_name": "Todd Greer",
-    "verifier_id": 170,
+    "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2021-04-29 02:54:16"
   }

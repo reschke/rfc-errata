@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1336,
+    "errata_id": "1336",
     "doc-id": "RFC5106",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": null,
     "submit_date": "2008-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1337,
+    "errata_id": "1337",
     "doc-id": "RFC5106",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Rationale:\r\na)  \"EAP Code Type\" is confusing; the correct term is \r\n    \"EAP Methode Type\".\r\nb)  The  code point indeed had been allocated by IANA on publication\r\n    of the RFC; the text should be explicit, for the ease of its readers.",
     "submit_date": "2008-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1338,
+    "errata_id": "1338",
     "doc-id": "RFC5106",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Rationale: See Figure 10 in Appendix A (on page 30).\r\n\r\nNote:  The RFC contains Figure 1..6, 10, and 11, but no Figure 7..9 !",
     "submit_date": "2008-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1339,
+    "errata_id": "1339",
     "doc-id": "RFC5106",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "Location 1 first bullet on page 15.\n --VERIFIER NOTES-- \nDocument editor's choice.",
     "submit_date": "2008-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1340,
+    "errata_id": "1340",
     "doc-id": "RFC5106",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "Location is third bullet on page 15.",
     "submit_date": "2008-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1341,
+    "errata_id": "1341",
     "doc-id": "RFC5106",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -85,27 +85,27 @@
     "notes": null,
     "submit_date": "2008-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1342,
+    "errata_id": "1342",
     "doc-id": "RFC5106",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 8.1,
+    "section": "8.1",
     "orig_text": "Last paragraph on page 17:\r\n\r\n         [...].  The Message Length field is four octets long and\r\n   contains the length of the entire message (i.e., the length of the\r\n   EAP Data field.).  Note that, in contrast, the Length field shown in\r\n   ^^^^^^^^^^^^^^\r\n   Figure 4 contains the length of only the current fragment.  [...]\r\n\r\nSecond-to-last paragraph on page 18:\r\n\r\n   The Integrity Checksum Data field contains a cryptographic checksum\r\n   that covers the entire EAP message, starting with the Code field, and\r\n|  ending at the end of the EAP Data field.  This field, shown in Figure\r\n                        ^^^^^^^^^^^^^^^^^^\r\n   4, is present only if the I bit is set in the Flags field.  The\r\n   Integrity Checksum Data field immediately follows the EAP Data field\r\n   without padding.\r\n",
     "correct_text": null,
     "notes": "The above text is ambiguous and confusing, because the\r\n\"EAP Data field\" is neither shown in Figure 4 nor\r\nintroduced in the text of Sections 8 / 8.1.\r\n\r\nFrom the text snippits above, it remains unclear in particular\r\nwhether or not the \"Integrity Checksum Data\" field is considered\r\npart of the \"EAP Data field\".\r\nAccording to the EAP base specification, the former should be\r\nexpected, but the text contains no provisions for presetting\r\nthat field when calculating the ICV; thus it might be concluded\r\nthat the latter was intended.\r\n\r\nPlease clarify!",
     "submit_date": "2008-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1343,
+    "errata_id": "1343",
     "doc-id": "RFC5106",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -115,12 +115,12 @@
     "notes": "Location is 3rd-to-last line of last paragraph of the section.",
     "submit_date": "2008-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1344,
+    "errata_id": "1344",
     "doc-id": "RFC5106",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -130,7 +130,7 @@
     "notes": null,
     "submit_date": "2008-03-03",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }

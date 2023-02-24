@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4768,
+    "errata_id": "4768",
     "doc-id": "RFC7929",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "The example hash 8d57[...]b7 is wrong. It has been calculated with the wrong hash algorithm: SHA-224, instead of SHA-256. The correct hash is c93f[...]d6, which is shown in the example in section 3.",
     "submit_date": "2016-08-08",
     "submitter_name": "James Manger",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4796,
+    "errata_id": "4796",
     "doc-id": "RFC7929",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   6.  The domain name (the \"right-hand side\" of the email address,\r\n       called the \"domain\" in [RFC5322]) is appended to the result of\r\n       step 2 to complete the prepared domain name.\r\n",
     "correct_text": "   6.  The domain name (the \"right-hand side\" of the email address,\r\n       called the \"domain\" in [RFC5322]) is appended to the result of\r\n       step 5 to complete the prepared domain name.\r\n",
     "notes": "Technically, it should be step 5, not step 2: after step 2, there is no _openpgpkey label in the composed domain name.  step 5 adds the _openpgpkey label.",
     "submit_date": "2016-09-08",
     "submitter_name": "Daniel Kahn Gillmor",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2987,
+    "errata_id": "2987",
     "doc-id": "RFC6157",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "Furthermore, there SHOULD\r\n   exist both IPv6 and IPv4 DNS entries for outbound proxy servers.\r\n   This allows the user agent to query DNS and obtain an IP address most\r\n   appropriate for its use (i.e., an IPv4-only user agent will query DNS\r\n   for A resource records (RRs), an IPv6-only user agent will query DNS\r\n   for AAAA RRs, and a dual-stack user agent will query DNS for all RRs\r\n   and choose a specific network.)",
     "correct_text": "Furthermore, there SHOULD\r\n   exist both IPv6 and IPv4 DNS entries for outbound proxy servers.\r\n   This allows the user agent to query DNS and obtain an IP address most\r\n   appropriate for its use (i.e., an IPv4-only user agent will query DNS\r\n   for A resource records (RRs), an IPv6-only user agent will query DNS\r\n   for AAAA RRs, and a dual-stack user agent will query DNS for all RRs\r\n   and choose a specific network.) This is an update to RFC 3263, in which\r\nthe client on a dual stack network queries for either A or AAAA.",
     "notes": "The RFC actually updates RFC 3263 - locating SIP servers - but doesn't make a clear note about it.\n --VERIFIER NOTES-- \nIt's not clear that this RFC intended to update 3263, but it does point to an issue in 3261 that should be clarified through a consensus process.",
     "submit_date": "2011-10-10",
     "submitter_name": "Olle E. Johansson",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

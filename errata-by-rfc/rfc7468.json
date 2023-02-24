@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4508,
+    "errata_id": "4508",
     "doc-id": "RFC7468",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "  preeb      = \"-----BEGIN \" label \"-----\" ; unlike [RFC1421] (A)BNF,\r\n                                           ; eol is not required (but\r\n  posteb     = \"-----END \" label \"-----\"   ; see [RFC1421], Section 4.4)\r\n",
     "correct_text": "  preeb      = \"-----\" %x42.45.47.49.4E \" \" label \"-----\" \r\n\r\n  posteb     = \"-----\" %x45.4E.44 \" \" label\"-----\"\r\n                         ; unlike [RFC1421] (A)BNF, eol is not required\r\n                         ; (but see [RFC1421], Section 4.4)\r\n\r\nOR:\r\n\r\n  preeb      = %s\"-----BEGIN \" label \"-----\" ; unlike [RFC1421] (A)BNF,\r\n                                             ; eol is not required (but\r\n  posteb     = %s\"-----END \" label \"-----\"   ; see [RFC1421],\r\n                                             ; Section 4.4)\r\n\r\n...with reference to RFC 7405.",
     "notes": "The encapsulation boundaries are case-sensitive, including (especially) the BEGIN and END characters. Nearly all implementations enforce the case sensitivity of BEGIN and END on input, and all surveyed implementations output all-caps.",
     "submit_date": "2015-10-20",
     "submitter_name": "Sean Leonard",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   }

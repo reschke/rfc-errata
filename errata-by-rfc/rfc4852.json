@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1043,
+    "errata_id": "1043",
     "doc-id": "RFC4852",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 10.1,
+    "section": "10.1",
     "orig_text": "  [IPSEC]  Eastlake 3rd, D., \"Cryptographic Algorithm Implementation\r\n           Requirements for Encapsulating Security Payload (ESP) and\r\n           Authentication Header (AH)\", RFC 4305, December 2005.",
     "correct_text": "  [IPSEC]  Kent, S. and K. Seo, \"Security Architecture for the\r\n           Internet Protocol\", RFC 4301, December 2005.",
     "notes": "a) RFC 4305 has been obsoleted by RFC 4835, published two weeks\r\n   before RFC 4852.\r\n\r\nb) The single use of \"[IPSEC]\" in the text is totally unrelated to\r\n   specific cryptographic algorithms and their support in IPsec;\r\n   it refers to IPsec in general, as a framework to secure IPv6 ND.\r\n\r\nc) The primary reference for IPsec alway should be the latest IPsec\r\n   Architecture document, currently RFC 4301, and not a subordinate\r\n   document with recommendations for cryptographic algorithm support\r\n   like RFC 4305/4835, subject to relatively frequent updates.",
     "submit_date": "2007-05-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Ron Bonica",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1044,
+    "errata_id": "1044",
     "doc-id": "RFC4852",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 10.2,
+    "section": "10.2",
     "orig_text": "   [TSPB]   Blanchet, M., and F. Parent, \"IPv6 Tunnel Broker with the\r\n|           Tunnel Setup Protocol (TSP\", Work in Progress, August 2005.",
     "correct_text": "   [TSPB]   Blanchet, M., and F. Parent, \"IPv6 Tunnel Broker with the\r\n|           Tunnel Setup Protocol (TSP)\", Work in Progress, August 2005.",
     "notes": "Matching parenthesis missing.",
     "submit_date": "2007-05-08",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

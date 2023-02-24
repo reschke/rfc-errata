@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2883,
+    "errata_id": "2883",
     "doc-id": "RFC6235",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "s/exportingProcessIPv4Address/exporterIPv4Address/ (twice)\r\ns/exportingProcessIPv6Address/exporterIPv6Address/ (twice)\r\ns/collectingProcessIPv4Address/collectorIPv4Address/ (once)\r\ns/collectingProcessIPv6Address/collectorIPv6Address/ (once)\r\n\r\n- per the names in IANA's IPFIX registry.",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2887,
+    "errata_id": "2887",
     "doc-id": "RFC6235",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "s/dataTimeMilliseconds/dateTimeMilliseconds/\r\n\r\nPer [RFC5102] section 3.1.16, the definition is \"dateTimeMilliseconds\"",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2907,
+    "errata_id": "2907",
     "doc-id": "RFC6235",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "s/templateID/templateId/\r\n\r\nPer RFC5102 and IANA's IPFIX registry, the correct name is \"templateId\".",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }

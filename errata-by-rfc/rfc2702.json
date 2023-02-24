@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3172,
+    "errata_id": "3172",
     "doc-id": "RFC2702",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "   An induced MPLS graph consists of a set of LSRs which comprise the\r\n   nodes of the graph and a set of LSPs which provide logical point to\r\n   point connectivity between the LSRs, and hence serve as the links of\r\n   the induced graph. it may be possible to construct hierarchical\r\n   induced MPLS graphs based on the concept of label stacks (see [1]).",
     "correct_text": "   An induced MPLS graph consists of a set of LSRs which comprise the\r\n   nodes of the graph and a set of LSPs which provide logical point to\r\n   point connectivity between the LSRs, and hence serve as the links of\r\n   the induced graph. It may be possible to construct hierarchical\r\n   induced MPLS graphs based on the concept of label stacks (see [1]).",
     "notes": "Typo. Capitalisation at start of sentence.",
     "submit_date": "2012-04-02",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5145,
+    "errata_id": "5145",
     "doc-id": "RFC7307",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "The original text uses \"this sub-TLV\" in ways that can be ambiguous. In particular, the final sentence \"The Length for this sub-TLV is 5.\" is incorrect if \"this sub-TLV\" refers to the topic of the section, i.e., \"MT LDP IPv4 FEC Sub-TLV\", but is correct if \"this sub-TLV\" refers to the LDP IPv4 prefix sub-TLV defined in RFC4379/RFC8029. The revised text is suggested to remove the ambiguities. Adrian Farrell provided the bulk of the suggested revisions.\r\n\r\nIn addition, the sub-TLV names are changed to match the names that were registered in the IANA registry, to aid those trying to find the registry entries.",
     "submit_date": "2017-10-05",
     "submitter_name": "Sandra Murphy",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2021-02-26 14:11:56"
   },
   {
-    "errata_id": 5146,
+    "errata_id": "5146",
     "doc-id": "RFC7307",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The original text uses \"this sub-TLV\" in ways that can be ambiguous. In particular, the final sentence \"The Length for this sub-TLV is 17.” is incorrect if \"this sub-TLV\" refers to the topic of the section, i.e., \"MT LDP IPv6 FEC Sub-TLV\", but is correct if \"this sub-TLV\" refers to the LDP IPv6 prefix sub-TLV defined in RFC4379/RFC8029. The revised text is suggested to remove the ambiguities. Adrian Farrell provided the bulk of the suggested revisions.\r\n\r\nIn addition, the sub-TLV names are changed to match the names that were registered in the IANA registry, to aid those trying to find the registry entries.",
     "submit_date": "2017-10-05",
     "submitter_name": "Sandra Murphy",
-    "verifier_id": 149,
+    "verifier_id": "149",
     "verifier_name": "Deborah Brungard",
     "update_date": "2021-02-26 14:12:25"
   }

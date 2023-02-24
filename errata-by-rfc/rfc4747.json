@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1045,
+    "errata_id": "1045",
     "doc-id": "RFC4747",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "[in the DESCRIPTION of t11vfLocallyEnabledOperStatus, page 13]\r\n \r\n      DESCRIPTION\r\n           \"This object is used to report the operational status of\r\n            Virtual Fabric tagging on this Port.\r\n\r\n            SET operation   Description\r\n            --------------  -------------------------------------------\r\n            off(1)          Virtual Fabric tagging is disabled on this\r\n                            Port.\r\n\r\n            on(2)           Virtual Fabric tagging is enabled on this\r\n                            Port.\"",
     "correct_text": "       DESCRIPTION\r\n           \"This object is used to report the operational status of\r\n            Virtual Fabric tagging on this Port.\r\n\r\n            Operational-Status Description\r\n            ------------------ -------------------------------------\r\n            off(1)             Virtual Fabric tagging is disabled on\r\n                               this Port.\r\n\r\n            on(2)              Virtual Fabric tagging is enabled on\r\n                               this Port.\"",
     "notes": "--VERIFIER NOTES--\r\n\r\nt11vfLocallyEnabledOperStatus is a read-only object -- which means it\r\nit does not have \"SET operation\"s.  So, the problem is the line in\r\nt11vfLocallyEnabledOperStatus's DESCRIPTION shown above.\r\n\r\n[Aside: traditionally, \"operational status\" is always read-only, as in\r\nifOperStatus in RFC 2863.]",
     "submit_date": "2007-09-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Keith McCloghrie",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1046,
+    "errata_id": "1046",
     "doc-id": "RFC4747",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "[in the DESCRIPTION of t11vfLocallyEnabledTable, page 12]\r\n \r\n       DESCRIPTION\r\n           \"A table for assigning and reporting operational status of\r\n            locally-enabled Virtual Fabric IDs to Ports.  The set of\r\n            Virtual Fabrics operational on the Port is the bit-wise\r\n            'AND' of the set of locally-enabled VF_IDs of this Port\r\n            and the locally-enabled VF_IDs of the attached Port.\"",
     "correct_text": "       DESCRIPTION\r\n           \"A table for reporting operational status of\r\n            locally-enabled Virtual Fabric IDs to Ports.  The set of\r\n            Virtual Fabrics operational on the Port is the bit-wise\r\n            'AND' of the set of locally-enabled VF_IDs of this Port\r\n            and the locally-enabled VF_IDs of the attached Port.\"",
     "notes": "--VERIFIER NOTES--\r\n\r\nThis phrase makes it seem like t11vfLocallyEnabledTable is \r\nread-write and needs to be changed.\r\n\r\nThe only reaon this table has a RowStatus object (and a StorageType) is \r\nso that a management application can limit the rows in the table to be \r\nonly those which it is interested in.  It doesn't allow the operational\r\nstatus to be changed.  Therefore the words \"assigning and\" need to be\r\nremoved, so that the definition is as above.\r\n",
     "submit_date": "2007-09-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Keith McCloghrie",
     "update_date": "2019-09-10 09:09:03"
   }

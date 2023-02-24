@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 2942,
+    "errata_id": "2942",
     "doc-id": "RFC2384",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 7,
+    "section": "7",
     "orig_text": "   The URL:\r\n\r\n        <pop://baz;AUTH=SCRAM-MD5@foo.bar>\r\n\r\n   Results in the following client commands:\r\n\r\n        <connect to foo.bar, port 110>\r\n\r\n        S: +OK POP3 server ready <1896.697170952@foo.bar>\r\n        C: AUTH SCRAM-MD5 AGNocmlzADx0NG40UGFiOUhCMEFtL1FMWEI3MmVnQGVsZW\r\n",
     "correct_text": "   The URL:\r\n\r\n        <pop://baz;AUTH=CRAM-MD5@foo.bar>\r\n\r\n   Results in the following client commands:\r\n\r\n        <connect to foo.bar, port 110>\r\n\r\n        S: +OK POP3 server ready <1896.697170952@foo.bar>\r\n        C: AUTH CRAM-MD5 AGNocmlzADx0NG40UGFiOUhCMEFtL1FMWEI3MmVnQGVsZW\r\n",
     "notes": "The name of the SASL mechanism based on RFC 2222 when this RFC was published is CRAM-MD5 specified in RFC 2195.  This is unrelated to the SCRAM-family of SASL mechanisms specified in RFC 5802.  Section 4 in RFC 2384 explains the intended SASL POP mechanism names; notably no \"S\" to indicate SASL.\r\n\r\nVERIFIER NOTE: We could change \"SCRAM-MD5\" to \"CRAM-MD5\", but we would need to modify the Base64 at the same time. This should be done through a document update or a separate erratum.",
     "submit_date": "2011-08-18",
     "submitter_name": "Frank Ellermann",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2943,
+    "errata_id": "2943",
     "doc-id": "RFC2384",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "        S: +OK POP3 server ready <1896.697170952@mail.eudora.com>\r\n        C: APOP rg c4c9334bac560ecc979e58001b3e22fb\r\n",
     "correct_text": "        S: +OK POP3 server ready <1896.697170952@mail.eudora.com>\r\n        C: APOP rg 8f5de26536bc248ba202a9ca612e71bd\r\n",
     "notes": "If the password for user \"rg\" is \"secret\" as in the plain PASS example before this APOP example, then \r\nMD5(\"<1896.697170952@mail.eudora.com>secret\") should be as shown in the corrected text. \r\n\r\nThe original text is a modification of the APOP example in RFC 1939, and\r\nMD5(\"<1896.697170952@dbc.mtview.ca.us>tanstaaf\") almost certainly will not match any plausible \r\nMD5(\"<1896.697170952@mail.eudora.com>\"||password).",
     "submit_date": "2011-08-18",
     "submitter_name": "Frank Ellermann",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }

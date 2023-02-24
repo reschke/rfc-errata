@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1841,
+    "errata_id": "1841",
     "doc-id": "RFC4803",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "In gmplsOutSegmentTable for the object gmplsOutSegmentTTLDecrement there is no gmplsTunnelTTLDecrement object in the gmplsTunnelTable of GMPLS-TE-STD-MIB which is referenced.",
     "submit_date": "2009-08-27",
     "submitter_name": "Girish Mahanta",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1883,
+    "errata_id": "1883",
     "doc-id": "RFC4803",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,22 +25,22 @@
     "notes": "The default value is changed. The default value specified in the RFC is 5ms. Section 5.3 states:\r\n\r\nThis value MAY be configured on a per neighbor basis.  The default value is 5 ms.\n --VERIFIER NOTES-- \nAfter discussion on the CCAMP mailing list it was agreed that the MIB module text is as intended, and is deliberately different from the value in the protocol specification.   ",
     "submit_date": "2009-09-16",
     "submitter_name": "Vishwas Manral",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3831,
+    "errata_id": "3831",
     "doc-id": "RFC4803",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 6,
+    "section": "6",
     "orig_text": "   In mplsXCTable:\r\n   {\r\n      mplsXCIndex                = 0x01,\r\n      mplsXCInSegmentIndex       = 0x00000015,\r\n      mplsXCOutSegmentIndex      = 0x00000012,\r\n      mplsXCLspId                = 0x0102 -- unique ID\r\n      mplsXCLabelStackIndex      = 0x00, -- only a single outgoing label\r\n      mplsXCRowStatus            = createAndGo(4)\r\n   }\r\n\r\n   In mplsXCTable:\r\n   {\r\n      mplsXCIndex                = 0x02,\r\n      mplsXCInSegmentIndex       = 0x00000016,\r\n      mplsXCOutSegmentIndex      = 0x00000013,\r\n      mplsXCLspId                = 0x0102 -- unique ID\r\n      mplsXCLabelStackIndex      = 0x00, -- only a single outgoing label\r\n      mplsXCRowStatus            = createAndGo(4)\r\n   }\r\n",
     "correct_text": "   In mplsXCTable:\r\n   {\r\n      mplsXCIndex                = 0x01,\r\n      mplsXCInSegmentIndex       = 0x00000015,\r\n      mplsXCOutSegmentIndex      = 0x00000012,\r\n      mplsXCLspId                = 0x0102 -- unique ID\r\n      mplsXCLabelStackIndex      = 0x00, -- only a single outgoing label\r\n      mplsXCRowStatus            = createAndGo(4)\r\n   }\r\n\r\n   In mplsXCTable:\r\n   {\r\n      mplsXCIndex                = 0x01,\r\n      mplsXCInSegmentIndex       = 0x00000016,\r\n      mplsXCOutSegmentIndex      = 0x00000013,\r\n      mplsXCLspId                = 0x0102 -- unique ID\r\n      mplsXCLabelStackIndex      = 0x00, -- only a single outgoing label\r\n      mplsXCRowStatus            = createAndGo(4)\r\n   }\r\n",
     "notes": "The entries in the mplsXCTable are indexed by {mplsXCIndex, mplsXCInSegmentIndex, mplsOutSegmentIndex}. All XC entries for the same LSP should share a common value of mplsXCIndex because mplsTunnelXCPointer can be set to point to the first entry and then all of the other entries can be found.\r\n\r\nThe error in the example in Section 6 is that it shows a different value of mplsXCIndex for the reverse direction cross-connects. It should be set to the same value as is used for the forward direction cross-connect.",
     "submit_date": "2013-12-12",
     "submitter_name": "Adrian Farrel",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }

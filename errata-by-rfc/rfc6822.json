@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4519,
+    "errata_id": "4519",
     "doc-id": "RFC6822",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The exception case (point-to-point hellos on a point-to-point IIHs on a point-to-point circuit (sic)) is discussed in Section 2.6.2.\r\nThe proposed text is therefore unnecessary.  However, clarification is useful.",
     "submit_date": "2015-11-02",
     "submitter_name": "Alexander Okonnikov",
-    "verifier_id": 140,
+    "verifier_id": "140",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4520,
+    "errata_id": "4520",
     "doc-id": "RFC6822",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "1. While operating in point-to-point mode over broadcast circuit, MI-RTR can use any of three multicast addresses for PDUs in standard instance - AllL1ISs, AllL2ISs or AllISs.\r\n\r\n2. New multicast addresses must be used for all kinds of IS-IS PDUs, not only for IIHs\r\n\r\n3. AllL1IS and AllL2IS are replaced by AllL1ISs and AllL2ISs, respectively (according to ISO 10589:2002).",
     "submit_date": "2015-11-02",
     "submitter_name": "Alexander Okonnikov",
-    "verifier_id": 140,
+    "verifier_id": "140",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4521,
+    "errata_id": "4521",
     "doc-id": "RFC6822",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "In Section 2.6.1, it clearly says \"If operating in point-to-point mode on a broadcast circuit [RFC5309]\" which reinforces that Section 2.6.2 is about point-to-point circuits and not broadcast circuits.\r\n\r\nHowever, there isn't any harm in adding a bit of clarity going forward.  This can be looked at if and when RFC 6822 is updated.",
     "submit_date": "2015-11-02",
     "submitter_name": "Alexander Okonnikov",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
   }

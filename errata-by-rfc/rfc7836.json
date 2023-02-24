@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 6197,
+    "errata_id": "6197",
     "doc-id": "RFC7836",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "When a point on an elliptic curve is given to an input of a hash\r\nfunction, affine coordinates for short Weierstrass form are used (see\r\nSection 5): an x coordinate value is fed first, a y coordinate value\r\nis fed second, both in little-endian format.",
     "correct_text": "When a point on an elliptic curve is given to an input of a hash\r\nfunction, affine coordinates for short Weierstrass form are used (see\r\nSection 5): an x coordinate value is fed first, a y coordinate value\r\nis fed second, both in little-endian format. If the point to be fed\r\nto the hash function is zero point, the calculation MUST NOT be performed\r\nand an error SHOULD be reported on a protocol level.",
     "notes": "A new sentence added at the end of the paragraph explicitly defines the processing in case when the zero point is fed to the hash function.",
     "submit_date": "2020-06-03",
     "submitter_name": "Billy Brumley",
-    "verifier_id": 157,
+    "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2020-07-01 03:41:39"
   },
   {
-    "errata_id": 6198,
+    "errata_id": "6198",
     "doc-id": "RFC7836",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "For now the original text may be interpreted in the wrong way that both multiplications inside the brackets should be performed modulo q. However, multiplication by m/q must be a simple integer multiplication, without reduction modulo q, to eliminate small subgroup component of the input elliptic curve point. The proposed text modification clarifies the correct types and order of multiplication.",
     "submit_date": "2020-06-03",
     "submitter_name": "Billy Brumley",
-    "verifier_id": 157,
+    "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2020-07-01 03:43:24"
   },
   {
-    "errata_id": 6199,
+    "errata_id": "6199",
     "doc-id": "RFC7836",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "For now the original text may be interpreted in the wrong way that both multiplications inside the brackets should be performed modulo q. However, multiplication by m/q must be a simple integer multiplication, without reduction modulo q, to eliminate small subgroup component of the input elliptic curve point. The proposed text modification clarifies the correct types and order of multiplication.",
     "submit_date": "2020-06-03",
     "submitter_name": "Billy Brumley",
-    "verifier_id": 157,
+    "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2020-07-01 03:44:20"
   },
   {
-    "errata_id": 6200,
+    "errata_id": "6200",
     "doc-id": "RFC7836",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The proposed text clarifies the P point specification ways and the need to check the public key of one side for belonging to the elliptic curve used by the opposite side.",
     "submit_date": "2020-06-03",
     "submitter_name": "Billy Brumley",
-    "verifier_id": 157,
+    "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2020-07-01 03:45:16"
   },
   {
-    "errata_id": 6201,
+    "errata_id": "6201",
     "doc-id": "RFC7836",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,7 +70,7 @@
     "notes": "The proposed text clarifies the P point specification ways and the need to check the public key of one side for belonging to the elliptic curve used by the opposite side.",
     "submit_date": "2020-06-03",
     "submitter_name": "Billy Brumley",
-    "verifier_id": 157,
+    "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2020-07-01 03:46:18"
   }

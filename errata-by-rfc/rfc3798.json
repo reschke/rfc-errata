@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 691,
+    "errata_id": "691",
     "doc-id": "RFC3798",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": "99Appendix A",
+    "section": "Appendix A",
     "orig_text": "(1) disposition types\r\n=====================\r\nThe dispositions \"denied\" and \"failed\" were removed from the\r\ndocument reflecting the lack of implementation or usage ...\r\n\r\n\r\nNow, the syntax production \"disposition-type\" in section 3.2.6. (on\r\npage 14) and section 7. (on mid-page 22) has been changed to read:\r\n\r\n    disposition-type = \"displayed\" / \"deleted\"\r\n\r\nThis means that the RFC 2298 disposition types \"dispatched\" and\r\n\"processed\" have been removed from the syntax definitions as well!\r\n\r\nThus, either Appendix A lacks mentioning these removals  OR  these\r\nitems should not have been removed from the syntax definitions.\r\n\r\nNevertheless, all these disposition types removed from the syntax are\r\nmentioned at many places throughout RFC 3798:\r\n\r\no  \"dispatched\" :\r\n\r\n   - section 3.2.6. , final paragraph of the section on page 16\r\n   - section 4. , third-to-last bullet on page 17\r\n   - section 4. , first bullet on page 18\r\n\r\no  \"processed\" :\r\n\r\n   - section 4. , third-to-last bullet on page 17\r\n   - section 4. , first bullet on page 18\r\n   - section 5. , 4th paragraph on page 18\r\n\r\no  \"denied\" :\r\n\r\n   - section 2.1. , bottom of page 4\r\n   - section 2.1. , end of 3rd paragraph on page 5\r\n   - section 4. , third-to-last bullet on page 17\r\n   - section 4. , first bullet on page 18\r\n   - section 6.2. , end of first paragraph on page 19\r\n\r\no  \"failed\" :\r\n\r\n   - section 2.2. , middle of second-to-last paragraph on page 6\r\n   - section 2.2. , middle of second paragraph on page 7 (twice)\r\n   - section 2.2. , third paragraph on page 7 (twice)\r\n   - section 3.2.7. , in 2nd text line, on page 16\r\n                    (mis-spelled \"failure\" there)\r\n   - section 4. , third-to-last bullet on page 17\r\n   - section 4. , first bullet on page 18\r\n\r\nAll these places in the text deal with the issue/sending/generation\r\nof MDNs with the named deprecated disposition types (it would be\r\nacceptable to talk about what to do with *received* such disposition\r\ntypes for backwards compatibility with RFC 2298) !\r\n",
     "correct_text": "[not submitted]",
     "notes": "from pending\n --VERIFIER NOTES-- \nClearly this document is a mess. The solution is to publish an RFC that cleans up the mess (and verifies that there is indeed consensus to remove the \"denied\" and \"failed\" dispositions), not to handle this via the errata process.   ",
     "submit_date": "2004-10-20",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 692,
+    "errata_id": "692",
     "doc-id": "RFC3798",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "Alexey: The editors have this change in their editorial copy of -bis.",
     "submit_date": "2004-10-20",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }

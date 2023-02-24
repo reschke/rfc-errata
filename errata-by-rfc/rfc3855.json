@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 6412,
+    "errata_id": "6412",
     "doc-id": "RFC3855",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "   id-ep-content ::= {joint-iso-itu-t(2) mhs(6) ipms(1) ep(11) 17}\r\n\r\n   id-et-content ::= {joint-iso-itu-t(2) mhs(6) ipms(1) et(4) 17}",
     "correct_text": "   id-ep-content OBJECT IDENTIFIER ::=\r\n      {joint-iso-itu-t(2) mhs(6) ipms(1) ep(11) 17}\r\n\r\n   id-et-content OBJECT IDENTIFIER ::=\r\n      {joint-iso-itu-t(2) mhs(6) ipms(1) et(4) 17}",
     "notes": "The \"OBJECT IDENTIFIER\" is needed for correct ASN.1 syntax.",
     "submit_date": "2021-01-27",
     "submitter_name": "Russ Housley",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-01-27 13:42:56"
   }

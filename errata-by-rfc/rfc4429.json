@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1625,
+    "errata_id": "1625",
     "doc-id": "RFC4429",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "   [RFC2462] introduces the concept of Tentative (in 5.4) and Deprecated\r\n | (in 5.5.4) addresses.  Addresses that are neither are said to be\r\n   Preferred.  Tentative addresses may not be used for communication,\r\n   and Deprecated addresses should not be used for new communications.\r\n   These address states may also be used by other standards documents,\r\n   for example, Default Address Selection [RFC3484].\r\n",
     "correct_text": "   [RFC2462] introduces the concept of Tentative (in 5.4) and Deprecated\r\n | (in 5.5.4) addresses.  Addresses that are neither Tentative nor Deprecated are said to be\r\n   Preferred.  Tentative addresses may not be used for communication,\r\n   and Deprecated addresses should not be used for new communications.\r\n   These address states may also be used by other standards documents,\r\n   for example, Default Address Selection [RFC3484].",
     "notes": null,
     "submit_date": "2008-12-03",
     "submitter_name": "Shiang-Ming Huang",
-    "verifier_id": 103,
+    "verifier_id": "103",
     "verifier_name": "Jari Arkko",
     "update_date": "2019-09-10 09:09:03"
   }

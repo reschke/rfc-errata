@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1980,
+    "errata_id": "1980",
     "doc-id": "RFC5537",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Rationale:\r\n  Contrary to its companion document, RFC 5536, this RFC mixes precise\r\n  IETF terminology for protocol elements and colloquial abuse of it in\r\n  various places.  For clarity and consistency, it should also\r\n  inequivocally make use of the standard terminology; the fields\r\n  of the \"header\" that a protocol layer or sub-layer adds to its\r\n  payload are \"header fields\", not \"headers\" in itself.\r\n  Similarly, denoting as \"header field\" a \"header field value\" is\r\n  confusing -- items (e), (f), (g), (i), and (j) above.",
     "submit_date": "2009-12-28",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 101,
+    "verifier_id": "101",
     "verifier_name": "Lisa Dusseault",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1981,
+    "errata_id": "1981",
     "doc-id": "RFC5537",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Rationale:\r\n  Cf. the definition of agent roles presented in Section 1 and the\r\n  first paragraph of Section 3:\r\n  Serving agents only forward to reading agents, and in that step,\r\n  the articles are not modified in any way.",
     "submit_date": "2009-12-28",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 101,
+    "verifier_id": "101",
     "verifier_name": "Lisa Dusseault",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1982,
+    "errata_id": "1982",
     "doc-id": "RFC5537",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": null,
     "submit_date": "2009-12-28",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 101,
+    "verifier_id": "101",
     "verifier_name": "Lisa Dusseault",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1983,
+    "errata_id": "1983",
     "doc-id": "RFC5537",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "Rationale:\r\n  RFC 5537 does not follow the IETF standard terminology reinforced\r\n  by RFC 4288 and does not properly use the media type registration\r\n  template from Section 10 of RFC 4288.\r\n  RFC 4288 clarifies that IETF media types (and subtypes) have\r\n  outgrown the Internet Email MIME environment and now are used\r\n  in non-email environments as well; for instance in the context\r\n  of Netnews (this RFC!).  Therefore, all mention of \"MIME\" in the\r\n  context of Internet media types must be avoided.  See Sections 1\r\n  through 3 of RFC 4288 for more rationale and Section 10 there for\r\n  the registration template to be used since RFC 4288, in 2005.\r\n\r\nEditorial Note (keep for update):\r\n  The structure of Section 4 would perhaps more reasonably have been\r\n  split into a single-paragraph Section 4 and packing the remainder\r\n  of 4. into a new subsection 4.1, \"Obsolescence of message/news\",\r\n  with the remaining subsection numbers 4.* bumped accordingly.",
     "submit_date": "2009-12-28",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 101,
+    "verifier_id": "101",
     "verifier_name": "Lisa Dusseault",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1993,
+    "errata_id": "1993",
     "doc-id": "RFC5537",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,22 +70,22 @@
     "notes": "As the mandatory Path: header field is missing, this control message is only a proto-article.\r\n\r\nA control message is defined in Section 5 as an article which contains a Control: header field.  Therefore, a Path: header field should be added to the headers of this sample newgroup control article.",
     "submit_date": "2009-12-28",
     "submitter_name": "Julien Élie",
-    "verifier_id": 101,
+    "verifier_id": "101",
     "verifier_name": "Lisa Dusseault",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4468,
+    "errata_id": "4468",
     "doc-id": "RFC5537",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 3.5,
+    "section": "3.5",
     "orig_text": "   An injecting agent processes proto-articles as follows:\r\n\r\n[...]\r\n\r\n   2.   It MUST reject any proto-article that does not have the proper\r\n        mandatory header fields for a proto-article, that has Injection-\r\n        Info or Xref header fields, that has a Path header field\r\n        containing the \"POSTED\" <diag-keyword>, or that is not\r\n        syntactically valid as defined by [RFC5536].",
     "correct_text": "   An injecting agent processes proto-articles as follows:\r\n\r\n[...]\r\n\r\n   2.   It MAY modify header fields so that the proto-article conforms\r\n        to [RFC5536].  If made, such modifications SHOULD be as\r\n        minimal as possible.  The usual changes are the removal of\r\n        empty header fields and a bit of cleaning in folding or the\r\n        syntax used.\r\n\r\n   3.   It MUST reject any proto-article that does not have the proper\r\n        mandatory header fields for a proto-article, that has Injection-\r\n        Info or Xref header fields, that has a Path header field\r\n        containing the \"POSTED\" <diag-keyword>, or that is not\r\n        syntactically valid as defined by [RFC5536].",
     "notes": "Subsequent items should be renumbered at the same time.\r\n\r\nRationale:  most of server software has been removing empty header fields and made syntax cleaning for ages.  Some news clients do rely on that \"feature\" of removing empty header fields, i.e by putting empty Followup-To, Summary and Keywords header fields into each article opened in the editor and not removing them if empty when posting the article.\r\n\r\nThough RFC 1849 (Son-of-1036) says the posting agent SHOULD delete empty headers, in practice the relayer (injecting agent) took care of that when not done by the posting agent.\r\n\r\nThis erratum describes a variation from the standard and could be taken into account in a revision of RFC 5537, if it happens.",
     "submit_date": "2015-09-08",
     "submitter_name": "Julien Élie",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

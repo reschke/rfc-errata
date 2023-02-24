@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5196,
+    "errata_id": "5196",
     "doc-id": "RFC6480",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "      3. For each manifest, verify that certificates and CRLs issued\r\n         under the corresponding CA certificate match the hash values\r\n         contained in the manifest.  Additionally, verify that no\r\n         certificate or manifest listed on the manifest is missing from\r\n         the repository.  If the hash values do not match, or if any\r\n         certificate or CRL is missing, notify the appropriate\r\n         repository administrator that the repository data has been\r\n         corrupted.\r\n",
     "correct_text": "      3. For each manifest, verify that certificates and CRLs issued\r\n         under the corresponding CA certificate match the hash values\r\n         contained in the manifest.  Additionally, verify that no\r\n         certificate or CRL listed on the manifest is missing from\r\n         the repository.  If the hash values do not match, or if any\r\n         certificate or CRL is missing, notify the appropriate\r\n         repository administrator that the repository data has been\r\n         corrupted.\r\n",
     "notes": "On the fourth line: it should read \"certificate or CRL\" instead of \"certificate or manifest\".",
     "submit_date": "2017-12-05",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5420,
+    "errata_id": "5420",
     "doc-id": "RFC7953",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "   availabilityprop  = *(\r\n                    ;\r\n                    ; the following are REQUIRED\r\n                    ; but MUST NOT occur more than once\r\n                    ;\r\n                    dtstamp / uid\r\n                    ;\r\n                    ; the following are OPTIONAL\r\n                    ; but MUST NOT occur more than once\r\n                    ;\r\n                    busytype / class / created / description /\r\n                    dtstart / last-mod / location / organizer /\r\n                    priority /seq / summary / url /\r\n                    ;\r\n                    ; Either 'dtend' or 'duration' MAY appear\r\n                    ; in an 'availableprop', but 'dtend' and\r\n                             ^^^^^^^^^^^^^\r\n                    ; 'duration' MUST NOT occur in the same\r\n                    ; 'availabilityprop'.\r\n                    ; 'duration' MUST NOT be present if\r\n                    ; 'dtstart' is not present\r\n                    ;\r\n                    dtend / duration /\r\n                    ;\r\n                    ; the following are OPTIONAL\r\n                    ; and MAY occur more than once\r\n                    ;\r\n                    categories / comment / contact /\r\n                    x-prop / iana-prop\r\n                    ;\r\n                    )",
     "correct_text": "   availabilityprop  = *(\r\n                    ;\r\n                    ; the following are REQUIRED\r\n                    ; but MUST NOT occur more than once\r\n                    ;\r\n                    dtstamp / uid\r\n                    ;\r\n                    ; the following are OPTIONAL\r\n                    ; but MUST NOT occur more than once\r\n                    ;\r\n                    busytype / class / created / description /\r\n                    dtstart / last-mod / location / organizer /\r\n                    priority /seq / summary / url /\r\n                    ;\r\n                    ; Either 'dtend' or 'duration' MAY appear\r\n                    ; in an 'availabilityprop', but 'dtend' and\r\n                             ^^^^^^^^^^^^^^^^\r\n                    ; 'duration' MUST NOT occur in the same\r\n                    ; 'availabilityprop'.\r\n                    ; 'duration' MUST NOT be present if\r\n                    ; 'dtstart' is not present\r\n                    ;\r\n                    dtend / duration /\r\n                    ;\r\n                    ; the following are OPTIONAL\r\n                    ; and MAY occur more than once\r\n                    ;\r\n                    categories / comment / contact /\r\n                    x-prop / iana-prop\r\n                    ;\r\n                    )\r\n",
     "notes": "The text 'availableprop' is a typo and should be 'availabilityprop' instead.  The text is only concerned with 'dtend' and 'duration' in the VAVAILABILITY component, and has nothing to do with the AVAILABLE component and its associated 'availableprop'.",
     "submit_date": "2018-07-14",
     "submitter_name": "Julian Cowley",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }

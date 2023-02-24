@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5993,
+    "errata_id": "5993",
     "doc-id": "RFC7155",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,27 +10,27 @@
     "notes": "I did not find AVP Redirected-Host defined anywhere, however there is Redirect-Host in RFC 6733 (same with Redirected-Host-Usage)\r\n\r\n[WK: Note that Errata 5993, 5994, 5995 are all related / similar. Readers are encouraged to read all 3 ]",
     "submit_date": "2020-02-27",
     "submitter_name": "Michal Liptak",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2020-03-04 10:03:40"
   },
   {
-    "errata_id": 5994,
+    "errata_id": "5994",
     "doc-id": "RFC7155",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.4,
+    "section": "3.4",
     "orig_text": "Redirected-Host-Cache-Time",
     "correct_text": "Redirect-Max-Cache-Time",
     "notes": "As per RFC 6733 section 8.3.2\r\n\r\n[WK: Note that Errata 5993, 5994, 5995 are all related / similar. Readers are encouraged to read all 3 ]",
     "submit_date": "2020-02-27",
     "submitter_name": "Michal Liptak",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2020-03-15 21:43:37"
   },
   {
-    "errata_id": 5995,
+    "errata_id": "5995",
     "doc-id": "RFC7155",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,27 +40,27 @@
     "notes": "typo in AVP name\r\n\r\n[WK: Note that Errata 5993, 5994, 5995 are all related / similar. Readers are encouraged to read all 3 ]",
     "submit_date": "2020-02-27",
     "submitter_name": "Michal Liptak",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2020-03-04 10:03:53"
   },
   {
-    "errata_id": 6029,
+    "errata_id": "6029",
     "doc-id": "RFC7155",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 4.4,
+    "section": "4.4",
     "orig_text": "   QoS-Filter-Rule             4.4.9        |    |     |",
     "correct_text": "   QoS-Filter-Rule             4.4.9        | M  |  V  |",
     "notes": "The row \"QoS-Filter-Rule\" does not define AVP Flag Rules for \"M\" or \"V\":\r\n- The V Flag MUST NOT be used for this AVP.\r\n- There may be some debate whether the M Flag can be retrospectively added to the MUST column, versus leaving it out (implied \"MAY\" ?).\r\n\r\nThe changes are consistent with all other AVPs in this RFC.",
     "submit_date": "2020-03-25",
     "submitter_name": "Luke Mewburn",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 6119,
+    "errata_id": "6119",
     "doc-id": "RFC7155",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,7 +70,7 @@
     "notes": "The description of Origin-AAA-Protocol (AVP Code 408) is missing from RFC 7155. The AVP is documented in RFC 4005 section 9.3.6.\r\n\r\nThe proposed corrected text contains RFC 4005 section 9.3 as RFC 7155 section 4.7, and RFC 4005 section 9.3.6 as RFC 7155 section 4.7.1. All other AVPs in RFC 4005 section 9.3.x are not listed because they are documented in their relevant standards already.\r\n\r\nRFC 7155 is listed as the Reference for Origin-AAA-Protocol in multiple locations in https://www.iana.org/assignments/aaa-parameters/aaa-parameters.xhtml\r\n\r\nIt appears that there may be an accidental omission of Origin-AAA-Protocol when RFC 7155 obsoleted RFC 4005.\r\n\r\nThe Origin-AAA-Protocol AVP is referenced in other sections in RFC 7155:\r\n- 3.1.  AA-Request (AAR) Command\r\n- 3.2.  AA-Answer (AAA) Command\r\n- 3.3.  Re-Auth-Request (RAR) Command\r\n- 3.4.  Re-Auth-Answer (RAA) Command\r\n- 3.5.  Session-Termination-Request (STR) Command\r\n- 3.6.  Session-Termination-Answer (STA) Command\r\n- 3.7.  Abort-Session-Request (ASR) Command\r\n- 3.8.  Abort-Session-Answer (ASA) Command\r\n- 3.9.  Accounting-Request (ACR) Command\r\n- 3.10.  Accounting-Answer (ACA) Command\r\n- 5.1.  AA-Request / AA-Answer AVP Table\r\n- 5.2.1.  Framed Access Accounting AVP Table\r\n- 5.2.2.  Non-Framed Access Accounting AVP Table",
     "submit_date": "2020-04-24",
     "submitter_name": "Luke Mewburn",
-    "verifier_id": 166,
+    "verifier_id": "166",
     "verifier_name": "Robert Wilton",
     "update_date": "2020-06-19 04:03:34"
   }

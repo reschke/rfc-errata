@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5055,
+    "errata_id": "5055",
     "doc-id": "RFC7162",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "RFC 7162 purports to extend RFC 3501 by adding the HIGHESTMODSEQ value as an option for the resp-text-code syntax. However, RFC 3501 only uses resp-text-code in the resp-text ABNF production, in which case it is always followed by a single space (\"SP\") and the \"text\" non-terminal, which expands to \"1*TEXT-CHAR\", as in non-empty text. As such, having a response code without any human-readable text suffix is illegal per the RFC 3501 spec, and the examples should be updated to be correct.",
     "submit_date": "2017-06-28",
     "submitter_name": "Dirkjan Ochtman",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2020-02-21 08:39:29"
   }

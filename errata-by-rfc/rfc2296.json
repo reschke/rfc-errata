@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4539,
+    "errata_id": "4539",
     "doc-id": "RFC2296",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.3,
+    "section": "3.3",
     "orig_text": "   and if the request contains the Accept- headers\r\n\r\n     Accept: text/html:q=1.0, */*:q=0.8\r\n     Accept-Language: en;q=1.0, fr;q=0.5",
     "correct_text": "   and if the request contains the Accept- headers\r\n\r\n     Accept: text/html;q=1.0, */*;q=0.8\r\n     Accept-Language: en;q=1.0, fr;q=0.5",
     "notes": "(quality) parameter must be separated by \";\" instead of \":\".",
     "submit_date": "2015-11-19",
     "submitter_name": "Florian Best",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

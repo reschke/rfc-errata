@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4872,
+    "errata_id": "4872",
     "doc-id": "RFC7181",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 16.2,
+    "section": "16.2",
     "orig_text": "   TC messages MAY be generated in response to a change in the\r\n   information that they are to advertise, indicated by a change in the\r\n   ANSN in the Neighbor Information Base.  In this case, a router MAY\r\n   send a complete TC message and, if so, MAY restart its TC message\r\n   schedule.  Alternatively, a router MAY send an incomplete TC message\r\n   with at least the newly advertised network addresses (i.e., not\r\n   previously, but now, an N_orig_addr or in an N_neighbor_addr_list in\r\n   a Neighbor Tuple with N_advertised = true or an AL_net_addr) in its\r\n   Address Blocks, with associated Address Block TLV(s).  Note that a\r\n   router cannot report removal of advertised content using an\r\n   incomplete TC message.",
     "correct_text": "   TC messages MAY be generated in response to a change in the\r\n   information that they are to advertise, indicated by a change in the\r\n   ANSN in the Neighbor Information Base.  In this case, a router MAY\r\n   send a complete TC message and, if so, MAY restart its TC message\r\n   schedule.  Alternatively, a router MAY send an incomplete TC message\r\n   with at least the newly advertised network addresses (i.e., not\r\n   previously, but now, an N_orig_addr or an N_neighbor_addr_list in\r\n   a Neighbor Tuple with N_advertised = true or an AL_net_addr) in its\r\n   Address Blocks, with associated Address Block TLV(s).  Note that a\r\n   router cannot report removal of advertised content using an\r\n   incomplete TC message.",
     "notes": "Unnecessary preposition \"in\"\n --VERIFIER NOTES-- \n From Christopher Dearlove (author):\r\n\r\nThe \"in\" distinguishes the cases of N_orig_addr and an N_neighbor_addr_list. The former is a single address, the latter is a list of addresses. Therefore one looks for the address as the former, or in (the word that should not be deleted) the latter.\r\n\r\nThis erratum must be rejected. ",
     "submit_date": "2016-11-30",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4874,
+    "errata_id": "4874",
     "doc-id": "RFC7181",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 17.1,
+    "section": "17.1",
     "orig_text": "   If the router changes its originator address, then:\r\n\r\n   1.  If there is no Originator Tuple with:\r\n\r\n       *  O_orig_addr = old originator address\r\n\r\n       then create an Originator Tuple with:\r\n\r\n       *  O_orig_addr := old originator address\r\n\r\n       The Originator Tuple (existing or new) with:\r\n\r\n       *  O_orig_addr = new originator address\r\n\r\n       is then modified as follows:\r\n\r\n       *  O_time := current time + O_HOLD_TIME\r\n",
     "correct_text": "   If the router changes its originator address, then:\r\n\r\n   1.  If there is an Originator Tuple with:\r\n\r\n       *  O_orig_addr = old originator address\r\n\r\n       then modify it as follows:\r\n\r\n       *  O_orig_addr := new originator address\r\n       *  O_time := current time + O_HOLD_TIME\r\n\r\n       otherwise create an Originator Tuple with:\r\n\r\n       *  O_orig_addr := new originator address\r\n       *  O_time := current time + O_HOLD_TIME\r\n",
     "notes": "At the time of the modification Originator Tuple with O_orig_addr = new originator address does not yet exist.\r\n\r\n===\r\nThe Corrected text reflects consultation with the WG.",
     "submit_date": "2016-12-01",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }

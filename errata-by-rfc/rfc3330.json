@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1436,
+    "errata_id": "1436",
     "doc-id": "RFC3330",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "   0.0.0.0/8            \"This\" Network                 [RFC1700, page 4]\r\n   10.0.0.0/8           Private-Use Networks                   [RFC1918]\r\n   14.0.0.0/8           Public-Data Networks         [RFC1700, page 181]\r\n   24.0.0.0/8           Cable Television Networks                    --\r\n   39.0.0.0/8           Reserved but subject\r\n                           to allocation                       [RFC1797]\r\n   127.0.0.0/8          Loopback                       [RFC1700, page 5]\r\n   128.0.0.0/16         Reserved but subject\r\n                           to allocation                             --\r\n   169.254.0.0/16       Link Local                                   --\r\n   172.16.0.0/12        Private-Use Networks                   [RFC1918]\r\n   191.255.0.0/16       Reserved but subject\r\n                           to allocation                             --\r\n   192.0.0.0/24         Reserved but subject\r\n                           to allocation                             --\r\n   192.0.2.0/24         Test-Net\r\n   192.88.99.0/24       6to4 Relay Anycast                     [RFC3068]\r\n   192.168.0.0/16       Private-Use Networks                   [RFC1918]\r\n   198.18.0.0/15        Network Interconnect\r\n                           Device Benchmark Testing            [RFC2544]\r\n   223.255.255.0/24     Reserved but subject\r\n                           to allocation                             --\r\n   224.0.0.0/4          Multicast                              [RFC3171]\r\n   240.0.0.0/4          Reserved for Future Use        [RFC1700, page 4]\r\n",
     "correct_text": "   0.0.0.0/8            \"This\" Network                [RFC1122, page 30]\r\n   10.0.0.0/8           Private-Use Networks                   [RFC1918]\r\n   14.0.0.0/8           Public-Data Networks         [RFC1700, page 181]\r\n   24.0.0.0/8           Cable Television Networks                    --\r\n   39.0.0.0/8           Reserved but subject\r\n                           to allocation                       [RFC1797]\r\n   127.0.0.0/8          Loopback                      [RFC1122, page 31]\r\n   128.0.0.0/16         Reserved but subject\r\n                           to allocation                             --\r\n   169.254.0.0/16       Link Local                                   --\r\n   172.16.0.0/12        Private-Use Networks                   [RFC1918]\r\n   191.255.0.0/16       Reserved but subject\r\n                           to allocation                             --\r\n   192.0.0.0/24         Reserved but subject\r\n                           to allocation                             --\r\n   192.0.2.0/24         Test-Net\r\n   192.88.99.0/24       6to4 Relay Anycast                     [RFC3068]\r\n   192.168.0.0/16       Private-Use Networks                   [RFC1918]\r\n   198.18.0.0/15        Network Interconnect\r\n                           Device Benchmark Testing            [RFC2544]\r\n   223.255.255.0/24     Reserved but subject\r\n                           to allocation                             --\r\n   224.0.0.0/4          Multicast                              [RFC3171]\r\n   240.0.0.0/4          Reserved for Future Use        [RFC1112, page 3]\r\n",
     "notes": "RFC 1700, page 4, does not mention 240.0.0.0/4.",
     "submit_date": "2008-06-12",
     "submitter_name": "Frank Ellermann",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "Ron Bonica",
     "update_date": "2019-09-10 09:09:03"
   }

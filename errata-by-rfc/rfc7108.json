@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4135,
+    "errata_id": "4135",
     "doc-id": "RFC7108",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "Using HOSTNAME.BIND/CH/TXT (Section 4.2), ID.SERVER/CH/TXT\r\n   (Section 4.3), or IDENTITY.L.ROOT-SERVERS.ORG/IN/TXT or IDENTITY.L\r\n   .ROOT-SERVERS/IN/A (Section 4.4)",
     "correct_text": "Using HOSTNAME.BIND/CH/TXT (Section 4.2), ID.SERVER/CH/TXT\r\n   (Section 4.3), or IDENTITY.L.ROOT-SERVERS.ORG/IN/TXT or IDENTITY.L\r\n   .ROOT-SERVERS.ORG/IN/A (Section 4.4)",
     "notes": "Fixing missing .ORG in FQDN",
     "submit_date": "2014-10-20",
     "submitter_name": "Mauricio Vergara Ereche",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }

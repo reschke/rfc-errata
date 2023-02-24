@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5605,
+    "errata_id": "5605",
     "doc-id": "RFC6625",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The 'Match for data reception' is an behavior on the MVPN receiver-site PE. If an SPMSI A-D route is matched for data reception, it means that the receiver-site PE will respond to this SPMSI A-D route, either send a responded Leaf A-D route in case there is an explicit-tracking flag (LIR or LIRpF), or join the PMSI tunnel in the SPMSI A-D route in case the tunnel type is mLDP/PIM etc. This usage of 'match for data reception' is not explicitly explained in this RFC but it is used in <draft-ietf-bess-mvpn-expl-track-13>. \r\nThere is clear inclusive-selective relationship between S-PMSI A-D (*,*) and S-PMSI A-D(S,G).\r\nThinking the S-PMSI A-D (*,*) as an Inclusive one, the receiver site PE with a (C-S,C-G) state should keep its join state on both the S-PMSI A-D (*,*) and S-PMSI A-D(S,G), and setup the 'reception state' on both the (*,*) PMSI-tunnel and (S,G) PMSI-tunnel. So the 'match for reception' should be one or more SPMSI A-D routes.  The 'if/othersize/othersize' sentences make the wrong meaning.\r\n\r\n\r\n=== AD Note ====\r\nThis section of rfc6625 has been Updated by rfc7582, rfc7900, and rfc8534 for various scenarios.  Any general change to the overall procedure must take those updates into consideration.  I am then marking this report as \"Held for Document Update\" so these modifications can be taken into account. ",
     "submit_date": "2019-01-16",
     "submitter_name": "Jingrong Xie",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2022-06-22 13:09:48"
   }

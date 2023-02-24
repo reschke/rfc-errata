@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1444,
+    "errata_id": "1444",
     "doc-id": "RFC3406",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4.3,
+    "section": "4.3",
     "orig_text": "   Registrations may be revised by updating the RFC through standard\r\n   IETF RFC update processes (see [RFC2606] for a discussion of IETF\r\n   process).\r\n",
     "correct_text": "   Registrations may be revised by updating the RFC through standard\r\n   IETF RFC update processes (see [RFC2026] for a discussion of IETF\r\n   process).\r\n",
     "notes": "The references (section 7) list RFC 2026, not RFC 2606, as expected.",
     "submit_date": "2008-06-14",
     "submitter_name": "Frank Ellermann",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2915,
+    "errata_id": "2915",
     "doc-id": "RFC3406",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "RFC 3406 obsoletes RFC 2611, which was BCP 33.  Correspondingly, RFC 3406 should be BCP 33 as well.  (See also http://www.rfc-editor.org/errata_search.php?rfc=4395; this is the same situation.)\r\n\r\nIf this erratum report is approved, BCP number 66 should be retired, as BCP 115 (see link above).\n --VERIFIER NOTES-- \nThis is likely correct. However, this is because the \"RFC has not been processed in accordance with the rules governing the proposed change to the RFC metadata.\" (See IESG statement on changes to metadata in errata.) Making the suggested change would potentially invalidate references to BCP 66. The IESG and RFC Editor should decide best course of action. ",
     "submit_date": "2011-08-04",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   }

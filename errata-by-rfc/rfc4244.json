@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2608,
+    "errata_id": "2608",
     "doc-id": "RFC4244",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4.5,
+    "section": "4.5",
     "orig_text": "                History-Info: <sip:Bob@P1.example.com>;index=1,\r\n                   <sip:Bob@P2.example.com>; index=1.1,\r\n                   <sip:User2@UA2.example.com?Reason=SIP;\\\r\n                    cause=408;text=\"RequestTimeout\">;index=1.1.1,\r\n                   <sip:User3@UA3.example.com?Reason=SIP; \\\r\n                    cause=487;text=\"Request Terminated\">; index=1.1.2,\r\n                   <sip:User4@UA4.example.com?Reason=SIP;\\\r\n                    cause=603;text=\"Decline\">; index=1.1.3",
     "correct_text": "                History-Info: <sip:Bob@P1.example.com>;index=1,\r\n                   <sip:Bob@P2.example.com>; index=1.1,\r\n                   <sip:User2@UA2.example.com?Reason=SIP%3B\\\r\n                    cause%3D408%3Btext%3D%22RequestTimeout%22>;index=1.1.1,\r\n                   <sip:User3@UA3.example.com?Reason=SIP%3B\\\r\n                    cause%3D487%3Btext%3D%22Request%20Terminated%22>; index=1.1.2,\r\n                   <sip:User4@UA4.example.com?Reason=SIP%3B\\\r\n                    cause%3D603%3Btext%3D%22Decline%22>; index=1.1.3",
     "notes": "This is one of many incorrect examples in section 4.5, 4.5.1, 4.5.2, etc.  The \";\", \"=\", double-quotes, and space are not legal tokens in URI-embedded headers.",
     "submit_date": "2010-11-04",
     "submitter_name": "Hadriel Kaplan",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2696,
+    "errata_id": "2696",
     "doc-id": "RFC1609",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "The integer value is the number of seconds, excluding leap seconds,\r\nafter midnight UTC, January 1, 1970. ",
     "correct_text": "The integer value is 63 072 000 when UTC was 1972-01-01; it increases by 1 for\r\nevery second of UTC, excluding positive leap seconds. ",
     "notes": "At the time when UTC was 1970-01-01, TAI was 1970-01-01 + 8.000 082 s,\r\naccording to [ftp://maia.usno.navy.mil/ser7/tai-utc.dat]. (The rate of\r\nUTC was slower than the rate of TAI at the time but there have not been any\r\nleap seconds in UTC between 1970 and 1972-01-01.) The original wording could be\r\ntaken to imply that the \"integer value\" was 63 072 001 when UTC was 1972-01-01\r\nand TAI was 1972-01-01 + 10 s, and reached the value 63 072 002 just 82 µs\r\nlater. However, UNIX practice is to assign the value 63 072 000 to\r\nthe instant when UTC was 1972-01-01. The proposed wording makes it clear\r\nthat seconds of UTC are counted, not any seconds.\r\n-- Regarding negative leap seconds (which have not occurred and probably\r\nnever will): \"excluding\" them would be wrong because, when they occur,\r\nthe phase of UTC increases by 2 s (and so must the time_t value) while the\r\nphase of TAI only increases by 1 s. The proposed wording simply does not deal with the case, while the original would do it incorrectly.\n --VERIFIER NOTES-- \n   The quoted text does not appear in RFC 1609. However, it does appear in\r\n   RFC 4049 (!). If the reporter wishes to file an erratum against RFC 4049,\r\n   he will need to file a new report with the correct RFC number.",
     "submit_date": "2011-01-30",
     "submitter_name": "Michael Deckers",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }

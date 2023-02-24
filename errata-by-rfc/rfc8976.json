@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6425,
+    "errata_id": "6425",
     "doc-id": "RFC8976",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "2.2.3 defines Hash Algorithm 1 as SHA384, and says that \"the size of the Digest field is 48 octets\". There is nothing in 2.2.3 (or 2.2.2, where Scheme is defined) that indicates that Scheme and Hash Algorithm are dependent on each other, so the fact that the Scheme value (241) is private should have no effect on the digest computed by Hash Algorithm 1.",
     "submit_date": "2021-02-10",
     "submitter_name": "Brian Wellington",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

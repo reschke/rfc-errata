@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 3732,
+    "errata_id": "3732",
     "doc-id": "RFC7011",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 1.1,
+    "section": "1.1",
     "orig_text": "A new Section 5.2 has been added to address wraparound of these\r\n     timestamp data types after they overflow in the years 2032-2038.\r\n",
     "correct_text": "A new Section 5.2 has been added to address wraparound of these\r\n    timestamp data types after they overflow.",
     "notes": "Since dateTimeSeconds is encoded in an _unsigned_ integer, it will wraparound in 2106 (as written correctly in section 5.2), not 2038.",
     "submit_date": "2013-09-21",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4216,
+    "errata_id": "4216",
     "doc-id": "RFC7011",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,22 +25,22 @@
     "notes": "Separate out the \"Scope Field\" definition from \"Scope Field Count\", since \"Scope Field\" is used as a defined term throughout the document without a formal definition.",
     "submit_date": "2014-12-31",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4396,
+    "errata_id": "4396",
     "doc-id": "RFC7011",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "Incremental sequence counter modulo 2^32 of all IPFIX Data Records\r\nsent in the current stream from the current Observation Domain by\r\nthe Exporting Process.",
     "correct_text": "Incremental sequence counter modulo 2^32 of all IPFIX Data Records\r\nsent in the current stream from the current Observation Domain by\r\nthe Exporting Process, prior to the receipt of this IPFIX Message.",
     "notes": "The original specification can be interpreted in two ways:\r\n\r\n(1) Incremental sequence counter modulo 2^32 of all IPFIX Data Records sent in the current stream from the current Observation Domain by the Exporting Process *up to* this Message.\r\n(2) Incremental sequence counter modulo 2^32 of all IPFIX Data Records sent in the current stream from the current Observation Domain by the Exporting Process *up to and including* this Message.\r\n\r\nIt seems that only Section 10.3.2 — Reliability explains which of the two interpretations is right: In the case of UDP, the IPFIX Sequence Number contains the total number of IPFIX Data Records sent for the Transport Session *prior* to the receipt of this IPFIX Message, modulo 2^32.\r\n\r\nIn my opinion, it would be good to clarify the use of sequence numbers in Message headers already in the definition of sequence numbers in RFC 7011, namely in Section 3.1.\r\n\r\nDiscussed here: https://mailarchive.ietf.org/arch/msg/ipfix/AQKObQ2WA_zIXgRzdxRsDrIWjx0",
     "submit_date": "2015-06-19",
     "submitter_name": "Rick Hofstede",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }

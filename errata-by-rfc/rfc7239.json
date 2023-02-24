@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5067,
+    "errata_id": "5067",
     "doc-id": "RFC7239",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "According to RFC 7230 Section 2.3, an HTTP \"proxy\" is a message-forwarding agent that is selected by the client. But this specification (as is clear from Section 1) uses the word \"proxy\" to refer also to message-forwarding agents that are *not* selected by the client.",
     "submit_date": "2017-07-12",
     "submitter_name": "Vasiliy Faronov",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5275,
+    "errata_id": "5275",
     "doc-id": "RFC7239",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "Forwarded   = 1#forwarded-element\r\n",
     "correct_text": "Forwarded   = forwarded-element *(OWS \",\" OWS forwarded-element)\r\nOWS = <Defined in [RFC7230], Section 3.2.3>\r\n",
     "notes": "Currently the only mention of commas in the RFC is in the text:\r\n\r\n> A proxy server that wants to add a new \"Forwarded\" header field value can either append it to the last existing \"Forwarded\" header field after a comma separator or add a new field at the end of the header block.\r\n\r\nThis should be reflected in the ABNF.  The original ABNF suggests you just smash the forwarded-elements together with no delimiters.",
     "submit_date": "2018-03-06",
     "submitter_name": "W. Trevor King",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

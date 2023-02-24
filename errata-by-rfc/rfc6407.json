@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3598,
+    "errata_id": "3598",
     "doc-id": "RFC6407",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "M. Brian Weiss confirmed to me that \"The description of \"DST ID Prot (1 octet) on Page 32 is incorrect, no such field is meant to be in Figure 8. This is definitely errata. The bullet describing \"DST ID Prot (1 octet)\" should be removed\"",
     "submit_date": "2013-04-20",
     "submitter_name": "Claude Briere de L'Isle",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3599,
+    "errata_id": "3599",
     "doc-id": "RFC6407",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,37 +25,37 @@
     "notes": "Brian Weiss wrote  \"You are correct, this should be \"destination ID\"\".",
     "submit_date": "2013-04-20",
     "submitter_name": "Claude Briere de L'Isle",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3600,
+    "errata_id": "3600",
     "doc-id": "RFC6407",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 7.4,
+    "section": "7.4",
     "orig_text": "The concepts \"forward access\r\ncontrol\" and \"backward access control\" have also been described as\r\n\"perfect forward security\" and \"perfect backward security\",\r\nrespectively, in the literature [RFC2627].",
     "correct_text": "The concepts \"forward access \r\ncontrol\" and \"backward access control\" have also been described as \r\n\"perfect forward security\" and \"perfect backward security\",\r\nrespectively, in the literature\r\n(<http://tools.ietf.org/id/draft-balenson-groupkeymgmt-oft-00.txt>).",
     "notes": "There is no occurrence of these terms in RFC 2627. Brian Weiss wrote : \"You are correct. I see that this wording was carried from early versions of an Internet-draft that became RFC 3547, the predecessor of RFC6407. A more accurate reference for these terms would be <http://tools.ietf.org/id/draft-balenson-groupkeymgmt-oft-00.txt>",
     "submit_date": "2013-04-20",
     "submitter_name": "Claude Briere de L'Isle",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3861,
+    "errata_id": "3861",
     "doc-id": "RFC6407",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "Secure group and multicast applications require a method by which\r\n   each group member shares common security policy and keying material.\r\n   This document describes the Group Domain of Interpretation (GDOI),\r\n   which is an Internet Security Association and Key Management Protocol\r\n   (ISAMKP) [RFC2408] Domain of Interpretation (DOI), a group key\r\n   management system. ",
     "correct_text": "Secure group and multicast applications require a method by which\r\n   each group member shares common security policy and keying material.\r\n   This document describes the Group Domain of Interpretation (GDOI),\r\n   which is an Internet Security Association and Key Management Protocol\r\n   (ISAKMP) [RFC2408] Domain of Interpretation (DOI), a group key\r\n   management system. ",
     "notes": "ISAMKP -> ISAKMP",
     "submit_date": "2014-01-07",
     "submitter_name": "Prashant Gupta",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   }

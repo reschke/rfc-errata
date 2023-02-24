@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3594,
+    "errata_id": "3594",
     "doc-id": "RFC6698",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "As per discussion on the DANE WG list, this was overtaken by events and so is rejected.\r\n\r\n\r\nThis is critical for interoperability between clients and servers.  A client that commits to verify TLSA RR certificate associations will fail if it can't obtain the required certificates.  With usage \"2\" there is no presumption that these are available to the client.  If servers are not obligated to provide them the protocol will consistently fail.  With non-interactive protocols where there is no user to \"click OK\", such as SMTP, there is no good work-around and both client and server owners suffer.\n --VERIFIER NOTES-- \n   As per discussion on the DANE WG list, this was overtaken by events and so is rejected.",
     "submit_date": "2013-04-16",
     "submitter_name": "Viktor Dukhovni",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   }

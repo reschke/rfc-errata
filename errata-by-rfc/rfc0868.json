@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2528,
+    "errata_id": "2528",
     "doc-id": "RFC0868",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,7 +10,7 @@
     "notes": "Although it is not explicit in the RFC, the 32-bits value is unsigned (otherwise, it could not end in 2036, as the RFC says). So, a negative value is not possible.",
     "submit_date": "2010-09-20",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "ron bonica",
     "update_date": "2019-09-10 09:09:03"
   }

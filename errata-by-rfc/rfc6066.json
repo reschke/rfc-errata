@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3283,
+    "errata_id": "3283",
     "doc-id": "RFC6066",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,37 +10,37 @@
     "notes": "Section 3 and Appendix A seem to be conflict with each other.  Am I parsing something incorrectly here:\r\n\r\nSection 3:   The ServerNameList MUST NOT contain more than one name of the same name_type.\r\n\r\nAppendix A:     The Server Name extension...deleted..It is provided that the ServerNameList can contain more than only one name of any particular name_type.\r\n\r\nI think the words \"more than\" were not supposed to appear in the final RFC.",
     "submit_date": "2012-07-12",
     "submitter_name": "Brad Wetmore",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4817,
+    "errata_id": "4817",
     "doc-id": "RFC6066",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 8,
+    "section": "8",
     "orig_text": "In the OCSPStatusRequest, the \"ResponderIDs\" provides a list of OCSP\r\nresponders that the client trusts. ",
     "correct_text": "In the OCSPStatusRequest, the \"ResponderID\" provides a list of OCSP\r\nresponders that the client trusts.\r\n\r\nor clearer \r\n\r\nIn OCSPStatusRequest, the \"responder_id_list\" provides a list of\r\n\"ResponderID\", OCSP responders that the client trusts.",
     "notes": "ResponderIDs is not defined anywhere within the document.\r\n\r\nQuote of this section in RFC6961 section 2.2 (p.4) seem to have fixed this.",
     "submit_date": "2016-10-03",
     "submitter_name": "ResponderIDs type is not defined anywhere.",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5658,
+    "errata_id": "5658",
     "doc-id": "RFC6066",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": null,
     "correct_text": "When a client uses DNS SRV to discover and connect to a server, the \r\nclient SHOULD include the \"source domain\" in the \"host_name\" and SHOULD\r\nNOT include the \"derived domain\", where \"source domain\" and \"derived\r\ndomain\" are defined in RFC6125. ",
     "notes": "The original text is all fine, but it is missing some additional clarifying text on use of SNI when a client users DNS SRV to discover the service it is connecting to.",
     "submit_date": "2019-03-14",
     "submitter_name": "Owen Friel",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

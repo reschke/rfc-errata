@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5175,
+    "errata_id": "5175",
     "doc-id": "RFC7707",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "In RFC1035 section 4.1.1. it states that an RCODE of 3 is 'Name Error' aka NXDOMAIN. RCODE 4 is \"Not Implemented\". RFC 7707 incorrectly refers to NXDOMAIN as RCODE 4 instead of RCODE 3. \r\n\r\nHere is the output of testing this in Wireshark:\r\n.... .... .... 0011 = Reply code: No such name (3)",
     "submit_date": "2017-10-30",
     "submitter_name": "Kevin Tyers",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   }

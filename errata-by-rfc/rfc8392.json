@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 5710,
+    "errata_id": "5710",
     "doc-id": "RFC8392",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 1.1,
+    "section": "1.1",
     "orig_text": "In JSON, maps are called objects and only have one kind of map key: a\r\n   string.  CBOR uses strings, negative integers, and unsigned integers\r\n   as map keys.",
     "correct_text": "In JSON, maps are called objects and only have one kind of map key:\r\na string.  CBOR allows other data types, such as strings, negative\r\nintegers, and unsigned integers, as map keys.",
     "notes": "The text as it stands risks an interpretation that CBOR limits map keys to integers and strings; per discussion on the CBOR mailing list, this is not the case.",
     "submit_date": "2019-04-29",
     "submitter_name": "Felipe Gasper",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5852,
+    "errata_id": "5852",
     "doc-id": "RFC8392",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The ASCII representation of binary bytes in Figure 10 is wrapped\r\non an odd number of ASCII characters. Since there are two ASCII\r\ncharacters per binary bytes this splits the last byte over two\r\nlines. \r\n\r\nThe CBOR playground (http://cbor.me) cannot handle this and\r\nerrors out. \r\n\r\nThis is slightly confusing for readers.\r\n\r\nThe actual bytes values are correct by all the checks I did.",
     "submit_date": "2019-09-03",
     "submitter_name": "Laurence Lundblade",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
   }

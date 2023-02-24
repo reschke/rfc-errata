@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3570,
+    "errata_id": "3570",
     "doc-id": "RFC5054",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "Too many spaces in the heading.",
     "submit_date": "2013-03-27",
     "submitter_name": "Nico Roeser",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4546,
+    "errata_id": "4546",
     "doc-id": "RFC5054",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 2.6,
+    "section": "2.6",
     "orig_text": "B = k*v + g^b % N",
     "correct_text": "B = ( k*v + g^b ) % N",
     "notes": "The customary binding is that + has lower priority than % and so the default reading of the expression would be \r\nB = k*v + ( g^b % N )\r\nThat is inconsistent with the existence of PAD(B) and the size of B in the test vectors, so the context hints at proper brackets, but this may still lead to implementation errors (of which I actually ran into an example).",
     "submit_date": "2015-11-30",
     "submitter_name": "Rick van Rein",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

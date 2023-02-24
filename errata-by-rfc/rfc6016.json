@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2553,
+    "errata_id": "2553",
     "doc-id": "RFC6016",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Rationale: The text in this paragraph does not match the preceding\r\n  artwork for Class = 11, C-Type = 16 and 17; it is spurious and\r\n  needs to be deleted.\r\n",
     "submit_date": "2010-10-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2554,
+    "errata_id": "2554",
     "doc-id": "RFC6016",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Rationale: Missing article",
     "submit_date": "2010-10-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2555,
+    "errata_id": "2555",
     "doc-id": "RFC6016",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Rationale: inappropriate past tense; should be present tense.",
     "submit_date": "2010-10-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2556,
+    "errata_id": "2556",
     "doc-id": "RFC6016",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Rationale: missing article; cf. other parts of the document.",
     "submit_date": "2010-10-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2557,
+    "errata_id": "2557",
     "doc-id": "RFC6016",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "Rationale:  s/EXP/Traffic Class/  !\r\n  RFC 5462 has carefully changed the terminology and updated numerous\r\n  RFCs; it has given a detailed explantion why this needs to be done\r\n  consistently and confirmed that all future RFCs should unconditionally\r\n  use the updated terms.\r\n  (See also EID 2547 for RFC 5994.)",
     "submit_date": "2010-10-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2558,
+    "errata_id": "2558",
     "doc-id": "RFC6016",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "Rationale:\r\na) missing articles [editorial]\r\nb) reference to wrong object\r\n",
     "submit_date": "2010-10-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2559,
+    "errata_id": "2559",
     "doc-id": "RFC6016",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -100,12 +100,12 @@
     "notes": "Rationale:\r\na) There are _two_ Reserved fields in the AGGREGATE-VPN-IPv{4|6}\r\n   SESSION objects, as shown in the preceding artwork in the RFC;\r\n   the said treatment applies to both.\r\nb) dto. for the GENERIC-AGGREGATE-VPN-IPv{4|6} SESSION objects.",
     "submit_date": "2010-10-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2560,
+    "errata_id": "2560",
     "doc-id": "RFC6016",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -115,12 +115,12 @@
     "notes": "Rationale: missing article (as in EID=2558)",
     "submit_date": "2010-10-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2561,
+    "errata_id": "2561",
     "doc-id": "RFC6016",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -130,7 +130,7 @@
     "notes": "Rationale:\r\n  a) missing article\r\n  b) incomplete specification; the use of \"These objects\" as well as the\r\n     references to two different RFCs (one for the IPv4 case, one for the\r\n     IPv6 case) are strong indications that this text should be phrased\r\n     in a similar manner as in preceding subsections of Section 8, i.e.\r\n     it should include mention of the equivalent object for the IPv6 case\r\n     as well (this qualifies the Errata Note as Technical);\r\n  c) s/a AGGREGATE/an AGGREGATE/\r\n  d) singular/plural mismatch:  s/it/they/ .",
     "submit_date": "2010-10-12",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   }

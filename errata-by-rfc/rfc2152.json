@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 862,
-    "doc-id": "RFC2152",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Editorial",
-    "section": "99In \"UTF-7 Definition\", it says:",
-    "orig_text": "Such characters\r\ninclude control characters such as carriage returns and line\r\nfeeds; thus, a Unicode shifted sequence always terminates at the\r\nof a line.",
-    "correct_text": "Such characters\r\ninclude control characters such as carriage returns and line\r\nfeeds; thus, a Unicode shifted sequence always terminates at the\r\nend of a line.",
-    "notes": "missing word",
-    "submit_date": "2006-05-16",
-    "submitter_name": "Christian Aymon",
-    "verifier_id": 2,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 3982,
+    "errata_id": "3982",
     "doc-id": "RFC2152",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +10,12 @@
     "notes": "The wrong character is used in the left column: code point 96 corresponds to \"Grave Accent\", not \"Apostrophe\".",
     "submit_date": "2014-05-08",
     "submitter_name": "Peter Occil",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5475,
+    "errata_id": "5475",
     "doc-id": "RFC2152",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -40,8 +25,23 @@
     "notes": "The charset name for this RFC is UTF-7, not UNICODE-2-0.\n --VERIFIER NOTES-- \n   \r\nThis is an example that's specifically introduced with, \"As an alternative to use of UTF-7,\" and quite intentionally uses a charset other than UTF-7.",
     "submit_date": "2018-08-22",
     "submitter_name": "Peter Occil",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "862",
+    "doc-id": "RFC2152",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "In \"UTF-7 Definition\", it says:",
+    "orig_text": "Such characters\r\ninclude control characters such as carriage returns and line\r\nfeeds; thus, a Unicode shifted sequence always terminates at the\r\nof a line.",
+    "correct_text": "Such characters\r\ninclude control characters such as carriage returns and line\r\nfeeds; thus, a Unicode shifted sequence always terminates at the\r\nend of a line.",
+    "notes": "missing word",
+    "submit_date": "2006-05-16",
+    "submitter_name": "Christian Aymon",
+    "verifier_id": "2",
+    "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
 ]

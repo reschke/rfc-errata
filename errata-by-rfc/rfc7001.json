@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4201,
+    "errata_id": "4201",
     "doc-id": "RFC7001",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The Sender-ID test is OK (header From:) but the DKIM one names a field\r\nin the DKIM-Signature: header (d=). Isn't it a violation of section\r\n2.2, which says 'if \"ptype\" is \"header\", this indicates from which header field the value being evaluated was extracted' Or is section 2.2 an insufficient description?\r\n\r\n----- Verifier Notes -----\r\nThe resolution of this isn't straightforward, and will require discussion and a proper update.  That is now ongoing.",
     "submit_date": "2014-12-15",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

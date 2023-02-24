@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3605,
+    "errata_id": "3605",
     "doc-id": "RFC5282",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "\"(64 bits)\" should be changed to \"(96 bits)\".",
     "submit_date": "2013-04-25",
     "submitter_name": "Wan-Teh Chang",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3606,
+    "errata_id": "3606",
     "doc-id": "RFC5282",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,22 +25,22 @@
     "notes": "\"(64 bits)\" should be changed to \"(96 bits)\".",
     "submit_date": "2013-04-25",
     "submitter_name": "Wan-Teh Chang",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5109,
+    "errata_id": "5109",
     "doc-id": "RFC5282",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 8,
+    "section": "8.",
     "orig_text": "8.  IKEv2 Algorithm Selection\r\n\r\n   This section applies to the use of any authenticated encryption\r\n   algorithm with the IKEv2 Encrypted Payload and is unique to that\r\n   usage.\r\n\r\n   IKEv2 (Section 3.3.3 of [RFC4306]) specifies that both an encryption\r\n   algorithm and an integrity checking algorithm are required for an IKE\r\n   SA (Security Association).  This document updates [RFC4306] to\r\n   require that when an authenticated encryption algorithm is selected\r\n   as the encryption algorithm for any SA (IKE or ESP), an integrity\r\n   algorithm MUST NOT be selected for that SA.  This document further\r\n   updates [RFC4306] to require that if all of the encryption algorithms\r\n   in any proposal are authenticated encryption algorithms, then the\r\n   proposal MUST NOT propose any integrity transforms.",
     "correct_text": "8.  IKEv2 Algorithm Selection\r\n\r\nIKEv2 [rfc7296], section 3.3. Security Association Payload, specifies\r\nAEAD algorithm selection.\r\n",
     "notes": "RFC-7296 and RFC-5282 contradict each other (yet RFC-7296 cites RFC-5282 without any\r\nclarification):\r\n\r\n- RFC-7296 explicitly disallows mixing AEAD and non-AEAD algorithms in a single\r\n  proposal; RFC-5282 does not (and strongly implies it is allowed)\r\n\r\n- RFC-7296 allows 'none' integrity in an AEAD-only proposal; RFC-5282 does not",
     "submit_date": "2017-09-08",
     "submitter_name": "Andrew Cagney",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

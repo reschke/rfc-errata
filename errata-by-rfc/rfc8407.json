@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 5693,
+    "errata_id": "5693",
     "doc-id": "RFC8407",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4.17,
+    "section": "4.17",
     "orig_text": "Note that the set of features within a module\r\n   is easily discovered by the reader, but the set of related modules\r\n   within the entire YANG library is not as easy to identity.  Module\r\n   names with a common prefix can help readers identity the set of\r\n   related modules, but this assumes the reader will have discovered and\r\n   installed all the relevant modules.",
     "correct_text": "Note that the set of features within a module\r\n   is easily discovered by the reader, but the set of related modules\r\n   within the entire YANG library is not as easy to identify.  Module\r\n   names with a common prefix can help readers identify the set of\r\n   related modules, but this assumes the reader will have discovered and\r\n   installed all the relevant modules.",
     "notes": "The word identity is not correct here. It should be identify to give the sentence correct meaning.",
     "submit_date": "2019-04-15",
     "submitter_name": "Mobashshera Rasool",
-    "verifier_id": 158,
+    "verifier_id": "158",
     "verifier_name": "Ignas Bagdonas",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5800,
+    "errata_id": "5800",
     "doc-id": "RFC8407",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Appendix A rightly says that these URL should have a scheme of https:\r\nbut Appendix B wrongly specifies http:\r\n\r\n[WK]: I'm marking this as 'Verified' (instead of \"Hold for Document Update\") as it is in a template which is likely to be copied and pasted, and this seems like it may get more visibility.",
     "submit_date": "2019-07-31",
     "submitter_name": "tom Petch",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6899,
+    "errata_id": "6899",
     "doc-id": "RFC8407",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "https://trustee.ietf.org/documents/trust-legal-provisions/tlp-5/ says:\r\n\r\n==\r\nNote: in prior versions of these provisions, the software license was erroneously called the “Simplified BSD License” rather than the “Revised BSD License”, and many documents that refer to these provisions copied the erroneous name. The IETF Trust corrected the error on September 21, 2021. The license text itself was always that of the Revised BSD License and has not changed.\r\n==\r\n --VERIFIER NOTES--\r\nVerified per discussion with John Levine and individuals in the netmod WG.  “Simplified” is what was used when RFC 8407 was published.  However, this RFC is providing guidance for authors and reviewers of future documents.",
     "submit_date": "2022-03-29",
     "submitter_name": "Mohamed Boucadair",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-04-06 14:00:23"
   }

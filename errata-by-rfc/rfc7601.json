@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4671,
+    "errata_id": "4671",
     "doc-id": "RFC7601",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "   The \"ptype\" in the ABNF above indicates the general type of property\r\n   being described by the result being reported, upon which the reported\r\n                                             ^^^^^\r\n   result was based.  Coupled with the \"property\", which is more\r\n   specific, they indicate from which particular part of the message the\r\n   reported data were extracted.\r\n                    ^^^^\r\n\r\n",
     "correct_text": "   The \"ptype\" in the ABNF above indicates the general type of property\r\n   being described by the value being reported, upon which the reported\r\n                                             ^^^^^\r\n   result was based.  Coupled with the \"property\", which is more\r\n   specific, they indicate from which particular part of the message the\r\n   reported \"pvalue\"s were extracted.\r\n                    ^^^^^^^^\r\n\r\n",
     "notes": "The original text can be understood in multiple ways, depending on the meaning attributed to the term \"result\".  The corrected text I submit is one of the possible interpretations.  Note that if the first appearance of the term is assumed to be the ABNF \"result\", then ptype becomes an attribute of method, thereby setting a limit of one ptype per resinfo, as coincidentally it actually is.",
     "submit_date": "2016-04-18",
     "submitter_name": "Ale",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5435,
+    "errata_id": "5435",
     "doc-id": "RFC7601",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 2.2,
+    "section": "2.2",
     "orig_text": "resinfo = [CFWS] \";\" methodspec [ CFWS reasonspec ]\r\n               *( CFWS propspec )\r\n",
     "correct_text": "resinfo = [CFWS] \";\" methodspec [ CFWS reasonspec ]\r\n            [ CFWS 1*propspec ]\r\n",
     "notes": "Since propspec includes optional CFWS at end, parsing the current version of resinfo will result in at most one propspec even if methodspec is followed by more than one propspec.",
     "submit_date": "2018-07-23",
     "submitter_name": "Peter Occil",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

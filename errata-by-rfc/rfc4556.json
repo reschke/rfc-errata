@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3157,
+    "errata_id": "3157",
     "doc-id": "RFC4556",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The new paragraph identifies an interoperability problem where an\r\nimplementation omits the Q value (required in the DomainParameters\r\ntype defined in RFC3370) of a Diffie-Hellman group when participating\r\nin PKINIT. This happens for two well-known IKEv2 MODP groups that are\r\ndefined in RFC3526, probably because RFC3526 does not explicitly state\r\nthe Q values for the moduli. The moduli are safe primes, so the new\r\ntext specifies how to compute their Q values (which are the\r\ncorresponding Sophie Germain primes).",
     "submit_date": "2012-03-15",
     "submitter_name": "Tom Yu",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3820,
+    "errata_id": "3820",
     "doc-id": "RFC4556",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The certificate subject alternative name (SAN) type added by RFC4556 is and has been used more generically than its symbolic name denotes.\r\n\r\nNote that there is no risk in using id-pkinit-san for non-PKINIT purposes as presence of that SAN is -naturally- insufficient by itself to cause an AS to issue a ticket to the client for the named principal.  RFC4556 is quite clear on this point.\r\n\r\nTherefore id-pkinit-san should have been named id-kerberos-san, and should be referred to as id-kerberos-san going forward.  (If there was a registry of PKIX certificate extensions we would additionally ask IANA to updte it.)\r\n\r\nThere are a few other mentions of id-pkinit-san in RFC4556, all of which should read id-kerberos-san instead.",
     "submit_date": "2013-12-05",
     "submitter_name": "Nicolas Williams",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

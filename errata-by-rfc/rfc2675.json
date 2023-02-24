@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2175,
+    "errata_id": "2175",
     "doc-id": "RFC2675",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4.",
     "orig_text": "receiver derive the actual UDP packet length from the IPv6 payload\r\nlength.  (Note that, prior to this modification, zero was not a legal",
     "correct_text": "receiver derive the actual UDP packet length from the Jumbo Payload\r\nLength.  (Note that, prior to this modification, zero was not a legal",
     "notes": "The IPv6 payload length is 0.",
     "submit_date": "2010-04-28",
     "submitter_name": "Constantin Hagemeierc",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

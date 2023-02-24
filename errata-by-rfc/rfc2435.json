@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4094,
+    "errata_id": "4094",
     "doc-id": "RFC2435",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Luma and Chroma was not in Zig Zag order and Luma energy has been de-saturated.\n --VERIFIER NOTES-- \n  Rejected per discussion in avtcore ",
     "submit_date": "2014-09-04",
     "submitter_name": "Julius Richard Friedman",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4095,
+    "errata_id": "4095",
     "doc-id": "RFC2435",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Did not take into account cases with only 1 component was used.\n --VERIFIER NOTES-- \n   Rejected due to discussion in avtcore",
     "submit_date": "2014-09-04",
     "submitter_name": "Julius Richard Friedman",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4096,
+    "errata_id": "4096",
     "doc-id": "RFC2435",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "types  component samp. fact. samp. fact. table number\r\n        FROM StartOf Frame (0xFFC0)\r\n\r\nRead Nf - Number of image components in frame\r\n\r\nif(Nf > 1) \r\n\r\nRead Each Component\r\n\r\n          0 1 2 3 4 5 6 7 \r\n         +-+-+-+-+-+-+-+-+\r\n         |   H   |   V   |\r\n         +-+-+-+-+-+-+-+-+\r\n\r\nH: Horizontal sampling factor – Specifies the relationship between the component horizontal dimension\r\nand maximum image dimension X (see Jpeg Spec A.1.1); also specifies the number of horizontal data units of component\r\nCi in each MCU, when more than one component is encoded in a scan.\r\nVi: Vertical sampling factor – Specifies the relationship between the component vertical dimension and\r\nmaximum image dimension Y (see Jpeg Spec A.1.1); also specifies the number of vertical data units of component Ci in\r\neach MCU, when more than one component is encoded in a scan.\r\nTqi: Implied from the position in parsing\n --VERIFIER NOTES-- \n   Rejected based on discussion in avtcore. (And also because the errata does not contain a proposed change to the text).",
     "submit_date": "2014-09-04",
     "submitter_name": "Julius Richard Friedman",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4097,
+    "errata_id": "4097",
     "doc-id": "RFC2435",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "Use a divisor of 256 to determine the height, where 8 / 256 = 32.\r\n\r\nEnsure FragmentOffset does not exceed 2^24, if it does then use 2^24 - value)\n --VERIFIER NOTES-- \n   Rejected based on discussion in avtcore",
     "submit_date": "2014-09-04",
     "submitter_name": "Julius Richard Friedman",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   }

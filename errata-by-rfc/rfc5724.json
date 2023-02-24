@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1996,
+    "errata_id": "1996",
     "doc-id": "RFC5724",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.4,
+    "section": "2.4",
     "orig_text": "a)  first bullet (near bottom of page 9):\r\n                                                              v\r\n|  o  Both must be either a <local-number> or a <global-number<, i.e.,\r\n      start with a \"+\".\r\n\r\nb)  last paragraph (page 10):\r\n\r\n   Since \"sms\" URIs can contain multiple <telephone-subscriber>s as well\r\n|  as <sms-fields>, in addition to adopting the rules defined for\r\n   comparing <telephone-subscriber>s as defined by [RFC3966], two \"sms\"\r\n   URIs are only equivalent if their <sms-fields> are identical, and if\r\n   all <telephone-subscriber>s, compared pairwise as a set (i.e.,\r\n   without taking sequence into consideration), are equivalent.\r\n\r\n\r\n",
     "correct_text": "a)\r\n                                                              v\r\n|  o  Both must be either a <local-number> or a <global-number>, i.e.,\r\n      start with a \"+\".\r\n\r\nb)\r\n\r\n   Since \"sms\" URIs can contain multiple <telephone-subscriber>s as well\r\n|  as <sms-field>s, in addition to adopting the rules defined for\r\n   comparing <telephone-subscriber>s as defined by [RFC3966], two \"sms\"\r\n   URIs are only equivalent if their <sms-fields> are identical, and if\r\n   all <telephone-subscriber>s, compared pairwise as a set (i.e.,\r\n   without taking sequence into consideration), are equivalent.\r\n",
     "notes": "Rationale:\r\na)  Distorting typo.\r\nb)  Although there is a rule '<sms-fields>', the components of it\r\n    are meant here, in plural: <sms-field>s .",
     "submit_date": "2010-01-10",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 101,
+    "verifier_id": "101",
     "verifier_name": "Lisa Dusseault",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2672,
+    "errata_id": "2672",
     "doc-id": "RFC5724",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Current SMS availability…\r\nhttp://en.wikipedia.org/wiki/SMS: \r\n1985… Since then, support for the service has expanded to include other mobile technologies such as ANSI CDMA networks and Digital AMPS, as well as satellite and landline networks.",
     "submit_date": "2010-12-16",
     "submitter_name": "Charles Curran",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2690,
+    "errata_id": "2690",
     "doc-id": "RFC5724",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,22 +40,22 @@
     "notes": "That is a typographical error.",
     "submit_date": "2011-01-21",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2784,
+    "errata_id": "2784",
     "doc-id": "RFC5724",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 2.2,
+    "section": "2.2",
     "orig_text": "2.2. Formal Definition\r\n\r\n   The URI scheme's keywords specified in the following syntax\r\n   description are case-insensitive.  The syntax of an \"sms\" URI is\r\n   formally described as follows, where the URI base syntax is taken\r\n   from [RFC3986]:\r\n\r\n  sms-uri        = scheme \":\" sms-hier-part [ \"?\" sms-fields ]\r\n  scheme         = \"sms\"\r\n  sms-hier-part  = sms-recipient *( \",\" sms-recipient )\r\n  sms-recipient  = telephone-subscriber ; defined in RFC 3966\r\n  sms-fields     = sms-field *( \"&\" sms-field )\r\n  sms-field      = sms-field-name \"=\" escaped-value\r\n  sms-field-name = \"body\" / sms-field-ext ; \"body\" MUST only appear once\r\n  sms-field-ext  = 1*( unreserved )\r\n  escaped-value  = *( unreserved / pct-encoded ) ; defined in RFC 3986",
     "correct_text": "2.2. Formal Definition\r\n\r\n   The URI scheme's keywords specified in the following syntax\r\n   description are case-insensitive.  The syntax of an \"sms\" URI is\r\n   formally described as follows, where the URI base syntax is taken\r\n   from [RFC3986]:\r\n\r\n  sms-uri        = scheme \":\" sms-hier-part [ \"?\" sms-fields ]\r\n  scheme         = \"sms\"\r\n  sms-hier-part  = sms-recipient *( \",\" sms-recipient )\r\n  sms-recipient  = telephone-subscriber  ; defined in RFC 3966\r\n  sms-fields     = no-body / body-first / body-middle-last\r\n  no-body        = sms-field *( \"&\" sms-field )  \r\n                   ; <sms-fields> part without the \"body\" field\r\n  body-first     = body-field *( \"&\" sms-field )\r\n                   ; <sms-fields> part with the \"body\" field  \r\n                   ; at the first place\r\n  body-middle-last = sms-field *( \"&\" sms-field ) \"&\" body-field\r\n                   *( \"&\" sms-field )\r\n                   ; <sms-fields> part with the \"body\" field  \r\n                   ; in the middle or at the end\r\n  sms-field      = sms-field-name \"=\" escaped-value\r\n  body-field     = \"body=\" escaped-value\r\n  sms-field-name = 1*( unreserved )\r\n  escaped-value  = *( unreserved / pct-encoded )  ; defined in RFC 3986",
     "notes": "The syntax I propose represents that \"body\" field can occur in the URI only once while the current one does not reveal this.",
     "submit_date": "2011-04-18",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 127,
+    "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
   }

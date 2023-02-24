@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3557,
+    "errata_id": "3557",
     "doc-id": "RFC6896",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The examples in Appendix A use decimal numbers for ATIME (eg ATIME: 1347265955), not hexadecimal.",
     "submit_date": "2013-03-18",
     "submitter_name": "James Manger",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4085,
+    "errata_id": "4085",
     "doc-id": "RFC6896",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "The key length for AES-CBC-128 is 128 bit (16 byte). The specified \r\nstring has a length of 15 bytes (and thus, cannot be used as the key).\r\n\r\nThis error is both in A.1. and A.2.\r\n\r\nThe corrected text above is a complete replacement (supplied by the Author) for \r\nAppendix A, with corrected results.",
     "submit_date": "2014-08-17",
     "submitter_name": "Sven Herzberg",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   }

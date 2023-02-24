@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 536,
+    "errata_id": "536",
     "doc-id": "RFC1867",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": "99Every occurance of the string:",
+    "section": "Every occurance of the string:",
     "orig_text": "   , boundary=",
     "correct_text": "   ; boundary=\n",
     "notes": "",
     "submit_date": "2002-03-09",
     "submitter_name": "Dirk Nimmich",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5487,
+    "errata_id": "5487",
     "doc-id": "RFC1867",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 6,
+    "section": "6",
     "orig_text": "   If the user also indicated an image file \"file2.gif\" for the answer\r\n   to 'What files are you sending?', the client might client might send\r\n   back the following data:",
     "correct_text": "   If the user also indicated an image file \"file2.gif\" for the answer\r\n   to 'What files are you sending?', the client might send back the\r\n   following data:",
     "notes": "\"client might\" appears twice, which is a typo",
     "submit_date": "2018-08-31",
     "submitter_name": "Eugene Adell",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   }

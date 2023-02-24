@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4437,
+    "errata_id": "4437",
     "doc-id": "RFC7605",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "I think those two sentences say exactly the same thing and that the presence of both indicates that someone wasn't paying quite enough attention during AUTH48 or earlier.  If they are intended to communicate different information, it isn't clear what that is and the result is massively confusing.\r\n\r\n-- Verifier Notes --\r\nThe sentence was duplicated by mistake.  ",
     "submit_date": "2015-08-07",
     "submitter_name": "John Klensin",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5592,
+    "errata_id": "5592",
     "doc-id": "RFC7605",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "                                      [RFC1340] also establishes the\r\n   Registered range of 1024-59151, though it notes that it is not\r\n   controlled by the IANA (at that point). ",
     "correct_text": "                                      [RFC1340] first indicated the\r\n   Registered range of 1024-65535. This noted that the range was only\r\n   recorded (rather than controlled) by IANA. The list provided by\r\n   [RFC1700] in 1994 remained the standard, until replaced by an\r\n   online version in 2002 [RFC3232].  At some time after 1994, but\r\n   before 2000, the Registered range was changed to 1024-49151 and the\r\n   Dynamic/Private range of 49152-65535 was established, although this\r\n   change was not recorded in the RFC series until 2011 [RFC6335].",
     "notes": "There is an editorial issue as the original text indicated the wrong range with respect to RFC1340. However, the range should not just be updated in the text as there is more history that needs clarification.",
     "submit_date": "2019-01-05",
     "submitter_name": "C. M. Heard",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7118",
+    "doc-id": "RFC9286",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "fileList           SEQUENCE SIZE (0..MAX) OF FileAndHash",
+    "correct_text": "fileList           SEQUENCE SIZE (1..MAX) OF FileAndHash",
+    "notes": "Section 7 specifies \" A CA's manifest will always contain at least one entry\"; therefor, a fileList sequence of size 0 is invalid.\r\n\r\n",
+    "submit_date": "2022-09-03",
+    "submitter_name": "Job Snijders",
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2022-09-06 12:45:41"
+  },
+  {
+    "errata_id": "7243",
+    "doc-id": "RFC9286",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.1.  Manifest",
+    "orig_text": "   thisUpdate:\r\n      This field contains the time when the manifest was created.  This\r\n      field has the same format constraints as specified in [RFC5280]\r\n      for the CRL field of the same name.  The issuer MUST ensure that\r\n      the value of this field is more recent than any previously\r\n      generated manifest.  Each RP MUST verify that this field value is\r\n      greater (more recent) than the most recent manifest it has\r\n      validated.  If this field in a purported \"new\" manifest is smaller\r\n      (less recent) than previously validated manifests, the RP SHOULD\r\n      use locally cached versions of objects, as described in\r\n      Section 6.6.",
+    "correct_text": "    thisUpdate:\r\n      This field contains the time when the manifest was created. This\r\n      field has the same format constraints as specified in [RFC5280]\r\n      for the CRL field of the same name. The issuer MUST ensure that\r\n      the value of this field is equal to the current time and higher or\r\n      equal to the thisUpdate of any previously generated manifest. Each\r\n      RP MUST verify that this field value is greater or equal to (as,\r\n      or more recent) than the most recent manifest it has validated.\r\n      Suppose this field in a purported \"new\" manifest is smaller (less\r\n      recent) than previously validated manifests. In that case, the RP\r\n      SHOULD use locally cached versions of objects, as described in\r\n      Section 6.6.\r\n\r\n",
+    "notes": "First of all: The previous text was not explicit that thisUpdate MUST contain the current time.\r\n\r\nSecond, in practice (e.g. multiple calls to a synchronous API) multiple manifests can be issued with the same thisUpdate. Under the previous text this would technically be misissuance. The propose text allows multiple manifests to be issued in the same second.",
+    "submit_date": "2022-11-07",
+    "submitter_name": "Ties de Kock",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

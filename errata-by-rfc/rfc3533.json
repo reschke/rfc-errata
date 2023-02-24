@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 6796,
+    "errata_id": "6796",
     "doc-id": "RFC3533",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5,
+    "section": "5",
     "orig_text": "Page_1 consists of the first three segments of\r\npacket_1, page_2 contains the remaining 2 segments from packet_1, and\r\npage_3 contains the first three pages of packet_2.",
     "correct_text": "Page_1 consists of the first three segments of\r\npacket_1, page_2 contains the remaining 2 segments from packet_1, and\r\npage_3 contains the first three segments of packet_2.",
     "notes": "The last part of this sentence used \"three pages\" which should be \"three segments\". As package is divided into segments.",
     "submit_date": "2021-12-25",
     "submitter_name": "Gang Zhao",
-    "verifier_id": 157,
+    "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2021-12-27 04:13:42"
   }

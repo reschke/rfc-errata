@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 359,
+    "errata_id": "359",
     "doc-id": "RFC2927",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   Content-Type: text/directory; profile=\"schema-ldap-0\";charset=\"utf-8\"\n   Content-Transfer-Encoding: Quoted-Printable\n   ldapSchemas: ( 1.2.3.4 NAME 'bogus schema' CLASSES ( top $ thing ) =\n   ATTRIBUTES ( objectClass $ name ) SYNTAXES ( =\n   1.3.6.1.4.1.1466.115.121.1.38 $ 1.3.6.1.4.1.1466.115.121.1.15 ) )",
     "correct_text": "   Content-Type: text/directory; profile=\"schema-ldap-0\";charset=\"utf-8\"\n   Content-Transfer-Encoding: Quoted-Printable\n   \n   ldapSchemas: ( 1.2.3.4 NAME 'bogus schema' CLASSES ( top $ thing ) =\n   ATTRIBUTES ( objectClass $ name ) SYNTAXES ( =\n   1.3.6.1.4.1.1466.115.121.1.38 $ 1.3.6.1.4.1.1466.115.121.1.15 ) )\n",
     "notes": "",
     "submit_date": "2002-01-04",
     "submitter_name": "Bruce Lilly",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

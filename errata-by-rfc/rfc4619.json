@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 41,
+    "errata_id": "41",
     "doc-id": "RFC4619",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "   The main functions required to support frame relay PW by a\r\n   Provider Edge (PE) include:",
     "correct_text": "   The main functions required to support frame relay PWs by a\r\n   Provider Edge (PE) include:\r\n",
     "notes": "from pending",
     "submit_date": "2006-11-01",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 3,
+    "verifier_id": "3",
     "verifier_name": "Andrew G. Malis",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 817,
+    "errata_id": "817",
     "doc-id": "RFC4619",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)  [[posted separately.]]\r\n\r\n\r\n(2)  improper wording (mismatch with what follows)\r\n\r\nOn page 3, the last paragraph above Figure 1 says:\r\n                                                     v      vvv\r\n   The following figure describes the reference models that are derived\r\n   from [RFC3985] to support the frame relay PW emulated services.\r\n\r\nIt should say:\r\n\r\n|  The following figure describes the reference model that is derived\r\n   from [RFC3985] to support the frame relay PW emulated services.\r\n\r\n\r\n(3)  typo (missing article)\r\n\r\nWithin Section 5, the 2nd list item on page 6 says:\r\n\r\n   - Frame relay Local Management Interface (LMI) is terminated locally\r\n     in the PE connected to the frame relay attachment circuit.\r\n\r\nIt should say:\r\n\r\n|  - The Frame relay Local Management Interface (LMI) is terminated\r\n     locally in the PE connected to the frame relay attachment circuit.\r\n\r\n\r\n(4)  missing article\r\n\r\nThe last bullet within Section 7.2, near the top of page 8, says:\r\n\r\n   - Payload\r\n\r\n     The payload field corresponds to X.36/X.76 frame relay frame\r\n     information field with the following components removed: bit/byte\r\n     stuffing, frame relay header, and FCS.  [...]\r\n\r\nIt should say:\r\n\r\n   - Payload\r\n\r\n|    The payload field corresponds to an X.36/X.76 frame relay frame\r\n     information field with the following components removed: bit/byte\r\n     stuffing, frame relay header, and FCS.  [...]\r\n\r\n\r\n(5)  typos/grammar\r\n\r\nThe last bulleted item in Section 7.6.2, on top of page 12, says:\r\n\r\n                                        vvvvvv\r\n|  - Otherwise, if the payload is longer, then the length specified in\r\n|    the control word padding characters are removed according to the\r\n     length field.\r\n                     ^\r\n\r\nIt should say:\r\n                                        v  v\r\n|  - Otherwise, if the payload is longer than the length specified in\r\n|    the control word, padding characters are removed according to the\r\n     length field.\r\n                     ^\r\n\r\n(6)  typo\r\n\r\nThe second sentence in the first paragraph of Section 7.9, on page 12,\r\n\r\n                                                           v\r\n           [...].  If the PE detects a service-affecting condition for a\r\n|  particular DLCI, as defined in [Q933] Q.933, Annex A.5, sited in IA\r\n   FRF1.1, the PE MUST communicate to the remote PE the status of the PW\r\n   that corresponds to the frame relay DLCI status.  [...]\r\n\r\nshould say:\r\n                                                           v\r\n           [...].  If the PE detects a service-affecting condition for a\r\n|  particular DLCI, as defined in [Q933] Q.933, Annex A.5, cited in IA\r\n   FRF1.1, the PE MUST communicate to the remote PE the status of the PW\r\n   that corresponds to the frame relay DLCI status.  [...]\r\n\r\n\r\n(7)  typo/grammar\r\n\r\nThe last sentence in the second paragraph of Section 7.9, on page 12,\r\n\r\n   [...].  The IANA allocation registry of \"Pseudowire Type\" is defined\r\n   in [RFC4446] along with initial allocated values.\r\n\r\nshould say:\r\n\r\n|  [...].  The IANA allocation registry of \"Pseudowire Types\" is defined\r\n|  in [RFC4446] along with initially allocated values.\r\n",
     "correct_text": "",
     "notes": "from pending",
     "submit_date": "2006-11-01",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 3,
+    "verifier_id": "3",
     "verifier_name": "Andrew G. Malis",
     "update_date": "2019-09-10 09:09:03"
   }

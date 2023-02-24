@@ -1,36 +1,36 @@
 [
   {
-    "errata_id": 5585,
+    "errata_id": "5585",
     "doc-id": "RFC7323",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.2,
+    "section": "2.2",
     "orig_text": "2.2.  Window Scale Option\r\n\r\n   The three-byte Window Scale option MAY be sent in a <SYN> segment by\r\n   a TCP.  It has two purposes: (1) indicate that the TCP is prepared to\r\n   both send and receive window scaling, and (2) communicate the\r\n   exponent of a scale factor to be applied to its receive window.\r\n   Thus, a TCP that is prepared to scale windows SHOULD send the option,\r\n   even if its own scale factor is 1 and the exponent 0.  The scale\r\n   factor is limited to a power of two and encoded logarithmically, so\r\n   it may be implemented by binary shift operations.  The maximum scale\r\n   exponent is limited to 14 for a maximum permissible receive window\r\n   size of 1 GiB (2^(14+16)).\r\n",
     "correct_text": "2.2.  Window Scale Option\r\n\r\n   The three-byte Window Scale option MAY be sent in a <SYN> segment by\r\n   a TCP.  It has two purposes: (1) indicate that the TCP is prepared to\r\n   both send and receive window scaling, and (2) communicate the\r\n   exponent of a scale factor to be applied to its receive window.\r\n   Thus, a TCP that is prepared to scale windows SHOULD send the option,\r\n   even if its own scale factor is 1 and the exponent 0.  The scale\r\n   factor is limited to a power of two and encoded logarithmically, so\r\n   it may be implemented by binary shift operations.  The maximum scale\r\n   exponent is limited to 14 for a maximum permissible receive window\r\n   size of approximately 1 GiB ((2^30-1) - (2^14-1)).\r\n",
     "notes": "Left shift inserts zero's on the right hand side so the maximum window size is actually 16KiB shy of 1 GiB. The exact calculation would be  ((2^30-1) - (2^14-1)). As it is stated as \"approximately 1 GiB\" the text is not incorrect but it would be good to provide the complete calculation in a document update to avoid invalid implementations.",
     "submit_date": "2018-12-27",
     "submitter_name": "Marco Caspers",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5586,
+    "errata_id": "5586",
     "doc-id": "RFC7323",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 2.3,
+    "section": "2.3",
     "orig_text": "Since the max window is 2^S (where S is the scaling shift count)\r\n   times at most 2^16 - 1 (the maximum unscaled window), the maximum\r\n   window is guaranteed to be < 2^30 if S <= 14.  Thus, the shift count\r\n   MUST be limited to 14 (which allows windows of 2^30 = 1 GiB).  If a\r\n   Window Scale option is received with a shift.cnt value larger than\r\n   14, the TCP SHOULD log the error but MUST use 14 instead of the\r\n   specified value.  This is safe as a sender can always choose to only\r\n   partially use any signaled receive window.  If the receiver is\r\n   scaling by a factor larger than 14 and the sender is only scaling by\r\n   14, then the receive window used by the sender will appear smaller\r\n   than it is in reality.\r\n\r\n",
     "correct_text": "Since the max window is 2^S (where S is the scaling shift count)\r\n   times at most 2^16 - 1 (the maximum unscaled window), the maximum\r\n   window is guaranteed to be < 2^30-2^14 if S <= 14.  Thus, the shift\r\n count\r\n   MUST be limited to 14 (which allows windows of 2^30-2^14 ~ 1 GiB).\r\n  If a\r\n   Window Scale option is received with a shift.cnt value larger than\r\n   14, the TCP SHOULD log the error but MUST use 14 instead of the\r\n   specified value.  This is safe as a sender can always choose to only\r\n   partially use any signaled receive window.  If the receiver is\r\n   scaling by a factor larger than 14 and the sender is only scaling by\r\n   14, then the receive window used by the sender will appear smaller\r\n   than it is in reality.\r\n",
     "notes": "Shifting is inserting zeroes on the right hand side. Thus for S = 14 the 14 right most bits are zero and thus the calculation 2^30 is invalid for the guaranteed maximum window size.\r\n\r\nCorrect calculation formulae is (2^30 - 1) - (2^14 -1).\r\nWhich can be simplified to 2^30 - 2^14.\n --VERIFIER NOTES-- \nThat section is for illustration purposes only, and not intended as an exact value for the maximum supported window size.\r\n\r\nIt is correct that the maximum supported window size is 2^30-2^14, but the requirement is, that the window size has to remain smaller than 2^30.",
     "submit_date": "2018-12-27",
     "submitter_name": "Marco Caspers",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2020-03-06 05:08:13"
   },
   {
-    "errata_id": 6798,
+    "errata_id": "6798",
     "doc-id": "RFC7323",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "several \"MAY\"s were incorrectly written as non RFC 2119 \"may\"s\n --VERIFIER NOTES-- \n   These examples are non-normative. The first is explanatory, and the other two are examples of ways to meet the requirement.",
     "submit_date": "2021-12-26",
     "submitter_name": "Yaakov Stein",
-    "verifier_id": 167,
+    "verifier_id": "167",
     "verifier_name": "Martin Duke",
     "update_date": "2022-05-13 14:13:18"
   }

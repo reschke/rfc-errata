@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1388,
+    "errata_id": "1388",
     "doc-id": "RFC5216",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Location is the 6th paragraph of Section 2.1.1.\r\n(Please note that the first paragraph of that section is\r\ninadvertently split into two parts by a spurious blank line\r\nthat has been ignored for the purpose of paragraph numbering.)\r\n\r\nRationale:\r\nThere's no such thing like a DSS signature public key.\r\nKeys have to match the mathematical algorithms, and only\r\nindirectly the standrds documents.\r\nThe Digital Signature Standard (DSS) supports three different\r\nkinds of signature algorithms: (classical) DSA, ECDSA (the DSA\r\nvariant based on Elliptic Curve Cryptography), and RSA.\r\nAll three algorithms require different keys, based on the\r\nmathematical properties and the related presentation forms.\r\n\r\nOther parts of the document, in particular Section 5.1 already\r\nuse the proper terminology to distinguish between algorithm and\r\nstandards document.",
     "submit_date": "2008-03-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1389,
+    "errata_id": "1389",
     "doc-id": "RFC5216",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The double word omission totally distorts the proper sense\r\nof the sentence.  The 4th paragraph of this section describes\r\nthe converse scenarion, and it does it properly; the wording\r\nfrom there has been adopted above.\r\n\r\nNote that RFC 2716 already had dropped the word \"than\" making it\r\ndifficult to understand.  Additionally dropping \"rather\" as well in\r\nRFC 5216 fully distorts the intended sense and leads to confusion.\r\n\r\n[Confirmed by Bernard Aboba and Ryan Hurst]",
     "submit_date": "2008-03-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1390,
+    "errata_id": "1390",
     "doc-id": "RFC5216",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Rationale:\r\n\r\nThe columnar alignment of many parts of the examples\r\npresented in Section 2.1.3 - 2.1.5 is distorted, for\r\nmultiple messages sent by the Authenticator\r\n(denoted A-msg below, for brevity).\r\n\r\nThe example above is the 3rd A-msg on page 10.\r\n\r\nAdditional occurrences of this issue are:\r\n\r\n-  Section 2.1.3, last part, mid-page 11, third A-msg,\r\n-  Section 2.1.4, first, second and third A-msg on page 13,\r\n-  Section 2.1.5, second and third A-msg on page 15,\r\n   and second A-msg on page 16.",
     "submit_date": "2008-03-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1391,
+    "errata_id": "1391",
     "doc-id": "RFC5216",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Wrong line break makes formula presentation confusing.\r\n\r\n(This flaw has been introduced in a last-minute change\r\n before publication!)",
     "submit_date": "2008-03-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1392,
+    "errata_id": "1392",
     "doc-id": "RFC5216",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "Rationale:\r\n\r\nFigure 2 should be comparable to Figure 1, but it does not\r\nshow the final deliverables with their names as they appear\r\nin the referenced documents.\r\nAlso, the figure is surprisingly unbalanced; it shows the split\r\nof MSK, but it does not show the split of EMSK; I cannot detect\r\nany reason for this difference. \r\nThe proposal above includes both these names and the technical\r\ndetails of how these variables are derived from MSK and EMSK,\r\naccording to the formulae given near the bottom of page 18.\r\n\r\nTo avoid these technical details and better align the abstraction\r\nlevel in the presentation with Figure 1, alternatively the second\r\nand the third tagged line above (those with \"=\" and MSK/EMSK)\r\ncould be left off.\n --VERIFIER NOTES-- \n\r\nThe updated figure is wrong -- RECV-IV/SEND-IV are not derived from EMSK.",
     "submit_date": "2008-03-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1393,
+    "errata_id": "1393",
     "doc-id": "RFC5216",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "There are two issues:\r\n-  misalignment of ruler lines above the diagram;\r\n-  misleading representation of the TLS Message Length field\r\n   that is continued from the 2nd to the 3rd data line;\r\n   the above proposal makes use of ':' to denote continuation\r\n   of a folded field -- this notational detail has been widely\r\n   adopted in many contemporary RFCs.\r\n\r\nThis very same issue recurs in Section 3.2, on page 22, and \r\nidentical changes should be applied there.\r\n\r\n\r\nNote:\r\n  Unfortunately, the affiliation of the authors apparently\r\n  maintains packet filters (since almost 9 months) that preclude\r\n  DNS lookups for the MX records, and hence sending email to the\r\n  authors, for any site operating a DNS resolver behind a NAT/NAPT,\r\n  by blackholing DNS queries from sorce ports other than 53 --\r\n  contrary to all applicable RFCs.\r\n  This effective denial of service has prohibited me from direct\r\n  communication with the authors, to make them aware of the issues\r\n  now reported in this series of Errata Reports.",
     "submit_date": "2008-03-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1394,
+    "errata_id": "1394",
     "doc-id": "RFC5216",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -100,37 +100,37 @@
     "notes": "Rationale: Clarification",
     "submit_date": "2008-03-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2510,
+    "errata_id": "2510",
     "doc-id": "RFC5216",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "The L bit (length included) is set to indicate the presence of the\r\nfour-octet TLS Message Length field, and MUST be set for the first\r\nfragment of a fragmented TLS message or set of messages.",
     "correct_text": "The L bit (length included) is set to indicate the presence of the\r\nfour-octet TLS Message Length field, and MUST be set for the first\r\nfragment of a fragmented TLS message.  The L bit MAY be included\r\nin all fragments of a fragmented TLS message, but if included the\r\nTLS Length MUST represent the entire length of the TLS message.",
     "notes": "The lack of definition for what to do with the L bit and the TLS length field for TLS fragments other than the first fragment is leaving the door open to divergent behavior for whether the L bit and length field are included, what the length contains if they're included, and how to interpret it.",
     "submit_date": "2010-09-03",
     "submitter_name": "Min Pae",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6357,
+    "errata_id": "6357",
     "doc-id": "RFC5216",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "   [3] Section 5 of BCP 86 [RFC3766] offers advice on the required RSA\r\n   or Diffie-Hellman (DH) module and Digital Signature Algorithm (DSA)\r\n   subgroup size in bits, for a given level of attack resistance in\r\n   bits.  For example, a 2048-bit RSA key is recommended to provide\r\n   128-bit equivalent key strength.  The National Institute of Standards\r\n   and Technology (NIST) also offers advice on appropriate key sizes in\r\n   [SP800-57].",
     "correct_text": "   [3] Section 5 of BCP 86 [RFC3766] offers advice on the required RSA\r\n   or Diffie-Hellman (DH) modulus and Digital Signature Algorithm (DSA)\r\n   subgroup size in bits, for a given level of attack resistance in\r\n   bits.  For example, a 2048-bit RSA key is recommended to provide\r\n   128-bit equivalent key strength.  The National Institute of Standards\r\n   and Technology (NIST) also offers advice on appropriate key sizes in\r\n   [SP800-57].",
     "notes": "RSA and DH computations are parameterized by their moduli, with singular \"modulus\" (not \"module\").",
     "submit_date": "2020-12-16",
     "submitter_name": "Benjamin Kaduk",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-01-19 14:33:45"
   }

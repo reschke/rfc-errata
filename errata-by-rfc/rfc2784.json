@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1706,
+    "errata_id": "1706",
     "doc-id": "RFC2784",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "   An RFC 1701 transmitter may set any of the Routing Present, Key\r\n   Present, Sequence Number Present, and Strict Source Route bits set to\r\n   one, and thus may transmit the RFC 1701 Key, Sequence Number or\r\n   Routing fields in the GRE header. As stated in Section 5.3, a packet\r\n   with non-zero bits in any of bits 1-5 MUST be discarded unless the\r\n   receiver implements RFC 1701.\r\n",
     "correct_text": "   An RFC 1701 transmitter may set any of the Routing Present, Key\r\n   Present, Sequence Number Present, and Strict Source Route bits set to\r\n   one, and thus may transmit the RFC 1701 Key, Sequence Number or\r\n   Routing fields in the GRE header. As stated in Section 2.3, a packet\r\n   with non-zero bits in any of bits 1-5 MUST be discarded unless the\r\n   receiver implements RFC 1701.\r\n",
     "notes": null,
     "submit_date": "2009-03-03",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3719,
+    "errata_id": "3719",
     "doc-id": "RFC2784",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "In the section entitled \"Packet header,\" RFC 1701 defined the one-bit Routing Present, Key Present, Sequence Number Present, and Strict Source Route fields in bits 1-4 , the Recursion Control field in bits 5-7, and a Flags field in bits 8-12.  It further stated that \"[b]its 5 through 12 are reserved for future use and MUST be transmitted as zero.\"  The language in RFC 2784 Section 5.2 makes it clear that incompatibilities between an  RFC 1701 transmitter and an RFC 2784 receiver arise only when one or more of the the Routing Present, Key Present, Sequence Number Present, and Strict Source Route bits are set, i.e., when any of bits 1-4 are set.\r\n\r\nVerifier's note: This looks like it was the intent of the authors, but the reader should note also RFC2890 which restores the K and S bits.\r\n",
     "submit_date": "2013-09-04",
     "submitter_name": "C, . M. Heard",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }

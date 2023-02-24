@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2171,
+    "errata_id": "2171",
     "doc-id": "RFC1878",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": null,
     "submit_date": "2010-04-23",
     "submitter_name": "Clark Rossdale",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3147,
+    "errata_id": "3147",
     "doc-id": "RFC1878",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Some parts of table 1-1 should be corrected as it is expected to include all-zeros and all-ones subnets.\r\nBroadcast address is always N.N.255.255 in the all-ones subnet of a class B network N.N.0.0, for any number of subnetting bits.\r\nThe last host address of the all-ones subnet should always be N.N.255.254. Then, the row for each all-ones subnet is to be modified to include N.N.255.N.\r\nFinally, the number of subnets for 8 bit subnet should be 256 (not 255), of 254 hosts each (not 253).",
     "submit_date": "2012-03-06",
     "submitter_name": "Cyril Pain-Barre",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5328,
+    "errata_id": "5328",
     "doc-id": "RFC1878",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "Introduction\r\n\r\nTypos: classfull , equivalants, Decmial\r\n\r\nTable\r\nTypo: Decmial",
     "submit_date": "2018-04-16",
     "submitter_name": "Cuauhtemoc Amox",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   }

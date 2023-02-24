@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 179,
+    "errata_id": "179",
     "doc-id": "RFC4147",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "     F800::/6              Reserved by IETF        RFC3513\n     FA00::/7              Reserved by IETF        RFC3513\n     FC00::/7              Reserved by IETF        RFC3513",
     "correct_text": "     F800::/6              Reserved by IETF        RFC3513\n     FC00::/7              Reserved by IETF        RFC3513",
     "notes": " Section 2 states \"There are no overlapping address blocks in the first\ncolumn\", but the address blocks F800::/6 and FA00::/7\noverlap. Therefore, the address block FA00::/7 should be removed from the table.",
     "submit_date": "2005-08-29",
     "submitter_name": "Mark Doll",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2668,
+    "errata_id": "2668",
     "doc-id": "RFC5934",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "This errata addresses two different issues:\r\n1.  The exact same class definition, not a clone, must be used in order to have the ASN.1 object sets work correctly.  This is the reason for the change in the definition of the CONTENT-TYPE class.\r\n\r\n2.  An errata on RFC5911 added the keyword TYPE so that a content type can be defined as not having an associated ASN.1 type (either because it is raw data or is a different structured data type such as XML).  This means that all objects of the CONTENT-TYPE class need to have the word TYPE added to them.\r\n\r\nNote also that the text is removed and not replaced for ORIG-1 ",
     "submit_date": "2010-12-09",
     "submitter_name": "Jim Schaad",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   }

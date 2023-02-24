@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4402,
+    "errata_id": "4402",
     "doc-id": "RFC7543",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "    +------------------------------------------------+---------------+\r\n    | Registry                                       | Code Point    |\r\n    +------------------------------------------------+---------------+\r\n    | BGP Outbound Route Filtering (ORF) Types       | CP-ORF (65)   |\r\n    | Transitive Opaque Extended Community Sub-Types | CP-ORF (0x03) |\r\n    +------------------------------------------------+---------------+",
     "correct_text": "    +------------------------------------------------+---------------+\r\n    | Registry                                       | Code Point    |\r\n    +------------------------------------------------+---------------+\r\n    | BGP Outbound Route Filtering (ORF) Types       | CP-ORF (65)   |\r\n    | Transitive Opaque Extended Community Sub-Types | CP-ORF (0x03) |\r\n    | Capability Codes                               | CP-ORF (72)   |\r\n    +------------------------------------------------+---------------+",
     "notes": "In the original text, we forgot to mention the value of the BGP capability code.\n --VERIFIER NOTES-- \nRFC 5291 describes The Outbound Route Filter (ORF) Capability for BGP. According to RFC 5291, when two BGP speakers initiate a session between one another and they intend to exchange ORFs of any type, they must advertise the ORF capability. The ORF capability is registered with a value of 3 in the IANA BGP Capability Code Registry. The ORF capability also includes a list of ORF types that the BGP speaker can send and/or receive. IANA also maintains a BGP Outbound Route Filtering (ORF) Types registry.\r\n\r\nRFC 7543 describes a new ORF type, called the Covering Prefix ORF (CP-ORF). RFC 7543 should conform to generic ORF procedures defined in RFC 5291. Specifically, when two BGP speakers initiate a session between one another and they intend to exchange CP-ORFs, they must advertise the ORF capability (value 3). The ORF capability must include CP-ORF (value 65) in the ORF type list.",
     "submit_date": "2015-06-26",
     "submitter_name": "Ron Bonica",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4669,
+    "errata_id": "4669",
     "doc-id": "RFC7543",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "This text occurs twice, once in Section 4 and again in Section 5",
     "submit_date": "2016-04-15",
     "submitter_name": "Ron Bonica",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5258,
+    "errata_id": "5258",
     "doc-id": "RFC7543",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "The original text provides conflicting definitions of the MAC Address Length in the Unknown MAC Route (UMR).\r\n\r\nSince the UMR is a MAC/IP Advertisement Route defined in RFC 7432, and since this RFC states that the MAC Address Length in these routes is 48, the text in Section 5 should be corrected to match RFC 7432 as well as the text in Section 1 of this RFC (where MAC Address Length in the UMR is correctly defined as 48).",
     "submit_date": "2018-02-08",
     "submitter_name": "Alexander (\"Sasha\") Vainshtein",
-    "verifier_id": 148,
+    "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
   }

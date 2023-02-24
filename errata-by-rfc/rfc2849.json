@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2258,
+    "errata_id": "2258",
     "doc-id": "RFC2849",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "There is no section numbering in this RFC, hence the \"GLOBAL\".\r\n\r\nNote 10 in \"Notes on LDIF Syntax\" says that base64-encoded values are subject to the same folding rules explained in Note 2. Note 2 requires folded lines to begin with a space character.\r\n\r\nThis modification was introduced passing from draft-good-ldap-ldif to RFC 2849.",
     "submit_date": "2010-05-13",
     "submitter_name": "Flavio Poletti",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3646,
+    "errata_id": "3646",
     "doc-id": "RFC2849",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "This appears in note 4 of \"Notes on LDIF Syntax\".\r\n\r\n---- Verifier notes ----\r\nNote 4 has double text, one of which allows more than the other.   But the ABNF\r\ndoesn't have that ambiguity.  This is really something that can only be fixed by\r\nrevising the spec.   It's simply not clear what the intent was.",
     "submit_date": "2013-06-11",
     "submitter_name": "Boris Kleint",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4009,
+    "errata_id": "4009",
     "doc-id": "RFC2849",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "There is no formal specification of the meaning of the \"deleteoldrdn\" value 0 or 1. 1 stands for deletion, 0 stands for keeping the old rdn. Add a note to explain the value meaning.\r\n\r\n-----\r\nVerifier note:\r\nIt is correct that the meaning of \"deleteoldrdn\" is never explained in the document.  The proposed resolution is a reasonable fix for that, and such an explanation is needed.",
     "submit_date": "2014-06-09",
     "submitter_name": "Giovanni Cannata",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4355,
+    "errata_id": "4355",
     "doc-id": "RFC2849",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "The implication is drawn from the \r\n(1): Note 2, \"When joining folded lines, exactly one space character at the beginning of each continued line must be discarded.\" (Emphasis on \"exactly one\".)\r\n(2): Note 8, \"Values … that end with SPACE SHOULD be base-64 encoded.\", implied premise of the format that each single line read from the file must be \"basically correct\", means, follow generic rule of (<empty line> / <comment> / <name:value pair> / <continuation line>) and the generic experience that trailing whitespaces are not apparently visible in text files without the use of special tools.\n --VERIFIER NOTES-- \n\r\nExcept that it's an incorrect implication.  The space at the beginning of the continued line is discarded simply because it's the space that was added to fold the line, so it has to be removed when you unfold.  There is no restriction on where the folding is done other than what Note 2 says (MUST NOT fold before the first character of the line, and SHOULD NOT fold in the middle of a multi-byte UTF-8 character).\r\n\r\nIn particular, a line can be folded in the middle of a FILL sequence, in the middle of a sequence of SPACE characters in a string, or in the middle of a sequence of SPACE characters in a comment line.  It is perfectly valid to have SPACE characters both before and after the <SEP SPACE> sequence that folding adds.",
     "submit_date": "2015-05-05",
     "submitter_name": "Andrey Repin",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4377,
+    "errata_id": "4377",
     "doc-id": "RFC2849",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -70,7 +70,7 @@
     "notes": "ldap-oid syntax on RFC2849 allow only ONE dot.\r\nBut it should allow decimal string separated by multi dots.\r\n\r\nRFC2251 LDAPOID definition:\r\n   The LDAPOID is a notational convenience to indicate that the\r\n   permitted value of this string is a (UTF-8 encoded) dotted-decimal\r\n   representation of an OBJECT IDENTIFIER.\r\n\r\n        LDAPOID ::= OCTET STRING\r\n\r\n   For example,\r\n\r\n        1.3.6.1.4.1.1466.1.2.3",
     "submit_date": "2015-05-28",
     "submitter_name": "Keita Kondou",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5913,
+    "errata_id": "5913",
     "doc-id": "RFC3058",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "     IDEA-CBC OBJECT IDENTIFIER\r\n       ::= { iso(1) identified-organization(3)\r\n           usdod(6) oid(1) private(4) enterprises(1)\r\n           ascom(188) systec(7) security(1) algorithms(1) 2 }",
     "correct_text": "     id-IDEA-CBC OBJECT IDENTIFIER\r\n       ::= { iso(1) identified-organization(3)\r\n           usdod(6) oid(1) private(4) enterprises(1)\r\n           ascom(188) systec(7) security(1) algorithms(1) 2 }",
     "notes": "ASN.1 requires that such an identifier begin with a lower case letter.  The prefix of \"id-\" is a common approach to meeting this requirement for an OBJECT IDENTIFIER.",
     "submit_date": "2019-11-19",
     "submitter_name": "Russ Housley",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-11-22 20:01:32"
   }

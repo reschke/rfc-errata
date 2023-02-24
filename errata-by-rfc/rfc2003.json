@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1686,
+    "errata_id": "1686",
     "doc-id": "RFC2003",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4.3,
+    "section": "4.3",
     "orig_text": "   The encapsulator MAY handle the ICMP Redirect messages itself.  It\r\n   MUST NOT not relay the Redirect to the sender of the original\r\n   unencapsulated datagram.\r\n",
     "correct_text": "   The encapsulator MAY handle the ICMP Redirect messages itself.  It\r\n   MUST NOT relay the Redirect to the sender of the original\r\n   unencapsulated datagram.\r\n",
     "notes": null,
     "submit_date": "2009-02-18",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

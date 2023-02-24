@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 2533,
+    "errata_id": "2533",
     "doc-id": "RFC5960",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "   A section MUST provide a means of identifying the type of payload it\r\n   carries.  If the section is a data-link, link-specific mechanisms\r\n   such as a protocol type indication in the data-link header MAY be\r\n   used.  If the section is an LSP, this information MAY be implied by\r\n   the LSP label or, if the LSP payload is MPLS-labeled, by the setting\r\n   of the S bit.  Additional labels MAY also be used if necessary to\r\n   distinguish different payload types; see [RFC5921] for examples and\r\n   further discussion.",
     "correct_text": "   A section MUST provide a means of identifying the type of payload it\r\n   carries. This mechanism may be used to facilitate multiplexing MPLS\r\n   with other protocols on the section if that function is supported by\r\n   the section. Support or non-support of multiplexing on sections is\r\n   out-of-scope for this document.\r\n\r\n   If the section is a data-link, link-specific mechanisms\r\n   such as a protocol type indication in the data-link header MAY be\r\n   used.  If the section is an LSP, this information MAY be implied by\r\n   the LSP label or, if the LSP payload is MPLS-labeled, by the setting\r\n   of the S bit.  Additional labels MAY also be used if necessary to\r\n   distinguish different payload types; see [RFC5921] for examples and\r\n   further discussion.",
     "notes": "This change clarifies the requirement to support payload identification, the way it is used, and the use to which it is put. Furthermore, it clarifies the standing of protocol multiplexing onto underlying sections.\r\n\r\nThis issue was first raised in a liaison from the ITU-T\r\nSee https://datatracker.ietf.org/liaison/916/",
     "submit_date": "2010-09-29",
     "submitter_name": "Italo Busi",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2534,
+    "errata_id": "2534",
     "doc-id": "RFC5960",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "   Where enhanced security is desirable, and a trust relationship exists\r\n   between an LSR and its peer, the LSR MAY choose to implement the\r\n   following policy for the processing of MPLS packets received from one\r\n   or more of its neighbors:\r\n\r\n      Upon receipt of an MPLS packet, discard the packet unless one of\r\n      the following two conditions holds:\r\n\r\n      1.  Any MPLS label in the packet's label stack processed at the\r\n          receiving LSR, such as an LSP or PW label, has a label value\r\n          that the receiving LSR has distributed to that neighbor; or\r\n\r\n      2.  Any MPLS label in the packet's label stack processed at the\r\n          receiving LSR, such as an LSP or PW label, has a label value\r\n          that the receiving LSR has previously distributed to the peer\r\n          beyond that neighbor (i.e., when it is known that the path\r\n          from the system to which the label was distributed to the\r\n          receiving system is via that neighbor).",
     "correct_text": "   Where enhanced security is desirable, and a trust relationship exists\r\n   between two LSRs, an LSR receiving an MPLS packet MAY choose to \r\n   implement an additional policy for processing the received packet as\r\n   follows:\r\n\r\n      The receiving LSR discards the packet unless every MPLS label\r\n      stack entry that it processes from the packet's label stack has a \r\n      label that has been agreed for use by the sender of the packet\r\n      (for example, is a reserved label or has been distributed using\r\n      the management plane or control plane upstream or downstream \r\n      allocation). ",
     "notes": "There was considerable confusion about the distinction between peer and neighbour. This was first raised in a liaison from the ITU-T visible at\r\nhttps://datatracker.ietf.org/liaison/916/\r\n\r\nClarification was also added about which labels are acceptable.\r\n\r\nThis does not result in a technical change to the specification, but introduces clarity about the processes described.",
     "submit_date": "2010-09-29",
     "submitter_name": "Italo Busi",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

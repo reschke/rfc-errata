@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3763,
+    "errata_id": "3763",
     "doc-id": "RFC5007",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Consider the scenario of DHCPv6 Failover (as mentioned in RFC 7031), there will be cases where only one server (Main) would have communicated with the client. Bindings for the client will be present on both servers, but the partner server (Backup) will not have Client Last Transaction Time. When a requestor sends Leasequery to the backup server, the response should not contain OPTION_CLT_TIME.\r\n\r\nFurther, consider the following scenarios:\r\n1. Requestor gets response for Leasequery from both servers (main and backup).\r\nIn this scenario, response having OPTION_CLT_TIME should be preferred by the requestor. This is the justification for adding the text in Section 4.3.4.\r\n\r\n2. Requestor gets response for Leasequery from only from one server (as other server is down).\r\nConsider main to be down. So, the requestor gets response only from Backup. The requestor should still accept this data. This is justification of removing the text from Section 4.3.3.",
     "submit_date": "2013-10-23",
     "submitter_name": "Darpan Malhotra",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4816,
+    "errata_id": "4816",
     "doc-id": "RFC5007",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "-- Verifier note --\r\nSection 4.1.2.5 of this RFC indeed specifies OPTION_LQ_CLIENT_LINK (the DHCPv6 IANA registry also uses OPTION_LQ_CLIENT_LINK). So, sections 4.3.3 and 4.4.1 should use \"OPTION_LQ_CLIENT_LINK\" rather than \"OPTION_CLIENT_LINK\".",
     "submit_date": "2016-10-02",
     "submitter_name": "Sander Steffann",
-    "verifier_id": 161,
+    "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2021-02-08 01:20:42"
   }

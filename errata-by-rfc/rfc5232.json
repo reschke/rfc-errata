@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4952,
+    "errata_id": "4952",
     "doc-id": "RFC5232",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "The anyof test is defined in the RFC 5228 as\r\nanyof <tests: test-list> \r\ntest-list    = \"(\" test *(\",\" test) \")\"\r\n\r\nWhich means the parentheses after anyof are mandatory/required.\r\n \r\nI would suggest dropping the anyof completely. An anyof with a single test is equivalent to a single test.\r\n\r\nAlexey Melnikov: I've updated the corrected text to match your latest suggestion.",
     "submit_date": "2017-02-26",
     "submitter_name": "Thomas Schmid",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4953,
+    "errata_id": "4953",
     "doc-id": "RFC5232",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "Neither \"fileinto\", \"imap4flags\" or \"variables\" declare a \"remove\" action.\r\n\r\nSo this should be most likely \"removeflag\" instead of \"remove\"",
     "submit_date": "2017-02-26",
     "submitter_name": "Thomas Schmid",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }

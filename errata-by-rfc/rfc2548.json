@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 420,
-    "doc-id": "RFC2548",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": "2.7.9",
-    "orig_text": "   Description\r\n\r\n      The MS-Secondary-NBNS-Server Attribute is used to indicate the\r\n      address of the secondary DNS server to be used by the PPP peer.\r\n      It MAY be included in both Access-Accept and Accounting-Request\r\n      packets.",
-    "correct_text": "   Description\r\n\r\n      The MS-Secondary-NBNS-Server Attribute is used to indicate the\r\n      address of the secondary NetBIOS Name Server (NBNS) [18] server to\r\n      be used by the PPP peer.  It MAY be included in both Access-Accept\r\n      and Accounting-Request packets.\r\n\r\n",
-    "notes": "",
-    "submit_date": "2005-02-04",
-    "submitter_name": "Hans-Ake Lund",
-    "verifier_id": 106,
-    "verifier_name": "Dan Romascanu",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1607,
+    "errata_id": "1607",
     "doc-id": "RFC2548",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +10,12 @@
     "notes": "See comments referring to RFC 2548 around line 1350 of:\r\n\r\nhttp://github.com/alandekok/freeradius-server/tree/master/src%2Fmodules%2Frlm_mschap%2Frlm_mschap.c\r\n\r\nThis is interoperable with everything, including Windows.",
     "submit_date": "2008-11-18",
     "submitter_name": "Alan DeKok",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3918,
+    "errata_id": "3918",
     "doc-id": "RFC2548",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +25,12 @@
     "notes": null,
     "submit_date": "2014-03-14",
     "submitter_name": "Kazuhiko Mino",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3919,
+    "errata_id": "3919",
     "doc-id": "RFC2548",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +40,27 @@
     "notes": null,
     "submit_date": "2014-03-14",
     "submitter_name": "Kazuhiko Mino",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4369,
+    "errata_id": "420",
+    "doc-id": "RFC2548",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.7.9",
+    "orig_text": "   Description\r\n\r\n      The MS-Secondary-NBNS-Server Attribute is used to indicate the\r\n      address of the secondary DNS server to be used by the PPP peer.\r\n      It MAY be included in both Access-Accept and Accounting-Request\r\n      packets.",
+    "correct_text": "   Description\r\n\r\n      The MS-Secondary-NBNS-Server Attribute is used to indicate the\r\n      address of the secondary NetBIOS Name Server (NBNS) [18] server to\r\n      be used by the PPP peer.  It MAY be included in both Access-Accept\r\n      and Accounting-Request packets.\r\n\r\n",
+    "notes": "",
+    "submit_date": "2005-02-04",
+    "submitter_name": "Hans-Ake Lund",
+    "verifier_id": "106",
+    "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "4369",
     "doc-id": "RFC2548",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -70,7 +70,7 @@
     "notes": "re: MS-CHAP-MPPE-Keys \"obfuscation\"\n --VERIFIER NOTES-- \nSection 2.4.1 describes 32 octets of content, which *include* padding.\r\n\r\nThe decrypted data is thus less than 32 octets. The ASCII art in that sections shows 64 bit of padding in the end, meaning it's only 24 octets of decrypted keys.",
     "submit_date": "2015-05-19",
     "submitter_name": "Alan DeKok",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }

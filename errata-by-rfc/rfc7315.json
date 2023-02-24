@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4447,
+    "errata_id": "4447",
     "doc-id": "RFC7315",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Problem is that the Reader is lead to the wrong procedures.",
     "submit_date": "2015-08-17",
     "submitter_name": "Roland Jesske",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4448,
+    "errata_id": "4448",
     "doc-id": "RFC7315",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -25,37 +25,37 @@
     "notes": "This pointer to a wrong section may lead to a wrong implementation",
     "submit_date": "2015-08-17",
     "submitter_name": "Roland Jesske",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4474,
+    "errata_id": "4474",
     "doc-id": "RFC7315",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 5.4,
+    "section": "5.4",
     "orig_text": "extension-access-info  = gen-value",
     "correct_text": "extension-access-info  = generic-param",
     "notes": "Most of the pre-defined access-info values are following the generic-param syntax. New access-info values (extensions) should also be allowed to follow the generic-param syntax, in order to allow both for a name and value of the extension.",
     "submit_date": "2015-09-14",
     "submitter_name": "Christer Holmberg",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4540,
+    "errata_id": "4540",
     "doc-id": "RFC7315",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "5.1. P-Associated-URI Header Syntax\r\n\r\n\r\n   The syntax of the P-Associated-URI header field is described as\r\n   follows:\r\n\r\n         P-Associated-URI       = \"P-Associated-URI\" HCOLON\r\n                                  [p-aso-uri-spec]\r\n                                  *(COMMA p-aso-uri-spec)\r\n         p-aso-uri-spec         = name-addr *(SEMI ai-param)\r\n         ai-param               = generic-param\r\n",
     "correct_text": "5.1. P-Associated-URI Header Syntax\r\n\r\n\r\n   The syntax of the P-Associated-URI header field is described as\r\n   follows:\r\n\r\n         P-Associated-URI       = \"P-Associated-URI\" HCOLON\r\n                                  (p-aso-uri-spec)\r\n                                  *(COMMA p-aso-uri-spec)\r\n         p-aso-uri-spec         = name-addr *(SEMI ai-param)\r\n         ai-param               = generic-param\r\n",
     "notes": "P-Associated-URI cannot include an empty header value (which was able to be included according to RFC 3455)\r\n\r\n- Background.\r\n\r\nThe policy of P-Associated-URI has been updated from RFC 3455.\r\nRFC 3455 : 4.1.2.2 Procedures at the registrar\r\n...\r\nIn case the address-of-record under registration does not have any\r\n   other SIP or SIPS URIs associated, the registrar MUST include an\r\n   empty P-Associated-URI header value.\r\n\r\n\r\nRFC 7315 : 4.1.2.2 Procedures at the Registrar\r\n...\r\nIf the address-of-record under registration does not have any\r\n   associated URIs, the P-Associated-URI header field SHALL NOT be\r\n   included.\r\n...\r\n\r\nMoreover, we can say RFC 3455 has same errata based on this analysis.",
     "submit_date": "2015-11-20",
     "submitter_name": "Dongo Yi",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

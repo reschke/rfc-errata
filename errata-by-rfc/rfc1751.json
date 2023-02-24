@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4617,
+    "errata_id": "4617",
     "doc-id": "RFC1751",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "This is an off-by-one error in the sample code in Appendix A.\r\n\r\nFurther down, we have this loop:\r\n        for(p = 0,i = 0; i < 64;i += 2)\r\n                p += extract(cp,i,2);\r\n\r\nSo i goes all the way to 62, and 9-byte cp is passed to extract()\r\n\r\nIn extract, we have this:\r\nstatic unsigned long\r\nextract(s, start, length)\r\nchar *s;\r\nint start, length;\r\n{\r\n          .\r\n          .\r\n          .\r\n        cr = s[start/8 +2];\r\n\r\nIf start is 62, then (start/8+2) is 9. s is the same 9-byte cp, and s[start/8 +2] is a one-byte overflow.",
     "submit_date": "2016-02-10",
     "submitter_name": "Yoav Nir",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   }

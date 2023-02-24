@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2071,
+    "errata_id": "2071",
     "doc-id": "RFC5639",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": null,
     "submit_date": "2010-03-10",
     "submitter_name": "Johannes Merkle",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2082,
+    "errata_id": "2082",
     "doc-id": "RFC5639",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Rationale:\r\n  According to the first part of A.2, the routine find_integer_2()\r\n  returns an integer value (see also original step 6.).\r\n  Thus, step 2 should be deleted, and 'h' is not needed.\r\n  Note that merely renumbered steps are not taagged with\r\n  a change bar above.\r\n\r\nUpdated 2013-06-06. Thanks to Edward Huff for the correction.",
     "submit_date": "2010-03-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2083,
+    "errata_id": "2083",
     "doc-id": "RFC5639",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Rationale: incomplete expansion of acronym.\r\n\r\nAdditional note:\r\n  In Section 7.2, two of the references quoted here should perhaps\r\n  better point to the current versions of the documents:\r\n\r\n   [SEC1]   \"SEC1: Elliptic Curve Cryptography\",\r\n            Version 2.0, May 2009.\r\n\r\n   [FIPS]   NIST, \"Digital Signature Standard (DSS)\",\r\n            FIPS PUB 186-3, November 2008.",
     "submit_date": "2010-03-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2084,
+    "errata_id": "2084",
     "doc-id": "RFC5639",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Rationale: \r\n  ... GF(p) ... sometimes also referred to as ... GF(p) ...\r\ndoes no make sense.\r\nThe original version from the draft did make sense -- mentioning\r\n_another_ common notion, \"F_p\".",
     "submit_date": "2010-03-21",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4701,
+    "errata_id": "4701",
     "doc-id": "RFC5639",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "Copy/Paste-Error, change noted as correct by Manfred Lochter",
     "submit_date": "2016-05-25",
     "submitter_name": "Mirko Dressler",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5075,
+    "errata_id": "5075",
     "doc-id": "RFC5639",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -85,7 +85,7 @@
     "notes": "The author's name is Marc Joye, not Marc Joyce.  See the original paper here: https://link.springer.com/chapter/10.1007/3-540-44828-4_6",
     "submit_date": "2017-08-01",
     "submitter_name": "Taylor R Campbell",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
   }

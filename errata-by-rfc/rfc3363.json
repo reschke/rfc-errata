@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3220,
+    "errata_id": "3220",
     "doc-id": "RFC3363",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "4.  DNAME in IPv6 Reverse Tree\r\n\r\n   The issues for DNAME in the reverse mapping tree appears to be\r\n   closely tied to the need to use fragmented A6 in the main tree: if\r\n   one is necessary, so is the other, and if one isn't necessary, the\r\n   other isn't either.  Therefore, in moving RFC 2874 to experimental,\r\n   the intent of this document is that use of DNAME RRs in the reverse\r\n   tree be deprecated.\r\n",
     "correct_text": "4. DNAME in IPv6 Reverse Tree\r\n\r\n[Deleted due to faulty premise.]",
     "notes": "The opening premise of this section is demonstrably wrong, and so the conclusion based on that premise is wrong.  The use of DNAME in the reverse tree is and always has been independent of A6.\n --VERIFIER NOTES-- \n   The scope of the requested change is outside what can be specified through an errata.",
     "submit_date": "2012-05-09",
     "submitter_name": "Mark Andrews",
-    "verifier_id": 117,
+    "verifier_id": "117",
     "verifier_name": "Ralph Droms",
     "update_date": "2019-09-10 09:09:03"
   }

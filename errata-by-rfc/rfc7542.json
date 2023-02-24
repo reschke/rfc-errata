@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5462,
+    "errata_id": "5462",
     "doc-id": "RFC7542",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "The \"utf8-realm\" SHOULD be supplied by the \"next hop\" or \"home\"\r\nsystem that also supplies the routing information necessary for\r\npackets to reach the next hop.",
     "correct_text": "The \"utf8-realm\" SHOULD be supplied by the \"next hop\" or \"home\"\r\nsystem that also supplies the routing information necessary for\r\npackets to reach the next hop.\r\n\r\nThe final home system SHOULD validate the NAI in the received packet\r\nagainst the list of Realms hosted by the home system.  If no match\r\nis found, the request SHOULD be rejected.",
     "notes": "It doesn't explicitly say that home systems only authenticate users for their own realms.  It may help to have this stated explicitly.\r\n\r\nSome text will also be added to draft-ietf-radext-coa-proxy in order to make this clearer.",
     "submit_date": "2018-08-14",
     "submitter_name": "Alan DeKok",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-12-11 14:23:20"
   }

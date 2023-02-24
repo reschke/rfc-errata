@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 6268,
+    "errata_id": "6268",
     "doc-id": "RFC8489",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "The message length in the test vector (first line, value: 9c) is the absolute length of the whole test vector. However from section 5. STUN Message Structure\r\n\r\n\"The message length MUST contain the size of the message in bytes, not\r\n   including the 20-byte STUN header.\"\r\n\r\nSo the message length in the header should be 20 bytes less than absolute length of the whole message. \r\n\r\n0x9C - 20 = 0x88.\r\n\r\nAlso the section was missing an indication of what password algorithm that was to be used to derive the password. As SHA-256 was used, and is not the default the PASSWORD-ALGORITHM attribute is required. Thus, this corrected message contains that STUN attribute. \r\n\r\nThe corrected message has a recalculated Message-Integrity-SHA256 attribute. ",
     "submit_date": "2020-08-30",
     "submitter_name": "Jared Williams",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2020-10-19 01:04:04"
   },
   {
-    "errata_id": 6290,
+    "errata_id": "6290",
     "doc-id": "RFC8489",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 18.1,
+    "section": "18.1",
     "orig_text": "Bits are assigned starting from the most significant side of the bit\r\nset, so Bit 0 is the leftmost bit and Bit 23 is the rightmost bit.",
     "correct_text": "Bits are assigned starting from the least significant side of the bit\r\nset, so Bit 0 is the rightmost bit, and Bit 23 is the leftmost bit.\r\n",
     "notes": null,
     "submit_date": "2020-09-14",
     "submitter_name": "Jared Williams",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2020-09-15 05:10:08"
   }

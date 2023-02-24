@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 3660,
+    "errata_id": "3660",
     "doc-id": "RFC6426",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 7.2,
+    "section": "7.2",
     "orig_text": "   Value    Meaning                 Reference\r\n   -----    -------------------     -----------------------------\r\n   22       Static LSP              this document (Section 2.4.1)\r\n   23       Static Pseudowire       this document (Section 2.4.2)",
     "correct_text": "   Value    Meaning                 Reference\r\n   -----    -------------------     -----------------------------\r\n   22       Static LSP              this document (Section 2.3.1)\r\n   23       Static Pseudowire       this document (Section 2.3.2)",
     "notes": null,
     "submit_date": "2013-06-17",
     "submitter_name": "Joël Repiquet",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4012,
+    "errata_id": "4012",
     "doc-id": "RFC6426",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7.6,
+    "section": "7.6",
     "orig_text": "Missing section",
     "correct_text": "7.6 New Global Flags Bit\r\n\r\nRFC 6425 defines a registry for \"Global Flags\" under the\r\n\"Multi-Protocol Label Switching (MPLS) Label Switched Path\r\n(LSP) Ping Parameters\" registry.\r\n\r\nThis document defines a new Global Flag, \"Validate Reverse\r\nPath (R)\". IANA has added this flag to the registry as\r\nfollows:\r\n\r\n   Bit number  |  Name                      | Reference\r\n   ------------+----------------------------+--------------\r\n      13       |  Validate Reverse Path     | [RFC 6426]\r\n\r\n",
     "notes": "\"Global Flags\" registry was created per request of RFC 6425 and did not yet existed when RFC 6426 was published leading to the fumbling of this allocation. This \"race condition\" has to be fixed to avoid possible name-space collision between RFC 6426 and new extensions to LSP ping.",
     "submit_date": "2014-06-10",
     "submitter_name": "Gregory Mirsky",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

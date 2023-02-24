@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4297,
+    "errata_id": "4297",
     "doc-id": "RFC7394",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "3.1. TTL TLV Format\r\n\r\n\r\n   0                   1                   2                   3\r\n   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Type = 32769                 |   Length = 8                  |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |   Value       |   Reserved    |   Flags                       |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n                  Figure 1: Time To Live TLV Format",
     "correct_text": "3.1. TTL TLV Format\r\n\r\n\r\n   0                   1                   2                   3\r\n   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Type = 32769                 |   Length = 4                  |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |   Value       |   Reserved    |   Flags                       |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n                  Figure 1: Time To Live TLV Format",
     "notes": "In an LSP Ping TTL, Length value should show length of the value fields only. See RFC 4379 section 3.",
     "submit_date": "2015-03-10",
     "submitter_name": "Himanshu Shah",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

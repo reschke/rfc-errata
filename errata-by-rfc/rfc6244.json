@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3012,
+    "errata_id": "3012",
     "doc-id": "RFC6244",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The \"reference\" statement is used as a reference to some other specification.\r\n\r\nThe column heading is \"Statement\".  It is not obvious that \"type leafref\" is a Statement, so I am not sure if the proposed corrected text is enough.",
     "submit_date": "2011-11-04",
     "submitter_name": "Martin Bjorklund",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3356,
+    "errata_id": "3356",
     "doc-id": "RFC6244",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,22 +25,22 @@
     "notes": "Section 2.2.3\r\n For example, if the above OSPF configuration were the standard, a\r\n   vendor module may augment this with vendor-specific extensions.\r\n\r\n       module vendorx-ospf {\r\n           namespace \"http://vendorx.example.com/ospf\";\r\n           prefix vendorx;\r\n\r\n           import example-ospf {\r\n               prefix ospf;\r\n           }\r\n\r\n           augment /ospf:ospf/ospf:area/ospf:interfaces  {\r\n               leaf no-neighbor-down-notification {\r\n                   type empty;\r\n                   description \"Don't inform other protocols about\"\r\n                             + \" neighbor down events\";\r\n               }\r\n           }\r\n       }\r\n\r\nWhile the \"above OSPF configuration\" refers to interface and not interfaces\r\n\r\n   module example-ospf {\r\n           namespace \"http://example.org/netconf/ospf\";\r\n           prefix ospf;\r\n\r\n           import network-types {  // Access another module's def'ns\r\n               prefix nett;\r\n           }\r\n\r\n           container ospf {   // Declare the top-level tag\r\n               list area {    // Declare a list of \"area\" nodes\r\n                   key name;  // The key \"name\" identifies list members\r\n                   leaf name {\r\n                       type nett:area-id;\r\n                   }\r\n                   list interface {\r\n                       key name;\r\n                       leaf name {\r\n                           type nett:interface-name;\r\n                       }\r\n                       leaf priority {\r\n                           description \"Designated router priority\";\r\n                           type uint8;  // The type is a constraint on\r\n                                        // valid values for \"priority\".\r\n                       }\r\n                       leaf metric {\r\n                           type uint16 {\r\n                               range 1..65535;\r\n                           }\r\n                       }\r\n                       leaf dead-interval {\r\n                           units seconds;\r\n                           type uint16 {\r\n                               range 1..65535;\r\n                           }\r\n                       }\r\n                   }\r\n               }\r\n           }\r\n       }",
     "submit_date": "2012-09-17",
     "submitter_name": "Benoit Claise",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5760,
+    "errata_id": "5760",
     "doc-id": "RFC6244",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "configuration datastore where configuration changes can be made that\r\nwill not affect the device until a \"commit-configuration\" operation\r\nis invoked.",
     "correct_text": "configuration datastore where configuration changes can be made that\r\nwill not affect the device until a \"<commit/>\" operation\r\nis invoked.",
     "notes": "Netconf RPC for commit-configuration is <commit/>",
     "submit_date": "2019-06-22",
     "submitter_name": "Ram Polisetty",
-    "verifier_id": 158,
+    "verifier_id": "158",
     "verifier_name": "Ignas Bagdonas",
     "update_date": "2019-09-10 09:09:03"
   }

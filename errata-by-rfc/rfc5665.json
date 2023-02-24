@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2015,
+    "errata_id": "2015",
     "doc-id": "RFC5665",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Rationale: missing article; consistency of style.",
     "submit_date": "2010-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 129,
+    "verifier_id": "129",
     "verifier_name": "Wes Eddy",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2016,
+    "errata_id": "2016",
     "doc-id": "RFC5665",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "Rationale:\r\n  The RFC text in Section 5.2.3.5. is outdated and does not correspond\r\n  to the revised design decision documented in Section 5.1 to _not_\r\n  register \"icmp\" and \"icmp6\" netids.\r\n\r\nSection 5.1 says:\r\n\r\n   o  To prevent confusion with the control protocol by the same name\r\n      [9], netids with the prefix \"ICMP\" are Reserved.\r\n\r\nand\r\n\r\n   2.  [...]\r\n                             Constant names with the prefix \"NC_STDS\",\r\n       \"NC_FCFS\", \"NC_PRIV\", \"NC_EXPE\", and \"NC_ICMP\" are Reserved.\r\n                      \r\nSince there are no such registry entries (see Table 2 in Section 5.1.1),\r\nthere also is no dummy shared Uaddr Format for ICMP in the Uaddr Format\r\nregistry (see Table 3 in Section 5.2.1), and hence the Original text is\r\nmoot.\r\n\r\nAn alternative to the above Corrected Text would be to delete the\r\nentire subsection 5.2.3.5. in the RFC.\r\n\r\n_____\r\nClosely related:\r\n\r\nNotes regarding the current IANA registries originated in RFC 5665\r\n\r\n[[ This part of the Errata Note should be deleted by the verifier\r\n   after verification and corrective action by IANA. ]]\r\n\r\na)  IANA has misrepresented the registration policy in the netid registry.\r\n\r\n    Both namespaces are split into two parts, governed respectively\r\n    by \"Standards Action\" and \"First Come First Served\" policy.\r\n\r\n    IANA has split the 'netid' registry into two sub-registries\r\n    (BTW: not sure this makes sense, since the namespace is shared),\r\n    but the first registry, \"ONC RPC Netids (First Come First Served)\"\r\n    confusingly says: \r\n       Registration Procedures \r\n          Standards Action\r\n    as well.\r\n    \r\nb)  \"RESERVED\" values and patterns\r\n\r\nIANA did not make note of the various \"reserved\" values specified\r\nin the RFC.  All these reservations should preferably be stated in\r\n\"Note\"s attached to the registries to remind readers and prospective\r\nregistrant of the reservations.\r\nMaybe, a short hint to the RFC suffices in both cases:\r\n\r\n\"Note:  RFC 5665 specifies various reserved values and name prefixes\r\n        for this registry.\"\r\n\r\nc)  Columnar alignment\r\n\r\nIn the \"ONC RPC Netids (First Come First Served)\" registry,\r\napparently the content of the \"Point of Contact\" column is missing,\r\nand the entries for the \"cross reference\" column are misaligned.\r\n\r\nIn the \"ONC RPC Netids (Standards Action)\" registry and the\r\n\"NC RPC Uaddr Format Registry\", the left alignment of the\r\ncross reference table cell entries below the (centered) column\r\nheading (and thus visually almost under the \"Point of Contact\" \r\ncolumn heading) also is rather confusing.\r\nIn general, using the _same_ (often: left) horizontal alignment\r\nof column headings and table cells would be preferable.",
     "submit_date": "2010-01-26",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

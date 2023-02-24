@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 6213,
+    "errata_id": "6213",
     "doc-id": "RFC7996",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "      Graphics may include ASCII art and a more complex form to be\r\n      defined, such as SVG line art [SVG].",
     "correct_text": "      Graphics may include ASCII art and a more complex form to be\r\n      defined, such as SVG line art [W3C.REC-SVG11-20110816].",
     "notes": "There is no [SVG] reference. I think that's the most likely candidate.\r\nSending this in so we don't forget to fix it in a future revision.",
     "submit_date": "2020-06-23",
     "submitter_name": "John Levine",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

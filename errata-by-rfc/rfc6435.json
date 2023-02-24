@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 3429,
+    "errata_id": "3429",
     "doc-id": "RFC6435",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "The whole of Section 4",
     "correct_text": "4.  Loopback Function\r\n\r\n   This section provides a description of the loopback function within        \r\n   an MPLS network.  This function is achieved through management             \r\n   commands, so there is no protocol specification necessary.  However,       \r\n   the loopback function is dependent on the lock function, so it is          \r\n   appropriate to describe it in this document.                               \r\n\r\n   The loopback function is used to test the integrity of a transport   \r\n   path from a MEP to any other node along the same transport path.     \r\n   This is achieved by setting the target node into loopback mode for   \r\n   that transport path, and  transmitting a pattern of test data from   \r\n   the MEP.  The target node loops all data received on the transport   \r\n   path back towards the sending MEP, which extracts the test data      \r\n   and compares it with what it sent.                                   \r\n                                                                        \r\n   Loopback is a function that enables a given node on a transport      \r\n   path to return traffic to the sending MEP for that transport path    \r\n   when in the loopback mode.  This mode corresponds to the situation   \r\n   where, at a given node, a forwarding plane loop is configured, and   \r\n   the incoming direction of a transport path is cross-connected to the \r\n   outgoing reverse direction.  Therefore, except in the case of early  \r\n   TTL expiry, traffic sent by the source will be received by that      \r\n   source.                                                              \r\n                                                                        \r\n   Data-plane loopback is an out-of-service function, as required in     \r\n   Section 2.2.5 of RFC 5860 [1].  This function loops back all traffic  \r\n   (including user data and OAM).  The traffic can be originated from    \r\n   one internal point at the ingress of a transport path within an       \r\n   interface or inserted from an input port of an interface using        \r\n   external test equipment.  The traffic is looped back unmodified       \r\n   (other than normal per-hop processing such as TTL decrement) in the   \r\n   direction of the point of origin by an interface at either an         \r\n   intermediate node or a terminating node.                              \r\n\r\n   It should be noted that the data-plane loopback function for a         \r\n   given transport path can be applied to data-plane loopback points      \r\n   residing on interfaces where there may be no MEP or MIP for that       \r\n   transport path.                                                        \r\n                                                                          \r\n   For data-plane loopback at an intermediate point in a transport path,  \r\n   the loopback needs to be configured to occur at either the ingress or  \r\n   egress interface.  This can be done using the management plane.        \r\n                                                                          \r\n   The management plane can be used to configure the loopback function.   \r\n   The management plane must ensure that the MEPs at either end of a      \r\n   transport path are locked before it requests setting a given node of   \r\n   that transport path into loopback mode.                                \r\n\r\n   The nature of test data and the use of loopback traffic to measure\r\n   packet loss, delay, and delay variation are outside the scope of this\r\n   document.\r\n",
     "notes": "The changes here reflect a number of minor editorial clarifications.\r\nThe original Errata Report raised by David Ball has been extensively\r\ndebated by the working group resulting in these changes.\r\n\r\nThe motivation is that the published text has caused confusion about\r\nexactly where the loopback function is applied. There was apparent\r\ncontradiction between paragraphs 2 and 7 which seemed to imply that\r\nthe loopback point must be a MEP or a MIP, while paragraph 5 seemded\r\nto imply that loopback is performed at a point where there is no MEP\r\nor MIP.\r\n   \r\nThe working group agrees that the intent was to state that there may\r\nor may not be a MEP or a MIP at the loopback point. I.e., that\r\nloopback may be performed at any point along the transport path.\r\n\r\nThe new text updates paragraphs 2, 3, 5, and 7 to embody this \r\nclarification.\r\n\r\nAdditionally, paragraphs 6 and 7 have received a minor change to \r\nshow the role of the \"management plane\" rather than \"management\" in\r\nthe control of loopback.",
     "submit_date": "2012-12-12",
     "submitter_name": "David Ball",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4017,
+    "errata_id": "4017",
     "doc-id": "RFC6435",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "Two useful Operations, Administration, and Maintenance (OAM)\r\nfunctions in a transport network are \"lock\" and \"loopback\".  This\r\ndocument discusses these functions in the context of MPLS networks.",
     "correct_text": "Two useful Operations, Administration, and Maintenance (OAM)\r\nfunctions in a transport network are \"lock\" and \"loopback\".  This\r\ndocument discusses these functions in the context of MPLS networks.\r\n\r\nFurther information about these abstract OAM functions in an MPLS\r\nTransport Profile context can be found in RFC 6371 [6] where the\r\nlock function is referred to as the \"Lock Instruct function (LKI)\"\r\nand the loopback function is called \"data-plane loopback.\"",
     "notes": "RFC6435 uses \"LI\" as acronym for \"Lock Instruct\" throughout the document.\r\nRFC6371 uses \"LKI\" for \"Lock Instruct\" in sections 7.1, 7.1.1 and 7.1.2.\r\nThis may confuse the reader of both documents.\r\nA similar confusion can occur for refering to the loopback function.",
     "submit_date": "2014-06-19",
     "submitter_name": "Huub van Helvoort",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

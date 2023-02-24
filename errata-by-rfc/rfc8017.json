@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5111,
+    "errata_id": "5111",
     "doc-id": "RFC8017",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "RSASSA-PSS is a signature scheme, it has no encrypt/decrypt operations.\r\nThis errata also applies to RFC 3447 (Section A.2.3)\r\nVerified by Burt Kaliski",
     "submit_date": "2017-09-11",
     "submitter_name": "Peter Wu",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5154,
+    "errata_id": "5154",
     "doc-id": "RFC8017",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Good catch.  Confirmed.\r\n\r\nBackground:  The addition of SHA224 support to PKCS #1 required a few minor technical updates in PKCS #1 v2.2 compared to v2.1, and to the corresponding RFC8017 compared to RFC3447.  PKCS #1 v2.2 got the correct update, but RFC8017 didn't -- presumably a copy-and-paste error.  My oversight in reviewing the edits.  Thanks, Joost, for pointing it out.",
     "submit_date": "2017-10-12",
     "submitter_name": "Joost Rijneveld",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5235,
+    "errata_id": "5235",
     "doc-id": "RFC8017",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "The semicolon needs to be placed outside of the quoted strings.",
     "submit_date": "2018-01-14",
     "submitter_name": "Joern Heissler",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5576,
+    "errata_id": "5576",
     "doc-id": "RFC8017",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "ASN.1 identifiers don't allow slash. The actual ASN.1 code in the middle of B.1, and the ASN.1 module in C, correctly use hyphens for id-sha512-224 and id-sha512-256.",
     "submit_date": "2018-12-16",
     "submitter_name": "Dave Thompson",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5577,
+    "errata_id": "5577",
     "doc-id": "RFC8017",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,7 +70,7 @@
     "notes": "Superscripting presumably lost in translation from the original. RFC 3447 (for v2.1) had these correct. To a person familiar with the art they are obvious typos (Editorial) but to other readers they could change the meaning.",
     "submit_date": "2018-12-16",
     "submitter_name": "Dave Thompson",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1727,
+    "errata_id": "1727",
     "doc-id": "RFC5480",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Location: last bullet in Section 2.1.1.\r\nRationale: inadvertant replication of \"type\"",
     "submit_date": "2009-03-16",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1728,
+    "errata_id": "1728",
     "doc-id": "RFC5480",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,37 +25,37 @@
     "notes": "Location: first paragraph of 2.1.1.1\r\nRationale:\r\na) typo:  s/name curve/named curve/\r\nb) extraneous hyphen (inserted in final publication processing)\r\n   changes semantics in an unfortunate manner; \"NIST-named curves\"\r\n   could be misunderstood as indicating that NIST had named these\r\n   'Named Curves'; \"NIST-recommended named curves\" might have been a\r\n   valid alternative but would have incurred too much word repetition.",
     "submit_date": "2009-03-16",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 111,
+    "verifier_id": "111",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4170,
+    "errata_id": "4170",
     "doc-id": "RFC5480",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "   ---------+----------+------------+-----------\r\n   256      | 512      | SHA-512    | secp521r1\r\n   ---------+----------+------------+-----------",
     "correct_text": "   ---------+----------+------------+-----------\r\n   256      | 512+     | SHA-512    | secp521r1\r\n   ---------+----------+------------+-----------",
     "notes": "The first table in section 4 (p. 9) provides the right text. The corresponding line in the table on p. 10 is the wrong one. In fact the key size is exactly 521 and not only 512+. Therefore 512+ in both tables could also be replaced by 521.",
     "submit_date": "2014-11-11",
     "submitter_name": "Annie Yousar",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6670,
+    "errata_id": "6670",
     "doc-id": "RFC5480",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   If the keyUsage extension is present in a certificate that indicates\r\n   id-ecDH or id-ecMQV in SubjectPublicKeyInfo, then the following\r\n   values MUST NOT be present:\r\n\r\n     digitalSignature;\r\n     nonRepudiation;\r\n     keyTransport;\r\n     keyCertSign; and\r\n     cRLSign.",
     "correct_text": "   If the keyUsage extension is present in a certificate that indicates\r\n   id-ecDH or id-ecMQV in SubjectPublicKeyInfo, then the following\r\n   values MUST NOT be present:\r\n\r\n     digitalSignature;\r\n     nonRepudiation;\r\n     keyEncipherment;\r\n     keyCertSign; and\r\n     cRLSign.",
     "notes": "\"keyTransport\" KU bit name does not exist; I believe \"keyEncipherment\" is intended here instead.\r\n\r\nWhile RFC 8813 makes it clear that \"keyEncipherment\" and \"dataEncipherment\" are prohibited, I'm marking this erratum as \"Technical\" due the reference to a non-existent bit name.",
     "submit_date": "2021-08-31",
     "submitter_name": "Corey Bonnell",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-09-01 09:42:42"
   }

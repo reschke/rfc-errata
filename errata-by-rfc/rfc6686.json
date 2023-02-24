@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4049,
+    "errata_id": "4049",
     "doc-id": "RFC6686",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "   Resource Record (RR) type.  These are always expressed internally in\r\n   software as numbers, assigned according to the procedures in\r\n   [DNS-IANA] Assigned RRTYPEs also have names.  The two of interest in",
     "correct_text": "   Resource Record (RR) type.  These are always expressed internally in\r\n   software as numbers, assigned according to the procedures in\r\n   [DNS-IANA].  Assigned RRTYPEs also have names.  The two of interest\r\n   in",
     "notes": "Wrong punctuation: missing period and space.\r\n\r\n----- Verifier Notes -----\r\nWe don't use errata reports for insignificant typos.",
     "submit_date": "2014-07-11",
     "submitter_name": "Nico Roeser",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

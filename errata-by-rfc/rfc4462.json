@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1621,
+    "errata_id": "1621",
     "doc-id": "RFC4462",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 9,
+    "section": "9",
     "orig_text": "   In order for the \"external-keyx\" user authentication method to be\r\n   used, it MUST have access to user authentication information obtained\r\n   as a side-effect of the key exchange.  If this information is\r\n   unavailable, the authentication MUST fail.",
     "correct_text": "   In order for the \"gssapi-keyex\" user authentication method to be\r\n   used, it MUST have access to user authentication information obtained\r\n   as a side-effect of the key exchange.  If this information is\r\n   unavailable, the authentication MUST fail.",
     "notes": "As mentioned in section 8, the \"external-keyx\" name was used by an earlier version of thespec, but got replaced by \"gssapi-keyex\" before publication.",
     "submit_date": "2008-11-25",
     "submitter_name": "Ben Harris",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Pasi Eronen",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4684,
+    "errata_id": "4684",
     "doc-id": "RFC4462",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 8,
+    "section": "8",
     "orig_text": "      The family of SSH key exchange method names beginning with \"gss-\r\n      group1-sha1-\" and not containing the at-sign ('@'), to name the\r\n      key exchange methods defined in Section 2.3.\r\n",
     "correct_text": "      The family of SSH key exchange method names beginning with \"gss-\r\n      group1-sha1-\" and not containing the at-sign ('@'), to name the\r\n      key exchange methods defined in Section 2.3.\r\n\r\n      The family of SSH key exchange method names beginning with \"gss-\r\n      group14-sha1-\" and not containing the at-sign ('@'), to name the\r\n      key exchange methods defined in Section 2.4.",
     "notes": "The group14-sha1 family of key exchange method names was not listed in the IANA considerations as being registered.  The registration is (already) correct in http://www.iana.org/assignments/ssh-parameters/ssh-parameters.xhtml#ssh-parameters-16",
     "submit_date": "2016-05-05",
     "submitter_name": "Dave Thompson",
-    "verifier_id": 159,
+    "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2020-02-14 12:29:52"
   }

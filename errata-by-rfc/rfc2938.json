@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1080,
+    "errata_id": "1080",
     "doc-id": "RFC2938",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "(h.QGEOPMCF02P09QC016CEPU22FO)\r\nwhere\r\n(h.QGEOPMCF02P09QC016CEPU22FO) :-\r\n (| (& (ua-media=continuous) (dpi=200) (dpi-xyratio=200/100)\r\n       (color=Binary) (paper-size=B4) (image-coding=MH) )\r\n    (& (ua-media=continuous) (dpi=200) (dpi-xyratio=200/100)\r\n       (color=Binary) (paper-size=B4) (image-coding=MR) )\r\n    (& (ua-media=stationery) (dpi=300) (dpi-xyratio=1)\r\n       (color=Binary) (paper-size=A4) (image-coding=JBIG) )\r\n    (& (ua-media=transparency) (dpi=300) (dpi-xyratio=1)\r\n\r\n       (color=Binary) (paper-size=A4) (image-coding=JBIG) ) )\r\nend",
     "correct_text": "(h.U965DKFHDGT0344VRHI6OONIBS)\r\nwhere\r\n(h.U965DKFHDGT0344VRHI6OONIBS) :-\r\n (| (& (ua-media=continuous) (dpi=200) (dpi-xyratio=200/100)\r\n       (color=Binary) (paper-size=B4) (image-coding=MH) )\r\n    (& (ua-media=continuous) (dpi=200) (dpi-xyratio=200/100)\r\n       (color=Binary) (paper-size=B4) (image-coding=MR) )\r\n    (& (ua-media=stationery) (dpi=300) (dpi-xyratio=1)\r\n       (color=Binary) (paper-size=A4) (image-coding=JBIG) )\r\n    (& (ua-media=transparency) (dpi=300) (dpi-xyratio=1)\r\n       (color=Binary) (paper-size=A4) (image-coding=JBIG) ) )\r\nend",
     "notes": "In an MD5 test suite the other three RFC 2938 examples work as expected",
     "submit_date": "2007-11-19",
     "submitter_name": "Frank Ellermann",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }

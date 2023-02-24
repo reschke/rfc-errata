@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7175",
+    "doc-id": "RFC8417",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1.4",
+    "orig_text": "{\r\n    \"iss\": \"https://idp.example.com/\",\r\n    \"jti\": \"756E69717565206964656E746966696572\",\r\n    \"iat\": 1508184845,\r\n    \"aud\": \"636C69656E745F6964\",\r\n    \"events\": {\r\n  \"https://schemas.openid.net/secevent/risc/event-type/account-disabled\"\r\n          : {\r\n        \"subject\": {\r\n          \"subject_type\": \"iss-sub\",\r\n          \"iss\": \"https://idp.example.com/\",\r\n          \"sub\": \"7375626A656374\"\r\n        },\r\n        \"reason\": \"hijacking\"\r\n      }\r\n    }\r\n  }\r\n\r\n                       Figure 4: Example RISC Event\r\n\r\n   Notice that parameters to the event are included in the event\r\n   payload, in this case, the \"reason\" and \"cause-time\" values.  The\r\n   subject of the event is identified using the \"subject\" payload value,\r\n   which itself is a JSON object.",
+    "correct_text": "{\r\n    \"iss\": \"https://idp.example.com/\",\r\n    \"jti\": \"756E69717565206964656E746966696572\",\r\n    \"iat\": 1508184845,\r\n    \"aud\": \"636C69656E745F6964\",\r\n    \"events\": {\r\n  \"https://schemas.openid.net/secevent/risc/event-type/account-disabled\"\r\n          : {\r\n        \"subject\": {\r\n          \"subject_type\": \"iss-sub\",\r\n          \"iss\": \"https://idp.example.com/\",\r\n          \"sub\": \"7375626A656374\"\r\n        },\r\n        \"reason\": \"hijacking\"\r\n      }\r\n    }\r\n  }\r\n\r\n                       Figure 4: Example RISC Event\r\n\r\n   Notice that parameters to the event are included in the event\r\n   payload, in this case, the \"reason\" value.  The\r\n   subject of the event is identified using the \"subject\" payload value,\r\n   which itself is a JSON object.",
+    "notes": "The included RISC event example JSON object does not contain a \"cause-time\" member, however this is referred to in the explanation following the example.  It would be valuable to either include the \"cause-time\" member, or to remove it from the explanation as per the above.",
+    "submit_date": "2022-10-21",
+    "submitter_name": "Nigel Somerfield",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

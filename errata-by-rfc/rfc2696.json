@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7292",
+    "doc-id": "RFC2696",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4. Example",
+    "orig_text": "C: SearchRequest + pagedResultsControl(3,\"\")\r\n   -- Server responds with three entries plus an indication\r\n   -- of 5 total entries in the search result and an opaque\r\n   -- cooking to be used by the client when retrieving subsequent\r\n   -- pages.\r\n   S: SearchResultEntry\r\n   S: SearchResultEntry\r\n   S: SearchResultEntry\r\n   S: SearchResultDone + pagedResultsControl(5, \"opaque\")\r\n   -- Client sends an identical search request (except for\r\n   -- message id), returning the opaque cooking, asking for\r\n   -- the next page.",
+    "correct_text": "C: SearchRequest + pagedResultsControl(3,\"\")\r\n   -- Server responds with three entries plus an indication\r\n   -- of 5 total entries in the search result and an opaque\r\n   -- cookie to be used by the client when retrieving subsequent\r\n   -- pages.\r\n   S: SearchResultEntry\r\n   S: SearchResultEntry\r\n   S: SearchResultEntry\r\n   S: SearchResultDone + pagedResultsControl(5, \"opaque\")\r\n   -- Client sends an identical search request (except for\r\n   -- message id), returning the opaque cookie, asking for\r\n   -- the next page.",
+    "notes": "It's a cookie that's received/sent. Instead of cookie, the RFC says cooking in two places.",
+    "submit_date": "2022-12-28",
+    "submitter_name": "Yogender Bhabhoria",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-01-06 14:52:22"
+  }
+]

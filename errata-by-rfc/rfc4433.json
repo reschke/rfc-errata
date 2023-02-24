@@ -1,6 +1,21 @@
 [
   {
-    "errata_id": 92,
+    "errata_id": "898",
+    "doc-id": "RFC4433",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "",
+    "orig_text": "In RFC 4433 paragraph 3.4, the extension is specified as skippable with type=139.  \r\nHowever the extension is specified in the \"Long Extension\r\nFormat\", which should be used for non-skippable extensions only according\r\nto RFC 3344 paragraph 1.10.\r\n",
+    "correct_text": "The extension should be specified in the \"Short Extension Format\" which\r\nis used for skippable extensions in accordance to RFC 3344 paragraph\r\n1.11.\r\n",
+    "notes": "This problem was reported by László Molnár.\r\n\r\nfrom pending",
+    "submit_date": "2007-04-11",
+    "submitter_name": "Kent Leung",
+    "verifier_id": "2",
+    "verifier_name": "",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "92",
     "doc-id": "RFC4433",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,23 +25,8 @@
     "notes": "According to, e.g., the explanations in bullet 1 of Section 5.3,\r\n\"Assigned HA\" is not correct; the term to be used is \"Requested HA\";\r\nit will eventually become the \"Assigned HA\" if the conditions\r\nmentioned are met, but the behaviour described strictly applies\r\nto the \"Requested HA\" role.\r\n\r\nfrom pending",
     "submit_date": "2006-11-09",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 898,
-    "doc-id": "RFC4433",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": 99,
-    "orig_text": "In RFC 4433 paragraph 3.4, the extension is specified as skippable with type=139.  \r\nHowever the extension is specified in the \"Long Extension\r\nFormat\", which should be used for non-skippable extensions only according\r\nto RFC 3344 paragraph 1.10.\r\n",
-    "correct_text": "The extension should be specified in the \"Short Extension Format\" which\r\nis used for skippable extensions in accordance to RFC 3344 paragraph\r\n1.11.\r\n",
-    "notes": "This problem was reported by László Molnár.\r\n\r\nfrom pending",
-    "submit_date": "2007-04-11",
-    "submitter_name": "Kent Leung",
-    "verifier_id": 2,
-    "verifier_name": "",
     "update_date": "2019-09-10 09:09:03"
   }
 ]

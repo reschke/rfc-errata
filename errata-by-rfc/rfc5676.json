@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1927,
+    "errata_id": "1927",
     "doc-id": "RFC5676",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Rationale: possible confusion.\r\n\r\n\"maximum size of SYSLOG messages recorded\" conceptionally would\r\nrelate to the SIZE of syslogMsgMsg OCTET STRING instances or the\r\nmaximum value for syslogMsgSDParams instances, but the DESCRIPTION\r\nclause for the syslogMsgTableMaxSize OBJECT-TYPE in the MIB module\r\nin Section 7 clarifies that this object indicates the maximum\r\n*number* of entries in the syslogMsgTable and does not describe\r\nsome filtering criterion (by size) of the SYSLOG messages recorded.",
     "submit_date": "2009-10-23",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1928,
+    "errata_id": "1928",
     "doc-id": "RFC5676",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "(a)\r\n\r\nSection 3.1 of RFC 2579 (on page 21) states, regarding numerical\r\nconversion descriptor components in DISPLAY-HINTS:\r\n\r\n               [...]  For all types, when rendering a value, leading\r\n   zeros are omitted, and for negative values, a minus sign is rendered\r\n   immediately before the digits.  [...]\r\n\r\nArguably, this means that substrings of OCTET STRING type are\r\ninterpreted as *signed* values (in network byte order).\r\nTherefore, the range restriction for the 'year' part specified\r\ninformally in the DESCRIPTION clause does not make proper sense;\r\nan upper bound of 65536 is nonsensical anyway since a 2-octet\r\nsubstring cannot assme 65537 different values; to avoid issues\r\nwith different interpretation of RFC 2579, the 'safe' range\r\n0..32767 is recommended -- this should not be a serious restriction\r\nin practice.\r\n\r\n(b)\r\n \r\nWARNING:\r\n\r\nAccording to Section 3.1 of RFC 2579, the components of the\r\nDISPLAY-HINTS string describe the *independent* formatting of\r\nsubstrings of the OCTET STRING (in this case).\r\nThus, the display instructions for the conceptional 'seconds'\r\npart of the OCTET STRING, \"1d.3d\", actually describes the\r\nindependent formatting of a 1-octet and a 3-octet substring\r\n(in network byte order) as decimal integers without leading\r\nzeros, separated by a literal period ('.') -- a \"display\r\nseparator character\" in RFC 2579 terms --, and not the\r\nhuman-friendly formatting of a single fixed-point fractional\r\nnumber; there is no concept of a decimal fraction representation\r\nin this notation.\r\nSo the presentation format will be very different from common \r\npractice for human beings. See the example below.\r\nThe \"fixed-point with decimal sign\" representation from\r\nRFC 2579 is only available for INTEGER values, for cases with\r\nscaled values, where the conceptual integer and fractional part\r\nare stored as a single integer in units of the specified\r\nfractional part; it is not applicable to display formats for\r\nOCTET STRING objects.\r\n\r\nElaborating on a slight variant of the example from the RFC, ...\r\n   Tuesday May 26, 1992 at 1:30:15.008 PM EDT\r\n(8 milliseconds past the full 15 seconds), the 'seconds' part\r\nwould be represented as 15 seconds 8000 microseconds in four\r\noctets containing 0x0F, 0x00, 0x1F, 0x40, which, together with\r\nthe other components, would be rendered as:\r\n    1992-5-26,13:30:15.8000,-4:0",
     "submit_date": "2009-10-23",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }

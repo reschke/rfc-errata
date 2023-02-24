@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3,
+    "errata_id": "3",
     "doc-id": "RFC4884",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "The one's complement of the one's complement sum of the data\nstructure, with the checksum field replaced by zero for the\npurpose of computing the checksum.",
     "correct_text": "The one's complement of the one's complement sum of the ICMP\nExtension Structure, with the checksum field replaced by zero for\nthe purpose of computing the checksum.\n",
     "notes": "",
     "submit_date": "2007-05-06",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

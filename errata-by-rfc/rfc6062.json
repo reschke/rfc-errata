@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3467,
+    "errata_id": "3467",
     "doc-id": "RFC6062",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "if you send connect request using the allocated port then port the will not be in listen mode and this will prevent incoming tcp connection on this port.\r\n\r\nthis will cause major problem while doing ice check. The effect is so bad that \r\n\r\nit may cause 97% call failure while using turn tcp behind nat.\n --VERIFIER NOTES-- \nTo my understanding this errata is due to implementation limitation or error. One those systems I have knowledge of you can create a TCP connection outgoing from the same TCP port that you have a listener. ",
     "submit_date": "2013-01-22",
     "submitter_name": "Nazmus Shakeeb",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2021-01-13 07:29:22"
   },
   {
-    "errata_id": 3469,
+    "errata_id": "3469",
     "doc-id": "RFC6062",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "It is solely a typo, i.e., client is replaced by peer. ",
     "submit_date": "2013-01-23",
     "submitter_name": "Nazmus Shakeeb",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }

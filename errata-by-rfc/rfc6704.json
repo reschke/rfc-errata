@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 3353,
+    "errata_id": "3353",
     "doc-id": "RFC6704",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 5.1,
+    "section": "5.1",
     "orig_text": "   The mechanism described in this document is vulnerable to a denial-\r\n   of-service (DoS) attack through flooding a client with bogus\r\n   FORCERENEW messages.  The calculations involved in authenticating the\r\n   bogus FORECERENEW messages may overwhelm the device on which the\r\n   client is running.\r\n",
     "correct_text": "   The mechanism described in this document is vulnerable to a denial-\r\n   of-service (DoS) attack through flooding a client with bogus\r\n   FORCERENEW messages.  The calculations involved in authenticating the\r\n   bogus FORCERENEW messages may overwhelm the device on which the\r\n   client is running.\r\n",
     "notes": "Spelling of \"FORECERENEW\" is incorrect. It should be \"FORCERENEW\"",
     "submit_date": "2012-09-14",
     "submitter_name": "Gaurav Halwasia",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4995,
+    "errata_id": "4995",
     "doc-id": "RFC6704",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "   IANA has assigned the following new DHCPv4 option code from the\r\n   registry \"BOOTP Vendor Extensions and DHCP Options\" maintained at\r\n   http://www.iana.org/assignments/bootp-dhcp-parameters:\r\n\r\n   Tag: 145\r\n\r\n   Name: FORCERENEW_NONCE_CAPABLE\r\n\r\n   Data length: 1\r\n\r\n   Description: Forcerenew Nonce Capable\r\n\r\n   Reference: this document",
     "correct_text": "   IANA has assigned the following new DHCPv4 option code from the\r\n   registry \"BOOTP Vendor Extensions and DHCP Options\" maintained at\r\n   http://www.iana.org/assignments/bootp-dhcp-parameters:\r\n\r\n   Tag: 145\r\n\r\n   Name: FORCERENEW_NONCE_CAPABLE\r\n\r\n   Data length: n\r\n\r\n   Description: Forcerenew Nonce Capable\r\n\r\n   Reference: this document",
     "notes": "RFC 6704 Section 3.1.1 states that the FORCERENEW_NONCE_CAPABLE option is variable length and contains a list of algorithm types:\r\n\r\nThe FORCERENEW_NONCE_CAPABLE option contains code 145, length n, and\r\n   a sequence of algorithms the client supports:\r\n\r\n             Code   Len   Algorithms\r\n            +-----+-----+----+----+----+\r\n            | 145 |  n  | A1 | A2 | A3 | ....\r\n            +-----+-----+----+----+----+\r\n\r\n                 Figure 1: FORCERENEW_NONCE_CAPABLE Option\r\n\r\n\r\nVerifier's note(Suresh Krishnan - INT AD): This erratum is correct and it requires a change in the IANA registry. I authorize IANA to make this change.",
     "submit_date": "2017-04-14",
     "submitter_name": "Niels Widger",
-    "verifier_id": 152,
+    "verifier_id": "152",
     "verifier_name": "Suresh Krishnan",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 369,
+    "errata_id": "369",
     "doc-id": "RFC2858",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 8,
+    "section": "8",
     "orig_text": "    As specified in this document, the MPL_REACH_NLRI and MP_UNREACH_NLRI\r\n    attributes contain the Subsequence Address Family Identifier (SAFI)\r\n    field. The SAFI name space is defined in Section 9. ...",
     "correct_text": "",
     "notes": "\r\nThere isn't SAFI name space definition in RFC 2858. This name name space \r\ndefinition presents in obsoleted RFC 2283 but completely removed from \r\nRFC 2858.",
     "submit_date": "2006-01-19",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 370,
+    "errata_id": "370",
     "doc-id": "RFC2858",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": "99\r\nIANA Considerations say:",
+    "section": "\r\nIANA Considerations say:",
     "orig_text": "\"...  The SAFI name space is defined in Section 9....\"",
     "correct_text": "\"...  The SAFI name space is defined in Section 5....\"\r\n",
     "notes": "",
     "submit_date": "2005-02-04",
     "submitter_name": "Tom Petch",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }

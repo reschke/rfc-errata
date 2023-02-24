@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2293,
+    "errata_id": "2293",
     "doc-id": "RFC5881",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 8,
+    "section": "8",
     "orig_text": "Ports 3784 and 3875 were assigned by IANA for use with the BFD \r\nControl and BFD Echo protocols, respectively.",
     "correct_text": "Ports 3784 and 3785 were assigned by IANA for use with the BFD \r\nControl and BFD Echo protocols, respectively.",
     "notes": "That is:\r\ns/3875/3785/\r\n\r\nA typo in the hastily-added IANA Considerations section.  The normative text is correct, so this error is less onerous than it could have been, happily.",
     "submit_date": "2010-06-02",
     "submitter_name": "Dave Katz",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

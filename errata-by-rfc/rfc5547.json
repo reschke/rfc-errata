@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3190,
+    "errata_id": "3190",
     "doc-id": "RFC5547",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "A Content-Length header is shown for a body-part within a multipart body. But Content-Length is an HTTP/SIP header, not a IANA-registered MIME header and should therefore not appear at that location in valid examples. The length of a body part within a multipart body is determined by MIME framing. A Content-Length header found for a body-part within a multipart body is meaningless and should be ignored.\r\n\r\nThis was discussed on both the SIP Implementors and SIP Core mailing lists.",
     "submit_date": "2012-04-12",
     "submitter_name": "Bruno CHATRAS",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

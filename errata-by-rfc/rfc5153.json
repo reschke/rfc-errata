@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 2900,
+    "errata_id": "2900",
     "doc-id": "RFC5153",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 7.2,
+    "section": "7.2",
     "orig_text": "   Consequently, an Exporting Process reporting traffic Flows measured\r\n   at a device that hosts one or more middleboxes should clearly\r\n   indicate to Collecting Processes the location of the used Observation\r\n   Point(s) with respect to the middlebox(es).  This can be done by\r\n   using Options with Observation Point as scope and elements like, for\r\n   instance, lineCardID or samplerID.  Otherwise, processing the\r\n   measured Flow data could lead to wrong results.\r\n",
     "correct_text": "   Consequently, an Exporting Process reporting traffic Flows measured\r\n   at a device that hosts one or more middleboxes should clearly\r\n   indicate to Collecting Processes the location of the used Observation\r\n   Point(s) with respect to the middlebox(es).  This can be done by\r\n   using Options with Observation Point as scope and elements like, for\r\n   instance, lineCardId or selectorId.  Otherwise, processing the\r\n   measured Flow data could lead to wrong results.\r\n",
     "notes": "s/lineCardID/lineCardId/\r\ns/samplerID/selectorId/\r\n\r\nPer the definitions in RFC5102, RFC5477 and IANA's IPFIX registry.",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2901,
+    "errata_id": "2901",
     "doc-id": "RFC5153",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.3,
+    "section": "3.3",
     "orig_text": "   Note that it is sometimes necessary to export information about\r\n   entities that exist outside any Observation Domain, or within\r\n   multiple Observation Domains (e.g., information about Metering\r\n   Processes scoped to meteringProcessID).  Such information SHOULD be\r\n   exported in an IPFIX Message with Observation Domain ID 0 (see\r\n   [RFC5101], Section 3.1).\r\n",
     "correct_text": "   Note that it is sometimes necessary to export information about\r\n   entities that exist outside any Observation Domain, or within\r\n   multiple Observation Domains (e.g., information about Metering\r\n   Processes scoped to meteringProcessId).  Such information SHOULD be\r\n   exported in an IPFIX Message with Observation Domain ID 0 (see\r\n   [RFC5101], Section 3.1).\r\n",
     "notes": "s/meteringProcessID/meteringProcessId/\r\n\r\nPer RFC5102 and IANA's IPFIX registry, the correct name is \"meteringProcessId\".",
     "submit_date": "2011-08-01",
     "submitter_name": "Paul Aitken",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   }

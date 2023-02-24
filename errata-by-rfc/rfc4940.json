@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1025,
+    "errata_id": "1025",
     "doc-id": "RFC4940",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 5.7,
+    "section": "5.7",
     "orig_text": "          vvvvvvv                     v\r\n|  OSPFv2 Options Registry (Section 2.1)\r\n\r\n   Value Description Reference\r\n   ----- ----------- ---------\r\n   0x01  B-bit       [RFC2328]\r\n|  0x02  W-bit       [RFC2328]\r\n   0x04  V-bit       [RFC2328]\r\n   0x08  W-bit       [RFC1584]\r\n   0x10  Nt-bit      [RFC3101]",
     "correct_text": "          vvvvvvvvvvvvvvvvv                     vvv\r\n|  OSPFv2 Router Properties Registry (Section 2.4.2)\r\n\r\n   Value Description Reference\r\n   ----- ----------- ---------\r\n   0x01  B-bit       [RFC2328]\r\n|  0x02  E-bit       [RFC2328]\r\n   0x04  V-bit       [RFC2328]\r\n   0x08  W-bit       [RFC1584]\r\n   0x10  Nt-bit      [RFC3101]",
     "notes": "Apparently, the headline has been erroneously copied from Section 5.1\r\nwithout performing the necessary edits.\r\nThe duplicate occurrence of \"W-Bit\" in the table is striking -\r\nSection A.4.2 of RFC 2328 normatively gives the correct name of bit\r\n0x02, and the Appendices of RFC 3101 and RFC 1584 correctly replicate\r\nthe field names as stated in RFC 2328 (and its predecessors).",
     "submit_date": "2007-08-15",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }

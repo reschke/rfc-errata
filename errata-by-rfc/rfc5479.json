@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2120,
+    "errata_id": "2120",
     "doc-id": "RFC5479",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Rationale: missing verb.",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2121,
+    "errata_id": "2121",
     "doc-id": "RFC5479",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Sections 5.1 through 5.3 use unexpected irregular, non-uniform\r\nindentation in hanging lists; this is accompanied by dangling\r\nhyphens in 5.2 ( s/third- party/third-party/ and \r\ns/crypto- agility/crypto-agility/ !).\r\n\r\n(Keep for update!)\r\nthird- party",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2122,
+    "errata_id": "2122",
     "doc-id": "RFC5479",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Rationale: language/grammar improvement -- keep for update!",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2123,
+    "errata_id": "2123",
     "doc-id": "RFC5479",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Rationale: singular/plural mismatch -- keep for update!",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2124,
+    "errata_id": "2124",
     "doc-id": "RFC5479",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "Rationale: singular/plural mismatch -- keep for update!",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2125,
+    "errata_id": "2125",
     "doc-id": "RFC5479",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -85,12 +85,12 @@
     "notes": "Rationale: clarification/language improvement -- keep for update!",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2126,
+    "errata_id": "2126",
     "doc-id": "RFC5479",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -100,12 +100,12 @@
     "notes": "Rationales: consistency with section headline.",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2602,
+    "errata_id": "2602",
     "doc-id": "RFC5479",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -115,7 +115,7 @@
     "notes": "It's not true that SDP Security Descriptions with SIPS have PFS \"Not applicable\" because the SDES rely on TLS that is part of the security scheme.\r\n\r\nPractically if the long terms keys (the x509v3 RSA key of SIPS server) is compromised, the TLS sessions can be decrypted, the SDES key extracted and SRTP calls deciphered.\r\n\r\nTLS support key exchange methods that provide PFS trough the use of Ephemeral Diffie Hellman keys.\r\n\r\nWhen SIPS use TLS with DHE key negotiation, then SDES acquire PFS feature because even in case of long-term key compromise (the server x509v3 RSA key), the short term keys (the SDES keys exchanged) will be safe.\r\n\r\n----\r\nFrom reviewer Dale Worley:\r\n\r\nIt seems that the entry for \"SDP Security Descriptions with S/MIME\" is\r\nalso incorrect, as revelation of the private keys of the participants\r\nwill render the SDES readable.  I think better phrasing of the revised\r\n\r\nwording is:\r\n\r\n    SDP Security Descriptions with SIPS\r\n\r\n       PFS if the selected TLS cipher suites for the SIPS hops provide PFS.\r\n\r\n    SDP Security Descriptions with S/MIME\r\n\r\n       No PFS.",
     "submit_date": "2010-11-04",
     "submitter_name": "Fabio Pietrosanti",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

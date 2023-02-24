@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4936,
+    "errata_id": "4936",
     "doc-id": "RFC3947",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "   The NAT-OA payloads are sent inside the first and second packets of\r\n   Quick Mode.  The initiator MUST send the payloads if it proposes any\r\n   UDP-Encapsulated-Transport mode, and the responder MUST send the\r\n   payload only if it selected UDP-Encapsulated-Transport mode.  It is\r\n   possible that the initiator sends the NAT-OA payload but proposes\r\n   both UDP-Encapsulated transport and tunnel mode.  Then the responder\r\n   selects the UDP-Encapsulated tunnel mode and does not send the NAT-OA\r\n   payload back.",
     "correct_text": "   The NAT-OA payloads are sent inside the first and second packets of\r\n   Quick Mode.  The initiator MUST send the payloads if it proposes any\r\n   UDP-Encapsulated mode, and the responder MUST send the\r\n   payload only if it selected UDP-Encapsulated-Transport mode.  It is\r\n   possible that the initiator sends the NAT-OA payload but proposes\r\n   both UDP-Encapsulated transport and tunnel mode.  Then the responder\r\n   selects the UDP-Encapsulated tunnel mode and does not send the NAT-OA\r\n   payload back.",
     "notes": "\n --VERIFIER NOTES-- \nThis is an incorrect errata to the RFC3947 (IKEv1 NAT-T negotiation).\r\n\r\nIt asks to change where initiator MUST send NAT-OA payloads if it proposes any UDP-Encapsulation mode, compared to the proposing EDP-Encapsulated-Transport mode. The original text is correct, we only need to send NAT-OA payloads if UDP-Encapsulated-Transport mode is proposed, it is not required if only UDP-Encapsulated-Tunnel mode is proposed.    ",
     "submit_date": "2017-02-16",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 173,
+    "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2022-04-10 16:48:13"
   },
   {
-    "errata_id": 4937,
+    "errata_id": "4937",
     "doc-id": "RFC3947",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "   The source IP and port address of the INITIAL-CONTACT notification\r\n   for the host behind NAT are not meaningful (as NAT can change them),\r\n   so the IP and port numbers MUST NOT be used to determine which\r\n   IKE/IPsec SAs to remove (see [RFC3715], section 2.1, case c).  The ID\r\n   payload sent from the other end SHOULD be used instead; i.e., when an\r\n   INITIAL-CONTACT notification is received from the other end, the\r\n   receiving end SHOULD remove all the SAs associated with the same ID\r\n   payload.",
     "correct_text": "   The source IP and port number of the INITIAL-CONTACT notification\r\n   for the host behind NAT are not meaningful (as NAT can change them),\r\n   so the IP and port numbers MUST NOT be used to determine which\r\n   IKE/IPsec SAs to remove (see [RFC3715], section 2.1, case c).  The ID\r\n   payload sent from the other end SHOULD be used instead; i.e., when an\r\n   INITIAL-CONTACT notification is received from the other end, the\r\n   receiving end SHOULD remove all the SAs associated with the same ID\r\n   payload.",
     "notes": "Port address should be replaced with port number.",
     "submit_date": "2017-02-16",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 173,
+    "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2022-04-10 16:51:03"
   }

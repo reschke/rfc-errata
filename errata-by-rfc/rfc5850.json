@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3662,
+    "errata_id": "3662",
     "doc-id": "RFC5850",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.5,
+    "section": "2.5",
     "orig_text": "   The multi-party architecture may also need to provide a mechanism to\r\n   get information about the status/handling of a dialog (for example,\r\n   information about the history of other contacts attempted prior to\r\n   the current contact).  Finally, the architecture should provide ample\r\n   opportunities to present informational URIs that relate to calls,\r\n   conversations, or dialogs in some way.  For example, consider the SIP\r\n   Call-Info header or Contact header fields returned in a 300-class\r\n   response.  Frequently, additional information about a call or dialog\r\n   can be fetched via non-SIP URIs.  For example, consider a web page\r\n   for package tracking when calling a delivery company or a web page\r\n   with related documentation when joining a dial-in conference.  The\r\n   use of URIs in the multi-party framework is discussed in more detail\r\n   in Section 3.7.",
     "correct_text": "   The multi-party architecture may also need to provide a mechanism to\r\n   get information about the status/handling of a dialog (for example,\r\n   information about the history of other contacts attempted prior to\r\n   the current contact).  Finally, the architecture should provide ample\r\n   opportunities to present informational URIs that relate to calls,\r\n   conversations, or dialogs in some way.  For example, consider the SIP\r\n   Call-Info header or Contact header fields returned in a 300-class\r\n   response.  Frequently, additional information about a call or dialog\r\n   can be fetched via non-SIP URIs.  For example, consider a web page\r\n   for package tracking when calling a delivery company or a web page\r\n   with related documentation when joining a dial-in conference.  The\r\n   use of URIs in the multi-party framework is discussed in more detail\r\n   in Section 2.7.",
     "notes": null,
     "submit_date": "2013-06-17",
     "submitter_name": "Joël Repiquet",
-    "verifier_id": 123,
+    "verifier_id": "123",
     "verifier_name": "Gonzalo Camarillo",
     "update_date": "2019-09-10 09:09:03"
   }

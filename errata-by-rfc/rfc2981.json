@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3798,
+    "errata_id": "3798",
     "doc-id": "RFC2981",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 7,
+    "section": "7",
     "orig_text": "mteTriggerSampleType's description:\r\nIf only 'existence' is set in mteTriggerTest this object has\r\nno meaning.\"\r\n",
     "correct_text": "If no 'boolean' is set in mteTriggerTest this object has\r\nno meaning.\"\r\n",
     "notes": "mteTriggerThresholdDeltaRising was added to mteTriggerThresholdTable from the version draft-ietf-disman-event-mib-09.txt and mteTriggerThresholdTable can both deal 'absoluteValue' and 'deltaValue', so mteTriggerSampleType has mean for 'boolean' only. (mteTriggerSampleType has no changed from draft-ietf-disman-event-mib-06.txt)\r\n\r\n was added to\n --VERIFIER NOTES-- \nAs justified by the DISMAN WG co-chair on the DISMAN mailing list (note: WG now closed), the RFC text is correct.  ",
     "submit_date": "2013-11-13",
     "submitter_name": "shuaixiaojuan",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }

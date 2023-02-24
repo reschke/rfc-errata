@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 358,
+    "errata_id": "358",
     "doc-id": "RFC2939",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 1,
+    "section": "1",
     "orig_text": "   DHCP protocol messages are identified by the 'DHCP Message Type'\n   option (option code 51).",
     "correct_text": "   DHCP protocol messages are identified by the 'DHCP Message Type'\n   option (option code 53).\n",
     "notes": "",
     "submit_date": "2001-09-04",
     "submitter_name": "Tyler Tidman",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 854,
+    "errata_id": "854",
     "doc-id": "RFC2939",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "   [3] Droms, R. and K. Fong, \"NetWare/IP Domain Name and Information\",\r\n       RFC 2142, November 1997.",
     "correct_text": "   [3] Droms, R. and K. Fong, \"NetWare/IP Domain Name and Information\",\r\n       RFC 2242, November 1997.",
     "notes": "References to RFC 2142 should be to 2242. \r\n\r\nfrom pending",
     "submit_date": "2007-02-02",
     "submitter_name": "Frank Ellermann",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

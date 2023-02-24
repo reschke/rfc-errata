@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2758,
+    "errata_id": "2758",
     "doc-id": "RFC2743",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "There appears to be accidentally duplicated text trailing the list of output parameters in section 2.1.4:  GSS_Add_cred call  (top of page 38).\r\n\r\nThe parameter \"cred_usage\" is an input-only parameter and also listed under input parameters, and the parameter \"mech_set\" is a duplicate of the actual_mechs output parameter.  Compare GSS-API C-Bindings document rfc2744, section 5.3. gss_add_cred\r\n\r\n-Martin",
     "submit_date": "2011-03-29",
     "submitter_name": "Martin Rex",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3797,
+    "errata_id": "3797",
     "doc-id": "RFC2743",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "The description of the GSS_S_COMPLETE return value from GSS_Import_name() indicates that the contents of the output_name field are \"described by the type value in output_name_type\".  There is no such output_name_type parameter.",
     "submit_date": "2013-11-12",
     "submitter_name": "Benjamin Kaduk",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4151,
+    "errata_id": "4151",
     "doc-id": "RFC2743",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "The other major status codes that GSS_Process_context_token() can return are: GSS_S_COMPLETE (input token successfully processed), GSS_S_DEFECTIVE_TOKEN (e.g., integrity protection for the input token failed), GSS_S_NO_CONTEXT (invalid input security context).\r\n\r\nThis leaves a) no way to report error token information, b) no purpose for GSS_S_FAILURE, since the other major status codes cover all plausible error conditions.\r\n\r\nBut clearly the intention was that \"asynchronous error tokens\" should be passed to GSS_Process_context_token(), and for such tokens to be useful as far as conveying information about the error goes.\r\n\r\nThere are at least two easy ways to fix this: either have GSS_Process_context_token() report the error information in the minor status with a major status of GSS_S_COMPLETE, or decide that the GSS_S_FAILURE description was incorrect, that it should have been used to convey error token information.  The latter is the more natural fix.\r\n\r\nThe KITTEN WG will have to review this erratum and decide whether to reject it, accept one fix, or the other. That review happened resulting in the corrected\r\ntext above.\r\n",
     "submit_date": "2014-11-03",
     "submitter_name": "Nicolas Williams",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   }

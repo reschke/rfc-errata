@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 3621,
+    "errata_id": "3621",
     "doc-id": "RFC6887",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 15.1,
+    "section": "15.1",
     "orig_text": "   In requests where the requested Lifetime is 0, the Suggested External\r\n   Address and Suggested External Port fields MUST be set to zero on\r\n   transmission and MUST be ignored on reception, and these fields MUST\r\n   be copied into the assigned external IP address and assigned external\r\n   port of the response.",
     "correct_text": "   In requests where the requested Lifetime is 0, the Suggested External\r\n   Port field MUST be set to zero on transmission and MUST be ignored on\r\n   reception. The Suggested External Address field must be set to the\r\n   appropriate all-zeros address, depending on whether the request is\r\n   deleting a mapping for an External IPv4 address or an External IPv6\r\n   address. Both the Suggested External Address and Suggested External\r\n   Port fields are copied into the assigned external IP address and\r\n   assigned external port of the response.",
     "notes": "Since a given internal address+port can have *two* mappings -- an IPv4 one and an IPv6 one -- the deletion request needs to signify which one is being deleted.",
     "submit_date": "2013-05-14",
     "submitter_name": "Stuart Cheshire",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3887,
+    "errata_id": "3887",
     "doc-id": "RFC6887",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,27 +25,27 @@
     "notes": "How PCP applies in the Dual-Egress NAT scene?\r\n\r\nIf the gateway device has two or more out interfaces to internet were doing different nat conversion in the ISP. \r\nPCP MAP mode does not include the destination address, the gateway device how to choose the out interfaces? And how to choose the different NAT address pools? \r\nThis scene is very common in the ISP, it means that PCP does not apply in this scene?\n --VERIFIER NOTES-- \nThis is not the right way to address the issue you have raised.   Please raise this issue in the PCP working group, so that the working group can come up with a consensus answer to the question.",
     "submit_date": "2014-02-11",
     "submitter_name": "Channy Zhang",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3891,
+    "errata_id": "3891",
     "doc-id": "RFC6887",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 13.3,
+    "section": "13.3",
     "orig_text": "The Prefix Length indicates how many bits of the address are used for\r\nthe filter.  For IPv4 addresses (which are encoded using the\r\nIPv4-mapped address format (::FFFF:0:0/96)), this means valid prefix\r\nlengths are between 96 and 128 bits, inclusive.  That is, add 96 to\r\nthe IPv4 prefix length.  For IPv6 addresses, valid prefix lengths are\r\nbetween 0 and 128 bits, inclusive.  Values outside those ranges cause\r\nthe PCP server to return the MALFORMED_OPTION result code.\r\n\r\nTo remove all existing filters, the Prefix Length 0 is used.  There\r\nis no mechanism to remove a specific filter.\r\n",
     "correct_text": "The Prefix Length indicates how many bits of the address are used for\r\nthe filter.  For IPv4 addresses (which are encoded using the\r\nIPv4-mapped address format (::FFFF:0:0/96)), this means valid prefix\r\nlengths are between 97 and 128 bits, inclusive.  That is, add 96 to\r\nthe IPv4 prefix length.  For IPv6 addresses, valid prefix lengths are\r\nbetween 1 and 128 bits, inclusive.  Values outside those ranges cause\r\nthe PCP server to return the MALFORMED_OPTION result code.\r\n\r\nTo remove all existing filters, the Prefix Length 0 is used.  The\r\nRemote Peer Port and Remote Peer IP Address fields MUST be set to zero\r\non transmission and MUST be ignored on reception.  There is no\r\nmechanism to remove a specific filter. \r\n",
     "notes": "A mapping with a filter containing an address-specific prefix length of 0 doesn't provide any value as it's no different to a mapping with no filters at all.\r\n\r\nSince a prefix length of 0 is not even possible for IPv6 addresses, it should not be possible for IPv4 addresses either. Therefore the valid prefix length range for IPv4 addresses should be 97 to 128 bits inclusive and the valid range for IPv6 addresses should be documented as 1 to 128 bits inclusive in addition to a prefix length of 0 being documented as the special case.\r\n\r\nAlso clarify in that special case that it doesn't matter what the remote peer port and IP address fields are and therefore follow the convention throughout the RFC of setting to zero on transmission and ignoring on reception.",
     "submit_date": "2014-02-14",
     "submitter_name": "Matt Dainty",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4255,
+    "errata_id": "4255",
     "doc-id": "RFC6887",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -55,7 +55,7 @@
     "notes": "Add (preferable at the start of both section 11 and 12) the actual numerical definition of the OpCode explained in the section.\r\n\r\nThere is a lot of mentioning of the MAP and PEER opcodes in the document, but nowhere in the text can be found what the actual OpCodes are. Everywhere where the MAP OpCode or PEER OpCode is mentioned is the reader directed to section 11 or 12 respectively, 'where the OpCode is defined'. But in those sections there is no definition of the OpCode.\r\n\r\ne.g.: section 7.1, in the field description of a PCP request packet:\r\n\"Opcode:  A 7-bit value specifying the operation to be performed.  MAP\r\n          and PEER Opcodes are defined in Sections 11 and 12.\"\r\n\r\nI had to search the internet and found them at:\r\nhttps://www.iana.org/assignments/pcp-parameters/pcp-parameters.xhtml\r\n\r\nWhere is stated:\r\n\r\nValue  Description  Reference\r\n0  ANNOUNCE  [RFC6887]\r\n1  MAP  [RFC6887]\r\n2  PEER  [RFC6887]\r\n\r\nThe above three numerical definitions are nowhere to be found in the RFC6887 document and seem quite crucial for correct PCP implementations. Should the OpCodes already be defined in some other RFC document and is the reader expected to know about it, then I'd suggest to put a link to that other RFC document at the start of sections 11 and 12.\n --VERIFIER NOTES-- \nThe numerical opcodes are defined in section 19.2.   I agree that the use of the term \"opcode\" is confusing, and it would be good to clarify that in a future update to the document, but the erratum as written is not correct.",
     "submit_date": "2015-02-03",
     "submitter_name": "Ad Steijvers",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   }

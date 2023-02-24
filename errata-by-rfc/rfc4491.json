@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1885,
+    "errata_id": "1885",
     "doc-id": "RFC4491",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "Rationale:\r\nInconsistency within the RFC.\r\nMost parts of the memo make use of the Internet-standard\r\n\"network byte order\". a.k.a. \"big-endian byte order\", which\r\nalso is at the heart of the ASN.1 BER/DER encoding.\r\nUse of mixed endian-ness within a single context, or even\r\na single specification, is a likely source of implementation\r\nerrors and, consequently, interoperability problems.\r\n\r\nCf. the related Errata Note for RFC 4490, EID=1884.\n --VERIFIER NOTES-- \n authors confirmed that little-endian encoding is correct.",
     "submit_date": "2009-09-17",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   }

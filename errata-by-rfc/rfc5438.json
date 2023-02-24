@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3013,
+    "errata_id": "3013",
     "doc-id": "RFC5438",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,22 +10,22 @@
     "notes": "None of the examples in this RFC comply with the format of CPIM defined in RFC 3862, in which the message metadata headers are separated from the headers of the encapsulated MIME object by a blank line.",
     "submit_date": "2011-11-04",
     "submitter_name": "Dan Price",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3850,
+    "errata_id": "3850",
     "doc-id": "RFC5438",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 8.3,
+    "section": "8.3",
     "orig_text": "   The aggregated IMDN is constructed using the multipart/mixed MIME\r\n   type and including as individual payloads all the IMDNS that were\r\n   received as message/imdn+xml.\r\n\r\n   Below is an example of aggregated IMDNs.\r\n\r\n   From: Bob <im:bob@example.com>\r\n   To: Alice <im:alice@example.com>\r\n   NS: imdn <urn:ietf:params:imdn>\r\n   imdn.Message-ID: d834jied93rf\r\n   Content-type: multipart/mixed;\r\n                      boundary=\"imdn-boundary\"\r\n   Content-Disposition: notification\r\n   Content-length: ...\r\n\r\n   --imdn-boundary\r\n   Content-type: message/imdn+xml\r\n\r\n   <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n   <imdn xmlns=\"urn:ietf:params:xml:ns:imdn\">\r\n         <message-id>34jk324j</message-id>\r\n         <datetime>2008-04-04T12:16:49-05:00</datetime>\r\n        <recipient-uri>im:bob@example.com</recipient-uri>\r\n         <original-recipient-uri\r\n           >im:bob@example.com</original-recipient-uri>\r\n         <delivery-notification>\r\n            <status>\r\n               <delivered/>\r\n            </status>\r\n         </delivery-notification>\r\n       </imdn>\r\n\r\n   --imdn-boundary\r\n   Content-type: message/imdn+xml\r\n\r\n   <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n   <imdn xmlns=\"urn:ietf:params:xml:ns:imdn\">\r\n         <message-id>34jk324j</message-id>\r\n         <datetime>2008-04-04T12:16:49-05:00</datetime>\r\n        <recipient-uri>im:bob@example.com</recipient-uri>\r\n         <original-recipient-uri\r\n            >im:bob@example.com</original-recipient-uri>\r\n         <display-notification>\r\n            <status>\r\n               <displayed/>\r\n            </status>\r\n         </display-notification>\r\n       </imdn>\r\n\r\n   --imdn-boundary\r\n",
     "correct_text": "   The aggregated IMDN is constructed using the multipart/mixed MIME\r\n   type and including as individual payloads all the IMDNS that were\r\n   received as message/imdn+xml.\r\n\r\n   Below is an example of aggregated IMDNs.\r\n\r\n   From: Bob <im:bob@example.com>\r\n   To: Alice <im:alice@example.com>\r\n   NS: imdn <urn:ietf:params:imdn>\r\n   imdn.Message-ID: d834jied93rf\r\n   Content-type: multipart/mixed;\r\n                      boundary=\"imdn-boundary\"\r\n   Content-Disposition: notification\r\n   Content-length: ...\r\n\r\n   --imdn-boundary\r\n   Content-type: message/imdn+xml\r\n\r\n   <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n   <imdn xmlns=\"urn:ietf:params:xml:ns:imdn\">\r\n         <message-id>34jk324j</message-id>\r\n         <datetime>2008-04-04T12:16:49-05:00</datetime>\r\n        <recipient-uri>im:bob@example.com</recipient-uri>\r\n         <original-recipient-uri\r\n           >im:bob@example.com</original-recipient-uri>\r\n         <delivery-notification>\r\n            <status>\r\n               <delivered/>\r\n            </status>\r\n         </delivery-notification>\r\n       </imdn>\r\n\r\n   --imdn-boundary\r\n   Content-type: message/imdn+xml\r\n\r\n   <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n   <imdn xmlns=\"urn:ietf:params:xml:ns:imdn\">\r\n         <message-id>34jk324j</message-id>\r\n         <datetime>2008-04-04T12:16:49-05:00</datetime>\r\n        <recipient-uri>im:bob@example.com</recipient-uri>\r\n         <original-recipient-uri\r\n            >im:bob@example.com</original-recipient-uri>\r\n         <display-notification>\r\n            <status>\r\n               <displayed/>\r\n            </status>\r\n         </display-notification>\r\n       </imdn>\r\n\r\n   --imdn-boundary--\r\n",
     "notes": "The last multipart MIME boundary should have a \"--\" at the end. In the above example it should be \"--imdn-boundary--\" instead of \"--imdn-boundary\"",
     "submit_date": "2013-12-26",
     "submitter_name": "Niket Kumar",
-    "verifier_id": 136,
+    "verifier_id": "136",
     "verifier_name": "Richard Barnes",
     "update_date": "2019-09-10 09:09:03"
   }

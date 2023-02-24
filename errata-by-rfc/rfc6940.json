@@ -1,36 +1,36 @@
 [
   {
-    "errata_id": 3885,
+    "errata_id": "3885",
     "doc-id": "RFC6940",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 14.9,
+    "section": "14.9",
     "orig_text": "   | Reserved                            | 0x8000..0xFFFE |  RFC 6940 |",
     "correct_text": "   | Reserved                            | 0x8000..0xFFFF |  RFC 6940 |",
     "notes": "Clearly there was some confusion and at least one of the authors thought that 0xFFFE was the largest 16 bit integer when in fact it should have been 0xFFFF. I would like to thank Pearl Liang for catching this mistake.",
     "submit_date": "2014-02-07",
     "submitter_name": "Cullen Jennings",
-    "verifier_id": 136,
+    "verifier_id": "136",
     "verifier_name": "Richard Barnes",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4486,
+    "errata_id": "4486",
     "doc-id": "RFC6940",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 10.8,
+    "section": "10.8",
     "orig_text": "10.8.  Route Query f.in 3",
     "correct_text": "10.8.  Route Query\r\n",
     "notes": "This is a formatting nit, probably caused by an nroff remnant. However, a bit confusing nevertheless...",
     "submit_date": "2015-09-28",
     "submitter_name": "Roland Bless",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5530,
+    "errata_id": "5530",
     "doc-id": "RFC6940",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "10.7.4.4 says, \"repeat the discovery process used in the initial join\", which refers to the 2nd paragraph after 10.5.9:\r\n\r\n\"It SHOULD send a Ping directed at Resource-ID n+1 (directly after its own Resource-ID).\"\r\n\r\nPing Node-ID is simply wrong. This correction makes it consistent with 10.5.9. Credit goes to xramtsov in the mailing list.",
     "submit_date": "2018-10-16",
     "submitter_name": "Michael Chen",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

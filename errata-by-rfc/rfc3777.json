@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 232,
+    "errata_id": "232",
     "doc-id": "RFC3777",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "  One possible selection method is described in RFC 2777 [1].",
     "correct_text": "  One possible selection method is described in RFC 3797 [1].",
     "notes": "\r\nReferences point to RFC 3797, not RFC 2777:\r\n   [1] Eastlake, 3rd, D., \"Publicly Verifiable Nominations Committee\r\n       (Nomcom) Random Selection\", RFC 3797, June 2004.\r\n\r\nRFC 3797 has obsoleted RFC 2777",
     "submit_date": "2006-08-31",
     "submitter_name": "Frank Ellermann",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4179,
+    "errata_id": "4179",
     "doc-id": "RFC3777",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "   3.  The nominating committee comprises at least a Chair, 10 voting\r\n       volunteers, 3 liaisons, and an advisor.",
     "correct_text": "   3.  The nominating committee comprises at least a Chair, 10 voting\r\n       volunteers, two liaisons, and an advisor.",
     "notes": "The ISOC liaison is optional. Saying \"at least ... two\" is future-proof.",
     "submit_date": "2014-11-13",
     "submitter_name": "Brian Carpenter",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

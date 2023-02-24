@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2163,
+    "errata_id": "2163",
     "doc-id": "RFC1320",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": null,
     "submit_date": "2010-04-16",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2164,
+    "errata_id": "2164",
     "doc-id": "RFC1320",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,27 +25,27 @@
     "notes": null,
     "submit_date": "2010-04-16",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3131,
+    "errata_id": "3131",
     "doc-id": "RFC1320",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3.4,
+    "section": "3.4",
     "orig_text": "Note. The value 5A..99 is a hexadecimal 32-bit constant, written with\r\nthe high-order digit first. This constant represents the square root\r\nof 2. The octal value of this constant is 013240474631.\r\n\r\nThe value 6E..A1 is a hexadecimal 32-bit constant, written with the\r\nhigh-order digit first.  This constant represents the square root of\r\n3. The octal value of this constant is 015666365641.\r\n",
     "correct_text": "Note. The value 5A..99 is a hexadecimal 32-bit constant, written with\r\nthe high-order digit first. This constant represents the square root\r\nof 2 divided by 4. The octal value of this constant is 013240474631.\r\n\r\nThe value 6E..A1 is a hexadecimal 32-bit constant, written with the\r\nhigh-order digit first.  This constant represents the square root of\r\n3 divided by 4. The octal value of this constant is 015666365641.\r\n",
     "notes": "More precisely, the value 5A..99 is a result of the formula: HEX(TRUNC((SQRT(2)/4)*2^32)), where SQRT represents the square root, TRUNC is truncation of the fractional part, HEX is a hexadecimal representation. Similarly, the value 6E..A1 = HEX(TRUNC((SQRT(3)/4)*2^32)).",
     "submit_date": "2012-02-20",
     "submitter_name": "Sergey Panasenko",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6998,
+    "errata_id": "6998",
     "doc-id": "RFC1320",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,7 +55,7 @@
     "notes": "\"the the\" grammar mistake",
     "submit_date": "2022-06-18",
     "submitter_name": "Alok Menghrajani",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-06-20 13:46:50"
   }

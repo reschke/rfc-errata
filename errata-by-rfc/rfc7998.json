@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7169",
+    "doc-id": "RFC7998",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.5.1",
+    "orig_text": "\r\n   5.  If an <artwork> element has type='binary-art', the data needs to\r\n       be in an \"src\" attribute with a URI scheme of \"data:\".  If the\r\n       \"src\" URI scheme is \"file:\", \"http:\", or \"https:\", resolve the\r\n       URL.  Replace the \"src\" attribute with a \"data:\" URI, and add an\r\n       \"originalSrc\" attribute with the value of the URI.  For the\r\n       \"http:\" and \"https:\" URI schemes, the mediatype of the \"data:\"\r\n       URI will be the Content-Type of the HTTP response.  For the\r\n       \"file:\" URI scheme, the mediatype of the \"data:\" URI needs to be\r\n       guessed with heuristics (this is possibly a bad idea).  This also\r\n       fails for content that includes binary images but uses a type\r\n       other than \"binary-art\".  Note: since this feature can't be used\r\n       for RFCs at the moment, this entire feature might be\r\n",
+    "correct_text": "   5.  There is no step 5.",
+    "notes": "binary-art is an undefined concept in RFC799x.  This paragraph appears to be a remnant of an earlier attempt to accommodate something called that way, but the process didn't even result in a complete sentence (and certainly not any semantics).\r\n'binary-art' needs to be removed from RFC 7998 (and its apocryphal mention in RFC 7991) as its presence is actively confusing.",
+    "submit_date": "2022-10-16",
+    "submitter_name": "Carsten Bormann",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 545,
+    "errata_id": "545",
     "doc-id": "RFC1534",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "   Any message received by a DHCP server that includes a 'DHCP message\n   type' (51) option is assumed to have been sent by a DHCP client.",
     "correct_text": "   Any message received by a DHCP server that includes a 'DHCP message\n   type' (53) option is assumed to have been sent by a DHCP client.\n",
     "notes": "",
     "submit_date": "2001-09-05",
     "submitter_name": "Tyler Tidman",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

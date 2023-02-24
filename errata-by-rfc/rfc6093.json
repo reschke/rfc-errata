@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4312,
+    "errata_id": "4312",
     "doc-id": "RFC6093",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 3.1,
+    "section": "3.1",
     "orig_text": "Unfortunately, virtually all TCP implementations process TCP urgent\r\nindications differently.  By default, the last byte of \"urgent data\"\r\nis delivered \"out of band\" to the application.  That is, it is not\r\ndelivered as part of the normal data stream [UNPv1].  For example,\r\nthe \"out-of-band\" byte is read by an application when a recv(2)\r\nsystem call with the MSG_OOB flag set is issued.",
     "correct_text": "Unfortunately, virtually all TCP implementations process TCP urgent\r\nindications differently.\r\n\r\nFor example, by default in particular UNIX implementations, the last\r\nbyte of \"urgent data\" is delivered \"out of band\" to the application.\r\nThat is, it is not delivered as part of the normal data stream [UNPv1].\r\nFor example, the \"out-of-band\" byte is read by an application when a\r\nrecv(2) system call with the MSG_OOB flag set is issued.",
     "notes": "The first and latter statements are contradictory, as a default is unlikely to apply when \"virtually all\" implementations process differently.\r\nThis correction to include \"in particular UNIX implementations\" would be appropriate at many points throughout the document in order to differentiate references to implementation specific features and terminology from references to terminology established in prior RFCs.\n --VERIFIER NOTES-- \nReading the text in a flow isn't giving the contradiction that there is a contradiction. ",
     "submit_date": "2015-03-24",
     "submitter_name": "Justin Yirka",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }

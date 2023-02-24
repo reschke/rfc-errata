@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 2072,
+    "errata_id": "2072",
     "doc-id": "RFC5819",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3.",
     "orig_text": "[ second example, near the bottom of page 3 ]\r\n\r\n|  C: A02 LIST (SUBSCRIBED RECURSIVEMATCH)\"\" % RETURN (STATUS\r\n      (MESSAGES))\r\n   S: * LIST (\\Subscribed) \".\"  \"INBOX\"\r\n   S: * STATUS \"INBOX\" (MESSAGES 17)\r\n   S: * LIST () \".\" \"foo\" (CHILDINFO (\"SUBSCRIBED\"))\r\n   S: A02 OK List completed.",
     "correct_text": "                                          v\r\n|  C: A02 LIST (SUBSCRIBED RECURSIVEMATCH) \"\" % RETURN (STATUS\r\n       (MESSAGES))\r\n      ^\r\n   S: * LIST (\\Subscribed) \".\"  \"INBOX\"\r\n   S: * STATUS \"INBOX\" (MESSAGES 17)\r\n   S: * LIST () \".\" \"foo\" (CHILDINFO (\"SUBSCRIBED\"))\r\n   S: A02 OK List completed.",
     "notes": "2 significant space character missing.",
     "submit_date": "2010-03-11",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5725,
+    "errata_id": "5725",
     "doc-id": "RFC5819",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "3.  Examples\r\n\r\n   C: A01 LIST \"\" % RETURN (STATUS (MESSAGES UNSEEN))\r\n   S: * LIST () \".\"  \"INBOX\"\r\n   S: * STATUS \"INBOX\" (MESSAGES 17 UNSEEN 16)\r\n   S: * LIST () \".\" \"foo\"\r\n   S: * STATUS \"foo\" (MESSAGES 30 UNSEEN 29)\r\n   S: * LIST (\\NoSelect) \".\" \"bar\"\r\n   S: A01 OK List completed.\r\n\r\n   The \"bar\" mailbox isn't selectable, so it has no STATUS reply.\r\n\r\n   C: A02 LIST (SUBSCRIBED RECURSIVEMATCH)\"\" % RETURN (STATUS\r\n      (MESSAGES))\r\n   S: * LIST (\\Subscribed) \".\"  \"INBOX\"\r\n   S: * STATUS \"INBOX\" (MESSAGES 17)\r\n   S: * LIST () \".\" \"foo\" (CHILDINFO (\"SUBSCRIBED\"))\r\n   S: A02 OK List completed.",
     "correct_text": "3.  Examples\r\n\r\n   C: A01 LIST \"\" % RETURN (STATUS (MESSAGES UNSEEN))\r\n   S: * LIST () \".\" \"INBOX\"\r\n   S: * STATUS \"INBOX\" (MESSAGES 17 UNSEEN 16)\r\n   S: * LIST () \".\" \"foo\"\r\n   S: * STATUS \"foo\" (MESSAGES 30 UNSEEN 29)\r\n   S: * LIST (\\NoSelect) \".\" \"bar\"\r\n   S: A01 OK List completed.\r\n\r\n   The \"bar\" mailbox isn't selectable, so it has no STATUS reply.\r\n\r\n   C: A02 LIST (SUBSCRIBED RECURSIVEMATCH)\"\" % RETURN (STATUS\r\n      (MESSAGES))\r\n   S: * LIST (\\Subscribed) \".\" \"INBOX\"\r\n   S: * STATUS \"INBOX\" (MESSAGES 17)\r\n   S: * LIST () \".\" \"foo\" (CHILDINFO (\"SUBSCRIBED\"))\r\n   S: A02 OK List completed.",
     "notes": "Lines 141 and 152 each contain two spaces between \"\".\"\" and \"\"INBOX\"\" instead of one.  While I had the instinct to mark these as editorial, these sample server responses have also ended up in another RFC and two IDs (which were corrected before they became RFCs).  In any event, given that these responses also violate the ABNF, and given the RFC Ed.'s guideline on ambiguity, I'm just marking them as technical.  I'll leave it to others more familiar with the practical issues for various implementers to make the final determination on how to label them.\r\n\r\nPlease note:  a previously verified erratum (Errata ID 2072) addresses this same section; I've just left the corresponding error as is in this corrected text.\r\n\r\n----- Verifier notes -----\r\nYes, this is an error: it comes from a combination of the RFC Editor style of double-spacing between sentences, the construction of the examples in XML in a manner that doesn't distinguish them from sentences, and the fact that it's nearly impossible to notice the situation when one is giving a final review.\r\n\r\nEditorial, though, because it's in examples.  The ABNF is the authoritative place, and that's correct.",
     "submit_date": "2019-05-20",
     "submitter_name": "Stan Kalisch",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

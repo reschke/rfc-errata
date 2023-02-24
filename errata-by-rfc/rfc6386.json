@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3395,
+    "errata_id": "3395",
     "doc-id": "RFC6386",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "It seems \"coeffs\" should be a pointer to a short instead of a short.",
     "submit_date": "2012-10-30",
     "submitter_name": "Thomas Butter",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5534,
+    "errata_id": "5534",
     "doc-id": "RFC6386",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 19.1,
+    "section": "19.1",
     "orig_text": "unsigned char *c = pbi->source;\r\nunsigned int tmp;\r\n\r\ntmp = (c[2] << 16) | (c[1] << 8) | c[0];\r\n\r\nkey_frame = tmp & 0x1;\r\nversion = (tmp >> 1) & 0x7;\r\nshow_frame = (tmp >> 4) & 0x1;\r\nfirst_part_size = (tmp >> 5) & 0x7FFFF;",
     "correct_text": "unsigned char *c = pbi->source;\r\nunsigned int tmp;\r\n\r\ntmp = (c[2] << 16) | (c[1] << 8) | c[0];\r\n\r\nkey_frame = !(tmp & 0x1);\r\nversion = (tmp >> 1) & 0x7;\r\nshow_frame = (tmp >> 4) & 0x1;\r\nfirst_part_size = (tmp >> 5) & 0x7FFFF;",
     "notes": "In section 9.1, where the frame tag is described, the field for the key frame is defined as \"A 1-bit frame type (0 for key frames, 1 for interframes).\"\r\n\r\nThe code block in section 19.1 interprets the bit in the opposite way: 1 for key frames and 0 for interframes.",
     "submit_date": "2018-10-18",
     "submitter_name": "Ard Oerlemans",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

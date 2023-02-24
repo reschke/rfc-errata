@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3635,
+    "errata_id": "3635",
     "doc-id": "RFC0917",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "4. Self-encoding fixed-width field: A specific number of bits\r\n   is is used for the subnet number. Subnets are in use if the\r\n   high-order bit of this field is one; otherwise, the entire\r\n   local address part is used for host number.",
     "correct_text": "4. Self-encoding fixed-width field: A specific number of bits\r\n   is used for the subnet number. Subnets are in use if the\r\n   high-order bit of this field is one; otherwise, the entire\r\n   local address part is used for host number.",
     "notes": "I would like to report a small/minor grammatical error on page 5 of\r\nRFC917. Point 4 of subsection 2.1 Note that the word \"is\" is repeated.",
     "submit_date": "2013-05-30",
     "submitter_name": "Michael Demirtzidis",
-    "verifier_id": 134,
+    "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
   }

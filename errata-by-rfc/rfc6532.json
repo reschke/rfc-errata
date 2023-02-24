@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 3153,
+    "errata_id": "3153",
     "doc-id": "RFC6532",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "The security impact of UTF-8 headers on email signature systems such\r\nas Domain Keys Identified Mail (DKIM), S/MIME, and OpenPGP is\r\ndiscussed in Section 14 of [RFC6530].\r\n",
     "correct_text": "The security impact of UTF-8 headers on email signature systems such\r\nas Domain Keys Identified Mail (DKIM), S/MIME, and OpenPGP is\r\ndiscussed in Section 13 of [RFC6530].\r\n",
     "notes": "Incorrect section number in reference.",
     "submit_date": "2012-03-09",
     "submitter_name": "Dave Thaler",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6036,
+    "errata_id": "6036",
     "doc-id": "RFC6532",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "Various header fields are defined in terms of the grammar defined in RFC 2045.  In particular, the missing extension of token was reported for Authentication-Results:\r\nhttps://mailarchive.ietf.org/arch/msg/dmarc/g1U__axJW5I6OenEuwD48nwptzU",
     "submit_date": "2020-04-01",
     "submitter_name": "Alessandro Vesely",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

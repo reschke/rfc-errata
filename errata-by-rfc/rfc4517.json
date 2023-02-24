@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4653,
+    "errata_id": "4653",
     "doc-id": "RFC4517",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4.2,
+    "section": "4.2",
     "orig_text": "4.2.  Matching Rule Definitions\r\n\r\n   Nominated character strings in assertion and attribute values are\r\n   prepared according to the string preparation algorithms [RFC4518] for\r\n   LDAP when evaluating the following matching rules:\r\n\r\n      numericStringMatch,\r\n      numericStringSubstringsMatch,\r\n      caseExactMatch,\r\n      caseExactOrderingMatch,\r\n      caseExactSubstringsMatch,\r\n      caseExactIA5Match,\r\n      caseIgnoreIA5Match,\r\n      caseIgnoreIA5SubstringsMatch,\r\n      caseIgnoreListMatch,\r\n      caseIgnoreListSubstringsMatch,\r\n      caseIgnoreMatch,\r\n      caseIgnoreOrderingMatch,\r\n      caseIgnoreSubstringsMatch,\r\n      directoryStringFirstComponentMatch,\r\n      telephoneNumberMatch,\r\n      telephoneNumberSubstringsMatch and\r\n      wordMatch.\r\n",
     "correct_text": "4.2.  Matching Rule Definitions\r\n\r\n   Nominated character strings in assertion and attribute values are\r\n   prepared according to the string preparation algorithms [RFC4518] for\r\n   LDAP when evaluating the following matching rules:\r\n\r\n      numericStringMatch,\r\n      numericStringOrderingMatch,\r\n      numericStringSubstringsMatch,\r\n      caseExactMatch,\r\n      caseExactOrderingMatch,\r\n      caseExactSubstringsMatch,\r\n      caseExactIA5Match,\r\n      caseIgnoreIA5Match,\r\n      caseIgnoreIA5SubstringsMatch,\r\n      caseIgnoreListMatch,\r\n      caseIgnoreListSubstringsMatch,\r\n      caseIgnoreMatch,\r\n      caseIgnoreOrderingMatch,\r\n      caseIgnoreSubstringsMatch,\r\n      directoryStringFirstComponentMatch,\r\n      telephoneNumberMatch,\r\n      telephoneNumberSubstringsMatch and\r\n      wordMatch.\r\n",
     "notes": "The 'numericStringOrderingMatch' matching rule should be in the list of Matching Rules that are prepared accordingly to RFC 4518. \r\n\r\nIn 4.2.23, a reference to the String Preparation algorithm is made :\r\n\r\n\"In preparing the attribute value and assertion value for comparison,\r\n   characters are not case folded in the Map preparation step, and only\r\n   numericString Insignificant Character Handling is applied in the\r\n   Insignificant Character Handling step.\"",
     "submit_date": "2016-03-31",
     "submitter_name": "Emmanuel Lecharny",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5167,
+    "errata_id": "5167",
     "doc-id": "RFC7940",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "A zero needs to be allowed in the version numbering, as included in the example below.  Zero is neither positive nor negative.  \"0, 1, 2, ...\" are the \"non-negative decimal integers\".  Positive decimal integers start at 1.\r\n\r\nThus for \"6.3.0\" to be a valid example, the constraint needs to be \"non-negative\" rather than \"positive\".",
     "submit_date": "2017-10-24",
     "submitter_name": "Phil Pennock",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5986,
+    "errata_id": "5986",
     "doc-id": "RFC7940",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Currently the value for count is 1, which means that the rule will match a label composed of only one char.\r\nHowever, since the rule is supposed to match a label composed one or more chars, the value ofr count must be \"1+\" .",
     "submit_date": "2020-02-22",
     "submitter_name": "KIM Kyongsok",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-02-22 10:43:44"
   },
   {
-    "errata_id": 5987,
+    "errata_id": "5987",
     "doc-id": "RFC7940",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Based on the context, \"one or more\" seems correct, NOT \"one of more\".",
     "submit_date": "2020-02-22",
     "submitter_name": "KIM Kyongsok",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-02-22 10:45:37"
   },
   {
-    "errata_id": 6102,
+    "errata_id": "6102",
     "doc-id": "RFC7940",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "The variant element is <var> not <variant>.",
     "submit_date": "2020-04-14",
     "submitter_name": "Michael Bauland",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-04-14 05:22:37"
   },
   {
-    "errata_id": 6105,
+    "errata_id": "6105",
     "doc-id": "RFC7940",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "The \"third label\" at the end of the sentence makes no sense in this context, instead it should read that the condition of the \"third action\" is triggered.",
     "submit_date": "2020-04-14",
     "submitter_name": "Michael Bauland",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-04-14 14:04:41"
   },
   {
-    "errata_id": 6106,
+    "errata_id": "6106",
     "doc-id": "RFC7940",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -85,7 +85,7 @@
     "notes": "The intention is the contrast to \"out-of-repertoire\"; no term \"n-repertoire\" is defined.",
     "submit_date": "2020-04-14",
     "submitter_name": "Asmus Freytag",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-04-14 14:06:19"
   }

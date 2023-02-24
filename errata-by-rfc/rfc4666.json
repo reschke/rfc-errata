@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2065,
+    "errata_id": "2065",
     "doc-id": "RFC4666",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Considering the scenario below I think the Routing Context in Notify must be conditional.\r\n\r\nIf ASP1 is Actively processing traffic for both AS1(Override) and AS2(Loadshare) and another ASP2 of AS1 becomes ACTIVE. Then I think it becomes mandatory for SG to send Notify message (\"Alternate ASP Active\") with AS1 Routing Context. ASP1 will use this Notify (containing AS1 Routing Context) to become INACTIVE for AS1, without this AS1 Routing Context ASP1 will become INACTIVE for both AS1 and AS2, which is not desired here. \r\n\r\nAlso please go through mailing list with subject line \"M3UA Notification and Routing Context\" for more on this.",
     "submit_date": "2010-03-04",
     "submitter_name": "AMIR KHAN",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2518,
+    "errata_id": "2518",
     "doc-id": "RFC4666",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "As the above three parameters mentioned are used for the same purpose in RFC 3868 and in RFC 4666. So the above parameters in RFC 4666 Section 3.2, the M3UA-Specific parameters can be considered to move them into the common parameters section 3.2 of RFC 4666 with the above sepecified values.\r\n\r\nThe advantage could be, for one who implements both SUA & M3UA can use the same encoding and decoding mechanisms/code for both the implementations.\n --VERIFIER NOTES-- \n   Per discussion on the SIGTRAN list, this is a fundamental and non-interoperable change to the protocol.",
     "submit_date": "2010-09-14",
     "submitter_name": "Suyash Karmarkar",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4475,
+    "errata_id": "4475",
     "doc-id": "RFC4666",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "It seems obvious that diagram is referring to 32-bit and not 32-byte (as in 32-octets) alignment.",
     "submit_date": "2015-09-14",
     "submitter_name": "Valentin Micic",
-    "verifier_id": 147,
+    "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
   }

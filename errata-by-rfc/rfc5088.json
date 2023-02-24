@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1264,
+    "errata_id": "1264",
     "doc-id": "RFC5088",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Wrong expansion of acronym;\r\ncf. RFC 4940 and RFC-Ed. file \"abbrev.expansion.txt\"",
     "submit_date": "2008-01-13",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1266,
+    "errata_id": "1266",
     "doc-id": "RFC5088",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "In OSPF, PCED is a TLV, not a sub-TLV, as clearly stated\r\nin this RFC.  All other occurrences of 'PCED' in the RFC\r\nindeed correctly use 'TLV'.",
     "submit_date": "2008-01-13",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1267,
+    "errata_id": "1267",
     "doc-id": "RFC5088",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,22 +40,22 @@
     "notes": "Spurious comma, distorting the grammar.\r\n\r\n>>>  This issue is not present in the equivalent text of\r\n     RFC 5089, which has been published together with this RFC.\r\n\r\nThis report is primarily intended as a kind of quality control feedback.\r\n\r\nAnother typographical flaw of similar 'severity' appears in Section 11.2,\r\nwhere punctuation has been orphaned into the 3rd line of the '[PCEP]'\r\nentry:\r\n\r\n   [PCEP]      Vasseur, JP., Ed., and JL. Le Roux, Ed., \"Path\r\n               Computation Element (PCE) communication Protocol (PCEP)\r\n|              \", Work in Progress, November 2007.\r\n               ^^\r\n\r\n>>> This latter issue also is present in RFC 5089.\r\nand perhaps does not deserve",
     "submit_date": "2008-01-13",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6459,
+    "errata_id": "6459",
     "doc-id": "RFC5088",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 7.2,
+    "section": "7.2",
     "orig_text": "   This document provides new capability bit flags, which are present in\r\n   the PCE-CAP-FLAGS TLV referenced in Section 4.1.5.\r\n",
     "correct_text": "   This document provides new capability bit flags, which are present in\r\n   the PCE-CAP-FLAGS TLV referenced in Section 4.5.\r\n",
     "notes": "There is no Section 4.1.5.",
     "submit_date": "2021-03-08",
     "submitter_name": "tom petch",
-    "verifier_id": 171,
+    "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2021-03-25 14:59:33"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 873,
+    "errata_id": "873",
     "doc-id": "RFC3964",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "copy/paste error.  Traffic is sent to the native IPv6 node, so the \r\ndestination address should be non-2002::/16.  When 6to4 is not used, \r\ndst_v4 is not applicable so it could be removed.\r\n\r\nfrom pending",
     "submit_date": "2007-03-26",
     "submitter_name": "Peter Su",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Pekka Savola",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 874,
+    "errata_id": "874",
     "doc-id": "RFC3964",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "typo in the anycast address.\r\n\r\n\r\nfrom pending",
     "submit_date": "2007-03-26",
     "submitter_name": "Peter Su",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Pekka Savola",
     "update_date": "2019-09-10 09:09:03"
   }

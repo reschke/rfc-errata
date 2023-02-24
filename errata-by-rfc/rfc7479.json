@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4328,
+    "errata_id": "4328",
     "doc-id": "RFC7479",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "\r\n    ssh.example.com IN SSHFP 4 2 ( a87f1b687ac0e57d2a081a2f2826723\r\n                                     34d90ed316d2b818ca9580ea384d924\r\n                                     01 )",
     "correct_text": "\r\n    ssh.example.com. IN SSHFP 4 2 ( a87f1b687ac0e57d2a081a2f2826723\r\n                                     34d90ed316d2b818ca9580ea384d924\r\n                                     01 )",
     "notes": "\r\nThere was a missing \".\" after .com\r\n\r\nOtherwise, the name server will complete the relative name, with unexpected results. (Yes, I know, it depends on how the $ORIGIN is set. Nevertheless, it is strange.)",
     "submit_date": "2015-04-05",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": 128,
+    "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
   }

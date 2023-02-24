@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 181,
+    "errata_id": "181",
     "doc-id": "RFC4140",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 9.2,
+    "section": "9.2",
     "orig_text": "This kind of dynamic hierarchy (or anchoring) is only recommended for cases where \r\ninter-AR u0movement is not frequent.",
     "correct_text": "This kind of dynamic hierarchy (or anchoring) is only recommended for cases where \r\ninter-AR movement is not frequent.\r\n",
     "notes": "",
     "submit_date": "2006-08-23",
     "submitter_name": "Teemu Huovila",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 182,
+    "errata_id": "182",
     "doc-id": "RFC4140",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": "99Appendix A",
+    "section": "Appendix A",
     "orig_text": "1.)  There are a couple of issues with the citations given\r\n     in Appendix A, on pp. 24-27 :\r\n\r\n1.1) I suspect that the repeated occurrences of \"[5]\" should\r\n     in fact be \"[4]\" (the Fast Handover RFC 4068).\r\n\r\n1.2) The final phrase at the bottom of page 26 should obviously\r\n     refer to RFC 4067 (CXTP) instead of a \"work in progress\"\r\n     (add appropriate ref to section 14.2.!)\r\n\r\n1.3) The citations \"[6]\" on page 27 apparently make no sense --\r\n     SEND does not update RFC 4068.  I suspect a reference to\r\n     some \"work in progress\" would have been appropriate.\r\n\r\n2.)  Minor typos and proposed textual improvements\r\n\r\n2.1) On p.8, in line 5 (i.e. the end of section 4.1.):\r\n     instead of \"introduced in future\" the text might perhaps\r\n     better say: \"introduced in the future\".\r\n\r\n2.2) On p. 14, in the bottom line (at the end of section 7.1.),\r\n     the final \".\" is missing.\r\n\r\n2.3) On p. 16, in the 2nd-to-last paragraph of section 7.2.,\r\n     The phrase \"RCoA is then bound to ...\" should perhaps better\r\n     say: \"The RCoA is then bound to ...\".\r\n\r\n2.4) On page 19, in the final line of section 9.2., the word\r\n     \"movement\" is mis-spelled \"u0movement\".\r\n\r\n2.5) On page 20, in the enumerated list at the end of section 12.,\r\n     I propose to remove the \"The\" in all 3 items, aligning with\r\n     the titles of the subsequent sections 12.1. - 12.3.",
     "correct_text": "[see above]",
     "notes": "from pending\r\n\r\n\r\n\r\n\r\n\n --VERIFIER NOTES-- \nRFC 4140 has been obsoleted by RFC 5380.",
     "submit_date": "2005-09-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

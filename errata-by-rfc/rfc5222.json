@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2511,
+    "errata_id": "2511",
     "doc-id": "RFC5222",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "It's not clear from the description how the location validation response elements are to be interpreted.  The example seems to indicate that the local name (only) for the civic address elements is used.  On the other hand, the schema seems to imply that, because this is a list of xs:QName, a qualified name is used for each.  The text itself is ambiguous.\r\n\r\n----\r\nThis errata is being held for document update. The essence of its issue is being addressed in draft-ietf-geopriv-local-civic. There are two related threads in the ecrit archive. One beginning at\r\nhttp://www.ietf.org/mail-archive/web/ecrit/current/msg07380.html\r\nand one ending at\r\nhttp://www.ietf.org/mail-archive/web/ecrit/current/msg07750.html\r\n\r\n\r\nUsing the local name only could result in errors - it would be possible (albeit inadvisable) to extend RFC 5139 with an element that had the same local name as an existing element or an element in another extension.  As long as the namespace is distinct, this is perfectly legal, but it could lead to a naming conflict here.\r\n\r\nWith this interpretation, the elements in the example in 8.3.5 indicate elements from the LoST namespace (urn:ietf:params:xml:ns:lost1), rather than the civic address namespace (urn:ietf:params:xml:ns:pidf:geopriv10:civicAddr).\r\n\r\nUpdating the description in 8.4.2 and the example in 8.3.5 would ensure that this doesn't result in interoperability problems.",
     "submit_date": "2010-09-07",
     "submitter_name": "Martin Thomson",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4174,
+    "errata_id": "4174",
     "doc-id": "RFC5222",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,27 +25,27 @@
     "notes": "The ‘unsupportedProfiles’ attribute is not referenced anywhere else in the text of the document; no instruction is given describing the use of this attribute.  This, by itself, is problematic.  However, based on the type, it seems reasonable that the intent may have been to list the location profiles which the server is unable to understand.\r\n\r\nConsider the condition under which the ‘locationProfileUnrecognized’ error is returned (section 12.1):\r\n    8. If a server receives a request that only contains location\r\n       information using profiles it does not understand, the server\r\n       responds with a <locationProfileError>\r\n\r\nIf none of the locations include the optional ‘profile’ attribute, the server may not be able to identify any of the profiles and therefore would be incapable of returning a list of profile names.  This is especially problematic considering that the ‘unsupportedProfiles’ attribute is required by the schema.\r\n\r\nEven in cases where one or more locations include the profile attribute, the client already knows what profiles were used in the request, so returning a list of these profiles does not provide new information to the client.\r\n\r\nAt best, use of the ‘unsupportedProfiles’ attribute appears to be redundant; at worst, it is impossible.  Therefore, the suggested course of action is to remove the attribute from the schema.",
     "submit_date": "2014-11-12",
     "submitter_name": "Dan Banks",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Alissa Cooper",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4175,
+    "errata_id": "4175",
     "doc-id": "RFC5222",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 12.1,
+    "section": "12.1",
     "orig_text": "     <location id=\"DEF 345\" profile=\"geodetic-2d\">\r\n       <gml:Point id=\"point1\" srsName=\"urn:ogc:def:crs:EPSG:4326\">\r\n         <gml:pos>42.656844 -73.348157</gml:pos>\r\n       </gml:Point>\r\n     </location>",
     "correct_text": "     <location id=\"DEF 345\" profile=\"geodetic-2d\">\r\n       <gml:Point id=\"point1\"\r\n       srsName=\"urn:ogc:def:crs:EPSG::4326\">\r\n         <gml:pos>42.656844 -73.348157</gml:pos>\r\n       </gml:Point>\r\n     </location>",
     "notes": "The 'srsName' in the location provided as part of example in Figure 15 is missing a required ':' between 'EPSG' and '4326'.",
     "submit_date": "2014-11-12",
     "submitter_name": "Dan Banks",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Alissa Cooper",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4176,
+    "errata_id": "4176",
     "doc-id": "RFC5222",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "The SRSInvalid error is defined in section 13.1, but was omitted from the schemas.",
     "submit_date": "2014-11-13",
     "submitter_name": "Dan Banks",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Alissa Cooper",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5250,
+    "errata_id": "5250",
     "doc-id": "RFC2488",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "   The\r\n   propagation delay to a LEO orbit ranges from several milliseconds\r\n   when communicating with a satellite directly overhead, to as much as\r\n   80 ms when the satellite is on the horizon.",
     "correct_text": "The propagation delay to a LEO orbit ranges from several milliseconds\r\nwhen communicating with a satellite directly overhead, to as much as\r\n20 ms when the satellite is on the horizon.",
     "notes": "80 ms * speed of light gives 24,000 km,\r\nwhich is a distance larger than MEO GPS altitude.\r\n\r\nGiven that the diameter of the Earth is just over 12,000 km,\r\na LEO satellite on the horizon will clearly not need that\r\npropagation delay or light travel time to reach it.\r\n\r\n(As it's defined as propagation delay,\r\nwe're not considering MAC retransmits.)\r\n\r\n30ms gives up to 6000km slant path, which is barely\r\npossible for a very high definition of LEO orbit that is\r\nalmost MEO. Tighten the value further, if you like, after\r\ndrawing a couple of circles and doing a bit of trigonometry.\r\n\r\nThis 80ms is being cited uncritically in papers\r\n(found it in a recent PhD thesis),\r\nso needs correction.\r\n",
     "submit_date": "2018-02-01",
     "submitter_name": "Lloyd Wood",
-    "verifier_id": 114,
+    "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2019-09-10 09:09:03"
   }

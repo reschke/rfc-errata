@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 1822,
+    "errata_id": "1822",
     "doc-id": "RFC5610",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.7,
+    "section": "3.7",
     "orig_text": "These types are registered in the IANA IPFIX Information Element\r\nUnits subregistry; new types may be added on a First Come First \r\nServed [RFC5226] basis.",
     "correct_text": "These units are registered in the IANA IPFIX Information Element \r\nUnits subregistry; new units may be added on an Expert Review \r\n[RFC5226] basis.",
     "notes": "The text in the IANA Considerations (section 5) and in the IANA registry created therefrom (http://www.iana.org/assignments/ipfix/ipfix.xhtml#informationElementUnits) specifies Expert Review, which was the intent of the WG. The text in section 3.7 is an editorial hold-over from an older version of the document.",
     "submit_date": "2009-08-04",
     "submitter_name": "Brian Trammell",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4731,
+    "errata_id": "4731",
     "doc-id": "RFC5610",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "Length should be 30 and Field Count should be 5.",
     "submit_date": "2016-07-06",
     "submitter_name": "Logarajan",
-    "verifier_id": 132,
+    "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
   }

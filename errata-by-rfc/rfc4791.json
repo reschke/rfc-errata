@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1002,
+    "errata_id": "1002",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "As per RFC 3744.\r\n",
     "submit_date": "2007-07-14",
     "submitter_name": "Julian Reschke",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1476,
+    "errata_id": "1476",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Proper namespace declarations should be returned in the XML response.",
     "submit_date": "2008-07-20",
     "submitter_name": "Filip Navara",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4152,
+    "errata_id": "4152",
     "doc-id": "RFC4791",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Remove the last VEVENT component in abcd2.ics, because it is outside of the time-range.\n --VERIFIER NOTES-- \nThe query requests the return of an entire resource (including all overridden instances) for any resource that has at least one component overlapping the time range.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4153,
+    "errata_id": "4153",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Remove the PRODID property in abcd3.ics, which was not selected by C:calendar-date/C:comp[@name=\"VCALENDAR\"]/*",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4154,
+    "errata_id": "4154",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "Typo in D:href",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4155,
+    "errata_id": "4155",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -85,12 +85,12 @@
     "notes": "9.6.5 says:\r\n      Date and local\r\n      time with reference to time zone information MUST be converted\r\n      into date with UTC time.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4156,
+    "errata_id": "4156",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -100,12 +100,12 @@
     "notes": "9.6.5 says:\r\nDate and local\r\ntime with reference to time zone information MUST be converted\r\ninto date with UTC time.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4157,
+    "errata_id": "4157",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -115,12 +115,12 @@
     "notes": "Typo in DTSTART, DTEND property.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4158,
+    "errata_id": "4158",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -130,12 +130,12 @@
     "notes": "Typo in D:href and D:getetag. \"Task #2\" is abcd5.ics.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4159,
+    "errata_id": "4159",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -145,12 +145,12 @@
     "notes": "RELATED is not START but END.\r\n\r\nBoth rfc2445 section4.8.6.3 and rfc5545 section3.8.6.3 says:\r\n\r\nIf the trigger is set relative to START, then the \"DTSTART\"\r\nproperty MUST be present in the associated \"VEVENT\" or \"VTODO\"\r\ncalendar component. If an alarm is specified for an event with\r\nthe trigger set relative to the END, then the \"DTEND\" property or\r\nthe \"DTSTART\" and \"DURATION \" properties MUST be present in the\r\nassociated \"VEVENT\" calendar component. If the alarm is specified\r\nfor a to-do with a trigger set relative to the END, then either\r\nthe \"DUE\" property or the \"DTSTART\" and \"DURATION \" properties\r\nMUST be present in the associated \"VTODO\" calendar component.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4160,
+    "errata_id": "4160",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -160,12 +160,12 @@
     "notes": "RELATED is not START but END.\r\n\r\nBoth rfc2445 section4.8.6.3 and rfc5545 section3.8.6.3 says:\r\n\r\nIf the trigger is set relative to START, then the \"DTSTART\"\r\nproperty MUST be present in the associated \"VEVENT\" or \"VTODO\"\r\ncalendar component. If an alarm is specified for an event with\r\nthe trigger set relative to the END, then the \"DTEND\" property or\r\nthe \"DTSTART\" and \"DURATION \" properties MUST be present in the\r\nassociated \"VEVENT\" calendar component. If the alarm is specified\r\nfor a to-do with a trigger set relative to the END, then either\r\nthe \"DUE\" property or the \"DTSTART\" and \"DURATION \" properties\r\nMUST be present in the associated \"VTODO\" calendar component.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4161,
+    "errata_id": "4161",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -175,12 +175,12 @@
     "notes": "1. DUE VTODO component property in abcd5.ics is using TZID=US/Eastern and response needs VTIMEZONE component.\r\n\r\n2. RELATED is not START but END, because VTODO has only DUE property.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4162,
+    "errata_id": "4162",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -190,12 +190,12 @@
     "notes": "Typo in C:time-range/@end",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4163,
+    "errata_id": "4163",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -205,12 +205,12 @@
     "notes": "Typo in DTEND.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4164,
+    "errata_id": "4164",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -220,12 +220,12 @@
     "notes": "\"Event #2 bis bis\" seems to be required.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4165,
+    "errata_id": "4165",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -235,12 +235,12 @@
     "notes": "abcd3.ics seems to have X-ABC-GUID property.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4166,
+    "errata_id": "4166",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -250,12 +250,12 @@
     "notes": "abcd4.ics RELATED parameter is not START but END, because TODO has only DUE property.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4167,
+    "errata_id": "4167",
     "doc-id": "RFC4791",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -265,12 +265,12 @@
     "notes": "1. \"Task #2\" seems to be intended to show DUE with US/Eastern timezone, because \"Task #1\" is DATE.\r\n\r\n2. RELATED would be not START, but END.",
     "submit_date": "2014-11-05",
     "submitter_name": "Hiroaki KAWAI",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4840,
+    "errata_id": "4840",
     "doc-id": "RFC4791",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -280,12 +280,12 @@
     "notes": "Content-Encoding (in opposite to Transfer-Encoding) changes strong ETags, see RFC 7232 2.3.3 for an example. So if you GET a resource with another content coding than \"identity\" (for instance, \"gzip\"), the (strong) ETag could be \"abc-gzip\" instead of \"abc\". If you then send a conditional request (which requires a strong ETag) with If-Match: \"abc-gzip\", it may not work as expected. The solution seems to be to use Transfer-Encoding whenever possible.",
     "submit_date": "2016-10-25",
     "submitter_name": "Ricki Hirner",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5481,
+    "errata_id": "5481",
     "doc-id": "RFC4791",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -295,12 +295,12 @@
     "notes": "The timezone is missing from the response in Section 7.8.5. \r\n\r\nThis is probably related to the previous errata (Errata ID: 4154, Errata ID: 4158, Errata ID: 4159), which all corrected the result to return abcd5.ics instead of abcd4.ics (which contains no timezone).\r\n\r\nFrom rfc4791, Section 4.1.:\r\n\r\n   Calendar object resources contained in calendar collections MUST NOT\r\n   contain more than one type of calendar component (e.g., VEVENT,\r\n   VTODO, VJOURNAL, VFREEBUSY, etc.) with the exception of VTIMEZONE\r\n   components, which **MUST be specified for each unique TZID parameter\r\n   value specified in the iCalendar object.**",
     "submit_date": "2018-08-27",
     "submitter_name": "Stefanie Schirmer",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5846,
+    "errata_id": "5846",
     "doc-id": "RFC4791",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -310,7 +310,7 @@
     "notes": "The protected status of supported-calendar-component-set is removed, so that CUAs can add component types to existing callendars, like VAVAILABILITY, which component types were not defined, when the calendar was created.",
     "submit_date": "2019-08-25",
     "submitter_name": "Дилян Палаузов",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

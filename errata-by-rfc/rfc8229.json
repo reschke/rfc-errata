@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5320,
+    "errata_id": "5320",
     "doc-id": "RFC8229",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "While Section 12.2 discusses some implications that TCP transport could have on ESP protocol, the IKE retransmission behavior, described in Section 2.1 of RFC7296, is not redefined by this RFC. This is an oversight and some recommendations for implementers should have been given. The suggested text should be placed in a new section, presumably between sections 8 and 9.\r\n\r\nPaul Wouters:\r\n\r\nThe reported of this errata is writing a bis draft for this document where this is indeed already clarified.\r\nSee https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-rfc8229bis-05#section-7.2\r\n\r\nResolving as Held for Document Update",
     "submit_date": "2018-04-09",
     "submitter_name": "Valery Smyslov",
-    "verifier_id": 173,
+    "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2022-04-10 17:23:47"
   }

@@ -1,32 +1,32 @@
 [
   {
-    "errata_id": 826,
-    "doc-id": "RFC4268",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Editorial",
-    "section": 99,
-    "orig_text": "(1)\r\n\r\nIn the CONTACT-INFO clauses of both MODULE-IDENTITY instances\r\n(page 6 and page 10), apparently a text line (between the two\r\nHTTP URIs given) has been blanked out inadvertently; usually,\r\n        \"Working Group Charter:\"\r\nappears at similar places in other MIB definitions.\r\n\r\n\r\n(2) [typo]\r\n\r\nThe DESCRIPTION clause of the EntityAlarmStatus TEXTUAL-CONVENTION\r\ndeclaration contains a funny 'byte twist'.\r\n It says (near the middle of page 8):\r\n\r\n       When the 'value of underRepair' is set, the resource is\r\n       currently being repaired, ...\r\n\r\nIt should say:\r\n\r\n       When the value of 'underRepair' is set, the resource is\r\n       currently being repaired, ...\r\n\r\n\r\n(3) \r\nIn the DESCRIPTION clause of the entStateAdmin OBJECT-TYPE says:\r\n\r\n    Setting this object to 'notSupported' will result in an 'inconsistentValue' error. [...]\r\n\r\nIt should say:\r\n\r\n    Setting this object to 'unknown' will result in an 'inconsistentValue' error. [...]\r\n\r\nNotes:\r\n\r\n\r\n    This is inconsistent with the value range for the EntityAdminState\r\n    TEXTUAL-CONVENTION describing the syntax of this object.\r\n    (Perhaps there's some history behind the scene.)\r\n\r\n(4) [typo/grammar]\r\n\r\nThe fourth paragraph of the DESCRIPTION clause of the entStateOper\r\nOBJECT-TYPE, 10 text lines from the bottom of page 12, says:\r\n\r\n       A value of 'testing' means that entity currently being\r\n       tested and cannot therefore report whether it is\r\n       operational or not.\r\n\r\nIt should perhaps better say:\r\n                                                       vvvv\r\n       A value of 'testing' means that entity currently is\r\n       being tested and cannot therefore report whether it\r\n       is operational or not.\r\n\r\n\r\n(5) [editing omission?]\r\n\r\nThe DESCRIPTION clause of the entStateStandby OBJECT-TYPE, near\r\nmid-page 14, says:\r\n\r\n       Some entities will exhibit only a subset of the\r\n       remaining standby state values.  [...]\r\n       ^^^^^^^^^^\r\nPerhaps this text has been 'cloned' without full adaptation.\r\nSince, in this case, no possible value of the object has been\r\nexcluded by the text, the word \"remaining\" is inappropriate in\r\nthis context.  Therefore, this clause should better say:\r\n\r\n       Some entities will exhibit only a subset of the\r\n       standby state values.  [...]\r\n\r\n\r\n(6) + (7)  [typo/grammar]\r\n\r\nThe second paragraph of the DESCRIPTION clause of each of the\r\ntwo NOTIFICATION-TYPE declarations, near the bottom of page 14\r\nand near the top of page 15, contains the sentence:\r\n\r\n       The entity this notification refers can be identified by\r\n       extracting the entPhysicalIndex from one of the\r\n       variable bindings.  [...]\r\n\r\nPreferrably, this sentence should better say (in both instances):\r\n\r\n                                          vvvv\r\n       The entity this notification refers to can be identified\r\n       by extracting the entPhysicalIndex from one of the\r\n       variable bindings.  [...]    ",
-    "correct_text": "[see above]       ",
-    "notes": "from pending",
-    "submit_date": "2005-12-20",
-    "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 2611,
+    "errata_id": "2611",
     "doc-id": "RFC4268",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "   entStateOperEnabled NOTIFICATION-TYPE\r\n.\r\n.\r\n.\r\n               ...to find out whether\r\n               there were any known alarms against the entity at that\r\n               time that may explain why the physical entity has become\r\n               operationally disabled.\"\r\n     ::= { entStateNotifications 1 }\r\n\r\n   entStateOperDisabled NOTIFICATION-TYPE\r\n.\r\n.\r\n.\r\n               ...to find out whether\r\n               there were any known alarms against the entity at that\r\n               time that may affect the physical entity's\r\n               ability to stay operationally enabled.\"\r\n     ::= { entStateNotifications 2 }\r\n\r\n",
     "correct_text": "   entStateOperEnabled NOTIFICATION-TYPE\r\n.\r\n.\r\n.\r\n               ...to find out whether\r\n               there were any known alarms against the entity at that\r\n               time that may affect the physical entity's\r\n               ability to stay operationally enabled.\"\r\n     ::= { entStateNotifications 1 }\r\n\r\n   entStateOperDisabled NOTIFICATION-TYPE\r\n.\r\n.\r\n.\r\n               ...to find out whether\r\n               there were any known alarms against the entity at that\r\n               time that may explain why the physical entity has become\r\n               operationally disabled.\"\r\n     ::= { entStateNotifications 2 }",
     "notes": "It appears that the text was inadvertently swapped in the DESCRIPTION clauses for the ~Enabled and ~Disabled notification definitions.",
     "submit_date": "2010-11-06",
     "submitter_name": "Mark Ellison",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "826",
+    "doc-id": "RFC4268",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "",
+    "orig_text": "(1)\r\n\r\nIn the CONTACT-INFO clauses of both MODULE-IDENTITY instances\r\n(page 6 and page 10), apparently a text line (between the two\r\nHTTP URIs given) has been blanked out inadvertently; usually,\r\n        \"Working Group Charter:\"\r\nappears at similar places in other MIB definitions.\r\n\r\n\r\n(2) [typo]\r\n\r\nThe DESCRIPTION clause of the EntityAlarmStatus TEXTUAL-CONVENTION\r\ndeclaration contains a funny 'byte twist'.\r\n It says (near the middle of page 8):\r\n\r\n       When the 'value of underRepair' is set, the resource is\r\n       currently being repaired, ...\r\n\r\nIt should say:\r\n\r\n       When the value of 'underRepair' is set, the resource is\r\n       currently being repaired, ...\r\n\r\n\r\n(3) \r\nIn the DESCRIPTION clause of the entStateAdmin OBJECT-TYPE says:\r\n\r\n    Setting this object to 'notSupported' will result in an 'inconsistentValue' error. [...]\r\n\r\nIt should say:\r\n\r\n    Setting this object to 'unknown' will result in an 'inconsistentValue' error. [...]\r\n\r\nNotes:\r\n\r\n\r\n    This is inconsistent with the value range for the EntityAdminState\r\n    TEXTUAL-CONVENTION describing the syntax of this object.\r\n    (Perhaps there's some history behind the scene.)\r\n\r\n(4) [typo/grammar]\r\n\r\nThe fourth paragraph of the DESCRIPTION clause of the entStateOper\r\nOBJECT-TYPE, 10 text lines from the bottom of page 12, says:\r\n\r\n       A value of 'testing' means that entity currently being\r\n       tested and cannot therefore report whether it is\r\n       operational or not.\r\n\r\nIt should perhaps better say:\r\n                                                       vvvv\r\n       A value of 'testing' means that entity currently is\r\n       being tested and cannot therefore report whether it\r\n       is operational or not.\r\n\r\n\r\n(5) [editing omission?]\r\n\r\nThe DESCRIPTION clause of the entStateStandby OBJECT-TYPE, near\r\nmid-page 14, says:\r\n\r\n       Some entities will exhibit only a subset of the\r\n       remaining standby state values.  [...]\r\n       ^^^^^^^^^^\r\nPerhaps this text has been 'cloned' without full adaptation.\r\nSince, in this case, no possible value of the object has been\r\nexcluded by the text, the word \"remaining\" is inappropriate in\r\nthis context.  Therefore, this clause should better say:\r\n\r\n       Some entities will exhibit only a subset of the\r\n       standby state values.  [...]\r\n\r\n\r\n(6) + (7)  [typo/grammar]\r\n\r\nThe second paragraph of the DESCRIPTION clause of each of the\r\ntwo NOTIFICATION-TYPE declarations, near the bottom of page 14\r\nand near the top of page 15, contains the sentence:\r\n\r\n       The entity this notification refers can be identified by\r\n       extracting the entPhysicalIndex from one of the\r\n       variable bindings.  [...]\r\n\r\nPreferrably, this sentence should better say (in both instances):\r\n\r\n                                          vvvv\r\n       The entity this notification refers to can be identified\r\n       by extracting the entPhysicalIndex from one of the\r\n       variable bindings.  [...]    ",
+    "correct_text": "[see above]       ",
+    "notes": "from pending",
+    "submit_date": "2005-12-20",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": "99",
+    "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
 ]

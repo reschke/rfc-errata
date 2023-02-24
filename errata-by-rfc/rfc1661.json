@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 543,
+    "errata_id": "543",
     "doc-id": "RFC1661",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5.4,
+    "section": "5.4",
     "orig_text": "On reception of a Configure-Reject, the Identifier field MUST\r\nmatch that of the last transmitted Configure-Request.\r\nAdditionally, the Configuration Options in a Configure-Reject MUST\r\nbe a proper subset of those in the last transmitted Configure-\r\nRequest.  Invalid packets are silently discarded.",
     "correct_text": "On reception of a Configure-Reject, the Identifier field MUST\r\nmatch that of the last transmitted Configure-Request.\r\nAdditionally, the Configuration Options in a Configure-Reject MUST\r\nbe a subset of those in the last transmitted Configure-\r\nRequest.  Invalid packets are silently discarded.",
     "notes": "The word \"proper\" should be deleted. (I discussed this a while ago with \r\nthe author, Bill Simpson, and he agreed.)\r\n\r\nIf A is a subset of B, then set A contains only elements that are also in \r\nset B, up to and including all the elements of B (in which case A == B).\r\n\r\nIf A is a PROPER subset of B, then A contains only elements that are in \r\nB, up to BUT NOT including all the elements of B.\r\n\r\nIn this case, the word \"proper\" is just a mistake, perhaps added because \r\nsomeone thought it made the sentence sound better, without realizing that \r\nthe mathematical term \"proper subset\" has a specific precise meaning, \r\nwhich is the wrong meaning in this case. As written in the RFC, the \r\nsentence states that if a Configure-Request packet has n Configuration \r\nOptions in it, ALL of which are not recognizable or not acceptable, then \r\nwhen the implementation returns its Configure-Reject packet, it's only \r\nallowed to indicate that up to n-1 options were rejected, when in truth \r\nALL were rejected. Removing the word \"proper\" removes this unintended and \r\nincorrect limitation.",
     "submit_date": "2006-09-27",
     "submitter_name": "Stuart Cheshire",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 175,
+    "errata_id": "175",
     "doc-id": "RFC4171",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,7 +10,7 @@
     "notes": "Section 4.1.1 refers to 'iSCSI Node Certificate', which is never defined in the document.\r\n\r\nFrom David Black:\r\nThe comment appears to be correct, and the actual Errata should\r\nbe to remove the following line from Section 4.1.1  of RFC\r\n4171 (iSNS) because it is not supported by the iSNS protocol:\r\n\r\n                     iSCSI Node Certificate",
     "submit_date": "2006-06-23",
     "submitter_name": "Hannes Reinecke",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   }

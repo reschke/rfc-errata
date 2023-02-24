@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1875,
+    "errata_id": "1875",
     "doc-id": "RFC5734",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 1,
+    "section": "1",
     "orig_text": "   This document describes how the Extensible Provisioning Protocol\r\n   (EPP) is mapped onto a single client-server TCP connection.  Security\r\n   services beyond those defined in EPP are provided by the Transport\r\n|  Layer Security (TLS) Protocol [RFC2246].  EPP is described in\r\n   [RFC5730].  TCP is described in [RFC0793].  This document obsoletes\r\n   RFC 4934 [RFC4934].",
     "correct_text": "   This document describes how the Extensible Provisioning Protocol\r\n   (EPP) is mapped onto a single client-server TCP connection.  Security\r\n   services beyond those defined in EPP are provided by the Transport\r\n|  Layer Security (TLS) Protocol ([RFC2246], [RFC4346], and [RFC5246]).\r\n   EPP is described in [RFC5730].  TCP is described in [RFC0793].\r\n   This document obsoletes RFC 4934 [RFC4934].",
     "notes": "Rationale:\r\n\r\nThe RFC text potentially misguides the reader to conclude that\r\nEPP over TCP is normatively bound to the outdated and slightly\r\nflawed version TLS v1.0 specified in [RFC2246], which in the\r\nmeantime has been superseded twice, first by TLS v1.1 ([RFC4346]),\r\nand then by TLS v1.2 ([RFC5246]).\r\n\r\nHowever, later on in the RFC, Sections 8 and 9 make it clear that\r\nthis is not the intent of the standard -- implementations MUST\r\nuse the most recent version of TLS available to the peers.\r\nSections 8 and 9 refer to all three versions of TLS specified\r\nso far, and thus, for consistency, the Introduction should not\r\nindicate otherwise.  The addition of the additional references\r\nseems sufficient to align the expectations of readers of the\r\nIntroduction with what is detailed later in the Standard.\r\n\r\nReleated Note for Section 11:\r\n\r\nArguably it would have been preferable to have not only the\r\nobsoleted RFC 2246, but also RFC 4346 and RFC 5246 listed as\r\n*Normative* References. \r\nBTW, the Normative Reference to RFC 2246 arguably is a downref\r\nand hence surprising anyway in a Full Standard.",
     "submit_date": "2009-09-11",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   }

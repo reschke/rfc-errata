@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1680,
+    "errata_id": "1680",
     "doc-id": "RFC3364",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "This document is listed as updating RFC 2673.  That claim is actually dubious, since it simply explains why one particular application of 2673 may not be appropriate, an application that is not even mentioned in 2673 itself.  But, if it does actually update 2673, then it should be possible for the reader to deduce how the two document interact without extensive detective work.\r\n\r\nAn alternative fix would be to remove the entry indicating updating of 2673 from the header of this document and corresponding indexes and references -- what this actually updates is 2874, which specifies a particular application of 2673.",
     "submit_date": "2009-02-09",
     "submitter_name": "John Klensin",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 2629,
+    "errata_id": "2629",
     "doc-id": "RFC4616",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "   Specifications for IETF protocols that indicate that this\r\n   mechanism is an applicable authentication mechanism MUST mandate that\r\n   implementations support an strong data security service, such as TLS.",
     "correct_text": "   Specifications for IETF protocols that indicate that this\r\n   mechanism is an applicable authentication mechanism MUST mandate that\r\n   implementations support a strong data security service, such as TLS.",
     "notes": "Just a typo in \"a strong data security service\".",
     "submit_date": "2010-11-12",
     "submitter_name": "Julien Élie",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6235,
+    "errata_id": "6235",
     "doc-id": "RFC4616",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 1,
+    "section": "1",
     "orig_text": "   The PLAIN mechanism should not be used without adequate data security\r\n   protection as this mechanism affords no integrity or confidentiality\r\n   protections itself.  The mechanism is intended to be used with data\r\n   security protections provided by application-layer protocol,\r\n   generally through its use of Transport Layer Security ([TLS])\r\n   services.",
     "correct_text": "   The PLAIN mechanism should not be used without adequate data security\r\n   protection as this mechanism affords no integrity or confidentiality\r\n   protections itself.  The mechanism is intended to be used with data\r\n   security protections provided by an application-layer protocol,\r\n   generally through its use of Transport Layer Security ([TLS])\r\n   services.",
     "notes": "Missing \"an\" in \"an application-layer protocol\".",
     "submit_date": "2020-07-24",
     "submitter_name": "Benjamin Kaduk",
-    "verifier_id": 162,
+    "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-01-19 14:31:41"
   }

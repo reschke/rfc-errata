@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4191,
+    "errata_id": "4191",
     "doc-id": "RFC6840",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 5.11,
+    "section": "5.11",
     "orig_text": "...\r\n\r\nA signed zone MUST include a DNSKEY for each algorithm present in\r\n      the zone's DS RRset and expected trust anchors for the zone.  The\r\n      zone MUST also be signed with each algorithm (though not each key)\r\n      present in the DNSKEY RRset.  ",
     "correct_text": "A signed zone MUST include a DNSKEY for each algorithm present in\r\n      the zone's DS RRset and expected trust anchors for the zone.  Each\r\n      authoritative RRset in the zone MUST be signed with each \r\n      algorithm (though not each key) present in the DNSKEY RRset.  ",
     "notes": "Zones aren't signed (per se), the data sets within them are.  But not cut point (NS) and glue.\n --VERIFIER NOTES-- \n This erratum is being rejected as the nomenclature being updated is understood within the community and is used in other DNSSEC specifications.  ",
     "submit_date": "2014-12-02",
     "submitter_name": "Edward Lewis",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4924,
+    "errata_id": "4924",
     "doc-id": "RFC6840",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "RFC6840 introduces new behaviour for AD in requests.  This should be reflected in the DNS Header Flags registry otherwise it is likely DNS Implementors will overlook the new behaviour.",
     "submit_date": "2017-02-07",
     "submitter_name": "Mark Andrews",
-    "verifier_id": 146,
+    "verifier_id": "146",
     "verifier_name": "Terry Manderson",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4927,
+    "errata_id": "4927",
     "doc-id": "RFC6840",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "RFC6840 introduces new requirements for validating resolvers. This should be reflected in the DNS Header Flags registry otherwise it is likely DNS Implementors will overlook the new behaviour.",
     "submit_date": "2017-02-08",
     "submitter_name": "Petr Špaček",
-    "verifier_id": 146,
+    "verifier_id": "146",
     "verifier_name": "Terry Manderson",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4928,
+    "errata_id": "4928",
     "doc-id": "RFC6840",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "RFC6840 introduces new behaviour for DO bit in replies. This should be reflected in the DNS Header Flags registry otherwise it is likely DNS Implementors will overlook the new behaviour.",
     "submit_date": "2017-02-08",
     "submitter_name": "Petr Špaček",
-    "verifier_id": 146,
+    "verifier_id": "146",
     "verifier_name": "Terry Manderson",
     "update_date": "2019-09-10 09:09:03"
   }

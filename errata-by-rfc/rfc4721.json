@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 856,
+    "errata_id": "856",
     "doc-id": "RFC4721",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)  Ruler line misalignment\r\n\r\nIn Section 2, on page 4, the two ruler lines on top of Figure 1\r\nare misaligned; they should be indented one more column.\r\n\r\nThe same issue holds for Figure 2 in Section 4, on page 11,\r\nand for Figure 3 in Section 5, on page 12.\r\n\r\n\r\n(2)  missing article\r\n\r\nIn the first paragraph of Section 3.1, on page 5,\r\n    \"... specified in Mobile IP specification ...\"\r\nshould better say:\r\n    \"... specified in the Mobile IP specification ...\" .\r\n                     ^^^^^\r\n\r\n(3)  Inconsistent/incomplete change of terminology\r\n\r\nRFC 4721 has changed the terms used to specify various protocol\r\nelements.  Yet these changes have not been performed consistently\r\nthroughout the memo.\r\n\r\nI have observed the following places where updates have been omitted:\r\n\r\n- Section 3.1, page 6, 4th paragraph:\r\n   \"(MN-AAA)\"  should say:  \"(Mobile-AAA)\"\r\n\r\n- Section 3.5, page 11, 3rd paragraph:\r\n   \"MN-AAA\"  should say:  \"Mobile-AAA\"\r\n\r\n- Section 11, last paragraph on page 16:\r\n   \"MN-AAA\"  should say:  \"Mobile-AAA\"\r\n\r\n- Section 11, first paragraph on page 17:\r\n   \"Mobile Node - Foreign Agent (MN-FA)\"  should say:  \"Mobile-Foreign\"\r\n\r\n- Appendix B, first line on page 22:\r\n\r\n     BAD_AUTHENTICATION\r\n  should say:\r\n     'mobile node failed authentication'\r\n\r\n- Appendix E, on page 24:\r\n\r\n     send_error(STALE_CHALLENGE)\r\n  should say:\r\n     send_error(stale_challenge)\r\n\r\n  and\r\n\r\n     send_error(UNKNOWN_CHALLENGE);\r\n  should say:\r\n     send_error(unknown_challenge);\r\n\r\nAlso, Appendix D makes repeated use of \"MN-FA Authentication\",\r\nbut that is not so closely related to the extension now named\r\ndifferently, and thus can perhaps be left unchanged.\r\n\r\n\r\n(4)  Section 11 -- logical grouping\r\n\r\nIn Section 11, the (new) final paragraph is an adjunct to the fourth\r\nindented paragraph (second paragraph on page 17) and should better\r\nhave been unified with that one; the new codes are already covered\r\nby the wording there!\r\n\r\n\r\n(5)  Appendix A -- typo\r\n\r\nIn the 7th bullet (onpage 20), \"compare to\" should say: \"compared to\" .\r\n",
     "correct_text": "[not submitted]",
     "notes": "I would like to submit a few comments, drawing your attention\r\nto some textual flaws left over in the text.\r\nThese might not be worth of an RFC Errata Note, but you should\r\nat least make note thereof, for consideration in any future work\r\nderived from this specification.\r\n\r\nfrom pending",
     "submit_date": "2007-02-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

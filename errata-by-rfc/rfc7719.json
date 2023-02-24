@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 4611,
+    "errata_id": "4611",
     "doc-id": "RFC7719",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "CNAME:  \"It is traditional to refer to the owner of a CNAME record as\r\n   'a CNAME'.  This is unfortunate, as 'CNAME' is an abbreviation of\r\n   'canonical name', and the owner of a CNAME record is most certainly\r\n   not a canonical name.\"  (Quoted from [RFC2181], Section 10.1.1)\r\n",
     "correct_text": "CNAME:  \"It is traditional to refer to the label of a CNAME record as\r\n   'a CNAME'.  This is unfortunate, as 'CNAME' is an abbreviation of\r\n   'canonical name', and the label of a CNAME record is an alias, not\r\n   a canonical name.\"  (Quoted from [RFC2181], Section 10.1.1)",
     "notes": "Incorrect quote from RFC 2181.\n --VERIFIER NOTES-- \n Not a technical erratum.\r\n\r\nis corrected already in \r\n\r\nhttps://tools.ietf.org/html/draft-ietf-dnsop-terminology-bis-05\r\n\r\nwhich  should be examined for consistency\r\n",
     "submit_date": "2016-02-02",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 135,
+    "verifier_id": "135",
     "verifier_name": "Joel Jaeggli",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5542,
+    "errata_id": "5542",
     "doc-id": "RFC7719",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 1,
+    "section": "1",
     "orig_text": "https://specs.webplatform.org/url/webspecs/develop",
     "correct_text": "https://webplatform.github.io/\r\n\r\n",
     "notes": "The RFC should be edited to reflect the intended content. Unfortunately, although I am technical, I do not have knowledge of the original. There are also other dead references.... and a reference to a \"dead project\" which is still living, here, but with little reference to DNS or domains.\r\n\r\nRFC Editor note: Errata are typically not used to correct URLs that were functioning at the time of publication. For this case, please see RFC 8499 (which obsoleted RFC 7719) for the current information.\n --VERIFIER NOTES-- \n   Thank you for submitting this. RFC 7719 has been updated by RFC8499 (published after your errata was submitted), which doesn't contain the reference. \r\n\r\nThanks again\r\nW",
     "submit_date": "2018-11-03",
     "submitter_name": "Scott Corcoran",
-    "verifier_id": 155,
+    "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   }

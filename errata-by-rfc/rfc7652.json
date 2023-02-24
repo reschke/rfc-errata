@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4513,
+    "errata_id": "4513",
     "doc-id": "RFC7652",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 5.5,
+    "section": "5.5",
     "orig_text": "      Option-Length: The length of the PA_AUTHENTICATION option for the\r\n      PCP Auth message (in octets), including the 4-octet fixed-length\r\n      header and the variable-length authentication data.\r\n",
     "correct_text": "      Option-Length: The length of the PA_AUTHENTICATION_TAG option\r\n      for the PCP Auth message (in octets), including the 4-octet\r\n      fixed-length header and the variable-length authentication data.",
     "notes": "Incorrect option name in the field description.",
     "submit_date": "2015-10-28",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

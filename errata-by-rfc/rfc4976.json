@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1269,
+    "errata_id": "1269",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "In some parts of the text, RFC 4976 makes confusing sluggish use of\r\nestablished IETF standard terminology.\r\n\r\nSince RFC 2045 ff., and reinforced by many more RFCs, the distinction\r\nbetween \"header\" and the elements of a header, \"header fields\" should be\r\nclear to all. I once again recommend BCP 90, RFC 3864, and in particular\r\nSection 3.1.1 of RFC 4249 for clarification of this terminological issue.\r\n\r\nHint:\r\nAdditionally, the RFC sometimes is not precise enough in distinguishing\r\nthe parts of a header field from the whole, e.g. saying \"header\" where\r\nit should say \"header field value\" ; this issue will be mentioned below\r\nas case e) and additionally be addressed in specific errata reports.\r\n\r\nNote:  Remarkably, other parts of RFC 4976, and the whole companion\r\n       document, RFC 4975, do not suffer from this deficiency.\r\n\r\nThe following parts of RFC 4976 suffer from the four variants\r\nof this abuse of language shown in the OLD / NEW boxes above:\r\n\r\na) headlines of Sections 4.2, 4.3, 4.4, and 4.5\r\n\r\nb) headline of Sections 4.6 and 10.2\r\n\r\nc) - text of section 4.2 (5 instances),\r\n   - text of section 4.3 (1 instance),\r\n   - text of section 4.4 (1 instance),\r\n   - text of section 4.5 (1 instance),\r\n   - text of section 4.6 (8 instances),\r\n   - text of section 5.1 (18 instances),\r\n   - text of section 6.3 (6 instances),\r\n   - text of section 6.4.1 (5 instances),\r\n   - text of section 6.4.2 -- see extra report,\r\n   - text of section 6.4.3 (5 instances),\r\n   - text of section 9.1 (6 instances),\r\n   - text of section 9.4 (2 instances)\r\n\r\nd) - text of section 4.2 (1 instance),\r\n   - text of section 9.1 (2 instances)\r\n\r\ne) - text of section 6.4.1 (2 instances)",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1270,
+    "errata_id": "1270",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "The text in Sections 4.3 through 4.5 refers to Section 5.1\r\nfor the details of HTTP Digest authentication.\r\nMost of these in fact are in Section 9.1; thus the reader\r\nshould be directly advised to consult Section 9.1 as well.\r\n\r\nIt might even be better to only point to 9.1 in these 3 instances.\r\n\r\nNote: The pointer to Section 5.1 given in Section 4.2 seems to be\r\nappropriate.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1271,
+    "errata_id": "1271",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "a) terminology -- cf. GLOBAL errata reoprt\r\nb) misleading verb: \"is\" --> \"contains\"",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1272,
+    "errata_id": "1272",
     "doc-id": "RFC4976",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "At the bottom of page 12:\r\na) terminology -- cf GLOBAL errata report\r\nb) s/request/response/    !!!",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1273,
+    "errata_id": "1273",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -70,12 +70,12 @@
     "notes": "In both messages, the \"Use-Path:\" header fields are garbled.\r\n\r\nThis should draw the attention to the lack of specification in the RFC\r\n(cf. extra report) for the Relay behavior w.r.t. Use-Path in repsonses.\r\n\r\nFrom descriptive text in the RFC it becomes clear that the 3rd message\r\nabove should contain one URI in the Use-Path header field, and that the\r\nsecond one shown there in fact needs to be added by the relay into the\r\n4th message (final response to the client).\r\nThe simple URI repetition shown in the 4th message doen not make sense\r\nat all.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1274,
+    "errata_id": "1274",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -85,12 +85,12 @@
     "notes": "Cf. GLOBAL errata report on terminology.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1275,
+    "errata_id": "1275",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -100,12 +100,12 @@
     "notes": "The offending text is at the end of the last paragraph of Section 6.4.1.\r\nFor rationale, cf. the GLOBAL errata report on terminology.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1276,
+    "errata_id": "1276",
     "doc-id": "RFC4976",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -115,12 +115,12 @@
     "notes": "As sadly confirmed by the flaws in the example in Section 5.1 (on p. 17),\r\nthe Relay Behavior / Handling Responses underspecifies the required\r\nsynthesis of the Use-Path header field value.\r\n\r\nThe above text is a strawman proposal and should be elaborated upon\r\nbefore signing off this report.\n --VERIFIER NOTES-- \nFrom reviewer Dale Worley:\r\n\r\nThe suggested change is incorrect.  The value of the Use-Path header\r\ngenerated by the server-relay in the 200 response is not intended to\r\nbe modified by any intermediate relay on the way to the client.  This\r\ncan be seen by (1) the lack of any text specifying any transformation\r\nof the Use-Path value by intermediate relays, and (2) the skeleton\r\nexample in section 5.1, page 14, which says \"Use-Path returned by C: B\r\nC\".  (In that example, a better rendering would be \"Use-Path returned\r\nby C: Btoken Ctoken\".)\r\n\r\nA relay can generate a complete Use-Path because the initial elements\r\ncan be extracted from the From-Path value of the request.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1277,
+    "errata_id": "1277",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -130,12 +130,12 @@
     "notes": "a) The prose of the RFC indicates that the restriction stated in the\r\n   added ABNF comment indeed should hold. See also note below.\r\n\r\nb) The <digest-param> syntax as stated in the RFC makes no sense;\r\n   allowing optional productions in the ABNF alternative would allow\r\n   empty <digest-param>s , i.e. immediately adjacent commas in the\r\n   WWW-Authenticate header field value; I suspect that the square\r\n   brackets might have been intended to indicate what I suggest to \r\n   express in the ABNF comment a).\r\n\r\nTo express the full set of requirements for WWW-Authenticate in pure,\r\nformal ABNF would perhaps make it much less readable.\r\n\r\nThese issues are replicated for <credentials> and <digest-response>\r\n-- this is addressed in a separate report.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1278,
+    "errata_id": "1278",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -145,12 +145,12 @@
     "notes": "For rationale, see the related report on <WWW-Authenticate> and\r\n<digest-param> ABNF.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1279,
+    "errata_id": "1279",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -160,12 +160,12 @@
     "notes": "a)  Newly introduced abbreviation -- never explained ==> need expansion\r\n    Please supply!\r\nb)  Grammar:  s/allows/allow/",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2695,
+    "errata_id": "2695",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -175,22 +175,22 @@
     "notes": "This is section is talking about handling response.\r\ntypo \"request\" should be \"response\"",
     "submit_date": "2011-01-30",
     "submitter_name": "Rockson Li",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2993,
+    "errata_id": "2993",
     "doc-id": "RFC4976",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "   Alice              a.example.org       b.example.net             Bob\r\n     |                     |                    |                     |\r\n     |--- SEND 1-3 ------->|                    |                     |\r\n     |<-- 200 OK ----------|                    |  (slow link)        |\r\n     |--- SEND 4-7 ------->|--- SEND 1-5 ------>|                     |\r\n     |<-- 200 OK ----------|<-- 200 OK ---------|--- SEND 1-3 ------->|\r\n     |--- SEND 8-10 ------>|--- SEND 6-10 ----->|                ....>|\r\n     |<-- 200 OK ----------|<-- 200 OK ---------|                  ..>|\r\n     |                     |                    |<-- 200 OK ----------|\r\n     |                     |                    |<-- REPORT 1-3 ------|\r\n     |                     |<-- REPORT 1-3 -----|--- SEND 4-7 ------->|\r\n     |<-- REPORT 1-3 ------|                    |                 ...>|\r\n     |                     |                    |<-- REPORT 4-7 ----->|\r\n     |                     |<-- REPORT 4-7 -----|--- SEND 8-10 ------>|\r\n     |<-- REPORT 4-7 ------|                    |                  ..>|\r\n     |                     |                    |<-- 200 OK ----------|\r\n     |                     |<-- REPORT done-----|<-- REPORT done -----|\r\n     |<-- REPORT done -----|                    |                     |\r\n     |                     |                    |                     |",
     "correct_text": "   Alice              a.example.org       b.example.net             Bob\r\n     |                     |                    |                     |\r\n     |--- SEND 1-3 ------->|                    |                     |\r\n     |<-- 200 OK ----------|                    |  (slow link)        |\r\n     |--- SEND 4-7 ------->|--- SEND 1-5 ------>|                     |\r\n     |<-- 200 OK ----------|<-- 200 OK ---------|--- SEND 1-3 ------->|\r\n     |--- SEND 8-10 ------>|--- SEND 6-10 ----->|                ....>|\r\n     |<-- 200 OK ----------|<-- 200 OK ---------|                  ..>|\r\n     |                     |                    |<-- 200 OK ----------|\r\n     |                     |                    |<-- REPORT 1-3 ------|\r\n     |                     |<-- REPORT 1-3 -----|--- SEND 4-7 ------->|\r\n     |<-- REPORT 1-3 ------|                    |                 ...>|\r\n     |                     |                    |<-- 200 OK ----------|\r\n     |                     |                    |<-- REPORT 4-7 ----->|\r\n     |                     |<-- REPORT 4-7 -----|--- SEND 8-10 ------>|\r\n     |<-- REPORT 4-7 ------|                    |                  ..>|\r\n     |                     |                    |<-- 200 OK ----------|\r\n     |                     |<-- REPORT done-----|<-- REPORT done -----|\r\n     |<-- REPORT done -----|                    |                     |\r\n     |                     |                    |                     |",
     "notes": "The flow in page 10 lacks the mandatory 200 OK for the SEND 4-7 received by Bob.",
     "submit_date": "2011-10-12",
     "submitter_name": "Iñaki Baz Castillo",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

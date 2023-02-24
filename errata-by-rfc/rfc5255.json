@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4092,
+    "errata_id": "4092",
     "doc-id": "RFC5255",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3.5,
+    "section": "3.5",
     "orig_text": "    lang-range-quoted = astring\r\n        ; Once any literal wrapper or quoting is removed, this\r\n        ; follows the language-range rule in [RFC4647]\r\n",
     "correct_text": "    lang-range-quoted = astring\r\n        ; Once any literal wrapper or quoting is removed, this\r\n        ; follows the language-range rule in [RFC4647],\r\n        ; or is the 7-character string \"default\"",
     "notes": "This change makes the ABNF comment match the prose and example in section 3.2.",
     "submit_date": "2014-08-26",
     "submitter_name": "Chris Newman",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

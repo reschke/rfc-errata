@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4422,
+    "errata_id": "4422",
     "doc-id": "RFC6154",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "There is missing information in this RFC that resulted in interoperability problems when we performed an informal interop test of multiple implementations on 2015-07-19. This is assumed to be a \"hold for document update\" errata.\r\n\r\nThere is no guidance in the document related to how special-use attributes are bootstrapped. Servers may pre-create them but there's no requirement to do so and clients may use the CREATE-SPECIAL-USE or METADATA extensions to bootstrap but there is no requirement to use those mechanisms if the server offers them. This resulted in a server implementation assuming the client would bootstrap these attributes and a client assuming the server would do so, thus interoperability failed.\r\n\r\nGiven this experience, the fastest way to resolve this interop problem over time is for both client and server to take responsibility for bootstrapping special use mailboxes. This means if clients create a mailbox intended for special use (e.g., drafts, sent, junk, trash, etc), and the CREATE-SPECIAL-USE extension is offered, then clients need to provide the USE extension to improve interoperability.  Servers that are provisioned with an end-user's locale or language need to pre-create appropriate special-use mailboxes to improve interoperability of this extension. For existing accounts where the server is upgraded to support this feature, the server can look for mailboxes with names that imply special use and add the attribute to those mailboxes (especially if the server has locale/language awareness provisioned for users). Clients that implement a name-based search if special use attributes are not present and decide to use a mailbox for a special use based on its name can use the METADATA extension, if offered, to label that mailbox appropriately.",
     "submit_date": "2015-07-20",
     "submitter_name": "Chris Newman",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5265,
+    "errata_id": "5265",
     "doc-id": "RFC6154",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -25,37 +25,37 @@
     "notes": "In RFC6154, the special-use attributes are consistently shown with initial capitals, but there doesn't appear to be any guidance whether the special-use attributes are case-sensitive, case-insensitive, or implementation defined. This could lead to interoperability issues.",
     "submit_date": "2018-02-25",
     "submitter_name": "Roy A. Gilmore",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5431,
+    "errata_id": "5431",
     "doc-id": "RFC6154",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 2,
+    "section": "2",
     "orig_text": "An IMAP server that supports this extension MAY include any or all of\r\nthe following attributes in responses to the non-extended IMAP LIST\r\ncommand.",
     "correct_text": "An IMAP server that supports this extension SHOULD include any or all of\r\nthe following attributes in responses to the non-extended IMAP LIST\r\ncommand.",
     "notes": "There exist clients which send a non-extended LIST command and will correctly display and interact with mailboxes usefully if their special-uses are given in the response.\r\n\r\nBecause of this, many servers are already replying with the special-use attributes, and there are no known reports of clients being broken by that behaviour.  Because of this, the MAY should be raised to a SHOULD, and server implementations should default to turning this on.\n --VERIFIER NOTES-- \nThe right way to make this change is to revise the document. MAY was intended at the time of publication.\r\n",
     "submit_date": "2018-07-19",
     "submitter_name": "Bron Gondwana",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5581,
+    "errata_id": "5581",
     "doc-id": "RFC6154",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 5.2,
+    "section": "5.2",
     "orig_text": "\r\n     C: t1 CAPABILITY\r\n     S: * CAPABILITY IMAP4rev1 SPECIAL-USE\r\n     S: t1 OK done",
     "correct_text": "\r\n     C: t1 CAPABILITY\r\n     S: * CAPABILITY IMAP4rev1 SPECIAL-USE LIST-EXTENDED\r\n     S: t1 OK done",
     "notes": "Is it okay for a server to support SPECIAL-USE without supporting LIST-EXTENDED? The example seems to imply this, but it's not clear from the RFC text. Section 2 starts with: \"For the extended list command [RFC5258]\", but doesn't say the server MUST support LIST-EXTENDED.",
     "submit_date": "2018-12-21",
     "submitter_name": "Not clear whether SPECIAL-USE implies LIST-EXTENDED",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

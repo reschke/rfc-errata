@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1204,
+    "errata_id": "1204",
     "doc-id": "RFC4102",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "       m=text 11000 RTP/AVP 98 100",
     "correct_text": "       m=text 11000 RTP/AVP 100 98",
     "notes": "According to RFC 3264 Offer-answer model, section 5.1, the payload types in m-lines shall be listed in order of preference. The redundancy method shall be preferred as default as described in section 4 of RFC 4103. The example should show the most common use. Therefore the redundancy payload type 100 shall be given first in the example m-line.",
     "submit_date": "2007-12-27",
     "submitter_name": "Gunnar Hellstrom",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

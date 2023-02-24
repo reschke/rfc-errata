@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 2753,
+    "errata_id": "2753",
     "doc-id": "RFC2626",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.6,
+    "section": "3.6",
     "orig_text": "3.6 \"Network News\"\r\n\r\n\r\n   There does exist a problem in both NNTP, RFC 977, and the Usenet News\r\n   Message Format, RFC 10336.  They both specify two-digit year format.\r\n   A working group has been formed to update the network news protocols\r\n   in general, and addressing this problem is on their list of work\r\n   items.\r\n",
     "correct_text": "3.6 \"Network News\"\r\n\r\n\r\n   There does exist a problem in both NNTP, RFC 977, and the Usenet News\r\n   Message Format, RFC 1036.  They both specify two-digit year format.\r\n   A working group has been formed to update the network news protocols\r\n   in general, and addressing this problem is on their list of work\r\n   items.\r\n",
     "notes": "s/RFC 10336/RFC 1036",
     "submit_date": "2011-03-25",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "Ron Bonica",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2754,
+    "errata_id": "2754",
     "doc-id": "RFC2626",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "{1} A typo in \"performed\".\r\n{2} A typo in \"interpreted\".\r\n{3} A typo in \"which demanded\".",
     "submit_date": "2011-03-25",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "Ron Bonica",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2755,
+    "errata_id": "2755",
     "doc-id": "RFC2626",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "{1} A typo in \"category\".\r\n{2} 1) A typo in \"discusses\";\r\n    2) A typo in \"midnight\".",
     "submit_date": "2011-03-25",
     "submitter_name": "Mykyta Yevstifeyev",
-    "verifier_id": 105,
+    "verifier_id": "105",
     "verifier_name": "Ron Bonica",
     "update_date": "2019-09-10 09:09:03"
   }

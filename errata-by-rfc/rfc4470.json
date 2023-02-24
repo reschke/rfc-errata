@@ -1,32 +1,32 @@
 [
   {
-    "errata_id": 81,
-    "doc-id": "RFC4470",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": 2,
-    "orig_text": "             ).com 3600 IN NSEC +.com ( RRSIG NSEC )",
-    "correct_text": "            \\).com 3600 IN NSEC \\+.com ( RRSIG NSEC )",
-    "notes": "Line should use the escape characters as defined in RFC 1035.",
-    "submit_date": "2006-05-09",
-    "submitter_name": "Sam Weiler",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 6734,
+    "errata_id": "6734",
     "doc-id": "RFC4470",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "   The first of these NSEC RRs proves that no exact match for\r\n   foo.example.com exists, and the second proves that there is no\r\n   wildcard in example.com.\r\n",
     "correct_text": "TBD",
     "notes": "\"the second proves that there is no wildcard in example.com\" is incorrect.\r\n\r\n\\)\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\r\n     \\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\r\n     \\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\r\n     \\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\r\n     \\255\\255.example.com 3600 IN NSEC \\000.*.example.com ( NSEC RRSIG )\r\n\r\nActually proves that *.example.com exists as it is part of the next field.  It is an empty non-terminal wildcard.  '\\000.domain' can only be used to prove no data  exists at 'domain', not that 'domain' doesn't exist.",
     "submit_date": "2021-11-12",
     "submitter_name": "Mark Andrews",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "81",
+    "doc-id": "RFC4470",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "             ).com 3600 IN NSEC +.com ( RRSIG NSEC )",
+    "correct_text": "            \\).com 3600 IN NSEC \\+.com ( RRSIG NSEC )",
+    "notes": "Line should use the escape characters as defined in RFC 1035.",
+    "submit_date": "2006-05-09",
+    "submitter_name": "Sam Weiler",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
   }
 ]

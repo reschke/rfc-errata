@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3955,
+    "errata_id": "3955",
     "doc-id": "RFC6857",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The characters '@' and '.' cannot appear in an encoded-word occurring\r\nin a phrase (see rule 3 of section 5 of RFC 2047), so they must be escaped\r\nwith '=40' and '=2E', respectively, in the Q encoding.",
     "submit_date": "2014-04-10",
     "submitter_name": "Peter Occil",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5419,
+    "errata_id": "5419",
     "doc-id": "RFC6857",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Under RFC 5322 sec. 3.6.7, the Return-Path header field contains no production named \"address\", but at most a production named \"angle-addr\", which does not accept display names, for one.  An update to this RFC could discuss this header field in its own section.\r\n\r\nI agree with John Levine's comment on this:\r\nThis erratum is correct.  I would suggest hold for update, since it is not \r\nmy impression that this flavor of downgrade is used very much if at all.\r\n",
     "submit_date": "2018-07-13",
     "submitter_name": "Peter Occil",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6573,
+    "errata_id": "6573",
     "doc-id": "RFC6857",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "Taking the original text from Errata 3955 (https://www.rfc-editor.org/errata/eid3955), the two encoded-words decode to: DISPLAY-LOCALNON-ASCII-LOCAL@example.com :; (According to section 6.2 of RFC 2047, linear whitespace between adjacent encoded-words is ignored.) This is clearly not desirable and thus a space should be encoded at the end of all display names in appendix A.",
     "submit_date": "2021-05-05",
     "submitter_name": "Kaspar Etter",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 6930,
+    "errata_id": "6930",
     "doc-id": "RFC6857",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -55,7 +55,7 @@
     "notes": "Recommend \"Hold for document update\" and see the extensive comments on Erratum 6573.\r\n\r\nThe text above, while correct, is fairly horrible and might make the confusion between the requirements of Sections 3.1.5 and 3.1.8 even worse.  A complete rewrite of this section and possibly 3.1.5 would be a better fix.   Note the prohibition on Encoded Words in <addr-spec> in RFC 2047, which requires updating.   Also note that the \" :;\" construction, which is correct in Section 3.1.7, does not belong in the above.\r\n\r\nIt also not clear to me why, under some principle of minimal change, the brackets should not be just left alone if they appear in the original with no adjacent display-name.",
     "submit_date": "2022-04-10",
     "submitter_name": "John Klensin",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

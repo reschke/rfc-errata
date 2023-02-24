@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2954,
+    "errata_id": "2954",
     "doc-id": "RFC3820",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,22 +10,22 @@
     "notes": "s/ECC/EEC/",
     "submit_date": "2011-08-31",
     "submitter_name": "Frank Cusack",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4039,
+    "errata_id": "4039",
     "doc-id": "RFC3820",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 7,
+    "section": "7",
     "orig_text": "   OID                      Description\r\n   ---                      -----------\r\n   1.3.6.1.5.5.7.21.1       id-ppl-inheritALL\r\n   1.3.6.1.5.5.7.21.2       id-ppl-independent",
     "correct_text": "   OID                      Description\r\n   ---                      -----------\r\n   1.3.6.1.5.5.7.21.0       id-ppl-anyLanguage\r\n   1.3.6.1.5.5.7.21.1       id-ppl-inheritAll\r\n   1.3.6.1.5.5.7.21.2       id-ppl-independent",
     "notes": "Two changes.  First, include id-ppl-anyLanguage.  Second, change \"ALL\" to \"All\"' to match the ASN.1 module.",
     "submit_date": "2014-07-03",
     "submitter_name": "Russ Housley",
-    "verifier_id": 141,
+    "verifier_id": "141",
     "verifier_name": "Kathleen Moriarty",
     "update_date": "2019-09-10 09:09:03"
   }

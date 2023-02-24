@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 4886,
+    "errata_id": "4886",
     "doc-id": "RFC6228",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 5,
+    "section": "5",
     "orig_text": "   If the Supported header field of an initial dialog initiation request\r\n   does not contain a \"199\" option-tag, the UAC MUST NOT send a 199\r\n   response on any early dialog associated with the request.\r\n",
     "correct_text": "   If the Supported header field of an initial dialog initiation request\r\n   does not contain a \"199\" option-tag, the UAS MUST NOT send a 199\r\n   response on any early dialog associated with the request.\r\n",
     "notes": "Changed \"UAC\" to \"UAS\" since the UAC does not send responses.",
     "submit_date": "2016-12-13",
     "submitter_name": "Brett Tate",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

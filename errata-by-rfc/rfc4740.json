@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2246,
+    "errata_id": "2246",
     "doc-id": "RFC4740",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": null,
     "submit_date": "2010-05-06",
     "submitter_name": "Miguel A. Garcia",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2315,
+    "errata_id": "2315",
     "doc-id": "RFC4740",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "According to RFC5090, defining Digest Authentication, we only have Digest-Method and Digest-URI during the first round trip.\r\nAs it is possible to add a Digest-Realm and Digest-Username, it is impossible to add a Digest-Nonce in the first round trip! The nonce is calculated in the diameter server so the RADIUS/Diameter gateway can't add a nonce when the first request arrive. This problem is not limited to Radius/Diameter gateway, a diameter peer can't add a nonce during the first MAR/MAA.\r\n\r\nMaybe I was no clear enough in my explanation, since I am implementing Diameter-SIP now, I am sure there is a problem. I am available if you need more details or explanation.\n --VERIFIER NOTES-- \nThe errata is wrong.\r\n\r\nThe SIP-Authorization AVP carries the content of the Authorization header provided by the user in the SIP request.\r\nAs you can see below, the content of the \r\n\r\n       credentials      = \"Digest\" digest-response\r\n       digest-response  = 1#( username | realm | nonce | digest-uri\r\n                       | response | [ algorithm ] | [cnonce] |\r\n                       [opaque] | [message-qop] |\r\n                           [nonce-count]  | [auth-param] )\r\n\r\nAnd username, realm, nonce, digest-uri, response are mandatory parameters in this header.\r\nSo the syntax is correct.\r\n\r\n   ",
     "submit_date": "2010-06-28",
     "submitter_name": "Alexandre Westfahl",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6028,
+    "errata_id": "6028",
     "doc-id": "RFC4740",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -40,7 +40,7 @@
     "notes": "The AVP is referenced in section 9.5.6 from RFC 4590 (obsoleted by RFC 5090) which names the AVP \"Digest-Qop\".\r\n\r\nThe error occurs in various sections, including 9.5.3, 9.5.4, 9.5.5, 9.5.6, 11.",
     "submit_date": "2020-03-25",
     "submitter_name": "Luke Mewburn",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

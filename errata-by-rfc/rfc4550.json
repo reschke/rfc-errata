@@ -1,36 +1,6 @@
 [
   {
-    "errata_id": 59,
-    "doc-id": "RFC4550",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Editorial",
-    "section": 1.1,
-    "orig_text": "   In particular, examples assume that Lemonade\r\n   Submit and IMAP servers support all Lemonade extensions described in\r\n   this document, so they don't show how to deal with absence of an\r\n   extension.",
-    "correct_text": "   In particular, examples assume that Lemonade\r\n   Submit and IMAP servers support all Lemonade extensions described in\r\n   this document, so they don't show how to deal with the absence of an\r\n   extension.",
-    "notes": "missing article",
-    "submit_date": "2006-08-11",
-    "submitter_name": "Alfred Hoenes",
-    "verifier_id": 116,
-    "verifier_name": "Alexey Melnikov",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 736,
-    "doc-id": "RFC4550",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Editorial",
-    "section": 9.2,
-    "orig_text": "   [IMAP-DISC] Melnikov, A., \"Synchronization operations for\r\n               disconnected IMAP4 clients\", Work in Progress, October\r\n               2004.\r\n",
-    "correct_text": "   [IMAP-DISC] Melnikov, A., Ed., \"Synchronization Operations for \r\n               Disconnected IMAP4 Clients\", RFC 4549, June 2006.\r\n\r\n\r\n",
-    "notes": "This I-D has been published -- synchronized with RFC 4550 -- as RFC 4549. \r\n\r\nfrom pending",
-    "submit_date": "2006-08-11",
-    "submitter_name": "Alfred Hoenes",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1767,
+    "errata_id": "1767",
     "doc-id": "RFC4550",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -40,8 +10,38 @@
     "notes": "According to section 1.1 (Conventions Used in This Document):\r\n   In examples, \"M:\", \"I:\", and \"S:\" indicate lines sent by the client\r\n   messaging user agent, IMAP e-mail server, and SMTP submit server,\r\n   respectively.\r\n\r\nThe exact same error appears in both sections 2.4.1 and 2.4.2.\r\n",
     "submit_date": "2009-04-16",
     "submitter_name": "Tony Hansen",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "59",
+    "doc-id": "RFC4550",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "1.1",
+    "orig_text": "   In particular, examples assume that Lemonade\r\n   Submit and IMAP servers support all Lemonade extensions described in\r\n   this document, so they don't show how to deal with absence of an\r\n   extension.",
+    "correct_text": "   In particular, examples assume that Lemonade\r\n   Submit and IMAP servers support all Lemonade extensions described in\r\n   this document, so they don't show how to deal with the absence of an\r\n   extension.",
+    "notes": "missing article",
+    "submit_date": "2006-08-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": "116",
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "736",
+    "doc-id": "RFC4550",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "9.2",
+    "orig_text": "   [IMAP-DISC] Melnikov, A., \"Synchronization operations for\r\n               disconnected IMAP4 clients\", Work in Progress, October\r\n               2004.\r\n",
+    "correct_text": "   [IMAP-DISC] Melnikov, A., Ed., \"Synchronization Operations for \r\n               Disconnected IMAP4 Clients\", RFC 4549, June 2006.\r\n\r\n\r\n",
+    "notes": "This I-D has been published -- synchronized with RFC 4550 -- as RFC 4549. \r\n\r\nfrom pending",
+    "submit_date": "2006-08-11",
+    "submitter_name": "Alfred Hoenes",
+    "verifier_id": "99",
+    "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4329,
+    "errata_id": "4329",
     "doc-id": "RFC7530",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": null,
     "submit_date": "2015-04-07",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4471,
+    "errata_id": "4471",
     "doc-id": "RFC7530",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,27 +25,27 @@
     "notes": "The locktype in LOCK4denied is not specified for the LOCK operation.  See 16.11.4. for similar wording for LOCKT.",
     "submit_date": "2015-09-12",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4639,
+    "errata_id": "4639",
     "doc-id": "RFC7530",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 5.9,
+    "section": "5.9",
     "orig_text": "To provide a greater degree of compatibility with NFSv3, which\r\nidentified users and groups by 32-bit unsigned user identifiers and\r\ngroup identifiers, owner and group strings that consist of ASCII-\r\nencoded decimal numeric values with no leading zeros can be given a\r\nspecial interpretation by clients and servers that choose to provide\r\nsuch support.",
     "correct_text": "To provide a greater degree of compatibility with NFSv3, which\r\nidentified users and groups by 32-bit unsigned user identifiers and\r\ngroup identifiers, owner and group strings that consist of UTF-8\r\nencoded decimal numeric values with no leading zeros can be given a\r\nspecial interpretation by clients and servers that choose to provide\r\nsuch support.",
     "notes": "The start of section 5.9 says:\r\n\r\nThe RECOMMENDED attributes \"owner\" and \"owner_group\" (and also users\r\nand groups used as values of the who field within nfs4ace structures\r\nused in the acl attribute) are represented in the form of UTF-8\r\nstrings.\r\n\r\nI believe in the case of the digits 0-9 the ASCII encoding is the same as the UTF-8 encoding but it may cause possible confusion by not maintaining consistency.",
     "submit_date": "2016-03-16",
     "submitter_name": "Stephen Butler",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4742,
+    "errata_id": "4742",
     "doc-id": "RFC7530",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -55,12 +55,12 @@
     "notes": "Whenever client does OPEN/ACCESS call, there is an inadvertent change in the Last Access time of the file. Hence we think that the Metadata is modified due to OPEN/ACCESS call.  Hence the Suggestion is to change the text as above.",
     "submit_date": "2016-07-15",
     "submitter_name": "Manju Karthik",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4828,
+    "errata_id": "4828",
     "doc-id": "RFC7530",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": "The new cookie is provided by the server in a reply, not in a request.",
     "submit_date": "2016-10-11",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4934,
+    "errata_id": "4934",
     "doc-id": "RFC7530",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -85,27 +85,27 @@
     "notes": null,
     "submit_date": "2017-02-15",
     "submitter_name": "Marcel Telka",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5407,
+    "errata_id": "5407",
     "doc-id": "RFC7530",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 16.36,
+    "section": "16.36",
     "orig_text": "The write\r\n   verifier is a cookie that the client can use to determine whether the\r\n   server has changed instance (boot) state between a call to WRITE and\r\n   a subsequent call to either WRITE or COMMIT.  This cookie must be\r\n   consistent during a single instance of the NFSv4 protocol service and\r\n   must be unique between instances of the NFSv4 protocol server, where\r\n   uncommitted data may be lost.",
     "correct_text": "The write\r\n   verifier is a cookie that the client can use to determine whether the\r\n   server has changed instance (boot) state between a call to WRITE and\r\n   a subsequent call to either WRITE or COMMIT.  This cookie must be\r\n   consistent during a single instance of the NFSv4 protocol service and\r\n   must be unique between instances of the NFSv4 protocol server, where\r\n   uncommitted data may be lost. The server implementation should not\r\n   assume that the cookie is on per file basis.",
     "notes": "Different NFS client implementation has chosen to interpret above statement differently. Semantically, it is correct to track cookie on per file basis since both WRITE and COMMIT happens on a single file handle. But, RFC wording says that the cookie should be maintained on a per server instance basis. Either way, I believe the RFC can be more clearer for both client and server implementer.",
     "submit_date": "2018-06-24",
     "submitter_name": "Viral Mehta",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5471,
+    "errata_id": "5471",
     "doc-id": "RFC7530",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -115,12 +115,12 @@
     "notes": "The the defined error is NFS4ERR_RECLAIM_BAD",
     "submit_date": "2018-08-18",
     "submitter_name": "Tigran Mkrtchyan",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5472,
+    "errata_id": "5472",
     "doc-id": "RFC7530",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -130,12 +130,12 @@
     "notes": "The defined error code is NFS4ERR_RECLAIM_BAD",
     "submit_date": "2018-08-18",
     "submitter_name": "Tigran Mkrtchyan",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5531,
+    "errata_id": "5531",
     "doc-id": "RFC7530",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -145,7 +145,7 @@
     "notes": "It does not make sense to revoke the delegation before lease_time period expiration and to not revoke it after.",
     "submit_date": "2018-10-16",
     "submitter_name": "Sylvain Etienne",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

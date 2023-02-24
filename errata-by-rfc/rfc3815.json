@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 227,
+    "errata_id": "227",
     "doc-id": "RFC3815",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": "99MplsFecEntry is defined as:",
+    "section": "MplsFecEntry is defined as:",
     "orig_text": "      MplsFecEntry ::= SEQUENCE {\r\n          mplsFecIndex               IndexInteger,\r\n          mplsFecType                INTEGER,\r\n          mplsFecAddrType            InetAddressType,\r\n          mplsFecAddr                InetAddress,\r\n          mplsFecAddrPrefixLength    InetAddressPrefixLength,\r\n          mplsFecStorageType         StorageType,\r\n          mplsFecRowStatus           RowStatus\r\n      }",
     "correct_text": "      MplsFecEntry ::= SEQUENCE {\r\n          mplsFecIndex               IndexInteger,\r\n          mplsFecType                INTEGER,\r\n          mplsFecAddrPrefixLength    InetAddressPrefixLength,\r\n          mplsFecAddrType            InetAddressType,\r\n          mplsFecAddr                InetAddress,\r\n          mplsFecStorageType         StorageType,\r\n          mplsFecRowStatus           RowStatus\r\n      }\r\n\r\n",
     "notes": " \r\n \r\nBecause the OID assignments are:\r\n\r\nmplsFecAddrPrefixLength - mplsFecEntry.3\r\nmplsFecAddrType         - mplsFecEntry.4\r\nmplsFecAddr             - mplsFecEntry.5\n --VERIFIER NOTES-- \nAfter discussion with an author (Joan Cucchiara), a MIB Doctor (Mike Heard), and an MPLS MIB expert (Tom Nadeau), we conclude that no change is required.\r\n\r\nIn the words of Mike Heard...\r\n\r\n  While this may be a poor practice, I don't think it actually\r\n  violates RFC 2578.  As far as I can see, the only thing it\r\n  actually says is this:\r\n\r\n  7.10.  Mapping of the OBJECT-TYPE value\r\n   ...\r\n     (2) If the object corresponds to a conceptual row, then at least one\r\n         assignment, one for each column in the conceptual row, is present\r\n         beneath that object.  The administratively assigned name for each\r\n         column is derived by appending a unique, positive sub-identifier to\r\n         the administratively assigned name for the conceptual row.\r\n\r\n  which does not put any ordering constraints on the sub-identifiers.\r\n\r\n  Unless there is something that I have missed, it seems to me that\r\n  this is not actually an erratum.\r\n\r\n",
     "submit_date": "2005-02-13",
     "submitter_name": "Michael Kirkham",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3261,
+    "errata_id": "3261",
     "doc-id": "RFC3815",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,22 +25,22 @@
     "notes": "Since draft-06 the mplsLdpFecTable has been renamed mplsFecTable",
     "submit_date": "2012-06-18",
     "submitter_name": "Daniel Cohn",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3262,
+    "errata_id": "3262",
     "doc-id": "RFC3815",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "     mplsFecLastChange OBJECT-TYPE\r\n         SYNTAX  TimeStamp\r\n         MAX-ACCESS read-only\r\n         STATUS current\r\n         DESCRIPTION\r\n             \"The value of sysUpTime at the time of the most\r\n             recent addition/deletion of an entry\r\n             to/from the mplsLdpFectTable or\r\n             the most recent change in values to any objects\r\n             in the mplsLdpFecTable.\r\n\r\n             If no such changes have occurred since the last\r\n             re-initialization of the local management subsystem,\r\n             then this object contains a zero value.\"\r\n        ::= { mplsFecObjects 1 }\r\n\r\n",
     "correct_text": "     mplsFecLastChange OBJECT-TYPE\r\n         SYNTAX  TimeStamp\r\n         MAX-ACCESS read-only\r\n         STATUS current\r\n         DESCRIPTION\r\n             \"The value of sysUpTime at the time of the most\r\n             recent addition/deletion of an entry\r\n             to/from the mplsFecTable or\r\n             the most recent change in values to any objects\r\n             in the mplsFecTable.\r\n\r\n             If no such changes have occurred since the last\r\n             re-initialization of the local management subsystem,\r\n             then this object contains a zero value.\"\r\n        ::= { mplsFecObjects 1 }\r\n\r\n",
     "notes": "Since draft-06 mplsLdpFecTable has been renamed to mplsFecTable",
     "submit_date": "2012-06-18",
     "submitter_name": "Daniel Cohn",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

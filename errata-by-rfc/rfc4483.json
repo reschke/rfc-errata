@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 79,
+    "errata_id": "79",
     "doc-id": "RFC4483",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 99,
+    "section": "",
     "orig_text": "(1)  Inconsistent Ref. to URI Specification\r\n\r\nThe text of RFC 4483 repeatedly refers to  \"RFC2396 [7]\" .\r\nThis is misleading.\r\nEvery occurrence of \"RFC 2396\" should be replaced by \"RFC 3986\".\r\n\r\nNote: Section 10.1. Normative References, holds the proper\r\n      reference to STD 66, RFC 3986 in its item [7] !\r\n\r\n\r\n(2)  Outdated Ref. to HTTP 1.1 Specification\r\n\r\nItem [4] of Section 10.1 Normative References, points to the\r\noutdated original specification for HTTP 1.1, RFC 2016,\r\nwhich has been obsoleted by RFC 2616, 7 years ago.\r\n\r\nSince the HTTP ETAG mechanism (referred to in the text of RFC 4483)\r\nhas been clarified substantially in RFC 2616, the reference to\r\n\"RFC2068 [4]\" in Section 4, near the bottom of page 5 of RFC 4483,\r\nshould bhave been \"RFC2616 [4]\", and the item [4] of Section 10.1,\r\non page 15 of RFC 4483, should be replaced by a citation of RFC 2616\r\naccording to `rfc-ref.txt`.\r\n\r\n\r\n(3)  (Mis)Use of SIP Terminology\r\n\r\nUnfortunately, RFC 4483 substantially adds to the confusion\r\nof precisely defined SIP (and other) terminology.\r\n\r\nIn particular, *all* occurrences of the term \"Header[s]\" in RFC 4483\r\nshould be corrected to say \"Header Field[s]\".\r\n\r\nRFC 4485, published just 2 weeks ahead of RFC 4483, explicitely\r\nposes the requirement for SIP extension documents to follow the\r\nestablished SIP terminology -- cf. Section 4.3 of RFC 4485\r\n(page 10), which says:\r\n\r\n   Careful attention must be paid to the actual usage of terminology.\r\n   Many documents misuse the terms header, header field, and header\r\n   field values, for example.  Document authors SHOULD do a careful\r\n   review of their documents for proper usage of these terms.\r\n\r\nSee also RFC 4249, Section 3.1.1 (page 3) for a similar statement on\r\nthe proper usage of these terms in the context of IMF and MIME, and\r\nrelated (extension) specifications.",
     "correct_text": null,
     "notes": "from pending",
     "submit_date": "2006-06-20",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1718,
+    "errata_id": "1718",
     "doc-id": "RFC5454",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The replacement text apparently has been placed into the wrong\r\nfield explanation.\r\nThe text presented for \"Prefix Length\" is the text that should\r\nbe specified for \"Mobile IPv6 Network Prefix\"; the correct text\r\nfor \"Prefix Length\" (as shown above) is borrowed from Section 2.2.",
     "submit_date": "2009-03-15",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1719,
+    "errata_id": "1719",
     "doc-id": "RFC5454",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,12 +25,12 @@
     "notes": "Rationale: The extension described in this section is sent\r\nfrom the Home Agent to the Mobile Node and reflects the decisions\r\nmade by the Home Agent. \"to be tunnelled\" could be misunderstood;\r\nthe text should better be stated as a confirmation; hence s/to/will/.\n --VERIFIER NOTES-- \nThe wording clearly conveys the action of tunneling the extension.   ",
     "submit_date": "2009-03-15",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1720,
+    "errata_id": "1720",
     "doc-id": "RFC5454",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,7 +40,7 @@
     "notes": "Rationale: The text should also make clear to which document\r\n(this RFC or RFC 4213) the last section number given refers.\r\nPointing to RFC 4213 twice (but not in the final case) could be\r\nmisunderstood, in particular due to the presence of the comma in\r\nfront of the \"and\" in a two-item list.",
     "submit_date": "2009-03-15",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 131,
+    "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
   }

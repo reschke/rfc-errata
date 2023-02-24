@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2622,
+    "errata_id": "2622",
     "doc-id": "RFC6011",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "Rationale:\r\na) This section discusses the U-NAPTR usage; therefore, as in the first\r\n   paragraph, the second paragraph should not erroneously indicate\r\n   a \"host name\" return, it also should precisely indicate that it\r\n   talks about U-NAPTR lookup; hence   s/host name/request URL/ .\r\n\r\nb) It is an unfortunately widespread misconception that a DNS query\r\n   for a RR type that does not exists at a particular domain name\r\n   returns a NXDomain response.  This is not the case.  An empty RRset\r\n   is a valid response returned with RCODE=0 (NoError).  Further, the\r\n   RFC text omits the important error cases that also need to be dealt\r\n   with by the SIP UA configuration procedure.\r\n   The replacement text tries to clarify the different situations\r\n   where no NAPTR record can be obtained.\r\n\r\nc) Use the standard version spelling of DNS RCODE names as registered\r\n   in the \"DNS RCODEs\" sub-registry -- part of\r\n   http://www.IANA.ORG/assignments/dns-parameters.",
     "submit_date": "2010-11-11",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 123,
+    "verifier_id": "123",
     "verifier_name": "Gonzalo Camarillo",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2623,
+    "errata_id": "2623",
     "doc-id": "RFC6011",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "Rationale:\r\n  See the related Errata Note for Section 2.3.1.2 (EID=2622) for\r\n  background and details. Dropping the parenthetical \"NXDOMAIN\"\r\n  here seems to be the most simple way to remove the misleading\r\n  allusion that \"no matching data available\" be equivalent to a\r\n  NXDomain response.",
     "submit_date": "2010-11-11",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 123,
+    "verifier_id": "123",
     "verifier_name": "Gonzalo Camarillo",
     "update_date": "2019-09-10 09:09:03"
   }

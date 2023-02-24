@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2097,
+    "errata_id": "2097",
     "doc-id": "RFC5546",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "The \"ORGANIZER\" property should be REQUIRED in \"VTODO\" calendar components with the \"REFRESH\" method.",
     "submit_date": "2010-03-29",
     "submitter_name": "Bernard Desruisseaux",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2331,
+    "errata_id": "2331",
     "doc-id": "RFC5546",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "The PARTSTAT value for VTODO component that is in progress is IN-PROCESS, not PARTIAL, per RFC 5545.",
     "submit_date": "2010-07-15",
     "submitter_name": "Filip Navara",
-    "verifier_id": 116,
+    "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3037,
+    "errata_id": "3037",
     "doc-id": "RFC5546",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Currently, the Component/Property doesn't match the term used in Comment. That needs to be corrected.\n --VERIFIER NOTES-- \nPer discussion on the ietf-calsify list, this report simply misunderstands the intent of the document and is clearly false.   ",
     "submit_date": "2011-11-30",
     "submitter_name": "Praveen Bhamidipati",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3932,
+    "errata_id": "3932",
     "doc-id": "RFC5546",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -55,7 +55,7 @@
     "notes": "The corrected text appeared in RFC 2446, however I couldn't find the reasoning as to why it was omitted in RFC 5546.\r\n\r\nThe correct comments also appear a few lines below, under \"STANDARD\".",
     "submit_date": "2014-03-25",
     "submitter_name": "Alfie John",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 3814,
+    "errata_id": "3814",
     "doc-id": "RFC6335",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -10,12 +10,12 @@
     "notes": "RFC 6335 should have noted in Section 10.3.1:  Exceptions to the FCFS\r\npolicy are documented in RFC 4340. RFC 5595 updated the usage of the SC\r\nvalues described in RFC 4340.",
     "submit_date": "2013-11-29",
     "submitter_name": "Gorry Fairhurst",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4999,
+    "errata_id": "4999",
     "doc-id": "RFC6335",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "Many port number assignments are to individuals, but the document does not\r\ncontemplate how they should be handled when the assignee is dead or\r\notherwise can't be contacted. \r\n\r\nThe most obvious procedure to follow is a transfer (8.5), but that requires \r\nde-assignment (8.2), and that doesn't cover the case above.",
     "submit_date": "2017-04-19",
     "submitter_name": "Mark Nottingham",
-    "verifier_id": 153,
+    "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2020-03-04 03:30:26"
   }

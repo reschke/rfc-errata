@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 6083,
+    "errata_id": "6083",
     "doc-id": "RFC7959",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 2.1,
+    "section": "2.1",
     "orig_text": "       +-----+---+---+---+---+--------+--------+--------+---------+\r\n       | No. | C | U | N | R | Name   | Format | Length | Default |\r\n       +-----+---+---+---+---+--------+--------+--------+---------+\r\n       |  23 | C | U | - | - | Block2 | uint   |    0-3 | (none)  |\r\n       |     |   |   |   |   |        |        |        |         |\r\n       |  27 | C | U | - | - | Block1 | uint   |    0-3 | (none)  |\r\n       +-----+---+---+---+---+--------+--------+--------+---------+\r\n\r\n                       Table 1: Block Option Numbers",
     "correct_text": "       +-----+---+---+---+---+--------+--------+--------+---------+\r\n       | No. | C | U | N | R | Name   | Format | Length | Default |\r\n       +-----+---+---+---+---+--------+--------+--------+---------+\r\n       |  23 | x | x | - |   | Block2 | uint   |    0-3 | (none)  |\r\n       |     |   |   |   |   |        |        |        |         |\r\n       |  27 | x | x | - |   | Block1 | uint   |    0-3 | (none)  |\r\n       +-----+---+---+---+---+--------+--------+--------+---------+\r\n\r\n                       Table 1: Block Option Numbers",
     "notes": "* This is to align with the conventions in Section 5.10 of RFC7252\r\n* These options are not repeatable as per:\r\n\r\n\"Either Block option MUST NOT occur more than once in a\r\n   single message.\"",
     "submit_date": "2020-04-09",
     "submitter_name": "Mohamed Boucadair",
-    "verifier_id": 130,
+    "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-04-10 07:22:52"
   }

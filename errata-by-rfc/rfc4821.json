@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 907,
+    "errata_id": "907",
     "doc-id": "RFC4821",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 8,
+    "section": "8",
     "orig_text": "   Since protocols that do not implement PLPMTUD are still subject to\r\n   problems due to ICMP black holes, it may be desirable to limit to\r\n   these protocols to \"safe\" MTUs likely to work on any path (e.g., 1280\r\n   bytes).  Allow any protocol implementing PLPMTUD to operate over the\r\n   full range supported by the lower layer.\r\n\r\nThere is an extra \"to\" in the first sentence.  It should read \"...it may\r\nbe desirable to limit these protocols to safe MTUs....\".\r\n\r\nIn the last one of the references at the end.....\r\n\r\n   [frag-errors]   Heffner, J., \"IPv4 Reassembly Errors at High Data\r\n                   Rates\", Work in Progress, December 2007.\r\n\r\n\r\nThe year is clearly wrong.\r\n",
     "correct_text": "[not submitted]",
     "notes": "Ooops, we all missed these....\r\n\r\nI don't think these warrant errata, but that is your call..\r\n\r\nThanks,\r\n--MM--\r\n\r\nfrom pending",
     "submit_date": "2007-04-15",
     "submitter_name": "Ron Broersm",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Matt Mathis",
     "update_date": "2019-09-10 09:09:03"
   }

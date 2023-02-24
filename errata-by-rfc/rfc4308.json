@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1090,
+    "errata_id": "1090",
     "doc-id": "RFC4308",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 2,
+    "section": "2",
     "orig_text": "<none>",
     "correct_text": "2.4 Hash Algorithm for IKEv1\r\n\r\nThis document does not specify a hash algorithm to negotiate for IKEv1. Any hash algorithm can be used; SHA-1 is a common choice. No hash algorithm is needed for IKEv2.",
     "notes": "This was accidentally omitted during the discussion of this document.",
     "submit_date": "2007-12-08",
     "submitter_name": "Paul Hoffman",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
     "update_date": "2019-09-10 09:09:03"
   }

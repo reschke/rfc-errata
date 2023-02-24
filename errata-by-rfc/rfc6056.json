@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 2750,
+    "errata_id": "2750",
     "doc-id": "RFC6056",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3.3,
+    "section": "3.3",
     "orig_text": "3.3.1.  Algorithm 1: Simple Port Randomization Algorithm\r\n\r\n-           if(check_suitable_port(port))\r\n\r\n3.3.2.  Algorithm 2: Another Simple Port Randomization Algorithm\r\n\r\n-           if(check_suitable_port(port))",
     "correct_text": "3.3.1.  Algorithm 1: Simple Port Randomization Algorithm\r\n\r\n+           if(check_suitable_port(next_ephemeral))\r\n\r\n3.3.2.  Algorithm 2: Another Simple Port Randomization Algorithm\r\n\r\n+           if(check_suitable_port(next_ephemeral))",
     "notes": "For neither Algorithm 1 or 2 the pseudo code defines \"port\" as a valid variable.\r\nThe variable passed to check_suitable_port() should be \"next_ephemeral\" in these cases.\r\nIt looks like a copy and paste error. The technical meaning is still clear.",
     "submit_date": "2011-03-13",
     "submitter_name": "Bjoern A. Zeeb",
-    "verifier_id": 129,
+    "verifier_id": "129",
     "verifier_name": "Wes Eddy",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 3739,
+    "errata_id": "3739",
     "doc-id": "RFC6056",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
@@ -25,7 +25,7 @@
     "notes": "The project implemented the RFC 6056 algorithms last year to obfuscate the ephemeral port numbers.\r\n\r\n[NetBSD-RFC6056] reference is:\r\nThe NetBSD Project, \"NetBSD Miscellaneous Information Manual -- RFC 6056, Randomization Algorithms\", man page - section 7, August 2011.\n --VERIFIER NOTES-- \nThe proposed text is not an errata but an addendum which isn't handled via the errata procedures. ",
     "submit_date": "2013-09-26",
     "submitter_name": "Jean-Yves Migeon",
-    "verifier_id": 133,
+    "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 448,
+    "errata_id": "448",
     "doc-id": "RFC2417",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "   IMPORTS\n       MODULE-COMPLIANCE, NOTIFICATION-GROUP, OBJECT-GROUP\n           FROM SNMPv2-CONF\n       snmpModules, MODULE-IDENTITY, NOTIFICATION-TYPE, Counter32,\n           Integer32, Unsigned32, OBJECT-TYPE, IpAddress\n           FROM SNMPv2-SMI",
     "correct_text": "   IMPORTS\n       MODULE-COMPLIANCE, NOTIFICATION-GROUP, OBJECT-GROUP\n           FROM SNMPv2-CONF\n       mib-2, MODULE-IDENTITY, NOTIFICATION-TYPE, Counter32,\n           Integer32, Unsigned32, OBJECT-TYPE, IpAddress\n           FROM SNMPv2-SMI\n",
     "notes": "",
     "submit_date": "2003-08-11",
     "submitter_name": "C. M. Heard",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

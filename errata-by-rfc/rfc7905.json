@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 5251,
+    "errata_id": "5251",
     "doc-id": "RFC7905",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "The security claimed on poly1305 is slightly beyond what was proven by the designer (see https://cr.yp.to/mac/poly1305-20050329.pdf), and the trivial forgery attempt with a message of length 1 succeeds with probability 2^{-106}.",
     "submit_date": "2018-02-01",
     "submitter_name": "Xavier Bonnetain",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

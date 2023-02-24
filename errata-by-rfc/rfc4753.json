@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 9,
-    "doc-id": "RFC4753",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": 7,
-    "orig_text": "   The Diffie-Hellman public value is obtained by concatenating the x\r\n   and y values.\r\n\r\n   The format of the Diffie-Hellman shared secret value is the same as\r\n   that of the Diffie-Hellman public value.",
-    "correct_text": "",
-    "notes": "The last paragraph is incorrect.  The Diffie-Hellman shared secret \r\ncontains only the x value.  The y value is not included in the shared \r\nsecret.\r\n\r\n\r\n\r\n",
-    "submit_date": "2007-04-23",
-    "submitter_name": "Russ Housley",
-    "verifier_id": 2,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 1800,
+    "errata_id": "1800",
     "doc-id": "RFC4753",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
@@ -25,8 +10,23 @@
     "notes": "The technical errata at <http://www.rfc-editor.org/errata_search.php?eid=9> is incorrect. It causes the specification in section 7 to disagree with the examples in section 8.",
     "submit_date": "2009-07-02",
     "submitter_name": "Paul Hoffman",
-    "verifier_id": 112,
+    "verifier_id": "112",
     "verifier_name": "Tim Polk",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "9",
+    "doc-id": "RFC4753",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "   The Diffie-Hellman public value is obtained by concatenating the x\r\n   and y values.\r\n\r\n   The format of the Diffie-Hellman shared secret value is the same as\r\n   that of the Diffie-Hellman public value.",
+    "correct_text": "",
+    "notes": "The last paragraph is incorrect.  The Diffie-Hellman shared secret \r\ncontains only the x value.  The y value is not included in the shared \r\nsecret.\r\n\r\n\r\n\r\n",
+    "submit_date": "2007-04-23",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "2",
+    "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
 ]

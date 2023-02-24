@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 4777,
+    "errata_id": "4777",
     "doc-id": "RFC5753",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
@@ -10,7 +10,7 @@
     "notes": "There is a problem in that for ECPoints, the public key is defined to be encoded differently in this document than it is in a public key certificate.  The difference is the presence of the ASN.1 OCTET STRING wrapper.\r\n\r\nOpenSSL and BouncyCastle both use the unwrapped version per Dr. Stephen Henson note to me in mail.\r\n\r\nThis error is also present in sections 3.1.2, 3.1.3, 3.2.1, 3.2.2, 7.2",
     "submit_date": "2016-08-13",
     "submitter_name": "Jim Schaad",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }

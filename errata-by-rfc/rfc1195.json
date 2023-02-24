@@ -1,21 +1,6 @@
 [
   {
-    "errata_id": 683,
-    "doc-id": "RFC1195",
-    "errata_status_code": "Held for Document Update",
-    "errata_type_code": "Technical",
-    "section": 3.3,
-    "orig_text": "In chapter '3.3 Addressing Routers in ISIS Packets' the RFC describes a\r\nstandard procedure\r\nfor deriving NSAP-addresses for IS in IP-only environments. However, the\r\nDFI as well as the AA\r\nare defined to be 'xx' and 'xx xx xx' respectively, which represents\r\nneither a valid decimal nor\r\nhexadecimal value.",
-    "correct_text": "[not submitted]",
-    "notes": "from pending",
-    "submit_date": "2003-03-04",
-    "submitter_name": "Joerg Ammon",
-    "verifier_id": 122,
-    "verifier_name": "Stewart Bryant",
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 3741,
+    "errata_id": "3741",
     "doc-id": "RFC1195",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -25,8 +10,23 @@
     "notes": "Currently, the relevant text in 5.3.2 and 5.3.5 are identical, but the 5.3.5 text should have the above text added.\r\n\r\nThis would match the following (see the last clause):\r\n\r\n5.2 Overview of IP-Specific Information for IS-IS\r\n\r\n   The \"IP Internal Reachability Information\" field ...\r\n   If included in level 1 LSPs,\r\n   this field includes only entries directly reachable by the router\r\n   which originates the LSP, via one of its interfaces. If included in\r\n   level 2 LSPs, this field includes only entries reachable by the\r\n   router which originates the LSP, either via one of its interfaces, or\r\n   indirectly via level 1 routing.\r\n\r\n\r\nI have marked this report as \"held for document update\" although I do not expect any new revision to RFC 1195. This \"correction\" is more of a clarification. The \"corrected\" text can be successfully deduced from the rest of the document such that nobody reading the document in its entirety would be led to make an incorrect and/or non-interoperable implementation.\r\n\r\nFurthermore, any clarifications necessary have previously been published in the informational RFCs 3719 and in particular 3787.\r\n\r\nHowever, there is some value in retaining this record for future enquiring minds (and to stop a similar report being raised in the future).",
     "submit_date": "2013-10-01",
     "submitter_name": "Jeffrey Zhang",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "683",
+    "doc-id": "RFC1195",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "In chapter '3.3 Addressing Routers in ISIS Packets' the RFC describes a\r\nstandard procedure\r\nfor deriving NSAP-addresses for IS in IP-only environments. However, the\r\nDFI as well as the AA\r\nare defined to be 'xx' and 'xx xx xx' respectively, which represents\r\nneither a valid decimal nor\r\nhexadecimal value.",
+    "correct_text": "[not submitted]",
+    "notes": "from pending",
+    "submit_date": "2003-03-04",
+    "submitter_name": "Joerg Ammon",
+    "verifier_id": "122",
+    "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }
 ]

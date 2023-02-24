@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2107,
+    "errata_id": "2107",
     "doc-id": "RFC5795",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,27 +10,27 @@
     "notes": "Rationale: This is already the 2nd revision of RFC 3095;\r\n  therefore, the adjusted temporal form better reflects\r\n  the current state of the art.",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2108,
+    "errata_id": "2108",
     "doc-id": "RFC5795",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": 3.2,
+    "section": "3.2",
     "orig_text": "[[  last paragraph on page 9: ]]\r\n\r\n|  An enhanced variant of CRTP, called eCRTP [RFC3545], means to improve\r\n   the robustness of CRTP in the presence of reordering and packet\r\n   losses, while keeping the protocol almost unchanged from CRTP.  As a\r\n   result, eCRTP does provide better means to implement some degree of\r\n   robustness, albeit at the expense of additional overhead, leading to\r\n   a reduction in compression efficiency in comparison to CRTP.",
     "correct_text": "|  An enhanced variant of CRTP, called eCRTP [RFC3545], introduces means\r\n   to improve the robustness of CRTP in the presence of reordering and\r\n   packet losses, while keeping the protocol almost unchanged from CRTP.\r\n   As a result, eCRTP does provide better means to implement some degree\r\n   of robustness, albeit at the expense of additional overhead, leading\r\n   to a reduction in compression efficiency in comparison to CRTP.",
     "notes": "Rationale: missing verb (legacy).\n --VERIFIER NOTES-- \nReject, but make note to improve this text in next update\r\n   ",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2109,
+    "errata_id": "2109",
     "doc-id": "RFC5795",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -40,12 +40,12 @@
     "notes": "Rationale:  Abuse of language;\r\n  the acronym definitions in Section 2.1 clearly say:\r\n     LSB    Least Significant Bit.\r\n     ...\r\n     MSB    Most Significant Bit.\n --VERIFIER NOTES-- \nproposed change is somewhat pedantic; it actually might reduce readability for some readers   ",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2110,
+    "errata_id": "2110",
     "doc-id": "RFC5795",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,7 +55,7 @@
     "notes": "Rationale: consistent use of punctuation within the RFC.",
     "submit_date": "2010-04-05",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 113,
+    "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
   }

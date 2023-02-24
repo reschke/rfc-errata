@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 5381,
+    "errata_id": "5381",
     "doc-id": "RFC1912",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 2.4,
+    "section": "2.4",
     "orig_text": "A CNAME record is not allowed to coexist with any other data.  In\r\n   other words, if suzy.podunk.xx is an alias for sue.podunk.xx, you\r\n   can't also have an MX record for suzy.podunk.edu, or an A record, or\r\n   even a TXT record.",
     "correct_text": "A CNAME record is not allowed to coexist with any other data.  In\r\n   other words, if suzy.podunk.xx is an alias for sue.podunk.xx, you\r\n   can't also have an MX record for suzy.podunk.xx, or an A record, or\r\n   even a TXT record.",
     "notes": "The .edu is a typo and should be corrected to .xx",
     "submit_date": "2018-06-06",
     "submitter_name": "Jonathan Teague",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
   }

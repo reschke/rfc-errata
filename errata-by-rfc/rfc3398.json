@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2161,
+    "errata_id": "2161",
     "doc-id": "RFC3398",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "504 appears twice with different text. From the context, it looks like the text in the second entry is correct, and the number is wrong.",
     "submit_date": "2010-04-13",
     "submitter_name": "Andrew Miller",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2580,
+    "errata_id": "2580",
     "doc-id": "RFC3398",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "No CANCEL is sent on INVITE transaction timeout. This is per 3261 \"If no provisional response has been received, the CANCEL request MUST NOT be sent; rather, the client MUST wait for the arrival of a provisional response before sending the request.\"",
     "submit_date": "2010-10-19",
     "submitter_name": "Stephen James",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Gonzalo Camarillo",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2977,
+    "errata_id": "2977",
     "doc-id": "RFC3398",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,22 +40,22 @@
     "notes": "\"Than\" is used for comparisons.  \"Then\" is used to denote something follows in sequence.",
     "submit_date": "2011-09-21",
     "submitter_name": "Jeff Dyer",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 2980,
+    "errata_id": "2980",
     "doc-id": "RFC3398",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 7.2,
+    "section": "7.2",
     "orig_text": "                               +---------+\r\n      +----------------------->|  Idle   |<---------------------+\r\n      |                        +----+----+                      |\r\n      |                             |                           |\r\n      |                             | INVITE/6.2.1              |\r\n      |                             V                           |\r\n      |      T7/6.2.2   +-------------------------+   REL/6.2.4 |\r\n      +<----------------+         Trying          +------------>+\r\n      |                 +-+--------+------+-------+             |\r\n      |    CANCEL/6.2.3 | |        |      |                     |\r\n      +<----------------+ | E.ACM/ | ACM/ | CON/ANM             |\r\n      |                   | 6.2.5  |6.2.6 | 6.2.7               |\r\n      |                   V        |      |                     |\r\n      | T9/6.2.8  +--------------+ |      |                     |\r\n      +<----------+ Not alerting | |      |                     |\r\n      |           +-------+------+ |      |                     |\r\n      |  CANCEL/6.2.3 |   |        |      |                     |\r\n      |<--------------+   | CPG/   |      |                     |\r\n      |                   | 6.2.9  |      |                     |\r\n      |                   V        V      |                     |\r\n      |    T9/6.2.8     +---------------+ |    REL/6.2.4        |\r\n      +<----------------+    Alerting   |-|-------------------->|\r\n      |<----------------+--+-----+------+ |                     |\r\n      |  CANCEL/6.2.3      |  ^  |        |                     |\r\n      |               CPG/ |  |  | ANM/   |                     |\r\n      |              6.2.9 +--+  | 6.2.7  |                     |\r\n      |                          V        V                     |\r\n      |                 +-------------------------+    REL/9.2  |\r\n      |                 |     Waiting for ACK     |------------>|\r\n      |                 +-------------+-----------+             |\r\n      |                               |                         |\r\n      |                               | ACK/6.2.10              |\r\n      |                               V                         |\r\n      |     BYE/9.1     +-------------------------+    REL/9.2  |\r\n      +<----------------+        Connected        +------------>+\r\n                        +-------------------------+\r\n",
     "correct_text": null,
     "notes": "References in figure to 6.2 should point to 7.1.",
     "submit_date": "2011-09-27",
     "submitter_name": "Pablo Varela",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2682,
+    "errata_id": "2682",
     "doc-id": "RFC5424",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Note 2 isn't present in this document. It's an artefact from RFC 3164.",
     "submit_date": "2011-01-07",
     "submitter_name": "VicTor Smirnoff",
-    "verifier_id": 124,
+    "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4967,
+    "errata_id": "4967",
     "doc-id": "RFC5424",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -25,27 +25,27 @@
     "notes": "There is a double entry in the facility list.",
     "submit_date": "2017-03-14",
     "submitter_name": "Muhammad Usman",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5010,
+    "errata_id": "5010",
     "doc-id": "RFC5424",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 8.1,
+    "section": "8.1",
     "orig_text": "This document guards against the technical issues outlined in UTR36 by\r\nREQUIRING \"shortest form\" encoding for syslog applications.",
     "correct_text": "\"Shortest Form\" encoding is REQUIRED for syslog applications to guard\r\nagainst the technical issues outlined in UTR36.",
     "notes": "\"REQUIRING\" is not a RFC 2119 keyword.",
     "submit_date": "2017-05-05",
     "submitter_name": "Job Snijders",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 6647,
+    "errata_id": "6647",
     "doc-id": "RFC5424",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
@@ -55,22 +55,22 @@
     "notes": "Not including the note (adapted from the one in RFC3164) causes errata like the one with ID 4967 to be erroneously reported.",
     "submit_date": "2021-07-23",
     "submitter_name": "Anonymous User",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   },
   {
-    "errata_id": 6927,
+    "errata_id": "6927",
     "doc-id": "RFC5424",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": 6,
+    "section": "6",
     "orig_text": "SD-NAME         = 1*32PRINTUSASCII\r\n                  ; except '=', SP, ']', %d34 (\")\r\n...\r\n\r\nPRINTUSASCII    = %d33-126",
     "correct_text": "SD-NAME         = 1*32PRINTUSASCII\r\n                  ; except '=', SP, ']', %d34 (\")\r\n...\r\nPRINTUSASCII    = %d32-126",
     "notes": "When excluding SP %d32 from PRINTUSASCII, then it does not make sense to state \"except ..SP ..\"\r\nThere are more issues with the grammar:\r\nSD_NAME forbids ']', but it should also forbid '['",
     "submit_date": "2022-04-07",
     "submitter_name": "Ulrich Windl",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
   }

@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4195,
+    "errata_id": "4195",
     "doc-id": "RFC7110",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 5.4,
+    "section": "5.4",
     "orig_text": "When an echo reply is received, if the Reply Mode is \"Reply via\r\nSpecified Path\" and the Reply Path return code is \"The echo reply was\r\nsent successfully using the specified Reply Path\", and if the return\r\npath is an MPLS LSP.  The ingress LSR MUST perform FEC validation\r\n(based on the FEC Stack information of the return path carried in the\r\nReply Path TLV) as an egress LSR does when receiving an echo request,\r\nthe FEC validation process (relevant to \"ping\" mode) defined in\r\nSection 4.4.1 of [RFC4379] applies here.\r\n\r\nWhen an echo reply is received with return code set to \"Malformed\r\necho request received\" and the Subcode set to zero.  It is possible\r\nthat the egress LSR may not know the \"Reply via Specified Path\" Reply\r\nMode, the operator may choose to re-perform another LSP ping by using\r\none of the four Reply Modes defined [RFC4379].\r\n",
     "correct_text": "When an echo reply is received, if the Reply Mode is \"Reply via\r\nSpecified Path\" and the Reply Path return code is \"The echo reply was\r\nsent successfully using the specified Reply Path\", and if the return\r\npath is an MPLS LSP, the ingress LSR MUST perform FEC validation\r\n(based on the FEC Stack information of the return path carried in the\r\nReply Path TLV) as an egress LSR does when receiving an echo request,\r\nthe FEC validation process (relevant to \"ping\" mode) defined in\r\nSection 4.4.1 of [RFC4379] applies here.\r\n\r\nWhen an echo reply is received with return code set to \"Malformed\r\necho request received\" and the Subcode set to zero, it is possible\r\nthat the egress LSR may not know the \"Reply via Specified Path\" Reply\r\nMode; the operator may choose to re-perform another LSP ping by using\r\none of the four Reply Modes defined in [RFC4379].\r\n",
     "notes": "In the first two paragraphs of section 5.4, the conditional clauses and the main clause have been separated by periods, not commas, which creates uncertainty as to whether or not text of the main clause has been elided.  This changes the periods into commas.",
     "submit_date": "2014-12-09",
     "submitter_name": "tom petch",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4196,
+    "errata_id": "4196",
     "doc-id": "RFC7110",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,22 +25,22 @@
     "notes": "The WG commended a value of 26 to IANA for the \"IPv4 RSVP Tunnel sub-TLV\r\nType\" which IANA confirmed. Leaving in the 'recommended' introduces a\r\nelement of uncertainty that is best avoided.",
     "submit_date": "2014-12-09",
     "submitter_name": "tom petch",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4197,
+    "errata_id": "4197",
     "doc-id": "RFC7110",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 4,
+    "section": "4",
     "orig_text": "The Reply Path TLV contains one or more nested sub-TLVs that can be\r\nused\r\n",
     "correct_text": "The Reply Path TLV contains zero or more nested sub-TLVs that can be\r\nused",
     "notes": "As section 4.2 correctly states, the Reply Path TLV can contain zero\r\nsub-TLVs; this brings section 4 inline.",
     "submit_date": "2014-12-09",
     "submitter_name": "tom petch",
-    "verifier_id": 119,
+    "verifier_id": "119",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

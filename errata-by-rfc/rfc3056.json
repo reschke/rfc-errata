@@ -1,36 +1,6 @@
 [
   {
-    "errata_id": 341,
-    "doc-id": "RFC3056",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": 5.3,
-    "orig_text": "then\r\napply any security checks (see Section 8);",
-    "correct_text": "then\r\napply any security checks (see Section 9);",
-    "notes": "",
-    "submit_date": "2002-11-20",
-    "submitter_name": "Brian Carpenter",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 697,
-    "doc-id": "RFC3056",
-    "errata_status_code": "Verified",
-    "errata_type_code": "Technical",
-    "section": 5.3,
-    "orig_text": "apply any security checks (see Section 8);",
-    "correct_text": "apply any security checks (see Section 9);\r\n",
-    "notes": "\r\n",
-    "submit_date": "2002-11-20",
-    "submitter_name": "Brian Carpenter",
-    "verifier_id": 99,
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": 2070,
+    "errata_id": "2070",
     "doc-id": "RFC3056",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -40,8 +10,38 @@
     "notes": "s/natuve/native/",
     "submit_date": "2010-03-09",
     "submitter_name": "Vishwas Manral",
-    "verifier_id": 106,
+    "verifier_id": "106",
     "verifier_name": "Dan Romascanu",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "341",
+    "doc-id": "RFC3056",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.3",
+    "orig_text": "then\r\napply any security checks (see Section 8);",
+    "correct_text": "then\r\napply any security checks (see Section 9);",
+    "notes": "",
+    "submit_date": "2002-11-20",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "697",
+    "doc-id": "RFC3056",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.3",
+    "orig_text": "apply any security checks (see Section 8);",
+    "correct_text": "apply any security checks (see Section 9);\r\n",
+    "notes": "\r\n",
+    "submit_date": "2002-11-20",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": "99",
+    "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
 ]

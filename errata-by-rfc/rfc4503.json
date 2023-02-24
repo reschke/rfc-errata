@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 2504,
+    "errata_id": "2504",
     "doc-id": "RFC4503",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "There is a typographical error in the example key used in sections B.1 and B.2. As a result of this error, the key does not match the examples.\r\n\r\nThe correct key values appear in Appendix A.",
     "submit_date": "2010-08-27",
     "submitter_name": "Justin Harrison",
-    "verifier_id": 126,
+    "verifier_id": "126",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5341,
+    "errata_id": "5341",
     "doc-id": "RFC4503",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "The letter combination \"mkey\" for the key is only used in section \"A.2.  Testing with IV Setup\" and nowhere else. In sections A.1, B.1 and B.2 instead consistently \"key\" is used. So I assume that the additional \"m\" is a typo. To retain formatting, an additional space is added after \"key\" as in sections A.1, B.1 and B.2.",
     "submit_date": "2018-04-28",
     "submitter_name": "Wolfgang Keller",
-    "verifier_id": 157,
+    "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

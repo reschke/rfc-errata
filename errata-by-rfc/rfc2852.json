@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 2300,
+    "errata_id": "2300",
     "doc-id": "RFC2852",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": 4,
+    "section": "4",
     "orig_text": "   by-parameter = \"BY=\"by-value\r\n   by-value     = by-time\";\"by-mode[by-trace]\r\n",
     "correct_text": "   by-parameter = \"BY=\" by-value\r\n                       ^\r\n   by-value     = by-time \";\" by-mode [by-trace]\r\n                         ^   ^       ^",
     "notes": "This is not a valid ABNF. BAP (ABNF parser) complains:\r\n\r\n error: Concatenation of adjacent elements is not allowed (missing whitespace?)\r\n\r\nSo extra spaces need to be inserted.",
     "submit_date": "2010-06-04",
     "submitter_name": "Alexey Melnikov",
-    "verifier_id": 121,
+    "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
   }

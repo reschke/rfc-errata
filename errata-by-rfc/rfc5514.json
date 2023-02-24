@@ -1,31 +1,31 @@
 [
   {
-    "errata_id": 1750,
+    "errata_id": "1750",
     "doc-id": "RFC5514",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": "99The title says:",
+    "section": "The title says:",
     "orig_text": "IPv6 over Social Networks ",
     "correct_text": "IPv6 over Anti-Social Networks ",
     "notes": " --VERIFIER NOTES-- \r\nThe body of 5514 is about communicating over Social Networks;\r\nits title doesn't need to be changed.",
     "submit_date": "2009-04-01",
     "submitter_name": "Brian Carpenter",
-    "verifier_id": 2,
+    "verifier_id": "2",
     "verifier_name": "Nevil Brownlee",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 5223,
+    "errata_id": "5223",
     "doc-id": "RFC5514",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 7.1,
+    "section": "7.1",
     "orig_text": null,
     "correct_text": "[RFC2119]  Bradner, S., \"Key words for use in RFCs to Indicate\r\n           Requirement Levels\", BCP 14, RFC 2119, March 1997.",
     "notes": "RFC 2119 key words (like SHOULD, SHOULD NOT, ...) are used throughout RFC 5514, but RFC 2119 is not referenced.\n --VERIFIER NOTES-- \nThe presence of RFC 2119 boilerplate and reference is needed if and only if the authors intend the use of upper case words to be interpreted as defined in RFC 2119. ",
     "submit_date": "2018-01-01",
     "submitter_name": "Luís Câmara",
-    "verifier_id": 157,
+    "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
   }

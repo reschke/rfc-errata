@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 3882,
+    "errata_id": "3882",
     "doc-id": "RFC5492",
     "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": 3,
+    "section": "3",
     "orig_text": "\"   A BGP speaker determines that its peer doesn't support capabilities\r\n   advertisement if, in response to an OPEN message that carries the\r\n   Capabilities Optional Parameter, the speaker receives a NOTIFICATION\r\n   message with the Error Subcode set to Unsupported Optional Parameter.\r\n   (This is a consequence of the base BGP-4 specification [RFC4271] and\r\n   not a new requirement.)  In this case, the speaker SHOULD attempt to\r\n   re-establish a BGP connection with the peer without sending to the\r\n   peer the Capabilities Optional Parameter.\"\r\n",
     "correct_text": "\"   A BGP speaker determines that its peer doesn't support capabilities\r\n   advertisement if, in response to an OPEN message that carries the\r\n   Capabilities Optional Parameter, the speaker receives a NOTIFICATION\r\n   message with the Error Subcode set to Unsupported Optional Parameter.\r\n   (This is a consequence of the base BGP-4 specification [RFC4271] and\r\n   not a new requirement.) The next actions depends on the BGP\r\n   speaker that received the NOTIFICATION. The speaker may intend to\r\n   re-establish a BGP connection with the peer. In this case, the \r\n   speaker SHOULD attempt to re-establish a BGP connection with the \r\n   peer without sending to the peer the Capabilities Optional \r\n   Parameter. On the other hand, the speaker may not intend to \r\n   re-establish peering.  For example, a BGP speaker may not intend \r\n   to re-establish peering if it established\r\n   peering to exchange IPv6 routes and determines that its peer does not\r\n   support capabilities advertisement. The decision to re-establish the\r\n   peering is local to the speaker.\"\r\n",
     "notes": "Notes: As explained above, it does not always make sense to \r\nre-establish peering when the peer does not support capabilities \r\nadvertisement. Indeed, in a very similar scenario, this RFC itself\r\nsuggests the proposed behavior. Consider the following text in \r\nSection 3:\r\n\r\n\"   If a BGP speaker that supports a certain capability determines that\r\n   its peer doesn't support this capability, the speaker MAY send a\r\n   NOTIFICATION message to the peer and terminate peering (see Section\r\n   \"Extensions to Error Handling\" for more details).  For example, a BGP\r\n   speaker may need to terminate peering if it established peering to\r\n   exchange IPv6 routes and determines that its peer does not support\r\n   Multiprotocol Extensions for BGP-4 [RFC4760].  The Error Subcode in\r\n   the NOTIFICATION message is then set to Unsupported Capability.  The\r\n   message MUST contain the capability or capabilities that cause the\r\n   speaker to send the message.  The decision to send the message and\r\n   terminate the peering is local to the speaker.  If terminated, such\r\n   peering SHOULD NOT be re-established automatically.\"\n --VERIFIER NOTES-- \nThis is a technical matter that should be discussed in the WG and if the WG decides that clarification is needed it should be addressed in an RFC.\r\n\r\nThe text referenced above is a SHOULD, and thus an implementation decision. The provision of further guidance to the implementer is outside the scope of the errata process.",
     "submit_date": "2014-02-05",
     "submitter_name": "Ramakrishna DTV",
-    "verifier_id": 122,
+    "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
   }

@@ -1,16 +1,16 @@
 [
   {
-    "errata_id": 1033,
+    "errata_id": "1033",
     "doc-id": "RFC4909",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": 3,
+    "section": "3",
     "orig_text": "                            1                   2                   3\r\n        0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|      ! Next   !      Type     !            Length             !\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|      !       OMA BCAST S/LTKM Subtype  (variable length)      ~\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n                Figure 1: OMA BCAST MIKEY General Extension",
     "correct_text": "                            1                   2                   3\r\n        0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|      ! Next payload  !      Type     !            Length             !\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|      !       OMA BCAST S/LTKM Subtype  (variable length)             ~\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n                Figure 1: OMA BCAST MIKEY General Extension",
     "notes": "After cross-checking with the basic MIKEY specification, RFC 3830,\r\nSection 6.15, I conclude that most probably the figure should be as above.",
     "submit_date": "2007-08-17",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 100,
+    "verifier_id": "100",
     "verifier_name": "Russ Housley",
     "update_date": "2019-09-10 09:09:03"
   }

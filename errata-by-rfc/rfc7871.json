@@ -1,21 +1,21 @@
 [
   {
-    "errata_id": 4735,
+    "errata_id": "4735",
     "doc-id": "RFC7871",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 13,
+    "section": "13",
     "orig_text": "   7.   Due its internal implementation, ANS finds a response that is\r\n        tailored for the whole /16 of the client that performed the\r\n        query.\r\n\r\n   8.   ANS adds an ECS option in the response, containing:\r\n[...]\r\n        *  SCOPE PREFIX-LENGTH set to 0x30, indicating a /48 network.",
     "correct_text": "   7.   Due its internal implementation, ANS finds a response that is\r\n        tailored for the whole /48 of the client that performed the\r\n        query.\r\n\r\n   8.   ANS adds an ECS option in the response, containing:\r\n[...]\r\n        *  SCOPE PREFIX-LENGTH set to 0x30, indicating a /48 network.",
     "notes": "The prose description in step 7 does not match the ECS option described in step 8. Either both should say \"/16\" or both should say \"/48\". Probably /48 was meant, since a /16 would be a huge amount of IPv6 address space.",
     "submit_date": "2016-07-08",
     "submitter_name": "Robert Edmonds",
-    "verifier_id": 135,
+    "verifier_id": "135",
     "verifier_name": "Joel Jaeggli",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4736,
+    "errata_id": "4736",
     "doc-id": "RFC7871",
     "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
@@ -25,7 +25,7 @@
     "notes": "ISC (no \"the\") was originally founded as Internet Software Consortium, Inc. in 1994 but it has been known as Internet Systems Consortium, Inc. since 2004.\n --VERIFIER NOTES-- \n   Internet Software Consortium occurs only in the acknowledgements and while incorrect now it is generally the perogative of the authors to include in this section what they see fit. were a future version to be updated it's acknowledgements would probably include the then current contributors not the previous ones.",
     "submit_date": "2016-07-08",
     "submitter_name": "Robert Edmonds",
-    "verifier_id": 135,
+    "verifier_id": "135",
     "verifier_name": "Joel Jaeggli",
     "update_date": "2019-09-10 09:09:03"
   }

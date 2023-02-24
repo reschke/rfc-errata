@@ -1,6 +1,6 @@
 [
   {
-    "errata_id": 1280,
+    "errata_id": "1280",
     "doc-id": "RFC4975",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -10,12 +10,12 @@
     "notes": "Clarification; otherwise, \"Alternately\" could be grossly misunderstood\r\nto indicate a direct alternative for the header field value.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1281,
+    "errata_id": "1281",
     "doc-id": "RFC4975",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -25,12 +25,12 @@
     "notes": "Note on Terminology:\r\nTo help avoid the terminological issues observed in the companion\r\ndocument, RFC 4976, and reduce the likelihood of similar issues in\r\nfuture derived work, it would perhaps have been useful to subtly\r\nchange the ABNF in Section 9 (and all related references in the prose),\r\nreplacing three rule names:\r\n      <headers>      -->    <hfields>\r\n      <header>       -->    <hfield>\r\n      <ext-header>   -->    <ext-hfield>",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1282,
+    "errata_id": "1282",
     "doc-id": "RFC4975",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -40,12 +40,12 @@
     "notes": "This resolves a potential parsing ambiguity,\r\nand should also improve the readability.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1284,
+    "errata_id": "1284",
     "doc-id": "RFC4975",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -55,12 +55,12 @@
     "notes": "Within quoted text literals, white space might be considered\r\nsignificant; thus, to avoid any potential ambiguity ....   :-)",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1285,
+    "errata_id": "1285",
     "doc-id": "RFC4975",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
@@ -70,12 +70,12 @@
     "notes": null,
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1286,
+    "errata_id": "1286",
     "doc-id": "RFC4975",
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
@@ -85,37 +85,37 @@
     "notes": "(This only is a proposal.)\r\n\r\nRationale:  Congratulations!  The registrant seems to have achieved\r\n  immortality, and/or his email address guaranteed to be perpetual.  :-)\r\n\r\nMore seriously:  cf. Section 3 of RFC 2434.",
     "submit_date": "2008-01-14",
     "submitter_name": "Alfred Hoenes",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 1954,
+    "errata_id": "1954",
     "doc-id": "RFC4975",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": 9,
+    "section": "9",
     "orig_text": "ext-header = hname \":\" SP hval CRLF\r\n",
     "correct_text": "ext-header = hname \":\" SP hval\r\n",
     "notes": "The rule:\r\n\r\n  headers = To-Path CRLF From-Path CRLF 1*( header CRLF )\r\n\r\nalready suffixes every header with a CRLF. The result is that the extension headers are followed by 2 CRLFs, introducing empty lines inside the header segment. This appears to be unintended, since none of the other headers have a terminating CRLF in their production rules, only the ext-header.",
     "submit_date": "2009-12-03",
     "submitter_name": "Dennis Noordsij",
-    "verifier_id": 118,
+    "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": 4177,
+    "errata_id": "4177",
     "doc-id": "RFC4975",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
-    "section": 7.1,
+    "section": "7.1",
     "orig_text": "   line, and a flag character.  If a body is present, the end-line MUST\r\n   be preceded by a CRLF that is not part of the body.  If the chunk\r\n   represents the data that forms the end of the complete message, the\r\n   flag value MUST be a \"$\".  If the sender is aborting an incomplete\r\n   message, and intends to send no further chunks in that message, the\r\n   flag MUST be a \"#\".  Otherwise, the flag MUST be a \"+\".\r\n\r\n   If the request contains a body, the sender MUST ensure that the end-\r\n   line (seven hyphens, the transaction identifier, and a continuation\r\n   flag) is not present in the body.  If the end-line is present in the\r\n",
     "correct_text": "   line, and a flag character.  If a body is present, the end-line MUST\r\n   be preceded by a CRLF that is not part of the body.  If the chunk\r\n   represents the data that forms the end of the complete message, the\r\n   flag value MUST be a \"$\".  If the sender is aborting an incomplete\r\n   message, and intends to send no further chunks in that message, the\r\n   flag MUST be a \"#\".  Otherwise, the flag MUST be a \"+\".\r\n\r\n   If the request contains a body, the sender MUST ensure that the end-\r\n   line (seven hyphens, the transaction identifier, and a continuation\r\n   flag) is not present in the body.  A receiver detecting an end-line\r\n   present in the body preceded by a non-empty sequence other than CRLF\r\n   SHOULD terminate the session. If the end-line is present in the\r\n",
     "notes": "The way the text is written leaves unspecified how a receiver should handle the situation where it encounters an end-line within the body that's preceded by something OTHER than CRLF.\r\n\r\nObviously, this indicates the sender is not complying with this RFC, but what should the receiver do?\r\n\r\nShould the receiver terminate the connection? Or just proceed giving no special interpretation to the end-line, which would actually work just fine?\r\n\r\nThe suggested change reflects the first choice. If the second choice were made, the change could be:\r\n\r\n   If the request contains a body, the sender MUST ensure that the\r\n   end-line (seven hyphens, the transaction identifier, and a continuation\r\n   flag) neither appears at the beginning of the body nor is not present\r\n   in the body preceded by CRLF. An end-line MAY appear in the body if\r\n   preceded in the body by any non-empty sequence other than CRLF.\r\n\r\nThis would force the interpretation that an end-line not preceded by CRLF has no special significance.",
     "submit_date": "2014-11-13",
     "submitter_name": "Archie Cobbs",
-    "verifier_id": 99,
+    "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
   }
