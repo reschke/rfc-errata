@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "errata_id": "6472",
+    "doc-id": "RFC8175",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "12.4, para 2",
+    "orig_text": "A Peer Offer Signal MUST be encoded within a UDP packet.  The IP source and destination fields in the packet MUST be set by swapping the values received in the Peer Discovery Signal.  The Peer Offer Signal completes the discovery process; see Section 7.1.",
+    "correct_text": "A Peer Offer Signal MUST be encoded within a UDP packet. The IP source and destination fields (addresses and ports) in the packet MUST be set by swapping the values received in the Peer Discovery Signal, with the exception that the new source address on the Offer Signal, which was the well-known destination address, becomes a local IP from the DLEP modem. The source port remains the well-known port from the Peer Discovery Signal. The Peer Offer signal contains zero or more connection points as described in 13.2 and 13.3 completes the discovery process; see Section 7.1 ",
+    "notes": "The original text will not result in a valid unicast IP packet.\r\n\r\n=====\r\nAD Note:  The original text is clearly wrong.  There has been discussion in the WG about the proper wording for the \"corrected text\".  Given that the current text results in an invalid packet, I am marking this report as Verified.\r\n\r\nhttps://mailarchive.ietf.org/arch/msg/manet/h8Sa924gn6ZmAZ7XNp-5UUrZlAY/",
+    "submit_date": "2021-03-10",
+    "submitter_name": "Rick Taylor",
+    "verifier_id": "148",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-05-26 12:31:27"
+  },
+  {
+    "errata_id": "6730",
+    "doc-id": "RFC8175",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "12.4",
+    "orig_text": "The Peer Offer Signal completes the discovery process; see Section 7.1.",
+    "correct_text": "The UDP source port and destination port MUST be set to the UDP destination port and source port, respectively, of the UDP packet containing the associated Peer Discovery Signal. The Peer Offer Signal completes the discovery process; see Section 7.1.",
+    "notes": "The original text did not specify any requirement about the source or destination UDP port number of the Peer Offer signal.\n --VERIFIER NOTES-- \nWhile this is a valid report, it is a duplicate of Errata ID: 6472.  I am then marking this one as Rejected.",
+    "submit_date": "2021-11-03",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": "148",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2021-11-05 14:25:13"
+  },
+  {
+    "errata_id": "6731",
+    "doc-id": "RFC8175",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "12.4",
+    "orig_text": "The Peer Offer Signal completes the discovery process; see Section 7.1.",
+    "correct_text": "The UDP source port and destination port MUST be set to the UDP destination port and source port, respectively, of the UDP packet containing the associated Peer Discovery Signal. The Peer Offer Signal completes the discovery process; see Section 7.1.",
+    "notes": "The original text did not specify any requirement about the source or destination UDP port number of the Peer Offer signal.\n --VERIFIER NOTES-- \n While this is a valid report, it is a duplicate of Errata ID: 6472.  I am then marking this one as Rejected.",
+    "submit_date": "2021-11-03",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": "148",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2021-11-05 14:25:36"
+  },
+  {
+    "errata_id": "6877",
+    "doc-id": "RFC8175",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "12.2.",
+    "orig_text": "All status code values less than 100 have a failure mode of 'Continue'; all other status codes have a failure mode of 'Terminate'.",
+    "correct_text": "All status code values less than 128 have a failure mode of 'Continue'; all other status codes have a failure mode of 'Terminate'.",
+    "notes": "\"Table 2: DLEP Status Codes\" indicates that all status code values less than 128 have failure mode 'Continue'.",
+    "submit_date": "2022-03-10",
+    "submitter_name": "Izar",
+    "verifier_id": "148",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2022-03-10 06:40:26"
+  }
+]
