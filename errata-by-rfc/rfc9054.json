@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "errata_id": "7335",
+    "doc-id": "RFC9054",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "       1 : int / tstr, # Algorithm identifier\r\n       2 : bstr, # Hash value\r\n       ? 3 : tstr, # Location of object that was hashed\r\n       ? 4 : any   # object containing other details and things\r\n",
+    "correct_text": "       1 : int / tstr, ; Algorithm identifier\r\n       2 : bstr, ; Hash value\r\n       ? 3 : tstr, ; Location of object that was hashed\r\n       ? 4 : any   ; object containing other details and things\r\n",
+    "notes": "The comment character for CDDL is a \";\", not a \"#\".",
+    "submit_date": "2023-02-06",
+    "submitter_name": "Carsten Bormann",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
