@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "6811",
+    "doc-id": "RFC9000",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.1.1",
+    "orig_text": "                                         The sequence number of the\r\n   initial connection ID is 0.  If the preferred_address transport\r\n   parameter is sent, the sequence number of the supplied connection ID\r\n   is 1.\r\n\r\n   Additional connection IDs are communicated to the peer using\r\n   NEW_CONNECTION_ID frames (Section 19.15).  The sequence number on\r\n   each newly issued connection ID MUST increase by 1.  ",
+    "correct_text": "                                         The sequence number of the\r\n   initial connection ID is 0.  If the preferred_address transport\r\n   parameter is sent, the sequence number of the supplied connection ID\r\n   is 1.  The sequence number for NEW_CONNECTION_ID frames starts at 2\r\n   when the preferred_address transport parameter is sent and 1\r\n   otherwise.\r\n\r\n   Additional connection IDs are communicated to the peer using\r\n   NEW_CONNECTION_ID frames (Section 19.15).  The sequence number on\r\n   each newly issued connection ID MUST increase by 1.",
+    "notes": "It is not sufficiently clear that the (implied) sequence number for the preferred_address transport parameter is taken from the sequence only when the transport parameter is present.\r\n\r\nThe original text might be read to imply that the first NEW_CONNECTION_ID frame always starts with 2, though maybe only at a server.  The proposed addition is much more explicit.",
+    "submit_date": "2022-01-06",
+    "submitter_name": "Martin Thomson",
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2022-02-18 02:18:41"
+  },
+  {
+    "errata_id": "7365",
+    "doc-id": "RFC9000",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "12.4.",
+    "orig_text": "| 0x19       | RETIRE_CONNECTION_ID | Section 19.16 | __01 |      |",
+    "correct_text": "| 0x19       | RETIRE_CONNECTION_ID | Section 19.16 | ___1 |      |",
+    "notes": "Based on the context and section 12.5 ending says:\r\n\r\nNote that it is not possible to send the following frames in 0-RTT\r\n   packets for various reasons: ACK, CRYPTO, HANDSHAKE_DONE, NEW_TOKEN,\r\n   PATH_RESPONSE, and RETIRE_CONNECTION_ID.  A server MAY treat receipt\r\n   of these frames in 0-RTT packets as a connection error of type\r\n   PROTOCOL_VIOLATION.\r\n\r\nSo, I think the RETIRE_CONNECTION_ID frame should not appear in the 0-RTT packet, only contained in the 1-RTT package.",
+    "submit_date": "2023-02-23",
+    "submitter_name": "yongboy",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
