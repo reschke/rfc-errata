@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "4305",
+    "doc-id": "RFC4862",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "   o  Clarified that on failure of Duplicate Address Detection, IP\r\n      network operation should be disabled and that the rule should\r\n      apply when the hardware address is supposed to be unique.\r\n",
+    "correct_text": "o  Clarified that on failure of Duplicate Address Detection, IP\r\n   network operation for the interface should be disabled if and \r\n   only if:\r\n   - the duplicate check is performed on the IP link-local address,\r\n   - the link-local address is based on an EUI-64 or other hardware \r\n     address, and\r\n   - the hardware address is supposed to be unique on the link.\r\n\r\n\r\n",
+    "notes": null,
+    "submit_date": "2015-03-17",
+    "submitter_name": "Erik Nordmark",
+    "verifier_id": "131",
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "6709",
+    "doc-id": "RFC4862",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "Abstract\r\n\r\n   This document specifies the steps a host takes in deciding how to\r\n   autoconfigure its interfaces in IP version 6.  The autoconfiguration\r\n   process includes generating a link-local address, generating global\r\n   addresses via stateless address autoconfiguration, and the Duplicate\r\n   Address Detection procedure to verify the uniqueness of the addresses\r\n   on a link.",
+    "correct_text": "Abstract\r\n\r\n   This document specifies the steps a host takes in deciding how to\r\n   autoconfigure its interfaces in IP version 6.  The autoconfiguration\r\n   process includes generating a link-local address, generating global\r\n   addresses via stateless address autoconfiguration (SLAAC), and the Duplicate\r\n   Address Detection procedure to verify the uniqueness of the addresses\r\n   on a link.",
+    "notes": "IPv6 Stateless Address Autoconfiguration is very widely known by the acronym SLAAC, yet surprisingly that acronym doesn't appear anywhere in RFC4862. It would be best to include and use it in a future update to RFC4862.",
+    "submit_date": "2021-10-14",
+    "submitter_name": "Mark Smith",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
