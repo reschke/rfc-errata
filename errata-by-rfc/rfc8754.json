@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "7081",
+    "doc-id": "RFC8754",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.1",
+    "orig_text": "A reduced SRH does not contain the first segment of the related SR\r\nPolicy (the first segment is the one already in the DA of the IPv6\r\nheader), and the Last Entry field is set to n-2, where n is the\r\nnumber of elements in the SR Policy.\r\n",
+    "correct_text": "A reduced SRH does not contain the first segment of the related SR\r\nPolicy (the first segment is the one already in the DA of the IPv6\r\nheader), and the Last Entry field is set to n-2, where n is the\r\nnumber of elements in the SR Policy.\r\n\r\nWhen an SRH includes TLVs and only one 128-bit Segment, the reduced\r\nSRH MUST NOT be used to avoid errors of SRH TLV processing defined\r\nin section 2.1. \r\n",
+    "notes": "When only one single Segment is included in the SRH, the last entry will be 0 forever, so a segment endpoint node cannot specify whether the last Segment is included or removed from the SRH. \r\n\r\nAs defined in section 2.1, only when the header length of SRH larger then (0+1)*2, the TLVs will be processed. \r\n1.\tWhen the Segment is removed, Segment Lefts = Last Entry = 0, each segment endpoint node will skip the bytes 8-16, and then process the following bytes following the TLV processing rules, which will cause errors.\r\n2.\tWhen the segment is not removed, Segment Lefts = Last Entry = 0, each segment endpoint will process the TLVs correctly from byte 8+16. \r\n\r\nChoosing option 2 can avoid processing error of SRH TLVs and be compatible with the current hardware implementation. Thus option 1 MUST be avoid in implementation.",
+    "submit_date": "2022-08-11",
+    "submitter_name": "Tianran Zhou",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7102",
+    "doc-id": "RFC8754",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "Segments Left:  Defined in [RFC8200], Section 4.4.",
+    "correct_text": "Segments Left:  Defined in [RFC8200], Section 4.4.\r\nSpecifically, for the SRH, the number of segments \r\nremaining in the Segment List.",
+    "notes": "RFC8754 describes “The encoding of IPv6 segments in the SRH” where IPv6 segments are defined in RFC8402.  RFC8402 describes binding SIDs and adjacency SIDs for SRv6. Both these SID types identify more than a single explicitly listed intermediate node to be visited. \r\nThe current definition of Segments Left only indicates it is defined in RFC8200, and RFC8200 defines it as “Number of route  segments remaining, i.e., number of explicitly listed intermediate nodes still to be visited before reaching the final destination”.\r\n\r\nPrevious versions of draft-ietf-6man-segment-routing-header (0-11) referenced RFC2460/RFC8200 and described the Segments Left field by use in the SRH; as an index into the Segment List. This was removed in later versions (12/13) to consolidate the use of segments left to be specific to the segment processed (now section 4.3.1).  However, that removed the definition of its meaning in the SRH which led to the current issue.\r\n\r\nThe corrected text restores the meaning of Segments Left for the SRH in relation to Segment List (which is not defined in RFC8200), while still leaving its use during segment processing to the segment definition (section 4.3.1 or future documents).",
+    "submit_date": "2022-08-23",
+    "submitter_name": "Darren Dukes",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
