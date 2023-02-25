@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "errata_id": "5069",
+    "doc-id": "RFC7946",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.6",
+    "orig_text": "3.1.6.  Polygon\r\n\r\n   To specify a constraint specific to Polygons, it is useful to\r\n   introduce the concept of a linear ring:\r\n\r\n   o  A linear ring is a closed LineString with four or more positions.\r\n\r\n   o  The first and last positions are equivalent, and they MUST contain\r\n      identical values; their representation SHOULD also be identical.\r\n\r\n   o  A linear ring is the boundary of a surface or the boundary of a\r\n      hole in a surface.\r\n\r\n   o  A linear ring MUST follow the right-hand rule with respect to the\r\n      area it bounds, i.e., exterior rings are counterclockwise, and\r\n      holes are clockwise.\r\n\r\n   Note: the [GJ2008] specification did not discuss linear ring winding\r\n   order.  For backwards compatibility, parsers SHOULD NOT reject\r\n   Polygons that do not follow the right-hand rule.\r\n\r\n   Though a linear ring is not explicitly represented as a GeoJSON\r\n   geometry type, it leads to a canonical formulation of the Polygon\r\n   geometry type definition as follows:\r\n\r\n   o  For type \"Polygon\", the \"coordinates\" member MUST be an array of\r\n      linear ring coordinate arrays.\r\n\r\n   o  For Polygons with more than one of these rings, the first MUST be\r\n      the exterior ring, and any others MUST be interior rings.  The\r\n      exterior ring bounds the surface, and the interior rings (if\r\n      present) bound holes within the surface.\r\n",
+    "correct_text": "3.1.6.  Polygon\r\n\r\n   To specify a constraint specific to Polygons, it is useful to\r\n   introduce the concept of a linear ring:\r\n\r\n   o  A linear ring is a closed LineString with four or more positions.\r\n\r\n   o  The first and last positions are equivalent, and they MUST contain\r\n      identical values; their representation SHOULD also be identical.\r\n\r\n   o  A linear ring is the boundary of a surface or the boundary of a\r\n      hole in a surface.\r\n\r\n   o  A linear ring MUST follow the right-hand rule with respect to the\r\n      area it bounds, i.e., exterior rings are clockwise, and holes are\r\n      counterclockwise.\r\n\r\n   Note: the [GJ2008] specification did not discuss linear ring winding\r\n   order.  For backwards compatibility, parsers SHOULD NOT reject\r\n   Polygons that do not follow the right-hand rule.\r\n\r\n   Though a linear ring is not explicitly represented as a GeoJSON\r\n   geometry type, it leads to a canonical formulation of the Polygon\r\n   geometry type definition as follows:\r\n\r\n   o  For type \"Polygon\", the \"coordinates\" member MUST be an array of\r\n      linear ring coordinate arrays.\r\n\r\n   o  For Polygons with more than one of these rings, the first MUST be\r\n      the exterior ring, and any others MUST be interior rings.  The\r\n      exterior ring bounds the surface, and the interior rings (if\r\n      present) bound holes within the surface.\r\n",
+    "notes": "This is only for the bullet point describing the right-hand rule for linear rings. It seems like the clockwise/counterclockwise descriptions are the opposite of the right-hand rule. Walking an exterior ring in a counterclockwise direction would have the exterior of the ring to the right of the observer.",
+    "submit_date": "2017-07-14",
+    "submitter_name": "Clark Archer",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7253",
+    "doc-id": "RFC7946",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "Consider a set of point Features within the Fiji archipelago,\r\nstraddling the antimeridian between 16 degrees S and 20 degrees S.\r\nThe southwest corner of the box containing these Features is at 20\r\ndegrees S and 177 degrees E, and the northwest corner is at 16\r\ndegrees S and 178 degrees W.",
+    "correct_text": "Consider a set of point Features within the Fiji archipelago,\r\nstraddling the antimeridian between 16 degrees S and 20 degrees S.\r\nThe southwest corner of the box containing these Features is at 20\r\ndegrees S and 177 degrees E, and the northeast corner is at 16\r\ndegrees S and 178 degrees W.",
+    "notes": "In the antimeridian-crossing example, the text says that the \"northwest\" corner is at 16 degrees S and 178 degrees W.  It should say this is the \"northeast\" corner instead.",
+    "submit_date": "2022-11-18",
+    "submitter_name": "Tim Schaub",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2022-11-21 14:09:04"
+  },
+  {
+    "errata_id": "7261",
+    "doc-id": "RFC7946",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "An OPTIONAL third-position element SHALL be the height in meters above or below the \r\nWGS84 reference ellipsoid.",
+    "correct_text": "An OPTIONAL third-position element SHALL be the height in meters above or below the \r\nEGM2008 geoid vertical datum, the height is defined with respect to the EGM2008 \r\nvertical coordinate reference system (providing close approximation to altitude above \r\nglobal mean sea level).",
+    "notes": "Vertical coordinates, where used within GeoJSON shall be interpreted as with respect to the EGM2008 vertical datum.  Transformations from WGS84 vertical coordinate values to EGM2008 coordinate values shall not be implemented (unless by prior arrangement between involved parties) .\r\n\r\nThere is specification information within the EPSG registry on both the EGM2008 vertical datum:\r\nhttps://epsg.org/crs_3855/EGM2008-height.html\r\nand on the compound of WGS84 latitude longitude with EGM2008 altitude\r\nhttps://epsg.org/crs_9518/WGS-84-EGM2008-height.html\r\n\r\nCommon usage of altitude vertical coordinates is with respect to mean sea level. However, the original text within rfc7946 state that a vertical coordinate is with respect to the WGS84 reference ellipsoid.  \r\n\r\nThe WGS84 reference ellipsoid is an oblate spheroid that only partially approximates mean sea level. The EGM2008 (superseding EGM96) vertical  datum provides\r\n\"Zero-height surface resulting from the application of the EGM2008 geoid model to the WGS 84 ellipsoid.\" (https://epsg.org/crs_3855/EGM2008-height.htm)\r\nEGM2008 closely models mean sea level as a global vertical datum.\r\n \r\nDistortions are global position dependent, discrepancies can range from less than a metre to 10s of metres.  For example, at a location of  (50.218 -5.327 (WGS84)) the discrepancy between a WGS84 vertical coordinate and a EGM2008 vertical coordinate is 53.4 metres.\r\nThis is a really significant vertical discrepancy for a positional coordinate.\r\n\r\nThe update within this errata matches the specification to the widespread and common use of vertical position with respect to mean sea level, as measured by national mapping agencies and satellite earth observations.",
+    "submit_date": "2022-12-08",
+    "submitter_name": "mark hedley",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
