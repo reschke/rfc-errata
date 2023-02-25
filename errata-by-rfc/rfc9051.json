@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "errata_id": "6826",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "   18.  RFC822, RFC822.HEADER, and RFC822.TEXT FETCH data items were\r\n        deprecated.  Clients should use the corresponding BODY[]\r\n        variants instead.",
+    "correct_text": "   18.  RFC822, RFC822.HEADER, and RFC822.TEXT FETCH data items were\r\n        removed. Clients should use the corresponding BODY[]\r\n        variants instead.",
+    "notes": "Contrary to the original text, these data items are not deprecated but they were completely removed from the text of the RFC. As far as I see other deprecated items are not removed completely but moved to a '...obsolete...' token in the formal syntax.",
+    "submit_date": "2022-02-02",
+    "submitter_name": "Hontvári Levente",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7246",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.5.2.",
+    "orig_text": "   BINARY[<section-binary>]<<number>>\r\n      An <nstring> or <literal8> expressing the content of the specified\r\n      section after removing any encoding specified in the corresponding\r\n      Content-Transfer-Encoding header field.  If <number> is present,\r\n      it refers to the offset within the DECODED section data.\r\n",
+    "correct_text": "   BINARY[<section-binary>]\r\n      An <nstring> or <literal8> expressing the content of the specified\r\n      section after removing any encoding specified in the corresponding\r\n      Content-Transfer-Encoding header field.\r\n",
+    "notes": "While a FETCH _request_ can be \"partial\" with <...> for both BODY[] and BINARY[], only a FETCH _response_  for BODY[] can have an optional offset. A FETCH _response_ for BINARY[] cannot have an optional offset. At least according to the ABNF, which I believe is leading.\r\nSee lines 6756 and 6757:  msg-att-static = \"BODY\" section [\"<\" number \">\"] SP nstring / \"BINARY\" section-binary SP (nstring / literal8)\r\nAnd line 6987: section-binary  = \"[\" [section-part] \"]\"\r\n\r\nRFC 3516, IMAP4 Binary Content Extension, from which the original text was probably copied, appears to have the same issue but no errata.",
+    "submit_date": "2022-11-12",
+    "submitter_name": "Mechiel Lukkien",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7323",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.4.4.4.",
+    "orig_text": "        S: B283 NO [BADCHARSET UTF-8] KOI8-R is not supported\r\n",
+    "correct_text": "        S: B283 NO [BADCHARSET (UTF-8)] KOI8-R is not supported\r\n",
+    "notes": "The BADCHARSET response code is described in 7.1 as \"Optionally followed by a parenthesized list of charsets\", and in the formal syntax as:\r\n\r\n   resp-text-code =/ \"BADCHARSET\" [SP \"(\" charset *(SP charset) \")\" ]\r\n\r\nAlthough a client's parser might use a generic resp-text-code (atom [SP 1*<any TEXT-CHAR except \"]\">]) as a fallback, the server should parenthesize even when only one charset is sent.",
+    "submit_date": "2023-01-26",
+    "submitter_name": "Nicholas Evans",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-01-26 16:50:01"
+  },
+  {
+    "errata_id": "7343",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "resp-cond-auth  = (\"OK\" / \"PREAUTH\") SP resp-text\r\n                    ; Authentication condition\r\n\r\nresp-cond-bye   = \"BYE\" SP resp-text\r\n\r\nresp-cond-state = (\"OK\" / \"NO\" / \"BAD\") SP resp-text\r\n                    ; Status condition\r\n\r\n...\r\n\r\nresp-text       = [\"[\" resp-text-code \"]\" SP] [text]\r\n\r\n",
+    "correct_text": "resp-cond-auth  = (\"OK\" / \"PREAUTH\") [SP resp-text]\r\n                    ; Authentication condition\r\n                    ;\r\n                    ; Servers SHOULD send the trailing SP when resp-text\r\n                    ; is empty.\r\n                    \r\n\r\nresp-cond-bye   = \"BYE\" [SP resp-text]\r\n                    ; Servers SHOULD send the trailing SP when resp-text\r\n                    ; is empty.\r\n\r\nresp-cond-state = (\"OK\" / \"NO\" / \"BAD\") [SP resp-text]\r\n                    ; Status condition\r\n                    ;\r\n                    ; Servers SHOULD send the trailing SP when resp-text\r\n                    ; is empty.\r\n\r\n...\r\n\r\n\r\nresp-text       = \"[\" resp-text-code \"]\" [SP [text]] / [text]\r\n                    ; Servers SHOULD send then trailing SP when\r\n                    ; resp-text-code is present but text is empty.",
+    "notes": "Appendix E, Changes from RFC 3501 / IMAP4rev1, item 23 states that \"resp-text ABNF non-terminal was updated to allow for empty text.\"\r\n\r\nIn the spirit of Appendix E. 23, resp-text should allow \"[\" resp-text-code \"]\" without a trailing SP.  Similarly, resp-cond-auth, resp-cond-bye, and resp-cond-state should also allow the trailing SP to be dropped when resp-text is empty.  In all of these cases, the missing SP does not change the semantics of the response, so clients should not require it to be present.  However, for compatibility with clients that strictly adhere to the formal syntax as-is, servers should conservatively send the trailing SP even when text or resp-text is empty.\r\n\r\nThis aligns with existing practice, as some existing IMAP4rev1 servers already fail to send these trailing spaces, and some liberal clients already allow them to be missing.",
+    "submit_date": "2023-02-13",
+    "submitter_name": "Nicholas Evans",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
