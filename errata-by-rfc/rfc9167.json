@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "errata_id": "7176",
+    "doc-id": "RFC9167",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1",
+    "orig_text": "xmlns=\"https://www.w3.org/2001/XMLSchema\"",
+    "correct_text": "xmlns=\"http://www.w3.org/2001/XMLSchema\"",
+    "notes": "XML Schema standard https://www.w3.org/TR/xmlschema-1/ \"The XML representation of schema components uses a vocabulary identified by the namespace name http://www.w3.org/2001/XMLSchema. \"",
+    "submit_date": "2022-10-21",
+    "submitter_name": "Stéphane Bortzmeyer",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
