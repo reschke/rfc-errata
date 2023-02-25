@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "7317",
+    "doc-id": "RFC4743",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.6.",
+    "orig_text": "   S:               <full-name>Charlie Root</full-name>\r\n   S:                 <dept>1</dept>\r\n   S:                 <id>1</id>\r\n   S:               </company-info>",
+    "correct_text": "   S:               <full-name>Charlie Root</full-name>\r\n   S:               <company-info>\r\n   S:                 <dept>1</dept>\r\n   S:                 <id>1</id>\r\n   S:               </company-info>",
+    "notes": "The opening tags for <company-info> seem to be missing in the example.",
+    "submit_date": "2023-01-24",
+    "submitter_name": "Dominik Krappel",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7318",
+    "doc-id": "RFC4743",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.6.",
+    "orig_text": "   S:               <full-name>Fred Flintstone</full-name>\r\n   S:                 <dept>2</dept>\r\n   S:                 <id>2</id>\r\n   S:               </company-info>",
+    "correct_text": "   S:               <full-name>Fred Flintstone</full-name>\r\n   S:               <company-info>\r\n   S:                 <dept>2</dept>\r\n   S:                 <id>2</id>\r\n   S:               </company-info>",
+    "notes": "The opening tags for <company-info> seem to be missing in the example.",
+    "submit_date": "2023-01-24",
+    "submitter_name": "Dominik Krappel",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
