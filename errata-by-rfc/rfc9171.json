@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "7272",
+    "doc-id": "RFC9171",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.5.1.1",
+    "orig_text": "dtn-hier-part = \"//\" node-name name-delim demux ; a path-rootless\r\n\r\nnode-name = reg-name\r\n\r\ndemux = *VCHAR\r\n",
+    "correct_text": "dtn-hier-part = \"//\" node-name name-delim demux [ \"?\" query ]\r\n\r\nnode-name = reg-name\r\n\r\ndemux = path-rootless / path-empty\r\n",
+    "notes": "The demux portion of an EID should match only URI path segments and not match query or fragment URI parts. A fragment part should not actually be sent as encoded EID to be consistent with other URI uses (e.g. HTTP). The administrative endpoint is the allowed empty demux path.",
+    "submit_date": "2022-12-12",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7337",
+    "doc-id": "RFC9171",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "   ; Actual CBOR data embedded in a byte string, with optional tag to\r\n   indicate so.\r\n \r\n...\r\n \r\n   ; Extension block type, which does not specialize other than the\r\n   code/number\r\n\r\n...\r\n\r\n   payload-block = payload-block-structure .within canonical-block-\r\n   structure\r\n",
+    "correct_text": "   ; Actual CBOR data embedded in a byte string, with optional tag to\r\n   ; indicate so.\r\n\r\n... \r\n \r\n   ; Extension block type, which does not specialize other than the\r\n   ; code/number\r\n\r\n...\r\n\r\n   payload-block = payload-block-structure .within\r\n                   canonical-block-structure\r\n",
+    "notes": "Various line breaking events cause syntax errors while parsing Appendix B.",
+    "submit_date": "2023-02-06",
+    "submitter_name": "Carsten Bormann",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
