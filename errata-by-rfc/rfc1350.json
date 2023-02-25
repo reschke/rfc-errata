@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "errata_id": "1712",
+    "doc-id": "RFC1350",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "Acknowlegements",
+    "correct_text": "Acknowledgements",
+    "notes": null,
+    "submit_date": "2009-03-11",
+    "submitter_name": "Andy",
+    "verifier_id": "116",
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "4971",
+    "doc-id": "RFC1350",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6",
+    "orig_text": "(i.e., Datagram length < 516)",
+    "correct_text": "(i.e., Datagram length < 512)",
+    "notes": null,
+    "submit_date": "2017-03-15",
+    "submitter_name": "Ondrej",
+    "verifier_id": "130",
+    "verifier_name": "Barry Leiba",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7167",
+    "doc-id": "RFC1350",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "   The end of a transfer is marked by a DATA packet that contains\r\n   between 0 and 511 bytes of data (i.e., Datagram length < 516).",
+    "correct_text": "   The end of a transfer is marked by a DATA packet that contains\r\n   between 0 and 511 bytes of data (i.e., Datagram length < 524).",
+    "notes": "After careful reading it seems clear to me that \"Datagram\" here refers to the UDP datagram.\r\n\r\n\"Datagram\" is used to refer to UDP in several places (section 1: \"the Internet User Datagram protocol (UDP or Datagram)\", section 3: \"Since  Datagram is implemented\", \"the Datagram layer\", Figure 3.1, Figure \"Order of headers\" at beginning of Appendix).\r\n\r\nUDP header + TFTP header + 512 bytes of data is 8+4+512 = 524.\r\n\r\nNote this errata conflicts with errata #4971",
+    "submit_date": "2022-10-15",
+    "submitter_name": "Christophe Deleuze",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2022-10-19 13:50:00"
+  }
+]
