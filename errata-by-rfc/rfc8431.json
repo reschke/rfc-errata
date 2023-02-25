@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "errata_id": "7359",
+    "doc-id": "RFC8431",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "     grouping vxlan-header {\r\n       description\r\n         \"The VXLAN encapsulation header information.\";\r\n       choice vxlan-type {\r\n         description\r\n           \"NVGRE can use either an IPv4\r\n            or an IPv6 header for encapsulation.\";\r\n         case ipv4 {\r\n           uses ipv4-header;\r\n         }\r\n         case ipv6 {\r\n           uses ipv6-header;\r\n         }\r\n       }\r\n       leaf vxlan-identifier {\r\n         type uint32;\r\n         mandatory true;\r\n         description\r\n           \"The VXLAN identifier of the VXLAN header.\";\r\n       }\r\n     }\r\n",
+    "correct_text": "     grouping vxlan-header {\r\n       description\r\n         \"The VXLAN encapsulation header information.\";\r\n       choice vxlan-type {\r\n         description\r\n           \"VXLAN can use either an IPv4\r\n            or an IPv6 header for encapsulation.\";\r\n         case ipv4 {\r\n           uses ipv4-header;\r\n         }\r\n         case ipv6 {\r\n           uses ipv6-header;\r\n         }\r\n       }\r\n       leaf vxlan-identifier {\r\n         type uint32;\r\n         mandatory true;\r\n         description\r\n           \"The VXLAN identifier of the VXLAN header.\";\r\n       }\r\n     }\r\n",
+    "notes": "In the description, instead of VXLAN, NVGRE is indicated (page 49)",
+    "submit_date": "2023-02-17",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "148",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2023-02-17 07:16:33"
+  },
+  {
+    "errata_id": "7360",
+    "doc-id": "RFC8431",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "    rpc route-delete {\r\n       description\r\n         \"To delete a route or a list of routes from a RIB\";\r\n       input {\r\n         leaf return-failure-detail {\r\n           type boolean;\r\n           default \"false\";\r\n           description\r\n             \"Whether to return the failure detail.\r\n              true  - return the failure detail\r\n              false - do not return the failure detail\r\n              The default is false.\";\r\n         }\r\n         leaf rib-name {\r\n           type string;\r\n           mandatory true;\r\n           description\r\n             \"A reference to the name of a RIB.\";\r\n         }\r\n         container routes {\r\n           description\r\n             \"The routes to be added to the RIB.\";\r\n           list route-list {\r\n             key \"route-index\";\r\n             description\r\n               \"The list of routes to be deleted.\";\r\n             uses route-prefix;\r\n           }\r\n         }\r\n       }\r\n       output {\r\n         uses route-operation-state;\r\n       }\r\n     }\r\n",
+    "correct_text": "    rpc route-delete {\r\n       description\r\n         \"To delete a route or a list of routes from a RIB\";\r\n       input {\r\n         leaf return-failure-detail {\r\n           type boolean;\r\n           default \"false\";\r\n           description\r\n             \"Whether to return the failure detail.\r\n              true  - return the failure detail\r\n              false - do not return the failure detail\r\n              The default is false.\";\r\n         }\r\n         leaf rib-name {\r\n           type string;\r\n           mandatory true;\r\n           description\r\n             \"A reference to the name of a RIB.\";\r\n         }\r\n         container routes {\r\n           description\r\n             \"The routes to be deleted from the RIB.\";\r\n           list route-list {\r\n             key \"route-index\";\r\n             description\r\n               \"The list of routes to be deleted.\";\r\n             uses route-prefix;\r\n           }\r\n         }\r\n       }\r\n       output {\r\n         uses route-operation-state;\r\n       }\r\n     }\r\n",
+    "notes": "Copy-paste error at page 60.",
+    "submit_date": "2023-02-17",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "148",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2023-02-17 07:17:33"
+  },
+  {
+    "errata_id": "7361",
+    "doc-id": "RFC8431",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "     rpc route-update {\r\n       description\r\n         \"To update a route or a list of routes of a RIB.\r\n          The inputs:\r\n            1. The match conditions, which could be:\r\n              a. route prefix,\r\n              b. route attributes, or\r\n              c. nexthop.\r\n            2. The update parameters to be used:\r\n              a. new nexthop,\r\n              b. new route attributes, or\r\n              c. nexthop.\r\n",
+    "correct_text": "     rpc route-update {\r\n       description\r\n         \"To update a route or a list of routes of a RIB.\r\n          The inputs:\r\n            1. The match conditions, which could be:\r\n              a. route prefix,\r\n              b. route attributes, or\r\n              c. nexthop.\r\n            2. The update parameters to be used:\r\n              a. new nexthop, or\r\n              b. new route attributes",
+    "notes": "Excess item 2.c (page 61)",
+    "submit_date": "2023-02-17",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "148",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2023-02-17 07:19:39"
+  },
+  {
+    "errata_id": "7362",
+    "doc-id": "RFC8431",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "       output {\r\n         leaf result {\r\n           type boolean;\r\n           mandatory true;\r\n           description\r\n             \"Return the result of the rib-add operation:\r\n              true  - success\r\n              false - failed\";\r\n         }\r\n         leaf reason {\r\n           type string;\r\n           description\r\n             \"The specific reason that caused the failure.\";\r\n         }\r\n         leaf nexthop-id {\r\n           type uint32;\r\n           description\r\n             \"A nexthop identifier that is allocated to the nexthop.\";\r\n         }\r\n",
+    "correct_text": "       output {\r\n         leaf result {\r\n           type boolean;\r\n           mandatory true;\r\n           description\r\n             \"Return the result of the nh-add operation:\r\n              true  - success\r\n              false - failed\";\r\n         }\r\n         leaf reason {\r\n           type string;\r\n           description\r\n             \"The specific reason that caused the failure.\";\r\n         }\r\n         leaf nexthop-id {\r\n           type uint32;\r\n           description\r\n             \"A nexthop identifier that is allocated to the nexthop.\";\r\n         }\r\n",
+    "notes": "Erroneously specified operation rib-add instead of nh-add on page 64",
+    "submit_date": "2023-02-17",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "148",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2023-02-17 07:23:16"
+  },
+  {
+    "errata_id": "7363",
+    "doc-id": "RFC8431",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "       output {\r\n         leaf result {\r\n           type boolean;\r\n           mandatory true;\r\n           description\r\n             \"Return the result of the rib-add operation:\r\n              true  - success;\r\n              false - failed\";\r\n         }\r\n",
+    "correct_text": "       output {\r\n         leaf result {\r\n           type boolean;\r\n           mandatory true;\r\n           description\r\n             \"Return the result of the nh-delete operation:\r\n              true  - success;\r\n              false - failed\";\r\n         }\r\n",
+    "notes": "Erroneously specified operation rib-add instead of nh-delete on page 65",
+    "submit_date": "2023-02-17",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "148",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2023-02-17 07:22:51"
+  }
+]
