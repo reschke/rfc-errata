@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "7147",
+    "doc-id": "RFC9260",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2",
+    "orig_text": "          +----+--------------------------------------------------+\r\n          | 00 | Stop processing this SCTP packet and discard the |\r\n          |    | unrecognized chunk and all further chunks.       |\r\n          +----+--------------------------------------------------+\r\n          | 01 | Stop processing this SCTP packet, discard the    |\r\n          |    | unrecognized chunk and all further chunks, and   |\r\n          |    | report the unrecognized chunk in an ERROR chunk  |\r\n          |    | using the 'Unrecognized Chunk Type' error cause. |\r\n          +----+--------------------------------------------------+\r\n          | 10 | Skip this chunk and continue processing.         |\r\n          +----+--------------------------------------------------+\r\n          | 11 | Skip this chunk and continue processing, but     |\r\n          |    | report it in an ERROR chunk using the            |\r\n          |    | 'Unrecognized Chunk Type' error cause.           |\r\n          +----+--------------------------------------------------+\r\n",
+    "correct_text": "          +----+--------------------------------------------------+\r\n          | 00 | Stop processing this SCTP packet and discard the |\r\n          |    | unrecognized chunk and all further chunks.       |\r\n          +----+--------------------------------------------------+\r\n          | 01 | Stop processing this SCTP packet, discard the    |\r\n          |    | unrecognized chunk and all further chunks, and   |\r\n          |    | report the unrecognized chunk in an ERROR chunk  |\r\n          |    | using the \"Unrecognized Chunk Type\" error cause. |\r\n          +----+--------------------------------------------------+\r\n          | 10 | Skip this chunk and continue processing.         |\r\n          +----+--------------------------------------------------+\r\n          | 11 | Skip this chunk and continue processing, but     |\r\n          |    | report it in an ERROR chunk using the            |\r\n          |    | \"Unrecognized Chunk Type\" error cause.           |\r\n          +----+--------------------------------------------------+\r\n",
+    "notes": "In the rest of the document, error cause names are enclosed in double quotes, not in single quotes.",
+    "submit_date": "2022-10-06",
+    "submitter_name": "Michael Tüxen",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-10-10 14:00:11"
+  },
+  {
+    "errata_id": "7148",
+    "doc-id": "RFC9260",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.3.3",
+    "orig_text": "A receiver of an INIT ACK chunk with the a_rwnd value set to a\r\nvalue smaller than 1500 MUST discard the packet, SHOULD send a\r\npacket in response containing an ABORT chunk and using the\r\nInitiate Tag as the Verification Tag, and MUST NOT change the\r\nstate of any existing association.\r\n",
+    "correct_text": "If an endpoint in the COOKIE-WAIT state receives an INIT ACK chunk\r\nwith the a_rwnd value set to a value smaller than 1500, it MUST\r\ndestroy the TCB and SHOULD send an ABORT chunk.  If such an\r\nINIT ACK chunk is received in any state other than CLOSED or\r\nCOOKIE-WAIT, it SHOULD be discarded silently (see Section 5.2.3).\r\n",
+    "notes": "The handling of a_rwnd < 1500 should be similar to the handling of OS = 0 or MIS = 0.",
+    "submit_date": "2022-10-06",
+    "submitter_name": "Michael Tüxen",
+    "verifier_id": "167",
+    "verifier_name": "Martin Duke",
+    "update_date": "2022-10-06 10:59:19"
+  }
+]
