@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "5285",
+    "doc-id": "RFC8095",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "section 3.1",
+    "orig_text": "3.1 Transport Control Protocol (TCP)",
+    "correct_text": "3.1 Transmission Control Protocol (TCP)",
+    "notes": "The acronym-expansion for TCP is incorrect in the section title, but is correct in other text within the document.",
+    "submit_date": "2018-03-12",
+    "submitter_name": "Wesley Eddy",
+    "verifier_id": "153",
+    "verifier_name": "Mirja Kühlewind",
+    "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "6710",
+    "doc-id": "RFC8095",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.11.1",
+    "orig_text": "Error detection and verification of the protocol control information\r\nrelies on the on the underlying transport (e.g., UDP checksum).",
+    "correct_text": "Error detection and verification of the protocol control information\r\nrelies on the underlying transport (e.g., UDP checksum).",
+    "notes": "There is a redundant \"on the\".",
+    "submit_date": "2021-10-15",
+    "submitter_name": "Jie Zhang",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-01-27 15:26:15"
+  }
+]
