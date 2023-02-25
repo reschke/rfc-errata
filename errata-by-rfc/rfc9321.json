@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "errata_id": "7299",
+    "doc-id": "RFC9321",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "In section A.3.3.\r\n\r\n   The SVT Signature object MUST contain one instance of the \"sig_data\"\r\n   claim (SignedData object) for each <ds:Reference> element in the\r\n   <ds:SignedInfo> element.  The \"sig_data\" claim MUST contain the\r\n   following elements:\r\n\r\nIn Sections B.2.3. and C.2.3.\r\n\r\n   The SVT Signature object MUST contain one instance of the \"sig_data\"\r\n   claim (SignedData object) with the following elements:",
+    "correct_text": "In section A.3.3.\r\n\r\n   The SVT Signature object MUST contain one instance of the\r\n   \"sig_data_ref\" claim (SignedDataReference object) for each\r\n   <ds:Reference> element in the <ds:SignedInfo> element.  The\r\n   \"sig_data_ref\" claim MUST contain the following elements:\r\n\r\nIn Sections B.2.3. and C.2.3.\r\n\r\n   The SVT Signature object MUST contain one instance of the\r\n   \"sig_data_ref\" claim (SignedDataReference object) with the following\r\n   elements:",
+    "notes": "The SignedDataReference Claims Object Class defined in section 3.2.6. has been incorrectly referenced in the appendices of the document\r\n\r\nAs defined in section 3.2.6. the class name of the object is \"SignedDataReference\" and the claims name is \"sig_data_ref\".",
+    "submit_date": "2023-01-04",
+    "submitter_name": "Stefan Santesson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
