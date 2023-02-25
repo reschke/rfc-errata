@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "errata_id": "7214",
+    "doc-id": "RFC9112",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "1.2",
+    "orig_text": "The following core rules are included by reference, as defined in\r\n[RFC5234], Appendix B.1: ALPHA (letters), CR (carriage return), CRLF\r\n(CR LF), CTL (controls), DIGIT (decimal 0-9), DQUOTE (double quote),\r\nHEXDIG (hexadecimal 0-9/A-F/a-f), HTAB (horizontal tab), LF (line\r\nfeed), OCTET (any 8-bit sequence of data), SP (space), and VCHAR (any\r\nvisible [USASCII] character).",
+    "correct_text": "The following core rules are included by reference, as defined in\r\n[RFC5234], Appendix B.1: ALPHA (letters), CR (carriage return), CRLF\r\n(CR LF), CTL (controls), DIGIT (decimal 0-9), DQUOTE (double quote),\r\nHEXDIG (hexadecimal 0-9/A-F), HTAB (horizontal tab), LF (line\r\nfeed), OCTET (any 8-bit sequence of data), SP (space), and VCHAR (any\r\nvisible [USASCII] character).",
+    "notes": "Rule HEXDIG from RFC5234 is \r\nHEXDIG =  DIGIT / \"A\" / \"B\" / \"C\" / \"D\" / \"E\" / \"F\"\r\nexcluding lower-case letters.\n --VERIFIER NOTES-- \nRFC 5234 section 2.3 says: ABNF strings are case insensitive and the character set for these strings is US-ASCII.",
+    "submit_date": "2022-10-31",
+    "submitter_name": "Niklas Wolber",
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2022-11-09 00:38:39"
+  }
+]
