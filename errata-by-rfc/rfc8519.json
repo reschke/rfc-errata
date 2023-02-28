@@ -33,30 +33,30 @@
     "errata_id": "7312",
     "doc-id": "RFC8519",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "A.1",
     "orig_text": "   The \"example-newco-acl\" module is an example of a company's\r\n   proprietary model that augments the \"ietf-acl\" module.  It shows how\r\n   to use 'augment' with an XML Path Language (XPath) expression to add\r\n   additional match criteria, actions, and default actions for when no\r\n   ACE matches are found.  All these are company proprietary extensions\r\n   or system feature extensions.  \"example-newco-acl\" is just an\r\n   example, and it is expected that vendors will create their own\r\n   proprietary models.",
     "correct_text": "   The \"example-newco-acl\" module is an example of a company's\r\n   proprietary model that augments the \"ietf-access-control-list\" module.  It shows how\r\n   to use 'augment' with an XML Path Language (XPath) expression to add\r\n   additional match criteria, actions, and default actions for when no\r\n   ACE matches are found.  All these are company proprietary extensions\r\n   or system feature extensions.  \"example-newco-acl\" is just an\r\n   example, and it is expected that vendors will create their own\r\n   proprietary models.",
     "notes": "There is no \"ietf-acl\" module in the document.",
     "submit_date": "2023-01-18",
     "submitter_name": "Mohamed Boucadair",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-02-27 15:06:56"
   },
   {
     "errata_id": "7313",
     "doc-id": "RFC8519",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "A.1",
     "orig_text": "   The following figure is the tree diagram of example-newco-acl.  In\r\n   this example, /ietf-acl:acls/ietf-acl:acl/ietf-acl:aces/ietf-acl:ace/\r\n   ietf-acl:matches are augmented with two new choices: protocol-\r\n   payload-choice and metadata.  The protocol-payload-choice uses a\r\n   grouping with an enumeration of all supported protocol values.\r\n   Metadata matches apply to fields associated with the packet, that are\r\n   not in the packet header, such as overall packet length.  In another\r\n   example, /ietf-acl:acls/ietf-acl:acl/ietf-acl:aces/ietf-acl:ace/\r\n   ietf-acl:actions are augmented with a new choice of actions.",
     "correct_text": "   The following figure is the tree diagram of example-newco-acl.  In\r\n   this example, /acl:acls/acl:acl/acl:aces/acl:ace/acl:matches\r\n   are augmented with two new choices: protocol-payload-choice and\r\n   metadata.  The protocol-payload-choice uses a\r\n   grouping with an enumeration of all supported protocol values.\r\n   Metadata matches apply to fields associated with the packet, that are\r\n   not in the packet header, such as overall packet length.  In another\r\n   example, /acl:acls/acl:acl/acl:aces/acl:ace/acl:actions \r\n   are augmented with a new choice of actions.",
     "notes": "The prefix is \"acl\" not \"ietf-acl\"\r\n\r\n==\r\nmodule ietf-access-control-list {\r\n  yang-version 1.1;\r\n  namespace \"urn:ietf:params:xml:ns:yang:ietf-access-control-list\";\r\n  prefix acl;\r\n  ...\r\n==",
     "submit_date": "2023-01-18",
     "submitter_name": "Mohamed Boucadair",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-02-27 15:00:06"
   }
 ]
