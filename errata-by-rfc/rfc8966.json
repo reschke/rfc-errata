@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7373",
+    "doc-id": "RFC8966",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.8.2.2.",
+    "orig_text": "Additionally, since metric computation does not necessarily coincide\r\nwith the delay in propagating updates, a node might receive an\r\nunfeasible update from a currently unselected neighbour that is\r\npreferable to the currently selected route (e.g., because it has a\r\nmuch smaller metric); in that case, the node SHOULD send a unicast\r\nseqno request to the neighbour that advertised the preferable update.\r\n",
+    "correct_text": "Additionally, since metric computation does not necessarily coincide\r\nwith the delay in propagating updates, a node might receive an\r\nunfeasible update from a currently unselected neighbour that would\r\nlead to the received route becoming selected were it feasible. In that\r\ncase, the node SHOULD send a unicast seqno request to the neighbour\r\nthat advertised the preferable update.\r\n",
+    "notes": "As currently written the text does not recommend sending a seqno request when no route is currently selected because \".. that is preferable to the currently selected route\" implies a selected route as a precondition.\r\n\r\nWe recommend reinstating some of the RFC6126 wording instead. (Thanks to Juliusz for pointing this out)",
+    "submit_date": "2023-02-27",
+    "submitter_name": "Daniel Gröber",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
