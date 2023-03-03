@@ -13,5 +13,20 @@
     "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7375",
+    "doc-id": "RFC5891",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1",
+    "orig_text": "Section: Appendix B.2\r\n\r\nOriginal Text:\r\n\r\nAuthorityInfoAccessSyntax, GeneralName, CrlEntryExtensions\r\nFROM PKIX1Implicit-2009 -- From [RFC5912]\r\n    {iso(1) identified-organization(3) dod(6) internet(1) security(5)\r\n    mechanisms(5) pkix(7) id-mod(0) id-mod-pkix1-implicit-02(5",
+    "correct_text": "AuthorityInfoAccessSyntax, GeneralName, CrlEntryExtensions, CRLReason\r\nFROM PKIX1Implicit-2009 -- From [RFC5912]\r\n    {iso(1) identified-organization(3) dod(6) internet(1) security(5)\r\n    mechanisms(5) pkix(7) id-mod(0) id-mod-pkix1-implicit-02(59)}",
+    "notes": "Said to",
+    "submit_date": "2023-03-02",
+    "submitter_name": "Nicholas Olsen",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
