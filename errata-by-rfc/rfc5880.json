@@ -111,12 +111,12 @@
     "errata_type_code": "Technical",
     "section": "6.8.1",
     "orig_text": "   bfd.LocalDiag\r\n\r\n      The diagnostic code specifying the reason for the most recent\r\n      change in the local session state.  This MUST be initialized to\r\n      zero (No Diagnostic).",
-    "correct_text": "[Proposed text]\r\n\r\n   bfd.LocalDiag\r\n\r\n      The diagnostic code specifying the reason for the most recent\r\n      change in the local session state.  This MUST be initialized to\r\n      zero (No Diagnostic).  It MUST also be re-initialized to zero \r\n      (No Diagnostic) when the local session state transitions to Up.",
-    "notes": "RFC 5880 at various points calls out setting the value of bfd.LocalDiag as part of state transitions.  The text defining the feature calls for it to be initialized to zero.  However, it doesn't define under what conditions it should be re-initialized to zero.\r\n\r\nOne possible place where it may be reinitialized is when the session transitions back to Up, indicating that prior issues may have been cleared.",
+    "correct_text": "No proposed changes are offered here. See the notes for further discussion.",
+    "notes": "RFC 5880 at various points calls out setting the value of bfd.LocalDiag as part of state transitions. The text defining the feature calls for it to be initialized to zero. Discussion on the WG mailing list following the filing of the initial version of this erratum revealed two things:\r\n\r\nFirst, the text of the RFC is correct, complete, and reflects the authors’ intention at the time of writing, which really WAS that the value should only be initialized to zero but not reset to zero at any other time. \r\n\r\nSecond, by not emphasizing this point, the spec although formally speaking unambiguous, left space for implementors to exercise their intuitions and creativity. As a result, several implementations are reported to reset this value to zero when the session transitions back to Up.\r\n\r\nThe discussion is archived at https://mailarchive.ietf.org/arch/msg/rtg-bfd/yEOx2LTO51zq1he6vChUOVJySqM/ . If a new version of RFC 5880 is prepared in the future, this question should be reopened as part of that process. It would also be possible to offer a standards track document to update RFC 5880 in this respect if WG consensus can be found for a new approach. ",
     "submit_date": "2022-11-06",
     "submitter_name": "Jeffrey Haas",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2023-03-06 06:37:37"
   }
 ]
