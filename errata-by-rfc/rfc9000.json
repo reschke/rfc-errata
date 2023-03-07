@@ -18,16 +18,16 @@
     "errata_id": "7365",
     "doc-id": "RFC9000",
     "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_type_code": "Editorial",
     "section": "12.4.",
     "orig_text": "| 0x19       | RETIRE_CONNECTION_ID | Section 19.16 | __01 |      |",
     "correct_text": "| 0x19       | RETIRE_CONNECTION_ID | Section 19.16 | ___1 |      |",
     "notes": "Based on the context and section 12.5 ending says:\r\n\r\nNote that it is not possible to send the following frames in 0-RTT\r\n   packets for various reasons: ACK, CRYPTO, HANDSHAKE_DONE, NEW_TOKEN,\r\n   PATH_RESPONSE, and RETIRE_CONNECTION_ID.  A server MAY treat receipt\r\n   of these frames in 0-RTT packets as a connection error of type\r\n   PROTOCOL_VIOLATION.\r\n\r\nSo, I think the RETIRE_CONNECTION_ID frame should not appear in the 0-RTT packet, only contained in the 1-RTT package.",
     "submit_date": "2023-02-23",
     "submitter_name": "yongboy",
-    "verifier_id": "2",
-    "verifier_name": "RFC Editor",
-    "update_date": "2023-02-27 14:22:00"
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2023-03-06 01:47:36"
   },
   {
     "errata_id": "7374",
