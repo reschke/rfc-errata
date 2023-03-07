@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7377",
+    "doc-id": "RFC0865",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "865",
+    "orig_text": "\"...Once a connection is established \r\n a short message is sent out \r\n the connection...\"\r\n\r\n",
+    "correct_text": "\"...Once a connection is established \r\n a short message is sent out '<via>' <from> <to> <of> \r\n the connection...\"",
+    "notes": "A minor grammatical error, perhaps due to the author thinking in code.",
+    "submit_date": "2023-03-06",
+    "submitter_name": "Conroy Bogle",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
