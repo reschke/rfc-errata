@@ -418,5 +418,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7382",
+    "doc-id": "RFC5322",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.3",
+    "orig_text": "ccontent        =   ctext / quoted-pair / comment\r\n\r\ncomment         =   \"(\" *([FWS] ccontent) [FWS] \")\"",
+    "correct_text": "ccontent        =   ctext / quoted-pair\r\n\r\ncomment         =   \"(\" *([FWS] ccontent) [FWS] \")\"",
+    "notes": "Trying to getting all possible originator formats a reader can get stuck into a circular dependency between \"comment\" and \"ccontent\" definitions.\r\nSince \"ccontent\" is referenced in the \"comment\" definition only circular dependency should be cut there I suppose.",
+    "submit_date": "2023-03-11",
+    "submitter_name": "Paolo Schiro",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
