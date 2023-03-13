@@ -133,5 +133,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7384",
+    "doc-id": "RFC8410",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "    sa-Ed25519 SIGNATURE-ALGORITHM ::= {\r\n       IDENTIFIER id-Ed25519\r\n        PARAMS ARE absent\r\n        PUBLIC-KEYS {pk-Ed25519}\r\n        SMIME-CAPS { IDENTIFIED BY id-Ed25519 }\r\n    }\r\n\r\n    pk-Ed25519 PUBLIC-KEY ::= {\r\n        IDENTIFIER id-Ed25519\r\n        -- KEY no ASN.1 wrapping --\r\n        PARAMS ARE absent\r\n        CERT-KEY-USAGE {digitalSignature, nonRepudiation,\r\n                        keyCertSign, cRLSign}\r\n        PRIVATE-KEY CurvePrivateKey\r\n    }",
+    "correct_text": "    sa-Ed25519 SIGNATURE-ALGORITHM ::= {\r\n       IDENTIFIER id-Ed25519\r\n        PARAMS ARE absent\r\n        PUBLIC-KEYS {pk-Ed25519}\r\n        SMIME-CAPS { IDENTIFIED BY id-Ed25519 }\r\n    }\r\n\r\n    pk-Ed25519 PUBLIC-KEY ::= {\r\n        IDENTIFIER id-Ed25519\r\n        -- KEY no ASN.1 wrapping --\r\n        PARAMS ARE absent\r\n        CERT-KEY-USAGE {digitalSignature, nonRepudiation,\r\n                        keyCertSign, cRLSign}\r\n        PRIVATE-KEY CurvePrivateKey\r\n    }\r\n\r\n   sa-Ed448 SIGNATURE-ALGORITHM ::= {\r\n      IDENTIFIER id-Ed448\r\n       PARAMS ARE absent\r\n       PUBLIC-KEYS {pk-Ed448}\r\n       SMIME-CAPS { IDENTIFIED BY id-Ed448 }\r\n   }\r\n\r\n   pk-Ed448 PUBLIC-KEY ::= {\r\n       IDENTIFIER id-Ed448\r\n       -- KEY no ASN.1 wrapping --\r\n       PARAMS ARE absent\r\n       CERT-KEY-USAGE {digitalSignature, nonRepudiation,\r\n                       keyCertSign, cRLSign}\r\n       PRIVATE-KEY CurvePrivateKey\r\n   }",
+    "notes": "The definitions for sa-Ed448 and pk-Ed448 are missing from RFC 8410.",
+    "submit_date": "2023-03-12",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
