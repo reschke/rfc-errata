@@ -103,5 +103,20 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2023-01-18 01:39:22"
+  },
+  {
+    "errata_id": "7383",
+    "doc-id": "RFC8259",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.  Values",
+    "orig_text": "      false = %x66.61.6c.73.65   ; false\r\n\r\n      null  = %x6e.75.6c.6c      ; null",
+    "correct_text": "      false = %x66.61.6C.73.65   ; false\r\n\r\n      null  = %x6E.75.6C.6C      ; null",
+    "notes": "Hex values should be capitalized https://www.rfc-editor.org/rfc/rfc5234#appendix-B.1",
+    "submit_date": "2023-03-12",
+    "submitter_name": "Daniel Tegründe",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
