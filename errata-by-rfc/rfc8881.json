@@ -73,5 +73,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-01-30 12:37:30"
+  },
+  {
+    "errata_id": "7386",
+    "doc-id": "RFC8881",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "18.46.3.",
+    "orig_text": "                                                             Operations\r\n   other than SEQUENCE, BIND_CONN_TO_SESSION, EXCHANGE_ID,\r\n   CREATE_SESSION, and DESTROY_SESSION, MUST NOT appear as the first\r\n   operation in a COMPOUND.",
+    "correct_text": "                                                             Operations\r\n   other than SEQUENCE, BIND_CONN_TO_SESSION, EXCHANGE_ID,\r\n   CREATE_SESSION, DESTROY_SESSION, and DESTROY_CLIENTID, MUST NOT\r\n   appear as the first operation in a COMPOUND.",
+    "notes": "Section 18.50.3. DESCRIPTION of DESTROY_CLIENTID says\r\n\r\n\"DESTROY_CLIENTID MAY be preceded with a SEQUENCE\"\r\n\r\nand also says\r\n\r\n\"If DESTROY_CLIENTID is not prefixed by SEQUENCE, it MUST be the only operation in the COMPOUND request\"\r\n\r\nwhich implies that DESTROY_CLIENTID can appear as the first (and the only) operation in a COMPOUND.",
+    "submit_date": "2023-03-13",
+    "submitter_name": "Pali Rohár",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
