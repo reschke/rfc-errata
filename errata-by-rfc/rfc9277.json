@@ -2,16 +2,16 @@
   {
     "errata_id": "7144",
     "doc-id": "RFC9277",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "Appendix D",
-    "orig_text": "{#sequences}",
-    "correct_text": "(Section 2.3)",
+    "orig_text": "As with the Labeled CBOR Sequence {#sequences}, this choice of the\r\ntag content places the ASCII characters \"CBOR\" prominently into the\r\nheader.",
+    "correct_text": "As with the Labeled CBOR Sequence (Section 2.3), this choice of the\r\ntag content places the ASCII characters \"CBOR\" prominently into the\r\nheader.",
     "notes": "It looks like a typo in the markdown (a missing pair of curly brackets) managed to trickle through the publication process.",
     "submit_date": "2022-10-04",
     "submitter_name": "Thomas Fossati",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-03-15 02:39:25"
   }
 ]
