@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7398",
+    "doc-id": "RFC8895",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "8.1",
+    "orig_text": "     \"my-network-map\": {\r\n       \"uri\": \"https://alto.example.com/networkmap\",\r\n       \"media-type\": \"application/alto-networkmap+json\",\r\n     },\r\n     ...",
+    "correct_text": "     \"my-network-map\": {\r\n       \"uri\": \"https://alto.example.com/networkmap\",\r\n       \"media-type\": \"application/alto-networkmap+json\"\r\n     },\r\n     ...",
+    "notes": "The OLD text includes a trailing \",\"",
+    "submit_date": "2023-03-20",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
