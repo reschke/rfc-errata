@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7401",
+    "doc-id": "RFC9249",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "8",
+    "orig_text": "  identity hmac-sha-256 {\r\n    description\r\n      \"HMAC-SHA-256 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }\r\n\r\n  identity hmac-sha-384 {\r\n    description\r\n      \"HMAC-SHA-384 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }\r\n\r\n  identity hmac-sha-512 {\r\n    description\r\n      \"HMAC-SHA-512 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }",
+    "correct_text": "  identity hmac-sha-256 {\r\n    base crypto-algorithm;\r\n    description\r\n      \"HMAC-SHA-256 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }\r\n\r\n  identity hmac-sha-384 {\r\n    base crypto-algorithm;\r\n    description\r\n      \"HMAC-SHA-384 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }\r\n\r\n  identity hmac-sha-512 {\r\n    base crypto-algorithm;\r\n    description\r\n      \"HMAC-SHA-512 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }",
+    "notes": "The identity definitions of \"hmac-sha-256\", \"hmac-sha-384\" and \"hmac-sha-512\" lack the \"base crypto-algorithm;\" statement and therefore basically cannot be used in the scope of ietf-ntp@2022-07-05.yang.",
+    "submit_date": "2023-03-21",
+    "submitter_name": "Maurice Angermann",
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2023-03-21 06:46:21"
+  }
+]
