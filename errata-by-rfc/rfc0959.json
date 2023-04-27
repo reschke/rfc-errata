@@ -223,5 +223,20 @@
     "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2021-03-07 08:22:38"
+  },
+  {
+    "errata_id": "7430",
+    "doc-id": "RFC0959",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "The direction of the transfer and the port used will be determined by the FTP service command.",
+    "correct_text": "The direction of the transfer will be determined by the FTP service command.",
+    "notes": "Per RFC 1123 (section \"4.1.2.12 Connections\"), the clause \"and the port used\" was a remnant of an earlier version of the standard, and ought to have been removed during the rewrite that produced RFC 959.  Admittedly, RFC 1123 does only use the term \"should\" in saying to ignore the wording, as the behaviour described had been correct at one time -- but that time was meant to have ended 38 years ago.  For the few brave souls who attempt to program FTP support in the modern day, this really ought to explicitly annotate the actual RFC.",
+    "submit_date": "2023-04-23",
+    "submitter_name": "Gordon Steemson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
