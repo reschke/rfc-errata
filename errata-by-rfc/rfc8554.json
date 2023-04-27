@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7409",
+    "doc-id": "RFC8554",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Section 6.4, Table 3",
+    "orig_text": "   +---------+------------+---------+-------------+ \r\n   | ParmSet | KeyGenTime | SigSize | KeyLifetime | \r\n   +---------+------------+---------+-------------+ \r\n                         ... \r\n\r\n   | 15/10   | 6 sec      | 3172    | 9 hours     | \r\n   |         |            |         |             | \r\n   | 15/15   | 6 sec      | 3332    | 12 days     | \r\n   |         |            |         |             | \r\n   | 20/10   | 3 min      | 3332    | 12 days     | \r\n   |         |            |         |             | \r\n   | 20/15   | 3 min      | 3492    | 1 year      | \r\n   |         |            |         |             | \r\n   | 25/10   | 1.5 hour   | 3492    | 1 year      | \r\n   |         |            |         |             | \r\n   | 25/15   | 1.5 hour   | 3652    | 34 years    | \r\n   +---------+------------+---------+-------------+ \r\n ",
+    "correct_text": "   +---------+------------+---------+-------------+ \r\n   | ParmSet | KeyGenTime | SigSize | KeyLifetime | \r\n   +---------+------------+---------+-------------+ \r\n                         ... \r\n\r\n   | 15/10   | 6 sec      | 3124    | 9 hours     | \r\n   |         |            |         |             | \r\n   | 15/15   | 6 sec      | 3284    | 12 days     | \r\n   |         |            |         |             | \r\n   | 20/10   | 3 min      | 3284    | 12 days     | \r\n   |         |            |         |             | \r\n   | 20/15   | 3 min      | 3444    | 1 year      | \r\n   |         |            |         |             | \r\n   | 25/10   | 1.5 hour   | 3444    | 1 year      | \r\n   |         |            |         |             | \r\n   | 25/15   | 1.5 hour   | 3604    | 34 years    | \r\n   +---------+------------+---------+-------------+ \r\n",
+    "notes": "The signature sizes for the two-level HSS parameters in Table 3 are all 48 bytes larger than they should be.  It looks like they were computed assuming a 64-byte identifier I in the level-1 LMS public key pub[1],  but the identifier was reduced to 16 bytes in draft -07.  The signature sizes for the single-level HSS parameters are all correct because they do not have intermediate LMS public keys.",
+    "submit_date": "2023-03-29",
+    "submitter_name": "Peter Campbell",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
