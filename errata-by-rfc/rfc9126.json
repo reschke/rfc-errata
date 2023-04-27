@@ -28,5 +28,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2022-11-21 13:58:28"
+  },
+  {
+    "errata_id": "7410",
+    "doc-id": "RFC9126",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1.1",
+    "orig_text": "Uses \"urn:example:bwc4JK-ESC0w8acc191e-Y1LTC2\" in two examples.",
+    "correct_text": "Use \"urn:ietf:params:oauth:request_uri:bwc4JK-ESC0w8acc191e-Y1LTC2\"\r\ninstead.",
+    "notes": "Some may find the use of \"urn:example:\" a bit misleading.",
+    "submit_date": "2023-03-31",
+    "submitter_name": "Andrii Deinega",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-04-25 17:42:58"
   }
 ]
