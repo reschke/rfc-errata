@@ -62,16 +62,16 @@
   {
     "errata_id": "6519",
     "doc-id": "RFC8224",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4",
     "orig_text": "ident-type = \"ppt\" EQUAL token",
     "correct_text": "ident-type = \"ppt\" EQUAL DQUOTE token DQUOTE",
-    "notes": "Based on IETF 101 STIR notes ptr= values should always be quoted. Also, ATIS-1000074 is using double quotes around ppt value.",
+    "notes": "Based on IETF 101 STIR notes ptr= values should always be quoted. Also, ATIS-1000074 is using double quotes around ppt value.\r\n\r\n[AD note] See the minutes of the STIR WG at IETF 116, and https://datatracker.ietf.org/doc/minutes-interim-2021-stir-01-202104141600/.",
     "submit_date": "2021-04-06",
     "submitter_name": "Roman Shpount",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2023-03-29 00:02:54"
   }
 ]
