@@ -73,5 +73,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7419",
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.3.2",
+    "orig_text": "   In the fields defined by this document, charset names appear either\r\n   in parameters (Content-Type), or, for Accept-Encoding, in the form of\r\n   a plain token.",
+    "correct_text": "   In the fields defined by this document, charset names appear either\r\n   in parameters (Content-Type), or, for Accept-Charset, in the form of\r\n   a plain token.",
+    "notes": "Accept-Encoding is the preferred list of response content codings.  Accept-Charset is the preferred list of response charsets.",
+    "submit_date": "2023-04-11",
+    "submitter_name": "Dave Shawley",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
