@@ -73,5 +73,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7405",
+    "doc-id": "RFC8017",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "11.2, 7.2",
+    "orig_text": "\"HAASTAD\"\r\n\r\nand\r\n\r\n\"Haastad, J\"",
+    "correct_text": "\"HASTAD\"\r\n\r\nand\r\n\r\n\"Hastad, J\"",
+    "notes": "https://epubs.siam.org/doi/10.1137/0217019 indicates that the author of \"Solving Simultaneous Modular Equations of Low Degree\" is \"Johan Hastad\", not \"Johan Haastad\".",
+    "submit_date": "2023-03-25",
+    "submitter_name": "Daniel Kahn Gillmor",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
