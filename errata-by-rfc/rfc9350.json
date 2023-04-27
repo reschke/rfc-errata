@@ -13,5 +13,20 @@
     "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2023-03-06 06:19:44"
+  },
+  {
+    "errata_id": "7406",
+    "doc-id": "RFC9350",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.1",
+    "orig_text": "The IS-IS FAD sub-TLV MAY be advertised in a\r\nLabel Switched Path (LSP) of any number.",
+    "correct_text": "The IS-IS FAD sub-TLV MAY be advertised in a\r\nLink State PDU (LSP) of any number.",
+    "notes": "I assume LSP is meant to refer to the PDU carrying the FAD, not a Label Switched Path.",
+    "submit_date": "2023-03-28",
+    "submitter_name": "Barry Friedman",
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2023-04-13 06:56:18"
   }
 ]
