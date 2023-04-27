@@ -73,5 +73,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7412",
+    "doc-id": "RFC8391",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.6 (Algorithm 1)",
+    "orig_text": "bits += 8;",
+    "correct_text": "bits = 8;",
+    "notes": "\"bits += 8;\" is misleading and results in one useless addition. \r\n\r\nThis is true because this instruction appears after the program ensured that \"bits == 0\".\r\n\r\nTherefore, \"bits = 8;\" is the actual instruction that should be executed here.",
+    "submit_date": "2023-04-02",
+    "submitter_name": "Rafael Misoczki",
+    "verifier_id": "163",
+    "verifier_name": "Colin Perkins",
+    "update_date": "2023-04-10 10:11:14"
+  },
+  {
+    "errata_id": "7420",
+    "doc-id": "RFC8391",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.2",
+    "orig_text": "// Generate reduced XMSS private keys\r\n     ADRS = toByte(0, 32);\r\n     for ( layer = 0; layer < d; layer++ ) {\r\n        ADRS.setLayerAddress(layer);\r\n        for ( tree = 0; tree <\r\n              (1 << ((d - 1 - layer) * (h / d)));\r\n              tree++ ) {\r\n           ADRS.setTreeAddress(tree);\r\n           for ( i = 0; i < 2^(h / d); i++ ) {\r\n             wots_sk[i] = WOTS_genSK();\r\n           }\r\n           setXMSS_SK(SK_MT, wots_sk, tree, layer);\r\n        }\r\n     }",
+    "correct_text": "// Generate reduced XMSS private keys\r\n     ADRS = toByte(0, 32);\r\n     for ( layer = 0; layer < d; layer++ ) {\r\n        ADRS.setLayerAddress(layer);\r\n        for ( tree = 0; tree <\r\n              (1 << ((d - 1 - layer) * (h / d)));\r\n              tree++ ) {\r\n           ADRS.setTreeAddress(tree);\r\n           for ( i = 0; i < 2^(h / d); i++ ) {\r\n             wots_sk[i] = WOTS_genSK();\r\n           }\r\n           setXMSS_SK(SK_MT, wots_sk, tree, layer, ADRS);\r\n        }\r\n     }",
+    "notes": "The ADRS variable is created and configured (layer address and tree address fields set) but it is not used anywhere in the for-loop. \r\n\r\nIt would be more precise if the setXMSS_SK function receives the ADRS variable so that implementers understand that both layer address and tree address fields must be set as defined in this for-loop in order to generate the correct XMSS private key in each iteration of this loop.",
+    "submit_date": "2023-04-11",
+    "submitter_name": "Rafael Misoczki",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
