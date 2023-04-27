@@ -43,5 +43,20 @@
     "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7413",
+    "doc-id": "RFC7011",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.4.1",
+    "orig_text": "Field Count\r\n\r\n      Number of fields in this Template Record.",
+    "correct_text": "Field Count\r\n\r\nNumber of fields in this Template Record. The Field Count MUST NOT be zero, unless used in a Template Withdrawal.",
+    "notes": "If the size of data record corresponding to a template can ever be zero, then  the only valid size for such a data set is the size of the set header.  For normal cases any size greater than that of the set header is a valid size, since records are read from a set until the number of octets remaining is less than the smallest possible record size for that set.  If a record size can be zero, then any number of bytes past the header cannot be padding (is not smaller than the smallest record), and a conforming implementation might return an infinite number of zero-sized records.  As this could cause a denial of service situation, rejecting templates that define zero-sized records seems to be the simplest solution.\r\n\r\nSimilar text may be necessary for Option Template records, though the fact that the scope count MUST be non-zero may negate the necessity.\r\n\r\n---\r\nWK: See thread https://mailarchive.ietf.org/arch/msg/ipfix/AkCZr1jObLt_x9cyQ73qXBlKC2w/ for more info.\r\nWK -  2023-04-26: Update from the original reporter (Michael) and confirmations from authors (Brian and Benoit) that Field Count can be zero in the case of Template Withdrawal. Changing the state from Verified to HFDU, so that this can be better clarified in any future updates. ",
+    "submit_date": "2023-04-02",
+    "submitter_name": "Michael Duggan",
+    "verifier_id": "155",
+    "verifier_name": "Wa",
+    "update_date": "2023-04-26 12:02:34"
   }
 ]
