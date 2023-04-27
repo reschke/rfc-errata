@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7402",
+    "doc-id": "RFC4025",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "       0                   1                   2                   3\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |  precedence   | gateway type  |  algorithm  |     gateway     |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-------------+                 +\r\n      ~                            gateway                            ~\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "correct_text": "       0                   1                   2                   3\r\n       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n      |  precedence   | gateway type  |   algorithm   |    gateway    |\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+---------------+               +\r\n      ~                            gateway                            ~\r\n      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "notes": "Section 2.4 does not explicitly specify a length for the algorithm field (unlike section 2.2 does for the precedence field). But using only 7 bits for it after the preceding two fields used 8 bits is quite unexpected. So this seems like a mistake in this diagram. Note that the BIND DNS server already uses 8 bits for the algorithm field.",
+    "submit_date": "2023-03-23",
+    "submitter_name": "Tobias Brunner",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
