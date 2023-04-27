@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7423",
+    "doc-id": "RFC9303",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.9",
+    "orig_text": "ITR MUST set the 'EID HMAC ID' field to 0 before computing the HMAC.",
+    "correct_text": "ITR MUST set the 'EID HMAC' field to 0 before computing the HMAC.",
+    "notes": "0 (zero) must be set in the 'EID HMAC' field, not in the 'EID HMAC ID' field",
+    "submit_date": "2023-04-15",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "175",
+    "verifier_name": "James N Guichard",
+    "update_date": "2023-04-19 07:15:42"
+  }
+]
