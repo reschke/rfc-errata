@@ -328,5 +328,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7429",
+    "doc-id": "RFC6749",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "Before initiating the protocol, the client registers with the\r\n   authorization server.  The means through which the client registers\r\n   with the authorization server are beyond the scope of this\r\n   specification but typically involve end-user interaction with an HTML\r\n   registration form.",
+    "correct_text": "Before initiating the protocol, the client registers with the\r\n   authorization server.  The means through which the client registers\r\n   with the authorization server are beyond the scope of this\r\n   specification but typically involve client developer interaction with an HTML\r\n   registration form.",
+    "notes": "As described in 1.1 resource owner if person is referred to as end user. Resource owner is not responsible for registering a client with authorization server, but the client developer is.",
+    "submit_date": "2023-04-20",
+    "submitter_name": "Gasan Guseinov",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
