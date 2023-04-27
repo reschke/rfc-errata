@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7418",
+    "doc-id": "RFC8016",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "84200377",
+    "orig_text": "If the client's IP address or source port has changed and the client wants to retain the existing allocation, the client includes the MOBILITY-TICKET\r\nattribute received in the Allocate success response in the Refresh\r\nrequest.  If there has been no IP address or source port number\r\nchange, the client MUST NOT include a MOBILITY-TICKET attribute, as\r\nthis would be rejected by the server and the client would need to\r\nretransmit the Refresh request without the MOBILITY-TICKET attribute",
+    "correct_text": "When the client wants to retain the existing allocation, the client includes the MOBILITY-TICKET attribute received in the Allocate success response in the Refresh\r\nrequest.  If there has been no IP address or source port number\r\nchange, the client MUST NOT include a MOBILITY-TICKET attribute, as\r\nthis would be rejected by the server and the client would need to\r\nretransmit the Refresh request without the MOBILITY-TICKET attribute",
+    "notes": "Here client's IP address and port are the STUN-mapped IP address and port.\r\n\r\nHow client will know that its IP address or source port has been changed?\r\n\r\nIt can be changed transparently where the client is not aware of it.\r\n\r\nOne way is to query it by STUN binding request before sending every STUN message\r\nbut this is not a feasible solution because of the huge overhead.\r\n\r\nThe best will be if the turnserver can inform the client about the changes. \r\n\r\nThe RFC should consider this otherwise it will not be very useful.",
+    "submit_date": "2023-04-11",
+    "submitter_name": "Md Nazmus Shakeeb",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
