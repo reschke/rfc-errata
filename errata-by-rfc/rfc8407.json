@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-04-06 14:00:23"
+  },
+  {
+    "errata_id": "7416",
+    "doc-id": "RFC8407",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.8",
+    "orig_text": "      revision \"2017-12-11\" {\r\n        description\r\n          \"Added support for YANG 1.1 actions and notifications tied to\r\n           data nodes.  Clarify how NACM extensions can be used by other\r\n           data models.\";\r\n        reference\r\n          \"RFC 8407: Network Configuration Protocol (NETCONF)\r\n                     Access Control Model\";\r\n      }",
+    "correct_text": "      revision \"2017-12-11\" {\r\n        description\r\n          \"Added support for YANG 1.1 actions and notifications tied to\r\n           data nodes.  Clarify how NACM extensions can be used by other\r\n           data models.\";\r\n        reference\r\n          \"RFC UUUU: Network Configuration Access Control Model\";\r\n      }",
+    "notes": "This example is supposed to illustrate the use of revisions in unpublished updates. Having an RFC under  the reference clause is inconsistent:\r\n\r\n   o  published: A stable release of a module or submodule.  For\r\n      example, the \"Request for Comments\" described in Section 2.1 of\r\n      [RFC2026] is considered a stable publication.\r\n\r\n   o  unpublished: An unstable release of a module or submodule.  For\r\n      example the \"Internet-Draft\" described in Section 2.2 of [RFC2026]\r\n      is considered an unstable publication that is a work in progress,\r\n      subject to change at any time. \r\n\r\nI suspect that RFC XXXX in draft-ietf-netmod-rfc6087bis was erroneously replaced by RFC 8407: \r\n\r\n      revision \"2017-12-11\" {\r\n        description\r\n          \"Added support for YANG 1.1 actions and notifications tied to\r\n           data nodes. Clarify how NACM extensions can be used by other\r\n           data models.\";\r\n        reference\r\n          \"RFC XXXX: Network Configuration Protocol (NETCONF)\r\n                     Access Control Model\";\r\n      }",
+    "submit_date": "2023-04-07",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-04-26 14:41:13"
   }
 ]
