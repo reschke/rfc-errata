@@ -108,30 +108,30 @@
     "errata_id": "7396",
     "doc-id": "RFC8824",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": "Note that a client located in an Application Server sending a request\r\nto a server located in the Device may not be compressed through this\r\nRule, since the MID might not start with 7 bits equal to 0.",
     "correct_text": "Note that, if a client is located in an Application Server and sends a\r\nrequest to a server located in the Device, then the request may not be\r\ncompressed through this Rule, since the MID might not start with 7 bits\r\nequal to 0.",
     "notes": "In the old text, \"compressed\" seems referred to \"client\" rather than to \"request\" as intended.",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-04-27 16:34:47"
   },
   {
     "errata_id": "7397",
     "doc-id": "RFC8824",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "7.2",
     "orig_text": "These classes point out that the Outer option contains the OSCORE\r\noption and that the message is OSCORE protected; this option carries\r\nthe information necessary to retrieve the Security Context.",
     "correct_text": "As per these classes, the Outer options comprise the OSCORE option,\r\nwhich indicates that the message is OSCORE protected and carries\r\nthe information necessary to retrieve the Security Context.",
     "notes": "\"Outer options\" should be in the plural, to refer to the set of CoAP options left unencrypted. Such a set comprises also the OSCORE option, which is the actual indicator of the message being protected with OSCORE.",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-04-27 16:41:58"
   }
 ]
