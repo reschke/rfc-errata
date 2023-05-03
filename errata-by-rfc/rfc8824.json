@@ -48,16 +48,16 @@
     "errata_id": "7392",
     "doc-id": "RFC8824",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "6.2",
     "orig_text": "Since the Observe Option MAY use a RST message to inform a server\r\nthat the client does not require the Observe response, a specific\r\nSCHC Rule SHOULD exist to allow the message's compression with the\r\nRST type.",
     "correct_text": "Since the Observe extension MAY use a RST message to inform a server\r\nthat the client does not require the Observe response, a specific\r\nSCHC Rule SHOULD exist to allow the message's compression with the\r\nRST type.",
     "notes": "A RST message is not used by the Observe option itself, but by a CoAP client when using Observe.",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-05-02 14:59:25"
   },
   {
     "errata_id": "7393",
@@ -78,31 +78,31 @@
     "errata_id": "7394",
     "doc-id": "RFC8824",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": "equal 1",
     "correct_text": "equal",
     "notes": "See the cell value of Table 3, last row, column \"MO\".",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-05-02 15:11:36"
   },
   {
     "errata_id": "7395",
     "doc-id": "RFC8824",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": "SCHC compression reduces the header, sending only the Type, a mapped\r\ncode, and the least significant bits of the Message ID (9 bits in the\r\nexample above).",
     "correct_text": "SCHC compression reduces the header, sending only a mapped Type (and\r\nonly for uplink messages), a mapped code, and the least significant\r\nbits of the Message ID (9 bits in the example above).",
     "notes": "As per the discussed rule from Table 3, the Type is also omitted if it is CON for downlink messages.",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-05-02 15:19:49"
   },
   {
     "errata_id": "7396",
