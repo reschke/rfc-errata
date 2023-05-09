@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7512",
+    "doc-id": "RFC8059",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.1",
+    "orig_text": "   Receiver RLOC:   The RLOC address on which the receiver ETR wishes to\r\n      receiver the unicast-encapsulated flow.",
+    "correct_text": "   Receiver RLOC:   The RLOC address on which the receiver ETR wishes to\r\n      receive the unicast-encapsulated flow.",
+    "notes": "The second \"receiver\" should be \"receive\".",
+    "submit_date": "2023-05-08",
+    "submitter_name": "Alvaro Retana",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-05-08 14:07:06"
+  }
+]
