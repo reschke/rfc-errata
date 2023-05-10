@@ -43,5 +43,20 @@
     "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-01-07 05:55:53"
+  },
+  {
+    "errata_id": "7513",
+    "doc-id": "RFC5789",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2",
+    "orig_text": "PATCH is neither safe nor idempotent as defined by [<a href=\"./rfc2616\" title=\"&quot;Hypertext Transfer Protocol -- HTTP/1.1&quot;\">RFC2616</a>], <a href=\"#section-9.1\">Section</a> <a href=\"#section-9.1\">9.1</a>.",
+    "correct_text": "PATCH is neither safe nor idempotent as defined by [<a href=\"./rfc2616\" title=\"&quot;Hypertext Transfer Protocol -- HTTP/1.1&quot;\">RFC2616</a>], <a href=\"./rfc2616#section-9.1\">Section</a> <a href=\"./rfc2616#section-9.1\">9.1</a>.",
+    "notes": "Having a link to #section-9.1 leads the browser to section 9.1 in the current RFC (5789). The link should, however, point to section 9.1 in RFC 2616.",
+    "submit_date": "2023-05-09",
+    "submitter_name": "Ivan Ivković",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
