@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7516",
+    "doc-id": "RFC3995",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.3 page 19",
+    "orig_text": "   For Pull Delivery Methods, a client MUST supply \"notify-recipient-\r\n   uri\" and MAY omit any of the rest of the attributes in column 1 of\r\n   Table 1 in a Subscription Creation Request.  For Push Delivery\r\n   Methods, a client MUST supply \"notify-pull-method\" and MAY omit any\r\n   of the rest of the attributes in column 1 of Table 1 in a\r\n   Subscription Creation Request.  A client MUST NOT supply both\r\n   \"notify-recipient-uri\" and \"notify-pull-method\" attributes in the\r\n   same Subscription Creation Request.",
+    "correct_text": "   For Push Delivery Methods, a client MUST supply \"notify-recipient-\r\n   uri\" and MAY omit any of the rest of the attributes in column 1 of\r\n   Table 1 in a Subscription Creation Request.  For Pull Delivery\r\n   Methods, a client MUST supply \"notify-pull-method\" and MAY omit any\r\n   of the rest of the attributes in column 1 of Table 1 in a\r\n   Subscription Creation Request.  A client MUST NOT supply both\r\n   \"notify-recipient-uri\" and \"notify-pull-method\" attributes in the\r\n   same Subscription Creation Request.",
+    "notes": "notify-recipient-uri is used for Push notification method and notify-pull-method is used for pull notification method based on the paragraph based on the second paragraph in section 5.3 paragraph 2 \"The \"notify-recipient-uri\" attribute is for use with Push Delivery\r\n   Methods.  The \"notify-pull-method\" attribute is for use with Pull\r\n   Delivery Methods.\" \r\nBut in 4th Paragraph for client requirements there is a mistake. It mentions pull requires notification-recipient-uri instead of push requires and similarly verbage is wrong for push as well which indicates clients must use notify-pull-method",
+    "submit_date": "2023-05-15",
+    "submitter_name": "Tarak Parikh",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-05-15 15:27:09"
+  }
+]
