@@ -58,5 +58,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7518",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.1.",
+    "orig_text": "   A set of messages can be referenced by a sequence set containing\r\n   either message sequence numbers or unique identifiers.  See Section 9\r\n   for details.  A sequence set can contain ranges of sequence numbers\r\n   (such as \"5:50\"), an enumeration of specific sequence numbers, or a\r\n   combination of the above.  A sequence set can use the special symbol\r\n   \"*\" to represent the maximum sequence number in the mailbox.  A\r\n   sequence set never contains unique identifiers.",
+    "correct_text": "Why am I required to fix someone else's sloppy writing?",
+    "notes": "The first and last sentences are in direct contradiction. Clarification is needed.",
+    "submit_date": "2023-05-18",
+    "submitter_name": "Joó Ádám",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
