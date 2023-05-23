@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7519",
+    "doc-id": "RFC6386",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9.3",
+    "orig_text": "       a.  L(1), the mode of segment feature data\r\n           (segment_feature_mode), can be absolute-value mode (0) or\r\n           delta value mode (1).",
+    "correct_text": "       a.  L(1), the mode of segment feature data\r\n           (segment_feature_mode), can be delta value mode (0) or\r\n           absolute-value mode (1).",
+    "notes": "9.3 lists the meanings of the bits the wrong way round.\r\n\r\nSection 19.2 has it the right way round:\r\n\r\n\"\"\"\r\n   o  segment_feature_mode indicates the feature data update mode, 0 for\r\n      delta and 1 for the absolute value\r\n\"\"\"\r\n\r\nThat is, at the moment two sections in the spec directly contradict each other. Section 19.2 is right, section 9.3 is wrong from what I can tell.",
+    "submit_date": "2023-05-22",
+    "submitter_name": "Nico Weber",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
