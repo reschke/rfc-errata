@@ -238,5 +238,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7522",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.2",
+    "orig_text": "{\r\n        \"name\" : \"schemaExtensions\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"A list of URIs of the resource type's schema\r\n          extensions.\",\r\n        \"required\" : true,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"schema\",\r\n            \"type\" : \"reference\",\r\n            \"referenceTypes\" : [\"uri\"],\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The URI of a schema extension.\",\r\n            \"required\" : true,\r\n            \"caseExact\" : true,\r\n            \"mutability\" : \"readOnly\",\r\n            \"returned\" : \"default\",\r\n            \"uniqueness\" : \"none\"\r\n          },",
+    "correct_text": "{\r\n        \"name\" : \"schemaExtensions\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A list of URIs of the resource type's schema\r\n          extensions.\",\r\n        \"required\" : true,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"schema\",\r\n            \"type\" : \"reference\",\r\n            \"referenceTypes\" : [\"uri\"],\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The URI of a schema extension.\",\r\n            \"required\" : true,\r\n            \"caseExact\" : true,\r\n            \"mutability\" : \"readOnly\",\r\n            \"returned\" : \"default\",\r\n            \"uniqueness\" : \"none\"\r\n          },",
+    "notes": "The description of \"schemaExtensions\" say that it is a list and also its name is plural. This contradict the value of \"multiValued\" setted to false. I believe that the \"multiValued\" attribute should be setted to \"true\".",
+    "submit_date": "2023-05-23",
+    "submitter_name": "Leonardo Speranzon",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
