@@ -13,5 +13,20 @@
     "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-04-10 07:22:52"
+  },
+  {
+    "errata_id": "7523",
+    "doc-id": "RFC7959",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "   then the block number (NUM), more bit (M), and block size exponent\r\n   (2**(SZX+4)) separated by slashes.  For example, a Block2 Option",
+    "correct_text": "   then the block number (NUM), more bit (M), and block size\r\n   (2**(SZX+4)) separated by slashes.  For example, a Block2 Option",
+    "notes": "The examples are given in the style of \"2:1/1/128\", wher 128 is the size (2**(SZX+4)), not the size exponent -- it contains the size exponent in the expression, but the full expression is the size.\r\n\r\n(Reporting this as an erratum because the use of \"SZX\" for \"size\" instead of \"size exponent\" has some potential for spreading and creating confusion; for example in Wireshark at https://gitlab.com/wireshark/wireshark/-/merge_requests/10763)",
+    "submit_date": "2023-05-24",
+    "submitter_name": "Christian Amsüss",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
