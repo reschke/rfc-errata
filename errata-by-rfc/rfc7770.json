@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7524",
+    "doc-id": "RFC7770",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.4",
+    "orig_text": "   o  The values are defined in Section 2.6.  All Router Informational\r\n      Capability TLV additions are to be assigned through IETF Review\r\n      [IANA-GUIDE].",
+    "correct_text": "   o  The values are defined in Section 2.5.  All Router Informational\r\n      Capability Bit additions are to be assigned through IETF Review\r\n      [IANA-GUIDE].",
+    "notes": "Router Informational Capabilities bits are defined in section 2.5 of the document and NOT section 2.6, and they are bits, not TLVs.\r\n\r\nSee also https://mailarchive.ietf.org/arch/msg/lsr/pc0-mos28aQ7D59ijCBDWLctAXE/",
+    "submit_date": "2023-05-24",
+    "submitter_name": "James N Guichard",
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2023-05-24 10:06:47"
+  }
+]
