@@ -58,5 +58,20 @@
     "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2022-09-06 11:54:33"
+  },
+  {
+    "errata_id": "7525",
+    "doc-id": "RFC6482",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "Within the ROAIPAddressFamily structure, addressFamily contains the Address Family Identifier (AFI) of an IP address family.  This specification only supports IPv4 and IPv6.  Therefore, addressFamily MUST be either 0001 or 0002.\r\n\r\nWithin a ROAIPAddress structure, the addresses field represents prefixes as a sequence of type IPAddress.  (See [RFC3779] for more details).  If present, the maxLength MUST be an integer ...\r\n",
+    "correct_text": "Within the ROAIPAddressFamily structure, addressFamily contains the Address Family Identifier (AFI) of an IP address family.  This specification only supports IPv4 and IPv6.  Therefore, addressFamily MUST be either 0001 or 0002. The addresses field represents prefixes as a sequence of type ROAIPAddress.  \r\n\r\nWithin the ROAIPAddress structure, the address field represents an IPv4 or IPv6 prefix of type IPaddress (See [RFC3779] for more details).  If present, the maxLength MUST be an integer ...",
+    "notes": "Original text contradicts does not align with normative ASN.1 schema.",
+    "submit_date": "2023-05-26",
+    "submitter_name": "Sacha Boudjema",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
