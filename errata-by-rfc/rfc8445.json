@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7526",
+    "doc-id": "RFC8445",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "22.2",
+    "orig_text": ".",
+    "correct_text": ".",
+    "notes": "The link to ICE-SIP-SDP is broken. It is a relative link:\r\n\r\n   [<a id=\"ref-ICE-SIP-SDP\">ICE-SIP-SDP</a>]\r\n              Petit-Huguenin, M., Nandakumar, S., and A. Keranen,\r\n              \"Session Description Protocol (SDP) Offer/Answer\r\n              procedures for Interactive Connectivity Establishment\r\n              (ICE)\", Work in Progress,\r\n              <a href=\"./draft-ietf-mmusic-ice-sip-sdp-21\">draft-ietf-mmusic-ice-sip-sdp-21</a>, June 2018.\r\n\r\nBut there is nothing at https://www.rfc-editor.org/rfc/draft-ietf-mmusic-ice-sip-sdp-21",
+    "submit_date": "2023-05-28",
+    "submitter_name": "Eric Rescorla",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
