@@ -32,16 +32,16 @@
   {
     "errata_id": "7374",
     "doc-id": "RFC9000",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
     "section": "13.4.1",
     "orig_text": "                                                               If an\r\n   endpoint does not implement ECN support or does not have access to\r\n   received ECN fields, it does not report ECN counts for packets it\r\n   receives.\r\n\r\n   Even if an endpoint does not set an ECT field in packets it sends,\r\n   the endpoint MUST provide feedback about ECN markings it receives, if\r\n   these are accessible.  ",
     "correct_text": "                                                               If an\r\n   endpoint does not have access to\r\n   received ECN fields, it does not report ECN counts for packets it\r\n   receives.\r\n\r\n   Even if an endpoint does not set an ECT field in packets it sends,\r\n   the endpoint MUST provide feedback about ECN markings it receives, if\r\n   these are accessible.  ",
-    "notes": "In the second sentence, the only allowed exception to \"MUST provide feedback about received ECN markings\" is inaccessibility. The first sentence contradicts this by allowing two exceptions: inaccessibility and just \"not implementing ECN support\". \r\n\r\nIf \"not implementing ECN support\" was really intended to be an allowed exception, the capitalized \"MUST\" would have been pointless.\r\n\r\nTherefore it is proposed that the words \"does not implement ECN support or \" are deleted from the first paragraph.",
+    "notes": "In the second sentence, the only allowed exception to \"MUST provide feedback about received ECN markings\" is inaccessibility. The first sentence contradicts this by allowing two exceptions: inaccessibility and just \"not implementing ECN support\". \r\n\r\nIf \"not implementing ECN support\" was really intended to be an allowed exception, the capitalized \"MUST\" would have been pointless.\r\n\r\nTherefore it is proposed that the words \"does not implement ECN support or \" are deleted from the first paragraph.\r\n\r\nNOTE : Based on discussion in https://mailarchive.ietf.org/arch/msg/quic/lsz4X-cZql71Ba56uQhNQz4NzGc/ , the error type is changed from technical to editorial.",
     "submit_date": "2023-02-27",
     "submitter_name": "Bob Briscoe",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2023-05-29 06:52:02"
   }
 ]
