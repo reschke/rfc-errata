@@ -88,5 +88,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7530",
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "15.5.2.",
+    "orig_text": "The 401 (Unauthorized) status code indicates that the request has not\r\nbeen applied because it lacks valid authentication credentials for\r\nthe target resource.",
+    "correct_text": "The 401 (Unauthorized) status code indicates that the request has not\r\nbeen processed because it lacks valid authentication credentials for\r\nthe target resource.",
+    "notes": "\"applying a request\" is not a standard expression. Usually, requests are \"treated\", \"granted\" or \"processed\".\r\n\r\nThis phrasing was imported in Apache Tomcat; thanks to Mark Thomas for pointing out it came from this RFC.",
+    "submit_date": "2023-05-29",
+    "submitter_name": "Philippe Cloutier",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
