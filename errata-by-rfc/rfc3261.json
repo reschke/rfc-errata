@@ -480,6 +480,21 @@
     "update_date": null
   },
   {
+    "errata_id": "7529",
+    "doc-id": "RFC3261",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "25.1",
+    "orig_text": "This is intended to behave exactly as HTTP/1.1 as described in RFC 2616 [8].\r\nThe SWS construct is used when linear white space is optional, generally between tokens and separators.\r\n\r\n      LWS  =  [*WSP CRLF] 1*WSP ; linear whitespace",
+    "correct_text": "This is intended to behave exactly as HTTP/1.1 as described in RFC 2616 [8].\r\nThe SWS construct is used when linear white space is optional, generally between tokens and separators.\r\n\r\n      LWS  =  [CRLF] 1*WSP ; linear whitespace",
+    "notes": "RFC 2616 states \r\nLWS            = [CRLF] 1*( SP | HT )\r\n\r\nRFC 2234 states \r\nWSP            =  SP / HTAB\r\n                               ; white space\r\nRFC 3261 is referencing both for BNF to follow, but looks like a new BNF is stated. So either it should not reference to follow RFC 2616 exactly or follow the same BNF as 2616.",
+    "submit_date": "2023-05-29",
+    "submitter_name": "Shraddha Soni",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "832",
     "doc-id": "RFC3261",
     "errata_status_code": "Held for Document Update",
