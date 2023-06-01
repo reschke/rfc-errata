@@ -2,16 +2,16 @@
   {
     "errata_id": "5584",
     "doc-id": "RFC8223",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "2.3.2",
     "orig_text": "1. The S-bit of the TAC is set to 1 or 0 to advertise or withdraw it.",
     "correct_text": "1. The E-bit of the TAC is set to 1 or 0 to advertise or withdraw it.",
-    "notes": "My understanding of this RFC suggests that in order to Advertize or Withdraw TAC , the bit E in TAC is used. In Point # 1 of section 2.3.2, it is mentioned that bit S is used. Looks this is Editorial mistake.",
+    "notes": "My understanding of this RFC suggests that in order to Advertize or Withdraw TAC , the bit E in TAC is used. In Point # 1 of section 2.3.2, it is mentioned that bit S is used. Looks this is Editorial mistake.\n --VERIFIER NOTES-- \n I believe this errata is inaccurate. The S-bit is part of the \"Capability Parameter\" TLV as defined in RFC 5561 Section 3 and the TAE is the Targeted Application Capability that is defined in RFC8223. Section 2.3.2 is correct in stating that the S-bit of the TAC is set to 1. ",
     "submit_date": "2018-12-27",
     "submitter_name": "Jayant Bhardwaj",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "175",
+    "verifier_name": "James N Guichard",
+    "update_date": "2023-05-31 09:51:45"
   }
 ]
