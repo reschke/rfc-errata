@@ -43,5 +43,20 @@
     "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7531",
+    "doc-id": "RFC5198",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "section 2, page 3",
+    "orig_text": "3. The control characters in the ASCII range (U+0000 to U+001F and U+007F to U+009F) SHOULD generally be avoided.",
+    "correct_text": "3. The control characters in the ASCII range (U+0000 to U+001F, and U+007F) SHOULD generally be avoided.",
+    "notes": "Characters in the range U+0080 to U+009F are explicitly noted in the following text as lying outside the ASCII range, and in fact they are discussed separately at that point (which, given the phrasing error pointed out here, currently is duplicate coverage).  They do not pertain to any range of ASCII characters and should not be treated as such.",
+    "submit_date": "2023-06-01",
+    "submitter_name": "Gordon Steemson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
