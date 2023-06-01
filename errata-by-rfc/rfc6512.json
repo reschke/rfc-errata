@@ -17,7 +17,7 @@
   {
     "errata_id": "6754",
     "doc-id": "RFC6512",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.2.1",
     "orig_text": "PE1 also has this Inter-AS I-PMSI A-D route.",
@@ -25,8 +25,8 @@
     "notes": "\"PE1 also has this route\" refers to \"Although ASBR1 does not have a route to PE2, it does have a BGP Intra-AS Inclusive PMSI (I-PMSI) auto-discovery (A-D) route\". Intra-AS mechanisms are used for auto-discovery/binding for Non-Segmented Inter-AS Tunnels.",
     "submit_date": "2021-11-25",
     "submitter_name": "Bert Van Ael",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "175",
+    "verifier_name": "James N Guichard",
+    "update_date": "2023-05-31 10:58:29"
   }
 ]
