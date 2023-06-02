@@ -77,16 +77,16 @@
   {
     "errata_id": "7291",
     "doc-id": "RFC5890",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "GLOBAL",
     "orig_text": "Request for Comments: 5890\r\nObsoletes: 3490\r\nCategory: Standards Track\r\n",
     "correct_text": "Request for Comments: 5890\r\nObsoletes: 3490\r\nUpdates: 4343\r\nCategory: Standards Track\r\n",
-    "notes": "I have no idea whether this correction is Editorial or Technical , nor what to use as a Section indication.  However...\r\n\r\nRFC 5890 (or IDNA2008 more generally), should have updated RFC 4343 and the IDN discussion in its Section 5.  The latter references the IDNA2003 documents and makes some statements that are, at best, confusing in the context of IDNA2008.\r\n\r\nSee the extended notes for RFC 4343 in https://www.rfc-editor.org/errata/eid7290 for more discussion and details.\r\n\r\nRecommendation: Hold for document update unless this appears to anyone to be a serious problem, in which case a separate RFC, using the notes on Errata ID 7290 as a starting point, may be in order.",
+    "notes": "I have no idea whether this correction is Editorial or Technical , nor what to use as a Section indication.  However...\r\n\r\nRFC 5890 (or IDNA2008 more generally), should have updated RFC 4343 and the IDN discussion in its Section 5.  The latter references the IDNA2003 documents and makes some statements that are, at best, confusing in the context of IDNA2008.\r\n\r\nSee the extended notes for RFC 4343 in https://www.rfc-editor.org/errata/eid7290 for more discussion and details.\r\n\r\nRecommendation: Hold for document update unless this appears to anyone to be a serious problem, in which case a separate RFC, using the notes on Errata ID 7290 as a starting point, may be in order.\r\n\r\n[AD Note:] Marking this as Verified, and will direct the RFC Editor to update the metadata about both documents.",
     "submit_date": "2022-12-26",
     "submitter_name": "John Klensin",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-01-06 14:10:14"
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2023-06-01 08:45:10"
   }
 ]
