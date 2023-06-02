@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7532",
+    "doc-id": "RFC5797",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "sections 3 and 7",
+    "orig_text": "(multiple occurrences of each within Table 1, column “RFC#s/References and Notes”)\r\n2640\r\n3659",
+    "correct_text": "(in section 7.2)\r\n\r\n[RFC2640] Curtin, B., \"Internationalization of the File Transfer Protocol\", RFC 2640, July 1999.\r\n\r\n(and)\r\n\r\n[RFC3659] Hethmon, P., \"Extensions to FTP\", RFC 3659, March 2007.",
+    "notes": "These RFCs are referenced prominently in the table which the remainder of the RFC is centered upon, but were omitted from the actual “References” section.  Merely to find out what their topics were, I had to go and query for them on the rfc-editor website.  This is inefficient in both network resources and user time.",
+    "submit_date": "2023-06-02",
+    "submitter_name": "Gordon Steemson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
