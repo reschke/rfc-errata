@@ -62,7 +62,7 @@
   {
     "errata_id": "7290",
     "doc-id": "RFC4343",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5",
     "orig_text": "A scheme has been adopted for \"internationalized domain names\" and \"internationalized labels\" as described in [RFC3490, RFC3454, RFC3491, and RFC3492]. It makes most of [UNICODE] available through a separate application level transformation from internationalized domain name to DNS domain name and from DNS domain name to internationalized domain name. Any case insensitivity that internationalized domain names and labels have varies depending on the script and is handled entirely as part of the transformation described in [RFC3454] and [RFC3491], which should be seen for further details.",
@@ -70,8 +70,8 @@
     "notes": "In trying to research something else, I reread RFC 4343.  It still references IDNA2003 (RFC 3490ff) as the authority for IDNs and says a few things that are misleading, or worse, under IDNA2008.   In retrospect, RFC 5890 should have updated 4343 and adjusted the language of its Section 5.  The author of 5890 clearly screwed up (i.e., mea culpa) and the WG and broader IETF review, especially by DNS-related groups, did not catch the problem.   \r\n\r\nThe \"corrected\" text above is merely an example of how this might be remedied.  The issue is clearly (at least to me) one to be \"held for document update\" of either RFC 4343 or 5890 but it seems worth inserting a pointer into the errata list to warn those who might want to look for it.",
     "submit_date": "2022-12-26",
     "submitter_name": "John Klensin",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2023-06-01 08:46:41"
   }
 ]
