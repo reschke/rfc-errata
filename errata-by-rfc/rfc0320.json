@@ -1,17 +1,1 @@
-[
-  {
-    "errata_id": "7533",
-    "doc-id": "RFC0320",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "6307003781",
-    "orig_text": "<video autoplay></video> \r\n\r\n<script>\r\n  var constraints = {\r\n    audio: true, \r\n    video: { \r\n      mandatory: {  \r\n        width: { min: 320 },\r\n        height: { min: 180 }\r\n      },\r\n      optional: [  \r\n        { width: { max: 1280 }},\r\n        { frameRate: 30 },\r\n        { facingMode: \"user\" }\r\n      ]\r\n    }\r\n  }\r\n\r\n  navigator.getUserMedia(constraints, gotStream, logError);  \r\n\r\n  function gotStream(stream) { \r\n    var video = document.querySelector('video');\r\n    video.src = window.URL.createObjectURL(stream);\r\n  }\r\n\r\n  function logError(error) { ... }\r\n</script>\r\nHTML video output element\r\n\r\nRequest a mandatory audio track\r\n\r\nRequest a mandatory video track",
-    "correct_text": "<video autoplay></video> \r\n\r\n<script>\r\n  var constraints = {\r\n    audio: true, \r\n    video: { \r\n      mandatory: {  \r\n        width: { min: 320 },\r\n        height: { min: 180 }\r\n      },\r\n      optional: [  \r\n        { width: { max: 1280 }},\r\n        { frameRate: 30 },\r\n        { facingMode: \"user\" }\r\n      ]\r\n    }\r\n  }\r\n\r\n  navigator.getUserMedia(constraints, gotStream, logError);  \r\n\r\n  function gotStream(stream) { \r\n    var video = document.querySelector('video');\r\n    video.src = window.URL.createObjectURL(stream);\r\n  }\r\n\r\n  function logError(error) { ... }\r\n</script>\r\nHTML video output element\r\n\r\nRequest a mandatory audio track\r\n\r\nRequest a mandatory video track",
-    "notes": "My address country India jila Sultanpur post kamtaganj gram basti paharpur Narsinghpur my name is Arun bihari",
-    "submit_date": "2023-06-03",
-    "submitter_name": "Arun bihari",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
-  }
-]
+[]
