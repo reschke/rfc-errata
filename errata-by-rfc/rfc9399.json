@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": "7534",
+    "doc-id": "RFC9399",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6",
+    "orig_text": "   After a certification path is successfully validated, the replying\r\n   party trusts the information that the CA includes in the certificate,\r\n   including any certificate extensions.",
+    "correct_text": "   After a certification path is successfully validated, the relying\r\n   party trusts the information that the CA includes in the certificate,\r\n   including any certificate extensions.",
+    "notes": "The phrase \"replying party\" is a typo and should be \"relying party\"",
+    "submit_date": "2023-06-05",
+    "submitter_name": "Preston Locke",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-06-05 14:02:52"
+  },
+  {
+    "errata_id": "7535",
+    "doc-id": "RFC9399",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6",
+    "orig_text": "   Consequently, if relying party software accepts a CA, then it should\r\n   be prepared to (unquestioningly) display the associated logotypes to\r\n   its human user, given that it is configured to do so.  Information\r\n   about the logotypes is provided so that the replying party software\r\n   can select the one that will best meet the needs of the human user.\r\n   This choice depends on the abilities of the human user, as well as\r\n   the capabilities of the platform on which the replaying party\r\n   software is running.",
+    "correct_text": "   Consequently, if relying party software accepts a CA, then it should\r\n   be prepared to (unquestioningly) display the associated logotypes to\r\n   its human user, given that it is configured to do so.  Information\r\n   about the logotypes is provided so that the relying party software\r\n   can select the one that will best meet the needs of the human user.\r\n   This choice depends on the abilities of the human user, as well as\r\n   the capabilities of the platform on which the relying party\r\n   software is running.",
+    "notes": "The phrases \"replying party\" and \"replaying party\" are typos and should be \"relying party\"",
+    "submit_date": "2023-06-05",
+    "submitter_name": "Preston Locke",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-06-05 14:10:20"
+  },
+  {
+    "errata_id": "7536",
+    "doc-id": "RFC9399",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6",
+    "orig_text": "   Care is needed when designing replying party software to ensure that\r\n   an appropriate context of logotype information is provided.",
+    "correct_text": "   Care is needed when designing relying party software to ensure that\r\n   an appropriate context of logotype information is provided.",
+    "notes": "The phrase \"replying party\" is a typo and should be \"relying party\"",
+    "submit_date": "2023-06-05",
+    "submitter_name": "Preston Locke",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-06-05 14:13:07"
+  }
+]
