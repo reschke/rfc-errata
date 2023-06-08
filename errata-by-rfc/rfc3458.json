@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7540",
+    "doc-id": "RFC3458",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "8",
+    "orig_text": "8. IANA Considerations\r\n\r\n   Section 8.3 is a registration for a new top-level RFC 2822 [3]\r\n   message header, \"Message-Context\".\r\n\r\n   This document creates an extensible set of context types.  To promote\r\n   interoperability and coherent interpretations of different types, a\r\n   central repository has been established for well-known context types.\r\n\r\n   The IANA has created a repository for context types called \"Internet\r\n   Message Context Types\".  Following the policies outlined in [5], this\r\n   repository is \"Specification Required\" by RFC.  Section 8.1 describes\r\n   the initial values for this registry.\r\n\r\n   To create a new message context type, you MUST publish an RFC to\r\n   document the type.  In the RFC, include a copy of the registration\r\n   template found in Section 8.2 of this document.  Put the template in\r\n   your IANA Considerations section, filling-in the appropriate fields.\r\n   You MUST describe any interoperability and security issues in your\r\n   document.\r\n\r\n8.1. Message Content Type Registrations\r\n\r\n   Internet Message Content Types",
+    "correct_text": "8. IANA Considerations\r\n\r\n   Section 8.3 is a registration for a new top-level RFC 2822 [3]\r\n   message header, \"Message-Context\".\r\n\r\n   This document creates an extensible set of context classes.  To promote\r\n   interoperability and coherent interpretations of different classes, a\r\n   central repository has been established for well-known context classes.\r\n\r\n   The IANA has created a repository for context classes called \"Internet\r\n   Message Context Classes\".  Following the policies outlined in [5], this\r\n   repository is \"Specification Required\" by RFC.  Section 8.1 describes\r\n   the initial values for this registry.\r\n\r\n   To create a new message context class, you MUST publish an RFC to\r\n   document the class.  In the RFC, include a copy of the registration\r\n   template found in Section 8.2 of this document.  Put the template in\r\n   your IANA Considerations section, filling-in the appropriate fields.\r\n   You MUST describe any interoperability and security issues in your\r\n   document.\r\n\r\n8.1. Message Context Class Registrations\r\n\r\n   Internet Message Context Classes",
+    "notes": "This document appears to mix up some terms:\r\n\r\n1) Context vs. Content: While most of the document refers to 'Context', parts of the IANA Considerations Section use 'Content' for the same thing\r\n\r\n2) class vs. type: While most of the document uses 'class', parts of the IANA Considerations Section use 'type' for the same thing\r\n\r\nImportant: The IANA Registry https://www.iana.org/assignments/message-header-types/message-header-types.xhtml also needs to be updated (given this errata is considered valid)",
+    "submit_date": "2023-06-07",
+    "submitter_name": "Bernie Hoeneisen",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
