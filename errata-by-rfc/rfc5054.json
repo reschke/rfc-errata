@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7538",
+    "doc-id": "RFC5054",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.1",
+    "orig_text": " The version of SRP used here is sometimes referred to as \"SRP-6\"\r\n   [SRP-6].",
+    "correct_text": " The version of SRP used here is sometimes referred to as \"SRP-6a\"\r\n   [SRP-6a].\r\n\r\n\r\n [SRP-6a]: Wu, T., \"SRP Protocol Design\", circa 2005, http://srp.stanford.edu/design.html",
+    "notes": "The protocol described uses a non-constant k, which is an innovation of SRP-6a -- never published formally in a technical report (until this RFC) and dating to ~2005 if we go by the libsrp version history. Actual [SRP-6] of 2002 uses a constant k = 3.\r\n\r\nReference to the [SRP-6] text is still valuable for rationale, but is not accurate. Confusion between these two versions is harmful and may impeded interoperability.",
+    "submit_date": "2023-06-07",
+    "submitter_name": "Mingye Wang",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
