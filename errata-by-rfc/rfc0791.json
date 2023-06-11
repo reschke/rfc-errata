@@ -227,17 +227,17 @@
   {
     "errata_id": "6677",
     "doc-id": "RFC0791",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "3.1",
     "orig_text": "Protocol:  8 bits\r\n\r\n    This field indicates the next level protocol used in the data\r\n    portion of the internet datagram.  The values for various protocols\r\n    are specified in \"Assigned Numbers\" [9].",
     "correct_text": "Protocol:  8 bits\r\n\r\n    This field indicates the next upper level protocol used in the data\r\n    portion of the internet datagram.  The values for various protocols\r\n    are specified in \"Assigned Numbers\" [9], section ASSIGNED INTERNET PROTOCOL NUMBERS.",
-    "notes": "The word 'next' is ambiguous in the sense that it does not indicate whether the 'next' protocol is at the next LOWER or UPPER level (referring to Fig. 1). Although it may be obvious to people well versed in this domain that the next UPPER level protocol is meant, as a newcomer I had to think twice to reach at this conclusion.\r\n\r\nAlso, the reference to [9] could be more specific.",
+    "notes": "The word 'next' is ambiguous in the sense that it does not indicate whether the 'next' protocol is at the next LOWER or UPPER level (referring to Fig. 1). Although it may be obvious to people well versed in this domain that the next UPPER level protocol is meant, as a newcomer I had to think twice to reach at this conclusion.\r\n\r\nAlso, the reference to [9] could be more specific.\n --VERIFIER NOTES-- \nThe description of the Protocol field states that it refers to the protocol \"used in the data portion of the internet datagram\".  In the context of Figure 1, this cannot refer to a lower layer protocol.",
     "submit_date": "2021-09-06",
     "submitter_name": "Øyvind Bolme Fredriksen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2023-06-10 16:49:05"
   },
   {
     "errata_id": "716",
