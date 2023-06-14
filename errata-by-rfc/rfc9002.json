@@ -2,16 +2,16 @@
   {
     "errata_id": "7539",
     "doc-id": "RFC9002",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": "5.3",
+    "section": "5.",
     "orig_text": "smoothed_rtt = 7/8 * smoothed_rtt + 1/8 * adjusted_rtt\r\nrttvar_sample = abs(smoothed_rtt - adjusted_rtt)\r\nrttvar = 3/4 * rttvar + 1/4 * rttvar_sample\r\n",
     "correct_text": "rttvar_sample = abs(smoothed_rtt - adjusted_rtt)\r\nrttvar = 3/4 * rttvar + 1/4 * rttvar_sample\r\nsmoothed_rtt = 7/8 * smoothed_rtt + 1/8 * adjusted_rtt\r\n",
     "notes": "Per Appendix A.7 of this RFC and Section 2 of the referred RFC 6298,\r\nrttvar should be computed before updating smoothed_rtt itself.",
     "submit_date": "2023-06-07",
     "submitter_name": "Sergey Kandaurov",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2023-06-13 06:13:04"
   }
 ]
