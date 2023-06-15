@@ -13,5 +13,20 @@
     "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-04-23 08:19:33"
+  },
+  {
+    "errata_id": "7543",
+    "doc-id": "RFC9008",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "As the Rank information in the RPI artifact is changed at each hop, it\r\nwill typically be zero when it arrives at the DODAG root.",
+    "correct_text": "As the Rank information in the RPI artifact is changed at each hop, it\r\nwill typically be non-zero when it arrives at the DODAG root.",
+    "notes": "The SenderRank is 0 if: \r\n- The packet comes from Internet (and has an RPI)\r\n- The packet has not been forwarded (ie. if the source is a direct child of the DODAG root), as RFC 6550 section 11.2 tells to set SenderRank to 0 at the source.\r\n\r\nThe typical case is rather a packet that arrives at the DODAG root from a child node forwarding a packet, in which case SenderRank is set to DAGRank(rank) > 0.",
+    "submit_date": "2023-06-14",
+    "submitter_name": "Mathis Marion",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
