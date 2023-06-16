@@ -778,5 +778,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7545",
+    "doc-id": "RFC4880",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.2",
+    "orig_text": "   The format of an Armor Header is that of a key-value pair.  A colon\r\n   (':' 0x38) and a single space (0x20) separate the key and value.\r\n   OpenPGP should consider improperly formatted Armor Headers to be\r\n   corruption of the ASCII Armor.  Unknown keys should be reported to\r\n   the user, but OpenPGP should continue to process the message.",
+    "correct_text": "   The format of an Armor Header is that of a key-value pair.  A colon\r\n   (':' 0x3A) and a single space (0x20) separate the key and value.\r\n   OpenPGP should consider improperly formatted Armor Headers to be\r\n   corruption of the ASCII Armor.  Unknown keys should be reported to\r\n   the user, but OpenPGP should continue to process the message.",
+    "notes": "0x3A is a colon -> ':' , whereas 0x38 is the character for the numeral eight -> '8'",
+    "submit_date": "2023-06-16",
+    "submitter_name": "Raghu Saxena",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
