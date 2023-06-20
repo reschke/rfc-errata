@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7546",
+    "doc-id": "RFC8402",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "1",
+    "orig_text": "The active segment is indicated by the Destination Address (DA) of the packet.\r\nThe next active segment is indicated by the SegmentsLeft (SL) pointer in the SRH.",
+    "correct_text": "Not sure of the exact corrected text but I feel SegmentsLeft (SL) pointer denotes the active segment, not the next active segment.",
+    "notes": "SL is the active segment\n --VERIFIER NOTES-- \nI am rejecting this errata as https://www.rfc-editor.org/rfc/rfc8200#section-4.4 says “Number of route segments remaining, i.e., number of explicitly listed intermediate nodes still to be visited before reaching the final destination.”. In my opinion, the existing text for RFC 8402 is accurate based on the quoted text of RFC 8200.",
+    "submit_date": "2023-06-19",
+    "submitter_name": "Praveen Kumar",
+    "verifier_id": "175",
+    "verifier_name": "James Guichard",
+    "update_date": "2023-06-19 07:12:20"
+  }
+]
