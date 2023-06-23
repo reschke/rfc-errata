@@ -178,5 +178,35 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-05-24 15:17:42"
+  },
+  {
+    "errata_id": "7547",
+    "doc-id": "RFC6458",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "9.12",
+    "orig_text": "info:  A pointer to the buffer containing the attribute associated\r\n   with the message to be sent.  The type is indicated by the\r\n   info_type parameter.\r\n",
+    "correct_text": "info:  A pointer to the buffer containing the attribute associated\r\n   with the message to be sent.  The type is indicated by the\r\n   infotype parameter.\r\n",
+    "notes": "The name of the parameter is infotype, not info_type.\r\nThanks to Philipp Stanner for making me aware of this issue.",
+    "submit_date": "2023-06-22",
+    "submitter_name": "Michael Tüxen",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-06-22 15:00:36"
+  },
+  {
+    "errata_id": "7548",
+    "doc-id": "RFC6458",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "9.1",
+    "orig_text": "info:  A pointer to the buffer to hold the attributes of the received\r\n    message.  The structure type of info is determined by the\r\n    info_type parameter.\r\n\r\ninfolen:  An in/out parameter describing the size of the info buffer.\r\n\r\ninfotype:  On return, *info_type is set to the type of the info\r\n    buffer.  The current defined values are as follows:\r\n\r\n    SCTP_RECVV_NOINFO:  If both SCTP_RECVRCVINFO and SCTP_RECVNXTINFO\r\n       options are not enabled, no attribute will be returned.  If\r\n       only the SCTP_RECVNXTINFO option is enabled but there is no\r\n       next message in the buffer, no attribute will be returned.  In\r\n       these cases, *info_type will be set to SCTP_RECVV_NOINFO.\r\n",
+    "correct_text": "info:  A pointer to the buffer to hold the attributes of the received\r\n    message.  The structure type of info is determined by the\r\n    infotype parameter.\r\n\r\ninfolen:  An in/out parameter describing the size of the info buffer.\r\n\r\ninfotype:  On return, *infotype is set to the type of the info\r\n    buffer.  The current defined values are as follows:\r\n\r\n    SCTP_RECVV_NOINFO:  If both SCTP_RECVRCVINFO and SCTP_RECVNXTINFO\r\n       options are not enabled, no attribute will be returned.  If\r\n       only the SCTP_RECVNXTINFO option is enabled but there is no\r\n       next message in the buffer, no attribute will be returned.  In\r\n       these cases, *infotype will be set to SCTP_RECVV_NOINFO.\r\n",
+    "notes": "The name of the parameter is infotype, not info_type.\r\nThanks to Philipp Stanner for making me aware of this issue.",
+    "submit_date": "2023-06-22",
+    "submitter_name": "Michael Tüxen",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-06-22 15:03:10"
   }
 ]
