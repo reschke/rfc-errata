@@ -88,5 +88,20 @@
     "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-04-26 19:03:57"
+  },
+  {
+    "errata_id": "7549",
+    "doc-id": "RFC4210",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.2. point 11",
+    "orig_text": "correct RA of CA public key",
+    "correct_text": "correct RA or CA public key",
+    "notes": "From the context it is obvious that there is a typo in the original text. This claim is supported by the fact that the \"r\" and the \"f\" key are next to each other on the keyboard.",
+    "submit_date": "2023-06-23",
+    "submitter_name": "Rufus Buschart",
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2023-06-23 07:39:11"
   }
 ]
