@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7556",
+    "doc-id": "RFC9218",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1",
+    "orig_text": "The urgency (u) parameter value is Integer (see Section 3.3.1 of\r\n[STRUCTURED-FIELDS]), between 0 and 7 inclusive, in descending order\r\nof priority.",
+    "correct_text": "The urgency (u) parameter value is Integer (see Section 3.3.1 of\r\n[STRUCTURED-FIELDS]), between 0 and 7 inclusive, in ASCENDING order\r\nof priority.",
+    "notes": "The very next paragraph indicates ASCENDING order of priority:\r\n\"The smaller the value, the higher the precedence.\"\r\nMinor nit: It is confusing and unnecessary to use \"precedence\" and \"urgency\" as aliases for \"priority\". Readers can be misled to think these are intended to be distinct properties rather than aliases.",
+    "submit_date": "2023-06-29",
+    "submitter_name": "Mo Zanaty",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
