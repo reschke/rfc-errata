@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7558",
+    "doc-id": "RFC8994",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.2.1",
+    "orig_text": "   ACP nodes MUST NOT support certificates with RSA public keys of less\r\n   than a 2048-bit modulus or curves with group order of less than 256\r\n   bits.  They MUST support certificates with RSA public keys with\r\n   2048-bit modulus and MAY support longer RSA keys.  They MUST support\r\n   certificates with ECC public keys using NIST P-256 curves and SHOULD\r\n   support P-384 and P-521 curves.\r\n\r\n   ACP nodes MUST NOT support certificates with RSA public keys whose\r\n   modulus is less than 2048 bits, or certificates whose ECC public keys\r\n   are in groups whose order is less than 256 bits.  RSA signing\r\n   certificates with 2048-bit public keys MUST be supported, and such\r\n   certificates with longer public keys MAY be supported.  ECDSA\r\n   certificates using the NIST P-256 curve MUST be supported, and such\r\n   certificates using the P-384 and P-521 curves SHOULD be supported.",
+    "correct_text": "   ACP nodes MUST NOT support certificates with RSA public keys whose\r\n   modulus is less than 2048 bits, or certificates whose ECC public keys\r\n   are in groups whose order is less than 256 bits.  RSA signing\r\n   certificates with 2048-bit public keys MUST be supported, and such\r\n   certificates with longer public keys MAY be supported.  ECDSA\r\n   certificates using the NIST P-256 curve MUST be supported, and such\r\n   certificates using the P-384 and P-521 curves SHOULD be supported.",
+    "notes": "The second paragraph in the original text appears to be a more carefully-written version of the first paragraph.  Therefore the first paragraph should be deleted and the second paragraph retained.",
+    "submit_date": "2023-07-02",
+    "submitter_name": "J. William Atwood",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
