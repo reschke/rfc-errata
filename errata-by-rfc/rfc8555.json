@@ -268,5 +268,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7565",
+    "doc-id": "RFC8555",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.1",
+    "orig_text": " The \"Thumbprint\" step indicates the computation specified in\r\n   [RFC7638], using the SHA-256 digest [FIPS180-4].  As noted in\r\n   [RFC7518] any prepended zero octets in the fields of a JWK object\r\n   MUST be stripped before doing the computation.",
+    "correct_text": "The \"Thumbprint\" step indicates the computation specified in\r\n   [RFC7638], using the SHA-256 digest [FIPS180-4].  As noted in\r\n   [RFC7518] any additional prepended zero octets in the fields of a JWK object\r\n   MUST be stripped before doing the computation.  \r\n   Fixed length fields such as found in ECDSA keys should be their natural length and \r\n   leading zero octets should not be stripped.",
+    "notes": "This comment was really aimed at the leading 0 octet sometimes used with RSA, but the comment is not RSA specific. ECDSA keys can have fixed length fields (X,Y) where there can be leading zeros.  This led me astray in implementing an ECDSA thumbprint routine for ACME. The result was that 1/128 ECDSA keys failed to generate t humbp[rint as leading zeros were removed.",
+    "submit_date": "2023-07-13",
+    "submitter_name": "Paul Breed",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
