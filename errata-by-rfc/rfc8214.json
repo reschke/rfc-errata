@@ -58,5 +58,20 @@
     "verifier_id": "174",
     "verifier_name": "Andrew Alston",
     "update_date": "2022-05-26 07:20:50"
+  },
+  {
+    "errata_id": "7562",
+    "doc-id": "RFC8214",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1",
+    "orig_text": "In a multihoming All-Active scenario, there is no Designated Forwarder (DF) election, and all the PEs in the ES that are active and ready to forward traffic to/from the CE will set the P Flag.",
+    "correct_text": "In a multihoming All-Active scenario, there is no Designated Forwarder (DF) election, and all the PEs in the ES that are active and ready to forward traffic to/from the CE SHOULD set the P Flag.",
+    "notes": "The original text in the RFC does not express any requirement level (\"will\" is not a recognized IETF term for expressing requirement levels as defined in RFC 2119). The new test replaces \"will\" with \"SHOULD\". \r\n\r\nSHOULD and not MUST is proposed to avoid potential issues with implementations that did not set P flag in the L2 Attributes Extended Community in All-Active multi-homing scenarios (since this was not required) and would suddenly become non-compliant if the text were changed to from \"will\" to MUST.",
+    "submit_date": "2023-07-13",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
