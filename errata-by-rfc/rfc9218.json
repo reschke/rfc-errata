@@ -2,16 +2,16 @@
   {
     "errata_id": "7556",
     "doc-id": "RFC9218",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.1",
     "orig_text": "The urgency (u) parameter value is Integer (see Section 3.3.1 of\r\n[STRUCTURED-FIELDS]), between 0 and 7 inclusive, in descending order\r\nof priority.",
     "correct_text": "The urgency (u) parameter value is Integer (see Section 3.3.1 of\r\n[STRUCTURED-FIELDS]), between 0 and 7 inclusive, in ASCENDING order\r\nof priority.",
-    "notes": "The very next paragraph indicates ASCENDING order of priority:\r\n\"The smaller the value, the higher the precedence.\"\r\nMinor nit: It is confusing and unnecessary to use \"precedence\" and \"urgency\" as aliases for \"priority\". Readers can be misled to think these are intended to be distinct properties rather than aliases.",
+    "notes": "The very next paragraph indicates ASCENDING order of priority:\r\n\"The smaller the value, the higher the precedence.\"\r\nMinor nit: It is confusing and unnecessary to use \"precedence\" and \"urgency\" as aliases for \"priority\". Readers can be misled to think these are intended to be distinct properties rather than aliases.\r\n\r\n[AD response] The operative phrase to me is \"between 0 and 7 inclusive, in descending order of priority\".  I read that as a set of ordered values from 0 to 7 where the first value has the highest priority, the second value is down a notch, etc., hence, descending.  The later phrase \"The smaller the value, the higher the precedence\" affirms this interpretation.\n --VERIFIER NOTES-- \n   ",
     "submit_date": "2023-06-29",
     "submitter_name": "Mo Zanaty",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2023-07-17 15:29:53"
   }
 ]
