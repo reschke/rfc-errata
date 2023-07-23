@@ -103,5 +103,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-02-15 14:20:08"
+  },
+  {
+    "errata_id": "7570",
+    "doc-id": "RFC2324",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "coffee-scheme = ( \"koffie\"                   ; Afrikaans, Dutch\r\n                | \"q%C3%A6hv%C3%A6\"          ; Azerbaijani\r\n                | \"%D9%82%D9%87%D9%88%D8%A9\" ; Arabic\r\n                | \"akeita\"                   ; Basque\r\n                | \"koffee\"                   ; Bengali\r\n                | \"kahva\"                    ; Bosnian\r\n                | \"kafe\"                     ; Bulgarian, Czech\r\n                | \"caf%C3%E8\"                ; Catalan, French, Galician\r\n                | \"%E5%92%96%E5%95%A1\"       ; Chinese\r\n                | \"kava\"                     ; Croatian\r\n                | \"k%C3%A1va                 ; Czech\r\n                | \"kaffe\"                    ; Danish, Norwegian, Swedish\r\n                | \"coffee\"                   ; English\r\n                | \"kafo\"                     ; Esperanto\r\n                | \"kohv\"                     ; Estonian\r\n                | \"kahvi\"                    ; Finnish\r\n                | \"%4Baffee\"                 ; German\r\n                | \"%CE%BA%CE%B1%CF%86%CE%AD\" ; Greek\r\n                | \"%E0%A4%95%E0%A5%8C%E0%A4%AB%E0%A5%80\" ; Hindi\r\n                | \"caff%C3%A8\"               ; Italian\r\n                | \"%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC\" ; Japanese\r\n                | \"%EC%BB%A4%ED%94%BC\"       ; Korean\r\n                | \"%D0%BA%D0%BE%D1%84%D0%B5\" ; Russian\r\n                | \"%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F\" ; Thai\r\n                )",
+    "correct_text": "coffee-scheme = ( \"koffie\"                               ; Afrikaans, Dutch\r\n                | \"q%C3%A6hv%C3%A6\"                      ; Azerbaijani\r\n                | \"%D9%82%D9%87%D9%88%D8%A9\"             ; Arabic\r\n                | \"akeita\"                               ; Basque\r\n                | \"koffee\"                               ; Bengali\r\n                | \"kahva\"                                ; Bosnian\r\n                | \"kafe\"                                 ; Bulgarian, Czech\r\n                | \"caf%C3%E8\"                            ; Catalan, French, Galician\r\n                | \"%E5%92%96%E5%95%A1\"                   ; Chinese\r\n                | \"kava\"                                 ; Croatian\r\n                | \"k%C3%A1va                             ; Czech\r\n                | \"kaffe\"                                ; Danish, Norwegian, Swedish\r\n                | \"coffee\"                               ; English\r\n                | \"kafo\"                                 ; Esperanto\r\n                | \"kohv\"                                 ; Estonian\r\n                | \"kahvi\"                                ; Finnish\r\n                | \"%4Baffee\"                             ; German\r\n                | \"%CE%BA%CE%B1%CF%86%CE%AD\"             ; Greek\r\n                | \"%E0%A4%95%E0%A5%8C%E0%A4%AB%E0%A5%80\" ; Hindi\r\n                | \"caff%C3%A8\"                           ; Italian\r\n                | \"%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC\" ; Japanese\r\n                | \"%EC%BB%A4%ED%94%BC\"                   ; Korean\r\n                | \"caf%C3%A9\"                            ; Portuguese\r\n                | \"%D0%BA%D0%BE%D1%84%D0%B5\"             ; Russian\r\n                | \"%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F\" ; Thai\r\n                )",
+    "notes": "Added missing Portuguese URI (\"café\") in coffe-scheme (techinical);\r\nFix mixed indentation with spaces (editorial);\r\nDepends Editorial Errata ID 7293;",
+    "submit_date": "2023-07-22",
+    "submitter_name": "Hugo Heger",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
