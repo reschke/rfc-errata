@@ -73,5 +73,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7572",
+    "doc-id": "RFC4180",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.2 Informative Ref",
+    "orig_text": "[4]  Repici, J., \"HOW-TO: The Comma Separated Value (CSV) File\r\n        Format\", 2004,\r\n        <http://www.creativyst.com/Doc/Articles/CSV/CSV01.htm>.",
+    "correct_text": "[4]  Repici, J., \"HOW-TO: The Comma Separated Value (CSV) File\r\n        Format\", 2004-2010,\r\n        <https://www.creativyst.com/Doc/Articles/CSV/CSV01.shtml>.",
+    "notes": "Suggested corrected text updates the link which uses the TLS-conforming URL for the creativyst.com site and the date range of publication. It seems that some browsers might not cleanly redirect to the HTTPS address.",
+    "submit_date": "2023-07-24",
+    "submitter_name": "Robert Hairgrove",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
