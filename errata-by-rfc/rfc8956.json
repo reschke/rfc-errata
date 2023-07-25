@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7571",
+    "doc-id": "RFC8956",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.8.1",
+    "orig_text": "+======+======================+=========================+==========+\r\n| len  | destination          | source                  | ul-proto |\r\n+======+======================+=========================+==========+\r\n| 0x12 | 01 20 00 20 01 0d bb | 02 68 40 12 34 56 78 9a | 03 81 06 |\r\n+------+----------------------+-------------------------+----------+\r\n                                 Table 1",
+    "correct_text": "+======+======================+=========================+==========+\r\n| len  | destination          | source                  | ul-proto |\r\n+======+======================+=========================+==========+\r\n| 0x12 | 01 20 00 20 01 0d b8 | 02 68 40 12 34 56 78 9a | 03 81 06 |\r\n+------+----------------------+-------------------------+----------+\r\n                                 Table 1",
+    "notes": "The last byte in the \"destination\" column of Table 1 in 3.8.1 should be \"b8\", not \"bb\".",
+    "submit_date": "2023-07-24",
+    "submitter_name": "Pawel Foremski",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-07-24 13:56:18"
+  }
+]
