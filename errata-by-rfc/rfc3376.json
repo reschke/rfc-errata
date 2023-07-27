@@ -90,6 +90,21 @@
     "update_date": "2023-02-08 11:08:06"
   },
   {
+    "errata_id": "7575",
+    "doc-id": "RFC3376",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1",
+    "orig_text": "If more changes to the same interface state entry occur before all\r\nthe retransmissions of the State-Change Report for the first change\r\nhave been completed, each such additional change triggers the\r\nimmediate transmission of a new State-Change Report.",
+    "correct_text": "If more changes to the same interface state entry occur before all\r\nthe retransmissions of the State-Change Report for the first change\r\nhave been completed, each such additional change triggers the\r\nimmediate transmission of a new State-Change Report only if the \r\nnew change is of the same type as the current change.",
+    "notes": "Section 5.1 says: \"If the interface reception-state change that triggers the new report is a filter-mode change, then the next [Robustness Variable] State-Change Reports will include a Filter-Mode-Change record. This applies even if any number of source-list changes occur in that period. The host has to maintain retransmission state for the group until the [Robustness Variable] State-Change reports have been sent.\". \r\n\r\nIt is clearly stated that if a source-list changes occur before all the retransmissions of the State-Change Report for the filter-mode change have been completed, The host has to maintain retransmission state for the group until the [Robustness Variable] State-Change reports have been sent. Therefore, in this case it must not immediately send a new State-Change Report.",
+    "submit_date": "2023-07-26",
+    "submitter_name": "Aymen Lahouel",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "770",
     "doc-id": "RFC3376",
     "errata_status_code": "Rejected",
