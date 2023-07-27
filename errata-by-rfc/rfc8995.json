@@ -103,5 +103,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7576",
+    "doc-id": "RFC8995",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.3",
+    "orig_text": "   objective-value = text       ; name of the (list of) supported\r\n                                ; protocols: \"EST-TLS\" for RFC 7030.\r\n",
+    "correct_text": "objective-value = text       ; name of the supported protocol.\r\n                             ; e.g., \"EST-TLS\" for RFC 7030.\r\n",
+    "notes": "This objective does not support a list of supported protocols. \r\nThe comment in the example might lead people to conclude they can do that.",
+    "submit_date": "2023-07-26",
+    "submitter_name": "Michael Richardson",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-07-26 14:55:14"
   }
 ]
