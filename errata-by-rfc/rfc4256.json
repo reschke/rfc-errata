@@ -17,17 +17,17 @@
   {
     "errata_id": "4746",
     "doc-id": "RFC4256",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
-    "section": "GLOBA",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
     "orig_text": "section 3.2, page 4:\r\n\r\nint       num-prompts\r\n\r\nsection 3.4, page 6:\r\n\r\nint       num-responses\r\n\r\nsection 3.4.4\r\n\r\npage 7:\r\nS:   int       1\r\n...\r\nC:   int       1\r\n\r\npage 8:\r\n\r\nS:   int       1\r\n...\r\nC:   int       1\r\n...\r\nS:   int       2\r\n...\r\nC:   int       2\r\n...\r\nS:   int       0\r\n\r\npage 9:\r\n\r\nS:   int       0",
     "correct_text": "section 3.2, page 4:\r\n\r\nuint32       num-prompts\r\n\r\nsection 3.4, page 6:\r\n\r\nuint32       num-responses\r\n\r\nsection 3.4.4\r\n\r\npage 7:\r\nS:   uint32       1\r\n...\r\nC:   uint32       1\r\n\r\npage 8:\r\n\r\nS:   uint32       1\r\n...\r\nC:   uint32       1\r\n...\r\nS:   uint32       2\r\n...\r\nC:   uint32       2\r\n...\r\nS:   uint32       0\r\n\r\npage 9:\r\n\r\nS:   uint32       0",
     "notes": "The type \"int\" is not present between the list of types present in the RFC 4251, section 5 ( \"Data Type Representations Used in the SSH Protocols\" ) . Alone it's confusing and meaningless.",
     "submit_date": "2016-07-25",
     "submitter_name": "Gabriele Bonacini",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2023-07-28 11:28:33"
   },
   {
     "errata_id": "758",
