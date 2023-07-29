@@ -47,7 +47,7 @@
   {
     "errata_id": "4533",
     "doc-id": "RFC4253",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": "[[ A paragraph is missing in this section to clarify implementation\r\n   requirements for the reserved field. This paragraph could suitably\r\n   be inserted after the description of first_kex_packet_follows. ]]",
@@ -55,14 +55,14 @@
     "notes": "RFC 4253 defines the KEXINIT reserved field as follows:\r\n\r\nuint32       0 (reserved for future extension)\r\n\r\nThis has in practice not been sufficient for developers to understand the requirements for sending and handling this field.\r\n\r\nAt least one common implementation will currently fail key exchange if the field is non-zero, because it forgets to decode it, and just assumes it is always zero.\r\n\r\nAt least one other implementation will currently disconnect if the field is non-zero, because it takes the above definition to mean that the field must be zero when received.\r\n\r\nThe above paragraph clarifies the correct treatment of this field. This has been discussed during November 2015 with other implementers on the \"ietf-ssh@netbsd.org\" mailing list. There appears to be consensus that the above is the correct treatment.",
     "submit_date": "2015-11-13",
     "submitter_name": "denis bider",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2023-07-28 11:00:57"
   },
   {
     "errata_id": "4721",
     "doc-id": "RFC4253",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "5.3",
     "orig_text": "   o  The minimum size of a TCP/IP header is 32 bytes.  Thus, the\r\n      increase is actually from 33 to 51 bytes (roughly).\r\n\r\n   o  The minimum size of the data field of an Ethernet packet is 46\r\n      bytes [RFC0894].  Thus, the increase is no more than 5 bytes.\r\n      When Ethernet headers are considered, the increase is less than 10\r\n      percent.",
@@ -70,8 +70,8 @@
     "notes": "As the minimum size of SSH message is 28, the minimum size of the TCP segment containing SSH message must be 32 + 28 == 60 bytes (as opposed to 32 + 1 in case of transmission of plain text over TCP).",
     "submit_date": "2016-06-27",
     "submitter_name": "Oleg Andriyanov",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2023-07-28 11:02:22"
   }
 ]
