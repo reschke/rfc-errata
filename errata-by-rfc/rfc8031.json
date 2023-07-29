@@ -2,22 +2,22 @@
   {
     "errata_id": "6339",
     "doc-id": "RFC8031",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "The public keys are generated from this using the formula in\r\nSection 2:\r\n\r\npub_i = X25519(d_i, G) =\r\n             48 d5 dd d4 06 12 57 ba 16 6f a3 f9 bb db 74 f1\r\n             a4 e8 1c 08 93 84 fa 77 f7 90 70 9f 0d fb c7 66\r\n\r\npub_r = X25519(d_r, G) =\r\n             0b e7 c1 f5 aa d8 7d 7e 44 86 62 67 32 98 a4 43\r\n             47 8b 85 97 45 17 9e af 56 4c 79 c0 ef 6e ee 25\r\n\r\nAnd this is the value of the Key Exchange Data field in the Key\r\nExchange payload described in Section 3.1.  The shared value is\r\ncalculated as in Section 2:\r\n\r\nSHARED_SECRET = X25519(d_i, pub_r) = X25519(d_r, pub_i) =\r\n             c7 49 50 60 7a 12 32 7f-32 04 d9 4b 68 25 bf b0\r\n             68 b7 f8 31 9a 9e 37 08-ed 3d 43 ce 81 30 c9 50\r\n",
     "correct_text": "The public keys are generated from this using the formula in\r\nSection 2:\r\n\r\npub_i = X25519(d_i, G) =\r\n             a7 07 b3 bc 0f 37 56 fc 0a cf 33 55 85 c5 f7 7b\r\n             9f 29 ff a4 24 70 14 af 84 70 5b eb 50 46 26 29\r\n\r\npub_r = X25519(d_r, G) =\r\n             0e 57 7e 11 5d 6c 08 59 b8 51 36 d2 1b 1c fd 74\r\n             67 9f 91 14 61 1d 79 c6 81 ba d0 8a 7e 1f 0a 04\r\n\r\nAnd this is the value of the Key Exchange Data field in the Key\r\nExchange payload described in Section 3.1.  The shared value is\r\ncalculated as in Section 2:\r\n\r\nSHARED_SECRET = X25519(d_i, pub_r) = X25519(d_r, pub_i) =\r\n             d6 8d 8c ea fd 2c d3 ce 25 34 43 33 c8 9e 35 54\r\n             9e 0f c6 1a 98 87 39 34 b1 8a 18 70 f0 3a 17 0c\r\n",
-    "notes": "The test vector values given both for the public keys and for the shared secret are wrong. It turns out that they were derived from the unchanged random input, instead of d_X. An explanation could be that a first text version did not include the fixing of the random bits and that after inserting the respective paragraph (introducing fixed_X and d_X), it was forgotten to update pub_X and SHARED_SECRET.\r\n\r\nPaul Wouters: endian issue mentioned in notes split into separate errata",
+    "notes": "The test vector values given both for the public keys and for the shared secret are wrong. It turns out that they were derived from the unchanged random input, instead of d_X. An explanation could be that a first text version did not include the fixing of the random bits and that after inserting the respective paragraph (introducing fixed_X and d_X), it was forgotten to update pub_X and SHARED_SECRET.\r\n\r\nPaul Wouters: endian issue mentioned in notes split into separate errata\n --VERIFIER NOTES-- \nPaul Wouters (AD): As per Tobias Brunner:\r\n\r\nThe original test vector works for us (verified with multiple X25519\r\nimplementations).  I think most of the confusion comes from the\r\ndifferent formatting of the values when compared to the test vectors in\r\nRFC 7749 (in particular d_i/r).\r\n\r\nIn the latter, the values are given as long hex strings.  It states:\r\n\r\n \"The inputs are generally given as 64 or 112 hexadecimal digits that\r\n  need to be decoded as 32 or 56 binary bytes before processing.\"\r\n\r\nSo these values are byte strings, i.e. each two hex digits simply\r\nrepresent a byte.  For the random_i/r, pub_i/r and SHARED_SECRET values\r\nin RFC 8031 this has been made a bit clearer by separating the\r\nindividual bytes.\r\n\r\nBut then there are the d_i and d_r values.  These are given as long hex\r\nstrings, however, unlike those in RFC 7749, they are not byte strings\r\nbut actually the numbers in base 16 after decoding the binary values\r\nfixed_i/r as little-endian.  Note that RFC 7749 also gives the decoded\r\nnumeric values of some of the inputs, but does so in base 10 thus\r\navoiding this confusion.\r\n\r\nSo in RFC 8031 it would have been clearer if these values were either\r\nprefixed with 0x:\r\n\r\nd_i = 0x549D5F4A460900E6D9F63F53586AD1DD8CEAF925739B78B676B4558630B41F70\r\nd_r = 0x4856A039B8F178E9A1550722DCEF01559ECDBA30E0D0ADDD600D295352645408\r\n\r\nor also given in base 10:\r\n\r\nd_i = 38272331938479145686941743521879072306\r\n      324697418955568337792079861743202082672\r\nd_r = 32719579781175365148694953981896303820\r\n      370069993938279311538545124444601603080\r\n",
     "submit_date": "2020-11-17",
     "submitter_name": "Christian Tschudin",
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
-    "update_date": "2022-04-10 17:30:15"
+    "update_date": "2023-07-28 10:54:24"
   },
   {
     "errata_id": "6931",
     "doc-id": "RFC8031",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Global",
     "orig_text": "",
@@ -27,6 +27,6 @@
     "submitter_name": "Christian Tschudin",
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
-    "update_date": "2022-04-10 17:29:03"
+    "update_date": "2023-07-28 10:56:03"
   }
 ]
