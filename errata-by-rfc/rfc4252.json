@@ -17,7 +17,7 @@
   {
     "errata_id": "5563",
     "doc-id": "RFC4252",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "8.",
     "orig_text": "      SSH_MSG_USERAUTH_FAILURE without partial success - The password\r\n      has not been changed.  Either password changing was not supported,\r\n      or the old password was bad.  Note that if the server has already\r\n      sent SSH_MSG_USERAUTH_PASSWD_CHANGEREQ, we know that it supports\r\n      changing the password.\r\n\r\n      SSH_MSG_USERAUTH_CHANGEREQ - The password was not changed because\r\n      the new password was not acceptable (e.g., too easy to guess).",
@@ -25,8 +25,8 @@
     "notes": "SSH_MSG_USERAUTH_PASSWD_CHANGEREQ seems to have been truncated to SSH_MSG_USERAUTH_CHANGEREQ for no apparent reason.",
     "submit_date": "2018-11-27",
     "submitter_name": "Benoît Morgan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2023-07-28 10:59:44"
   }
 ]
