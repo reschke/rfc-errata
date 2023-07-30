@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7577",
+    "doc-id": "RFC9190",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.5",
+    "orig_text": "   When an EAP-TLS server has successfully processed the TLS client\r\n   Finished and sent its last handshake message (Finished or a post-\r\n   handshake message), it sends an encrypted TLS record with application\r\n   data 0x00.  The encrypted TLS record with application data 0x00 is a\r\n   protected success result indication, as defined in [RFC3748] ...\r\n",
+    "correct_text": "(append)\r\n\r\nIf the EAP-TLS peer does not see the protected success indication, it\r\nMUST behave as if it had received an EAP Failure instead.",
+    "notes": "This is largely a nit, but it's reasonable to say this.\r\n\r\nThe existing text discussed what the server must do,  But it does not say what the\r\npeer does if the server fails to behave this way,",
+    "submit_date": "2023-07-29",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
