@@ -43,5 +43,20 @@
     "verifier_id": "172",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2023-05-29 06:52:02"
+  },
+  {
+    "errata_id": "7578",
+    "doc-id": "RFC9000",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "17.2.1",
+    "orig_text": "                                                       Where QUIC\r\n   might be multiplexed with other protocols (see [RFC7983]), servers\r\n   SHOULD set the most significant bit of this field (0x40) to 1 so that\r\n   Version Negotiation packets appear to have the Fixed Bit field.",
+    "correct_text": "                                                       Unless the\r\n   server has out-of-band knowledge that clients are not\r\n   demultiplexing QUIC with other protocols (see [RFC7983]), it\r\n   SHOULD set the most significant bit of this field (0x40) to 1 so that\r\n   Version Negotiation packets appear to have the Fixed Bit field.",
+    "notes": "Unless operating in a tightly controlled environment, the server has no way of knowing what other protocols the client might be demultiplexing on the same UDP socket. According to the demultiplexing logic defined in RFC 9443, Version Negotiation packets with 0x40 set to 0 would be misclassified as RTP/RTCP.",
+    "submit_date": "2023-07-30",
+    "submitter_name": "Marten Seemann",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
