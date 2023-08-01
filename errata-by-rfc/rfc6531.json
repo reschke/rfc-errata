@@ -13,5 +13,20 @@
     "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7580",
+    "doc-id": "RFC6531",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3, 3.7.3",
+    "orig_text": "The <Mailbox> ABNF rule is imported from RFC 5321 and updated in order to support the internationalized email address.\r\n\r\nThe following ABNF rules imported from RFC 5321, Section 4.1.2, are updated directly or indirectly by this document:\r\n\r\nThis document updates <Mailbox> and <Domain> to support non-ASCII characters.",
+    "correct_text": "The <Mailbox> ABNF rule is imported from RFC 5321 and extended in order to support the internationalized email address.\r\n\r\nThe following ABNF rules imported from RFC 5321, Section 4.1.2, are extended directly or indirectly by this document:\r\n\r\nThis document extends <Mailbox> and <Domain> to support non-ASCII characters.",
+    "notes": "The original text can be incorrectly interpreted to suggest that the definitions found in RFC 6531 formally update the definitions found in RFC 5321. RFC 6531 does not formally update RFC 5321. As such, a word like \"extends\" may be less prone to misinterpretation than \"updates\".",
+    "submit_date": "2023-07-31",
+    "submitter_name": "Scott Hollenbeck",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
