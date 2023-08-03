@@ -167,17 +167,17 @@
   {
     "errata_id": "4994",
     "doc-id": "RFC4226",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.2",
     "orig_text": "The HOTP client (hardware or software token) increments its counter\r\nand then calculates the next HOTP value HOTP client.  If the value\r\nreceived by the authentication server matches the value calculated by\r\nthe client, then the HOTP value is validated.  In this case, the\r\nserver increments the counter value by one.\r\n\r\nIf the value received by the server does not match the value\r\ncalculated by the client, the server initiate the resynch protocol\r\n(look-ahead window) before it requests another pass.",
     "correct_text": "The HOTP client (hardware or software token) increments its counter\r\nand then calculates the next HOTP value HOTP client.  If the value\r\nreceived by the authentication server matches the value calculated by\r\nthe server, then the HOTP value is validated.  In this case, the\r\nserver increments the counter value by one.\r\n\r\nIf the value received by the server does not match the value\r\ncalculated by the server, the server initiate the resynch protocol\r\n(look-ahead window) before it requests another pass.",
-    "notes": "The OTP value received by the server is the one calculated by the client.",
+    "notes": "The OTP value received by the server is the one calculated by the client.\r\n\r\nAD Note: this text still has the stray \"HOTP client\" string that errata eid 5723 reported.",
     "submit_date": "2017-04-14",
     "submitter_name": "Mathias Tausig",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2023-08-02 18:41:23"
   },
   {
     "errata_id": "5129",
@@ -197,7 +197,7 @@
   {
     "errata_id": "5130",
     "doc-id": "RFC4226",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix C",
     "orig_text": " static public String generateOTP(byte[] secret,\r\n                  long movingFactor,\r\n             int codeDigits,\r\n                  boolean addChecksum,\r\n             int truncationOffset)\r\n           throws NoSuchAlgorithmException, InvalidKeyException\r\n       {\r\n           // put movingFactor value into text byte array\r\n     String result = null;\r\n     int digits = addChecksum ? (codeDigits + 1) : codeDigits;\r\n           byte[] text = new byte[8];\r\n           for (int i = text.length - 1; i >= 0; i--) {\r\n               text[i] = (byte) (movingFactor & 0xff);\r\n               movingFactor >>= 8;\r\n           }",
@@ -205,9 +205,9 @@
     "notes": "method parameters like movingFactor should not be edited or changed in the method logic. This may lead to misunderstanding and bugs when the code is ported to other platforms and or re-implemented. Here movingFactor would be expected to stay constant and can be reused, but the original implementation updates the value to 0, which means any extra logic or updates (even debug statements) would always see movingFactor == 0 no matter what.",
     "submit_date": "2017-09-27",
     "submitter_name": "Gerrit Jansen van Vuuren",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2023-08-02 18:44:50"
   },
   {
     "errata_id": "5723",
