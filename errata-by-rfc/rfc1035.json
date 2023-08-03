@@ -403,5 +403,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-04-26 16:19:46"
+  },
+  {
+    "errata_id": "7587",
+    "doc-id": "RFC1035",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.1.1",
+    "orig_text": "ID              A 16 bit identifier assigned by the program that\r\n                generates any kind of query.  This identifier is copied\r\n                the corresponding reply and can be used by the requester\r\n                to match up replies to outstanding queries.",
+    "correct_text": "ID              A 16 bit identifier assigned by the program that\r\n                generates any kind of query.  This identifier is copied\r\n                to the corresponding reply and can be used by the\r\n                requester to match up replies to outstanding queries.",
+    "notes": "There’s a missing preposition.",
+    "submit_date": "2023-08-02",
+    "submitter_name": "Roj",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-08-02 14:32:56"
   }
 ]
