@@ -62,31 +62,31 @@
   {
     "errata_id": "4960",
     "doc-id": "RFC4086",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "8.2.1",
     "orig_text": "   If the adversary can command a highly parallel processor or a large\r\n   network of work stations, 10^11 cycles per second is probably a\r\n   minimum assumption today.  Looking forward a few years, there should\r\n   be at least an order of magnitude improvement.  Thus, it is\r\n   reasonable to assume that 10^10 keys could be checked per second, or\r\n   3.6*10^12 per hour or 6*10^14 per week, or 2.4*10^15 per month. ",
     "correct_text": "   If the adversary can command a highly parallel processor or a large\r\n   network of work stations, 10^11 cycles per second is probably a\r\n   minimum assumption today.  Looking forward a few years, there should\r\n   be at least an order of magnitude improvement.  Thus, it is\r\n   reasonable to assume that 10^10 keys could be checked per second, or\r\n   3.6*10^13 per hour or 8.6*10^14 per week, or 2.6*10^16 per month. ",
-    "notes": "Incorrect values.",
+    "notes": "Incorrect values.\r\n\r\nAD Note: The proposed corrected text is also incorrect though. The number 8.6*10^14 is per day, not per week. The per week number is 6.48 * 10^15. The proposed updated numbers for per hour and per month are a correct update. So the proposed final text should be:\r\n\r\nor  3.6*10^13 per hour or 6.48 * 10^15 per week, or 2.6*10^16 per month. ",
     "submit_date": "2017-03-09",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2023-08-02 17:53:45"
   },
   {
     "errata_id": "5386",
     "doc-id": "RFC4086",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "GLOBAL",
     "orig_text": "   [DoD]           \"Password Management Guideline\", United States of\r\n                   America, Department of Defense, Computer Security\r\n                   Center, CSC-STD-002-85, April 1885.",
     "correct_text": "   [DoD]           \"Password Management Guideline\", United States of\r\n                   America, Department of Defense, Computer Security\r\n                   Center, CSC-STD-002-85, April 1985.",
-    "notes": "This Informative Reference had the wrong century as publish date.",
+    "notes": "This Informative Reference had the wrong century as publish date.\r\n",
     "submit_date": "2018-06-08",
     "submitter_name": "David Jonasson",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2023-08-02 18:30:48"
   }
 ]
