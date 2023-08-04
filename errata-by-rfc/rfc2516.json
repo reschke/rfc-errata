@@ -92,17 +92,17 @@
   {
     "errata_id": "5634",
     "doc-id": "RFC2516",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A",
-    "orig_text": "If there is data, and the first octet of the data is nonzero, then\r\nit MUST be a printable UTF-8 string which explains why the request\r\nwas denied.  This string MAY NOT be NULL terminated.",
-    "correct_text": "If there is data, and the first octet of the data is nonzero, then\r\nit MUST be a printable UTF-8 string which explains why the request\r\nwas denied.  This string MUST NOT be NULL terminated.",
+    "orig_text": "If there is data, and the first octet of the data is nonzero, then\r\nit MUST be a printable UTF-8 string which explains why the request\r\nwas denied.  This string MAY NOT be NULL terminated.\r\n\r\n(multiple occurrences of \"MAY NOT\")",
+    "correct_text": "If there is data, and the first octet of the data is nonzero, then\r\nit MUST be a printable UTF-8 string which explains why the request\r\nwas denied.  This string MUST NOT be NULL terminated.\r\n\r\n(all occurrences of \"MAY NOT\" must be changed to \"MUST NOT\")",
     "notes": "The keyword \"MAY NOT\" does not exist in RFC 2119. It should be \"MUST NOT\".",
     "submit_date": "2019-02-11",
     "submitter_name": "Chris Fletcher",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 06:31:22"
   },
   {
     "errata_id": "5635",
