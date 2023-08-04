@@ -17,16 +17,16 @@
   {
     "errata_id": "5688",
     "doc-id": "RFC2317",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "[Page 2]",
     "orig_text": " Let us assume we have assigned the address spaces to three different\r\n   parties as follows:\r\n\r\n           192.0.2.0/25   to organization A\r\n           192.0.2.128/26 to organization B\r\n           192.0.2.192/26 to organization C\r\n",
     "correct_text": " Let us assume we have assigned the address spaces to three different\r\n   parties as follows:\r\n\r\n           192.0.2.0/25   to organization A\r\n           192.0.2.128/26 to organization B\r\n           192.0.2.192/27 to organization C\r\n\r\n ",
-    "notes": "Ip mask 27 ?",
+    "notes": "Ip mask 27 ?\n --VERIFIER NOTES-- \n   Actually, the last octet of 192.0.2.128 is b'1000 0000 and 192.0.2.192 is n'1100 0000 and the latter is *not* a subnet of the former in this RFC. I.e., both are /26",
     "submit_date": "2019-04-11",
     "submitter_name": "Dominik",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 06:36:56"
   }
 ]
