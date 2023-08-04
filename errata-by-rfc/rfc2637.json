@@ -62,7 +62,7 @@
   {
     "errata_id": "6287",
     "doc-id": "RFC2637",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.2.3",
     "orig_text": "When the PAC receives the Outgoing-Call-Reply, it attempts to connect the call, assuming the calling party has not hung up.",
@@ -70,14 +70,14 @@
     "notes": "The PAC does not receive Outgoing-Call-Reply messages, as also indicated in sections 3.2.4.1 and 3.2.4.2. It receives Incoming-Call-Reply messages, as indicated in sections 3.2.3.1 and 3.2.3.2.",
     "submit_date": "2020-09-13",
     "submitter_name": "Casper van Eersel",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 06:19:58"
   },
   {
     "errata_id": "6288",
     "doc-id": "RFC2637",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "2.14",
     "orig_text": "Th Call ID assigned by the PNS to this call.",
@@ -85,8 +85,8 @@
     "notes": "A missing ‘e’ in ‘Th’.",
     "submit_date": "2020-09-13",
     "submitter_name": "Casper van Eersel",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 06:15:03"
   }
 ]
