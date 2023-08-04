@@ -62,17 +62,17 @@
   {
     "errata_id": "6447",
     "doc-id": "RFC2131",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.2",
     "orig_text": "a client requests the use of an address for some period of time.  The \r\nallocation mechanism (the collection of DHCP servers) guarantees not \r\nto reallocate that address within the requested time",
     "correct_text": "a client requests the use of an address for some period of time.  The \r\nallocation mechanism (the collection of DHCP servers) may or may not be able or willing to grant a lease for the requested duration.  Any lease duration it offers it then guarantees not to reallocate within the offered time",
-    "notes": "It is simply ludicrous to imagine that clients are in control of the lease duration, and that servers will simply comply, regardless of resource availability.",
+    "notes": "It is simply ludicrous to imagine that clients are in control of the lease duration, and that servers will simply comply, regardless of resource availability.\n --VERIFIER NOTES-- \n   The text does not say that the DHCP servers must grant the requested leased time. I.e., the current text is OK.",
     "submit_date": "2021-03-01",
     "submitter_name": "Adrien de Croy",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 04:06:53"
   },
   {
     "errata_id": "6618",
