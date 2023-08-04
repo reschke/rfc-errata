@@ -32,16 +32,16 @@
   {
     "errata_id": "6429",
     "doc-id": "RFC2759",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "9.1.2.",
     "orig_text": "Authenticator authentication failure\r\n\r\n                         <- Authenticator Challenge\r\n       Peer Response/Challenge ->\r\n                         <- Success/Authenticator Response\r\n\r\n   (Authenticator Response verification fails, peer disconnects)",
     "correct_text": "Authenticator authentication failure\r\n\r\n                         <- Authenticator Challenge\r\n       Peer Response/Challenge ->\r\n                         <- Failure/Authenticator Response\r\n\r\n   (Authenticator Response verification fails, peer disconnects)",
-    "notes": "According to section 6. Failure Packet is identical in format to the standard CHAP Failure packet, but there are different codes for success and for failure so in case of failure the returned code must be 4 thus in section 9.1.2. the line \"<- Success/Authenticator Response\"  the response logic should be Failure, not Succsess.",
+    "notes": "According to section 6. Failure Packet is identical in format to the standard CHAP Failure packet, but there are different codes for success and for failure so in case of failure the returned code must be 4 thus in section 9.1.2. the line \"<- Success/Authenticator Response\"  the response logic should be Failure, not Succsess.\n --VERIFIER NOTES-- \n   The example is when the authenticator fails authenticate itself to the peer (i.e., it is a rogue authenticator). MS-CHAPv2 is doing piggy-backed mutual authentication.",
     "submit_date": "2021-02-14",
     "submitter_name": "Valentin Atanasov",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 06:13:03"
   }
 ]
