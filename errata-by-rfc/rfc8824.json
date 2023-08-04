@@ -2,7 +2,7 @@
   {
     "errata_id": "7389",
     "doc-id": "RFC8824",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.1",
     "orig_text": "For example, the Uri-Path option is\r\nmandatory in the request, and it might not be present in the\r\nresponse.",
@@ -10,9 +10,9 @@
     "notes": "The Uri-Path option is not mandatory in a CoAP request, and it is not supposed to be used in a CoAP response.",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 05:30:16"
   },
   {
     "errata_id": "7390",
@@ -32,32 +32,32 @@
   {
     "errata_id": "7391",
     "doc-id": "RFC8824",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5.4",
     "orig_text": "The SCHC Rule description MAY define sending some field values by\r\nsetting the TV to \"not-sent\", the MO to \"ignore\", and the CDA to\r\n\"value-sent\".",
     "correct_text": "The SCHC Rule description MAY define sending some field values by\r\ndescribing an empty TV, with the MO set to \"ignore\" and the CDA set to\r\n\"value-sent\".",
-    "notes": "The new text indicates to use an empty TV, consistent with the intended CDA \"value-sent\".",
+    "notes": "The new text indicates to use an empty TV, consistent with the intended CDA \"value-sent\".\n --VERIFIER NOTES-- \nThe WG/author wrote:\r\n\"As you can see 'not set' has been transformed into 'not-sent' during\r\nthe edition. And I prefer to use this terminology that corresponds to\r\nthe RFC8724.\"\r\nin https://mailarchive.ietf.org/arch/msg/lp-wan/Vw5P6i0DysYqxClBj-gUjMEmqWY/",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 05:12:45"
   },
   {
     "errata_id": "7392",
     "doc-id": "RFC8824",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "6.2",
     "orig_text": "Since the Observe Option MAY use a RST message to inform a server\r\nthat the client does not require the Observe response, a specific\r\nSCHC Rule SHOULD exist to allow the message's compression with the\r\nRST type.",
     "correct_text": "Since the Observe extension MAY use a RST message to inform a server\r\nthat the client does not require the Observe response, a specific\r\nSCHC Rule SHOULD exist to allow the message's compression with the\r\nRST type.",
-    "notes": "A RST message is not used by the Observe option itself, but by a CoAP client when using Observe.",
+    "notes": "A RST message is not used by the Observe option itself, but by a CoAP client when using Observe.\n --VERIFIER NOTES-- \n The authors wrote:\r\n\"[Ana] as soon as I understand CoAP RFC7252 uses Options, and in the\r\nRFC7641 Observe is also an Option, so I don't think that the change is\r\nneeded. Because Observe is not an extension.\"\r\nin https://mailarchive.ietf.org/arch/msg/lp-wan/amZkZfocq1SQCpFPNJzoxn3TMsY/\r\n",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-05-02 14:59:25"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 05:11:05"
   },
   {
     "errata_id": "7393",
@@ -77,52 +77,52 @@
   {
     "errata_id": "7394",
     "doc-id": "RFC8824",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": "equal 1",
     "correct_text": "equal",
-    "notes": "See the cell value of Table 3, last row, column \"MO\".",
+    "notes": "See the cell value of Table 3, last row, column \"MO\".\n --VERIFIER NOTES-- \n   Per the WG/author in https://mailarchive.ietf.org/arch/msg/lp-wan/ZVVEzAILvuGbudfpLhNp2xJuBDc/",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-05-02 15:11:36"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 05:16:28"
   },
   {
     "errata_id": "7395",
     "doc-id": "RFC8824",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": "SCHC compression reduces the header, sending only the Type, a mapped\r\ncode, and the least significant bits of the Message ID (9 bits in the\r\nexample above).",
     "correct_text": "SCHC compression reduces the header, sending only a mapped Type (and\r\nonly for uplink messages), a mapped code, and the least significant\r\nbits of the Message ID (9 bits in the example above).",
-    "notes": "As per the discussed rule from Table 3, the Type is also omitted if it is CON for downlink messages.",
+    "notes": "As per the discussed rule from Table 3, the Type is also omitted if it is CON for downlink messages.\n --VERIFIER NOTES-- \n The author/WG wrote:\r\n\"In this case we are making a difference between the index of the\r\nmatching-list sent in Type and the mapped index used for Code that belongs\r\nto the RFC7252 section 12.1 IANA values.\"\r\nin https://mailarchive.ietf.org/arch/msg/lp-wan/s7EO2F4JUPHUyFLc3Qr-5RnwNZE/\r\n",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-05-02 15:19:49"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 05:24:15"
   },
   {
     "errata_id": "7396",
     "doc-id": "RFC8824",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "7.1",
     "orig_text": "Note that a client located in an Application Server sending a request\r\nto a server located in the Device may not be compressed through this\r\nRule, since the MID might not start with 7 bits equal to 0.",
     "correct_text": "Note that, if a client is located in an Application Server and sends a\r\nrequest to a server located in the Device, then the request may not be\r\ncompressed through this Rule, since the MID might not start with 7 bits\r\nequal to 0.",
     "notes": "In the old text, \"compressed\" seems referred to \"client\" rather than to \"request\" as intended.",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-04-27 16:34:47"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 05:32:48"
   },
   {
     "errata_id": "7397",
     "doc-id": "RFC8824",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.2",
     "orig_text": "These classes point out that the Outer option contains the OSCORE\r\noption and that the message is OSCORE protected; this option carries\r\nthe information necessary to retrieve the Security Context.",
@@ -130,8 +130,8 @@
     "notes": "\"Outer options\" should be in the plural, to refer to the set of CoAP options left unencrypted. Such a set comprises also the OSCORE option, which is the actual indicator of the message being protected with OSCORE.",
     "submit_date": "2023-03-19",
     "submitter_name": "Marco Tiloca",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-04-27 16:41:58"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 05:33:56"
   }
 ]
