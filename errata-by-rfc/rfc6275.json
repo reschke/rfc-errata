@@ -47,16 +47,16 @@
   {
     "errata_id": "5898",
     "doc-id": "RFC6275",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": null,
     "correct_text": "It should say:\r\n\r\nUpdates: 4861 [in RFC header]\r\n",
-    "notes": "RFC4861 Section 6.2.1 says that \r\n\"MaxRtrAdvInterval ..MUST be no less than 4 seconds\"\r\nand \r\n\"MinRtrAdvInterval...MUST MUST be no less than 3 seconds\"\r\n\r\nRFC6275 Section 7.5.  changes those requirements to:\r\n\"Routers supporting mobility SHOULD be able to be configured with a\r\n   smaller MinRtrAdvInterval value and MaxRtrAdvInterval value to allow\r\n   sending of unsolicited multicast Router Advertisements more often.\r\n   The minimum allowed values are:\r\n\r\n   o  MinRtrAdvInterval 0.03 seconds\r\n\r\n   o  MaxRtrAdvInterval 0.07 seconds\r\n\"\r\nso it  should be flagged as a formal update to RFC4861.",
+    "notes": "RFC4861 Section 6.2.1 says that \r\n\"MaxRtrAdvInterval ..MUST be no less than 4 seconds\"\r\nand \r\n\"MinRtrAdvInterval...MUST MUST be no less than 3 seconds\"\r\n\r\nRFC6275 Section 7.5.  changes those requirements to:\r\n\"Routers supporting mobility SHOULD be able to be configured with a\r\n   smaller MinRtrAdvInterval value and MaxRtrAdvInterval value to allow\r\n   sending of unsolicited multicast Router Advertisements more often.\r\n   The minimum allowed values are:\r\n\r\n   o  MinRtrAdvInterval 0.03 seconds\r\n\r\n   o  MaxRtrAdvInterval 0.07 seconds\r\n\"\r\nso it  should be flagged as a formal update to RFC4861.\n --VERIFIER NOTES-- \nDeviation from RFC 4861 are allowed by its section 6.2.1: \r\n\" The default values for some of the variables listed below may be\r\n   overridden by specific documents that describe how IPv6 operates over\r\n   different link layers.\"",
     "submit_date": "2019-11-08",
     "submitter_name": "Jen Linkova",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 04:58:36"
   }
 ]
