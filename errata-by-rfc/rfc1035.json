@@ -302,17 +302,17 @@
   {
     "errata_id": "6264",
     "doc-id": "RFC1035",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2.2",
     "orig_text": "amount of new network code which is required.  This scheme can also\r\nallow a group of hosts can share a small number of caches rather than\r\nmaintaining a large number of separate caches, on the premise that the\r\ncentralized caches will have a higher hit ratio.  In either case,\r\n",
     "correct_text": "amount of new network code which is required.  This scheme can also\r\nallow a group of hosts to share a small number of caches rather than\r\nmaintaining a large number of separate caches, on the premise that the\r\ncentralized caches will have a higher hit ratio.  In either case,\r\n",
-    "notes": "[WK]: s/a group of hosts can share a/a group of hosts to share a/  (I had to use 'dif' to find the change. Commenting here to save others from same. ",
+    "notes": "[WK]: s/a group of hosts can share a/a group of hosts to share a/  (I had to use 'dif' to find the change. Commenting here to save others from same. \r\n[EV] Indeed the s/can/to/ is a valid grammar correction.",
     "submit_date": "2020-08-24",
     "submitter_name": "Merlin Büge",
-    "verifier_id": "155",
-    "verifier_name": "Warren Kumari (Ops AD)",
-    "update_date": "2020-08-24 10:16:39"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 04:00:28"
   },
   {
     "errata_id": "6463",
