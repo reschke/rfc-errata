@@ -73,5 +73,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7593",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.3.10",
+    "orig_text": "  C: A001 NAMESPACE\r\n  S: * NAMESPACE ((\"\" \"/\")(\"#mh/\" \"/\" \"X-PARAM\"\r\n      (\"FLAG1\" \"FLAG2\"))) NIL NIL\r\n  S: A001 OK NAMESPACE command completed\r\n\r\n  C: A002 LIST (SPECIAL-USE) \"\" \"*\"\r\n  S: * LIST (\\NonExistent \\Archive) \"/\" Archives\r\n  S: * LIST (\\NonExistent \\Drafts) \"/\" Drafts\r\n  S: * LIST (\\NonExistent \\Junk) \"/\" Junk\r\n  S: * LIST (\\NonExistent \\Sent) \"/\" \"Sent Mail\"\r\n  S: * LIST (\\NonExistent \\Trash) \"/\" \"Deleted Items\"\r\n  S: A002 OK LIST Completed\r\n\r\n  C: A003 LIST (SPECIAL-USE) \"#mh/\" \"*\"\r\n  S: * LIST (\\NonExistent \\Archive) \"/\" \"#mh/Archives\"\r\n  S: * LIST (\\NonExistent \\Drafts) \"/\" \"#mh/Drafts\"\r\n  S: * LIST (\\NonExistent \\Junk) \"/\" \"#mh/Junk\"\r\n  S: * LIST (\\NonExistent \\Sent) \"/\" \"#mh/Sent Mail\"\r\n  S: * LIST (\\NonExistent \\Trash) \"/\" \"#mh/Deleted Items\"\r\n  S: A003 OK LIST Completed\r\n",
+    "correct_text": "  C: A001 NAMESPACE\r\n  S: * NAMESPACE ((\"\" \"/\")(\"#mh/\" \"/\" \"X-PARAM\"\r\n      (\"FLAG1\" \"FLAG2\"))) NIL NIL\r\n  S: A001 OK NAMESPACE command completed\r\n\r\n  C: A002 LIST \"\" \"*\"\r\n  S: * LIST (\\NonExistent \\Archive) \"/\" Archives\r\n  S: * LIST (\\NonExistent \\Drafts) \"/\" Drafts\r\n  S: * LIST (\\NonExistent \\Junk) \"/\" Junk\r\n  S: * LIST (\\NonExistent \\Sent) \"/\" \"Sent Mail\"\r\n  S: * LIST (\\NonExistent \\Trash) \"/\" \"Deleted Items\"\r\n  S: A002 OK LIST Completed\r\n\r\n  C: A003 LIST \"#mh/\" \"*\"\r\n  S: * LIST (\\NonExistent \\Archive) \"/\" \"#mh/Archives\"\r\n  S: * LIST (\\NonExistent \\Drafts) \"/\" \"#mh/Drafts\"\r\n  S: * LIST (\\NonExistent \\Junk) \"/\" \"#mh/Junk\"\r\n  S: * LIST (\\NonExistent \\Sent) \"/\" \"#mh/Sent Mail\"\r\n  S: * LIST (\\NonExistent \\Trash) \"/\" \"#mh/Deleted Items\"\r\n  S: A003 OK LIST Completed\r\n",
+    "notes": "The SPECIAL-USE LIST option is part of the IMAP4rev1 SPECIAL-USE extension, but has not been carried over in IMAP4rev2.",
+    "submit_date": "2023-08-07",
+    "submitter_name": "Simon Ser",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
