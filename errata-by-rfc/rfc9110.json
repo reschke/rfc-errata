@@ -103,5 +103,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-07-07 14:22:25"
+  },
+  {
+    "errata_id": "7599",
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.4.1",
+    "orig_text": "All 1xx (Informational), 204 (No Content), and 304 (Not Modified)\r\nresponses do not include content.\r\n\r\nAll other responses do include content, although that content might\r\nbe of zero length.",
+    "correct_text": "All 1xx (Informational), 204 (No Content), 205 (Reset Content), \r\nand 304 (Not Modified) responses do not include content.\r\n\r\nAll other responses do include content, although that content might\r\nbe of zero length.",
+    "notes": "Per section 15.3.6 (205 No Content), it says that servers MUST NOT generate a response. Section 6.4.1 says that \"All 1xx, 204, and 304 response don't include content and others do.\" even though 205 response mustn't generate content.",
+    "submit_date": "2023-08-11",
+    "submitter_name": "Justine Krejcha",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
