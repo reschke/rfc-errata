@@ -118,5 +118,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2023-04-27 16:24:06"
+  },
+  {
+    "errata_id": "7600",
+    "doc-id": "RFC8259",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "   The representation of numbers is similar to that used in most\r\n   programming languages.  A number is represented in base 10 using\r\n   decimal digits.  It contains an integer component that may be\r\n   prefixed with an optional minus sign, which may be followed by a\r\n   fraction part and/or an exponent part.  Leading zeros are not\r\n   allowed.",
+    "correct_text": "   The representation of numbers is similar to that used in most\r\n   programming languages.  A number is represented in base 10 using\r\n   decimal digits.  It contains an integer component that may be\r\n   prefixed with an optional minus sign, which may be followed by a\r\n   fraction part and/or an exponent part.  Leading zeros in the\r\n   integer component beyond the units digit are not allowed.",
+    "notes": "The original wording about leading zeros contradicts the documented ABNF grammar for JSON numbers in the following cases:\r\n- If the integer component is equal to 0 and the fractional component exists. (Examples: 0.1, 0.001)\r\n- In the exponent part, after the letter E or e or the optional sign. (Example: 1E01)",
+    "submit_date": "2023-08-11",
+    "submitter_name": "Guillaume Fortin-Debigaré",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
