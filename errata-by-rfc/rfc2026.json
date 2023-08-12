@@ -167,7 +167,7 @@
   {
     "errata_id": "6658",
     "doc-id": "RFC2026",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "Status",
     "orig_text": "This document specifies an Internet Best Current Practices",
@@ -175,24 +175,24 @@
     "notes": "“Practices” should be singular.",
     "submit_date": "2021-08-15",
     "submitter_name": "Jason Yundt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "169",
+    "verifier_name": "Lars Eggert",
+    "update_date": "2023-08-11 04:00:38"
   },
   {
     "errata_id": "6659",
     "doc-id": "RFC2026",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "1.2",
-    "orig_text": "\r\n   The procedures described in this document are the result of a number\r\n   of years of evolution, driven both by the needs of the growing and\r\n   increasingly diverse Internet community, and by experience.",
-    "correct_text": "\r\n   The procedures described in this document are the result of a number\r\n   of years of evolution, driven both by the needs of the growing and\r\n   increasingly diverse Internet community and by experience.",
+    "orig_text": "   The procedures described in this document are the result of a number\r\n   of years of evolution, driven both by the needs of the growing and\r\n   increasingly diverse Internet community, and by experience.",
+    "correct_text": "   The procedures described in this document are the result of a number\r\n   of years of evolution, driven both by the needs of the growing and\r\n   increasingly diverse Internet community and by experience.",
     "notes": "The list contains 2 items:\r\n\r\n•  “by the needs of the growing and increasingly diverse Internet community”\r\n•  “by experience”\r\n\r\nSince the list contains 2 items, there shouldn’t be a comma before the word “and”.",
     "submit_date": "2021-08-15",
     "submitter_name": "Jason Yundt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "169",
+    "verifier_name": "Lars Eggert",
+    "update_date": "2023-08-11 04:02:45"
   },
   {
     "errata_id": "6661",
@@ -227,17 +227,17 @@
   {
     "errata_id": "6671",
     "doc-id": "RFC2026",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "13",
-    "orig_text": "\r\n   [1]  Postel, J., \"Internet Official Protocol Standards\", STD 1,\r\n        USC/Information Sciences Institute, March 1996.\r\n\r\n   [2]  ANSI, Coded Character Set -- 7-Bit American Standard Code for\r\n        Information Interchange, ANSI X3.4-1986.\r\n\r\n   [3]  Reynolds, J., and J. Postel, \"Assigned Numbers\", STD 2,\r\n        USC/Information Sciences Institute, October 1994.\r\n\r\n   [4]  Postel, J., \"Introduction to the STD Notes\", RFC 1311,\r\n        USC/Information Sciences Institute, March 1992.\r\n\r\n   [5]  Postel, J., \"Instructions to RFC Authors\", RFC 1543,\r\n        USC/Information Sciences Institute, October 1993.\r\n\r\n   [6]  Huitema, C., J. Postel, and S. Crocker \"Not All RFCs are\r\n        Standards\", RFC 1796, April 1995.",
-    "correct_text": "\r\n   [1]  Postel, J., \"Internet Official Protocol Standards\", STD 1,\r\n        USC/Information Sciences Institute, March 1996.\r\n\r\n   [2]  ANSI, Coded Character Set -- 7-Bit American Standard Code for\r\n        Information Interchange, ANSI X3.4-1986.\r\n\r\n   [3]  Postel, J., \"Introduction to the STD Notes\", RFC 1311,\r\n        USC/Information Sciences Institute, March 1992.\r\n\r\n   [4]  Postel, J., \"Instructions to RFC Authors\", RFC 1543,\r\n        USC/Information Sciences Institute, October 1993.\r\n\r\n   [5]  Huitema, C., J. Postel, and S. Crocker \"Not All RFCs are\r\n        Standards\", RFC 1796, April 1995.",
+    "orig_text": "   [1]  Postel, J., \"Internet Official Protocol Standards\", STD 1,\r\n        USC/Information Sciences Institute, March 1996.\r\n\r\n   [2]  ANSI, Coded Character Set -- 7-Bit American Standard Code for\r\n        Information Interchange, ANSI X3.4-1986.\r\n\r\n   [3]  Reynolds, J., and J. Postel, \"Assigned Numbers\", STD 2,\r\n        USC/Information Sciences Institute, October 1994.\r\n\r\n   [4]  Postel, J., \"Introduction to the STD Notes\", RFC 1311,\r\n        USC/Information Sciences Institute, March 1992.\r\n\r\n   [5]  Postel, J., \"Instructions to RFC Authors\", RFC 1543,\r\n        USC/Information Sciences Institute, October 1993.\r\n\r\n   [6]  Huitema, C., J. Postel, and S. Crocker \"Not All RFCs are\r\n        Standards\", RFC 1796, April 1995.",
+    "correct_text": "   [1]  Postel, J., \"Internet Official Protocol Standards\", STD 1,\r\n        USC/Information Sciences Institute, March 1996.\r\n\r\n   [2]  ANSI, Coded Character Set -- 7-Bit American Standard Code for\r\n        Information Interchange, ANSI X3.4-1986.\r\n\r\n   [3]  Postel, J., \"Introduction to the STD Notes\", RFC 1311,\r\n        USC/Information Sciences Institute, March 1992.\r\n\r\n   [4]  Postel, J., \"Instructions to RFC Authors\", RFC 1543,\r\n        USC/Information Sciences Institute, October 1993.\r\n\r\n   [5]  Huitema, C., J. Postel, and S. Crocker \"Not All RFCs are\r\n        Standards\", RFC 1796, April 1995.",
     "notes": "Reference number 3 is never used. If this change is made, then the inline citations will also have to be updated.",
     "submit_date": "2021-08-31",
     "submitter_name": "Jason Yundt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "169",
+    "verifier_name": "Lars Eggert",
+    "update_date": "2023-08-11 04:03:41"
   },
   {
     "errata_id": "7181",
