@@ -17,16 +17,16 @@
   {
     "errata_id": "6990",
     "doc-id": "RFC5237",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "1",
     "orig_text": "1.  Introduction\r\n\r\n   This document revises the IANA guidelines [RFC2780] for allocating\r\n   new Protocol field values in IPv4 header [RFC0791].",
     "correct_text": "1.  Introduction\r\n\r\n   This document revises the IANA guidelines [RFC2780] for allocating\r\n   new Protocol field values in IPv4 header [RFC791].",
-    "notes": "Either the link to RFC0791 should point to https://www.rfc-editor.org/rfc/rfc791 (without the zero), or the url to RFC0791 itself is wrong without the zero.",
+    "notes": "Either the link to RFC0791 should point to https://www.rfc-editor.org/rfc/rfc791 (without the zero), or the url to RFC0791 itself is wrong without the zero.\n --VERIFIER NOTES-- \nThis is about a rendering issue in the HTMLized version of the RFC. The reference entry does contain the correct URL.",
     "submit_date": "2022-06-14",
     "submitter_name": "Ruder Laplace",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2022-06-16 16:06:17"
+    "verifier_id": "169",
+    "verifier_name": "Lars Eggert",
+    "update_date": "2023-08-11 04:10:05"
   }
 ]
