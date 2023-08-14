@@ -133,5 +133,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7603",
+    "doc-id": "RFC8259",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1",
+    "orig_text": "   A string is a sequence of zero or more Unicode characters [UNICODE].",
+    "correct_text": "   A string is a sequence of zero or more Unicode code points [UNICODE].",
+    "notes": "Surrogate code points are not Unicode characters, as explained here: https://www.unicode.org/glossary/#surrogate_character\r\n\r\nHowever, a surrogate code point outside of a surrogate pair is allowed in JSON strings both in escaped and unescaped forms according to the ABNF grammar in section 7 and the warning in section 8.2, despite an UTF-8 incompatibility for the unescaped form. In addition, the original text contradicts ECMA-404 section 9, which states: \"A string is a sequence of Unicode code points wrapped with quotation marks (U+0022). All code points may be placed within the quotation marks except for the code points that must be escaped: quotation mark (U+0022), reverse solidus (U+005C), and the control characters U+0000 to U+001F. \"",
+    "submit_date": "2023-08-13",
+    "submitter_name": "Guillaume Fortin-Debigaré",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
