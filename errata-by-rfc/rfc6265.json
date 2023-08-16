@@ -163,5 +163,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7604",
+    "doc-id": "RFC6265",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.  Overview",
+    "orig_text": "User agents MAY ignore Set-Cookie headers contained in\r\nresponses with 100-level status codes but MUST process Set-Cookie\r\nheaders contained in other responses (including responses with 400-\r\nand 500-level status codes).",
+    "correct_text": "Cookie-enabled user agents MAY ignore Set-Cookie headers contained in\r\nresponses with 100-level status codes but MUST process Set-Cookie\r\nheaders contained in other responses (including responses with 400-\r\nand 500-level status codes).",
+    "notes": "The concern is that the sentence in its original form may be read to mean that all conforming user agents MUST process Set-Cookie headers contained in non 100-level responses, when, differing behavior is allowed as described in sections 5.2 and 7.2:\r\n\r\nSection 5.2, paragraph 1: \"When a user agent receives a Set-Cookie header field in an HTTP response, the user agent MAY ignore the Set-Cookie header field in its entirety.\"\r\n\r\nSection 7.2, paragraph 2: \"When cookies are disabled, ... the user agent MUST NOT process Set-Cookie headers in inbound HTTP responses.\"\r\n\r\nThe suggested correction is one possible way to alleviate this erratum concern. However, the erratum author does not know if this is the most optimal disambiguation method.",
+    "submit_date": "2023-08-15",
+    "submitter_name": "Ted Zhu",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
