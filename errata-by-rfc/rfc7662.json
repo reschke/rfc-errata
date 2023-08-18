@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7607",
+    "doc-id": "RFC7662",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2",
+    "orig_text": "a given token has been issued by this authorization server, has not been revoked by the resource owner, and is within its given time window of validity",
+    "correct_text": "a given token has been issued by this authorization server, has not been revoked by the resource owner or client, and is within its given time window of validity",
+    "notes": "RFC 7009 defined a given token can be revoke by client, so should write client here.",
+    "submit_date": "2023-08-17",
+    "submitter_name": "Fulong Sun",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
