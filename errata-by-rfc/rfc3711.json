@@ -73,5 +73,20 @@
     "verifier_id": "147",
     "verifier_name": "Ben Campbell",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7606",
+    "doc-id": "RFC3711",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "B.3",
+    "orig_text": "   This section provides test data for the default key derivation\r\n   function, which uses AES-128 in Counter Mode.  In the following, we\r\n   walk through the initial key derivation for the AES-128 Counter Mode\r\n   cipher, which requires a 16 octet session encryption key and a 14\r\n   octet session salt, and an authentication function which requires a\r\n   94-octet session authentication key.\r\n\r\n(...)\r\n\r\n   Below, the auth key is shown on the left, while the corresponding AES\r\n   input blocks are shown on the right.\r\n\r\n   auth key                           AES input blocks\r\n   CEBE321F6FF7716B6FD4AB49AF256A15   0EC675AD498AFEEAB6960B3AABE60000\r\n   6D38BAA48F0A0ACF3C34E2359E6CDBCE   0EC675AD498AFEEAB6960B3AABE60001\r\n   E049646C43D9327AD175578EF7227098   0EC675AD498AFEEAB6960B3AABE60002\r\n   6371C10C9A369AC2F94A8C5FBCDDDC25   0EC675AD498AFEEAB6960B3AABE60003\r\n   6D6E919A48B610EF17C2041E47403576   0EC675AD498AFEEAB6960B3AABE60004\r\n   6B68642C59BBFC2F34DB60DBDFB2       0EC675AD498AFEEAB6960B3AABE60005",
+    "correct_text": "   This section provides test data for the default key derivation\r\n   function, which uses AES-128 in Counter Mode.  In the following, we\r\n   walk through the initial key derivation for the AES-128 Counter Mode\r\n   cipher, which requires a 16 octet session encryption key and a 14\r\n   octet session salt, and an authentication function which requires a\r\n   20-octet session authentication key.\r\n\r\n(...)\r\n\r\n   Below, the auth key is shown on the left, while the corresponding AES\r\n   input blocks are shown on the right.\r\n\r\n   auth key blocks                    AES input blocks\r\n   CEBE321F6FF7716B6FD4AB49AF256A15   0EC675AD498AFEEAB6960B3AABE60000\r\n   6D38BAA4                           0EC675AD498AFEEAB6960B3AABE60001\r\n \r\n   auth key: CEBE321F6FF7716B6FD4AB49AF256A156D38BAA4",
+    "notes": "The RFC specifies a 160 bit, 20-octet session authentication key throughout (section 5.2, Section 8.2, Section 9.2 and Section 9.5), but the vectors and derivation in section B.3 specifies the need for a 94-octet session key, and includes test vectors as such.",
+    "submit_date": "2023-08-17",
+    "submitter_name": "David Satterlee",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
