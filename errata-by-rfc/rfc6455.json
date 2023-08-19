@@ -238,5 +238,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7608",
+    "doc-id": "RFC6455",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.1.1",
+    "orig_text": "The underlying TCP connection, in most normal cases, SHOULD be closed\r\n   first by the server, so that it holds the TIME_WAIT state and not the\r\n   client (as this would prevent it from re-opening the connection for 2\r\n   maximum segment lifetimes (2MSL), while there is no corresponding\r\n   server impact as a TIME_WAIT connection is immediately reopened upon\r\n   a new SYN with a higher seq number).  ",
+    "correct_text": "The underlying TCP connection, in most normal cases, SHOULD be closed\r\n   first by the server, so that the TIME_WAIT occurs at the\r\n   client, not at the server.  ",
+    "notes": "1. There is no such thing as a 'TIME_WAIT connection'.\r\n2. TCP connections are never reused.\r\n3. It is better for the TIME_WAIT *port* states to accumulate at the clients rather than at the server, as this distributes them among the client base and avoids possible resource exhaustion at the server (NB *not* port exhaustion, as the server is only using one port).\r\n4. The part about 'as this would prevent it [the client] from re-opening the connection' is only true if the client is using a fixed local port number, which never works anyway.\r\n5. The part about ' a TIME_WAIT connection is immediately reopened upon\r\n   a new SYN with a higher seq number' is nonsense.",
+    "submit_date": "2023-08-19",
+    "submitter_name": "Esmond Pitt",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
