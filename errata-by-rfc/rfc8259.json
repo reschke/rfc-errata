@@ -45,21 +45,6 @@
     "update_date": "2019-09-10 09:09:03"
   },
   {
-    "errata_id": "5355",
-    "doc-id": "RFC8259",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "6",
-    "orig_text": "Note that when such software is used, numbers that are integers and\r\nare in the range [-(2**53)+1, (2**53)-1] are interoperable in the\r\nsense that implementations will agree exactly on their numeric\r\nvalues.",
-    "correct_text": "Note that when such software is used, numbers that are integers and\r\nare in the range [-(2**53), (2**53)] are interoperable in the\r\nsense that implementations will agree exactly on their numeric\r\nvalues.",
-    "notes": "The limit is presumably derived from ECMAScript which says:\r\n\r\n\"The value of Number.MAX_SAFE_INTEGER is the largest integer n such that n and n + 1 are both exactly representable as a Number value\"\r\n\r\nHowever, Number.MAX_SAFE_INTEGER is 9007199254740991 ((2*53)-1) making n+1 (2**53) the largest exactly representable Number value",
-    "submit_date": "2018-05-10",
-    "submitter_name": "Anders Rundgren",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
-  },
-  {
     "errata_id": "5853",
     "doc-id": "RFC8259",
     "errata_status_code": "Reported",
