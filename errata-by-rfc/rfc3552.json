@@ -73,5 +73,20 @@
     "verifier_id": "151",
     "verifier_name": "Andrew Sullivan",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7610",
+    "doc-id": "RFC3552",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3.5",
+    "orig_text": "Note that it is only necessary to authenticate one side of the\r\n   transaction in order to prevent man-in-the-middle attacks.  In such a\r\n   situation the the peers can establish an association in which only\r\n   one peer is authenticated.  In such a system, an attacker can\r\n   initiate an association posing as the unauthenticated peer but cannot\r\n   transmit or access data being sent on a legitimate connection.  This\r\n   is an acceptable situation in contexts such as Web e-commerce where\r\n   only the server needs to be authenticated (or the client is\r\n   independently authenticated via some non-cryptographic mechanism such\r\n   as a credit card number).",
+    "correct_text": "Note that it is only necessary to authenticate one side of the\r\n   transaction in order to prevent man-in-the-middle attacks.  In such a\r\n   situation where peers can establish an association in which only\r\n   one peer is authenticated, an attacker can\r\n   initiate an association posing as the unauthenticated peer but cannot\r\n   transmit or access data being sent on a legitimate connection.  This\r\n   is an acceptable situation in contexts such as Web e-commerce where\r\n   only the server needs to be authenticated (or the client is\r\n   independently authenticated via some non-cryptographic mechanism such\r\n   as a credit card number).",
+    "notes": "2nd sentence - \"the the\" - also the sentence does not seem to make sense.\r\nSuggest combining the 2nd and 3rd sentences as in Corrected Text.",
+    "submit_date": "2023-08-19",
+    "submitter_name": "Pete Jorgensen",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
