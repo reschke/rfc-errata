@@ -133,5 +133,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7617",
+    "doc-id": "RFC8259",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "   Note that when such software is used, numbers that are integers and\r\n   are in the range [-(2**53)+1, (2**53)-1] are interoperable in the\r\n   sense that implementations will agree exactly on their numeric\r\n   values.",
+    "correct_text": "   Note that when such software parses numbers as rational numbers in\r\n   decimal or scientific notation, they are interoperable in the sense\r\n   that implementations will agree exactly on their numeric values. In\r\n   particular, when such software is used, numbers that are integers and\r\n   are in the range [-(2**53)+1, (2**53)-1] are interoperable in that\r\n   sense.",
+    "notes": "IEEE 754 does not consider negative zero and positive zero to be the same numeric value, even though it considers them equal. Despite this, JavaScript serializes negative zero as the JSON text \"0\", which contradicts the original text.\r\n\r\nMy suggested correction mentions \"rational numbers in decimal or scientific notation\" since it's never explicitly mentioned in the document how a number should be interpreted when parsed to maximize interoperability. This version addresses that concern at the same time.",
+    "submit_date": "2023-08-25",
+    "submitter_name": "Guillaume Fortin-Debigaré",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
