@@ -2,16 +2,16 @@
   {
     "errata_id": "6979",
     "doc-id": "RFC6092",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.1",
     "orig_text": "   REC-9: Inbound DHCPv6 discovery packets [RFC3315] received on\r\n   exterior interfaces MUST NOT be processed by any integrated DHCPv6\r\n   server or relay agent.\r\n",
     "correct_text": "   REC-9: Inbound DHCPv6 Solicit messages [RFC3315] received on\r\n   exterior interfaces MUST NOT be processed by any integrated DHCPv6\r\n   server or relay agent.\r\n",
-    "notes": "\"discovery\" packet, more precisely DHCPDISCOVER message, is defined in DHCPv4 but it is not defined in DHCPv6.\r\nDHCPv6 clients send \"Solicit\" messages to discover DHCPv6 servers or relay agents.",
+    "notes": "\"discovery\" packet, more precisely DHCPDISCOVER message, is defined in DHCPv4 but it is not defined in DHCPv6.\r\nDHCPv6 clients send \"Solicit\" messages to discover DHCPv6 servers or relay agents.\r\n\r\n[WK]: RFC3315 seems to use \"discover\" and \"discovery\" in the general sense, but as this recommendation uses RFC2119 MUST NOT language, it seems that being more explicit (Solicit) is more appropriate. ",
     "submit_date": "2022-05-23",
     "submitter_name": "Tomoyuki Sahara",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2022-05-24 14:56:21"
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2023-08-31 09:52:06"
   }
 ]
