@@ -88,5 +88,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2022-08-22 14:59:43"
+  },
+  {
+    "errata_id": "7625",
+    "doc-id": "RFC7748",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "swap ^= k_t",
+    "correct_text": "swap = swap XOR k_t",
+    "notes": "The '^' symbol is used inconsistently. In the line `swap ^= k_t` this symbol means the XOR operation, while later, e.g. in line `x_3 = (DA + CB)^2`, it indicates exponentiation. Pseudocode in this document also denotes the XOR operation in the following way: `x_2 = x_2 XOR dummy`. The inconsistent use of the '^' symbol may cause confusion. If one were to perform the operation `swap = swap (to the power of) k_t` instead of `swap = swap XOR k_t`, they would get incorrect results.",
+    "submit_date": "2023-08-31",
+    "submitter_name": "Tomasz Mioduszewski",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
