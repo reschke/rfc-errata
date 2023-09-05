@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7626",
+    "doc-id": "RFC8295",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1.1.",
+    "orig_text": "0007 Start DS certificate enrollment: Indicates that the client needs\r\n        to begin enrolling its DS certificate.  The PAL entry points to\r\n        a /simpleenroll URI, which is defined in [RFC7030].\r\n",
+    "correct_text": "0007 Start DS certificate enrollment: Indicates that the client needs\r\n        to begin enrolling its DS certificate.  The PAL entry points to\r\n        a /simpleenroll or a /fullcmc URI, both of which are defined in     [RFC7030].\r\n",
+    "notes": "Without this change and taking the 0006 definition into consideration, one might assume that a Simple PKI Request doesn't require the /csrattrs URI to be done beforehand, but the enrollment with a Full PKI Request must be preceded by the /csrattrs URI, which is not required - see the rest of the document, especially Section 9 and [RFC7030].",
+    "submit_date": "2023-09-04",
+    "submitter_name": "Piotr Popis",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
