@@ -73,5 +73,50 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7627",
+    "doc-id": "RFC5272",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.7",
+    "orig_text": "See Section 5 of [CRMF] for a detailed discussion of POP.",
+    "correct_text": "See Section 4 of [CRMF] for a detailed discussion of POP.",
+    "notes": "This is a purely editorial change.",
+    "submit_date": "2023-09-04",
+    "submitter_name": "Piotr Popis",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7628",
+    "doc-id": "RFC5272",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.1.3.1.",
+    "orig_text": "AuthenticatedData content type is used by this document for:\r\n\r\nThe id-cmc-authData control (Section 6.16), and\r\n\r\nThe top-level wrapper in environments where an encryption-only key is being certified.\r\n",
+    "correct_text": "AuthenticatedData content type is used by this document for:\r\n\r\nThe id-cmc-authData control (Section 6.16), and\r\n\r\nThe top-level wrapper in environments where an encryption-only key is being certified or where a shared-secret exists, but a PKI-based trust (needed for SignedData) has not yet been established.\r\n",
+    "notes": "For consistency with the same paragraph and the rest of the document.",
+    "submit_date": "2023-09-04",
+    "submitter_name": "Piotr Popis",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7629",
+    "doc-id": "RFC5272",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.1.3.4.",
+    "orig_text": "For the PKI Response, SignedData allows the server to sign the returning data, if any exists, and to carry the certificates and CRLs corresponding to the PKI Request.  If no data is being returned beyond the certificates and CRLs, the EncapsulatedInfo and SignerInfo fields are not populated.",
+    "correct_text": "For the PKI Response, SignedData allows the server to sign the returning data, if any exists, and to carry the certificates and CRLs corresponding to the PKI Request.  If no data is being returned beyond the certificates and CRLs, the eContent field in the EncapsulatedContentInfo and SignerInfo fields are not populated.\r\n\r\nOnly if the server is unable to sign the response (and unable to use any RecipientInfo options of the AuthenticatedData content type), and at the same time it should send a negative response, Full PKI Response SignedData type containing a CMC Status Info control MUST be returned using a CMCFailInfo with a value of internalCAError and a bodyPartID of 0, and the eContent field in the EncapsulatedContentInfo as well as SignerInfo fields MUST not be populated.\r\n",
+    "notes": "This change is needed to comply with Errata ID 7379 (the first para) and covers the case (the second para) where the server shall send a negative response (Full PKI Response) as it is unable to sign the certificate and at the same time it is unable to sign the response itself (e.g. due to a loss in connection to the HSM).",
+    "submit_date": "2023-09-04",
+    "submitter_name": "Piotr Popis",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
