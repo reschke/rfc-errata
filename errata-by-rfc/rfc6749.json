@@ -343,5 +343,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7631",
+    "doc-id": "RFC6749",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.2.1",
+    "orig_text": "This protects the client from substitution of the authentication code.",
+    "correct_text": "This protects the client from substitution of the authorization code.",
+    "notes": "It will be a bit confusing to figure out if it is a MAC or an authorization code.",
+    "submit_date": "2023-09-05",
+    "submitter_name": "Daiki Usami",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
