@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7637",
+    "doc-id": "RFC9450",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "1",
+    "orig_text": "IEEE 802.11 has identified a set of real applications\r\n[IEEE80211RTA], which may use the IEEE802.11 standards.  They\r\ntypically emphasize strict end-to-end delay requirements.",
+    "correct_text": "IEEE 802.11 has identified a set of real-time applications\r\n[IEEE80211RTA], which may use the IEEE 802.11 standards.  They\r\ntypically emphasize strict end-to-end delay requirements.",
+    "notes": "Given both the context and the title of the referenced document, \"real-time\" makes more sense here than \"real\".",
+    "submit_date": "2023-09-10",
+    "submitter_name": "Peter Yee",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
