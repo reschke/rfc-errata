@@ -13,20 +13,5 @@
     "verifier_id": "105",
     "verifier_name": "Ron Bonica",
     "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": "7611",
-    "doc-id": "RFC5220",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "2.2.2",
-    "orig_text": "Here, when this host tries to connect to\r\n   Host-B that has registered both A and AAAA records in the DNS, the\r\n   host will choose AAAA as the destination address and the ULA for the\r\n   source address.  This will clearly result in a connection failure.",
-    "correct_text": "Strike the entire section or explain the limited situations in which this can occur.",
-    "notes": "This conclusion is incorrect, mooting the entire section. As I explained several times on the ipv6 mailing list, when the two candidate (source,dest) address pairs are (ULA,GUA) and (IPv4,IPv4), rule 5 of the destination address selection algorithm in RFC 6724 will terminate the comparison, preferring the latter to the former. The problem stated in 5220 happens only when the candidate IPv6 destination is also ULA, which means either that it is intentional (in which case it is presumed to be reachable from a ULA source) or that it is a misconfiguration (e.g., unreachable ULA address leakage in DNS).",
-    "submit_date": "2023-08-22",
-    "submitter_name": "Kyle Rose",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
   }
 ]
