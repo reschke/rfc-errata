@@ -358,5 +358,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7642",
+    "doc-id": "RFC6749",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "1",
+    "orig_text": " Instead, she authenticates directly with a server trusted by the photo-sharing service (authorization server), which issues the printing service delegation-\r\nspecific credentials (access token).",
+    "correct_text": "Instead, she directly authenticates with a trusted server, the authorization server, which issues delegation-specific credentials, known as access tokens, to the printing service for controlled and secure access.",
+    "notes": "The sentence is confusing, and the reader might confuse the Authorization Server with the Resource Server.",
+    "submit_date": "2023-09-17",
+    "submitter_name": "Wilhelm Fast",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
