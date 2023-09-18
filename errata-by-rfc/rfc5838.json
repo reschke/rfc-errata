@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7644",
+    "doc-id": "RFC5838",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.7",
+    "orig_text": "   Interface MTU\r\n      The size in octets of the largest address family specific datagram\r\n      that can be sent on the associated interface without\r\n      fragmentation.  The MTUs of common Internet link types can be\r\n      found in Table 7-1 of [MTUDISC].  The Interface MTU SHOULD be set\r\n      to 0 in Database Description packets sent over virtual links.\r\n",
+    "correct_text": "   Interface MTU\r\n      The size in octets of the largest address family specific datagram\r\n      that can be sent on the associated interface without\r\n      fragmentation.  The MTUs of common Internet link types can be\r\n      found in Table 7-1 of [MTUDISC].  The Interface MTU SHOULD be set\r\n      to 0 in Database Description packets sent over (OSPF3) virtual links.\r\n      This recommendation MUST NOT be applied to tunnel and other virtual\r\n      or software interfaces which carry traffic other than OSPF protocol packets.",
+    "notes": "Currently, the language is ambiguous and at least one vendor has implemented OSPF3 sending an MTU of zero on GRE interfaces (and possibly others such as IPIP, IPSEC, etc., as I have not tested these). I believe that the intent of the RFC is to refer strictly to OSPF virtual-links which carry only OSPF protocol data and therefore have no meaningful MTU. When this is mistakenly applied to other forms of \"virtual\" interfaces such as tunnels, the results can be quite harmful.\r\n\r\nAs such, I think that clarification is in order, since the vendor in question is unrepentant and claims their current implementation to be compliant with the RFC.",
+    "submit_date": "2023-09-17",
+    "submitter_name": "Owen DeLong",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
