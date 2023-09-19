@@ -43,5 +43,20 @@
     "verifier_id": "166",
     "verifier_name": "Rob Wilton",
     "update_date": "2022-07-29 15:43:07"
+  },
+  {
+    "errata_id": "7647",
+    "doc-id": "RFC6991",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "[...]\r\n\r\ntypedef object-identifier-128 {\r\n       type object-identifier {\r\n\r\n[...]\r\n\r\n(and other typedefs that appear in the latest revisions of the module)",
+    "correct_text": "[...]\r\n\r\ntypedef object-identifier-128 {\r\n       type yang:object-identifier {\r\n\r\n[...]\r\n\r\n(and other typedefs that appear in the latest revisions of the module)",
+    "notes": "In Section 3, the textual definition of the \"ietf-yang-types\" module presents, in my opinion, inconsistencies when defining typedefs that point to other typedefs in the same module: sometimes the value for the \"type\" key contains the prefix of the module and sometimes not. Please, see the example attached. This can also be applied to other typedefs defined in the latest revisions of the module, such as \"date-no-zone\" and \"time-no-zone\". I think this should be addressed to provide clarification and consistency, and thus can be extended to other modules and the YANG standard as well. Thanks for your time.",
+    "submit_date": "2023-09-18",
+    "submitter_name": "David Martínez García",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-09-18 15:59:24"
   }
 ]
