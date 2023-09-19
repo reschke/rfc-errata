@@ -118,5 +118,20 @@
     "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7645",
+    "doc-id": "RFC5340",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.3.3",
+    "orig_text": "Section A.3.3 (in part) reads:\r\n\r\n Interface MTU\r\n      The size in bytes of the largest IPv6 datagram that can be sent\r\n      out the associated interface without fragmentation.  The MTUs of\r\n      common Internet link types can be found in Table 7-1 of [MTUDISC].\r\n      Interface MTU should be set to 0 in Database Description packets\r\n      sent over virtual links.\r\n",
+    "correct_text": " Interface MTU\r\n      The size in bytes of the largest IPv6 datagram that can be sent\r\n      out the associated interface without fragmentation.  The MTUs of\r\n      common Internet link types can be found in Table 7-1 of [MTUDISC].\r\n      Interface MTU should be set to 0 in Database Description packets\r\n      sent over OSPF virtual links. This rule should not be applied to tunnel\r\n      or other software interfaces.\r\n",
+    "notes": "OSPF Virtual links carry only OSPF packets so MTU negotiation is not needed and this provision makes sense. For interfaces that have an actual MTU, even though they may be \"virtual\" interfaces, they are not \"virtual links\" in the intended meaning of this paragraph. As such, this change will provide clarification and remove ambiguity from the current standard. At least one popular router vendor implements this RFC as MTU = 0 sent on all GRE interfaces which results in incompatibilities with most other router platforms which expect an actual value. The router vendor points to this provision in the RFCs as justification for their implementation. It is (arguably) a legitimate, if nonsensical interpretation of the existing text.",
+    "submit_date": "2023-09-18",
+    "submitter_name": "Owen DeLong",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": "2023-09-18 16:24:04"
   }
 ]
