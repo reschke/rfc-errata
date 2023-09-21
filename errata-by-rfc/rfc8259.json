@@ -148,5 +148,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7650",
+    "doc-id": "RFC8259",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "      string = quotation-mark *char quotation-mark\r\n\r\n      char = unescaped /\r\n          escape (\r\n              %x22 /          ; \"    quotation mark  U+0022\r\n              %x5C /          ; \\    reverse solidus U+005C\r\n              %x2F /          ; /    solidus         U+002F\r\n              %x62 /          ; b    backspace       U+0008\r\n              %x66 /          ; f    form feed       U+000C\r\n              %x6E /          ; n    line feed       U+000A\r\n              %x72 /          ; r    carriage return U+000D\r\n              %x74 /          ; t    tab             U+0009\r\n              %x75 4HEXDIG )  ; uXXXX                U+XXXX",
+    "correct_text": "      string = quotation-mark *json-char quotation-mark\r\n\r\n      json-char = unescaped /\r\n          escape (\r\n              %x22 /          ; \"    quotation mark  U+0022\r\n              %x5C /          ; \\    reverse solidus U+005C\r\n              %x2F /          ; /    solidus         U+002F\r\n              %x62 /          ; b    backspace       U+0008\r\n              %x66 /          ; f    form feed       U+000C\r\n              %x6E /          ; n    line feed       U+000A\r\n              %x72 /          ; r    carriage return U+000D\r\n              %x74 /          ; t    tab             U+0009\r\n              %x75 4HEXDIG )  ; uXXXX                U+XXXX",
+    "notes": "RFC 5234 Section 2.1 \"Rule Naming\" notes that \"rule names are case insensitive\". It is explained that literal text strings enclosed in quotation marks are case insensitive, and have later been clarified by RFC 7405.\r\nIn RFC 5234 Appendix B, Section B.1 \"Core Rules\", the rule \"CHAR\" is already defined such that it constitutes the core of ABNF, thus no grammar can use those names regarding the previous explanation.\r\n\r\nThe goal of this errata is to propose an alternative for the \"char\" rule such that RFC 8259 can provide a valid grammar regarding the ABNF RFCs.",
+    "submit_date": "2023-09-20",
+    "submitter_name": "Lucas Tesson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
