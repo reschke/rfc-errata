@@ -285,6 +285,21 @@
     "update_date": null
   },
   {
+    "errata_id": "7651",
+    "doc-id": "RFC4226",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.3",
+    "orig_text": "   The Truncate function performs Step 2 and Step 3, i.e., the dynamic\r\n   truncation and then the reduction modulo 10^Digit.  The purpose of\r\n   the dynamic offset truncation technique is to extract a 4-byte\r\n   dynamic binary code from a 160-bit (20-byte) HMAC-SHA-1 result.\r\n\r\n    DT(String) // String = String[0]...String[19]\r\n     Let OffsetBits be the low-order 4 bits of String[19]\r\n     Offset = StToNum(OffsetBits) // 0 <= OffSet <= 15\r\n     Let P = String[OffSet]...String[OffSet+3]\r\n     Return the Last 31 bits of P",
+    "correct_text": "   The Truncate function performs Step 2 and Step 3, i.e., the dynamic\r\n   truncation and then the reduction modulo 10^Digit.  The purpose of\r\n   the dynamic offset truncation technique is to extract a 4-byte\r\n   dynamic binary code from a 160-bit (20-byte) HMAC-SHA-1 result.\r\n\r\n    DT(String) // String = String[0]...String[19]\r\n     Let OffsetBits be the low-order 4 bits of String[19]\r\n     Offset = StToNum(OffsetBits) // 0 <= OffSet <= 15\r\n|    Let P = String[Offset*8]...String[Offset*8+31]\r\n     Return the Last 31 bits of P",
+    "notes": "The uncorrected text uses String as a byte string amidst correct uses of it as a bit string. Section 5.1. clearly states, \"A string always means a binary string, meaning a sequence of zeros and ones.\" The RFC seems to intend that either \"string\" or \"String\" is a bit string, not a byte string, so the use of \"String\" as a byte string in the uncorrected text seems incorrect, out of place, as if a typo.\r\n\r\nAnother apparent typo is use of camel case \"OffSet\" instead of simply \"Offset\". There is no distinction within the RFC that camel case \"OffSet\" has any meaning beyond another spelling for \"Offset\".\r\n\r\nThank you for considering this erratum and for this very straightforward, easy to understand, positively impactful RFC.",
+    "submit_date": "2023-09-21",
+    "submitter_name": "Ashley R. Thomas",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "834",
     "doc-id": "RFC4226",
     "errata_status_code": "Held for Document Update",
