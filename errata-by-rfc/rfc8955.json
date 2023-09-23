@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7654",
+    "doc-id": "RFC8955",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "   This NLRI information is encoded using MP_REACH_NLRI and\r\n   MP_UNREACH_NLRI attributes, as defined in [RFC4760].  When\r\n   advertising Flow Specifications, the Length of the Next-Hop Network\r\n   Address MUST be set to 0.  The Network Address of the Next-Hop field\r\n   MUST be ignored.\r\n",
+    "correct_text": "   This NLRI information is encoded using MP_REACH_NLRI and\r\n   MP_UNREACH_NLRI attributes, as defined in [RFC4760].  When\r\n   advertising Flow Specifications, the \"Length of Next Hop Network \r\n   Address\" field MUST be set to 0.  The \"Network Address of Next Hop\" \r\n   field MUST be ignored.",
+    "notes": "The fields are named incorrectly in the original text -- they don't match the field names they're referencing in RFC 4760. Most importantly there's no hyphen in the RFC 4760 field definitions, but there are other differences too.",
+    "submit_date": "2023-09-22",
+    "submitter_name": "John Scudder",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
