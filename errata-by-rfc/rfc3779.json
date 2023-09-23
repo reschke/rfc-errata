@@ -60,6 +60,21 @@
     "update_date": "2021-12-24 20:15:17"
   },
   {
+    "errata_id": "7653",
+    "doc-id": "RFC3779",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.3",
+    "orig_text": "Section 3.2.3.4:\r\nAny contiguous series of AS identifiers MUST be combined into a single range\r\nwhenever possible.\r\n\r\nSection 3.2.3.8:\r\nThe ASRange type is a SEQUENCE consisting of a min and a max element,\r\nand is used to specify a range of AS identifier values.",
+    "correct_text": "Section 3.2.3.4:\r\nAny contiguous series of AS identifiers MUST be combined into a single range\r\nor, whenever possible, represented as a single ASId.\r\n\r\nSection 3.2.3.8:\r\nThe ASRange type is a SEQUENCE consisting of a min and a max element,\r\nand is used to specify a range of AS identifier values. The min and max\r\nelements MUST specify two distinct AS identifiers.",
+    "notes": "The introduction in section 1 stresses that the objective of the encoding rules in section 2 and section 3\r\nis to produce unique encoding and minimal size encoding of the information.\r\n\r\nAllowing ASRanges where the minimum value is the same as the maximum value clearly violates the\r\nobjective of specifying a canonical form (in order to produce a unique representation); however the\r\nspecification as-is doesn't forbid min & max to be the same value. The corrected text addresses this.",
+    "submit_date": "2023-09-22",
+    "submitter_name": "Job Snijders",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "836",
     "doc-id": "RFC3779",
     "errata_status_code": "Verified",
