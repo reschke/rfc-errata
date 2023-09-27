@@ -298,5 +298,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7658",
+    "doc-id": "RFC5280",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7.1",
+    "orig_text": "The hyperlink to \"Section 2.6.1\" of RFC 4158 in this text is incorrect:\r\n\r\n   *  In step 6, Insignificant Character Removal, perform white space\r\n      compression as specified in Section 2.6.1, Insignificant Space\r\n      Handling, of [RFC4518].\r\n\r\nIt currently points to https://www.rfc-editor.org/rfc/rfc5280#section-2.6.1",
+    "correct_text": "It should point to https://www.rfc-editor.org/rfc/rfc4518#section-2.6.1",
+    "notes": "Simple fix to correct an incorrect hyperlink.",
+    "submit_date": "2023-09-26",
+    "submitter_name": "Sean Mullan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
