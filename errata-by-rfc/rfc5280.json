@@ -313,5 +313,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7661",
+    "doc-id": "RFC5280",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.5",
+    "orig_text": "      (g)  cross-certification:  Two CAs exchange information used in\r\n           establishing a cross-certificate.  A cross-certificate is a\r\n           certificate issued by one CA to another CA that contains a CA\r\n           signature key used for issuing certificates.",
+    "correct_text": "      (g)  cross-certification:  Two CAs exchange information used in\r\n           establishing a cross-certificate.",
+    "notes": "The removed sentence is factually inaccurate and misleading: \"A cross-certificate is a certificate issued by one CA to another CA that contains a CA signature key used for issuing certificates.\" \r\nA \"signature key used for issuing certificates\" would be a private key.  A certificate simply does not contain a private key.  A definition of \"cross-certificate\" for the purpose of this RFC is already provided in section 3.2, so there is no point in elaborating here.  \r\n(The definition given in section 3.2 conflicts with the narrower, and more generally used, definition given in RFC 4949, but that is beside the point.)",
+    "submit_date": "2023-09-28",
+    "submitter_name": "Benjamin Strauss",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
