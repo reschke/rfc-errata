@@ -62,16 +62,16 @@
   {
     "errata_id": "7400",
     "doc-id": "RFC8650",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": "A.3",
+    "section": "Appendix A.3",
     "orig_text": "   POST /restconf/operations\r\n        /ietf-subscribed-notifications:establish-subscription\r\n   {\r\n      \"ietf-subscribed-notifications:input\": {\r\n         \"stream\": \"NETCONF\",\r\n         \"stream-xpath-filter\":\r\n           \"/ietf-vrrp:vrrp-protocol-error-event[\r\n             protocol-error-reason='checksum-error']/\",\r\n      }\r\n   }\r\n\r\n       Figure 16: Establishing a Subscription Error Reason via XPath\r\n\r\n...\r\n\r\n   POST /restconf/operations\r\n        /ietf-subscribed-notifications:modify-subscription\r\n   {\r\n      \"ietf-subscribed-notifications:input\": {\r\n         \"stream\": \"NETCONF\",\r\n         \"stream-subtree-filter\": {\r\n           \"/ietf-vrrp:vrrp-protocol-error-event\" : {}\r\n         }\r\n      }\r\n   }\r\n                Figure 17: Example \"modify-subscription\" RPC",
-    "correct_text": "NEW1:\r\n   POST /restconf/operations\r\n        /ietf-subscribed-notifications:establish-subscription\r\n\r\n   {\r\n      \"ietf-subscribed-notifications:input\": {\r\n         \"stream\": \"NETCONF\",\r\n         \"stream-xpath-filter\":\r\n           \"/ietf-vrrp:vrrp-protocol-error-event[\r\n             protocol-error-reason='checksum-error']/\"\r\n      }\r\n   }\r\n\r\n       Figure 16: Establishing a Subscription Error Reason via XPath\r\n\r\n...\r\n\r\n   POST /restconf/operations\r\n        /ietf-subscribed-notifications:modify-subscription\r\n\r\n   {\r\n      \"ietf-subscribed-notifications:input\": {\r\n         \"stream\": \"NETCONF\",\r\n         \"stream-subtree-filter\": {\r\n           \"/ietf-vrrp:vrrp-protocol-error-event\" : {}\r\n         }\r\n      }\r\n   }\r\n                Figure 17: Example \"modify-subscription\" RPC\r\n\r\nor NEW2 (to follow the conventions in 1.1.6 of RFC8040)\r\n\r\n\r\n   POST /restconf/operations\\\r\n        /ietf-subscribed-notifications:establish-subscription\r\n\r\n   {\r\n      \"ietf-subscribed-notifications:input\": {\r\n         \"stream\": \"NETCONF\",\r\n         \"stream-xpath-filter\":\r\n           \"/ietf-vrrp:vrrp-protocol-error-event[\\\r\n             protocol-error-reason='checksum-error']/\"\r\n      }\r\n   }\r\n\r\n       Figure 16: Establishing a Subscription Error Reason via XPath\r\n...\r\n\r\n   POST /restconf/operations\\\r\n        /ietf-subscribed-notifications:modify-subscription\r\n\r\n   {\r\n      \"ietf-subscribed-notifications:input\": {\r\n         \"stream\": \"NETCONF\",\r\n         \"stream-subtree-filter\": {\r\n           \"/ietf-vrrp:vrrp-protocol-error-event\" : {}\r\n         }\r\n      }\r\n   }\r\n                Figure 17: Example \"modify-subscription\" RPC",
+    "correct_text": "   POST /restconf/operations\r\n        /ietf-subscribed-notifications:establish-subscription\r\n\r\n   {\r\n      \"ietf-subscribed-notifications:input\": {\r\n         \"stream\": \"NETCONF\",\r\n         \"stream-xpath-filter\":\r\n           \"/ietf-vrrp:vrrp-protocol-error-event[\r\n             protocol-error-reason='checksum-error']/\"\r\n      }\r\n   }\r\n\r\n       Figure 16: Establishing a Subscription Error Reason via XPath\r\n\r\n...\r\n\r\n   POST /restconf/operations\r\n        /ietf-subscribed-notifications:modify-subscription\r\n\r\n   {\r\n      \"ietf-subscribed-notifications:input\": {\r\n         \"stream\": \"NETCONF\",\r\n         \"stream-subtree-filter\": {\r\n           \"/ietf-vrrp:vrrp-protocol-error-event\" : {}\r\n         }\r\n      }\r\n   }\r\n                Figure 17: Example \"modify-subscription\" RPC\r\n",
     "notes": "* There is a missing CRLF in both figures as per RFC9112:\r\n\r\n--\r\n  HTTP-message   = start-line CRLF\r\n                   *( field-line CRLF )\r\n                   CRLF\r\n                   [ message-body ]\r\n--\r\n\r\n* The last item in the JSON of figure 16 includes a trailing \",\" while it shouldn't.",
     "submit_date": "2023-03-21",
     "submitter_name": "Mohamed Boucadair",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-04-27 16:48:05"
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2023-10-02 07:07:28"
   }
 ]
