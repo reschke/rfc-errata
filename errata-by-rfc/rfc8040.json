@@ -182,7 +182,7 @@
   {
     "errata_id": "6277",
     "doc-id": "RFC8040",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.8.5",
     "orig_text": "The default value is \"last\".",
@@ -190,9 +190,9 @@
     "notes": "The \"last\" default is intended for when creating a new element.  \r\n\r\nA PUT operation that replaces a list or leaf-list entry should not move the entry unless the \"insert\" parameter is explicitly passed.",
     "submit_date": "2020-09-03",
     "submitter_name": "Kent Watsen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2023-10-02 06:31:11"
   },
   {
     "errata_id": "6342",
@@ -227,17 +227,17 @@
   {
     "errata_id": "6363",
     "doc-id": "RFC8040",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.8.2.",
     "orig_text": "   By default, the server will include all sub-resources within a\r\n   retrieved resource that have the same resource type as the requested\r\n   resource.  The exception is the datastore resource.  If this resource\r\n   type is retrieved, then by default the datastore and all child data\r\n   resources are returned.",
     "correct_text": "   By default, the server SHOULD include all sub-resources within a\r\n   retrieved resource that have the same resource type as the requested\r\n   resource.  The exception is the datastore resource.  If this resource\r\n   type is retrieved, then by default the datastore and all child data\r\n   resources are returned.",
-    "notes": "Substitute \"will\" by \"SHOULD\".\r\n\r\nUse one of the keywords of RFC2119 to clarify the expected server behavior.",
+    "notes": "Substitute \"will\" by \"SHOULD\".\r\n\r\nUse one of the keywords of RFC2119 to clarify the expected server behavior.\n --VERIFIER NOTES-- \nThe existing text is correct, and could probably be read equivalently to \"the server MUST include\".  Changing \"will\" to \"SHOULD\" would change the meaning of the specification by giving flexibility for servers to not return sub-resources and yet still be compliant.",
     "submit_date": "2020-12-22",
     "submitter_name": "Muly Ilan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2023-10-02 06:49:29"
   },
   {
     "errata_id": "6473",
