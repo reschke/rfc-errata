@@ -47,17 +47,17 @@
   {
     "errata_id": "6383",
     "doc-id": "RFC8466",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "8",
     "orig_text": "container service {\r\n              container svc-bandwidth {\r\n                if-feature \"input-bw\";\r\n                list bandwidth {\r\n                  key \"direction type\";\r\n                  leaf direction {\r\n                    type identityref {\r\n                      base bw-direction;\r\n                    }\r\n                    description\r\n                      \"Indicates the bandwidth direction.  It can be\r\n                       the bandwidth download direction from the SP to\r\n                       the site or the bandwidth upload direction from\r\n                       the site to the SP.\";\r\n                  }",
     "correct_text": null,
-    "notes": "The svc-bandwidth container is triggered by if-feature \"input-bw\". However, that container can contain input-bw only, output-bw only or both. It might be better to have two separate containers, one for input-bw and the other for output-bw, triggered by if-feature \"input-bw\" and if-feature \"output-bw\" respectively.",
+    "notes": "The svc-bandwidth container is triggered by if-feature \"input-bw\". However, that container can contain input-bw only, output-bw only or both. It might be better to have two separate containers, one for input-bw and the other for output-bw, triggered by if-feature \"input-bw\" and if-feature \"output-bw\" respectively.\r\n\r\nThe bug looks to be valid, but this erratum has been marked as \"Hold For Document Update\" because further discussion is required as to the solution, and it will require a new revision of the YANG module which will require a new RFC to be published.",
     "submit_date": "2021-01-08",
     "submitter_name": "Julian Lucek",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2023-10-02 07:59:18"
   },
   {
     "errata_id": "6384",
@@ -107,17 +107,17 @@
   {
     "errata_id": "6699",
     "doc-id": "RFC8466",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "8",
     "orig_text": "                  container lacp {\r\n                    if-feature \"lacp\";\r\n                    leaf enabled {\r\n                      type boolean;\r\n                      default \"false\";\r\n                      description\r\n                        \"LACP on/off.  By default, LACP is disabled.\";\r\n                    }\r\n                    leaf mode {\r\n                      type neg-mode;\r\n                      description\r\n                        \"LACP mode.  LACP modes have active mode and\r\n                         passive mode ('false').  'Active mode' means\r\n                         initiating the auto-speed negotiation and\r\n                         trying to form an Ethernet channel with the\r\n                         other end.  'Passive mode' means not initiating\r\n                         the negotiation but responding to LACP packets\r\n                         initiated by the other end (e.g., full duplex\r\n                         or half duplex).\";\r\n                    }\r\n\r\n",
-    "correct_text": "\r\n                  container lacp {\r\n                    if-feature \"lacp\";\r\n                    leaf enabled {\r\n                      type boolean;\r\n                      default \"false\";\r\n                      description\r\n                        \"LACP on/off.  By default, LACP is disabled.\";\r\n                    }\r\n                    leaf mode {\r\n                      type identityref {\r\n                        base lacp-mode;\r\n                      }\r\n                      description\r\n                        \"LACP mode. LACP modes have active mode and\r\n                         passive mode ('false').  'Active mode' means\r\n                         initiating the auto-speed negotiation and\r\n                         trying to form an Ethernet channel with the\r\n                         other end.  'Passive mode' means not initiating\r\n                         the negotiation but responding to LACP packets\r\n                         initiated by the other end (e.g., full duplex\r\n                         or half duplex).\";\r\n                    }\r\n\r\n\r\nAlso, make this change: \r\n\r\nOLD:\r\n\r\n           |  +--rw lag-interfaces {lag-interface}?\r\n           |  |  +--rw lag-interface* [index]\r\n           |  |     +--rw index    string\r\n           |  |     +--rw lacp {lacp}?\r\n           |  |        +--rw enabled?           boolean\r\n           |  |        +--rw mode?              neg-mode\r\n\r\nNEW:\r\n\r\n           |  +--rw lag-interfaces {lag-interface}?\r\n           |  |  +--rw lag-interface* [index]\r\n           |  |     +--rw index    string\r\n           |  |     +--rw lacp {lacp}?\r\n           |  |        +--rw enabled?           boolean\r\n           |  |        +--rw mode?              identityref\r\n",
-    "notes": "The LACP mode can be set to active or passive, which is not what neg-mode is supposed to cover. lacp-mode identity should be used, instead.",
+    "correct_text": "                  container lacp {\r\n                    if-feature \"lacp\";\r\n                    leaf enabled {\r\n                      type boolean;\r\n                      default \"false\";\r\n                      description\r\n                        \"LACP on/off.  By default, LACP is disabled.\";\r\n                    }\r\n                    leaf mode {\r\n                      type identityref {\r\n                        base lacp-mode;\r\n                      }\r\n                      description\r\n                        \"LACP mode. LACP modes have active mode and\r\n                         passive mode ('false').  'Active mode' means\r\n                         initiating the auto-speed negotiation and\r\n                         trying to form an Ethernet channel with the\r\n                         other end.  'Passive mode' means not initiating\r\n                         the negotiation but responding to LACP packets\r\n                         initiated by the other end (e.g., full duplex\r\n                         or half duplex).\";\r\n                    }\r\n\r\n\r\nAlso, make this change: \r\n\r\nOLD:\r\n\r\n           |  +--rw lag-interfaces {lag-interface}?\r\n           |  |  +--rw lag-interface* [index]\r\n           |  |     +--rw index    string\r\n           |  |     +--rw lacp {lacp}?\r\n           |  |        +--rw enabled?           boolean\r\n           |  |        +--rw mode?              neg-mode\r\n\r\nNEW:\r\n\r\n           |  +--rw lag-interfaces {lag-interface}?\r\n           |  |  +--rw lag-interface* [index]\r\n           |  |     +--rw index    string\r\n           |  |     +--rw lacp {lacp}?\r\n           |  |        +--rw enabled?           boolean\r\n           |  |        +--rw mode?              identityref\r\n",
+    "notes": "The LACP mode can be set to active or passive, which is not what neg-mode is supposed to cover. lacp-mode identity should be used, instead.\r\n\r\nThe errata looks valid, but given this requires a new revision of the YANG module a new RFC needs to be published.",
     "submit_date": "2021-10-01",
     "submitter_name": "Mohamed Boucadair",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2021-10-01 08:59:39"
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2023-10-02 07:47:31"
   },
   {
     "errata_id": "6703",
@@ -137,16 +137,16 @@
   {
     "errata_id": "6922",
     "doc-id": "RFC8466",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.5.2.1",
-    "orig_text": "                  <svc-bandwidth>\r\n                     <bandwidth>\r\n                       <direction>input-bw</direction>\r\n                        <type>bw-per-cos</type>\r\n                         <cir>450000000</cir>\r\n                         <cbs>20000000</cbs>\r\n                         <eir>1000000000</eir>\r\n                         <ebs>200000000</ebs>\r\n                     </bandwidth>\r\n                    </svc-bandwidth>",
-    "correct_text": "                  <svc-bandwidth>\r\n                     <bandwidth>\r\n                       <direction>input-bw</direction>\r\n                        <type>bw-per-cos</type>\r\n                        <cos-id>10</cos-id>\r\n                         <cir>450000000</cir>\r\n                         <cbs>20000000</cbs>\r\n                         <eir>1000000000</eir>\r\n                         <ebs>200000000</ebs>\r\n                     </bandwidth>\r\n                    </svc-bandwidth>",
-    "notes": "* Note 1: cos-id must be included as per the following:\r\n\r\n                  leaf cos-id {\r\n                    when \"derived-from-or-self(../type, \"\r\n                       + \"'l2vpn-svc:bw-per-cos')\" {\r\n                      description\r\n                        \"Relevant when the bandwidth type is set to\r\n                         'bw-per-cos'.\";\r\n                    }\r\n                    type uint8;\r\n                    description\r\n                      \"Identifier of the CoS, indicated by DSCP or a\r\n                       CE-VLAN CoS (802.1p) value in the service frame.\r\n                       If the bandwidth type is set to 'bw-per-cos',\r\n                       the CoS ID MUST also be specified.\";\r\n                  }\r\n\r\n* Note 2: More changes are needed because the current structure does not allow to specify multiple cos-ids.",
+    "orig_text": "...\r\n             <network-access-id>LA1</network-access-id>\r\n                <service>\r\n                  <svc-bandwidth>\r\n                     <bandwidth>\r\n                       <direction>input-bw</direction>\r\n                        <type>bw-per-cos</type>\r\n                         <cir>450000000</cir>\r\n                         <cbs>20000000</cbs>\r\n                         <eir>1000000000</eir>\r\n                         <ebs>200000000</ebs>\r\n                     </bandwidth>\r\n                    </svc-bandwidth>\r\n...\r\n            <network-access-id>LA2</network-access-id>\r\n                <service>\r\n                  <svc-bandwidth>\r\n                     <bandwidth>\r\n                       <direction>input-bw</direction>\r\n                        <type>bw-per-cos</type>\r\n                         <cir>450000000</cir>\r\n                         <cbs>20000000</cbs>\r\n                         <eir>1000000000</eir>\r\n                         <ebs>200000000</ebs>",
+    "correct_text": "...\r\n             <network-access-id>LA1</network-access-id>\r\n                <service>\r\n                  <svc-bandwidth>\r\n                     <bandwidth>\r\n                       <direction>input-bw</direction>\r\n                        <type>bw-per-cos</type>\r\n                         <cos-id>10</cos-id>\r\n                         <cir>450000000</cir>\r\n                         <cbs>20000000</cbs>\r\n                         <eir>1000000000</eir>\r\n                         <ebs>200000000</ebs>\r\n                     </bandwidth>\r\n                    </svc-bandwidth>\r\n...\r\n            <network-access-id>LA2</network-access-id>\r\n                <service>\r\n                  <svc-bandwidth>\r\n                     <bandwidth>\r\n                       <direction>input-bw</direction>\r\n                        <type>bw-per-cos</type>\r\n                         <cos-id>10</cos-id>\r\n                         <cir>450000000</cir>\r\n                         <cbs>20000000</cbs>\r\n                         <eir>1000000000</eir>\r\n                         <ebs>200000000</ebs>\r\n",
+    "notes": "The cos-id must be included when the bandwidth type is set to \"bw-per-cos\".\r\n",
     "submit_date": "2022-04-05",
     "submitter_name": "Mohamed Boucadair",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2023-10-02 07:55:17"
   }
 ]
