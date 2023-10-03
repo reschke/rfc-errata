@@ -272,16 +272,16 @@
   {
     "errata_id": "6833",
     "doc-id": "RFC6733",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.4",
     "orig_text": "The following Application Id values are defined:\r\n\r\n         Diameter common message       0\r\n         Diameter base accounting      3\r\n         Relay                         0xffffffff",
     "correct_text": "The following Application Id values are defined:\r\n\r\n         Diameter common message       0\r\n         Diameter base accounting      3\r\n         Relay                         0xffffff",
-    "notes": "I presume relay application ID should be 0xffffff decimal equivalent of which is 16777215.\r\nInstead 0xffffffff decimal translates to 4294967295.\r\n\r\nThis is assumption.",
+    "notes": "I presume relay application ID should be 0xffffff decimal equivalent of which is 16777215.\r\nInstead 0xffffffff decimal translates to 4294967295.\r\n\r\nThis is assumption.\n --VERIFIER NOTES-- \n The Application-ID field in the Diameter header is 32 bits long, hence the exist Application Id for \"Relay\" is correct.",
     "submit_date": "2022-02-03",
     "submitter_name": "Kshitij Dutt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2023-10-02 06:55:24"
   }
 ]
