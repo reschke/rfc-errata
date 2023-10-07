@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7667",
+    "doc-id": "RFC5662",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "   /// /*\r\n   ///  * Program number is in the transient range since the client\r\n   ///  * will assign the exact transient program number and provide\r\n   ///  * that to the server via the SETCLIENTID operation.\r\n   ///  */\r\n   /// program NFS4_CALLBACK {\r\n",
+    "correct_text": "   /// /*\r\n   ///  * Program number is in the transient range since the client\r\n   ///  * will assign the exact transient program number and provide\r\n   ///  * that to the server via the CREATE_SESSION or\r\n   ///  * BACKCHANNEL_CTL operations.\r\n   ///  */\r\n   /// program NFS4_CALLBACK {\r\n",
+    "notes": "SETCLIENTID operation is NFSv4.0 specific operation. NFSv4.1 uses CREATE_SESSION or BACKCHANNEL_CTL operation for setting backchannel parameters.",
+    "submit_date": "2023-10-06",
+    "submitter_name": "Pali Rohár",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7669",
+    "doc-id": "RFC5662",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "   /// /*\r\n   ///  * From RFC 2203\r\n   ///  */\r\n   /// enum rpc_gss_svc_t {\r\n   ///         RPC_GSS_SVC_NONE        = 1,\r\n   ///         RPC_GSS_SVC_INTEGRITY   = 2,\r\n   ///         RPC_GSS_SVC_PRIVACY     = 3\r\n   /// };\r\n   ///\r\n   /// struct rpcsec_gss_info {\r\n   ///         sec_oid4        oid;\r\n   ///         qop4            qop;\r\n   ///         rpc_gss_svc_t   service;\r\n   /// };",
+    "correct_text": "   /// /*\r\n   ///  * From RFC 2203\r\n   ///  */\r\n   /// enum rpc_gss_service_t {\r\n   ///         /* Note: the enumerated value for 0 is reserved. */\r\n   ///         rpc_gss_svc_none        = 1,\r\n   ///         rpc_gss_svc_integrity   = 2,\r\n   ///         rpc_gss_svc_privacy     = 3\r\n   /// };\r\n   ///\r\n   /// struct rpcsec_gss_info {\r\n   ///         sec_oid4            oid;\r\n   ///         qop4                qop;\r\n   ///         rpc_gss_service_t   service;\r\n   /// };",
+    "notes": "Mentioned RFC 2203 (and also its updates RFC 5403 and RFC 7861) does not have any enum rpc_gss_svc_t. Instead it has enum rpc_gss_service_t and all enum values are lowercase.",
+    "submit_date": "2023-10-06",
+    "submitter_name": "Pali Rohár",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
