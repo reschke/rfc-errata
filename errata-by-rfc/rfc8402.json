@@ -13,5 +13,20 @@
     "verifier_id": "175",
     "verifier_name": "James Guichard",
     "update_date": "2023-06-19 07:12:20"
+  },
+  {
+    "errata_id": "7671",
+    "doc-id": "RFC8402",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.1",
+    "orig_text": "   A likely use case for the BGP-Prefix segment is an IGP-free hyper-\r\n   scale spine-leaf topology where connectivity is learned solely via\r\n   BGP [RFC7938]",
+    "correct_text": "   A likely use case for the BGP-Prefix segment is an IGP-free hyper-\r\n   scale spine-leaf topology where connectivity is learned solely via\r\n   BGP [RFC7938].",
+    "notes": "The period is missing at the end of the sentence.",
+    "submit_date": "2023-10-09",
+    "submitter_name": "Alvaro Retana",
+    "verifier_id": "175",
+    "verifier_name": "James N Guichard",
+    "update_date": "2023-10-09 12:29:31"
   }
 ]
