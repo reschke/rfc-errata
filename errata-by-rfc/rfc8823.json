@@ -3,15 +3,15 @@
     "errata_id": "7508",
     "doc-id": "RFC8823",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "3.1 and 3.2",
     "orig_text": "Figure 1:\r\n  Message-ID: <A2299BB.FF7788@example.org>\r\n  From: acme-generator@example.org\r\n  To: alexey@example.com\r\n\r\nFigure 2:\r\n   Message-ID: <111-22222-3333333@example.com>\r\n   In-Reply-To: <A2299BB.FF7788@example.org>\r\n   From: alexey@example.com\r\n   To: acme-generator@example.org",
     "correct_text": "Figure 1:\r\n  Message-ID: <A2299BB.FF7788@example.com>\r\n  From: acme-generator@example.com\r\n  To: alexey@example.org\r\n\r\nFigure 2:\r\n   Message-ID: <111-22222-3333333@example.org>\r\n   In-Reply-To: <A2299BB.FF7788@example.com>\r\n   From: alexey@example.org\r\n   To: acme-generator@example.com",
     "notes": "Accoording to RFC8555, the domain example.com used for ACME server, the example.org used for the Client.",
     "submit_date": "2023-05-04",
     "submitter_name": "Richard Wang",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-10-10 16:49:10"
   }
 ]
