@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7672",
+    "doc-id": "RFC9172",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.6",
+    "orig_text": "Security Context Id:\r\n This field identifies the security context used to implement\r\n the security service represented by this block and applied to\r\n each security target.  This field SHALL be represented by a\r\n CBOR unsigned integer.  The values for this Id should come from\r\n the registry defined in Section 11.3.\r\n",
+    "correct_text": "Security Context Id:\r\n This field identifies the security context used to implement\r\n the security service represented by this block and applied to\r\n each security target.  This field SHALL be represented by a\r\n CBOR unsigned or negative integer.  The values for this Id should\r\n come from the registry defined in Section 11.3.\r\n",
+    "notes": "Per the IANA sub-registry in Section 11.3 the Context ID has \"The value range: signed 16-bit integer.\" and negative values are reserved for private use, so the value can be either an unsigned or a negative integer.",
+    "submit_date": "2023-10-10",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
