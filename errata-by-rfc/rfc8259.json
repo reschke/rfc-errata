@@ -163,5 +163,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7673",
+    "doc-id": "RFC8259",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "The representation of strings is similar to conventions used in the C family\r\nof programming languages.  A string begins and ends with quotation marks. All\r\nUnicode characters may be placed within the quotation marks, except for the\r\ncharacters that MUST be escaped: quotation mark, reverse solidus, and the\r\ncontrol characters (U+0000 through U+001F).",
+    "correct_text": "The representation of strings is similar to conventions used in the C family\r\nof programming languages.  A string begins and ends with quotation marks.  All\r\nUnicode characters may be placed within the quotation marks, except for the\r\ncharacters that MUST be escaped: quotation mark, reverse solidus, and the\r\ncontrol characters (U+0000 through U+001F, U+007F, and U+0080 through\r\nU+009F).\r\n",
+    "notes": "There are 33 7-bit control characters, but the JSON RFC only listed 32 by\r\nomitting the inclusion of the last control character in the 7-bit ASCII range,\r\n'del.'  However, JSON is not limited to 7-bit ASCII; it is Unicode.  Unicode\r\nencompasses 65 control characters from U+0080 to U+009F, totaling an additional\r\n32 characters.  The section that currently reads \"U+0000 through U+001F\" should\r\ninclude these additional control characters reading as \"U+0000 through U+001F,\r\nU+007F, and U+0080 through U+009F\"",
+    "submit_date": "2023-10-11",
+    "submitter_name": "Zachary Collier (Zamicol)",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
