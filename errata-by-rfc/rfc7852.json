@@ -13,5 +13,20 @@
     "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2022-05-16 11:43:54"
+  },
+  {
+    "errata_id": "7679",
+    "doc-id": "RFC7852",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.1",
+    "orig_text": "An example\r\n   Call-Info header field for this would be:\r\n\r\n   Call-Info:  https://www.example.com/23sedde3;\r\n       purpose=\"EmergencyCallData.ProviderInfo\"",
+    "correct_text": "An example\r\n   Call-Info header field for this would be:\r\n\r\n   Call-Info:  https://www.example.com/23sedde3;\r\n       purpose=EmergencyCallData.ProviderInfo",
+    "notes": "Remove double quote on purpose attribute. It's a token type instead of \"String\" type.",
+    "submit_date": "2023-10-16",
+    "submitter_name": "Tom Hsu",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
