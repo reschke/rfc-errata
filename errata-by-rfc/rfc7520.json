@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-12-10 09:31:13"
+  },
+  {
+    "errata_id": "7680",
+    "doc-id": "RFC7520",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.9",
+    "orig_text": "   This example illustrates encrypting content that is first compressed.\r\n   It reuses the AES symmetric key, key encryption algorithm, and\r\n   content encryption algorithm from Section 5.8.\r\n\r\n   Note that whitespace is added for readability as described in\r\n   Section 1.1.\r\n",
+    "correct_text": "   This example illustrates encrypting content that is first compressed.\r\n   It reuses the AES symmetric key, key encryption algorithm, and\r\n   content encryption algorithm from Section 5.8.\r\n\r\n   Note that DEFLATE [RFC1951] is not a deterministic algorithm; its\r\n   implementations must properly round-trip but are not required to\r\n   produce the same compressed data; it might not be possible to exactly\r\n   replicate the results in this section.\r\n\r\n   Note that whitespace is added for readability as described in\r\n   Section 1.1.",
+    "notes": "This added text is aligned with other non-deterministic algorithms in sections 4.2, 4.3, 5.1, 5.2, 5.13, and 6. It gives the reader a heads up that the results might not be replicable, e.g. when using a modern zlib deflate implementation which uses ANZAC++ hash in favour of hardware accelerated hashing function (i.e. CRC32) to insert symbols in the dictionary during compression.",
+    "submit_date": "2023-10-17",
+    "submitter_name": "Filip Skokan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
