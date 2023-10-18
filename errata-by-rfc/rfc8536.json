@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7681",
+    "doc-id": "RFC8536",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "B.2",
+    "orig_text": "   | 135    | 00           | UT/local[0]      | 1 (UT)                 |\r\n...\r\n   | 141    | 00           | standard/wall[0] | 1 (standard)           |",
+    "correct_text": "   | 135    | 00           | UT/local[0]      | 0 (local)              |\r\n...\r\n   | 141    | 00           | standard/wall[0] | 0 (wall)               |",
+    "notes": "The field value is inconsistent with the hexadecimal octets. This change corrects it to be the same as for bytes 310 and 316 in the same section.",
+    "submit_date": "2023-10-17",
+    "submitter_name": "Jacob Pratt",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
