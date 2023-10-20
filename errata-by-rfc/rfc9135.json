@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7683",
+    "doc-id": "RFC9135",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.2.",
+    "orig_text": "  2.  However, if PE2 is configured for asymmetric IRB mode, PE2 will\r\n       advertise TS4 MAC/IP information in a MAC/IP Advertisement route\r\n       with a zero Label2 field and no Route Target identifying IP-VRF1.\r\n       In this case, PE2 will install TS4 information in its ARP table\r\n       and BT1.  When a packet from TS2 to TS4 arrives at PE1, a longest\r\n       prefix match on IP-VRF1's route table will yield the local IRB\r\n       interface to BT1, where a subsequent ARP and bridge table lookup\r\n       will provide the information for an asymmetric forwarding mode to\r\n       PE2.",
+    "correct_text": "  2.  However, if PE2 is configured for asymmetric IRB mode, PE2 will\r\n       advertise TS4 MAC/IP information in a MAC/IP Advertisement route\r\n       with a zero Label2 field and no Route Target identifying IP-VRF1.\r\n       In this case, PE1 will install TS4 information in its ARP table\r\n       and BT1.  When a packet from TS2 to TS4 arrives at PE1, a longest\r\n       prefix match on IP-VRF1's route table will yield the local IRB\r\n       interface to BT1, where a subsequent ARP and bridge table lookup\r\n       will provide the information for an asymmetric forwarding mode to\r\n       PE2.",
+    "notes": "PE1 will use ARP table for forwarding traffic to PE2 - seems like typo",
+    "submit_date": "2023-10-19",
+    "submitter_name": "Denis Vrkic",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7684",
+    "doc-id": "RFC9135",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.1",
+    "orig_text": " This route is advertised along with the following extended community:\r\n\r\n   *  Tunnel Type Extended Community",
+    "correct_text": " This route is advertised along with the following extended community:\r\n\r\n   *  Encapsulation Extended Community",
+    "notes": "I guess that solud be Encapsulation Extended Community (or  maybe Tunnel Encapsulation Attribute)",
+    "submit_date": "2023-10-19",
+    "submitter_name": "Denis Vrkic",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
