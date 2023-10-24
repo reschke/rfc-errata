@@ -62,22 +62,22 @@
   {
     "errata_id": "7306",
     "doc-id": "RFC9110",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "14.1.1",
     "orig_text": "  ranges-specifier = range-unit \"=\" range-set\r\n  range-set        = 1#range-spec\r\n  range-spec       = int-range\r\n                   / suffix-range\r\n                   / other-range",
     "correct_text": "  ranges-specifier = range-unit \"=\" OWS range-set\r\n  range-set        = 1#range-spec\r\n  range-spec       = int-range\r\n                   / suffix-range\r\n                   / other-range",
-    "notes": "The ABNF is inconistent with one of the examples given in 14.1.2\r\n\r\n   bytes= 0-999, 4500-5499, -1000\r\n\r\nThe bug in the ABNF was likely introduced when converting away from \"implied linear whitespace\".\r\n\r\nSee also <https://github.com/whatwg/fetch/issues/1070#issuecomment-1361800123>.",
+    "notes": "The ABNF is inconsistent with one of the examples given in 14.1.2\r\n\r\n   bytes= 0-999, 4500-5499, -1000\r\n\r\nThe bug in the ABNF was likely introduced when converting away from \"implied linear whitespace\".\r\n\r\nSee also <https://github.com/whatwg/fetch/issues/1070#issuecomment-1361800123>.",
     "submit_date": "2023-01-13",
     "submitter_name": "Julian Reschke",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-10-23 02:45:18"
   },
   {
     "errata_id": "7419",
     "doc-id": "RFC9110",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "8.3.2",
     "orig_text": "   In the fields defined by this document, charset names appear either\r\n   in parameters (Content-Type), or, for Accept-Encoding, in the form of\r\n   a plain token.",
@@ -85,9 +85,9 @@
     "notes": "Accept-Encoding is the preferred list of response content codings.  Accept-Charset is the preferred list of response charsets.",
     "submit_date": "2023-04-11",
     "submitter_name": "Dave Shawley",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-10-23 02:42:33"
   },
   {
     "errata_id": "7530",
@@ -107,16 +107,16 @@
   {
     "errata_id": "7599",
     "doc-id": "RFC9110",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "6.4.1",
     "orig_text": "All 1xx (Informational), 204 (No Content), and 304 (Not Modified)\r\nresponses do not include content.\r\n\r\nAll other responses do include content, although that content might\r\nbe of zero length.",
     "correct_text": "All 1xx (Informational), 204 (No Content), 205 (Reset Content), \r\nand 304 (Not Modified) responses do not include content.\r\n\r\nAll other responses do include content, although that content might\r\nbe of zero length.",
-    "notes": "Per section 15.3.6 (205 No Content), it says that servers MUST NOT generate a response. Section 6.4.1 says that \"All 1xx, 204, and 304 response don't include content and others do.\" even though 205 response mustn't generate content.",
+    "notes": "Per section 15.3.6 (205 No Content), it says that servers MUST NOT generate a response. Section 6.4.1 says that \"All 1xx, 204, and 304 response don't include content and others do.\" even though 205 response mustn't generate content.\n --VERIFIER NOTES-- \nIn rejecting this Errata report I note that the reported text is not an error, but a deliberate decision of the authors and working group.",
     "submit_date": "2023-08-11",
     "submitter_name": "Justine Krejcha",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-10-23 02:39:12"
   }
 ]
