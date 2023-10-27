@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2021-12-14 13:00:21"
+  },
+  {
+    "errata_id": "7689",
+    "doc-id": "RFC8906",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.2.8",
+    "orig_text": "expect: DO=1 to be present if an RRSIG is in the response\r\n",
+    "correct_text": "expect: flag: do to be present if an RRSIG is in the response",
+    "notes": "The same section has `expect: flag: aa to be present`, and when running the suggested command, no `DO=1` is shown, which makes the advice unhelpful.\r\n\r\nSample command:\r\n```\r\n$ dig +nocookie +edns=0 +noad +norec +dnssec soa $zone @$server\r\n\r\n; <<>> DiG 9.16.44-Debian <<>> +nocookie +edns +noad +norec +dnssec soa powerdns.com @2600:3c03::f03c:91ff:fe55:e54d\r\n;; global options: +cmd\r\n;; Got answer:\r\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 45268\r\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\r\n\r\n;; OPT PSEUDOSECTION:\r\n; EDNS: version: 0, flags: do; udp: 1232\r\n;; QUESTION SECTION:\r\n;powerdns.com.\t\t\tIN\tSOA\r\n\r\n;; Query time: 0 msec\r\n;; SERVER: 2600:3c03::f03c:91ff:fe55:e54d#53(2600:3c03::f03c:91ff:fe55:e54d)\r\n;; WHEN: Thu Oct 26 22:26:44 UTC 2023\r\n;; MSG SIZE  rcvd: 41\r\n```",
+    "submit_date": "2023-10-26",
+    "submitter_name": "Josh Soref",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-10-26 18:09:00"
   }
 ]
