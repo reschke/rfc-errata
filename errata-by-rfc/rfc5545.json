@@ -538,5 +538,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7691",
+    "doc-id": "RFC5545",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.8.4.2",
+    "orig_text": "The following is an example of this property with an alternate\r\nrepresentation of an LDAP URI to a directory entry containing the\r\ncontact information:\r\n\r\nCONTACT;ALTREP=\"ldap://example.com:6666/o=ABC%20Industries\\,\r\n c=US???(cn=Jim%20Dolittle)\":Jim Dolittle\\, ABC Industries\\,\r\n +1-919-555-1234",
+    "correct_text": "The following is an example of this property with an alternate\r\nrepresentation of an LDAP URI to a directory entry containing the\r\ncontact information:\r\n\r\nCONTACT;ALTREP=\"ldap://example.com:6666/o=ABC%20Industries,\r\n c=US???(cn=Jim%20Dolittle)\":Jim Dolittle\\, ABC Industries\\,\r\n +1-919-555-1234",
+    "notes": "Note that the original text has an escaped comma in the ALTREP parameter value at the end of the unfolded line.\r\n\r\nThe characters '\\' and ',' are allowed in quoted parameter values.\r\nThis means that the URL must be parsed as\r\n\"ldap://example.com:6666/o=ABC%20Industries\\,c=US???(cn=Jim%20Dolittle)\"\r\nbut this is not a valid URI because of the extra backslash.\r\n\r\nBecause commas do not need to be escaped in quoted parameter values, I assume that this is an error and the comma should not have been quoted.",
+    "submit_date": "2023-10-30",
+    "submitter_name": "Tom Sydney Kerckhove",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
