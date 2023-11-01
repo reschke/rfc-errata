@@ -2,7 +2,7 @@
   {
     "errata_id": "7692",
     "doc-id": "RFC8806",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "3",
     "orig_text": "   There is a risk that a system using a local authoritative server for\r\n   the root zone cannot refresh the contents of the root zone before the\r\n   expire time in the SOA.  A system using a local authoritative server\r\n   for the root zone MUST NOT serve stale data for the root zone.  To\r\n   mitigate the risk that stale data is served, the local root server\r\n   MUST immediately switch to using non-local root servers when it\r\n   detects that it would be serving state data.",
@@ -10,8 +10,8 @@
     "notes": "Based on the context, it seems that in the last sentence the intended word is \"stale\" as in stale data, instead of \"state\". So, I believe there might be a typo in the text, and the correct interpretation would be to swith back to the non-local root when stale data is detected.",
     "submit_date": "2023-10-31",
     "submitter_name": "Deliang Chang",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-10-31 09:57:06"
   }
 ]
