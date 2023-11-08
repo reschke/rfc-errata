@@ -28,20 +28,5 @@
     "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
-  },
-  {
-    "errata_id": "7372",
-    "doc-id": "RFC7541",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "C.4.3",
-    "orig_text": "   Decoded header list:\r\n\r\n   :method: GET\r\n   :scheme: https\r\n   :path: /index.html\r\n   :authority: www.example.com\r\n   custom-key: custom-value",
-    "correct_text": "   Decoded header list:\r\n\r\n   :method: GET\r\n   :scheme: https\r\n   :path: /index.html\r\n   :authority: www.example.com\r\n   cache-control: no-cache\r\n   custom-key: custom-value",
-    "notes": "After the first two requests, the cache-control is added to the header list and dynamic table. After the third request, the value should be in both the header list and dynamic table but the document does not show it in the header list.  This causes automated tests to fail when implementing HPack decoder.",
-    "submit_date": "2023-02-27",
-    "submitter_name": "Jamal Moore",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
   }
 ]
