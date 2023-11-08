@@ -32,16 +32,16 @@
   {
     "errata_id": "5032",
     "doc-id": "RFC4103",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5.2",
     "orig_text": "After an idle period, the transmitter SHOULD set the M-bit to one in\r\nthe first packet with new text.",
     "correct_text": "After an idle period, the transmitter SHOULD set the M-bit to one in\r\nthe first packet with new text.\r\n\r\nA number of approaches can be taken for how to compose the initial\r\npackets in the session, and the packets sent at resumption after an\r\nidle period. In order to harmonize transmitter behavior, and fulfill\r\nrequirements in RFC 2198[3] and RFC 4102[9], transmitters SHOULD\r\napply the following mechanism:  Initially in the session and at \r\nresumption of transmission after an idle period, when redundancy is\r\nused, the packets to send SHOULD contain the same level of redundancy\r\nas specified for the session. If redundant data for the specified\r\nnumber of generations is not available for transmission, empty \r\nT140blocks SHOULD be inserted in the packet for transmission to make\r\nit contain the specified level of redundancy. ",
-    "notes": "RFC 4103 does not exactly specify how to compose the first packets in the session and the packets after an idle period, when redundancy is used in the session. \r\n\r\nEven if receivers should be prepared to decode any valid packet composition, it eases interoperability when transmitters behave consistently. \r\n\r\nRFC 2198 requires that the redundant format must carry at least the primary and one redundant level. RFC 4102 requires that if different compositions of the payloads in the packet is to be used, then each combination needs to be assigned its own payload type number. Assuming that that includes use of varying levels of redundancy with the same payload in the redundant data, these requirements lead to the recommendation to use the approach documented in the corrected text.",
+    "notes": "RFC 4103 does not exactly specify how to compose the first packets in the session and the packets after an idle period, when redundancy is used in the session. \r\n\r\nEven if receivers should be prepared to decode any valid packet composition, it eases interoperability when transmitters behave consistently. \r\n\r\nRFC 2198 requires that the redundant format must carry at least the primary and one redundant level. RFC 4102 requires that if different compositions of the payloads in the packet is to be used, then each combination needs to be assigned its own payload type number. Assuming that that includes use of varying levels of redundancy with the same payload in the redundant data, these requirements lead to the recommendation to use the approach documented in the corrected text.\n --VERIFIER NOTES-- \nYour comment is not in scope for errata reports, which are meant to collect errors in the documents, things that were actual errors at publication and that would have been fixed at that time had the working group or document authors noticed them -- they were just missed. What you've reported goes beyond what can be done in errata. The change, therefore, if it is to be applied needs to be achieved through a consensus document.",
     "submit_date": "2017-06-07",
     "submitter_name": "Gunnar Hellstrom",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-11-07 01:21:42"
   }
 ]
