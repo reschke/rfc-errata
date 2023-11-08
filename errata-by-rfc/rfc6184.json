@@ -17,17 +17,17 @@
   {
     "errata_id": "4713",
     "doc-id": "RFC6184",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "8.1",
     "orig_text": "profile-level-id:\r\n         A base16 [7] (hexadecimal) representation of the following\r\n         three bytes in the sequence parameter",
     "correct_text": "profile-level-id:\r\n         A base16 [7] (hexadecimal) representation of the following\r\n         six bytes in the sequence parameter",
-    "notes": "profile-level-id is composed of three 2-byte length fields.",
+    "notes": "profile-level-id is composed of three 2-byte length fields.\n --VERIFIER NOTES-- \nThe original text is correct; 3 bytes in the binary representation become 6 text characters in base16. ",
     "submit_date": "2016-06-17",
     "submitter_name": "Iñaki Baz Castillo",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-11-07 01:13:01"
   },
   {
     "errata_id": "4714",
