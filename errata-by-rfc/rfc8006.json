@@ -17,16 +17,16 @@
   {
     "errata_id": "7657",
     "doc-id": "RFC8006",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6.10",
     "orig_text": "   {\r\n     \"metadata\": [\r\n       {\r\n         \"generic-metadata-type\": \"MI.TimeWindowACL\",\r\n         \"generic-metadata-value\": {\r\n           \"times\": [\r\n             \"windows\": [\r\n               {\r\n                 \"start\": \"1213948800\",\r\n                 \"end\": \"1478047392\"\r\n               }\r\n             ],\r\n             \"action\": \"allow\"\r\n           ]\r\n         }\r\n       }\r\n     ]\r\n   }",
     "correct_text": "   {\r\n     \"metadata\": [\r\n       {\r\n         \"generic-metadata-type\": \"MI.TimeWindowACL\",\r\n         \"generic-metadata-value\": {\r\n           \"times\": [\r\n              {\r\n                \"windows\": [\r\n                  {\r\n                    \"start\": 1213948800,\r\n                    \"end\": 1478047392\r\n                  }\r\n                ],\r\n                \"action\": \"allow\"\r\n              }\r\n           ]\r\n         }\r\n       }\r\n     ]\r\n   }",
-    "notes": "1. The \"times\" property of  the TimeWindowACL object has an array of TimeWindowRule type, so I changed it to \"windows\" and \"action\" are contained in braces.\r\n2. The \"start\" and \"end\" property of the TimeWindow object have a Time type, which is an alias of Integer. So I changed their values (\"1213948800\", \"1478047392\") to Integer (1213948800, 1478047392).\r\n\r\nThe examples in sections 4.2.3 and 4.2.3.* seems to be correct as defined in this RFC.",
+    "notes": "1. The \"times\" property of  the TimeWindowACL object has an array of TimeWindowRule type, so I changed it to \"windows\" and \"action\" are contained in braces.\r\n2. The \"start\" and \"end\" property of the TimeWindow object have a Time type, which is an alias of Integer. So I changed their values (\"1213948800\", \"1478047392\") to Integer (1213948800, 1478047392).\r\n",
     "submit_date": "2023-09-26",
     "submitter_name": "Kazuki Takashima",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-11-07 00:44:44"
   }
 ]
