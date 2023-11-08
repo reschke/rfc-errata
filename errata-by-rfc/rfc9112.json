@@ -17,16 +17,16 @@
   {
     "errata_id": "7633",
     "doc-id": "RFC9112",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.2",
     "orig_text": "   Although the line terminator for the start-line and fields is the\r\n   sequence CRLF, a recipient MAY recognize a single LF as a line\r\n   terminator and ignore any preceding CR.",
     "correct_text": "   Although the line terminator for the start-line, fields, chunk\r\n   and last-chunk is the sequence CRLF, a recipient MAY recognize\r\n   a single LF as a line terminator and ignore any preceding CR.",
-    "notes": "chunked encoding (section 6.3) uses CRLF for line/framing delimiters in the same manner as other HTTP message sections. But these lines are not listed as a possible sites of bare-LF line terminator. Which makes for an unnecessary parser exception and complicates possible request smuggling robustness between implementations.",
+    "notes": "chunked encoding (section 6.3) uses CRLF for line/framing delimiters in the same manner as other HTTP message sections. But these lines are not listed as a possible sites of bare-LF line terminator. Which makes for an unnecessary parser exception and complicates possible request smuggling robustness between implementations.\n --VERIFIER NOTES-- \nThe difference was intentional. A chunked parser is not a start line or field parser (it is a message body parser) and it is supposed to be less forgiving because it does not have to retain backwards compatibility with 1.0 parsers.\r\n\r\nHence, bare LF around the chunk sizes would be invalid and should result in the connection being marked as invalid.\r\n\r\nIn any case, suggestions to further hardening of the chunked parser would have to be defined in that section, and would need to be achieved through a consensus document, not in an errata report.",
     "submit_date": "2023-09-06",
     "submitter_name": "Amos Jeffries",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-11-07 02:08:59"
   }
 ]
