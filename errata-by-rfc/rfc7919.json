@@ -18,15 +18,15 @@
     "errata_id": "7579",
     "doc-id": "RFC7919",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "The primes in these finite field groups are all safe primes; that is,\r\na prime p is a safe prime when q = (p-1)/2 is also prime.  Where e is\r\nthe base of the natural logarithm and square brackets denote the\r\nfloor operation, the groups that initially populate this registry are\r\nderived for a given bit length b by finding the lowest positive\r\ninteger X that creates a safe prime p where:\r\n\r\n p = 2^b - 2^{b-64} + {[2^{b-130} e] + X } * 2^64 - 1\r\n",
     "correct_text": "The primes in these finite field groups are all safe primes; that is,\r\na prime p is a safe prime when q = (p-1)/2 is also prime.  Where e is\r\nthe base of the natural logarithm and square brackets denote the\r\nfloor operation, the groups that initially populate this registry are\r\nderived for a given bit length b by finding the lowest positive\r\ninteger X that creates a safe prime p where:\r\n\r\n p = 2^b - 2^{b-64} + {[2^{b-130} * e] + X } * 2^64 - 1\r\n",
     "notes": "The multiplication sign ('*' in ASCII) is missing in the explanatory introduction of Appendix A that describes the equation used for deriving the primes. It is correct in all five concrete derivations A.1 through A.5",
     "submit_date": "2023-07-31",
     "submitter_name": "Tim Geiser",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-11-08 13:52:23"
   }
 ]
