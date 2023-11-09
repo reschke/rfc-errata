@@ -47,7 +47,7 @@
   {
     "errata_id": "4873",
     "doc-id": "RFC5764",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "5.1.1",
     "orig_text": "When the mechanism described in this document is in\r\neffect, this is modified so that data written by upper-level protocol\r\nclients of DTLS is assumed to be RTP/RTP and is encrypted using SRTP\r\nrather than the standard TLS record encoding.",
@@ -55,8 +55,8 @@
     "notes": "Section 5.1 notes that RTP or RTCP can be sent over the channel, so \"RTP/RTP\" should be \"RTP/RTCP\".",
     "submit_date": "2016-11-30",
     "submitter_name": "Peter Wu",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2023-11-08 00:37:24"
   }
 ]
