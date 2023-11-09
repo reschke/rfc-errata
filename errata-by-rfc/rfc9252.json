@@ -33,15 +33,15 @@
     "errata_id": "7652",
     "doc-id": "RFC9252",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "3.2.1",
     "orig_text": "   Transposition Offset indicates the bit position, and Transposition\r\n   Length indicates the number of bits that are being taken out of the\r\n   SRv6 SID value and encoded in the MPLS Label field.  The bits that\r\n   have been shifted out MUST be set to 0 in the SID value.",
     "correct_text": "   Transposition Offset indicates the bit position and Transposition\r\n   Length indicates the number of bits that are being taken out of the\r\n   SRv6 SID value and put into high order bits of MPLS label field. The\r\n   bits that have been shifted out MUST be set to 0 in the SID value.",
     "notes": "This errata reverses an editorial change that was made during the AUTH48 phase and restores the text that came from the WG and IESG review. Refer https://datatracker.ietf.org/doc/html/draft-ietf-bess-srv6-services-15#page-10\r\n\r\nThis change was made during the AUTH48 since the \"high order bits\" was already covered under various subsections of Sec 6. However, readers have reported that there are other places in Sec 6 and Sec 5 where transposition also occurs and that the original text was still required.",
     "submit_date": "2023-09-22",
     "submitter_name": "Ketan Talaulikar",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-11-08 10:30:23"
   }
 ]
