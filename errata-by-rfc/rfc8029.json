@@ -33,15 +33,15 @@
     "errata_id": "7639",
     "doc-id": "RFC8029",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "4.5",
     "orig_text": "If the Reply Mode in the echo request is \"Reply via an\r\nIPv4 UDP packet with Router Alert\", then the IP header MUST contain\r\nthe Router Alert IP Option of value 0x0 [RFC2113] for IPv4 or 69\r\n[RFC7506] for IPv6.",
     "correct_text": "If the Reply Mode in the echo request is \"Reply via an\r\nIPv4/IPv6 UDP packet with Router Alert\", then the IP header MUST contain\r\nthe Router Alert IP Option of value 0x0 [RFC2113] for IPv4 or 69\r\n[RFC7506] for IPv6.",
     "notes": "The description of the Reply Mode recorded in the IANA \"Reply Modes\" sub-registry of the \"Multiprotocol Label Switching (MPLS) Label Switched Paths (LSPs) Ping Parameters\" registry is \"Reply via an IPv4/IPv6 UDP packet with Router Alert\".",
     "submit_date": "2023-09-11",
     "submitter_name": "Greg Mirsky",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2023-11-08 14:21:08"
   }
 ]
