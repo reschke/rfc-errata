@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7696",
+    "doc-id": "RFC7642",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.4",
+    "orig_text": "The user selects some attributes and authorizes the transfer of data via authorization protocols (e.g., OAuth, SAML), so selected attributes of the user are transferred from the user's account in directory service A to the website of replying party B at the time of the user's first visit to that site.",
+    "correct_text": "The user selects some attributes and authorizes the transfer of data via authorization protocols (e.g., OAuth, SAML), so selected attributes of the user are transferred from the user's account in directory service A to the website of relying party B at the time of the user's first visit to that site.",
+    "notes": "\"relying party\", not \"replying party\"",
+    "submit_date": "2023-11-10",
+    "submitter_name": "Masaya Watanabe",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
