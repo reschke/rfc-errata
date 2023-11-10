@@ -107,16 +107,16 @@
   {
     "errata_id": "7576",
     "doc-id": "RFC8995",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.3",
     "orig_text": "   objective-value = text       ; name of the (list of) supported\r\n                                ; protocols: \"EST-TLS\" for RFC 7030.\r\n",
-    "correct_text": "objective-value = text       ; name of the supported protocol.\r\n                             ; e.g., \"EST-TLS\" for RFC 7030.\r\n",
+    "correct_text": "   objective-value = text       ; name of the supported protocol,\r\n                                ; e.g., \"EST-TLS\" for RFC 7030.\r\n",
     "notes": "This objective does not support a list of supported protocols. \r\nThe comment in the example might lead people to conclude they can do that.",
     "submit_date": "2023-07-26",
     "submitter_name": "Michael Richardson",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-11-08 10:51:46"
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2023-11-09 08:55:04"
   }
 ]
