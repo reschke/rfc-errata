@@ -32,17 +32,17 @@
   {
     "errata_id": "4047",
     "doc-id": "RFC3665",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "2.1",
     "orig_text": "   F3 REGISTER Bob -> SIP Server\r\n\r\n   REGISTER sips:ss2.biloxi.example.com SIP/2.0\r\n   Via: SIP/2.0/TLS client.biloxi.example.com:5061;branch=z9hG4bKnashd92\r\n   Max-Forwards: 70\r\n   From: Bob <sips:bob@biloxi.example.com>;tag=ja743ks76zlflH\r\n   To: Bob <sips:bob@biloxi.example.com>\r\n   Call-ID: 1j9FpLxk3uxtm8tn@biloxi.example.com\r\n   CSeq: 2 REGISTER\r\n   Contact: <sips:bob@client.biloxi.example.com>\r\n   Authorization: Digest username=\"bob\", realm=\"atlanta.example.com\"\r\n    nonce=\"ea9c8e88df84f1cec4341ae6cbe5a359\", opaque=\"\",\r\n    uri=\"sips:ss2.biloxi.example.com\",\r\n    response=\"dfe56131d1958046689d83306477ecc\"\r\n   Content-Length: 0",
     "correct_text": "   F3 REGISTER Bob -> SIP Server\r\n\r\n   REGISTER sips:ss2.biloxi.example.com SIP/2.0\r\n   Via: SIP/2.0/TLS client.biloxi.example.com:5061;branch=z9hG4bKnashd92\r\n   Max-Forwards: 70\r\n   From: Bob <sips:bob@biloxi.example.com>;tag=ja743ks76zlflH\r\n   To: Bob <sips:bob@biloxi.example.com>\r\n   Call-ID: 1j9FpLxk3uxtm8tn@biloxi.example.com\r\n   CSeq: 2 REGISTER\r\n   Contact: <sips:bob@client.biloxi.example.com>\r\n   Authorization: Digest username=\"bob\", realm=\"atlanta.example.com\",\r\n    nonce=\"ea9c8e88df84f1cec4341ae6cbe5a359\", opaque=\"\",\r\n    uri=\"sips:ss2.biloxi.example.com\",\r\n    response=\"dfe56131d1958046689d83306477ecc\"\r\n   Content-Length: 0",
     "notes": "A comma (,) is missing before the 'nonce' parameter of the Authorization header.",
     "submit_date": "2014-07-11",
     "submitter_name": "Gergely Szabo",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-11-09 01:06:58"
   },
   {
     "errata_id": "4516",
