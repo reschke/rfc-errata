@@ -13,5 +13,20 @@
     "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7697",
+    "doc-id": "RFC7468",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.3",
+    "orig_text": "   This section does not disturb the official application/pkix-cert\r\n   registration [RFC2585] in any way (which states that \"each '.cer'\r\n   file contains exactly one certificate, encoded in DER format\"), but\r\n   merely articulates a widespread, de facto alternative.\r\n",
+    "correct_text": "   This section does not disturb the official application/pkix-cert\r\n   registration [RFC2585] in any way (which states that \"each '.cer'\r\n   file contains exactly one certificate, encoded in DER format\").\r\n   \r\n   PEM encoded certificates should use the application/pkix-cert+pem\r\n   IANA registration. This distinguishes it from plain DER encoded data\r\n   and also denotes it uses an encoding following syntax and semantics\r\n   of the application/pem media type.  ",
+    "notes": "The current statement allows two possible interpretations:\r\n\r\n1. As PEM wraps DER format, a PEM encoded certificate is also DER encoded. Thus application/pkix-cert is the correct media type also for PEM encoded certificates.\r\n\r\n2. \"Exactly one certificate in DER format\" precludes any additional encoding, e.g. PEM. Thus application/pkix-cert is not valid for PEM encoded certificates.\r\n\r\nIn case 2 is the correct interpretation, a distinct media type for PEM encoded data should be registered with IANA. This media type should be used as a structured syntax type for all PEM wrapped key and certificate types. E.g.:\r\n\r\n- application/pem\r\n- application/pkix-cert+pem \r\n- application/x-x509-ca-cert+pem\r\n\r\nThe latter two would be an amendment to RFC 2585 and and RFC 8894 respectively.\r\n\r\nThe \"+pem\" suffix used conforms to RFC 6838 \"structured syntax\".\r\n\r\nOpenPGP ascii armor (RFC 4880) and SSH public key (RFC 4716) are *not* subtypes of PEM.",
+    "submit_date": "2023-11-10",
+    "submitter_name": "Stefan Brüns",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-11-10 13:41:53"
   }
 ]
