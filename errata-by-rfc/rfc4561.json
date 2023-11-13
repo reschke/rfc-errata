@@ -2,7 +2,7 @@
   {
     "errata_id": "7583",
     "doc-id": "RFC4561",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "[RSVP-TE] defines the IPv4 and IPv6 RRO sub-objects.  Moreover, two additional flags are defined in [FAST-REROUTE]: the \"Local Protection Available\" and \"Local Protection in Use\" bits.",
@@ -10,8 +10,8 @@
     "notes": "The \"Local Protection Available\" and \"Local Protection in Use\" are defined in RFC3209 (Sections 4.4.1.1, 4.4.1.2), not RFC4090. The latter defines \"Bandwidth protection\" and \"Node protection\" in Section 4.4.",
     "submit_date": "2023-08-01",
     "submitter_name": "Igor Malyushkin",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "174",
+    "verifier_name": "Andrew Alston",
+    "update_date": "2023-11-12 00:57:28"
   }
 ]
