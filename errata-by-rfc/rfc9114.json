@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7702",
+    "doc-id": "RFC9114",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "10.7",
+    "orig_text": "   Where HTTP/2 employs PADDING frames and Padding fields in other\r\n   frames to make a connection more resistant to traffic analysis,\r\n   HTTP/3 can either rely on transport-layer padding or employ the\r\n   reserved frame and stream types discussed in Sections 7.2.8 and\r\n   6.2.3.  ",
+    "correct_text": "   Where HTTP/2 employs Padding fields in some\r\n   frames to make a connection more resistant to traffic analysis,\r\n   HTTP/3 can either rely on transport-layer padding or employ the\r\n   reserved frame and stream types discussed in Sections 7.2.8 and\r\n   6.2.3.  ",
+    "notes": "HTTP/2 doesn't define PADDING frames",
+    "submit_date": "2023-11-15",
+    "submitter_name": "Lucas Pardue",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-11-14 20:58:41"
   }
 ]
