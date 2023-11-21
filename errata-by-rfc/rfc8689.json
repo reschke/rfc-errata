@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7705",
+    "doc-id": "RFC8689",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.1",
+    "orig_text": "   4.  Establish a TLS-protected SMTP session with its peer SMTP server\r\n       and authenticate the server's certificate as specified in\r\n       [RFC6125] or [RFC7672], as applicable.  The hostname from the MX\r\n       record lookup (or the domain name in the absence of an MX record\r\n       where an A record is used directly) MUST match the DNS-ID or CN-\r\n       ID of the certificate presented by the server.\r\n",
+    "correct_text": "   4.  Establish a TLS-protected SMTP session with its peer SMTP server\r\n       and authenticate the server's certificate as specified in\r\n       [RFC6125] or [RFC7672], as applicable.",
+    "notes": "The second sentence tries to explain/summarize the policies found in the RFCs referenced in the first sentence, about PKIX and DANE. But the explanation seems to accidentally sets new requirements that contradict behaviour specified by DANE: With DANE-EE TLSA records, no specific hostname validation must be done, instead verification is done based on (hash of) SPKI/entire certificate. (DANE-TA hostname verification is also a bit more nuanced). Since the requirements are accurately explained in the RFCs referenced in the first sentence, it seems better to completely remove the second sentence.\r\n\r\nI would also like to point out that implementers may want to take care not to treat the situation where all TLSA records are \"unusable\" (as explained in DANE RFCs) as \"authenticated with DANE\", in line with \"[...] or it MUST be verified successfully using DANE [...]\" on line 197.",
+    "submit_date": "2023-11-20",
+    "submitter_name": "Mechiel Lukkien",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
