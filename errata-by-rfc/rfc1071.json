@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7711",
+    "doc-id": "RFC1071",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "We now present explicit examples of calculating a simple 1's\r\ncomplement sum on a 2's complement machine.  The examples show the\r\nsame sum calculated byte by bye, by 16-bits words in normal and\r\nswapped order, and 32 bits at a time in 3 different orders.  All\r\nnumbers are in hex.",
+    "correct_text": "We now present explicit examples of calculating a simple 1's\r\ncomplement sum on a 2's complement machine.  The examples show the\r\nsame sum calculated byte by byte, by 16-bits words in normal and\r\nswapped order, and 32 bits at a time in 3 different orders.  All\r\nnumbers are in hex.",
+    "notes": "A small typo in line 3 in the second occurrence of the word 'byte'",
+    "submit_date": "2023-11-23",
+    "submitter_name": "Mohammed Amine CHAKIR",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
