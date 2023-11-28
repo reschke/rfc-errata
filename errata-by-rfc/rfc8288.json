@@ -32,17 +32,17 @@
   {
     "errata_id": "5319",
     "doc-id": "RFC8288",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "1.1",
     "orig_text": "   This document uses the Augmented Backus-Naur Form (ABNF) [RFC5234]\r\n   notation of [RFC7230], including the #rule, and explicitly includes\r\n   the following rules from it: quoted-string, token, SP (space), BWS\r\n   (bad whitespace), OWS (optional whitespace), RWS (required\r\n   whitespace), LOALPHA, DIGIT.",
     "correct_text": "   This document uses the Augmented Backus-Naur Form (ABNF) [RFC5234]\r\n   notation of [RFC7230], including the #rule, and explicitly includes\r\n   the following rules from it: quoted-string, token, SP (space), BWS\r\n   (bad whitespace), OWS (optional whitespace), RWS (required\r\n   whitespace), DIGIT. It also uses the following additional rule:\r\n\r\n   LOALPHA = %x61-7A\r\n\r\n   ",
     "notes": "I can't find a definition of LOALPHA in RFC5234 or RFC7230. I see a definition in RFC2616, which seems to have been dropped in the update.",
     "submit_date": "2018-04-04",
     "submitter_name": "Jeffrey Yasskin",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-11-27 00:07:07"
   },
   {
     "errata_id": "5878",
