@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7719",
+    "doc-id": "RFC7516",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "The key identification methods for this specification are the same as\r\nthose defined in Section 6 of [JWS], except that the key being\r\nidentified is the public key to which the JWE was encrypted.",
+    "correct_text": "??? <I don't know the proper correction.>",
+    "notes": "Section 6 of [JWS] says \"these parameters need not be integrity protected, since changing them in a way that causes a different key to be used will cause the validation to fail.\"\r\n\r\nI don't know if this is true for signature schemes (that is, RFC 7515 might have the same erratum), but this is only true for encryption schemes if the algorithm is key-committing. See https://www.ietf.org/archive/id/draft-irtf-cfrg-aead-properties-02.html#name-key-commitment.",
+    "submit_date": "2023-12-01",
+    "submitter_name": "Jeffrey Yasskin",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
