@@ -43,5 +43,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-07-03 17:54:53"
+  },
+  {
+    "errata_id": "7720",
+    "doc-id": "RFC7519",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.6",
+    "orig_text": "4.1.6.  \"iat\" (Issued At) Claim\r\n\r\nThe \"iat\" (issued at) claim identifies the time at which the JWT was\r\nissued.  This claim can be used to determine the age of the JWT.  Its\r\nvalue MUST be a number containing a NumericDate value.  Use of this\r\nclaim is OPTIONAL.",
+    "correct_text": "4.1.6.  \"iat\" (Issued At) Claim\r\n\r\nThe \"iat\" (issued at) claim identifies the time at which the JWT was\r\nissued.  This claim can be used to determine the age of the JWT.  Its\r\nvalue MUST be a number containing a NumericDate value.  Use of this\r\nclaim is OPTIONAL. Implementors MUST NOT reject otherwise-valid JWTs\r\nwith \"iat\" claims that appear to be from the future; token issuers\r\ndesiring this behavior may require it by including an \"nbf\" claim.",
+    "notes": "There is substantial confusion and disagreement among JWT library implementors about whether to reject JWTs with `iat` claims that appear to be from the future due to clock drift. This confusion has led to over half a dozen Github issues & PRs over the years in libraries in many different ecosystems, and lots of strong disagreement among library developers and users.\r\n\r\nBased on a sample of the top Google search results for jwt client libraries in 11 different language ecosystems, the majority (7) of the libraries sampled do not reject future `iat` claims, while the remaining 4 *do* reject future `iat` claims by default. Of those 4 who do, *all* of them have had Github issues filed (by different unique users) in which the user was having a JWT unexpectedly rejected by a token validator using the library whose clock had drifted from that of the token issuer enough to trigger `iat`-based rejection.\r\n\r\nI propose we update the spec to explicitly prohibit rejection of future-`iat` JWTs (especially since token issuers have always been able to opt into this behavior using an `nbf` claim). Since this RFC has been published and cannot be edited, a new superseding RFC will have to be published and this one deprecated in order for the suggested change to make it out of the errata and into an actual RFC doc.\r\n\r\nI'm not sure if this merits a full RFC republish -- but as a data point for impact consideration, it's worth noting that this confusion has almost certainly wasted at least multiple hours per person (on average) of *dozens* of developers' time over the years, and led to at least half a dozen production bugs that I've seen mentioned. One of these bugs cropped up in my own organization on 2023-11-31 and has been observed previously but was misunderstood and not resolved; the 2023-11-31 occurence involved 10+ people in discussion. One Github issue I saw described an elongated full web server outage attributed to this confusion which cropped up during a leap-second-related clock drift issue. I'm filing this errata request on calendar day 3+ of discussing this issue in my organization (if you include past times this issue has cropped up).\r\n\r\nThanks for your consideration! I look forward to hearing back.",
+    "submit_date": "2023-12-01",
+    "submitter_name": "Timothy Vergenz",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
