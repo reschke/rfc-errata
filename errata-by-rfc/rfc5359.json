@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7718",
+    "doc-id": "RFC5359",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "             |           No RTP Sent!        |",
+    "correct_text": "             |           One way RTP         |\r\n             |<==============================|",
+    "notes": "If we follow the explanation next to the diagram, the RTP flow should be 'unidirectionnal' after the hold because F10 is using a=sendonly and F12 a=recvonly.\r\n\r\n[AD Note, forwarded from Robert Sparks:]\r\nThe existing text explains and it is intentional that the diagram claims that no media is sent.\n --VERIFIER NOTES-- \n   ",
+    "submit_date": "2023-12-01",
+    "submitter_name": "Fabien R.",
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2023-12-01 10:53:30"
+  }
+]
