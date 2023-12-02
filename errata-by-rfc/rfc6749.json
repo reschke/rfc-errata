@@ -397,11 +397,11 @@
     "section": "4.2.2",
     "orig_text": "   For example, the authorization server redirects the user-agent by\r\n   sending the following HTTP response (with extra line breaks for\r\n   display purposes only):\r\n\r\n     HTTP/1.1 302 Found\r\n     Location: http://example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA\r\n               &state=xyz&token_type=example&expires_in=3600\r\n",
     "correct_text": "   For example, the authorization server redirects the user-agent by\r\n   sending the following HTTP response (with extra line breaks for\r\n   display purposes only):\r\n\r\n     HTTP/1.1 302 Found\r\n     Location: http://client.example.com/cb?access_token=2YotnFZFEjr1zCsicMWpAA\r\n               &state=xyz&token_type=example&expires_in=3600\r\n",
-    "notes": "- Host example.com should be client.example.com to be consistent with other examples.\r\n- A hash is used for the query parameters when a question mark should have been used.",
+    "notes": "- Host example.com should be client.example.com to be consistent with other examples.\r\n- A hash is used for the query parameters when a question mark should have been used.\r\n\r\nRFC Editor Note: The first point above is a duplicate of EID 4819, which is currently still in Reported state (see https://www.rfc-editor.org/errata/eid4819). ",
     "submit_date": "2023-11-29",
     "submitter_name": "Alex Wilson",
     "verifier_id": "2",
     "verifier_name": null,
-    "update_date": "2023-11-29 11:13:09"
+    "update_date": "2023-12-01 11:49:41"
   }
 ]
