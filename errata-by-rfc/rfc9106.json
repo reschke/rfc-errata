@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7721",
+    "doc-id": "RFC9106",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2",
+    "orig_text": "   6.  If the number of passes t is larger than 1, we repeat step 5.  We\r\n       compute B[i][0] and B[i][j] for all i raging from (and including)\r\n       0 to (not including) p and for all j ranging from (and including)\r\n       1 to (not including) q.  However, blocks are computed differently\r\n       as the old value is XORed with the new one:\r\n\r\n       B[i][0] = G(B[i][q-1], B[l][z]) XOR B[i][0];\r\n       B[i][j] = G(B[i][j-1], B[l][z]) XOR B[i][j].\r\n",
+    "correct_text": "   6.  If the number of passes t is larger than 1, we repeat step 5.  We\r\n       compute B[i][0] and B[i][j] for all i ranging from (and\r\n       including) 0 to (not including) p and for all j ranging from (and\r\n       including) 1 to (not including) q.  However, blocks are computed\r\n       differently as the old value is XORed with the new one:\r\n\r\n       B[i][0] = G(B[i][q-1], B[l][z]) XOR B[i][0];\r\n       B[i][j] = G(B[i][j-1], B[l][z]) XOR B[i][j].\r\n",
+    "notes": "Firstly: nice, clear RFC. Well done.\r\n\r\nI know it's really minor, and we all like to have \"fun with flags\", but...\"ranging\" rather than \"raging\" :-)",
+    "submit_date": "2023-12-07",
+    "submitter_name": "David Finnie",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2023-12-07 10:46:36"
+  }
+]
