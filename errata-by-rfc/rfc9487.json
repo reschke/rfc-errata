@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7728",
+    "doc-id": "RFC9487",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.10",
+    "orig_text": "5.1.10.  srhSegmentIPv6LocatorLength\r\n\r\n   ElementID:  501\r\n   Name:  srhSegmentIPv6LocatorLength\r\n   Data Type Semantics:  default\r\n   Description:  The length of the SRH segment IPv6 locator specified as\r\n      the number of significant bits.  Together with srhSegmentIPv6, it\r\n      enables the calculation of the SRv6 Locator.\r\n   Additional Information:  See Section 3.1 of [RFC8986] for more\r\n      details about the SID format.\r\n   Reference:  RFC 9487",
+    "correct_text": "5.1.10.  srhSegmentIPv6LocatorLength\r\n\r\n   ElementID:  501\r\n   Name:  srhSegmentIPv6LocatorLength\r\n   Abstract Data Type:  unsigned8\r\n   Data Type Semantics:  default\r\n   Description:  The length of the SRH segment IPv6 locator specified as\r\n      the number of significant bits.  Together with srhSegmentIPv6, it\r\n      enables the calculation of the SRv6 Locator.\r\n   Additional Information:  See Section 3.1 of [RFC8986] for more\r\n      details about the SID format.\r\n   Reference:  RFC 9487",
+    "notes": "I'm not an expert on RFC8986, I assumed it's unsigned8 but need help to check this is the case indeed",
+    "submit_date": "2023-12-12",
+    "submitter_name": "Ahmed Elhassany",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-12-12 09:08:24"
+  }
+]
