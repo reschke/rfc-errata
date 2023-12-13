@@ -77,16 +77,16 @@
   {
     "errata_id": "7703",
     "doc-id": "RFC7854",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2",
     "orig_text": "      *  The L flag, if set to 1, indicates that the message reflects\r\n         the post-policy Adj-RIB-In (i.e., its path attributes reflect\r\n         the application of inbound policy).  It is set to 0 if the\r\n         message reflects the pre-policy Adj-RIB-In.  Locally sourced\r\n         routes also carry an L flag of 1.  See Section 5 for further\r\n         detail.  This flag has no significance when used with route\r\n         mirroring messages (Section 4.7).",
     "correct_text": "      *  The L flag, if set to 1, indicates that the message reflects\r\n         the post-policy Adj-RIB-In (i.e., its path attributes reflect\r\n         the application of inbound policy).  It is set to 0 if the\r\n         message reflects the pre-policy Adj-RIB-In.  Locally sourced\r\n         routes also carry an L flag of 1.  See Section 5 for further\r\n         detail.  This flag has significance only when used with Route\r\n         Monitoring messages.",
-    "notes": "The L flag is used to indicate whether the route monitoring update reflects Adj-RIB-In pre-policy or post-policy (RFC 7854), or Adj-RIB-Out pre-policy or post-policy (RFC 8671). It does not apply to any message other than the Route Monitoring message.",
+    "notes": "The L flag is used to indicate whether the route monitoring update reflects Adj-RIB-In pre-policy or post-policy (RFC 7854), or Adj-RIB-Out pre-policy or post-policy (RFC 8671). It does not apply to any message other than the Route Monitoring message.\r\n",
     "submit_date": "2023-11-16",
     "submitter_name": "Dhananjay S. Patki",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2023-12-11 08:50:18"
   }
 ]
