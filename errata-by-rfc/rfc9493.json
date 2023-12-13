@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7727",
+    "doc-id": "RFC9493",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "Security Event Identifier Formats",
+    "correct_text": "Subject Identifier Formats",
+    "notes": "The identifiers described in the RFC are relating to subject fields in Security Event Tokens, and not to the Security Event Tokens as a whole. This is clearly stated in the first sentence of Section 1 (Introduction) and the first sentence of the second paragraph of Section 1 (Introduction).\r\n\r\nTherefore, the registry defined in Section 8.1 should be named \"Subject Identifier Formats\", and not \"Security Event Identifier Formats\".",
+    "submit_date": "2023-12-11",
+    "submitter_name": "Atul Tulshibagwale",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2023-12-12 08:56:34"
+  }
+]
