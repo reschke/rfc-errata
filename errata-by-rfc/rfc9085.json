@@ -13,5 +13,20 @@
     "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-09-03 13:17:11"
+  },
+  {
+    "errata_id": "7734",
+    "doc-id": "RFC9085",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.3.5",
+    "orig_text": "11 or 12 octets depending on the label or index encoding of the SID.",
+    "correct_text": "15 or 16 octets depending on the label or index encoding of the SID.",
+    "notes": "Length of the TLV does not account for the Prefix-SID Sub-TLVs type and length fields: 2 octets each = 4 octets in total.\r\nThis is valid for all variants: IS-IS, OSPFv2 and OSPFv3.",
+    "submit_date": "2023-12-18",
+    "submitter_name": "Alexandru Bran",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
