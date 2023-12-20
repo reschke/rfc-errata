@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7737",
+    "doc-id": "RFC9514",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1",
+    "orig_text": "   The IPv6 Prefix matching the locator may also be advertised as prefix\r\n   reachability by the underlying routing protocol.  In this case, the\r\n   Prefix NLRI would also be associated with the Prefix Metric TLV\r\n   [RFC7752] that carries the routing metric for this prefix.  A Prefix\r\n   NLRI that has been advertised with a SRv6 Locator TLV is also\r\n   considered a normal routing prefix (i.e., prefix reachability) only\r\n   when there is also an IGP Metric TLV (TLV 1095) associated it.\r\n   Otherwise, it is only considered an SRv6 Locator advertisement.",
+    "correct_text": "   The IPv6 Prefix matching the locator may also be advertised as prefix\r\n   reachability by the underlying routing protocol.  In this case, the\r\n   Prefix NLRI would also be associated with the Prefix Metric TLV\r\n   [RFC7752] that carries the routing metric for this prefix.  A Prefix\r\n   NLRI that has been advertised with a SRv6 Locator TLV is also\r\n   considered a normal routing prefix (i.e., prefix reachability) only\r\n   when there is also a Prefix Metric TLV (TLV 1155) associated it.\r\n   Otherwise, it is only considered an SRv6 Locator advertisement.",
+    "notes": "The current text is referring to the wrong BGP-LS TLV. Since the SRv6 Locator TLV is associated with a Prefix NLRI, the \"Prefix Metric TLV (TLV 1155)\" should be referenced here since the \"IGP metric TLV (TLV 1095)\" is associated with a Link NLRI.",
+    "submit_date": "2023-12-20",
+    "submitter_name": "Ketan Talaulikar",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
