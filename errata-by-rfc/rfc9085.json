@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7736",
+    "doc-id": "RFC9085",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.3.5",
+    "orig_text": "   A Prefix NLRI, that has been advertised with a Range TLV, is\r\n   considered a normal routing prefix (i.e., prefix reachability) only\r\n   when there is also an IGP metric TLV (TLV 1095) associated it.\r\n   Otherwise, it is considered only as the first prefix in the range for\r\n   prefix-to-SID mapping advertisement.",
+    "correct_text": "   A Prefix NLRI, that has been advertised with a Range TLV, is\r\n   considered a normal routing prefix (i.e., prefix reachability) only\r\n   when there is also an Prefix Metric TLV (TLV 1155) associated it.\r\n   Otherwise, it is considered only as the first prefix in the range for\r\n   prefix-to-SID mapping advertisement.",
+    "notes": "The current text is referring to the wrong BGP-LS TLV. Since the Range TLV is associated with a Prefix NLRI, the \"Prefix Metric TLV (TLV 1155)\" should be referenced here since the \"IGP metric TLV (TLV 1095)\" is associated with a Link NLRI.",
+    "submit_date": "2023-12-20",
+    "submitter_name": "Ketan Talaulikar",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
