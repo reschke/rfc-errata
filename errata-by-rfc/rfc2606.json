@@ -13,5 +13,20 @@
     "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2023-08-03 05:41:05"
+  },
+  {
+    "errata_id": "7741",
+    "doc-id": "RFC2606",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "Reserved Top Level DNS Names\r\ninvalid DNS names",
+    "correct_text": "Reserved Top Level domain Names\r\ninvalid domain names",
+    "notes": "There is no such concept as a DNS name, nor is it found in any RFC. The correct concept is a domain name.",
+    "submit_date": "2023-12-25",
+    "submitter_name": "Tromler",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
