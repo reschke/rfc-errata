@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7743",
+    "doc-id": "RFC9116",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "   CRLF             =  CR LF\r\n                         ; Internet standard newline",
+    "correct_text": "   CRLF             =  [CR] LF\r\n                         ; Both CRLF and LF line separators can be used\r\n                         ; (see Section 2.2) as long as the entire file\r\n                         ; uses the chosen line separator.",
+    "notes": "RFC 9116 section 2.2 accepts both CRLF and LF line separators. There is a contradiction in the ABNF Grammar as it suggests only CRLF would be allowed elsewhere whereas LF is an option in \"cleartext\" & \"eol\". For consistency, the CRLF should either be mandatory or optional on the entire file, and only CRLF or LF should be used in a single file instead of mixing them.\r\n\r\nThe referenced RFC 2046 (section 4.1.1) and 5198 (section 2) have chosen the CRLF sequence as a MUST. On the other hand, the context is OpenPGP Message Format that canonicalizes the signed text documents by converting LF to CRLF before signing (RFC 4880, 5.4.2), and the receiving software should convert them to native line endings (RFC 4880, 5.9).\r\n\r\nThis report respects the intent of section 2.2 to treat line separators more liberally and recognizes that it is not an issue in the context of RFC 4880. The goal is to describe this in the ABNF Grammar with the smallest possible change, resulting in \"CRLF\" being locally redefined as \"[CR] LF\".",
+    "submit_date": "2023-12-30",
+    "submitter_name": "Esa Jokinen",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
