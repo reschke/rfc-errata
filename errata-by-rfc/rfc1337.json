@@ -28,5 +28,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-10-06 14:21:48"
+  },
+  {
+    "errata_id": "7745",
+    "doc-id": "RFC1337",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "   (F3) Use 64-bit Sequence Numbers\r\n\r\n        O'Malley and Peterson [RFC-1264] have suggested expansion of the\r\n        TCP sequence space to 64 bits as an alternative to PAWS for\r\n        avoiding the hazard of wrapped sequence numbers within the same\r\n        incarnation.",
+    "correct_text": "   (F3) Use 64-bit Sequence Numbers\r\n\r\n        O'Malley and Peterson [RFC-1263] have suggested expansion of the\r\n        TCP sequence space to 64 bits as an alternative to PAWS for\r\n        avoiding the hazard of wrapped sequence numbers within the same\r\n        incarnation.",
+    "notes": "S. O'Malley and L. Peterson actually authored [RFC-1263] not [RFC-1264].",
+    "submit_date": "2024-01-01",
+    "submitter_name": "Garri Djavadyan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
