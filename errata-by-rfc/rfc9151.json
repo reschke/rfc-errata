@@ -2,7 +2,7 @@
   {
     "errata_id": "7724",
     "doc-id": "RFC9151",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.2",
     "orig_text": "      If RSASSA-PSS is supported (using rsa_pss_rsae_sha384 for\r\n      example), then the implementation MUST assert rsaEncryption as the\r\n      public key algorithm, the hash algorithm (used for both mask\r\n      generation and signature generation) MUST be SHA-384, the mask\r\n      generation function 1 (MGF1) from [RFC8017] MUST be used, and the\r\n      salt length MUST be 48 octets.",
@@ -10,8 +10,8 @@
     "notes": "RFC9151 explicitly allows both rsa_pss_pss_sha384 and rsa_pss_rsae_sha384 RSASSA-PSS signatures (Sections 6.2, 6.3, 6.4, 7.1, 7.2). This conflicts with the requirement that “the implementation MUST assert rsaEncryption as the public key algorithm” because rsa_pss_pss_sha384 uses RSASSA-PSS as the public key algorithm.\r\n\r\nThe proposed corrected text updates the requirement to include the correct public key algorithm for rsa_pss_pss_sha384 signatures. The wording closely follows the language used in Section 4.2.3 of RFC 8446.",
     "submit_date": "2023-12-08",
     "submitter_name": "James Mayclin",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-01-04 03:38:34"
   }
 ]
