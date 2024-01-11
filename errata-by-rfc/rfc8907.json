@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7754",
+    "doc-id": "RFC8907",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.1",
+    "orig_text": "The rem_addr_len indicates the length of the port field, in bytes.",
+    "correct_text": "The rem_addr_len indicates the length of the rem_addr field, in bytes.",
+    "notes": "Substitute \"port field\" with \"rem_addr field\"",
+    "submit_date": "2024-01-10",
+    "submitter_name": "Joao Fracarolli",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-01-10 09:30:36"
+  }
+]
