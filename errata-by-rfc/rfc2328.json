@@ -373,5 +373,20 @@
     "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2022-09-01 14:36:54"
+  },
+  {
+    "errata_id": "7756",
+    "doc-id": "RFC2328",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "A.4.5",
+    "orig_text": "AS-external-LSAs are the Type 5 LSAs. These LSAs are originated by AS boundary routers, and describe destinations external to the AS. For details concerning the construction of AS-external-LSAs, see Section 12.4.3",
+    "correct_text": "AS-external-LSAs are the Type 5 LSAs. These LSAs are originated by AS boundary routers, and describe destinations external to the AS. For details concerning the construction of AS-external-LSAs, see Section 12.4.4",
+    "notes": "Incorrect references. Construction of AS-external-LSAs explained in Section 12.4.4. Not in 12.4.3",
+    "submit_date": "2024-01-11",
+    "submitter_name": "Lokesh Venkata Kumar Chakka",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
