@@ -2,16 +2,16 @@
   {
     "errata_id": "7637",
     "doc-id": "RFC9450",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "1",
     "orig_text": "IEEE 802.11 has identified a set of real applications\r\n[IEEE80211RTA], which may use the IEEE802.11 standards.  They\r\ntypically emphasize strict end-to-end delay requirements.",
     "correct_text": "IEEE 802.11 has identified a set of real-time applications\r\n[IEEE80211RTA], which may use the IEEE 802.11 standards.  They\r\ntypically emphasize strict end-to-end delay requirements.",
-    "notes": "Given both the context and the title of the referenced document, \"real-time\" makes more sense here than \"real\".",
+    "notes": "Given both the context and the title of the referenced document, \"real-time\" makes more sense here than \"real\".\n --VERIFIER NOTES-- \n   Authors note that \"real\" is intended, to mean \"not just hypothetical.\" See https://mailarchive.ietf.org/arch/msg/raw/BRwbIzNaNVWgGo-fptJ2ZKAeOBc/",
     "submit_date": "2023-09-10",
     "submitter_name": "Peter Yee",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-11-13 19:13:32"
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-11 10:13:02"
   }
 ]
