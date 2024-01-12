@@ -2,7 +2,7 @@
   {
     "errata_id": "4920",
     "doc-id": "RFC0864",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "TCP Based",
     "orig_text": "   It is fairly likely that users of this service will abruptly decide\r\n   that they have had enough and abort the TCP connection, instead of\r\n   carefully closing it.  The service should be prepared for either the\r\n   carfull close or the rude abort.",
@@ -10,9 +10,9 @@
     "notes": "Spelling of \"carfull\" for \"careful\".",
     "submit_date": "2017-01-29",
     "submitter_name": "Jim Young",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-11 17:24:46"
   },
   {
     "errata_id": "5333",
