@@ -349,15 +349,15 @@
     "doc-id": "RFC2328",
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": ".4",
+    "section": "3.4",
     "orig_text": "        The area border routers RT3, RT4, RT7, RT10 and RT11 condense\r\n        the routing information of their attached non-backbone areas for\r\n        distribution via the backbone; these are the dashed stubs that\r\n        appear in Figure 8.  Remember that the third area has been\r\n        configured to condense Networks N9-N11 and Host H1 into a single\r\n        route.  This yields a single dashed line for networks N9-N11 and\r\n        Host H1 in Figure 8.  Routers RT5 and RT7 are AS boundary\r\n        routers; their externally derived information also appears on\r\n        the graph in Figure 8 as stubs.\r\n\r\n",
     "correct_text": "        The area border routers RT3, RT4, RT7, RT10 and RT11 condense\r\n        the routing information of their attached non-backbone areas for\r\n        distribution via the backbone; these are the dashed stubs that\r\n        appear in Figure 6.  Remember that the third area has been\r\n        configured to condense Networks N9-N11 and Host H1 into a single\r\n        route.  This yields a single dashed line for networks N9-N11 and\r\n        Host H1 in Figure 8.  Routers RT5 and RT7 are AS boundary\r\n        routers; their externally derived information also appears on\r\n        the graph in Figure 8 as stubs.\r\n\r\n",
     "notes": "Incorrect figure number (8 instead 6).",
     "submit_date": "2021-09-07",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": "171",
+    "verifier_id": "2",
     "verifier_name": "John Scudder",
-    "update_date": "2022-05-09 14:02:32"
+    "update_date": "2024-01-11 09:51:58"
   },
   {
     "errata_id": "7112",
@@ -377,16 +377,31 @@
   {
     "errata_id": "7756",
     "doc-id": "RFC2328",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "A.4.5",
-    "orig_text": "AS-external-LSAs are the Type 5 LSAs. These LSAs are originated by AS boundary routers, and describe destinations external to the AS. For details concerning the construction of AS-external-LSAs, see Section 12.4.3",
-    "correct_text": "AS-external-LSAs are the Type 5 LSAs. These LSAs are originated by AS boundary routers, and describe destinations external to the AS. For details concerning the construction of AS-external-LSAs, see Section 12.4.4",
-    "notes": "Incorrect references. Construction of AS-external-LSAs explained in Section 12.4.4. Not in 12.4.3",
+    "orig_text": "    AS-external-LSAs are the Type 5 LSAs.  These LSAs are originated by\r\n    AS boundary routers, and describe destinations external to the AS.\r\n    For details concerning the construction of AS-external-LSAs, see\r\n    Section 12.4.3.",
+    "correct_text": "    AS-external-LSAs are the Type 5 LSAs.  These LSAs are originated by\r\n    AS boundary routers, and describe destinations external to the AS.\r\n    For details concerning the construction of AS-external-LSAs, see\r\n    Section 12.4.4.",
+    "notes": "Incorrect references. Construction of AS-external-LSAs explained in Section 12.4.4. Not in 12.4.\r\n\r\n(See also https://mailarchive.ietf.org/arch/msg/lsr/OiOvEPM2W-Mwd_QgbmJASg8bDOI/)",
     "submit_date": "2024-01-11",
     "submitter_name": "Lokesh Venkata Kumar Chakka",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-11 10:05:01"
+  },
+  {
+    "errata_id": "7757",
+    "doc-id": "RFC2328",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "A.4.5",
+    "orig_text": "Forwarding address\r\nData traffic for the advertised destination will be forwarded to this address. If the Forwarding address is set to 0.0.0.0, data traffic will be forwarded instead to the LSA's originator (i.e., the responsible AS boundary router).",
+    "correct_text": "Forwarding address\r\nData traffic for the advertised destination will be forwarded to this address. If the Forwarding address is set to a Router ID address value other than 0.0.0.0, data traffic will be forwarded to that Router instead to the LSA's originator (i.e., the responsible AS boundary router).",
+    "notes": "Data traffic destined to the network indicated by Link State ID will be routed to that Router ID mentioned in forwarding address. If forwarding address is set to 0.0.0.0, it will be forwarded to LSA Originator itself.\n --VERIFIER NOTES-- \n   See https://mailarchive.ietf.org/arch/msg/lsr/_Xa4tym_roMmxFioFbrF3WRkKcM/",
+    "submit_date": "2024-01-11",
+    "submitter_name": "Lokesh Venkata Kumar Chakka",
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-11 09:00:19"
   }
 ]
