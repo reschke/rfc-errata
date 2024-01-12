@@ -2,16 +2,16 @@
   {
     "errata_id": "7630",
     "doc-id": "RFC0826",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "The Problem:",
     "orig_text": "The world is a jungle in general, and the networking game\r\ncontributes many animals.  ",
     "correct_text": "The world is a jungle in general, and in the networking game\r\ncontribute many animals.  ",
-    "notes": "The original text makes no sense.",
+    "notes": "The original text makes no sense.\n --VERIFIER NOTES-- \nWhile the original text is somewhat idiomatic, it makes perfect sense. The proposed rewrite, on the other hand, doesn't.",
     "submit_date": "2023-09-05",
     "submitter_name": "enea eugen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-11 17:23:15"
   }
 ]
