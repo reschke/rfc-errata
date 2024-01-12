@@ -2,17 +2,17 @@
   {
     "errata_id": "5648",
     "doc-id": "RFC7519",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "1",
     "orig_text": "JSON Web Token (JWT) is a compact claims representation format\r\n   intended for space constrained environments such as HTTP\r\n   Authorization headers and URI query parameters.  JWTs encode claims\r\n   to be transmitted as a JSON [RFC7159] object that is used as the\r\n   payload of a JSON Web Signature (JWS) [JWS] structure or as the\r\n   plaintext of a JSON Web Encryption (JWE) [JWE] structure, enabling\r\n   the claims to be digitally signed or integrity protected with a\r\n   Message Authentication Code (MAC) and/or encrypted.  JWTs are always\r\n   represented using the JWS Compact Serialization or the JWE Compact\r\n   Serialization.\r\n\r\n   The suggested pronunciation of JWT is the same as the English word\r\n   \"jot\".\r\n\r\n",
     "correct_text": "JSON Web Token (JWT) is a compact claims representation format\r\n   intended for space constrained environments such as HTTP\r\n   Authorization headers and URI query parameters.  JWTs encode claims\r\n   to be transmitted as a JSON [RFC7159] object that is used as the\r\n   payload of a JSON Web Signature (JWS) [JWS] structure or as the\r\n   plaintext of a JSON Web Encryption (JWE) [JWE] structure, enabling\r\n   the claims to be digitally signed or integrity protected with a\r\n   Message Authentication Code (MAC) and/or encrypted.  JWTs are always\r\n   represented using the JWS Compact Serialization or the JWE Compact\r\n   Serialization.\r\n",
-    "notes": "The suggested pronunciation is strange and confusing. It makes it hard to onboard new people verbally and always requires an explanation of the pronunciation. The standard already has a perfectly reasonable initialism of JWT that clearly refers to JSON Web Tokens. It is jarring to suggest a pronunciation that does not map to the letters of the spec, and in my experience often leads to confusion when used.",
+    "notes": "The suggested pronunciation is strange and confusing. It makes it hard to onboard new people verbally and always requires an explanation of the pronunciation. The standard already has a perfectly reasonable initialism of JWT that clearly refers to JSON Web Tokens. It is jarring to suggest a pronunciation that does not map to the letters of the spec, and in my experience often leads to confusion when used.\n --VERIFIER NOTES-- \nThis guidance was produced with the consensus of the WG.  Per https://www.ietf.org/about/groups/iesg/statements/processing-errata-ietf-stream/, \"Errata are items that were errors at the time the document was published\"",
     "submit_date": "2019-03-08",
     "submitter_name": "Andy Delcambre",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2024-01-11 18:53:29"
   },
   {
     "errata_id": "5906",
