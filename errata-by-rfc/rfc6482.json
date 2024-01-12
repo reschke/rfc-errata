@@ -62,16 +62,16 @@
   {
     "errata_id": "7525",
     "doc-id": "RFC6482",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.3",
     "orig_text": "Within the ROAIPAddressFamily structure, addressFamily contains the Address Family Identifier (AFI) of an IP address family.  This specification only supports IPv4 and IPv6.  Therefore, addressFamily MUST be either 0001 or 0002.\r\n\r\nWithin a ROAIPAddress structure, the addresses field represents prefixes as a sequence of type IPAddress.  (See [RFC3779] for more details).  If present, the maxLength MUST be an integer ...\r\n",
     "correct_text": "Within the ROAIPAddressFamily structure, addressFamily contains the Address Family Identifier (AFI) of an IP address family.  This specification only supports IPv4 and IPv6.  Therefore, addressFamily MUST be either 0001 or 0002. The addresses field represents prefixes as a sequence of type ROAIPAddress.  \r\n\r\nWithin the ROAIPAddress structure, the address field represents an IPv4 or IPv6 prefix of type IPaddress (See [RFC3779] for more details).  If present, the maxLength MUST be an integer ...",
-    "notes": "Original text contradicts does not align with normative ASN.1 schema.",
+    "notes": "Original text contradicts does not align with normative ASN.1 schema.\n --VERIFIER NOTES-- \nSee discussion on the sidrops list at https://mailarchive.ietf.org/arch/msg/sidrops/cFCZREOerU-jGWWG5zh5PdXTLKE/\r\n\r\nThis erratum is filed against RFC 6482. Although RFC 6482 has not yet been marked \"obsolete\", this is only a formality -- draft-ietf-sidrops-rfc6482bis-09 has been approved for publication and is currently in the RFC Editor queue. When editing is complete and rfc6482bis is published as an RFC, 6482 will indeed be obsolete. In that spirit, I'm applying guideline 7 from https://www.ietf.org/about/groups/iesg/statements/processing-errata-ietf-stream/ and rejecting this erratum. Note that in the thread referenced above, Job says the erratum is fixed in the bis. If it's not, a new erratum should be raised against the bis.",
     "submit_date": "2023-05-26",
     "submitter_name": "Sacha Boudjema",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-11 14:39:51"
   }
 ]
