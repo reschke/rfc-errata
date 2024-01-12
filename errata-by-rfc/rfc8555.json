@@ -2,7 +2,7 @@
   {
     "errata_id": "5729",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.5.1",
     "orig_text": "The client indicates to the server that it is ready for the challenge\r\nvalidation by sending an empty JSON body (\"{}\") carried in a POST\r\nrequest to the challenge URL (not the authorization URL).",
@@ -10,9 +10,9 @@
     "notes": "It's clear from other text in section 7.5.1 that the \"empty JSON body\" is interpreted by the ACME server as a \"response object\".  (The first function of this erratum is to clarify this point).\r\n\r\nSection 8 says that \"The definition of a challenge type includes...Contents of response objects\", and section 7.5.1 notes that \"the challenges in this document do not define any response fields, but future specifications might define them\".  (The second function of this erratum is to permit clients to send response objects that contain response fields).",
     "submit_date": "2019-05-22",
     "submitter_name": "Rob Stradling",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw.com",
+    "update_date": "2024-01-11 06:07:36"
   },
   {
     "errata_id": "5732",
@@ -32,7 +32,7 @@
   {
     "errata_id": "5733",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "8.3",
     "orig_text": "POST /acme/chall/prV_B7yEyA4",
@@ -40,14 +40,14 @@
     "notes": null,
     "submit_date": "2019-05-23",
     "submitter_name": "Rob Stradling",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw.com",
+    "update_date": "2024-01-11 06:11:53"
   },
   {
     "errata_id": "5734",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "8.4",
     "orig_text": "POST /acme/chall/Rg5dV14Gh1Q",
@@ -55,14 +55,14 @@
     "notes": null,
     "submit_date": "2019-05-23",
     "submitter_name": "Rob Stradling",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw.com",
+    "update_date": "2024-01-11 06:13:29"
   },
   {
     "errata_id": "5735",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "8.3",
     "orig_text": "GET /.well-known/acme-challenge/LoqXcYV8...jxAjEuX0",
@@ -70,9 +70,9 @@
     "notes": null,
     "submit_date": "2019-05-23",
     "submitter_name": "Rob Stradling",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw.com",
+    "update_date": "2024-01-11 06:14:39"
   },
   {
     "errata_id": "5771",
@@ -167,32 +167,32 @@
   {
     "errata_id": "6103",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "7.1.",
     "orig_text": "   o  A \"newAccount\" resource (Section 7.3)\r\n\r\n   o  A \"newOrder\" resource (Section 7.4)",
     "correct_text": "   o  A \"newAccount\" resource (Section 7.3)\r\n\r\n   o  A \"newAuthz\" resource (Section 7.4)\r\n\r\n   o  A \"newOrder\" resource (Section 7.4)",
     "notes": "The item for the \"newAuthz\" resource is missing in the list of resources.",
     "submit_date": "2020-04-14",
     "submitter_name": "Theodor Nolte",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw.com",
+    "update_date": "2024-01-11 07:44:03"
   },
   {
     "errata_id": "6104",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "6.7.1",
     "orig_text": "   in the problem document.\r\n\r\nHTTP/1.1 403 Forbidden\r\nContent-Type: application/problem+json\r\nLink: <https://example.com/acme/directory>;rel=\"index\"\r\n\r\n{\r\n    \"type\": \"urn:ietf:params:acme:error:malformed\",\r\n    \"detail\": \"Some of the identifiers requested were rejected\",\r\n    \"subproblems\": [\r\n        {\r\n            \"type\": \"urn:ietf:params:acme:error:malformed\",\r\n            \"detail\": \"Invalid underscore in DNS name \\\"_example.org\\\"\",\r\n            \"identifier\": {\r\n                \"type\": \"dns\",\r\n                \"value\": \"_example.org\"\r\n            }\r\n        },\r\n        {\r\n            \"type\": \"urn:ietf:params:acme:error:rejectedIdentifier\",\r\n            \"detail\": \"This CA will not issue for \\\"example.net\\\"\",\r\n            \"identifier\": {\r\n                \"type\": \"dns\",\r\n                \"value\": \"example.net\"\r\n            }\r\n        }\r\n    ]\r\n}",
     "correct_text": "   in the problem document.\r\n\r\n   HTTP/1.1 403 Forbidden\r\n   Content-Type: application/problem+json\r\n   Link: <https://example.com/acme/directory>;rel=\"index\"\r\n\r\n   {\r\n       \"type\": \"urn:ietf:params:acme:error:malformed\",\r\n       \"detail\": \"Some of the identifiers requested were rejected\",\r\n       \"subproblems\": [\r\n           {\r\n               \"type\": \"urn:ietf:params:acme:error:malformed\",\r\n               \"detail\": \"Invalid underscore in DNS name \\\"_example.org\\\"\",\r\n               \"identifier\": {\r\n                   \"type\": \"dns\",\r\n                   \"value\": \"_example.org\"\r\n               }\r\n           },\r\n           {\r\n               \"type\": \"urn:ietf:params:acme:error:rejectedIdentifier\",\r\n               \"detail\": \"This CA will not issue for \\\"example.net\\\"\",\r\n               \"identifier\": {\r\n                   \"type\": \"dns\",\r\n                   \"value\": \"example.net\"\r\n               }\r\n           }\r\n       ]\r\n   }",
-    "notes": "The code block of the HTTP reply is not aligned.",
+    "notes": "The indenting of the code block of the HTTP reply is not aligned.",
     "submit_date": "2020-04-14",
     "submitter_name": "Theodor Nolte",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw.com",
+    "update_date": "2024-01-11 06:18:15"
   },
   {
     "errata_id": "6276",
@@ -212,7 +212,7 @@
   {
     "errata_id": "6317",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "7.5.1",
     "orig_text": "The server is said to \"finalize\" the authorization when it has\r\ncompleted one of the validations.",
@@ -220,9 +220,9 @@
     "notes": "The current handling of failed challenges is ambiguous, or at least inefficient.\r\n\r\nTo get a certificate, a client creates an Order. The client then has to validate all Authorizations (\"authzs\"). For each Authorization, the client needs to successfully complete one of the offered Challenges. One successful Challenge is sufficient to validate the authz. However, currently in practice, one failed Challenge is sufficient to invalidate the authz, and thus the entire Order. To try another Challenge, the client then has to first deactivate the other Authorizations (expensive) and create a new Order (also expensive), then repeat the whole process, remembering what was already tried.\r\n\r\nIt is proposed that an Authorization MUST NOT be finalized until all possible challenges have failed. The client could then simply try the next Challenge. In other words, a single failed Challenge should not invalidate an authz; an authz should be \"pending\" until all offered challenges have failed or one has succeeded.\r\n\r\nThe spec should be clear that a single failed challenge is not sufficient to finalize an authz which has multiple possible challenges.\r\n\r\nACME servers see many, many failed validations. ACME clients need to keep more state. This change will speed up ACME transactions, lower costs for CAs, reduce code complexity, and make ACME more reliable on the whole.\r\n\r\nReal-world experience: https://github.com/mholt/acmez/commit/80adb6d5e64a3d36a56c58c66965b131ea366b8c\r\nMailing list discussion: https://mailarchive.ietf.org/arch/msg/acme/wIHaqikTCZ59zrWsUUus8lZ4VSg/",
     "submit_date": "2020-10-23",
     "submitter_name": "Matthew Holt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2024-01-11 13:31:57"
   },
   {
     "errata_id": "6364",
@@ -242,7 +242,7 @@
   {
     "errata_id": "6843",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "8.3",
     "orig_text": "Because many web servers\r\nallocate a default HTTPS virtual host to a particular low-privilege\r\ntenant user in a subtle and non-intuitive manner, the challenge must\r\nbe completed over HTTP, not HTTPS.\r\n",
@@ -250,9 +250,9 @@
     "notes": "Completing the entire http-01 challenge over HTTP is unnecessary. The threat of default HTTPS virtual hosts is remediated by \"initiating\" the http-01 challenge over HTTP. Validation servers which redirect from HTTP to HTTPS should be permitted following the rest of the guidance within Section 10, Security Considerations.",
     "submit_date": "2022-02-08",
     "submitter_name": "James Kasten",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2024-01-11 10:51:38"
   },
   {
     "errata_id": "6950",
@@ -272,7 +272,7 @@
   {
     "errata_id": "7565",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "8.1",
     "orig_text": " The \"Thumbprint\" step indicates the computation specified in\r\n   [RFC7638], using the SHA-256 digest [FIPS180-4].  As noted in\r\n   [RFC7518] any prepended zero octets in the fields of a JWK object\r\n   MUST be stripped before doing the computation.",
@@ -280,8 +280,8 @@
     "notes": "This comment was really aimed at the leading 0 octet sometimes used with RSA, but the comment is not RSA specific. ECDSA keys can have fixed length fields (X,Y) where there can be leading zeros.  This led me astray in implementing an ECDSA thumbprint routine for ACME. The result was that 1/128 ECDSA keys failed to generate t humbp[rint as leading zeros were removed.",
     "submit_date": "2023-07-13",
     "submitter_name": "Paul Breed",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2024-01-11 10:49:44"
   }
 ]
