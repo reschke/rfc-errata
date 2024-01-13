@@ -47,16 +47,16 @@
   {
     "errata_id": "4972",
     "doc-id": "RFC3280",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.2.1.5",
     "orig_text": "   id-ce-certificatePolicies OBJECT IDENTIFIER ::=  { id-ce 32 }\r\n\r\n   anyPolicy OBJECT IDENTIFIER ::= { id-ce-certificate-policies 0 }",
     "correct_text": "   id-ce-certificatePolicies OBJECT IDENTIFIER ::=  { id-ce 32 }\r\n\r\n   anyPolicy OBJECT IDENTIFIER ::= { id-ce-certificatePolicies 0 }",
-    "notes": "The ASN.1 did not compile due to a missing identifier.  The corrected text does also occur in A.2.",
+    "notes": "The ASN.1 did not compile due to a missing identifier.  The corrected text does also occur in A.2.\r\n\r\nPaul Wouters (AD): This is resolved in RFC 5280 which obsoletes this RFC.",
     "submit_date": "2017-03-17",
     "submitter_name": "Rick van Rein",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-12 12:37:00"
   }
 ]
