@@ -2,7 +2,7 @@
   {
     "errata_id": "6298",
     "doc-id": "RFC8886",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "A.1.1",
     "orig_text": "openssl ecparam -out privatekey.key -name prime256v1 -genkey",
@@ -10,9 +10,9 @@
     "notes": "The rest of the appendix expects the name key.pem.",
     "submit_date": "2020-10-05",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 08:41:00"
   },
   {
     "errata_id": "6299",
@@ -32,7 +32,7 @@
   {
     "errata_id": "6300",
     "doc-id": "RFC8886",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "A.3.2",
     "orig_text": "   $ openssl smime -decrypt -in SN19842256.enc -inform pkcs7\\\r\n      -out config.cfg -inkey key.pem\r\n",
@@ -40,8 +40,8 @@
     "notes": "Otherwise, OpenSSL fails with:\r\n\r\nsmime: Invalid format \"pkcs7\" for -inform\r\nsmime: Use -help for summary.",
     "submit_date": "2020-10-05",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 08:36:57"
   }
 ]
