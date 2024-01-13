@@ -17,17 +17,17 @@
   {
     "errata_id": "7734",
     "doc-id": "RFC9085",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.3.5",
     "orig_text": "11 or 12 octets depending on the label or index encoding of the SID.",
     "correct_text": "15 or 16 octets depending on the label or index encoding of the SID.",
-    "notes": "Length of the TLV does not account for the Prefix-SID Sub-TLVs type and length fields: 2 octets each = 4 octets in total.\r\nThis is valid for all variants: IS-IS, OSPFv2 and OSPFv3.",
+    "notes": "Length of the TLV does not account for the Prefix-SID Sub-TLVs type and length fields: 2 octets each = 4 octets in total.\r\nThis is valid for all variants: IS-IS, OSPFv2 and OSPFv3.\r\n\r\nNote: see also https://mailarchive.ietf.org/arch/msg/idr/G_3KN-XXqyXbSXO1doiNJbK_gIA/",
     "submit_date": "2023-12-18",
     "submitter_name": "Alexandru Bran",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-12 09:47:46"
   },
   {
     "errata_id": "7736",
