@@ -47,17 +47,17 @@
   {
     "errata_id": "6685",
     "doc-id": "RFC8572",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "8.3",
     "orig_text": "   Each URI entry in the bootstrap-server-list is structured as follows:\r\n\r\n    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-...-+-+-+-+-+-+-+\r\n    |       uri-length              |          URI                  |\r\n    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-...-+-+-+-+-+-+-+\r\n\r\n    * uri-length: 2 octets long; specifies the length of the URI data.\r\n    * URI: URI of the SZTP bootstrap server.",
     "correct_text": "Multiple URI entries can be specified in a comma-separated list.",
-    "notes": "Most of DHCP servers can be configured only with ASCII string for options.",
+    "notes": "Most of DHCP servers can be configured only with ASCII string for options.\n --VERIFIER NOTES-- \nAs discussed with the authors on the NETCONF mailing list the intent is to have one URI entry per uri-data entry (containing URI-length and the associated URI). Multiple instances of uri-data entry are permitted.",
     "submit_date": "2021-09-14",
     "submitter_name": "Alex Krichevsky",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 09:55:08"
   },
   {
     "errata_id": "6690",
