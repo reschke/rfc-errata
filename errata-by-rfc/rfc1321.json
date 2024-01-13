@@ -77,16 +77,16 @@
   {
     "errata_id": "6193",
     "doc-id": "RFC1321",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "A.4",
     "orig_text": "  printf\r\n (\"Speed = %ld bytes/second\\n\",\r\n  (long)TEST_BLOCK_LEN * (long)TEST_BLOCK_COUNT/(endTime-startTime));",
     "correct_text": " if(endTime-startTime)\r\n printf\r\n (\"Speed = %ld bytes/second\\n\",\r\n  (long)TEST_BLOCK_LEN * (long)TEST_BLOCK_COUNT/(endTime-startTime));",
-    "notes": "The result of endTime-startTime may be zero. The result is a division by zero. This check prevents this.",
+    "notes": "The result of endTime-startTime may be zero. The result is a division by zero. This check prevents this.\r\n\r\nAD Note: Technically endTime-startTime is not a bool, so a better fix would be:\r\n                if ((endTime-startTime) !=0)",
     "submit_date": "2020-05-29",
     "submitter_name": "User",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-12 11:32:39"
   }
 ]
