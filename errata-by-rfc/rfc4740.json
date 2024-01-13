@@ -32,16 +32,16 @@
   {
     "errata_id": "6028",
     "doc-id": "RFC4740",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "\"Digest-QoP\".\r\n",
-    "correct_text": "\"Digest-Qop\".\r\n          ^--- lower-case \"p\".",
-    "notes": "The AVP is referenced in section 9.5.6 from RFC 4590 (obsoleted by RFC 5090) which names the AVP \"Digest-Qop\".\r\n\r\nThe error occurs in various sections, including 9.5.3, 9.5.4, 9.5.5, 9.5.6, 11.",
+    "correct_text": "\"Digest-Qop\".",
+    "notes": "The AVP is referenced in section 9.5.6 from RFC 4590 (obsoleted by RFC 5090) which names the AVP \"Digest-Qop\" (i.e., with a lowercase 'p').\r\n\r\nThe error occurs in various sections, including 9.5.3, 9.5.4, 9.5.5, 9.5.6, 11.",
     "submit_date": "2020-03-25",
     "submitter_name": "Luke Mewburn",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 05:38:58"
   }
 ]
