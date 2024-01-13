@@ -32,7 +32,7 @@
   {
     "errata_id": "4781",
     "doc-id": "RFC1535",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "Solution(s)",
     "orig_text": "Given user@a.b.c.d. connecting to host those same two\r\ntries would appear as:\r\n\r\n   x.b.c.d.  and x.\r\n",
@@ -40,8 +40,8 @@
     "notes": "The original example text in section \"Solution(s)\" does not list the specific host the user@a.b.c.d. wants to connect to. From the search items listed next, I would suspect that the user wants to connect to host \"x\". However, I'm not exactly sure. In any case, it would be helpful to clarify the text with respect to the search list given next.",
     "submit_date": "2016-08-18",
     "submitter_name": "Harald Albrecht",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2024-01-11 23:25:21"
   }
 ]
