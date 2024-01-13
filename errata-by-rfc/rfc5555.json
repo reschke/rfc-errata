@@ -17,16 +17,16 @@
   {
     "errata_id": "3463",
     "doc-id": "RFC5555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "with error code 144",
     "correct_text": null,
-    "notes": "Binding acknowledgement error status 144 is referenced in sections 4.4.2 and 4.5 to specify that MN should not use UDP encapsulation. However, there is no mention of this status number in the IANA Considerations section (section 8).",
+    "notes": "Binding acknowledgement error status 144 is referenced in sections 4.4.2 and 4.5 to specify that MN should not use UDP encapsulation. However, there is no mention of this status number in the IANA Considerations section (section 8).\r\n\r\n-- Verifier note (EV) ---\r\n\r\nThe MIPv6 Status code 144 does not appear in https://www.iana.org/assignments/mobility-parameters/mobility-parameters.xhtml#mobility-parameters-6\r\n\r\nEven worse, it is actually assigned to MIPV6-ID-MISMATCH by a previous RFC 4285 (and the semantics of MIPV6-ID-MISMATCH probably does not match RFC 5555 semantics).",
     "submit_date": "2013-01-17",
     "submitter_name": "Romain Kuntz",
-    "verifier_id": "2",
-    "verifier_name": "Ted Lemon",
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2024-01-12 00:28:37"
   }
 ]
