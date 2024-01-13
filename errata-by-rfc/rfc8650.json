@@ -17,7 +17,7 @@
   {
     "errata_id": "6369",
     "doc-id": "RFC8650",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "A.2.1",
     "orig_text": "A.2.1.  \"subscription-modified\"\r\n\r\n   A \"subscription-modified\" encoded in JSON would look like:\r\n\r\n   {\r\n     \"ietf-restconf:notification\" : {\r\n       \"eventTime\": \"2007-09-01T10:00:00Z\",\r\n       \"ietf-subscribed-notifications:subscription-modified\": {\r\n         \"id\": 39,\r\n         \"uri\": \"https://example.com/restconf/subscriptions/22\"\r\n         \"stream-xpath-filter\": \"/example-module:foo\",\r\n         \"stream\": {\r\n            \"ietf-netconf-subscribed-notifications\" : \"NETCONF\"\r\n         }\r\n       }\r\n     }\r\n   }",
@@ -25,9 +25,9 @@
     "notes": "Change the URI to match the ID.",
     "submit_date": "2020-12-24",
     "submitter_name": "Muly Ilan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 08:33:06"
   },
   {
     "errata_id": "6379",
