@@ -62,7 +62,7 @@
   {
     "errata_id": "7653",
     "doc-id": "RFC3779",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.2.3",
     "orig_text": "Section 3.2.3.8:\r\nThe ASRange type is a SEQUENCE consisting of a min and a max element,\r\nand is used to specify a range of AS identifier values.",
@@ -70,9 +70,9 @@
     "notes": "The introduction in section 1 stresses that the objective of the encoding rules in section 2 and section 3\r\nis to produce unique encoding and minimal size encoding of the information.\r\n\r\nAllowing ASRanges where the minimum value is the same as the maximum value clearly violates the\r\nobjective of specifying a canonical form (in order to produce a unique representation); however the\r\nspecification as-is doesn't forbid min & max to be the same value. The corrected text addresses this.\r\n\r\nNote: erratum edited per https://mailarchive.ietf.org/arch/msg/pkix/iZnCd58xgl1C47GSeFemAU9CF1g/",
     "submit_date": "2023-09-22",
     "submitter_name": "Job Snijders",
-    "verifier_id": "171",
-    "verifier_name": "John Scudder",
-    "update_date": "2024-01-11 16:54:53"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-12 12:44:15"
   },
   {
     "errata_id": "836",
