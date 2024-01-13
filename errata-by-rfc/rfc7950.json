@@ -257,7 +257,7 @@
   {
     "errata_id": "6258",
     "doc-id": "RFC7950",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.6.5",
     "orig_text": "For example, with these modules:\r\n\r\n     module a {\r\n       yang-version 1.1;\r\n       namespace \"urn:example:a\";\r\n       prefix \"a\";\r\n\r\n       import b {\r\n         revision-date 2015-01-01;\r\n       }\r\n       import c;\r\n\r\n       revision 2015-01-01;\r\n",
@@ -265,9 +265,9 @@
     "notes": "As is considered in 7.1.5, The mandatory \"prefix\" substatement assigns a prefix for the imported module that is scoped to the importing module or submodule. \r\n\r\nSo, there should be a prefix substatement in the \"import b\" and \"import c\" statement respectively.",
     "submit_date": "2020-08-20",
     "submitter_name": "Fred Gan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 09:48:38"
   },
   {
     "errata_id": "6570",
