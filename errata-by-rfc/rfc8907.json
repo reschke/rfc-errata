@@ -4,14 +4,14 @@
     "doc-id": "RFC8907",
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
-    "section": "6.1",
+    "section": "5.1, 5.3, 6.1",
     "orig_text": "The rem_addr_len indicates the length of the port field, in bytes.",
     "correct_text": "The rem_addr_len indicates the length of the rem_addr field, in bytes.",
-    "notes": "Substitute \"port field\" with \"rem_addr field\"",
+    "notes": "Substitute \"port field\" with \"rem_addr field\".  The issue exists in both 5.1 and 6.1.\r\n\r\nIn addition, in section 5.3, it should be the user_msg_len field indicating the length of the user_msg field, in bytes.  The diagram should also refer to \"user_msg_len\" rather than \"user_msg len\".",
     "submit_date": "2024-01-10",
     "submitter_name": "Joao Fracarolli",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-01-10 09:30:36"
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 08:51:59"
   }
 ]
