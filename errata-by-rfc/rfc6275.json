@@ -32,17 +32,17 @@
   {
     "errata_id": "5695",
     "doc-id": "RFC6275",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "GLOBAL",
     "orig_text": "[none]",
     "correct_text": "Updates: 4302 [in RFC header]",
-    "notes": "Section 11.3.2 says:\r\n      The treatment of destination options described in RFC 4302 is\r\n      extended as follows.  The AH authentication data MUST be\r\n      calculated... [etc.]\r\nThis is a change to the AH algorithm and should be flagged as a formal update to RFC 4302.",
+    "notes": "Section 11.3.2 says:\r\n      The treatment of destination options described in RFC 4302 is\r\n      extended as follows.  The AH authentication data MUST be\r\n      calculated... [etc.]\r\nThis is a change to the AH algorithm and should be flagged as a formal update to RFC 4302.\r\n\r\n-- Verifier note (EV) ----\r\n\r\nIndeed, RFC 6275 should formally update RFC 4302. This erratum sits somewhere between editorial and technical, and as it does not change the technical content itself, I edited the type to 'editorial'.",
     "submit_date": "2019-04-16",
     "submitter_name": "Brian Carpenter",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-01-12 02:52:53"
   },
   {
     "errata_id": "5898",
