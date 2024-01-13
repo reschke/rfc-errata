@@ -137,16 +137,16 @@
   {
     "errata_id": "7623",
     "doc-id": "RFC8824",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Section 7.1",
-    "orig_text": "\r\nTable 3 \r\n\r\nField\t        FL\tFP\tDI\tTV\tMO\tCDA\tSent [bits]\r\nCoAP Uri-Path\tvar\t1\tDw\tpath\tequal 1\tnot-sent\t",
-    "correct_text": "\r\nTable 3 \r\n\r\nField\t        FL\tFP\tDI\tTV\t    MO\t  CDA\tSent [bits]\r\nCoAP \r\nUri-Path\tvar\t1\tDw    1st. element  equal not-sent\r\n                                      of the path\t\t",
-    "notes": "A MO 'equal 1' has not been defined in the possibilities of SCHC. However, when this table was written and never updated, it was one option to say that we wanted to check only the first element. To comply with the RFC8724, the idea of only matching the first element of the path needs to be expressed in the corrected text way.",
+    "orig_text": "Table 3 \r\n\r\nField\t        FL\tFP\tDI\tTV\tMO\tCDA\tSent [bits]\r\nCoAP Uri-Path\tvar\t1\tDw\tpath\tequal 1\tnot-sent\t",
+    "correct_text": "Table 3 \r\n\r\nField\t        FL\tFP\tDI\tTV\t    MO\t  CDA\tSent [bits]\r\nCoAP \r\nUri-Path\tvar\t1\tDw    1st. element  equal not-sent\r\n                                      of the path\t\t",
+    "notes": "A MO 'equal 1' has not been defined in the possibilities of SCHC. However, when this table was written and never updated, it was one option to say that we wanted to check only the first element. To comply with the RFC8724, the idea of only matching the first element of the path needs to be expressed in the corrected text way.\r\n\r\n---- verifier note ---\r\nLet's indeed fix this in draft-ietf-schc-8824-update",
     "submit_date": "2023-08-31",
     "submitter_name": "Ana Minaburo",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2024-01-11 22:24:02"
   }
 ]
