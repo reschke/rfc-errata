@@ -137,7 +137,7 @@
   {
     "errata_id": "7746",
     "doc-id": "RFC2516",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7",
     "orig_text": "      Field Check Sequence (FCS) Alternatives,\r\n\r\n      Address-and-Control-Field-Compression (ACFC),\r\n\r\n      Asynchronous-Control-Character-Map (ACCM)\r\n",
@@ -145,9 +145,9 @@
     "notes": "The names used for the first and third options is not the offical one (as defined on https://www.iana.org/assignments/ppp-numbers/ppp-numbers.xhtml#ppp-numbers-4 and in rfc1570 and rfc1662, respectively).  Moreover, if FCS really had to be \"expanded\", it should be Frame (rather than Field) Ckeck Sequence.  This is from common knowledge, and from rfc1570 appendix A.",
     "submit_date": "2024-01-01",
     "submitter_name": "Christophe Deleuze",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2024-01-11 22:30:15"
   },
   {
     "errata_id": "789",
