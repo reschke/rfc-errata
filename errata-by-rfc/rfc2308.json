@@ -77,16 +77,16 @@
   {
     "errata_id": "4983",
     "doc-id": "RFC2308",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "1",
-    "orig_text": "\r\n   \"QNAME\" - the name in the query section of an answer, or where this\r\n   resolves to a CNAME, or CNAME chain, the data field of the last\r\n   CNAME.",
-    "correct_text": "\r\n   \"QNAME\" - the name in the query section (RFC 1034, section 3.7.1).\r\n\r\n",
-    "notes": "RFC 2308 is the only RFC that defines QNAME this way. Original definition in RFC 1034 is clear, and is used by all other RFC since. (This point was raised during the development of RFC 8020, and is now discussed in the context of draft-ietf-dnsop-terminology-bis)",
+    "orig_text": "   \"QNAME\" - the name in the query section of an answer, or where this\r\n   resolves to a CNAME, or CNAME chain, the data field of the last\r\n   CNAME.",
+    "correct_text": "   \"QNAME\" - the name in the query section (RFC 1034, section 3.7.1).\r\n\r\n",
+    "notes": "RFC 2308 is the only RFC that defines QNAME this way. Original definition in RFC 1034 is clear, and is used by all other RFC since. (This point was raised during the development of RFC 8020, and is now discussed in the context of draft-ietf-dnsop-terminology-bis)\r\n\r\n-- verifier note --\r\n\r\nRFC 8499 (replacing draft-ietf-dnsop-terminology-bis) notes that there are indeed several definitions of \"QNAME\".",
     "submit_date": "2017-03-28",
     "submitter_name": "Stéphane Bortzmeyer",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2024-01-11 23:31:04"
   }
 ]
