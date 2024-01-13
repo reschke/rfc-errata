@@ -2,17 +2,17 @@
   {
     "errata_id": "6211",
     "doc-id": "RFC8639",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "7",
     "orig_text": "   A specification for a transport MUST identify any encodings that are\r\n   supported.  If a configured subscription's transport allows different\r\n   encodings, the specification MUST identify the default encoding.\r\n",
     "correct_text": "   A specification for a transport MUST identify any encodings that are\r\n   supported.  If a configured subscription's transport allows different\r\n   encodings, the specification MUST identify the default encoding, or\r\n   provide a mechanism whereby supported encodings can be discovered.\r\n",
-    "notes": "https://mailarchive.ietf.org/arch/msg/netconf/XBpoFqtRynfc0zaRggMEiEMBW2M/",
+    "notes": "https://mailarchive.ietf.org/arch/msg/netconf/XBpoFqtRynfc0zaRggMEiEMBW2M/\r\n",
     "submit_date": "2020-06-22",
     "submitter_name": "kent watsen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 06:54:48"
   },
   {
     "errata_id": "6366",
