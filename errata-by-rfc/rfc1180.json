@@ -92,7 +92,7 @@
   {
     "errata_id": "5074",
     "doc-id": "RFC1180",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.3",
     "orig_text": "When an incoming IP packet arrives it is never forwarded back out\r\nthrough the same network interface.",
@@ -100,9 +100,9 @@
     "notes": "IP routers can and do send IP packets out the ingress interface. An ICMP redirect message may be sent in this case.\r\n\r\nThis is different to Ethernet bridge behavior, where a frame will not be sent out the ingress interface.\r\n\r\nAn IP packet that egresses the ingress interface is carried in a new Ethernet frame, this is not the same frame that arrived at the ingress interface (different SRC and DST MAC addresses, decreased TTL in the IP header).",
     "submit_date": "2017-07-29",
     "submitter_name": "Erik Auerswald",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2024-01-11 23:22:01"
   },
   {
     "errata_id": "556",
