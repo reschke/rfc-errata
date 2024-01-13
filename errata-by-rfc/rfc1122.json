@@ -77,17 +77,17 @@
   {
     "errata_id": "5033",
     "doc-id": "RFC1122",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "2.3.2",
     "orig_text": "Section 2.3.2, and subsections 2.3.2.1 and 2.3.2.2, do not belong where \r\nthey are in this RFC.\r\n\r\n\r\n",
     "correct_text": "Move the text in this section either under section 2.4, or in section \r\n3.\r\n\r\n",
-    "notes": "ARP is a protocol used by Internet devices for the purpose of mapping Internet Addresses to MAC addresses.  Link layer devices and associated protocols will only support and/or use ARP to the extent that they are also Internet devices (for example if participating in management protocols developed to operate between IP addressed devices).\r\n\r\nHence referring to ARP as a Link Layer Protocol will only continue to confuse the industry.\r\n\r\nBecause the number of references to ARP refering to Link.2, perhaps it would be easiest to move the text to section 2.4, adding a new subsection header 2.4.1 for the text currently in section 2.4, and renumbering current section 2.3.2 to 2.4.2 (as well as renumbering subsections 2.3.2.1 and 2.3.2.2 to 2.4.2.1 and 2.4.2.2, respectively).\r\n\r\nRefering to ARP as a part of the Link/Internet Layer Interface is more accurate.",
+    "notes": "ARP is a protocol used by Internet devices for the purpose of mapping Internet Addresses to MAC addresses.  Link layer devices and associated protocols will only support and/or use ARP to the extent that they are also Internet devices (for example if participating in management protocols developed to operate between IP addressed devices).\r\n\r\nHence referring to ARP as a Link Layer Protocol will only continue to confuse the industry.\r\n\r\nBecause the number of references to ARP refering to Link.2, perhaps it would be easiest to move the text to section 2.4, adding a new subsection header 2.4.1 for the text currently in section 2.4, and renumbering current section 2.3.2 to 2.4.2 (as well as renumbering subsections 2.3.2.1 and 2.3.2.2 to 2.4.2.1 and 2.4.2.2, respectively).\r\n\r\nRefering to ARP as a part of the Link/Internet Layer Interface is more accurate.\r\n\r\n-- Verifier Note (EV) --\r\n\r\nThe erratum is correct, i.e., ARP is not a layer-2 protocol. The erratum reflects more the modern thinking though of ARP position in the OSI stack and does not impact the protocol itself.\r\n\r\nTherefore, the status if \"held for document update\" even of RFC 1122 will probably never be updated in the world of NDP and IPv6.\r\n\r\n",
     "submit_date": "2017-06-08",
     "submitter_name": "Eric Gray",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-01-12 03:36:58"
   },
   {
     "errata_id": "559",
