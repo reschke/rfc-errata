@@ -62,16 +62,16 @@
   {
     "errata_id": "7180",
     "doc-id": "RFC4364",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
     "section": "4.3.4",
     "orig_text": "   Note that this VPN architecture does not require the capability to\r\n   distribute unlabeled VPN-IPv4 addresses.",
     "correct_text": "   Note that this VPN architecture does not require the capability to\r\n   distribute unlabeled IPv4 addresses.",
-    "notes": "From my understanding, VPN-IPv4 addresses are necessarily labeled, but IPv4 adresses are not indeed. Section 10 seems to confirm the error by using the correct term: \"distribute unlabeled IPv4 addresses to each other.\"",
+    "notes": "From my understanding, VPN-IPv4 addresses are necessarily labeled, but IPv4 adresses are not indeed. Section 10 seems to confirm the error by using the correct term: \"distribute unlabeled IPv4 addresses to each other.\"\r\n\r\nAdditional note from verifier: this was reported as technical, but I have changed it to editorial following the guidelines in https://www.ietf.org/about/groups/iesg/statements/processing-errata-ietf-stream/ (“Technical errata are expected to be things that would likely cause significant misunderstandings of the technical specification and might result in faulty implementations if they are not corrected. Editorial errata are, as the name implies, editorial - for example, typos, missing commas, etc. Errors in examples will generally be editorial…”) Since the text in question is a “note that” I take the view that it’s similar in character to an example. Furthermore, I don’t think it’s likely the error would result in faulty implementations. Finally, the uncorrected text, while kind of silly, isn’t strictly speaking untrue, so I have chosen “hold for document update“ rather than “verified”.",
     "submit_date": "2022-10-24",
     "submitter_name": "Angély",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-12 06:43:04"
   }
 ]
