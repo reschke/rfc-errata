@@ -17,16 +17,16 @@
   {
     "errata_id": "4977",
     "doc-id": "RFC6762",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "6.1",
     "orig_text": "The 'Next Domain Name' field contains the record's own name. When\r\nused with name compression, this means that the 'Next Domain Name'\r\nfield always takes exactly two bytes in the message.",
     "correct_text": "The 'Next Domain Name' field contains the record's own name.",
-    "notes": "Section 4.1.1 of RFC 4034 states:\r\n\r\n\"A sender MUST NOT use DNS name compression on the Next Domain Name\r\nfield when transmitting an NSEC RR.\"\r\n\r\nIn order to comply with the existing RFC, name compression should not\r\nbe suggested.",
+    "notes": "Section 4.1.1 of RFC 4034 states:\r\n\r\n\"A sender MUST NOT use DNS name compression on the Next Domain Name\r\nfield when transmitting an NSEC RR.\"\r\n\r\n--- Verifier note ---\r\nWhile errata submitter's concern is valid, this is not a stricto sensu \"errata\" as the existing RFC reflects the WG consensus at the publication time.\r\n\r\n\r\nIn order to comply with the existing RFC, name compression should not\r\nbe suggested.",
     "submit_date": "2017-03-23",
     "submitter_name": "Nathan Osman",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2024-01-11 22:27:11"
   }
 ]
