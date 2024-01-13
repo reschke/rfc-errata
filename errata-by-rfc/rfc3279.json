@@ -77,17 +77,17 @@
   {
     "errata_id": "6672",
     "doc-id": "RFC3279",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
     "section": "2.3.5",
     "orig_text": "If the keyUsage extension is present in a CA or CRL issuer certificate which conveys an elliptic curve public key, any combination of the following values MAY be present:\r\n\r\ndigitalSignature;\r\nnonRepudiation; and\r\nkeyAgreement.\r\n\r\nIf the keyAgreement value is present, either of the following values MAY be present:\r\n\r\nencipherOnly; and\r\ndecipherOnly.\r\n\r\nThe keyUsage extension MUST NOT assert both encipherOnly and decipherOnly.\r\n\r\nIf the keyUsage extension is present in a CA certificate which conveys an elliptic curve public key, any combination of the following values MAY be present:\r\n\r\ndigitalSignature;\r\nnonRepudiation;\r\nkeyAgreement;\r\nkeyCertSign; and\r\ncRLSign.",
     "correct_text": "If the keyUsage extension is present in an end entity certificate which conveys an elliptic curve public key, any combination of the following values MAY be present:\r\n\r\ndigitalSignature;\r\nnonRepudiation; and\r\nkeyAgreement.\r\n\r\nIf the keyAgreement value is present, either of the following values MAY be present:\r\n\r\nencipherOnly; and\r\ndecipherOnly.\r\n\r\nThe keyUsage extension MUST NOT assert both encipherOnly and decipherOnly.\r\n\r\nIf the keyUsage extension is present in a CA or CRL issuer certificate which conveys an elliptic curve public key, any combination of the following values MAY be present:\r\n\r\ndigitalSignature;\r\nnonRepudiation;\r\nkeyAgreement;\r\nkeyCertSign; and\r\ncRLSign.\r\n",
-    "notes": "- \"a CA or CRL issuer certificate\" is replaced by \"an end entity certificate\"\r\n- \"CA certificate\" is replaced by \"CA or CRL issuer certificate\"\r\n\r\nThe need for this correction can be confirmed from RFC 5480, \"3. Key Usage Bits\".\r\n\r\nCorrected wording has been copied from the section \"2.3.1 RSA Keys\" of this RFC 3279 itself.",
+    "notes": "- \"a CA or CRL issuer certificate\" is replaced by \"an end entity certificate\"\r\n- \"CA certificate\" is replaced by \"CA or CRL issuer certificate\"\r\n\r\nThe need for this correction can be confirmed from RFC 5480, \"3. Key Usage Bits\".\r\n\r\nCorrected wording has been copied from the section \"2.3.1 RSA Keys\" of this RFC 3279 itself.\r\n\r\nPaul Wouters (AD): As 5480 updates 3279, this errata is resolved ",
     "submit_date": "2021-09-01",
     "submitter_name": "Jaime Hablutzel",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-12 12:21:21"
   },
   {
     "errata_id": "7296",
