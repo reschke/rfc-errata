@@ -167,17 +167,17 @@
   {
     "errata_id": "6271",
     "doc-id": "RFC8040",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.5",
     "orig_text": "   The \"insert\" (Section 4.8.5) and \"point\" (Section 4.8.6) query\r\n   parameters MUST be supported by the PUT method for data resources.\r\n   These parameters are only allowed if the list or leaf-list is\r\n   \"ordered-by user\".\r\n",
     "correct_text": "   The \"insert\" (Section 4.8.5) and \"point\" (Section 4.8.6) query\r\n   parameters MUST be supported by the PUT method for data resources.\r\n   These parameters are only allowed if the target resource is a\r\n   non-existent entry of an \"ordered-by user\" list or leaf-list.",
-    "notes": "First, Section 3.5 (Data Resource) says that \"list\" and \"leaf-leaf\" are not a data resources:\r\n\r\n  A data resource represents a YANG data node that is a descendant node\r\n  of a datastore resource. Each YANG-defined data node can be uniquely\r\n  targeted by the request-line of an HTTP method. Containers, leafs,\r\n  leaf-list entries, list entries, anydata nodes, and anyxml nodes are\r\n  data resources.\r\n\r\nSecond, these query parameters only make sense when targeting a non-existent entry.   If the entry does not exist, then PUT is being used like a POST: to create and place an item in an ordered list.  However, if the entry exists, then PUT is being used to both replace the contents and (presumably) re-place the order in the list; but this doesn't make sense because:\r\n\r\n  1) \"insert\" defaults to \"last\".\r\n  2) there is no \"insert\" value to indicate \"keep existing placement\".\r\n  3) having to concoct valid \"insert\" and \"point\" values is hard.\r\n\r\nThus indiscriminate PUTs would move entries to the end, which can't be desired...",
+    "notes": "First, Section 3.5 (Data Resource) says that \"list\" and \"leaf-leaf\" are not a data resources:\r\n\r\n  A data resource represents a YANG data node that is a descendant node\r\n  of a datastore resource. Each YANG-defined data node can be uniquely\r\n  targeted by the request-line of an HTTP method. Containers, leafs,\r\n  leaf-list entries, list entries, anydata nodes, and anyxml nodes are\r\n  data resources.\r\n\r\nSecond, these query parameters only make sense when targeting a non-existent entry.   If the entry does not exist, then PUT is being used like a POST: to create and place an item in an ordered list.  However, if the entry exists, then PUT is being used to both replace the contents and (presumably) re-place the order in the list; but this doesn't make sense because:\r\n\r\n  1) \"insert\" defaults to \"last\".\r\n  2) there is no \"insert\" value to indicate \"keep existing placement\".\r\n  3) having to concoct valid \"insert\" and \"point\" values is hard.\r\n\r\nThus indiscriminate PUTs would move entries to the end, which can't be desired...\n --VERIFIER NOTES-- \nReplaced by errata 6277.",
     "submit_date": "2020-09-01",
     "submitter_name": "Kent Watsen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 06:47:56"
   },
   {
     "errata_id": "6277",
@@ -257,7 +257,7 @@
   {
     "errata_id": "7311",
     "doc-id": "RFC8040",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7",
     "orig_text": "              +-------------------------+------------------+\r\n              | error-tag               | status code      |\r\n              +-------------------------+------------------+\r\n(...)\r\n              | unknown-attribute       | 400              |\r\n              |                         |                  |\r\n              | bad-element             | 400              |\r\n(...)",
@@ -265,8 +265,8 @@
     "notes": "Add missing-element to the table Mapping from <error-tag> to Status Code\r\nin Section 7.\r\n\r\nThe NETCONF error-tag missing-element is not listed in the table mapping\r\nerror-tag to HTTP status code. This seems to be a mistake since all other\r\nerror-tags are listed (even the obsolete partial-operation which should not\r\nbe used according to RFC 6241).",
     "submit_date": "2023-01-18",
     "submitter_name": "Per Andersson",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 09:42:50"
   }
 ]
