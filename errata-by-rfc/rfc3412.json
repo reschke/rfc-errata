@@ -2,7 +2,7 @@
   {
     "errata_id": "6344",
     "doc-id": "RFC3412",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.2.2",
     "orig_text": "The elements of procedure for the dispatching of PDUs depends on the\r\n   value of sendPduHandle.  If the value of sendPduHandle is <none>,\r\n   then this is a request or notification and the procedures specified\r\n   in Section 4.2.2.1 apply.  If the value of snmpPduHandle is not\r\n   <none>, then this is a response and the procedures specified in\r\n   Section 4.2.2.2 apply.",
@@ -11,7 +11,7 @@
     "submit_date": "2020-11-30",
     "submitter_name": "Michel Albert",
     "verifier_id": "166",
-    "verifier_name": "Rob Wilton",
-    "update_date": "2023-10-02 07:43:08"
+    "verifier_name": "Robert Wilton",
+    "update_date": "2024-01-12 05:30:59"
   }
 ]
