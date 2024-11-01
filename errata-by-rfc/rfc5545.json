@@ -362,52 +362,52 @@
   {
     "errata_id": "5082",
     "doc-id": "RFC5545",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.8.7.3",
     "orig_text": "N/A",
     "correct_text": "The value must not be in the future.",
-    "notes": "If future values are allowed for LAST-MODIFIED, it makes it very difficult for software to perform change management for a VEVENT.\r\n\r\nSay for example, an event is imported from a source and the VEVENT has a future date. For example, December 20 2017 12:00:00Z\r\n\r\nThat event is then edited and assigned the actual correct date and time. Say August 9 2017 13:45:44Z.\r\n\r\nSoftware that examines the VEVENT's LAST-MODIFIED to determine if the VEVENT record has been modified will not see the VEVENT is updated. \r\n\r\nIn order for different systems to perform change management, the value for LAST-MODIFIED should NEVER be a future date.",
+    "notes": "If future values are allowed for LAST-MODIFIED, it makes it very difficult for software to perform change management for a VEVENT.\r\n\r\nSay for example, an event is imported from a source and the VEVENT has a future date. For example, December 20 2017 12:00:00Z\r\n\r\nThat event is then edited and assigned the actual correct date and time. Say August 9 2017 13:45:44Z.\r\n\r\nSoftware that examines the VEVENT's LAST-MODIFIED to determine if the VEVENT record has been modified will not see the VEVENT is updated. \r\n\r\nIn order for different systems to perform change management, the value for LAST-MODIFIED should NEVER be a future date.\n --VERIFIER NOTES-- \nThe description of the property already implies that it is not in the future.  And any handling of clock skew is an iTIP/CalDAV protocol issue, NOT a data format issue.\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/calsify/x82GopunVcEh8y5UGSIsEIC3s6M/",
     "submit_date": "2017-08-10",
     "submitter_name": "George Sexton",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-16 06:22:17"
   },
   {
     "errata_id": "5214",
     "doc-id": "RFC5545",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.6.5",
     "orig_text": "       timezonec  = \"BEGIN\" \":\" \"VTIMEZONE\" CRLF\r\n                    *(\r\n                    ;\r\n                    ; 'tzid' is REQUIRED, but MUST NOT occur more\r\n                    ; than once.\r\n                    ;\r\n                    tzid /\r\n                    ;\r\n                    ; 'last-mod' and 'tzurl' are OPTIONAL,\r\n                    ; but MUST NOT occur more than once.\r\n                    ;\r\n                    last-mod / tzurl /\r\n                    ;\r\n                    ; One of 'standardc' or 'daylightc' MUST occur\r\n                    ; and each MAY occur more than once.\r\n                    ;\r\n                    standardc / daylightc /\r\n                    ;\r\n                    ; The following are OPTIONAL,\r\n                    ; and MAY occur more than once.\r\n                    ;\r\n                    x-prop / iana-prop\r\n                    ;\r\n                    )\r\n                    \"END\" \":\" \"VTIMEZONE\" CRLF",
     "correct_text": "       timezonec    = \"BEGIN\" \":\" \"VTIMEZONE\" CRLF\r\n                      timezoneprop timezonesubc\r\n                      \"END\" \":\" \"VTIMEZONE\" CRLF\r\n\r\n       timezoneprop = *(\r\n                      ;\r\n                      ; 'tzid' is REQUIRED, but MUST NOT occur more\r\n                      ; than once.\r\n                      ;\r\n                      tzid /\r\n                      ;\r\n                      ; 'last-mod' and 'tzurl' are OPTIONAL,\r\n                      ; but MUST NOT occur more than once.\r\n                      ;\r\n                      last-mod / tzurl /\r\n                      ;\r\n                      ; The following are OPTIONAL,\r\n                      ; and MAY occur more than once.\r\n                      ;\r\n                      x-prop / iana-prop\r\n                      ;\r\n\r\n       timezonesubc = *(\r\n                      ;\r\n                      ; One of 'standardc' or 'daylightc' MUST occur\r\n                      ; and each MAY occur more than once.\r\n                      ;\r\n                      standardc / daylightc\r\n                      ;\r\n                      )\r\n",
-    "notes": "The definition of icalbody shows that calendar properties precede components. Some components may contains sub-components. For those that may:\r\n\r\nThe definition of eventc (section 3.6.1 - Event Component) also shows that properties precede sub-components.\r\n\r\nThe definition of todoc (section 3.6.2 - To-Do Component) also shows that properties precede sub-components.\r\n\r\nHowever, the definition of timezonec (section 3.6.5 - Time Zone Component) shows that properties and sub-components may be intermingled. The corrected text assumes this was not intended.",
+    "notes": "The definition of icalbody shows that calendar properties precede components. Some components may contains sub-components. For those that may:\r\n\r\nThe definition of eventc (section 3.6.1 - Event Component) also shows that properties precede sub-components.\r\n\r\nThe definition of todoc (section 3.6.2 - To-Do Component) also shows that properties precede sub-components.\r\n\r\nHowever, the definition of timezonec (section 3.6.5 - Time Zone Component) shows that properties and sub-components may be intermingled. The corrected text assumes this was not intended.\n --VERIFIER NOTES-- \nThe current ABNF doesn't appear to cause any interop problems, given that both ical4j and libical don't care about the order of properties and components within a VTIMEZONE component.\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/calsify/x82GopunVcEh8y5UGSIsEIC3s6M/",
     "submit_date": "2017-12-24",
     "submitter_name": "Richard Smith",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-16 06:25:28"
   },
   {
     "errata_id": "5215",
     "doc-id": "RFC5545",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.8.5.1",
     "orig_text": "   Purpose:  This property defines the list of DATE-TIME exceptions for\r\n   recurring events, to-dos, journal entries, or time zone\r\n   definitions.\r\n\r\n...\r\n\r\n   Conformance:  This property can be specified in recurring \"VEVENT\",\r\n   \"VTODO\", and \"VJOURNAL\" calendar components as well as in the\r\n   \"STANDARD\" and \"DAYLIGHT\" sub-components of the \"VTIMEZONE\"\r\n   calendar component.",
     "correct_text": "   Purpose:  This property defines the list of DATE-TIME exceptions for\r\n   recurring events, to-dos or journal entries.\r\n\r\n...\r\n\r\n   Conformance:  This property can be specified in recurring \"VEVENT\",\r\n   \"VTODO\", and \"VJOURNAL\" calendar components.",
-    "notes": "Section 3.8.5.1 describes Exception Date-Times (EXDATE).\r\n\r\ntzprop (section 3.6.5) does not allow EXDATE.\r\n\r\n(Of course, the problem could be that 3.6.5 should include EXDATE.)",
+    "notes": "Section 3.8.5.1 describes Exception Date-Times (EXDATE).\r\n\r\ntzprop (section 3.6.5) does not allow EXDATE.\r\n\r\n(Of course, the problem could be that 3.6.5 should include EXDATE.)\n --VERIFIER NOTES-- \nExcluding EXDATE from tzprop is the actual error and is worthy of a new errata.\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/calsify/x82GopunVcEh8y5UGSIsEIC3s6M/",
     "submit_date": "2017-12-24",
     "submitter_name": "Richard Smith",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-16 06:27:42"
   },
   {
     "errata_id": "5505",
     "doc-id": "RFC5545",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.2.19",
     "orig_text": "       tzidparam  = \"TZID\" \"=\" [tzidprefix] paramtext\r\n",
@@ -415,24 +415,24 @@
     "notes": "TZID appears to be the only parameter defined 5545 whose value can not be a quoted string.  This is problematic in that time zone IDs such as \"GMT-03:00\" are beginning to appear (note the embedded colon).  RFC 6868 has no mechanism to quote a colon character, as it relies on such characters appearing within a quoted string.  I see no technical reason why a TZID parameter can not be quoted, and existing implementations already accept quoted TZIDs.",
     "submit_date": "2018-09-26",
     "submitter_name": "Ken Murchison",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-16 06:28:12"
   },
   {
     "errata_id": "5602",
     "doc-id": "RFC5545",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "3.1.3",
     "orig_text": "     ATTACH;FMTTYPE=text/plain;ENCODING=BASE64;VALUE=BINARY:VGhlIH\r\n      F1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4\r\n",
     "correct_text": "     ATTACH;FMTTYPE=text/plain;ENCODING=BASE64;VALUE=BINARY:VGhlIH\r\n      F1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=\r\n",
     "notes": "The base64 text used in the example misses the base64 padding.  RFC 5545 appears to be using base64 according to RFC 4648 Section 4 with padding throughout, except for this example.  (The corrected text decodes to \"The quick brown fox jumps over the lazy dog.\")  Beyond temporary confusion in implementers, it is possible that this example will turn up in a test suite and ultimately cause unnecessarily lenient behavior of decoders (\"soup\"); it should be either clarified that this lenient behavior is not the intention or the behavior should be codified.",
     "submit_date": "2019-01-15",
     "submitter_name": "Carsten Bormann",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-16 06:28:55"
   },
   {
     "errata_id": "5794",
@@ -467,22 +467,22 @@
   {
     "errata_id": "5920",
     "doc-id": "RFC5545",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.8.5.3",
     "orig_text": "Every Friday the 13th, forever:\r\n\r\n       DTSTART;TZID=America/New_York:19970902T090000\r\n       EXDATE;TZID=America/New_York:19970902T090000\r\n       RRULE:FREQ=MONTHLY;BYDAY=FR;BYMONTHDAY=13\r\n\r\n       ==> (1998 9:00 AM EST) February 13;March 13;November 13\r\n           (1999 9:00 AM EDT) August 13\r\n           (2000 9:00 AM EDT) October 13\r\n           ...",
     "correct_text": "Every Friday the 13th, forever:\r\n\r\n       DTSTART;TZID=America/New_York:19980213T090000\r\n       RRULE:FREQ=MONTHLY;BYDAY=FR;BYMONTHDAY=13\r\n\r\n       ==> (1998 9:00 AM EST) February 13;March 13;November 13\r\n           (1999 9:00 AM EDT) August 13\r\n           (2000 9:00 AM EDT) October 13\r\n           ...",
-    "notes": "The \"DTSTART\" property is not synchronized with the recurrence rule.\r\n\r\nAlthough it may be removed from the recurrence set by an \"EXDATE\" property, the description at the start of section 3.8.5.3 leaves no doubt that the \"DTSTART\" property should still be synchronized with the recurrence rule.",
+    "notes": "The \"DTSTART\" property is not synchronized with the recurrence rule.\r\n\r\nAlthough it may be removed from the recurrence set by an \"EXDATE\" property, the description at the start of section 3.8.5.3 leaves no doubt that the \"DTSTART\" property should still be synchronized with the recurrence rule.\n --VERIFIER NOTES-- \nRejected since it changes the intent of the example (showing exclusion the first instance).  The example should be something like the following (possibly to be reported in a new errata):\r\n\r\n        DTSTART;TZID=America/New_York:19970613T090000\r\n        EXDATE;TZID=America/New_York:19970613T090000\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/calsify/x82GopunVcEh8y5UGSIsEIC3s6M/",
     "submit_date": "2019-11-26",
     "submitter_name": "Lars Henriksen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-16 06:30:54"
   },
   {
     "errata_id": "6109",
     "doc-id": "RFC5545",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.6.1",
     "orig_text": "The anniversary type of \"VEVENT\" can span more than one date (i.e., \"DTEND\"\r\nproperty value is set to a calendar date after the \"DTSTART\" property value).",
@@ -490,24 +490,24 @@
     "notes": "\"DTEND\" comes, by definition (3.8.2.2), always after \"DTSTART\". The span (duration) is the difference between the two.",
     "submit_date": "2020-04-19",
     "submitter_name": "Lars Henriksen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-16 06:32:45"
   },
   {
     "errata_id": "6212",
     "doc-id": "RFC5545",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.8.5.3",
     "orig_text": "      Daily until December 24, 1997:\r\n\r\n       DTSTART;TZID=America/New_York:19970902T090000\r\n       RRULE:FREQ=DAILY;UNTIL=19971224T000000Z\r\n\r\n       ==> (1997 9:00 AM EDT) September 2-30;October 1-25\r\n           (1997 9:00 AM EST) October 26-31;November 1-30;December 1-23",
     "correct_text": "      Daily until December 24, 1997:\r\n\r\n       DTSTART;TZID=America/New_York:19970902T090000\r\n       RRULE:FREQ=DAILY;UNTIL=19971224T140000Z\r\n                                       ^^\r\n       ==> (1997 9:00 AM EDT) September 2-30;October 1-25\r\n           (1997 9:00 AM EST) October 26-31;November 1-30;December 1-24\r\n                                                                     ^^",
-    "notes": "The UNTIL rule part has value type DATE-TIME (same as DTSTART), but the introductory text \"Daily until December 24, 1997\" mentions a DATE only. Assuming that \"until\", like UNTIL, is inclusive, I would expect\r\n\r\n    (1997 9:00 AM EST) December 24\r\n\r\nto be the last instance, i.e. the unstated time is 9:00 AM. Translating to UTC you get\r\n\r\n    19971224T140000Z\r\n\r\nThe same error occurs in all examples of section 3.8.5.3 with \"December 24, 1997\", four in all: pages 123 (above), 125 (twice) and 126. The resulting occurrences are only affected for pages 123 and 125 (second).",
+    "notes": "The UNTIL rule part has value type DATE-TIME (same as DTSTART), but the introductory text \"Daily until December 24, 1997\" mentions a DATE only. Assuming that \"until\", like UNTIL, is inclusive, I would expect\r\n\r\n    (1997 9:00 AM EST) December 24\r\n\r\nto be the last instance, i.e. the unstated time is 9:00 AM. Translating to UTC you get\r\n\r\n    19971224T140000Z\r\n\r\nThe same error occurs in all examples of section 3.8.5.3 with \"December 24, 1997\", four in all: pages 123 (above), 125 (twice) and 126. The resulting occurrences are only affected for pages 123 and 125 (second).\n --VERIFIER NOTES-- \nThe example is correct as-is.  UNTIL does not have to match the recurrence pattern.\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/calsify/x82GopunVcEh8y5UGSIsEIC3s6M/",
     "submit_date": "2020-06-23",
     "submitter_name": "Lars Henriksen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-16 06:31:47"
   },
   {
     "errata_id": "6316",
@@ -527,17 +527,17 @@
   {
     "errata_id": "7332",
     "doc-id": "RFC5545",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "3.3.9",
     "orig_text": "The period start at 18:00:00 on January 1, 1997 and lasting 5\r\nhours and 30 minutes would be:\r\n\r\n19970101T180000Z/PT5H30M",
     "correct_text": "The period start at 18:00:00 on January 1, 1997 and lasting 5\r\nhours and 30 minutes would be:\r\n\r\n19970101T180000/PT5H30M",
     "notes": "I do not know if this is an editorial or technical issue.\r\n\r\nIf I understand the datetime value (Section 3.3.5) correct the last character should only be \"Z\" if the value is in UTC.\r\n\r\nIn the first example in section 3.3.9 UTC is explicitely mentioned but not in the second example.",
     "submit_date": "2023-02-04",
     "submitter_name": "Tobias Subklewe",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-16 06:34:14"
   },
   {
     "errata_id": "7691",
@@ -553,5 +553,20 @@
     "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2023-11-01 06:40:39"
+  },
+  {
+    "errata_id": "7945",
+    "doc-id": "RFC5545",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.8.8.3",
+    "orig_text": "rstatus    = \"REQUEST-STATUS\" rstatparam \":\"\r\n             statcode \";\" statdesc [\";\" extdata]",
+    "correct_text": "rstatus    = \"REQUEST-STATUS\" rstatparam \":\"\r\n             statcode \";\" statdesc [\";\" extdata] CRLF",
+    "notes": "All other properties are specified to end with a CRLF. There seems to be no reason for this property to be an exception.",
+    "submit_date": "2024-05-19",
+    "submitter_name": "Maximilian Bauer",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-29 12:39:22"
   }
 ]
