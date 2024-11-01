@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7930",
+    "doc-id": "RFC8463",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "A.3",
+    "orig_text": "It is about the DKIM signature, baby, it is\r\n\r\n/gCrinpcQOoIfuHNQIbq4pgh9kyIK3AQUdt9OdqQehSwhEIug4D11BusFa3bT3FY5OsU7ZbnKELq+eXdp1Q1Dw==\r\n\r\n(even though this pastes terribly in this HTML)",
+    "correct_text": "The signature should be\r\n\r\nQGeDV9CRdXSybek0z54GoycZ4/kl1PsNnGoOsCZ0ZOOwiGYFE8Ft0SZpy1XLW/fwlwNFC1k6VaxsnQAH8+9cAA==",
+    "notes": "On the DKIM list i wrote\r\n\r\n>I come here because alongside the above i had a look at RFC 8463\r\n>again, and its example in \"A.3.  Signed Message\".\r\n>And if i use its \"A.1.  Secret Keys\", and (manually) normalize the\r\n>example message header of A.3 via \"relaxed\"\r\n[.]\r\n>and pass that through RFC 8032 code:\r\n\r\n>  privkey: b'nWGxne/9WmC6hEr0kuwsxERJxWl7MmkZcDusAxyuf2A=\\n'\r\n>  pubkey : b'11qYAYKxCrfVS/7TyWQHOg7hcvPapiMlrwIaaPcHURo=\\n'\r\n>  The message is:\r\n>  >>>b'from:Joe SixPack <joe@football.example.com>\\r\\nto:Suzie Q <suzie@shopping.example.net>\\r\\nsubject:Is dinner ready?\\r\\ndate:Fri, 11 Jul 2003 21:00:37 -0700 (PDT)\\r\\nmessage-id:<20030712040037.46341.5F8J@football.example.com>\\r\\ndkim-signature:v=1; a=ed25519-sha256; c=relaxed/relaxed; d=football.example.com; i=@football.example.com; q=dns/txt; s=brisbane; t=1528637909; h=from : to : subject : date : message-id : from : subject : date; bh=2jUSOH9NhtVGCQWNr9BrIAPreKQjO6Sn7XIkfJVOzv8=; b='<<<\r\n>\r\n>then i get\r\n>\r\n>  Signature: b'QGeDV9CRdXSybek0z54GoycZ4/kl1PsNnGoOsCZ0ZOOwiGYFE8Ft0SZpy1XLW/fwlwNFC1k6VaxsnQAH8+9cAA==\\n'\r\n>  Signature verifies: True\n --VERIFIER NOTES-- \nThe RFC is correct as-is.  The process applied by the erratum author deviates from the algorithm used by DKIM.",
+    "submit_date": "2024-05-09",
+    "submitter_name": "Steffen Nurpmeso",
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2024-05-13 08:01:14"
+  }
+]
