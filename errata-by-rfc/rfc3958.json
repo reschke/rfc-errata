@@ -17,7 +17,7 @@
   {
     "errata_id": "4451",
     "doc-id": "RFC3958",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2.2",
     "orig_text": "   example.com.\r\n   ;;       order pref flags\r\n   IN NAPTR 100   10   \"\"    \"WP:whois++\"      ( ; service\r\n                             \"\"                  ; regexp\r\n                             bunyip.example.     ; replacement\r\n                                               )\r\n   IN NAPTR 100   20   \"s\"   \"WP:ldap\"         ( ; service\r\n                             \"\"                  ; regexp\r\n                            _ldap._tcp.myldap.example.com. ; replacement\r\n                                               )\r\n   IN NAPTR 200   10   \"\"    \"EM:protA\"        ( ; service\r\n                             \"\"                  ; regexp\r\n                             someisp.example.    ; replacement\r\n                                               )\r\n   IN NAPTR 200   30   \"a\"   \"EM:protB\"          ; service\r\n                             \"\"                  ; regexp\r\n                             myprotB.example.com.; replacement\r\n                                               )\r\n",
@@ -25,9 +25,9 @@
     "notes": "Not so familiar with BIND syntax, but by appearance, the last entry seems to be missing a beginning parenthesis. There is another similar omission in section 4.2 (thinkingcat.example definition, this time missing an ending parenthesis).",
     "submit_date": "2015-08-19",
     "submitter_name": "Frans Oilinki",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 13:40:01"
   },
   {
     "errata_id": "608",
