@@ -28,5 +28,20 @@
     "verifier_id": "100",
     "verifier_name": "Russ Housley",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8082",
+    "doc-id": "RFC5657",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "BCP 9",
+    "correct_text": "Informational",
+    "notes": "At the time 5657 was adopted, there was such a thing as a Draft Standard, a category that was eliminated by RFC 6410.  Hence, when it was published, this was appropriately a BCP.  However, RFC 6410 not only eliminated the Draft Standard status but explicitly says, in Section 3.2, \r\n\r\n\"Although no longer required by the IETF Standards Processes, RFC 5657  [2] can be helpful to conduct interoperability testing.\"\r\n\r\nWhile it is still appropriate to say that it updates RFC 2026, that statement appears to me to make 5657 purely advisory, i.e., an Informational document and it should be considered and reclassified accordingly.",
+    "submit_date": "2024-08-17",
+    "submitter_name": "John Klensin",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-09-17 12:31:18"
   }
 ]
