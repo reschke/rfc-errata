@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7981",
+    "doc-id": "RFC9543",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "4",
+    "orig_text": "IETF Network Slice:  The realization of the service in the provider's\r\n   network achieved by partitioning network resources and by applying\r\n   certain tools and techniques within the network (see Sections 4.1\r\n   and 7).\r\n\r\n",
+    "correct_text": "IETF Network Slice:  The realization of the service in the provider's\r\n   network achieved both by partitioning network resources and by \r\n   applying certain tools and techniques within the network\r\n   (see Sections 4.1 and 7).\r\n\r\n\r\n",
+    "notes": "There is a confusion in the TEAS WG whether the \"and\" is to be interpreted as \"both ..and\" or \"or\".\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/teas/xejJJtuNtCeCZniUEhQkadb1i3k/ for more context. \r\n\r\nThe NEW text makes the intent explicit.\n --VERIFIER NOTES-- \nRejected per discussion on the teas list; see https://mailarchive.ietf.org/arch/msg/teas/lb2QilbMlon5kXctsJV4TQ3swkw/",
+    "submit_date": "2024-06-11",
+    "submitter_name": "Mohamed BOUCADAIR",
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-07-29 08:02:03"
+  }
+]
