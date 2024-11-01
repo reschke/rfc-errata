@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8144",
+    "doc-id": "RFC8624",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": " This document updates the IANA registry \"Delegation Signer (DS) Resource\r\n   Record (RR) Type Digest Algorithms\". The registry has been updated by\r\n   the following table from section 3.3:\r\n\r\n   +--------+-----------------+-------------------+-------------------+\r\n   | Number | Mnemonics       | DNSSEC Delegation | DNSSEC Validation |\r\n   +--------+-----------------+-------------------+-------------------+\r\n   | 0      | NULL (CDS only) | MUST NOT [*]      | MUST NOT [*]      |\r\n   | 1      | SHA-1           | MUST NOT          | MUST              |\r\n   | 2      | SHA-256         | MUST              | MUST              |\r\n   | 3      | GOST R 34.11-94 | MUST NOT          | MAY               |\r\n   | 4      | SHA-384         | MAY               | RECOMMENDED       |\r\n   +--------+-----------------+-------------------+-------------------+\r\n",
+    "correct_text": "This document updates the IANA registry \"Delegation Signer (DS) Resource\r\n   Record (RR) Type Digest Algorithms\". The registry has been updated by\r\n   the following table from section 3.3:\r\n\r\n   +--------+-----------------+-------------------+-------------------+\r\n   | Number | Mnemonics       | DNSSEC Delegation | DNSSEC Validation |\r\n   +--------+-----------------+-------------------+-------------------+\r\n   | 0      | NULL (CDS only) | MUST NOT [*]      | MUST NOT [*]      |\r\n   | 1      | SHA-1           | MUST NOT          | MUST              |\r\n   | 2      | SHA-256         | MUST              | MUST              |\r\n   | 3      | GOST R 34.11-94 | MUST NOT          | MAY               |\r\n   | 4      | SHA-384         | MAY               | RECOMMENDED       |\r\n   | 5      | SHA-512         | MAY               | MAY               |\r\n   +--------+-----------------+-------------------+-------------------+\r\n",
+    "notes": "Requesting DNSSEC be allowed to fully support the \r\nCommercial National Security Algorithm Suite 2.0 - series of hashes.  \r\nThis is part of NISTs Post Quantum Cryptography effort",
+    "submit_date": "2024-10-16",
+    "submitter_name": "Robert Wagner",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
