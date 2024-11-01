@@ -32,16 +32,16 @@
   {
     "errata_id": "6745",
     "doc-id": "RFC6555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5.6",
     "orig_text": "   Web browsers implement a same-origin policy [RFC6454] that causes\r\n   subsequent connections to the same hostname to go to the same IPv4\r\n   (or IPv6) address as the previous successful connection.  This is\r\n   done to prevent certain types of attacks.\r\n\r\n   The same-origin policy harms user-visible responsiveness if a new\r\n   connection fails (e.g., due to a transient event such as router\r\n   failure or load-balancer failure).  While it is tempting to use Happy\r\n   Eyeballs to maintain responsiveness, web browsers MUST NOT change\r\n   their same-origin policy because of Happy Eyeballs, as that would\r\n   create an additional security exposure.",
     "correct_text": "<This section should be removed>",
-    "notes": "This entire section should be deleted.  Same-Origin policy has nothing to do with what IP connections to the same hostname go to.  Two connections to the same host are same origin even if they're using different IPs.  Happy Eyeballs is free to use whatever IP for a hostname it wants for an origin, and Same-Origin policy will not be violated.",
+    "notes": "This entire section should be deleted.  Same-Origin policy has nothing to do with what IP connections to the same hostname go to.  Two connections to the same host are same origin even if they're using different IPs.  Happy Eyeballs is free to use whatever IP for a hostname it wants for an origin, and Same-Origin policy will not be violated.\r\n\r\n\r\n[ Edit (WK) ]: I am rejecting  this Errata because this RFC has been Obsoleted by RFC8305 - \"Happy Eyeballs Version 2: Better Connectivity Using Concurrency\", which does not contain this text. \n --VERIFIER NOTES-- \n   ",
     "submit_date": "2021-11-19",
     "submitter_name": "Matthew Menke",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-01-15 11:15:45"
   }
 ]
