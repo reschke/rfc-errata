@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7766",
+    "doc-id": "RFC9513",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6",
+    "orig_text": "   The AC-bit (value 0x80) in the OSPFv3 PrefixOptions field [RFC5340]\r\n   is defined to advertise the anycast property:\r\n\r\n                          0  1  2  3  4  5  6  7\r\n                         +--+--+--+--+--+--+--+--+\r\n                         |AC|EL| N|DN| P| x|LA|NU|\r\n                         +--+--+--+--+--+--+--+--+\r\n\r\n                   Figure 2: OSPFv3 Prefix Options Field\r\n",
+    "correct_text": "   The AC-bit (value 0x80) in the OSPFv3 PrefixOptions field [RFC5340]\r\n   is defined to advertise the anycast property:\r\n\r\n                          0  1  2  3  4  5  6  7\r\n                         +--+--+--+--+--+--+--+--+\r\n                         |AC| E| N|DN| P| x|LA|NU|\r\n                         +--+--+--+--+--+--+--+--+\r\n\r\n                   Figure 2: OSPFv3 Prefix Options Field\r\n",
+    "notes": "Bit 1 is defined in RFC9089 section 6 as   \r\n *  Bit 0x40 in the \"OSPFv3 Prefix Options (8 bits)\" registry has been\r\n      allocated to the E-Flag (ELC Flag).\r\nIt is not the EL bit or flag.\r\n\r\nVerifier note: I added a space before the E in Tom's proposed correction, to make the diagram line up.",
+    "submit_date": "2024-01-16",
+    "submitter_name": "tom petch",
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-16 10:17:18"
+  }
+]
