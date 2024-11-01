@@ -298,5 +298,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7862",
+    "doc-id": "RFC6376",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.4.2",
+    "orig_text": "[..]",
+    "correct_text": "[insert after item 2]\r\n\r\nDue to de-facto implementation practice, the term WSP of the following two items, \r\nas well as in the part that refers to after the separating colon (the field body) \r\nin the third, has to be interpreted differently, and must include all US-ASCII \r\nwhitespace characters, namely %d9 (HT), %d10 (LF), %d11 (VT), %d12 (FF), %d12 \r\n(CR) as well as %d32 (SP) [?](the isspace(3) set of characters in the ISO C \"C\" \r\nlocale)[/?]",
+    "notes": "As written.\r\nThe behaviour *could* originate in a partial misunderstanding of the Sendmail milter protocol, which is often used to implement DKIM; this protocol *may* send header continuation lines separated by lone LF bytes, instead of CRLF.\r\n(Thanks to Claus Assmann of esmtp.org for this in-between-the-lines reading.)\n --VERIFIER NOTES-- \n   Withdrawn by submitter.",
+    "submit_date": "2024-03-21",
+    "submitter_name": "Steffen Nurpmeso",
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2024-03-21 19:39:17"
   }
 ]
