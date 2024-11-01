@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8012",
+    "doc-id": "RFC9608",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "The Certification Authority (CA) that issues these short-lived \r\ncertificates do not publish revocation information because the \r\ncertificate lifespan that is shorter than the time needed to detect,\r\nreport, and distribute revocation information.",
+    "correct_text": "The Certification Authority (CA) that issues these short-lived \r\ncertificates do not publish revocation information because the \r\ncertificate lifespan is shorter than the time needed to detect,\r\nreport, and distribute revocation information.",
+    "notes": "In all formats, the abstract has a grammar typo - the \"that is\"\r\nin the cited sentence should just be \"is\". It looks possibly like\r\nan editing artifact from prior versions of the sentence.",
+    "submit_date": "2024-07-01",
+    "submitter_name": "Eric Mill",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-07-01 08:57:33"
+  }
+]
