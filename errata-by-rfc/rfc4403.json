@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8068",
+    "doc-id": "RFC4403",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.5",
+    "orig_text": "      ( 1.3.6.1.1.10.6.5 NAME 'uddiBindingTemplate'\r\n        SUP top\r\n        STRUCTURAL\r\n        MUST ( uddiBindingKey )\r\n        MAY ( uddiServiceKey $\r\n              uddiDescription $\r\n              uddiAccessPoint $\r\n              uddiHostingRedirector\r\n              uddiCategoryBag $\r\n              uddiv3BindingKey $\r\n              uddiv3ServiceKey $\r\n              uddiv3DigitalSignature $\r\n              uddiv3EntityCreationTime $\r\n              uddiv3NodeId)\r\n      )",
+    "correct_text": "      ( 1.3.6.1.1.10.6.5 NAME 'uddiBindingTemplate'\r\n        SUP top\r\n        STRUCTURAL\r\n        MUST ( uddiBindingKey )\r\n        MAY ( uddiServiceKey $\r\n              uddiDescription $\r\n              uddiAccessPoint $\r\n              uddiHostingRedirector $\r\n              uddiCategoryBag $\r\n              uddiv3BindingKey $\r\n              uddiv3ServiceKey $\r\n              uddiv3DigitalSignature $\r\n              uddiv3EntityCreationTime $\r\n              uddiv3NodeId)\r\n      )",
+    "notes": "The line containing the required (MUST) \"uddiHostingRedirector\" attribute type lacks the necessary '$' delimiter.",
+    "submit_date": "2024-08-08",
+    "submitter_name": "Jesse Coretta",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8069",
+    "doc-id": "RFC4403",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.7",
+    "orig_text": "      ( 1.3.6.1.1.10.6.7 NAME 'uddiTModel'\r\n        SUP top\r\n        STRUCTURAL\r\n        MUST ( uddiTModelKey $\r\n               uddiName )\r\n        MAY ( uddiAuthorizedName $\r\n              uddiOperator $\r\n              uddiDescription $\r\n              uddiOverviewDescription $\r\n              uddiOverviewURL $\r\n              uddiIdentifierBag $\r\n              uddiCategoryBag $\r\n              uddiIsHidden\r\n              uddiv3TModelKey $\r\n              uddiv3DigitalSignature $\r\n              uddiv3NodeId)\r\n      )",
+    "correct_text": "      ( 1.3.6.1.1.10.6.7 NAME 'uddiTModel'\r\n        SUP top\r\n        STRUCTURAL\r\n        MUST ( uddiTModelKey $\r\n               uddiName )\r\n        MAY ( uddiAuthorizedName $\r\n              uddiOperator $\r\n              uddiDescription $\r\n              uddiOverviewDescription $\r\n              uddiOverviewURL $\r\n              uddiIdentifierBag $\r\n              uddiCategoryBag $\r\n              uddiIsHidden $\r\n              uddiv3TModelKey $\r\n              uddiv3DigitalSignature $\r\n              uddiv3NodeId)\r\n      )",
+    "notes": "The line containing the optional (MAY) \"uddiIsHidden\" attribute type lacks the necessary '$' delimiter.",
+    "submit_date": "2024-08-08",
+    "submitter_name": "Jesse Coretta",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
