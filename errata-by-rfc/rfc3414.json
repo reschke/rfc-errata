@@ -43,5 +43,20 @@
     "verifier_id": "132",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7797",
+    "doc-id": "RFC3414",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "1.3",
+    "orig_text": "   For these protocols, it not possible to obtain data integrity without\r\n   data origin authentication, nor is it possible to obtain data origin\r\n   authentication without data integrity.  Further, there is no\r\n   provision for data confidentiality without both data integrity and\r\n   data origin authentication.",
+    "correct_text": "   For these protocols, it is not possible to obtain data integrity without\r\n   data origin authentication, nor is it possible to obtain data origin\r\n   authentication without data integrity.  Further, there is no\r\n   provision for data confidentiality without both data integrity and\r\n   data origin authentication.",
+    "notes": "The original text is incorrect in grammar.\r\n\r\nmissing \"is\":\r\nit not > it is not\r\n\r\n",
+    "submit_date": "2024-02-05",
+    "submitter_name": "李骋昊",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-05 15:20:12"
   }
 ]
