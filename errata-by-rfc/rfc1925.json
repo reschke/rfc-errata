@@ -17,17 +17,17 @@
   {
     "errata_id": "4939",
     "doc-id": "RFC1925",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "No matter how hard you push and no matter what the priority,\r\n        you can't increase the speed of light.",
     "correct_text": "No matter how hard you push and no matter what the priority, \r\nyou can't increase the speed of light. You can, however, \r\nslow it down.",
-    "notes": "Light travels more slowly through media such as glass, and the speed depends on frequency - this is how refraction works.",
+    "notes": "Light travels more slowly through media such as glass, and the speed depends on frequency - this is how refraction works.\n --VERIFIER NOTES-- \nThe erratum would have been correct if the original text had said “speed of light in vacuum“, or its synonym, “c”. But it didn’t, so as far as I can see it’s correct, and consistent with the observations made in the notes that were submitted.",
     "submit_date": "2017-02-17",
     "submitter_name": "T Rogers",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-02-11 07:25:03"
   },
   {
     "errata_id": "532",
