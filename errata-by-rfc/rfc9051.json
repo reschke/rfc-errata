@@ -88,5 +88,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8001",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix E",
+    "orig_text": "   1.   Support for 64-bit message and body part sizes.\r\n...\r\n   30.  Loosened requirements on servers when closing connections to be\r\n        more aligned with existing practices.",
+    "correct_text": "   1.  Support for 64-bit message and body part sizes.\r\n...\r\n   30.  Loosened requirements on servers\r\n        when closing connections to be more aligned with existing practices.\r\n   31.  Response of the SUBSCRIBE command and the UNSUBSCRIBE command\r\n        is changed from tagged NO to tagged OK\r\n        if the mailbox is already subscribed/unsubscribed.",
+    "notes": "RFC3501 6.3.6 says:\r\n\r\nThe SUBSCRIBE command adds the specified mailbox name to the server's set of \"active\" or \"subscribed\" mailboxes as returned by the LSUB command. This command returns a tagged OK response only if the subscription is successful.\r\n\r\nAccording to this, SUBSCRIBE command returns a tagged NO response if the mailbox is already subscribed.\r\nhowever, RFC 9501 6.3.7 says:\r\n\r\nThe SUBSCRIBE command adds the specified mailbox name to the server's set of \"active\" or \"subscribed\" mailboxes as returned by the LIST (SUBSCRIBED) command. This command returns a tagged OK response if the subscription is successful or if the mailbox is already subscribed.\r\n\r\nThis can be said that there are not compatible between IMAP4rev1 and IMAP4rev2.\r\nThis problem also occurs in UNSUBSCRIBE command.\r\nI think this should be written in Appendix E.",
+    "submit_date": "2024-06-25",
+    "submitter_name": "Yasumasa Shimizu",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-06-25 12:41:04"
+  },
+  {
+    "errata_id": "8030",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.3.10",
+    "orig_text": "The client is designed so that it keeps two 'Deleted Items' mailboxes,\r\none for each namespace\r\n\r\nC: A005 CREATE \"Delete Items\"\r\nS: A005 OK CREATE command completed\r\nC: A006 CREATE \"#mh/Deleted Items\"\r\nS: A006 OK CREATE command completed",
+    "correct_text": "The client is designed so that it keeps two 'Deleted Items' mailboxes,\r\none for each namespace\r\n\r\nC: A005 CREATE \"Deleted Items\"\r\nS: A005 OK CREATE command completed\r\nC: A006 CREATE \"#mh/Deleted Items\"\r\nS: A006 OK CREATE command completed",
+    "notes": "Simple typographic error in mailbox name. \"Delete Items\" should be \"Deleted Items\".",
+    "submit_date": "2024-07-14",
+    "submitter_name": "David Harris",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-07-15 10:26:36"
   }
 ]
