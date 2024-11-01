@@ -32,7 +32,7 @@
   {
     "errata_id": "5855",
     "doc-id": "RFC4648",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "10.",
     "orig_text": "10.  Test Vectors\r\n\r\n   BASE64(\"\") = \"\"\r\n\r\n   BASE64(\"f\") = \"Zg==\"\r\n\r\n   ...",
@@ -40,9 +40,9 @@
     "notes": "TL;DR: Test Vectors section should specify the character encoding (ASCII/UTF-8) of the _character_ sequences used to represent input-data _octet_ sequences.\r\n\r\nThe input to a Base 64/-32/-16 encoding operation is sequence of _octets_.\r\n\r\nHowever, the test vector expressions use sequences of _characters_ to represent input _octet_ sequences.\r\n\r\nThat's a type mismatch (characters where octets are needed), and although it's pretty obvious that the strings were meant to represent octet sequences, there's no mention the the intended character encoding isn't, say, EBCDIC.  \r\n\r\nSome possible fixes:\r\n1) The text should specify the character encoding (ASCII/UTF-8) to be used to interpret the character sequences as input octet sequences.\r\n2) The input octet sequences should be represented with a more direct (encoding-independent) representation of octets (e.g., \"0x48, 0x69\".).",
     "submit_date": "2019-09-06",
     "submitter_name": "Daniel Barclay",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 13:41:14"
   },
   {
     "errata_id": "7514",
