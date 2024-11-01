@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7925",
+    "doc-id": "RFC9497",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4.3",
+    "orig_text": "HashToScalar():  Use hash_to_field from [RFC9380] using L = 48,\r\n         expand_message_xmd with SHA-256, DST = \"HashToScalar-\" ||\r\n         contextString, and a prime modulus equal to Group.Order().",
+    "correct_text": "HashToScalar():  Compute uniform_bytes using expand_message =\r\n         expand_message_xmd, DST = \"HashToScalar-\" || contextString, and\r\n         an output length of 48 bytes, interpret uniform_bytes as a\r\n         384-bit integer in little-endian order, and reduce the integer\r\n         modulo Group.Order().",
+    "notes": "It is incorrect to refer to the hash_to_filed operation of RFC 9380 because the implementation of hash_to_field, as described in section 5.2 of RFC 9380 reduces the result integer mod Field order (not Group order).\r\n\r\n 7.     e_j = OS2IP(tv) mod p\r\n\r\nWhere p is the characteristic of field F.\r\n\r\nThe current text imply that the existing hash_to_field implementation for P-256 can be used. But using this will cause a false result due to the mod field order operation.\r\n\r\nThe a better, and accurate way to describe this is by using the same explanation as for other curve types and specify the use of expand_message_xmd directly modulus Group.Order().\n --VERIFIER NOTES-- \nDiscussed on CFRG list. The original text is correct, see https://mailarchive.ietf.org/arch/msg/cfrg/YLqRy76LFlVzeOofGyQiYeDhAuM/",
+    "submit_date": "2024-05-07",
+    "submitter_name": "Stefan Santesson",
+    "verifier_id": "163",
+    "verifier_name": "Colin Perkins",
+    "update_date": "2024-05-20 15:51:25"
+  },
+  {
+    "errata_id": "7999",
+    "doc-id": "RFC9497",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3.3",
+    "orig_text": "evaluatedElement = G.ScalarInverse(t) * blindedElement\r\n",
+    "correct_text": "evaluatedElement = t * blindedElement\r\n",
+    "notes": "This appears in def BlindEvaluate(skS, blindedElement, info). It seems that the evaluatedElement=t * blindedElement, which is consistent with tweakedKey = t * G.Generator()\r\n\r\n\r\n",
+    "submit_date": "2024-06-24",
+    "submitter_name": "Quanwei Cai",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-06-25 14:29:44"
+  }
+]
