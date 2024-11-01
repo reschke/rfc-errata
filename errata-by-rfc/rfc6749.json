@@ -227,7 +227,7 @@
   {
     "errata_id": "5708",
     "doc-id": "RFC6749",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "3.1 and 3.2",
     "orig_text": "Parameters sent without a value MUST be treated as if they were\r\nomitted from the request.  The authorization server MUST ignore\r\nunrecognized request parameters.  Request and response parameters\r\nMUST NOT be included more than once.",
@@ -235,9 +235,9 @@
     "notes": "Adds the text \"defined by this specification\" to the last sentence to clarify that the restriction only applies to parameters defined in RFC 6749 and not to unrecognized parameters or parameters defined by extension.",
     "submit_date": "2019-04-29",
     "submitter_name": "Brian Campbell",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "162",
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2024-01-17 06:07:04"
   },
   {
     "errata_id": "5793",
@@ -348,16 +348,16 @@
     "errata_id": "7631",
     "doc-id": "RFC6749",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "3.2.1",
     "orig_text": "This protects the client from substitution of the authentication code.",
     "correct_text": "This protects the client from substitution of the authorization code.",
     "notes": "It will be a bit confusing to figure out if it is a MAC or an authorization code.",
     "submit_date": "2023-09-05",
     "submitter_name": "Daiki Usami",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2024-04-09 20:41:37"
   },
   {
     "errata_id": "7642",
@@ -403,5 +403,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2023-12-01 11:49:41"
+  },
+  {
+    "errata_id": "7823",
+    "doc-id": "RFC6749",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.1",
+    "orig_text": "   Confidential clients or other clients issued client credentials MUST\r\n   authenticate with the authorization server as described in\r\n   Section 2.3 when making requests to the token endpoint.  Client\r\n   authentication is used for:\r\n\r\n   o  Enforcing the binding of refresh tokens and authorization codes to\r\n      the client they were issued to.  Client authentication is critical\r\n      when an authorization code is transmitted to the redirection\r\n      endpoint over an insecure channel or when the redirection URI has\r\n      not been registered in full.",
+    "correct_text": "   Confidential clients or other clients issued client credentials MUST\r\n   authenticate with the authorization server as described in\r\n   Section 2.3 when making requests to the token endpoint.  Client\r\n   authentication is used for:\r\n\r\n   o  Enforcing the binding of refresh tokens, authorization codes, and\r\n      (in the case of the Client Credentials Grant as described in\r\n      Section 4.4) the access token to the client they were issued to.\r\n      Client authentication is critical when an authorization code is\r\n      transmitted to the redirection endpoint over an insecure channel\r\n      or when the redirection URI has not been registered in full.",
+    "notes": "Section 4.4.2 requires for the \"client_credentials\" grant type that the client is authenticated to the authorization server according to section 3.2.1. The reason for this authentication is (or so I assume) that the to-be-issued access token shall be bound to the correct (authenticated) client. Otherwise, the client could authenticate with valid credentials as \"client A\" and request a token for \"client B\", and would still be in accordance with the RFC, which is probably not intended.",
+    "submit_date": "2024-02-26",
+    "submitter_name": "Alexander Stumpf",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-02-26 16:41:51"
   }
 ]
