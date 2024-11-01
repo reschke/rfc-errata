@@ -17,7 +17,7 @@
   {
     "errata_id": "5122",
     "doc-id": "RFC2361",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "WAVE form Registration Number (hex):    0x00111",
@@ -25,14 +25,14 @@
     "notes": "The registration number can be no more than four hexadecimal places (i.e. two bytes) long, according to WAVE format specifications.",
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:00:29"
   },
   {
     "errata_id": "5123",
     "doc-id": "RFC2361",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "WAVE form wFormatTag ID:        WAVE_FORMAT_ CREATIVE_FASTSPEECH10",
@@ -40,44 +40,44 @@
     "notes": null,
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:01:50"
   },
   {
     "errata_id": "5124",
     "doc-id": "RFC2361",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": "Appendix A",
+    "section": "Appendix A.58 says:",
     "orig_text": "WAVE form wFormatTag ID:n       WAVE_FORMAT_VOXWARE_BYTE_ALIGNED",
     "correct_text": "WAVE form wFormatTag ID:        WAVE_FORMAT_VOXWARE_BYTE_ALIGNED",
     "notes": null,
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-15 22:00:24"
   },
   {
     "errata_id": "5125",
     "doc-id": "RFC2361",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "Appendix A",
     "orig_text": "A.40    Rockwell Digit LK",
     "correct_text": "A.40    Rockwell DigiTalk",
-    "notes": null,
+    "notes": "The existing text matches what appears in the Internet-Draft (https://datatracker.ietf.org/doc/draft-fleischman-codec-subtree/01/) and the IANA registry (https://www.iana.org/assignments/wave-avi-codec-registry/).",
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-28 17:59:52"
   },
   {
     "errata_id": "5126",
     "doc-id": "RFC2361",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "Codec ID in the IANA Namespace:         audio/vnd.wave;codec=1401\r\nWAVE form wFormatTag ID:                WAVE_FORMAT_ISIAUDIO",
@@ -85,8 +85,8 @@
     "notes": "Codec 1401 has an ID of \"WAVE_FORMAT_ISIAUDIO_2\" according to \"mmreg.h\", from which it presumably derives. \"WAVE_FORMAT_ISIAUDIO\" is already the ID of codec 88, which appears earlier in the appendix.",
     "submit_date": "2017-09-24",
     "submitter_name": "David Russo",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:03:38"
   }
 ]
