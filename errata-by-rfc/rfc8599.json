@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8136",
+    "doc-id": "RFC8599",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.1.4",
+    "orig_text": "Example of a SIP REGISTER response including a 'sip.pnsreg'\r\n     media feature tag and a 'sip.pnsreq' feature-capability indicator:\r\n\r\nIf the UA receives a 2xx response to the REGISTER request that\r\n   contains a Feature-Caps header field with a 'sip.pnsreq' feature-\r\n   capability indicator,\r\n\r\nIf the UA receives a 2xx response to the REGISTER request that does\r\n   not contain a Feature-Caps header field with a 'sip.pnsreq' feature-\r\n   capability indicator,\r\n\r\n",
+    "correct_text": "Example of a SIP REGISTER response including a 'sip.pnsreg'\r\n     media feature tag and a 'sip.pnsreg' feature-capability indicator:\r\n\r\nIf the UA receives a 2xx response to the REGISTER request that\r\n   contains a Feature-Caps header field with a 'sip.pnsreg' feature-\r\n   capability indicator,\r\n\r\nIf the UA receives a 2xx response to the REGISTER request that does\r\n   not contain a Feature-Caps header field with a 'sip.pnsreg' feature-\r\n   capability indicator,",
+    "notes": "“sip.pnsreq” should be “sip.pnsreg” in the three sentences in this report.",
+    "submit_date": "2024-10-12",
+    "submitter_name": "Babar",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-10-24 11:09:31"
   }
 ]
