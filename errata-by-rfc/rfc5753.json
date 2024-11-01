@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8087",
+    "doc-id": "RFC5753",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A.1",
+    "orig_text": "   -- From [CMS-AESCG]\r\n\r\n   id-aes128-CCM, id-aes192-CCM, id-aes256-CCM, CCMParameters\r\n   id-aes128-GCM, id-aes192-GCM, id-aes256-GCM, GCMParameters\r\n     FROM CMS-AES-CCM-and-AES-GCM\r\n       { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)\r\n         smime(16) modules(0) id-mod-cms-aes(32) }\r\n\r\n   ;",
+    "correct_text": "   -- From [CMS-AESCG]\r\n\r\n   id-aes128-CCM, id-aes192-CCM, id-aes256-CCM, CCMParameters,\r\n   id-aes128-GCM, id-aes192-GCM, id-aes256-GCM, GCMParameters\r\n     FROM CMS-AES-CCM-and-AES-GCM\r\n       { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)\r\n         smime(16) modules(0) id-mod-cms-aes(32) }\r\n\r\n   ;",
+    "notes": "the missing comma after CCMParameters in the import statement is an ASN.1 syntax error",
+    "submit_date": "2024-08-23",
+    "submitter_name": "Stefan Grundmann",
+    "verifier_id": "2",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-08-23 10:47:14"
   }
 ]
