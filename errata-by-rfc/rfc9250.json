@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7883",
+    "doc-id": "RFC9250",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7.5",
+    "orig_text": "Implementations SHOULD use the mechanisms defined in Section 5.4 to\r\nmitigate this attack.",
+    "correct_text": "Implementations MUST use the padding mechanisms defined in Section 5.4\r\nto mitigate this attack.",
+    "notes": "Section 5.4 states that \"[i]mplementations MUST protect against the traffic analysis attacks described in Section 7.5\", but Section 7.5 describes that obligation as a \"SHOULD\". \"MUST\" is correct, and the inconsistent \"SHOULD\" in Section 7.5 is an error.\r\n\r\n-- Verifier (Eric Vyncke) note --\r\n\r\nThe short discussion on the DPRIVE WG list has indicated that 2 authors are in favour of verifying this errata.",
+    "submit_date": "2024-04-05",
+    "submitter_name": "Lyra Naeseth",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-04-23 06:14:46"
+  }
+]
