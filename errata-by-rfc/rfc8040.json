@@ -197,32 +197,32 @@
   {
     "errata_id": "6342",
     "doc-id": "RFC8040",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.6.1",
     "orig_text": "To replace just the \"year\" field in the \"album\" resource (instead of\r\nreplacing the entire resource with the PUT method), the client might\r\nsend a plain patch as follows:\r\nPATCH /restconf/data/example-jukebox:jukebox/\\\r\nlibrary/artist=Foo%20Fighters/album=Wasting%20Light HTTP/1.1\r\nHost: example.com\r\nIf-Match: \"b8389233a4c\"\r\nContent-Type: application/yang-data+xml\r\n<album xmlns=\"http://example.com/ns/example-jukebox\">\r\n<year>2011</year>\r\n</album>",
     "correct_text": "To replace just the \"year\" field in the \"album\" resource (instead of\r\nreplacing the entire resource with the PUT method), the client might\r\nsend a plain patch as follows:\r\nPATCH /restconf/data/example-jukebox:jukebox/\\\r\nlibrary/artist=Foo%20Fighters/album=Wasting%20Light HTTP/1.1\r\nHost: example.com\r\nIf-Match: \"b8389233a4c\"\r\nContent-Type: application/yang-data+xml\r\n<album xmlns=\"http://example.com/ns/example-jukebox\">\r\n<name>Wasting Light</name>\r\n<year>2011</year>\r\n</album>",
-    "notes": "Missing key leaf value in the message-body (<name>Wasting Light</name>)",
+    "notes": "Missing key leaf value in the message-body (<name>Wasting Light</name>)\n --VERIFIER NOTES-- \nAs per this thread, https://mailarchive.ietf.org/arch/msg/netconf/ZlAQl3-YljG4tCDlrHP-PGb-KEY/  the consensus amongst the authors was that the RFC does not specify whether keys must be included in a YANG PATCH operation, and hence the default assumption is that they are not required.\r\n\r\nIt may be helpful for a a future revision of RESTCONF (or possibly YANG) to more explicitly state the required behaviour. ",
     "submit_date": "2020-11-22",
     "submitter_name": "Muly Ilan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2024-01-15 06:01:44"
   },
   {
     "errata_id": "6362",
     "doc-id": "RFC8040",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.3.",
     "orig_text": "   The client might request the response header fields for an XML\r\n   representation of a specific \"album\" resource:\r\n\r\n      GET /restconf/data/example-jukebox:jukebox/\\\r\n         library/artist=Foo%20Fighters/album=Wasting%20Light HTTP/1.1\r\n      Host: example.com\r\n      Accept: application/yang-data+xml\r\n\r\n   The server might respond as follows:\r\n\r\n      HTTP/1.1 200 OK\r\n      Date: Thu, 26 Jan 2017 20:56:30 GMT\r\n      Server: example-server\r\n      Content-Type: application/yang-data+xml\r\n      Cache-Control: no-cache\r\n      ETag: \"a74eefc993a2b\"\r\n      Last-Modified: Thu, 26 Jan 2017 14:02:14 GMT",
     "correct_text": "   The client might request the response header fields for an XML\r\n   representation of a specific \"album\" resource:\r\n\r\n      GET /restconf/data/example-jukebox:jukebox/\\\r\n         library/artist=Foo%20Fighters/album=Wasting%20Light HTTP/1.1\r\n      Host: example.com\r\n      Accept: application/yang-data+xml\r\n\r\n   The server might respond as follows:\r\n\r\n      HTTP/1.1 200 OK\r\n      Date: Thu, 26 Jan 2017 20:56:30 GMT\r\n      Server: example-server\r\n      Content-Type: application/yang-data+xml\r\n      Cache-Control: no-cache\r\n",
-    "notes": "Removed the \"ETag\" and \"Last-Modified\" header fields.\r\n\r\nAccording to Appendix B.3.1. :\r\n   To retrieve only the configuration child resources, the \"content\"\r\n   parameter is set to \"config\".  Note that the \"ETag\" and\r\n   \"Last-Modified\" headers are only returned if the \"content\" parameter\r\n   value is \"config\".",
+    "notes": "Removed the \"ETag\" and \"Last-Modified\" header fields.\r\n\r\nAccording to Appendix B.3.1. :\r\n   To retrieve only the configuration child resources, the \"content\"\r\n   parameter is set to \"config\".  Note that the \"ETag\" and\r\n   \"Last-Modified\" headers are only returned if the \"content\" parameter\r\n   value is \"config\".\n --VERIFIER NOTES-- \nThis has been discussed at: https://mailarchive.ietf.org/arch/msg/netconf/SIpDoR7W8_na_USDHdMApjW6Wu8/\r\n\r\nThe example is not incorrect because an ETag and Last-Modified header are allowed to be returned if no content parameter has been specified, but only apply to the configuration data.\r\n\r\nNote, the referenced text in Appendix B.3.1 (Note that the \"ETag\" and\r\n\"Last-Modified\" headers are only returned if the \"content\" parameter\r\nvalue is \"config\") looks to be incorrect and should be removed or clarified in a future revision of the protocol.",
     "submit_date": "2020-12-22",
     "submitter_name": "Muly Ilan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2024-01-15 06:27:35"
   },
   {
     "errata_id": "6363",
@@ -242,7 +242,7 @@
   {
     "errata_id": "6473",
     "doc-id": "RFC8040",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "B.3.2",
     "orig_text": "   Example 3: depth=3\r\n\r\n   To limit the depth level to the target resource plus two child\r\n   resource layers, the value \"3\" is used.\r\n\r\n      GET /restconf/data/example-jukebox:jukebox?depth=3 HTTP/1.1\r\n      Host: example.com\r\n      Accept: application/yang-data+json\r\n\r\n   The server might respond as follows:\r\n\r\n      HTTP/1.1 200 OK\r\n      Date: Thu, 26 Jan 2017 20:56:30 GMT\r\n      Server: example-server\r\n      Cache-Control: no-cache\r\n      Content-Type: application/yang-data+json\r\n\r\n      {\r\n        \"example-jukebox:jukebox\" : {\r\n          \"library\" : {\r\n            \"artist\" : {}\r\n          },\r\n          \"playlist\" : [\r\n            {\r\n              \"name\" : \"Foo-One\",\r\n              \"description\" : \"example playlist 1\",\r\n              \"song\" : {}\r\n            }\r\n          ],\r\n          \"player\" : {\r\n            \"gap\" : 0.5\r\n          }\r\n        }\r\n      }",
@@ -250,9 +250,9 @@
     "notes": "\"artist\" and \"song\" are defined as list.  Therefore, according to RFC 7951, they should be encoded as array instead of object.",
     "submit_date": "2021-03-10",
     "submitter_name": "Kyoung-Hwan Yun",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2024-01-15 06:31:17"
   },
   {
     "errata_id": "7311",
@@ -268,5 +268,35 @@
     "verifier_id": "166",
     "verifier_name": "Robert Wilton",
     "update_date": "2024-01-12 09:42:50"
+  },
+  {
+    "errata_id": "7866",
+    "doc-id": "RFC8040",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Multiple",
+    "orig_text": "Text occurs in three places\r\n\r\n1)    Section 3.5.3\r\n\r\n      The leaf-list value is specified as a string, using the canonical\r\n      representation for the YANG data type.  Any reserved characters\r\n      MUST be percent-encoded, according to Sections 2.1 and 2.5 of\r\n      [RFC3986].\r\n\r\n\r\n2)    Section 3.5.3\r\n\r\n      The key value is specified as a string, using the canonical\r\n      representation for the YANG data type.  Any reserved characters\r\n      MUST be percent-encoded, according to Sections 2.1 and 2.5 of\r\n      [RFC3986]. \r\n\r\n\r\n3)    Section 5.1\r\n\r\n      The contents of any query parameter value MUST be encoded according\r\n      to Section 3.4 of [RFC3986].  Any reserved characters MUST be\r\n      percent-encoded, according to Sections 2.1 and 2.5 of [RFC3986].",
+    "correct_text": "1)    Section 3.5.3\r\n\r\n      The leaf-list value is specified as a string, using the canonical\r\n      representation for the YANG data type.  Any reserved characters\r\n      MUST be percent-encoded, according to Sections 2.1, 2.2, and 2.5 of\r\n      [RFC3986].\r\n\r\n2)    Section 3.5.3\r\n\r\n      The key value is specified as a string, using the canonical\r\n      representation for the YANG data type.  Any reserved characters\r\n      MUST be percent-encoded, according to Sections 2.1, 2.2, and 2.5 of\r\n      [RFC3986]. \r\n\r\n3)    Section 5.1\r\n      \r\n      The contents of any query parameter value MUST be encoded according\r\n      to Section 3.4 of [RFC3986].  Any reserved characters MUST be\r\n      percent-encoded, according to Sections 2.1, 2.2, and 2.5 of [RFC3986].\r\n",
+    "notes": "The reserved character list is defined in section 2.2 of RFC 3986",
+    "submit_date": "2024-03-23",
+    "submitter_name": "Andy Bierman",
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2024-04-03 10:10:02"
+  },
+  {
+    "errata_id": "7884",
+    "doc-id": "RFC8040",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.5.3.",
+    "orig_text": "   The following example shows how reserved characters are\r\n   percent-encoded within a key value.  The value of \"key1\" contains\r\n   a comma, single-quote, double-quote, colon, double-quote, space,\r\n   and forward slash (,'\":\" /).  Note that double-quote is not a\r\n   reserved character and does not need to be percent-encoded.  The\r\n   value of \"key2\" is the empty string, and the value of \"key3\" is the\r\n   string \"foo\".\r\n\r\n   Example URL:\r\n\r\n      /restconf/data/example-top:top/list1=%2C%27\"%3A\"%20%2F,,foo",
+    "correct_text": "   The following example shows how specific characters are\r\n   percent-encoded within a key value.  The value of \"key1\" contains\r\n   a comma, single-quote, double-quote, colon, double-quote, space,\r\n   and forward slash (,'\":\" /).  Note that double-quote and space are\r\n   not reserved characters but also do not correspond to characters in\r\n   the unreserved set and therefore need to be percent-encoded.  The\r\n   value of \"key2\" is the empty string, and the value of \"key3\" is the\r\n   string \"foo\".\r\n\r\n   Example URL:\r\n\r\n      /restconf/data/example-top:top/list1=%2C%27%22%3A%22%20%2F,,foo",
+    "notes": "As explained in RFC3986, the restricted set of URI characters consists of reserved characters, unreserved characters and percent-encodings. If a character does not belong to either reserved characters or unreserved characters it can only appear as a percent-encoding in a valid URI. This restricted set of characters is defined by RFC3986, Appendix A, and does not include double-quote and space characters.",
+    "submit_date": "2024-04-05",
+    "submitter_name": "Jernej Tuljak",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
