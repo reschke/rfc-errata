@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8041",
+    "doc-id": "RFC9239",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4",
+    "orig_text": "Source goal sources SHOULD be encoded as UTF-8",
+    "correct_text": "Script goal sources SHOULD be encoded as UTF-8",
+    "notes": "Section 3 says there are only two goals: Module and Script. That \"Source goal\" is a typo and should read \"Script goal\".",
+    "submit_date": "2024-07-22",
+    "submitter_name": "Thomas Broyer",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-07-25 10:52:58"
+  }
+]
