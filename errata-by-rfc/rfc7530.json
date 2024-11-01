@@ -107,32 +107,32 @@
   {
     "errata_id": "5471",
     "doc-id": "RFC7530",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "16.16.5",
     "orig_text": " o  NFS4ERR_BAD_RECLAIM is returned if the other error conditions do\r\n      not apply and the server has no record of the delegation whose\r\n      reclaim is being attempted.\r\n",
     "correct_text": " o  NFS4ERR_RECLAIM_BAD is returned if the other error conditions do\r\n      not apply and the server has no record of the delegation whose\r\n      reclaim is being attempted.\r\n",
-    "notes": "The the defined error is NFS4ERR_RECLAIM_BAD",
+    "notes": "The the defined error is NFS4ERR_RECLAIM_BAD\r\n\r\n\r\n---\r\nRFC Editor Note: This also appears in Section 10.2.1. See https://www.rfc-editor.org/errata/eid5472.",
     "submit_date": "2018-08-18",
     "submitter_name": "Tigran Mkrtchyan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-02 14:01:00"
   },
   {
     "errata_id": "5472",
     "doc-id": "RFC7530",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "10.2.1",
     "orig_text": "   When NFS4ERR_EXPIRED is returned, the server MAY retain information\r\n   about the delegations held by the client, deleting those that are\r\n   invalidated by a conflicting request.  Retaining such information\r\n   will allow the client to recover all non-invalidated delegations\r\n   using the claim type CLAIM_DELEGATE_PREV, once the\r\n   SETCLIENTID_CONFIRM is done to recover.  Attempted recovery of a\r\n   delegation that the client has no record of, typically because they\r\n   were invalidated by conflicting requests, will result in the error\r\n   NFS4ERR_BAD_RECLAIM.  Once a reclaim is attempted for all delegations\r\n   that the client held, it SHOULD do a DELEGPURGE to allow any\r\n   remaining server delegation information to be freed.",
     "correct_text": "   When NFS4ERR_EXPIRED is returned, the server MAY retain information\r\n   about the delegations held by the client, deleting those that are\r\n   invalidated by a conflicting request.  Retaining such information\r\n   will allow the client to recover all non-invalidated delegations\r\n   using the claim type CLAIM_DELEGATE_PREV, once the\r\n   SETCLIENTID_CONFIRM is done to recover.  Attempted recovery of a\r\n   delegation that the client has no record of, typically because they\r\n   were invalidated by conflicting requests, will result in the error\r\n   NFS4ERR_RECLAIM_BAD.  Once a reclaim is attempted for all delegations\r\n   that the client held, it SHOULD do a DELEGPURGE to allow any\r\n   remaining server delegation information to be freed.",
-    "notes": "The defined error code is NFS4ERR_RECLAIM_BAD",
+    "notes": "The defined error code is NFS4ERR_RECLAIM_BAD\r\n\r\n\r\n--\r\nRFC Editor Note: This also appears in 16.16.5. See https://www.rfc-editor.org/errata/eid5471.",
     "submit_date": "2018-08-18",
     "submitter_name": "Tigran Mkrtchyan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-02 14:02:24"
   },
   {
     "errata_id": "5531",
