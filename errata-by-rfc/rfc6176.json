@@ -17,16 +17,16 @@
   {
     "errata_id": "5536",
     "doc-id": "RFC6176",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
     "section": "1",
     "orig_text": "   RFC 4346 [TLS1.1], and later RFC 5246 [TLS1.2], explicitly warned\r\n   implementers that the \"ability to send version 2.0 CLIENT-HELLO\r\n   messages will be phased out with all due haste\".  This document\r\n   accomplishes this by updating the backward compatibility sections\r\n   found in TLS [TLS1.0][TLS1.1][TLS1.2].",
     "correct_text": "   RFC 2246 [TLS1.0], and later RFC 4346 [TLS1.1], then RFC 5246\r\n   [TLS1.2] explicitly warned implementers that the \"ability to send\r\n   version 2.0 CLIENT-HELLO messages will be phased out with all due\r\n   haste\". This document accomplishes this by updating the backward\r\n   compatibility sections found in TLS [TLS1.0][TLS1.1][TLS1.2].",
     "notes": "The warning on the version 2.0 Client Hello is as old as the first TLS version (RFC 2246 Appendix E). That's what the authors meant and wanted to highlight by listing two of the three RFCs containing this warning. This is confirmed by their last sentence. It looks like a small mistake without concrete effects, I push this errata considering \"IESG Processing of RFC Errata for the IETF Stream rule 6\"",
     "submit_date": "2018-10-19",
     "submitter_name": "Eugene Adell",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-03-18 01:11:10"
   }
 ]
