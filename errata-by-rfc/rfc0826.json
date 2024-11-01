@@ -13,5 +13,20 @@
     "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2024-01-11 17:23:15"
+  },
+  {
+    "errata_id": "7909",
+    "doc-id": "RFC0826",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "The \"Packet format\" section says:",
+    "orig_text": "        16.bit: (ar$pro) Protocol address space.  For Ethernet\r\n                         hardware, this is from the set of type\r\n                         fields ether_typ$<protocol>.",
+    "correct_text": "        16.bit: (ar$pro) Protocol address space.  For Ethernet\r\n                         hardware, this is from the set of type\r\n                         fields ether_type$<protocol>.",
+    "notes": "In original text last letter \"e\" is missing in \"ether_type$<protocol>\".\r\n\r\n--- Verifier note (Eric Vyncke, INT AD) ---\r\nAfter reclassification into \"editorial\", this erratum is approved.",
+    "submit_date": "2024-04-26",
+    "submitter_name": "Alexander Bondarenko",
+    "verifier_id": "2",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-04-26 11:01:17"
   }
 ]
