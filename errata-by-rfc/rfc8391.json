@@ -103,5 +103,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7900",
+    "doc-id": "RFC8391",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.1.",
+    "orig_text": "An XMSS private key SK contains 2^h WOTS+ private keys, the leaf\r\nindex idx of the next WOTS+ private key that has not yet been used,\r\nSK_PRF (an n-byte key to generate pseudorandom values for randomized\r\nmessage hashing), the n-byte value root (which is the root node of\r\nthe tree and SEED), and the n-byte public seed used to pseudorandomly\r\ngenerate bitmasks and hash function keys.",
+    "correct_text": "An XMSS private key SK contains 2^h WOTS+ private keys, the leaf\r\nindex idx of the next WOTS+ private key that has not yet been used,\r\nSK_PRF (an n-byte key to generate pseudorandom values for randomized\r\nmessage hashing), the n-byte value root (which is the root node of\r\nthe tree), and SEED (the n-byte public seed used to pseudorandomly\r\ngenerate bitmasks and hash function keys).",
+    "notes": "SEED appearing in the parenthesis explaining the root value is confusing. It has to be paired with the explanation of it that follows.\r\n\r\nErrata verified by Andreas Hülsing, 2024-04-22",
+    "submit_date": "2024-04-18",
+    "submitter_name": "Çağdaş Çalık",
+    "verifier_id": "163",
+    "verifier_name": "Colin Perkins",
+    "update_date": "2024-04-22 15:01:25"
   }
 ]
