@@ -77,7 +77,7 @@
   {
     "errata_id": "6263",
     "doc-id": "RFC8410",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7",
     "orig_text": "NOTE: There exist some private key import functions that have not picked up the new ASN.1 structure OneAsymmetricKey that is defined in [RFC7748].",
@@ -85,9 +85,9 @@
     "notes": "RFC7748 does not define or even mention OneAsymmetricKey. The correct reference should be RFC5958 \"Asymmetric Key Packages\"",
     "submit_date": "2020-08-24",
     "submitter_name": "David Ireland",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-10-30 03:03:49"
   },
   {
     "errata_id": "6738",
@@ -137,7 +137,7 @@
   {
     "errata_id": "7384",
     "doc-id": "RFC8410",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "9",
     "orig_text": "    sa-Ed25519 SIGNATURE-ALGORITHM ::= {\r\n       IDENTIFIER id-Ed25519\r\n        PARAMS ARE absent\r\n        PUBLIC-KEYS {pk-Ed25519}\r\n        SMIME-CAPS { IDENTIFIED BY id-Ed25519 }\r\n    }\r\n\r\n    pk-Ed25519 PUBLIC-KEY ::= {\r\n        IDENTIFIER id-Ed25519\r\n        -- KEY no ASN.1 wrapping --\r\n        PARAMS ARE absent\r\n        CERT-KEY-USAGE {digitalSignature, nonRepudiation,\r\n                        keyCertSign, cRLSign}\r\n        PRIVATE-KEY CurvePrivateKey\r\n    }",
@@ -145,8 +145,23 @@
     "notes": "The definitions for sa-Ed448 and pk-Ed448 are missing from RFC 8410.",
     "submit_date": "2023-03-12",
     "submitter_name": "Russ Housley",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-04-11 12:56:33"
+  },
+  {
+    "errata_id": "7848",
+    "doc-id": "RFC8410",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "Certificate  ::=  SEQUENCE  {\r\n           tbsCertificate       TBSCertificate,\r\n           signatureAlgorithm   AlgorithmIdentifier,\r\n           signatureValue       BIT STRING  }\r\n\r\n...\r\n\r\n\r\nFor the Certificate structure, the signature value is\r\n   wrapped in the \"signatureValue\" BIT STRING field.",
+    "correct_text": "Certificate  ::=  SEQUENCE  {\r\n           tbsCertificate       TBSCertificate,\r\n           signatureAlgorithm   AlgorithmIdentifier,\r\n           signature            BIT STRING  }\r\n\r\n...\r\n\r\nFor the Certificate structure, the signature value is\r\n   wrapped in the \"signature\" BIT STRING field.",
+    "notes": "There is no field with the name \"signatureValue\" in the Certificate SEQUENCE. It is instead named \"signature\" according to the ASN.1 module in RFC 5280 A.1 as well as the ASN.1 module in section 14 of RFC 5912.",
+    "submit_date": "2024-03-12",
+    "submitter_name": "Corey Bonnell",
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-04-11 12:52:08"
   }
 ]
