@@ -28,5 +28,20 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2022-03-20 08:51:57"
+  },
+  {
+    "errata_id": "8028",
+    "doc-id": "RFC8984",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.3",
+    "orig_text": "{\r\n     \"@type\": \"Group\",\r\n     \"uid\": \"bf0ac22b-4989-4caf-9ebd-54301b4ee51a\",\r\n     \"updated\": \"2020-01-15T18:00:00Z\",\r\n     \"name\": \"A simple group\",\r\n     \"entries\": [{\r\n       \"@type\": \"Event\",\r\n       \"uid\": \"a8df6573-0474-496d-8496-033ad45d7fea\",\r\n       \"updated\": \"2020-01-02T18:23:04Z\",\r\n       \"title\": \"Some event\",\r\n       \"start\": \"2020-01-15T13:00:00\",\r\n       \"timeZone\": \"America/New_York\",\r\n       \"duration\": \"PT1H\"\r\n     },\r\n     {\r\n       \"@type\": \"Task\",\r\n       \"uid\": \"2a358cee-6489-4f14-a57f-c104db4dc2f2\",\r\n       \"updated\": \"2020-01-09T14:32:01Z\",\r\n       \"title\": \"Do something\"\r\n     }]\r\n   }",
+    "correct_text": "{\r\n     \"@type\": \"Group\",\r\n     \"uid\": \"bf0ac22b-4989-4caf-9ebd-54301b4ee51a\",\r\n     \"updated\": \"2020-01-15T18:00:00Z\",\r\n     \"title\": \"A simple group\",\r\n     \"entries\": [{\r\n       \"@type\": \"Event\",\r\n       \"uid\": \"a8df6573-0474-496d-8496-033ad45d7fea\",\r\n       \"updated\": \"2020-01-02T18:23:04Z\",\r\n       \"title\": \"Some event\",\r\n       \"start\": \"2020-01-15T13:00:00\",\r\n       \"timeZone\": \"America/New_York\",\r\n       \"duration\": \"PT1H\"\r\n     },\r\n     {\r\n       \"@type\": \"Task\",\r\n       \"uid\": \"2a358cee-6489-4f14-a57f-c104db4dc2f2\",\r\n       \"updated\": \"2020-01-09T14:32:01Z\",\r\n       \"title\": \"Do something\"\r\n     }]\r\n   }",
+    "notes": "There is no \"name\" property specified for a Group. \"name\" should be \"title\".\r\nSee Section 5.3 of RFC8984.",
+    "submit_date": "2024-07-12",
+    "submitter_name": "Jonathan K Porter",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-07-12 05:55:58"
   }
 ]
