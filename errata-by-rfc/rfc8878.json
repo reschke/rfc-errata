@@ -32,17 +32,17 @@
   {
     "errata_id": "7297",
     "doc-id": "RFC8878",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.1.1.3.1.1",
     "orig_text": "Size_Format == 01:  4 streams.  Both Regenerated_Size and\r\n   Compressed_Size use 10 bits (values 0-1023).\r\n   Literals_Section_Header uses 3 bytes.\r\n\r\nSize_Format == 10:  4 streams.  Both Regenerated_Size and\r\n   Compressed_Size use 14 bits (values 0-16383).\r\n   Literals_Section_Header uses 4 bytes.\r\n\r\nSize_Format == 11:  4 streams.  Both Regenerated_Size and\r\n   Compressed_Size use 18 bits (values 0-262143).\r\n   Literals_Section_Header uses 5 bytes.",
     "correct_text": "Size_Format == 01:  4 streams.  Both Regenerated_Size and\r\n   Compressed_Size use 10 bits (values 6-1023).\r\n   Literals_Section_Header uses 3 bytes.\r\n\r\nSize_Format == 10:  4 streams.  Both Regenerated_Size and\r\n   Compressed_Size use 14 bits (values 6-16383).\r\n   Literals_Section_Header uses 4 bytes.\r\n\r\nSize_Format == 11:  4 streams.  Both Regenerated_Size and\r\n   Compressed_Size use 18 bits (values 6-262143).\r\n   Literals_Section_Header uses 5 bytes.",
-    "notes": "The calculation for the size of the fourth stream, specified in section 3.1.1.3.1.6, will underflow if the total size of the literals in the block is less than 6 bytes. So the 4-stream mode cannot be used in blocks with fewer than 6 literals. (Nor should it be, since it is strictly less efficient for very small literal sections.)\r\n\r\nThe source for this errata is https://github.com/facebook/zstd/pull/3398.",
+    "notes": "The calculation for the size of the fourth stream, specified in section 3.1.1.3.1.6, will underflow if the total size of the literals in the block is less than 6 bytes. So the 4-stream mode cannot be used in blocks with fewer than 6 literals. (Nor should it be, since it is strictly less efficient for very small literal sections.)\r\n\r\nThe source for this errata is https://github.com/facebook/zstd/pull/3398.\r\n\r\n[Verifier note: Confirmed with zstd developers.]",
     "submit_date": "2023-01-03",
     "submitter_name": "Felix Handte",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2024-08-22 10:58:54"
   },
   {
     "errata_id": "7567",
@@ -55,6 +55,21 @@
     "notes": "Section 3.1.1.3.1 describes the Literals_Section mentioned in and linked from Section 3.1.1.3 Compressed Blocks. However, the section is labeled as Literals_Section_Header resulting in two sections both labeled Literals_Section_Header (sections 3.1.1.3.1 and 3.1.1.3.1.1).",
     "submit_date": "2023-07-20",
     "submitter_name": "Jordan Tucker",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8085",
+    "doc-id": "RFC8878",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.1.5",
+    "orig_text": "   +=======+==========+===========+===========+===========+============+\r\n   |offset_|literals_ | Repeated_ | Repeated_ | Repeated_ |Comment     |\r\n   | value |  length  |  Offset1  |  Offset2  |  Offset3  |            |\r\n   +=======+==========+===========+===========+===========+============+\r\n   |       |          |     1     |     4     |     8     |starting    |\r\n   |       |          |           |           |           |values      |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |   1114|    11    |    1111   |     1     |     4     |non-repeat  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      1|    22    |    1111   |     1     |     4     |repeat 1; no|\r\n   |       |          |           |           |           |change      |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |   2225|    22    |    2222   |    1111   |     1     |non-repeat  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |   1114|   111    |    1111   |    2222   |    1111   |non-repeat  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |   3336|    33    |    3333   |    1111   |    2222   |non-repeat  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      2|    22    |    1111   |    3333   |    2222   |repeat 2;   |\r\n   |       |          |           |           |           |swap 1 & 2  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      3|    33    |    2222   |    1111   |    3333   |repeat 3;   |\r\n   |       |          |           |           |           |rotate 3 to |\r\n   |       |          |           |           |           |1           |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      1|    0     |    2221   |    2222   |    1111   |insert      |\r\n   |       |          |           |           |           |resolved    |\r\n   |       |          |           |           |           |offset      |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      1|    0     |    2222   |    2221   |    3333   |repeat 2    |\r\n   +-------+----------+-----------+-----------+-----------+------------+",
+    "correct_text": "   +=======+==========+===========+===========+===========+============+\r\n   |offset_|literals_ | Repeated_ | Repeated_ | Repeated_ |Comment     |\r\n   | value |  length  |  Offset1  |  Offset2  |  Offset3  |            |\r\n   +=======+==========+===========+===========+===========+============+\r\n   |       |          |     1     |     4     |     8     |starting    |\r\n   |       |          |           |           |           |values      |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |   1114|    11    |    1111   |     1     |     4     |non-repeat  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      1|    22    |    1111   |     1     |     4     |repeat 1; no|\r\n   |       |          |           |           |           |change      |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |   2225|    22    |    2222   |    1111   |     1     |non-repeat  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |   1114|   111    |    1111   |    2222   |    1111   |non-repeat  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |   3336|    33    |    3333   |    1111   |    2222   |non-repeat  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      2|    22    |    1111   |    3333   |    2222   |repeat 2;   |\r\n   |       |          |           |           |           |swap 1 & 2  |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      3|    33    |    2222   |    1111   |    3333   |repeat 3;   |\r\n   |       |          |           |           |           |rotate 3 to |\r\n   |       |          |           |           |           |1           |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      3|    0     |    2221   |    2222   |    1111   |insert      |\r\n   |       |          |           |           |           |resolved    |\r\n   |       |          |           |           |           |offset      |\r\n   +-------+----------+-----------+-----------+-----------+------------+\r\n   |      1|    0     |    2222   |    2221   |    1111   |repeat 2    |\r\n   +-------+----------+-----------+-----------+-----------+------------+",
+    "notes": "According to the description in 3.1.1.5, an offset value 1 with literal length 0 shall use Repeated Offset 2. However, in the last row of the example table, this is not the case. Since the second-to-last row has no \"3333\" value, I believe that the fifth column in the last row should be \"1111\".",
+    "submit_date": "2024-08-19",
+    "submitter_name": "Nianqi Tang",
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
