@@ -47,7 +47,7 @@
   {
     "errata_id": "6252",
     "doc-id": "RFC3659",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "10.2",
     "orig_text": "To add a file type to this OS specific registry of OS specific file types, an applicant must send to the IANA a request, in which is specified the OS name, the OS specific file type, a definition of the syntax of the fact value, which must conform to the syntax of a token as given in this document, and a specification of the semantics to be associated with the particular fact and its values.\r\n",
@@ -55,9 +55,9 @@
     "notes": "It appears that the text in section 10.2 has been copy/pasted from section 10.1, without applying the necessary adjustments for the differences between OS-specific facts and OS-specific filetypes. While OS-specific facts do have values (see section 7.2), there is no concept of a \"value\" of an OS-specific filetype defined in the RFC (see section 7.5.1.5).\r\n\r\nThis error effectively makes it impossible to register an OS-specific filetype with IANA, were IANA to follow the wording of the RFC to the letter – IANA must demand a \"definition of the syntax of the fact value\" for every filetype registration, despite the fact that request makes no sense for a filetype as defined in the RFC.",
     "submit_date": "2020-08-08",
     "submitter_name": "Simon Kissane",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 13:29:17"
   },
   {
     "errata_id": "899",
