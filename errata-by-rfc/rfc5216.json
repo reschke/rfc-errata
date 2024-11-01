@@ -133,5 +133,20 @@
     "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-01-19 14:33:45"
+  },
+  {
+    "errata_id": "7991",
+    "doc-id": "RFC5216",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1.3 page 10",
+    "orig_text": "   Authenticating Peer     Authenticator\r\n   -------------------     -------------\r\n                           <- EAP-Request/\r\n                           Identity\r\n   EAP-Response/\r\n   Identity (MyID) ->\r\n                           <- EAP-Request/\r\n                           EAP-Type=EAP-TLS\r\n                           (TLS Start)\r\n   EAP-Response/\r\n   EAP-Type=EAP-TLS\r\n   (TLS client_hello)->\r\n                           <- EAP-Request/\r\n                           EAP-Type=EAP-TLS\r\n                           (TLS server_hello,\r\n                             TLS certificate,\r\n                    [TLS server_key_exchange,]\r\n               TLS certificate_request,\r\n                 TLS server_hello_done)\r\n\r\n   EAP-Response/\r\n   EAP-Type=EAP-TLS\r\n   (TLS certificate,\r\n    TLS client_key_exchange,\r\n    TLS certificate_verify,\r\n    TLS change_cipher_spec,\r\n    TLS finished) ->\r\n\r\n                           <- EAP-Request/\r\n                           EAP-Type=EAP-TLS\r\n                           (TLS change_cipher_spec,\r\n                           TLS finished)\r\n   EAP-Response/\r\n   EAP-Type=EAP-TLS ->\r\n                           <- EAP-Request\r\n                           EAP-Type=EAP-TLS\r\n                           (TLS Alert message)\r\n   EAP-Response/\r\n   EAP-Type=EAP-TLS ->\r\n                           <- EAP-Failure\r\n                           (User Disconnected)",
+    "correct_text": "   Authenticating Peer     Authenticator\r\n   -------------------     -------------\r\n                           <- EAP-Request/\r\n                           Identity\r\n   EAP-Response/\r\n   Identity (MyID) ->\r\n                           <- EAP-Request/\r\n                           EAP-Type=EAP-TLS\r\n                           (TLS Start)\r\n   EAP-Response/\r\n   EAP-Type=EAP-TLS\r\n   (TLS client_hello)->\r\n                           <- EAP-Request/\r\n                           EAP-Type=EAP-TLS\r\n                           (TLS server_hello,\r\n                             TLS certificate,\r\n                    [TLS server_key_exchange,]\r\n               TLS certificate_request,\r\n                 TLS server_hello_done)\r\n\r\n   EAP-Response/\r\n   EAP-Type=EAP-TLS\r\n   (TLS certificate,\r\n    TLS client_key_exchange,\r\n    TLS certificate_verify,\r\n    TLS change_cipher_spec,\r\n    TLS finished) ->\r\n\r\n                           <- EAP-Request\r\n                           EAP-Type=EAP-TLS\r\n                           (TLS Alert message)\r\n   EAP-Response/\r\n   EAP-Type=EAP-TLS ->\r\n                           <- EAP-Failure\r\n                           (User Disconnected)",
+    "notes": "The message which has to be sent after server fails to authenticate the peer is ,TLS alert message, The TLS change cipher spec and the TLS finished cannot be sent from the server side if the server fails to authenticate the peer. Instead the server has to send TLS alert message after the peer sends change cipher spec.",
+    "submit_date": "2024-06-14",
+    "submitter_name": "E Vashist Kumar",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-06-14 10:26:01"
   }
 ]
