@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7913",
+    "doc-id": "RFC4770",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "   BEGIN:vCard\r\n   VERSION:3.0\r\n   FN:Alice Doe\r\n   IMPP;TYPE=personal,pref:im:alice@example.com\r\n   END:vCard",
+    "correct_text": "   BEGIN:vCard\r\n   VERSION:3.0\r\n   FN:Alice Doe\r\n   N:Doe;Alice;;;\r\n   IMPP;TYPE=personal,pref:im:alice@example.com\r\n   END:vCard",
+    "notes": "The \"N\" property is required according to RFC2426: \"Type name: N [...] The property MUST be present in the vCard object.\"",
+    "submit_date": "2024-04-29",
+    "submitter_name": "Tom Sydney Kerckhove",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-05-14 21:13:34"
+  }
+]
