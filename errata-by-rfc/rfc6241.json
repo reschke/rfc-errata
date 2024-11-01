@@ -197,16 +197,16 @@
   {
     "errata_id": "7624",
     "doc-id": "RFC6241",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.3.",
     "orig_text": "     <rpc-reply xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n       <rpc-error>\r\n         <error-type>rpc</error-type>\r\n         <error-tag>missing-attribute</error-tag>\r\n         <error-severity>error</error-severity>\r\n         <error-info>\r\n           <bad-attribute>message-id</bad-attribute>\r\n           <bad-element>rpc</bad-element>\r\n         </error-info>\r\n       </rpc-error>\r\n     </rpc-reply>",
     "correct_text": "     <nc:rpc-reply xmlns:nc=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n       <nc:rpc-error>\r\n         <nc:error-type>rpc</nc:error-type>\r\n         <nc:error-tag>missing-attribute</nc:error-tag>\r\n         <nc:error-severity>error</nc:error-severity>\r\n         <nc:error-info>\r\n           <nc:bad-attribute>message-id</nc:bad-attribute>\r\n           <nc:bad-element>nc:rpc</nc:bad-element>\r\n         </nc:error-info>\r\n       </nc:rpc-error>\r\n     </nc:rpc-reply>",
-    "notes": "The original error response is referring to the NETCONF messages layer attribute \"message-id\", which does not belong to any XML namespace. The response is not properly encoding xs:QName values of elements \"bad-attribute\" and \"bad-element\" by placing them both into the default XML namespace. Proposed new text (while verbose) ensures that the values are placed into their respective proper XML namespaces.",
+    "notes": "The original error response is referring to the NETCONF messages layer attribute \"message-id\", which does not belong to any XML namespace. The response is not properly encoding xs:QName values of elements \"bad-attribute\" and \"bad-element\" by placing them both into the default XML namespace. Proposed new text (while verbose) ensures that the values are placed into their respective proper XML namespaces.\n --VERIFIER NOTES-- \n   The original error response is valid when validated against netconf XSD defined in RFC 4741.",
     "submit_date": "2023-08-31",
     "submitter_name": "Jernej Tuljak",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2024-05-10 10:37:28"
   }
 ]
