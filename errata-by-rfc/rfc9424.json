@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7964",
+    "doc-id": "RFC9424",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.2.3",
+    "orig_text": "At its simplest, this indicates that\r\n   the receiver may share with anyone (TLP:CLEAR), share within the\r\n   defined sharing community (TLP:GREEN), share within their\r\n   organisation and their clients (TLP:AMBER+STRICT), share just within\r\n   their organisation (TLP:AMBER), or not share with anyone outside the\r\n   original specific IoC exchange (TLP:RED).\r\n",
+    "correct_text": "At its simplest, this indicates that\r\n   the receiver may share with anyone (TLP:CLEAR), share within the\r\n   defined sharing community (TLP:GREEN), share within their\r\n   organisation and their clients (TLP:AMBER), share just within\r\n   their organisation (TLP:AMBER+STRICT), or not share with anyone \r\n   outside the original specific IoC exchange (TLP:RED).\r\n",
+    "notes": "The definitions of TLP:AMBER and TLP:AMBER+STRICT are the wrong way round in the original text.\r\n",
+    "submit_date": "2024-05-30",
+    "submitter_name": "Andrew Shaw",
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-06-05 11:35:10"
+  }
+]
