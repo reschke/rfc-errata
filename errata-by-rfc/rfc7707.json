@@ -13,5 +13,20 @@
     "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8119",
+    "doc-id": "RFC7707",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.1.1",
+    "orig_text": "1.  The \"Universal\" bit (bit 6, from left to right) of the address is \r\nset to 1.",
+    "correct_text": "1.  The \"Universal\" bit (bit 7, from left to right) of the address is \r\nset to 1.",
+    "notes": "The \"Universal\" bit is the bit #7 and not the bit #6.",
+    "submit_date": "2024-09-24",
+    "submitter_name": "Anvar Durmanov",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-09-24 21:44:53"
   }
 ]
