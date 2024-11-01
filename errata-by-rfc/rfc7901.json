@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8053",
+    "doc-id": "RFC7901",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "8.3",
+    "orig_text": "8.3.  Nonexistent Data\r\n\r\n   A recursive resolver receives a query for the A record for\r\n   \"ipv6.toronto.redhat.ca\".  It includes the CHAIN option with the\r\n   following parameters:\r\n\r\n   o  Option-code, set to 13\r\n\r\n   o  Option-length, set to 0x00 0x03\r\n\r\n   o  The closest trust point set to \"ca.\"",
+    "correct_text": "8.3.  Nonexistent Data\r\n\r\n   A recursive resolver receives a query for the A record for\r\n   \"ipv6.toronto.redhat.ca\".  It includes the CHAIN option with the\r\n   following parameters:\r\n\r\n   o  Option-code, set to 13\r\n\r\n   o  Option-length, set to 0x00 0x04\r\n\r\n   o  The closest trust point set to \"ca.\"",
+    "notes": "The value of the option is 0x02 0x63 0x61 0x00 which has length 4 not 3.",
+    "submit_date": "2024-07-27",
+    "submitter_name": "Mark Andrews",
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-07-29 15:04:21"
+  }
+]
