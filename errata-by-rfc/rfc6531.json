@@ -18,15 +18,15 @@
     "errata_id": "7580",
     "doc-id": "RFC6531",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
-    "section": "3.3, 3.7.3",
-    "orig_text": "The <Mailbox> ABNF rule is imported from RFC 5321 and updated in order to support the internationalized email address.\r\n\r\nThe following ABNF rules imported from RFC 5321, Section 4.1.2, are updated directly or indirectly by this document:\r\n\r\nThis document updates <Mailbox> and <Domain> to support non-ASCII characters.",
-    "correct_text": "The <Mailbox> ABNF rule is imported from RFC 5321 and extended in order to support the internationalized email address.\r\n\r\nThe following ABNF rules imported from RFC 5321, Section 4.1.2, are extended directly or indirectly by this document:\r\n\r\nThis document extends <Mailbox> and <Domain> to support non-ASCII characters.",
+    "errata_type_code": "Technical",
+    "section": "Sections 3.3 and 3.7.3 say:",
+    "orig_text": "The <Mailbox> ABNF rule is imported from RFC 5321 and updated in \r\norder to support the internationalized email address.\r\n\r\nThe following ABNF rules imported from RFC 5321, Section 4.1.2, are \r\nupdated directly or indirectly by this document:\r\n\r\nThis document updates <Mailbox> and <Domain> to support non-ASCII \r\ncharacters.",
+    "correct_text": "The <Mailbox> ABNF rule is imported from RFC 5321 and extended in \r\norder to support the internationalized email address.\r\n\r\nThe following ABNF rules imported from RFC 5321, Section 4.1.2, are \r\nextended directly or indirectly by this document:\r\n\r\nThis document extends <Mailbox> and <Domain> to support non-ASCII \r\ncharacters.",
     "notes": "The original text can be incorrectly interpreted to suggest that the definitions found in RFC 6531 formally update the definitions found in RFC 5321. RFC 6531 does not formally update RFC 5321. As such, a word like \"extends\" may be less prone to misinterpretation than \"updates\".",
     "submit_date": "2023-07-31",
     "submitter_name": "Scott Hollenbeck",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2024-02-02 13:32:15"
   }
 ]
