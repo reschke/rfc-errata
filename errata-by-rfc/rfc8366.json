@@ -2,7 +2,7 @@
   {
     "errata_id": "6646",
     "doc-id": "RFC8366",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.2",
     "orig_text": "   {\r\n     \"ietf-voucher:voucher\": {\r\n       \"created-on\": \"2016-10-07T19:31:42Z\",\r\n       \"expires-on\": \"2016-10-21T19:31:42Z\",\r\n       \"assertion\": \"verified\",\r\n       \"serial-number\": \"JADA123456789\",\r\n       \"idevid-issuer\": \"base64encodedvalue==\",\r\n       \"pinned-domain-cert\": \"base64encodedvalue==\",\r\n       \"domain-cert-revocation-checks\": \"true\",\r\n       \"last-renewal-date\": \"2017-10-07T19:31:42Z\"\r\n     }\r\n   }",
@@ -10,9 +10,9 @@
     "notes": "domain-cert-revocation-checks is defined as boolean in the YANG specification in section 5.3 of the same RFC 8366. Boolean value in JSON are represented using true/false without the quotes.",
     "submit_date": "2021-07-22",
     "submitter_name": "Aman Mangal",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2024-01-15 04:04:36"
   },
   {
     "errata_id": "7289",
@@ -32,16 +32,16 @@
   {
     "errata_id": "7301",
     "doc-id": "RFC8366",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": "5.2",
+    "section": "5.3",
     "orig_text": "          \"The Authority Key Identifier OCTET STRING (as defined in\r\n           Section 4.2.1.1 of RFC 5280) from the pledge's IDevID\r\n",
     "correct_text": "          \"The Authority Key Identifier OCTET STRING (as defined in\r\n           Section 4.2.1.1 of [RFC5280]) from the pledge's IDevID\r\n",
-    "notes": "The YANG module references RFC 5280 normatively, but the document does not include it as a normative reference.",
+    "notes": "The YANG module references RFC 5280 normatively, but the document does not include it as a normative reference.\r\n\r\nThis errata requires a new revision of the YANG module that cannot be done by an errata, hence moved to \"Held for Document Update\".  In the update, I would suggesting adding a reference statement to the YANG leaf and also a normative document reference to RFC 5280.",
     "submit_date": "2023-01-08",
     "submitter_name": "Michael Richardson",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2024-01-15 00:55:45"
   }
 ]
