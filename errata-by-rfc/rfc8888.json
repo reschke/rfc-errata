@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7894",
+    "doc-id": "RFC8888",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.1",
+    "orig_text": "   RTCP Congestion Control Feedback Packets SHOULD include a report\r\n   block for every active SSRC.",
+    "correct_text": "   RTCP Congestion Control Feedback Packets SHOULD include a report\r\n   block for every SSRC where packets have been received since the\r\n   previous report was generated.",
+    "notes": "The term \"active\" is ambiguous. Discussion on the avtcore mailing list indicates that this is the intended meaning.",
+    "submit_date": "2024-04-16",
+    "submitter_name": "Harald Tveit Alvestrand",
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2024-05-21 06:44:41"
+  }
+]
