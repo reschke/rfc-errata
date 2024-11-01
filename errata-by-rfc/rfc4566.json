@@ -77,22 +77,22 @@
   {
     "errata_id": "4903",
     "doc-id": "RFC4566",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
     "section": "9",
     "orig_text": "   ; SDP Syntax\r\n   session-description = proto-version\r\n                         origin-field\r\n                         session-name-field\r\n                         information-field\r\n                         uri-field\r\n                         email-fields\r\n                         phone-fields\r\n                         connection-field\r\n                         bandwidth-fields\r\n                         time-fields\r\n                         key-field\r\n                         attribute-fields\r\n                         media-descriptions\r\n\r\n   connection-field =    [%x63 \"=\" nettype SP addrtype SP\r\n                         connection-address CRLF]\r\n                         ;a connection field must be present\r\n                         ;in every media description or at the\r\n                         ;session-level\r\n\r\n   media-descriptions =  *( media-field\r\n                         information-field\r\n                         *connection-field\r\n                         bandwidth-fields\r\n                         key-field\r\n                         attribute-fields )\r\n",
     "correct_text": "   ; SDP Syntax\r\n   session-description = proto-version\r\n                         origin-field\r\n                         session-name-field\r\n                         information-field\r\n                         uri-field\r\n                         email-fields\r\n                         phone-fields\r\n                         [connection-field]\r\n                         bandwidth-fields\r\n                         time-fields\r\n                         key-field\r\n                         attribute-fields\r\n                         media-descriptions\r\n\r\n   connection-field =    %x63 \"=\" nettype SP addrtype SP\r\n                         connection-address CRLF\r\n                         ;a connection field must be present\r\n                         ;in every media description or at the\r\n                         ;session-level\r\n\r\n   media-descriptions =  *( media-field\r\n                         information-field\r\n                         *connection-field\r\n                         bandwidth-fields\r\n                         key-field\r\n                         attribute-fields )\r\n",
     "notes": "in BNF of SDP, \r\nconnection-field itself is optional [0, 1], but media-description has multiple [0,) connection-field.\r\nit seems conflict, because multiple of optional fields doesn't finish because multiple filed can't find when to end.\r\n\r\nso change connection-field itself not optional (remove []) and, replace session-descriptions connection-field as optional.",
     "submit_date": "2017-01-12",
     "submitter_name": "Jxck",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 12:53:04"
   },
   {
     "errata_id": "5183",
     "doc-id": "RFC4566",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "6.  SDP Attr",
     "orig_text": " a=rtpmap:<payload type> <encoding name>/<clock rate> [/<encoding\r\n         parameters>]",
@@ -100,9 +100,9 @@
     "notes": "rtpmap requires format below\r\n\r\na=rtpmap:97 L16/8000\r\na=rtpmap:98 L16/11025/2\r\n\r\nno space between clock rate and optional parameter",
     "submit_date": "2017-11-14",
     "submitter_name": "no space before encoding parameter in rtpmap value",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 12:55:48"
   },
   {
     "errata_id": "5595",
