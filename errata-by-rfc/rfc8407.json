@@ -58,5 +58,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2023-04-26 14:41:13"
+  },
+  {
+    "errata_id": "7791",
+    "doc-id": "RFC8407",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "There are two related items.\r\n\r\n1) Section 3.7.1 \"Security Considerations Section Template\" begins\r\n\r\n   X.  Security Considerations\r\n\r\n   The YANG module specified in this document defines a schema for data\r\n   that is designed to be accessed via network management protocols such\r\n   as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer\r\n   is the secure transport layer, and the mandatory-to-implement secure\r\n   transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer\r\n   is HTTPS, and the mandatory-to-implement secure transport is TLS\r\n   [RFC8446].\r\n\r\n2) RFC 8470 says \"the latest approved template (available at\r\n<https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>)\".  But\r\nthe template at that URL says \"the latest approved template (available\r\nat\r\nhttp://trac.tools.ietf.org/area/ops/trac/wiki/yang-security-guidelines).\"\r\n",
+    "correct_text": "1) It would be helpful if the beginning of the template contained a\r\nreference to RFC 8407 to provide a pointer back to where the templated\r\nsection of Yang module definitions was instantiated from.  Perhaps\r\nstarting the template with \"[Instantiated from the template of\r\n[RFC8407] section 3.7.1.]\"\r\n\r\n2) While the URL given in RFC 8407 works, the URL given in the online\r\ntemplate only goes to a generic page, \"Welcome to the IETF Community\r\nWiki\".  Presumably the URL in the online template should be the URL of\r\nthat page itself.\r\n\r\n",
+    "notes": "Item (2) is a straightforward correction.  Item (1) is in service to\r\nhaving better pointers/references in our documents.\r\n\n --VERIFIER NOTES-- \n1) The original text is not broken (including the URL). Text enhancements can be considered as part of https://datatracker.ietf.org/doc/draft-ietf-netmod-rfc8407bis/.\r\n\r\n2) The Secretariat fixed the link.",
+    "submit_date": "2024-01-30",
+    "submitter_name": "Dale R. Worley",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-08 11:53:51"
   }
 ]
