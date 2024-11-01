@@ -28,5 +28,20 @@
     "verifier_id": "133",
     "verifier_name": "Martin Stiemerling",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7873",
+    "doc-id": "RFC6056",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3.3",
+    "orig_text": "(this \"separation of the\r\nephemeral port space\" means that transport-protocol instances with\r\ndifferent remote endpoints will not have different sequences of port\r\nnumbers, i.e., will not be part of the same ephemeral port sequence\r\nas in the case of the traditional BSD ephemeral port selection\r\nalgorithm)",
+    "correct_text": "(this \"separation of the\r\nephemeral port space\" means that transport-protocol instances with\r\ndifferent remote endpoints will have different sequences of port\r\nnumbers, i.e., will not be part of the same ephemeral port sequence\r\nas in the case of the traditional BSD ephemeral port selection\r\nalgorithm)",
+    "notes": "Drop the first \"not\", otherwise the two parts of the sentence (before and after \"i.e.\") are contradictory and the whole parenthetical doesn't match the context.",
+    "submit_date": "2024-03-27",
+    "submitter_name": "Štěpán Němec",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
