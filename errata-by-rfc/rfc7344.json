@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7997",
+    "doc-id": "RFC7344",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.2.1",
+    "orig_text": "When a Parent operates in \"calculate DS\" mode, it can operate in one\r\n   of two sub-modes:\r\n\r\n   full:  The Parent only publishes DS records it calculates from DNSKEY\r\n      records.",
+    "correct_text": "When a Parent operates in \"calculate DS\" mode, it can operate in one\r\n   of two sub-modes:\r\n\r\n   full:  The Parent only publishes DS records it calculates from CDNSKEY\r\n      records.",
+    "notes": "In the last sentence, \"DNSKEY\" should be \"CDNSKEY\".  That is, the Parent calculates DS records from the CDNSKEY records, not from the DNSKEY records.\r\n\r\nPaul Wouters (AD): Verifying as the regular AD is an author on the doc :)",
+    "submit_date": "2024-06-21",
+    "submitter_name": "Casey Deccio",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-06-25 14:53:46"
+  }
+]
