@@ -62,7 +62,7 @@
   {
     "errata_id": "5624",
     "doc-id": "RFC3339",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "5.6",
     "orig_text": "The following profile of ISO 8601 [ISO8601] dates SHOULD be used in\r\nnew protocols on the Internet.  This is specified using the syntax\r\ndescription notation defined in [ABNF].\r\n",
@@ -70,14 +70,14 @@
     "notes": "There has been some misunderstanding of the intended scope of RFC3339; e.g. see [1]\r\n\r\nThe added paragraph clarifies the intent that RFC3339 definitions can be used by applications that don't need to convey a full date+time value.\r\n\r\n[1] https://stackoverflow.com/a/522281/324122",
     "submit_date": "2019-02-06",
     "submitter_name": "Graham Klyne",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 12:40:27"
   },
   {
     "errata_id": "5783",
     "doc-id": "RFC3339",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.6",
     "orig_text": "   date-time       = full-date \"T\" full-time\r\n\r\n...\r\n\r\n      NOTE: ISO 8601 defines date and time separated by \"T\".\r\n      Applications using this syntax may choose, for the sake of\r\n      readability, to specify a full-date and full-time separated by\r\n      (say) a space character.",
@@ -85,23 +85,23 @@
     "notes": "This specification seems ambiguous; the ABNF allows only “T”/“t” as the separator, but the “NOTE:” paragraph describes acceptability of other separators.\r\n\r\nIt’s unclear what “this syntax” refers to: if “this” refers to ISO 8601, then it seems irrelevant, but if “this” means RFC 3339, then the paragraph conflicts with the ABNF.\r\n\r\nI’m not sure of the proper fix because I don’t know the intended meaning.",
     "submit_date": "2019-07-15",
     "submitter_name": "Felipe Gasper",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-04 07:21:36"
   },
   {
     "errata_id": "6533",
     "doc-id": "RFC3339",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": "In the Table of Contents, it says:",
+    "section": "The Table of Contents says:",
     "orig_text": "   Appendix D. Leap Seconds ..............................,... 15",
     "correct_text": "   Appendix D. Leap Seconds .................................. 15",
-    "notes": "Punctuation.",
+    "notes": "comma to period",
     "submit_date": "2021-04-13",
     "submitter_name": "Juli Mallett",
     "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2021-04-20 09:09:12"
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-16 17:52:25"
   }
 ]
