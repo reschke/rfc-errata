@@ -2,7 +2,7 @@
   {
     "errata_id": "7071",
     "doc-id": "RFC8994",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "6.2.2",
     "orig_text": "   The acp-node-name in Figure 2 is the ABNF definition (\"Augmented BNF\r\n   for Syntax Specifications: ABNF\" [RFC5234]) of the ACP Node Name.  An\r\n   ACP certificate MUST carry this information.  It MUST contain an\r\n   otherName field in the X.509 Subject Alternative Name extension, and\r\n   the otherName MUST contain an AcpNodeName as described in\r\n   Section 6.2.2.",
@@ -10,23 +10,23 @@
     "notes": "David von Oheimb discovered [1] that section 6.2.2 is self-referential and incorrect regarding the section reference to the ASN.1 module.\r\n\r\nThe correct section number is 6.2.2.1.\r\n\r\n[1] https://mailarchive.ietf.org/arch/msg/spasm/-ymZk94KFzzolZSsJh6HONnypXQ/",
     "submit_date": "2022-08-04",
     "submitter_name": "Corey Bonnell",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2024-01-15 02:52:26"
   },
   {
     "errata_id": "7558",
     "doc-id": "RFC8994",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
     "section": "6.2.1",
     "orig_text": "   ACP nodes MUST NOT support certificates with RSA public keys of less\r\n   than a 2048-bit modulus or curves with group order of less than 256\r\n   bits.  They MUST support certificates with RSA public keys with\r\n   2048-bit modulus and MAY support longer RSA keys.  They MUST support\r\n   certificates with ECC public keys using NIST P-256 curves and SHOULD\r\n   support P-384 and P-521 curves.\r\n\r\n   ACP nodes MUST NOT support certificates with RSA public keys whose\r\n   modulus is less than 2048 bits, or certificates whose ECC public keys\r\n   are in groups whose order is less than 256 bits.  RSA signing\r\n   certificates with 2048-bit public keys MUST be supported, and such\r\n   certificates with longer public keys MAY be supported.  ECDSA\r\n   certificates using the NIST P-256 curve MUST be supported, and such\r\n   certificates using the P-384 and P-521 curves SHOULD be supported.",
     "correct_text": "   ACP nodes MUST NOT support certificates with RSA public keys whose\r\n   modulus is less than 2048 bits, or certificates whose ECC public keys\r\n   are in groups whose order is less than 256 bits.  RSA signing\r\n   certificates with 2048-bit public keys MUST be supported, and such\r\n   certificates with longer public keys MAY be supported.  ECDSA\r\n   certificates using the NIST P-256 curve MUST be supported, and such\r\n   certificates using the P-384 and P-521 curves SHOULD be supported.",
     "notes": "The second paragraph in the original text appears to be a more carefully-written version of the first paragraph.  Therefore the first paragraph should be deleted and the second paragraph retained.",
     "submit_date": "2023-07-02",
     "submitter_name": "J. William Atwood",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2024-01-15 02:57:32"
   }
 ]
