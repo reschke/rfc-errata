@@ -208,5 +208,50 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7841",
+    "doc-id": "RFC3031",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.2",
+    "orig_text": "      label switched path       The path through one or more LSRs at one\r\n                                level of the hierarchy followed by a\r\n                                packets in a particular FEC.",
+    "correct_text": "      label switched path       The path through one or more LSRs at one\r\n                                level of the hierarchy followed by packets\r\n                                in a particular FEC.",
+    "notes": "s/a packets/packets/",
+    "submit_date": "2024-03-07",
+    "submitter_name": "Christophe Deleuze",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-03-08 11:15:07"
+  },
+  {
+    "errata_id": "7842",
+    "doc-id": "RFC3031",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.2",
+    "orig_text": "      MPLS edge node            an MPLS node that connects an MPLS\r\n                                domain with a node which is outside of\r\n                                the domain, either because it does not\r\n                                run MPLS, and/or because it is in a\r\n                                different domain.  Note that if an LSR\r\n                                has a neighboring host which is not\r\n                                running MPLS, that that LSR is an MPLS\r\n                                edge node.",
+    "correct_text": "      MPLS edge node            an MPLS node that connects an MPLS\r\n                                domain with a node which is outside of\r\n                                the domain, either because it does not\r\n                                run MPLS, and/or because it is in a\r\n                                different domain.  Note that if an LSR\r\n                                has a neighboring host which is not\r\n                                running MPLS, then that LSR is an MPLS\r\n                                edge node.",
+    "notes": "s/that that/then that/",
+    "submit_date": "2024-03-07",
+    "submitter_name": "Christophe Deleuze",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-03-08 11:17:23"
+  },
+  {
+    "errata_id": "7843",
+    "doc-id": "RFC3031",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.2",
+    "orig_text": "      VP merge                  label merging where the MPLS label is\r\n                                carried din the ATM VPI field, so as to\r\n",
+    "correct_text": "      VP merge                  label merging where the MPLS label is\r\n                                carried in the ATM VPI field, so as to",
+    "notes": "s/din/in/",
+    "submit_date": "2024-03-07",
+    "submitter_name": "Christophe Deleuze",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-03-08 11:20:52"
   }
 ]
