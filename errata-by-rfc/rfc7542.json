@@ -13,5 +13,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-12-11 14:23:20"
+  },
+  {
+    "errata_id": "8105",
+    "doc-id": "RFC7542",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.4",
+    "orig_text": "Examples of valid Network Access Identifiers include the following:\r\n[...]\r\n        \\(user\\)@example.net",
+    "correct_text": "Examples of invalid Network Access Identifiers include the following:\r\n[...]\r\n        \\(user\\)@example.net",
+    "notes": "\\(user\\)@example.net is listed as a valid example, but neither backslashes nor parentheses are allowed in the ABNF rules (sections 2.1 and 2.2).  Obsoleted RFC 4282 had ABNF rules to allow for backslash escapes, but RFC 7542 does not.  These are the only backslashes in the entire document.\r\n\r\nPerhaps this example should be moved to the invalid examples list?\r\n\r\nOr perhaps the ABNF rules should be extended to allow some forms of backslash escapes, although probably not to the same wide-open extent as RFC 4282?",
+    "submit_date": "2024-09-16",
+    "submitter_name": "Matthew Ogilvie",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-09-17 10:58:52"
   }
 ]
