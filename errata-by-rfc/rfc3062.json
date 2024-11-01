@@ -17,7 +17,7 @@
   {
     "errata_id": "4899",
     "doc-id": "RFC3062",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "   PasswdModifyRequestValue ::= SEQUENCE {\r\n     userIdentity    [0]  OCTET STRING OPTIONAL\r\n     oldPasswd       [1]  OCTET STRING OPTIONAL\r\n     newPasswd       [2]  OCTET STRING OPTIONAL }\r\n",
@@ -25,8 +25,8 @@
     "notes": "The missing commas are probably just a typo in the formal specifications, but it is pleasant if they are acceptable to ASN.1 compilers.",
     "submit_date": "2017-01-09",
     "submitter_name": "Rick van Rein",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:08:13"
   }
 ]
