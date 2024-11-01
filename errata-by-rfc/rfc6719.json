@@ -43,5 +43,35 @@
     "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7772",
+    "doc-id": "RFC6719",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.3",
+    "orig_text": "to covert",
+    "correct_text": "to convert",
+    "notes": "describing the conversion of path cost into a rank value.",
+    "submit_date": "2024-01-22",
+    "submitter_name": "Dominique Barthel",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-01-22 10:12:04"
+  },
+  {
+    "errata_id": "7773",
+    "doc-id": "RFC6719",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.2",
+    "orig_text": "If the cost \r\nof the path through the preferred parent and the worst parent is too \r\nlarge, a node MAY keep a smaller parent set than PARENT_SET_SIZE.",
+    "correct_text": "If the difference in cost of the paths through the preferred parent \r\nand the worst parent is too large, a node MAY keep a smaller parent \r\nset than PARENT_SET_SIZE.\r\n\r\n",
+    "notes": "This sentence is meant to explain that there is no benefit in keeping in the parent set neighbors that have too high a path cost compared to that of the preferred parent.\r\nThe original text omits the notion of difference in cost. It also contains a circular reference: indeed, the worst parent is the neighbor within the parent set that has the highest cost.\r\n\r\nVerifier's note: the submitter also included this option:\r\n\r\n```\r\nor better yet\r\n\r\n\"A node MAY keep a parent set smaller than PARENT_SET_SIZE, so that \r\nthe difference in cost of the paths through the preferred parent and \r\nthe worst parent is not too large.\"\r\n```\r\n\r\nI agree this is a clearer way to express the concept and I think it should be considered if there's ever a bis prepared of the spec, however, I elected to verify the first option given because it represents the minimal change needed to make the document correct.",
+    "submit_date": "2024-01-22",
+    "submitter_name": "Dominique Barthel",
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-02-07 10:18:18"
   }
 ]
