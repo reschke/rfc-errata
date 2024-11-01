@@ -32,31 +32,31 @@
   {
     "errata_id": "6757",
     "doc-id": "RFC8536",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "B.3",
     "orig_text": "   | 064    | 00 00 00 03  | isutccnt         | 1                      |\r\n   | 068    | 00 00 00 03  | isstdcnt         | 1                      |\r\n   | 072    | 00 00 00 00  | isleapcnt        | 0                      |\r\n   | 076    | 00 00 00 03  | timecnt          | 1                      |\r\n   | 080    | 00 00 00 03  | typecnt          | 1                      |\r\n   | 084    | 00 00 00 08  | charcnt          | 4                      |\r\n",
     "correct_text": "   | 064    | 00 00 00 01  | isutccnt         | 1                      |\r\n   | 068    | 00 00 00 01  | isstdcnt         | 1                      |\r\n   | 072    | 00 00 00 00  | isleapcnt        | 0                      |\r\n   | 076    | 00 00 00 01  | timecnt          | 1                      |\r\n   | 080    | 00 00 00 01  | typecnt          | 1                      |\r\n   | 084    | 00 00 00 04  | charcnt          | 4                      |\r\n",
-    "notes": "The numbers 1 and 4 are incorrectly encoded as big-endian 32-bit integer values. I'm guessing that the example originally used more data and was then trimmed down (from 3 to 1 for isutccnt, isstdcnt, timecnt, and typecnt, and from 8 to 4 for charcnt) but the integer encodings were never updated.",
+    "notes": "The numbers 1 and 4 are incorrectly encoded as big-endian 32-bit integer values. I'm guessing that the example originally used more data and was then trimmed down (from 3 to 1 for isutccnt, isstdcnt, timecnt, and typecnt, and from 8 to 4 for charcnt) but the integer encodings were never updated.\r\n===\r\nVerifier's notes: The errata is correct, but incomplete, as there are several errors in these tables. An update to the document implementing the fix is being worked on.",
     "submit_date": "2021-11-28",
     "submitter_name": "Carl Gay",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-05-02 02:36:00"
   },
   {
     "errata_id": "7681",
     "doc-id": "RFC8536",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "B.2",
     "orig_text": "   | 135    | 00           | UT/local[0]      | 1 (UT)                 |\r\n...\r\n   | 141    | 00           | standard/wall[0] | 1 (standard)           |",
     "correct_text": "   | 135    | 00           | UT/local[0]      | 0 (local)              |\r\n...\r\n   | 141    | 00           | standard/wall[0] | 0 (wall)               |",
-    "notes": "The field value is inconsistent with the hexadecimal octets. This change corrects it to be the same as for bytes 310 and 316 in the same section.",
+    "notes": "The field value is inconsistent with the hexadecimal octets. This change corrects it to be the same as for bytes 310 and 316 in the same section.\r\n===\r\nVerifier's notes: There are several errors in these tables. An update to the document implementing the fix is being worked on.",
     "submit_date": "2023-10-17",
     "submitter_name": "Jacob Pratt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-05-02 02:37:02"
   }
 ]
