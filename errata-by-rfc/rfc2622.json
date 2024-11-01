@@ -17,7 +17,7 @@
   {
     "errata_id": "7564",
     "doc-id": "RFC2622",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.6",
     "orig_text": "In page 26 of RFC2622\r\nIn the following example 9.9.9.1 imports 128.9.0.0/16 from 9.9.9.2\r\n and 9.9.9.3.\r\n (7) peering-set: prng-bar\r\n peering: AS1 at 9.9.9.1\r\n peering-set: prng-foo\r\n peering: prng-bar\r\n peering: AS2 at 9.9.9.1\r\n aut-num: AS1\r\n import: from prng-foo accept { 128.9.0.0/16 }",
@@ -25,8 +25,8 @@
     "notes": "As  \"Figure 22: Example topology consisting of three ASes, AS1, AS2, and\r\n AS3; two exchange points, EX1 and EX2; and six routers.\" shows, the router 9.9.9.1 of AS1 connects to the router 9.9.9.3 of AS3 in exchange point 2.  It states that \"In the following example 9.9.9.1 imports 128.9.0.0/16 from 9.9.9.2 and 9.9.9.3.\", so I think the corresponding AS of 9.9.9.3 should be AS3 instead of AS1.",
     "submit_date": "2023-07-13",
     "submitter_name": "Jiang Li",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-07-13 13:50:29"
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-01-15 10:54:47"
   }
 ]
