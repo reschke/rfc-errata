@@ -403,5 +403,35 @@
     "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2024-01-11 09:00:19"
+  },
+  {
+    "errata_id": "7850",
+    "doc-id": "RFC2328",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "10.7/A.3.5",
+    "orig_text": "Section 10.7\r\n\r\n        Each LSA specified in the Link State Request packet should be\r\n        located in the router's database, and copied into Link State\r\n        Update packets for transmission to the neighbor.  These LSAs\r\n        should NOT be placed on the Link state retransmission list for\r\n        the neighbor.  If an LSA cannot be found in the database,\r\n        something has gone wrong with the Database Exchange process, and\r\n        neighbor event BadLSReq should be generated.\r\n \r\nSection A.3.5 \r\n\r\n    Link State Update packets are multicast on those physical networks\r\n    that support multicast/broadcast.  In order to make the flooding\r\n    procedure reliable, flooded LSAs are acknowledged in Link State\r\n    Acknowledgment packets.  If retransmission of certain LSAs is\r\n    necessary, the retransmitted LSAs are always sent directly to the\r\n    neighbor.  For more information on the reliable flooding of LSAs,\r\n    consult Section 13.",
+    "correct_text": "Section 10.7\r\n        \r\n        Each LSA specified in the Link State Request packet should be\r\n        located in the router's database, and copied into Link State\r\n        Update packets for transmission directly to the neighbor, \r\n        i.e., unicast on all interface types except point-to-point\r\n        interfaces where all OSPF packets are sent to the address\r\n        AllSPFRouters.  These LSAs should NOT be placed on the Link\r\n        state retransmission list for the neighbor.  If an LSA cannot\r\n        be found in the database, something has gone wrong with the\r\n        Database Exchange process, and neighbor event BadLSReq should\r\n        be generated.\r\n\r\nSection A.3.5 \r\n    \r\n    Link State Update packets are multicast on those physical networks\r\n    that support multicast/broadcast.  In order to make the flooding\r\n    procedure reliable, flooded LSAs are acknowledged in Link State\r\n    Acknowledgment packets.  If retransmission of certain LSAs is\r\n    necessary, the retransmitted LSAs are always sent directly to the\r\n    neighbor.  For more information on the reliable flooding of LSAs,\r\n    consult Section 13. Link State Update packets are also sent\r\n    directly to the neighbor in response to Link State Request\r\n    packets as specified in Section 10.7.\r\n   ",
+    "notes": "Clarification that OSPF Link State Updates sent in response to OSPF Link Requests should be unicast.",
+    "submit_date": "2024-03-15",
+    "submitter_name": "Alfred Lindem",
+    "verifier_id": "178",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2024-10-10 06:04:37"
+  },
+  {
+    "errata_id": "7851",
+    "doc-id": "RFC2328",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "8.1",
+    "orig_text": "        Retransmissions of Link State Update packets are ALWAYS sent\r\n        directly to the neighbor. On multi-access networks, this means\r\n        that retransmissions should be sent to the neighbor's IP\r\n        address.\r\n\r\n       ",
+    "correct_text": "        Retransmissions of Link State Update packets and Link State\r\n        Update packets sent in response to Link State Request packets\r\n        are ALWAYS sent directly to the neighbor. On multi-access\r\n        networks, this means that retransmissions should be sent to\r\n        the neighbor's IP address.\r\n\r\n       ",
+    "notes": "One more place requiring clarification with respect to the Link State Update packets sent in response to Link State Request packets.",
+    "submit_date": "2024-03-15",
+    "submitter_name": "Acee Lindem",
+    "verifier_id": "178",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2024-10-10 06:07:23"
   }
 ]
