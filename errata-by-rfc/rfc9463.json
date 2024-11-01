@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7784",
+    "doc-id": "RFC9463",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.5",
+    "orig_text": "dohpath:  Used to supply a relative DoH URI Template (Section 5.1 of\r\n      [RFC9461]).",
+    "correct_text": "dohpath:  Used to supply a relative DoH URI Template (Section 5 of\r\n      [RFC9461]).",
+    "notes": "Just a minor reference correction. There is no Section 5.1 in RFC 9461. The dohpath parameter is defined in Section 5.",
+    "submit_date": "2024-01-25",
+    "submitter_name": "Tomek Mrugalski",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-01-25 09:40:40"
+  },
+  {
+    "errata_id": "7804",
+    "doc-id": "RFC9463",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.1",
+    "orig_text": "Note that the \"Addr Length\", \"ipv6-address(es)\", and \"Service \r\nParameters (SvcParams)\" fields are not present if the ADN-only mode \r\nis used (Section 3.1.6).",
+    "correct_text": "Note that the \"Addr Length\", \"ipv6-address(es)\", \"SvcParams \r\nLength\", and \"Service Parameters (SvcParams)\" fields are not \r\npresent if the ADN-only mode is used (Section 3.1.6).",
+    "notes": "The paragraph is presumably copied from section 4.1 (DHCPv6 Encrypted DNS Option), and omits the \"SvcParams Length\" field, which is only present in the IPv6 RA Encrypted DNS Option. Mandating the presence of a superfluous length field when using the ADN-only mode seems like an oversight.",
+    "submit_date": "2024-02-09",
+    "submitter_name": "David Härdeman",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-03-17 16:39:58"
+  }
+]
