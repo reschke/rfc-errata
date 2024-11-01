@@ -118,5 +118,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8089",
+    "doc-id": "RFC6347",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.2",
+    "orig_text": "   struct {\r\n     HandshakeType msg_type;\r\n     uint24 length;\r\n     uint16 message_seq;                               // New field\r\n     uint24 fragment_offset;                           // New field\r\n     uint24 fragment_length;                           // New field\r\n     select (HandshakeType) {\r\n       case hello_request: HelloRequest;\r\n       case client_hello:  ClientHello;\r\n       case hello_verify_request: HelloVerifyRequest;  // New type\r\n       case server_hello:  ServerHello;\r\n       case certificate:Certificate;\r\n       case server_key_exchange: ServerKeyExchange;\r\n       case certificate_request: CertificateRequest;\r\n       case server_hello_done:ServerHelloDone;\r\n       case certificate_verify:  CertificateVerify;\r\n       case client_key_exchange: ClientKeyExchange;\r\n       case finished: Finished;\r\n     } body;\r\n   } Handshake;",
+    "correct_text": "   struct {\r\n     HandshakeType msg_type;\r\n     uint24 length;\r\n     uint16 message_seq;                               // New field\r\n     uint24 fragment_offset;                           // New field\r\n     uint24 fragment_length;                           // New field\r\n     select (HandshakeType) {\r\n       case hello_request: HelloRequest;\r\n       case client_hello:  ClientHello;\r\n       case server_hello:  ServerHello;\r\n       case hello_verify_request: HelloVerifyRequest;  // New field\r\n       case certificate:Certificate;\r\n       case server_key_exchange: ServerKeyExchange;\r\n       case certificate_request: CertificateRequest;\r\n       case server_hello_done:ServerHelloDone;\r\n       case certificate_verify:  CertificateVerify;\r\n       case client_key_exchange: ClientKeyExchange;\r\n       case finished: Finished;\r\n     } body; } Handshake;",
+    "notes": "Change the order of cases inside select field to keep it:\r\n1. In ascending order\r\n2. Consistent with the structure in 4.3.2",
+    "submit_date": "2024-08-23",
+    "submitter_name": "Kamil Milewski",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-10-30 15:13:05"
   }
 ]
