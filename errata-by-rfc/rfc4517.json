@@ -13,5 +13,20 @@
     "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7917",
+    "doc-id": "RFC4517",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.3.10",
+    "orig_text": "      subset        = \"baseobject\" / \"oneLevel\" / \"wholeSubtree\"\r\n",
+    "correct_text": "      subset        = \"baseObject\" / \"oneLevel\" / \"wholeSubtree\"\r\n",
+    "notes": "The Enhanced Guide \"subset\" token SHOULD honor the case folding scheme for a search scope, as this  refers to actual ASN.1 ENUMERATED / INTEGER components; see RFC 4511 Section 4.5.1 and ITU-T Rec. X.511 Clause 11.2.1 respectively.\r\n\r\nTherefore, \"baseobject\" SHOULD be \"baseObject\".\r\n\r\nAdditionally, outreach to author failed due to unknown recipient at specified address/domain.",
+    "submit_date": "2024-04-30",
+    "submitter_name": "Jesse Coretta",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-01 08:21:18"
   }
 ]
