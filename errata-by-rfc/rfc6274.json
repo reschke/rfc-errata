@@ -13,5 +13,20 @@
     "verifier_id": "135",
     "verifier_name": "Joel Jaeggli",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7887",
+    "doc-id": "RFC6274",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": ".8.4",
+    "orig_text": "   The attacker is:\r\n\r\n   o  Four hops away from A.\r\n\r\n   o  Four hops away from B.\r\n\r\n   o  Four hops away from C.\r\n\r\n   o  Four hops away from D.\r\n\r\n   In the network setup of Figure 3, the only system that satisfies all\r\n   these conditions is the one marked as the \"F\".\r\n",
+    "correct_text": "   The attacker is:\r\n\r\n   o  Four hops away from A.\r\n\r\n   o  Four hops away from B.\r\n\r\n   o  Four hops away from C.\r\n\r\n   o  Three hops away from D.\r\n\r\n   In the network setup of Figure 6, the only system that satisfies all\r\n   these conditions is the one marked as the \"F\".\r\n",
+    "notes": "Since the packets that D gets has a TTL of 62 while A,B and C gets packets with TTL of 61, it should be that D is one less hop away than the others. This also seems to be illustrated in Figure 6.\r\n\r\nText that seems to refer to the network setup of Figure 6 references to incorrect figure number 3.",
+    "submit_date": "2024-04-08",
+    "submitter_name": "Niklas Baerveldt",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-04-09 16:38:42"
   }
 ]
