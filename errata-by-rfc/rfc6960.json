@@ -2,7 +2,7 @@
   {
     "errata_id": "5730",
     "doc-id": "RFC6960",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.1.1",
     "orig_text": "optionalSignature contains the algorithm identifier and any\r\nassociated algorithm parameters in signatureAlgorithm; the\r\nsignature value in signature; and, optionally, certificates the\r\nserver needs to verify the signed response (normally up to but not\r\nincluding the client’s root certificate).\r\n",
@@ -10,9 +10,9 @@
     "notes": "The paragraph refers to the signed \"response\" where it should refer to the signed \"request\".",
     "submit_date": "2019-05-22",
     "submitter_name": "Jaime Hablutzel",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-02-23 13:17:29"
   },
   {
     "errata_id": "5891",
@@ -47,7 +47,7 @@
   {
     "errata_id": "6165",
     "doc-id": "RFC6960",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "1",
     "orig_text": "---",
@@ -55,14 +55,14 @@
     "notes": "The RFC6960 changes OCSP protocol in part of KeyHash type calculation. In RFC2560 there is the description:\r\n   KeyHash ::= OCTET STRING -- SHA-1 hash of responder's public key\r\n   (excluding the tag and length fields)\r\n\r\nBut in Appendix B.1, which is the major OCSP descriptive module, stated:\r\nKeyHash ::= OCTET STRING -- SHA-1 hash of responder's public key\r\n                         -- (i.e., the SHA-1 hash of the value of the\r\n                         -- BIT STRING subjectPublicKey [excluding\r\n                         -- the tag, length, and number of unused\r\n                         -- bits] in the responder's certificate)\r\n\r\nThe difference is in what would be under SHA-1 hash. In RFC2560 KeyHash would be calculated for entire BIT STRING value, with \"unused bits\" byte (first byte in BIT STRING value), but Appendix B.1 in RFC6960 states that SHA-1 hash must be calculated for BIT STRING value without \"unused bits\".",
     "submit_date": "2020-05-11",
     "submitter_name": "Yury Strozhevsky",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-06-04 02:52:18"
   },
   {
     "errata_id": "6166",
     "doc-id": "RFC6960",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix B.2",
     "orig_text": "KeyHash ::= OCTET STRING -- SHA-1 hash of responder's public key\r\n                         -- (excluding the tag and length fields)\r\n",
@@ -70,14 +70,14 @@
     "notes": "These two descriptions of KeyHash produce different SHA-1 hashes due to different values: one is pure BIT STRING value block, with \"unused bits\" byte, but other - without \"unused byte\". Also the Appendix B.2 must be aligned with Appendix B.1 information.",
     "submit_date": "2020-05-11",
     "submitter_name": "Yury Strozhevsky",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-06-04 02:52:38"
   },
   {
     "errata_id": "6167",
     "doc-id": "RFC6960",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2.1",
     "orig_text": "   KeyHash ::= OCTET STRING -- SHA-1 hash of responder's public key\r\n   (excluding the tag and length fields)\r\n",
@@ -85,8 +85,38 @@
     "notes": "Same explanationa as for https://www.rfc-editor.org/errata/eid6166",
     "submit_date": "2020-05-11",
     "submitter_name": "Yury Strozhevsky",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-06-04 02:53:00"
+  },
+  {
+    "errata_id": "7961",
+    "doc-id": "RFC6960",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "This module replaces the modules in Section 12 of [RFC5912]\r\nand Appendix A.1 of [RFC6277].",
+    "correct_text": "This module replaces the modules in Section 4 of [RFC5912]\r\nand Appendix A.1 of [RFC6277]",
+    "notes": "The section \"Appendix B\" actually updates Section-4 of RFC-5912",
+    "submit_date": "2024-05-29",
+    "submitter_name": "himanshu sharma",
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-06-01 12:25:47"
+  },
+  {
+    "errata_id": "7962",
+    "doc-id": "RFC6960",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "B.2",
+    "orig_text": "IMPORTS\r\n\r\nExtensions{}, EXTENSION, ATTRIBUTE",
+    "correct_text": "IMPORTS\r\n\r\nExtensions{}, EXTENSION",
+    "notes": "It should not include \"ATTRIBUTE\" as it is not being used anywhere.",
+    "submit_date": "2024-05-29",
+    "submitter_name": "himanshu sharma",
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-06-04 02:51:39"
   }
 ]
