@@ -103,5 +103,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2022-06-13 16:36:28"
+  },
+  {
+    "errata_id": "7880",
+    "doc-id": "RFC8439",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.4.1",
+    "orig_text": "encrypted_message |= (block^key_stream)[0..len(plaintext)%64]\r\n",
+    "correct_text": "encrypted_message |= (block^key_stream)[0..(len(plaintext)%64)-1]",
+    "notes": "If the plaintext size is not a multiple of 64 bytes, there is an off-by-one error in appending the final block of the encrypted message. In the original version, the encrypted message would always be one byte larger than the plaintext.\r\n\r\nThe corrected version ensures that the encrypted message size is always equal to the plaintext size.\r\n\r\nFor completeness: If the plaintext size is a multiple of 64 bytes, the second part of the code is skipped. Hence, this off-by-one error is not triggered in that specific case.\r\n\r\n(Non-)relation to correction 5989: The \"original text\", as quoted here, assumes that correction 5989 has already been applied. Correction 5989 deals with a different issue of this line of code, namely, the replacement of \"+=\" by \"|=\". This is completely orthogonal to the off-by-one error described here.",
+    "submit_date": "2024-04-03",
+    "submitter_name": "Volker Diels-Grabsch",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
