@@ -122,7 +122,7 @@
   {
     "errata_id": "4975",
     "doc-id": "RFC4122",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.1",
     "orig_text": "The UUID format is 16 octets; some bits of the eight octet variant \r\nfield specified below determine finer structure.",
@@ -130,14 +130,14 @@
     "notes": "The original wording implies the variant field is 8 octets long. It is between 1 and 3 bits long. An alternative correction would be:\r\n\r\n\"The UUID format is 16 octets; some bits of the variant \r\nfield in octet 8 specified below determine finer structure.\"",
     "submit_date": "2017-03-22",
     "submitter_name": "Joseph Boon",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-24 09:06:49"
   },
   {
     "errata_id": "4976",
     "doc-id": "RFC4122",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "GLOBAL",
     "orig_text": "Set the two most significant bits (bits 6 and 7) of the\r\nclock_seq_hi_and_reserved to zero and one, respectively.",
@@ -145,24 +145,24 @@
     "notes": "The original wording appears in sections 4.2.2, 4.3, and 4.4. It can lead to confusion about which bit is most significant (6 or 7), and does not align neatly with the table of Variants in section 4.1.1 (which shows 1 followed by 0 for msb0 and msb1). The revised wording specifies the bits in msb order, which helps the reader more clearly correlate the bit values with section 4.1.1. It is noted that the revised wording would not match other parts of the document which give the lsb number first (e.g. \"bits 32 through 47\"), but this case is different because it is specifying fixed values for two bits, and the sentence starts with \"Set the two most significant bits\".",
     "submit_date": "2017-03-22",
     "submitter_name": "Joseph Boon",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 13:52:56"
   },
   {
     "errata_id": "5560",
     "doc-id": "RFC4122",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.1.1",
-    "orig_text": "\r\n   The following table lists the contents of the variant field, where\r\n   the letter \"x\" indicates a \"don't-care\" value.\r\n\r\n   Msb0  Msb1  Msb2  Description\r\n\r\n    0     x     x    Reserved, NCS backward compatibility.\r\n\r\n    1     0     x    The variant specified in this document.",
-    "correct_text": "\r\n   The following table lists the contents of the variant field, where\r\n   the letter \"x\" indicates a \"don't-care\" value.\r\n\r\n   Msb0  Msb1  Msb2  Description\r\n\r\n    0     x     x    Reserved, NCS backward compatibility.\r\n\r\n    1     0     0    The variant specified in this document.",
+    "orig_text": "   The following table lists the contents of the variant field, where\r\n   the letter \"x\" indicates a \"don't-care\" value.\r\n\r\n   Msb0  Msb1  Msb2  Description\r\n\r\n    0     x     x    Reserved, NCS backward compatibility.\r\n\r\n    1     0     x    The variant specified in this document.",
+    "correct_text": "   The following table lists the contents of the variant field, where\r\n   the letter \"x\" indicates a \"don't-care\" value.\r\n\r\n   Msb0  Msb1  Msb2  Description\r\n\r\n    0     x     x    Reserved, NCS backward compatibility.\r\n\r\n    1     0     0    The variant specified in this document.",
     "notes": "If Msb2 is a « don't-care » value, this means it's not wrong to set the bit to 0 or 1.\r\nIn the case of UUIDv3 and UUIDv5, this does not specify if the bit from the hash output should be left untouched or not.\r\nIt's not stated that it's illegal to reset it to 0 when setting Msb0 and Msb1 altogether (as libuuid does), since it's a « don't-care » value.\r\nBut letting it untouched whenever it's set to 1 by the hash output (as the Python stdlib does) causes two UUIDv{3,5} to be different for the same input namespaces and data. (Example: NS=Nil UUID, data = 0x44 («D»).\r\n\r\nThe RFC should enforce the value of the bit to 0 or 1, or clarify if it should be left untouched depending on the context-dependent data (Clock ID {1,2}, hash output {3,5}, random input {4}). (Which would mean it's then just a libuuid bug to forcibly set Msb2 to 0 when it should be untouched.)\r\n\r\nSee also : https://uuid.pirate-server.com/blog/brother-uuids-or-why-uuids-are-not-unique.html",
     "submit_date": "2018-11-25",
     "submitter_name": "GLOBAL UUID DATABASE",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-24 09:06:23"
   },
   {
     "errata_id": "6225",
@@ -182,7 +182,7 @@
   {
     "errata_id": "6665",
     "doc-id": "RFC4122",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "Appendix A",
     "orig_text": "static unsigned16 true_random(void);\r\n\r\n/* uuid_create -- generator a UUID */\r\nint uuid_create(uuid_t *uuid)\r\n{\r\n     uuid_time_t timestamp, last_time;",
@@ -190,8 +190,8 @@
     "notes": "The comment above the declaration of uuid_create() uses \"generate a UUID\", so the comment above the definition is likely intended to be identical.",
     "submit_date": "2021-08-25",
     "submitter_name": "Andrzej Koszela",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 13:56:01"
   }
 ]
