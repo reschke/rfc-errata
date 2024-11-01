@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8143",
+    "doc-id": "RFC9620",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.11",
+    "orig_text": "   With proper authentication, the scenario would be as follows:\r\n\r\n   Alice wants to communicate with Bob.  Alice sends data to Bob.\r\n   Corinne intercepts the data sent to Bob.  Corinne reads and alters\r\n   the message to Bob.  Bob is unable to verify whether that the data\r\n   came from Alice.\r\n",
+    "correct_text": "   With proper authentication, the scenario would be as follows:\r\n\r\n   Alice wants to communicate with Bob.  Alice sends data to Bob.\r\n   Corinne intercepts the data sent to Bob.  Corinne reads and alters\r\n   the message to Bob.  Bob is able to verify whether that the data\r\n   came from Alice.\r\n",
+    "notes": "With proper authentication, Bob can check if the data came from Alice.",
+    "submit_date": "2024-10-16",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
