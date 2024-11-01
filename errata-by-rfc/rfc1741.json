@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7918",
+    "doc-id": "RFC1741",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A says:",
+    "orig_text": "!\"#$%&'()*+,- 012345689@ABCDEFGHIJKLMNPQRSTUVXYZ[`abcdefhijklmpqr",
+    "correct_text": "!\"#$%&'()*+,-012345689@ABCDEFGHIJKLMNPQRSTUVXYZ[`abcdefhijklmpqr",
+    "notes": "Removed the erroneous ' ' (space) character between the '-' and '0' characters. This makes the available characters for the HexBin 4.0 format more clear. In this reference file (https://www.iana.org/assignments/media-types/application/applefile) they presented it as such:\r\n\r\n!\"#$%&'()*+,-\r\n012345689@ABCDEFGHIJKLMNPQRSTUVXYZ[`abcdefhijklmpqr",
+    "submit_date": "2024-04-30",
+    "submitter_name": "Jugraj Dhillon",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-05-01 22:49:59"
+  }
+]
