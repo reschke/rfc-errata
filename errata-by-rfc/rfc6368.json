@@ -13,5 +13,20 @@
     "verifier_id": "140",
     "verifier_name": "Alia Atlas",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7834",
+    "doc-id": "RFC6368",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "Using this mechanism isolates the customer network from the\r\nattributes used in the customer network and vice versa.  Attributes\r\nsuch as the route reflection cluster list attribute are segregated\r\nsuch that customer network cluster identifiers won't be considered by\r\nthe customer network route reflectors and vice versa.",
+    "correct_text": "Using this mechanism isolates the customer network from the\r\nattributes used in the provider network and vice versa.  Attributes\r\nsuch as the route reflection cluster list attribute are segregated\r\nsuch that customer network cluster identifiers won't be considered by\r\nthe provider network route reflectors and vice versa.",
+    "notes": "\"customer network\" is used twice instead of \"provider network\"",
+    "submit_date": "2024-03-01",
+    "submitter_name": "Hugues Le Bastard",
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-03-07 06:39:49"
   }
 ]
