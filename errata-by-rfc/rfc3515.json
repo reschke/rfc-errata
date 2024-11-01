@@ -17,7 +17,7 @@
   {
     "errata_id": "4898",
     "doc-id": "RFC3515",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2.1",
     "orig_text": "Refer-To: <sip:bob@biloxi.example.net?Accept-Contact=sip:bobsdesk.\r\n       biloxi.example.net&Call-ID%3D55432%40alicepc.atlanta.example.com>",
@@ -25,8 +25,8 @@
     "notes": "The \"=\" between the header name (hname) and the value (hvalue) in the headers component of the URI does not have to be in the percent-coded format as part of the ABNF of the headers component defined in RFC3261:\r\nsip:user:password@host:port;uri-parameters?headers\r\nheaders         =  \"?\" header *( \"&\" header )\r\nheader          =  hname \"=\" hvalue\r\nhname           =  1*( hnv-unreserved / unreserved / escaped )\r\nhvalue          =  *( hnv-unreserved / unreserved / escaped )\r\nhnv-unreserved  =  \"[\" / \"]\" / \"/\" / \"?\" / \":\" / \"+\" / \"$\"",
     "submit_date": "2017-01-03",
     "submitter_name": "Marianne MOHALI",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 13:17:48"
   }
 ]
