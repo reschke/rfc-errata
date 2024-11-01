@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7806",
+    "doc-id": "RFC9438",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4.1.2",
+    "orig_text": "* cwndprior: Size of cwnd in segments at the time of setting ssthresh\r\n  most recently, either upon exiting the first slow start or just\r\n  before cwnd was reduced in the last congestion event.\r\n",
+    "correct_text": "* cwndprior: Flight Size as defined in RFC5681 in segments at\r\n  the time of setting ssthresh most recently, either upon exiting\r\n  the first slow start or just before cwnd was reduced in the last\r\n  congestion event.\r\n",
+    "notes": "The implicit assumption appears to be, that only singular, isolated events happen during a cubic congestion control response. However, it is not uncommon that multiple events, such as loss, loss recovery initiation, followed by one or more RTOs happen. In many implementations, cwnd only properly tracks Flight Size while no loss recovery is going on. RFC5681 made it clear, that adjustments to ssthresh should be based off of the (estimated) Flightsize. Similarly, it appears prudent to observe Flight Size and not a potentially adjusted cwnd value here.\r\n\r\nThe observed effect of deriving cwnd_prior directly from cwnd, and not Flight Size is a deflated value for ssthresh, earlier transition from slow-start to congestion avoidance, and less rapid resumption of reasonable bandwidth after e.g. a burst loss event followed by a RTO.\r\n\r\nRFC5681 section 7 has this to say around setting ssthresh:\r\n\r\n   The treatment of ssthresh on retransmission timeout was clarified.\r\n   In particular, ssthresh must be set to half the FlightSize on the\r\n   first retransmission of a given segment and then is held constant on\r\n   subsequent retransmissions of the same segment.\n --VERIFIER NOTES-- \n   The reporter and author agreed that Sec 4.6 is clear in this regard.",
+    "submit_date": "2024-02-09",
+    "submitter_name": "Richard Scheffenegger",
+    "verifier_id": "167",
+    "verifier_name": "Martin Duke",
+    "update_date": "2024-02-26 12:34:10"
+  }
+]
