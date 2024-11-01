@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7973",
+    "doc-id": "RFC7239",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "       Forwarded: for=\"_gazonk\"\r\n       Forwarded: For=\"[2001:db8:cafe::17]:4711\"",
+    "correct_text": "       Forwarded: for=\"_gazonk\"\r\n       Forwarded: for=\"[2001:db8:cafe::17]:4711\"",
+    "notes": "having an example that shows the parameter capitalized indicates that this would be acceptable usage, but nowhere else in the document indicates or implies that this parameter can be capitalized.\n --VERIFIER NOTES-- \n>    The top-level list is represented as a list of HTTP header\r\n>    field-values as defined in Section 3.2 of [RFC7230].  The first\r\n>    element in this list holds information added by the first proxy that\r\n>    implements and uses this header field, and each subsequent element\r\n>    holds information added by each subsequent proxy.  Because this\r\n>    header field is optional, any proxy in the chain may choose not to\r\n>    update this header field.  Each field-value is a semicolon-separated\r\n>    list; this sublist consists of parameter-identifier pairs.\r\n>    Parameter-identifier pairs are grouped together by an equals sign.\r\n>    Each parameter MUST NOT occur more than once per field-value.  The\r\n>    parameter names are case-insensitive.  The header field value can be\r\n>    defined in ABNF syntax as:\r\n\r\n\"The parameter names are case-insensitive\".",
+    "submit_date": "2024-06-07",
+    "submitter_name": "Kevin W. Finkenbinder",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-06-19 07:32:40"
   }
 ]
