@@ -73,5 +73,35 @@
     "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2022-10-12 23:22:22"
+  },
+  {
+    "errata_id": "8062",
+    "doc-id": "RFC7599",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "In the case of an IPv4 prefix, the IPv4 address field is right-padded\r\nwith zeros up to 32 bits.  The PSID is left-padded with zeros to\r\ncreate a 16-bit field.  For an IPv4 prefix or a complete IPv4\r\naddress, the PSID field is zero.",
+    "correct_text": "In the case of an IPv4 prefix, the IPv4 address field is right-padded\r\nwith zeros up to 32 bits.  The PSID is left-padded with zeros to\r\ncreate a 16-bit field.  For an IPv4 prefix the PSID field is zero.",
+    "notes": "When there is a complete IPv4 address, the PSID field should contain the PSID. This is shown in Appendix A, Example 1. It shows an End-user IPv6 prefix and BMR that result in a complete IPv4 address. The resulting \"IPv6 address of MAP CE\" includes the PSID value in the the IPv6 Interface Identifier field.",
+    "submit_date": "2024-08-01",
+    "submitter_name": "Scott Freemire",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8063",
+    "doc-id": "RFC7599",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5",
+    "orig_text": "The MAP-T algorithmic mapping rules are identical to those in\r\nSection 5(link #1) of the MAP-E specification [RFC7597](link #2), with the following\r\nexception: the forwarding of traffic to and from IPv4 destinations\r\noutside a MAP-T domain is to be performed as described in this\r\ndocument, instead of Section 5.4(link #3) of the MAP-E specification.\r\n\r\nlink #1: https://datatracker.ietf.org/doc/html/rfc7599#section-5\r\nlink #2: https://datatracker.ietf.org/doc/html/rfc7597\r\nlink #3: https://datatracker.ietf.org/doc/html/rfc7599#section-5.4",
+    "correct_text": "The MAP-T algorithmic mapping rules are identical to those in\r\nSection 5(link #1) of the MAP-E specification [RFC7597](link #2), with the following\r\nexception: the forwarding of traffic to and from IPv4 destinations\r\noutside a MAP-T domain is to be performed as described in this\r\ndocument, instead of Section 5.4(link #3) of the MAP-E specification.\r\n\r\nlink #1: https://datatracker.ietf.org/doc/html/rfc7597#section-5\r\nlink #2: https://datatracker.ietf.org/doc/html/rfc7597\r\nlink #3: https://datatracker.ietf.org/doc/html/rfc7597#section-5.4",
+    "notes": "The text in section 5 is correct, but 2 of the URL links are incorrect.\r\nAll links in section 5 should point to RFC7597.\r\n\r\n--VERIFIER NOTES-- \r\nThis is regarding the links generated in the rfc2html output.",
+    "submit_date": "2024-08-02",
+    "submitter_name": "Scott Freemire",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-08-05 13:56:37"
   }
 ]
