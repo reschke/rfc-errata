@@ -418,5 +418,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-08-02 14:32:56"
+  },
+  {
+    "errata_id": "8101",
+    "doc-id": "RFC1035",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.1.2",
+    "orig_text": "QNAME           a domain name represented as a sequence of labels, where\r\n                each label consists of a length octet followed by that\r\n                number of octets.  The domain name terminates with the\r\n                zero length octet for the null label of the root.  Note\r\n                that this field may be an odd number of octets; no\r\n                padding is used.",
+    "correct_text": "QNAME           a domain name represented as a sequence of labels, where\r\n                each label consists of a length octet followed by that\r\n                number of octets.  The domain name terminates with the\r\n                zero length octet for the null label of the root.  Note\r\n                that this field may be an odd number of octets; no\r\n                padding is used.\r\n\r\n                For example:\r\n                - example.com is encoded as \\x07example\\x03com\\x00 (in hex: \r\n                  07 65 78 61 6d 70 6c 65 03 63 6f 6d 00).\r\n                  - \\x07example is the first label:\r\n                    - \\x07 is a single byte that indicates the length of the \r\n                      label (7 characters).\r\n                    - example is the content of the label.\r\n                  - \\x03com is the second label:\r\n                    - \\x03 is a single byte that indicates the length of the \r\n                      label (3 characters).\r\n                    - com is the content of the label.\r\n                  - \\x00 is the null byte that terminates the domain name.\r\n",
+    "notes": "To better understand the QNAME field in DNS queries, it's helpful to know how domain names are encoded. The QNAME field represents domain names as a series of labels, where each label starts with a byte indicating its length, followed by the label's content. The entire domain name ends with a null byte (\\x00). For instance, example.com is encoded as \\x07example\\x03com\\x00, where \\x07 indicates the length of the first label example, \\x03 indicates the length of the second label com, and \\x00 marks the end of the domain name. This encoding format allows DNS servers to correctly interpret and process domain names in queries and responses.\r\n\r\nAdding an example improves the understanding of QNAME field in DNS Question Section\r\n\r\n--- verifier note (Eric Vyncke) ---\r\n\r\nWhile the example would help the reader, it is not fixing an error in the document. ",
+    "submit_date": "2024-09-01",
+    "submitter_name": "Vishal Sharma",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-10-02 23:25:39"
   }
 ]
