@@ -32,7 +32,7 @@
   {
     "errata_id": "6345",
     "doc-id": "RFC5804",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2.6",
     "orig_text": "Examples:\r\n[…]\r\n       C: Putscript \"mysievescript\" {110+}\r\n       C: require [\"fileinto\"];\r\n       C:\r\n       C: if envelope :contains \"to\" \"tmartin+sent\" {\r\n       C:   fileinto \"INBOX.sent\";\r\n       C: }\r\n       S: OK\r\n\r\n       C: Putscript \"myforwards\" {190+}\r\n       C: redirect \"111@example.net\";\r\n       C:\r\n       C: if size :under 10k {\r\n       C:     redirect \"mobile@cell.example.com\";\r\n       C: }\r\n       C:\r\n       C: if envelope :contains \"to\" \"tmartin+lists\" {\r\n       C:     redirect \"lists@groups.example.com\";\r\n       C: }\r\n       S: OK (WARNINGS) \"line 8: server redirect action\r\n               limit is 2, this redirect might be ignored\"",
@@ -40,8 +40,23 @@
     "notes": "The octet count of the second example is wrong. Additionally, both the second and the third example should have an empty client line after the code like the first example. Otherwise, the octet count of the last example is also wrong.",
     "submit_date": "2020-11-30",
     "submitter_name": "Kaspar Etter",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 14:29:43"
+  },
+  {
+    "errata_id": "7825",
+    "doc-id": "RFC5804",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "response-logout       = response-oknobye\r\n",
+    "correct_text": "response-logout       = response-ok\r\n",
+    "notes": "The client sends the LOGOUT command when it is finished with a\r\n   connection and wishes to terminate it.  The server MUST reply with an\r\n   OK response.  The server MUST ignore commands issued by the client\r\n   after the LOGOUT command.\r\n\r\n[Verifier notes:] Verified by Alexey Melnikov.",
+    "submit_date": "2024-02-27",
+    "submitter_name": "Mauro De Gennaro",
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2024-03-17 21:21:49"
   }
 ]
