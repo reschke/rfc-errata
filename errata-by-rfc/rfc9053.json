@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8061",
+    "doc-id": "RFC9053",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "(This is an addition to the beginning of section 4)",
+    "correct_text": "While this document defines no IDs for non-AEAD ciphers, they are\r\npermitted in COSE. When considering support for a non-AEAD cipher,\r\nthe security considerations in [RFC9459] should be thoroughly reviewed.\r\nAdditionally, consideration should be given to the AEAD downgrade\r\nattack described in [AEAD-Downgrade], which is applicable to COSE\r\nand can be avoided by never performing decryption with a non-AEAD\r\ncipher.\r\n\r\n[AEAD-Downgrade] Falko Strenzke and Johannes Roth, \r\n    “Legacy Encryption Downgrade Attacks against LibrePGP and CMS”,\r\n    Cryptology ePrint Archive, 2024 <https://eprint.iacr.org/2024/1110>\r\n\r\n[RFC9459] Housley, R. and H. Tschofenig, \r\n    \"CBOR Object Signing and Encryption (COSE): AES-CTR and AES-CBC\",\r\n     RFC 9459, DOI 10.17487/RFC9459, September 2023,\r\n     <https://www.rfc-editor.org/rfc/rfc9459>.",
+    "notes": "This is basically a vulnerability disclosure.  The AEAD downgrade\r\nattack was not known at the time of publication. RFC 9459 was\r\nnot published. This does not change the meaning of RFC 9053,\r\n just warns about some use of it.\r\n\r\nGiven the weight we usually put on security considerations (for\r\nexample, those in RFC9459), it seems disclosing this is something\r\nthat should be done.",
+    "submit_date": "2024-08-01",
+    "submitter_name": "Laurence Lundblade",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-08-02 09:21:02"
+  }
+]
