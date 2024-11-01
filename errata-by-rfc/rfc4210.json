@@ -103,5 +103,20 @@
     "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2023-06-23 07:39:11"
+  },
+  {
+    "errata_id": "7888",
+    "doc-id": "RFC4210",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "5.3.2.",
+    "orig_text": "An Initialization response message contains as the PKIBody an\r\nCertRepMessage data structure,",
+    "correct_text": "An Initialization response message contains as the PKIBody a\r\nCertRepMessage data structure,",
+    "notes": "typo (an > a)",
+    "submit_date": "2024-04-09",
+    "submitter_name": "Sylvain Etienne",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-04-09 16:47:28"
   }
 ]
