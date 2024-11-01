@@ -2,16 +2,16 @@
   {
     "errata_id": "6236",
     "doc-id": "RFC7346",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "5",
     "orig_text": "5.  Definition of Realm-Local Scope for IEEE 802.15.4\r\n\r\n   When used in an IP-over-IEEE802.15.4 network, scop 3 is defined to\r\n   include all interfaces sharing a Personal Area Network Identifier\r\n   (PAN ID).",
     "correct_text": "5.  Definition of Realm-Local Scope for IEEE 802.15.4\r\n\r\n   When used in an IP-over-IEEE802.15.4 network, scope 3 is defined to\r\n   include all interfaces sharing a Personal Area Network Identifier\r\n   (PAN ID).",
-    "notes": "missing trailing 'e'",
+    "notes": "missing trailing 'e'\n --VERIFIER NOTES-- \nSection 2.7 of RFC 4291 defines the field in the multicast address as \"scop\". This text is referencing the \"scop\" field.",
     "submit_date": "2020-07-24",
     "submitter_name": "Michael Richardson",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-15 21:16:41"
   }
 ]
