@@ -43,5 +43,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7985",
+    "doc-id": "RFC9083",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "This is an example of the common response body.\r\n\r\n{\r\n  \"errorCode\": 418,\r\n  \"title\": \"Your Beverage Choice is Not Available\",\r\n  \"description\":\r\n  [\r\n    \"I know coffee has more ummppphhh.\",\r\n    \"Sorry, dude!\"\r\n  ]\r\n}",
+    "correct_text": "This is an example of the common response body.\r\n\r\n{\r\n  \"rdapConformance\" :\r\n  [\r\n    \"rdap_level_0\"\r\n  ],\r\n  \"errorCode\": 418,\r\n  \"title\": \"Your Beverage Choice is Not Available\",\r\n  \"description\":\r\n  [\r\n    \"I know coffee has more ummppphhh.\",\r\n    \"Sorry, dude!\"\r\n  ]\r\n}",
+    "notes": "RFC 9083 4.1 states that the rdapConformance data structure MUST appear in the topmost JSON object of RDAP responses. The example error response provided in Figure 28 should include the rdapConformance property but does not.\n --VERIFIER NOTES-- \nThe example cited in Figure 28 is described in the text as a \"common response body\", not a complete RDAP response. The error response body is described in the context of a complete RDAP response in Figure 29, which includes an rdapConformance data structure. As such, the examples in the two figures are fine as-is.",
+    "submit_date": "2024-06-12",
+    "submitter_name": "Gavin Brown",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-06-13 14:30:40"
+  },
+  {
+    "errata_id": "7986",
+    "doc-id": "RFC9083",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "The following is an elided example of an entity truncated data.\r\n\r\n{\r\n  \"objectClassName\" : \"entity\",\r\n  \"handle\" : \"ANENTITY\",\r\n  \"roles\" : [ \"registrant\" ],\r\n  ...\r\n  \"entities\" :\r\n  [\r\n    {\r\n      \"objectClassName\" : \"entity\",\r\n      \"handle\": \"ANEMBEDDEDENTITY\",\r\n      \"roles\" : [ \"technical\" ],\r\n      ...\r\n    },\r\n    ...\r\n  ],\r\n  \"networks\" :\r\n  [\r\n    ...\r\n  ],\r\n  ...\r\n  \"remarks\" :\r\n  [\r\n    {\r\n      \"title\" : \"Data Policy\",\r\n      \"type\" : \"object truncated due to unexplainable reason\",\r\n      \"description\" :\r\n      [\r\n        \"Some of the data in this object has been removed.\"\r\n      ],\r\n      \"links\" :\r\n      [\r\n        {\r\n          \"value\" : \"https://example.net/help\",\r\n          \"rel\" : \"alternate\",\r\n          \"type\" : \"text/html\",\r\n          \"href\" : \"https://www.example.com/data_policy.html\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n",
+    "correct_text": "The following is an elided example of an entity truncated data.\r\n\r\n{\r\n  \"rdapConformance\" :\r\n  [\r\n    \"rdap_level_0\"\r\n  ],\r\n  \"objectClassName\" : \"entity\",\r\n  \"handle\" : \"ANENTITY\",\r\n  \"roles\" : [ \"registrant\" ],\r\n  ...\r\n  \"entities\" :\r\n  [\r\n    {\r\n      \"objectClassName\" : \"entity\",\r\n      \"handle\": \"ANEMBEDDEDENTITY\",\r\n      \"roles\" : [ \"technical\" ],\r\n      ...\r\n    },\r\n    ...\r\n  ],\r\n  \"networks\" :\r\n  [\r\n    ...\r\n  ],\r\n  ...\r\n  \"remarks\" :\r\n  [\r\n    {\r\n      \"title\" : \"Data Policy\",\r\n      \"type\" : \"object truncated due to unexplainable reason\",\r\n      \"description\" :\r\n      [\r\n        \"Some of the data in this object has been removed.\"\r\n      ],\r\n      \"links\" :\r\n      [\r\n        {\r\n          \"value\" : \"https://example.net/help\",\r\n          \"rel\" : \"alternate\",\r\n          \"type\" : \"text/html\",\r\n          \"href\" : \"https://www.example.com/data_policy.html\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n",
+    "notes": "RFC 9083 4.1 states that the rdapConformance data structure MUST appear in the topmost JSON object of RDAP responses. The example error response provided in Figure 33 should include the rdapConformance property but does not.",
+    "submit_date": "2024-06-12",
+    "submitter_name": "Gavin Brown",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-06-13 14:27:42"
   }
 ]
