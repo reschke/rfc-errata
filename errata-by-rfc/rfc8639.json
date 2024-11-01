@@ -28,5 +28,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2021-01-19 11:22:56"
+  },
+  {
+    "errata_id": "8073",
+    "doc-id": "RFC8639",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "  identity configurable-encoding {\r\n    description\r\n      \"If a transport identity derives from this identity, it means\r\n       that it supports configurable encodings.  An example of a\r\n       configurable encoding might be a new identity such as",
+    "correct_text": "  identity configurable-encoding {\r\n    base transport;\r\n    description\r\n      \"If a transport identity derives from this identity, it means\r\n       that it supports configurable encodings.  An example of a\r\n       configurable encoding might be a new identity such as",
+    "notes": "This identity is incorrectly located in the section 'identities for encodings'\r\nIt is actually an identity for the 'transport' leaf.\r\nThe base is missing making it incorrect\r\n(page 44)",
+    "submit_date": "2024-08-11",
+    "submitter_name": "Andy Bierman",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
