@@ -73,5 +73,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2022-06-20 14:00:46"
+  },
+  {
+    "errata_id": "7907",
+    "doc-id": "RFC6787",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "13.1.3",
+    "orig_text": "   Content-ID                         Generic\r\n                             [RFC2392], [RFC2046], and [RFC5322]\r\n",
+    "correct_text": "   Content-ID                         Generic          [RFC2046]\r\n",
+    "notes": "Content-ID is defined in 2046, not in 2392 or 5322. IANA asked about this when 5322 was being obsoleted and wanted to update the reference. IANA needs to simply remove 2392 and 5322 from the registry entry for Content-ID. That said, there are a bunch of other items in this registry where the reference seems to be to HTTP rather than to 6787 itself, but I'm not clear on the intent here. If someone wants to make this a bigger erratum, feel free.",
+    "submit_date": "2024-04-25",
+    "submitter_name": "Pete Resnick",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
