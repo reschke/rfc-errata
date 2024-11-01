@@ -62,7 +62,7 @@
   {
     "errata_id": "5618",
     "doc-id": "RFC7991",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.5.6",
     "orig_text": "It is an error to have both a \"src\" attribute and content in the\r\n<artwork> element.\r\n",
@@ -70,29 +70,29 @@
     "notes": "This sentence needs to be removed because the second paragraph in Section 2.5 says that the \"textual content acts as a fallback\" for the \"src\" attribute.",
     "submit_date": "2019-01-31",
     "submitter_name": "Kent Watsen",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "153",
+    "verifier_name": "Mirja Kühlewnd (IAB/RSAB chair)",
+    "update_date": "2024-03-14 04:59:14"
   },
   {
     "errata_id": "5781",
     "doc-id": "RFC7991",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "Hdr & Abstra",
     "orig_text": "Header: Obsoletes: 7749\r\n\r\nAnd, in the Abstract: \r\n\r\nThis document obsoletes the v2 grammar described in RFC 7749.",
     "correct_text": "Header: remove the \"Obsoletes\" line\r\n\r\nAbstract: \r\n\r\nThis new version of the syntax is expected to supersede the v2 grammar\r\ndescribed in RFC 7749 and has started to do so.",
-    "notes": "The norm in the IETF is that is one document obsoletes another, we treat the obsoleted document as dead and no longer to be referenced.   But xml2rfc v2 is very much not obsolete and won't be obsolete until v3 is fully deployed, I-Ds are __no longer__ being prepared and passed to the submission tool in v2, and the RFC Editor stops accepting v2 files when a document is transferred to them from a Stream manager.\r\n\r\nWe should accurately describe the status of documents, not anticipate the future, especially while the most common practice _in the IETF_ is still to use the prior version and its syntax.",
+    "notes": "The norm in the IETF is that is one document obsoletes another, we treat the obsoleted document as dead and no longer to be referenced.   But xml2rfc v2 is very much not obsolete and won't be obsolete until v3 is fully deployed, I-Ds are __no longer__ being prepared and passed to the submission tool in v2, and the RFC Editor stops accepting v2 files when a document is transferred to them from a Stream manager.\r\n\r\nWe should accurately describe the status of documents, not anticipate the future, especially while the most common practice _in the IETF_ is still to use the prior version and its syntax.\n --VERIFIER NOTES-- \nAn RFC can obsolete another RFC without moving the RFC to historic. This is also what is done for newer versions of certain protocols like e.g. TLS.",
     "submit_date": "2019-07-14",
     "submitter_name": "John Klensin",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "153",
+    "verifier_name": "Mirja Kühlewind (RSAB chair)",
+    "update_date": "2024-03-13 10:52:16"
   },
   {
     "errata_id": "5887",
     "doc-id": "RFC7991",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix C",
     "orig_text": "xref =\r\n  element xref {\r\n    attribute xml:base { text }?,\r\n    attribute xml:lang { text }?,\r\n    attribute target { xsd:IDREF },\r\n    [ a:defaultValue = \"false\" ]\r\n    attribute pageno { \"true\" | \"false\" }?,\r\n    [ a:defaultValue = \"default\" ]\r\n    attribute format { \"default\" | \"title\" | \"counter\" | \"none\" }?,\r\n    attribute derivedContent { text }?,\r\n    text\r\n  }",
@@ -100,24 +100,24 @@
     "notes": "In section 1.3.2: New Attributes for Existing Elements, the attributes 'relative', 'section', and 'sectionFormat' are added to the xref element. This is, however, not reflected in appendix C.\r\n\r\nThis same mistake is reflected in appendix D.",
     "submit_date": "2019-10-30",
     "submitter_name": "Rolf van Kleef",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "153",
+    "verifier_name": "Mirja Kühlewnd (IAB/RSAB chair)",
+    "update_date": "2024-03-14 05:00:38"
   },
   {
     "errata_id": "5914",
     "doc-id": "RFC7991",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "A.3",
     "orig_text": "The consensus attribute can be used to supply this information.  The\r\n   acceptable values are \"true\" (the default) and \"false\"; \"yes\" and\r\n   \"no\" from v2 are deprecated.",
     "correct_text": "The consensus attribute can be used to supply this information.  The\r\n   acceptable values are \"true\" and \"false\" (the default); \"yes\" and\r\n   \"no\" from v2 are deprecated.",
     "notes": "Section 2.45.2.  \"consensus\" Attribute says,\r\n\r\n>>>>>>\r\n Affects the generated boilerplate.  Note that the values of \"no\" and\r\n   \"yes\" are deprecated and are replaced by \"false\" (the default) and\r\n   \"true\".\r\n\r\n   See [RFC7841] for more information.\r\n\r\n   Allowed values:\r\n\r\n   o  \"no\"\r\n\r\n   o  \"yes\"\r\n\r\n   o  \"false\" (default)\r\n\r\n   o  \"true\"\r\n<<<<<<\r\n\r\nWhich is the opposite default from what A.3 currently claims. These should be consistent.",
     "submit_date": "2019-11-19",
     "submitter_name": "Jeffrey Yasskin",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2024-03-01 14:18:19"
   },
   {
     "errata_id": "6387",
