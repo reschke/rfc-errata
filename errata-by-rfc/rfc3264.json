@@ -47,31 +47,31 @@
   {
     "errata_id": "5177",
     "doc-id": "RFC3264",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5.1",
     "orig_text": "Section 5.1 says:\r\nHowever, for sendonly and sendrecv streams, the answer might indicate\r\ndifferent payload type numbers for the same codecs, in which case,\r\nthe offerer MUST send with the payload type numbers from the answer.\r\n\r\nSection 6.2 says:\r\nIn the case of RTP, if a particular codec was referenced with a\r\nspecific payload type number in the offer, that same payload type\r\nnumber SHOULD be used for that codec in the answer.",
     "correct_text": "Only one of the above statements can be correct.\r\n",
-    "notes": "Above two statements are conflicting.\r\nThe answerer should be able to either map the payload type to a different codec or not.",
-    "submit_date": "2017-11-03",
+    "notes": "Above two statements are conflicting.\r\nThe answerer should be able to either map the payload type to a different codec or not.\n --VERIFIER NOTES-- \n   See https://mailarchive.ietf.org/arch/msg/mmusic/HRD7ISwLIwiHOA73mc2KW680xAg/",
+    "submit_date": "2017-11-00",
     "submitter_name": "Sandeep Kumar Aitha",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "2",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-09 13:32:58"
   },
   {
     "errata_id": "7597",
     "doc-id": "RFC3264",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "6.1",
     "orig_text": "   The interpretation of fmtp parameters in an offer depends on the\r\n   parameters.  In many cases, those parameters describe specific\r\n   configurations of the media format, and should therefore be processed\r\n   as the media format value itself would be.  This means that the same\r\n   fmtp parameters with the same values MUST be present in the answer if\r\n   the media format they describe is present in the answer.  Other fmtp\r\n   parameters are more like parameters, for which it is perfectly\r\n   acceptable for each agent to use different values.  In that case, the\r\n   answer MAY contain fmtp parameters, and those MAY have the same\r\n   values as those in the offer, or they MAY be different.  SDP\r\n   extensions that define new parameters SHOULD specify the proper\r\n   interpretation in offer/answer.",
     "correct_text": "   The interpretation of fmtp parameters in an offer depends on the\r\n   parameters.  In many cases, those parameters describe specific\r\n   configurations of the media format, and should therefore be processed\r\n   as the media format value itself would be.  This means that the same\r\n   fmtp parameters with the same values MUST be present in the answer if\r\n   the media format they describe is present in the offer.  Other fmtp\r\n   parameters are more like parameters, for which it is perfectly\r\n   acceptable for each agent to use different values.  In that case, the\r\n   answer MAY contain fmtp parameters, and those MAY have the same\r\n   values as those in the offer, or they MAY be different.  SDP\r\n   extensions that define new parameters SHOULD specify the proper\r\n   interpretation in offer/answer.",
-    "notes": "This indicated that the same fmtp parameters with the same values MUST be present in the answer if the media format they describe is present in the **answer**.\r\n\r\nI believe the second instance of **answer** should be replace with **offer**, otherwise the quoted text does not makes sense I think.",
+    "notes": "This indicated that the same fmtp parameters with the same values MUST be present in the answer if the media format they describe is present in the **answer**.\r\n\r\nI believe the second instance of **answer** should be replace with **offer**, otherwise the quoted text does not makes sense I think.\n --VERIFIER NOTES-- \nSee https://mailarchive.ietf.org/arch/msg/mmusic/jDXva6XmGQ4Z6_PUW_TxhZp0-Hc/",
     "submit_date": "2023-08-11",
     "submitter_name": "Hugo Tunius",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-09 13:30:52"
   }
 ]
