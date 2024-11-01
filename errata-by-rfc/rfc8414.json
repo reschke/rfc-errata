@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7793",
+    "doc-id": "RFC8414",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "response_types_supported\r\n      REQUIRED.  JSON array containing a list of the OAuth 2.0\r\n      \"response_type\" values that this authorization server supports.\r\n      The array values used are the same as those used with the\r\n      \"response_types\" parameter defined by \"OAuth 2.0 Dynamic Client\r\n      Registration Protocol\" [RFC7591].",
+    "correct_text": "response_types_supported\r\n      JSON array containing a list of the OAuth 2.0\r\n      \"response_type\" values that this authorization server supports.\r\n      This is REQUIRED unless no grant types are supported\r\n      that use the authorization endpoint. The array values used are\r\n      the same as those used with the \"response_types\" parameter defined by\r\n      \"OAuth 2.0 Dynamic Client Registration Protocol\" [RFC7591].",
+    "notes": "For the authorization servers that only support grant types that do not use authorization endpoint (like client credentials grant), there is no value to put in the required `response_types_supported` parameter. At the same time, section 3.2 says that \"Claims with zero elements MUST be omitted from the response.\" `authorization_endpoint`parameter is already required for the ASs that support grant types that use the authorization endpoint, so it should be the same for the `response_types_supported` parameter.",
+    "submit_date": "2024-01-31",
+    "submitter_name": "Kristina Yasuda",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
