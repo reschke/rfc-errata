@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7815",
+    "doc-id": "RFC9522",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.1.3.7",
+    "orig_text": "   IP Flow Information Export (IPFIX) [RFC5470] defines an architecture\r\n   that is very similar to the RTFM architecture and includes Metering,\r\n   Exporting, and Collecting Processes.  [RFC5472] describes the\r\n   applicability of IPFIX and makes a comparison with RTFM, pointing out\r\n   that, architecturally, while RTM talks about devices, IPFIX deals\r\n   with processes to clarify that multiple of those processes may be co-\r\n   located on the same machine.  The IPFIX protocol [RFC7011] is widely\r\n   implemented.",
+    "correct_text": "   IP Flow Information Export (IPFIX) [RFC5470] defines an architecture\r\n   that is very similar to the RTFM architecture and includes Metering,\r\n   Exporting, and Collecting Processes.  [RFC5472] describes the\r\n   applicability of IPFIX and makes a comparison with RTFM, pointing out\r\n   that, architecturally, while RTFM talks about devices, IPFIX deals\r\n   with processes to clarify that multiple of those processes may be co-\r\n   located on the same machine.  The IPFIX protocol [RFC7011] is widely\r\n   implemented.",
+    "notes": "Missing a letter in the acronym RTFM.\r\n\r\nRTM > RTFM",
+    "submit_date": "2024-02-20",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-20 10:37:45"
+  }
+]
