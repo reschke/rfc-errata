@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7912",
+    "doc-id": "RFC2425",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "8.2",
+    "orig_text": "begin:VCARD\r\nsource:ldap://cn=bjorn%20Jensen, o=university%20of%20Michigan, c=US\r\nname:Bjorn Jensen",
+    "correct_text": "begin:VCARD\r\nsource:ldap://cn=bjorn%20Jensen,o=university%20of%20Michigan,c=US\r\nname:Bjorn Jensen",
+    "notes": "Section 6.1 says \"It contains a URI as defined in [RFC-1738]\" and RFC 1738 says in section 2.2:\r\n\"Octets must be encoded [...] if the use of the corresponding character is unsafe [...]\" and \r\n\"The space character is unsafe [...]\".\r\nThis means that the space character in this source uri must be percent-encoded or, in this case, removed.",
+    "submit_date": "2024-04-29",
+    "submitter_name": "Tom Sydney Kerckhove",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-29 11:42:53"
+  }
+]
