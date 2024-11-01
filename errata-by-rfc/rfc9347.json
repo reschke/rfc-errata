@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8042",
+    "doc-id": "RFC9347",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7.2",
+    "orig_text": "3-255 \tReserved",
+    "correct_text": "2-255 \tUnassigned",
+    "notes": "The same section, in the previous line, states \"1 \tCongestion Control Format \tRFC 9347\" so 2 is not covered in the registry. It's likely meant to be \"Unassigned\"?",
+    "submit_date": "2024-07-22",
+    "submitter_name": "Antony Antony",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-07-22 17:30:39"
+  }
+]
