@@ -28,5 +28,20 @@
     "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2020-10-27 06:54:50"
+  },
+  {
+    "errata_id": "7808",
+    "doc-id": "RFC7997",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "1",
+    "orig_text": "Please review the PDF version of this draft.",
+    "correct_text": "Please review the \"PDF with images\" version of this draft.",
+    "notes": "This may not be precisely an erratum, but this seems like the right place to report and record it.   While the above statement points to the PDF version (as explained further on, to be able to see the non-ASCII characters),  if one goes to https://www.rfc-editor.org/search/rfc_search_detail.php for this RFC and clicks on \"PDF\" one gets a PDF rendering that is substantially identical to the text version, i.e., the non-ASCII characters do not appear.  \"PDF with images\" works, but that is not what the specification says. \r\n\r\nAnd, while I'm whining, the use of the term \"draft\" in that sentence is inappropriate and should have been caught during editing.",
+    "submit_date": "2024-02-10",
+    "submitter_name": "John Klensin",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
