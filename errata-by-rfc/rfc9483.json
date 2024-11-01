@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7833",
+    "doc-id": "RFC9483",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.6",
+    "orig_text": "-- MUST be 0 for recipientInfo type PasswordRecipientInfo",
+    "correct_text": "-- MUST be 3 for recipientInfo type PasswordRecipientInfo",
+    "notes": "It turns out that we make a mistake interpreting CMS RFC 5652 section 6.1 (https://datatracker.ietf.org/doc/html/rfc5652#section-6.1).\r\n\r\nAFAICS, this was due to a misleadingly formatted condition in that section:\r\n\r\nIF ((originatorInfo is present) AND\r\n___(any version 2 attribute certificates are present)) OR\r\n___(any RecipientInfo structures include pwri) OR\r\n___(any RecipientInfo structures include ori)\r\nTHEN version is 3\r\n\r\nwhere for clarity the indentation of the 2nd line should be one more character to the right:\r\n\r\nIF ((originatorInfo is present) AND\r\n____(any version 2 attribute certificates are present)) OR\r\n___(any RecipientInfo structures include pwri) OR\r\n___(any RecipientInfo structures include ori)\r\nTHEN version is 3\r\n\r\n(I replaced leading space chars by '_' to make sure the indentation comes across.)\r\n\r\nSo this can also be seen as an editorial erratum of RFC 5652.",
+    "submit_date": "2024-03-01",
+    "submitter_name": "David von Oheimb",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
