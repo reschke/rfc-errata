@@ -32,7 +32,7 @@
   {
     "errata_id": "6517",
     "doc-id": "RFC8214",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5",
     "orig_text": "   Finally, EVPN may employ data-plane egress link protection mechanisms\r\n   not available in VPWS.  This can be done by the primary PE (on local\r\n   AC down) using the label advertised in the per-EVI Ethernet A-D route\r\n   by the backup PE to encapsulate the traffic and direct it to the\r\n   backup PE.",
@@ -40,9 +40,9 @@
     "notes": "RFC 8104 \"Pseudowire (PW) Endpoint Fast Failure Protection\" defines a solution for egress PW endpoint protection that provides fast local protection against failure of the primary egress PE and failure of the Attachment Circuit of this PE, so that the claim that the data-plane egress link protection mechanisms are not available for LDP-signaled PWs is factually inaccurate. However, the solution defined in RFC 8104is much more complicated both from the POV of implementation and from the operational POV, while the EVPN-based solution is quite straightforward.",
     "submit_date": "2021-04-05",
     "submitter_name": "Alexander (\"Sasha\") Vainshtein",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "178",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2024-10-30 06:39:31"
   },
   {
     "errata_id": "6743",
@@ -62,7 +62,7 @@
   {
     "errata_id": "7562",
     "doc-id": "RFC8214",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.1",
     "orig_text": "In a multihoming All-Active scenario, there is no Designated Forwarder (DF) election, and all the PEs in the ES that are active and ready to forward traffic to/from the CE will set the P Flag.",
@@ -70,8 +70,23 @@
     "notes": "The original text in the RFC does not express any requirement level (\"will\" is not a recognized IETF term for expressing requirement levels as defined in RFC 2119). The new test replaces \"will\" with \"SHOULD\". \r\n\r\nSHOULD and not MUST is proposed to avoid potential issues with implementations that did not set P flag in the L2 Attributes Extended Community in All-Active multi-homing scenarios (since this was not required) and would suddenly become non-compliant if the text were changed to from \"will\" to MUST.",
     "submit_date": "2023-07-13",
     "submitter_name": "Alexander (\"Sasha\") Vainshtein",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "178",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2024-10-30 06:42:37"
+  },
+  {
+    "errata_id": "7837",
+    "doc-id": "RFC8214",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.1",
+    "orig_text": "This document defines a new extended community [RFC4360], to be included with per-EVI Ethernet A-D routes.  This attribute is mandatory if multihoming is enabled.",
+    "correct_text": "This document defines a new extended community [RFC4360], to be included with per-EVI Ethernet A-D routes.  \r\n\r\nIf multihoming is enabled, this attribute is MANDATORY regardless of whether the per-EVI Ethernet A-D route is advertised by an EVPN-VPWS instance or by a \"bridging\" EVPN instance.\r\n\r\n",
+    "notes": "The lower-case \"mandatory\" used in the original text does not represent any form of requirement in IETF documents, therefore replacing with upper-case \"MANDATORY\" is needed.\r\n\r\nThe reference to per-EVI Ethernet A-D routes advertised by both \"bridging\" EVPN and EVPN-VPWS is needed to remove possible doubts about the scope of this requirement since the standard is about EVPN-VPWS.\r\n\r\n--\r\nVerifier note: see also https://mailarchive.ietf.org/arch/msg/bess/vBYU98CJkLvHfvnX_6wIsV2cCFM/",
+    "submit_date": "2024-03-05",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-03-07 06:35:04"
   }
 ]
