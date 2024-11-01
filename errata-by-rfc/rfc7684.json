@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8104",
+    "doc-id": "RFC7684",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "   Route Type\r\n      The type of the OSPFv2 route.  If the route type is 0\r\n      (Unspecified), the information inside the OSPFv2 External Prefix\r\n      TLV applies to the prefix regardless of prefix's route type.  This\r\n      is useful when prefix-specific attributes are advertised by an\r\n      external entity that is not aware of the route type associated\r\n      with the prefix.  Supported types are:",
+    "correct_text": "   Route Type\r\n      The type of the OSPFv2 route.  If the route type is 0\r\n      (Unspecified), the information inside the OSPFv2 Extended Prefix\r\n      TLV applies to the prefix regardless of prefix's route type.  This\r\n      is useful when prefix-specific attributes are advertised by an\r\n      external entity that is not aware of the route type associated\r\n      with the prefix.  Supported types are:",
+    "notes": "s/External Prefix/Extended Prefix/",
+    "submit_date": "2024-09-16",
+    "submitter_name": "Kris Michielsen",
+    "verifier_id": "178",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2024-09-16 07:34:38"
+  }
+]
