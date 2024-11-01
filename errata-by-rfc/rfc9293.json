@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8126",
+    "doc-id": "RFC9293",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3.1",
+    "orig_text": "the sequence space labeled 3 in Figure 3",
+    "correct_text": "the sequence space labeled 2 and 3 in Figure 3",
+    "notes": "In Figure 3, the send window shoud be 2(sequence numbers of unacknowledged data) and 3(sequence numbers allowed for new data transmission).",
+    "submit_date": "2024-10-01",
+    "submitter_name": "zhihua.li",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-10-07 12:15:13"
+  }
+]
