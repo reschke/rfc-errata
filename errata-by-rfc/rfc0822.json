@@ -62,16 +62,16 @@
   {
     "errata_id": "7573",
     "doc-id": "RFC0822",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.1.1",
     "orig_text": "        inserted.  Thus, the single line\r\n            To:  \"Joe & J. Harvey\" <ddd @Org>, JJV @ BBN\r\n        can be represented as:\r\n            To:  \"Joe & J. Harvey\" <ddd @ Org>,\r\n                    JJV@BBN\r\n        and\r\n            To:  \"Joe & J. Harvey\"\r\n                            <ddd@ Org>, JJV\r\n             @BBN\r\n        and\r\n            To:  \"Joe &\r\n             J. Harvey\" <ddd @ Org>, JJV @ BBN",
     "correct_text": "        inserted.  Thus, the single line\r\n            To:  \"Joe & J. Harvey\" <ddd @Org>, JJV @ BBN\r\n        can be represented as:\r\n            To:  \"Joe & J. Harvey\" <ddd @ Org>,\r\n             JJV@BBN\r\n        and\r\n            To:  \"Joe & J. Harvey\"\r\n             <ddd@ Org>, JJV\r\n             @BBN\r\n        and\r\n            To:  \"Joe &\r\n             J. Harvey\" <ddd @ Org>, JJV @ BBN",
-    "notes": "Possibly arising from mis-interpreting RFC 733 section III.B.a (Folding and unfolding of headers) which says: \"The general rule is that wherever there can be linear-white-space  (NOT  simply  LWSP-chars), a CRLF immediately followed by AT LEAST one LWSP-char can instead be inserted.\"\r\nThis may be interpreted that when folding at one while space character an arbitrary amount of white space characters may be inserted at the next line, also saying that one white space in a header is equivalent to multiple white space characters.\r\nsubsequent revisions (RFC 2822, RFC 5322) are increasingly more clear on that:\r\n\"The general rule is that wherever this specification allows for folding white space (not simply WSP characters), a CRLF may be inserted before any WSP.\"",
+    "notes": "Possibly arising from mis-interpreting RFC 733 section III.B.a (Folding and unfolding of headers) which says: \"The general rule is that wherever there can be linear-white-space  (NOT  simply  LWSP-chars), a CRLF immediately followed by AT LEAST one LWSP-char can instead be inserted.\"\r\nThis may be interpreted that when folding at one while space character an arbitrary amount of white space characters may be inserted at the next line, also saying that one white space in a header is equivalent to multiple white space characters.\r\nsubsequent revisions (RFC 2822, RFC 5322) are increasingly more clear on that:\r\n\"The general rule is that wherever this specification allows for folding white space (not simply WSP characters), a CRLF may be inserted before any WSP.\"\n --VERIFIER NOTES-- \nPer https://datatracker.ietf.org/doc/statement-iesg-iesg-processing-of-rfc-errata-for-the-ietf-stream-20210507/\r\n\r\nIt appears this has been clarified in subsequent revisions (RFC 2822, RFC 5322)\r\n\r\n\r\n\r\n",
     "submit_date": "2023-07-24",
     "submitter_name": "Ulrich Windl",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 12:11:49"
   }
 ]
