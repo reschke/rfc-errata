@@ -148,5 +148,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-03-16 12:46:23"
+  },
+  {
+    "errata_id": "8148",
+    "doc-id": "RFC1123",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.1",
+    "orig_text": "           If a dotted-decimal number can be entered without such\r\n           identifying delimiters, then a full syntactic check must be\r\n           made, because a segment of a host domain name is now allowed\r\n           to begin with a digit and could legally be entirely numeric\r\n           (see Section 6.1.2.4).",
+    "correct_text": "           If a dotted-decimal number can be entered without such\r\n           identifying delimiters, then a full syntactic check must be\r\n           made, because a segment of a host domain name is now allowed\r\n           to begin with a digit and could legally be entirely numeric.",
+    "notes": "The text says \"see Section 6.1.2.4\", but section 6.1.2.4 is about compression and is not related to section 2.1 at all.\r\n\r\n--VERIFIER NOTES--\r\nPerhaps Section 6.1.3.5 was intended.",
+    "submit_date": "2024-10-17",
+    "submitter_name": "Hirotaka Yamamoto",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-10-24 12:52:53"
   }
 ]
