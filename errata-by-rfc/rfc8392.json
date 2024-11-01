@@ -2,7 +2,7 @@
   {
     "errata_id": "5710",
     "doc-id": "RFC8392",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "1.1",
     "orig_text": "In JSON, maps are called objects and only have one kind of map key: a\r\n   string.  CBOR uses strings, negative integers, and unsigned integers\r\n   as map keys.",
@@ -10,9 +10,9 @@
     "notes": "The text as it stands risks an interpretation that CBOR limits map keys to integers and strings; per discussion on the CBOR mailing list, this is not the case.",
     "submit_date": "2019-04-29",
     "submitter_name": "Felipe Gasper",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-16 18:22:25"
   },
   {
     "errata_id": "5852",
@@ -28,5 +28,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7982",
+    "doc-id": "RFC8392",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.2.2",
+    "orig_text": "     / kid /  4: h'53796d6d6574726963323536' / 'Symmetric256' /,",
+    "correct_text": "     / kid /  2: h'53796d6d6574726963323536' / 'Symmetric256' /,",
+    "notes": "The hex above the diagnostic notation encodes for index 2 before the 'Symmetric256' value. The use of CBOR value 2 to mean \"kid\" is also consistent with the examples around it.\r\n\r\nAs this is a mix-up between the \"kid\" key from COSE Key Common Parameters and COSE Header parameters, a check through the whole document for whether the right numeric values are used might be due. The use of 2 here and 4 in A.3 and A.4 seems right to me -- but I keep mixing those up myself, which was why I was looking into this example in the first place.",
+    "submit_date": "2024-06-11",
+    "submitter_name": "Christian Amsüss",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-06-11 09:39:34"
   }
 ]
