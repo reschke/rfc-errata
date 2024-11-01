@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7800",
+    "doc-id": "RFC9481",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.2.3",
+    "orig_text": "   The KMAC algorithm is defined in [RFC8702] and FIPS SP 800-185\r\n   [NIST.SP.800-185]].",
+    "correct_text": "   The KMAC algorithm is defined in [RFC8702] and NIST SP 800-185\r\n   [NIST.SP.800-185].",
+    "notes": "Correct two errors. First, the referenced document is a Special Publication, not a FIPS. Second, there are two closing brackets, but there should only be one.",
+    "submit_date": "2024-02-07",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-07 09:46:57"
+  },
+  {
+    "errata_id": "8018",
+    "doc-id": "RFC9481",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "10",
+    "orig_text": "   [NIST.FIPS.180-4]\r\n              Dang, Q. H. and NIST, \"Secure Hash Standard\", NIST Federal\r\n              Information Processing Standards Publications 180-4,\r\n              DOI 10.6028/NIST.FIPS.180-4, July 2015,\r\n              <https://nvlpubs.nist.gov/nistpubs/FIPS/\r\n              NIST.FIPS.180-4.pdf>.\r\n",
+    "correct_text": "   [NIST.FIPS.180-4]\r\n              Dang, Q. H., \"Secure Hash Standard\", NIST Federal\r\n              Information Processing Standards Publications 180-4,\r\n              DOI 10.6028/NIST.FIPS.180-4, July 2015,\r\n              <https://nvlpubs.nist.gov/nistpubs/FIPS/\r\n              NIST.FIPS.180-4.pdf>.\r\n",
+    "notes": "The references section contains several references (the given one is just the first example) that treat NIST like a human author under several.\r\nIn this example, the mistake is directly imported from bib.ietf.org for NIST.FIPS.180-4\r\n\r\n(This should become \"Hold for Document Update\", as it is unlikely to cause confusion, just a few raised eyebrows.)\r\n\r\n--VERIFIER NOTES-- \r\nSee:\r\nhttps://github.com/ietf-tools/bibxml-service/issues/262\r\nhttps://github.com/ietf-tools/bibxml-service/issues/418",
+    "submit_date": "2024-07-03",
+    "submitter_name": "Carsten Bormann",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-07-09 16:04:26"
+  }
+]
