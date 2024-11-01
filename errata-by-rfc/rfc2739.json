@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2021-07-06 15:21:50"
+  },
+  {
+    "errata_id": "7914",
+    "doc-id": "RFC2739",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.3",
+    "orig_text": "BEGIN:VCARD\r\nVERSION:3.0\r\nN:Dun;Alec\r\nFN:Alec Dun\r\nORG:Microsoft Corporation\r\nADR;WORK;POSTAL;PARCEL:;;One Microsoft Way;\r\n Redmond;WA;98052-6399;USA\r\nTEL;WORK;MSG:+1-206-936-4544\r\nTEL;WORK;FAX:+1-206-936-7329\r\nEMAIL;INTERNET:user@host1.com\r\nCALADRURI;PREF:mailto:user@host1.com\r\nCALURI;PREF:http://cal.host1.com/user/cal.ics\r\nFBURL;PREF:http://cal.host1.com/user/fb.ifb\r\nCALURI:http://cal.company.com/projectA/pjtA.ics\r\nFBURL:http://cal.company.com/projectA/pjtAfb.ifb\r\nEND:VCARD",
+    "correct_text": "BEGIN:VCARD\r\nVERSION:3.0\r\nN:Dun;Alec\r\nFN:Alec Dun\r\nORG:Microsoft Corporation\r\nADR;TYPE=WORK,POSTAL,PARCEL:;;One Microsoft Way;\r\n Redmond;WA;98052-6399;USA\r\nTEL;TYPE=WORK,MSG:+1-206-936-4544\r\nTEL;TYPE=WORK,FAX:+1-206-936-7329\r\nEMAIL;TYPE=INTERNET:user@host1.com\r\nCALADRURI;TYPE=PREF:mailto:user@host1.com\r\nCALURI;TYPE=PREF:http://cal.host1.com/user/cal.ics\r\nFBURL;TYPE=PREF:http://cal.host1.com/user/fb.ifb\r\nCALURI:http://cal.company.com/projectA/pjtA.ics\r\nFBURL:http://cal.company.com/projectA/pjtAfb.ifb\r\nEND:VCARD",
+    "notes": "The TYPE parameter parameter name was missing. parameter names are not optional, as specified in RFC 2426:\r\n\r\n   param        = param-name \"=\" param-value *(\",\" param-value)\r\n\r\n   param-name   = iana-token / x-name\r\n\r\n   param-value  = ptext / quoted-string",
+    "submit_date": "2024-04-29",
+    "submitter_name": "Tom Sydney Kerckhove",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-29 11:51:32"
   }
 ]
