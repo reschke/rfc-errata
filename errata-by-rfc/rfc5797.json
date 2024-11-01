@@ -32,7 +32,7 @@
   {
     "errata_id": "5748",
     "doc-id": "RFC5797",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "3",
     "orig_text": "   | RNTO  | base | Rename From       | s    | m    | 959              |",
@@ -40,14 +40,14 @@
     "notes": "Obviously RNTO = Rename To as defined in RFC 959",
     "submit_date": "2019-06-08",
     "submitter_name": "Eugene Adell",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 14:24:04"
   },
   {
     "errata_id": "7532",
     "doc-id": "RFC5797",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "sections 3 and 7",
     "orig_text": "(multiple occurrences of each within Table 1, column “RFC#s/References and Notes”)\r\n2640\r\n3659",
@@ -55,8 +55,8 @@
     "notes": "These RFCs are referenced prominently in the table which the remainder of the RFC is centered upon, but were omitted from the actual “References” section.  Merely to find out what their topics were, I had to go and query for them on the rfc-editor website.  This is inefficient in both network resources and user time.",
     "submit_date": "2023-06-02",
     "submitter_name": "Gordon Steemson",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 14:25:57"
   }
 ]
