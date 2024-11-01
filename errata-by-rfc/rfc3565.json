@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8088",
+    "doc-id": "RFC3565",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "-- AES information object identifiers --\r\n\r\naes OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840)\r\n               organization(1) gov(101) csor(3)_ nistAlgorithms(4)  1 }",
+    "correct_text": "-- AES information object identifiers --\r\n\r\naes OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840)\r\n               organization(1) gov(101) csor(3) nistAlgorithms(4)  1 }",
+    "notes": "underscore in aes OID is an ANS.1 syntax error.",
+    "submit_date": "2024-08-23",
+    "submitter_name": "Stefan Grundmann",
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-08-23 06:31:05"
+  }
+]
