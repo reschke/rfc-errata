@@ -43,5 +43,35 @@
     "verifier_id": "2",
     "verifier_name": "Paul Wouters",
     "update_date": "2023-11-10 15:06:55"
+  },
+  {
+    "errata_id": "7801",
+    "doc-id": "RFC3739",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": ".2.6.1",
+    "orig_text": "   If a value of type SemanticsInformation is present in a QCStatement\r\n   where the statementID component is set to id-qcs-pkix-QCSyntax-v1 or\r\n   id-qcs-pkix-QCSyntax-v2, then at least one of the semanticsIdentifier\r\n   or nameRegistrationAuthorities fields must be present, as indicated.\r\n   Note that the statementInfo component need not be present in a\r\n   QCStatement value even if the statementID component is set to id-\r\n   qcs-pkix-QCSyntax-v1 or id-qcs-pkix-QCSyntax-v2.",
+    "correct_text": "   If a value of type SemanticsInformation is present in a QCStatement\r\n   where the statementId component is set to id-qcs-pkix-QCSyntax-v1 or\r\n   id-qcs-pkix-QCSyntax-v2, then at least one of the semanticsIdentifier\r\n   or nameRegistrationAuthorities fields must be present, as indicated.\r\n   Note that the statementInfo component need not be present in a\r\n   QCStatement value even if the statementId component is set to id-\r\n   qcs-pkix-QCSyntax-v1 or id-qcs-pkix-QCSyntax-v2.",
+    "notes": "The name of the statement ID component per the ASN.1 definition is \"statementId\", not \"statementID\".\r\n\r\nThis appears in both sentences above.",
+    "submit_date": "2024-02-07",
+    "submitter_name": "Corey Bonnell",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-08 12:02:55"
+  },
+  {
+    "errata_id": "7802",
+    "doc-id": "RFC3739",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "A.1",
+    "orig_text": "   SemanticsInformation  ::= SEQUENCE {\r\n       semanticsIndentifier        OBJECT IDENTIFIER OPTIONAL,\r\n       nameRegistrationAuthorities NameRegistrationAuthorities OPTIONAL\r\n       } -- At least one field shall be present",
+    "correct_text": "   SemanticsInformation  ::= SEQUENCE {\r\n       semanticsIdentifier         OBJECT IDENTIFIER OPTIONAL,\r\n       nameRegistrationAuthorities NameRegistrationAuthorities OPTIONAL\r\n       } -- At least one field shall be present",
+    "notes": "The body of the document and Appendix A.2 use \"semanticsIdentifier\" for the name of the first item in the SEQUENCE.  This change is needed to the normative ASN.1 module to be consistent.\r\n\r\nNote: the typo is \"Indentifier\" instead of \"Identifier\".",
+    "submit_date": "2024-02-07",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-02-07 13:22:51"
   }
 ]
