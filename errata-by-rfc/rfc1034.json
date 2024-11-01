@@ -253,5 +253,20 @@
     "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7820",
+    "doc-id": "RFC1034",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.7.1",
+    "orig_text": "The QCLASS field may contain:\r\n\r\n<any class>     matches just that class (e.g., IN, CH).\r\n\r\n*               matches aLL RR classes.",
+    "correct_text": "The QCLASS field may contain:\r\n\r\n<any class>     matches just that class (e.g., IN, CH).\r\n\r\n*               matches all RR classes.",
+    "notes": "Manual inspection of each use of the terms RR and RRs did not reveal any additional incorrectly capitalized adjacent words.\r\n\r\naLL > all",
+    "submit_date": "2024-02-23",
+    "submitter_name": "Ben Buehler",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-02-25 19:54:54"
   }
 ]
