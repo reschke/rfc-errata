@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8111",
+    "doc-id": "RFC9328",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.3.3",
+    "orig_text": "The FU header consists of an S bit, an E bit, an R bit, and a 5-bit\r\n   FuType field, as shown in Figure 10.",
+    "correct_text": "The FU header consists of an S bit, an E bit, an P bit, and a 5-bit\r\n   FuType field, as shown in Figure 10.",
+    "notes": "The figure 10 and the explanation to Figure 10 calls it the P bit:\r\n\r\n\r\n                             +---------------+\r\n                             |0|1|2|3|4|5|6|7|\r\n                             +-+-+-+-+-+-+-+-+\r\n                             |S|E|P|  FuType |\r\n                             +---------------+\r\n\r\n                 Figure 10: The Structure of the FU Header\r\n\r\n   The semantics of the FU header fields are as follows:\r\n\r\n   S: 1 bit\r\n      When set to 1, the S bit indicates the start of a fragmented NAL\r\n      unit, i.e., the first byte of the FU payload is also the first\r\n      byte of the payload of the fragmented NAL unit.  When the FU\r\n      payload is not the start of the fragmented NAL unit payload, the S\r\n      bit MUST be set to 0.\r\n\r\n   E: 1 bit\r\n      When set to 1, the E bit indicates the end of a fragmented NAL\r\n      unit, i.e., the last byte of the payload is also the last byte of\r\n      the fragmented NAL unit.  When the FU payload is not the last\r\n      fragment of a fragmented NAL unit, the E bit MUST be set to 0.\r\n\r\n   P: 1 bit\r\n      When set to 1, the P bit indicates the last FU of the last VCL NAL\r\n      unit of a coded picture, i.e., the last byte of the FU payload is\r\n      also the last byte of the last VCL NAL unit of the coded picture.\r\n      When the FU payload is not the last fragment of the last VCL NAL\r\n      unit of a coded picture, the P bit MUST be set to 0.",
+    "submit_date": "2024-09-20",
+    "submitter_name": "Magnus Westerlund",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-09-23 14:13:53"
+  },
+  {
+    "errata_id": "8162",
+    "doc-id": "RFC9328",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3.1",
+    "orig_text": "   A single NAL unit packet contains exactly one NAL unit and consists\r\n   of a payload header, as defined in Table 5 of [VVC]",
+    "correct_text": "   A single NAL unit packet contains exactly one NAL unit and consists\r\n   of a payload header, as defined in Section 7.3.1.2 of [VVC]",
+    "notes": "Table 5 of T-REC-H.266-202309 lists NAL unit type codes, but the text here discusses the NAL unit header format, which is defined in Section 7.3.1.2.\r\n\r\nThe same happens in sections 4.3.2 and 4.3.3.",
+    "submit_date": "2024-10-31",
+    "submitter_name": "Carlos Falgueras García",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
