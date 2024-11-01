@@ -47,31 +47,31 @@
   {
     "errata_id": "5927",
     "doc-id": "RFC4357",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "10.6",
     "orig_text": "           Gost28147-89-ParamSet\r\n           FROM Gost28147-89-EncryptionSyntax\r\n\r\n...\r\n\r\n       GostR3410-94-PublicKeyParameters ::=\r\n           SEQUENCE {\r\n               publicKeyParamSet\r\n                   OBJECT IDENTIFIER (\r\n                       id-GostR3410-94-TestParamSet |\r\n                           -- Only for testing purposes\r\n                       id-GostR3410-94-CryptoPro-A-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-B-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-C-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-D-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-XchA-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-XchB-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-XchC-ParamSet\r\n                   ),\r\n               digestParamSet\r\n                   OBJECT IDENTIFIER (\r\n                       id-GostR3411-94-TestParamSet |\r\n                           -- Only for testing purposes\r\n                       id-GostR3411-94-CryptoProParamSet\r\n                   ),\r\n               encryptionParamSet Gost28147-89-ParamSet OPTIONAL\r\n           }",
     "correct_text": "           id-Gost28147-89-CryptoPro-A-ParamSet, Gost28147-89-ParamSet\r\n           FROM Gost28147-89-EncryptionSyntax\r\n\r\n...\r\n\r\n       GostR3410-94-PublicKeyParameters ::=\r\n           SEQUENCE {\r\n               publicKeyParamSet\r\n                   OBJECT IDENTIFIER (\r\n                       id-GostR3410-94-TestParamSet |\r\n                           -- Only for testing purposes\r\n                       id-GostR3410-94-CryptoPro-A-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-B-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-C-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-D-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-XchA-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-XchB-ParamSet |\r\n                       id-GostR3410-94-CryptoPro-XchC-ParamSet\r\n                   ),\r\n               digestParamSet\r\n                   OBJECT IDENTIFIER (\r\n                       id-GostR3411-94-TestParamSet |\r\n                           -- Only for testing purposes\r\n                       id-GostR3411-94-CryptoProParamSet\r\n                   ),\r\n               encryptionParamSet Gost28147-89-ParamSet DEFAULT\r\n                    id-Gost28147-89-CryptoPro-A-ParamSet\r\n           }",
-    "notes": "The parameters structures of GostR3410-94-PublicKeyParameters defined in RFC 4357 and RFC 4491 that do not match. In RFC4491, a DEFAULT is provided for the 'encryptionParamSet' object identifier, while in RFC 4357, the 'encryptionParamSet' object identifier is OPTIONAL.",
+    "notes": "The parameters structures of GostR3410-94-PublicKeyParameters defined in RFC 4357 and RFC 4491 that do not match. In RFC4491, a DEFAULT is provided for the 'encryptionParamSet' object identifier, while in RFC 4357, the 'encryptionParamSet' object identifier is OPTIONAL.\r\n\r\n\r\n---Verifier Notes:---\r\nPaul Wouters (AD): Closed as Verified. There won't be any updates for RFC 4357 as the algorithms are not used anymore.\r\nThe current GOST algorithms are defined in RFC 6986, RFC 7801 and RFC 7836.\r\n",
     "submit_date": "2019-12-06",
     "submitter_name": "Stanislav Smyshlyaev",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-16 10:02:34"
   },
   {
     "errata_id": "5928",
     "doc-id": "RFC4357",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "10.8",
     "orig_text": "           Gost28147-89-ParamSet\r\n           FROM Gost28147-89-EncryptionSyntax\r\n\r\n...\r\n\r\n       GostR3410-2001-PublicKeyParameters ::=\r\n           SEQUENCE {\r\n               publicKeyParamSet\r\n                   OBJECT IDENTIFIER (\r\n                       id-GostR3410-2001-TestParamSet |\r\n                           -- Only for testing purposes\r\n                       id-GostR3410-2001-CryptoPro-A-ParamSet |\r\n                       id-GostR3410-2001-CryptoPro-B-ParamSet |\r\n                       id-GostR3410-2001-CryptoPro-C-ParamSet |\r\n                       id-GostR3410-2001-CryptoPro-XchA-ParamSet |\r\n                       id-GostR3410-2001-CryptoPro-XchB-ParamSet\r\n                   ),\r\n               digestParamSet\r\n                   OBJECT IDENTIFIER (\r\n                       id-GostR3411-94-TestParamSet |\r\n                           -- Only for testing purposes\r\n                       id-GostR3411-94-CryptoProParamSet\r\n                   ),\r\n               encryptionParamSet Gost28147-89-ParamSet OPTIONAL\r\n           }",
     "correct_text": "           id-Gost28147-89-CryptoPro-A-ParamSet, Gost28147-89-ParamSet\r\n           FROM Gost28147-89-EncryptionSyntax\r\n\r\n...\r\n\r\n       GostR3410-2001-PublicKeyParameters ::=\r\n           SEQUENCE {\r\n               publicKeyParamSet\r\n                   OBJECT IDENTIFIER (\r\n                       id-GostR3410-2001-TestParamSet |\r\n                           -- Only for testing purposes\r\n                       id-GostR3410-2001-CryptoPro-A-ParamSet |\r\n                       id-GostR3410-2001-CryptoPro-B-ParamSet |\r\n                       id-GostR3410-2001-CryptoPro-C-ParamSet |\r\n                       id-GostR3410-2001-CryptoPro-XchA-ParamSet |\r\n                       id-GostR3410-2001-CryptoPro-XchB-ParamSet\r\n                   ),\r\n               digestParamSet\r\n                   OBJECT IDENTIFIER (\r\n                       id-GostR3411-94-TestParamSet |\r\n                           -- Only for testing purposes\r\n                       id-GostR3411-94-CryptoProParamSet\r\n                   ),\r\n               encryptionParamSet Gost28147-89-ParamSet DEFAULT\r\n                    id-Gost28147-89-CryptoPro-A-ParamSet\r\n           }",
-    "notes": "The parameters structures of GostR3410-2001-PublicKeyParameters defined in RFC 4357 and RFC 4491 do not match. In RFC4491, a DEFAULT is provided for the 'encryptionParamSet' object identifier, while in RFC 4357, the 'encryptionParamSet' object identifier is OPTIONAL.",
+    "notes": "The parameters structures of GostR3410-2001-PublicKeyParameters defined in RFC 4357 and RFC 4491 do not match. In RFC4491, a DEFAULT is provided for the 'encryptionParamSet' object identifier, while in RFC 4357, the 'encryptionParamSet' object identifier is OPTIONAL.\r\n\r\n---Verifier Notes:---\r\nPaul Wouters (AD): Closed as Verified. There won't be any updates for RFC 4357 as the algorithms are not used anymore.\r\nThe current GOST algorithms are defined in RFC 6986, RFC 7801 and RFC 7836.",
     "submit_date": "2019-12-06",
     "submitter_name": "Stanislav Smyshlyaev",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-16 10:04:12"
   }
 ]
