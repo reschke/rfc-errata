@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8039",
+    "doc-id": "RFC9074",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.1",
+    "orig_text": "acknowledged = \"ACKNOWLEDGED\" *acknowledgedparam \":\" datetime CRLF",
+    "correct_text": "acknowledged = \"ACKNOWLEDGED\" *acknowledgedparam \":\" date-time CRLF",
+    "notes": "to match the \"date-type\" defined as value type above, and the name of the ABNF definition in RFC5545",
+    "submit_date": "2024-07-21",
+    "submitter_name": "Dominique Hazaël-Massieux",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-07-25 11:47:17"
+  }
+]
