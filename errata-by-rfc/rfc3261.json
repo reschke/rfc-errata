@@ -257,7 +257,7 @@
   {
     "errata_id": "4084",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "13.2.2.4",
     "orig_text": "   If the dialog identifier in the 2xx response matches the dialog\r\n   identifier of an existing dialog, the dialog MUST be transitioned to\r\n   the \"confirmed\" state, and the route set for the dialog MUST be\r\n   recomputed based on the 2xx response using the procedures of Section\r\n   12.2.1.2.",
@@ -265,29 +265,29 @@
     "notes": "The procedures of recomputing the route set should refer to the Section 12.2.1.1, rather than Section 12.2.1.2. \r\n\r\nActually in Section 12.2.1.2, there is no procedure of computing route set. Instead, the related procedures can only be found in Section 12.2.1.1.\r\n\r\nTo avoid misleading, \"12.2.1.2\" here should be \"12.2.1.1\" instead.",
     "submit_date": "2014-08-15",
     "submitter_name": "Xing Lou Han",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 07:10:52"
   },
   {
     "errata_id": "4275",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "15",
     "orig_text": "The caller's UA MAY send a BYE for either confirmed or early dialogs",
     "correct_text": "The caller's UA MUST send a BYE for confirmed dialogs",
-    "notes": "In general, BYE shall be handled in the same way as CANCEL if it is for early dialogs.\r\nIn case, when BYE is on the way to the destination, the callee probably accepts INVITE, the race condition will occure.\r\nIf we follow the procedure as CANCEL, caller shall send ACK for 200 OK and immediately release the session using BYE.\r\nSo two BYEs will be triggered in the case, it does not make sense.",
+    "notes": "In general, BYE shall be handled in the same way as CANCEL if it is for early dialogs.\r\nIn case, when BYE is on the way to the destination, the callee probably accepts INVITE, the race condition will occure.\r\nIf we follow the procedure as CANCEL, caller shall send ACK for 200 OK and immediately release the session using BYE.\r\nSo two BYEs will be triggered in the case, it does not make sense.\n --VERIFIER NOTES-- \nThis behavior was clarified in https://www.rfc-editor.org/rfc/rfc6141#section-5.3",
     "submit_date": "2015-02-19",
     "submitter_name": "Chao Wang",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:13:35"
   },
   {
     "errata_id": "4300",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "24.2",
     "orig_text": "F2 100 Trying atlanta.com proxy -> Alice\r\n(...)\r\nF3 INVITE atlanta.com proxy -> biloxi.com proxy\r\n(...)\r\nF4 100 Trying biloxi.com proxy -> atlanta.com proxy\r\n(...)\r\nF5 INVITE biloxi.com proxy -> Bob",
@@ -295,24 +295,24 @@
     "notes": "Figure 1 in Section 4 shows different indexes for the 100 Trying and INVITE messages.",
     "submit_date": "2015-03-12",
     "submitter_name": "Tamas Horvath",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 06:45:15"
   },
   {
     "errata_id": "4379",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "25.1",
     "orig_text": "Errata ID: 316\r\ndigest-uri-value  =  request-uri ; Equal to request-uri\r\n                                   as specified by HTTP/1.1\r\n",
     "correct_text": "digest-uri-value  =  rquest-uri ; Equal to request-uri\r\n                                  as specified by HTTP/1.1\r\n",
-    "notes": "Rule names are case-insensitive.\r\nRequest-URI has been defined already.\r\nAn original definition is correct.\r\nAlternatively, it may refer to request-target as specified by RFC 7230.",
+    "notes": "Rule names are case-insensitive.\r\nRequest-URI has been defined already.\r\nAn original definition is correct.\r\nAlternatively, it may refer to request-target as specified by RFC 7230.\n --VERIFIER NOTES-- \nThe original text includes: Errata ID: 316\r\n\r\nBut the current text matches the suggestion:\r\n\r\nhttps://datatracker.ietf.org/doc/html/rfc3261#section-25.1",
     "submit_date": "2015-05-28",
     "submitter_name": "OKUMURA Shinji",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 06:52:34"
   },
   {
     "errata_id": "4385",
@@ -332,17 +332,17 @@
   {
     "errata_id": "4553",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "20.11",
     "orig_text": "The handling parameter, handling-param, describes how the UAS should\r\nreact if it receives a message body whose content type or disposition\r\ntype it does not understand.  The parameter has defined values of\r\n\"optional\" and \"required\".  If the handling parameter is missing, the\r\nvalue \"required\" SHOULD be assumed.  The handling parameter is\r\ndescribed in RFC 3204 [19].\r\n",
     "correct_text": "The handling parameter, handling-param, describes how the UAS should\r\nreact if it receives a message body whose content type or disposition\r\ntype it does not understand.  The parameter has defined values of\r\n\"optional\" and \"required\".  If the handling parameter is missing, or if\r\nthe Content-Disposition header field is missing, the value \"required\" \r\nMUST be assumed.  The handling parameter is described in RFC 3204 [19].\r\n",
-    "notes": "SIPCORE discussion: https://mailarchive.ietf.org/arch/msg/sipcore/bn-pRgDyGL2FP_M7eYpyT35zNp4",
+    "notes": "SIPCORE discussion: https://mailarchive.ietf.org/arch/msg/sipcore/bn-pRgDyGL2FP_M7eYpyT35zNp4\n --VERIFIER NOTES-- \n   See https://mailarchive.ietf.org/arch/msg/sipcore/fjlcEaK4zFS3Yelzkqvljl5SxRw/",
     "submit_date": "2015-12-04",
     "submitter_name": "Christer Holmberg",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:22:03"
   },
   {
     "errata_id": "4567",
@@ -362,7 +362,7 @@
   {
     "errata_id": "4637",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "23.4.3",
     "orig_text": "        ghyHhHUujhJhjH77n8HHGTrfvbnj756tbB9HG4VQpfyF467GhIGfHfYT6\r\n        4VQpfyF467GhIGfHfYT6jH77n8HHGghyHhHUujhJh756tbB9HGTrfvbnj\r\n        n8HHGTrfvhJhjH776tbB9HG4VQbnj7567GhIGfHfYT6ghyHhHUujpfyF4\r\n        7GhIGfHfYT64VQbnj756\r\n\r\n        --boundary42-",
@@ -370,9 +370,9 @@
     "notes": "As far as I know a boundary end should end with two dashes as for RFC 3851 for that specific case, hence it should be :\r\n\r\n --boundary42--",
     "submit_date": "2016-03-11",
     "submitter_name": "Boris Shtrasman",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 07:03:59"
   },
   {
     "errata_id": "4675",
@@ -422,7 +422,7 @@
   {
     "errata_id": "5653",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "17.1.1.2",
     "orig_text": null,
@@ -430,14 +430,14 @@
     "notes": "When a INVITE client transaction transitions to Proceeding state (upon receiving a provisional response), the request retransmission stops (for an unreliable transport) i.e. Timer A is stopped. \r\nHowever in Proceeding state, Timer B, i.e. Transaction Timeout Timer can still fire if no final response is received in stipulated time in which case the TU should be informed and the transaction should transition to Terminated state.\r\n\"Figure 5: INVITE client transaction\" in RFC 3261 does not show the Timer B expiry event in Proceeding state. This means that we are saying there is a guarantee that a final response will always be received in Proceeding state which may not always be the case.\r\nIn my opinion, the Proceeding state in Figure 5 should be updated to include a Timer B event.",
     "submit_date": "2019-03-12",
     "submitter_name": "Vimal Chandra Tewari",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:31:19"
   },
   {
     "errata_id": "6645",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "23.3",
     "orig_text": "Content-Disposition: attachment; filename=smime.p7m\r\n           handling=required",
@@ -445,9 +445,9 @@
     "notes": "The example for Content-Disposition header is incorrectly formatted according to the BNF.\r\nIt is missing a semicolon between each disp-param.\r\n(Relevant section of BNF posted below)\r\n\r\nContent-Disposition   =  \"Content-Disposition\" HCOLON\r\n                         disp-type *( SEMI disp-param )\r\ndisp-type             =  \"render\" / \"session\" / \"icon\" / \"alert\"\r\n                         / disp-extension-token\r\ndisp-param            =  handling-param / generic-param\r\nhandling-param        =  \"handling\" EQUAL\r\n                         ( \"optional\" / \"required\"\r\n                         / other-handling )\r\nother-handling        =  token\r\ndisp-extension-token  =  token\r\n\r\nThis also occurs in 23.4.3",
     "submit_date": "2021-07-20",
     "submitter_name": "Matt Hertogs",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:33:06"
   },
   {
     "errata_id": "678",
@@ -467,7 +467,7 @@
   {
     "errata_id": "6793",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "8.1.1.5",
     "orig_text": "The CSeq header field serves as a way to identify and order\r\n   transactions.  It consists of a sequence number and a method.  The\r\n   method MUST match that of the request.  For non-REGISTER requests\r\n   outside of a dialog, the sequence number value is arbitrary.  The\r\n   sequence number value MUST be expressible as a 32-bit unsigned\r\n   integer and MUST be less than 2**31.  As long as it follows the above\r\n   guidelines, a client may use any mechanism it would like to select\r\n   CSeq header field values.",
@@ -475,14 +475,14 @@
     "notes": "For more clarity and more understanding, It would be nice to have a quiet bit of update in RFC 3261 section 8.1.1.5. Because, the word \"arbitrary\" in the CSeq value may be confused with the same value as before.",
     "submit_date": "2021-12-21",
     "submitter_name": "Mojtaba Esfandiari.S",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:37:16"
   },
   {
     "errata_id": "7529",
     "doc-id": "RFC3261",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "25.1",
     "orig_text": "This is intended to behave exactly as HTTP/1.1 as described in RFC 2616 [8].\r\nThe SWS construct is used when linear white space is optional, generally between tokens and separators.\r\n\r\n      LWS  =  [*WSP CRLF] 1*WSP ; linear whitespace",
@@ -490,9 +490,9 @@
     "notes": "RFC 2616 states \r\nLWS            = [CRLF] 1*( SP | HT )\r\n\r\nRFC 2234 states \r\nWSP            =  SP / HTAB\r\n                               ; white space\r\nRFC 3261 is referencing both for BNF to follow, but looks like a new BNF is stated. So either it should not reference to follow RFC 2616 exactly or follow the same BNF as 2616.",
     "submit_date": "2023-05-29",
     "submitter_name": "Shraddha Soni",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 14:47:02"
   },
   {
     "errata_id": "832",
