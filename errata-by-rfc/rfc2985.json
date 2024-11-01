@@ -28,5 +28,20 @@
     "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7813",
+    "doc-id": "RFC2985",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "5.2.6",
+    "orig_text": "  5.2.6 Gender\r\n\r\n   The gender attribute specifies the gender of the subject it is\r\n   associated with.\r\n\r\n   gender ATTRIBUTE ::= {\r\n           WITH SYNTAX PrintableString (SIZE(1) ^\r\n                       FROM (\"M\" | \"F\" | \"m\" | \"f\"))\r\n           EQUALITY MATCHING RULE caseIgnoreMatch\r\n           SINGLE VALUE TRUE\r\n           ID pkcs-9-at-gender\r\n   }\r\n\r\n   The letter \"M\" (or \"m\") represents \"male\" and the letter \"F\" (or \"f\")\r\n   represents \"female\".  gender attributes must be single-valued.",
+    "correct_text": "  5.2.6 Gender\r\n\r\n   The gender attribute specifies the gender of the subject it is\r\n   associated with.\r\n\r\n   gender ATTRIBUTE ::= {\r\n           WITH SYNTAX IA5String (SIZE(1..pkcs-9-ub-gender))\r\n           EQUALITY MATCHING RULE caseIgnoreMatch\r\n           ID pkcs-9-at-gender\r\n   }\r\n\r\n   Attributes of this type need not be single-valued.",
+    "notes": "The original specification restricts the gender attribute to be single-valued. The suggested correction removes the requirement for the attribute to be single-valued, allowing for greater flexibility in representing gender attributes. The suggested correction aligns with the evolving understanding and recognition of gender diversity. By updating the syntax and removing the single value requirement, the revised attribute definition can better accommodate a broader range of gender identities, ensuring inclusivity and accuracy in representing the gender of a subject. This change would introduce a new upper bound pkcs-9-ub-gender with a bound of type INTEGER ::= pkcs-9-ub-pkcs9String. If this correction is to be applied, the RFC should change or remove existing references to the incorrect gender attribute specification throughout the RFC.\n --VERIFIER NOTES-- \nPaul Wouters(AD): While we applaud your intent for improved inclusivity, this modification cannot be done via an errata. We don't have versions of RFCs, so if we were to make a functional change than someone stating they comply to this RFC, you would not know if that includes this new feature or not. The proper way to make this change is to suggest a bis version of this RFC that would obsolete this RFC with the proposed changes. Feel free to reach out to one of the Security Area Directors if you need help on how to start this process. ",
+    "submit_date": "2024-02-18",
+    "submitter_name": "Florian Weber",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-02-22 07:58:51"
   }
 ]
