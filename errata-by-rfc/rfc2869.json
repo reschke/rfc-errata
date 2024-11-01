@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7906",
+    "doc-id": "RFC2869",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.14",
+    "orig_text": "When the checksum is calculated the signature string should be\r\nconsidered to be sixteen octets of zero.  The shared secret is\r\nused as the key for the HMAC-MD5 hash.  The is calculated and\r\ninserted in the packet before the Response Authenticator is\r\ncalculated.",
+    "correct_text": "When the checksum is calculated the signature string should be\r\nconsidered to be sixteen octets of zero.  The shared secret is\r\nused as the key for the HMAC-MD5 hash.  The checksum is calculated and\r\ninserted in the packet before the Response Authenticator is\r\ncalculated.",
+    "notes": "The last sentence was missing a \"checksum\"",
+    "submit_date": "2024-04-24",
+    "submitter_name": "Jan-Frederik Rieckers",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-04-26 11:08:06"
+  }
+]
