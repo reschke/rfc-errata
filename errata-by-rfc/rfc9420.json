@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8031",
+    "doc-id": "RFC9420",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.9",
+    "orig_text": "   The parent_hash field in ParentHashInput captures\r\n   information about the nodes above P. the original_sibling_tree_hash\r\n   captures ...",
+    "correct_text": "   The parent_hash field in ParentHashInput captures\r\n   information about the nodes above P. The original_sibling_tree_hash\r\n   captures ...",
+    "notes": "capital letter needed for first word of second sentence (i.e., \"The\" not \"the\").",
+    "submit_date": "2024-07-15",
+    "submitter_name": "Stefan Schaubeck",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-07-15 10:38:04"
+  },
+  {
+    "errata_id": "8032",
+    "doc-id": "RFC9420",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "7.9.2",
+    "orig_text": "... is equal to the resolution of C with D removed.",
+    "correct_text": "... is equal to the resolution of C with C removed.",
+    "notes": "I think it should be C instead of D, since C is not a leaf node at all and D is an unmerged leaf.\n --VERIFIER NOTES-- \n   As per Richard Barnes:\r\n\"The resolution of C with C removed\" is nonsensical.  The only reason C would appear in its own resolution is if the resolution is just [C], in which case removing C yields the empty list.  The intent here is correct.  If D is non-blank, as this section presumes, then the resolution of C will be [D, D.unmerged_leaves..., stuff_outside_of_subtree_D].  So what this says is that P and D agree on the unmerged leaves under D.",
+    "submit_date": "2024-07-15",
+    "submitter_name": "Stefan Schaubeck",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-07-15 18:46:07"
+  }
+]
