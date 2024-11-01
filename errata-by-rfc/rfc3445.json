@@ -13,5 +13,20 @@
     "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7836",
+    "doc-id": "RFC3445",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "Updates: RFC2535",
+    "correct_text": "Updates: RFC2535, RFC2931",
+    "notes": "This is based on our experience that when writing draft-ietf-dnssd-srp, we had no idea that the KEY RR format was updated, because there was no reference to the updated format in the datatracker page for RFC2931. I think it makes sense to say that 3445 updates 2931, because it does so explicitly.\r\n\r\n-- Verifier (Eric Vyncke) note --\r\nSee also https://mailarchive.ietf.org/arch/msg/dnsext/bSBYA97VQItwQS26fpVdQocrvnA/\r\n\r\nI will request the IETF secretariat to update the datatracker.",
+    "submit_date": "2024-03-04",
+    "submitter_name": "Ted Lemon",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-04-23 07:03:57"
   }
 ]
