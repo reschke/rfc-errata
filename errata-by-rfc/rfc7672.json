@@ -17,7 +17,7 @@
   {
     "errata_id": "6283",
     "doc-id": "RFC7672",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.2.2",
     "orig_text": "3.2.2.  DANE-TA(2) Name Checks\r\n\r\n   To match a server via a TLSA record with certificate usage\r\n   DANE-TA(2), the client MUST perform name checks to ensure that it has\r\n   reached the correct server.  In all DANE-TA(2) cases, the SMTP client\r\n   MUST employ the TLSA base domain as the primary reference identifier\r\n   for matching the server certificate.\r\n\r\n   TLSA records for MX hostnames:  If the TLSA base domain was obtained\r\n      indirectly via a \"secure\" MX lookup (including any CNAME-expanded\r\n      name of an MX hostname), then the original next-hop domain used in\r\n      the MX lookup MUST be included as a second reference identifier.\r\n      The CNAME-expanded original next-hop domain MUST be included as a\r\n      third reference identifier if different from the original next-hop\r\n      domain.  When the client MTA is employing DANE TLS security\r\n      despite \"insecure\" MX redirection, the MX hostname is the only\r\n      reference identifier.",
@@ -25,8 +25,8 @@
     "notes": "The first paragraph of 3.2.2 makes it clear that the TLSA base domain is the primary reference identifier in all cases.  The last sentence of the second paragraph inadvertently contradicts this  in the case the the TLSA base domain is a CNAME expansion of the input MX hostname.\r\n\r\nThe corrected text replaces \"... the MX hostname is the only reference identifier\" with \"... the TLSA base domain is the only reference identifier\".",
     "submit_date": "2020-09-08",
     "submitter_name": "Viktor Dukhovni",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-16 06:26:10"
   }
 ]
