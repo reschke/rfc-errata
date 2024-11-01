@@ -32,16 +32,16 @@
   {
     "errata_id": "7735",
     "doc-id": "RFC8365",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "8.3.1",
     "orig_text": "Since VXLAN and NVGRE encapsulations do not include the ESI label, \r\nother means of performing the split-horizon filtering function must \r\nbe devised for these encapsulations.",
     "correct_text": "The \"ESI Label\" field, in the \"ESI Label\" Extended Community, is set \r\nto all zeros in case of VxLAN encapsulation. Since even though the \r\nVXLAN and NVGRE encapsulations send the \"ESI Label\" Extended Community, \r\nyet they do not set the \"ESI label\" field in it. Therefore, other means \r\nof performing the split-horizon filtering function must be devised for \r\nthese encapsulations.",
-    "notes": "It should be mentioned somewhere in this RFC document that the \"ESI Label\" Extended Community is sent with VxLAN encapsulation too, just like it is used with MPLS, but with the \"MPLS Label\" field set to all zeros in case of VxLAN.\r\n\r\nOtherwise, it gives rise to the unanswered question in mind, about the value of that field, given that there are no labels in VxLAN.",
+    "notes": "It should be mentioned somewhere in this RFC document that the \"ESI Label\" Extended Community is sent with VxLAN encapsulation too, just like it is used with MPLS, but with the \"MPLS Label\" field set to all zeros in case of VxLAN.\r\n\r\nOtherwise, it gives rise to the unanswered question in mind, about the value of that field, given that there are no labels in VxLAN.\n --VERIFIER NOTES-- \nThis change appears to be unneeded in this document, see https://mailarchive.ietf.org/arch/msg/bess/ztIEqCJh23KdAbEaec-zeQBwdSs/\r\n\r\nRelated (and mentioned in the referenced email thread) rfc7432bis does clarify the situation with the note, \"The ESI label value MAY be zero if no split-horizon filtering procedures are required in any of the VLANs of the Ethernet Segment. This is the case in [RFC8214]\".",
     "submit_date": "2023-12-19",
     "submitter_name": "Gaurav Sinha",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-12-19 09:58:20"
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-02-12 07:17:17"
   }
 ]
