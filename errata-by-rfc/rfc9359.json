@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7901",
+    "doc-id": "RFC9359",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "Echo Request/Reply for Enabled In Situ OAM (IOAM) Capabilities",
+    "correct_text": "Echo Request/Reply for Enabled In Situ Operation, Administration,\r\nand Maintenance (IOAM) Capabilities",
+    "notes": "Neither OAM nor IOAM are well-known and need to be expanded at first use, this is the title so this is the first occurrence.",
+    "submit_date": "2024-04-19",
+    "submitter_name": "Loa Andersson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7902",
+    "doc-id": "RFC9359",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "   Abstract\r\n   \r\n   This document describes a generic format for use in echo request/\r\n   reply mechanisms, which can be used within an IOAM-Domain, allowing\r\n   the IOAM encapsulating node to discover the enabled IOAM capabilities\r\n   of each IOAM transit and IOAM decapsulating node.  The generic format\r\n   is intended to be used with a variety of data planes such as IPv6,\r\n   MPLS, Service Function Chain (SFC), and Bit Index Explicit\r\n   Replication (BIER).",
+    "correct_text": "   Abstract\r\n\r\n   This document describes a generic format for use in echo request/\r\n   reply mechanisms, which can be used within an In Situ Operations, \r\n   Administration, and Maintenance (IOAM)-Domain, allowing\r\n   the IOAM encapsulating node to discover the enabled IOAM capabilities\r\n   of each IOAM transit and IOAM decapsulating node.  The generic format\r\n   is intended to be used with a variety of data planes such as IPv6,\r\n   MPLS, Service Function Chain (SFC), and Bit Index Explicit\r\n   Replication (BIER).",
+    "notes": "The Abstract is considered stand-alone, and any not well-known abbreviations need to be \r\nexpanded.\r\nNote: I'm uncertain about the placement of the \"hyphen\" and the parenthesis in\r\n\"In Situ Operations, Administration, and Maintenance (IOAM)-Domain\"",
+    "submit_date": "2024-04-19",
+    "submitter_name": "Loa Andersson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
