@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7874",
+    "doc-id": "RFC8467",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "6",
+    "orig_text": "Note that even with encryption and padding, it might be trivial to identify that the observed traffic is DNS.",
+    "correct_text": "Note that even with encryption and padding, it might be easy to identify that the observed traffic is DNS.",
+    "notes": "easy to understand what that means.\n --VERIFIER NOTES-- \nWhile the suggested text*might* be easier to read (and as a non-English speaker easy/trivial are easy to read even if they do not convey the same semantic), it is not worth a verified errata IMHO.",
+    "submit_date": "2024-03-28",
+    "submitter_name": "hello world",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-04-23 05:29:07"
+  }
+]
