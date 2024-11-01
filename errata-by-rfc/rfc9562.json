@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": "7929",
+    "doc-id": "RFC9562",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "B.2",
+    "orig_text": "custom_c  62   0b00, 0x38a375d0df1fbf6",
+    "correct_text": "custom_c  62   0b01, 0x38a375d0df1fbf6",
+    "notes": "As shown as -938a- in Figure 30.\r\n\r\nB: xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx\r\nC: 5c146b14-3c52-8afd-938a-375d0df1fbf6\r\n\r\nSee also: https://mailarchive.ietf.org/arch/msg/uuidrev/2wJLek182NMv4xQZf8TIos6XrD0/",
+    "submit_date": "2024-05-09",
+    "submitter_name": "KIM Jaesuck a.k.a. gim tcaesvk",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-10 13:33:12"
+  },
+  {
+    "errata_id": "7931",
+    "doc-id": "RFC9562",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "1",
+    "orig_text": "applications such as the Mozilla Web browser;",
+    "correct_text": "applications such as the Firefox web browser;",
+    "notes": "to reflect this RFC's time and place; as a consequence, for this errata I've replaced the now-discontinued Mozilla Suite with the more modern Firefox, as well as a lowercase \"web\"",
+    "submit_date": "2024-05-10",
+    "submitter_name": "Nicole (Darby Smurf) Ortizo",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7955",
+    "doc-id": "RFC9562",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.1",
+    "orig_text": "time_high:\r\n    The least significant 12 bits from the 60-bit starting timestamp.\r\n    Occupies bits 52 through 63 (octets 6-7).",
+    "correct_text": "time_high:\r\n    The most significant 12 bits from the 60-bit starting timestamp.\r\n    Occupies bits 52 through 63 (octets 6-7).",
+    "notes": "The original text has the least significant 12 bits from the 60-bit starting timestamp duplicated in the UUID. Once as the least significant 12 bits of time_low and again as time_high. The most significant 12 bits of the starting timestamp are omitted from the UUID.\r\n\r\nThe corrected text gives the self-evident intention of the committee.",
+    "submit_date": "2024-05-24",
+    "submitter_name": "Gordon Garmaise",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-29 08:45:45"
+  },
+  {
+    "errata_id": "7958",
+    "doc-id": "RFC9562",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.1",
+    "orig_text": "     | 0    | x    | x    | x    | 1-7     | Reserved.  Network      |\r\n     |      |      |      |      |         | Computing System (NCS)  |\r\n     |      |      |      |      |         | backward compatibility, |\r\n     |      |      |      |      |         | and includes Nil UUID   |\r\n     |      |      |      |      |         | as per Section 5.9.     |\r\n",
+    "correct_text": "     | 0    | x    | x    | x    | 0-7     | Reserved.  Network      |\r\n     |      |      |      |      |         | Computing System (NCS)  |\r\n     |      |      |      |      |         | backward compatibility, |\r\n     |      |      |      |      |         | and includes Nil UUID   |\r\n     |      |      |      |      |         | as per Section 5.9.     |\r\n",
+    "notes": "This row matches the case where MSB0, MSB1, MSB2, MSB3 are all 0, which would make the variant number 0.",
+    "submit_date": "2024-05-25",
+    "submitter_name": "Roman Donchenko",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-29 08:43:36"
+  }
+]
