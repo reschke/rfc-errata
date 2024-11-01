@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8036",
+    "doc-id": "RFC9141",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2",
+    "orig_text": "NEW:\r\n\r\nThose archives are located\r\n at https://www.ietf.org/ietf-ftp/ietf-⁠mail-archive/.\r\n",
+    "correct_text": "NEW:\r\n\r\nThose archives are located\r\n at https://www.ietf.org/ietf-ftp/ietf-mail-archive/.\r\n",
+    "notes": "There's a word joiner (WJ) (U+2060) between \"ietf-\" and \"mail-archive/\" in the URL which translates to https://www.ietf.org/ietf-ftp/ietf-%E2%81%A0mail-archive/",
+    "submit_date": "2024-07-17",
+    "submitter_name": "Kesara Rathnayake",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-07-25 11:43:44"
+  }
+]
