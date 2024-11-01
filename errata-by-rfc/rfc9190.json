@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8094",
+    "doc-id": "RFC9190",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1.1",
+    "orig_text": "Certificates can be of any type supported by TLS including raw\r\npublic keys.",
+    "correct_text": "Certificates can be of any type supported by TLS. Raw public keys may\r\nalso be used.",
+    "notes": "A raw public key specifically is **not** a certificate.",
+    "submit_date": "2024-09-04",
+    "submitter_name": "Eliot Lear",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
