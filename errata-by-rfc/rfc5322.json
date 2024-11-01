@@ -362,7 +362,7 @@
   {
     "errata_id": "5918",
     "doc-id": "RFC5322",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.2",
     "orig_text": "Header fields are lines beginning with a field name, followed by a\r\n   colon (\":\"), followed by a field body, and terminated by CRLF.  A\r\n   field name MUST be composed of printable US-ASCII characters (i.e.,\r\n   characters that have values between 33 and 126, inclusive), except\r\n   colon.",
@@ -370,14 +370,14 @@
     "notes": "I'm reporting an omission rather than a correction. The description of field names in S2.2 does not describe any length limit, but it implicitly prohibits folding by not permitting WSP chars in the name. 3.6.8 defines an ABNF for field-name, but does not specify a length limit either. \r\n\r\nAs far as I can see this means that field names should be limited to 77 characters – the field name and a trailing : – after which the field body can start after FWS on the next line.\r\n\r\nI suspect this will be open to some debate, so I'm not sure what to suggest as a correction beyond that. Nor do I know whether common clients & servers impose their own arbitrary limits on field names.",
     "submit_date": "2019-11-26",
     "submitter_name": "Marcus Bointon",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-05-15 01:57:58"
   },
   {
     "errata_id": "6639",
     "doc-id": "RFC5322",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.3",
     "orig_text": "   zone            =   (FWS ( \"+\" / \"-\" ) 4DIGIT) / obs-zone",
@@ -385,14 +385,14 @@
     "notes": "The current syntax does not allow space before an obs-zone. Thus, it rejects header items like:\r\n\r\nDate: Mon, 12 Jul 2021 18:32:01 GMT\r\n\r\nwhich are still being produced today by, for example, mail(1) on FreeBSD.",
     "submit_date": "2021-07-12",
     "submitter_name": "Brennan Vincent",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-05-15 01:59:01"
   },
   {
     "errata_id": "6920",
     "doc-id": "RFC5322",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2.1",
     "orig_text": "and interpreted as US-ASCII [ANSI.X3-4.1986] characters.  For brevity, this document sometimes refers to this range of characters as simply \"US-ASCII characters\".",
@@ -400,14 +400,14 @@
     "notes": "The choice of \"US-ASCII\" as a charset name reflected circumstances at the time, but it was not then and has never been the name of a coded character set, much less the one specified in the various versions of what is now ANSI INCITS 4-1986[R2017].  The common name of the latter, both specified in the Standard and in common practice, is \"ASCII\" without any further qualification.   \"For brevity\", \"ASCII\" is not only more accurate, but shorter.   While the correction is being made, it would be wise to change the citation anchor to \"[ASCII]\" or, if necessary for some reason, \"[ASCII1986]\".  The odd punctuation used in \"[ANSI.X3-4.1986]\" to refer to ANSI X3.4-1986 is just unnecessarily confusing.\r\n\r\n(this erratum is being reported more or less at the request of the editor of RFC 5322 and its successor)",
     "submit_date": "2022-04-05",
     "submitter_name": "John Klensin",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 14:16:44"
   },
   {
     "errata_id": "6921",
     "doc-id": "RFC5322",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.1",
     "orig_text": "composed of characters with values in the range of 1 through 127 and interpreted as US-ASCII [ANSI.X3-4.1986] characters.",
@@ -415,23 +415,23 @@
     "notes": "See previous erratum about \"US-ASCII\" versus \"ASCII\" or \"RFC20\" and apply as needed to the suggested text.  \r\n\r\nWhile there are several ways to fix the problem being reported here, the \"range of 1 through 127\" has no meaning without some qualification as to what the numbers mean.  One could infer from the original form that the range is interpreted according to something in the standard, but that standard, unlike, e.g., Unicode, never uses a linear sequence of numbers to refer to code points, only the Column/Row notation shown above (plus, of course, the actual seven-bit binary coding).",
     "submit_date": "2022-04-05",
     "submitter_name": "John Klensin",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-05-16 06:27:47"
   },
   {
     "errata_id": "7382",
     "doc-id": "RFC5322",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.2.3",
     "orig_text": "ccontent        =   ctext / quoted-pair / comment\r\n\r\ncomment         =   \"(\" *([FWS] ccontent) [FWS] \")\"",
     "correct_text": "ccontent        =   ctext / quoted-pair\r\n\r\ncomment         =   \"(\" *([FWS] ccontent) [FWS] \")\"",
-    "notes": "Trying to getting all possible originator formats a reader can get stuck into a circular dependency between \"comment\" and \"ccontent\" definitions.\r\nSince \"ccontent\" is referenced in the \"comment\" definition only circular dependency should be cut there I suppose.",
+    "notes": "Trying to getting all possible originator formats a reader can get stuck into a circular dependency between \"comment\" and \"ccontent\" definitions.\r\nSince \"ccontent\" is referenced in the \"comment\" definition only circular dependency should be cut there I suppose.\n --VERIFIER NOTES-- \nThe ABNF for comment is correct in 5322. It is intended to be recursive, allowing for nested comments.",
     "submit_date": "2023-03-11",
     "submitter_name": "Paolo Schiro",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-05-15 01:54:32"
   }
 ]
