@@ -58,5 +58,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-09-01 09:42:42"
+  },
+  {
+    "errata_id": "8026",
+    "doc-id": "RFC5480",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4",
+    "orig_text": "---------+----------+------------+-----------\r\n80       | 160-223  | SHA-1      | sect163k1\r\n         |          | SHA-224    | secp163r2\r\n         |          | SHA-256    | secp192r1\r\n         |          | SHA-384    |\r\n         |          | SHA-512    |\r\n---------+----------+------------+-----------",
+    "correct_text": "---------+----------+------------+-----------\r\n80       | 160-223  | SHA-1      | sect163k1\r\n         |          | SHA-224    | sect163r2\r\n         |          | SHA-256    | secp192r1\r\n         |          | SHA-384    |\r\n         |          | SHA-512    |\r\n---------+----------+------------+-----------",
+    "notes": "Misspelling: secp163r2 is not defined, whereas sect163r2 is.",
+    "submit_date": "2024-07-10",
+    "submitter_name": "Loïc Etienne",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-07-10 10:39:22"
   }
 ]
