@@ -13,5 +13,20 @@
     "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2023-11-08 00:41:29"
+  },
+  {
+    "errata_id": "7858",
+    "doc-id": "RFC7714",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "17",
+    "orig_text": "   The examples in this section are all based upon the same RTCP packet:\r\n\r\n            81c8000e 4d617273 4e545031 4e545031\r\n            52545020 0000042a 0000eb98 4c756e61\r\n            deadbeef deadbeef deadbeef deadbeef\r\n            deadbeef\r\n\r\n   with 32-bit SRTCP index 000005d4.\r\n",
+    "correct_text": "   The examples in this section are all based upon the same RTCP packet:\r\n\r\n\t    81c8000d 4d617273 4e545031 4e545032\r\n            52545020 0000042a 0000e930 4c756e61\r\n            deadbeef deadbeef deadbeef deadbeef\r\n            deadbeef\r\n\r\n   with 32-bit SRTCP index 000005d4.",
+    "notes": "The text at the beginning of Section 17 presents a sample RTCP packet which it expects to be used in subsequent examples. However, all the examples indicate they are based on the packet in the corrected text.",
+    "submit_date": "2024-03-20",
+    "submitter_name": "Doug Gibbons",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-03-20 14:33:22"
   }
 ]
