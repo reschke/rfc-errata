@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7983",
+    "doc-id": "RFC8945",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.2",
+    "orig_text": "If the TSIG RR cannot be interpreted, the server MUST regard the\r\nmessage as corrupt and return a FORMERR to the server.",
+    "correct_text": "If the TSIG RR cannot be interpreted, the server MUST regard the\r\nmessage as corrupt and return a FORMERR to the client.",
+    "notes": "Server send an error to the client, not to itself.",
+    "submit_date": "2024-06-11",
+    "submitter_name": "Terts Diepraam",
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-06-11 06:50:20"
+  }
+]
