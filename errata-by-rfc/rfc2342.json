@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8033",
+    "doc-id": "RFC2342",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5",
+    "orig_text": "< The client is designed so that it keeps two ’Deleted Items’\r\nmailboxes, one for each namespace. >\r\n\r\nC: A003 CREATE \"Delete Items\"\r\nS: A003 OK CREATE command completed\r\nC: A004 CREATE \"#mh/Deleted Items\"\r\nS: A004 OK CREATE command completed\r\n",
+    "correct_text": "< The client is designed so that it keeps two ’Deleted Items’\r\nmailboxes, one for each namespace. >\r\n\r\nC: A003 CREATE \"Deleted Items\"\r\nS: A003 OK CREATE command completed\r\nC: A004 CREATE \"#mh/Deleted Items\"\r\nS: A004 OK CREATE command completed\r\n",
+    "notes": "Simple typographic error in mailbox name - \"Delete\" should be \"Deleted\".",
+    "submit_date": "2024-07-16",
+    "submitter_name": "David Harris",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-07-18 14:44:20"
+  }
+]
