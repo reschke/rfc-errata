@@ -28,5 +28,20 @@
     "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2023-08-03 06:25:12"
+  },
+  {
+    "errata_id": "8029",
+    "doc-id": "RFC3810",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.2",
+    "orig_text": "   Both Multicast Address Specific Queries and Multicast Address and\r\n   Source Specific Queries are only sent in response to State Change\r\n   Reports, never in response to Current State Reports.  This\r\n   distinction between the two types of reports is needed to avoid the\r\n   router treating all Multicast Listener Reports as potential changes\r\n   in state.  By doing so, the fast leave mechanism of MLDv2, described\r\n   in more detail in section 2.2, might not be effective if a State\r\n   Change Report is lost, and only the following Current State Report is\r\n   received by the router.  Nevertheless, it avoids an increased\r\n   processing at the router and it reduces the MLD traffic on the link.\r\n   More details on the necessity of distinguishing between the two\r\n   report types can be found in Appendix A1.",
+    "correct_text": "   Both Multicast Address Specific Queries and Multicast Address and\r\n   Source Specific Queries are only sent in response to State Change\r\n   Reports, never in response to Current State Reports.  This\r\n   distinction between the two types of reports is needed to avoid the\r\n   router treating all Multicast Listener Reports as potential changes\r\n   in state.  By doing so, the fast leave mechanism of MLDv2, described\r\n   in more detail in section 2.3, might not be effective if a State\r\n   Change Report is lost, and only the following Current State Report is\r\n   received by the router.  Nevertheless, it avoids an increased\r\n   processing at the router and it reduces the MLD traffic on the link.\r\n   More details on the necessity of distinguishing between the two\r\n   report types can be found in Appendix A1.",
+    "notes": "IIUC the fast leave mechanism is not explain in section 2.2 but in 2.3",
+    "submit_date": "2024-07-12",
+    "submitter_name": "Marco Seravalli",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-07-12 12:57:20"
   }
 ]
