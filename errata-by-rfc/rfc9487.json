@@ -2,7 +2,7 @@
   {
     "errata_id": "7728",
     "doc-id": "RFC9487",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.1.10",
     "orig_text": "5.1.10.  srhSegmentIPv6LocatorLength\r\n\r\n   ElementID:  501\r\n   Name:  srhSegmentIPv6LocatorLength\r\n   Data Type Semantics:  default\r\n   Description:  The length of the SRH segment IPv6 locator specified as\r\n      the number of significant bits.  Together with srhSegmentIPv6, it\r\n      enables the calculation of the SRv6 Locator.\r\n   Additional Information:  See Section 3.1 of [RFC8986] for more\r\n      details about the SID format.\r\n   Reference:  RFC 9487",
@@ -10,8 +10,23 @@
     "notes": "I'm not an expert on RFC8986, I assumed it's unsigned8 but need help to check this is the case indeed",
     "submit_date": "2023-12-12",
     "submitter_name": "Ahmed Elhassany",
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2024-01-15 02:11:13"
+  },
+  {
+    "errata_id": "8020",
+    "doc-id": "RFC9487",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A.2",
+    "orig_text": "Figure 7:\r\n\r\n   0                   1                   2                   3\r\n   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|         Set ID = 3            |          Length = 24          |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|       Template ID 259         |        Field Count = 3        |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|     Scope Field Count = 1     |0| srhActiveSegmentIPv6 = 495  |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|   Scope 1 Field Length = 4    |0|srhSegmentIPv6End.Behav = 502|\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|       Field Length = 1        |0|srhSegmentIPv6Lo.Length = 501|\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|       Field Length = 4        |           Padding             |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\nFigure 8:\r\n\r\n 0                   1                   2                   3\r\n 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|         SET ID = 259          |           Length = 28         |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|               srhActiveSegmentIPv6 = 2001:db8::1              |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|srhSegmentIPv6EndpointBehavior |srhSegmentIPv6LocatorLength= 48|\r\n|= End [1]                      |                               |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|               srhActiveSegmentIPv6 = 2001:db8::4              |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|srhSegmentIPv6EndpointBehavior |srhSegmentIPv6LocatorLength= 48|\r\n|= End with NEXT-CSID [43]      |                               |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|               srhActiveSegmentIPv6 = 2001:db8::6              |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|srhSegmentIPv6EndpointBehavior |srhSegmentIPv6LocatorLength= 48|\r\n|= End.DX6 [16]                 |                               |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n\r\n",
+    "correct_text": "Figure 7:\r\n\r\n 0                   1                   2                   3\r\n 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|         Set ID = 3            |          Length = 24          |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|       Template ID 259         |        Field Count = 3        |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|     Scope Field Count = 1     |0|     srhSegmentIPv6 = 494    |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|   Scope 1 Field Length = 4    |0|srhSegmentIPv6End.Behav = 502|\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|       Field Length = 1        |0|srhSegmentIPv6Lo.Length = 501|\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|       Field Length = 4        |           Padding             |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n\r\nFigure 8:\r\n\r\n 0                   1                   2                   3\r\n 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|         SET ID = 259          |           Length = 28         |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|                  srhSegmentIPv6 = 2001:db8::1                 |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|srhSegmentIPv6EndpointBehavior |srhSegmentIPv6LocatorLength= 48|\r\n|= End [1]                      |                               |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|                  srhSegmentIPv6 = 2001:db8::4                 |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|srhSegmentIPv6EndpointBehavior |srhSegmentIPv6LocatorLength= 48|\r\n|= End with NEXT-CSID [43]      |                               |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|                  srhSegmentIPv6 = 2001:db8::6                 |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|srhSegmentIPv6EndpointBehavior |srhSegmentIPv6LocatorLength= 48|\r\n|= End.DX6 [16]                 |                               |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
+    "notes": "Example in Appendix A.2 should state IE494 srhSegmentIPv6  instead of IE495 srhActiveSegmentIPv6 for mapping the IE510 srhSegmentIPv6LocatorLength and IE502 srhSegmentIPv6EndpointBehavior in IPFIX option-template as described in Section 6.2.\r\n\r\nErrata has been reported to me by a software developer of a major vendor working on implementation.\r\n\r\nAlso, the first two lines of Figure 7 are two characters to the right from the correct place. This was reported by Carsten Bormann.",
+    "submit_date": "2024-07-06",
+    "submitter_name": "Thomas Graf",
     "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-12-12 09:08:24"
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2024-07-11 10:06:09"
   }
 ]
