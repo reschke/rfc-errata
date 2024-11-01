@@ -32,16 +32,16 @@
   {
     "errata_id": "6564",
     "doc-id": "RFC7012",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
     "section": "7.2",
     "orig_text": "   The specification\r\n   of new MPLS label types MUST be published using a well-established\r\n   and persistent publication medium.",
     "correct_text": "(Deleted)",
     "notes": "This paragraph envisaged that a new RFC be written to specify new label types in the mplsTopLabelType sub-registry.\r\n\r\nSince the publication of RFC7012, IANA has added 16 other IPFIX IE sub-registries, none of which have the same requirement. See https://www.iana.org/assignments/ipfix/ipfix.xhtml\r\n\r\nPublication in IANA's IPFIX registry should provide a clear and persistent definition. New IPFIX MPLS label type specifications should not be singled out to require persistent publication of an additional document.",
     "submit_date": "2021-04-28",
     "submitter_name": "Paul Aitken",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "166",
+    "verifier_name": "Rob Wilton",
+    "update_date": "2024-01-15 01:55:52"
   }
 ]
