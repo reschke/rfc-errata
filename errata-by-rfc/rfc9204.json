@@ -2,16 +2,16 @@
   {
     "errata_id": "7277",
     "doc-id": "RFC9204",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "In the static table, entry 73 has a value of:\r\n\r\naccess-control-allow-credentials: TRUE\r\n\r\nand entry 74 has a value of:\r\n\r\naccess-control-allow-credentials: FALSE",
     "correct_text": "Entry 73 should have a value of:\r\n\r\naccess-control-allow-credentials: true\r\n\r\n(note the lower-case value of \"true\")\r\n\r\nand entry 74 should NOT EXIST since \"FALSE\" (in upper-case\r\nor lower-case) is not a valid value for this header.",
-    "notes": "The \"access-control-allow-credentials\" header is a CORS header. It only has one allowed value - \"true\" (without quotes, MUST be in lower-case). Values of \"TRUE\", \"FALSE\" and \"false\" are all invalid values, as is any mixed-case version of \"true\".\r\n\r\nSee the latest WHATWG spec at https://fetch.spec.whatwg.org/#cors-protocol-and-credentials which notes the required case-sensitivity of the \"true\" value and that it is the only valid value.\r\n\r\nAlso see the prior W3C spec at https://www.w3.org/TR/2020/SPSD-cors-20200602/#access-control-allow-credentials-response-header which says the same thing. Note that the W3C spec was superseded by the WHATWG spec.\r\n\r\nNote that there are many instances of \"access-control-allow-credentials: false\" being returned from server responses (which is presumably why these values were added to the table), but they are invalid and the servers that send them are not following the CORS specification.\r\n\r\nThere may be case to be made that the static table is defined to make the QPACK algorithm as performant as possible and therefore it should include not only commonly-used valid values, but also commonly-used invalid values. However, the static table should ideally contain only valid header values.",
+    "notes": "The \"access-control-allow-credentials\" header is a CORS header. It only has one allowed value - \"true\" (without quotes, MUST be in lower-case). Values of \"TRUE\", \"FALSE\" and \"false\" are all invalid values, as is any mixed-case version of \"true\".\r\n\r\nSee the latest WHATWG spec at https://fetch.spec.whatwg.org/#cors-protocol-and-credentials which notes the required case-sensitivity of the \"true\" value and that it is the only valid value.\r\n\r\nAlso see the prior W3C spec at https://www.w3.org/TR/2020/SPSD-cors-20200602/#access-control-allow-credentials-response-header which says the same thing. Note that the W3C spec was superseded by the WHATWG spec.\r\n\r\nNote that there are many instances of \"access-control-allow-credentials: false\" being returned from server responses (which is presumably why these values were added to the table), but they are invalid and the servers that send them are not following the CORS specification.\r\n\r\nThere may be case to be made that the static table is defined to make the QPACK algorithm as performant as possible and therefore it should include not only commonly-used valid values, but also commonly-used invalid values. However, the static table should ideally contain only valid header values.\r\n\r\n-- Verifier notes\r\nSee https://mailarchive.ietf.org/arch/msg/quic/tgmjRvHDPev-mjPQWEM_zqRn5LE/",
     "submit_date": "2022-12-15",
     "submitter_name": "Rory Hewitt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-30 06:27:48"
   }
 ]
