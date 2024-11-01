@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7785",
+    "doc-id": "RFC9001",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "5.",
+    "orig_text": "The key and IV for the packet are computed as described in\r\nSection 5.1.  The nonce, N, is formed by combining the packet\r\nprotection IV with the packet number.  The 62 bits of the\r\nreconstructed QUIC packet number in network byte order are left-\r\npadded with zeros to the size of the IV.  The exclusive OR of the\r\npadded packet number and the IV forms the AEAD nonce.",
+    "correct_text": "The key and IV for the packet are computed as described in\r\nSection 5.1.  The nonce, N, is formed by combining the packet\r\nprotection IV with the packet number.  The 32 bits of the\r\nreconstructed QUIC packet number in network byte order are left-\r\npadded with zeros to the size of the IV.  The exclusive OR of the\r\npadded packet number and the IV forms the AEAD nonce.",
+    "notes": "Given the description of packet number reconstruction in RFC9000 section 17.1 and the example in RFC9000 Appendix A3, the length of reconstructed packet number should be 32 bits, not 62 bits.\n --VERIFIER NOTES-- \n The full packet number is 62 bits, although it is never expressed as such in the packet number field of the header. Hence, this errata is rejected.",
+    "submit_date": "2024-01-26",
+    "submitter_name": "Tom Pearson",
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2024-01-29 11:50:46"
+  }
+]
