@@ -88,5 +88,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7936",
+    "doc-id": "RFC7616",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "   domain\r\n\r\n      A quoted, space-separated list of URIs, as specified in [RFC3986],\r\n      that define the protection space.  If a URI is a path-absolute, it\r\n      is relative to the canonical root URL.  (See Section 2.2 of\r\n",
+    "correct_text": "   domain\r\n\r\n      A quoted, space-separated list of URI-reference strings, as specified in [RFC3986],\r\n      that define the protection space.  If a URI-reference is in a relative form, it\r\n      is relative to the canonical root URL.  (See Section 2.2 of\r\n",
+    "notes": "The definition of the \"domain\" parameter is inconsistent/contradictory - a list of space-separated URIs cannot include a path-absolute, since path-absolute is not a URI - though it is a URI-reference. If the intent was that \"a space-separated list of URI-reference strings\" is allowed, that could be used instead, per my suggested corrected text. \r\n\r\nIt is likely both that the intent was not to allow any URI-reference here, and that current client implementations accept only absolute-URI or path-absolute. So it could instead be clarified as follows:\r\n\r\n    A quoted, space-separated list of either absolute-URI or path-absolute, as specified in [RFC3986], that define the protection space.",
+    "submit_date": "2024-05-13",
+    "submitter_name": "Joe Orton",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
