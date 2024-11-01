@@ -73,5 +73,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-04-15 11:32:34"
+  },
+  {
+    "errata_id": "7863",
+    "doc-id": "RFC5652",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "\"... and the content\r\n   field of the EncapsulatedContentInfo value MUST be omitted.\"",
+    "correct_text": "\"... and the eContent\r\n   field of the EncapsulatedContentInfo value MUST be omitted.\"",
+    "notes": "No 'content' field exists and I do not think this is referring to another structure.",
+    "submit_date": "2024-03-21",
+    "submitter_name": "heasley",
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-03-22 07:49:17"
   }
 ]
