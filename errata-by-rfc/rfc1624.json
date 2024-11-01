@@ -2,7 +2,7 @@
   {
     "errata_id": "4782",
     "doc-id": "RFC1624",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "   The problem is avoided by not assuming this property.  The correct\r\n   equation is given below:\r\n\r\n          HC' = ~(C + (-m) + m')    --    [Eqn. 3]\r\n              = ~(~HC + ~m + m')",
@@ -10,14 +10,14 @@
     "notes": "The RFC is for computing incremental checksum and ensuring the computed checksum does not result in 0xFFFF (representing -0). However, when in cases where the original value (m) has not changed, and original header checksum (HC) is 0, it will change the fianl checksum value to 0xFFFF (against the intent of this RFC).\r\n\r\nExample:\r\nm = 0x5555\r\n~m = 0xAAAA\r\nm' = 0x5555\r\nChecksum (HC) = 0x0000\r\nChecksum compliment (~HC) = 0xFFFF\r\nincremental checksum = ~(~HC + ~m + m')\t~(0xFFFF + 0xAAAA + 0x5555) = ~(0x0000) = 0xFFFF\r\n\r\nSolution:\r\nNeed to explicitly mention that the incremental checksum computation should be done only when there is change in value (ie, m != m').",
     "submit_date": "2016-08-18",
     "submitter_name": "Ihsan Ulla Sharief",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 13:32:15"
   },
   {
     "errata_id": "5864",
     "doc-id": "RFC1624",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "(end of section 3 Discussion)",
@@ -25,14 +25,14 @@
     "notes": "The existing Errata ID: 4782 does not appear to correctly implement 1's complement addition.\r\n\r\nIts example should read as follows:\r\n\r\n~(~HC + ~m + m')\r\n~(~0x0000 + ~0x5555 + 0x5555)\r\n~(0xFFFF + 0xAAAA + 0x5555)\r\n~(0x1FFFE)                -- 32bit\r\n~(0xFFFE + 0x1)        -- carry foldaround\r\n~(0xFFFF)\r\n0x0000\r\n\r\nA different example showing multiple carry foldaround is replacing a 0x5555 value by 0x5556 where the original header checksum was 0x0000:\r\n\r\n~(~HC + ~m + m')\r\n~(~0x0000 + ~0x5555 + 0x5556)\r\n~(0xFFFF + 0xAAAA + 0x5556)\r\n~(0x1FFFF)                -- 32bit\r\n~(0xFFFF + 0x1)        -- carry foldaround\r\n~(0x10000)                -- 32bit\r\n~(0x0000 + 0x1)        -- carry foldaround\r\n~(0x0001)\r\n0xFFFE",
     "submit_date": "2019-09-25",
     "submitter_name": "J.A. Bezemer",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 13:35:04"
   },
   {
     "errata_id": "5865",
     "doc-id": "RFC1624",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "(end of section 3 Discussion)",
@@ -40,8 +40,8 @@
     "notes": "This updates the previous Errata ID: 5864 by including details on the bit-limited negation, which was probably a(nother) cause of the failing result in Errata ID: 4782.",
     "submit_date": "2019-09-25",
     "submitter_name": "J.A. Bezemer",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-03 13:53:21"
   }
 ]
