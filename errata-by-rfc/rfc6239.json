@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7859",
+    "doc-id": "RFC6239",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.2",
+    "orig_text": "The format of the SSH_MSG_KEXECDH_REPLY is:\r\n\r\n      byte      SSH_MSG_KEXECDH_REPLY",
+    "correct_text": "The format of the SSH_MSG_KEXECDH_REPLY is:\r\n\r\n      byte      SSH_MSG_KEXDH_REPLY",
+    "notes": "SSH_MSG_KEXECDH_REPLY is defined nowhere. Similar to SSH_MSG_KEXECDH_INIT with SSH_MSG_KEXDH_INIT, I think SSH_MSG_KEXECDH_REPLY is supposed to reuse SSH_MSG_KEXDH_REPLY.",
+    "submit_date": "2024-03-20",
+    "submitter_name": "Thomas Bailleux",
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-03-29 16:09:20"
+  }
+]
