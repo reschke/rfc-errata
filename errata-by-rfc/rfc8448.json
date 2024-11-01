@@ -2,7 +2,7 @@
   {
     "errata_id": "5645",
     "doc-id": "RFC8448",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "   Ephemeral private keys are shown as they are generated in the traces.",
@@ -10,9 +10,9 @@
     "notes": "On page 3,5,16,20,29,43,44,55,57, there are ten X25519 ephemeral private\r\nkeys listed. None of these private key value, when used directly in X25519\r\ncalculation, will yield the associated public key listed. These private key\r\nvalues are not the actual values used. Instead up to 5 bits are modified as\r\nrecommended by RFC 7748 section 5. Some implementations may choose NOT to\r\ndo such trimming, and it does not affect the connectivity, as the private\r\nkeys are never sent over the wire and does not affect network behavior.\r\n\r\nNot clarifying how the X25519 private keys were modified before using could\r\ncause serious confusion. I personally struggled for a day before figuring\r\nout this little obscure detail.",
     "submit_date": "2019-02-28",
     "submitter_name": "Anthony Mai",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-10-18 08:17:47"
   },
   {
     "errata_id": "5720",
