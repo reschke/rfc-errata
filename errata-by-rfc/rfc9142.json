@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-09-13 14:56:50"
+  },
+  {
+    "errata_id": "7799",
+    "doc-id": "RFC9142",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "1.2.1",
+    "orig_text": "+============+=============================+\r\n| Curve Name | Estimated Security Strength |\r\n+============+=============================+\r\n| nistp256   | 128 bits                    |\r\n+------------+-----------------------------+\r\n| nistp384   | 192 bits                    |\r\n+------------+-----------------------------+\r\n| nistp521   | 512 bits                    |\r\n+------------+-----------------------------+\r\n| curve25519 | 128 bits                    |\r\n+------------+-----------------------------+\r\n| curve448   | 224 bits                    |\r\n+------------+-----------------------------+",
+    "correct_text": "+============+=============================+\r\n| Curve Name | Estimated Security Strength |\r\n+============+=============================+\r\n| nistp256   | 128 bits                    |\r\n+------------+-----------------------------+\r\n| nistp384   | 192 bits                    |\r\n+------------+-----------------------------+\r\n| nistp521   | 256 bits                    |\r\n+------------+-----------------------------+\r\n| curve25519 | 128 bits                    |\r\n+------------+-----------------------------+\r\n| curve448   | 224 bits                    |\r\n+------------+-----------------------------+",
+    "notes": "P-521 has approximately 256 bits of security (rather than 512), as per Table 1 of Section 6.1.1 of FIPS 186-5, and Section 9 Paragraph 5 of RFC 5656.",
+    "submit_date": "2024-02-07",
+    "submitter_name": "Ben S",
+    "verifier_id": "2",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-02-08 13:44:23"
   }
 ]
