@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7996",
+    "doc-id": "RFC9312",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.1 and 8",
+    "orig_text": "Operators should expect to observe packets with other version numbers \r\nas a result of various Internet experiments, future standards, and \r\ngreasing [RFC7801].\r\n\r\n...\r\n\r\n[RFC7801]\r\nDolmatov, V., Ed., \"GOST R 34.12-2015: Block Cipher \"Kuznyechik\"\", \r\nRFC 7801, DOI 10.17487/RFC7801, March 2016, \r\n<https://www.rfc-editor.org/info/rfc7801>",
+    "correct_text": "Operators should expect to observe packets with other version numbers \r\nas a result of various Internet experiments, future standards, and \r\ngreasing [RFC8701].\r\n\r\n...\r\n\r\n[RFC 8701]\r\nBenjamin, D.,\"Applying Generate Random Extensions And Sustain \r\nExtensibility (GREASE) to TLS Extensibility\", RFC 8701, \r\nDOI 10.17487/RFC8701, January 2020, \r\n<https://www.rfc-editor.org/info/rfc8701>.",
+    "notes": "Typo, should be RFC8701 instead of RFC7801",
+    "submit_date": "2024-06-20",
+    "submitter_name": "No No",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-06-21 09:19:39"
+  }
+]
