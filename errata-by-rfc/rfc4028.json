@@ -47,7 +47,7 @@
   {
     "errata_id": "4056",
     "doc-id": "RFC4028",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "8",
     "orig_text": "8.  Proxy Behavior\r\n\r\n   Session timers are mostly of interest to call stateful proxy servers\r\n   (that is, to servers that maintain the state of calls and dialogs\r\n   established through them).  However, a stateful proxy server (that\r\n   is, a server which is aware of transaction state but does not retain\r\n   call or dialog state) MAY also follow the rules described here.\r\n   Stateless proxies MUST NOT attempt to request session timers.\r\n   Proxies that ask for session timers SHOULD record-route, as they\r\n   won't receive refreshes if they don't.",
@@ -55,9 +55,9 @@
     "notes": "After the \"However\", it should be a stateless proxy server.",
     "submit_date": "2014-07-17",
     "submitter_name": "Lucas Wang",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 13:48:21"
   },
   {
     "errata_id": "4744",
