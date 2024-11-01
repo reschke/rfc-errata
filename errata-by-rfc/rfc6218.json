@@ -13,5 +13,20 @@
     "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8095",
+    "doc-id": "RFC6218",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "            For responses (e.g., CoA-ACK [RFC5176], Accounting-Response\r\n            [RFC2866], etc.), the value of the MAC field is a hash of\r\n            the entire packet except the Response Authenticator in the\r\n            header of the RADIUS packet using a shared secret as the\r\n            key, as follows.\r\n\r\n            MAC = HASH-ALG(Key, Type + Identifier + Length + Attributes)",
+    "correct_text": "            For responses (e.g., CoA-ACK [RFC5176], Accounting-Response\r\n            [RFC2866], etc.), the value of the MAC field is a hash\r\n            calculated using the Request Authenticator from the request\r\n            this packet is in reply to and a shared secret as the key\r\n            as follows.\r\n\r\n            MAC = HASH-ALG(Key, Type + Identifier + Length + Request\r\n               Authenticator + Attributes)",
+    "notes": "Parity with RFC 3579 section 3.2\r\n\r\n      For Access-Challenge, Access-Accept, and Access-Reject packets,\r\n      the Message-Authenticator is calculated as follows, using the\r\n      Request-Authenticator from the Access-Request this packet is in\r\n      reply to:\r\n\r\n      Message-Authenticator = HMAC-MD5 (Type, Identifier, Length,\r\n      Request Authenticator, Attributes)",
+    "submit_date": "2024-09-06",
+    "submitter_name": "Manjiri Gadagkar",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
