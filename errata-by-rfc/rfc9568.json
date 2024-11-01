@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7947",
+    "doc-id": "RFC9568",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.4.1",
+    "orig_text": "         o  For each IPv4 address associated with the Virtual Router,\r\n            broadcast a gratuitous ARP message containing the Virtual\r\n            Router MAC address and with the target link-layer address\r\n            set to the Virtual Router MAC address.\r\n\r\n",
+    "correct_text": "         o  For each IPv4 address associated with the Virtual Router,\r\n            broadcast a gratuitous ARP message containing the Virtual\r\n            Router IPv4 address and with the target link-layer address\r\n            set to the Virtual Router MAC address.\r\n\r\n",
+    "notes": "The MAC address is specified instead of the IPv4 address.",
+    "submit_date": "2024-05-21",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "175",
+    "verifier_name": "James Guichard",
+    "update_date": "2024-06-27 07:01:11"
+  },
+  {
+    "errata_id": "7949",
+    "doc-id": "RFC9568",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.4.2",
+    "orig_text": "         o  For each IPv4 address associated with the Virtual Router,\r\n            broadcast a gratuitous ARP message containing the Virtual\r\n            Router MAC address and with the target link-layer address\r\n            set to the Virtual Router MAC address.\r\n",
+    "correct_text": "         o  For each IPv4 address associated with the Virtual Router,\r\n            broadcast a gratuitous ARP message containing the Virtual\r\n            Router IPv4 address and with the target link-layer address\r\n            set to the Virtual Router MAC address.\r\n",
+    "notes": "The MAC address is specified instead of the IPv4 address.",
+    "submit_date": "2024-05-21",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "175",
+    "verifier_name": "James Guichard",
+    "update_date": "2024-06-27 07:01:46"
+  }
+]
