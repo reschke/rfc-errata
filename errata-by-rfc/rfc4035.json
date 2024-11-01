@@ -28,5 +28,35 @@
     "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2023-08-03 04:53:19"
+  },
+  {
+    "errata_id": "7972",
+    "doc-id": "RFC4035",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4.2",
+    "orig_text": "   Security-aware resolvers MAY query for missing security RRs in an\r\n   attempt to perform validation; implementations that choose to do so\r\n   must be aware that the answers received may not be sufficient to\r\n   validate the original response.  For example, a zone update may have\r\n   changed (or deleted) the desired information between the original and\r\n   follow-up queries.",
+    "correct_text": "   Security-aware resolvers MAY query for missing security RRs in an\r\n   attempt to perform validation; implementations that choose to do so\r\n   MUST be aware that the answers received may not be sufficient to\r\n   validate the original response.  For example, a zone update may have\r\n   changed (or deleted) the desired information between the original and\r\n   follow-up queries.",
+    "notes": "\"MUST\" is a key word according to RFC 2119/BCP 14 and should be capitalized.\n --VERIFIER NOTES-- \n As it appears to the original authors, remaining members of dnsext mailing list, and myself as INT AD, the \"must\" here is not normative and should be kept in lowercase.\r\n\r\nSee also:\r\nhttps://mailarchive.ietf.org/arch/msg/dnsext/1PZ58ajXFj_RodKgHzus6d6UB-U/",
+    "submit_date": "2024-06-06",
+    "submitter_name": "Nate Choe",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-06-07 13:58:08"
+  },
+  {
+    "errata_id": "8037",
+    "doc-id": "RFC4035",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5.3.1.",
+    "orig_text": "   [...] the validator cannot predetermine which DNSKEY\r\n   RR to use to authenticate the signature, and it MUST try each\r\n   matching DNSKEY RR until either the signature is validated or the\r\n   validator has run out of matching public keys to try.",
+    "correct_text": "   [...] the validator cannot predetermine which DNSKEY\r\n   RR to use to authenticate the signature, and it SHOULD try each\r\n   matching DNSKEY RR until either the signature is validated or the\r\n   validator has run out of matching public keys to try.",
+    "notes": "The original text requires validators to invest an unreasonable amount of work to validate a given signature in case there are many such DNSKEY RRs. The issue was exploited in the construction of CPU resource exhaustion attacks (CVE-2023-50387). For more details see our publication with ACM CCS'24 on the KeyTrap denial of service vulnerabilities.\r\n\r\n-- verifier note --\r\nWhile the concern is valid, this erratum does not represent the DNSEXT WG consensus at the time of writing, i.e., it cannot be \"verified\"",
+    "submit_date": "2024-07-18",
+    "submitter_name": "Elias Heftrig",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-08-07 08:37:24"
   }
 ]
