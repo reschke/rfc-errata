@@ -47,16 +47,16 @@
   {
     "errata_id": "7091",
     "doc-id": "RFC5965",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "   e.  Except as discussed below, each feedback report MUST be related\r\n       to only a single email message.  Summary and aggregate formats\r\n       are outside of the scope of this specification.\r\n",
     "correct_text": "   e.  Except when using the Incidents field (see below),\r\n       each feedback report MUST be related\r\n       to only a single email message.  Summary and aggregate formats\r\n       are outside of the scope of this specification.\r\n",
-    "notes": "There doesn't seem to be another discussion of similarity.",
+    "notes": "There doesn't seem to be another discussion of similarity.\n --VERIFIER NOTES-- \nA single report is about a single message, even if it includes a claim that it is similar to other messages.",
     "submit_date": "2022-08-16",
     "submitter_name": "Alessandro Vesely",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "164",
+    "verifier_name": "Murray Kucherawy",
+    "update_date": "2024-02-02 16:28:06"
   }
 ]
