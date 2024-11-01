@@ -47,17 +47,17 @@
   {
     "errata_id": "5100",
     "doc-id": "RFC2131",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.1",
     "orig_text": "Normally, DHCP servers and BOOTP relay agents attempt to deliver\r\nDHCPOFFER, DHCPACK and DHCPNAK messages directly to the client using\r\nuicast delivery.",
     "correct_text": "Normally, DHCP servers and BOOTP relay agents attempt to deliver\r\nDHCPOFFER, DHCPACK messages directly to the client using\r\nunicast delivery.",
-    "notes": "According to prior part description in section 4.1: \"In all cases, when ’giaddr’ is zero, the server broadcasts any DHCPNAK messages to 0xffffffff.\", the DHCP server should not send DHCPNAK in unicast to client unless 'giaddr' is not zero.",
+    "notes": "According to prior part description in section 4.1: \"In all cases, when ’giaddr’ is zero, the server broadcasts any DHCPNAK messages to 0xffffffff.\", the DHCP server should not send DHCPNAK in unicast to client unless 'giaddr' is not zero.\n --VERIFIER NOTES-- \n   DHC WG feedback on this errata is:\r\n\"What's possibly being missed here is that the DHCP server has the client's MAC address, and is not relying on just on the routing table in the kernel, but also on giaddr and chaddr to determine how to send unicast responses. If giaddr is nonzero, the server sends the response using regular unicast through the IP stack's routing table, but if giaddr is zero, the server constructs a layer 2 frame with chaddr as the layer 2 destination address and unicasts that frame out the appropriate interface, bypassing the kernel's routing table and layer 3 processing entirely. So it doesn't actually matter what the IP destination address is other than that the client stack has to recognize that address as its own. The 'broadcast' bit takes care of the case where the client isn't able to do this. The server is always permitted to broadcast if it doesn't have the ability to route the response directly over layer 2, but at the time this RFC was written this was considered suboptimal, and the RFC goes to some lengths to make it possible for DHCP servers and relay agents to avoid sending broadcasts\"\r\n\r\nI.e., the current text is correct.",
     "submit_date": "2017-08-29",
     "submitter_name": "Fan Wei",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-04-23 05:52:27"
   },
   {
     "errata_id": "6447",
@@ -148,5 +148,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-02-24 14:39:26"
+  },
+  {
+    "errata_id": "7776",
+    "doc-id": "RFC2131",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4.3.1",
+    "orig_text": "Client identifier         MUST NOT     MUST NOT           MAY",
+    "correct_text": "Client identifier         MUST NOT     MUST NOT           MUST NOT",
+    "notes": "In the \"Options\" list in Table 3 (\"Fields and options used by DHCP server\"), the \"Client identifier\" option has \"MUST NOT\" for both DHCPOFFER and DHCPACK; however, for DHCPNAK, it has \"MAY\".\r\n\r\n\"Client identifier\" should be a \"MUST NOT\" for DHCPNAK as well. \r\n\r\nIt seems that the field should only be used by a client and never by a server, and if that's true for the OFFER and ACK, then it should be even more correct for the NAK.\r\n\r\n\"Vendor class identifier\" has a MAY for all three messages, so maybe it was a typo in the previous option because of the repetitive input in the next one.\n --VERIFIER NOTES-- \nRFC 6842 has addressed this problem with more information than a simple errata.\r\n\r\nI.e., the problem in RFC 2131 exists indeed but has been fixed.",
+    "submit_date": "2024-01-23",
+    "submitter_name": "Imrane",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-04-23 05:59:15"
   }
 ]
