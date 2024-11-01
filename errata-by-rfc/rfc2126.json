@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7923",
+    "doc-id": "RFC2126",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.1",
+    "orig_text": "Non-standard TPDU size may be negotiated using the negotiation\r\nmechanism specified in ISO 8073. The maximum TPDU size is 65531\r\noctets. The Default maximum TPDU size is 65531 octets.\r\nPlease refer to 'Notes to Implementors' section 6.4.",
+    "correct_text": "Non-standard TPDU size may be negotiated using the negotiation\r\nmechanism specified in ISO 8073. The maximum TPDU size is 65408\r\noctets. The Default maximum TPDU size is 65408 octets.\r\nPlease refer to 'Notes to Implementors' section 6.4.",
+    "notes": "According to X.224(1995), which is technically aligned with ISO 8073:1997, the maximum TPDU size is specified as a multiple of 128 (ref section 13.3.4.c in X.224). This allows a maximum of 511*128 = 65408. The value of 65531 is the maximum payload in RFC 2126.",
+    "submit_date": "2024-05-05",
+    "submitter_name": "Øyvind Jonsson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
