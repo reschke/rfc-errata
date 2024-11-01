@@ -118,5 +118,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8027",
+    "doc-id": "RFC5272",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "recipientInfos.riid.issuerSerialNumber = <NULL, 201>",
+    "correct_text": "recipientInfos.riid.issuerSerialNumber = <NULL-DN, 201>",
+    "notes": "In ASN.1, NULL is a type that is encoded as 0x0500. NULL is not appropriate in this context because the corresponding field is defined as a Name. NULL-DN is defined in RFC4210 as \"a zero-length SEQUENCE OF RelativeDistinguishedNames\". A NULL-DN is encoded as 0x3000. This is almost certainly what was intended here. Note, RFC4210 is not referenced by RFC5272 currently, so that would need to be changed as well to reference NULL-DN.",
+    "submit_date": "2024-07-11",
+    "submitter_name": "Carl Wallace",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-07-12 12:51:55"
+  },
+  {
+    "errata_id": "8137",
+    "doc-id": "RFC5272",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "C.1",
+    "orig_text": "NoSignatureValue contains the hash of the certification request. ",
+    "correct_text": "NoSignatureValue contains the SHA-1 hash value of the certification request. \r\nThe hash value given by NoSignatureValue SHOULD be ignored.",
+    "notes": "The hash value was not sufficiently defined because the choice of the hash algorithm was not specified.\r\nAt that time presumably the use of SHA-1 was implied.\r\n\r\nI suggest requiring SHA-1 here simply for backward compatibility.\r\nFrom today's perspective more flexibility may be demanded and SHA-1 likely no more is the best choice.\r\n\r\nAnyway I see no real value in NoSignatureValue (pun intended), so it should not matter.\r\nFor this reason I propose ignoring the hash value.",
+    "submit_date": "2024-10-12",
+    "submitter_name": "David von Oheimb",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
