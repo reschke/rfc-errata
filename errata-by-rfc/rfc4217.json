@@ -17,17 +17,17 @@
   {
     "errata_id": "7294",
     "doc-id": "RFC4217",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "The abstract says:",
     "orig_text": "   This document\r\n   is intended to provide TLS support for FTP in a similar way to that\r\n   provided for SMTP in RFC 2487, \"SMTP Service Extension for Secure\r\n   SMTP over Transport Layer Security\", and HTTP in RFC 2817, \"Upgrading\r\n   to TLS Within HTTP/1.1.\".",
     "correct_text": "   This document\r\n   is intended to provide TLS support for FTP in a similar way to that\r\n   provided for SMTP in RFC 3207, \"SMTP Service Extension for Secure\r\n   SMTP over Transport Layer Security\", and HTTP in RFC 2817, \"Upgrading\r\n   to TLS Within HTTP/1.1.\".",
-    "notes": "Upgrade?",
+    "notes": "Upgrade?\n --VERIFIER NOTES-- \n   The text was correct at the time of publishing, and the datatracker conveys that RFC 2487 was obsoleted by RFC 3207",
     "submit_date": "2022-12-31",
     "submitter_name": "Mikael A",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2023-11-30 10:15:01"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 14:07:50"
   },
   {
     "errata_id": "800",
