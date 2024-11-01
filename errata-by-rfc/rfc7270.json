@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "Benoit Claise",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7775",
+    "doc-id": "RFC7270",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.12",
+    "orig_text": "Abstract Data Type:  unsigned32",
+    "correct_text": "Abstract Data Type:  unsigned8",
+    "notes": "Section 4.12 describes an 8-bit forwardingStatus field, and xrefs CCO-NF9FMT where FORWARDING STATUS has a length of 1 (ie, 8 bits).\r\n\r\nIANA's IPFIX registry lists the Abstract Data Type for forwardingStatus as \"unsigned8\".\r\n\r\nThe \"unsigned32\" Abstract Data Type is out of sync with these other documents.",
+    "submit_date": "2024-01-23",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
