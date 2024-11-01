@@ -13,5 +13,20 @@
     "verifier_id": "131",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8142",
+    "doc-id": "RFC2003",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.2",
+    "orig_text": "The encapuslated (inner) datagram includes an IP Authentication header.\r\n",
+    "correct_text": "The encapsulated (inner) datagram includes an IP Authentication header.\r\n",
+    "notes": "Typo: “encapuslated” should be “encapsulated”. ",
+    "submit_date": "2024-10-16",
+    "submitter_name": "Gorka Zamorano Oró",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-10-24 11:56:13"
   }
 ]
