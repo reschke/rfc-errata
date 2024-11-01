@@ -32,7 +32,7 @@
   {
     "errata_id": "4202",
     "doc-id": "RFC3325",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "10.2",
     "orig_text": "P-Asserted-Identity: \"Cullen Jennings\" <sip:fluffy@vovida.org>\r\n",
@@ -40,23 +40,38 @@
     "notes": "May be an editorial error in the message F4, section 10.2.\r\nIn that message is added the P-Asserted-Identity with the SIP URI sip:fluffy@vovida.org\r\nI suppose it should be cisco.com and not vovida.com.\r\nThank you.",
     "submit_date": "2014-12-17",
     "submitter_name": "Giovanni Signoriello",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 12:38:52"
   },
   {
     "errata_id": "5499",
     "doc-id": "RFC3325",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "10",
     "orig_text": "   * F4   proxy.cisco.com -> proxy.pstn.net (trusted)\r\n\r\n   INVITE sip:+14085551212@proxy.pstn.net SIP/2.0\r\n   Via: SIP/2.0/TCP useragent.cisco.com;branch=z9hG4bK-124\r\n   Via: SIP/2.0/TCP proxy.cisco.com;branch=z9hG4bK-abc\r\n",
     "correct_text": "   * F4   proxy.cisco.com -> proxy.pstn.net (trusted)\r\n\r\n   INVITE sip:+14085551212@proxy.pstn.net SIP/2.0\r\n   Via: SIP/2.0/TCP proxy.cisco.com;branch=z9hG4bK-abc\r\n   Via: SIP/2.0/TCP useragent.cisco.com;branch=z9hG4bK-124\r\n",
-    "notes": "As per RFC 3261, chapter 16.6, step 8:\r\n  The proxy MUST insert a Via header field value into the copy before the existing Via header field values.\r\n\r\nThe order of Via headers should be reversed. This applies to the following message examples:\r\nchapter 10.1: F4, F5\r\nchapter 10.2: F4, F5, F6",
+    "notes": "As per RFC 3261, chapter 16.6, step 8:\r\n  The proxy MUST insert a Via header field value into the copy before the existing Via header field values.\r\n\r\nThe order of Via headers should be reversed. This applies to the following message examples:\r\nchapter 10.1: F4, F5\r\nchapter 10.2: F4, F5, F6\r\n\r\nText and examples in RFC3261 Section 20.42 supports the argument that the order is reversed.",
     "submit_date": "2018-09-20",
     "submitter_name": "Richard Phernambucq",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-03-29 12:33:43"
+  },
+  {
+    "errata_id": "7794",
+    "doc-id": "RFC3325",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "10.2",
+    "orig_text": "The next proxy removes the P-Asserted-Identity \r\nheader field and the request for Privacy before forwarding this \r\nrequest onward to the biloxi.com proxy server which it does not trust.",
+    "correct_text": "The next proxy removes the P-Asserted-Identity \r\nheader field but does not remove the request for Privacy before forwarding this \r\nrequest onward to the biloxi.com proxy server which it does not trust.",
+    "notes": "As stated in ETSI TS 124 607 V17.0.0 (2022-04), \r\nsection 4.3.3 Requirements on the terminating network side:\r\nNOTE 1: The priv-value \"id\" in the Privacy header is not expected be removed when removing any P-Asserted-Identity header as described in 3GPP TS 24.229 subclauses 4.4.2 (The priv-value \"id\" shall not be removed from the Privacy header field when SIP signalling crosses the boundary of the trust domain) and 5.4.3.3.\r\nand also,\r\nsection 4.5.2.9 Actions at the AS serving the terminating UE:\r\nThe priv-value \"id\" in the Privacy header will be used by the terminating UE to distinguish the request of OIR by the originating user.\n --VERIFIER NOTES-- \nThis section was revised in https://www.rfc-editor.org/rfc/rfc5876.txt Section 3.2\r\nIf the errata remains relevant to the revision, a new errata should be filed per https://datatracker.ietf.org/doc/statement-iesg-iesg-processing-of-rfc-errata-for-the-ietf-stream-20210507/",
+    "submit_date": "2024-02-02",
+    "submitter_name": "Christos Diamantis",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-05-04 07:12:28"
   }
 ]
