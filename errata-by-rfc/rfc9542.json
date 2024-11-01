@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7952",
+    "doc-id": "RFC9542",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "   For global addresses, X = 0 and a MAC address begins with 3 octets or\r\n   a larger initial prefix indicating the assignee of the block of MAC\r\n   addresses.  This prefix is followed by a sequence of additional\r\n   octets so as to add up to the total MAC address length.  For example,\r\n   the IEEE assigns MAC Address Block Small (MA-S), where the first four\r\n   and a half octets (36 bits) are assigned, giving the holder of the\r\n   MA-S one and a half octets (12 bits) they can control in constructing\r\n   48-bit MAC addresses; other prefix lengths are also available\r\n   [IEEEtutorials].",
+    "correct_text": "   For global addresses, X = 0 and a MAC address begins with 3 octets or\r\n   a larger initial prefix indicating the assignee of the block of MAC\r\n   addresses.  This prefix is followed by a sequence of additional\r\n   bits so as to add up to the total MAC address length.  For example,\r\n   the IEEE assigns MAC Address Block Small (MA-S), where the first four\r\n   and a half octets (36 bits) are assigned, giving the holder of the\r\n   MA-S one and a half octets (12 bits) they can control in constructing\r\n   48-bit MAC addresses; other prefix lengths are also available\r\n   [IEEEtutorials].",
+    "notes": "It is incorrect to talk about additional octets here, since the prefix size may not be an integer number of octets. It is appropriate to speak about additional bits.",
+    "submit_date": "2024-05-23",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-05-23 23:10:31"
+  }
+]
