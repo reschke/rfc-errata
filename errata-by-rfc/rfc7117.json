@@ -13,5 +13,20 @@
     "verifier_id": "174",
     "verifier_name": "Andrew Alston",
     "update_date": "2022-05-26 06:36:15"
+  },
+  {
+    "errata_id": "7977",
+    "doc-id": "RFC7117",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2",
+    "orig_text": "Furthermore, if the local PE uses RSVP-TE P2MP LSP for sending\r\n(multicast) traffic, originated by VPLS sites connected to the PE, to\r\nthe sites attached to other PEs, then the local PE MUST use the\r\nOriginating Router’s IP Address information carried in the Intra-AS\r\nA-D route to add the PE, that originated the route, as a leaf node to\r\nthe LSP. This MUST be done irrespective of whether or not the\r\nreceived Intra-AS A-D route carries the PMSI Tunnel attribute.",
+    "correct_text": "Furthermore, if the local PE uses RSVP-TE P2MP LSP for sending\r\n(multicast) traffic, originated by VPLS sites connected to the PE, to\r\nthe sites attached to other PEs, then the local PE MUST use the\r\nBGP Next-Hop IP Address carried in the Intra-AS\r\nA-D route to add the PE, that originated the route, as a leaf node to\r\nthe LSP. This MUST be done irrespective of whether or not the\r\nreceived Intra-AS A-D route carries the PMSI Tunnel attribute.",
+    "notes": "There is no such field as the Origination Router's IP Address in any VPLS A-D routes (RFC4761, RFC6074). For Intra-AS cases the BGP NH IP address can be used for the leaf tracking.",
+    "submit_date": "2024-06-09",
+    "submitter_name": "Igor Malyushkin",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
