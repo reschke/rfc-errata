@@ -2,16 +2,16 @@
   {
     "errata_id": "6751",
     "doc-id": "RFC8913",
-    "errata_status_code": "Verified",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "5.1",
     "orig_text": "   Please note that the backslash ('\\') character near the end of the\r\n   diagram is used for formatting purposes only (i.e.,\r\n   \"reflector-udp-port]\" should be treated as part of the same line as\r\n   \"[sender-ip sender-udp-port reflector-ip\").",
     "correct_text": "   Please note that the backslash ('\\') character near the end of the\r\n   diagram is used for formatting purposes only (i.e.,\r\n   \"reflector-udp-port]\" should be treated as part of the same line as\r\n   \"[sender-ip sender-udp-port reflector-ip]\").",
-    "notes": "Omitted character ']' at the end of a sentence.",
+    "notes": "Omitted character ']' at the end of a sentence.\n --VERIFIER NOTES-- \nThe original is correct. It explains how the following entry was broken across two lines due to line-length constraints:\r\n\r\n           +--ro test-session*\r\n                   [sender-ip sender-udp-port reflector-ip \\\r\n                    reflector-udp-port]  ",
     "submit_date": "2021-11-23",
     "submitter_name": "Nikolai Malykh",
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
-    "update_date": "2022-01-27 15:53:57"
+    "update_date": "2024-03-21 10:54:22"
   }
 ]
