@@ -88,5 +88,20 @@
     "verifier_id": "167",
     "verifier_name": "Martin Duke",
     "update_date": "2022-10-06 14:46:08"
+  },
+  {
+    "errata_id": "7899",
+    "doc-id": "RFC5925",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "   o  Receive_SYN_traffic_key - the traffic key used to authenticate\r\n      incoming SYNs.  The source ISN is known (the TCP connection's\r\n      remote ISN), and the destination (remote) ISN is unknown (and so\r\n      the value 0 is used).",
+    "correct_text": "   o  Receive_SYN_traffic_key - the traffic key used to authenticate\r\n      incoming SYNs.  The source ISN is known (the TCP connection's\r\n      remote ISN), and the destination (local) ISN is unknown (and so\r\n      the value 0 is used).",
+    "notes": "\"remote side\" is referenced twice:  potential cut-and-paste error from the previous paragraph. Errata verified based on the discussion in tcpm mailing list : https://mailarchive.ietf.org/arch/msg/tcpm/wauBdtHFEqtltJUxTo7kdF8msIU/",
+    "submit_date": "2024-04-17",
+    "submitter_name": "Jean-Michel COMBES",
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2024-05-15 03:45:00"
   }
 ]
