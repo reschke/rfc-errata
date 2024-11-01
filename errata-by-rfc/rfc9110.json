@@ -118,5 +118,35 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2023-10-23 02:39:12"
+  },
+  {
+    "errata_id": "7870",
+    "doc-id": "RFC9110",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "8.6",
+    "orig_text": "   Likewise, a sender MUST NOT forward a message with a Content-Length\r\n   header field value that does not match the ABNF above, with one\r\n   exception: a recipient of a Content-Length header field value\r\n   consisting of the same decimal value repeated as a comma-separated\r\n   list (e.g, \"Content-Length: 42, 42\") MAY either reject the message as\r\n   invalid or replace that invalid field value with a single instance of\r\n   the decimal value, since this likely indicates that a duplicate was\r\n   generated or combined by an upstream message processor.",
+    "correct_text": "   Likewise, a sender MUST NOT send a message with a Content-Length\r\n   header field value that does not match the ABNF above. A\r\n   recipient of a Content-Length header field value consisting of\r\n   the same decimal value repeated as a comma-separated list (e.g,\r\n   \"Content-Length: 42, 42\") MAY either reject the message as invalid\r\n   or replace that invalid field value with a single instance of the\r\n   decimal value, since this likely indicates that a duplicate was\r\n   generated or combined by an upstream message processor.",
+    "notes": "This change aims to fix 2 issues with the text:\r\n\r\nIssue #1\r\nRecall the following from section 8.6:\r\n> Likewise, a sender MUST NOT forward a message with a Content-Length header field value that does not match the ABNF above, ...\r\n\r\nIt wasn't immediately clear to me which of these was the intended meaning:\r\n1. Upon receipt of a message with an invalid Content-Length value, senders MUST NOT forward the message.\r\n2. Upon receipt of a message with an invalid Content-Length value, senders MUST NOT forward the message with the invalid value intact.\r\n\r\nMark Nottingham confirmed on GitHub that the intended meaning is option 2:\r\nhttps://github.com/httpwg/http-core/issues/1113#issuecomment-1937914210\r\n\r\nI propose that the word \"forward\" be changed to \"send\" to clear up the ambiguity.\r\n\r\nIssue #2\r\nWe've just established that the intended meaning of the first half of the sentence in question is that malformed CL header values MUST NOT be forwarded intact.\r\nAn exception to this rule is (by definition) a situation in which invalid CL header values *are* permitted to be forwarded intact.\r\nThe \"exception\" described in the text does not allow for invalid header values to be forwarded intact, so it is a misuse of the word \"exception.\"\r\n\r\nTo clear this up, I propose that the sentence be split in two, and that the word \"exception\" be removed.\n --VERIFIER NOTES-- \nIssue #1: 'forward' and 'send' are defined terms in the specification, and the previous paragraph covers the 'send' -- this requirement is specific to forwarding. It's specifically there to call out the exception _only_ in the forwarding case.\r\n\r\nFor issue #2, this might be more than an editorial problem, but mostly I disagree about \"exception\" being a misuse. I agree that more extensive editorial work could be done, but that is out of scope for an erratum.\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/httpbisa/wYhoNFePlmmj5g58g_70er8pTH4/",
+    "submit_date": "2024-03-24",
+    "submitter_name": "Ben Kallus",
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-05-14 01:01:48"
+  },
+  {
+    "errata_id": "8138",
+    "doc-id": "RFC9110",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "15.4",
+    "orig_text": "   5.  If the request method has been changed to GET or HEAD, remove\r\n       content-specific header fields, including (but not limited to)\r\n       Content-Encoding, Content-Language, Content-Location,\r\n       Content-Type, Content-Length, Digest, Last-Modified.",
+    "correct_text": "6.If a redirect request includes a target uri of \r\nredirect link (a recursive redirect request) \r\nsuch as: http://example.com/reditectto=\r\n\"\"http://example.com/redirecto=\"http://bad.examaple.com\"\" \r\na redirect to http://example.com/redirecto=\"http://bad.examaple.com\" \r\nshould be made and than to \r\nhttp://bad.examaple.com that way the security \r\nmessures to redirect to another domain may take place",
+    "notes": "currently the rfc doesn't indicate how web server and \r\nbrowsers should handle recursive rerdirect such as \r\nhttp://example.com/reditectto=\"http://example.com/redirecto=\"http://bad.examaple.com\"\" \r\ntherefore i was able to abuse this behavior to gain \r\ncve and exploitation on web server for 2 main resoans \r\n1. redirect allowed only to same domain logic : with regex on \r\nthe parameter \"gooddomain.com/.*\" which works as intended for the escape of the domain part in the uri but doesnt handle a case where there is a recursive request which is handled by server side.\r\n2. out of domain control which gives the user a choice to know and \r\napprove the moving to another domain because the server views the \r\nrequest as to the same domain\r\n\r\nthe correct text should come after number 5\n --VERIFIER NOTES-- \n\r\nIn rejecting this errata report, I note that the aim of this erratum is not to fix an apparent error, but an addition to the current tex. This sort of text change is not in scope for errata reports, which are meant to collect errors in the documents, things that were actual errors at publication and that would have been fixed at that time had the working group or document authors noticed them -- they were just missed. This is not the case here.\r\n\r\nAdditionally, cyclical redirections are already addressed for clients, and are not relevant for servers, see: https://mailarchive.ietf.org/arch/msg/httpbisa/o3-eUDiKUiC_nWi-5s1wOOmMesU/ for details.",
+    "submit_date": "2024-10-12",
+    "submitter_name": "Roy Yosef Barkay, Tomer Yair",
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-10-29 08:02:19"
   }
 ]
