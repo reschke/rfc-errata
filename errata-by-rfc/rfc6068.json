@@ -58,5 +58,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7919",
+    "doc-id": "RFC6068",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "   1.  A number of characters that can appear in <addr-spec> MUST be\r\n       percent-encoded.  These are the characters that cannot appear in\r\n       a URI according to [STD66] as well as \"%\" (because it is used for\r\n       percent-encoding) and all the characters in gen-delims except \"@\"\r\n       and \":\" (i.e., \"/\", \"?\", \"#\", \"[\", and \"]\").  Of the characters\r\n       in sub-delims, at least the following also have to be percent-\r\n       encoded: \"&\", \";\", and \"=\".  Care has to be taken both when\r\n       encoding as well as when decoding to make sure these operations\r\n       are applied only once.",
+    "correct_text": "   1.  A number of characters that can appear in <addr-spec> MUST be\r\n       percent-encoded.  These are the characters that cannot appear in\r\n       a URI according to [STD66] as well as \"%\" (because it is used for\r\n       percent-encoding) and all the characters in gen-delims except \"@\"\r\n       and \":\" (i.e., \"/\", \"?\", \"#\", \"[\", and \"]\").  Care has to be taken\r\n       both when encoding as well as when decoding to make sure these\r\n       operations are applied only once.",
+    "notes": "RFC 3986 does not require that sub-delimiters used in one component are encoded in other components.  Specifically, RFC 3986 Section 2.1 (https://www.rfc-editor.org/rfc/rfc3986#section-2.1) states that a character requires encoding when it \"is being used as a delimiter of, or within, the component.\"\r\n\r\nAccording to RFC 3986, the mailto URI <mailto:Mike&family@example.org> is unambiguously the single addr-spec \"Mike&family@example.org\" because the path component of the mailto scheme does not use \"&\" as a sub-delimiter.\r\n\r\nMore comprehensively, the mailto URI <mailto:Mike&family@example.org?subject=Use%20of%20%26&body=Should%20be%20fine%20in%20addr-spec> must substitute \"%26\" for \"&\" in the value of the body header field because \"&\" is a query component sub-delimiter in the mailto scheme, but the query is the only component where this is required.",
+    "submit_date": "2024-05-01",
+    "submitter_name": "Mark Slater",
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-07-17 12:30:21"
   }
 ]
