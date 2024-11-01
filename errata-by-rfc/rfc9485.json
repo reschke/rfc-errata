@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7990",
+    "doc-id": "RFC9485",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1",
+    "orig_text": "5.1.  Multi-Character Escapes\r\n\r\n   I-Regexp does not support common multi-character escapes (MCEs) and\r\n   character classes built around them.  These can usually be replaced\r\n   as shown by the examples in Table 1.\r\n\r\n                      +============+===============+\r\n                      | MCE/class: | Replace with: |\r\n                      +============+===============+\r\n                      | \\S         | [^ \\t\\n\\r]    |\r\n                      +------------+---------------+\r\n                      | [\\S ]      | [^\\t\\n\\r]     |\r\n                      +------------+---------------+\r\n                      | \\d         | [0-9]         |\r\n                      +------------+---------------+",
+    "correct_text": "5.1.  Multi-Character Escapes\r\n\r\n   I-Regexp does not support common multi-character escapes (MCEs) and\r\n   character classes built around them.  These can usually be replaced\r\n   as shown by the examples in Table 1.\r\n\r\n                      +============+===============+\r\n                      | MCE/class: | Replace with: |\r\n                      +============+===============+\r\n                      | \\d         | [0-9]         |\r\n                      +------------+---------------+",
+    "notes": "`\\S` excludes the form feed and vertical tabulation characters in Perl, ECMAScript, and other implementations, while the suggested replacement includes them. Given the entire document is about interoperable regular expressions, misrepresentation of the common definition of `\\S` runs counter to that. Including form feed and vertical tabulation literally in the replacement expression is not likely to be helpful, so removing the misleading rows seems to be the best option.",
+    "submit_date": "2024-06-13",
+    "submitter_name": "Bjoern Hoehrmann",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
