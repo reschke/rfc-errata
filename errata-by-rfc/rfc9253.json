@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8156",
+    "doc-id": "RFC9253",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.2",
+    "orig_text": "   linkparam      = (\";\" \"VALUE\" \"=\" (\"XML-REFERENCE\" /\r\n                                \"URI\" /\r\n                                \"UID\"))\r\n                    1*(\";\" linkrelparam)\r\n                    1*(\";\" fmttypeparam)\r\n                    1*(\";\" labelparam)\r\n                    1*(\";\" languageparam)\r\n                    *(\";\" other-param)\r\n                    ; the elements herein may appear in any order,\r\n                    ; and the order is not significant.",
+    "correct_text": "   linkparam      = (\";\" \"VALUE\" \"=\" (\"XML-REFERENCE\" /\r\n                                \"URI\" /\r\n                                \"UID\"))\r\n                    1*(\";\" linkrelparam)\r\n                    [\";\" fmttypeparam]\r\n                    [\";\" labelparam]\r\n                    [\";\" languageparam]\r\n                    *(\";\" other-param)\r\n                    ; the elements herein may appear in any order,\r\n                    ; and the order is not significant.",
+    "notes": "The original text defines that all of the LINKREL, FMTTYPE, LABEL, LANGUAGE parameters MUST be set at least once. However, the examples do not adhere to this rule. Instead they suggest that only LINKREL and VALUE are mandatory.\r\n\r\nThe corrected text defines the FMTTYPE, LABEL, and LANGUAGE parameters to be optional and that they only should be set at most once.\r\n\r\nThe linkparam definition still allows the LINKREL parameter to be set multiple times. This might not have been the original intent. The ABNF might also get updated to restrict it to be set exactly once.",
+    "submit_date": "2024-10-24",
+    "submitter_name": "Robert Stepanek",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8157",
+    "doc-id": "RFC9253",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.2",
+    "orig_text": "LINK;LINKREL=SOURCE;LABEL=Venue;VALUE=URI:\r\n  https://example.com/events",
+    "correct_text": "LINK;LINKREL=ABOUT;LABEL=Venue;VALUE=URI:\r\n  https://example.com/events",
+    "notes": "This section defines the \"link relation type [to be] defined in Section 2.1 of [RFC8288]\". But the SOURCE link relation in the example is not a valid link relation type according to RFC8288, as it is not registered at IANA (https://www.iana.org/assignments/link-relations/link-relations.xhtml).\r\n\r\nThe example should be updated to either:\r\n1. replace SOURCE in the example with a registered link relation type (as depicted in the corrected text), or\r\n2. register the SOURCE relation type at IANA according to RFC 8288, or\r\n3. replace SOURCE in the example with an extension link relation type, e.g. https://example.com/rel/source",
+    "submit_date": "2024-10-24",
+    "submitter_name": "Robert Stepanek",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
