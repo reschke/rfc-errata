@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7878",
+    "doc-id": "RFC1157",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "4.1.3.1",
+    "orig_text": "GetResponse (( ipRouteDest.9.1.2.3 =  \"9.1.2.3\" ),\r\n                         ( ipRouteNextHop.9.1.2.3 = \"99.0.0.3\" ),\r\n                         ( ipRouteMetric1.9.1.2.3 = 3 ))",
+    "correct_text": "GetResponse (( ipRouteDest.9.1.2.3 =  \"9.1.2.3\" ),\r\n                         ( ipRouteNextHop.9.1.2.3 = \"99.0.0.3\" ),\r\n                         ( ipRouteMetric.9.1.2.3 = 3 ))",
+    "notes": "ipRouteMetric1.9.1.2.3 should be ipRouteMetric. 9.1.2.3\n --VERIFIER NOTES-- \n“ipRouteMetric1” is the name per Section 4.1.3.1:\r\n\r\n   The management station sends to the SNMP agent a GetNextRequest-PDU\r\n   containing the indicated OBJECT IDENTIFIER values as the requested\r\n   variable names:\r\n\r\n   GetNextRequest ( ipRouteDest, ipRouteNextHop, ipRouteMetric1 )",
+    "submit_date": "2024-04-02",
+    "submitter_name": "neo",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-05-17 10:32:36"
+  }
+]
