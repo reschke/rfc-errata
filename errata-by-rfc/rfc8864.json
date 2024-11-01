@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7805",
+    "doc-id": "RFC8864",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.1",
+    "orig_text": "   In order to avoid SCTP Stream identifier collisions, in alignment\r\n   with [RFC8832], the endpoint acting as a DTLS client (for the SCTP\r\n   association used to realize data channels) MUST use even identifier\r\n   values, and the endpoint acting as a DTLS server MUST use odd\r\n   identifier values.\r\n",
+    "correct_text": "[RFC8831] does not restrict the SCTP Stream identifiers for data\r\nchannels negotiated out-of-band. The endpoints are free to assign\r\nany numbers to the negotiated data channels; collisions are handled\r\nby the usual mechanisms used to avoid SDP signalling glare.\r\n\r\n",
+    "notes": "The procedures of [RFC8832] are inappropriate in this case, because DCMAP indicates channels negotiated out-of-band and not via DCEP.\r\n\r\nAt initial offer, the DTLS direction attribute is ACTPASS, so the direction is not known. Thus, the RFC 8832 numbering rule is impossible to apply anyway.",
+    "submit_date": "2024-02-09",
+    "submitter_name": "Harald Alvestrand",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
