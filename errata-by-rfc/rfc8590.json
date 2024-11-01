@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8079",
+    "doc-id": "RFC8590",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.1",
+    "orig_text": "Registration for the changePoll XML schema:\r\n\r\n   URI: urn:ietf:params:xml:ns:changePoll-1.0\r\n\r\n   Registrant Contact: IESG\r\n\r\n   XML: See the \"Formal Syntax\" section of this document.",
+    "correct_text": "Registration for the changePoll XML schema:\r\n\r\n   URI: urn:ietf:params:xml:schema:changePoll-1.0\r\n\r\n   Registrant Contact: IESG\r\n\r\n   XML: See the \"Formal Syntax\" section of this document.",
+    "notes": "The wrong URN for the XML schema is written in the RFC. However, despite that, the IANA registered it correctly: https://www.iana.org/assignments/xml-registry/xml-registry.xhtml#schema",
+    "submit_date": "2024-08-16",
+    "submitter_name": "Ben van Hartingsveldt",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-08-19 08:45:00"
+  }
+]
