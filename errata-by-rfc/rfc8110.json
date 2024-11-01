@@ -32,17 +32,17 @@
   {
     "errata_id": "5980",
     "doc-id": "RFC8110",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.3",
     "orig_text": "   This failure should be logged, and if the client abandons association\r\n   due to the (repeated) receipt of invalid elements, notification of\r\n   this fact should be provided to the user.",
     "correct_text": "   This failure SHOULD be logged, and if the client abandons association\r\n   due to the (repeated) receipt of invalid elements, notification of\r\n   this fact SHOULD be provided to the user.",
-    "notes": "Uncapitalized \"should\" used instead of RFC 2119 \"SHOULD\".",
+    "notes": "Uncapitalized \"should\" used instead of RFC 2119 \"SHOULD\".\n --VERIFIER NOTES-- \nUse of RFC 2119 keywords is optional. The text is sufficiently clear with the lower-case “should”. ",
     "submit_date": "2020-02-12",
     "submitter_name": "Alexander Martin",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-02-11 08:20:21"
   },
   {
     "errata_id": "6182",
