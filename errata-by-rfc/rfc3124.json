@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7818",
+    "doc-id": "RFC3124",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "             The nrecd parameter indicates how many bytes were\r\n   successfully received by the receiver since the last cm_update call,\r\n   while the nrecd parameter identifies how many bytes were received\r\n   were lost during the same time period.  ",
+    "correct_text": "             The nrecd parameter indicates how many bytes were\r\n   successfully received by the receiver since the last cm_update call,\r\n   while the nlost parameter identifies how many bytes were lost during the same time period.  ",
+    "notes": "Wrong nrecd parameter instead of nlost at the beginning of page 10.",
+    "submit_date": "2024-02-21",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "167",
+    "verifier_name": "Martin Duke",
+    "update_date": "2024-03-05 15:18:13"
+  }
+]
