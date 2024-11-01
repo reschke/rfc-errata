@@ -92,16 +92,16 @@
   {
     "errata_id": "7592",
     "doc-id": "RFC3696",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "3",
     "orig_text": "acute accent (\"`\")",
     "correct_text": "backtick (\"`\")",
-    "notes": "Acute accent would be in the other direction like in É.\r\nThis accent is usually mentionned as backtick or backquote.",
+    "notes": "Acute accent would be in the other direction like in É.\r\nThis accent is usually mentioned as backtick or backquote.\r\n\r\n===RPC Notes===\r\n\r\nA bis doc should consider referring to \"grave accent\", \"backtick\", or \"backquote\".\r\n\r\nFrom John Klensin:\r\n\"grave accent\" is the term used both by Unicode and by the ASCII\r\nstandard (X3.4-1968, RFC 20, INCITS 4-1986[R2017], ISO 646 BV).\r\nIn Unicode-land and the surrounding vicinity, \"backtick\" is\r\noften a combining character, U+0300, and backquote is, even more\r\noften--and preferred by the Standard -- U+301D.  Neither\r\nbacktick or backquote is used by Unicode to identify a\r\ncharacter, probably because of those ambiguities.",
     "submit_date": "2023-08-07",
     "submitter_name": "Rémi Plénat",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-04-09 17:19:40"
   }
 ]
