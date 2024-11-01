@@ -77,16 +77,16 @@
   {
     "errata_id": "6942",
     "doc-id": "RFC3394",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2.1",
     "orig_text": "R[i]          An array of 64-bit registers where\r\n                       i = 0, 1, 2, ..., n\r\nA[t], R[i][t] The contents of registers A and R[i] after encryption\r\n                       step t.",
     "correct_text": "R[i]          An array of 64-bit registers where\r\n                       i = 1, 2, ..., n\r\nA[t], R[t][i] The contents of registers A and R[i] after encryption\r\n                       step t.",
-    "notes": "1) There are n 64-bit registers indexed R[1] to R[n] in the algorithms in section 2.2.\r\n2) The notation of the algorithms in section 2.2 dereference R[][] using the step as the first index, and the index of the register from 1 to n as the second index",
+    "notes": "1) There are n 64-bit registers indexed R[1] to R[n] in the algorithms in section 2.2.\r\n2) The notation of the algorithms in section 2.2 dereference R[][] using the step as the first index, and the index of the register from 1 to n as the second index\r\n\r\nPaul Wouters(AD): There was some talk of a better fix, but that would require new text for whole sections, which is more that what should be done in an errata.",
     "submit_date": "2022-04-25",
     "submitter_name": "Samuel Lee",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-22 08:47:18"
   }
 ]
