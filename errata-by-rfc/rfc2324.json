@@ -118,5 +118,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "7847",
+    "doc-id": "RFC2324",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "               | \"k%C3%A1va                 ; Czech\r\n",
+    "correct_text": "               | \"k%C3%A1va\"                ; Czech\r\n",
+    "notes": "Missing end-quote on Czech language coffee scheme name.",
+    "submit_date": "2024-03-11",
+    "submitter_name": "Kayla Coyote",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-03-13 10:37:51"
+  },
+  {
+    "errata_id": "8160",
+    "doc-id": "RFC2324",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "2.2.2.1",
+    "orig_text": "        addition-type   = ( \"*\"\r\n                          | milk-type\r\n                          | syrup-type\r\n                          | sweetener-type\r\n                          | spice-type\r\n                          | alcohol-type\r\n                          ) *( \";\" parameter )\r\n        milk-type       = ( \"Cream\" | \"Half-and-half\" | \"Whole-milk\"\r\n                          | \"Part-Skim\" | \"Skim\" | \"Non-Dairy\" )\r\n        syrup-type      = ( \"Vanilla\" | \"Almond\" | \"Raspberry\"\r\n                          | \"Chocolate\" )\r\n        alcohol-type    = ( \"Whisky\" | \"Rum\" | \"Kahlua\" | \"Aquavit\" )",
+    "correct_text": "        addition-type   = ( \"*\"\r\n                          | milk-type\r\n                          | syrup-type\r\n                          | sweetener-type\r\n                          | spice-type\r\n                          | alcohol-type\r\n                          ) *( \";\" parameter )\r\n        milk-type       = ( \"Cream\" | \"Half-and-half\" | \"Whole-milk\"\r\n                          | \"Part-Skim\" | \"Skim\" | \"Non-Dairy\" )\r\n        sweetener-type  = ( \"Sugar\" | \"Saccharine\" | \"Cyclamate\"\r\n                          | \"Neotame\" | \"Aspartame\" )\r\n        spice-type      = ( \"Chicory\" | \"Cocoa\" | \"Cinnamon\"\r\n                          | \"Cardamom\" )\r\n        syrup-type      = ( \"Vanilla\" | \"Almond\" | \"Raspberry\"\r\n                          | \"Chocolate\" )\r\n        alcohol-type    = ( \"Whisky\" | \"Rum\" | \"Kahlua\" | \"Aquavit\" )",
+    "notes": "two nonterminal symbols referenced as`additition-type` alternatives are undefined: `sweetener-type` and `spice-type`. in the absence of enumerated sweetener and spice values for so many years, users, authors, and implementers who needed or needed to support spices and (non-syrup) sweeteners were forced to improvise, leading to widespread interoperability issues, especially due to the use of brand name molecules. obviously this madness must end.\n --VERIFIER NOTES-- \n   Thank you for your submission.  While I fully agree with the sentiment, the change would require a document update, and this RFC will not be updated.",
+    "submit_date": "2024-10-29",
+    "submitter_name": "bathos whitespace",
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-10-29 09:41:58"
   }
 ]
