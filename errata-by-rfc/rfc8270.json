@@ -17,16 +17,16 @@
   {
     "errata_id": "5502",
     "doc-id": "RFC8270",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
     "section": "5",
     "orig_text": "   A malicious client could cause a Denial of Service by intentionally\r\n   making multiple connections that are less than 2048 bits in size.\r\n   Therefore, operating systems SHOULD NOT log DH groups that are less\r\n   than 2048 bits in size, as it would create an additional attack\r\n   surface.",
     "correct_text": "   A malicious client could cause a Denial of Service by intentionally\r\n   making multiple connections that are less than 2048 bits in size.\r\n   Therefore, operating systems without any rate-limited logging \r\n   SHOULD NOT log DH groups that are less than 2048 bits in size, as it\r\n   would create an additional attack surface.",
-    "notes": "Instead of ignoring attacks, the administrator wants to know when one is taking place, particularly if it is an intense one which would lead to a denial of service, as suggested by the authors. Thus, using a rate-limited logging mechanism is an appropriate solution to keep records of the attack, and to notify the administrator in real-time then he can take actions if he wants to. As there might not be other ways to inform the administrator of an attack taking place, not logging at all is the last choice.",
+    "notes": "Instead of ignoring attacks, the administrator wants to know when one is taking place, particularly if it is an intense one which would lead to a denial of service, as suggested by the authors. Thus, using a rate-limited logging mechanism is an appropriate solution to keep records of the attack, and to notify the administrator in real-time then he can take actions if he wants to. As there might not be other ways to inform the administrator of an attack taking place, not logging at all is the last choice.\n --VERIFIER NOTES-- \n We are rejecting because it is not clear what course of action an administrator has when seeing such log messages, so the usefulness of this kind of logging seems marginal at best and the security considerations advice to just silently drop these connections without logging them still seems best.",
     "submit_date": "2018-09-21",
     "submitter_name": "Eugene Adell",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-10-30 02:53:55"
   }
 ]
