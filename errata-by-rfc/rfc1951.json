@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7764",
+    "doc-id": "RFC1951",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.5",
+    "orig_text": "The extra bits should be interpreted as a machine integer \r\nstored with the most-significant bit first, e.g., bits 1110 \r\nrepresent the value 14.",
+    "correct_text": "The extra bits should be interpreted as a machine integer \r\nstored with the least-significant bit first, e.g., bits 0111 \r\nrepresent the value 14.",
+    "notes": "In tools like infgen, unlike huffman codes which are reversed after read (https://github.com/madler/infgen/blob/2d2300507d24b398dfc7482f3429cc0061726c8b/infgen.c#L893-L901), extra bits are read as-is (in the LSB-first order) and never get reversed: https://github.com/madler/infgen/blob/2d2300507d24b398dfc7482f3429cc0061726c8b/infgen.c#L1038",
+    "submit_date": "2024-01-15",
+    "submitter_name": "Hiroki Kobayashi",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-03-22 11:52:14"
+  }
+]
