@@ -43,5 +43,20 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2023-11-09 06:13:00"
+  },
+  {
+    "errata_id": "8040",
+    "doc-id": "RFC9073",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.3",
+    "orig_text": "      resprop      = *(\r\n                     ;\r\n                     ; The following are REQUIRED\r\n                     ; but MUST NOT occur more than once.\r\n                     ;\r\n                     uid /\r\n                     ;\r\n                     ; The following are OPTIONAL\r\n                     ; but MUST NOT occur more than once.\r\n                     ;\r\n                     description / geo / name / restype /\r\n                     ;\r\n                     ; The following are OPTIONAL\r\n                     ; and MAY occur more than once.\r\n                     ;\r\n                     sdataprop / iana-prop\r\n                   )",
+    "correct_text": "      resprop      = *(\r\n                     ;\r\n                     ; The following are REQUIRED\r\n                     ; but MUST NOT occur more than once.\r\n                     ;\r\n                     uid /\r\n                     ;\r\n                     ; The following are OPTIONAL\r\n                     ; but MUST NOT occur more than once.\r\n                     ;\r\n                     description / geo / name / restypeprop /\r\n                     ;\r\n                     ; The following are OPTIONAL\r\n                     ; and MAY occur more than once.\r\n                     ;\r\n                     sdataprop / iana-prop\r\n                   )",
+    "notes": "restype is not defined anywhere, whereas restypeprop is",
+    "submit_date": "2024-07-21",
+    "submitter_name": "Dominique Hazaël-Massieux",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
