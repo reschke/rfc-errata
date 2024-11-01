@@ -62,17 +62,17 @@
   {
     "errata_id": "7095",
     "doc-id": "RFC7748",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": "Appendix A",
+    "section": "Appendix A says:",
     "orig_text": "This section specifies the procedure that was used to generate the\r\nabove curves; specifically, it defines how to generate the parameter\r\nA of the Montgomery curve y^2 = x^3 + A*x^2 + x.\r\n",
     "correct_text": "This section specifies the procedure that was used to generate the\r\nabove curves; specifically, it defines how to generate the parameter\r\nA of the Montgomery curve v^2 = u^3 + A*u^2 + u.\r\n",
     "notes": "For consistency with the other parts of the document (e.g. Section 3), use the variables u and v in the Montgomery curve equation.",
     "submit_date": "2022-08-18",
     "submitter_name": "James Muir",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-01-22 21:17:49"
   },
   {
     "errata_id": "7096",
@@ -103,5 +103,35 @@
     "verifier_id": "168",
     "verifier_name": "Stanislav Smyshlyaev",
     "update_date": "2023-09-04 02:05:42"
+  },
+  {
+    "errata_id": "7824",
+    "doc-id": "RFC7748",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "   Input scalar:\r\n     203d494428b8399352665ddca42f9de8fef600908e0d461cb021f8c5\r\n     38345dd77c3e4806e25f46d3315c44e0a5b4371282dd2c8d5be3095f\r\n   Input scalar as a number (base 10):\r\n     633254335906970592779259481534862372382525155\r\n     252028961056404001332122152890562527156973881\r\n     968934311400345568203929409663925541994577184\r\n   Input u-coordinate:\r\n     0fbcc2f993cd56d3305b0b7d9e55d4c1a8fb5dbb52f8e9a1e9b6201b\r\n     165d015894e56c4d3570bee52fe205e28a78b91cdfbde71ce8d157db\r\n   Input u-coordinate as a number (base 10):\r\n     622761797758325444462922068431234180649590390\r\n     024811299761625153767228042600197997696167956\r\n     134770744996690267634159427999832340166786063\r\n   Output u-coordinate:\r\n     884a02576239ff7a2f2f63b2db6a9ff37047ac13568e1e30fe63c4a7\r\n     ad1b3ee3a5700df34321d62077e63633c575c1c954514e99da7c179d",
+    "correct_text": "   Input scalar:\r\n     203d494428b8399352665ddca42f9de8fef600908e0d461cb021f8c5\r\n     38345dd77c3e4806e25f46d3315c44e0a5b4371282dd2c8d5be3095f\r\n   Input scalar as a number (base 10):\r\n     633254335906970592779259481534862372382525155\r\n     252028961056404001332122152890562527156973881\r\n     968934311400345568203929409663925541994577184\r\n   Input u-coordinate:\r\n     1e37b1e6368991ebce5815bf6b567cedfec0d32246815a6707f02c4a\r\n     61247656f5df569f02613cc5bcedf7a924424ff063c9c0aff5b395ae\r\n   Input u-coordinate as a number (base 10):\r\n     495683502945530038677307449626580741146441879\r\n     406119444019011021926629134928724388368946852\r\n     962833749157931574628774133988199037473470238\r\n   Output u-coordinate:\r\n     d34142faca68f7a3ddf805fa39cc706d5ab3f5633ceff5e6462b775d\r\n     ef45f33083461dcf821cc3f0f74a813277e6895a35d958feef79a5bf",
+    "notes": "Regarding Section 5.2, X448, second vector, the given input u-coordinate is not part of a valid point on the Montgomery form of Curve448.\r\n\r\nI suggest replacing the point with a valid one: (2^447 + 100)*G\r\n\r\nSee the SageMath code (permalink): https://web.archive.org/web/20240227114733/https://pastebin.com/yAuzvEJG",
+    "submit_date": "2024-02-27",
+    "submitter_name": "Jose Luis Amador Moreno",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "7879",
+    "doc-id": "RFC7748",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "z_2 = E * (AA + a24 * E)",
+    "correct_text": "z_2 = E * (BB + a24 * E)",
+    "notes": "In the for loop on page 8, the variable AA should be replaced with BB in Z_2. This modification is necessary because the mathematical formula for point doubling on the Montgomery curve according to (https://en.wikipedia.org/wiki/Montgomery_curve#Montgomery_arithmetic) indicates that Z2n (equivalent to Z_2 in this case) is calculated as follows: Z2n = 4XnZn((Xn-Zn)^2 + ((A+2)/4)(4XnZn)). It is observed in this equation that the operation in the (Xn-Zn)^2 part involves subtraction similar to the variable B, while the operation in the variable A involves addition. Considering this discrepancy, it is suggested to substitute AA with BB for correctness.",
+    "submit_date": "2024-04-02",
+    "submitter_name": "Nawras Hussein Sabbry",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
