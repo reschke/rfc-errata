@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7844",
+    "doc-id": "RFC9380",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "10.6",
+    "orig_text": "({#hashtofield-expand-xmd}, step 10)",
+    "correct_text": "(Section 5.3.1, step 10)",
+    "notes": "Same issue as Erratum #7144 for RFC 9277:  a typo in the markdown (curly-bracketed entry that should have been converted to an xref entry in the XML) that got through the publication process.",
+    "submit_date": "2024-03-07",
+    "submitter_name": "Lynne Bartholomew",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-03-08 11:01:44"
+  }
+]
