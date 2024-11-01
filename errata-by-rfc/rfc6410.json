@@ -13,5 +13,20 @@
     "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8083",
+    "doc-id": "RFC6410",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "Updates: 2026",
+    "correct_text": "Updates: 2026, 5657",
+    "notes": "RFC 5657 was addressed to the requirement for an implementation report for specifications progressing to Draft Standard.  RFC  6410 not only eliminates Draft Standards but quite explicitly eliminates the requirement for implementation reports.  It even goes on to say, in Section 3.2, that the advice in RFC 5657 \"can be helpful to conduct interoperability testing\".    In spite of there being no other discussion of 5657 in 6410, that constitutes an update to 5657 that changes its status and the interpretation of every normative statement in it\r\n\r\nCf errata report 8082.",
+    "submit_date": "2024-08-17",
+    "submitter_name": "John Klensin",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-09-17 12:31:44"
   }
 ]
