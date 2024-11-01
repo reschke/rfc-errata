@@ -2,16 +2,16 @@
   {
     "errata_id": "7586",
     "doc-id": "RFC8087",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
     "section": "1",
     "orig_text": "The  ECT(0) codepoint '01' and the ECT(1) codepoint '10' both indicate\r\nthat the transport protocol using the IP layer supports the use of\r\nECN.",
     "correct_text": "The  ECT(0) codepoint '10' and the ECT(1) codepoint '01' both indicate\r\nthat the transport protocol using the IP layer supports the use of\r\nECN.",
     "notes": "Figure 1, immediately afterwards, has the correct codepoints, which are consistent with RFC 3168.",
     "submit_date": "2023-08-02",
     "submitter_name": "Martin Duke",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "167",
+    "verifier_name": "Martin Duke",
+    "update_date": "2024-01-18 15:59:10"
   }
 ]
