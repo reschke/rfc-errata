@@ -58,5 +58,20 @@
     "verifier_id": "146",
     "verifier_name": "Terry Manderson",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8038",
+    "doc-id": "RFC6840",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.2.",
+    "orig_text": "   When validating a response to QTYPE=*, all received RRsets that match\r\n   QNAME and QCLASS MUST be validated.  If any of those RRsets fail\r\n   validation, the answer is considered Bogus.",
+    "correct_text": "   When validating a response to QTYPE=*, all received RRsets that match\r\n   QNAME and QCLASS SHOULD be validated.  If any of those RRsets fail\r\n   validation, the answer is considered Bogus.",
+    "notes": "The original text requires validators to invest an unreasonable amount of work to validate the signatures over the RRsets in case there are many such RRsets. The issue was exploited in the construction of CPU resource exhaustion attacks (CVE-2023-50387). For more details see our publication with ACM CCS'24 on the KeyTrap denial of service vulnerabilities.\r\n\r\n-- verifier note --\r\nWhile the concern is valid (and has been addressed by more recent RFC), this erratum does not represent the DNSEXT WG consensus at the time of writing, i.e., it cannot be \"verified\".\r\n\r\nNote that further elaboration is required to clarify the implications of not following the recommendation. We suggest to also update the second sentence along the lines of:\r\n>  If any of those RRsets fail validation or the response contains more such RRsets than the validator is willing to process, the answer is considered Bogus.",
+    "submit_date": "2024-07-18",
+    "submitter_name": "Elias Heftrig",
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-08-07 08:39:59"
   }
 ]
