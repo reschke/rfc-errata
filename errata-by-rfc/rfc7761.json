@@ -43,5 +43,20 @@
     "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7857",
+    "doc-id": "RFC7761",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.6.5",
+    "orig_text": "     bool lost_assert(S,G,I) {\r\n       if ( RPF_interface(S) == I ) {\r\n          return FALSE\r\n       } else {\r\n          return ( AssertWinner(S,G,I) != NULL AND\r\n                   AssertWinner(S,G,I) != me  AND\r\n                   (AssertWinnerMetric(S,G,I) is better\r\n                      than spt_assert_metric(S,I) )\r\n       }\r\n     }",
+    "correct_text": "     bool lost_assert(S,G,I) {\r\n       if ( RPF_interface(S) == I ) {\r\n          return FALSE\r\n       } else {\r\n          return ( AssertWinner(S,G,I) != NULL AND\r\n                   AssertWinner(S,G,I) != me  AND\r\n                   AssertWinnerMetric(S,G,I) is better\r\n                      than spt_assert_metric(S,I) )\r\n       }\r\n     }",
+    "notes": "Excessive parenthesis before 'AssertWinnerMetric(S,G,I)'.",
+    "submit_date": "2024-03-19",
+    "submitter_name": "Alexander Okonnikov",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-03-20 14:25:24"
   }
 ]
