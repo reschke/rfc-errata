@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "7822",
+    "doc-id": "RFC9480",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "A.2",
+    "orig_text": "PKIHeader ::= SEQUENCE {\r\n       pvno                INTEGER     { cmp1999(1), cmp2000(2),\r\n                                         cmp2012(3) },",
+    "correct_text": "PKIHeader ::= SEQUENCE {\r\n       pvno                INTEGER     { cmp1999(1), cmp2000(2),\r\n                                         cmp2021(3) },",
+    "notes": "There is a typo in the ASN.1 module regarding the cmp version.  This was noticed in the RFC 4210-bis draft document and has been corrected there, but also affects this document which has already been published.",
+    "submit_date": "2024-02-26",
+    "submitter_name": "John Gray",
+    "verifier_id": "2",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-02-26 16:28:23"
+  }
+]
