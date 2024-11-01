@@ -17,17 +17,17 @@
   {
     "errata_id": "7238",
     "doc-id": "RFC9114",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.2.2",
     "orig_text": "Because this limit is applied separately by each implementation that\r\nprocesses the message, messages below this limit are not guaranteed\r\nto be accepted.\r\n",
     "correct_text": "Because this limit is applied separately by each implementation that\r\nprocesses the message, messages above this limit are not guaranteed\r\nto be accepted.\r\n",
-    "notes": "The section 4.2.2 specifies header size constraints and notes that implementations can send a SETTINGS frame with a SETTINGS_MAX_FIELD_SECTION_SIZE identifier to set a limit on the maximum size of the message header. Since this a maximum size, the sentence that states that intermediaries aren't guaranteed to accept a message below this limit seems odd and I think it should instead say \"above this limit\".",
+    "notes": "The section 4.2.2 specifies header size constraints and notes that implementations can send a SETTINGS frame with a SETTINGS_MAX_FIELD_SECTION_SIZE identifier to set a limit on the maximum size of the message header. Since this a maximum size, the sentence that states that intermediaries aren't guaranteed to accept a message below this limit seems odd and I think it should instead say \"above this limit\".\n --VERIFIER NOTES-- \nThe current RFC text is correct. The problem that is being described is where 1) a client sends a message smaller than MAX_FIELD_SECTION_SIZE and might expect that to work but 2) the server is an intermediary that needs to forward the message onto another server that, for example,  has a smaller value for MAX_FIELD_SECTION_SIZE preventing this.\r\n\r\nAny further clarification to this text, if any is needed, should be made via an update to this document. We encourage you to participate in suggesting improvement/clarifications by opening an issue on the spec issue tracker (https://github.com/quicwg) or in the mailing list: <quic@ietf.org>.\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/quic/8E8kNJe1VGKEjotTl3IT2oZoGGo/",
     "submit_date": "2022-11-04",
     "submitter_name": "Jaikiran Pai",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-10-30 01:54:40"
   },
   {
     "errata_id": "7702",
@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2023-11-14 20:58:41"
+  },
+  {
+    "errata_id": "7780",
+    "doc-id": "RFC9114",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7.2.6",
+    "orig_text": "The GOAWAY frame applies to the entire connection,\r\nnot a specific stream. A client MUST treat a\r\nGOAWAY frame on a stream other than the control\r\nstream as a connection error of type\r\nH3_FRAME_UNEXPECTED.",
+    "correct_text": "The GOAWAY frame applies to the entire connection,\r\nnot a specific stream. An endpoint MUST treat a\r\nGOAWAY frame on a stream other than the control\r\nstream as a connection error of type\r\nH3_FRAME_UNEXPECTED.",
+    "notes": "HTTP/3 originally only supported GOAWAY from server to client. In this PR we added the ability to also send GOAWAY from client to server https://github.com/quicwg/base-drafts/pull/3129/files. Unfortunately we didn't update the highlighted text to cover the situation where a server receives a GOAWAY on a different stream. \r\n\r\nFWIW the implementation I am responsible for already applies the rule to request streams.",
+    "submit_date": "2024-01-24",
+    "submitter_name": "Lucas Pardue",
+    "verifier_id": "170",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2024-01-29 01:18:06"
   }
 ]
