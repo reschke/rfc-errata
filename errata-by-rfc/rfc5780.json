@@ -43,5 +43,20 @@
     "verifier_id": "137",
     "verifier_name": "Spencer Dawkins",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "7971",
+    "doc-id": "RFC5780",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.4",
+    "orig_text": "This will also require at most three tests.\r\n\r\n[...]\r\n\r\nIf\r\nthe client receives a response, the current behavior is Address-\r\nDependent Filtering; if no response is received, the current behavior\r\nis Address and Port-Dependent Filtering.",
+    "correct_text": "This will require at most four tests.\r\n\r\n[...]\r\n\r\nIf the client receives a response, the current behavior is\r\nAddress-Dependent Filtering.\r\n\r\nIf no response is received, test IV must be performed to distinguish\r\nbetween Address and Port-Dependent Filtering and lack of connectivity\r\nwith the STUN server's alternate address.  For example, a server\r\nmight be configured with a private OTHER-ADDRESS or reside behind an\r\ninterfering firewall.  In test IV, the client sends a Binding Request\r\n(without a CHANGE-REQUEST attribute) to the alternate address, but\r\nprimary port.  If the client receives a response, the current\r\nbehavior is Address and Port-Dependent Filtering; if no response is\r\nreceived, the client knows that it does not have UDP connectivity\r\nwith the server's alternate address, and therefore cannot use the\r\ncurrent server to determine the current filtering behavior.",
+    "notes": "I am suggesting this change after encountering several public STUN\r\nservers with an OTHER-ADDRESS (or CHANGED-ADDRESS) set to 0.0.0.0,\r\n10.x.x.x, 172.x.x.x, or 192.168.x.x. With such a server, a client\r\nfollowing this RFC as currently written (version 08) will incorrectly\r\nassume it has discovered Address and Port-Dependent Filtering.\r\n\r\nI would also note in section 4.5 (Combining and Ordering Tests) that\r\nfiltering behavior test IV is the same as the mapping behavior test\r\nII, allowing them to be combined so long as the filtering tests are\r\ndone before the mapping tests (to preserve prior NAT state).\r\n\r\nIn support of that ordering, I would ideally have this RFC present\r\nthe filtering tests before presenting the mapping tests, by swapping\r\nsection 4.4 with 4.3 and swapping 3.2 with 3.1. This would make\r\nthings easier for people implementing the spec, as they would\r\nintuitively follow the optimal ordering simply by following the RFC's\r\npresented order, and would no longer have to mentally reorder the\r\nwritten steps whenever validating or reasoning about their code.\r\nSwapping those sections would, of course, affect external references\r\nto those section numbers; I don't know if that would too disruptive a\r\nchange without assigning a new RFC number.",
+    "submit_date": "2024-06-05",
+    "submitter_name": "Forest",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-06-07 11:33:16"
   }
 ]
