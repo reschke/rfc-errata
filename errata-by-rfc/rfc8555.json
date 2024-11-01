@@ -17,7 +17,7 @@
   {
     "errata_id": "5732",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "8",
     "orig_text": "A challenge object with an error MUST have status\r\nequal to \"invalid\".",
@@ -25,9 +25,9 @@
     "notes": "Section 8.2 says that 'The server MUST add an entry to the \"error\" field in the challenge after each failed validation query'.  However, if the challenge must then become \"invalid\", it is never possible to retry any validation query (because \"invalid\" is a final state for a challenge object).\r\nThis erratum is necessary to permit validation query retries to ever happen.",
     "submit_date": "2019-05-23",
     "submitter_name": "Rob Stradling",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-02-22 07:52:09"
   },
   {
     "errata_id": "5733",
@@ -152,7 +152,7 @@
   {
     "errata_id": "6030",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "7.2",
     "orig_text": "To get a fresh nonce, the client sends a HEAD request to the newNonce\r\nresource on the server.  The server's response MUST include a Replay-\r\nNonce header field containing a fresh nonce and SHOULD have status\r\ncode 200 (OK).  The server MUST also respond to GET requests for this\r\nresource, returning an empty body (while still providing a Replay-\r\nNonce header) with a status code of 204 (No Content).",
@@ -160,9 +160,9 @@
     "notes": "RFC7321 s4.3.2, says \"The server SHOULD send the same header fields in response to a HEAD request as it would have sent if the request had been a GET\".  I can't see any rationale for violating this SHOULD in the discussion in the GH issue which introduced the discrepancy in response code between GET and HEAD (https://github.com/ietf-wg-acme/acme/pull/371), thus (IMHO) it violates the tenets of a SHOULD, as \"the full implications\" do not appear to have \"be[en] understood and carefully weighed before choosing a different course\" (RFC2119, of course).",
     "submit_date": "2020-03-25",
     "submitter_name": "Matt Palmer",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-03-22 08:00:45"
   },
   {
     "errata_id": "6103",
@@ -227,7 +227,7 @@
   {
     "errata_id": "6364",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.1.4",
     "orig_text": "   wildcard (optional, boolean):  This field MUST be present and true\r\n      for authorizations created as a result of a newOrder request\r\n      containing a DNS identifier with a value that was a wildcard\r\n      domain name.  For other authorizations, it MUST be absent.\r\n      Wildcard domain names are described in Section 7.1.3.",
@@ -235,9 +235,9 @@
     "notes": "This section states that the wildcard field must be absent for other authorizations, but the example in this section has an explicitly set wildcard field with value false. The proposed change allows both options, either omitting it or explicitly setting it to false. Also a sentence has been added to explicitly describe the behavior for pre-authorizations.",
     "submit_date": "2020-12-23",
     "submitter_name": "Evangelos Karatsiolis",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-03-22 07:57:21"
   },
   {
     "errata_id": "6843",
@@ -257,7 +257,7 @@
   {
     "errata_id": "6950",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "token (required, string):  A random value that uniquely identifies\r\n      the challenge.  This value MUST have at least 128 bits of entropy.",
@@ -265,9 +265,9 @@
     "notes": "This standards-track document doesn't specify the string ramifications for entropy; I'd expect it to be called out to implementers, just the once, and then referred to later at other tokens.\r\n\r\nIf entropy is log2 the number of possible characters (64 if full base64url set of chars is in use) then \r\nlog2 (64^21) = 126\r\nlog2 (64^22) = 132\r\n\r\nso a minimum of 22 characters are needed to get a minimum of 128 bits of entropy in the token.\r\n\r\nBut, if the random value is specified using a subset of the base64url, say because the implementer doesn't like or use CAPITALS or (most likely) the punctuation symbols, then the token must necessarily be longer to meet the local implementer entropy requirement (though just losing only the punctuation marks means you're still good and meet the requirement with 22 characters). Not sure that matters so much on the wire.\r\n\r\nI also have editing nits about base64url being defined clearly in ABNF just for Replay-Nonce:, but then both 'base64 alphabet' and 'base64url alphabet' are in use in the document, and base64url references are to RFC4648 via RFC7515, but those are to Base64url, not to base64url... it all seems a bit inconsistent editingwise. So all the references to 'base64 alphabet' should be to 'base64url alphabet' as defined in the doc, but it should really be 'Base64url alphabet' to be consistent with references?\r\n\r\n(I really think that it should have been called 'Base-64_url alphabet' way back when to enphasise the punctuation use, but that ship has sailed.)\r\n\r\nTo me, 'base64 alphabet' is the a-zA-Z subset of base64... I think the document could be much clearer in this regard, and I hope any doc revisions taking into account all the other errata raised consider this too.\r\n\r\nMy thanks to Lee Maguire for pointing much of this out.",
     "submit_date": "2022-05-02",
     "submitter_name": "Lloyd Wood",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2024-03-22 08:01:54"
   },
   {
     "errata_id": "7565",
@@ -283,5 +283,20 @@
     "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2024-01-11 10:49:44"
+  },
+  {
+    "errata_id": "7826",
+    "doc-id": "RFC8555",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.2",
+    "orig_text": "The server MUST provide information about its retry state to the \r\nclient via the \"error\" field in the challenge and the Retry-After \r\nHTTP header field in response to requests to the challenge resource.",
+    "correct_text": "In responding to requests to the challenge resource while the status \r\nof the challenge remains \"processing\", the server MUST provide \r\ninformation about its retry state to the client via the \"error\" field \r\nin the challenge and the Retry-After HTTP header field.",
+    "notes": "The current text seems to require the server to include the \"error\" field and Retry-After HTTP header in all responses to requests for a challenge resource, even before that challenge has moved from \"pending\" to \"processing\", and even after that challenge has moved from \"processing\" to \"valid\" or \"invalid\".  However, the \"State Transitions for Challenge Objects\" diagram in Section 7.1.6 shows that it only makes sense for the server to communicate \"its retry state\" to the client when the challenge is \"processing\".\r\n\r\nI've modelled the structure of my suggested Corrected Text on similar language in Section 7.5.1: \"In responding to poll requests while the validation is still in progress, the server MUST...\".",
+    "submit_date": "2024-02-28",
+    "submitter_name": "Rob Stradling",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2024-02-28 13:15:45"
   }
 ]
