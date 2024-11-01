@@ -13,5 +13,20 @@
     "verifier_id": "157",
     "verifier_name": "Adrian Farrel",
     "update_date": "2020-09-22 14:42:14"
+  },
+  {
+    "errata_id": "7920",
+    "doc-id": "RFC8785",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "<end of section>",
+    "correct_text": "Since -0 is a valid JSON Number but is serialized as 0, a JSON\r\nparser following this specification SHOULD generate an error\r\ncondition (which in turn SHOULD stop processing) when it\r\nencounters -0, in order to thwart potential attacks on not yet\r\nparsed data. ",
+    "notes": "IEEE 754 includes as distinct values both positive and negative\r\nzero. Section 7.1.12.1 of ECMA-262 says: If m is +0 or -0, return\r\nthe String \"0\".  This may lend itself to erroneous input to \r\nsupporting functions. ",
+    "submit_date": "2024-05-02",
+    "submitter_name": "Peter Patel-Schneider",
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-05-15 02:58:52"
   }
 ]
