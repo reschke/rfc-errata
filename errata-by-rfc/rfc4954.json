@@ -92,16 +92,16 @@
   {
     "errata_id": "5224",
     "doc-id": "RFC4954",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4",
-    "orig_text": "If the initial\nresponse argument is omitted and the chosen mechanism requires\nan initial client response, the server MUST proceed as defined\nin Section 5.1 of [SASL]. \n\n[...]\n\nIf use of the initial response\nargument would cause the AUTH command to exceed this length,\nthe client MUST NOT use the initial response parameter (and\ninstead proceed as defined in Section 5.1 of [SASL]).",
-    "correct_text": "If the initial\nresponse argument is omitted and the chosen mechanism requires\nan initial client response, the server MUST proceed as defined\nin Section 5.1 of [RFC 2222]. \n\n[...]\n\nIf use of the initial response\nargument would cause the AUTH command to exceed this length,\nthe client MUST NOT use the initial response parameter (and\ninstead proceed as defined in Section 5.1 of [RFC 2222]).",
-    "notes": "[SASL] points to RFC 4422 that does not contain a Section 5.1.\nSo the Original text leads to confusion. The referenced Text can be found in RFC 2222 instead.",
+    "orig_text": "If the initial\r\nresponse argument is omitted and the chosen mechanism requires\r\nan initial client response, the server MUST proceed as defined\r\nin Section 5.1 of [SASL]. \r\n\r\n[...]\r\n\r\nIf use of the initial response\r\nargument would cause the AUTH command to exceed this length,\r\nthe client MUST NOT use the initial response parameter (and\r\ninstead proceed as defined in Section 5.1 of [SASL]).",
+    "correct_text": "If the initial\r\nresponse argument is omitted and the chosen mechanism requires\r\nan initial client response, the server MUST proceed as defined\r\nin Section 5.1 of [RFC 2222]. \r\n\r\n[...]\r\n\r\nIf use of the initial response\r\nargument would cause the AUTH command to exceed this length,\r\nthe client MUST NOT use the initial response parameter (and\r\ninstead proceed as defined in Section 5.1 of [RFC 2222]).",
+    "notes": "[SASL] points to RFC 4422 that does not contain a Section 5.1.\r\nSo the Original text leads to confusion. The referenced Text can be found in RFC 2222 instead.",
     "submit_date": "2018-01-02",
     "submitter_name": "Bastian Schumacher",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 13:46:12"
   }
 ]
