@@ -58,5 +58,20 @@
     "verifier_id": "155",
     "verifier_name": "Wa",
     "update_date": "2023-04-26 12:02:34"
+  },
+  {
+    "errata_id": "7875",
+    "doc-id": "RFC7011",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.2",
+    "orig_text": "   Reduced-size encoding MAY be applied to the following integer types:\r\n   unsigned64, signed64, unsigned32, signed32, unsigned16, and signed16.\r\n   The signed versus unsigned property of the reported value MUST be\r\n   preserved.  The reduction in size can be to any number of octets\r\n   smaller than the original type if the data value still fits, i.e., so\r\n   that only leading zeroes are dropped.  For example, an unsigned64 can\r\n   be reduced in size to 7, 6, 5, 4, 3, 2, or 1 octet(s).",
+    "correct_text": "   Reduced-size encoding MAY be applied to the following integer types:\r\n   unsigned64, signed64, unsigned32, signed32, unsigned16, and signed16.\r\n   The signed versus unsigned property of the reported value MUST be\r\n   preserved. The reduction in size can be to any number of octets\r\n   smaller than the original type if the data value still fits, i.e., so\r\n   that only leading zeroes are dropped (Or, in the case of negative\r\n   signed values, so that only leading ones are dropped). For example,\r\n   an unsigned64 can be reduced in size to 7, 6, 5, 4, 3, 2, or 1 octet(s).",
+    "notes": "As written, the specification suggests that integer values may only be encoded using a reduced-size encoding if they have a run of zeroes at the beginning. However, the specification also describes being able to use reduced-size encoding for signed integer values—and only non-negative values of signed integers have a representation that begins with zeroes.\r\n\r\nEither the text should clarify that negative values may never be expressed using a reduced-size encoding (which is what the strictest reading of the current text would suggest), or it should specify that leading ones may also be dropped for signed values, which makes it clear that they should be interpreted via sign extension of the high bit.\r\n\r\nA quick survey of existing IPFIX implementations suggests that those which decode reduced-size encoding of integers at all produce the semantic equivalent of sign extension when they encounter a reduced-size encoding of a signed integer value.\r\n\r\n-- \r\nWK: Thread (for posterity): https://mailarchive.ietf.org/arch/msg/ipfix/sBsLy-XYH8sQCEjnPSGoEKsRL9Y/\r\n",
+    "submit_date": "2024-03-28",
+    "submitter_name": "Katherine Prevost",
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-04-04 06:39:34"
   }
 ]
