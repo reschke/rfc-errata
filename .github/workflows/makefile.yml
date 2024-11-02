@@ -1,10 +1,11 @@
-name: Makefile CI
+name: Update errata
 
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,5 +15,17 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: make
-      run: make -B
+    - name: Download errata from RFC Editor
+      run: |
+        curl https://www.rfc-editor.org/errata.json -o errata.json.raw --etag-compare errata.json.etag --etag-save errata.json.etag
+        jq "sort_by(.errata_id)" errata.json.raw > errata.json
+
+    - name: Extract by RFC
+      run: ./extract-by-rfc.sh errata.json
+
+    - name: Commit changes
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add errata-by-rfc/rfc*json errata.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update errata" && git push)
