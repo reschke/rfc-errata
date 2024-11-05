@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2024-10-07 12:15:13"
+  },
+  {
+    "errata_id": "8167",
+    "doc-id": "RFC9293",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.10.7.3",
+    "orig_text": "first check that the sequence number exactly\r\nmatches RCV.NXT prior to executing the action in the next\r\nparagraph.\r\n",
+    "correct_text": "first check that the ACK field acknowledges our\r\nSYN prior to executing the action in the next paragraph.\r\n",
+    "notes": "RFC 5961, Section 3.2, under \"The modified RST segment processing\" (the source of this particular mitigation), reads:\r\n\r\n>   In the SYN-SENT state (a RST received in response to an initial SYN),\r\n>   the RST is acceptable if the ACK field acknowledges the SYN.\r\n\r\nThe sequence number must exactly match RCV.NXT only in the synchronized states. In the SYN-SENT state, the RCV.NXT variable hasn't been set, and we don't have an Initial Receive Sequence (IRS) number, so it's not possible to validate the sequence number against RCV.NXT.",
+    "submit_date": "2024-11-04",
+    "submitter_name": "Christopher Williams",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

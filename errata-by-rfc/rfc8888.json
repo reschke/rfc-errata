@@ -13,5 +13,20 @@
     "verifier_id": "172",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2024-05-21 06:44:41"
+  },
+  {
+    "errata_id": "8166",
+    "doc-id": "RFC8888",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1",
+    "orig_text": "         Following this, the report block contains a\r\n   16-bit packet metric block for each RTP packet that has a sequence\r\n   number in the range begin_seq to begin_seq+num_reports inclusive\r\n   (calculated using arithmetic modulo 65536 to account for possible\r\n   sequence number wrap-around).",
+    "correct_text": "         Following this, the report block contains a\r\n   16-bit packet metric block for each RTP packet that has a sequence\r\n   number in the range begin_seq up to, but not including,\r\n   begin_seq+num_reports\r\n   (calculated using arithmetic modulo 65536 to account for possible\r\n   sequence number wrap-around).",
+    "notes": "The text can be read as the range being [begin_seq, begin_seq+num_reports].\r\n\r\nIf \"begin_seq\" is taken as the first sequence number you are reporting on, the original text means that you would have to have num_reports be 0 when you are reporting on a single packet. This seems very strange.\r\n\r\nAlternatively, if \"begin_seq\" is taken as the sequence number before the one you are reporting on, the num_reports is consistent, but you are then reporting on the range <begin_seq, begin_seq+num_reports], which also seems strange.\r\n\r\nThe suggested clarification would report on the sequence [begin_seq, begin_seq + num_reports>, which seems like the most natural interpretation.\r\n\r\nThis is also consistent with the format of an empty report, which is explicit that begin_seq is the sequence number of the last RTP packet received.",
+    "submit_date": "2024-11-04",
+    "submitter_name": "Harald Alvestrand",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
