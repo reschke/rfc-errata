@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8169",
+    "doc-id": "RFC2080",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "1.2",
+    "orig_text": "- This protocol uses fixed \"metrics\" to compare alternative routes.\r\n     It is not appropriate for situations where routes need to be chosen\r\n     based on real-time parameters such a measured delay, reliability,\r\n     or load.  The obvious extensions to allow metrics of this type are\r\n     likely to introduce instabilities of a sort that the protocol is\r\n     not designed to handle.",
+    "correct_text": "- This protocol uses fixed \"metrics\" to compare alternative routes.\r\n     It is not appropriate for situations where routes need to be chosen\r\n     based on real-time parameters such as measured delay, reliability,\r\n     or load.  The obvious extensions to allow metrics of this type are\r\n     likely to introduce instabilities of a sort that the protocol is\r\n     not designed to handle.",
+    "notes": "It should be 'such as' instead of 'such a'.",
+    "submit_date": "2024-11-05",
+    "submitter_name": "Ze-en Xiong",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-11-05 08:29:46"
+  }
+]
