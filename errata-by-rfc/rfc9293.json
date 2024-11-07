@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8171",
+    "doc-id": "RFC9293",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "    +-----------------+---------+------+--------+-----+--------+------+\r\n    | *  Dest Unreach | SHLD-25 |  X   |        |     |        |      |\r\n    |    (0,1,5) =>   |         |      |        |     |        |      |\r\n    |    inform ALP   |         |      |        |     |        |      |\r\n    +-----------------+---------+------+--------+-----+--------+------+\r\n",
+    "correct_text": "    +-----------------+---------+------+--------+-----+--------+------+\r\n    | *  Dest Unreach | SHLD-25 |      |   X    |     |        |      |\r\n    |    (0,1,5) =>   |         |      |        |     |        |      |\r\n    |    inform ALP   |         |      |        |     |        |      |\r\n    +-----------------+---------+------+--------+-----+--------+------+\r\n",
+    "notes": "This requirement has an X in the \"MUST\" column, but the X should be in the \"SHOULD\" column.\r\n\r\nThe relevant text for this requirement is \"a TCP implementation ... SHOULD make the information available to the application (SHLD-25).\"",
+    "submit_date": "2024-11-06",
+    "submitter_name": "Christopher Williams",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
