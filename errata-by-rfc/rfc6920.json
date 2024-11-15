@@ -33,15 +33,15 @@
     "errata_id": "8174",
     "doc-id": "RFC6920",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "9.4",
     "orig_text": "the hash algorithm name string",
     "correct_text": "the case-(in)sensitive hash algorithm name string",
     "notes": "The RFC does not specify whether the Hash Name String is considered to be case-sensitive or not. According to RFC 8126, section 2.2., it should be clearly stated whether case matters, like in RFC 7518, section 7.1.1. Does this mean one should interpret them as case-insensitive?",
     "submit_date": "2024-11-12",
     "submitter_name": "Henry Jalonen",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2024-11-14 19:15:23"
   }
 ]
