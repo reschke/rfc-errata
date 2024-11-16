@@ -32,7 +32,7 @@
   {
     "errata_id": "4980",
     "doc-id": "RFC7483",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.5",
     "orig_text": "country -- a string containing the name of the two-character\r\ncountry code of the autnum",
@@ -40,9 +40,9 @@
     "notes": "As described in Section 3, country codes should consistently be represented as two-character string values. Note that this differs from the \"full name\" format used in jCard representations of entity objects.",
     "submit_date": "2017-03-24",
     "submitter_name": "Scott Hollenbeck",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-11-15 14:02:04"
   },
   {
     "errata_id": "5666",
@@ -77,7 +77,7 @@
   {
     "errata_id": "6158",
     "doc-id": "RFC7483",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "10.2.3",
     "orig_text": "Description: The object instance was transferred from one registrant to another.",
@@ -85,8 +85,8 @@
     "notes": "I believe the corrected text is what was intended for this particular registry value, and is what is being implemented by operators today. Registrant-to-registrant transfers are also possible, but they're not performed using EPP and are not logged as an event action. The text in the RFC should be changed and the description of the action in the IANA registry should also be changed.",
     "submit_date": "2020-05-06",
     "submitter_name": "Scott Hollenbeck",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-11-15 14:08:30"
   }
 ]

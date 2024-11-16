@@ -2,7 +2,7 @@
   {
     "errata_id": "7093",
     "doc-id": "RFC9083",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.1",
     "orig_text": "The data structure named \"rdapConformance\" is an array of strings,\r\neach providing a hint as to the specifications used in the construction\r\nof the response.",
@@ -10,9 +10,9 @@
     "notes": "The original text uses the word \"hint\", which some people have interpreted to mean \"not normative\" and/or \"can be ignored\". This misinterpretation will likely cause significant misunderstanding of the technical specification and might result in faulty implementations if not corrected. The intention and meaning of this sentence is more clearly specified with the corrected text, noting that the array of string identifiers is directly associated with the set of specifications used to construct an RDAP response.",
     "submit_date": "2022-08-17",
     "submitter_name": "Scott Hollenbeck",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-11-15 13:48:02"
   },
   {
     "errata_id": "7094",
