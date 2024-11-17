@@ -58,5 +58,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2020-03-05 14:34:52"
+  },
+  {
+    "errata_id": "8179",
+    "doc-id": "RFC8422",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.4.  Server Key Exc",
+    "orig_text": "   The ServerKeyExchange message is extended as follows.\r\n\r\n           enum {\r\n               ec_diffie_hellman\r\n           } KeyExchangeAlgorithm;\r\n\r\n   o  ec_diffie_hellman: Indicates the ServerKeyExchange message\r\n      contains an ECDH public key.\r\n\r\n      select (KeyExchangeAlgorithm) {\r\n          case ec_diffie_hellman:\r\n              ServerECDHParams    params;\r\n              Signature           signed_params;\r\n      } ServerKeyExchange;\r\n\r\n.....................................................\r\n\r\n        enum {\r\n            ecdsa(3),\r\n            ed25519(7)\r\n            ed448(8)\r\n        } SignatureAlgorithm;\r\n        select (SignatureAlgorithm) {\r\n           case ecdsa:\r\n                digitally-signed struct {\r\n                    opaque sha_hash[sha_size];\r\n                };\r\n           case ed25519,ed448:\r\n                digitally-signed struct {\r\n                    opaque rawdata[rawdata_size];\r\n                };\r\n        } Signature;\r\n      ServerKeyExchange.signed_params.sha_hash\r\n          SHA(ClientHello.random + ServerHello.random +\r\n                                 ServerKeyExchange.params);\r\n      ServerKeyExchange.signed_params.rawdata\r\n          ClientHello.random + ServerHello.random +\r\n                                 ServerKeyExchange.params;\r\n\r\n   NOTE: SignatureAlgorithm is \"rsa\" for the ECDHE_RSA key exchange\r\n   algorithm and \"anonymous\" for ECDH_anon.  These cases are defined in\r\n   TLS.  SignatureAlgorithm is \"ecdsa\" or \"eddsa\" for ECDHE_ECDSA.",
+    "correct_text": "The extended ServerKeyExchange message seems just for tls version 1.0 and version 1.1, not for 1.2, because tls version 1.2 ServerKeyExchange message format is different from version 1.0 and 1.1. The following is tls version 1.2 ServerKeyExchange message format:\r\n\r\n struct {\r\n select (KeyExchangeAlgorithm) {\r\n case dh_anon:\r\n ServerDHParams params;\r\n case dhe_dss:\r\n case dhe_rsa:\r\n ServerDHParams params;\r\n digitally-signed struct {\r\n opaque client_random[32];\r\n opaque server_random[32];\r\n ServerDHParams params;\r\n } signed_params;\r\n case rsa:\r\n case dh_dss:\r\n case dh_rsa:\r\n struct {} ;\r\n /* message is omitted for rsa, dh_dss, and dh_rsa */\r\n /* may be extended, e.g., for ECDH -- see [TLSECC] */\r\n };\r\n } ServerKeyExchange;\r\n\r\nit does not specify the message format for ECDH_RSA and ECDH_anon, the \"NOTE\" in original text does not apply to tls version 1.2, because it doesn't have the \"Signature\" field.",
+    "notes": "the ServerKeyExchange for ECDH_RSA and ECDH_anon should be specified for tls version 1.2.",
+    "submit_date": "2024-11-16",
+    "submitter_name": "warren.wang",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
