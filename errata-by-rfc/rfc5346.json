@@ -28,5 +28,20 @@
     "verifier_id": "118",
     "verifier_name": "Robert Sparks",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8182",
+    "doc-id": "RFC5346",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "R1386",
+    "orig_text": "11-19 07:17:08.113 I/BLASTBufferQueue_Java(32631): new BLASTBufferQueue, mName= ViewRootImpl@2f9a321[PopupWindow:bab152b] mNativeObject= 0xb4000079ab641100 sc.mNativeObject= 0xb4000079e5f160c0 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3028 android.view.ViewRootImpl.relayoutWindow:10131 android.view.ViewRootImpl.performTraversals:4110 android.view.ViewRootImpl.doTraversal:3288 android.view.ViewRootImpl$TraversalRunnable.run:11344 android.view.Choreographer$CallbackRecord.run:1689 android.view.Choreographer$CallbackRecord.run:1698 android.view.Choreographer.doCallbacks:1153 android.view.Choreographer.doFrame:1079 android.view.Choreographer$FrameDisplayEventReceiver.run:1646 ",
+    "correct_text": "11-19 07:17:08.113 I/BLASTBufferQueue_Java(32631): new BLASTBufferQueue, mName= ViewRootImpl@2f9a321[PopupWindow:bab152b] mNativeObject= 0xb4000079ab641100 sc.mNativeObject= 0xb4000079e5f160c0 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3028 android.view.ViewRootImpl.relayoutWindow:10131 android.view.ViewRootImpl.performTraversals:4110 android.view.ViewRootImpl.doTraversal:3288 android.view.ViewRootImpl$TraversalRunnable.run:11344 android.view.Choreographer$CallbackRecord.run:1689 android.view.Choreographer$CallbackRecord.run:1698 android.view.Choreographer.doCallbacks:1153 android.view.Choreographer.doFrame:1079 android.view.Choreographer$FrameDisplayEventReceiver.run:1646 ",
+    "notes": "Errorlogs reports being deleted from all logcat recordings",
+    "submit_date": "2024-11-19",
+    "submitter_name": "Jose Martinez",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

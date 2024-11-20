@@ -32,16 +32,16 @@
   {
     "errata_id": "8174",
     "doc-id": "RFC6920",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "9.4",
     "orig_text": "the hash algorithm name string",
     "correct_text": "the case-(in)sensitive hash algorithm name string",
-    "notes": "The RFC does not specify whether the Hash Name String is considered to be case-sensitive or not. According to RFC 8126, section 2.2., it should be clearly stated whether case matters, like in RFC 7518, section 7.1.1. Does this mean one should interpret them as case-insensitive?",
+    "notes": "The RFC does not specify whether the Hash Name String is considered to be case-sensitive or not. According to RFC 8126, section 2.2., it should be clearly stated whether case matters, like in RFC 7518, section 7.1.1. Does this mean one should interpret them as case-insensitive?\r\n\r\nVerifier notes:\r\n\r\nhttps://www.rfc-editor.org/rfc/rfc6920#section-2\r\nhttps://www.rfc-editor.org/rfc/rfc2234#section-6.1\r\n\r\nalg            = 1*unreserved\r\nunreserved  = ALPHA / DIGIT / \"-\" / \".\" / \"_\" / \"~\"\r\nALPHA          =  %x41-5A / %x61-7A   ; A-Z / a-z\r\n\r\nIts clear that algorithm name's can contain uppercase characters.\r\n\r\nIn the discussion regarding this errata, there was no objection to the following comment\r\n\r\n> this should have been case sensitive and restricted to lower-case only in the ABNF (now it’s “unreserved”).\r\n\r\nSuch a change cannot be made through the errata process, and requires an update.\r\n\r\nNone the less the current registry contains no uppercase character based algorithm names, and hopefully won't in the future.\r\n",
     "submit_date": "2024-11-12",
     "submitter_name": "Henry Jalonen",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-11-14 19:15:23"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-11-19 06:26:44"
   }
 ]
