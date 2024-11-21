@@ -13,5 +13,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8183",
+    "doc-id": "RFC9483",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.6.1",
+    "orig_text": "              rid             REQUIRED\r\n    -- MUST contain the subjectKeyIdentifier of the CMP protection\r\n    --   certificate, if available, in the rKeyId choice, and the\r\n    --   subjectKeyIdentifier MUST equal the senderKID in the\r\n    --   PKIHeader.\r\n    -- If the CMP protection certificate does not contain a\r\n    --   subjectKeyIdentifier, the issuerAndSerialNumber choice MUST\r\n    --   be used.\r\n",
+    "correct_text": "              rid             REQUIRED\t\r\n-- MUST contain the subjectKeyIdentifier of the CMP protection\r\n--   certificate of the request message, if available. The\r\n--   subjectKeyIdentifier is equal the senderKID in the\r\n--   PKIHeader of that message.\r\n-- If the CMP protection certificate of the request message does\r\n--   not contain a subjectKeyIdentifier, the issuerAndSerialNumber\r\n--   choice MUST be used.\r\n\r\n",
+    "notes": "1. rKeyId choice is wrongly used here as Section 6.2.1 of RFC 5652 does not have rKeyId choice. \r\n2. rid value must be taken from CMP protection certificate of request message as it is used to specify the recipient.",
+    "submit_date": "2024-11-20",
+    "submitter_name": "Rajeev Ranjan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8184",
+    "doc-id": "RFC9483",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.6.2",
+    "orig_text": "          rid           REQUIRED\r\n-- MUST contain the subjectKeyIdentifier of the CMP protection\r\n--   certificate, if available, in the rKeyId choice, and the\r\n--   subjectKeyIdentifier MUST equal the senderKID in the\r\n--   PKIHeader.\r\n-- If the CMP protection certificate does not contain a\r\n--   subjectKeyIdentifier, the issuerAndSerialNumber choice MUST\r\n--   be used\r\n",
+    "correct_text": "          rid           REQUIRED\r\n-- MUST contain the subjectKeyIdentifier of the CMP protection\r\n--   certificate of the request message, if available, in the\r\n--   rKeyId choice. The subjectKeyIdentifier is equal\r\n--   the senderKID in the PKIHeader of that message.\r\n-- If the CMP protection certificate of the request message does\r\n--   not contain a subjectKeyIdentifier, the issuerAndSerialNumber\r\n--   choice MUST be used.\r\n",
+    "notes": "1. rid value must be taken from CMP protection certificate of request message as it is used to identify the recipient using key agreement.\r\n2. senderKID refer to value in request message, and here we are preparing the response message. So MUST is removed.",
+    "submit_date": "2024-11-20",
+    "submitter_name": "Rajeev Ranjan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
