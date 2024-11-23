@@ -58,5 +58,20 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2024-10-29 03:09:03"
+  },
+  {
+    "errata_id": "8186",
+    "doc-id": "RFC6797",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.1",
+    "orig_text": "     directive-value           = token | quoted-string",
+    "correct_text": "     directive-value           = token / quoted-string",
+    "notes": "The \"directive-value\" production should use a \"/\" for alternatives, not a \"|\".  See RFC 5234, which should be referenced by this spec but isn't.  This is an editorial nitpick.",
+    "submit_date": "2024-11-22",
+    "submitter_name": "Joe Hildebrand",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
