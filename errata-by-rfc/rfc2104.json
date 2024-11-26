@@ -77,16 +77,16 @@
   {
     "errata_id": "8185",
     "doc-id": "RFC2104",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "5",
     "orig_text": "length t be not less than",
     "correct_text": "length to be not less than",
-    "notes": "typo on what I assume should be 'to'",
+    "notes": "typo on what I assume should be 'to'\r\n\n --VERIFIER NOTES-- \nWe assume that \"the output length t\" refers to the t bits of output in the previous sentence:\r\n\r\n\"Applications of HMAC can choose to truncate the output of HMAC by outputting the t leftmost bits of the HMAC computation for some parameter t (namely, the computation is carried in the normal way as defined in section 2 above but the end result is truncated to t bits). We recommend that the output length t be not less than half the length of the hash output (to match the birthday attack bound) and not less than 80 bits (a suitable lower bound on the number of bits that need to be\r\npredicted by an attacker).\"",
     "submit_date": "2024-11-22",
     "submitter_name": "ev",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-11-25 08:06:18"
   }
 ]
