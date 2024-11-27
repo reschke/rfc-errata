@@ -88,5 +88,20 @@
     "verifier_id": "161",
     "verifier_name": "Éric Vyncke",
     "update_date": "2024-01-11 23:31:04"
+  },
+  {
+    "errata_id": "8188",
+    "doc-id": "RFC2308",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "1 - Terminology",
+    "orig_text": "   \"NODATA\" - a pseudo RCODE which indicates that the name is valid, for\r\n   the given class, but are no records of the given type.  A NODATA\r\n   response has to be inferred from the answer.",
+    "correct_text": "   \"NODATA\" - a pseudo RCODE which indicates that the name is valid, for\r\n   the given class, but there are no records of the given type.  A NODATA\r\n   response has to be inferred from the answer.",
+    "notes": "Added missing \"there\" which impacts readability.",
+    "submit_date": "2024-11-26",
+    "submitter_name": "Ari Cooper-Davis",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
