@@ -58,5 +58,20 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2024-01-29 01:18:06"
+  },
+  {
+    "errata_id": "8190",
+    "doc-id": "RFC9114",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.2.6",
+    "orig_text": "   The GOAWAY frame is always sent on the control stream.  In the\r\n   server-to-client direction, it carries a QUIC stream ID for a client-\r\n   initiated bidirectional stream encoded as a variable-length integer.\r\n   A client MUST treat receipt of a GOAWAY frame containing a stream ID\r\n   of any other type as a connection error of type H3_ID_ERROR.\r\n\r\n   In the client-to-server direction, the GOAWAY frame carries a push ID\r\n   encoded as a variable-length integer.\r\n",
+    "correct_text": "   The GOAWAY frame is always sent on the control stream.  In the\r\n   server-to-client direction, it carries a QUIC stream ID for a client-\r\n   initiated bidirectional stream encoded as a variable-length integer.\r\n   A client MUST treat receipt of a GOAWAY frame containing a stream ID\r\n   of any other type as a connection error of type H3_ID_ERROR.\r\n\r\n   In the client-to-server direction, the GOAWAY frame carries a push ID\r\n   encoded as a variable-length integer. A server MUST treat receipt of\r\n   a GOAWAY frame containing a stream ID of any other type as a\r\n   connection error of type H3_ID_ERROR.",
+    "notes": "The MUST requiring a stream error on an invalid stream ID was missing in the client-to-server direction. This is related to erratum 7780, and likely entered the spec for the same reason.",
+    "submit_date": "2024-11-28",
+    "submitter_name": "Cory Benfield",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
