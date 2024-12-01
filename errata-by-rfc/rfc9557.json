@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8192",
+    "doc-id": "RFC9557",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.4",
+    "orig_text": "In case of an inconsistency between time-offset and time zone suffix, \r\nif the critical flag is used on the time zone suffix, an application\r\nMUST act on the inconsistency. If the critical flag is not used,\r\nit MAY act on the inconsistency. Acting on the inconsistency \r\nmay involve rejecting the timestamp or resolving the inconsistency\r\nvia additional information, such as user input and/or programmed\r\nbehavior.\r\n\r\n",
+    "correct_text": "In case of an inconsistency between time-offset and time zone suffix, \r\nif the critical-flag is used on the time zone suffix, an application\r\nMUST act on the inconsistency. If the critical-flag is not used,\r\nit MAY act on the inconsistency. Acting on the inconsistency \r\nmay involve rejecting the timestamp or resolving the inconsistency\r\nvia additional information, such as user input and/or programmed\r\nbehavior.\r\n",
+    "notes": "\"critical flag\" missing hyphen",
+    "submit_date": "2024-12-01",
+    "submitter_name": "Robert Wishlaw",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
