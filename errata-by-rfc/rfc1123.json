@@ -163,5 +163,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2024-10-24 12:52:53"
+  },
+  {
+    "errata_id": "8194",
+    "doc-id": "RFC1123",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.1.5",
+    "orig_text": "Use QCLASS=* unnecessarily                     |6.1.2.2    | |x| | | |",
+    "correct_text": "Use QCLASS=* unnecessarily                     |6.1.2.2    | | | |x| |",
+    "notes": "In the summary for Section 6.1.2.2, the directive for \"Use QCLASS=* unnecessarily\" is marked as \"SHOULD\". This contradicts the guidance in Section 6.1.2.2 which states that QCLASS=* \"SHOULD NOT be used unless the requestor is seeking data from more than one class.\"\r\n\r\nThe table entry should be updated to \"SHOULD NOT\" for consistency with the main text",
+    "submit_date": "2024-12-01",
+    "submitter_name": "Constantinos Psomadakis",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
