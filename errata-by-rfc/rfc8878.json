@@ -73,5 +73,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8195",
+    "doc-id": "RFC8878",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.2.2",
+    "orig_text": "For example, if the literal sequence \"0145\" was encoded using the\r\n   above prefix code, it would be encoded (in reverse order) as:\r\n\r\n                           +=========+==========+\r\n                           |  Symbol | Encoding |\r\n                           +=========+==========+\r\n                           |    5    |   0000   |\r\n                           +---------+----------+\r\n                           |    4    |   0001   |\r\n                           +---------+----------+\r\n                           |    1    |    01    |\r\n                           +---------+----------+\r\n                           |    0    |    1     |\r\n                           +---------+----------+\r\n                           | Padding |  00001   |\r\n                           +---------+----------+\r\n\r\n                             Table 26: Literal\r\n                              Sequence \"0145\"\r\n\r\n   This results in the following 2-byte bitstream:\r\n\r\n     00010000 00001101\r\n\r\n   Here is an alternative representation with the symbol codes separated\r\n   by underscores:\r\n\r\n     0001_0000 00001_1_01",
+    "correct_text": "For example, if the literal sequence \"0145\" was encoded using the\r\n   above prefix code, it would be encoded (in reverse order) as:\r\n\r\n                           +=========+==========+\r\n                           |  Symbol | Encoding |\r\n                           +=========+==========+\r\n                           |    5    |   0001   |\r\n                           +---------+----------+\r\n                           |    4    |   0000   |\r\n                           +---------+----------+\r\n                           |    1    |    01    |\r\n                           +---------+----------+\r\n                           |    0    |    1     |\r\n                           +---------+----------+\r\n                           | Padding |  00001   |\r\n                           +---------+----------+\r\n\r\n                             Table 26: Literal\r\n                              Sequence \"0145\"\r\n\r\n   This results in the following 2-byte bitstream:\r\n\r\n     00000001 00001101\r\n\r\n   Here is an alternative representation with the symbol codes separated\r\n   by underscores:\r\n\r\n     0000_0001 00001_1_01",
+    "notes": "Assuming that `using the above prefix code` refers to the codes in the `Table 25: Sorting by Weight`.",
+    "submit_date": "2024-12-02",
+    "submitter_name": "Maciej Dudek",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

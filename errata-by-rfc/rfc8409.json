@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8196",
+    "doc-id": "RFC8409",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "http://macedir.org/entity-category\r\nhttp://macedir.org/entity-category-support",
+    "correct_text": "(see notes)",
+    "notes": "(Reported on behalf of Alfonso Alongi <alfonso.alongi.it@gmail.com>. While errata reports normally shouldn't cover currently broken URLs that worked at the time of publication, the domain is used as an attribute namespace and is specified by normative text.)\r\n\r\nThese URLs are no longer valid and now redirect to a casino sponsorship website. This change in ownership renders these references irrelevant and misleading for implementations relying on this RFC.\r\n\r\nUse of Non-Secure HTTP Scheme:\r\nThe URLs use the http:// scheme instead of https://, which does not guarantee transport-layer security. This poses risks, especially in contexts where trust and integrity are critical.\r\n\r\nRelevance of Hardcoding References:\r\nThe functionality described in RFC 8409 (Entity Category Attribute and Entity Category Support Attribute) can be implemented using SAML's existing support for custom attributes, without reliance on these specific URLs.",
+    "submit_date": "2024-12-02",
+    "submitter_name": "Jean Mahoney",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
