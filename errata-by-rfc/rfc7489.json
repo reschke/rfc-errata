@@ -47,7 +47,7 @@
   {
     "errata_id": "5221",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix C.",
     "orig_text": "       <xs:pattern value=\"((1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]).){3}\r\n                   (1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])|\r\n                   ([A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}\"/>",
@@ -56,13 +56,13 @@
     "submit_date": "2017-12-31",
     "submitter_name": "Steven Hilton",
     "verifier_id": "157",
-    "verifier_name": "Adrian Farrel",
-    "update_date": "2021-06-01 13:01:21"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-12-02 23:01:43"
   },
   {
     "errata_id": "5229",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix C",
     "orig_text": "   <!-- The DMARC policy that applied to the messages in\r\n        this report. -->\r\n   <xs:complexType name=\"PolicyPublishedType\">\r\n     <xs:all>\r\n       <!-- The domain at which the DMARC record was found. -->\r\n       <xs:element name=\"domain\" type=\"xs:string\"/>\r\n       <!-- The DKIM alignment mode. -->\r\n       <xs:element name=\"adkim\" type=\"AlignmentType\"\r\n                   minOccurs=\"0\"/>\r\n       <!-- The SPF alignment mode. -->\r\n       <xs:element name=\"aspf\" type=\"AlignmentType\"\r\n                   minOccurs=\"0\"/>\r\n       <!-- The policy to apply to messages from the domain. -->\r\n       <xs:element name=\"p\" type=\"DispositionType\"/>\r\n       <!-- The policy to apply to messages from subdomains. -->\r\n       <xs:element name=\"sp\" type=\"DispositionType\"/>\r\n       <!-- The percent of messages to which policy applies. -->\r\n       <xs:element name=\"pct\" type=\"xs:integer\"/>\r\n       <!-- Failure reporting options in effect. -->\r\n       <xs:element name=\"fo\" type=\"xs:string\"/>\r\n     </xs:all>\r\n   </xs:complexType>\r\n",
@@ -70,9 +70,9 @@
     "notes": "Per section 6.3, \"adkim\", \"aspf\", \"sp\", \"pct\", and \"fo\" are optional. All but \"sp\" have a default value, which is inconsistently applied in Appendix C.\r\n\r\nIf the Subdomain Policy (sp) is required in aggregate reports, I recommend clarification on how to provide this information for domains that do not publish this information.\r\nFor example:\r\n- If a subdomain policy is published on a subdomain of an organizational domain, return an 'ignored' subdomain policy in the aggregate report\r\n- If a subdomain policy is NOT published on an organizational domain, recommend returning the effective subdomain policy in the aggregate report, which is the domain policy per section 6.3\r\n- Recommend addition of the \"fo\" tag only if the \"ruf\" tag is published.",
     "submit_date": "2018-01-07",
     "submitter_name": "Steven Hilton",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-12-02 23:01:07"
   },
   {
     "errata_id": "5365",
@@ -137,7 +137,7 @@
   {
     "errata_id": "5495",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "6.6.3 step 1",
     "orig_text": "   1.  Mail Receivers MUST query the DNS for a DMARC TXT record at the\r\n       DNS domain matching the one found in the RFC5322.From domain in\r\n       the message.  A possibly empty set of records is returned.",
@@ -145,9 +145,9 @@
     "notes": "Section 6.1.  DMARC Policy Record states that DMARC records are 'stored as DNS TXT records in    subdomains named \"_dmarc\"'.  The policy discovery procedure needs to match.  As I read it, it currently doesn't.",
     "submit_date": "2018-09-08",
     "submitter_name": "Scott Kitterman",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-12-02 23:05:23"
   },
   {
     "errata_id": "5552",
@@ -167,17 +167,17 @@
   {
     "errata_id": "5773",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "Appendix C",
     "orig_text": "   <!-- The DMARC policy that applied to the messages in\r\n        this report. -->\r\n   <xs:complexType name=\"PolicyPublishedType\">\r\n     <xs:all>\r\n       <!-- The domain at which the DMARC record was found. -->\r\n       <xs:element name=\"domain\" type=\"xs:string\"/>\r\n       <!-- The DKIM alignment mode. -->\r\n       <xs:element name=\"adkim\" type=\"AlignmentType\"\r\n                   minOccurs=\"0\"/>\r\n       <!-- The SPF alignment mode. -->\r\n       <xs:element name=\"aspf\" type=\"AlignmentType\"\r\n                   minOccurs=\"0\"/>\r\n       <!-- The policy to apply to messages from the domain. -->\r\n       <xs:element name=\"p\" type=\"DispositionType\"/>\r\n       <!-- The policy to apply to messages from subdomains. -->\r\n       <xs:element name=\"sp\" type=\"DispositionType\"/>\r\n       <!-- The percent of messages to which policy applies. -->\r\n       <xs:element name=\"pct\" type=\"xs:integer\"/>\r\n       <!-- Failure reporting options in effect. -->\r\n       <xs:element name=\"fo\" type=\"xs:string\"/>\r\n     </xs:all>\r\n   </xs:complexType>",
     "correct_text": "   <!-- The DMARC policy that applied to the messages in\r\n        this report. -->\r\n   <xs:complexType name=\"PolicyPublishedType\">\r\n     <xs:all>\r\n       <!-- The domain at which the DMARC record was found. -->\r\n       <xs:element name=\"domain\" type=\"xs:string\"/>\r\n       <!-- The DKIM alignment mode. -->\r\n       <xs:element name=\"adkim\" type=\"AlignmentType\"/>\r\n       <!-- The SPF alignment mode. -->\r\n       <xs:element name=\"aspf\" type=\"AlignmentType\"/>\r\n       <!-- The policy to apply to messages from the domain. -->\r\n       <xs:element name=\"p\" type=\"DispositionType\"/>\r\n       <!-- The policy to apply to messages from subdomains. -->\r\n       <xs:element name=\"sp\" type=\"DispositionType\"/>\r\n       <!-- The percent of messages to which policy applies. -->\r\n       <xs:element name=\"pct\" type=\"xs:integer\"/>\r\n       <!-- Failure reporting options. -->\r\n       <xs:element name=\"fo\" type=\"xs:string\" />\r\n     </xs:all>\r\n   </xs:complexType>",
-    "notes": "The name \"PolicyPublishedType\" suggests that the elements within it represent the domain's published policy. But the comment from element \"fo\" describes itself as \"Failure reporting options IN EFFECT\".\r\n\r\nA lot of organizations do not send failure (forensic) reports and do not publish the \"fo\" element in their aggregate reports (Google, Yahoo!, Zoho) . This is reasonable since the description says \"in effect\". But the field also has a (default) MinOccurs of 1 because MinOccurs is not defined. So by omitting the element, the reports from these organizations are in violation of the guidelines.\r\n\r\nShould an aggregate report have a mandatory \"fo\" element, even if the organization doesn't do failure (forensic) reporting? If so, than the comment \"<!-- Failure reporting options in effect. -->\" should be \"<!-- Failure reporting options. -->\". And if not, than the minOccurs=\"0\" should be added to the \"fo\" element to allow it to be optional.\r\n\r\nEven if DMARC policy options are OPTIONAL and not specified, the messages are processed by the receiver with the default values. This is also the case for adkim and aspf, which also have a minOccurs of 0.\r\n\r\nSo i would suggest the following:\r\n\r\nThe PolicyPublishedType describe the policy that is applied tot the messages in the reports. Elements that are not defined by the domain's DMARC policy should be filled with the default values, as they would also be processed that way. So when adkim is not configured in the policy, the report should state value \"r\" as this is the default value. Same applies to aspf (\"r\"), sp (same as \"p\"), pct (100) and fo (0). Even if an organization doesn't send out failure reports it MUST mention the \"fo\" value from the domain's policy, or, when not specified, the default value of 0.",
+    "notes": "The name \"PolicyPublishedType\" suggests that the elements within it represent the domain's published policy. But the comment from element \"fo\" describes itself as \"Failure reporting options IN EFFECT\".\r\n\r\nA lot of organizations do not send failure (forensic) reports and do not publish the \"fo\" element in their aggregate reports (Google, Yahoo!, Zoho) . This is reasonable since the description says \"in effect\". But the field also has a (default) MinOccurs of 1 because MinOccurs is not defined. So by omitting the element, the reports from these organizations are in violation of the guidelines.\r\n\r\nShould an aggregate report have a mandatory \"fo\" element, even if the organization doesn't do failure (forensic) reporting? If so, than the comment \"<!-- Failure reporting options in effect. -->\" should be \"<!-- Failure reporting options. -->\". And if not, than the minOccurs=\"0\" should be added to the \"fo\" element to allow it to be optional.\r\n\r\nEven if DMARC policy options are OPTIONAL and not specified, the messages are processed by the receiver with the default values. This is also the case for adkim and aspf, which also have a minOccurs of 0.\r\n\r\nSo i would suggest the following:\r\n\r\nThe PolicyPublishedType describe the policy that is applied tot the messages in the reports. Elements that are not defined by the domain's DMARC policy should be filled with the default values, as they would also be processed that way. So when adkim is not configured in the policy, the report should state value \"r\" as this is the default value. Same applies to aspf (\"r\"), sp (same as \"p\"), pct (100) and fo (0). Even if an organization doesn't send out failure reports it MUST mention the \"fo\" value from the domain's policy, or, when not specified, the default value of 0.\n --VERIFIER NOTES-- \nThe design choice may be debatable, but this not an erratum in the sense of an error.",
     "submit_date": "2019-07-03",
     "submitter_name": "Freddie Leeman",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-12-02 23:04:28"
   },
   {
     "errata_id": "5774",
@@ -227,7 +227,7 @@
   {
     "errata_id": "6729",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.2",
     "orig_text": "   3.  Search the public suffix list for the name that matches the\r\n       largest number of labels found in the subject DNS domain.  Let\r\n       that number be \"x\".",
@@ -235,14 +235,14 @@
     "notes": "The PSL includes both public and private domains.  RFC 7489 should have limited name matching to the public, ICANN DOMAINS section of the PSL.  As an example, using the current PSL, the organizational domain for example.s3.dualstack.ap-northeast-1.amazonaws.com is example.s3.dualstack.ap-northeast-1.amazonaws.com, not amazonaws.com since it is listed in the private section of the PSL.  This is clearly the wrong result.",
     "submit_date": "2021-11-01",
     "submitter_name": "Scott Kitterman",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-12-02 23:03:17"
   },
   {
     "errata_id": "7099",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "7.2.1.1",
     "orig_text": "   The extension MUST be \"xml\" for a plain XML file, or \"xml.gz\" for an\r\n   XML file compressed using GZIP.\r\n\r\n   \"unique-id\" allows an optional unique ID generated by the Mail\r\n   Receiver to distinguish among multiple reports generated\r\n   simultaneously by different sources within the same Domain Owner.\r\n\r\n   For example, this is a possible filename for the gzip file of a\r\n   report to the Domain Owner \"example.com\" from the Mail Receiver\r\n   \"mail.receiver.example\":\r\n\r\n     mail.receiver.example!example.com!1013662812!1013749130.gz",
@@ -250,14 +250,14 @@
     "notes": "The example filename uses an invalid extension (not one of \"xml\", \"xml.gz\").",
     "submit_date": "2018-05-28",
     "submitter_name": "Cris van Pelt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-12-02 23:05:58"
   },
   {
     "errata_id": "7100",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "7.2.1.1",
     "orig_text": "   The extension MUST be \"xml\" for a plain XML file, or \"xml.gz\" for an\r\n   XML file compressed using GZIP.\r\n\r\n   \"unique-id\" allows an optional unique ID generated by the Mail\r\n   Receiver to distinguish among multiple reports generated\r\n   simultaneously by different sources within the same Domain Owner.\r\n\r\n   For example, this is a possible filename for the gzip file of a\r\n   report to the Domain Owner \"example.com\" from the Mail Receiver\r\n   \"mail.receiver.example\":\r\n\r\n     mail.receiver.example!example.com!1013662812!1013749130.gz",
@@ -265,9 +265,9 @@
     "notes": "The example filename uses an invalid extension (not one of \"xml\", \"xml.gz\").",
     "submit_date": "2018-05-28",
     "submitter_name": "Cris van Pelt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-12-02 23:06:40"
   },
   {
     "errata_id": "7835",
@@ -287,7 +287,7 @@
   {
     "errata_id": "7865",
     "doc-id": "RFC7489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix C says:",
     "orig_text": "<!-- Credit to Roger L. Costello for IPv4 regex\r\n    http://mailman.ic.ac.uk/pipermail/xml-dev/1999-December/\r\n          018018.html -->\r\n<!-- Credit to java2s.com for IPv6 regex\r\n    http://www.java2s.com/Code/XML/XML-Schema/\r\n          IPv6addressesareeasiertodescribeusingasimpleregex.htm -->\r\n<xs:simpleType name=\"IPAddress\">\r\n  <xs:restriction base=\"xs:string\">\r\n    <xs:pattern value=\"((1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]).){3}\r\n                (1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])|\r\n                ([A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}\"/>\r\n  </xs:restriction>\r\n</xs:simpleType>",
@@ -295,8 +295,8 @@
     "notes": "The IPv4 regex contains a period \".\" that should be corrected to an escaped period \"\\.\" As stated in the follow up message of the one referenced in the IPv4 regex credit: \"I just realized that there is a bug [...] The period (.) is a special character meaning 'any character'. To indicate that we want a period and not 'any character' the period must be escaped with a backslash, i.e., \\.\" Following the XML schema provided in the original Appendix C, strings like \"1a1a1a1\" and \"1111111\" are considered valid IPv4 addresses, although they are not usable.",
     "submit_date": "2024-03-23",
     "submitter_name": "Fränz Friederes",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-03-25 10:16:26"
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-12-02 22:59:54"
   }
 ]

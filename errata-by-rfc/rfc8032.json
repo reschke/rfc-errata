@@ -148,5 +148,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8197",
+    "doc-id": "RFC8032",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.4",
+    "orig_text": "However, using the formulas described in Section 3.2 of [Edwards-revisited] and in [EFD-TWISTED-DBL] saves a few smaller operations.",
+    "correct_text": "However, using the formulas described in Section 3.3 of [Edwards-revisited] and in [EFD-TWISTED-DBL] saves a few smaller operations.",
+    "notes": "In RFC 8032 Section 5.1.4, the reference to \"formulas described in Section 3.2 of [Edwards-revisited]\" is incorrect. Section 3.2 of [Edwards-revisited] discusses Dedicated Addition, not doubling. The doubling formulas mentioned in RFC 8032 actually appear in Section 3.3 of [Edwards-revisited], under Dedicated Doubling.",
+    "submit_date": "2024-12-03",
+    "submitter_name": "Nawras H. Sabbry",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
