@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8199",
+    "doc-id": "RFC8972",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.4",
+    "orig_text": "Also, the Session-Reflector MUST copy the value of the DSCP and ECN\r\nfields of the IP header of the received STAMP test packet into the\r\nDSCP2 field in the reflected test packet.",
+    "correct_text": "Also, the Session-Reflector MUST copy the value of the DSCP and ECN\r\nfields of the IP header of the received STAMP test packet into the\r\nDSCP2 and ECN fields, respectively, in the reflected test packet.",
+    "notes": "First, thank you to all the IETF contributors who do such amazing work to keep the Internet going (seriously!). I noticed this minor omission while implementing the specification. I spoke with Mr. Mirsky (one of the authors) who suggested I file this report. Of course, the authors' intent is not in doubt, but he suggested that I submit this report nonetheless. Besides this very minor misstatement, as someone writing an implementation who was completely uninvolved in drafting the RFC, I have found this document to be incredibly readable and easy to follow -- thank you!\r\n\r\n[Edit: WK (Ops AD): Thanks for the Errata (and the kind note) ].",
+    "submit_date": "2024-12-04",
+    "submitter_name": "William Hawkins",
+    "verifier_id": "155",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-12-04 10:59:56"
+  }
+]

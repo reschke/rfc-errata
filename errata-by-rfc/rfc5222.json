@@ -58,5 +58,20 @@
     "verifier_id": "2",
     "verifier_name": "Alissa Cooper",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8200",
+    "doc-id": "RFC5222",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "15 & Apdx A",
+    "orig_text": "In section 15:\r\n  ##\r\n  ##         Any element not in the LoST namespace.\r\n  ##\r\n  notLost = element * - (ns1:* | ns1:*) { anyElement }\r\n\r\nAnd in Appendix A:\r\n       <define name=\"notLost\">\r\n         <a:documentation>\r\n           Any element not in the LoST namespace.\r\n         </a:documentation>\r\n         <element>\r\n           <anyName>\r\n             <except>\r\n               <nsName ns=\"urn:ietf:params:xml:ns:lost1\"/>\r\n               <nsName/>\r\n             </except>\r\n           </anyName>\r\n           <ref name=\"anyElement\"/>\r\n         </element>\r\n       </define>",
+    "correct_text": "In section 15:\r\n  ##\r\n  ##         Any element having a namespace other than the LoST namespace.\r\n  ##\r\n  notLost = element * - (ns1:* | local:*) { anyElement }\r\n\r\nAnd in Appendix A:\r\n       <define name=\"notLost\">\r\n         <a:documentation>\r\n           Any element having a namespace other than the LoST namespace.\r\n         </a:documentation>\r\n         <element>\r\n           <anyName>\r\n             <except>\r\n               <nsName ns=\"urn:ietf:params:xml:ns:lost1\"/>\r\n               <nsName ns=\"\"/>\r\n             </except>\r\n           </anyName>\r\n           <ref name=\"anyElement\"/>\r\n         </element>\r\n       </define>",
+    "notes": "The schema, in both the compact and XML versions, uses the \"notLost\" name-class to implement extension points.  Both definitions, as they appear in the original text, exclude the LoST namespace twice.  This appears to be a mistake.\r\n\r\nSome of the included comments suggest that the intent was to include only elements from other namespaces, implying that elements without a namespace would be excluded.  The patterns used are quite similar to examples appearing in the Name Classes sections of the RELAX NG tutorials that do exactly that.\r\n\r\nThe proposed correction fixes the schemas to exclude elements without a namespace and eliminates the redundancy with respect to the LoST namespace itself.  The comment text is also changed to be consistent with the result and other comments.",
+    "submit_date": "2024-12-04",
+    "submitter_name": "Dan Banks",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
