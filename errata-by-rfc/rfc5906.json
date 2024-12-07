@@ -103,5 +103,20 @@
     "verifier_id": "165",
     "verifier_name": "Erik Kline",
     "update_date": "2022-07-27 08:36:21"
+  },
+  {
+    "errata_id": "8204",
+    "doc-id": "RFC5906",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Table of Contents",
+    "orig_text": "   13. IANA Considerations ...........................................42\r\n   13. References ....................................................42\r\n      13.1. Normative References .....................................42\r\n      13.2. Informative References ...................................43",
+    "correct_text": "   13. IANA Considerations ...........................................42\r\n   14. References ....................................................42\r\n      14.1. Normative References .....................................42\r\n      14.2. Informative References ...................................43",
+    "notes": "Repeated Section 13 in the Table of Contents. (14 is correctly numbered in the body of the document.)",
+    "submit_date": "2024-12-06",
+    "submitter_name": "RFC Editor",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-12-06 10:03:41"
   }
 ]

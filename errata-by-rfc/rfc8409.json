@@ -2,46 +2,46 @@
   {
     "errata_id": "8196",
     "doc-id": "RFC8409",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.1",
     "orig_text": "It is RECOMMENDED that http:-scheme or https:-scheme URIs are used;\r\nit is further RECOMMENDED that a category URI resolves to a human-\r\nreadable document defining the category.",
-    "correct_text": "The category URI might also be a URL that resolves to a human-\r\nreadable document defining the category.  Because domain ownership\r\nmay change hands over time, implementations MUST NOT resolve the\r\nURI for any purpose. Resolution is purely for human documentation\r\nconsiderations, and even then, caution is advised when readers\r\nclick on URIs shown in this specification, as underlying domains\r\nhave changed hands since its original publication.",
-    "notes": "(Reported on behalf of Alfonso Alongi <alfonso.alongi.it@gmail.com>. \r\n\r\nThese URLs are no longer valid and now redirect to a casino sponsorship website. This change in ownership renders these references irrelevant and misleading for implementations relying on this RFC.\r\n\r\nUse of Non-Secure HTTP Scheme:\r\nThe URLs use the http:// scheme instead of https://, which does not guarantee transport-layer security. This poses risks, especially in contexts where trust and integrity are critical.\r\n\r\nRelevance of Hardcoding References:\r\nThe functionality described in RFC 8409 (Entity Category Attribute and Entity Category Support Attribute) can be implemented using SAML's existing support for custom attributes, without reliance on these specific URLs.",
+    "correct_text": "The category URI might also be a URL that resolves to a human-\r\nreadable document defining the category.  Because domain ownership\r\nmay change hands over time, implementations MUST NOT resolve the\r\nURI for any purpose. Resolution is purely for human documentation\r\nconsiderations. Even then, caution is advised when readers\r\nclick on URIs shown in this specification, just as one domain\r\nhas changed hands since its original publication.",
+    "notes": "(Reported on behalf of Alfonso Alongi <alfonso.alongi.it@gmail.com>. \r\nReaders are advised to not make use of macedir.org, as the domain has changed hands.\r\n",
     "submit_date": "2024-12-02",
     "submitter_name": "Jean Mahoney",
     "verifier_id": "157",
     "verifier_name": "Eliot Lear",
-    "update_date": "2024-12-05 12:16:42"
+    "update_date": "2024-12-06 04:54:31"
   },
   {
     "errata_id": "8201",
     "doc-id": "RFC8409",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.1",
     "orig_text": "It is RECOMMENDED that http:-scheme or https:-scheme URLs are used;\r\nit is further RECOMMENDED that each such value resolves to a human-\r\nreadable document defining the value's semantics.",
     "correct_text": "Each such value might resolve to a human-readable document.  The same\r\nprecautions and restrictions about URIs discussed in the erratum to\r\nSection 3.1 apply here as well.\r\n",
-    "notes": "(Reported on behalf of Alfonso Alongi <alfonso.alongi.it@gmail.com>. ",
-    "submit_date": "2024-12-02",
-    "submitter_name": "Jean Mahoney",
-    "verifier_id": "157",
-    "verifier_name": "Eliot Lear",
-    "update_date": "2024-12-05 12:44:42"
-  },
-  {
-    "errata_id": "8202",
-    "doc-id": "RFC8409",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "6",
-    "orig_text": "<>",
-    "correct_text": "Add to top of Section 6:\r\n\r\nPlease note that the macedir.org domain used in the names of\r\nthe two SAML Attributes defined in this specification has been\r\ntaken over by a third party that is not affiliated with the\r\noriginal owner of the domain at the time this specification\r\nwas authored.  Implementations MUST NOT attempt to resolve\r\nthose names as URLs, and readers are advised that doing so\r\nwill yield no information related to this work.",
     "notes": "(Reported on behalf of Alfonso Alongi <alfonso.alongi.it@gmail.com>. \r\n",
     "submit_date": "2024-12-02",
     "submitter_name": "Jean Mahoney",
     "verifier_id": "157",
     "verifier_name": "Eliot Lear",
-    "update_date": "2024-12-05 12:45:33"
+    "update_date": "2024-12-06 04:55:46"
+  },
+  {
+    "errata_id": "8202",
+    "doc-id": "RFC8409",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "(Top of Section)",
+    "correct_text": "Add to top of Section 6:\r\n\r\nPlease note that the macedir.org domain used in the names of\r\nthe two SAML Attributes defined in this specification has been\r\ntaken over by a third party that is not affiliated with the\r\noriginal owner of the domain at the time this specification\r\nwas authored.  As discussed in the erratum to Section 3.1, \r\nimplementations MUST NOT attempt to resolve\r\nthose names as URLs, and readers are advised that doing so\r\nwill yield no information related to this work.",
+    "notes": "Reported on behalf of Alfonso Alongi <alfonso.alongi.it@gmail.com>. \r\n",
+    "submit_date": "2024-12-02",
+    "submitter_name": "Jean Mahoney",
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2024-12-06 04:57:55"
   }
 ]
