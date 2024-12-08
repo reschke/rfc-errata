@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8207",
+    "doc-id": "RFC5248",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.4",
+    "orig_text": "| X.5.3  | 451           |",
+    "correct_text": "| X.5.3  | 452           |",
+    "notes": "Section 4.5.3.1.10 of RFC 5321 states the following:                  \r\n                                                                                                \r\n   \"If an SMTP server has an implementation limit on the number of RCPT commands and this limit is exhausted, it MUST use a response code of 452 (but the client SHOULD also be prepared for a 552, as noted above).\" \r\n\r\nThe \"451\" Associated Basic Status Code in the Enhanced Status Codes Registry entry for X.5.3 should be \"452\" given what is stated in RFC 5321.",
+    "submit_date": "2024-12-07",
+    "submitter_name": "S. Moonesamy",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
