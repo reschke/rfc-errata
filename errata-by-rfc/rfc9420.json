@@ -28,5 +28,20 @@
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2024-07-15 18:46:07"
+  },
+  {
+    "errata_id": "8211",
+    "doc-id": "RFC9420",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7.4",
+    "orig_text": "   If member B subsequently generates an UpdatePath based on a secret\r\n   \"leaf_secret\", then it would generate the following sequence of path\r\n   secrets:",
+    "correct_text": "   If member B subsequently generates an UpdatePath based on a secret\r\n   \"path_secret[0]\", then it would generate the following sequence of\r\n   path secrets:",
+    "notes": "This text is a vestige of an early method of computing path secrets, which started with a fresh leaf_secret instead of a fresh path_secret[0], the latter being clearly specified just above this text.\r\n\r\nFigure 14 should also be updated to remove the leaf_secret and the two arrows emerging from it.",
+    "submit_date": "2024-12-11",
+    "submitter_name": "Richard Barnes",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

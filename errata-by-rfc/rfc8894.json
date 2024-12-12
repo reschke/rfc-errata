@@ -32,16 +32,16 @@
   {
     "errata_id": "8210",
     "doc-id": "RFC8894",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2.3",
     "orig_text": "If the key being certified allows encryption, then the CA's\r\nCertResp will use the same certificate's public key when\r\nencrypting the response.\r\n",
     "correct_text": "If the key being certified allows encryption, then the CA's\r\nCertRep will use the same certificate's public key when\r\nencrypting the response.",
-    "notes": "There is no \"CertResp\" defined in the document. I believe this is supposed to be \"CertRep\"",
+    "notes": "There is no \"CertResp\" defined in the document. I believe this is supposed to be \"CertRep\".",
     "submit_date": "2024-12-10",
     "submitter_name": "Angelica Semenec",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-12-11 08:49:25"
   }
 ]

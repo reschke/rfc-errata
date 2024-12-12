@@ -2,16 +2,16 @@
   {
     "errata_id": "8192",
     "doc-id": "RFC9557",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "3.4",
     "orig_text": "In case of an inconsistency between time-offset and time zone suffix, \r\nif the critical flag is used on the time zone suffix, an application\r\nMUST act on the inconsistency. If the critical flag is not used,\r\nit MAY act on the inconsistency. Acting on the inconsistency \r\nmay involve rejecting the timestamp or resolving the inconsistency\r\nvia additional information, such as user input and/or programmed\r\nbehavior.\r\n\r\n",
     "correct_text": "In case of an inconsistency between time-offset and time zone suffix, \r\nif the critical-flag is used on the time zone suffix, an application\r\nMUST act on the inconsistency. If the critical-flag is not used,\r\nit MAY act on the inconsistency. Acting on the inconsistency \r\nmay involve rejecting the timestamp or resolving the inconsistency\r\nvia additional information, such as user input and/or programmed\r\nbehavior.\r\n",
-    "notes": "\"critical flag\" missing hyphen",
+    "notes": "\"critical flag\" missing hyphen\n --VERIFIER NOTES-- \nRejecting per explanation from Carsten Bormann (author):\r\n\r\nThe hyphenated form (“critical-flag”) occurs only as the name of the ABNF rule (which cannot have a space inside and therefore uses a hyphen to separate the two words).\r\n\r\nI don’t see a reason to hyphenate the English text usages of “critical flag”.\r\nMaybe it could have been (talking about the ABNF rule), but then also would have been set in typewriter face and probably without a definite article (similar to the way `time-offset` has been set/phrased in the first sentence). However, the way the critical-flag ABNF rule is defined (namely, as an *optional* exclamation mark), it is actually present whether or not the critical flag (the exclamation mark) is.\r\n\r\nSo I believe we made the right choice in setting/phrasing this different from the ABNF rule name.",
     "submit_date": "2024-12-01",
     "submitter_name": "Robert Wishlaw",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-12-11 08:43:33"
   }
 ]
