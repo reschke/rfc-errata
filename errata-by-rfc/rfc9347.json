@@ -13,5 +13,20 @@
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2024-07-22 17:30:39"
+  },
+  {
+    "errata_id": "8212",
+    "doc-id": "RFC9347",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1",
+    "orig_text": "   As the use of the AGGFRAG_PAYLOAD payload is currently only defined\r\n   for non-transport-mode tunnels, the USE_AGGFRAG notification MUST NOT\r\n   be combined with the USE_TRANSPORT notification.\r\n",
+    "correct_text": "   As the use of the AGGFRAG_PAYLOAD payload is currently only defined\r\n   for non-transport-mode tunnels, the USE_AGGFRAG notification MUST NOT\r\n   be combined with the USE_TRANSPORT_MODE notification.\r\n",
+    "notes": "There is no \"USE_TRANSPORT\" notification in IKEv2. The correct name is \"USE_TRANSPORT_MODE \"(note, that in the other place of this Section the correct name was used).",
+    "submit_date": "2024-12-18",
+    "submitter_name": "Valery Smyslov",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

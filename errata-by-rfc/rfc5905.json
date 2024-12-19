@@ -493,5 +493,35 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-06-28 14:30:48"
+  },
+  {
+    "errata_id": "8214",
+    "doc-id": "RFC5905",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.5.5.7",
+    "orig_text": "  /*\r\n   * rstclock() - clock state machine\r\n   */\r\n  void\r\n  rstclock(\r\n          int     state,          /* new state */\r\n          double  offset,         /* new offset */\r\n          double  t               /* new update time */\r\n          )\r\n  {\r\n          /*\r\n           * Enter new state and set state variables.  Note, we use the\r\n           * time of the last clock filter sample, which must be earlier\r\n           * than the current time.\r\n           */\r\n          c.state = state;\r\n          c.last = c.offset = offset;\r\n          s.t = t;\r\n  }",
+    "correct_text": "  /*\r\n   * rstclock() - clock state machine\r\n   */\r\n  void\r\n  rstclock(\r\n          int     state,          /* new state */\r\n          double  t,              /* new update time */\r\n          double  offset          /* new offset */\r\n          )\r\n  {\r\n          /*\r\n           * Enter new state and set state variables.  Note, we use the\r\n           * time of the last clock filter sample, which must be earlier\r\n           * than the current time.\r\n           */\r\n          c.state = state;\r\n          c.last = c.offset = offset;\r\n          s.t = t;\r\n  }",
+    "notes": "These are all the calls of rstclock in the example code:\r\n\r\n- rstclock(FSET, 0, 0); inside main(), pg 71\r\n- rstclock(NSET, 0, 0); inside main(), pg 71\r\n- rstclock(FREQ, p->t, 0); inside local_clock(), pg 100\r\n- rstclock(SYNC, p->t, 0); inside local_clock(), pg 100\r\n- rstclock(FREQ, p->t, offset); inside local_clock(), pg 100\r\n- rstclock(SYNC, p->t, offset); inside local_clock(), pg 101\r\n- rstclock(SYNC, p->t, offset); inside local_clock(), pg 102\r\n\r\nAll calls use the new update time as the second argument and the new offset as the third argument, or set both to zero. But the definition of rstclock expects the new offset as the second argument and the new update time as the third, i.e. the order of the parameters is flipped.",
+    "submit_date": "2024-12-18",
+    "submitter_name": "Manuel Bergler",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8215",
+    "doc-id": "RFC5905",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.5.5.4",
+    "orig_text": "        /*\r\n         * Combine the survivor offsets and update the system clock; the\r\n         * local_clock() routine will tell us the good or bad news.\r\n         */\r\n        s.t = p->t;\r\n        clock_combine();\r\n        switch (local_clock(p, s.offset)) {\r\n.....\r\n        }",
+    "correct_text": "        /*\r\n         * Combine the survivor offsets and update the system clock; the\r\n         * local_clock() routine will tell us the good or bad news.\r\n         */\r\n        clock_combine();\r\n        switch (local_clock(p, s.offset)) {\r\n.....\r\n        }\r\n        s.t = p->t;",
+    "notes": "The `clock_update` function sets `s.t` to the value of `p->t` before calling `local_clock`. This causes the assignment `mu =  p->t - s.t;` inside the `local_clock` function to always set `mu` to zero, which in turn causes a division by zero when evaluating `freq = (offset - c.offset) / mu;`\r\n\r\nLuckily, neither `clock_combine()` nor any code inside the switch's cases make use of `s.t`, neither directly nor indirectly. Moreover, the only way to return early from the `clock_update` function is by exiting the program entirely. Moving the assignment to after the `switch` thus cannot cause bugs due to using an outdated value in `clock_combine`, any of the cases and anything happening after `clock_update` returns.\r\n\r\nAll that is left to do to verify that the suggested correction fixes the problem without introducing other bugs is to ensure that moving the assignment doesn't unintentionally change the behavior of the `local_clock` function. There are three distinct cases how `s.t` is used inside `local_clock`:\r\n\r\n- Its value is used in the (currently problematic) calculation of `mu`\r\n- Its value is updated through calls of `rstclock`\r\n- Its value is used in the condition of the `if` statement `if (c.t - s.t < WATCH) return (IGNORE);` in the `FREQ` case on pg 101\r\n\r\nThe change of behavior of the computation of `mu` is the intended effect of this erratum, so that is fine.\r\nThe calls to `rstclock` all set the value of `s.t` to the value of `p->t` (assuming erratum 8214 [0] is correct) , so having the assignment `s.t = p->t;` at the end of `clock_update` fortunately doesn't conflict with the value set by `rstclock`.\r\n\r\nSince I haven't fully grasped how the clock discipline is supposed to work I'm unsure about what to do with the `c.t - s.t < WATCH` condition, though. It might be the case that the condition should've used the old value of `s.t` just like the computation of `mu`, in which case there is nothing to do. If, however, the current behavior is correct, the condition has to be replaced by `c.t - p->t < WATCH`.\r\n\r\n\r\n[0] https://www.rfc-editor.org/errata/eid8214",
+    "submit_date": "2024-12-18",
+    "submitter_name": "Manuel Bergler",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
