@@ -110,13 +110,13 @@
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
     "section": "4.2",
-    "orig_text": "If an addr-type is defined for addresses which use characters outside of this repertoire, the specification for that addr-type MUST define the means of encoding those addresses in printable US-ASCII characters when are then encoded as xtext.",
-    "correct_text": "If an addr-type is defined for addresses which use characters outside of this repertoire, the specification for that addr-type MUST define the means of encoding those addresses in printable US-ASCII characters which are then encoded as xtext.",
+    "orig_text": "If an addr-type is\r\n   defined for addresses which use characters outside of this\r\n   repertoire, the specification for that addr-type MUST define the\r\n   means of encoding those addresses in printable US-ASCII characters\r\n   when are then encoded as xtext.",
+    "correct_text": "If an addr-type is \r\n   defined for addresses which use characters outside of this \r\n   repertoire, the specification for that addr-type MUST define the \r\n   means of encoding those addresses in printable US-ASCII characters \r\n   which are then encoded as xtext.",
     "notes": "\"characters when are then\" should be \"characters which are then\".",
     "submit_date": "2024-12-30",
     "submitter_name": "Alan Haggai Alavi",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2024-12-30 12:13:23"
   }
 ]
