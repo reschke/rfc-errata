@@ -73,5 +73,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8225",
+    "doc-id": "RFC7519",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.2",
+    "orig_text": "   7.   Depending upon whether the JWT is a JWS or JWE, there are two\r\n        cases:\r\n\r\n        *  If the JWT is a JWS, follow the steps specified in [JWS] for\r\n           validating a JWS.  Let the Message be the result of base64url\r\n           decoding the JWS Payload.\r\n\r\n        *  Else, if the JWT is a JWE, follow the steps specified in\r\n           [JWE] for validating a JWE.  Let the Message be the resulting\r\n           plaintext.\r\n\r\n   8.   If the JOSE Header contains a \"cty\" (content type) value of\r\n        \"JWT\", then the Message is a JWT that was the subject of nested\r\n        signing or encryption operations.  In this case, return to Step\r\n        1, using the Message as the JWT.\r\n\r\n   9.   Otherwise, base64url decode the Message following the\r\n        restriction that no line breaks, whitespace, or other additional\r\n        characters have been used.\r\n\r\n   10.  Verify that the resulting octet sequence is a UTF-8-encoded\r\n        representation of a completely valid JSON object conforming to\r\n        RFC 7159 [RFC7159]; let the JWT Claims Set be this JSON object.",
+    "correct_text": "   7.   Depending upon whether the JWT is a JWS or JWE, there are two\r\n        cases:\r\n\r\n        *  If the JWT is a JWS, follow the steps specified in [JWS] for\r\n           validating a JWS.  Let the Message be the result of base64url\r\n           decoding the JWS Payload.\r\n\r\n        *  Else, if the JWT is a JWE, follow the steps specified in\r\n           [JWE] for validating a JWE.  Let the Message be the resulting\r\n           plaintext.\r\n\r\n   8.   If the JOSE Header contains a \"cty\" (content type) value of\r\n        \"JWT\", then the Message is a JWT that was the subject of nested\r\n        signing or encryption operations.  In this case, return to Step\r\n        1, using the Message as the JWT.\r\n\r\n   9.   Verify that the resulting octet sequence is a UTF-8-encoded\r\n        representation of a completely valid JSON object conforming to\r\n        RFC 7159 [RFC7159]; let the JWT Claims Set be this JSON object.",
+    "notes": "If the JWT is a JWS, then the Message, as defined in step (7), is already base64url decoded.\r\n\r\nIf the JWT is a JWE, then the Message, defined as the resulting plaintext in step (7) is not base64url encoded at all per [JWE].\r\n\r\nRepeating the base64url decode operation here would yield a bad octet sequence.\r\n\r\nThe decoding instructions regarding line breaks, whitespace, and other characters, are also already part of the validations steps in [JWS] and may be redundant here. Otherwise, they could be moved to the relevant passage about base64url decryption in step (7).",
+    "submit_date": "2024-12-31",
+    "submitter_name": "Alex Giannakakos",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
