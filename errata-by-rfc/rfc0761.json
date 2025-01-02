@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8226",
+    "doc-id": "RFC0761",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.1",
+    "orig_text": "Control Bits:  8 bits (from left to right):\r\n\r\n    URG:  Urgent Pointer field significant\r\n    ACK:  Acknowledgment field significant\r\n    EOL:  End of Letter\r\n    RST:  Reset the connection\r\n    SYN:  Synchronize sequence numbers\r\n    FIN:  No more data from sender",
+    "correct_text": "Control Bits:  6 bits (from left to right):\r\n\r\n    URG:  Urgent Pointer field significant\r\n    ACK:  Acknowledgment field significant\r\n    EOL:  End of Letter\r\n    RST:  Reset the connection\r\n    SYN:  Synchronize sequence numbers\r\n    FIN:  No more data from sender",
+    "notes": "The \"control bits\" field includes 6 bits as listed, while the line says they are 8 bits.\r\nI might be mistaken, if so please tell me, but I assume it is a typing error due to distraction.",
+    "submit_date": "2025-01-01",
+    "submitter_name": "Mattia Marchese",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
