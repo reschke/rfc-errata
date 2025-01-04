@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8229",
+    "doc-id": "RFC8613",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7.3",
+    "orig_text": "Note that the message binding does not guarantee that a misbehaving\r\nserver created the response before receiving the request, i.e., it\r\ndoes not verify server aliveness.",
+    "correct_text": "Note that the message binding does not prevent a misbehaving\r\nserver from creating the response before receiving the request, i.e.,\r\nOSCORE does not verify server aliveness.",
+    "notes": "The original text should have said \"does not guarantee that a misbehaving server did not create\", so a negation was missing. The new text addresses that, using \"prevent\" instead of \"guarantee\" in order to avoid a double negation.",
+    "submit_date": "2025-01-03",
+    "submitter_name": "Marco Tiloca",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-01-03 07:22:31"
+  },
+  {
+    "errata_id": "8230",
+    "doc-id": "RFC8613",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.4",
+    "orig_text": "If either the decompression or the COSE message fails to decode,\r\nthen go to 8.",
+    "correct_text": "If the decompression fails, or the Recipient Context is\r\nunusable or invalid, or the COSE message fails to decode,\r\nthen go to 8.",
+    "notes": "There is currently no definition of \"invalid\" Security Context. Any later update on this can build on https://datatracker.ietf.org/doc/draft-ietf-core-oscore-key-limits/",
+    "submit_date": "2025-01-03",
+    "submitter_name": "Marco Tiloca",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2025-01-03 07:28:07"
+  }
+]
