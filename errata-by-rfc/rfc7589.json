@@ -2,7 +2,7 @@
   {
     "errata_id": "8193",
     "doc-id": "RFC7589",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "The well-known TCP port number 6513 is used by NETCONF servers to listen for TCP connections established by NETCONF over TLS clients.",
@@ -10,8 +10,8 @@
     "notes": "Section 10 of that same RFC correctly states: \"Per RFC 5539, IANA assigned TCP port number (6513) in the 'Registered Port Numbers' range with the service name 'netconf-tls'. This port is the default port for NETCONF over TLS, as defined in Section 2.\" With that said, wouldn't the sentence concerned be more correct in the suggested form? Thanks!",
     "submit_date": "2024-12-01",
     "submitter_name": "Ryan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2025-01-03 22:47:15"
   }
 ]
