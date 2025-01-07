@@ -88,5 +88,20 @@
     "verifier_id": "172",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2024-10-14 09:19:18"
+  },
+  {
+    "errata_id": "8240",
+    "doc-id": "RFC9000",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "12.4",
+    "orig_text": "0x1c-0x1d   CONNECTION_CLOSE  Section 19.19  ih01  N",
+    "correct_text": "0x1c-0x1d   CONNECTION_CLOSE  Section 19.19  ih01  NC",
+    "notes": "QUIC congestion control RFC 9002 (https://www.rfc-editor.org/rfc/rfc9002) section 3 states:\r\n\r\n\"The types of frames contained in a packet affect recovery and congestion control logic:\r\n...\r\nPackets containing frames besides ACK or CONNECTION_CLOSE frames count toward congestion control limits and are considered to be in flight.\"\r\n\r\nSo as per RFC-9002, it means that ACK and CONNECTION_CLOSE frames do not contribute to congestion control limits.\r\n\r\nOn the other hand, RFC-9000, section 12.4 has a Table 3 (https://www.rfc-editor.org/rfc/rfc9000#frame-types) which states:\r\n\r\n\"The \"Spec\" column in Table 3 summarizes any special rules governing the processing or generation of the frame type, as indicated by the following characters:\r\n...\r\nC: Packets containing only frames with this marking do not count toward bytes in flight for congestion control purposes; see [QUIC-RECOVERY].\"\r\n\r\nHowever, in that table, the CONNECTION_CLOSE frame isn't marked with the \"C\" character and only the ACK frame is. This appears to be an oversight in that table in RFC-9000.\r\n\r\nP.S: I raised this as a question in the QUIC working group mailing list before raising this errata. That mail thread is here https://mailarchive.ietf.org/arch/msg/quic/aBYUxanWVO-yEQASSxUNGbQQ8Kk/",
+    "submit_date": "2025-01-06",
+    "submitter_name": "Jaikiran Pai",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

@@ -148,5 +148,20 @@
     "verifier_id": "157",
     "verifier_name": "Eliot Lear",
     "update_date": "2024-10-29 09:41:58"
+  },
+  {
+    "errata_id": "8244",
+    "doc-id": "RFC2324",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2",
+    "orig_text": "All HTCPCP servers should be referred to with the \"coffee:\" URI scheme (Section 4).",
+    "correct_text": "All HTCPCP servers should be referred to with the \"coffee:\" URI scheme (Section 3).",
+    "notes": "The coffee: URI scheme is described in Section 3, not Section 4.",
+    "submit_date": "2025-01-07",
+    "submitter_name": "Robert Sayre",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

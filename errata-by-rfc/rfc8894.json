@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2024-12-11 08:49:25"
+  },
+  {
+    "errata_id": "8245",
+    "doc-id": "RFC8894",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "    signerInfo {\r\n      signedAttrs {\r\n        transactionID,\r\n        messageType,\r\n        pkiStatus,\r\n        failInfo,          -- Optional\r\n        senderNonce / recipientNonce,\r\n        },\r\n      signature\r\n      }\r\n    }",
+    "correct_text": "    signerInfo {\r\n      authenticatedAttributes {\r\n        transactionID,\r\n        messageType,\r\n        pkiStatus,\r\n        failInfo,          -- Optional\r\n        senderNonce / recipientNonce,\r\n        },\r\n      signature\r\n      }",
+    "notes": "There is no reference to \"signedAttrs\" in the RFC other than once Figure 6. I believe this is supposed to be \"authenticatedAttributes\" based on the information in section 3.2 and 3.2.1",
+    "submit_date": "2025-01-07",
+    "submitter_name": "Angelica Semenec",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
