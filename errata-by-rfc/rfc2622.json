@@ -32,7 +32,7 @@
   {
     "errata_id": "8243",
     "doc-id": "RFC2622",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "5.3",
     "orig_text": "5.3 Predefined Set Objects\r\n\r\n   In a context that expects a route set (e.g.  members attribute of the\r\n   route-set class), an AS number ASx defines the set of routes that are\r\n   originated by ASx; and an as-set AS-X defines the set of routes that\r\n   are originated by the ASes in AS-X. A route p is said to be\r\n   originated by ASx if there is a route object for p with ASx as the\r\n   value of the origin attribute.  For example, in Figure 15, the route\r\n   set rs-special contains 128.9.0.0/16, routes of AS1 and AS2, and\r\n   routes of the ASes in AS set AS-FOO.\r\n\r\n   route-set: rs-special\r\n   members: 128.9.0.0/16, AS1, AS2, AS-FOO\r\n\r\n\r\n          Figure 15:  Use of AS numbers and AS sets in route sets.\r\n\r\n   The set rs-any contains all routes registered in IRR. The set as-any\r\n   contains all ASes registered in IRR.\r\n\r\n",
@@ -40,8 +40,8 @@
     "notes": "The section header for 5.3 is misplaced. It breaks 5.2 (definition and examples of route-set) at a place that does not make sense in context. The section break should be after the caption for Figure 15. The last two sentences (beginning with \"The set rs-any\") are the only text referring to predefined set objects.",
     "submit_date": "2025-01-06",
     "submitter_name": "Michael Lambert",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-01-07 08:14:49"
   }
 ]
