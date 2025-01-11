@@ -58,5 +58,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2025-01-08 13:49:58"
+  },
+  {
+    "errata_id": "8247",
+    "doc-id": "RFC8894",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "authenticated attributes\r\n\r\nand\r\n\r\nauthenticatedAttributes",
+    "correct_text": "signed attributes\r\n\r\nand\r\n\r\nsignedAttrs",
+    "notes": "Throughout the document it refers to \"authenticated attributes\" and the \"authenticatedAttributes\" set.  However, SCEP uses the SignedData content type which doesn't have an authenticatedAttributes field (other content types do have this field, e.g. the RFC 2630 version of AuthenticatedData). It should refer to signed attributes instead.  This aligns with Figure 6 which includes the signerInfo.signedAttrs field.\r\n\r\nNote, if this errata is correct then errata 8245 is incorrect.",
+    "submit_date": "2025-01-10",
+    "submitter_name": "Daniel Van Geest",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
