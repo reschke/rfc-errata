@@ -13,5 +13,20 @@
     "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2020-02-21 08:39:29"
+  },
+  {
+    "errata_id": "8249",
+    "doc-id": "RFC7162",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "   resp-text-code      =/ \"HIGHESTMODSEQ\" SP mod-sequence-value /\r\n                          \"NOMODSEQ\" /\r\n                          \"MODIFIED\" SP sequence-set",
+    "correct_text": "   resp-text-code      =/ \"HIGHESTMODSEQ\" SP mod-sequence-value /\r\n                          \"NOMODSEQ\" /\r\n                          \"MODIFIED\" SP sequence-set\r\n                          ;; * in sequence-set is not allowed.",
+    "notes": "RFC 4551 used \"set\" (context: https://www.rfc-editor.org/errata/eid3506). This was rectified to \"sequence-set\" but I assume we should further exclude \"*\".",
+    "submit_date": "2025-01-12",
+    "submitter_name": "Damian Poddebniak",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
