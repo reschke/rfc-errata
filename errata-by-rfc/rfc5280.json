@@ -328,5 +328,20 @@
     "verifier_id": "179",
     "verifier_name": "Deb Cooley",
     "update_date": "2024-10-29 08:17:30"
+  },
+  {
+    "errata_id": "8251",
+    "doc-id": "RFC5280",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.1.4",
+    "orig_text": "              If no node of depth i in the valid_policy_tree has a\r\n              valid_policy of ID-P but there is a node of depth i with a\r\n              valid_policy of anyPolicy, then generate a child node of\r\n              the node of depth i-1 that has a valid_policy of anyPolicy\r\n              as follows:\r\n",
+    "correct_text": "              If no node of depth i in the valid_policy_tree has a\r\n              valid_policy of ID-P but there is a node of depth i-1 with a\r\n              valid_policy of anyPolicy, then generate a child node of\r\n              the node of depth i-1 that has a valid_policy of anyPolicy\r\n              as follows:\r\n",
+    "notes": "The second half of the sentence refers to the node identified in the first half, so the depths should match.",
+    "submit_date": "2025-01-14",
+    "submitter_name": "Roman Donchenko",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

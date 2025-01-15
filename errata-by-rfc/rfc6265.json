@@ -182,7 +182,7 @@
   {
     "errata_id": "8242",
     "doc-id": "RFC6265",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.1.1",
     "orig_text": "cookie-value      = *cookie-octet / ( DQUOTE *cookie-octet DQUOTE )",
@@ -190,8 +190,8 @@
     "notes": "Many parsers process ABNF alternatives left-to-right and do not backtrack if an alternative partially matches but ultimately fails. This is why placing *cookie-octet first can cause issues.\r\n\r\nThe quoted pattern ( DQUOTE *cookie-octet DQUOTE ) is more specific than the unquoted pattern *cookie-octet. Placing it first ensures that the parser prioritizes correctly. Quoted values are matched as a whole first. If the value isn’t quoted, the parser safely falls back to checking for unquoted *cookie-octet.",
     "submit_date": "2025-01-06",
     "submitter_name": "Vladimír Gorej",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-01-06 09:02:42"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2025-01-14 07:32:42"
   }
 ]
