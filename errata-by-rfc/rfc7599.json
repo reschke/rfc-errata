@@ -97,11 +97,11 @@
     "section": "5",
     "orig_text": "The MAP-T algorithmic mapping rules are identical to those in\r\nSection 5(link #1) of the MAP-E specification [RFC7597](link #2), with the following\r\nexception: the forwarding of traffic to and from IPv4 destinations\r\noutside a MAP-T domain is to be performed as described in this\r\ndocument, instead of Section 5.4(link #3) of the MAP-E specification.\r\n\r\nlink #1: https://datatracker.ietf.org/doc/html/rfc7599#section-5\r\nlink #2: https://datatracker.ietf.org/doc/html/rfc7597\r\nlink #3: https://datatracker.ietf.org/doc/html/rfc7599#section-5.4",
     "correct_text": "The MAP-T algorithmic mapping rules are identical to those in\r\nSection 5(link #1) of the MAP-E specification [RFC7597](link #2), with the following\r\nexception: the forwarding of traffic to and from IPv4 destinations\r\noutside a MAP-T domain is to be performed as described in this\r\ndocument, instead of Section 5.4(link #3) of the MAP-E specification.\r\n\r\nlink #1: https://datatracker.ietf.org/doc/html/rfc7597#section-5\r\nlink #2: https://datatracker.ietf.org/doc/html/rfc7597\r\nlink #3: https://datatracker.ietf.org/doc/html/rfc7597#section-5.4",
-    "notes": "The text in section 5 is correct, but 2 of the URL links are incorrect.\r\nAll links in section 5 should point to RFC7597.\r\n\r\n--VERIFIER NOTES-- \r\nThis is regarding the links generated in the rfc2html output.",
+    "notes": "The text in section 5 is correct, but 2 of the URL links are incorrect.\r\nAll links in section 5 should point to RFC7597.\r\n\r\n--VERIFIER NOTES-- \r\nThis is regarding the link generated in the rfc2html output, not the RFC itself (https://www.rfc-editor.org/rfc/rfc7599.txt).",
     "submit_date": "2024-08-02",
     "submitter_name": "Scott Freemire",
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
-    "update_date": "2024-08-05 13:56:37"
+    "update_date": "2025-01-15 11:19:06"
   }
 ]
