@@ -137,16 +137,16 @@
   {
     "errata_id": "8137",
     "doc-id": "RFC5272",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "C.1",
     "orig_text": "NoSignatureValue contains the hash of the certification request. ",
     "correct_text": "NoSignatureValue contains the SHA-1 hash value of the certification request. \r\nThe hash value given by NoSignatureValue SHOULD be ignored.",
-    "notes": "The hash value was not sufficiently defined because the choice of the hash algorithm was not specified.\r\nAt that time presumably the use of SHA-1 was implied.\r\n\r\nI suggest requiring SHA-1 here simply for backward compatibility.\r\nFrom today's perspective more flexibility may be demanded and SHA-1 likely no more is the best choice.\r\n\r\nAnyway I see no real value in NoSignatureValue (pun intended), so it should not matter.\r\nFor this reason I propose ignoring the hash value.",
+    "notes": "This has been fixed in RFC 6402\r\n\r\nThe hash value was not sufficiently defined because the choice of the hash algorithm was not specified.\r\nAt that time presumably the use of SHA-1 was implied.\r\n\r\nI suggest requiring SHA-1 here simply for backward compatibility.\r\nFrom today's perspective more flexibility may be demanded and SHA-1 likely no more is the best choice.\r\n\r\nAnyway I see no real value in NoSignatureValue (pun intended), so it should not matter.\r\nFor this reason I propose ignoring the hash value.",
     "submit_date": "2024-10-12",
     "submitter_name": "David von Oheimb",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-17 05:44:53"
   }
 ]
