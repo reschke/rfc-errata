@@ -77,17 +77,17 @@
   {
     "errata_id": "7096",
     "doc-id": "RFC7748",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "# section A.1 sage code:\r\n\r\n       for A in xrange(3, int(1e9)):\r\n           if (A-2) % 4 != 0:\r\n             continue\r\n\r\n# section A.3 sage code:\r\n\r\n       for uInt in range(1, 1e3):\r\n         u = F(uInt)",
     "correct_text": "# section A.1 sage code:\r\n\r\n       for A in xsrange(3, int(1e9)):\r\n           if (A-2) % 4 != 0:\r\n             continue\r\n\r\n# section A.3 sage code:\r\n\r\n       for uInt in xsrange(1, int(1e3)):\r\n         u = F(uInt)",
-    "notes": "\"xrange\" is not recognized by Sage with python 3, so the script from section A.1 fails with a syntax error (using \"xrange\" likely worked fine for Sage with python 2).  The suggested changes in A.3 are just for consistency.",
+    "notes": "\"xrange\" is not recognized by Sage with python 3, so the script from section A.1 fails with a syntax error (using \"xrange\" likely worked fine for Sage with python 2).  The suggested changes in A.3 are just for consistency.\r\n\r\nHeld for Document Update. Errata 7096 updates Sage code in Appendix A to make it compatible with Python 3 by replacing 'xrange' with 'xsrange'. This change addresses a compatibility issue for modern implementations but does not affect the cryptographic security or functionality of the protocol, making it low-priority and suitable for future document updates. - CFRG co-chair",
     "submit_date": "2022-08-18",
     "submitter_name": "James Muir",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2022-08-22 14:59:43"
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-01-18 10:31:17"
   },
   {
     "errata_id": "7625",
@@ -122,16 +122,16 @@
   {
     "errata_id": "7879",
     "doc-id": "RFC7748",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5",
     "orig_text": "z_2 = E * (AA + a24 * E)",
     "correct_text": "z_2 = E * (BB + a24 * E)",
-    "notes": "In the for loop on page 8, the variable AA should be replaced with BB in Z_2. This modification is necessary because the mathematical formula for point doubling on the Montgomery curve according to (https://en.wikipedia.org/wiki/Montgomery_curve#Montgomery_arithmetic) indicates that Z2n (equivalent to Z_2 in this case) is calculated as follows: Z2n = 4XnZn((Xn-Zn)^2 + ((A+2)/4)(4XnZn)). It is observed in this equation that the operation in the (Xn-Zn)^2 part involves subtraction similar to the variable B, while the operation in the variable A involves addition. Considering this discrepancy, it is suggested to substitute AA with BB for correctness.",
+    "notes": "In the for loop on page 8, the variable AA should be replaced with BB in Z_2. This modification is necessary because the mathematical formula for point doubling on the Montgomery curve according to (https://en.wikipedia.org/wiki/Montgomery_curve#Montgomery_arithmetic) indicates that Z2n (equivalent to Z_2 in this case) is calculated as follows: Z2n = 4XnZn((Xn-Zn)^2 + ((A+2)/4)(4XnZn)). It is observed in this equation that the operation in the (Xn-Zn)^2 part involves subtraction similar to the variable B, while the operation in the variable A involves addition. Considering this discrepancy, it is suggested to substitute AA with BB for correctness.\n --VERIFIER NOTES-- \n Duplicate of errata report 5651, rejected on CFRG list",
     "submit_date": "2024-04-02",
     "submitter_name": "Nawras Hussein Sabbry",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-01-18 10:37:14"
   }
 ]

@@ -77,17 +77,17 @@
   {
     "errata_id": "6569",
     "doc-id": "RFC8439",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.3",
     "orig_text": "o  A 32-bit block count parameter, treated as a 32-bit little-endian integer.",
     "correct_text": "o  A 32-bit block count parameter, treated as a 32-bit integer.",
-    "notes": "The block count is not used as a little-endian integer. An example of this can be seen in the example test vector in section 2.3.2, where Block Count = 1, but the block count word of the initial state is 00000001.",
+    "notes": "The block count is not used as a little-endian integer. An example of this can be seen in the example test vector in section 2.3.2, where Block Count = 1, but the block count word of the initial state is 00000001.\r\n\r\n\r\nHold for document update.\r\n\r\nErrata 6569 clarifies that the 32-bit block count is not little-endian, as originally described, improving accuracy in the ChaCha20 and Poly1305 specifications. While minor, this clarification helps developers accurately interpret block counts. Low priority and held for document update. - CFRG co-chair",
     "submit_date": "2021-05-03",
     "submitter_name": "David Reed",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-01-18 10:56:43"
   },
   {
     "errata_id": "6989",

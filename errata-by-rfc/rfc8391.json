@@ -47,32 +47,32 @@
   {
     "errata_id": "6352",
     "doc-id": "RFC8391",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "The WOTS+ signature and public key formats are formally defined using\r\nXDR [RFC4506] in order to provide an unambiguous, machine readable\r\ndefinition. ",
     "correct_text": "The WOTS+ signature and public key formats are defined in a syntax similar to XDR [RFC4506].",
-    "notes": "The definition is not machine readable, e.g. github.com/stellar/xdrgen fails. \r\nReason:\r\n- some Identifiers contain \"/\" and \"-\", RFC4506 allows only letter, digits and underbars\r\n- some enum bodies end with  \",}\", RFC4506 requests \"}\" here\r\n- some discriminated union definitions have incomplete declarations in the case-spec, e.g. the union xmss_ots_signature refers to the wotsp-sha2_256 without giving a type. \r\n- The encoding of some unions in the reference implementation is different to the encoding specified in RFC4506. The 4-byte discriminant is missing.",
+    "notes": "The definition is not machine readable, e.g. github.com/stellar/xdrgen fails. \r\nReason:\r\n- some Identifiers contain \"/\" and \"-\", RFC4506 allows only letter, digits and underbars\r\n- some enum bodies end with  \",}\", RFC4506 requests \"}\" here\r\n- some discriminated union definitions have incomplete declarations in the case-spec, e.g. the union xmss_ots_signature refers to the wotsp-sha2_256 without giving a type. \r\n- The encoding of some unions in the reference implementation is different to the encoding specified in RFC4506. The 4-byte discriminant is missing.\r\n\r\n\r\nHold for document update.\r\n\r\nCFRG co-chair: Errata 6352 addresses XDR syntax alignment for WOTS+ format definitions in Appendix A of RFC 8391. While it does not impact cryptographic functionality, this adjustment clarifies encoding for automated implementations, benefiting future document versions.\r\nBas Westerbaan on CFRG list: changes the text, but doesn't propose to change the format.",
     "submit_date": "2020-12-09",
     "submitter_name": "Andreas Kretschmer",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-01-18 10:51:48"
   },
   {
     "errata_id": "6821",
     "doc-id": "RFC8391",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.1.5",
     "orig_text": "\"Note that the checksum may reach a maximum integer value of len_1 * (w - 1) * 2^8\"",
     "correct_text": "\"Note that the checksum may reach a maximum integer value of len_1 * (w - 1)\"",
-    "notes": "The \"* 2^8\" appears to be a mistake. If the checksum integers could reach those values, the checksum field would overflow, which would potentially allow an attacker to forge a message.\r\n\r\nIn reality, the correct maximum is just \"len_1 * (w - 1)\"",
+    "notes": "The \"* 2^8\" appears to be a mistake. If the checksum integers could reach those values, the checksum field would overflow, which would potentially allow an attacker to forge a message.\r\n\r\nIn reality, the correct maximum is just \"len_1 * (w - 1)\"\r\n\r\n\r\nVerified on CFRG list by Bas Westerbaan.",
     "submit_date": "2022-01-24",
     "submitter_name": "Peter Gordon",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-01-18 10:52:27"
   },
   {
     "errata_id": "7412",

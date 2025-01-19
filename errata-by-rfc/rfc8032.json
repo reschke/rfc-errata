@@ -92,17 +92,17 @@
   {
     "errata_id": "6306",
     "doc-id": "RFC8032",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.1.7",
     "orig_text": "       Decode the first half as a\r\n       point R, and the second half as an integer S, in the range\r\n       0 <= s < L.  Decode the public key A as point A'.  If any of the\r\n       decodings fail (including S being out of range), the signature is\r\n       invalid.\r\n\r\n   2.  Compute SHA512(dom2(F, C) || R || A || PH(M)), and interpret the\r\n       64-octet digest as a little-endian integer k.\r\n\r\n   3.  Check the group equation [8][S]B = [8]R + [8][k]A'.  It's\r\n       sufficient, but not required, to instead check [S]B = R + [k]A'.",
     "correct_text": "       Decode the first half R as a\r\n       point R', and the second half as an integer S, in the range\r\n       0 <= S < L.  Decode the public key A as point A'.  If any of the\r\n       decodings fail (including S being out of range), the signature is\r\n       invalid.\r\n\r\n   2.  Compute SHA512(dom2(F, C) || R || A || PH(M)), and interpret the\r\n       64-octet digest as a little-endian integer k.\r\n\r\n   3.  Check the group equation [8][S]B = [8]R' + [8][k]A'.  It's\r\n       sufficient, but not required, to instead check [S]B = R' + [k]A'.",
-    "notes": "1)  public key R' and its encoding R are confused\r\n2)  s changed to S (this errata has been reported already)",
+    "notes": "1)  public key R' and its encoding R are confused\r\n2)  s changed to S (this errata has been reported already)\r\n\r\n\r\nHeld for Document Update: Errata 6306 suggests clarifying variable names in Section 5.1.7's decoding components to reduce ambiguity in signature verification processes. The adjustments are editorial but help improve implementation clarity, particularly for complex protocols that rely on accurate component identification. Suitable for future document updates. - CFRG co-chair",
     "submit_date": "2020-10-15",
     "submitter_name": "Dmitry Khovratovich",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-01-18 10:40:30"
   },
   {
     "errata_id": "6348",

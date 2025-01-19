@@ -22,11 +22,11 @@
     "section": "3.3.3",
     "orig_text": "evaluatedElement = G.ScalarInverse(t) * blindedElement\r\n",
     "correct_text": "evaluatedElement = t * blindedElement\r\n",
-    "notes": "This appears in def BlindEvaluate(skS, blindedElement, info). It seems that the evaluatedElement=t * blindedElement, which is consistent with tweakedKey = t * G.Generator()\r\n\r\n\r\n",
+    "notes": "This appears in def BlindEvaluate(skS, blindedElement, info). It seems that the evaluatedElement=t * blindedElement, which is consistent with tweakedKey = t * G.Generator()\r\n\r\n\r\nVerified on CFRG list by co-author with note: I would also change \"0\" to \"seq = 0\"\r\n",
     "submit_date": "2024-06-24",
     "submitter_name": "Quanwei Cai",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-06-25 14:29:44"
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-01-18 10:48:19"
   }
 ]
