@@ -47,7 +47,7 @@
   {
     "errata_id": "4775",
     "doc-id": "RFC5272",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "B.1",
     "orig_text": "eContentType = id-ct-PKIData",
@@ -55,14 +55,14 @@
     "notes": "This is repeated a few times throughout Appendix B.",
     "submit_date": "2016-08-11",
     "submitter_name": "Kees-Jan Hermans",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-19 02:57:59"
   },
   {
     "errata_id": "7379",
     "doc-id": "RFC5272",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "2.2. Protocol Requests/Responses says:\r\n\r\n> Simple PKI Response\r\n> ...\r\n> encapsulatedContentInfo is absent.\r\n\r\n4.1. Simple PKI Response says:\r\n\r\n> The Simple PKI Response consists of a SignedData with no EncapsulatedContentInfo\r\nand no SignerInfo.",
@@ -70,9 +70,9 @@
     "notes": "This change is required for consistency with RFC 8551:\r\n\r\n> 3.8.  Creating a Certificate Management Message\r\n>    The certificate management message or MIME entity is used to\r\n>    transport certificates and/or Certificate Revocation Lists (CRLs),\r\n>    such as in response to a registration request.\r\n>    Step 1.  The certificates and/or CRLs are made available to the CMS\r\n>             generating process that creates a CMS object of type\r\n>             SignedData.  The SignedData encapContentInfo eContent field\r\n>             MUST be absent, and the signerInfos field MUST be empty.\r\n\r\nAdditionally, RFC 3852 doesn't allow for the absence of the EncapsulatedContentInfo in a SignedData:\r\n\r\n> The signed-data content type shall have ASN.1 type SignedData:\r\n> SignedData ::= SEQUENCE {\r\n> version CMSVersion,\r\n> digestAlgorithms DigestAlgorithmIdentifiers,\r\n> encapContentInfo EncapsulatedContentInfo,\r\n> certificates [0] IMPLICIT CertificateSet OPTIONAL,\r\n> crls [1] IMPLICIT RevocationInfoChoices OPTIONAL,\r\n> signerInfos SignerInfos }",
     "submit_date": "2023-03-08",
     "submitter_name": "Jaime Hablutzel",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-19 02:56:29"
   },
   {
     "errata_id": "7627",
@@ -92,7 +92,7 @@
   {
     "errata_id": "7628",
     "doc-id": "RFC5272",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.2.1.3.1.",
     "orig_text": "AuthenticatedData content type is used by this document for:\r\n\r\nThe id-cmc-authData control (Section 6.16), and\r\n\r\nThe top-level wrapper in environments where an encryption-only key is being certified.\r\n",
@@ -100,9 +100,9 @@
     "notes": "For consistency with the same paragraph and the rest of the document.",
     "submit_date": "2023-09-04",
     "submitter_name": "Piotr Popis",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-19 02:57:07"
   },
   {
     "errata_id": "7629",
@@ -122,7 +122,7 @@
   {
     "errata_id": "8027",
     "doc-id": "RFC5272",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix B",
     "orig_text": "recipientInfos.riid.issuerSerialNumber = <NULL, 201>",
@@ -130,9 +130,9 @@
     "notes": "In ASN.1, NULL is a type that is encoded as 0x0500. NULL is not appropriate in this context because the corresponding field is defined as a Name. NULL-DN is defined in RFC4210 as \"a zero-length SEQUENCE OF RelativeDistinguishedNames\". A NULL-DN is encoded as 0x3000. This is almost certainly what was intended here. Note, RFC4210 is not referenced by RFC5272 currently, so that would need to be changed as well to reference NULL-DN.",
     "submit_date": "2024-07-11",
     "submitter_name": "Carl Wallace",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-07-12 12:51:55"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-19 02:57:31"
   },
   {
     "errata_id": "8137",
