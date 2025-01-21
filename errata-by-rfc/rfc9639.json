@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8256",
+    "doc-id": "RFC9639",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.2",
+    "orig_text": "   SSAAAAAASSBBBBBBSSCCCCCC\r\n   ^   ^   ^   ^   ^   ^\r\n   |   |   |   |   |  Bits of 2nd sample of 1st channel\r\n   |   |   |   |  Sign extension bits of 2nd sample of 2nd channel\r\n   |   |   |  Bits of 1st sample of 2nd channel\r\n   |   |  Sign extension bits of 1st sample of 2nd channel\r\n   |  Bits of 1st sample of 1st channel\r\n   Sign extension bits of 1st sample of 1st channel",
+    "correct_text": "   SSAAAAAASSBBBBBBSSCCCCCC\r\n   ^   ^   ^   ^   ^   ^\r\n   |   |   |   |   |  Bits of 2nd sample of 1st channel\r\n   |   |   |   |  Sign extension bits of 2nd sample of 1st channel\r\n   |   |   |  Bits of 1st sample of 2nd channel\r\n   |   |  Sign extension bits of 1st sample of 2nd channel\r\n   |  Bits of 1st sample of 1st channel\r\n   Sign extension bits of 1st sample of 1st channel",
+    "notes": "One of the diagram labels appears to contradict the sign-extension + interleaving method described in the preceding paragraph.",
+    "submit_date": "2025-01-20",
+    "submitter_name": "Casey",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
