@@ -3,15 +3,15 @@
     "errata_id": "8222",
     "doc-id": "RFC0127",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "Listen for Connection on L                RTS, U, L, l\r\n     STR, L, U, 32                                    A",
     "correct_text": "Listen for Connection on L\r\n                                            RTS, U, L, l\r\n                                                        A\r\nSTR, L, U, 32\r\n\r\n\r\n\r\n",
     "notes": "I do not have a scan of the original printed RFC to check, but I believe there may have been\r\na transcription error when the ASCII text version of this RFC was prepared. (Either that, or\r\nthe typed original contained a formatting error.)\r\n\r\nThe issue is that there is a time delay (perhaps a considerable one) between the \"Listen\" and\r\nthe sending of the STR (which is necessarily a reply to the RTS message).\r\nThe inclusion of the blank line makes this timing/ordering clear(er).",
     "submit_date": "2024-12-27",
     "submitter_name": "Noel Chiappa",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-01-21 10:07:43"
   }
 ]
