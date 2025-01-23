@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8258",
+    "doc-id": "RFC9528",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "C.2",
+    "orig_text": "EAD_1 = 1* ead\r\nEAD_2 = 1* ead\r\nEAD_3 = 1* ead\r\nEAD_4 = 1* ead\r\n...\r\nPLAINTEXT_2 = (\r\n  C_R,\r\n  ID_CRED_R : map / bstr / -24..23,\r\n...\r\nPLAINTEXT_3 = (\r\n  ID_CRED_I : map / bstr / -24..23,\r\n",
+    "correct_text": "EAD_1 = (+ ead)\r\nEAD_2 = (+ ead)\r\nEAD_3 = (+ ead)\r\nEAD_4 = (+ ead)\r\n...\r\nPLAINTEXT_2 = (\r\n  C_R : bstr / -24..23,\r\n  ID_CRED_R : header_map / bstr / -24..23,\r\n...\r\nPLAINTEXT_3 = (\r\n  ID_CRED_I : header_map / bstr / -24..23,\r\n",
+    "notes": "The EAD groups are missing parentheses.\r\nThe PLAINTEXT_2 field C_R is missing a type entirely, which is identical to message_1 field C_I.\r\nThe ID_CRED_R and ID_CRED_I fields use an undefined type \"map\" but could use the valid COSE-defined type \"header_map\" or some locally-defined equivalent.",
+    "submit_date": "2025-01-23",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
