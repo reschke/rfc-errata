@@ -47,17 +47,17 @@
   {
     "errata_id": "5779",
     "doc-id": "RFC7030",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "A.4",
     "orig_text": " Because the DecryptKeyIdentifier attribute is not included in this\r\n   request, the response does not include additional encryption beyond\r\n   the TLS session.  The EST server response is:\r\n\r\n   HTTP/1.1 200 OK\r\n   Status: 200 OK\r\n   Content-Type: multipart/mixed ; boundary=estServerExampleBoundary\r\n   Content-Length: 3219\r\n\r\n   This is the preamble.  It is to be ignored, though it\r\n   is a handy place for estServer to include an explanatory note,\r\n   including contact or support information.\r\n   --estServerExampleBoundary\r\n   Content-Type: application/pkcs8\r\n   Content-Transfer-Encoding: base64",
     "correct_text": " Because the DecryptKeyIdentifier attribute is not included in this\r\n   request, the response does not include additional encryption beyond\r\n   the TLS session.  The EST server response is:\r\n\r\n   HTTP/1.1 200 OK\r\n   Status: 200 OK\r\n   Content-Type: multipart/mixed; boundary=estServerExampleBoundary\r\n   Content-Length: 3219\r\n\r\n   This is the preamble.  It is to be ignored, though it\r\n   is a handy place for estServer to include an explanatory note,\r\n   including contact or support information.\r\n   --estServerExampleBoundary\r\n   Content-Type: application/pkcs8\r\n   Content-Transfer-Encoding: base64",
-    "notes": "Content-Type: multipart/mixed ; boundary=estServerExampleBoundary\r\n\r\nThe ; has a space, believe it or not, we implemented it that way.\r\n\r\nContent-Type: multipart/mixed; boundary=estServerExampleBoundary",
+    "notes": "Content-Type: multipart/mixed ; boundary=estServerExampleBoundary\r\n\r\nThe ; has a space, believe it or not, we implemented it that way.\r\n\r\nContent-Type: multipart/mixed; boundary=estServerExampleBoundary\n --VERIFIER NOTES-- \n  per Ben Kaduk:   https://tools.ietf.org/html/rfc7231#section-3.1.1.1 says\r\n       media-type = type \"/\" subtype *( OWS \";\" OWS parameter )\r\nwhich would seem to allow for whitespace before the semicolon.",
     "submit_date": "2019-07-13",
     "submitter_name": "Simon Edänge",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-24 04:20:47"
   },
   {
     "errata_id": "5904",

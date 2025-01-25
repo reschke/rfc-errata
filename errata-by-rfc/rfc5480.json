@@ -32,7 +32,7 @@
   {
     "errata_id": "4170",
     "doc-id": "RFC5480",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "4",
     "orig_text": "   ---------+----------+------------+-----------\r\n   256      | 512      | SHA-512    | secp521r1\r\n   ---------+----------+------------+-----------",
@@ -40,9 +40,9 @@
     "notes": "The first table in section 4 (p. 9) provides the right text. The corresponding line in the table on p. 10 is the wrong one. In fact the key size is exactly 521 and not only 512+. Therefore 512+ in both tables could also be replaced by 521.",
     "submit_date": "2014-11-11",
     "submitter_name": "Annie Yousar",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-24 04:12:13"
   },
   {
     "errata_id": "6670",

@@ -107,22 +107,22 @@
   {
     "errata_id": "4145",
     "doc-id": "RFC5912",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "14",
     "orig_text": "  --  3.  A more complex version, but one that automatically ties\r\n  --      together both the signature algorithm and the\r\n  --      signature value for automatic decoding.\r\n  --\r\n  SIGNED{ToBeSigned} ::= SEQUENCE {\r\n     toBeSigned           ToBeSigned,\r\n     algorithmIdentifier  SEQUENCE {\r\n         algorithm        SIGNATURE-ALGORITHM.\r\n                            &id({SignatureAlgorithms}),\r\n         parameters       SIGNATURE-ALGORITHM.\r\n                            &Params({SignatureAlgorithms}\r\n                              {@algorithmIdentifier.algorithm}) OPTIONAL\r\n     },\r\n     signature BIT STRING (CONTAINING SIGNATURE-ALGORITHM.&Value(\r\n                              {SignatureAlgorithms}\r\n                              {@algorithmIdentifier.algorithm}))\r\n  }",
     "correct_text": "  SIGNED{ToBeSigned} ::= SEQUENCE {\r\n     toBeSigned           ToBeSigned,\r\n     algorithmIdentifier  SEQUENCE {\r\n         algorithm        SIGNATURE-ALGORITHM.\r\n                            &id({SignatureAlgorithms}),\r\n         parameters       SIGNATURE-ALGORITHM.\r\n                            &Params({SignatureAlgorithms}\r\n                              {@algorithmIdentifier.algorithm}) OPTIONAL\r\n     },\r\n     signature BIT STRING \r\n  }",
-    "notes": "I *believe* the 3rd option for SIGNED{} is invalid.  The \"signature\" BIT STRING contains an OpenType which references an optional class field.  It's possible to define objects with no type and OpenTypes must refer to a type.  There's no mechanism to allow an OpenType to reference random bytes (not ASN.1 encoded).\r\n\r\nI understand the intent is to allow for automatic decoding, but unless the \"&Value\" is required in SIGNATURE-ALGORITHM this will not work.  Requiring it will not work because not all signature algorithms require the signature value to be encoded (e.g. RSA).  The syntax would be valid is if \"signature\" was OPTIONAL (obviously not desirable).\r\n\r\nSo I propose we revert \"signature\" to \"BIT STRING\" without constraints.",
+    "notes": "I *believe* the 3rd option for SIGNED{} is invalid.  The \"signature\" BIT STRING contains an OpenType which references an optional class field.  It's possible to define objects with no type and OpenTypes must refer to a type.  There's no mechanism to allow an OpenType to reference random bytes (not ASN.1 encoded).\r\n\r\nI understand the intent is to allow for automatic decoding, but unless the \"&Value\" is required in SIGNATURE-ALGORITHM this will not work.  Requiring it will not work because not all signature algorithms require the signature value to be encoded (e.g. RSA).  The syntax would be valid is if \"signature\" was OPTIONAL (obviously not desirable).\r\n\r\nSo I propose we revert \"signature\" to \"BIT STRING\" without constraints.\n --VERIFIER NOTES-- \nThe proposed change is one way to handle it, but it does not support the many signature values that are ASN.1 encoded.",
     "submit_date": "2014-10-23",
     "submitter_name": "Pierce Leonberger",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-24 04:05:51"
   },
   {
     "errata_id": "4244",
     "doc-id": "RFC5912",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "14",
     "orig_text": "  at-x520StateOrProvinceName ATTRIBUTE ::=\r\n      { TYPE DirectoryString {ub-state-name}\r\n          IDENTIFIED BY id-at-stateOrProvinceName }\r\n  X520StateOrProvinceName ::= DirectoryString {ub-state-name}\r\n\r\n  at-x520OrganizationName ATTRIBUTE ::=\r\n      { TYPE DirectoryString {ub-organization-name}\r\n          IDENTIFIED BY id-at-organizationName }\r\n  X520OrganizationName ::= DirectoryString {ub-organization-name}\r\n\r\n  at-x520OrganizationalUnitName ATTRIBUTE ::=\r\n      { TYPE DirectoryString  {ub-organizational-unit-name}\r\n          IDENTIFIED BY id-at-organizationalUnitName }\r\n  X520OrganizationalUnitName ::= DirectoryString\r\n                                     {ub-organizational-unit-name}",
@@ -130,9 +130,9 @@
     "notes": "The definitions of the three ATTRIBUTE objects (at-x520StateOrProvinceName, at-x520OrganizationName, at-x520OrganizationalUnitName) should be changed to reference the existing type definitions.  This change will eliminate the extra type definition in each of those objects as well as make those object definitions consistent with the definitions for the at-x520LocalityName and at-x520CommonName ATTRIBUTE objects.",
     "submit_date": "2015-01-27",
     "submitter_name": "Richard Nicholas",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-24 04:04:26"
   },
   {
     "errata_id": "6806",

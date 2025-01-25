@@ -107,7 +107,7 @@
   {
     "errata_id": "7629",
     "doc-id": "RFC5272",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.2.1.3.4.",
     "orig_text": "For the PKI Response, SignedData allows the server to sign the returning data, if any exists, and to carry the certificates and CRLs corresponding to the PKI Request.  If no data is being returned beyond the certificates and CRLs, the EncapsulatedInfo and SignerInfo fields are not populated.",
@@ -115,9 +115,9 @@
     "notes": "This change is needed to comply with Errata ID 7379 (the first para) and covers the case (the second para) where the server shall send a negative response (Full PKI Response) as it is unable to sign the certificate and at the same time it is unable to sign the response itself (e.g. due to a loss in connection to the HSM).",
     "submit_date": "2023-09-04",
     "submitter_name": "Piotr Popis",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-24 04:06:48"
   },
   {
     "errata_id": "8027",

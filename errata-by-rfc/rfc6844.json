@@ -227,16 +227,16 @@
   {
     "errata_id": "6715",
     "doc-id": "RFC6844",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
-    "section": "3",
+    "section": "",
     "orig_text": "If the domain name holder specifies one or more iodef properties, a\r\ncertificate issuer MAY report invalid certificate requests to that\r\naddress.",
     "correct_text": "If the domain name holder specifies one or more iodef properties, a\r\ncertificate issuer MAY report invalid certificate requests to those\r\naddresses.",
-    "notes": "\"address\" should be plural.",
+    "notes": "\"address\" should be plural.\r\n\r\nNote:  This has been corrected in RFC 8659",
     "submit_date": "2021-10-18",
     "submitter_name": "Jaime Hablutzel",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-24 04:18:15"
   }
 ]

@@ -32,7 +32,7 @@
   {
     "errata_id": "6567",
     "doc-id": "RFC5755",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix B",
     "orig_text": "   GeneralName, GeneralNames, id-ce, AuthorityKeyIdentifier,\r\n   AuthorityInfoAccessSyntax, CRLDistributionPoint\r\n     FROM PKIX1Implicit88",
@@ -40,8 +40,8 @@
     "notes": "CRLDistributionPoint is part of the IMPORTS statement, but it is not used in the definitions that follow.",
     "submit_date": "2021-05-01",
     "submitter_name": "Russ Housley",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-24 04:16:22"
   }
 ]
