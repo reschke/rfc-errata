@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": "8263",
+    "doc-id": "RFC9553",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2.1.1. Figure 20",
+    "orig_text": "{\r\n     \"@type\": \"Card\",\r\n     \"language\": \"zh-Hant\",\r\n     \"name\": {\r\n       \"components\": [\r\n         { \"kind\": \"surname\", \"value\": \"孫\" },\r\n         { \"kind\": \"given\", \"value\": \"中山\" },\r\n         { \"kind\": \"given2\", \"value\": \"文\" },\r\n         { \"kind\": \"given2\", \"value\": \"逸仙\" }\r\n       ]\r\n     },\r\n     \"localizations\": {\r\n       \"yue\": {\r\n         \"name/phoneticSystem\": \"jyut\",\r\n         \"name/phoneticScript\": \"Latn\",\r\n         \"name/components/0/phonetic\": \"syun1\",\r\n         \"name/components/1/phonetic\": \"zung1saan1\",\r\n         \"name/components/2/phonetic\": \"man4\",\r\n         \"name/components/3/phonetic\": \"jat6sin1\"\r\n       }\r\n     }\r\n   }",
+    "correct_text": "\"language\": \"zh-Hant\",\r\n\"name\": {\r\n  \"components\": [\r\n    { \"kind\": \"surname\", \"value\": \"孫\" },\r\n    { \"kind\": \"given\", \"value\": \"中山\" },\r\n    { \"kind\": \"given2\", \"value\": \"文\" },\r\n    { \"kind\": \"given2\", \"value\": \"逸仙\" }\r\n  ]\r\n},\r\n\"localizations\": {\r\n  \"yue\": {\r\n    \"name/phoneticSystem\": \"jyut\",\r\n    \"name/phoneticScript\": \"Latn\",\r\n    \"name/components/0/phonetic\": \"syun1\",\r\n    \"name/components/1/phonetic\": \"zung1saan1\",\r\n    \"name/components/2/phonetic\": \"man4\",\r\n    \"name/components/3/phonetic\": \"jat6sin1\"\r\n  }\r\n}",
+    "notes": "The figure 20 is not following the RFC because some mandatory fields are not present: version, uid\r\n\r\nTwo possible solutions\r\n\r\n- adding missing fields. Note that this is not *my* preferred solution\r\n\r\n\r\n```json\r\n{\r\n     \"@type\": \"Card\",\r\n     \"version\": \"1.0\",\r\n     \"uid\": \"22B2C7DF-9120-4969-8460-05956FE6B065\",\r\n     \"language\": \"zh-Hant\",\r\n     \"name\": {\r\n       \"components\": [\r\n         { \"kind\": \"surname\", \"value\": \"孫\" },\r\n         { \"kind\": \"given\", \"value\": \"中山\" },\r\n         { \"kind\": \"given2\", \"value\": \"文\" },\r\n         { \"kind\": \"given2\", \"value\": \"逸仙\" }\r\n       ]\r\n     },\r\n     \"localizations\": {\r\n       \"yue\": {\r\n         \"name/phoneticSystem\": \"jyut\",\r\n         \"name/phoneticScript\": \"Latn\",\r\n         \"name/components/0/phonetic\": \"syun1\",\r\n         \"name/components/1/phonetic\": \"zung1saan1\",\r\n         \"name/components/2/phonetic\": \"man4\",\r\n         \"name/components/3/phonetic\": \"jat6sin1\"\r\n       }\r\n     }\r\n   }\r\n```\r\n\r\n- only show the useful properties - like in others figures (for example, figure 24)\r\n\r\n```json\r\n\"language\": \"zh-Hant\",\r\n\"name\": {\r\n  \"components\": [\r\n    { \"kind\": \"surname\", \"value\": \"孫\" },\r\n    { \"kind\": \"given\", \"value\": \"中山\" },\r\n    { \"kind\": \"given2\", \"value\": \"文\" },\r\n    { \"kind\": \"given2\", \"value\": \"逸仙\" }\r\n  ]\r\n},\r\n\"localizations\": {\r\n  \"yue\": {\r\n    \"name/phoneticSystem\": \"jyut\",\r\n    \"name/phoneticScript\": \"Latn\",\r\n    \"name/components/0/phonetic\": \"syun1\",\r\n    \"name/components/1/phonetic\": \"zung1saan1\",\r\n    \"name/components/2/phonetic\": \"man4\",\r\n    \"name/components/3/phonetic\": \"jat6sin1\"\r\n  }\r\n}\r\n```",
+    "submit_date": "2025-01-27",
+    "submitter_name": "n4n5",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2025-01-27 13:06:20"
+  },
+  {
+    "errata_id": "8264",
+    "doc-id": "RFC9553",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.7.1. Figure 39",
+    "orig_text": "{\r\n    \"name\": {\r\n        \"components\": [\r\n            { \"kind\": \"title\", \"value\": \"Mr.\" },\r\n            { \"kind\": \"given\", \"value\": \"Ivan\" },\r\n            { \"kind\": \"given2\", \"value\": \"Petrovich\" },\r\n            { \"kind\": \"surname\", \"value\": \"Vasiliev\" }\r\n        ]\r\n    },\r\n    \"localizations\": {\r\n        \"uk-Cyrl\": {\r\n            \"name\": {\r\n                \"components\": [\r\n                    { \"kind\": \"title\", \"value\": \"г-н\" },\r\n                    { \"kind\": \"given\", \"value\": \"Иван\" },\r\n                    { \"kind\": \"given2\", \"value\": \"Петрович\" },\r\n                    { \"kind\": \"surname\", \"value\": \"Васильев\" }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}",
+    "correct_text": "\"name\": {\r\n    \"components\": [\r\n        { \"kind\": \"title\", \"value\": \"Mr.\" },\r\n        { \"kind\": \"given\", \"value\": \"Ivan\" },\r\n        { \"kind\": \"given2\", \"value\": \"Petrovich\" },\r\n        { \"kind\": \"surname\", \"value\": \"Vasiliev\" }\r\n    ]\r\n},\r\n\"localizations\": {\r\n    \"uk-Cyrl\": {\r\n        \"name\": {\r\n            \"components\": [\r\n                { \"kind\": \"title\", \"value\": \"г-н\" },\r\n                { \"kind\": \"given\", \"value\": \"Иван\" },\r\n                { \"kind\": \"given2\", \"value\": \"Петрович\" },\r\n                { \"kind\": \"surname\", \"value\": \"Васильев\" }\r\n            ]\r\n        }\r\n    }\r\n}\r\n",
+    "notes": "This errata is just for consistency\r\n\r\nAll others figures are not using open and end brackets, for example figure 24, 40, etc...\r\n\r\nTechnically if bracket are used, that could means we are in a closed struct, so in a card and the card is not valid as the RFC spec\r\n\r\nBy just remove first and last bracket, the figure is cleaner",
+    "submit_date": "2025-01-27",
+    "submitter_name": "n4n5",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2025-01-27 13:09:22"
+  },
+  {
+    "errata_id": "8265",
+    "doc-id": "RFC9553",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2.1.1. Figure 18",
+    "orig_text": "\"full\": \"Mr. John Q. Public, Esq.\"",
+    "correct_text": "\"name\": {\r\n    \"full\": \"Mr. John Q. Public, Esq.\"\r\n}",
+    "notes": "This errata is for consistency\r\n\r\nIn section 2.2.1.1 The Name object is defined.\r\nIn figure 16,17,18,19 we give example of Name object\r\nBut the figure 18 is only the subpart of the Name object\r\n\r\nWith this update, all figures will be described the Name object consistently",
+    "submit_date": "2025-01-27",
+    "submitter_name": "n4n5",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2025-01-27 13:10:47"
+  },
+  {
+    "errata_id": "8266",
+    "doc-id": "RFC9553",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.6.2. Figure 36",
+    "orig_text": "\"directories\": {\r\n     \"dir1\": {\r\n       \"kind\": \"entry\",\r\n       \"uri\": \"https://dir.example.com/addrbook/jdoe/Jean%20Dupont.vcf\"\r\n     },\r\n     \"dir2\": {\r\n       \"kind\": \"directory\",\r\n       \"uri\": \"ldap://ldap.example/o=Example%20Tech,ou=Engineering\",\r\n       \"pref\": 1\r\n     }",
+    "correct_text": "\"directories\": {\r\n     \"dir1\": {\r\n       \"kind\": \"entry\",\r\n       \"uri\": \"https://dir.example.com/addrbook/jdoe/Jean%20Dupont.vcf\"\r\n     },\r\n     \"dir2\": {\r\n       \"kind\": \"directory\",\r\n       \"uri\": \"ldap://ldap.example/o=Example%20Tech,ou=Engineering\",\r\n       \"pref\": 1\r\n     }\r\n}",
+    "notes": "Missing end bracket",
+    "submit_date": "2025-01-27",
+    "submitter_name": "n4n5",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2025-01-27 13:11:49"
+  }
+]
