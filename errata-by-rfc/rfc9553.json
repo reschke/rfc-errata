@@ -58,5 +58,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2025-01-27 13:11:49"
+  },
+  {
+    "errata_id": "8267",
+    "doc-id": "RFC9553",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.6.1. cryptoKeys",
+    "orig_text": "A CryptoKey object has all properties of the Resource (Section 1.4.4)\r\ndata type, with the following additional definition:\r\n\r\nThe @type property value MUST be \"CryptoKey\", if set.",
+    "correct_text": "A CryptoKey object has all properties of the Resource (Section 1.4.4)\r\ndata type, with the following additional definition:\r\n\r\n- The @type property value MUST be \"CryptoKey\", if set.\r\n\r\n- The kind property is optional. Its enumerated (Section 1.7.5) values\r\n   are:\r\n\r\n  - link\r\n  - embed\r\n",
+    "notes": "I've noticed that CryptoKey is defined as a Resource but the CryptoKey \"kind\" is never defined.\r\n\r\nThe Resource specify that for kind: \"The allowed values are defined in the property definition that makes use of the Resource type. Some property definitions may change this property from being optional to mandatory.\"\r\n\r\n\r\nThe proposed values in the corrected text are only suggestion from the example of the RFC\r\n\r\nAs values of \"kind\" type are registered with IANA we can see that the CryptoKey kind is not present at \r\nhttps://www.iana.org/assignments/jscontact/jscontact.xhtml#jscontact-enum-values\r\n\r\n\r\nIf the CryptoKey kind is missing, I guess iana should also update the enum (email from the RFC: iana@iana.org)",
+    "submit_date": "2025-01-28",
+    "submitter_name": "n4n5",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

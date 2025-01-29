@@ -148,5 +148,20 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2024-10-29 08:02:19"
+  },
+  {
+    "errata_id": "8268",
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "B.2",
+    "orig_text": "The priority of the absolute form of the request URI over the Host\r\nheader field by origin servers has been made explicit to align with\r\nproxy handling. (Section 7.2)",
+    "correct_text": "[[ Move to RFC 9112, Appendix C.3 ]]\r\n\r\nThe priority of the absolute form of the request URI over the Host\r\nheader field by origin servers has been made explicit to align with\r\nproxy handling. (Section 3.2.2)",
+    "notes": "Section 7.2 doesn't discuss the absolute form, the link appears broken.\r\n\r\nAfter the referred text was moved between RFC-to-be 9110 and 9112 [1], this item from \"Changes from 7230\" was not caught up.\r\n\r\n[1] https://github.com/httpwg/http-core/commit/e47483b5",
+    "submit_date": "2025-01-28",
+    "submitter_name": "Sergey Kandaurov",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
