@@ -148,5 +148,35 @@
     "verifier_id": "161",
     "verifier_name": "Éric Vyncke",
     "update_date": "2024-01-11 22:24:02"
+  },
+  {
+    "errata_id": "8270",
+    "doc-id": "RFC8824",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.3",
+    "orig_text": " +---------------+---+--+--+----------------+-------+---------+======+\r\n |CoAP OSCORE_kid|var|1 |Up| 0x636c69656e70 |MSB(52)|LSB      |KKKK  |\r\n +---------------+---+--+--+----------------+-------+---------+======+",
+    "correct_text": " +---------------+---+--+--+----------------+-------+---------+======+\r\n |CoAP OSCORE_kid|var|1 |Up| 0x636c69656e70 |MSB(44)|LSB      |KKKK  |\r\n +---------------+---+--+--+----------------+-------+---------+======+",
+    "notes": "In Section 7.3, the example in Figure 12 considers the OSCORE kid 0x636c69656e74, with length 6 bytes (48 bits).\r\n\r\nAlso in Section 7.3, the Field Descriptor \"CoAP OSCORE_kid\" of the SCHC Compression Rule in Table 5 has the intent to send only the 4 least significant bits 0b0100, as reflected by \"KKKK\" in the column \"Sent [bits]\".\r\n\r\nA successful matching with the Field Descriptor for compressing the corresponding field \"CoAP OSCORE_kid\" requires that the 44 (not 52) most significant bits produce a match, so that the remaining 4 least significant bits are sent.\r\n\r\nTherefore, as per the corrected text above, the MO for the Field Descriptor about \"CoAP OSCORE_kid\" should be MSB(44).",
+    "submit_date": "2025-01-29",
+    "submitter_name": "Marco Tiloca",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8271",
+    "doc-id": "RFC8824",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.3",
+    "orig_text": "   Compressed message:\r\n   ==================\r\n   0x001489458a9fc3686852f6c4 (12 bytes)\r\n   0x00 RuleID\r\n       1489 Compression Residue\r\n           458a9fc3686852f6c4 Padded payload\r\n\r\n   Compression Residue:\r\n   0b 0001 010 0100 0100 (15 bits -> 2 bytes with padding)\r\n       mid tkn piv  kid\r\n\r\n   Payload\r\n   0xa2c54fe1b434297b62 (9 bytes)\r\n\r\n   Compressed message length: 12 bytes",
+    "correct_text": "   Compressed message:\r\n   ==================\r\n   0x00148889458a9fc3686852f6c4 (13 bytes)\r\n   0x00 RuleID\r\n       148889 Compression Residue\r\n             458a9fc3686852f6c4 padded payload\r\n\r\n   Compression Residue:\r\n   0b 0001 010\r\n       mid tkn\r\n       \r\n      0100 0100\r\n            piv (residue size and residue)\r\n\r\n      0100 0100\r\n            kid (residue size and residue)\r\n       \r\n      (23 bits -> 3 bytes with padding)\r\n\r\n   Payload\r\n   0xa2c54fe1b434297b62 (9 bytes)\r\n\r\n   Compressed message length: 13 bytes",
+    "notes": "In Section 7.3, the Rule in Table 5 is used to perform the OSCORE outer compression of the message shown in Figure 12, in order to produce the SCHC compressed message in Figure 14.\r\n\r\nThe residue shown in Figure 14 is not correct, with respect to what is sent on the wire for the fields of the OSCORE option identified as \"CoAP OSCORE_piv\" and \"CoAP OSCORE_kid\". Hence, the whole compressed message shown in Figure 14 is not correct.\r\n\r\nPer Section 7.4.2 of RFC 8724:\r\n\r\n> If the field is ... of variable length, then applying the CDA to compress this field may result in a value ... of variable size (e.g., value-sent or LSB). ..., the residue for that field is the bits that result from applying the CDA to the field, preceded with the size of the value.\r\n\r\nIn the considered Rule of Table 5, both \"CoAP OSCORE_piv\" and \"CoAP OSCORE_kid\" have FL=var. However, the old text for the SCHC-OSCORE Compressed GET Request of Figure 14 shows that the residue sent on the wire for the two fields is not prepended by the respective residue length (in bits).\r\n\r\nSuch a residue length has to be encoded as per Section 7.4.2 of RFC 8724, i.e.:\r\n\r\n> The size (using the unit defined in the FL) is encoded on 4, 12, or 28 bits as follows:\r\n> * If the size is between 0 and 14, it is encoded as a 4-bit unsigned integer.\r\n> * Sizes between 15 and 254 are encoded as 0b1111 followed by the 8-bit unsigned integer.\r\n> * Larger sizes are encoded as 0xfff followed by the 16-bit unsigned integer.",
+    "submit_date": "2025-01-29",
+    "submitter_name": "Marco Tiloca",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

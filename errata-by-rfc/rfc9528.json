@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8272",
+    "doc-id": "RFC9528",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.4.2",
+    "orig_text": "The Initiator SHOULD NOT persistently store PRK_out or application keys\r\nuntil the Initiator has verified message_4 or a message protected with\r\na derived application key, such as an OSCORE message, from the Responder\r\nand the application has authenticated the Responder. ",
+    "correct_text": "The Initiator SHOULD NOT persistently store\r\nC_I, C_R, PRK_out or application keys\r\nuntil the Initiator has verified message_4 or a message protected with\r\na derived application key, such as an OSCORE message, from the Responder\r\nand the application has authenticated the Responder. ",
+    "notes": "This applies to the connection identifiers C_I, C_R equally as to the keys.",
+    "submit_date": "2025-01-29",
+    "submitter_name": "John Mattsson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
