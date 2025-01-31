@@ -103,5 +103,20 @@
     "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8274",
+    "doc-id": "RFC7539",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.3.2",
+    "orig_text": " ChaCha state with the key setup.\r\n\r\n       61707865  3320646e  79622d32  6b206574\r\n       03020100  07060504  0b0a0908  0f0e0d0c\r\n       13121110  17161514  1b1a1918  1f1e1d1c\r\n       00000001  09000000  4a000000  00000000",
+    "correct_text": " ChaCha state with the key setup.\r\n\r\n       61707865  3320646e  79622d32  6b206574\r\n       03020100  07060504  0b0a0908  0f0e0d0c\r\n       13121110  17161514  1b1a1918  1f1e1d1c\r\n       01000000  09000000  4a000000  00000000",
+    "notes": "Section 2.3 says: \"A 32-bit block count parameter, treated as a 32-bit little-endian integer\". In Section 2.3.2 the initial block counter is set to 1 which is 00000001 in big-endian hex. So I think, the corresponding entry in the state matrix (index 12) should be 01000000.",
+    "submit_date": "2025-01-30",
+    "submitter_name": "Alina Obst",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
