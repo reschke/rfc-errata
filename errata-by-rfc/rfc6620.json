@@ -28,5 +28,20 @@
     "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8275",
+    "doc-id": "RFC6620",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.2.3",
+    "orig_text": "The DAD_NS messages are not\r\nsent through any of the ports configured as Validating Ports.  The\r\nDAD_NSOL messages are sent through Trusted Ports (but, of course,\r\nsubject to usual switch behavior and possible MLD snooping\r\noptimizations).",
+    "correct_text": "The DAD_NS messages are not\r\nsent through any of the ports configured as Validating Ports.  The\r\nDAD_NS messages are sent through Trusted Ports (but, of course,\r\nsubject to usual switch behavior and possible MLD snooping\r\noptimizations).",
+    "notes": "DAD_NSOL is the term used in SEND-SAVI but is not used anywhere else in FCFS-SAVI. The current phrasing might lead to believe that DAD_NSOL is different from DAD_NS.",
+    "submit_date": "2025-02-01",
+    "submitter_name": "Olivier Paul",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
