@@ -283,5 +283,50 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8279",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "         server  The value SHOULD be unique within the context of the\r\n            current SCIM endpoint (or tenancy) and MAY be globally\r\n            unique (e.g., a \"username\", email address, or other\r\n            server-generated key or counter).  No two resources on the\r\n            same server SHOULD possess the same value.",
+    "correct_text": "         server  The value for the attribute SHOULD be different from \r\n            all other values for the attribute in any resource on the \r\n            same server which use the same schema definition. Uniqueness \r\n            MAY be restricted to resources accessible to the same tenant.",
+    "notes": "The definition is highly ambiguous. Assume a service provider offering the two endpoints /Users and /BusinessUsers. Assume that both resource types use the schema \"urn:ietf:params:scim:schemas:core:2.0:User\". Further, assume that the service provider serves two tenants, each having access to only a fraction of the resources.\r\n\r\nUniqueness within the context of the SCIM endpoint means that a User and a BusinessUser *can* have the same \"userName\", but two Users *cannot* exist on the server with the same \"userName\".\r\nUniqueness within the context of the tenancy means that a User and a BusinessUser *cannot* have the same \"userName\" if accessible to the same tenant, but two Users *can* exist on the server with the same \"userName\" if they are not accessible to the same tenant.\r\nFinally, the uniqueness in the sense of the second sentence means that a User and a BusinessUser *cannot* have the same \"userName\" and two Users *cannot* exist on the server with the same \"userName\" irrespective of the tenancy.\r\n\r\nBecause the option is named \"server\" and not \"endpoint\", I assume it is not intended to be restricted endpoints, but rather applies to all resource types using the schema. I also assume a restriction to tenancy is intended. Without this restriction it would be possible for a tenant to determine values of not accessible resources by a brute-force attack.\r\n\r\nLet me note that the usage of SHOULD instead of MUST does not make much sense here, because a service provider offering the schema to clients will always know for sure if it enforces uniqueness or not. On the other hand, changing SHOULD to MUST is beyond the scope of errata.",
+    "submit_date": "2025-02-05",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8280",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1.1",
+    "orig_text": "---- Section 1.1 ----\r\n   The key words \"REQUIRED\" and \"OPTIONAL\" are used throughout this\r\n   document to indicate whether an attribute or schema element is\r\n   required or optional.  These key words may be used alone (e.g.,\r\n   \"REQUIRED.\") or in a sentence.  If not specified, an attribute is\r\n   considered to be optional.\r\n\r\n---- Section 2.2 ----\r\n   o  \"required\" is \"false\" (i.e., not REQUIRED),",
+    "correct_text": "---- Section 1.1 ----\r\n   The key words \"REQUIRED\" and \"OPTIONAL\" are used throughout this\r\n   document to indicate whether an attribute or schema element is\r\n   required to have a value or not.  These key words may be used alone (e.g.,\r\n   \"REQUIRED.\") or in a sentence.  If not specified, an attribute value is\r\n   considered to be optional.\r\n\r\n---- Section 2.2 ----\r\n   o  \"required\" is \"false\",",
+    "notes": "There are three ways in which an attribute can be required. The correction makes clear which one is meant.\r\n\r\n1) Support is REQUIRED: It must be possible that the attribute has a value, i.e. it cannot be omitted from the schema.\r\n2) A value is REQUIRED: The server must make sure that the attribute always has a value.\r\n3) The attribute characteristic \"required\" is set to \"true\": If an attribute is \"required\", clients MUST specify the attribute in the PUT request. [RFC7644]\r\n\r\nAnalogous interpretations are possible for OPTIONAL.\r\n\r\nWhile almost all usages of REQUIRED and OPTIONAL are compatible to the second interpretation, one usage in section 2.2 clearly refers to the third one and should be removed.",
+    "submit_date": "2025-02-05",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8281",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "\r\n      required  A Boolean value that specifies whether or not the\r\n         attribute is required.",
+    "correct_text": "\r\n      required  A Boolean value that specifies whether or not the\r\n         attribute is required. If an attribute is \"required\", \r\n         clients MUST specify the attribute in the PUT request, \r\n         see section 3.5.1 of RFC7644.",
+    "notes": "The definition of the \"required\" characteristic is recursive and has no explanatory value. A reference to RFC7644 makes it much clearer.",
+    "submit_date": "2025-02-05",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

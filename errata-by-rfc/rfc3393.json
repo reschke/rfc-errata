@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-06-16 17:36:48"
+  },
+  {
+    "errata_id": "8282",
+    "doc-id": "RFC3393",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.4.",
+    "orig_text": "T1 is the wire-time at which Scr sent the first bit of the first packet, and T2 is the wire-time at which Src sent the first bit of the second packet.",
+    "correct_text": "T1 is the wire-time at which Src sent the first bit of the first packet, and T2 is the wire-time at which Src sent the first bit of the second packet.",
+    "notes": "The first mention of Scr is misspelled. It should be Src.",
+    "submit_date": "2025-02-05",
+    "submitter_name": "Pablo Navarro",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
