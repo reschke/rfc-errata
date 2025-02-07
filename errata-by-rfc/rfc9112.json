@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2024-01-03 11:17:30"
+  },
+  {
+    "errata_id": "8284",
+    "doc-id": "RFC9112",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "C.3",
+    "orig_text": "",
+    "correct_text": "   The priority of the absolute form of the request URI over the Host\r\n   header field by origin servers has been made explicit to align with\r\n   proxy handling. (Section 3.2.2)",
+    "notes": "This text should be added after the second paragraph.\r\n\r\nAfter the referred text was moved between RFC-to-be 9110 and 9112 [1], this item from \"Changes from 7230\" was not caught up.\r\n \r\n[1] https://github.com/httpwg/http-core/commit/e47483b5 \r\n\r\nSee also https://www.rfc-editor.org/errata/eid8268 for the erratum in RFC 9110 (ack Sergey Kandaurov)",
+    "submit_date": "2025-02-06",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-02-06 11:30:34"
   }
 ]
