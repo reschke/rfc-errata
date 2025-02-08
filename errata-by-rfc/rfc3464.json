@@ -13,5 +13,20 @@
     "verifier_id": "127",
     "verifier_name": "Pete Resnick",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8285",
+    "doc-id": "RFC3464",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Appendix D",
+    "orig_text": "A registration for a DSN address-type MUST include the following information:",
+    "correct_text": "A registration for a DSN diagnostic-type MUST include the following information:",
+    "notes": "Section for \"IANA registration form for diagnostic-type\" accidentally uses 'address-type' instead of 'diagnostic-type', incorrectly indicating that diagnostic-type information should be used for address-type registrations.",
+    "submit_date": "2025-02-07",
+    "submitter_name": "Mason K",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
