@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2025-01-22 14:46:18"
+  },
+  {
+    "errata_id": "8287",
+    "doc-id": "RFC4647",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1",
+    "orig_text": "   3.  Lookup (Section 3.4) matches a language priority list consisting\r\n       of basic language ranges to sets of language tags to find the one\r\n       exact language tag that best matches the range.",
+    "correct_text": "   3.  Lookup (Section 3.4) matches a language priority list consisting\r\n       of basic and/or extended language ranges to sets of language tags\r\n       to find the one exact language tag that best matches the range.",
+    "notes": "The original text illustrated above states that the 'lookup' matching scheme operates using 'basic language ranges' as opposed to 'extended language ranges'. However, the description of the 'lookup' matching scheme in section 3.4, in its last two paragraphs (beginning with \"In some cases,\"), describes how extended language ranges are processed by the 'lookup' matching scheme. Thus, section 3.1 indicates that 'extended language ranges' are not supported by the 'lookup' matching scheme, while section 3.4 indicates the opposite and describes how they are to be supported.\r\n\r\nThis contradiction can lead to confusion for the reader and compliance ambiguity for the implementor.",
+    "submit_date": "2025-02-08",
+    "submitter_name": "Randall Edward Cotton",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
