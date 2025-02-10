@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8290",
+    "doc-id": "RFC7680",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.4.",
+    "orig_text": "At each of the selected times in this process, we obtain one value of Type-P-One-way-Delay.",
+    "correct_text": "At each of the selected times in this process, we obtain one value of Type-P-One-way-Packet-Loss.",
+    "notes": "It is not generally incorrect that a value of Type-P-One-way-Delay can be obtained at each of the selected times. However, in that case it should also be mentioned in the following sentence (\"The value of the sample is the sequence made up of the resulting <time, loss> pairs\"), that the loss is 0 exactly when Type-P-One-way-Delay is a finite value, and it is 1 exactly when Type-P-One-way-Delay is undefined. But, as this observation is already made for the singleton metric Type-P-One-way-Packet-Loss in section 2.5., it would be easier to directly refer to this singleton metric in section 3.4. (as suggested in this errata).",
+    "submit_date": "2025-02-09",
+    "submitter_name": "Pablo Navarro",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8291",
+    "doc-id": "RFC7680",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.8.1.",
+    "orig_text": "The value of Type-P-One-way-Delay could change if the protocol (UDP or TCP), port number, size, or arrangement for special treatment (e.g., IP DS Field [RFC2780], Explicit Congestion Notification (ECN) [RFC3168], or RSVP) changes.",
+    "correct_text": "The value of Type-P-One-way-Packet-Loss could change if the protocol (UDP or TCP), port number, size, or arrangement for special treatment (e.g., IP DS Field [RFC2780], Explicit Congestion Notification (ECN) [RFC3168], or RSVP) changes.",
+    "notes": "The original text is not incorrect and a change in Type-P-One-way-Delay could also imply a change in Type-P-One-way-Packet-Loss. Therefore, and as this section refers to the Type-P-One-way-Packet-Loss, it would be more accurate to refer to Type-P-One-way-Packet-Loss directly.",
+    "submit_date": "2025-02-09",
+    "submitter_name": "Pablo Navarro",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

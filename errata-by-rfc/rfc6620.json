@@ -32,16 +32,16 @@
   {
     "errata_id": "8275",
     "doc-id": "RFC6620",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "3.2.3",
     "orig_text": "The DAD_NS messages are not\r\nsent through any of the ports configured as Validating Ports.  The\r\nDAD_NSOL messages are sent through Trusted Ports (but, of course,\r\nsubject to usual switch behavior and possible MLD snooping\r\noptimizations).",
     "correct_text": "The DAD_NS messages are not\r\nsent through any of the ports configured as Validating Ports.  The\r\nDAD_NS messages are sent through Trusted Ports (but, of course,\r\nsubject to usual switch behavior and possible MLD snooping\r\noptimizations).",
-    "notes": "DAD_NSOL is the term used in SEND-SAVI but is not used anywhere else in FCFS-SAVI. The current phrasing might lead to believe that DAD_NSOL is different from DAD_NS.",
+    "notes": "DAD_NSOL is the term used in SEND-SAVI but is not used anywhere else in FCFS-SAVI. The current phrasing might lead to believe that DAD_NSOL is different from DAD_NS.\r\n\r\n--- Verifier note ---\r\n\r\nThis indeed appears to be typo, borrowing a different shorthand for the same thing from a related document.",
     "submit_date": "2025-02-01",
     "submitter_name": "Olivier Paul",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-02-06 10:51:14"
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-02-09 16:45:05"
   }
 ]
