@@ -2,7 +2,7 @@
   {
     "errata_id": "8044",
     "doc-id": "RFC9062",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.3",
     "orig_text": "EVPN allows for three different models of unicast label\r\nassignment: label per EVI, label per <ESI, Ethernet Tag>, and\r\nlabel per MAC address.  ",
@@ -10,8 +10,8 @@
     "notes": "Section 9.1.1 of RFC 7432 defines four label allocation models for labels advertised in the Label1 field of MAC/IP Advertisement (EVPN Type 2 routes).\r\n\r\nOne of these models is missing in the original text f the RFC.",
     "submit_date": "2024-07-23",
     "submitter_name": "Alexander (\"Sasha\") Vainshtein",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-07-25 11:05:11"
+    "verifier_id": "178",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2025-02-10 02:42:04"
   }
 ]
