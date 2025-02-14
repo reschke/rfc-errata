@@ -47,16 +47,16 @@
   {
     "errata_id": "8289",
     "doc-id": "RFC2549",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "Multicasting is supported, but requires the implementation of a clone device.",
     "correct_text": "Multicasting is supported, but requires the implementation of a cloning and memory-altering device.",
-    "notes": "As the destination addresses are brain-embedded in carriers, simply using a cloning device on a carrier would result in multiple packets sent to the same unicast address. Following this issue, an implementation of a memory-altering functionality would be required to change the destination address when replicating packets to reach multiple receivers.",
+    "notes": "As the destination addresses are brain-embedded in carriers, simply using a cloning device on a carrier would result in multiple packets sent to the same unicast address. Following this issue, an implementation of a memory-altering functionality would be required to change the destination address when replicating packets to reach multiple receivers.\n --VERIFIER NOTES-- \nThank you for your errata report.  An addressing model is not fully specified, particular source address selection.  Memory is apparently necessary only for the destination address, and for multicast that represents no conflict.",
     "submit_date": "2025-02-08",
     "submitter_name": "Pavel Pikirenia",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2025-02-13 06:17:24"
   }
 ]
