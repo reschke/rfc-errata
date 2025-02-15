@@ -18,15 +18,15 @@
     "errata_id": "8291",
     "doc-id": "RFC7680",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
-    "section": "2.8.1.",
-    "orig_text": "The value of Type-P-One-way-Delay could change if the protocol (UDP or TCP), port number, size, or arrangement for special treatment (e.g., IP DS Field [RFC2780], Explicit Congestion Notification (ECN) [RFC3168], or RSVP) changes.",
-    "correct_text": "The value of Type-P-One-way-Packet-Loss could change if the protocol (UDP or TCP), port number, size, or arrangement for special treatment (e.g., IP DS Field [RFC2780], Explicit Congestion Notification (ECN) [RFC3168], or RSVP) changes.",
+    "errata_type_code": "Technical",
+    "section": "2.8.1",
+    "orig_text": "The value of Type-P-One-way-Delay could change if the protocol (UDP or TCP), \r\nport number, size, or arrangement for special treatment (e.g., IP DS Field \r\n[RFC2780], Explicit Congestion Notification (ECN) [RFC3168], or RSVP) changes.",
+    "correct_text": "The value of Type-P-One-way-Packet-Loss could change if the protocol (UDP or \r\nTCP), port number, size, or arrangement for special treatment (e.g., IP DS Field \r\n[RFC2780], Explicit Congestion Notification (ECN) [RFC3168], or RSVP) changes.",
     "notes": "The original text is not incorrect and a change in Type-P-One-way-Delay could also imply a change in Type-P-One-way-Packet-Loss. Therefore, and as this section refers to the Type-P-One-way-Packet-Loss, it would be more accurate to refer to Type-P-One-way-Packet-Loss directly.",
     "submit_date": "2025-02-09",
     "submitter_name": "Pablo Navarro",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-02-14 13:52:51"
   }
 ]
