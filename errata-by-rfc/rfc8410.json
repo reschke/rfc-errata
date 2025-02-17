@@ -163,5 +163,20 @@
     "verifier_id": "179",
     "verifier_name": "Deb Cooley",
     "update_date": "2024-04-11 12:52:08"
+  },
+  {
+    "errata_id": "8297",
+    "doc-id": "RFC8410",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "   -----BEGIN PRIVATE KEY-----\r\n   MHICAQEwBQYDK2VwBCIEINTuctv5E1hK1bbY8fdp+K06/nwoy/HU++CXqI9EdVhC\r\n   oB8wHQYKKoZIhvcNAQkJFDEPDA1DdXJkbGUgQ2hhaXJzgSEAGb9ECWmEzf6FQbrB\r\n   Z9w7lshQhqowtrbLDFw4rXAxZuE=\r\n   -----END PRIVATE KEY------\r\n",
+    "correct_text": "(re-encoded with correct attribute OID, see notes)",
+    "notes": "This encoded private key contains an attribute with OID \"1 2 840 113549 1 9 9 20\", which is not assigned to anything. Likely, the intent was to use \"1 2 840 113549 1 9 20\" (one fewer 9), which is pkcs-9-at-friendlyName from RFC 2985.\r\n\r\nThe same private key also appears in section 10.3.",
+    "submit_date": "2025-02-16",
+    "submitter_name": "Roman Donchenko",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
