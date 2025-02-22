@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "8305",
+    "doc-id": "RFC3915",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.2",
+    "orig_text": "When an <info> command has been processed successfully, the EPP\r\n<resData> element MUST contain child elements as described in [2]. In\r\naddition, the EPP <extension> element MUST contain a child\r\n<rgp:infData> element that identifies the registry grace period\r\nnamespace and the location of the registry grace period schema.  The\r\n<rgp:infData> element contains a single <rgp:rgpStatus> element that\r\ncontains a single attribute \"s\" whose value describes the current\r\ngrace period status of the domain.  Possible status values are\r\ndescribed in section Section 3.1.\r\n",
+    "correct_text": "When an <info> command has been processed successfully, the EPP\r\n<resData> element MUST contain child elements as described in [2]. In\r\naddition, the EPP <extension> element MUST contain a child\r\n<rgp:infData> element that identifies the registry grace period\r\nnamespace and the location of the registry grace period schema.  The\r\n<rgp:infData> element contains one or more <rgp:rgpStatus> elements that\r\neach contain a single attribute \"s\" whose value describes one of the the\r\ncurrent grace period status of the domain.  Possible status values are\r\ndescribed in section Section 3.1.\r\n",
+    "notes": "The XML schema in Section 5 sets the maximum number of occurrences of the <rgpStatus> element to be unbounded, meaning that any number of elements may be present.\r\n\r\nThis correction updates the text to reflect the XML schema.",
+    "submit_date": "2025-02-21",
+    "submitter_name": "Gavin Brown",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8306",
+    "doc-id": "RFC3915",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.5",
+    "orig_text": "When an extended <update> command without a restore report has been\r\nprocessed successfully, the EPP response is as described in the EPP\r\ndomain mapping [2] except that an extension element is added to\r\ndescribe grace period status as a result of processing the <update>\r\ncommand.  The extension element contains a single child element\r\n(<upData>) that itself contains a single child element (<rgpStatus>)\r\nthat contains a single attribute \"s\" whose value MUST be\r\n\"pendingRestore\" if the <restore> request has been accepted.\r\n",
+    "correct_text": "When an extended <update> command without a restore report has been\r\nprocessed successfully, the EPP response is as described in the EPP\r\ndomain mapping [2] except that an extension element is added to\r\ndescribe grace period status as a result of processing the <update>\r\ncommand.  The extension element contains a single child element\r\n(<upData>) that itself contains one more <rgpStatus> child elements,\r\neach of which contain a single attribute \"s\" whose value describes\r\none of the current grace period status of the domain. Possible status\r\nvalues are described in section Section 3.1. At least one <rgpStatus>\r\nelement MUST have an \"s\" attribute with a value of \"pendingRestore\"\r\nif the <restore> request has been accepted.\r\n",
+    "notes": "The XML schema in Section 5 sets the maximum number of occurrences of the <rgpStatus> element to be unbounded, meaning that any number of elements may be present.\r\n\r\nThis correction updates the text to reflect the XML schema.",
+    "submit_date": "2025-02-21",
+    "submitter_name": "Gavin Brown",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
