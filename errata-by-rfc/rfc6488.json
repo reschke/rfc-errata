@@ -17,16 +17,16 @@
   {
     "errata_id": "8307",
     "doc-id": "RFC6488",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "The content-type is the signed-data type of id-data, namely the id-signedData OID [RFC5652], 1.2.840.113549.1.7.2.",
     "correct_text": "The content-type is the id-signedData OID [RFC5652], 1.2.840.113549.1.7.2.",
-    "notes": "id-data (OID 1.2.840.113549.1.7.1) and id-signedData are siblings in the pkcs7 arc, so the latter is not a type of the former.\r\n\r\nSee also https://mailarchive.ietf.org/arch/msg/sidrops/_FuWIR0d5V53VGGGSh-6MKlqLxI/",
+    "notes": "id-data (OID 1.2.840.113549.1.7.1) and id-signedData are siblings in the pkcs7 arc, so the latter is not a type of the former.\r\n\r\nSee also https://mailarchive.ietf.org/arch/msg/sidrops/_FuWIR0d5V53VGGGSh-6MKlqLxI/\r\n\r\nVerifier note:\r\n\r\nSee also also, https://mailarchive.ietf.org/arch/msg/sidr/wIwQ1bsGCKC6V9sPNtRoJ3gntxo/\r\n\r\nVerifier note:\r\n\r\nSee also also, https://mailarchive.ietf.org/arch/msg/sidr/wIwQ1bsGCKC6V9sPNtRoJ3gntxo/",
     "submit_date": "2025-02-21",
     "submitter_name": "Theo Buehler",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2025-02-22 12:14:42"
   }
 ]
