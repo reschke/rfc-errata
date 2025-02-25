@@ -43,5 +43,20 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2023-11-09 01:09:01"
+  },
+  {
+    "errata_id": "8310",
+    "doc-id": "RFC5589",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.3",
+    "orig_text": "F5 REFER Transferor -> Transferee\r\n\r\n   REFER sips:3ld812adkjw@biloxi.example.com;gr=3413kj2ha SIP/2.0\r\n   Via: SIP/2.0/TLS pc33.atlanta.example.com;branch=z9hG4bKnashds9\r\n   Max-Forwards: 70\r\n   To: <sips:3ld812adkjw@biloxi.example.com;gr=3413kj2ha>\r\n   From: <sips:transferor@atlanta.example.com>;tag=1928301774\r\n   Call-ID: a84b4c76e66710\r\n   CSeq: 314159 REFER\r\n   Require: tdialog\r\n   <allOneLine>\r\n   Refer-To: <sips:482n4z24kdg@chicago.example.com;gr=8594958?\r\n   Replaces=592435881734450904%3Bto-tag%3D9m2n3wq%3Bfrom-tag3D763231>\r\n   </allOneLine>\r\n   Target-Dialog: 592435881734450904;local-tag=9m2n3wq\r\n    ;remote-tag=763231\r\n   Contact: <sips:4889445d8kjtk3@atlanta.example.com;gr=723jd2d>\r\n   Content-Length: 0",
+    "correct_text": "F5 REFER Transferor -> Transferee\r\n\r\n   REFER sips:3ld812adkjw@biloxi.example.com;gr=3413kj2ha SIP/2.0\r\n   Via: SIP/2.0/TLS pc33.atlanta.example.com;branch=z9hG4bKnashds9\r\n   Max-Forwards: 70\r\n   To: <sips:3ld812adkjw@biloxi.example.com;gr=3413kj2ha>\r\n   From: <sips:transferor@atlanta.example.com>;tag=1928301774\r\n   Call-ID: a84b4c76e66710\r\n   CSeq: 314159 REFER\r\n   Require: tdialog\r\n   <allOneLine>\r\n   Refer-To: <sips:482n4z24kdg@chicago.example.com;gr=8594958?\r\n   Replaces=592435881734450904%3Bto-tag%3D9m2n3wq%3Bfrom-tag3D763231>\r\n   </allOneLine>\r\n   Target-Dialog: 090459243588173445;local-tag=7553452\r\n    ;remote-tag=31431\r\n   Contact: <sips:4889445d8kjtk3@atlanta.example.com;gr=723jd2d>\r\n   Content-Length: 0\r\n",
+    "notes": "In 7.3.  Attended Transfer, message F5 REFER Transferor -> Transferee has a Target-Dialog header that contains the dialog identifying information from the call to the Transfer Target when it should have the ones from the call from the Transferee.",
+    "submit_date": "2025-02-24",
+    "submitter_name": "Julien Rousseau",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

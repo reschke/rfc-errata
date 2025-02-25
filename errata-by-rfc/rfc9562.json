@@ -62,7 +62,7 @@
   {
     "errata_id": "8288",
     "doc-id": "RFC9562",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6.1",
     "orig_text": "   Length:\r\n      The length of a given timestamp directly impacts how many\r\n      timestamp ticks can be contained in a UUID before the maximum\r\n      value for the timestamp field is reached.  Take care to ensure\r\n      that the proper length is selected for a given timestamp.  UUIDv1\r\n      and UUIDv6 utilize a 60-bit timestamp valid until 5623 AD; UUIDv7\r\n      features a 48-bit timestamp valid until the year 10889 AD.",
@@ -70,8 +70,8 @@
     "notes": "I believe the error is the result of a bad calculation that used the Unix epoch as the zero-date instead of the Gregorian calendar's 1582 zero-date. I've seen online references to the following [incorrect] calculation for determining the UUIDv1 maximum date: (2^60 / 10^7 / 60 / 60 / 24 / 365.25 + 1970) = 5623.38778807. Source: https://github.com/uuid6/uuid6-ietf-draft/issues/23#issuecomment-898866487\r\n\r\nThat is: (bitsOfTimeData / 100 nanoseconds / secondsPerMin / minutesPerHour / hoursPerDay / daysPerYear + unixEpochYear). However, the max date for v1 and v6 is based, not on the Unix epoch year, but on the year 1582 (Ref: section 5.1).\r\n\r\n\r\nThe same calculation, but using 1582 as the trailing year added, is 5235.38778807.\r\n\r\n\r\n\r\n\r\nDoing manual math approximation:\r\n\r\n60 bits = 2^60 = 1152921504606846976 one-hundred-nano-second-intervals\r\n1152921504606846976 * 100 = 115292150460684697600 nanoseconds\r\n\r\n115292150460684697600 nanoseconds / 31557600000000000 nanosecondPerYear (365.25 daysPerYear assumed) =~ 3653.3878 years.\r\n\r\nDate math: 1582.7890 + 3653.3878 years = 5236.1768 =~ March of 5236\r\n\r\n\r\n\r\n\r\nExact date math spot checking using a couple of programming languages calculators:\r\n\r\nGo:\r\n\r\npackage main\r\n\r\nimport (\r\n\t\"fmt\"\r\n\t\"time\"\r\n)\r\n\r\nfunc main() {\r\n\tt := time.Date(1582, 10, 15, 0, 0, 0, 0, time.UTC)\r\n\tfor _ = range 100 {\r\n\t\tt = t.Add(1152921504606846976)\r\n\t}\r\n\tfmt.Println(t)\r\n}\r\n\r\n\r\nOutput: 5236-03-31 21:21:00.6846976 +0000 UTC\r\n\r\n\r\n\r\nPython:\r\n\r\nfrom datetime import datetime, timedelta, timezone\r\n\r\nstart_date = datetime(1582, 10, 15, tzinfo=timezone.utc)\r\n\r\nnanoseconds = 115292150460684697600\r\nseconds = nanoseconds // 1_000_000_000  # Convert to seconds\r\nremaining_nanoseconds = nanoseconds % 1_000_000_000\r\nmicroseconds = remaining_nanoseconds // 1000  # Convert remaining to microseconds\r\n\r\ndelta = timedelta(seconds=seconds, microseconds=microseconds)\r\n\r\nresult_date = start_date + delta\r\n\r\nprint(result_date)\r\n\r\n\r\nOutput: 5236-03-31 21:21:00.684697+00:00\r\n\r\n\r\n\r\nJavascript:\r\n\r\nconst startDate = new Date(Date.UTC(1582, 9, 15)); // Month is 0-based in JS\r\nconst nanoseconds = BigInt('115292150460684697600');\r\n\r\nconst milliseconds = Number(nanoseconds / BigInt(1_000_000));\r\n\r\nconst resultDate = new Date(startDate.getTime() + milliseconds);\r\n\r\nconsole.log(resultDate.toUTCString());\r\n\r\n\r\nOutput: Mon, 31 Mar 5236 21:21:00 GMT",
     "submit_date": "2025-02-08",
     "submitter_name": "Nathan McGarvey",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2025-02-24 13:35:49"
   }
 ]
