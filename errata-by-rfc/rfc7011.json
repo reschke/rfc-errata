@@ -73,5 +73,20 @@
     "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2024-04-04 06:39:34"
+  },
+  {
+    "errata_id": "8313",
+    "doc-id": "RFC7011",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.2",
+    "orig_text": "   E\r\n\r\n      Enterprise bit.  This is the first bit of the Field Specifier.  If\r\n      this bit is zero, the Information Element identifier identifies an\r\n      Information Element in [IANA-IPFIX], and the four-octet Enterprise\r\n      Number field MUST NOT be present.  If this bit is one, the\r\n      Information Element identifier identifies an enterprise-specific\r\n      Information Element, and the Enterprise Number field MUST be\r\n      present.\r\n\r\n   Information Element identifier\r\n\r\n      A numeric value that represents the Information Element.  Refer to\r\n      [IANA-IPFIX].",
+    "correct_text": "   E\r\n\r\n      Enterprise bit.  This is the first bit of the Field Specifier.  If\r\n      this bit is zero, the Information Element identifier identifies an\r\n      Information Element in [IANA-IPFIX], and the four-octet Enterprise\r\n      Number field MUST NOT be present.  If this bit is one, the\r\n      Information Element identifier identifies an enterprise-specific\r\n      Information Element, and the Enterprise Number field MUST be\r\n      present.\r\n\r\n   Information Element identifier\r\n\r\n      A numeric value that represents the Information Element. This field\r\n      takes a value in [IANA-IPFIX] when the E bit is set to zero.",
+    "notes": "Makes it explicit that the values in [IANA-IPFIX] only applies when the is E-bit is unset. \r\n\r\nAn alternative would be to simply delete \"Refer to [IANA-IPFIX].\" as the exact behavior is already mentioned under the E bit description.",
+    "submit_date": "2025-02-25",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

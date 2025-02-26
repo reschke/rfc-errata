@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8314",
+    "doc-id": "RFC6901",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "    \"/i\\\\j\"      5\r\n    \"/k\\\"l\"      6\r\n  ",
+    "correct_text": "    \"/i\\\\\\\\j\"      5\r\n    \"/k\\\\\"l\"       6\r\n",
+    "notes": "RFC 6901 uses obsolete RFC 4627, when referring to JSON. RFC 4627 has been obsoleted by RFC 7158 -> RFC 7159 -> RFC 8259. Under RFC 8259 the \"/i\\\\j\" and \"/k\\\"l\" are no longer valid JSON Strings. This errata provides a clarification how JSON Strings used in this RFC 6901 need to be defined to be parsable by RFC 8259 implementation.",
+    "submit_date": "2025-02-25",
+    "submitter_name": "Vladimír Gorej",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
