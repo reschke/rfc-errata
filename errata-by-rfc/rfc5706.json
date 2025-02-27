@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8315",
+    "doc-id": "RFC5706",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.6.1",
+    "orig_text": "   The protocol document should make clear the limitations implicit\r\n   within the protocol and the behavior when limits are exceeded.  This\r\n   should be considered in a data-modeling-independent manner -- what\r\n   makes managed-protocol sense, not what makes management-protocol-\r\n   sense.",
+    "correct_text": "   The protocol document should make clear the limitations implicit\r\n   within the protocol and the behavior when limits are exceeded.  This\r\n   should be considered in a data-modeling-independent manner -- what\r\n   makes managed-protocol sense, not what makes data model\r\n   sense.",
+    "notes": "I am not sure what correct wording would be. The existing wording is self contradictory. The above \"corrected\" text is just a guess.",
+    "submit_date": "2025-02-26",
+    "submitter_name": "Donald Eastlake",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
