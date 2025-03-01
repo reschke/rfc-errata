@@ -43,5 +43,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2020-05-07 13:59:51"
+  },
+  {
+    "errata_id": "8318",
+    "doc-id": "RFC8018",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "A.5",
+    "orig_text": "Examples of underlying encryption schemes are given in Appendix B.3.\r\n",
+    "correct_text": "Examples of underlying message authentication schemes are given in Appendix B.3.\r\n",
+    "notes": "The paragraph this sentence is in describes the messageAuthScheme field, and the referenced appendix covers message authentication schemes.",
+    "submit_date": "2025-02-28",
+    "submitter_name": "Roman Donchenko",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
