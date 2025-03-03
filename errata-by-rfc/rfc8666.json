@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8319",
+    "doc-id": "RFC8666",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6",
+    "orig_text": "   Example 1: If the following router addresses (loopback addresses)\r\n   need to be mapped into the corresponding Prefix-SID indexes:\r\n\r\n             Router-A: 2001:DB8::1/128, Prefix-SID: Index 1\r\n             Router-B: 2001:DB8::2/128, Prefix-SID: Index 2\r\n             Router-C: 2001:DB8::3/128, Prefix-SID: Index 3\r\n             Router-D: 2001:DB8::4/128, Prefix-SID: Index 4\r\n\r\n   then the Address Prefix field in the OSPFv3 Extended Prefix Range TLV\r\n   would be set to 2001:DB8::1, the Prefix Length would be set to 128,\r\n   the Range Size would be set to 4, and the Index value in the Prefix-\r\n   SID sub-TLV would be set to 1.\r\n\r\n   Example 2: If the following prefixes need to be mapped into the\r\n   corresponding Prefix-SID indexes:\r\n\r\n             2001:DB8:1::0/120,   Prefix-SID: Index 51\r\n             2001:DB8:1::100/120, Prefix-SID: Index 52\r\n             2001:DB8:1::200/120, Prefix-SID: Index 53\r\n             2001:DB8:1::300/120, Prefix-SID: Index 54\r\n             2001:DB8:1::400/120, Prefix-SID: Index 55\r\n             2001:DB8:1::500/120, Prefix-SID: Index 56\r\n             2001:DB8:1::600/120, Prefix-SID: Index 57\r\n\r\n   then the Prefix field in the OSPFv3 Extended Prefix Range TLV would\r\n   be set to 2001:DB8:1::0, the Prefix Length would be set to 120, the\r\n   Range Size would be set to 7, and the Index value in the Prefix-SID\r\n   sub-TLV would be set to 51.",
+    "correct_text": "   Example 1: If the following router addresses (loopback addresses)\r\n   need to be mapped into the corresponding Prefix-SID indexes:\r\n\r\n             Router-A: 2001:db8::1/128, Prefix-SID: Index 1\r\n             Router-B: 2001:db8::2/128, Prefix-SID: Index 2\r\n             Router-C: 2001:db8::3/128, Prefix-SID: Index 3\r\n             Router-D: 2001:db8::4/128, Prefix-SID: Index 4\r\n\r\n   then the Address Prefix field in the OSPFv3 Extended Prefix Range TLV\r\n   would be set to 2001:db8::1, the Prefix Length would be set to 128,\r\n   the Range Size would be set to 4, and the Index value in the Prefix-\r\n   SID sub-TLV would be set to 1.\r\n\r\n   Example 2: If the following prefixes need to be mapped into the\r\n   corresponding Prefix-SID indexes:\r\n\r\n             2001:db8:1::0/120,   Prefix-SID: Index 51\r\n             2001:db8:1::100/120, Prefix-SID: Index 52\r\n             2001:db8:1::200/120, Prefix-SID: Index 53\r\n             2001:db8:1::300/120, Prefix-SID: Index 54\r\n             2001:db8:1::400/120, Prefix-SID: Index 55\r\n             2001:db8:1::500/120, Prefix-SID: Index 56\r\n             2001:db8:1::600/120, Prefix-SID: Index 57\r\n\r\n   then the Prefix field in the OSPFv3 Extended Prefix Range TLV would\r\n   be set to 2001:DB8:1::0, the Prefix Length would be set to 120, the\r\n   Range Size would be set to 7, and the Index value in the Prefix-SID\r\n   sub-TLV would be set to 51.",
+    "notes": "The OLD does not follow this recommendation from rfc5952#section-4.3\r\n\r\n   The characters \"a\", \"b\", \"c\", \"d\", \"e\", and \"f\" in an IPv6 address\r\n   MUST be represented in lowercase.",
+    "submit_date": "2025-03-02",
+    "submitter_name": "Mohamed BOUCADAIR",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
