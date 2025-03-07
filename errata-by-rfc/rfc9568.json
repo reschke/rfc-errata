@@ -32,7 +32,7 @@
   {
     "errata_id": "8298",
     "doc-id": "RFC9568",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": "    It MUST verify that the VRID is configured on the receiving\r\n    interface and the local router is not the IPvX address owner\r\n    (Priority = 255 (decimal)).\r\n\r\nIf any one of the above checks fails, the receiver MUST discard the\r\npacket, SHOULD log the event (subject to rate-limiting), and MAY\r\nindicate via network management that an error occurred.",
@@ -40,14 +40,14 @@
     "notes": "Although it is clearly a configuration error, if two (or more) VRRP routers are configured as the address owner for the same VRID, if received VRRP packets are just dropped (as specified in section 7.1), all such routers will remain in Active state, will continue sending VRRP adverts, and will respond to ARP/ND requests. This will make communication with any VIP unachievable, or at best unreliable.\r\n\r\nIf the VRRP packets are not dropped, but processed in the normal way, in section 6.4.3 - \"Active\", following \"If an ADVERTISEMENT is received\", then:\r\n   . If the Priority in the ADVERTISEMENT is greater than the\r\n     local Priority or the Priority in the ADVERTISEMENT is equal\r\n     to the local Priority and the primary IPvX address of the\r\n     sender is greater than the local primary IPvX address (based\r\n     on an unsigned integer comparison of the IPvX addresses in\r\n     network byte order), then:\r\n         ...\r\n         Transition to the {Backup} state\r\n\r\nwill cause all except one of the VRRP routers to revert to Backup state, and the VRRP instance will be stable.",
     "submit_date": "2025-02-17",
     "submitter_name": "Quentin Armitage",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "175",
+    "verifier_name": "Jim Guichard",
+    "update_date": "2025-03-06 05:15:17"
   },
   {
     "errata_id": "8299",
     "doc-id": "RFC9568",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": " * It MUST verify that the VRID is configured on the receiving\r\n   interface and the local router is not the IPvX address owner\r\n   (Priority = 255 (decimal)).\r\n\r\nIf any one of the above checks fails, the receiver MUST discard the\r\npacket, SHOULD log the event (subject to rate-limiting), and MAY\r\nindicate via network management that an error occurred.",
@@ -55,14 +55,14 @@
     "notes": "The only change above is adding:\r\n  * It MUST verify that IPvX Addr Count is non zero.\r\n\r\nThis is due to section 5.2.5 requiring it:\r\n\r\n5.2.5. IPvX Addr Count\r\n\r\nThe IPvX Addr Count field is the number of either IPv4 addresses or IPv6 addresses contained in this VRRP advertisement. The minimum value is 1. If the received count is 0, the VRRP advertisement MUST be ignored.",
     "submit_date": "2025-02-17",
     "submitter_name": "Quentin Armitage",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "175",
+    "verifier_name": "Jim Guichard",
+    "update_date": "2025-03-06 05:19:10"
   },
   {
     "errata_id": "8300",
     "doc-id": "RFC9568",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": " * It MUST verify that the VRID is configured on the receiving\r\n   interface and the local router is not the IPvX address owner\r\n   (Priority = 255 (decimal)).\r\n\r\nIf any one of the above checks fails, the receiver MUST discard the\r\npacket, SHOULD log the event (subject to rate-limiting), and MAY\r\nindicate via network management that an error occurred.",
@@ -70,14 +70,14 @@
     "notes": "The change only adds checking that the first IPv6 address is link-local.\r\n\r\nSection 5.2.9 states:\r\nFor IPv6, the first address MUST be the IPv6 link-local address associated with the Virtual Router.\r\n\r\nSection 6.1 also states (although this may relate to the configuration rather than the VRRP packet contents):\r\nIPv6_Addresses    One or more IPv6 addresses associated with this Virtual Router. Configured list of addresses with no default. The first address MUST be the Link-Local address associated with the Virtual Router.",
     "submit_date": "2025-02-17",
     "submitter_name": "Quentin Armitage",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "175",
+    "verifier_name": "Jim Guichard",
+    "update_date": "2025-03-06 05:18:36"
   },
   {
     "errata_id": "8301",
     "doc-id": "RFC9568",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6.1",
     "orig_text": "Advertisement_Interval  Time interval between VRRP Advertisements\r\n   (centiseconds) sent by this Virtual Router. Default is 100\r\n   centiseconds (1 second).\r\n\r\n\r\n and section 7.1 says:\r\n\r\n * It MUST verify that the VRID is configured on the receiving\r\n   interface and the local router is not the IPvX address owner\r\n   (Priority = 255 (decimal)).\r\n\r\nIf any one of the above checks fails, the receiver MUST discard the\r\npacket, SHOULD log the event (subject to rate-limiting), and MAY\r\nindicate via network management that an error occurred.",
@@ -85,8 +85,8 @@
     "notes": "The Skew_Time and Active_Down_Time are calculated by multiplying by Active_Adver_Interval which is the Advertisement_Interval of the current active virtual router. A value of 0 for the Active_Adver_Interval will result in Skew_Time and Active_Down_Interval being 0 (centiseconds). The consequence of this is that all backup routers will immediately time out the Active_Down_Interval and transition to Active state. All but the lowest priority virtual router will send an advert, all virtual routes will keep timing out and sending VRRP adverts and the LAN will be flooded with VRRP packets.\r\n\r\nIt causes mayhem (I have tried it)!",
     "submit_date": "2025-02-17",
     "submitter_name": "Quentin Armitage",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "175",
+    "verifier_name": "Jim Guichard",
+    "update_date": "2025-03-06 05:17:26"
   }
 ]
