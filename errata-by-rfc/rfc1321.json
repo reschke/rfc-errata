@@ -92,16 +92,16 @@
   {
     "errata_id": "7814",
     "doc-id": "RFC1321",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "Appendix A.1 says:",
     "orig_text": "/* POINTER defines a generic pointer type */\r\ntypedef unsigned char *POINTER;\r\n\r\n/* UINT2 defines a two byte word */\r\ntypedef unsigned short int UINT2;\r\n\r\n/* UINT4 defines a four byte word */\r\ntypedef unsigned long int UINT4;\r\n",
     "correct_text": "#include <stdint.h>\r\n\r\n/* POINTER defines a generic pointer type */\r\ntypedef unsigned char *POINTER;\r\n\r\n/* UINT2 defines a two byte word */\r\ntypedef uint16_t UINT2;\r\n\r\n/* UINT4 defines a four byte word */\r\ntypedef uint32_t UINT4;",
-    "notes": "On some modern systems like x86-64 Linux, unsigned long int is 8 bytes, which causes the original implementation to be incorrect.",
+    "notes": "On some modern systems like x86-64 Linux, unsigned long int is 8 bytes, which causes the original implementation to be incorrect.\n --VERIFIER NOTES-- \nSec AD(Paul Wouters): At the time of writing, this was correct. As this document is not going to be updated in the future, there is no point updating the C code to modern or future compiler features.",
     "submit_date": "2024-02-19",
     "submitter_name": "Nilstrieb",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-02-19 22:53:55"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-03-07 08:47:15"
   }
 ]

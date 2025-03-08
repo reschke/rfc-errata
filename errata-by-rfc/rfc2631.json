@@ -77,7 +77,7 @@
   {
     "errata_id": "6302",
     "doc-id": "RFC2631",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.2.1.1",
     "orig_text": "3. Set N’= L/1024\r\n",
@@ -85,9 +85,9 @@
     "notes": "The definition of N' is not used in the document. On line 19 of the algorithm, we have \"If counter < (4096 * N) then go to 8.\". Hence, either the definition on line 3 has to be N instead of N', or it should be N' instead of N on line 19.",
     "submit_date": "2020-10-07",
     "submitter_name": "Abdullah Talayhan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-03-07 08:42:33"
   },
   {
     "errata_id": "7761",
