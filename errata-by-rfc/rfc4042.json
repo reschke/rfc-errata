@@ -28,5 +28,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2024-03-25 10:21:03"
+  },
+  {
+    "errata_id": "8325",
+    "doc-id": "RFC4042",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "   UINT9 *UCS4_to_UTF9 (UINT9 *utf9P,UINT31 ucs4)\r\n   {\r\n     if (ucs4 > 0x100) {\r\n       if (ucs4 > 0x10000) {\r\n         if (ucs4 > 0x1000000)\r\n   /* ... */",
+    "correct_text": "   UINT9 *UCS4_to_UTF9 (UINT9 *utf9P,UINT31 ucs4)\r\n   {\r\n     if (ucs4 >= 0x100) {\r\n       if (ucs4 >= 0x10000) {\r\n         if (ucs4 >= 0x1000000)\r\n   /* ... */",
+    "notes": "Errors in the conditionals in the C code.",
+    "submit_date": "2025-03-10",
+    "submitter_name": "Kang-Che Sung",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

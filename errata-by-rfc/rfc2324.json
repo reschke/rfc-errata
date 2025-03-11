@@ -163,5 +163,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2025-01-07 08:17:27"
+  },
+  {
+    "errata_id": "8324",
+    "doc-id": "RFC2324",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.3.1",
+    "orig_text": "   This return code is normally interpreted as \"The resource identified\r\n   by the request is only capable of generating response entities which\r\n   have content characteristics not acceptable according to the accept\r\n   headers sent in the request. In HTCPCP, this response code MAY be\r\n   returned if the operator of the coffee pot cannot comply with the\r\n   Accept-Addition request. Unless the request was a HEAD request, the\r\n   response SHOULD include an entity containing a list of available\r\n   coffee additions.",
+    "correct_text": "   This return code is normally interpreted as \"The resource identified\r\n   by the request is only capable of generating response entities which\r\n   have content characteristics not acceptable according to the accept\r\n   headers sent in the request.\" In HTCPCP, this response code MAY be\r\n   returned if the operator of the coffee pot cannot comply with the\r\n   Accept-Addition request. Unless the request was a HEAD request, the\r\n   response SHOULD include an entity containing a list of available\r\n   coffee additions.",
+    "notes": "The quoted portion was missing a closing quotation mark.",
+    "submit_date": "2025-03-10",
+    "submitter_name": "Eric Spishak-Thomas",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
