@@ -3,15 +3,15 @@
     "errata_id": "8323",
     "doc-id": "RFC5927",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "2",
-    "orig_text": "   Appendix D of [RFC4301] provides information about which ICMPv4 error\r\n   messages are produced by hosts, intermediate routers, or both.\r\n\r\n\r\n...\r\n\r\n\r\n   Appendix D of [RFC4301] provides information about which ICMPv6 error\r\n   messages are produced by hosts, intermediate routers, or both.",
-    "correct_text": "   Appendix D of [RFC2401] provides information about which ICMPv4 error\r\n   messages are produced by hosts, intermediate routers, or both.\r\n\r\n\r\n...\r\n\r\n\r\n   Appendix D of [RFC2401] provides information about which ICMPv6 error\r\n   messages are produced by hosts, intermediate routers, or both.",
+    "orig_text": "Appendix D of [RFC4301] provides information about which ICMPv4 error\r\nmessages are produced by hosts, intermediate routers, or both.\r\n...\r\nAppendix D of [RFC4301] provides information about which ICMPv6 error\r\nmessages are produced by hosts, intermediate routers, or both.",
+    "correct_text": "Appendix D of [RFC2401] provides information about which ICMPv4 error\r\nmessages are produced by hosts, intermediate routers, or both.\r\n...\r\nAppendix D of [RFC2401] provides information about which ICMPv6 error\r\nmessages are produced by hosts, intermediate routers, or both.",
     "notes": "RFC4301 says the following in 13: The appendix on \"Categorization of ICMP Messages\" has been deleted.\r\n\r\nThe Informative References should be updated accordingly as RFC2401 isn't mentionned at all, and these two references are supposed to give more understanding, not any normative material.",
     "submit_date": "2025-03-10",
     "submitter_name": "Eugene Adell",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-03-12 08:04:24"
   }
 ]
