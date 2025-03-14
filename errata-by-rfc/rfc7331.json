@@ -28,5 +28,20 @@
     "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8327",
+    "doc-id": "RFC7331",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "bfdSessUp NOTIFICATION-TYPE\r\n     OBJECTS {\r\n         bfdSessDiag, -- low range value\r\n         bfdSessDiag  -- high range value\r\n     }\r\n     STATUS     current\r\n     DESCRIPTION\r\n         \"This notification is generated when the\r\n          bfdSessState object for one or more contiguous\r\n          entries in bfdSessTable are about to enter the up(4)\r\n          state from some other state.  The included values of\r\n          bfdSessDiag MUST both be set equal to this\r\n          new state (i.e., up(4)).  The two instances of\r\n          bfdSessDiag in this notification indicate the range\r\n          of indexes that are affected.  Note that all the indexes\r\n          of the two ends of the range can be derived from the\r\n          instance identifiers of these two objects.  For the\r\n          cases where a contiguous range of sessions\r\n          have transitioned into the up(4) state at roughly\r\n          the same time, the device SHOULD issue a single\r\n          notification for each range of contiguous indexes in\r\n          an effort to minimize the emission of a large number\r\n          of notifications.  If a notification has to be\r\n          issued for just a single bfdSessEntry, then\r\n          the instance identifier (and values) of the two\r\n          bfdSessDiag objects MUST be identical.\"\r\n     ::= { bfdNotifications 1 }",
+    "correct_text": "bfdSessUp NOTIFICATION-TYPE\r\n     OBJECTS {\r\n         bfdSessIndex, -- low range value\r\n         bfdSessIndex-- high range value\r\n     }\r\n     STATUS     current\r\n     DESCRIPTION\r\n         \"This notification is generated when the\r\n          bfdSessState object for one or more contiguous\r\n          entries in bfdSessTable are about to enter the up(4)\r\n          state from some other state.  The included values of\r\n          bfdSessIndex MUST both be set equal to this\r\n          new state (i.e., up(4)).  The two instances of\r\n          bfdSessIndex in this notification indicate the range\r\n          of indexes that are affected.  Note that all the indexes\r\n          of the two ends of the range can be derived from the\r\n          instance identifiers of these two objects.  For the\r\n          cases where a contiguous range of sessions\r\n          have transitioned into the up(4) state at roughly\r\n          the same time, the device SHOULD issue a single\r\n          notification for each range of contiguous indexes in\r\n          an effort to minimize the emission of a large number\r\n          of notifications.  If a notification has to be\r\n          issued for just a single bfdSessEntry, then\r\n          the instance identifier (and values) of the two\r\n          bfdSessIndex objects MUST be identical.\"\r\n     ::= { bfdNotifications 1 }",
+    "notes": "The bfdSessUp and bfdSessDown must report the bfdSessIndex range for which the Session State has changed and not the bfdSessDiag.",
+    "submit_date": "2025-03-13",
+    "submitter_name": "Goutham Jain",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

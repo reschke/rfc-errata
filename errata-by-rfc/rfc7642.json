@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-11-10 13:33:51"
+  },
+  {
+    "errata_id": "8326",
+    "doc-id": "RFC7642",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.3.1",
+    "orig_text": "CSP-1 then pushes the new CSU joiner push\r\n   request downstream to CSU-2 and gets confirmation that the account\r\n   was successfully created.",
+    "correct_text": "CSP-1 then pushes the new CSU joiner push\r\n   request downstream to CSP-2 and gets confirmation that the account\r\n   was successfully created.",
+    "notes": "CSU-2 makes no sense to me, and it's not even defined in the previous line, AFAIU.",
+    "submit_date": "2025-03-13",
+    "submitter_name": "Emmanuel Lecharny",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
