@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8330",
+    "doc-id": "RFC9595",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "   2.  The list of items is sorted in alphabetical order.  'namespace'\r\n       entries are sorted in descending order, and 'identifier' entries\r\n       are sorted in ascending order.  ",
+    "correct_text": "   2.  The list of items is sorted in alphabetical order.  'namespace'\r\n       entries are sorted in ascending order, and 'identifier' entries\r\n       are sorted in ascending order.  ",
+    "notes": "Examples and all tools follow ascending order.\r\nYANG lists are usually sorting in ascending order.",
+    "submit_date": "2025-03-14",
+    "submitter_name": "Andrew Bierman",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
