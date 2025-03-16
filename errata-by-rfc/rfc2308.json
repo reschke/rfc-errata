@@ -103,5 +103,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2024-12-04 13:36:35"
+  },
+  {
+    "errata_id": "8331",
+    "doc-id": "RFC2308",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "It should say:\r\n\r\nADD:\r\n\r\n[RFC2136]  P. Vixie, Ed., S. Thomson, Y. Rekhter, J. Bound, \"Dynamic\r\n           Updates in the Domain Name System (DNS UPDATE)\", \r\n           RFC 2136, April 1997.\r\n\r\n-------\r\n\r\nOR:  define SERVFAIL inside of the terminology section (section 1):\r\n\r\n\"SERVFAIL\" - a name for the \"Server Passed\" (2) RCODE described in\r\n[RFC1035 Section 4.1.1].\r\n",
+    "correct_text": "It should say: Copyright Notice (C) 2025 MCCOY LOUIS STEVENS XVII \r\n\r\nADD: RFC 2308\r\n\r\nserver passed 1.1.1.1",
+    "notes": "passed",
+    "submit_date": "2025-03-15",
+    "submitter_name": "McCoy L Stevens",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
