@@ -32,16 +32,31 @@
   {
     "errata_id": "7944",
     "doc-id": "RFC8960",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.5",
     "orig_text": "  grouping nhlfe-single-contents {\r\n    description\r\n      \"A grouping that describes a single Next Hop Label Forwarding\r\n       Entry (NHLFE) and its associated parameters as described in\r\n       the MPLS architecture.  This grouping is specific to the case\r\n       when a single next hop is associated with the route.\";\r\n    uses rt-types:mpls-label-stack;\r\n  }",
     "correct_text": "  grouping nhlfe-single-contents {\r\n    description\r\n      \"A grouping that describes a single Next Hop Label Forwarding\r\n       Entry (NHLFE) and its associated parameters as described in\r\n       the MPLS architecture.  This grouping is specific to the case\r\n       when a single next hop is associated with the route.\";\r\n    <some reference to an mpls-operations-type>\r\n    uses rt-types:mpls-label-stack;\r\n  }\r\n",
-    "notes": "Section 2.2 states that the NHLFE contains the packet's next hop and \"[t]he operation to perform on the packet's label stack.\"\r\n\r\nSection 2.5 defines an mpls-operations-type typedef, but then it is never referenced by anything else in the YANG module.\r\n\r\nI *think* it should be associated with nhlfe-single-contents, alongside the rt-types:mpls-label-stack used there.  My YANG skills are too poor to craft any plausibly correct syntax, though.",
+    "notes": "Section 2.2 states that the NHLFE contains the packet's next hop and \"[t]he operation to perform on the packet's label stack.\"\r\n\r\nSection 2.5 defines an mpls-operations-type typedef, but then it is never referenced by anything else in the YANG module.\r\n\r\nI *think* it should be associated with nhlfe-single-contents, alongside the rt-types:mpls-label-stack used there.  My YANG skills are too poor to craft any plausibly correct syntax, though.\n --VERIFIER NOTES-- \nSee https://mailarchive.ietf.org/arch/msg/mpls/hzb3iO0Mn_Z4eyaPiUkMig_8JkE/",
     "submit_date": "2024-05-19",
     "submitter_name": "Erik Kline",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2025-03-16 19:00:17"
+  },
+  {
+    "errata_id": "8333",
+    "doc-id": "RFC8960",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "2.2",
+    "orig_text": "   2.  The operation to perform on the packet's label stack.  This can\r\n       be one of the following operations:\r\n",
+    "correct_text": "    2.  The operation to perform on the packet's label stack which \r\n        is implicitly derived from the mpls-label-stack container \r\n        (in nhlfe-single-contents/nhlfe-multiple-contents) and the \r\n        \"mpls-local-label\" leaf.  This can be one of the following\r\n        operations:\r\n",
+    "notes": "A previous erratum, number 7944, was opened and ultimately closed as erroneous. In the discussion of that erratum, https://mailarchive.ietf.org/arch/msg/mpls/hzb3iO0Mn_Z4eyaPiUkMig_8JkE/ the clarification found in this report was suggested.",
+    "submit_date": "2025-03-17",
+    "submitter_name": "John Scudder",
+    "verifier_id": "171",
+    "verifier_name": "John Scudder",
+    "update_date": "2025-03-16 19:14:46"
   }
 ]
