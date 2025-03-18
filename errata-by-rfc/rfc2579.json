@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8335",
+    "doc-id": "RFC2579",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "(Page 18)\r\n\r\nDateAndTime ::= TEXTUAL-CONVENTION\r\n    DISPLAY-HINT \"2d-1d-1d,1d:1d:1d.1d,1a1d:1d\"\r\n    STATUS       current\r\n    DESCRIPTION\r\n            \"A date-time specification.\r\n\r\n            field  octets  contents                  range\r\n            -----  ------  --------                  -----\r\n              1      1-2   year*                     0..65536\r\n              2       3    month                     1..12\r\n              3       4    day                       1..31\r\n              4       5    hour                      0..23\r\n              5       6    minutes                   0..59\r\n              6       7    seconds                   0..60\r\n                           (use 60 for leap-second)\r\n              7       8    deci-seconds              0..9\r\n              8       9    direction from UTC        '+' / '-'\r\n              9      10    hours from UTC*           0..13\r\n             10      11    minutes from UTC          0..59\r\n\r\n            * Notes:\r\n            - the value of year is in network-byte order\r\n            - daylight saving time in New Zealand is +13\r\n",
+    "correct_text": "DateAndTime ::= TEXTUAL-CONVENTION\r\n    DISPLAY-HINT \"2d-1d-1d,1d:1d:1d.1d,1a1d:1d\"\r\n    STATUS       current\r\n    DESCRIPTION\r\n            \"A date-time specification.\r\n\r\n            field  octets  contents                  range\r\n            -----  ------  --------                  -----\r\n              1      1-2   year*                     0..65536\r\n              2       3    month                     1..12\r\n              3       4    day                       1..31\r\n              4       5    hour                      0..23\r\n              5       6    minutes                   0..59\r\n              6       7    seconds                   0..60\r\n                           (use 60 for leap-second)\r\n              7       8    deci-seconds              0..9\r\n              8       9    direction from UTC        '+' / '-'\r\n              9      10    hours from UTC*           0..14\r\n             10      11    minutes from UTC          0..59\r\n\r\n            * Notes:\r\n            - the value of year is in network-byte order\r\n            - Line Islands region of Kiribata is +14\r\n",
+    "notes": "Line Islands region of Kiribata has a UTC+14 time zone, need to increase upper bound to support this area.",
+    "submit_date": "2025-03-17",
+    "submitter_name": "Michael Sweet",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

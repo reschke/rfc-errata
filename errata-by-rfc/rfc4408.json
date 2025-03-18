@@ -15,6 +15,21 @@
     "update_date": "2019-09-10 09:09:03"
   },
   {
+    "errata_id": "8334",
+    "doc-id": "RFC4408",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "Network Working Group                                            M. Wong\r\nRequest for Comments: 4408                                    W. Schlitt\r\nCategory: Experimental                                        April 2006\r\n\r\n",
+    "correct_text": "Network Working Group                                            M. Wong\r\nRequest for Comments: 4408                                    W. Schlitt\r\nCategory: Experimental                                        April 2006\r\nOBSOLETED BY: 7208\r\n",
+    "notes": "I saw recent discussions mentioning RFC4408 and copying the phrase \"it does not specify an Internet standard of any kind\", which implies the authors browsed the RFC but didn't see a link to the actual version of SPF.",
+    "submit_date": "2025-03-17",
+    "submitter_name": "Alessandro Vesely",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "99",
     "doc-id": "RFC4408",
     "errata_status_code": "Held for Document Update",
