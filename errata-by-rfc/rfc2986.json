@@ -5,28 +5,28 @@
     "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.1",
-    "orig_text": "subjectPublicKeyInfo contains information about the public key...",
-    "correct_text": "subjectPKInfo contains information about the public key...",
+    "orig_text": "subjectPublicKeyInfo contains information about the public key being certified.",
+    "correct_text": "subjectPKInfo contains information about the public key being certified.",
     "notes": "This section describes top-level components of CertificationRequestInfo. \"subjectPublicKeyInfo\" should be labeled as \"subjectPKInfo\".",
     "submit_date": "2025-03-14",
     "submitter_name": "Angelica Semenec",
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
-    "update_date": "2025-03-17 12:34:28"
+    "update_date": "2025-03-18 11:35:26"
   },
   {
     "errata_id": "8336",
     "doc-id": "RFC2986",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.2",
-    "orig_text": "certificateRequestInfo is the \"certification request",
-    "correct_text": "certificationRequestInfo is the \"certification request",
-    "notes": "There is no other reference to \"certificateRequestInfo\" and the ASN.1 definition specifies \"certificationRequestInfo\"",
+    "orig_text": "certificateRequestInfo is the \"certification request information.\"",
+    "correct_text": "certificationRequestInfo is the \"certification request information.\"",
+    "notes": "There is no other reference to \"certificateRequestInfo\" and the ASN.1 definition specifies \"certificationRequestInfo\".",
     "submit_date": "2025-03-17",
     "submitter_name": "Angelica Semenec",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-03-18 11:41:40"
   }
 ]

@@ -13,5 +13,20 @@
     "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2024-12-04 10:59:56"
+  },
+  {
+    "errata_id": "8339",
+    "doc-id": "RFC8972",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.7",
+    "orig_text": "The Session-Reflector MUST validate the Length value of the STAMP test\r\npacket.",
+    "correct_text": "The Session-Reflector MUST validate the Length value of the Followup\r\nTLV.",
+    "notes": "The STAMP protocol (and the introduction of TLV extensions) make for a great tool for active network measurement. I hope that this simple change helps improve the technical accuracy of the coordinated set of RFCs. Thank you, authors and editors, for the great work you have done!",
+    "submit_date": "2025-03-18",
+    "submitter_name": "William Hawkins",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

@@ -2,16 +2,16 @@
   {
     "errata_id": "8323",
     "doc-id": "RFC5927",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "Appendix D of [RFC4301] provides information about which ICMPv4 error\r\nmessages are produced by hosts, intermediate routers, or both.\r\n...\r\nAppendix D of [RFC4301] provides information about which ICMPv6 error\r\nmessages are produced by hosts, intermediate routers, or both.",
-    "correct_text": "Appendix D of [RFC2401] provides information about which ICMPv4 error\r\nmessages are produced by hosts, intermediate routers, or both.\r\n...\r\nAppendix D of [RFC2401] provides information about which ICMPv6 error\r\nmessages are produced by hosts, intermediate routers, or both.",
-    "notes": "RFC4301 says the following in 13: The appendix on \"Categorization of ICMP Messages\" has been deleted.\r\n\r\nThe Informative References should be updated accordingly as RFC2401 isn't mentionned at all, and these two references are supposed to give more understanding, not any normative material.",
+    "correct_text": "[Text sections are removed - see the notes]",
+    "notes": "Text deleted as they are not necessary, since the \r\ncorrect references to ICMPv4 (RFC792) and ICMPv6 (RFC2460) are already \r\npresent.\r\n\r\nSee the discussions here (https://mailarchive.ietf.org/arch/msg/tcpm/OkmxfectGJJ92thymY-CS375fzQ/).",
     "submit_date": "2025-03-10",
     "submitter_name": "Eugene Adell",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-03-12 08:04:24"
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 19:19:17"
   }
 ]

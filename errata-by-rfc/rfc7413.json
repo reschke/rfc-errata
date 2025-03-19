@@ -92,32 +92,32 @@
   {
     "errata_id": "8015",
     "doc-id": "RFC7413",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.2.2",
     "orig_text": "      b. Otherwise, include the Fast Open option with the cookie of the\r\n         server.  Include any data up to the cached server MSS or\r\n         default 536 bytes.",
     "correct_text": "      b. Otherwise, include the Fast Open option with the cookie of the\r\n         server.  Include any data up to the cached server MSS or\r\n         default: 536 bytes for IPv4 or 1220 bytes for IPv6.",
-    "notes": "default MSS is IP protocol-version-specific",
+    "notes": "default MSS is IP protocol-version-specific.\r\n\r\nBased on the discussion https://mailarchive.ietf.org/arch/msg/tcpm/mJC7Lz5GE8RmkJ_cJWaiRIn-sC8/, this is HFDU.",
     "submit_date": "2024-07-02",
     "submitter_name": "Bart Overkamp",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-07-03 15:11:00"
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 01:35:06"
   },
   {
     "errata_id": "8016",
     "doc-id": "RFC7413",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "6.3.3",
     "orig_text": "    <...> In fact, power has become such a prominent issue in\r\n   modern Long Term Evolution (LTE) devices that mobile browsers close\r\n   HTTP connections within seconds or even immediately [SOUDERS11].\r\n",
     "correct_text": "    <...> In fact, power has become such a prominent issue in\r\n   3G mobile devices that mobile browsers close HTTP connections\r\n   within seconds or even immediately [SOUDERS11].\r\n",
     "notes": "Reading the reference: It mentions 3G exclusively.\r\n3G data networks are circuit-switched so energy consumption on idle connections is an issue.\r\n4G/5G (LTE) networks are packet-switched, and radio energy consumption (active carrier?) might not be an issue. 4G and 5G are not mentioned in the reference.",
     "submit_date": "2024-07-02",
     "submitter_name": "Bart Overkamp",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-07-03 15:09:43"
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 01:30:58"
   },
   {
     "errata_id": "8017",

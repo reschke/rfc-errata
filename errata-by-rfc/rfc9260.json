@@ -47,31 +47,31 @@
   {
     "errata_id": "7852",
     "doc-id": "RFC9260",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "8.5",
     "orig_text": "When receiving an SCTP packet, the endpoint MUST ensure that the\r\nvalue in the Verification Tag field of the received SCTP packet\r\nmatches its own tag.",
     "correct_text": "When receiving an SCTP packet, the endpoint MUST first ensure that the\r\nvalue in the Verification Tag field of the received SCTP packet\r\nmatches its own tag before processing any chunks or changing its state.",
     "notes": "State explicitly that the check of the verification tag needs to be done before any processing of the packet.\r\n\r\nThanks to Jake Ginesin, Max von Hippel, and Cristina Nita-Rotaru for reporting issue and discussing it with me.",
     "submit_date": "2024-03-15",
     "submitter_name": "Michael Tüxen",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-03-19 09:24:14"
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 01:01:23"
   },
   {
     "errata_id": "7988",
     "doc-id": "RFC9260",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
-    "section": "3.3.2.  Initiation",
+    "section": ".3.2.  Initiation",
     "orig_text": "not clearly specified  sending IP Address for INIT",
     "correct_text": "INIT can be accepted from either the Primary or Secondary IP Address",
-    "notes": "Oracle explained clear\r\n\r\nhttps://docs.oracle.com/cd/E57516_01/docs.70/Transport_Manager/concepts/c_transport_mgr_multihoming.html\r\n\r\nSome vendors do not accept INIT sent by Secondary Peer IP Address",
-    "submit_date": "2024-06-13",
+    "notes": "Based on the dicussion here (https://mailarchive.ietf.org/arch/msg/tsvwg/KmARqJ0C3lDnyrv9Wz_IH0Rwqyc/) this errata is rejected.\n --VERIFIER NOTES-- \nBased on the dicussion here (https://mailarchive.ietf.org/arch/msg/tsvwg/KmARqJ0C3lDnyrv9Wz_IH0Rwqyc/) this errata is rejected.",
+    "submit_date": "2024-06-01",
     "submitter_name": "Milen Hristov",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 00:46:19"
   }
 ]

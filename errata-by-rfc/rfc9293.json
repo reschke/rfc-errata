@@ -2,37 +2,37 @@
   {
     "errata_id": "8126",
     "doc-id": "RFC9293",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "3.3.1",
     "orig_text": "the sequence space labeled 3 in Figure 3",
     "correct_text": "the sequence space labeled 2 and 3 in Figure 3",
     "notes": "In Figure 3, the send window shoud be 2(sequence numbers of unacknowledged data) and 3(sequence numbers allowed for new data transmission).",
     "submit_date": "2024-10-01",
     "submitter_name": "zhihua.li",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-10-07 12:15:13"
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 01:36:20"
   },
   {
     "errata_id": "8167",
     "doc-id": "RFC9293",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.10.7.3",
-    "orig_text": "first check that the sequence number exactly\r\nmatches RCV.NXT prior to executing the action in the next\r\nparagraph.\r\n",
-    "correct_text": "first check that the ACK field acknowledges our\r\nSYN prior to executing the action in the next paragraph.\r\n",
-    "notes": "RFC 5961, Section 3.2, under \"The modified RST segment processing\" (the source of this particular mitigation), reads:\r\n\r\n>   In the SYN-SENT state (a RST received in response to an initial SYN),\r\n>   the RST is acceptable if the ACK field acknowledges the SYN.\r\n\r\nThe sequence number must exactly match RCV.NXT only in the synchronized states. In the SYN-SENT state, the RCV.NXT variable hasn't been set, and we don't have an Initial Receive Sequence (IRS) number, so it's not possible to validate the sequence number against RCV.NXT.",
+    "orig_text": "o  A potential blind reset attack is described in RFC 5961 [9].\r\n            The mitigation described in that document has specific\r\n            applicability explained therein, and is not a substitute for\r\n            cryptographic protection (e.g., IPsec or TCP-AO).  A TCP\r\n            implementation that supports the mitigation described in RFC\r\n            5961 SHOULD first check that the sequence number exactly\r\n            matches RCV.NXT prior to executing the action in the next\r\n            paragraph.\r\n",
+    "correct_text": "[ The text is removed - see notes]\r\n",
+    "notes": "This entire bullet is removed as RFC 5961 adds no rules to the handling\r\nof RST segments in the SYN-SENT state.\r\n\r\nSee the discussion here (https://mailarchive.ietf.org/arch/msg/tcpm/Y5feX5f1YA00gCUyb4yP4iNfdXs/)",
     "submit_date": "2024-11-04",
     "submitter_name": "Christopher Williams",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 19:39:16"
   },
   {
     "errata_id": "8171",
     "doc-id": "RFC9293",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix B",
     "orig_text": "    +-----------------+---------+------+--------+-----+--------+------+\r\n    | *  Dest Unreach | SHLD-25 |  X   |        |     |        |      |\r\n    |    (0,1,5) =>   |         |      |        |     |        |      |\r\n    |    inform ALP   |         |      |        |     |        |      |\r\n    +-----------------+---------+------+--------+-----+--------+------+\r\n",
@@ -40,8 +40,8 @@
     "notes": "This requirement has an X in the \"MUST\" column, but the X should be in the \"SHOULD\" column.\r\n\r\nThe relevant text for this requirement is \"a TCP implementation ... SHOULD make the information available to the application (SHLD-25).\"",
     "submit_date": "2024-11-06",
     "submitter_name": "Christopher Williams",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 01:39:14"
   }
 ]

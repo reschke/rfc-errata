@@ -32,17 +32,17 @@
   {
     "errata_id": "7702",
     "doc-id": "RFC9114",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "10.7",
     "orig_text": "   Where HTTP/2 employs PADDING frames and Padding fields in other\r\n   frames to make a connection more resistant to traffic analysis,\r\n   HTTP/3 can either rely on transport-layer padding or employ the\r\n   reserved frame and stream types discussed in Sections 7.2.8 and\r\n   6.2.3.  ",
-    "correct_text": "   Where HTTP/2 employs Padding fields in some\r\n   frames to make a connection more resistant to traffic analysis,\r\n   HTTP/3 can either rely on transport-layer padding or employ the\r\n   reserved frame and stream types discussed in Sections 7.2.8 and\r\n   6.2.3.  ",
+    "correct_text": "   Where HTTP/2 employs Padding fields in some types of frame\r\n   to make a connection more resistant to traffic analysis,\r\n   HTTP/3 can either rely on transport-layer padding or employ the\r\n   reserved frame and stream types discussed in Sections 7.2.8 and\r\n   6.2.3.  ",
     "notes": "HTTP/2 doesn't define PADDING frames",
     "submit_date": "2023-11-15",
     "submitter_name": "Lucas Pardue",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-11-14 20:58:41"
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 19:02:31"
   },
   {
     "errata_id": "7780",
@@ -62,16 +62,16 @@
   {
     "errata_id": "8190",
     "doc-id": "RFC9114",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "7.2.6",
     "orig_text": "   The GOAWAY frame is always sent on the control stream.  In the\r\n   server-to-client direction, it carries a QUIC stream ID for a client-\r\n   initiated bidirectional stream encoded as a variable-length integer.\r\n   A client MUST treat receipt of a GOAWAY frame containing a stream ID\r\n   of any other type as a connection error of type H3_ID_ERROR.\r\n\r\n   In the client-to-server direction, the GOAWAY frame carries a push ID\r\n   encoded as a variable-length integer.\r\n",
     "correct_text": "   The GOAWAY frame is always sent on the control stream.  In the\r\n   server-to-client direction, it carries a QUIC stream ID for a client-\r\n   initiated bidirectional stream encoded as a variable-length integer.\r\n   A client MUST treat receipt of a GOAWAY frame containing a stream ID\r\n   of any other type as a connection error of type H3_ID_ERROR.\r\n\r\n   In the client-to-server direction, the GOAWAY frame carries a push ID\r\n   encoded as a variable-length integer. A server MUST treat receipt of\r\n   a GOAWAY frame containing a stream ID of any other type as a\r\n   connection error of type H3_ID_ERROR.",
-    "notes": "The MUST requiring a stream error on an invalid stream ID was missing in the client-to-server direction. This is related to erratum 7780, and likely entered the spec for the same reason.",
+    "notes": "The MUST requiring a stream error on an invalid stream ID was missing in the client-to-server direction. This is related to erratum 7780, and likely entered the spec for the same reason.\n --VERIFIER NOTES-- \n In H3 push IDs are their own namespace. There is no concept of using a wrong stream ID for push IDs. When a push promise is fulfilled, a server initiates a new unidirectional stream with a stream type header indicating its of push type, then followed by the push ID.",
     "submit_date": "2024-11-28",
     "submitter_name": "Cory Benfield",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "172",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-18 03:36:24"
   }
 ]
