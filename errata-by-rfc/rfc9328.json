@@ -17,16 +17,16 @@
   {
     "errata_id": "8162",
     "doc-id": "RFC9328",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "4.3.1",
     "orig_text": "   A single NAL unit packet contains exactly one NAL unit and consists\r\n   of a payload header, as defined in Table 5 of [VVC]",
     "correct_text": "   A single NAL unit packet contains exactly one NAL unit and consists\r\n   of a payload header, as defined in Section 7.3.1.2 of [VVC]",
-    "notes": "Table 5 of T-REC-H.266-202309 lists NAL unit type codes, but the text here discusses the NAL unit header format, which is defined in Section 7.3.1.2.\r\n\r\nThe same happens in sections 4.3.2 and 4.3.3.",
+    "notes": "Table 5 of T-REC-H.266-202309 lists NAL unit type codes, but the text here discusses the NAL unit header format, which is defined in Section 7.3.1.2.\r\n\r\nThe same happens in sections 4.3.2 and 4.3.3.\r\n",
     "submit_date": "2024-10-31",
     "submitter_name": "Carlos Falgueras García",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "Zaheduzzaman Sarker",
+    "update_date": "2025-03-19 00:11:16"
   }
 ]
