@@ -58,5 +58,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8341",
+    "doc-id": "RFC7946",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "The latitude of the northeast corner is always greater than the latitude of the southwest corner, but bounding boxes that cross the antimeridian have a northeast corner longitude that is less than the longitude of the southwest corner.",
+    "correct_text": "The longitude of the northeast corner is always greater than the longitude of the southwest corner, but bounding boxes that cross the antimeridian have a northeast corner longitude that is less than the longitude of the southwest corner.",
+    "notes": "Judging by the example in the same section and the second part of the paragraph, it probably intended to refer to longitude, not latitude.",
+    "submit_date": "2025-03-20",
+    "submitter_name": "Danil Petrov",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
