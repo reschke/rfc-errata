@@ -37,12 +37,12 @@
     "section": "4.2.5",
     "orig_text": "The primary media type typically carried within the Multimedia\r\nStreaming service class is video; as such, it is RECOMMENDED to map\r\nthis class into the Video Access Category (AC_VI), which it will by\r\ndefault (as described in Section 2.3).  Specifically, it is\r\nRECOMMENDED to map AF31, AF32, and AF33 to UP 4, thereby admitting\r\nMultimedia Streaming into the Video Access Category (AC_VI).",
     "correct_text": "The primary media type typically carried within the Multimedia\r\nStreaming service class is video; as such, it is RECOMMENDED to map\r\nthis class into the Video Access Category (AC_VI);\r\nhowever, by default (as described in Section 2.3), this\r\nservice class will map to UP 3 and, thus, the Best Effort Access\r\nCategory (AC_BE).  Therefore, a non-default mapping is RECOMMENDED,\r\nsuch that AF31, AF32, and AF33 map to UP 4, thereby admitting\r\nMultimedia Streaming into the Video Access Category (AC_VI).",
-    "notes": "Section 2.3 notes \"inconsistent QoS mappings, specifically:\"\r\n\"Multimedia Streaming (AF3-011xx0) will be mapped to UP 3 (011) and treated in the Best Effort Access Category (AC_BE) rather than the Video Access Category (AC_VI), for which it is intended\"",
+    "notes": "This correction addresses an inconsistent mapping in Section 2.3, specifically:\r\n\"Multimedia Streaming (AF3-011xx0) will be mapped to UP 3 (011) and treated in the Best Effort Access Category (AC_BE) rather than the Video Access Category (AC_VI), for which it is intended\".  It does not seek to endorse or change any mappings. ",
     "submit_date": "2024-09-21",
     "submitter_name": "Mo Zanaty",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "186",
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2025-03-21 01:42:51"
   },
   {
     "errata_id": "8113",
