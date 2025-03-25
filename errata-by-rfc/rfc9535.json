@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8343",
+    "doc-id": "RFC9535",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.4",
+    "orig_text": "function-argument   = literal /\r\n                      filter-query / ; (includes singular-query)\r\n                      logical-expr /\r\n                      function-expr",
+    "correct_text": "function-argument   = logical-expr / \r\n                      function-expr /\r\n                      filter-query / ; (includes singular-query)\r\n                      literal\r\n",
+    "notes": "PEG (Parsing Expression Grammar) parsers will fail to parse $[?blt(1==1)] with the RFC 9535 ABNF grammar.\r\nPEG parsers use ordered choice, so by implication the order matters a lot.\r\n\r\nPEG tries to match `literal` production rule with input `1==1`\r\n- 1 matches a `number`\r\n- But == breaks the rest of the rule\r\n- But because `number` is a subrule of `literal`, and `literal` matches partially (just the 1)…\r\n- PEG commits to `literal` and doesn't try `logical-expr`\r\n\r\nThus: `function-argument` fails, even though `logical-expr` would have matched.\r\n\r\nWhy the \"Corrected Text\" will work with PEG parsers and is PEG-safe? It includes the most complex structures first and prevents early partial matches.\r\n\r\nPS: also the https://www.rfc-editor.org/rfc/rfc9535#appendix-A is affected",
+    "submit_date": "2025-03-24",
+    "submitter_name": "Vladimír Gorej",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
