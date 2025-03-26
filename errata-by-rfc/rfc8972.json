@@ -17,16 +17,16 @@
   {
     "errata_id": "8339",
     "doc-id": "RFC8972",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.7",
     "orig_text": "The Session-Reflector MUST validate the Length value of the STAMP test\r\npacket.",
-    "correct_text": "The Session-Reflector MUST validate the Length value of the Followup\r\nTLV.",
-    "notes": "The STAMP protocol (and the introduction of TLV extensions) make for a great tool for active network measurement. I hope that this simple change helps improve the technical accuracy of the coordinated set of RFCs. Thank you, authors and editors, for the great work you have done!",
+    "correct_text": "The Session-Reflector MUST validate the Length value of the\r\nFollow-Up Telemetry TLV in that STAMP test packet.\r\n",
+    "notes": "--- Verifier note ---\r\nUpdated the type of errata to technical from editorial.\r\n\r\nThere is no length field discussed for the test packet. The behavior is about checking the length of a Follow-Up Telemetry TLV included in a test packet.",
     "submit_date": "2025-03-18",
     "submitter_name": "William Hawkins",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-03-21 13:40:26"
+    "verifier_id": "184",
+    "verifier_name": "Mohamed Boucadair",
+    "update_date": "2025-03-24 23:41:37"
   }
 ]

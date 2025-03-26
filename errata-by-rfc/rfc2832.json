@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8346",
+    "doc-id": "RFC2832",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.3.9.2",
+    "orig_text": "   Examples\r\n\r\n   The current registrar of a name server queries the name server:\r\n\r\n   C:status<crlf>\r\n   C:EntityName:NameServer<crlf>\r\n   C:NameServer:ns1.registrarA.com<crlf>\r\n   C:.<crlf>\r\n   S:200 Command completed successfully<crlf>\r\n   S:ipaddress:198.42.1.11<crlf>\r\n   S:registrar:registrarA<crlf>\r\n   S:registrar transfer date:1999-09-22 10:27:00.0<crlf>\r\n   S:CreatedDate:1998-09-22 10:27:00.0<crlf>\r\n   S:CreatedBy:registrarA<crlf>\r\n   S:UpdatedDate:2002-09-22 10:27:00.0<crlf>\r\n   S:UpdatedBy:registrarA<crlf>\r\n   S:.<crlf>",
+    "correct_text": "   Examples\r\n\r\n   The current registrar of a name server queries the name server:\r\n\r\n   C:status<crlf>\r\n   C:EntityName:NameServer<crlf>\r\n   C:NameServer:ns1.registrarA.com<crlf>\r\n   C:.<crlf>\r\n   S:200 Command completed successfully<crlf>\r\n   S:ipaddress:198.42.1.11<crlf>\r\n   S:registrar:registrarA<crlf>\r\n   S:registrar transfer date:1999-09-22 10:27:00.0<crlf>\r\n   S:created date:1998-09-22 10:27:00.0<crlf>\r\n   S:created by:registrarA<crlf>\r\n   S:updated date:2002-09-22 10:27:00.0<crlf>\r\n   S:updated by:registrarA<crlf>\r\n   S:.<crlf>",
+    "notes": "In the example, some of the attributes are written in Pascal Case, when those are described in the section WITH a space and being in lowercase.",
+    "submit_date": "2025-03-25",
+    "submitter_name": "Ben van Hartingsveldt",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
