@@ -92,16 +92,16 @@
   {
     "errata_id": "8344",
     "doc-id": "RFC5440",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "9.15",
     "orig_text": "   IANA created a registry for the PCEP TLVs.\r\n\r\n    Value         Meaning                    Reference\r\n\r\n      1          NO-PATH-VECTOR TLV         This document\r\n      2          OVERLOAD-DURATION TLV      This document\r\n      3          REQ-MISSING TLV            This document",
     "correct_text": "   IANA created a registry for the PCEP TLVs.\r\n\r\n    Value         Meaning                    Reference\r\n\r\n      1          NO-PATH-VECTOR TLV         This document\r\n      2          OVERLOADED-DURATION TLV    This document\r\n      3          REQ-MISSING TLV            This document",
-    "notes": "As per RFC 5440, name of PCEP TLV type 2 will be OVERLOADED-DURATION TLV. So, TLV name needs to be corrected at section 9.15 of RFC 5440. Also IANA registry page needs to be reflected with the same.",
+    "notes": "As per RFC 5440, the name of PCEP TLV type 2 will be OVERLOADED-DURATION TLV. So, the TLV name needs to be corrected in Section 9.15 of RFC 5440. Also, the IANA registry page needs to be reflected with the same.",
     "submit_date": "2025-03-24",
     "submitter_name": "Mrinmoy Das",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-03-26 06:49:31"
   }
 ]

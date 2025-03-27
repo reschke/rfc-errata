@@ -2,16 +2,16 @@
   {
     "errata_id": "8345",
     "doc-id": "RFC6356",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
-    "section": "Global",
+    "section": "The first-page header says:",
     "orig_text": "M. Handly",
     "correct_text": "M. Handley",
-    "notes": "This is an error in the front page of RFC6356. The list of authors is presented as:\r\n\r\nInternet Engineering Task Force (IETF)                         C. Raiciu\r\nRequest for Comments: 6356                Univ. Politehnica of Bucharest\r\nCategory: Experimental                                         M. Handly\r\nISSN: 2070-1721                                             D. Wischik\r\n                                                    Univ. College London\r\n                                                            October 2011\r\n\r\nNotice the misspelled author name \"M. Handly\". The author name is listed correctly in the Authors' Addresses section as:\r\n\r\n   Mark Handley\r\n   University College London\r\n   Gower Street\r\n   London  WC1E 6BT\r\n   UK\r\n\r\n   EMail: m.handley@cs.ucl.ac.uk",
+    "notes": "This is an error in the front page of RFC 6356. The list of authors is presented as:\r\n\r\nInternet Engineering Task Force (IETF)                         C. Raiciu\r\nRequest for Comments: 6356                Univ. Politehnica of Bucharest\r\nCategory: Experimental                                         M. Handly\r\nISSN: 2070-1721                                             D. Wischik\r\n                                                    Univ. College London\r\n                                                            October 2011\r\n\r\nNotice the misspelled author name \"M. Handly\". The author name is listed correctly in the Authors' Addresses section as:\r\n\r\n   Mark Handley\r\n   University College London\r\n   Gower Street\r\n   London  WC1E 6BT\r\n   UK\r\n\r\n   EMail: m.handley@cs.ucl.ac.uk\r\n\r\n-- VERIFIER NOTES --\r\nNote that this hasn’t affected the XML citation library entry (https://www.rfc-editor.org/refs/bibxml/reference.RFC.6356.xml) or the text reference entry listed at https://www.rfc-editor.org/rfc-index.txt.",
     "submit_date": "2025-03-24",
     "submitter_name": "Christian Huitema",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-03-26 10:56:45"
   }
 ]
