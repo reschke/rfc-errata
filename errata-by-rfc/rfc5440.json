@@ -103,5 +103,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2025-03-26 06:49:31"
+  },
+  {
+    "errata_id": "8349",
+    "doc-id": "RFC5440",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7.14",
+    "orig_text": "         The OVERLOADED-DURATION TLV is compliant with the PCEP TLV\r\n         format defined in Section 7.1 and is comprised of 2 bytes for\r\n         the type, 2 bytes specifying the TLV length (length of the\r\n         value portion in bytes), followed by a fixed-length value field\r\n         of a 32-bit flags field.\r\n\r\n         Type:   2\r\n         Length: 4 bytes\r\n         Value:  32-bit flags field indicates the estimated PCE\r\n                 congestion duration in seconds.",
+    "correct_text": "         The OVERLOADED-DURATION TLV is compliant with the PCEP TLV\r\n         format defined in Section 7.1 and is comprised of 2 bytes for\r\n         the type, 2 bytes specifying the TLV length (length of the\r\n         value portion in bytes), followed by a fixed-length value field\r\n         of 4 bytes.\r\n\r\n         Type:   2\r\n         Length: 4 bytes\r\n         Value:  4 bytes field indicates the estimated PCE\r\n                 congestion duration in seconds.",
+    "notes": "TLV value field marked as 32-bit flags field which needs to be corrected to 4 bytes field.",
+    "submit_date": "2025-03-27",
+    "submitter_name": "Mrinmoy Das",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

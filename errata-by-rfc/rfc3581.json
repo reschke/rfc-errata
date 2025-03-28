@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8351",
+    "doc-id": "RFC3581",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": " The client behavior specified here affects the transport processing\r\n   defined in Section 18.1 of SIP (RFC 3261) [1].\r\n\r\n   A client, compliant to this specification (clients include UACs and\r\n   proxies), MAY include an \"rport\" parameter in the top Via header\r\n   field value of requests it generates.  This parameter MUST have no\r\n   value; it serves as a flag to indicate to the server that this\r\n   extension is supported and requested for the transaction.\r\n\r\n   When the client sends the request, if the request is sent using UDP,\r\n   the client MUST be prepared to receive the response on the same IP\r\n   address and port it used to populate the source IP address and source\r\n   port of the request.  For backwards compatibility, the client MUST\r\n   still be prepared to receive a response on the port indicated in the\r\n   sent-by field of the topmost Via header field value, as specified in\r\n   Section 18.1.1 of SIP [1].",
+    "correct_text": " The client behavior specified here affects the transport processing\r\n   defined in Section 18.1 of SIP (RFC 3261) [1].\r\n\r\n   A client, compliant to this specification (clients include UACs and\r\n   proxies), MAY include an \"rport\" parameter in the top Via header\r\n   field value of requests it generates.  This parameter MUST have no\r\n   value; it serves as a flag to indicate to the server that this\r\n   extension is supported and requested for the transaction.\r\n\r\n   When the client sends the request, if the request is sent using UDP,\r\n   the client MUST be prepared to receive the response on the same IP\r\n   address and port it used to populate the source IP address and source\r\n   port of the request.  For backwards compatibility, the client MUST\r\n   still be prepared to receive a response on the port indicated in the\r\n   sent-by field of the topmost Via header field value, as specified in\r\n   Section 18.1.1 of SIP [1].",
+    "notes": "would like to report an error in RFC 3581, \"An Extension to the Session Initiation Protocol (SIP) for Symmetric Response Routing\".\r\n\r\nIn Section 3, \"Client Behavior\", the following sentence contains an incorrect references:\r\n\"processing defined in Section 18.1 of SIP\"\r\n\"As specified in Section 18.1.1 of SIP [1].\"\r\n\r\nThe reference points to RFC 3581, but RFC 3581 does not contain a Section 18.1.1. The correct reference should point to Section 18.1.1 of RFC 3261, which is the core SIP specification.\r\n\r\nCorrect reference:\r\nhttps://datatracker.ietf.org/doc/html/rfc3261#section-18.1.1\r\n\r\nPlease consider updating the RFC to correct this error.",
+    "submit_date": "2025-03-27",
+    "submitter_name": "Roman",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

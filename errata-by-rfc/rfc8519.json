@@ -58,5 +58,20 @@
     "verifier_id": "166",
     "verifier_name": "Robert Wilton",
     "update_date": "2024-01-12 06:28:11"
+  },
+  {
+    "errata_id": "8350",
+    "doc-id": "RFC8519",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1",
+    "orig_text": "      \"The source and destination port range definitions\r\n       can be further qualified using an operator.  An\r\n       operator is needed only if the lower-port is specified\r\n       and the upper-port is not specified.  The operator\r\n       therefore further qualifies the lower-port only.\";",
+    "correct_text": "      \"A port number definition can be further qualified\r\n       using an operator.\";",
+    "notes": "The operator isn't used with port-ranges because these are defined in distinct cases:\r\n\r\n===\r\n        |        |  |  |     |     +--:(range-or-operator)\r\n        |        |  |  |     |        +--rw (port-range-or-operator)?\r\n        |        |  |  |     |           +--:(range)\r\n        |        |  |  |     |           |  +--rw lower-port\r\n        |        |  |  |     |           |  |       inet:port-number\r\n        |        |  |  |     |           |  +--rw upper-port\r\n        |        |  |  |     |           |          inet:port-number\r\n        |        |  |  |     |           +--:(operator)\r\n        |        |  |  |     |              +--rw operator?     operator\r\n        |        |  |  |     |              +--rw port\r\n==",
+    "submit_date": "2025-03-27",
+    "submitter_name": "Mohamed BOUCADAIR",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
