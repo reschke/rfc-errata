@@ -242,17 +242,17 @@
   {
     "errata_id": "6171",
     "doc-id": "RFC6733",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6.1.3",
     "orig_text": "A relay or proxy agent MUST check for forwarding loops when receiving\r\nrequests.  A loop is detected if the server finds its own identity in\r\na Route-Record AVP.  When such an event occurs, the agent MUST answer\r\nwith the Result-Code AVP set to DIAMETER_LOOP_DETECTED.",
     "correct_text": "A relay or proxy agent MUST check for forwarding loops when receiving\r\nrequests. A loop is detected if a relay or proxy agent finds its own\r\nidentity in a Route-Record AVP.  When such an event occurs, the agent\r\nMUST answer with the Result-Code AVP set to DIAMETER_LOOP_DETECTED.",
-    "notes": "The term \"server\" used to identify party which is to detect its own identity as a part of Route-Record AVP is semantically too close to the term Diameter Server. If \"relay or proxy agent MUST check\", the question is what would be the consequence of such action if  the (Diameter) \"server\" is to do the \"detecting\"?",
+    "notes": "The term \"server\" used to identify party which is to detect its own identity as a part of Route-Record AVP is semantically too close to the term Diameter Server. If \"relay or proxy agent MUST check\", the question is what would be the consequence of such action if  the (Diameter) \"server\" is to do the \"detecting\"?\r\n\r\n== Verifier note\r\n\r\nThis section is about relays/proxy agents checks to detect loops. See also Rob's comment at https://mailarchive.ietf.org/arch/msg/dime/4GVvCGAcMOtfRLuPe3amF2xX2E8/\r\n\r\n",
     "submit_date": "2020-05-13",
     "submitter_name": "Valentin Micic",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "184",
+    "verifier_name": "Mohamed Boucadair",
+    "update_date": "2025-03-28 10:57:18"
   },
   {
     "errata_id": "6832",

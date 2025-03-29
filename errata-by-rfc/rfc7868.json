@@ -253,5 +253,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2022-04-06 14:52:59"
+  },
+  {
+    "errata_id": "8355",
+    "doc-id": "RFC7868",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.6.2.4",
+    "orig_text": "   Transmission times derived from physical interfaces MUST be n units\r\n   of picoseconds, converted to picoseconds prior to being exchanged\r\n   between neighbors, or used in the composite metric determination.\r\n\r\n   This includes delay values present in configuration-based commands\r\n   (i.e., interface delay, redistribute, default-metric, route-map,\r\n   etc.).\r\n\r\n   The delay value is then converted to a \"latency\" using the formula:\r\n\r\n                          Delay * EIGRP_WIDE_SCALE\r\n        Latency = K3 *   --------------------------\r\n                             EIGRP_DELAY_PICO",
+    "correct_text": "   Transmission times derived from physical interfaces MUST be n units\r\n   of picoseconds, converted to picoseconds prior to being exchanged\r\n   between neighbors, or used in the composite metric determination.\r\n\r\n   This includes delay values present in configuration-based commands\r\n   (i.e., interface delay, redistribute, default-metric, route-map,\r\n   etc.).\r\n\r\n   The sum of the delay values are then converted to a \"latency\" using the formula:\r\n\r\n                          Delay * EIGRP_WIDE_SCALE\r\n        Latency = K3 *   --------------------------\r\n                             EIGRP_DELAY_PICO\r\n\r\n",
+    "notes": "It is perhaps useful to reference the point at which the delay values should be summed.",
+    "submit_date": "2025-03-28",
+    "submitter_name": "Mike Harding",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
