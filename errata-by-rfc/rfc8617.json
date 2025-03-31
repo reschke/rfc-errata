@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8357",
+    "doc-id": "RFC8617",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2.2",
+    "orig_text": "5.2.2.  Responding to ARC Validation Failures during the SMTP\r\n        Transaction\r\n\r\n   If an ARC Validator determines that the incoming message fails ARC\r\n   validation, the Validator MAY signal the breakage through the\r\n   extended SMTP response code 5.7.29 (\"ARC validation failure\") and the\r\n   corresponding SMTP basic response code.",
+    "correct_text": "The text is fine, but an SMTP RFC is not cited.",
+    "notes": "Cite RFC 5321 or a replacement.",
+    "submit_date": "2025-03-30",
+    "submitter_name": "Robert Sayre",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
