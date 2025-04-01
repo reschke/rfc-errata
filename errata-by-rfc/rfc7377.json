@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8364",
+    "doc-id": "RFC7377",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "   C: tag1 UID ESEARCH FROM \"frobozz\" 1:100\r\n\r\n   ... followed later by this:\r\n\r\n   C: tag1 UID ESEARCH FROM \"frobozz\" 101:200\r\n",
+    "correct_text": "   C: tag1 ESEARCH FROM \"frobozz\" 1:100\r\n\r\n   ... followed later by this:\r\n\r\n   C: tag1 ESEARCH FROM \"frobozz\" 101:200\r\n",
+    "notes": "There is no \"UID ESEARCH\" command. The document defines the \"ESEARCH\" command. It is unlike the other commands with a UID and non-UID version, such as fetch, store, search, etc. Understandable, because message sequence numbers aren't returned for multimailbox search results. Just above it says: \"it is worth pointing out that with ESEARCH, as with any SEARCH or UID SEARCH command\", so there is no confusion about uid vs non-uid commands. The ABNF also only adds an \"ESEARCH\" command, not a \"UID ESEARCH\".\r\n\r\nThe example seems to imply message sequence numbers can be used in the search program with ESEARCH, for pagination. This can work if you know the number of messages in each mailbox you're searching. Presumably also for mailboxes that aren't selected which is what this document is about. But it doesn't make it explicit, there is no \"IN (...)\" in the example.\r\n\r\nThe same example is present in RFC 6237.",
+    "submit_date": "2025-03-31",
+    "submitter_name": "Mechiel Lukkien",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
