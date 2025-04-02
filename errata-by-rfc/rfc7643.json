@@ -418,5 +418,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8366",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.2",
+    "orig_text": "      {\r\n        \"name\" : \"endpoint\",\r\n        \"type\" : \"reference\",\r\n        \"referenceTypes\" : [\"uri\"],\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The resource type's HTTP-addressable\r\n          endpoint relative to the Base URL, e.g., '/Users'.\",\r\n        \"required\" : true,\r\n        \"caseExact\" : false,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"none\"\r\n      },",
+    "correct_text": "      {\r\n        \"name\" : \"endpoint\",\r\n        \"type\" : \"reference\",\r\n        \"referenceTypes\" : [\"uri\"],\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The resource type's HTTP-addressable\r\n          endpoint relative to the Base URL, e.g., '/Users'.\",\r\n        \"required\" : true,\r\n        \"caseExact\" : false,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"server\"\r\n      },",
+    "notes": "For \"endpoint\" the property \"uniqueness\" should be \"server\" instead of \"none\".\r\nI believe endpoints are thought to be unique within a server, i.e. each endpoint should offer exactly one type of resources. Though I don't see any point in RFC7644 or RFC7643 that currently forbids using the same endpoint for several resource types, it would make processing much harder for clients. Also, clients cannot specify which resource type they want to create. They can only specify endpoint and schema.",
+    "submit_date": "2025-04-01",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
