@@ -62,17 +62,17 @@
   {
     "errata_id": "8060",
     "doc-id": "RFC7519",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.2",
     "orig_text": "   5.   Verify that the resulting JOSE Header includes only parameters\r\n        and values whose syntax and semantics are both understood and\r\n        supported or that are specified as being ignored when not\r\n        understood.",
-    "correct_text": "   5.   Verify that the resulting JOSE Header includes only parameters\r\n        and values whose syntax and semantics are both understood and\r\n        supported or that are specified as being ignored when not\r\n        understood. If the JWT is a JWS, the steps specified in \r\n        RFC7515 takes precedence when validating JOSE Header parameters.",
+    "correct_text": "   5.   Verify that the resulting JOSE Header according to RFC7515 or RFC7516.",
     "notes": "Validation step 5 in section 7.2 of RFC 7519 states that header parameters should only be ignored if they are explicitly specified as needing to be ignored. \r\n\r\nThis is contrary to step 7 in section 7.2 which requires that the processing rules of RFC 1515 be used if the JWT is a JWS (defined in RFC 1515). RFC 7515 does not include any special provisions for only ignoring header parameters if they are specified as being ignored, but instead requires all header parameters to be ignored if they are not understood (repeated below for convenience). \r\n\r\n\"Unless listed as a critical Header Parameter, per\r\n   Section 4.1.11, all Header Parameters not defined by this\r\n   specification MUST be ignored when not understood.\"\r\n\r\nA discussion with the authors at IETF 120 confirmed that all header parameters that are not understood must be ignored.\r\n\r\nThe proposed errata aims to clarify that if the JWT is a JWS, the processing rules of RFC 7151 should apply (including ignoring header parameters that are not understood). This is consistent with point 7.2, which requires that RFC 7515 [JWS] rules applies and avoids the impression that a new requirement on when parameters are ignored is being introduced in (i.e. the need to be explicitly defined as needing to be ignored).",
     "submit_date": "2024-07-31",
     "submitter_name": "Pieter Kasselman",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-04-03 10:29:08"
   },
   {
     "errata_id": "8225",

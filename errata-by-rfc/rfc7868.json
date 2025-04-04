@@ -137,17 +137,17 @@
   {
     "errata_id": "6090",
     "doc-id": "RFC7868",
-    "errata_status_code": "Rejected",
+    "errata_status_code": "Reported",
     "errata_type_code": "Technical",
     "section": "5.6.2.5.",
     "orig_text": "metric = (K1 * min(Throughput)) + (K3 * sum(Latency)) }",
     "correct_text": "metric = K1 * Max-Throughput + Latency",
-    "notes": "This errata is consequence of:\r\n- erratas 5242 and 6084,\r\n- inconsistency of using (Max-)Throughput and Latency variables,\r\n- using additional min() and sum() functions which are not used in formula where all K-values takes effect ( metric =[Net-Throughput+Latency+(K6*ExtAttr)] * K5/(K4+Rel)) .\r\n\r\nThe Max-Throughput variable defined in 5.6.2.3. is a little bit unfortunate, as in fact it is minimum of maximum available throughput of all network segments in the path. \r\n\r\nI removed also K3 value from the metric as it is already embraced in Latency calculation in 5.6.2.4.\r\n\r\nI decided to use this formula as it is mathematically correct and is least intrusive but the best would be to review notations from 5.6.2.3. up to .5 and remove all inaccuracies. Also highlighting usage of K-Values in final metric calculation would make this document more readable, eg. metric = K1 * Throughtput + K3 * Latency - which shows best how K-values affect metric.\n --VERIFIER NOTES-- \n   Duplicate.",
+    "notes": "This errata is consequence of:\r\n- erratas 5242 and 6084,\r\n- inconsistency of using (Max-)Throughput and Latency variables,\r\n- using additional min() and sum() functions which are not used in formula where all K-values takes effect ( metric =[Net-Throughput+Latency+(K6*ExtAttr)] * K5/(K4+Rel)) .\r\n\r\nThe Max-Throughput variable defined in 5.6.2.3. is a little bit unfortunate, as in fact it is minimum of maximum available throughput of all network segments in the path. \r\n\r\nI removed also K3 value from the metric as it is already embraced in Latency calculation in 5.6.2.4.\r\n\r\nI decided to use this formula as it is mathematically correct and is least intrusive but the best would be to review notations from 5.6.2.3. up to .5 and remove all inaccuracies. Also highlighting usage of K-Values in final metric calculation would make this document more readable, eg. metric = K1 * Throughtput + K3 * Latency - which shows best how K-values affect metric.",
     "submit_date": "2020-04-12",
     "submitter_name": "Rafał Cygnarowski",
-    "verifier_id": "157",
-    "verifier_name": "Eliot Lear",
-    "update_date": "2025-04-01 07:16:01"
+    "verifier_id": "2",
+    "verifier_name": "",
+    "update_date": "2025-04-03 10:04:54"
   },
   {
     "errata_id": "6091",
@@ -268,20 +268,5 @@
     "verifier_id": "157",
     "verifier_name": "Eliot Lear",
     "update_date": "2025-04-01 05:35:47"
-  },
-  {
-    "errata_id": "8368",
-    "doc-id": "RFC7868",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "5.6.2.5.",
-    "orig_text": "metric = (K1 * min(Throughput)) + (K3 * sum(Latency)) }",
-    "correct_text": "metric = K1 * Max-Throughput + Latency",
-    "notes": "This errata is consequence of:\r\n- erratas 5242 and 6084,\r\n- inconsistency of using (Max-)Throughput and Latency variables,\r\n- using additional min() and sum() functions which are not used in formula where all K-values takes effect ( metric =[Net-Throughput+Latency+(K6*ExtAttr)] * K5/(K4+Rel)) .\r\n\r\nThe Max-Throughput variable defined in 5.6.2.3. is a little bit unfortunate, as in fact it is minimum of maximum available throughput of all network segments in the path. \r\n\r\nI removed also K3 value from the metric as it is already embraced in Latency calculation in 5.6.2.4.\r\n\r\nI decided to use this formula as it is mathematically correct and is least intrusive but the best would be to review notations from 5.6.2.3. up to .5 and remove all inaccuracies. Also highlighting usage of K-Values in final metric calculation would make this document more readable, eg. metric = K1 * Throughtput + K3 * Latency - which shows best how K-values affect metric.",
-    "submit_date": "2020-04-12",
-    "submitter_name": "Rafał Cygnarowski",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
   }
 ]

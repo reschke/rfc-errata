@@ -77,7 +77,7 @@
   {
     "errata_id": "5926",
     "doc-id": "RFC7030",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "A.1 to A.4",
     "orig_text": "   HTTP/1.1 200 OK\r\n   Status: 200 OK\r\n   Content-Type: application/pkcs7-mime\r\n   Content-Transfer-Encoding: base64\r\n   Content-Length: 4246",
@@ -85,8 +85,8 @@
     "notes": "EST examples in appendix A.1 through A.4 have incorrect \"Content-Length\". That header is mutually exclusive with \"Transfer-Encoding\" according to HTTP 1.1 RFC 2616. If a clients receives both headers, \"Transfer-Encoding\" header takes precedence and the erroneous \"Content-Length\" header must be ignored.\r\n\r\nHTTP 1.1 RFC 2616 Section 4.4 (https://tools.ietf.org/html/rfc2616#section-4.4)\r\n\r\n3.If a Content-Length header field (section 14.13) is present, its\r\n     decimal value in OCTETs represents both the entity-length and the\r\n     transfer-length. The Content-Length header field MUST NOT be sent\r\n     if these two lengths are different (i.e., if a Transfer-Encoding\r\n     header field is present). If a message is received with both a\r\n     Transfer-Encoding header field and a Content-Length header field,\r\n     the latter MUST be ignored.\r\n\r\n\r\nEST RFC 7030 is non-compliant with HTTP 1.1 RFC 2616.\r\n\r\nPlease remove erroneous \"Content-Length\" header from all affected EST response examples in Appendixes A.1 through to A.4. This is incorrect and misleading.\r\n\r\nPlease make this fix at same time the erroneous \"Content-Transfer-Encoding\" header is corrected to be \"Transfer-Encoding\", as reported in a different errata.",
     "submit_date": "2019-12-03",
     "submitter_name": "Justin Cranford",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-04-03 10:39:12"
   }
 ]

@@ -77,7 +77,7 @@
   {
     "errata_id": "6566",
     "doc-id": "RFC5035",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "   certs\r\n      contains the list of certificates that are to be used in\r\n      validating the message.  The first certificate identified in the\r\n      sequence of certificate identifiers MUST be the certificate used\r\n      to verify the signature.  The encoding of the ESSCertIDv2 for this\r\n      certificate SHOULD include the issuerSerial field.  If other\r\n      constraints ensure that issuerAndSerialNumber will be present in\r\n      the SignerInfo, the issuerSerial field MAY be omitted.  The\r\n      certificate identified is used during the signature verification\r\n      process.  If the hash of the certificate does not match the\r\n      certificate used to verify the signature, the signature MUST be\r\n      considered invalid.\r\n\r\n      If more than one certificate is present, subsequent certificates\r\n      limit the set of certificates that are used during validation.\r\n",
@@ -85,9 +85,9 @@
     "notes": "Some aspects of the 'certs' field of a SigningCertificateV2 attribute:\r\n\r\n   SigningCertificateV2 ::=  SEQUENCE {\r\n       certs        SEQUENCE OF ESSCertIDv2,\r\n       policies     SEQUENCE OF PolicyInformation OPTIONAL\r\n   }\r\n\r\ndescribed in the sentences quoted above are rather vague.\r\nThis lead to major confusion and wrong implementations.\r\nAs meanwhile has been clarified, they should be re-phrased;\r\nsee suggested new version above.\r\n\r\n(One may further mandate/clarify that the certificate identifiers must be given in the same order\r\nas they are expected in the validation chain, but I think this is not important because\r\nthe order should not play a critical role and will be determined by the validation chain anyway.)",
     "submit_date": "2021-04-29",
     "submitter_name": "David von Oheimb",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-04-03 10:39:53"
   },
   {
     "errata_id": "6735",
