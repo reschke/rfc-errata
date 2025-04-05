@@ -135,6 +135,21 @@
     "update_date": "2022-04-05 22:22:32"
   },
   {
+    "errata_id": "8373",
+    "doc-id": "RFC4291",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.5.6",
+    "orig_text": "   Routers must not forward any packets with Link-Local source or\r\n   destination addresses to other links.",
+    "correct_text": "Routers MUST not forward any packets with Link-Local source or destination addresses to other links.  Hop-limit MUST be set to 1.",
+    "notes": "I believe it would be reasonable for someone to override the behavior via setsockopt() call but that the default behavior of an internet connected host should set hlimit=1",
+    "submit_date": "2025-04-04",
+    "submitter_name": "Jared Mauch",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "863",
     "doc-id": "RFC4291",
     "errata_status_code": "Rejected",
