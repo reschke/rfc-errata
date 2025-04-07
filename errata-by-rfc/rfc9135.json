@@ -43,5 +43,20 @@
     "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2024-02-12 07:28:26"
+  },
+  {
+    "errata_id": "8375",
+    "doc-id": "RFC9135",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.3",
+    "orig_text": "The ingress PE gets the destination TS's MAC address for that TS's IP \r\naddress from its ARP table or NDP cache. It encapsulates the packet \r\nwith that destination MAC address and a source MAC address \r\ncorresponding to that IRB interface and sends the packet to its \r\ndestination subnet MAC-VRF/BT.\r\n\r\n",
+    "correct_text": "The ingress PE gets the destination TS's MAC address for that TS's IP \r\naddress from its ARP table or NDP cache. It encapsulates the packet \r\nwith that destination MAC address and a source MAC address \r\ncorresponding to that IRB interface. \r\nIn addition, if the following conditions for the EVPN instance in \r\nquestion are met:\r\n\r\n- uses MPLS encapsulation\r\n- implements VLAN-aware bundle service interface as defined in \r\n  Section 6.3 of RFC 7432\r\n\r\nthen the VLAN tag with the \"normalized VID\" of the corresponding BT \r\nis pushed on the customer IP packet.\r\n\r\nThe resulting packet is sent to its destination subnet MAC-VRF/BT.\r\n\r\n",
+    "notes": "Section 6.3 of RFC 743 OPTIONALLY allows a MAC-VRF that implements VLAN-aware bundle service interface and uses MPLS encapsulation to advertise the same label for all its broadcast domains. This option is only allowed when each broadcast domain in such a MAC-VRF is represented by the same VID in all the PEs. With this option, a VLAN tag with the \"normalized\" VID of the specific ingress domain MUST be present when the packet crosses the underlay, and MUST be used for identification of the specific broadcast domain in the egress PE.\r\n\r\nIn the case of inter-subnet forwarding, the original VLAN tag of IP packets undergoing such forwarding does not identify the broadcast domain to which the packet would be sent.",
+    "submit_date": "2025-04-06",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
