@@ -58,5 +58,35 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2024-07-25 10:59:40"
+  },
+  {
+    "errata_id": "8376",
+    "doc-id": "RFC9171",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.8",
+    "orig_text": "If the fragmented bundle is not a fragment or is the fragment with\r\noffset zero, then all extension blocks of the fragmented bundle \r\nMUST be replicated in the fragment whose offset is zero.",
+    "correct_text": "All extension blocks of the fragmented bundle MUST be represented \r\nin at least one fragment.",
+    "notes": "Requiring that the \"first fragment\" of a bundle contain every extension block of the fragmented bundle can lead to situations where the \"first fragment\" bundle is, itself, larger than some reasonable MTU.\r\n\r\nMore generally, more thought needs to be put into the way in which extension blocks from the fragmented bundle are placed into bundles representing fragments.  This is particularly an issue if the bundle holding the fragment will also have extension blocks added to it, as there is no evident way to distinguish between extension blocks in a bundle holding a fragment that were part of the fragmented bundle versus extension blocks in a bundle holding a fragment that are not associated with the fragmented bundle.",
+    "submit_date": "2025-04-07",
+    "submitter_name": "Ed Birrane",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8377",
+    "doc-id": "RFC9171",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.7",
+    "orig_text": "If the received bundle is a fragment, the ADU \r\nReassembly procedure described in Section 5.9 MUST \r\nbe followed. If this procedure results in reassembly \r\nof the entire original ADU, processing of the \r\nfragmentary bundle whose payload has been replaced \r\nby the reassembled ADU (whether this bundle or a \r\npreviously received fragment) proceeds from Step 2; ",
+    "correct_text": "If the received bundle is a fragment, the ADU \r\nReassembly procedure described in Section 5.9 MUST \r\nbe followed. If this procedure results in reassembly \r\nof the entire original ADU, \r\n\r\nthen the original primary block of the fragmented \r\nbundle whose ADU has been reassembled must replace \r\nthe primary block of the fragmentary bundle whose\r\npayload has been replaced by the reassembled ADU.\r\n\r\nProcessing of this fragmentary bundle proceeds \r\nfrom Step 2; ",
+    "notes": "When performing bundle fragmentation, the original bundle is never fully reconstituted because the original bundle primary block is never recreated upon reassembly.  This means that any extension blocks that require the original bundle primary block to be intact (such as security blocks) cannot verify the reassembled bundle.\r\n\r\nA solution to bundle reassembly that allows for the original bundle to be secured and then verified/decrypted upon reassembly needs to be put in place as the text in 9171 currently cannot support this.",
+    "submit_date": "2025-04-07",
+    "submitter_name": "Ed Birrane",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
