@@ -2,16 +2,16 @@
   {
     "errata_id": "8340",
     "doc-id": "RFC9685",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "7.1",
     "orig_text": "   0                   1                   2                   3\r\n   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n  |     Type      |     Length    |    Status     |    Opaque     |\r\n  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n  |Rsv| P | I |R|T|     TID       |     Registration Lifetime     |\r\n  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n  |                                                               |\r\n ...          Registration Ownership Verifier (ROVR)              ...\r\n  |                                                               |\r\n  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
     "correct_text": "   0                   1                   2                   3\r\n   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n  |     Type      |     Length    |    Status     |    Opaque     |\r\n  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n  |R| P |C| I |R|T|     TID       |     Registration Lifetime     |\r\n  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n  |                                                               |\r\n ...          Registration Ownership Verifier (ROVR)              ...\r\n  |                                                               |\r\n  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+",
-    "notes": "The EARO format in RFC 9685  (Figure 5) omits the C-flag, which was previously defined in RFC 8928. This inconsistency could lead to issues in implementation and interoperability. It is important to ensure that newer standards respect and align with existing conventions.\r\nsmall \"R\" is a single unused/Reserved bit.",
+    "notes": "The EARO format in RFC 9685  (Figure 5) omits the C-flag, which was previously defined in RFC 8928. This inconsistency could lead to issues in implementation and interoperability. It is important to ensure that newer standards respect and align with existing conventions.\r\nsmall \"R\" is a single unused/Reserved bit.\n --VERIFIER NOTES-- \nWhile the problem description is correct, the suggested way to fix the problem is rejected. Indeed, authors, chairs, and AD prefer to have another RFC updating RFC 8928 and fixing the IANA registry.",
     "submit_date": "2025-03-20",
     "submitter_name": "Adnan Rashid",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2025-04-14 00:04:19"
   }
 ]
