@@ -298,5 +298,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2024-02-28 13:15:45"
+  },
+  {
+    "errata_id": "8381",
+    "doc-id": "RFC8555",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.3",
+    "orig_text": "   3.  Dereference the URL using an HTTP GET request.  This request MUST\r\n       be sent to TCP port 80 on the HTTP server.",
+    "correct_text": "   3.  Dereference the URL using an HTTP GET request.  This request MUST\r\n       be sent to TCP port 80 on the HTTP server.  (The HTTP client must\r\n       not resolve and/or must ignore any HTTPS DNS RRs [RFC 9460].)",
+    "notes": "Doing a DNS lookup of an HTTPS DNS RR [RFC 9460] might force the client to switch from HTTP to HTTPS scheme which would break HTTP-01 lookups.  The RFC8555 text is clear that \"request MUST be sent to TCP port 80 on the HTTP server\" which would be violated if the validating client did an HTTPS RR lookup in the DNS and followed the instructions in RFC 9460 section 9.5.",
+    "submit_date": "2025-04-15",
+    "submitter_name": "Erik Nygren",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
