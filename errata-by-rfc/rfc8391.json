@@ -118,5 +118,35 @@
     "verifier_id": "163",
     "verifier_name": "Colin Perkins",
     "update_date": "2024-04-22 15:01:25"
+  },
+  {
+    "errata_id": "8382",
+    "doc-id": "RFC8391",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.4",
+    "orig_text": "Input: WOTS+ private key sk, address ADRS, seed SEED",
+    "correct_text": "Input: WOTS+ private key sk, seed SEED, address ADRS",
+    "notes": "When `WOTS_genPK` is called in `treeHash`, it is called as `WOTS_genPK (getWOTS_SK(SK, s + i), SEED, ADRS)`. By swapping the `SEED` and `ADRS` arguments in `WOTS_genPK` this aligns with the API change from Errata ID 5572.",
+    "submit_date": "2025-04-16",
+    "submitter_name": "Alex J Malozemoff",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8383",
+    "doc-id": "RFC8391",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.5",
+    "orig_text": "Input: Message M, WOTS+ private key sk, address ADRS, seed SEED",
+    "correct_text": "Input: private key sk, Message M, WOTS+ seed SEED, address ADRS",
+    "notes": "When used in Algorithm 11 it is called as `WOTS_sign(getWOTS_SK(SK, idx_sig), M', getSEED(SK), ADRS);` that is, the secret key comes first, then the message, then the seed, then finally the address.",
+    "submit_date": "2025-04-16",
+    "submitter_name": "Alex J Malozemoff",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
