@@ -238,5 +238,20 @@
     "verifier_id": "124",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8391",
+    "doc-id": "RFC4211",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.2",
+    "orig_text": "         challengeResponse indicates that a challenge message is to be\r\n         sent from the CA/RA to the requestor.",
+    "correct_text": "         challengeResp indicates that a challenge message is to be\r\n         sent from the CA/RA to the requestor.",
+    "notes": "Earlier in the section, SubsequentMessage is defined with two possible values: encrCert (0) and challengeResp (1).  This aligns with that definition.",
+    "submit_date": "2025-04-23",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-04-23 12:51:17"
   }
 ]
