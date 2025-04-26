@@ -28,5 +28,35 @@
     "verifier_id": "182",
     "verifier_name": "Nick Sullivan",
     "update_date": "2025-01-18 10:48:19"
+  },
+  {
+    "errata_id": "8392",
+    "doc-id": "RFC9497",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "RandomScalar():  Implemented by returning a uniformly random\r\n         Scalar in the range [0, G.Order() - 1].",
+    "correct_text": "RandomScalar():  Implemented by returning a uniformly random\r\n         Scalar in the range [1, G.Order() - 1].",
+    "notes": "Section 2.1 (https://www.rfc-editor.org/rfc/rfc9497#section-2.1-4.12) states:\r\n> Chooses at random a nonzero element in GF(p).\r\n\r\nSo `RandomScalar()` implementations can't return 0.",
+    "submit_date": "2025-04-25",
+    "submitter_name": "daxpedda",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8393",
+    "doc-id": "RFC9497",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.7",
+    "orig_text": "4.7.1.  Rejection Sampling\r\n\r\n   Generate a random byte array with Ns bytes and attempt to map to a\r\n   Scalar by calling DeserializeScalar in constant time.\r\n   ...\r\n\r\n4.7.2.  Random Number Generation Using Extra Random Bits\r\n\r\n   Generate a random byte array with L = ceil(((3 *\r\n   ceil(log2(G.Order()))) / 2) / 8) bytes, and interpret it as an\r\n   integer; reduce the integer modulo G.Order(), and return the result.",
+    "correct_text": "4.7.1.  Rejection Sampling\r\n\r\n   Generate a random byte array with Ns bytes and attempt to map to a\r\n   Scalar by calling DeserializeScalar and checking for a nonzero Scalar\r\n   in constant time.\r\n   ...\r\n\r\n4.7.2.  Random Number Generation Using Extra Random Bits\r\n\r\n   Generate a random byte array with L = ceil(((3 *\r\n   ceil(log2(G.Order()))) / 2) / 8) bytes, and interpret it as an\r\n   integer; reduce the integer modulo G.Order() - 1, 1, and return the\r\n   result.",
+    "notes": "Section 2.1 (https://www.rfc-editor.org/rfc/rfc9497#section-2.1-4.12) states:\r\n> Chooses at random a nonzero element in GF(p).\r\n\r\nSo `RandomScalar()` implementations can't return 0.\r\n\r\nFor rejection sampling I actually recommend changing `DeserializeScalar()` instead to check for nonzero Scalar and decline those. My suggested errata is just a compromise to keep the change as specific as possible. Changing `DeserializeScalar()` might need a separate discussion, but I will await feedback for that.\r\n\r\nFor \"Random Number Generation Using Extra Random Bits\" my suggestion is to follow FIPS 186-5 A.2.1 (https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf#%5B%7B%22num%22%3A154%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C70%2C586%2C0%5D), which is described in my errata. I found no standard referring to Ristretto255, but the one provided by FIPS for ECDSA works as well here.",
+    "submit_date": "2025-04-25",
+    "submitter_name": "daxpedda",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
