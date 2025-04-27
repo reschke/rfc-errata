@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8394",
+    "doc-id": "RFC6188",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4, tables 1-4",
+    "orig_text": "   | Default key lifetime         | 2^31 packets                       |",
+    "correct_text": "   | Maximum key lifetime (SRTP)  | 2^48 packets                       |\r\n   | Maximum key lifetime (SRTCP) | 2^31 packets                       |\r\n",
+    "notes": "RFC 3711 and RFC 7714 specifies different maximum key lifetime values for SRTP and SRTCP (2^48 and 2^31). Additionally word \"Default\" suggests that higher values are also allowed, what may lead to two-time pad vulnerability for a very long streams.",
+    "submit_date": "2025-04-26",
+    "submitter_name": "Daniel Frużyński",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
