@@ -148,5 +148,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8396",
+    "doc-id": "RFC8391",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.10",
+    "orig_text": "pk_ots = WOTS_pkFromSig(sig_ots, M', SEED, ADRS);",
+    "correct_text": "pk_ots = WOTS_pkFromSig(M', sig_ots, ADRS, SEED);",
+    "notes": "The call to `WOTS_pkFromSig` in `XMSS_rootFromSig` does not match the signature of Algorithm 6 (Section 3.1.6).",
+    "submit_date": "2025-04-28",
+    "submitter_name": "Alex J Malozemoff",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

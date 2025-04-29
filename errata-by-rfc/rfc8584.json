@@ -34,7 +34,7 @@
     "doc-id": "RFC8584",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": ".2",
+    "section": "3.2",
     "orig_text": "   Where:\r\n\r\n   o  DF(V) is defined to be the address Si (index i) for which\r\n      Weight(V, Es, Si) is the highest; 0 <= i < N-1.\r\n\r\n   o  BDF(V) is defined as that PE with address Sk for which the\r\n      computed Weight is the next highest after the Weight of the DF.\r\n      j is the running index from 0 to N-1; i and k are selected values.\r\n",
     "correct_text": "   Where:\r\n\r\n   o  DF(V) is defined to be the address Si (index i) for which\r\n      Weight(V, Es, Si) is the highest; 0 <= i <= N-1.\r\n\r\n   o  BDF(V) is defined as that PE with address Sk for which the\r\n      computed Weight is the next highest after the Weight of the DF.\r\n      j is the running index from 0 to N-1; i and k are selected values.\r\n",
     "notes": "An observation was made while reviewing EVPN Port-Active draft pointing to a possible algorithm errata in RFC8584 ;\r\n\r\nBasically, when evaluating the DF for HRW, \r\n>      * DF(Es) is defined to be the address Si (index i) for which\r\n>        Weight(Es, Si) is the highest; 0 <= i < N-1.\r\n\r\nHere,\r\n\r\nif N=1, no remotes:  0 <= i < 0    -- ERROR\r\n\r\nif N=2, 1 peer:  0 <= i < 1  -> possible values are only 0 meaning index 1 (the peer)’s weight is not considered.\r\nLogically, this should be 0 <= i <= N-1    or    0 <= i < N ",
@@ -42,6 +42,6 @@
     "submitter_name": "Luc André Burdet",
     "verifier_id": "178",
     "verifier_name": "Gunter Van de Velde",
-    "update_date": "2025-02-10 02:39:45"
+    "update_date": "2025-04-28 13:54:53"
   }
 ]
