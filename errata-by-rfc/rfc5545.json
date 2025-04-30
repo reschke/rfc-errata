@@ -568,5 +568,20 @@
     "verifier_id": "176",
     "verifier_name": "Orie Steele",
     "update_date": "2024-05-29 12:39:22"
+  },
+  {
+    "errata_id": "8398",
+    "doc-id": "RFC5545",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.6.5",
+    "orig_text": "       tzprop     = *(\r\n                    ;\r\n                    ; The following are REQUIRED,\r\n                    ; but MUST NOT occur more than once.\r\n                    ;\r\n                    dtstart / tzoffsetto / tzoffsetfrom /\r\n                    ;\r\n                    ; The following is OPTIONAL,\r\n                    ; but SHOULD NOT occur more than once.\r\n                    ;\r\n                    rrule /\r\n                    ;\r\n                    ; The following are OPTIONAL,\r\n                    ; and MAY occur more than once.\r\n                    ;\r\n                    comment / rdate / tzname / x-prop / iana-prop\r\n                    ;\r\n                    )",
+    "correct_text": "       tzprop     = *(\r\n                    ;\r\n                    ; The following are REQUIRED,\r\n                    ; but MUST NOT occur more than once.\r\n                    ;\r\n                    dtstart / tzoffsetto / tzoffsetfrom /\r\n                    ;\r\n                    ; The following is OPTIONAL,\r\n                    ; but SHOULD NOT occur more than once.\r\n                    ;\r\n                    rrule /\r\n                    ;\r\n                    ; The following are OPTIONAL,\r\n                    ; and MAY occur more than once.\r\n                    ;\r\n                    comment / exdate / rdate / tzname / x-prop / iana-prop\r\n                    ;\r\n                    )",
+    "notes": "This proposal adds exdate to STANDARD and DAYLIGHT\r\n\r\ntzprop does not include \"exdate\"\r\nHowever, the exdate documentation states:\r\n\r\nConformance:  This property can be specified in recurring \"VEVENT\",\r\n      \"VTODO\", and \"VJOURNAL\" calendar components as well as in the\r\n      \"STANDARD\" and \"DAYLIGHT\" sub-components of the \"VTIMEZONE\"\r\n      calendar component.",
+    "submit_date": "2025-04-29",
+    "submitter_name": "Nicco Kunzmann",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

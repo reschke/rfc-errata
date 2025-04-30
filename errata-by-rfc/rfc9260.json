@@ -78,15 +78,15 @@
     "errata_id": "8387",
     "doc-id": "RFC9260",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "3.3.10.6",
     "orig_text": "Unrecognized Chunk: variable length\r\n   The Unrecognized Chunk field contains the unrecognized chunk from\r\n   the SCTP packet complete with Chunk Type, Chunk Flags, and Chunk\r\n   Length.",
     "correct_text": "Unrecognized Chunk: variable length\r\n   The Unrecognized Chunk field contains the unrecognized chunk from\r\n   the SCTP packet complete with Chunk Type, Chunk Flags, Chunk Length,\r\n   and Chunk Value.",
     "notes": "If the Unrecognized Chunk field of the Unrecognized Chunk Type (6) error cause only contained \"Chunk Type, Chunk Flags, and Chunk Length\" (as the RFC says) then the Cause Length would have fixed value 8. However, Unrecognized Chunk is defined as variable length, meaning that it must contain the entire unrecognized Chunk including its Chunk Value field.",
     "submit_date": "2025-04-20",
     "submitter_name": "Iñaki Baz Castillo",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-04-29 14:31:39"
   }
 ]

@@ -3,15 +3,15 @@
     "errata_id": "8390",
     "doc-id": "RFC9679",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "5.4",
-    "orig_text": "[...] as the \"x5t\" (X.509 certificate SHA-1 thumbprint) [RFC9360] \r\nvalue defined for X.509 certificate objects does.",
-    "correct_text": "[...] as the \"x5t\" (X.509 certificate thumbprint) [RFC9360] \r\nvalue defined for X.509 certificate objects does.",
+    "orig_text": "as the \"x5t\" (X.509 certificate SHA-1 thumbprint) [RFC9360] \r\nvalue defined for X.509 certificate objects does.",
+    "correct_text": "as the \"x5t\" (X.509 certificate thumbprint) [RFC9360] \r\nvalue defined for X.509 certificate objects does.",
     "notes": "The hash function name \"SHA-1\" is spurious here.\r\nRFC 9360 calls \"x5t\" a \"Hash of an X.509 certificate\" or goes into more detail by saying \"x5t:\r\nThis header parameter identifies the end-entity X.509 certificate by a hash value (a thumbprint). \".\r\nSo calling \"x5t\" an \"X.509 certificate thumbprint\" is not wrong.\r\nHowever, there is nothing in RFC 9360 about SHA-1, and SHA-1 is outdated enough that this misreference borders on a technical mistake.",
     "submit_date": "2025-04-22",
     "submitter_name": "Carsten Bormann",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-04-29 14:50:18"
   }
 ]
