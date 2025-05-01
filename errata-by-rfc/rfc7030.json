@@ -107,16 +107,16 @@
   {
     "errata_id": "8399",
     "doc-id": "RFC7030",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.4",
     "orig_text": "The EST server MUST authenticate the client, as specified in\r\nSection 3.3.2 if certificate-based authenticated is used or",
-    "correct_text": "The EST server MUST authenticate the client, as specified in\r\nSection 3.3.2 if certificate-based authentication is used or",
-    "notes": "Should say \"authentication\"",
+    "correct_text": "The EST server MUST authenticate the client, as specified in\r\nSection 3.3.2, if certificate-based authentication is used or",
+    "notes": "\"authenticated\" should be \"authentication\".",
     "submit_date": "2025-04-29",
     "submitter_name": "Angelica Semenec",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-04-30 08:01:16"
   }
 ]

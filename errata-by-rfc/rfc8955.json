@@ -13,5 +13,20 @@
     "verifier_id": "175",
     "verifier_name": "Jim Guichard",
     "update_date": "2024-10-09 08:10:08"
+  },
+  {
+    "errata_id": "8400",
+    "doc-id": "RFC8955",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.2, 5.1",
+    "orig_text": "4.2.2.1. Type 1 - Destination Prefix\r\n\r\nEncoding: <type (1 octet), length (1 octet), prefix (variable)>\r\nDefines the destination prefix to match. The length and prefix fields\r\nare encoded as in BGP UPDATE messages [RFC4271].\r\n\r\n4.2.2.2. Type 2 - Source Prefix\r\n\r\nEncoding: <type (1 octet), length (1 octet), prefix (variable)>\r\nDefines the source prefix to match. The length and prefix fields are \r\nencoded as in BGP UPDATE messages [RFC4271].\r\n[...]\r\n\r\n5.1. Ordering of Flow Specifications \r\n[...]\r\nFor IP prefix values (IP destination or source prefix), if one of the\r\ntwo prefixes to compare is a more specific prefix of the other, the more\r\nspecific prefix has higher precedence. Otherwise, the one with the\r\nlowest IP value has higher precedence.\r\n",
+    "correct_text": "No correction offered, see notes.",
+    "notes": "No corrected text is supplied since the resolution of this issue is somewhat ambiguous.\r\nIn RFC 4271 Section 4.3, the definition of a prefix is:\r\n         b) Prefix:\r\n\r\n            The Prefix field contains an IP address prefix, followed by\r\n            the minimum number of trailing bits needed to make the end\r\n            of the field fall on an octet boundary.  Note that the value\r\n            of trailing bits is irrelevant.\r\n\r\nRFC 8955 doesn't quite address the \"trailing bits\" consideration.  Following the advice from RFC 4271, irrelevant would primarily impact ignoring the trailing bits for purposes of installing firewall rules generated from flowspec routes.  For the ordering procedures, comparing two equivalent prefixes that differ in trailing bits should result in them being considered equal.\r\n\r\nImplementations of flowspec that don't ignore trailing bits may treat routes with components that differ only in trailing bits for their source or destination prefixes as different flowspec routes.\r\n\r\nFor updates to RFC 8955, including the upcoming flowspec v2, more normative text to zero out the trailing bits should be considered.",
+    "submit_date": "2025-04-30",
+    "submitter_name": "Jeffrey Haas",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
