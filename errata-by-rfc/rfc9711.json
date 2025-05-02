@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8401",
+    "doc-id": "RFC9711",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1",
+    "orig_text": "For attestation, the keys are associated with\r\nspecific devices and are configured by device manufacturers. ",
+    "correct_text": "The quoted text is inaccurate and just an opinion of the editors. \r\nIt should preferably be removed from the RFC.",
+    "notes": "In SGX, the keys are not configured by the manufacturer alone. The platform owner can provide a random value called OWNER_EPOCH.\r\n\r\nSee this for technical details: https://mailarchive.ietf.org/arch/msg/rats/4V2zZHhk5IuxwcUMNWpPBpnzpaM/",
+    "submit_date": "2025-05-01",
+    "submitter_name": "Muhammad Usama Sardar",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
