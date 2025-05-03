@@ -88,5 +88,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2025-04-29 14:31:39"
+  },
+  {
+    "errata_id": "8402",
+    "doc-id": "RFC9260",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.6",
+    "orig_text": "If the T1-init timer expires at \"A\" after the INIT or COOKIE ECHO\r\nchunks are sent, the same INIT or COOKIE ECHO chunk with the same\r\nInitiate Tag (i.e., Tag_A) or State Cookie is retransmitted and the\r\ntimer is restarted.",
+    "correct_text": "If the T1-init timer expires at \"A\" after the INIT chunk is sent or\r\nif the T1-cookie timer expires at \"A\" after the the COOKIE ECHO chunk\r\nis sent, the same INIT or COOKIE ECHO chunk with the same Initiate\r\nTag (i.e., Tag_A) or State Cookie is retransmitted and the timer is\r\nrestarted.",
+    "notes": "T1-init timer is cancelled at \"A\" upon receipt of INIT ACK chunk from \"Z\", so it's impossible that T1-init timer expires at \"A\" after the COOKIE ECHO chunk is sent (since COOKIE ECHO chunk is immediately sent after INIT ACK chunk is received).",
+    "submit_date": "2025-05-02",
+    "submitter_name": "Iñaki Baz Castillo",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

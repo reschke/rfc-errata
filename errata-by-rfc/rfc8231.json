@@ -122,7 +122,7 @@
   {
     "errata_id": "8370",
     "doc-id": "RFC8231",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.3.4",
     "orig_text": "   Length (16 bits): indicates the total length of the TLV in octets.\r\n   The TLV MUST be zero-padded so that the TLV is 4-octet aligned.",
@@ -130,8 +130,8 @@
     "notes": "The \"total length of the TLV\" is incorrect, as in PCEP the TLV formatting is as per RFC 5440 which requires the length to be of the value portion only (https://datatracker.ietf.org/doc/html/rfc5440#section-7.1).\r\n\r\nSimilar mistake was already fixed for different TLV in same RFC as part of:\r\nhttps://www.rfc-editor.org/errata/eid6289",
     "submit_date": "2025-04-03",
     "submitter_name": "Samuel Sidor",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "185",
+    "verifier_name": "Ketan Talaulikar",
+    "update_date": "2025-05-02 02:02:38"
   }
 ]
