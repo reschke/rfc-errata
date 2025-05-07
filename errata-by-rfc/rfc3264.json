@@ -53,11 +53,11 @@
     "orig_text": "Section 5.1 says:\r\nHowever, for sendonly and sendrecv streams, the answer might indicate\r\ndifferent payload type numbers for the same codecs, in which case,\r\nthe offerer MUST send with the payload type numbers from the answer.\r\n\r\nSection 6.2 says:\r\nIn the case of RTP, if a particular codec was referenced with a\r\nspecific payload type number in the offer, that same payload type\r\nnumber SHOULD be used for that codec in the answer.",
     "correct_text": "Only one of the above statements can be correct.\r\n",
     "notes": "Above two statements are conflicting.\r\nThe answerer should be able to either map the payload type to a different codec or not.\n --VERIFIER NOTES-- \n   See https://mailarchive.ietf.org/arch/msg/mmusic/HRD7ISwLIwiHOA73mc2KW680xAg/",
-    "submit_date": "2017-11-00",
+    "submit_date": "2017-11-03",
     "submitter_name": "Sandeep Kumar Aitha",
     "verifier_id": "2",
     "verifier_name": "Orie Steele",
-    "update_date": "2024-05-09 13:32:58"
+    "update_date": "2025-05-06 14:11:49"
   },
   {
     "errata_id": "7597",

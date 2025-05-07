@@ -8,11 +8,11 @@
     "orig_text": "reading the fresh RFC 3967 (== BCP 97), I found that this memo uses\r\nexamples which are well known, but not very appropriate, for the\r\ndesired purpose:\r\n\r\n(1)\r\n    HMAC [RFC2104]\r\n\r\nThis algorithm - since almost three years - is a US Federal\r\nInformation Processing Standard!\r\n\r\n( FIPS PUB 198, issued '2002 March 6' ;\r\n  to download a PDF copy (updated '2002 April 8'), see\r\n  <http://crc.nist.gov/publications/fips/index.html> )\r\n\r\nThis is an active standard published by a recognized standards body.\r\nTherefore, *Normative References* to HMAC in future IETF Standards\r\nTrack documents should always refer to FIPS-198 instead of RFC 2104 !\r\n\r\n\r\n",
     "correct_text": "[see above]",
     "notes": "Remark 1:\n  FIPS-198 in turn refers to RFC 2104 as a readily available\n  source document for the algorithm, but gives a detailed,\n  independent description of the algorithm and its application.\n\nRemark 2:\n  Expect alternative MAC algorithms like UMAC, TTMAC, EMAC,\n  and RMAC to get formally standardized soon by various Standards\n  Bodies. For example, the former three Algorithms are already\n  (since Feb. 2003) recommended for new applications to be used in\n  the public administration and economy within the European Union.\n  This has been the result of the NESSIE project - an open contest\n  similar to the AES contest of NIST's), see\n  <http://www.cryptonessie.org/> .\n\nfrom pending\n --VERIFIER NOTES-- \n2021-10-06: moved from Held for Document Update to Rejected per request from Murray Kucherawy.  This erratum was reviewed while working on a bis document.",
-    "submit_date": "2005-01-00",
+    "submit_date": "2005-01-03",
     "submitter_name": "Alfred Hoenes",
     "verifier_id": "2",
     "verifier_name": "Russ Housley",
-    "update_date": "2021-10-06 11:53:12"
+    "update_date": "2025-05-06 14:11:31"
   },
   {
     "errata_id": "706",

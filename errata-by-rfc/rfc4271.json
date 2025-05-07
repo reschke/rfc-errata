@@ -298,5 +298,20 @@
     "verifier_id": "148",
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-03-29 10:30:14"
+  },
+  {
+    "errata_id": "8406",
+    "doc-id": "RFC4271",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.8",
+    "orig_text": "If a pair of BGP speakers try to establish a BGP connection with each\r\n   other simultaneously, then two parallel connections well be formed.",
+    "correct_text": "If a pair of BGP speakers try to establish a BGP connection with each\r\n   other simultaneously, then two parallel connections will be formed.",
+    "notes": "small typo: \"well\" -> \"will\"",
+    "submit_date": "2025-05-06",
+    "submitter_name": "David Naylor",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
