@@ -88,5 +88,20 @@
     "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2020-04-14 14:06:19"
+  },
+  {
+    "errata_id": "8409",
+    "doc-id": "RFC7940",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.4.3.",
+    "orig_text": "       <char cp=\"30FB\" when=\"japanese-in-label\"/>\r\n       <rule name=\"japanese-in-label\">\r\n           <union>\r\n               <class property=\"sc:Hani\"/>\r\n               <class property=\"sc:Kata\"/>\r\n               <class property=\"sc:Hira\"/>\r\n           </union>\r\n       </rule>",
+    "correct_text": "       <char cp=\"30FB\" when=\"japanese-in-label\"/>\r\n       <rule name=\"japanese-in-label\">\r\n           <union>\r\n               <class property=\"sc:Hani\"/>\r\n               <class property=\"sc:Kana\"/>\r\n               <class property=\"sc:Hira\"/>\r\n           </union>\r\n       </rule>",
+    "notes": "ISO 15924 code for Katakana is Kana, not Kata",
+    "submit_date": "2025-05-07",
+    "submitter_name": "Julien Bernard",
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-05-07 13:49:52"
   }
 ]

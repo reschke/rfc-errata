@@ -103,5 +103,20 @@
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2023-07-28 10:44:55"
+  },
+  {
+    "errata_id": "8407",
+    "doc-id": "RFC7296",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.15.",
+    "orig_text": "InitiatorSignedOctets = RealMessage1 | NonceRData | MACedIDForI\r\n\r\nNonceRPayload = PayloadHeader | NonceRData",
+    "correct_text": "InitiatorSignedOctets = RealMessage1 | Nr| MACedIDForI\r\n\r\nNonceRPayload = PayloadHeader | Nr",
+    "notes": "I'm not sure whether \"NonceRData\" and \"NonceIData \" refers to Nr and Ni? I searched \"NonceRData\" but I cannot find its definition. \r\n\r\nBTW, because we have already included \"MACedIDForI\" that is generated from Nonce in InitiatorSignedOctets, can we remove \"NonceRData\" from InitiatorSignedOctets (assuming NonceRData is Nr)?",
+    "submit_date": "2025-05-07",
+    "submitter_name": "Yan Jia",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
