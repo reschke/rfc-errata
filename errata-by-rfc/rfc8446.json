@@ -643,5 +643,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2024-01-22 10:43:23"
+  },
+  {
+    "errata_id": "8411",
+    "doc-id": "RFC8446",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.7",
+    "orig_text": "struct {\r\n    NamedGroup named_group_list<2..2^16-1>;\r\n} NamedGroupList;",
+    "correct_text": "struct {\r\n    NamedGroup named_group_list<2..2^16-2>;\r\n} NamedGroupList;",
+    "notes": "The specified maximum legal length of the named_group_list vector in the NamedGroupList structure is 2^16-1 bytes. This is invalid because NamedGroup is an enum that occupies two bytes, but 2^16-1 is not an exact multiple of the element size (2 bytes), as required in Section 3.4. It appears that the intended upper bound should be 2^16-2 bytes instead.",
+    "submit_date": "2025-05-08",
+    "submitter_name": "Albin Johansson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

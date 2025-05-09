@@ -2,16 +2,16 @@
   {
     "errata_id": "8405",
     "doc-id": "RFC9268",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2",
     "orig_text": "It does not replace PMTUD [RFC8201], Packetization Layer Path MTU\r\nDiscovery (PLPMTUD) [RFC4821], or Datagram Packetization Layer PMTU\r\nDiscovery (DPLPMTUD) [RFC8899] but rather is designed to compliment\r\nthese methods.",
     "correct_text": "It does not replace PMTUD [RFC8201], Packetization Layer Path MTU\r\nDiscovery (PLPMTUD) [RFC4821], or Datagram Packetization Layer PMTU\r\nDiscovery (DPLPMTUD) [RFC8899] but rather is designed to complement\r\nthese methods.",
-    "notes": "We are enhancing the methods, not telling them they are good.",
+    "notes": "\"compliment\" should be written as \"complement\".",
     "submit_date": "2025-05-06",
     "submitter_name": "LEdoian",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-05-08 13:53:01"
   }
 ]
