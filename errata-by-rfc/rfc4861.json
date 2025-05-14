@@ -212,16 +212,16 @@
   {
     "errata_id": "8055",
     "doc-id": "RFC4861",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.2",
     "orig_text": "Note: If neither M nor O flags are set, this indicates that no \r\ninformation is available via DHCPv6.\r\n",
     "correct_text": "Note: If neither M nor O flags are set, this indicates that no \r\ninformation is available via DHCPv6 from the router, or from \r\nother nodes that the router has been made aware of.\r\n",
-    "notes": "M=0 does not prevent a node from attempting DHCPv6. \r\n\r\nThe router cannot definitively know that no other DHCPv6 servers exist.\r\n\r\nRFC 8415 does not require M=1, with §18 providing other examples that may trigger a DHCP exchange.",
+    "notes": "M=0 does not prevent a node from attempting DHCPv6. \r\n\r\nThe router cannot definitively know that no other DHCPv6 servers exist.\r\n\r\nRFC 8415 does not require M=1, with §18 providing other examples that may trigger a DHCP exchange.\r\n\r\n--- AD notes ---\r\n\r\nRight, the advertising router can only know about the things with which is was configured, ergo no unimpeachable statement about the availability or lack thereof of DHCPv6 can be made with protocol-guaranteed perfect correctness.\r\n\r\nOne possible revision that a future -bis document could consider might be as follows:\r\n\r\nOLD:\r\n\r\n        Note: If neither M nor O flags are set, this indicates that no\r\n        information is available via DHCPv6.\r\n\r\nNEW:\r\n\r\n        Note: If neither M nor O flags are set, this indicates that the advertising router,\r\n        and by extension its administrator(s), are neither aware of nor party to any\r\n        other information available via DHCPv6.\r\n\r\n(or words to that effect).\r\n",
     "submit_date": "2024-07-29",
     "submitter_name": "Richard Patterson",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-03-27 13:00:16"
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-05-12 23:05:51"
   }
 ]
