@@ -448,5 +448,50 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8417",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.2",
+    "orig_text": "[\r\n  {\r\n    \"id\" :\r\n      \"urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig\",\r\n    \"name\" : \"Service Provider Configuration\",\r\n\r\n...\r\n\r\n  {\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\",\r\n    \"name\" : \"ResourceType\",\r\n\r\n...\r\n\r\n  {\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:Schema\",\r\n    \"name\" : \"Schema\",",
+    "correct_text": "[\r\n  {\r\n    \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Schema\"],\r\n    \"id\" :\r\n      \"urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig\",\r\n    \"meta\" : {\r\n      \"resourceType\" : \"Schema\",\r\n      \"location\" : \"/v2/Schemas/urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig\"\r\n    },\r\n    \"name\" : \"Service Provider Configuration\",\r\n\r\n...\r\n\r\n  {\r\n    \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Schema\"],\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\",\r\n    \"meta\" : {\r\n      \"resourceType\" : \"Schema\",\r\n      \"location\" : \"/v2/Schemas/urn:ietf:params:scim:schemas:core:2.0:ResourceType\"\r\n    },\r\n    \"name\" : \"ResourceType\",\r\n\r\n...\r\n\r\n  {\r\n    \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Schema\"],\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:Schema\",\r\n    \"meta\" : {\r\n      \"resourceType\" : \"Schema\",\r\n      \"location\" : \"/v2/Schemas/urn:ietf:params:scim:schemas:core:2.0:Schema\"\r\n    },\r\n    \"name\" : \"Schema\",",
+    "notes": "The JSON representation of the Schema resources for ServiceProviderConfig, ResourceType, and Schema are missing the \"schemas\" attribute and the \"meta\" attribute. See also Erratum 5999.",
+    "submit_date": "2025-05-16",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8418",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.2",
+    "orig_text": "  {\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:Schema\",\r\n    \"name\" : \"Schema\",\r\n    \"description\" : \"Specifies the schema that describes a\r\n      SCIM schema\",\r\n    \"attributes\" : [\r\n      {\r\n        \"name\" : \"id\",\r\n        \"type\" : \"string\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The unique URI of the schema.\r\n          When applicable, service providers MUST specify the URI.\",\r\n        \"required\" : true,\r\n        \"caseExact\" : false,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"none\"\r\n      },\r\n      {\r\n        \"name\" : \"name\",\r\n",
+    "correct_text": "  {\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:Schema\",\r\n    \"name\" : \"Schema\",\r\n    \"description\" : \"Specifies the schema that describes a\r\n      SCIM schema\",\r\n    \"attributes\" : [\r\n      {\r\n        \"name\" : \"name\",\r\n",
+    "notes": "The JSON representation of the schema resource for \"Schema\" specifies an \"id\" attribute. It should not be listed because it is part of the common attributes from section 3.1. \r\nThe attribute characteristics listed in section 3.1 for \"id\" would override the definitions given in the schema resource anyway. Therefore, \"caseExact\" will be true, \"returned\" will be \"always\", and \"uniqueness\" will be \"server\".",
+    "submit_date": "2025-05-16",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8419",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.2",
+    "orig_text": "  {\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\",\r\n    \"name\" : \"ResourceType\",\r\n    \"description\" : \"Specifies the schema that describes a SCIM\r\n      resource type\",\r\n    \"attributes\" : [\r\n      {\r\n        \"name\" : \"id\",\r\n        \"type\" : \"string\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The resource type's server unique id.\r\n          May be the same as the 'name' attribute.\",\r\n        \"required\" : false,\r\n        \"caseExact\" : false,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"none\"\r\n      },\r\n      {\r\n        \"name\" : \"name\",\r\n",
+    "correct_text": "  {\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\",\r\n    \"name\" : \"ResourceType\",\r\n    \"description\" : \"Specifies the schema that describes a SCIM\r\n      resource type\",\r\n    \"attributes\" : [\r\n      {\r\n        \"name\" : \"name\",\r\n",
+    "notes": "The JSON representation of the schema resource for \"ResourceType\" specifies an \"id\" attribute. It should not be listed because it is part of the common attributes from section 3.1. \r\nThe attribute characteristics listed in section 3.1 for \"id\" would override the definitions given in the schema resource anyway. Therefore, \"caseExact\" will be true, \"returned\" will be \"always\", and \"uniqueness\" will be \"server\".\r\n\r\nSection 3.1 says that for \"ResourceType\" and \"ServiceProviderConfig\" resources the common attributes do not need to be \"defined\", but they are still considered part of the base schema. This is stated explicitly in section 5 for \"ServiceProviderConfig\". All examples for \"ResourceType\" resource representations also include the attribute \"meta\" which is not defined in the schema in section 8.7.2.",
+    "submit_date": "2025-05-16",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
