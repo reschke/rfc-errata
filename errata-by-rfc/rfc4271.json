@@ -317,6 +317,21 @@
   {
     "errata_id": "8408",
     "doc-id": "RFC4271",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "9.1.1",
+    "orig_text": "The Phase 1 decision function is a separate process,f which completes\r\n   when it has no further work to do.",
+    "correct_text": "The Phase 1 decision function is a separate process, f, which completes\r\n   when it has no further work to do.",
+    "notes": "Extra space and comma needed around function \"f\"\n --VERIFIER NOTES-- \nDuplicate of https://www.rfc-editor.org/errata/eid150",
+    "submit_date": "2025-05-07",
+    "submitter_name": "David Naylor",
+    "verifier_id": "185",
+    "verifier_name": "Ketan Talaulikar",
+    "update_date": "2025-05-19 00:15:48"
+  },
+  {
+    "errata_id": "8422",
+    "doc-id": "RFC4271",
     "errata_status_code": "Reported",
     "errata_type_code": "Editorial",
     "section": "9.1.1",

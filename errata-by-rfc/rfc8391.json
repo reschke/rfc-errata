@@ -163,5 +163,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8424",
+    "doc-id": "RFC8391",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.3",
+    "orig_text": "An XMSS private key SK contains 2^h WOTS+ private keys, ...",
+    "correct_text": "An XMSS private key SK contains an algorithm OID, 2^h WOTS+ private keys, ...",
+    "notes": "Section 4.1.3 makes no mention of an OID; however, the reference spec includes one with the following comment: \"For an implementation that uses runtime parameters, it is crucial that the OID is part of the secret key as well; i.e. not just for interoperability, but also for internal use.\"\r\n\r\nThis would suggest that an OID should be included as part of the private key in Section 4.1.3.",
+    "submit_date": "2025-05-19",
+    "submitter_name": "Alex J Malozemoff",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

@@ -658,5 +658,20 @@
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2025-05-09 06:10:30"
+  },
+  {
+    "errata_id": "8423",
+    "doc-id": "RFC8446",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.2",
+    "orig_text": " struct {\r\n      \tProtocolVersion legacy_version = 0x0303;\t/* TLS v1.2 */\r\n      \tRandom random;\r\n      \topaque legacy_session_id<0..32>;\r\n      \tCipherSuite cipher_suites<2..2^16-2>;\r\n      \topaque legacy_compression_methods<1..2^8-1>;\r\n      \tExtension extensions<8..2^16-1>;\r\n } ClientHello;",
+    "correct_text": "struct {\r\n      \tProtocolVersion legacy_version = 0x0303;\t/* TLS v1.2 */\r\n      \tRandom random;\r\n      \topaque legacy_session_id<0..32>;\r\n      \tCipherSuite cipher_suites<2..2^16-2>;\r\n      \topaque legacy_compression_methods<1..2^8-1>;\r\n      \tExtension extensions<7..2^16-1>;\r\n} ClientHello;",
+    "notes": "The minimum size of the ClientHello’s extensions is 7 as the bytes of the SupportedVersions field are at least:\r\n- 2 bytes for the type of extension;\r\n- 2 bytes for the length of the extension;\r\n- 1 byte for the length of the following versions;\r\n- 2 bytes per version (and there is at least 1 version).\r\n\r\nThe typo is also present in the section B.3.1.",
+    "submit_date": "2025-05-19",
+    "submitter_name": "Nizar Nadif",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
