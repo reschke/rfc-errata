@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8425",
+    "doc-id": "RFC9606",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3, paragraph 2",
+    "orig_text": "A DNS client can retrieve the resolver information using\r\nthe RESINFO RR  type and the QNAME of the domain name that\r\nis used to authenticate the DNS resolver (referred to as\r\nthe Authentication Domain Name (ADN) in DNR [RFC9463]).\r\n",
+    "correct_text": "A DNS client can retrieve the resolver information using\r\nthe RESINFO RR  type and the QNAME of the domain name that\r\nis used to authenticate the DNS resolver (referred to as\r\nthe Authentication Domain Name (ADN) in DNR [RFC9463])",
+    "notes": "The link to RFC9463 at the end of the paragraph has an Anchor of  \r\n   https://www.rfc-editor.org/rfc/rfc9606.html#RFC9463\r\nwhich just pointspback to itself, instead of to the actual RFC946 document\r\n\r\nThe correct link should IMHO be\r\n  https://www.rfc-editor.org/rfc/rfc9463\r\n\r\n(or maybe it should point to the relevant line in Section 9 References that has details of the RFCs)?",
+    "submit_date": "2025-05-20",
+    "submitter_name": "Mathias Koerber",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
