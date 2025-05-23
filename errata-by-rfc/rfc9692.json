@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8428",
+    "doc-id": "RFC9692",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.2",
+    "orig_text": "enum   KVTypes {\r\n    Experimental = 1,\r\n    WellKnown    = 2,\r\n    OUI          = 3,\r\n}",
+    "correct_text": "enum   KVTypes {\r\n    Experimental = 1,\r\n    WellKnown    = 2,\r\n    OUI          = 3,\r\n}\r\n\r\ntypedef  i16    FabricIDType\r\n\r\nconst FabricIDType   undefined_fabric_id   = 0\r\nconst FabricIDType   default_fabric_id     = 1\r\n\r\n/** <auto-evpn> */\r\n/** EVPN Fabric ID */\r\n\r\nconst    bool   default_acting_auto_evpn_dci_when_tof = false\r\n\r\nenum AutoEVPNModel {\r\n    ERB_VLAN_BUNDLE = 0,\r\n}\r\n\r\nconst AutoEVPNModel default_autoevpn_model = \r\n      AutoEVPNModel.ERB_VLAN_BUNDLE\r\n\r\nconst bool AUTO_EVPN_SUPPORT_DEFAULT = false\r\n\r\n/** </auto-evpn> */\r\n\r\n/** <auto-flood-reflection> */\r\n\r\nenum AutoFRModel {\r\n    /** Full Mesh of L1 tunnel shortcuts, only model supported \r\n        currently with auto FR */\r\n    NoTunnelMode    = 0,\r\n    TunnelMode      = 1,\r\n}\r\n\r\nconst AutoFRModel default_autofr_model = AutoFRModel.NoTunnelMode\r\n\r\ntypedef i32          FloodReflectionClusterIDType\r\n\r\n/* maybe used in future for special purposes */\r\nconst FloodReflectionClusterIDType  IllegalClusterID = 0\r\nconst FloodReflectionClusterIDType  DefaultClusterID  = 1\r\n\r\n/** preference to become FR, higher is better */\r\ntypedef i32          FloodReflectionPreferenceType\r\n\r\nconst   FloodReflectionPreferenceType \r\n        MinFloodReflectionPreference = 0\r\n\r\nconst bool AUTO_FLOOD_REFLECTION_SUPPORT = false\r\n/** </auto-flood-reflection> */\r\n\r\n/** <southbound KVs> */\r\n\r\n/** </southbound KVs> */",
+    "notes": "missing data type and constant definitions added to the end of the common.thrift file in section 7.2 common.thrift",
+    "submit_date": "2025-05-22",
+    "submitter_name": "Christian Kuhtz",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
