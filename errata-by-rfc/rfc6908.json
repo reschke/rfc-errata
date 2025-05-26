@@ -2,7 +2,7 @@
   {
     "errata_id": "8121",
     "doc-id": "RFC6908",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "3.2.2",
     "orig_text": "Operators should assign the same IPv4\r\n   address (e.g., 192.0.0.2/32 [RFC6333]) to all AFTRs.  \r\n",
@@ -10,8 +10,8 @@
     "notes": "In RFC6333 6.5:\r\n\r\n    The AFTR SHOULD use the well-known IPv4 address 192.0.0.1 reserved by\r\n    IANA to configure the IPv4-in-IPv6 tunnel.\r\n\r\nIn RFC6333 5.7:\r\n\r\n    ..., and 192.0.0.2 is reserved for the B4 element.\r\n\r\nI think this is Editorial because the IP address here is just an example.",
     "submit_date": "2024-09-27",
     "submitter_name": "Tomoyuki Sahara",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-09-30 09:34:46"
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-05-25 14:53:59"
   }
 ]

@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2024-03-22 11:52:14"
+  },
+  {
+    "errata_id": "8429",
+    "doc-id": "RFC1951",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.7",
+    "orig_text": "         A code length of 0 indicates that the corresponding symbol in\r\n         the literal/length or distance alphabet will not occur in the\r\n         block, and should not participate in the Huffman code\r\n         construction algorithm given earlier.  If only one distance\r\n         code is used, it is encoded using one bit, not zero bits; in\r\n         this case there is a single code length of one, with one unused\r\n         code.  One distance code of zero bits means that there are no\r\n         distance codes used at all (the data is all literals).",
+    "correct_text": "         A code length of 0 indicates that the corresponding symbol in\r\n         the literal/length or distance alphabet will not occur in the\r\n         block, and should not participate in the Huffman code\r\n         construction algorithm given earlier.  If only one distance\r\n         code is used, it is encoded using one bit, not zero bits; in\r\n         this case there is a single code length of one, with one unused\r\n         code.  One distance code length of zero means that there are no\r\n         distance codes used at all (the data is all literals).",
+    "notes": "The RFC's construction does not allow for a 0-bit Huffman code to be defined for a symbol. Therefore, \"one distance code of zero bits\" can only mean a single distance code length of 0, which does not correspond to any code.",
+    "submit_date": "2025-05-25",
+    "submitter_name": "Matthew House",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
