@@ -28,5 +28,20 @@
     "verifier_id": "114",
     "verifier_name": "Magnus Westerlund",
     "update_date": "2020-09-15 05:10:08"
+  },
+  {
+    "errata_id": "8434",
+    "doc-id": "RFC8489",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.2.2",
+    "orig_text": "    - has no plans to use any resources (such as a mapped address\r\n      (MAPPED-ADDRESS or XOR-MAPPED-ADDRESS) or relayed address\r\n      [RFC5766]) that were learned though STUN requests sent over that\r\n      connection,",
+    "correct_text": "    - has no plans to use any resources (such as a mapped address\r\n      (MAPPED-ADDRESS or XOR-MAPPED-ADDRESS) or relayed address\r\n      [RFC5766]) that were learned through STUN requests sent over that\r\n      connection,",
+    "notes": "Simple spelling correction: \"though\" should be \"through\" in the phrase \"learned though STUN requests\"",
+    "submit_date": "2025-05-27",
+    "submitter_name": "Jose Nicolas Frati",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

@@ -28,5 +28,20 @@
     "verifier_id": "165",
     "verifier_name": "Erik Kline",
     "update_date": "2021-04-29 13:54:37"
+  },
+  {
+    "errata_id": "8433",
+    "doc-id": "RFC8505",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "5.5",
+    "orig_text": "If the Registered Node is reachable over a route-over configuration from the Registering Node, the SLLA in the NS(ARO) is that of the Registering Node.",
+    "correct_text": "If the Registered Node is reachable over a route-over configuration from the Registering Node, the SLLA in the NS(EARO) is that of the Registering Node.",
+    "notes": "RFC8505 uses the EARO, which is an upgraded version of the ARO.",
+    "submit_date": "2025-05-27",
+    "submitter_name": "Adnan Rashid",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

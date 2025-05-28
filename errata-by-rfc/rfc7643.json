@@ -493,5 +493,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8435",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7",
+    "orig_text": "   attributes\r\n      A complex type that defines service provider attributes and their\r\n      qualities via the following set of sub-attributes:\r\n\r\n      name  The attribute's name.\r\n\r\n      type  The attribute's data type.  Valid values are \"string\",\r\n         \"boolean\", \"decimal\", \"integer\", \"dateTime\", \"reference\", and\r\n         \"complex\".  When an attribute is of type \"complex\", there\r\n         SHOULD be a corresponding schema attribute \"subAttributes\"\r\n         defined, listing the sub-attributes of the attribute.",
+    "correct_text": "   attributes\r\n      A complex type that defines service provider attributes and their\r\n      qualities via the following set of sub-attributes:\r\n\r\n      name  The attribute's name.\r\n\r\n      type  The attribute's data type.  Valid values are \"string\",\r\n         \"boolean\", \"decimal\", \"integer\", \"dateTime\", \"reference\", \"binary\" and\r\n         \"complex\".  When an attribute is of type \"complex\", there\r\n         SHOULD be a corresponding schema attribute \"subAttributes\"\r\n         defined, listing the sub-attributes of the attribute.",
+    "notes": "binary is missing from the possible values a attribute can have. its documented everywhere else as a type that can be used, but not when you are explaining the actual property",
+    "submit_date": "2025-05-27",
+    "submitter_name": "Philip Meholm",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

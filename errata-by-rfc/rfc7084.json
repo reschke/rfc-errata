@@ -2,31 +2,31 @@
   {
     "errata_id": "7699",
     "doc-id": "RFC7084",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.3",
     "orig_text": "   L-3:   An IPv6 CE router MUST advertise itself as a router for the\r\n          delegated prefix(es) (and ULA prefix if configured to provide\r\n          ULA addressing) using the \"Route Information Option\" specified\r\n          in Section 2.3 of [RFC4191].  This advertisement is\r\n          independent of having or not having IPv6 connectivity on the\r\n          WAN interface.",
     "correct_text": "   L-3:   An IPv6 CE router MUST advertise itself as a router for the\r\n          delegated prefix(es) (and ULA prefix if configured to provide\r\n          ULA addressing) using the \"Route Information Option\" specified\r\n          in Section 2.3 of [RFC4191], but only when correspondent \"Prefix \r\n          Information Option\" is not using the entire prefix delegation or\r\n          its on-link flag is unset. This advertisement is independent of\r\n          having or not having IPv6 connectivity on the WAN interface.",
-    "notes": "When both on-link \"Prefix Information Option\"  and \"Route Information Option\" will contain the same prefix, hosts that receive such Router Advertisements will have to add 2 almost identical routes in their routing tables:\r\n- PIO route set to \"PD/64 dev <incoming_interface>\"\r\n- RIO route set to \"PD/64 dev <incoming_interface> nexthop <router_ll_address>\"\r\n\r\nIn best case scenario, PIO will take precedence and RIO will have no effect.\r\n\r\nIn worst case scenario, RIO will take precedence and PIO route will have no effect, which will be equivalent with host ignoring the on-link flag of the PIO.",
+    "notes": "When both on-link \"Prefix Information Option\"  and \"Route Information Option\" will contain the same prefix, hosts that receive such Router Advertisements will have to add 2 almost identical routes in their routing tables:\r\n- PIO route set to \"PD/64 dev <incoming_interface>\"\r\n- RIO route set to \"PD/64 dev <incoming_interface> nexthop <router_ll_address>\"\r\n\r\nIn best case scenario, PIO will take precedence and RIO will have no effect.\r\n\r\nIn worst case scenario, RIO will take precedence and PIO route will have no effect, which will be equivalent with host ignoring the on-link flag of the PIO.\n --VERIFIER NOTES-- \n   \r\nSee https://mailarchive.ietf.org/arch/msg/v6ops/kEygjVcuk_95fqjpAxmDr1zD2PA/",
     "submit_date": "2023-11-14",
     "submitter_name": "Alin Nastac",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "184",
+    "verifier_name": "Mohamed Boucadair",
+    "update_date": "2025-05-27 08:28:51"
   },
   {
     "errata_id": "7700",
     "doc-id": "RFC7084",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.3",
     "orig_text": "   L-14:  The IPv6 CE router MUST send an ICMPv6 Destination Unreachable\r\n          message, code 5 (Source address failed ingress/egress policy)\r\n          for packets forwarded to it that use an address from a prefix\r\n          that has been invalidated.",
     "correct_text": "   L-14:  The IPv6 CE router MUST send an ICMPv6 Destination Unreachable\r\n          message, code 5 (Source address failed ingress/egress policy)\r\n          for packets forwarded to it that use an address from a prefix\r\n          that has been deprecated.",
-    "notes": "The prefix route still need to exist on CPE to allow sending ICMPv6 errors back to the offending host. \r\n\r\nOnly deprecated prefixes (preferred lifetime=0, valid lifetime > 0) still have such route installed in CPE.",
+    "notes": "The prefix route still need to exist on CPE to allow sending ICMPv6 errors back to the offending host. \r\n\r\nOnly deprecated prefixes (preferred lifetime=0, valid lifetime > 0) still have such route installed in CPE.\n --VERIFIER NOTES-- \n   \r\n   \r\nSee https://mailarchive.ietf.org/arch/msg/v6ops/kEygjVcuk_95fqjpAxmDr1zD2PA/",
     "submit_date": "2023-11-14",
     "submitter_name": "Alin Nastac",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "184",
+    "verifier_name": "Mohamed Boucadair",
+    "update_date": "2025-05-27 08:29:22"
   }
 ]
