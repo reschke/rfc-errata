@@ -118,5 +118,20 @@
     "verifier_id": "130",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8437",
+    "doc-id": "RFC7159",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "      object = begin-object [ member *( value-separator member ) ]\r\n               end-object\r\n",
+    "correct_text": "      object = begin-object { member *( value-separator member ) }\r\n               end-object\r\n",
+    "notes": "It seems that if this is not fixed, initialization of arrays and objects will look the same..",
+    "submit_date": "2025-05-28",
+    "submitter_name": "Mikhail",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

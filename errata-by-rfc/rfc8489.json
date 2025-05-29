@@ -32,16 +32,16 @@
   {
     "errata_id": "8434",
     "doc-id": "RFC8489",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "6.2.2",
-    "orig_text": "    - has no plans to use any resources (such as a mapped address\r\n      (MAPPED-ADDRESS or XOR-MAPPED-ADDRESS) or relayed address\r\n      [RFC5766]) that were learned though STUN requests sent over that\r\n      connection,",
-    "correct_text": "    - has no plans to use any resources (such as a mapped address\r\n      (MAPPED-ADDRESS or XOR-MAPPED-ADDRESS) or relayed address\r\n      [RFC5766]) that were learned through STUN requests sent over that\r\n      connection,",
-    "notes": "Simple spelling correction: \"though\" should be \"through\" in the phrase \"learned though STUN requests\"",
+    "orig_text": "    o has no plans to use any resources (such as a mapped address\r\n      (MAPPED-ADDRESS or XOR-MAPPED-ADDRESS) or relayed address\r\n      [RFC5766]) that were learned though STUN requests sent over that\r\n      connection,",
+    "correct_text": "    o has no plans to use any resources (such as a mapped address\r\n      (MAPPED-ADDRESS or XOR-MAPPED-ADDRESS) or relayed address\r\n      [RFC5766]) that were learned through STUN requests sent over that\r\n      connection,",
+    "notes": "Simple spelling correction: \"though\" should be \"through\" in the phrase \"learned though STUN requests\".",
     "submit_date": "2025-05-27",
     "submitter_name": "Jose Nicolas Frati",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-05-28 07:40:25"
   }
 ]

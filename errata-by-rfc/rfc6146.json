@@ -18,15 +18,15 @@
     "errata_id": "8416",
     "doc-id": "RFC6146",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "3.5.1.1",
     "orig_text": "In all cases, the allocated IPv4 transport address (T,t) MUST NOT be in use in another entry in the same BIB, but can be in use in other BIBs (e.g., the UDP and TCP BIBs).",
     "correct_text": "In all cases, the allocated IPv4 transport address (T,t) MUST NOT be in use in another entry in the same BIB, but can be in use in other BIBs (e.g., the TCP and ICMP BIBs).",
     "notes": "The confusing wording appears in section 3.5.1.1 (regarding UDP BIB) and 3.5.2.3 (regarding TCP BIB).\r\n\r\nIt's possible and reasonable to interpret section 3.5.1.1's text\r\n\r\n    \"but can be in use in other BIBs (e.g., the UDP and TCP BIBs)\"\r\n\r\nas if the text were:\r\n\r\n    \"but can be in use in other BIBs (i.e., can be in use in the other BIBs, which in this case are the UDP and TCP BIBs).\"\r\n\r\nThis looks like an error, because when *this* BIB is the UDP BIB, the *other* BIBs are the TCP and ICMP BIBs, not the UDP and TCP BIBs.\r\n\r\nThis interpretation is reasonable because use of the Latin \"e.g.\" (\"for example\") makes it seem like the given BIBs are examples of \"other BIBs.\"\r\n\r\nSimilarly, in section 3.5.2.3, *this* BIB is the TCP BIB, the *other* BIBs are the UDP and ICMP BIBs, but the text mentions UDP and TCP BIBs in the parenthetical example, and again looks like an error.\r\n\r\nIf this is the correct interpretation, then each section simply requires the correct *other* example BIBs in the parenthetical. [Section 3.5.1.1 corrected text given above; section 3.5.2.3 would be corrected in a similar manner.]\r\n\r\nHowever, there is another possible interpretation, in which the given BIBs are correctly stated, but the wording is unclear as to what is denoted by the parenthetical example. In this interpretation, section 3.5.1.1 is intended as if the text were:\r\n\r\n    \"but can be in use in other BIBs (i.e., the same address can be used in entries in both the UDP and TCP BIBs),\"\r\n\r\nor\r\n\r\n    \"\"but can be in use in other BIBs (i.e., the UDP and TCP BIBs can have an entry using the same address).\"\r\n\r\nIf this interpretation is intended, then it should be made clearer, and probably should use the Latin \"i.e.\" (\"that is\") for the clarifying situation. [Again, in sections 3.5.1.1 and 3.5.2.3.]\r\n\r\nEither way, because interpretation of the text is ambiguous in a way that affects its normative meaning, it should be clarified.",
     "submit_date": "2025-05-15",
     "submitter_name": "Marc Lepage",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-05-28 07:17:37"
   }
 ]

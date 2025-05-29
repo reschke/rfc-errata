@@ -17,17 +17,17 @@
   {
     "errata_id": "150",
     "doc-id": "RFC4271",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "9.1.1",
     "orig_text": "The Phase 1 decision function is a separate process,f which completes \r\nwhen it has no further work to do.",
     "correct_text": "The Phase 1 decision function is a separate process, which completes \r\nwhen it has no further work to do.\r\n",
-    "notes": "",
+    "notes": "Clearly an editorial issue with a stray \"f\" in there. \r\n",
     "submit_date": "2006-01-26",
     "submitter_name": "Nikolai Malykh",
-    "verifier_id": "2",
-    "verifier_name": "Stewart Bryant",
-    "update_date": "2025-05-22 06:41:51"
+    "verifier_id": "185",
+    "verifier_name": "Ketan Talaulikar",
+    "update_date": "2025-05-28 05:09:55"
   },
   {
     "errata_id": "1633",
@@ -77,17 +77,17 @@
   {
     "errata_id": "3264",
     "doc-id": "RFC4271",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "In Appendix F.3",
     "orig_text": "Implementations that combine update messages (as described above in\r\nSection 6.1) may prefer to see all path attributes presented in a\r\nknown order.",
     "correct_text": "Implementations that combine update messages (as described above in\r\nAppendix F.1) may prefer to see all path attributes presented in a\r\nknown order.",
-    "notes": "Section 6.1 does not say anything about combining update messages.",
+    "notes": "Section 6.1 does not say anything about combining update messages.\r\n\r\nAppendix F.1 is the correct reference.",
     "submit_date": "2012-06-19",
     "submitter_name": "Anmol Khirbat",
-    "verifier_id": "2",
-    "verifier_name": "Stewart Bryant",
-    "update_date": "2025-05-22 09:12:31"
+    "verifier_id": "185",
+    "verifier_name": "Ketan Talaulikar",
+    "update_date": "2025-05-28 05:11:12"
   },
   {
     "errata_id": "3366",
@@ -137,7 +137,7 @@
   {
     "errata_id": "3809",
     "doc-id": "RFC4271",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "6",
     "orig_text": "   Before the invalid routes are deleted\r\n   from the system, it advertises, to its peers, either withdraws for\r\n   the routes marked as invalid, or the new best routes before the\r\n   invalid routes are deleted from the system.",
@@ -145,9 +145,9 @@
     "notes": "The phrase \"Before the invalid routes are deleted from the system\" is unnecessarily repeated in the same sentence.",
     "submit_date": "2013-11-21",
     "submitter_name": "Ramakrishna DTV",
-    "verifier_id": "2",
-    "verifier_name": "Stewart Bryant",
-    "update_date": "2025-05-22 09:37:00"
+    "verifier_id": "185",
+    "verifier_name": "Ketan Talaulikar",
+    "update_date": "2025-05-28 05:12:27"
   },
   {
     "errata_id": "4493",
@@ -242,7 +242,7 @@
   {
     "errata_id": "5766",
     "doc-id": "RFC4271",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "9.2",
     "orig_text": "   If, due to the limits on the maximum size of an UPDATE message (see\r\n   Section 4), a single route doesn't fit into the message, the BGP\r\n   speaker MUST not advertise the route to its peers and MAY choose to\r\n   log an error locally.\r\n",
@@ -250,9 +250,9 @@
     "notes": "The Normative text should be \"MUST NOT\", and not \"MUST not\" -- both words should be capitalized.",
     "submit_date": "2019-06-28",
     "submitter_name": "Alvaro Retana",
-    "verifier_id": "2",
-    "verifier_name": "Alvaro Retana",
-    "update_date": "2025-05-22 09:38:34"
+    "verifier_id": "185",
+    "verifier_name": "Ketan Talaulikar",
+    "update_date": "2025-05-28 05:13:20"
   },
   {
     "errata_id": "6256",

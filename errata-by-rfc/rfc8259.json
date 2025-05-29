@@ -178,5 +178,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8438",
+    "doc-id": "RFC8259",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "14.1",
+    "orig_text": "14.1.  Normative References\r\n\r\n   [ECMA-404] Ecma International, \"The JSON Data Interchange Format\",\r\n              Standard ECMA-404,\r\n              <http://www.ecma-international.org/publications/\r\n              standards/Ecma-404.htm>.",
+    "correct_text": "14.1.  Normative References\r\n\r\n   [ECMA-404] Ecma International, \"The JSON Data Interchange Format\",\r\n              Standard ECMA-404,\r\n              <https://ecma-international.org/publications-and-standards/\r\n              standards/ecma-404/>.",
+    "notes": "Link to ECMA-404 should be updated",
+    "submit_date": "2025-05-28",
+    "submitter_name": "vitya-ne",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
