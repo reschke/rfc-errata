@@ -122,16 +122,16 @@
   {
     "errata_id": "8437",
     "doc-id": "RFC7159",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4",
     "orig_text": "      object = begin-object [ member *( value-separator member ) ]\r\n               end-object\r\n",
     "correct_text": "      object = begin-object { member *( value-separator member ) }\r\n               end-object\r\n",
-    "notes": "It seems that if this is not fixed, initialization of arrays and objects will look the same..",
+    "notes": "It seems that if this is not fixed, initialization of arrays and objects will look the same..\n --VERIFIER NOTES-- \n The corrected text given in this errata is attempting to modify ABNF with invalid ABNF. Additionally, the RFC has been obsoleted by RFC 8259.",
     "submit_date": "2025-05-28",
     "submitter_name": "Mikhail",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-05-29 12:16:02"
   }
 ]
