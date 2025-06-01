@@ -238,5 +238,20 @@
     "verifier_id": "176",
     "verifier_name": "Orie Steele",
     "update_date": "2024-03-29 13:44:28"
+  },
+  {
+    "errata_id": "8442",
+    "doc-id": "RFC3986",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1",
+    "orig_text": "Readers familiar with regular expressions should see Appendix B for an example of a non-validating URI-reference parser that will take any given string and extract the URI components.",
+    "correct_text": "\"any given string\" is the problem here.  You can come up with the corrected text yourself.",
+    "notes": "The original statement is false.",
+    "submit_date": "2025-06-01",
+    "submitter_name": "Timothy McSweeney",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
