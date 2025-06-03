@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8444",
+    "doc-id": "RFC9484",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.6",
+    "orig_text": "   *  \"ipproto\" MUST represent a decimal integer between 0 and 255\r\n      inclusive or the wildcard value \"*\".",
+    "correct_text": "   *  \"ipproto\" MUST represent a decimal integer between 0 and 255\r\n      inclusive or the wildcard value \"*\".\r\n   *  If the \"target\" or \"ipproto\" variable is set to the wildcard\r\n      value \"*\", it MUST be percent-encoded. It will therefore be\r\n      transmitted as \"%2A\".",
+    "notes": "Sending the value \"*\" without percent-encoding is invalid per the rules from RFC 6570. See the full discussion on the MASQUE list:\r\nhttps://mailarchive.ietf.org/arch/msg/masque/lueN0h94KYPCIVr-SyHAV-xbVDs/\r\n\r\n\r\nSimilarly, the examples in Sections 4.2 and 4.4 need to be corrected:\r\n\r\nOLD s4.2:\r\n   GET https://example.org/.well-known/masque/ip/*/*/ HTTP/1.1\r\n\r\nNEW s4.2:\r\n   GET https://example.org/.well-known/masque/ip/%2A/%2A/ HTTP/1.1\r\n\r\nOLD s4.4:\r\n   :path = /.well-known/masque/ip/*/*/\r\n\r\nNEW s4.4:\r\n   :path = /.well-known/masque/ip/%2A/%2A/",
+    "submit_date": "2025-06-02",
+    "submitter_name": "David Schinazi",
+    "verifier_id": "187",
+    "verifier_name": "Mike Bishop",
+    "update_date": "2025-06-02 13:23:39"
+  }
+]
