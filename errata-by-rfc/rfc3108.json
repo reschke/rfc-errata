@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8446",
+    "doc-id": "RFC3108",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.6.3.2",
+    "orig_text": "When present, the 'silenceSupp' attribute is used to indicate the use\r\nor non-use of silence suppression.  The format of the 'silenceSupp'\r\nmedia attribute line is as follows:\r\n\r\na=silenceSupp: <silenceSuppEnable> <silenceTimer> <suppPref> <sidUse> <fxnslevel>",
+    "correct_text": "When present, the 'silenceSupp' attribute is used to indicate the use\r\nor non-use of silence suppression.  The format of the 'silenceSupp'\r\nmedia attribute line is as follows:\r\n\r\na=silenceSupp:<silenceSuppEnable> <silenceTimer> <suppPref> <sidUse> <fxnslevel>",
+    "notes": "There is a space after the colon in the format of the 'silenceSupp' attribute. This does not match the a=<attribute>:<value> format specified in RFC2327 (which would have been normative at the time) or the two RFCs that superceded it, or the corresponding ABNF. \r\n\r\nIt also does not match the ABNF given for the attribute itself in section 9 of the RFC (RFC3108), which is \"silenceSupp\" \":\" silenceSuppEnable space silenceTimer space suppPref space sidUse space fxnslevel / .\r\n\r\nWhile I am submitting this errata as an example of the issue for review, a considerable number of other attributes in the document also exhibit this same issue in their format definitions. If this errata is accepted I can file matching errata for all other similar errors.",
+    "submit_date": "2025-06-03",
+    "submitter_name": "Robert Hanton",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

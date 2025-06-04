@@ -242,16 +242,16 @@
   {
     "errata_id": "8442",
     "doc-id": "RFC3986",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.1",
     "orig_text": "Readers familiar with regular expressions should see Appendix B for an example of a non-validating URI-reference parser that will take any given string and extract the URI components.",
     "correct_text": "\"any given string\" is the problem here.  You can come up with the corrected text yourself.",
-    "notes": "The original statement is false.",
+    "notes": "The original statement is false.\n --VERIFIER NOTES-- \n The reporter has not supplied actual corrected text nor notes with sufficient explanation of the issue. This errata was discussed on the art@ietf.org list with the conclusion to reject this errata as too vague.",
     "submit_date": "2025-06-01",
     "submitter_name": "Timothy McSweeney",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-06-03 05:18:34"
   }
 ]
