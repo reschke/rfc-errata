@@ -17,16 +17,16 @@
   {
     "errata_id": "8439",
     "doc-id": "RFC8295",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
     "section": "Appendix B",
     "orig_text": "   The ContentInfo is a PKIData:\r\n\r\n     PKIData ::= SEQUENCE {\r\n       reqSequence        SEQUENCE SIZE(0..MAX) OF TaggedRequest\r\n       }",
     "correct_text": "   The ContentInfo is a PKIData:\r\n\r\n     ct-PKIData CONTENT-TYPE ::=\r\n       { PKIData IDENTIFIED BY id-cct-PKIData }\r\n\r\n     id-cct-PKIData OBJECT IDENTIFIER ::= { iso(1)\r\n       identified-organization(3) dod(6) internet(1) security(5)\r\n       mechanisms(5) pkix(7) cct(12) 2 }\r\n\r\n     PKIData ::= SEQUENCE {\r\n       reqSequence        SEQUENCE SIZE(0..MAX) OF TaggedRequest\r\n       }",
     "notes": "Make it clear which object identifier is associated with PIKData.",
     "submit_date": "2025-05-29",
     "submitter_name": "Russ Housley",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-06-04 09:15:54"
   }
 ]

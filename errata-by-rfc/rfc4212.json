@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8447",
+    "doc-id": "RFC4212",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "      OptionalAttCertValidity  ::= SEQUENCE {\r\n         notBeforeTime  GeneralizedTime  OPTIONAL,\r\n         notAfterTime   GeneralizedTime  OPTIONAL\r\n      } -- at least one must be present",
+    "correct_text": "      OptionalAttCertValidity  ::= SEQUENCE {\r\n         notBeforeTime  [0] GeneralizedTime  OPTIONAL,\r\n         notAfterTime   [1] GeneralizedTime  OPTIONAL\r\n      } -- at least one must be present",
+    "notes": "A SEQUENCE cannot contain two optional components with the same tag, so a tag must be provided for at least one of them.  This correction provides tags for both of the optional components.",
+    "submit_date": "2025-06-04",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8448",
+    "doc-id": "RFC4212",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "      AttCertTemplate ::= SEQUENCE {\r\n         version                 AttCertVersion            OPTIONAL,\r\n         holder                  Holder                    OPTIONAL,\r\n         issuer                  AttCertIssuer             OPTIONAL,\r\n         signature               AlgorithmIdentifier       OPTIONAL,\r\n         serialNumber            CertificateSerialNumber   OPTIONAL,\r\n         attrCertValidityPeriod  OptionalAttCertValidity   OPTIONAL,\r\n         attributes              SEQUENCE OF Attribute     OPTIONAL,\r\n         issuerUniqueID          UniqueIdentifier          OPTIONAL,\r\n         extensions              Extensions                OPTIONAL\r\n      }",
+    "correct_text": "      AttCertTemplate ::= SEQUENCE {\r\n         version                 [0] AttCertVersion            OPTIONAL,\r\n         holder                  [1] Holder                    OPTIONAL,\r\n         issuer                  [2] AttCertIssuer             OPTIONAL,\r\n         signature               [3] AlgorithmIdentifier       OPTIONAL,\r\n         serialNumber            [4] CertificateSerialNumber   OPTIONAL,\r\n         attrCertValidityPeriod  [5] OptionalAttCertValidity   OPTIONAL,\r\n         attributes              [6] SEQUENCE OF Attribute     OPTIONAL,\r\n         issuerUniqueID          [7] UniqueIdentifier          OPTIONAL,\r\n         extensions              [8] Extensions                OPTIONAL\r\n      }",
+    "notes": "A SEQUENCE cannot contain two optional components with the same tag, so a tag must be provided for at least one of them. This correction provides tags for both of the optional components.",
+    "submit_date": "2025-06-04",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
