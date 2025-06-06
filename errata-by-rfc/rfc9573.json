@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8451",
+    "doc-id": "RFC9573",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1",
+    "orig_text": " 0                   1                   2                   3\r\n 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n| 0x03 or 0x43  |      8        |      ID-Type                  |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|                         ID-Value                              |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "correct_text": " 0                   1                   2                   3\r\n 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|     0x03      |     0x08      |      ID-Type                  |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n|                         ID-Value                              |\r\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n",
+    "notes": "Text describes the EC as Transitive Opaque only - 0x03\r\n(Also minor change to '8' -> 0x08 resembling format in IANA's allocation table)\r\n\r\nIndeed also IANA has NOT allocated non-transitive EC subtype:\r\n\r\nhttps://www.iana.org/assignments/bgp-extended-communities/bgp-extended-communities.xhtml#trans-opaque\r\n\r\nhttps://www.iana.org/assignments/bgp-extended-communities/bgp-extended-communities.xhtml#non-trans-opaque",
+    "submit_date": "2025-06-05",
+    "submitter_name": "Luc André Burdet",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

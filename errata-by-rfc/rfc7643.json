@@ -508,5 +508,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8450",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.1.",
+    "orig_text": "password\r\n      This attribute is intended to be used as a means to set, replace,\r\n      or compare (i.e., filter for equality) a password.  The cleartext\r\n      value or the hashed value of a password SHALL NOT be returnable by\r\n      a service provider.  If a service provider holds the value\r\n      locally, the value SHOULD be hashed.  When a password is set or\r\n      changed by the client, the cleartext password SHOULD be processed\r\n      by the service provider as follows:\r\n\r\n      *  Prepare the cleartext value for international language\r\n         comparison.  See Section 7.8 of [RFC7644].\r\n\r\n      *  Validate the value against server password policy.  Note: The\r\n         definition and enforcement of password policy are beyond the\r\n         scope of this document.\r\n\r\n      *  Ensure that the value is encrypted (e.g., hashed).  See\r\n         Section 9.2 for acceptable hashing and encryption handling when\r\n         storing or persisting for provisioning workflow reasons.",
+    "correct_text": "password\r\n      This attribute is intended to be used as a means to set, replace,\r\n      or compare (i.e., filter for equality) a password.  The cleartext\r\n      value or the hashed value of a password SHALL NOT be returnable by\r\n      a service provider.  If a service provider holds the value\r\n      locally, the value SHOULD be hashed.  When a password is set or\r\n      changed by the client, the cleartext password SHOULD be processed\r\n      by the service provider as follows:\r\n\r\n      *  Prepare the cleartext value for international language\r\n         comparison.  See Section 7.8 of [RFC7644].\r\n\r\n      *  Validate the value against server password policy.  Note: The\r\n         definition and enforcement of password policy are beyond the\r\n         scope of this document.\r\n\r\n      *  Ensure that the value is hashed or encrypted.  See\r\n         Section 9.2 for acceptable hashing and encryption handling when\r\n         storing or persisting for provisioning workflow reasons.",
+    "notes": "it was confusing that the text stated encrypted (e.g., hashed) .",
+    "submit_date": "2025-06-05",
+    "submitter_name": "Guillaume Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
