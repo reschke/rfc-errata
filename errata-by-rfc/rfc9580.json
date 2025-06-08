@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8454",
+    "doc-id": "RFC9580",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2.3",
+    "orig_text": "One or more MPIs comprising the signature. This portion is\r\nalgorithm specific.",
+    "correct_text": "One or more MPIs comprising the signature, or plain octets with no\r\nMPI header. This portion is algorithm specific.",
+    "notes": "The final bullet point of 5.2.3 is not, strictly speaking, correct. Ed25519 and Ed448 have signatures that are not MPIs but rather \"native\" octet strings. These algorithms do not have \"one or more MPIs\" - they have zero MPIs and only the octet string (of length 64 or 114). Prior to the introduction of these algorithms that statement was correct - every other signature algorithm uses MPI(s).",
+    "submit_date": "2025-06-07",
+    "submitter_name": "Tim Geiser",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
