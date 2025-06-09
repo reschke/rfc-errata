@@ -2,7 +2,7 @@
   {
     "errata_id": "8447",
     "doc-id": "RFC4212",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.1",
     "orig_text": "      OptionalAttCertValidity  ::= SEQUENCE {\r\n         notBeforeTime  GeneralizedTime  OPTIONAL,\r\n         notAfterTime   GeneralizedTime  OPTIONAL\r\n      } -- at least one must be present",
@@ -10,14 +10,14 @@
     "notes": "A SEQUENCE cannot contain two optional components with the same tag, so a tag must be provided for at least one of them.  This correction provides tags for both of the optional components.",
     "submit_date": "2025-06-04",
     "submitter_name": "Russ Housley",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2025-06-08 04:50:46"
   },
   {
     "errata_id": "8448",
     "doc-id": "RFC4212",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.1",
     "orig_text": "      AttCertTemplate ::= SEQUENCE {\r\n         version                 AttCertVersion            OPTIONAL,\r\n         holder                  Holder                    OPTIONAL,\r\n         issuer                  AttCertIssuer             OPTIONAL,\r\n         signature               AlgorithmIdentifier       OPTIONAL,\r\n         serialNumber            CertificateSerialNumber   OPTIONAL,\r\n         attrCertValidityPeriod  OptionalAttCertValidity   OPTIONAL,\r\n         attributes              SEQUENCE OF Attribute     OPTIONAL,\r\n         issuerUniqueID          UniqueIdentifier          OPTIONAL,\r\n         extensions              Extensions                OPTIONAL\r\n      }",
@@ -25,8 +25,8 @@
     "notes": "A SEQUENCE cannot contain two optional components with the same tag, so a tag must be provided for at least one of them. This correction provides tags for both of the optional components.",
     "submit_date": "2025-06-04",
     "submitter_name": "Russ Housley",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2025-06-08 04:51:15"
   }
 ]
