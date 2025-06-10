@@ -17,17 +17,17 @@
   {
     "errata_id": "8449",
     "doc-id": "RFC9580",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.11",
     "orig_text": "   A User ID packet consists of UTF-8 text that is intended to represent\r\n   the name and email address of the keyholder.  By convention, it\r\n   includes a mail name-addr as described in [RFC2822], but there are no\r\n   restrictions on its content.  The packet length in the header\r\n   specifies the length of the User ID.\r\n",
     "correct_text": "   A User ID packet consists of UTF-8 text that is intended to represent\r\n   the name and email address of the keyholder.  By convention, it\r\n   includes a mailbox as described in [RFC2822], but there are no\r\n   restrictions on its content.  The packet length in the header\r\n   specifies the length of the User ID.\r\n",
-    "notes": "A name-addr requires angled brackets around the mail address, which in practice are left off when there is no display name.\r\n`mailbox` in rfc2822 (and 5322) is defined as `name-addr / addr-spec` so it can be either the original name-addr, or a bare address which does occur in the wild.",
+    "notes": "A name-addr requires angled brackets around the mail address, which in practice are left off when there is no display name.\r\n`mailbox` in rfc2822 (and 5322) is defined as `name-addr / addr-spec` so it can be either the original name-addr, or a bare address which does occur in the wild.\r\n\r\nPaul Wouters (SEC AD): Note that the corrected text also does not fully address the problem. See further https://mailarchive.ietf.org/arch/msg/openpgp/PNluQWUlkABlJ5Er4hA9P6zCADk/",
     "submit_date": "2025-06-05",
     "submitter_name": "Jasper Spaans",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-06-09 13:45:39"
   },
   {
     "errata_id": "8454",
