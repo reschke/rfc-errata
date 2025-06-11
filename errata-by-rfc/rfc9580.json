@@ -2,17 +2,17 @@
   {
     "errata_id": "8432",
     "doc-id": "RFC9580",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "16.1",
     "orig_text": "   [SP800-56A]\r\n              NIST, \"Recommendation for Pair-Wise Key Establishment\r\n              Schemes Using Discrete Logarithm Cryptography\", NIST\r\n              Special Publication 800-56A Revision 3,\r\n              DOI 10.6028/NIST.SP.800-56Ar, April 2018,\r\n              <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/\r\n              nist.sp.800-56Ar3.pdf>.",
-    "correct_text": "   [SP800-56A]\r\n              NIST, \"Recommendation for Pair-Wise Key Establishment\r\n              Schemes Using Discrete Logarithm Cryptography\", NIST\r\n              Special Publication 800-56A Revision 3,\r\n              DOI 10.6028/NIST.SP.800-56Ar, April 2018,\r\n              <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/\r\n              nist.sp.800-56Ar3.pdf>.",
-    "notes": "I noticed that Section 16.1 of RFC 9580 contains a broken link.\r\n\r\n  https://www.rfc-editor.org/rfc/rfc9580.html#section-16.1\r\n\r\nSpecifically, this entry is broken:\r\n\r\n  [SP800-56A] NIST, \"Recommendation for Pair-Wise Key Establishment\r\n  Schemes Using Discrete Logarithm Cryptography\", NIST Special\r\n  Publication 800-56A Revision 3, DOI 10.6028/NIST.SP.800-56Ar, April\r\n  2018, <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/ \r\n  nist.sp.800-56Ar3.pdf>.\r\n\r\nThe URL should be:\r\n\r\n  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/nist.sp.800-56Ar3.pdf\r\n\r\nThat is, the link contains an extra space.\r\n\r\nI've checked, and this error exists in both the HTML and the PDF\r\nversions of the document.",
+    "correct_text": "   [SP800-56A]\r\n              NIST, \"Recommendation for Pair-Wise Key Establishment\r\n              Schemes Using Discrete Logarithm Cryptography\", NIST\r\n              Special Publication 800-56A Revision 3,\r\n              DOI 10.6028/NIST.SP.800-56Ar, April 2018,\r\n              <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/nist.sp.800-56Ar3.pdf>.",
+    "notes": "I noticed that Section 16.1 of RFC 9580 contains a broken link.\r\n\r\nhttps://www.rfc-editor.org/rfc/rfc9580.html#section-16.1\r\n\r\nSpecifically, this entry is broken:\r\n\r\n  [SP800-56A] NIST, \"Recommendation for Pair-Wise Key Establishment\r\n  Schemes Using Discrete Logarithm Cryptography\", NIST Special\r\n  Publication 800-56A Revision 3, DOI 10.6028/NIST.SP.800-56Ar, April\r\n  2018, <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/ \r\n  nist.sp.800-56Ar3.pdf>.\r\n\r\nThe URL should be:\r\n\r\nhttps://nvlpubs.nist.gov/nistpubs/SpecialPublications/nist.sp.800-56Ar3.pdf\r\n\r\nThat is, the link contains an extra space.\r\n\r\nI've checked, and this error exists in both the HTML and the PDF\r\nversions of the document.",
     "submit_date": "2025-05-27",
     "submitter_name": "Neal Walfield",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-06-10 12:33:20"
   },
   {
     "errata_id": "8449",
