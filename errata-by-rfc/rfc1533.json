@@ -13,5 +13,20 @@
     "verifier_id": "134",
     "verifier_name": "Ted Lemon",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8456",
+    "doc-id": "RFC1533",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.18",
+    "orig_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  n  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "correct_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  4  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "notes": "The length is static, not dynamic. The length in the diagram  should be 4, not n.",
+    "submit_date": "2025-06-13",
+    "submitter_name": "Jason Giberson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
