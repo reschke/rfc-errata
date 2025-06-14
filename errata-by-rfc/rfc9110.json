@@ -163,5 +163,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2025-02-06 10:31:25"
+  },
+  {
+    "errata_id": "8459",
+    "doc-id": "RFC9110",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "15",
+    "orig_text": "The status code of a response is a three-digit integer code that \r\ndescribes the result of the request and the semantics of the \r\nresponse, including whether the request was successful and what \r\ncontent is enclosed (if any). All valid status codes are within \r\nthe range of 100 to 599, inclusive.",
+    "correct_text": "The status code of a response is a three-digit integer code that \r\ndescribes the result of the request and the semantics of the \r\nresponse, including whether the request was successful and what \r\ncontent is enclosed (if any). All valid status codes are within \r\nthe range of 100 to 999, inclusive.",
+    "notes": "In the initial RFC 7231 which was obsoleted by this one, we had simple definition of a status code which was used to build http servers, clients and libraries that are being used now \"The status-code element is a three-digit integer code giving the result of the attempt to understand and satisfy the request.\".\r\n\r\nA lot of old systems are based on RFC 7231 and are using status codes that are in rage of 600 - 999. Those codes are mainly used to describe errors that aren't covered in previous status codes.\r\n\r\nFor example we have payment system that can return e.g. \"677 Invalid card number\" and no body. Now we'd probably return \"400 Bad request\" with e.g. json body in which we have error message.\r\n\r\nThis RFC should be backward compatible, and not to define breaking changes. If breaking changes are defined, it should be promoted more and talked about it between the community, give developers of old systems a time to align with new RFC, etc.\r\n\r\nDue to all of this, I'm suggesting that we omit all parts in this section that are limiting status codes to be only in range from 100 to 599, and update it accordingly so it support status codes from 100 to 999.\n --VERIFIER NOTES-- \nSection 6 of RFC 7231 also says \"There are five values for the first digit\" and lists 1xx through 5xx. Going further back, RFC 2616 contains identical language in Section 6.1.1; RFC 2068 contains identical language in its Section 6.1.1. This is not only not a recent change, it's not a change at all. This is the way HTTP has operated for decades, the reporter's noncompliant systems notwithstanding.",
+    "submit_date": "2025-06-13",
+    "submitter_name": "Bosko Stupar",
+    "verifier_id": "187",
+    "verifier_name": "Mike Bishop (WIT AD)",
+    "update_date": "2025-06-13 11:04:51"
   }
 ]

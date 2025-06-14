@@ -43,5 +43,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8457",
+    "doc-id": "RFC7636",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.1",
+    "orig_text": "code-verifier = 43*128unreserved",
+    "correct_text": "code_verifier = 43*128unreserved",
+    "notes": "The ABNF accidentally uses a hyphen/dash rather than an underscore in the code_verifier name in its rule.",
+    "submit_date": "2025-06-13",
+    "submitter_name": "Jeff Walden",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8458",
+    "doc-id": "RFC7636",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.2",
+    "orig_text": "code-challenge = 43*128unreserved",
+    "correct_text": "code_challenge = 43*128unreserved",
+    "notes": "The ABNF accidentally uses a hyphen/dash rather than an underscore in the code_challenge name in its rule.",
+    "submit_date": "2025-06-13",
+    "submitter_name": "Jeff Walden",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
