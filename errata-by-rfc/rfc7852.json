@@ -28,5 +28,20 @@
     "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2023-11-07 06:51:06"
+  },
+  {
+    "errata_id": "8462",
+    "doc-id": "RFC7852",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7",
+    "orig_text": "<svc:ServiceType>VOIP</svc:ServiceType>",
+    "correct_text": "<svc:ServiceType>OTT</svc:ServiceType>",
+    "notes": "The value \"VOIP\" is not registered. The value \"OTT\" seems appropriate for VoIP providers.",
+    "submit_date": "2025-06-16",
+    "submitter_name": "Randall Gellens",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
