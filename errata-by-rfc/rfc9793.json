@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8463",
+    "doc-id": "RFC9793",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "   When BFR2 receives the route, it calculates its BIFT entries.\r\n   Because the route from BFER1 does not include a BIER Nexthop, BFR2\r\n   uses BFR1's BFR-prefix as the next hop.",
+    "correct_text": "   When BFR2 receives the route, it calculates its BIFT entries.\r\n   Because the route from BFER1 does not include a BIER Nexthop, BFR2\r\n   uses BFER1's BFR-prefix as the next hop.",
+    "notes": "The original text mistakenly says \"BFR1's BFR-prefix\". Given that the route is explicitly stated to be \"from BFER1\", the next hop should logically be \"BFER1's BFR-prefix\". This correction ensures consistency and technical accuracy in describing how BFR2 determines the next hop.",
+    "submit_date": "2025-06-17",
+    "submitter_name": "Haibo Wang",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
