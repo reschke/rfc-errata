@@ -2,16 +2,16 @@
   {
     "errata_id": "8441",
     "doc-id": "RFC9642",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
     "section": "2.1.3.6.",
     "orig_text": "   Comments:\r\n\r\n   *  The \"inline-or-keystore-end-entity-cert-with-key-grouping\"\r\n      grouping is provided solely as convenience to consuming modules\r\n      that wish to offer an option for a symmetric key that is defined\r\n      either inline or as a reference to a symmetric key in the\r\n      keystore.",
     "correct_text": "   Comments:\r\n\r\n   *  The \"inline-or-keystore-end-entity-cert-with-key-grouping\"\r\n      grouping is provided solely as convenience to consuming modules\r\n      that wish to offer an option for an asymmetric key and certificate\r\n      pair that is defined either inline or as a reference to an\r\n      asymmetric key and certificate in the keystore.",
     "notes": "The comment incorrectly describes the grouping \"inline-or-keystore-end-entity-cert-with-key-grouping\" as a reference to a symmetric key instead of an asymmetric key/certificate pair.\r\n\r\nThis probably was a result of a copy/paste of the \"inline-or-keystore-symmetric-key-grouping\" grouping comments.",
     "submit_date": "2025-05-30",
     "submitter_name": "Liam Brady",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2025-06-18 07:07:36"
   }
 ]

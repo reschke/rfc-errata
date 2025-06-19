@@ -43,5 +43,35 @@
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2025-06-13 06:26:20"
+  },
+  {
+    "errata_id": "8465",
+    "doc-id": "RFC9580",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.5.3",
+    "orig_text": "A point on an elliptic curve will always be represented on the wire\r\nas an MPI.",
+    "correct_text": "TBD",
+    "notes": "This and the following paragraphs don't mention the case of \"native\" secret key representations. The text should acknowledge the existence of MPIs as well as natively encoded points.",
+    "submit_date": "2025-06-18",
+    "submitter_name": "Heiko Schaefer",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-06-18 10:14:33"
+  },
+  {
+    "errata_id": "8466",
+    "doc-id": "RFC9580",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "11.2",
+    "orig_text": "A point on an elliptic curve will always be represented on the wire \r\nas an MPI.",
+    "correct_text": "TBD",
+    "notes": "This langauge doesn't acknowledge the native encoding of the new Ed/X 25519/448 variants.\r\nVarious language in the following sections of chapter 11 also seem to imply that all EC data is encoded in MPI format.\r\n\r\nIn particular, in 11.3, all three entries in the table \"OpenPGP Elliptic Curve Scalar Encodings Registry\" seem to imply variants of MPI encoding. The case of \"native\" fixed length encoding seems to be missing.",
+    "submit_date": "2025-06-18",
+    "submitter_name": "Heiko Schaefer",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
