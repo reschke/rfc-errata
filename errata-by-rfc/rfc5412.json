@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8467",
+    "doc-id": "RFC5412",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "9.2",
+    "orig_text": "   The Mobile Configuration Response is used to acknowledge a previously\r\n   received Mobile Configuration Request, and includes a Result Code\r\n   message element that indicates whether an error occurred on the WTP.\r\n\r\n   This message requires no special processing and is only used to\r\n   acknowledge the Mobile Configuration Request.\r\n\r\n   The Data Transfer Request message MUST contain the message elements\r\n   described in the next subsection.",
+    "correct_text": "   The Mobile Config Response is used to acknowledge a previously\r\n   received Mobile Config Request, and includes a Result Code\r\n   message element that indicates whether an error occurred on the WTP.\r\n\r\n   This message requires no special processing and is only used to\r\n   acknowledge the Mobile Config Request.\r\n\r\n   The Mobile Config Response message MUST contain the message element\r\n   described in the next subsection.",
+    "notes": "Section 9.2 describes \"Mobile Config Response\", not \"Mobile Configuration Response\" (incorrect spelling) or \"Data Transfer Request\" (an entirely different message type). \"Mobile Config Response\" is an acknowledgement of \"Mobile Config Request\", not \"Mobile Configuration Request\" (incorrect spelling). The next subsection describes exactly one message element.",
+    "submit_date": "2025-06-19",
+    "submitter_name": "Denis Ovsienko",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
