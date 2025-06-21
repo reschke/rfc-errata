@@ -523,5 +523,50 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8471",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.1",
+    "orig_text": "      {\r\n        \"name\" : \"groups\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A list of groups to which the user belongs,\r\neither through direct membership, through nested groups, or\r\ndynamically calculated.\",\r\n        \"required\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The identifier of the User's group.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : false,\r\n            \"mutability\" : \"readOnly\",\r\n            \"returned\" : \"default\",\r\n            \"uniqueness\" : \"none\"\r\n          },\r\n          {\r\n            \"name\" : \"$ref\",\r\n            \"type\" : \"reference\",\r\n            \"referenceTypes\" : [\r\n              \"User\",\r\n              \"Group\"\r\n            ],",
+    "correct_text": "      {\r\n        \"name\" : \"groups\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A list of groups to which the user belongs,\r\neither through direct membership, through nested groups, or\r\ndynamically calculated.\",\r\n        \"required\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The identifier of the User's group.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : false,\r\n            \"mutability\" : \"readOnly\",\r\n            \"returned\" : \"default\",\r\n            \"uniqueness\" : \"none\"\r\n          },\r\n          {\r\n            \"name\" : \"$ref\",\r\n            \"type\" : \"reference\",\r\n            \"referenceTypes\" : [\r\n              \"Group\"\r\n            ],",
+    "notes": "The 'groups.$ref' sub-attribute of the core User schema should not contain \"User\" in its referenceTypes. According to section 4.1.2 it is \"A list of groups to which the user belongs\".",
+    "submit_date": "2025-06-20",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8472",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.1",
+    "orig_text": "      {\r\n        \"name\" : \"manager\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The User's manager.  A complex type that\r\noptionally allows service providers to represent organizational\r\nhierarchy by referencing the 'id' attribute of another User.\",\r\n        \"required\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The id of the SCIM resource representing\r\nthe User's manager.  REQUIRED.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : false,",
+    "correct_text": "      {\r\n        \"name\" : \"manager\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The User's manager.  A complex type that\r\noptionally allows service providers to represent organizational\r\nhierarchy by referencing the 'id' attribute of another User.\",\r\n        \"required\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The id of the SCIM resource representing\r\nthe User's manager.  REQUIRED.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : true,",
+    "notes": "In the Enterprise User, the sub-attribute \"value\" of the attribute \"manager\" is defined as 'The \"id\" of the SCIM resource representing the user's manager.' (section 4.3). The \"id\" is case-exact (section 3.1). Therefore, \"manager.value\" must also be case-exact.",
+    "submit_date": "2025-06-20",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8475",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "Section 6.  ResourceType Schema\r\n\r\n   name\r\n      The resource type name.  When applicable, service providers MUST\r\n      specify the name, e.g., \"User\" or \"Group\".  This name is\r\n      referenced by the \"meta.resourceType\" attribute in all resources.\r\n      REQUIRED.\r\n\r\n...\r\n\r\n   endpoint\r\n      The resource type's HTTP-addressable endpoint relative to the Base\r\n      URL of the service provider, e.g., \"Users\".  REQUIRED.\r\n\r\n---\r\n\r\nSection 8.7.2.  Service Provider Schema Representation\r\n\r\n  {\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\",\r\n    \"name\" : \"ResourceType\",\r\n    \"description\" : \"Specifies the schema that describes a SCIM\r\n      resource type\",\r\n    \"attributes\" : [\r\n...\r\n      {\r\n        \"name\" : \"name\",\r\n        \"type\" : \"string\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The resource type name.  When applicable,\r\n          service providers MUST specify the name, e.g., 'User'.\",\r\n        \"required\" : true,\r\n        \"caseExact\" : false,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"none\"\r\n      },\r\n...\r\n      {\r\n        \"name\" : \"endpoint\",\r\n        \"type\" : \"reference\",\r\n        \"referenceTypes\" : [\"uri\"],\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The resource type's HTTP-addressable\r\n          endpoint relative to the Base URL, e.g., '/Users'.\",\r\n        \"required\" : true,\r\n        \"caseExact\" : false,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"none\"\r\n      },",
+    "correct_text": "Section 6.  ResourceType Schema\r\n\r\n   name\r\n      The resource type name.  When applicable, service providers MUST\r\n      specify the name, e.g., \"User\" or \"Group\".  This name is\r\n      referenced by the \"meta.resourceType\" attribute in all resources.\r\n      This attribute has a \"uniqueness\" of \"server\" and is case-exact.\r\n      REQUIRED\r\n\r\n...\r\n\r\n   endpoint\r\n      The resource type's HTTP-addressable endpoint relative to the Base\r\n      URL of the service provider, e.g., \"Users\".  This attribute has a\r\n      \"uniqueness\" of \"server\" and is case-exact.  REQUIRED\r\n\r\n---\r\n\r\nSection 8.7.2.  Service Provider Schema Representation\r\n\r\n  {\r\n    \"id\" : \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\",\r\n    \"name\" : \"ResourceType\",\r\n    \"description\" : \"Specifies the schema that describes a SCIM\r\n      resource type\",\r\n    \"attributes\" : [\r\n      {\r\n        \"name\" : \"name\",\r\n        \"type\" : \"string\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The resource type name.  Service providers MUST\r\n          specify the name, e.g., \"User\" or \"Group\".\",\r\n        \"required\" : true,\r\n        \"caseExact\" : true,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"server\"\r\n      },\r\n...\r\n      {\r\n        \"name\" : \"endpoint\",\r\n        \"type\" : \"reference\",\r\n        \"referenceTypes\" : [\"uri\"],\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The resource type's HTTP-addressable\r\n          endpoint relative to the Base URL, e.g., '/Users'.\",\r\n        \"required\" : true,\r\n        \"caseExact\" : true,\r\n        \"mutability\" : \"readOnly\",\r\n        \"returned\" : \"default\",\r\n        \"uniqueness\" : \"server\"\r\n      },",
+    "notes": "The attributes \"name\" and \"endpoint\" in the ResourceType schema must have a \"uniqueness\" of \"server\" and be case-exact.\r\n\r\nCase-exact:\r\nThe attributes \"name\" and \"endpoint\" are both used in references (e.g. \"{base-url}/ResourceTypes/{name}\" and \"{base-url}/{endpoint}/{id}\"). References are defined as case-exact in section 2.3.7. Therefore, both attributes must also be case-exact.\r\nThis should also be reflected in section 8.7.2\r\n\r\nUniqueness:\r\nFor the uniqueness of \"name\" see Errata ID: 8362.\r\nFor \"endpoint\" the change makes it explicit that each endpoint should provide exactly one type of resource. I do not see any point in RFC 7644 or RFC 7643 that currently forbids using the same endpoint for several resource types, but this would not work when creating resources. Clients cannot specify which resource type they want to create; they can only specify the endpoint and schema.\r\nThis should also be reflected in section 8.7.2 (see Errata ID: 8366)",
+    "submit_date": "2025-06-20",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

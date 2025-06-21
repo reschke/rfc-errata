@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8470",
+    "doc-id": "RFC7642",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.1",
+    "orig_text": "      {\r\n        \"name\" : \"x509Certificates\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A list of certificates issued to the User.\",\r\n        \"required\" : false,\r\n        \"caseExact\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"binary\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The value of an X.509 certificate.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : false,\r\n            \"mutability\" : \"readWrite\",\r\n            \"returned\" : \"default\",\r\n            \"uniqueness\" : \"none\"\r\n          },",
+    "correct_text": "      {\r\n        \"name\" : \"x509Certificates\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A list of certificates issued to the User.\",\r\n        \"required\" : false,\r\n        \"caseExact\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"binary\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The value of an X.509 certificate.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : true,\r\n            \"mutability\" : \"readWrite\",\r\n            \"returned\" : \"default\"\r\n          },",
+    "notes": "Section 2.3.6 indicates that \"binary [...] has no uniqueness.\" The \"x509Certificates\" binary \"value\" subattribute currently lists a \"uniqueness\" property which should be removed. (See also Errata ID: 6000 - Binary attributes are case-exact)",
+    "submit_date": "2025-06-20",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

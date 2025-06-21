@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8473",
+    "doc-id": "RFC5412",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "8.5",
+    "orig_text": "   When an AC receives a WTP Event Request, it will respond with a WTP\r\n   Event Request.\r\n",
+    "correct_text": "   When an AC receives a WTP Event Request, it will respond with a WTP\r\n   Event Response.\r\n",
+    "notes": "This statement tries to rephrase what the immediately following Section 8.6 says.",
+    "submit_date": "2025-06-20",
+    "submitter_name": "Denis Ovsienko",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
