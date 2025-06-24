@@ -58,5 +58,20 @@
     "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8476",
+    "doc-id": "RFC5730",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.9.2.3.",
+    "orig_text": "   An \"op\" attribute (with value\r\n   \"ack\") and a \"msgID\" attribute (whose value corresponds to the value\r\n   of the \"id\" attribute copied from the <msg> element in the message\r\n   being acknowledged) are REQUIRED to acknowledge receipt of a message.",
+    "correct_text": "   An \"op\" attribute (with value\r\n   \"ack\") and a \"msgID\" attribute (whose value corresponds to the value\r\n   of the \"id\" attribute copied from the <msgQ> element in the message\r\n   being acknowledged) are REQUIRED to acknowledge receipt of a message.",
+    "notes": "\"msgQ\" contains the \"id\" - \"msg\" is just the human-readable message.",
+    "submit_date": "2025-06-23",
+    "submitter_name": "Rafael Gallani",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
