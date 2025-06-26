@@ -28,5 +28,20 @@
     "verifier_id": "122",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8481",
+    "doc-id": "RFC2784",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4",
+    "orig_text": "The IPv4 protocol 47 [RFC1700] is used when GRE packets are\r\nenapsulated in IPv4. See [RFC1122] for requirements relating to the\r\ndelivery of packets over IPv4 networks.",
+    "correct_text": "The IPv4 protocol 47 [RFC1700] is used when GRE packets are\r\nencapsulated in IPv4. See [RFC1122] for requirements relating to the\r\ndelivery of packets over IPv4 networks.",
+    "notes": "s/enapsulated/encapsulated/",
+    "submit_date": "2025-06-25",
+    "submitter_name": "Eugene Adell",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

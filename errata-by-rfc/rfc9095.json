@@ -1,20 +1,5 @@
 [
   {
-    "errata_id": "8479",
-    "doc-id": "RFC9095",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "7",
-    "orig_text": "<import namespace=\"urn:iana:xml:ns:eppcom-1.0\"/>\r\n",
-    "correct_text": "<import namespace=\"urn:ietf:xml:ns:eppcom-1.0\"/>\r\n",
-    "notes": "s/iana/ietf/",
-    "submit_date": "2025-06-24",
-    "submitter_name": "Gavin Brown",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
-  },
-  {
     "errata_id": "8480",
     "doc-id": "RFC9095",
     "errata_status_code": "Reported",
@@ -22,11 +7,11 @@
     "section": "7",
     "orig_text": "<import namespace=\"urn:iana:xml:ns:eppcom-1.0\"/>\r\n",
     "correct_text": "<import namespace=\"urn:ietf:params:xml:ns:eppcom-1.0\"/>\r\n",
-    "notes": "My previous report (#8475) was insufficient to resolve the issue. This report has the correct namespace URI.\r\n\r\nPlease reject the previous report.",
+    "notes": "This report has the correct namespace URI.",
     "submit_date": "2025-06-24",
     "submitter_name": "Gavin Brown",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-06-25 13:27:52"
   }
 ]

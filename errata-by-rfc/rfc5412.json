@@ -32,7 +32,7 @@
   {
     "errata_id": "8467",
     "doc-id": "RFC5412",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "9.2",
     "orig_text": "   The Mobile Configuration Response is used to acknowledge a previously\r\n   received Mobile Configuration Request, and includes a Result Code\r\n   message element that indicates whether an error occurred on the WTP.\r\n\r\n   This message requires no special processing and is only used to\r\n   acknowledge the Mobile Configuration Request.\r\n\r\n   The Data Transfer Request message MUST contain the message elements\r\n   described in the next subsection.",
@@ -40,23 +40,23 @@
     "notes": "Section 9.2 describes \"Mobile Config Response\", not \"Mobile Configuration Response\" (incorrect spelling) or \"Data Transfer Request\" (an entirely different message type). \"Mobile Config Response\" is an acknowledgement of \"Mobile Config Request\", not \"Mobile Configuration Request\" (incorrect spelling). The next subsection describes exactly one message element.",
     "submit_date": "2025-06-19",
     "submitter_name": "Denis Ovsienko",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-06-25 13:54:56"
   },
   {
     "errata_id": "8473",
     "doc-id": "RFC5412",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "8.5",
-    "orig_text": "   When an AC receives a WTP Event Request, it will respond with a WTP\r\n   Event Request.\r\n",
-    "correct_text": "   When an AC receives a WTP Event Request, it will respond with a WTP\r\n   Event Response.\r\n",
-    "notes": "This statement tries to rephrase what the immediately following Section 8.6 says.",
+    "orig_text": "When an AC receives a WTP Event Request, it will respond with a WTP\r\nEvent Request.\r\n",
+    "correct_text": "When an AC receives a WTP Event Request, it will respond with a WTP\r\nEvent Response.\r\n",
+    "notes": "This statement tries to rephrase what the immediately following Section 8.6 says. The second instance of \"Request\" in the original text should be \"Response\".",
     "submit_date": "2025-06-20",
     "submitter_name": "Denis Ovsienko",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-06-25 13:48:33"
   }
 ]
