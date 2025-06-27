@@ -62,7 +62,7 @@
   {
     "errata_id": "8478",
     "doc-id": "RFC9135",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "IP-VRF is identified by its corresponding Route Target and Route \r\nDistinguisher, and MAC-VRF is also identified by its corresponding Route\r\nTarget and Route Distinguisher. If operating in EVPN VLAN-based mode, \r\nthen a receiving PE that receives an EVPN route with a MAC-VRF Route \r\nTarget can identify the corresponding bridge table; however, if \r\noperating in EVPN VLAN-aware bundle mode, then the receiving PE needs \r\nboth the MAC-VRF Route Target and VLAN ID in order to identify the \r\ncorresponding bridge table.",
@@ -70,8 +70,8 @@
     "notes": "MAC/IP Advertisement (EVPN Type 2) routes for IP-->MAC pairs do not carry any information about VLAN IDs used in encapsulation of ARP (or NA) messages that trigger their advertisement.\r\nInstead, they carry  Ethernet Tag IDs of Broadcast Domains in which these messages have been received which may represent the original VLAN ID or the so-called \"normalized\" VLAN ID of the Broadcast Domain as defined in Section 6.3 of RFC 7432.",
     "submit_date": "2025-06-24",
     "submitter_name": "Alexander (\"Sasha\") Vainshtein",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "178",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2025-06-26 05:09:41"
   }
 ]
