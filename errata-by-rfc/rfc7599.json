@@ -77,17 +77,17 @@
   {
     "errata_id": "8062",
     "doc-id": "RFC7599",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "6",
     "orig_text": "In the case of an IPv4 prefix, the IPv4 address field is right-padded\r\nwith zeros up to 32 bits.  The PSID is left-padded with zeros to\r\ncreate a 16-bit field.  For an IPv4 prefix or a complete IPv4\r\naddress, the PSID field is zero.",
     "correct_text": "In the case of an IPv4 prefix, the IPv4 address field is right-padded\r\nwith zeros up to 32 bits.  The PSID is left-padded with zeros to\r\ncreate a 16-bit field.  For an IPv4 prefix the PSID field is zero.",
-    "notes": "When there is a complete IPv4 address, the PSID field should contain the PSID. This is shown in Appendix A, Example 1. It shows an End-user IPv6 prefix and BMR that result in a complete IPv4 address. The resulting \"IPv6 address of MAP CE\" includes the PSID value in the the IPv6 Interface Identifier field.",
+    "notes": "When there is a complete IPv4 address, the PSID field should contain the PSID. This is shown in Appendix A, Example 1. It shows an End-user IPv6 prefix and BMR that result in a complete IPv4 address. The resulting \"IPv6 address of MAP CE\" includes the PSID value in the the IPv6 Interface Identifier field.\r\n\r\n---- verifier note ----\r\n\r\nSee also the verified errata 5225 on the same paragraph. Clarity will need to be added if ever this document is updated.",
     "submit_date": "2024-08-01",
     "submitter_name": "Scott Freemire",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-27 01:23:23"
   },
   {
     "errata_id": "8063",

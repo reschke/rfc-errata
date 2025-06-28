@@ -2,31 +2,31 @@
   {
     "errata_id": "8401",
     "doc-id": "RFC9711",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "1",
     "orig_text": "For attestation, the keys are associated with\r\nspecific devices and are configured by device manufacturers. ",
     "correct_text": "The quoted text is inaccurate and just an opinion of the editors. \r\nIt should preferably be removed from the RFC.",
-    "notes": "In SGX, the keys are not configured by the manufacturer alone. The platform owner can provide a random value called OWNER_EPOCH.\r\n\r\nSee this for technical details: https://mailarchive.ietf.org/arch/msg/rats/4V2zZHhk5IuxwcUMNWpPBpnzpaM/",
+    "notes": "In SGX, the keys are not configured by the manufacturer alone. The platform owner can provide a random value called OWNER_EPOCH.\r\n\r\nSee this for technical details: https://mailarchive.ietf.org/arch/msg/rats/4V2zZHhk5IuxwcUMNWpPBpnzpaM/\n --VERIFIER NOTES-- \n   Incorrectly specified errata.  The corrected text is not actually correct.",
     "submit_date": "2025-05-01",
     "submitter_name": "Muhammad Usama Sardar",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-06-27 10:00:06"
   },
   {
     "errata_id": "8404",
     "doc-id": "RFC9711",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "8.4",
     "orig_text": "The nonce claim is based on a value usually derived\r\n   remotely (outside of the entity).",
     "correct_text": "See notes",
-    "notes": "Attester-generated nonce does not provide any replay protection since the Attester can pre-generate an Evidence that might not reflect the actual system state, but a past one.\r\n\r\nSee the attack trace for Attester-generated nonce at: \r\nhttps://mailarchive.ietf.org/arch/msg/rats/jcAv9FKbYSIVtUNQ8ggEHL8lrmM/  \r\n\r\nFor replay protection, nonce should *always* be derived remotely (for example, by the Relying Party).",
+    "notes": "Attester-generated nonce does not provide any replay protection since the Attester can pre-generate an Evidence that might not reflect the actual system state, but a past one.\r\n\r\nSee the attack trace for Attester-generated nonce at: \r\nhttps://mailarchive.ietf.org/arch/msg/rats/jcAv9FKbYSIVtUNQ8ggEHL8lrmM/  \r\n\r\nFor replay protection, nonce should *always* be derived remotely (for example, by the Relying Party).\n --VERIFIER NOTES-- \n   Incorrectly formatted errata.  The corrected text is not correct.",
     "submit_date": "2025-05-04",
     "submitter_name": "Muhammad Usama Sardar",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-06-27 10:01:20"
   }
 ]

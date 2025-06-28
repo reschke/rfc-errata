@@ -92,7 +92,7 @@
   {
     "errata_id": "8397",
     "doc-id": "RFC7030",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "   +--------------+--------------------+-------------------------------+\r\n   | EST server   | A CA               | Presented by the EST server   |\r\n   | certificate  | authenticatable by | during the TLS handshake.     |\r\n   |              | a third-party TA,  |                               |\r\n   |              | e.g., a web server | Section 3.3.1 and             |\r\n   |              | CA                 | Security Considerations       |\r\n   +--------------+--------------------+-------------------------------+",
@@ -100,9 +100,9 @@
     "notes": "In Figure 3, second row under the header should specify this information is for the \"Third-party\" EST server certificate (similar to row 3 for \"Third-party EST client certificate\")",
     "submit_date": "2025-04-28",
     "submitter_name": "Angelica Semenec",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-05-07 10:36:34"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-06-27 09:58:32"
   },
   {
     "errata_id": "8399",

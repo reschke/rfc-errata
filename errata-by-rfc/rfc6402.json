@@ -62,7 +62,7 @@
   {
     "errata_id": "8385",
     "doc-id": "RFC6402",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2.8",
     "orig_text": "      ChangeSubjectName ::= SEQUENCE {\r\n          subject             Name OPTIONAL,\r\n          subjectAlt          SubjectAltName OPTIONAL\r\n      }\r\n      (WITH COMPONENTS {..., subject PRESENT} |\r\n            COMPONENTS {..., subjectAlt PRESENT} )",
@@ -70,8 +70,8 @@
     "notes": "The missing \"WITH\" is necessary for the ASN.1 to compile properly.  The \"WITH\" is present in the ASN.1 module in Appendix A.2.\r\n\r\nIn addition, the tag is added.  See errata 3943 about that change.",
     "submit_date": "2025-04-18",
     "submitter_name": "Russ Housley",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-06-27 09:52:50"
   }
 ]

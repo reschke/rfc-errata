@@ -2,16 +2,16 @@
   {
     "errata_id": "8482",
     "doc-id": "RFC2083",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "The abstract says \"This document describes PNG (Portable Network Graphics)\" and \"This specification defines the Internet Media Type image/png.\"",
     "correct_text": "The publication of RFC 2083 has been overtaken by further work in the W3C. The latest specification for PNG can be found at https://www.w3.org/TR/png-3/",
-    "notes": "Someone who finds the RFC might think it is the current PNG spec.",
+    "notes": "Someone who finds the RFC might think it is the current PNG spec.\n --VERIFIER NOTES-- \nWhile true, an erratum indicates that the RFC was incorrect at the time of publication. A request to mark RFC 2083 Historic for that reason would be in order; an erratum is not.\r\n",
     "submit_date": "2025-06-26",
     "submitter_name": "Paul Hoffman",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-06-27 14:16:58"
   }
 ]

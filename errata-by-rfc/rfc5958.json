@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8490",
+    "doc-id": "RFC5958",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "   --  [[2: publicKey       [1] BIT STRING (CONTAINING\r\n   --                             PUBLIC-KEY.&Params({PublicKeySet}\r\n   --                             {@privateKeyAlgorithm.algorithm})\r\n   --                             OPTIONAL,",
+    "correct_text": "   --  [[2: publicKey       [1] BIT STRING (CONTAINING\r\n   --                             PUBLIC-KEY.&Params({PublicKeySet}\r\n   --                             {@privateKeyAlgorithm.algorithm}))\r\n   --                             OPTIONAL ]],",
+    "notes": "The ASN.1 exhibit in Appendix A is missing a closing \"]]\" for the version.",
+    "submit_date": "2025-06-27",
+    "submitter_name": "Sean Turner",
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-06-27 09:43:29"
   }
 ]

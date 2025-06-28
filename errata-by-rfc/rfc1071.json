@@ -17,17 +17,17 @@
   {
     "errata_id": "4918",
     "doc-id": "RFC1071",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.1",
     "orig_text": "while( count > 1 )  {\r\n        /*  This is the inner loop */\r\n        sum += * (unsigned short) addr++;\r\n        count -= 2;\r\n}",
     "correct_text": "while( count > 1 )  {\r\n        /*  This is the inner loop */\r\n        sum += * (unsigned short *) addr;\r\n        addr += 2;\r\n        count -= 2;\r\n}",
-    "notes": "- In the original text, code incorrectly casts from pointer to integer.\r\n- Increments addr pointer by 1. Because unsigned short is two bytes, it should have been incremented by 2 instead.",
+    "notes": "- In the original text, code incorrectly casts from pointer to integer.\r\n- Increments addr pointer by 1. Because unsigned short is two bytes, it should have been incremented by 2 instead.\r\n",
     "submit_date": "2017-01-26",
     "submitter_name": "Cihangir Akturk",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-26 23:33:59"
   },
   {
     "errata_id": "560",

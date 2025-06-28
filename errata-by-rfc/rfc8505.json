@@ -47,16 +47,16 @@
   {
     "errata_id": "8484",
     "doc-id": "RFC8505",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "9.1",
     "orig_text": "                +-------------+--------------+------------+\r\n                |  ARO Status | Description  | Reference  |\r\n                +-------------+--------------+------------+\r\n                |     0-5     | Unassigned   |            |\r\n                |             |              |            |\r\n                |      6      | R Flag       | RFC 8505   |\r\n                |             |              |            |\r\n                |      7      | T Flag       | RFC 8505   |\r\n                +-------------+--------------+------------+\r\n\r\n              Table 2: New Address Registration Option Flags",
-    "correct_text": "                +-------------+--------------+------------+\r\n                |  ARO Flags  | Description  | Reference  |\r\n                +-------------+--------------+------------+\r\n                |     0-3     | Unassigned   |            |\r\n                |             |              |            |\r\n                |     4-5     |\tI-Field      | RFC 8505   |\r\n                |             |              |            | \r\n                |      6      | R Flag       | RFC 8505   |\r\n                |             |              |            |\r\n                |      7      | T Flag       | RFC 8505   |\r\n                +-------------+--------------+------------+\r\n\r\n              Table 2: New Address Registration Option Flags",
-    "notes": "Table 2 must use 'ARO Flags' or 'ARO Flags Field' instead of 'ARO Status,' avoiding conflict with the Status field. Additionally, the 2-bit I-Field (bits 4 and 5) defined in Section 4 is missing, making bits 0-3 unassigned instead of 0-5.",
+    "correct_text": "                +-------------+--------------+------------+\r\n                |  Bit number | Description  | Reference  |\r\n                +-------------+--------------+------------+\r\n                |     0-3     | Unassigned   |            |\r\n                |             |              |            |\r\n                |     4-5     |\tI Field      | RFC 8505   |\r\n                |             |              |            | \r\n                |      6      | R Flag       | RFC 8505   |\r\n                |             |              |            |\r\n                |      7      | T Flag       | RFC 8505   |\r\n                +-------------+--------------+------------+\r\n\r\n              Table 2: New Address Registration Option Flags",
+    "notes": "Table 2 must use 'ARO Flags' or 'ARO Flags Field' instead of 'ARO Status,' avoiding conflict with the Status field. Additionally, the 2-bit I-Field (bits 4 and 5) defined in Section 4 is missing, making bits 0-3 unassigned instead of 0-5.\r\n\r\n---- Verifier's notes ----\r\nThe table should have the same headings as the IANA registry https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-adress-registration-option-flags (i.e., 'bit number').",
     "submit_date": "2025-06-26",
     "submitter_name": "Adnan Rashid",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-26 23:22:49"
   }
 ]

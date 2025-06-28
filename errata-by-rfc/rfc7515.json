@@ -32,16 +32,16 @@
   {
     "errata_id": "8430",
     "doc-id": "RFC7515",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "A.1.1",
     "orig_text": "Encoding this JWS Signature as BASE64URL(JWS Signature) gives this value:\r\n     dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk",
     "correct_text": "[ I don't know what the signature is. dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk is not base64url. ]",
-    "notes": "Maybe it was the signature in ascii and needed to be converted to base4url?",
+    "notes": "Maybe it was the signature in ascii and needed to be converted to base4url?\n --VERIFIER NOTES-- \n   This does not appear to be broken (or incorrect).  Add == to the end for padding to allow proper decoding.",
     "submit_date": "2025-05-26",
     "submitter_name": "Panos Kampanakis",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-06-27 10:05:59"
   }
 ]

@@ -2,16 +2,16 @@
   {
     "errata_id": "8077",
     "doc-id": "RFC5227",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "[none]",
     "correct_text": "Handling ARP Probe on a Router with Local Proxy ARP configured:\r\n\r\nHost A with IP X is learnt on Router R on which Local Proxy ARP \r\nis configured. When another Host B is configured with same IP X \r\nconnected to same Router R, there would be a ARP Probe sent from \r\nHost B received on Router R.\r\n\r\nRouter R with Local Proxy ARP configuration would respond to the \r\nARP Probe indicating the IP X is already in use. In this case \r\nRouter R wouldn't perform validity of IP X based on the ARP Probe. \r\nIf the validity of the IP address is performed for every ARP Probe \r\nthen there would be large amount of ARP request packets in the \r\nnetwork.\r\n\r\nAs Local Proxy ARP functionality is to perform a \"proxy\" on behalf \r\nof the intended host, it would take preference over flooding of \r\nARP Probes.",
-    "notes": "There is this above explained issue on how DAD ARP works with Local Proxy ARP enabled. There has to be a clarification from the RFC on what is the mandated behavior when Local Proxy ARP is configured and there is a DAD ARP packet received on it.",
+    "notes": "There is this above explained issue on how DAD ARP works with Local Proxy ARP enabled. There has to be a clarification from the RFC on what is the mandated behavior when Local Proxy ARP is configured and there is a DAD ARP packet received on it.\r\n\r\n--- verifier note ---\r\nWhile the concern is valid, the use of errata is limited to errors in the text conflicting wuth the WG / IETF consensus. In this case, ARP proxy are not in scope.\n --VERIFIER NOTES-- \n   \r\n--- verifier note ---\r\nWhile the concern is valid, the use of errata is limited to errors in the text conflicting wuth the WG / IETF consensus. In this case, ARP proxy are not in scope.",
     "submit_date": "2024-08-14",
     "submitter_name": "Gopinatha Rao P",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-09-11 09:52:53"
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-26 23:48:03"
   }
 ]

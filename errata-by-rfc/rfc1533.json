@@ -17,16 +17,46 @@
   {
     "errata_id": "8456",
     "doc-id": "RFC1533",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.18",
     "orig_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  n  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
     "correct_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  4  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
-    "notes": "The length is static, not dynamic. The length in the diagram  should be 4, not n.",
+    "notes": "The length is static, not dynamic. The length in the diagram  should be 4, not n.\n --VERIFIER NOTES-- \n      This errata is a duplicate of errata 8488",
     "submit_date": "2025-06-13",
     "submitter_name": "Jason Giberson",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-27 00:51:03"
+  },
+  {
+    "errata_id": "8487",
+    "doc-id": "RFC1533",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.18",
+    "orig_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  n  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "correct_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  4  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "notes": "The length is static, not dynamic. The length in the diagram  should be 4, not n.\n --VERIFIER NOTES-- \n   This errata is a duplicate of errata 8488",
+    "submit_date": "2025-06-13",
+    "submitter_name": "Jason Giberson",
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-27 00:50:35"
+  },
+  {
+    "errata_id": "8488",
+    "doc-id": "RFC1533",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.18",
+    "orig_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  n  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "correct_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  4  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "notes": "The length is static, not dynamic. The length in the diagram  should be 4, not n.\n --VERIFIER NOTES-- \nWhile the correct is valid, this RFC has been obsoleted by RFC 2132 and a errata 487 has already been filed against the same error in RFC 2132.\r\nSee also: https://datatracker.ietf.org/doc/statement-iesg-iesg-processing-of-rfc-errata-for-the-ietf-stream-20210507/",
+    "submit_date": "2025-06-13",
+    "submitter_name": "Jason Giberson",
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-27 00:47:16"
   }
 ]

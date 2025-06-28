@@ -2,17 +2,17 @@
   {
     "errata_id": "8223",
     "doc-id": "RFC9606",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4",
     "orig_text": "Each key/value pair is encoded using the format rules defined\r\nin Section 6.3 of [RFC6763].",
     "correct_text": "Each key/value pair is encoded as its own constituent string\r\nusing the format rules defined in Section 6.3 of [RFC6763].",
-    "notes": "Although the example in section 6 indicates that each key/value pair inhabits its own string,\r\nthe requirement is stated indirectly by reference to RFC6763(6.3).\r\n\r\nThis requirement need to be explicitly included in section 4.\r\n\r\nI am aware of one implementation which mistakenly encodes three attributes within a single string.",
+    "notes": "Although the example in section 6 indicates that each key/value pair inhabits its own string,\r\nthe requirement is stated indirectly by reference to RFC6763(6.3).\r\n\r\nThis requirement need to be explicitly included in section 4.\r\n\r\nI am aware of one implementation which mistakenly encodes three attributes within a single string.\n --VERIFIER NOTES-- \nSee the author's reply at https://mailarchive.ietf.org/arch/msg/add/czP4qw0XdeZ38tDqUk7adHj51A4/ and the verifier agrees with the author.",
     "submit_date": "2024-12-28",
     "submitter_name": "Dick Franks",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-27 01:10:44"
   },
   {
     "errata_id": "8425",
