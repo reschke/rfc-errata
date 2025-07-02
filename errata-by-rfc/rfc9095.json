@@ -2,16 +2,16 @@
   {
     "errata_id": "8480",
     "doc-id": "RFC9095",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7",
     "orig_text": "<import namespace=\"urn:iana:xml:ns:eppcom-1.0\"/>\r\n",
     "correct_text": "<import namespace=\"urn:ietf:params:xml:ns:eppcom-1.0\"/>\r\n",
-    "notes": "This report has the correct namespace URI.",
+    "notes": "The namespace parameter has been corrected to reflect what is listed in the IANA registry.",
     "submit_date": "2025-06-24",
     "submitter_name": "Gavin Brown",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-06-25 13:27:52"
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2025-07-01 05:23:54"
   }
 ]
