@@ -88,5 +88,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8495",
+    "doc-id": "RFC9171",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "Step 2:\r\nProcessing proceeds from Step 1 of Section 5.4.\r\n",
+    "correct_text": "Step 2:\r\nProcessing proceeds from Step 1 of Section 5.3.\r\n",
+    "notes": "The original text requires bundles transmitted from local endpoints to pass through the forwarding process even if the destination EID is registered by a local application and is expected to result in delivery. This can result in logical confusion for a BPA, because it might be forwarding-to-self which is specifically disallowed in other sections.\r\n\r\nThe corrected text proceeds to the disposition process which allows transmitted bundles to be delivered locally, as necessary, just the same as received bundles. This avoids possible forwarding-to-self confusion and allows for efficient local-to-local delivery.",
+    "submit_date": "2025-07-02",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

@@ -3,15 +3,15 @@
     "errata_id": "8474",
     "doc-id": "RFC9136",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "4.1",
     "orig_text": "   An example of inter-subnet forwarding between subnet SN1, which uses\r\n   a 24-bit IP prefix (written as SN1/24 in the future), and a subnet\r\n   sitting in the WAN is described below.  NVE2, NVE3, DGW1, and DGW2\r\n   are running BGP EVPN.  TS2 and TS3 do not participate in dynamic\r\n   routing protocols, and they only have a static route to forward the\r\n   traffic to the WAN.  SN1/24 is dual-homed to NVE2 and NVE3.",
     "correct_text": "   An example of inter-subnet forwarding between subnet SN1, which uses\r\n   a 24-bit IP prefix (written as SN1 in the figure), and a subnet\r\n   sitting in the WAN is described below.  NVE2, NVE3, DGW1, and DGW2\r\n   are running BGP EVPN.  TS2 and TS3 do not participate in dynamic\r\n   routing protocols, and they only have a static route to forward the\r\n   traffic to the WAN.  SN1/24 is dual-homed to NVE2 and NVE3.",
     "notes": "There are two editor issues in the original \"(written as SN1/24 in the future)\".\r\n\"future\" should be \"figure\".\r\n\"SN1/24\" should be \"SN1\".\r\n\r\nI am reporting these two minor ones mainly because the second one was causing me some trouble when I was trying to locate SN1 in the figure - the search just could not find \"SN1/24\".",
     "submit_date": "2025-06-20",
     "submitter_name": "Zhaohui (Jeffrey) Zhang",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-07-02 06:30:31"
   }
 ]

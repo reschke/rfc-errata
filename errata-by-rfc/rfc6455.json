@@ -258,15 +258,15 @@
     "errata_id": "8491",
     "doc-id": "RFC6455",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
-    "section": "section-9.1",
+    "errata_type_code": "Technical",
+    "section": "9.1",
     "orig_text": "   is exactly equivalent to\r\n\r\n         Sec-WebSocket-Extensions: foo, bar; baz=2",
     "correct_text": "   is exactly equivalent to\r\n\r\n         Sec-WebSocket-Extensions: foo; bar; baz=2",
     "notes": "Should be semicolon-separated",
     "submit_date": "2025-06-28",
     "submitter_name": "YuSheng Chen",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-07-02 09:11:09"
   }
 ]
