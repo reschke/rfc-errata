@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8504",
+    "doc-id": "RFC6648",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "Title 'Deprecating the \"X-\" Prefix and Similar Constructs in Application Protocols\" and body of the document.'",
+    "correct_text": "See discussion below.",
+    "notes": "A recent (July 2025) discussion [1][2] on the dispatch@ietf.org list strongly suggests that \"deprecating the 'X-' prefix\" can be understood in two different ways.  One is that it should not be used at all.  The other is that it should not be treated as having any special interpretation but that its use is not prohibited or even discouraged.  Different statements in the document can be interpreted by reasonable people as supporting one view or the other, creating some ambiguity even if not an outright contradiction.  Several protocol specifications published on the standards track, superseding earlier ones, have adopted the second view by simply removing any rules specific to the \"X-\" construction and its variations.\r\n\r\nThe issue, and specific text pointers, are provided in much more detail in one of those on-list messages [2].\r\n\r\nIt seems important to flag this in the errata system but, since the BCP has existed for well over a decade without evidence of harm, and fixing this would probably require a rewrite (or at least a re-title), there does not seem to be a strong argument for changes to the document itself.\r\n\r\n[1] https://mailarchive.ietf.org/arch/msg/dispatch/D3sWMPavpL-50VakJ-aDncN2g30\r\n[2] https://mailarchive.ietf.org/arch/msg/dispatch/ylwvUeu-ztuBRr6LXMHOCwqh6Jg",
+    "submit_date": "2025-07-04",
+    "submitter_name": "John Klensin",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
