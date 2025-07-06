@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8505",
+    "doc-id": "RFC9485",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1",
+    "orig_text": "   The construct \\p{IsBasicLatin} is essentially a reference to legacy\r\n   ASCII; it can be replaced by the character class [\\u0000-\\u007f].\r\n",
+    "correct_text": "Three possible approaches in the Notes section.",
+    "notes": "Neither \"\\p{IsBasicLatin}\" nor \"[\\u0000-\\u007f]\" are valid i-regexp's.  I see three possible approaches:\r\n\r\n1) The implication of this section is that the sense of this sentence is how to convert an existing regexp that works in an existing regex engine to i-regexp.  If that is the actual intent, then the best fix is for the SingleCharEsc ABNF rule to support unicode character escapes.  That will be pulled in to the charClassExpr rule to make this example correct.  When this is fixed, some thought should be given to non-BMP characters that would either need to be escaped as two UTF-16 code points or with one escape of the form \\u{xxxxx}.\r\n\r\n2) If the intent of this section is to describe how to convert an i-regexp to the syntax of an existing regexp engine, then the charProp rule will need to be expanded to support \"IsBasicLatin\", which it currently does not.  This will be difficult to get correct and have it stay correct over time as Unicode adds new properties.  It also places a relatively difficult burden on implementers.\r\n\r\n3) Remove this sentence entirely.  Presumably this was added because \\p{IsBasicLatin} comes up often enough that this would otherwise be a frequently-asked question.  That means that the spec should be fixed for this important use case, rather than ignoring the problem, in my opinion.\r\n\r\nI believe the first option is correct, and will fix a hole in the RFC, which currently has inadequate support for the many Unicode characters that are difficult to enter, visualize, and document in their unescaped forms.  As an example, getting the suggested \\u0000 into a string without escaping is difficult on systems that use null-terminated strings.\r\n\r\nFurthermore, if even the *authors* of the spec believe that the i-regexp variant should have had Unicode escapes, this feels like a mistake in the ABNF that warrants a -bis version of this RFC.",
+    "submit_date": "2025-07-05",
+    "submitter_name": "Joe Hildebrand",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
