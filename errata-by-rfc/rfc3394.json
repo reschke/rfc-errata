@@ -92,7 +92,7 @@
   {
     "errata_id": "8468",
     "doc-id": "RFC3394",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "6",
     "orig_text": "   AES-WRAP  National Institute of Standards and Technology. AES Key\r\n             Wrap Specification. 17 November 2001.\r\n             [http://csrc.nist.gov/encryption/kms/key-wrap.pdf]",
@@ -100,8 +100,8 @@
     "notes": "Unfortunately, the link is dead.  The original document appears to still be available using the wayback machine.  This is the earliest snapshot:\r\n\r\n  https://web.archive.org/web/20030322033216/http://csrc.nist.gov/encryption/kms/key-wrap.pdf\r\n\r\nThat isn't actually the document, but a redirect to:\r\n\r\n  http://www.csrc.nist.gov/CryptoToolkit/kms/key-wrap.pdf\r\n\r\nThat website does not appear to be available anymore (either via http or https).  But the wayback machine has archived the redirect:\r\n\r\n  https://web.archive.org/web/20041031122517/http://www.csrc.nist.gov/CryptoToolkit/kms/key-wrap.pdf\r\n\r\nLooking at the PDF, the title and date match the bibliographic reference.",
     "submit_date": "2025-06-20",
     "submitter_name": "Neal Walfield",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-07-09 06:02:00"
   }
 ]
