@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "Lisa Dusseault",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8515",
+    "doc-id": "RFC4643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.4.2",
+    "orig_text": "To ensure interoperability, client and server implementations of this\r\nextension MUST implement the [DIGEST-MD5] SASL mechanism.",
+    "correct_text": "To ensure interoperability, client and server implementations of this\r\nextension MUST implement the [SCRAM-SHA-256] SASL mechanism.",
+    "notes": "The DIGEST-MD5 mechanism was marked as obsolete more than a decade ago, in 2011, by RFC 6331 (\"Moving DIGEST-MD5 to Historic\") because of several flaws.  The new recommendation is to use SCRAM:\r\n\r\n   The Salted Challenge Response Authentication Mechanism (SCRAM) family\r\n   of SASL mechanisms [RFC5802] has been developed to provide similar\r\n   features as DIGEST-MD5 but with a better design.\r\n\r\nSASL libraries begin to retire DIGEST-MD5 so it may no longer be available in current software implementations.  I believe another mechanism should be mentioned in RFC 4643 for interoperability.  Either SCRAM-SHA-256 or SCRAM-SHA-512 (which may last some more years) for instance.\r\n\r\nDIGEST-MD5 should also be removed from all the examples it appears in RFC 4643.",
+    "submit_date": "2025-07-16",
+    "submitter_name": "Julien ÉLIE",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

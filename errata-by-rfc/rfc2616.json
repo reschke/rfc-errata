@@ -225,6 +225,21 @@
     "update_date": "2019-09-10 09:09:03"
   },
   {
+    "errata_id": "8514",
+    "doc-id": "RFC2616",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "1.3 Terminology",
+    "orig_text": "variant\r\n      A resource may have one, or more than one, representation(s)\r\n      associated with it at any given instant. Each of these\r\n      representations is termed a `varriant'.  Use of the term `variant'\r\n      does not necessarily imply that the resource is subject to content\r\n      negotiation.",
+    "correct_text": "variant\r\n      A resource may have one, or more than one, representation(s)\r\n      associated with it at any given instant. Each of these\r\n      representations is termed a `variant'.  Use of the term `variant'\r\n      does not necessarily imply that the resource is subject to content\r\n      negotiation.",
+    "notes": "`varriant' --> `variant'",
+    "submit_date": "2025-07-16",
+    "submitter_name": "Logan Stottle",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "892",
     "doc-id": "RFC2616",
     "errata_status_code": "Held for Document Update",
