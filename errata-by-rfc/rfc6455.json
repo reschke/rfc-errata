@@ -257,16 +257,16 @@
   {
     "errata_id": "8491",
     "doc-id": "RFC6455",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "9.1",
     "orig_text": "   is exactly equivalent to\r\n\r\n         Sec-WebSocket-Extensions: foo, bar; baz=2",
     "correct_text": "   is exactly equivalent to\r\n\r\n         Sec-WebSocket-Extensions: foo; bar; baz=2",
-    "notes": "Should be semicolon-separated",
+    "notes": "Should be semicolon-separated\n --VERIFIER NOTES-- \nRFC 6455 defines this field in Section 9.1 as:\r\n\r\n         extension-list = 1#extension\r\n         extension = extension-token *( \";\" extension-param )\r\n\r\nWhile the reporter is noting the \";\" between extension-token and extension-param, the separator between two extension elements is found in the definition of \"#\" from RFC 2616:\r\n\r\n   #rule\r\n      A construct \"#\" is defined, similar to \"*\", for defining lists of\r\n      elements. The full form is \"<n>#<m>element\" indicating at least\r\n      <n> and at most <m> elements, each separated by one or more commas\r\n      (\",\") and OPTIONAL linear white space (LWS). This makes the usual\r\n      form of lists very easy; a rule such as\r\n         ( *LWS element *( *LWS \",\" *LWS element ))\r\n\r\nThus, as is typical in HTTP fields other than Cookie, the delimiter between outermost elements is \",\" and \";\" is an internal separator within an element.",
     "submit_date": "2025-06-28",
     "submitter_name": "YuSheng Chen",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-07-02 09:11:09"
+    "verifier_id": "187",
+    "verifier_name": "Mike Bishop (WIT AD)",
+    "update_date": "2025-07-19 01:36:48"
   }
 ]
