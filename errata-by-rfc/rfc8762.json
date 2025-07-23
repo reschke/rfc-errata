@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8518",
+    "doc-id": "RFC8762",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3.1-4.5",
+    "orig_text": "The Session-Sender TTL field is one octet long, and its value is\r\nthe copy of the TTL field in IPv4 (or Hop Limit in IPv6) from the\r\nreceived STAMP-Test packet.",
+    "correct_text": "The Session-Sender TTL field is one octet long, and its value is\r\nthe copy of the TTL field in IPv4 (or Hop Limit in IPv6) from the\r\nreceived STAMP-Test packet. If an implementation cannot fetch the\r\nactual TTL value from the TTL field (or Hop Limit) in the IP\r\nheader of the received STAMP-Test packet, it MUST set the Session-\r\nSender TTL value as 255.",
+    "notes": "The RFC contains no language describing the value that the reflector should include in the Session Sender TTL field of a reflected STAMP packet if the TTL value cannot be read from the IP header of the test packet. The language seems to presume that fetching the TTL is always possible. Having a description for the behavior of an implementation when that is not the case would help the life of the implementer. \r\n\r\nAs an added benefit of defining the behavior in the \"error case\", there would be an increase in the compatibility between STAMP and TWAMP Light. TWAMP Light, as a result of its reliance on TWAMP, specifies the behavior of an implementation that cannot fetch the TTL value from a test packet (and is the source of the suggested language given above).",
+    "submit_date": "2025-07-22",
+    "submitter_name": "Will Hawkins",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
