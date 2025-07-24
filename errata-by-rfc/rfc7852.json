@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": "Andy Newton",
     "update_date": "2025-06-18 08:52:38"
+  },
+  {
+    "errata_id": "8519",
+    "doc-id": "RFC7852",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "     <!--\r\n       6.1.3\r\n     -->\r\n     <xs:element name=\"source\">\r\n       <xs:complexType>\r\n         <xs:sequence>\r\n           <xs:element name=\"parameters\">",
+    "correct_text": "     <!--\r\n       6.1.3\r\n     -->\r\n     <xs:element name=\"source\">\r\n       <xs:complexType>\r\n         <xs:sequence>\r\n           <xs:element name=\"parameters\" minOccurs=\"0\">",
+    "notes": "The XML schema in Appendix A is based on the Relax NG schema defined in RFC 6351. There already is a verified errata 2994 for RFC 6351 which updates the Relax NG schema to define the parameters of the SOURCE property to be optional. The XML schema in RFC 7852 should be updated accordingly.\r\n\r\nNote that RFC 7852, Section 11.6. registers the XML schema in the IANA XML Registry, so the XML schema at IANA should be updated as well.\r\n\r\nThe contents of this errata were originally highlighted by John Scott on the vcarddav and the ecrit mailing lists. See https://mailarchive.ietf.org/arch/msg/ecrit/JPCturATh0WN1rQfyF4M6EAkar0/\r\n\r\nErrata for RFC 6351: https://www.rfc-editor.org/errata/eid2994\r\nIANA XML Registry: https://www.iana.org/assignments/xml-registry/xml-registry.xhtml\r\nvCard 4.0 XML Schema at IANA: https://www.iana.org/assignments/xml-registry/schema/vcard-4.0.xsd",
+    "submit_date": "2025-07-23",
+    "submitter_name": "Robert Stepanek",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
