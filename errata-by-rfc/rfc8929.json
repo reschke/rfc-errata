@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8520",
+    "doc-id": "RFC8929",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.1",
+    "orig_text": "insert an SLLAO in the EDAR to the 6LBR....",
+    "correct_text": "This document updates EDAR format, adding Options field.",
+    "notes": "As per RFC8505, there is no room for Options in EDAR. The RFC8929 updates RFC8505 in Section 3.1, but does not specify the updated format of EDAR with the Option field. The said document must follow the latest format of EDAR as defined in the Prefix Registration draft (https://datatracker.ietf.org/doc/html/draft-ietf-6lo-prefix-registration-15) and update the Section. The Numbering of all other figures will be changed accordingly.",
+    "submit_date": "2025-07-27",
+    "submitter_name": "Adnan Rashid",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
