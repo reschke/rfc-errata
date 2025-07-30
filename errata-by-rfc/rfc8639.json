@@ -47,16 +47,16 @@
   {
     "errata_id": "8427",
     "doc-id": "RFC8639",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4",
     "orig_text": "    uses subscription-policy-modifiable {\r\n      augment \"target/stream\" {\r\n        description\r\n          \"Adds additional objects that can be modified by an RPC.\";\r\n        leaf stream {\r\n          type stream-ref {\r\n            require-instance false;\r\n          }\r\n          mandatory true;\r\n          description\r\n            \"Indicates the event stream to be considered for\r\n             this subscription.\";\r\n        }",
     "correct_text": "    uses subscription-policy-modifiable {\r\n      augment \"target/stream\" {\r\n        description\r\n          \"Adds additional objects that can be modified by an RPC.\";\r\n        leaf stream {\r\n          when \"/sn:streams/sn:stream\";\r\n          type stream-ref {\r\n            require-instance false;\r\n          }\r\n          mandatory true;\r\n          description\r\n            \"Indicates the event stream to be considered for\r\n             this subscription.\";\r\n        }",
-    "notes": "The mandatory leaf \"stream\" is an augmentation on \"target/stream\".\r\n\r\nSection 7.17 of RFC7950 states that any augmentation of mandatory leaves need a \"when\" statement:\r\n   If the augmentation adds mandatory nodes (see Section 3) that\r\n   represent configuration to a target node in another module, the\r\n   augmentation MUST be made conditional with a \"when\" statement.  Care\r\n   must be taken when defining the \"when\" expression so that clients\r\n   that do not know about the augmenting module do not break.\r\n\r\nOr else, the \"mandatory\" statement needs to be removed.",
+    "notes": "The mandatory leaf \"stream\" is an augmentation on \"target/stream\".\r\n\r\nSection 7.17 of RFC7950 states that any augmentation of mandatory leaves need a \"when\" statement:\r\n   If the augmentation adds mandatory nodes (see Section 3) that\r\n   represent configuration to a target node in another module, the\r\n   augmentation MUST be made conditional with a \"when\" statement.  Care\r\n   must be taken when defining the \"when\" expression so that clients\r\n   that do not know about the augmenting module do not break.\r\n\r\nOr else, the \"mandatory\" statement needs to be removed.\r\n\r\nNo objections received from the WG to mark it for \"Held for Document Update\". In addition Andy wrote:\r\n\r\n\"I am not sure this augment-when rule from RFC 7950 really applies here.\r\nThe augmenting leaf is in the same module, and all the objects were produced as a first release.\r\nThe added when-stmt is needed if the mandatory node is added in a new release of the same module\r\nor if it is defined in a separate module.\r\n\r\nIMO this should be held for document update for clarification.\"",
     "submit_date": "2025-05-22",
     "submitter_name": "Alex Huang Feng",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2025-07-29 03:48:21"
   }
 ]

@@ -287,7 +287,7 @@
   {
     "errata_id": "8485",
     "doc-id": "RFC2812",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.2.1",
     "orig_text": "Numeric Replies:\r\n\r\n           ERR_NEEDMOREPARAMS              ERR_BANNEDFROMCHAN\r\n           ERR_INVITEONLYCHAN              ERR_BADCHANNELKEY\r\n           ERR_CHANNELISFULL               ERR_BADCHANMASK\r\n           ERR_NOSUCHCHANNEL               ERR_TOOMANYCHANNELS\r\n           ERR_TOOMANYTARGETS              ERR_UNAVAILRESOURCE\r\n           RPL_TOPIC",
@@ -295,14 +295,14 @@
     "notes": "Numeric reply list for the JOIN message should include RPL_NAMREPLY as it is stated by Section 3.2.1 : \"If a JOIN is successful, the user receives a JOIN message as confirmation and is then sent the channel's topic (using RPL_TOPIC) and the list of users who are on the channel (using RPL_NAMREPLY), which MUST include the user joining.\"",
     "submit_date": "2025-06-27",
     "submitter_name": "Ildiko Cseri",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-07-09 06:09:17"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2025-07-29 07:46:03"
   },
   {
     "errata_id": "8489",
     "doc-id": "RFC2812",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.6.2",
     "orig_text": "Numeric Replies:\r\n\r\n           ERR_NOSUCHSERVER              ERR_NONICKNAMEGIVEN\r\n           RPL_WHOISUSER                 RPL_WHOISCHANNELS\r\n           RPL_WHOISCHANNELS             RPL_WHOISSERVER\r\n           RPL_AWAY                      RPL_WHOISOPERATOR\r\n           RPL_WHOISIDLE                 ERR_NOSUCHNICK\r\n           RPL_ENDOFWHOIS",
@@ -310,9 +310,9 @@
     "notes": "RPL_WHOISCHANNELS is duplicated",
     "submit_date": "2025-06-27",
     "submitter_name": "Ildiko Cseri",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-07-09 06:30:46"
+    "verifier_id": "176",
+    "verifier_name": "Orie Steele",
+    "update_date": "2025-07-29 07:41:30"
   },
   {
     "errata_id": "991",

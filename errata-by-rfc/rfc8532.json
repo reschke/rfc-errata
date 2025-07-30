@@ -13,5 +13,20 @@
     "verifier_id": "177",
     "verifier_name": "Mahesh Jethanandani",
     "update_date": "2024-11-03 06:46:40"
+  },
+  {
+    "errata_id": "8521",
+    "doc-id": "RFC8532",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "    anydata root {\r\n      yangmnt:mount-point \"root\";\r\n      description\r\n        \"Root for models supported per test point.\";\r\n    }\r\n",
+    "correct_text": "    container root {\r\n      description\r\n        \"Root for models supported per test point.\";\r\n      yangmnt:mount-point \"root\";\r\n    }\r\n",
+    "notes": "The following error is displayed against the module (e.g., https://www.yangcatalog.org/yangvalidator?rfc=8532):\r\n\r\n=\r\nlibyang err : Ext plugin \"ly2 schema mount v1\": Extension \"yangmnt:mount-point\" instance allowed only in container or list statement. (Path \"/ietf-connectionless-oam:test-point-location-info/root/{extension='yangmnt:mount-point'}/root\".)\r\n==\r\n\r\nPer RFC 8528:\r\n\r\n   o  mount point: A container or a list node whose definition contains\r\n      the \"mount-point\" extension statement.\r\n\r\nAdding a surrounding container or simply changing \"anydata root\" into \"container root\" would fix the issue.",
+    "submit_date": "2025-07-29",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
