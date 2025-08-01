@@ -2,16 +2,16 @@
   {
     "errata_id": "8520",
     "doc-id": "RFC8929",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.1",
     "orig_text": "insert an SLLAO in the EDAR to the 6LBR....",
     "correct_text": "This document updates EDAR format, adding Options field.",
-    "notes": "As per RFC8505, there is no room for Options in EDAR. The RFC8929 updates RFC8505 in Section 3.1, but does not specify the updated format of EDAR with the Option field. The said document must follow the latest format of EDAR as defined in the Prefix Registration draft (https://datatracker.ietf.org/doc/html/draft-ietf-6lo-prefix-registration-15) and update the Section. The Numbering of all other figures will be changed accordingly.",
+    "notes": "As per RFC8505, there is no room for Options in EDAR. The RFC8929 updates RFC8505 in Section 3.1, but does not specify the updated format of EDAR with the Option field. The said document must follow the latest format of EDAR as defined in the Prefix Registration draft (https://datatracker.ietf.org/doc/html/draft-ietf-6lo-prefix-registration-15) and update the Section. The Numbering of all other figures will be changed accordingly.\r\n\r\n--- Verifier note ---\r\n\r\nWhile the erratum is correct in the lights of draft-ietf-6lo-prefix-registration, this RFC predates the draft. I.e., it cannot represent the 6LO WG consensus at the time of approving RFC 8929.",
     "submit_date": "2025-07-27",
     "submitter_name": "Adnan Rashid",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-07-28 09:03:51"
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2025-07-31 04:01:24"
   }
 ]
