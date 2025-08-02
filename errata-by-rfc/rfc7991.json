@@ -168,15 +168,15 @@
     "errata_id": "8522",
     "doc-id": "RFC7991",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "A.1.2.4",
     "orig_text": "   The special value \"none\" was also used back then; it denied the IETF\r\n   any rights beyond publication as an Internet-Draft.",
     "correct_text": "Remove from A.1.2.4. Should be its own section under A.1.1, and have this text:\r\n\r\n\r\nThe special value \"none\" is available to produce documents not intended \r\nfor submission to the Internet-Drafts system or the RFC Editor system.  \r\nIt omits any publication IPR boilerplate related to the IETF and RFC process.",
     "notes": "The xml2rfc tool still supports the 'ipr=\"none\"' attribute for the \"rfc\" element, and its original designed use was not to deny the IETF publication rights, but to re-use a set of code and tools for other documents that could make use of similar formatting.   \r\n\r\nRegardless of whether \"none\" is obsolete or not, either the original text or the corrected text needs to be moved out from under A.1.2.4.",
     "submit_date": "2025-07-30",
     "submitter_name": "Michael StJohns",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-08-01 12:01:38"
   }
 ]

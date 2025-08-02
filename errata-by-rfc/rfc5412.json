@@ -63,16 +63,16 @@
     "errata_id": "8509",
     "doc-id": "RFC5412",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "8.1.1",
     "orig_text": "   The Image Download message element is sent by the WTP to the AC and\r\n   contains the image filename.  The value is a variable-length byte\r\n   string.  The string is NOT zero terminated.",
     "correct_text": "   The Image Download message element is sent by the WTP to the AC and\r\n   contains the image filename.  The value is a variable-length byte\r\n   string.  The string is NOT zero terminated.  Note that this document\r\n   does not assign a Type value to this message element.",
     "notes": "This seems to be the only message element in this document without an assigned code point.",
     "submit_date": "2025-07-12",
     "submitter_name": "Denis Ovsienko",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-08-01 11:50:14"
   },
   {
     "errata_id": "8510",
@@ -93,15 +93,15 @@
     "errata_id": "8511",
     "doc-id": "RFC5412",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "4.2.1.1",
     "orig_text": "   The Message Type field identifies the function of the LWAPP control\r\n   message.  The valid values for a Message Type are the following:\r\n",
     "correct_text": "   The Message Type field identifies the function of the LWAPP control\r\n   message.  This document does not assign a Message Type value to the\r\n   following messages: Key Update ACK (Section 6.9), Key Update Confirm\r\n   (Section 6.10), Key Update Trigger (Section 6.11) and IEEE 802.11 WTP\r\n   Event (Section 11.8.3).  For all other messages the valid values for\r\n   a Message Type are the following:\r\n",
     "notes": "This document defines a few message types that do not have an assigned code point.",
     "submit_date": "2025-07-12",
     "submitter_name": "Denis Ovsienko",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-08-01 11:59:33"
   }
 ]
