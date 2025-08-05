@@ -103,5 +103,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8525",
+    "doc-id": "RFC9171",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.1.1",
+    "orig_text": "as described in Section 4.2.5.1.1.",
+    "correct_text": "as described in Section 4.2.5.1.1. or Section 4.2.5.1.2.",
+    "notes": "Node IDs may be expressed using either the dtn or ipn URI scheme. The original sentence could be mistakenly read as allowing only the dtn scheme for the source node ID in a Bundle Status Report. The revised wording clarifies that both schemes—dtn (Section 4.2.5.1.1) and ipn (Section 4.2.5.1.2)—are valid, keeping this requirement consistent with the rest of the specification.",
+    "submit_date": "2025-08-05",
+    "submitter_name": "Huiung Park",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
