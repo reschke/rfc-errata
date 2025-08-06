@@ -13,5 +13,20 @@
     "verifier_id": "159",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2021-06-24 19:40:20"
+  },
+  {
+    "errata_id": "8526",
+    "doc-id": "RFC7518",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.4.5",
+    "orig_text": "|  Compression of RTCP: No IETF-defined header compression method\r\n      compress RTCP; however, if such methods are developed in the\r\n|     future, these methods must take Reduced-Size RTCP in account.\r\n",
+    "correct_text": "|Compression of RTCP: No IETF-defined header compression methods\r\n      compress RTCP; however, if such methods are developed in the\r\n|     future, these methods must take Reduced-Size RTCP into account.\r\n",
+    "notes": "Note: this also applies to any changes to files in [RFC2119]",
+    "submit_date": "2025-08-05",
+    "submitter_name": "Benjamin Hurst",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
