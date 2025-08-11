@@ -497,7 +497,7 @@
   {
     "errata_id": "8214",
     "doc-id": "RFC5905",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "A.5.5.7",
     "orig_text": "  /*\r\n   * rstclock() - clock state machine\r\n   */\r\n  void\r\n  rstclock(\r\n          int     state,          /* new state */\r\n          double  offset,         /* new offset */\r\n          double  t               /* new update time */\r\n          )\r\n  {\r\n          /*\r\n           * Enter new state and set state variables.  Note, we use the\r\n           * time of the last clock filter sample, which must be earlier\r\n           * than the current time.\r\n           */\r\n          c.state = state;\r\n          c.last = c.offset = offset;\r\n          s.t = t;\r\n  }",
@@ -505,9 +505,9 @@
     "notes": "These are all the calls of rstclock in the example code:\r\n\r\n- rstclock(FSET, 0, 0); inside main(), pg 71\r\n- rstclock(NSET, 0, 0); inside main(), pg 71\r\n- rstclock(FREQ, p->t, 0); inside local_clock(), pg 100\r\n- rstclock(SYNC, p->t, 0); inside local_clock(), pg 100\r\n- rstclock(FREQ, p->t, offset); inside local_clock(), pg 100\r\n- rstclock(SYNC, p->t, offset); inside local_clock(), pg 101\r\n- rstclock(SYNC, p->t, offset); inside local_clock(), pg 102\r\n\r\nAll calls use the new update time as the second argument and the new offset as the third argument, or set both to zero. But the definition of rstclock expects the new offset as the second argument and the new update time as the third, i.e. the order of the parameters is flipped.",
     "submit_date": "2024-12-18",
     "submitter_name": "Manuel Bergler",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-08-10 17:33:40"
   },
   {
     "errata_id": "8215",

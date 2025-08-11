@@ -152,7 +152,7 @@
   {
     "errata_id": "6248",
     "doc-id": "RFC8200",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.5",
     "orig_text": "      The Per-Fragment headers must consist of the IPv6 header plus any\r\n      extension headers that must be processed by nodes en route to the\r\n      destination, that is, all headers up to and including the Routing\r\n      header if present, else the Hop-by-Hop Options header if present,\r\n      else no extension headers.",
@@ -160,8 +160,8 @@
     "notes": "1. As specified in in section 4.1 of RFC8200, the recommended order of existing extension headers could be revised, and there have been some examples in the RFCs that do such revision: RFC7837, RFC6275 and its related RFCs, RFC3775/RFC3776/RFC4784. \r\n2. RFC6275 requires DoH carrying a special option to be placed before Fragmentation header. This gives an example how to support Fragmentation with the order of extension headers revised.\r\n3. As specified in section 4.8 of RFC8200, new extension headers could be defined, and there may be some new Per-fragment header(s) defined requiring en route processing with fragmentation support.",
     "submit_date": "2020-08-06",
     "submitter_name": "Jingrong Xie",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-08-10 17:22:40"
   }
 ]
