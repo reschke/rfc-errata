@@ -2,7 +2,7 @@
   {
     "errata_id": "7272",
     "doc-id": "RFC9171",
-    "errata_status_code": "Verified",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.2.5.1.1",
     "orig_text": "dtn-hier-part = \"//\" node-name name-delim demux ; a path-rootless\r\n\r\nnode-name = reg-name\r\n\r\ndemux = *VCHAR\r\n",
@@ -10,9 +10,9 @@
     "notes": "The demux portion of an EID should match only URI path segments and not match query or fragment URI parts. A fragment part should not actually be sent as encoded EID to be consistent with other URI uses (e.g. HTTP). The administrative endpoint is the allowed empty demux path.\r\n\r\n--- see also ---\r\n\r\n* https://mailarchive.ietf.org/arch/msg/dtn/7cdgvvfv7Tg3ivLwCW-UFjgvWsc/",
     "submit_date": "2022-12-12",
     "submitter_name": "Brian Sipos",
-    "verifier_id": "165",
+    "verifier_id": "2",
     "verifier_name": "Erik Kline",
-    "update_date": "2025-08-10 17:03:20"
+    "update_date": "2025-08-12 17:08:34"
   },
   {
     "errata_id": "7337",
