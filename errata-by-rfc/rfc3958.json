@@ -43,5 +43,35 @@
     "verifier_id": "116",
     "verifier_name": "Alexey Melnikov",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8532",
+    "doc-id": "RFC3958",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2.4",
+    "orig_text": "\"As shown in the example set above, it is possible to have multiple \r\npossible targets for a single application service+protocol pair.\"",
+    "correct_text": "\"It is possible to have multiple possible targets for a single \r\napplication service+protocol pair.\"",
+    "notes": "The example in section 2.2 does not contain multiple targets for a single application service+protocol pair.",
+    "submit_date": "2025-08-18",
+    "submitter_name": "Marc Petit-Huguenin",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2025-08-18 09:17:30"
+  },
+  {
+    "errata_id": "8533",
+    "doc-id": "RFC3958",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2.4",
+    "orig_text": "\"Failure\" is declared, and backtracking must be used, when\"",
+    "correct_text": "\"Failure\" is declared, and backtracking must be used, when\r\n\r\n o  a direct or indirect loop is detected;\"",
+    "notes": "If the target is identical to the domain name of the NAPTR record, or is identical to one of the previous domain names  used to reached that target, then a client will potentially loop forever.",
+    "submit_date": "2025-08-18",
+    "submitter_name": "Marc Petit-Huguenin",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
