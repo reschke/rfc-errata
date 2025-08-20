@@ -178,5 +178,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8534",
+    "doc-id": "RFC8391",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.1",
+    "orig_text": "Choices of w are limited to the values 4 and 16 since these values yield optimal trade-offs and easy implementation.",
+    "correct_text": "Choices of w are limited to the values 4 and 16 since these values yield optimal trade-offs and easy implementation.\r\n\r\nNOTE: Instantiating w and n with values not specified here may require changes to the algorithms as they are described in this RFC, for correctness and security. In particular, Algorithm 1 (Section 2.6) is incorrect for values of w larger than 256. Algorithms 5 and 6 (Sections 3.1.5 and 3.1.6) yield an insecure signature scheme when instantiated with parameters n and w such that len_2 * lg(w) is divisible by 8 (for example, with w = 256 and any value of n).",
+    "notes": "This additional note aims at future-proofing the RFC against unchecked extensions to the parameter set.\r\n\r\nAlgorithm 1 when w > 256 may lead to an insecure instantiation.\r\n\r\nInstantiating Algorithms 5 and 6 with w = 256 (and any value of n) or some other (n, w) pair such that len_2 * lg(w) is divisible by 8 leads to immediate forgery attacks: the value of csum gets multiplied by 2^8 (shifted left by 8), but its big-endian encoding (with toByte) does not take this into account and drops the most significant base w word(s) of the checksum.",
+    "submit_date": "2025-08-19",
+    "submitter_name": "François Dupressoir",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
