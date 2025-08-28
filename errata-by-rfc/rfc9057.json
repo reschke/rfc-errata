@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8556",
+    "doc-id": "RFC9057",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "author = \"Author:\" mailbox-list CRLF",
+    "correct_text": "author = \"Author:\" (mailbox-list / address-list) CRLF",
+    "notes": "RFC 6854 updates RFC 5322, relaxing the syntax of the From: header field to admit group syntax.\r\nThe definition in this RFC 9057 is based on the earlier syntax from RFC 5322.  The processing rules\r\nalso specified by this RFC require that the value of the Author: field when created MUST BE identical\r\nthe the value of the From: field.  This condition cannot be satisfied in general, because the From: \r\nfield (per RFC 6854) admits values that the Author: field does not admit.\r\n\r\nThis RFC should be updated to follow the RFC 6854 syntax and include RFC 6854 in the normative references.",
+    "submit_date": "2025-08-27",
+    "submitter_name": "Fraser Tweedale",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
