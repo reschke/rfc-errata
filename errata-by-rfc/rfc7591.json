@@ -32,16 +32,16 @@
   {
     "errata_id": "8557",
     "doc-id": "RFC7591",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "2",
     "orig_text": "As required by [Section 2](https://datatracker.ietf.org/doc/html/rfc7591#section-2) of OAuth 2.0 [[RFC6749](https://datatracker.ietf.org/doc/html/rfc6749)]",
     "correct_text": "As required by [Section 2](https://datatracker.ietf.org/doc/html/rfc6749#section-2) of OAuth 2.0 [[RFC6749](https://datatracker.ietf.org/doc/html/rfc6749)]",
-    "notes": "In section 2 of RFC 7591, the links to sections 2, 2.1, 2.3.1, 4.1, 4.2, 4.3, 4.4, 4.5, and 6 are incorrectly pointing to sections within RFC7591. They should be pointing to the corresponding sections in RFC 6749. The link to sections 2.3.1, 4.3, and 4.4 are actually broken, because those sections do not exist in RFC 7591",
+    "notes": "In section 2 of RFC 7591, the links to sections 2, 2.1, 2.3.1, 4.1, 4.2, 4.3, 4.4, 4.5, and 6 are incorrectly pointing to sections within RFC7591. They should be pointing to the corresponding sections in RFC 6749. The link to sections 2.3.1, 4.3, and 4.4 are actually broken, because those sections do not exist in RFC 7591\n --VERIFIER NOTES-- \nThis is regarding the links generated in the rfc2html output, not the RFC itself (https://www.rfc-editor.org/rfc/rfc7591.txt). Please add an issue here: https://github.com/ietf-tools/rfc2html.   ",
     "submit_date": "2025-08-27",
     "submitter_name": "Atul Tulshibagwale",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-08-28 09:24:30"
   }
 ]

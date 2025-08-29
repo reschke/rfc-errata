@@ -62,16 +62,16 @@
   {
     "errata_id": "8466",
     "doc-id": "RFC9580",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "11.2",
     "orig_text": "A point on an elliptic curve will always be represented on the wire \r\nas an MPI.",
     "correct_text": "TBD",
-    "notes": "This langauge doesn't acknowledge the native encoding of the new Ed/X 25519/448 variants.\r\nVarious language in the following sections of chapter 11 also seem to imply that all EC data is encoded in MPI format.\r\n\r\nIn particular, in 11.3, all three entries in the table \"OpenPGP Elliptic Curve Scalar Encodings Registry\" seem to imply variants of MPI encoding. The case of \"native\" fixed length encoding seems to be missing.",
+    "notes": "This langauge doesn't acknowledge the native encoding of the new Ed/X 25519/448 variants.\r\nVarious language in the following sections of chapter 11 also seem to imply that all EC data is encoded in MPI format.\r\n\r\nIn particular, in 11.3, all three entries in the table \"OpenPGP Elliptic Curve Scalar Encodings Registry\" seem to imply variants of MPI encoding. The case of \"native\" fixed length encoding seems to be missing.\r\n\r\nPaul Wouters (AD): This report is correct: the text is a holdover from RFC 6637 and should have been updated with the new streamlined ECC formats added in RFC 9580.\r\n\r\ndkg proposed corrected text to be prefixed like \"For ECDH (18), ECDSA (19) and EdDSALegacy (22) public key algorithms, …\"\r\n\r\n",
     "submit_date": "2025-06-18",
     "submitter_name": "Heiko Schaefer",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-08-28 10:46:42"
   }
 ]
