@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8559",
+    "doc-id": "RFC9292",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.6",
+    "orig_text": "invalid messages.  A recipient MUST treat a message that contains\r\nfield values that would cause an HTTP/2 message to be malformed\r\naccording to Section 8.2.1 of [HTTP/2] as invalid; see Section 4.",
+    "correct_text": "invalid messages.  A recipient MUST treat a message that contains\r\nfield names and values that would cause an HTTP/2 message to be\r\nmalformed according to Section 8.2.1 of [HTTP/2] as invalid; see\r\nSection 4.",
+    "notes": "Calling out field name handling explicitly since encoding and decoding entities might be using different versions of HTTP.\r\n\r\nAn additional section explaining encoder and decoder expectations might be useful as well, something like the following: \"To ensure interoperability where communicating entities use different HTTP versions, encoders MUST convert field names to lowercase upon encoding. Decoders MUST treat any uppercase field names as an error.\"",
+    "submit_date": "2025-08-29",
+    "submitter_name": "Ricardo Perez",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
