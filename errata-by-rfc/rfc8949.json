@@ -1,17 +1,1 @@
-[
-  {
-    "errata_id": "8255",
-    "doc-id": "RFC8949",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
-    "section": "3.1",
-    "orig_text": "Major type 5:\r\n  ...",
-    "correct_text": "Major type 5:\r\n   ...\r\n\r\nA map key MUST NOT contain a data item which is of Major type 4 or 5.\r\nA map that contains one or more keys of Major Type 4 or 5 may be well\r\nformed, but it is not valid.\r\n\r\nA map key MAY contain a data item which has Major type 6, but only\r\nif the data item contained in that tag is not of Major type 4 or 5.\r\nFor map keys of Major type 6, all key comparisons MUST include both\r\nthe tag number and the tag value.  This requirement allows the\r\ndifferentiation of untagged data from tagged data.",
-    "notes": "The rest of the text implies that a map key is a simple data item such as integer, string, byte string, etc.  However, there is no explicit statement to this effect.\r\n\r\nIt's not clear how a map would behave if the key was itself a map.\r\n\r\nIt could be useful to allow arrays as map keys, e.g. for tag 4 (decimal fraction).  It seems relatively clear how to create a map key from integers.  However for other complex structures such as tag 40 (multi-dimensional array), it's not clear how you would use that as a map key.",
-    "submit_date": "2025-01-19",
-    "submitter_name": "Alan DeKok",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
-  }
-]
+[]
