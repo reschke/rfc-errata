@@ -328,5 +328,20 @@
     "verifier_id": "179",
     "verifier_name": "Deb Cooley",
     "update_date": "2024-10-29 08:17:30"
+  },
+  {
+    "errata_id": "8561",
+    "doc-id": "RFC5280",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "4.1.2.8",
+    "orig_text": "   This profile RECOMMENDS that names not be reused for\r\n   different entities and that Internet certificates not make use of\r\n   unique identifiers.",
+    "correct_text": "   It is RECOMMENDED that names not be reused for\r\n   different entities and that Internet certificates not make use of\r\n   unique identifiers.",
+    "notes": "RECOMMENDS is not a normative language per: \r\n\r\n   The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\r\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\r\n   document are to be interpreted as described in [RFC2119].\r\n\r\nThere are other similar uses of RECOMMENDS in the document.",
+    "submit_date": "2025-09-03",
+    "submitter_name": "Mohamed Boucadair",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-09-03 06:26:42"
   }
 ]
