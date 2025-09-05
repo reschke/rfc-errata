@@ -167,16 +167,16 @@
   {
     "errata_id": "8550",
     "doc-id": "RFC2544",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
-    "section": "GLOBAL",
+    "section": " First-page header",
     "orig_text": "Network Working Group",
     "correct_text": "Benchmarking Working Group",
-    "notes": "In the header of the RFC, \"Network Working Group\" appears. However, RFC 2544 is one of the most famous products of the Benchmarking Working Group. \r\nLikely because of this error, RFC 2544 is not listed among the documents of BMWG: https://datatracker.ietf.org/group/bmwg/documents/",
+    "notes": "In the header of the RFC, \"Network Working Group\" appears. However, RFC 2544 is one of the most famous products of the Benchmarking Working Group. \r\nLikely because of this error, RFC 2544 is not listed among the documents of BMWG: https://datatracker.ietf.org/group/bmwg/documents/\n --VERIFIER NOTES-- \nFor many years, RFCs showed “Network Working Group” in the header, regardless of their source. See https://www.rfc-editor.org/faq/#wg. The actual source of a given RFC is displayed on its info page, and for RFC 2544, that has been corrected from “Legacy” to “bmwg (ops)“. See https://www.rfc-editor.org/info/rfc2544.   ",
     "submit_date": "2025-08-22",
     "submitter_name": "Gabor Lencse",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-09-04 09:40:37"
   }
 ]

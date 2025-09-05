@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8564",
+    "doc-id": "RFC7628",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.4",
+    "orig_text": "[Negotiate TLS...]\r\nC: AUTH OAUTHBEARER bix1c2VyPXNvbWV1c2VyQGV4YW1wbGUuY29tLAFhdXRoPUJlYXJl\r\n       ciB2RjlkZnQ0cW1UYzJOdmIzUmxja0JoZEhSaGRtbHpkR0V1WTI5dENnPT0BAQ==\r\nS: 334 eyJzdGF0dXMiOiJpbnZhbGlkX3Rva2VuIiwic2NoZW1lcyI6ImJlYXJlciBtYWMiL\r\n       CJzY29wZSI6Imh0dHBzOi8vbWFpbC5leGFtcGxlLmNvbS8ifQ==\r\n\r\n(...)\r\n\r\n   n,user=someuser@example.com,^A\r\n   auth=Bearer vF9dft4qmTc2Nvb3RlckBhdHRhdmlzdGEuY29tCg==^A^A\r\n",
+    "correct_text": "[Negotiate TLS...]\r\nC: AUTH OAUTHBEARER bixhPXNvbWV1c2VyQGV4YW1wbGUuY29tLAFhdXRoPUJlYXJlciB2\r\n       RjlkZnQ0cW1UYzJOdmIzUmxja0JoZEhSaGRtbHpkR0V1WTI5dENnPT0BAQ==\r\nS: 334 eyJzdGF0dXMiOiJpbnZhbGlkX3Rva2VuIiwic2NoZW1lcyI6ImJlYXJlciBtYWMiL\r\n       CJzY29wZSI6Imh0dHBzOi8vbWFpbC5leGFtcGxlLmNvbS8ifQ==\r\n\r\n(...)\r\n\r\n   n,a=someuser@example.com,^A\r\n   auth=Bearer vF9dft4qmTc2Nvb3RlckBhdHRhdmlzdGEuY29tCg==^A^A\r\n\r\n",
+    "notes": "The gs2-header defined in RFC 5801 has a=authzid, not name=authzid.",
+    "submit_date": "2025-09-04",
+    "submitter_name": "Kim Alvefur",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2025-09-04 08:37:43"
+  }
+]

@@ -13,5 +13,20 @@
     "verifier_id": "176",
     "verifier_name": "Orie Steele",
     "update_date": "2025-03-25 07:39:17"
+  },
+  {
+    "errata_id": "8565",
+    "doc-id": "RFC9605",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.5.1",
+    "orig_text": "using the authenticated counter mode of AES",
+    "correct_text": "using the unauthenticated counter mode of AES",
+    "notes": "AES-CTR is not an authenticated encryption mode.",
+    "submit_date": "2025-09-04",
+    "submitter_name": "Richard Barnes",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

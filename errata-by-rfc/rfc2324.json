@@ -178,5 +178,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2025-03-11 07:06:57"
+  },
+  {
+    "errata_id": "8563",
+    "doc-id": "RFC2324",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.3.1",
+    "orig_text": "In HTCPCP, this response code MAY be returned if the operator of the \r\ncoffee pot cannot comply with the Accept-Addition request.",
+    "correct_text": "In HTCPCP, this response code MAY be returned if the operator of the \r\ncoffee pot cannot comply with the Accept-Additions request.",
+    "notes": "Missing an s after Accept-Addition(s) as defined in 2.2.2.1.",
+    "submit_date": "2025-09-04",
+    "submitter_name": "Eric Wang",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-09-04 11:39:37"
   }
 ]

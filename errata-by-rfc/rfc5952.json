@@ -122,17 +122,17 @@
   {
     "errata_id": "4985",
     "doc-id": "RFC5952",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.2",
     "orig_text": "In cases where there is more than one field of only zeros, there is a\r\nchoice of how many fields can be shortened.\r\n\r\n2001:db8:0:0:0::1\r\n2001:db8:0:0::1\r\n2001:db8:0::1\r\n2001:db8::1",
     "correct_text": "In cases where there is more than one field of only zeros,there is a\r\nchoice of how many fields can be shortened, but must be shortened to \r\nits maximum capability.\r\n\r\n2001:db8:0:0:0::1 is NOT acceptable\r\n2001:db8:0:0::1 is NOT acceptable\r\n2001:db8:0::1 is NOT acceptable\r\n2001:db8::1 is CORRECT\r\n",
-    "notes": "Applying section 4.2.1",
+    "notes": "Applying section 4.2.1\n --VERIFIER NOTES-- \n--- ek@ ---\r\n\r\nSection 2.2 is, as part of Section 2, listing \"Examples of flexibility\".  There is nothing prescriptive in any of these sections and, as noted, section 4.2.* is where the recommendations are made.",
     "submit_date": "2017-03-31",
     "submitter_name": "Julian de Prado",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-09-03 23:01:18"
   },
   {
     "errata_id": "4986",
@@ -152,31 +152,31 @@
   {
     "errata_id": "6272",
     "doc-id": "RFC5952",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.2.1",
     "orig_text": "The line\r\n\r\n> The use of the symbol \"::\" MUST be used to its maximum capability.\r\n\r\n… contradicts the next section, which states that single-0 fields are not reduced.\r\n\r\ni.e., this:\r\n\r\n> 2001:db8:0:1:1:1:1:1\r\n\r\n… is longer than:\r\n\r\n> 2001:db8::1:1:1:1:1\r\n\r\nThus, the standard does not, in all cases, require that \"::\" be used to its maximum capability.",
     "correct_text": "The first line of 4.2.1 should be amended to be consistent with section 4.2.2\r\n\r\n> The use of the symbol \"::\" MUST be used to its maximum capability to reduce consecutive 16-bit 0 fields.",
-    "notes": null,
+    "notes": "--- ek@ ---\r\n\r\nIt's possible that swapping 4.2.2 and 4.2.1 would put the recommendations in an order where an exception doesn't follow the general rule and as such might be more orderly for some readers.  Nevertheless, the intent remains clear.",
     "submit_date": "2020-09-02",
     "submitter_name": "Felipe Gasper",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-09-03 23:06:07"
   },
   {
     "errata_id": "8554",
     "doc-id": "RFC5952",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "[none]",
     "correct_text": "An extension to the format defined here to represent scoped addresses, such as link-local addresses, is defined in [RFC4007].",
-    "notes": "This omission was noticed while drafting RFC 9844.",
+    "notes": "This omission was noticed while drafting RFC 9844.\r\n\r\n--- ek@ ---\r\n\r\nA future revision might also include reference to RFC 9844 for the reader/implementer to note.",
     "submit_date": "2025-08-24",
     "submitter_name": "Brian Carpenter",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-09-03 22:54:31"
   }
 ]
