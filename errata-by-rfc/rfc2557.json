@@ -133,5 +133,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8566",
+    "doc-id": "RFC2557",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "9.6",
+    "orig_text": "The image reference below cannot be resolved within this\r\n      MIME message, since it contains a reference from an outside\r\n      body part to an inside body part, which is not supported\r\n      by this standard.\r\n      <IMG SRC=images/ietflogo2e.gif\"\r\n      ALT=\"IETF logo with transparent background\">",
+    "correct_text": "The image reference below cannot be resolved within this\r\n      MIME message, since it contains a reference from an outside\r\n      body part to an inside body part, which is not supported\r\n      by this standard.\r\n      <IMG SRC=\"images/ietflogo2e.gif\"\r\n      ALT=\"IETF logo with transparent background\">",
+    "notes": "Unbalanced double qoutes in value for SRC attribute. Both\r\n        images/ietflogo2e.gif\r\nand\r\n        \"images/ietflogo2e.gif\"\r\nare valid. Quoted version is consistent with other attribute values in this document.",
+    "submit_date": "2025-09-07",
+    "submitter_name": "David Ritchie",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
