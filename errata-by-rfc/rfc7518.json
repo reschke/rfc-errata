@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8568",
+    "doc-id": "RFC7518",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.2",
+    "orig_text": "(This requirement is based on Section 5.3.4 (Security Effect of the HMAC Key) of NIST SP 800-117 [NIST.800-107], which states that the effective security strength is the minimum of the security strength of the key and two times the size of the internal hash value.)",
+    "correct_text": "(This requirement is based on Section 5.3.4 (Security Effect of the HMAC Key) of NIST SP 800-107 [NIST.800-107], which states that the effective security strength is the minimum of the security strength of the key and two times the size of the internal hash value.)",
+    "notes": "NIST SP 800-117 wasSCAP, 800-107 is the correct one (as linked)",
+    "submit_date": "2025-09-08",
+    "submitter_name": "Sören Sprößig",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
