@@ -13,5 +13,20 @@
     "verifier_id": "158",
     "verifier_name": "Ignas Bagdonas",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8569",
+    "doc-id": "RFC6242",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.1",
+    "orig_text": "   S: <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n   S: <hello xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n   S:   <capabilities>\r\n   S:     <capability>\r\n   S:       urn:ietf:params:netconf:base:1.1\r\n   S:     </capability>\r\n   S:     <capability>\r\n   S:       urn:ietf:params:ns:netconf:capability:startup:1.0\r\n   S:     </capability>\r\n   S:   </capabilities>\r\n   S:   <session-id>4</session-id>\r\n   S: </hello>\r\n   S: ]]>]]>\r\n",
+    "correct_text": "   S: <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n   S: <hello xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n   S:   <capabilities>\r\n   S:     <capability>\r\n   S:       urn:ietf:params:netconf:base:1.1\r\n   S:     </capability>\r\n   S:     <capability>\r\n   S:       urn:ietf:params:netconf:capability:startup:1.0\r\n   S:     </capability>\r\n   S:   </capabilities>\r\n   S:   <session-id>4</session-id>\r\n   S: </hello>\r\n   S: ]]>]]>\r\n",
+    "notes": "Correct the startup capability in accordance with the URN defined in RFC 6241 Section 10.4 and registered in IANA.",
+    "submit_date": "2025-09-11",
+    "submitter_name": "Ahmed Elhassany",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
