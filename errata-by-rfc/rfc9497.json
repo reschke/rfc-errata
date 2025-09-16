@@ -63,15 +63,15 @@
     "errata_id": "8575",
     "doc-id": "RFC9497",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "\"EvaluatedElement\":  The evaluated element output by BlindEvaluate(),\r\n      a serialized Element of Ne bytes long.",
     "correct_text": "\"EvaluationElement\":  The evaluated element output by BlindEvaluate(),\r\n      a serialized Element of Ne bytes long.",
     "notes": "To match the identifier used in all subsequent test vectors. There is still a slight inconsistency, as \"EvaluatedElement\" is used throughout the RFC and \"EvaluationElement\" is used uniquely in \"Appendix A. Test Vectors\".",
     "submit_date": "2025-09-12",
     "submitter_name": "Charles Edward Gagnon",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-09-15 07:37:21"
   }
 ]

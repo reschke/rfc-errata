@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8576",
+    "doc-id": "RFC6206",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.8",
+    "orig_text": "A\r\n   consistency occurs when a node hears an older or equal version\r\n   number.  When hearing an older version number, rather than reset its\r\n   own Trickle timer, the node sends an update. ",
+    "correct_text": "A\r\n   consistency occurs when a node hears an older or equal version\r\n   number.  When hearing an older version number, rather than reset its\r\n   own Trickle timer, the node sends an update through another protocol.",
+    "notes": "I had been thinking of the version as a sort of epoch counter, rather than a full software change.  \r\n\r\nWithout the clarification that the update is sent Out Of Band (with respect to trickle), my initial interpretation was that the \"update\" would consist of sending the newer version number -- and this would not actually happen, unless the counter c were still less than k when the node reached time t.",
+    "submit_date": "2025-09-15",
+    "submitter_name": "Jim J Jewett",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
