@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8578",
+    "doc-id": "RFC6151",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2, Page 2",
+    "orig_text": " append the stream of data ’text’ to the B byte string resulting from step (2)",
+    "correct_text": "append the B byte string resulting from step (2)to the stream of data ’text’",
+    "notes": "Message is appended to the key \\oplus ipad.",
+    "submit_date": "2025-09-19",
+    "submitter_name": "Prasanna Raghaw Mishra",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
