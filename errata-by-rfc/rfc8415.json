@@ -35,13 +35,13 @@
     "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
-    "orig_text": "section 16:\r\n\"A server MUST discard any Solicit, Confirm, Rebind, or Information-request messages it receives with a Layer 3 unicast destination address.\"\r\n\r\nsection 18.2:\r\n\"If the client has a source address of sufficient scope that can be used by the server as a return address and the client has received a Server Unicast option (see Section 21.12) from the server, the client SHOULD unicast any Request, Renew, Release, and Decline messages to the server.\"\r\n\r\n\r\nAppendix B does not permit a Server Unicast option in a Reconfigure message.",
-    "correct_text": "section 16:\r\n\"A server MUST discard any Solicit, Confirm, or Rebind messages it receives with a Layer 3 unicast destination address.\"\r\n\r\nsection 18.2:\r\n\"If the client has a source address of sufficient scope that can be used by the server as a return address and the client has received a Server Unicast option (see Section 21.12) from the server, the client SHOULD unicast any Request, Renew, Release, Decline, and Information-request messages to the server.\"\r\n\r\nAppendix B permits a Server Unicast option in a Reconfigure message.",
+    "orig_text": "section 16:\r\n   A server MUST discard any Solicit, Confirm, Rebind, or\r\n   Information-request messages it receives with a Layer 3 unicast\r\n   destination address.\r\n\r\nsection 18.2:\r\n   If the client has a source address of sufficient scope that can be\r\n   used by the server as a return address and the client has received a\r\n   Server Unicast option (see Section 21.12) from the server, the client\r\n   SHOULD unicast any Request, Renew, Release, and Decline messages to\r\n   the server.\r\n\r\nAppendix B does not permit a Server Unicast option in a Reconfigure message.",
+    "correct_text": "section 16:\r\n   A server MUST discard any Solicit, Confirm, or Rebind messages \r\n   it receives with a Layer 3 unicast destination address.\r\n\r\nsection 18.2:\r\n   If the client has a source address of sufficient scope that can be \r\n   used by the server as a return address and the client has received a \r\n   Server Unicast option (see Section 21.12) from the server, the client \r\n   SHOULD unicast any Request, Renew, Release, Decline, and Information-\r\n   request messages to the server.\r\n\r\nAppendix B permits a Server Unicast option in a Reconfigure message.",
     "notes": "Section 18.4 allows transmission of Information-request messages with a unicast destination address, if the client received a message with Server Unicast option. (See also https://mailarchive.ietf.org/arch/msg/dhcwg/x80cmfTN8fpRViiN_RHNXes-zVg/)\r\n\r\n-- Verifier note --\r\nAfter discussions inside the DHC WG (https://mailarchive.ietf.org/arch/msg/dhcwg/oNqBzT7CSOtoV7kQNLkJfSY_73E/), it appears that there is indeed an issue but as a RFC 8415-bis is probably coming and as the errata does not seem to be a couple of sentences to add/modify,  I am selecting 'hold for document update'",
     "submit_date": "2020-08-30",
     "submitter_name": "Felix Hamme",
-    "verifier_id": "161",
+    "verifier_id": "2",
     "verifier_name": "Eric Vyncke",
-    "update_date": "2021-01-28 02:02:48"
+    "update_date": "2025-09-19 09:19:42"
   }
 ]
