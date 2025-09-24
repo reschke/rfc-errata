@@ -13,5 +13,20 @@
     "verifier_id": "171",
     "verifier_name": "John Scudder",
     "update_date": "2024-01-16 10:11:20"
+  },
+  {
+    "errata_id": "8581",
+    "doc-id": "RFC9514",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.",
+    "orig_text": "If the SRv6 SIDs had been advertised within the BGP-\r\n   LS Link Attribute associated with the existing Node NLRI, the BGP-LS\r\n   update would have grown rather large ...",
+    "correct_text": "If the SRv6 SIDs had been advertised within the BGP-\r\n   LS Attribute associated with the existing Node NLRI, the BGP-LS\r\n   update would have grown rather large ...",
+    "notes": "According to RFC 7752, Link Attribute is associated with the Link NLRI, not the Node NLRI. The correct term to be used should be \"BGP-LS Attribute\", or perhaps \"BGP-LS Node Attribute\".",
+    "submit_date": "2025-09-23",
+    "submitter_name": "Long Dao",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
