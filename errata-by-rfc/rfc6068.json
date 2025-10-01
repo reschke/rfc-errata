@@ -73,5 +73,20 @@
     "verifier_id": "176",
     "verifier_name": "Orie Steele",
     "update_date": "2024-07-17 12:30:21"
+  },
+  {
+    "errata_id": "8588",
+    "doc-id": "RFC6068",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7",
+    "orig_text": "Some header fields are inherently unsafe to include in a message generated from a URI.  For details, please see Section 3.",
+    "correct_text": "Some header fields are inherently unsafe to include in a message generated from a URI.  For details, please see Sections 3 and 4.",
+    "notes": "Section 3 is \"Semantics and Operations\" which does indeed discuss some unsafe header fields.\r\n\r\nBut Section 4 is titled \"Unsafe Header Fields\" and deserves to also be referenced from section 7, Security Considerations.",
+    "submit_date": "2025-09-30",
+    "submitter_name": "Daniel Kahn Gillmor",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
