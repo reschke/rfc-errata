@@ -2,16 +2,16 @@
   {
     "errata_id": "8590",
     "doc-id": "RFC9704",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6.2",
     "orig_text": "performs full DNSSEC validation locally [RFC6698]",
     "correct_text": "performs full DNSSEC validation locally [RFC4033]",
-    "notes": "Wrong RFC reference. The correct reference is RFC 4033 for DNSSEC and \"Validating Stub Resolver\" definition.",
+    "notes": "Wrong RFC reference. The correct reference is RFC 4033 for DNSSEC and \"Validating Stub Resolver\" definition.\r\n\r\n--- Verifier note (Eric Vyncke) ----\r\nThanks for Dan Wing for the verification.",
     "submit_date": "2025-10-01",
     "submitter_name": "Mrigank Pawagi",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-10-02 01:47:19"
   }
 ]
