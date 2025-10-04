@@ -28,5 +28,35 @@
     "verifier_id": "184",
     "verifier_name": "Mohamed Boucadair",
     "update_date": "2025-03-24 23:41:37"
+  },
+  {
+    "errata_id": "8591",
+    "doc-id": "RFC8972",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.3-4.10, 4.3-4.14",
+    "orig_text": "A one-octet field that characterizes the method by which the ingress of\r\nthe Session-Reflector obtained the timestamp T2.\r\n\r\n...\r\n\r\nA one-octet field that characterizes the method by which the egress of\r\nthe Session-Reflector obtained the timestamp T3.",
+    "correct_text": "A one-octet field that characterizes the method at ingress by which the\r\ntimestamp set in the Receive Timestamp field of the reflected packet was\r\nobtained.\r\n\r\n...\r\n\r\nA one-octet field that characterizes the method at egress by which the\r\ntimestamp set in the Timestamp field of the reflected packet was\r\nobtained.",
+    "notes": "First, and as usual, I sincerely appreciate the technical accuracy of the authors of the STAMP-related RFCs. As an implementer, the writing and specificity make it easy to build compliant software. I hope that this errata report is helpful for future implementers.\r\n\r\nSecond, I apologize for not knowing the best way to refer to two, non contiguous phrases from the same section that both require changes. I hope that what I have included makes it obvious what needs to be changed.\r\n\r\nI have conferred with one of the RFC's authors who indicated that the inclusion of T2 and T3 were simply the result of an error in drafting. We collaborated via email to arrive at the corrected text I have submitted here. I say that only to indicate that I have attempted to do enough research prior to submitting this report so that it is not a waste of time but _not_ to imply that the person with whom I communicated endorses this report.\r\n\r\nThank you again for your work!\r\nWill",
+    "submit_date": "2025-10-03",
+    "submitter_name": "William Hawkins",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8592",
+    "doc-id": "RFC8972",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.7",
+    "orig_text": "A Session-Reflector might be able to put only an \"SW Local\" (see\r\nTable 9) timestamp in the Follow-Up Timestamp field.",
+    "correct_text": "A Session-Reflector might be able to put only an \"SW Local\" (see\r\nTable 9) timestamp in the Timestamp field of the reflected STAMP\r\npacket (Figure 2).",
+    "notes": "Sorry for the back-to-back submissions -- I had these queued up and had delayed submission.\r\n\r\nIn an earlier version of the RFC, the sentence quoted in the Original Text read\r\n\r\n\"A Session-Reflector might be able to put in the Timestamp field only a \"SW Local\" (see Table 6) timestamp.\" \r\n\r\n(see, inter alia, https://datatracker.ietf.org/doc/html/draft-ietf-ippm-stamp-option-tlv-02#section-4.7)\r\n\r\nI have confirmed with one of the draft's original authors that a simple copy editing error was the cause of this tiny mistake. The sentence at the beginning of section 4.7 is meant to refer to the Timestamp field in the STAMP packet transmitted by the Session Reflector.\r\n\r\nThe earlier draft of this RFC specified that what is currently named the Follow-Up Timestamp field should be named the Timestamp field. The name collision resulted in an overzealous search/replace hiccup. I hope that having the record reflect the correct field name will save future developers from having to scratch their head like I did.\r\n\r\nAs usual, I sincerely appreciate the technical accuracy of the authors of the STAMP-related RFCs. As an implementer, the writing and specificity make it easy to build compliant software. I hope that this errata report is helpful for future implementers.",
+    "submit_date": "2025-10-04",
+    "submitter_name": "William Hawkins",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
