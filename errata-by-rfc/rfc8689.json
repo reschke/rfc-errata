@@ -21,12 +21,12 @@
     "errata_type_code": "Technical",
     "section": "Abstract",
     "orig_text": "If the REQUIRETLS option or TLS-Required message header field is used \r\nwhen sending a message, it asserts a request on the part of the message \r\nsender to override the default negotiation of TLS, either by requiring \r\nthat TLS be negotiated when the message is relayed or by requesting \r\nthat recipient-side policy mechanisms such as MTA-STS and DNS-Based \r\nAuthentication of Named Entities (DANE) be ignored when relaying a \r\nmessage for which security is unimportant.",
-    "correct_text": "If the REQUIRETLS option or TLS-Required message header field is used \r\nwhen sending a message, it indicates the sender's preference for \r\ntransport-level encryption: REQUIRETLS mandates that the message be \r\nrelayed over a TLS-protected session, whereas the TLS-Required header \r\nfield allows the sender to request that recipient-side policy \r\nmechanisms, such as MTA-STS and DNS-based Authentication of Named \r\nEntities (DANE), be temporarily ignored—for example, so as to overcome \r\nconfiguration errors when delivery takes precedence or when the \r\nsecurity of the message is unimportant.",
+    "correct_text": "If the REQUIRETLS option or TLS-Required message header field is used\r\nwhen sending a message, it indicates the sender's preference for\r\ntransport-level encryption: REQUIRETLS mandates that the message be\r\nrelayed over a TLS-protected session, whereas the TLS-Required header\r\nfield allows the sender to request that recipient-side policy\r\nmechanisms, such as MTA-STS and DNS-based Authentication of Named\r\nEntities (DANE), be temporarily ignored – for example, so as to overcome\r\nconfiguration errors when delivery takes precedence and the\r\nsecurity of the message is unimportant.",
     "notes": "This wording is slightly misleading as the 'TLS-Required: No' header field is intended to ignore recipient-side policies, prioritizing delivery. However, it is not meant for messages \"for which security is unimportant\", but rather for cases like misconfigured recipient servers. The wording could be misinterpreted as allowing insecure delivery for convenience.\r\n\r\nThe corrected text clarifies the distinction between REQUIRETLS and TLS-Required.Emphasizes that TLS-Required is for exceptional cases (not general insecurity).",
     "submit_date": "2025-10-04",
     "submitter_name": "Liam W",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-10-06 13:51:25"
   }
 ]
