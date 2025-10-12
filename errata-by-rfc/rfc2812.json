@@ -315,6 +315,21 @@
     "update_date": "2025-07-29 07:41:30"
   },
   {
+    "errata_id": "8597",
+    "doc-id": "RFC2812",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.3.1",
+    "orig_text": "               =/ 14( SPACE middle ) [ SPACE [ \":\" ] trailing ]",
+    "correct_text": "    params     =/ 14( SPACE middle ) [ SPACE [ \":\" ] trailing ]",
+    "notes": "To comply with the ABNF specification and to be consistent with the other 'incremental alternative' rule definitions in the remainder of section 2.3.1, the <params> identifier should be present at the beginning of the rule definition.",
+    "submit_date": "2025-10-11",
+    "submitter_name": "John DeSilva",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
     "errata_id": "991",
     "doc-id": "RFC2812",
     "errata_status_code": "Held for Document Update",
