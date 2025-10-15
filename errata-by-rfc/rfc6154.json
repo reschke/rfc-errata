@@ -58,5 +58,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8601",
+    "doc-id": "RFC6154",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "N/A",
+    "correct_text": "Updates: 3501",
+    "notes": "This RFC updates RFC 3501 (IMAP4rev1) by allowing servers to send LIST responses including flags such as \\Trash. That was previously forbidden (page 86): \"Server implementations MUST NOT generate flag-extension flags except as defined by future standard or standards-track revisions of this specification.\"\n --VERIFIER NOTES-- \nPer notes from the RFC authors, 6154 does not update 3501.",
+    "submit_date": "2025-10-14",
+    "submitter_name": "Jakob Kramer",
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-10-14 16:29:54"
   }
 ]
