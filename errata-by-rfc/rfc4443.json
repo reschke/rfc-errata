@@ -62,17 +62,17 @@
   {
     "errata_id": "6153",
     "doc-id": "RFC4443",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.1",
     "orig_text": "3.1.  Destination Unreachable Message\r\n\r\n   [..]\r\n\r\n   If the reason for the failure to deliver is that the destination is\r\n   beyond the scope of the source address, the Code field is set to 2.\r\n   This condition can occur only when the scope of the source address is\r\n   smaller than the scope of the destination address (e.g., when a\r\n   packet has a link-local source address and a global-scope destination\r\n   address) and the packet cannot be delivered to the destination\r\n   without leaving the scope of the source address.",
     "correct_text": "3.1.  Destination Unreachable Message\r\n\r\n   [..]\r\n\r\n   If the reason for the failure to deliver is that the destination is\r\n   beyond the scope zone of the source address, the Code field is set to\r\n   2.  The scope zone of the destination address is determined by the\r\n   scope of the address and arrival interface of the packet, as specified\r\n   in [IPv6-SCOPE, Section 9].  Similarly, the scope zone of the source\r\n   address is determined by the scope of the address and arrival\r\n   interface of the packet.  This condition can occur only when\r\n   transmitting the packet on the chosen next-hop interface would cause\r\n   the packet to leave the zone of the source address, i.e., cross a zone\r\n   boundary of the scope of the source address.\r\n\r\n7.1.  Normative References\r\n\r\n   [..]\r\n\r\n   [IPv6-SCOPE] Deering, S., Haberman, B., Jinmei, T., Nordmark, E.,\r\n                and B. Zill, \"IPv6 Scoped Address Architecture\", RFC\r\n                4007, March 2005.   ",
-    "notes": "https://tools.ietf.org/html/rfc4007#section-9\r\n\r\nScope zone is not scope.\r\n\r\nConsider a case when the source IP is link-local and the destination is global, yet the routing happens in the same VLAN. Per RFC 4007, the packet should be transmitted; however, RFC 4443 allows for an ambiguity which is already causing vendors to reject packets in this case.",
+    "notes": "https://tools.ietf.org/html/rfc4007#section-9\r\n\r\nScope zone is not scope.\r\n\r\nConsider a case when the source IP is link-local and the destination is global, yet the routing happens in the same VLAN. Per RFC 4007, the packet should be transmitted; however, RFC 4443 allows for an ambiguity which is already causing vendors to reject packets in this case.\n --VERIFIER NOTES-- \nI was tempted to mark this HFDU, since it seems like there is always the opportunity to improve clarity around text that deals with IPv6 scope concepts.\r\n\r\nHowever, I'm not sure this specific text is an improvement and some discussion on the mailing list did not seem to come to any consensus as to what should be done.  See also:\r\n\r\n    https://mailarchive.ietf.org/arch/msg/ipv6/pkRo2Bt4hHu9PFJf2BtYPVn4sJk/\r\n\r\nand preceding messages.",
     "submit_date": "2020-05-01",
     "submitter_name": "Töma Gavrichenkov",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-10-16 21:20:56"
   },
   {
     "errata_id": "88",
