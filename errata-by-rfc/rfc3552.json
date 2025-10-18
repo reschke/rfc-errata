@@ -88,5 +88,20 @@
     "verifier_id": "153",
     "verifier_name": "Mirja Kühlewind",
     "update_date": "2024-01-11 08:43:21"
+  },
+  {
+    "errata_id": "8607",
+    "doc-id": "RFC3552",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "[In the metadata]\r\n<stream>IAB</stream>",
+    "correct_text": "<stream>IETF</stream>",
+    "notes": "BCPs, by definition, can only be in the IETF Stream. The fact that the IAB is an *author* of this document seems to have confused the RFC Editor when the \"stream\" metadata was retrofitted to the RFC index, some years after the RFC was published.",
+    "submit_date": "2025-10-17",
+    "submitter_name": "Brian Carpenter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
