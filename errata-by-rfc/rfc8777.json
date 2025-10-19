@@ -43,5 +43,20 @@
     "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2021-10-05 10:00:02"
+  },
+  {
+    "errata_id": "8609",
+    "doc-id": "RFC8777",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "  #!/usr/bin/env python3\r\n  import sys\r\n  name=sys.argv[1]\r\n  wire=''\r\n  for dn in name.split('.'):\r\n    if len(dn) > 0:\r\n      wire += ('%02x' % len(dn))\r\n      wire += (''.join('%02x'%ord(x) for x in dn))\r\n  print(len(wire)//2) + 2\r\n  print(wire)",
+    "correct_text": "  #!/usr/bin/env python3\r\n  import sys\r\n  name=sys.argv[1]\r\n  wire=''\r\n  for dn in name.split('.'):\r\n    if len(dn) > 0:\r\n      wire += ('%02x' % len(dn))\r\n      wire += (''.join('%02x'%ord(x) for x in dn))\r\n  wire += '00'\r\n  print(len(wire)//2 + 2)\r\n  print(wire)",
+    "notes": "Given erratum 6218 (<https://www.rfc-editor.org/errata/eid6218>: missing final empty root label), already verified, the Python code should also produce the correct output.",
+    "submit_date": "2025-10-18",
+    "submitter_name": "Viktor Dukhovni",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

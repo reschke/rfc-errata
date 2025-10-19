@@ -32,7 +32,7 @@
   {
     "errata_id": "7509",
     "doc-id": "RFC4862",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.3",
     "orig_text": "A link-local address is formed by combining the well-known link-local prefix FE80::0 [RFC4291] (of appropriate length) with an interface identifier as follows:\r\n",
@@ -40,8 +40,8 @@
     "notes": "The prefix text should be in CIDR notation, as the referenced RFC4921 sec. 2.4 lists it in CIDR notation. Further, FE80::0 describes an address, not a prefix.",
     "submit_date": "2023-05-05",
     "submitter_name": "Jonathan Johnson",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2023-05-05 15:19:33"
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-10-18 15:45:30"
   }
 ]
