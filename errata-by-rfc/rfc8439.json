@@ -92,31 +92,31 @@
   {
     "errata_id": "6989",
     "doc-id": "RFC8439",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.8.2",
     "orig_text": "Poly1305 r =  455e9a4057ab6080f47b42c052bac7b",
     "correct_text": "Poly1305 r = 8455e9a4057ab6080f47b42c052bac7b",
-    "notes": "fist nibble of r appears to be missing",
+    "notes": "fist nibble of r appears to be missing\n --VERIFIER NOTES-- \nr in Section 2.8.2 is the clamped 128-bit little-endian integer derived from the first 16 bytes of the Poly1305 one-time key. Clamping clears the top bits (see Section 2.5.1), so the big-endian hex begins 0x0455..., and when printed as a number the leading zero nibble may be omitted, yielding 455e9a4057ab6080f47b42c052bac7b as shown in the RFC. The 0x8455e9a4 value visible in the preceding table is a pre-clamp ChaCha20 block word, not r itself. This report conflates the pre-clamp word with the post-clamp r.\r\n\r\nRefs: RFC 8439 Section 2.5.1 and Section 2.8.2: http://www.rfc-editor.org/rfc/rfc8439.html\r\n",
     "submit_date": "2022-06-10",
     "submitter_name": "Mike Markowitz",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2022-06-13 16:36:28"
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-10-20 15:18:45"
   },
   {
     "errata_id": "7880",
     "doc-id": "RFC8439",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.4.1",
     "orig_text": "encrypted_message |= (block^key_stream)[0..len(plaintext)%64]\r\n",
     "correct_text": "encrypted_message |= (block^key_stream)[0..(len(plaintext)%64)-1]",
-    "notes": "If the plaintext size is not a multiple of 64 bytes, there is an off-by-one error in appending the final block of the encrypted message. In the original version, the encrypted message would always be one byte larger than the plaintext.\r\n\r\nThe corrected version ensures that the encrypted message size is always equal to the plaintext size.\r\n\r\nFor completeness: If the plaintext size is a multiple of 64 bytes, the second part of the code is skipped. Hence, this off-by-one error is not triggered in that specific case.\r\n\r\n(Non-)relation to correction 5989: The \"original text\", as quoted here, assumes that correction 5989 has already been applied. Correction 5989 deals with a different issue of this line of code, namely, the replacement of \"+=\" by \"|=\". This is completely orthogonal to the off-by-one error described here.",
-    "submit_date": "2024-04-03",
+    "notes": "If the plaintext size is not a multiple of 64 bytes, there is an off-by-one error in appending the final block of the encrypted message. In the original version, the encrypted message would always be one byte larger than the plaintext.\r\n\r\nThe corrected version ensures that the encrypted message size is always equal to the plaintext size.\r\n\r\nFor completeness: If the plaintext size is a multiple of 64 bytes, the second part of the code is skipped. Hence, this off-by-one error is not triggered in that specific case.\r\n\r\n(Non-)relation to correction 5989: The \"original text\", as quoted here, assumes that correction 5989 has already been applied. Correction 5989 deals with a different issue of this line of code, namely, the replacement of \"+=\" by \"|=\". This is completely orthogonal to the off-by-one error described here.\r\n\r\n--VERIFIER NOTES--\r\nFixes an off-by-one in the final partial-block slice. §2.4.1 uses inclusive bounds (e.g., 0..63 for full blocks). For L = len(plaintext)%64, the correct indices are 0..(L-1); 0..L would extract L+1 bytes.\r\nRefs: RFC 8439 §2.4.1: http://datatracker.ietf.org/doc/html/rfc8439#section-2.4.1",
+    "submit_date": "2024-04-00",
     "submitter_name": "Volker Diels-Grabsch",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-10-20 15:58:10"
   }
 ]
