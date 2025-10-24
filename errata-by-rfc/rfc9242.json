@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2024-12-18 13:23:31"
+  },
+  {
+    "errata_id": "8613",
+    "doc-id": "RFC9242",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3.2.",
+    "orig_text": "   Note that it is possible to avoid actual reconstruction of the\r\n   message by incrementally calculating prf on decrypted (or ready to be\r\n   encrypted) fragments.  However, care must be taken to properly\r\n   replace the content of the Next Header and the Length fields so that\r\n   the result of computing the prf is the same as if it were computed on\r\n   the reconstructed message.\r\n",
+    "correct_text": "   Note that it is possible to avoid actual reconstruction of the\r\n   message by incrementally calculating prf on decrypted (or ready to be\r\n   encrypted) fragments.  However, care must be taken to properly\r\n   replace the content of the Next Payload and the Length fields so that\r\n   the result of computing the prf is the same as if it were computed on\r\n   the reconstructed message.\r\n",
+    "notes": "s/Next Header/Next Payload/",
+    "submit_date": "2025-10-23",
+    "submitter_name": "Andrew Cagney",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
