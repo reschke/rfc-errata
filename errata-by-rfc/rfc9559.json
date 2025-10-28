@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8615",
+    "doc-id": "RFC9559",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.4.1.24",
+    "orig_text": "   path:  \\Segment\\Tracks\\TrackEntry\\AttachmentLink\r\n   maxOccurs:  1\r\n   maxver:  3",
+    "correct_text": "   path:  \\Segment\\Tracks\\TrackEntry\\AttachmentLink\r\n   maxver:  3",
+    "notes": "The \"maxOccurs\" set to 1 is bogus. There can more more than one AttachmentLink in a TrackEntry. It should be removed to allow any number of AttachmentLink per TrackEntry.\r\n\r\nThis corresponds to this fix: https://github.com/ietf-wg-cellar/matroska-specification/pull/932",
+    "submit_date": "2025-10-27",
+    "submitter_name": "Steve Lhomme",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8616",
+    "doc-id": "RFC9559",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "22",
+    "orig_text": "   (via the CueClusterPosition element). Additional non-mandated\r\n   elements are part of the CuePoint element, such as CueDuration,\r\n   CueRelativePosition, CueCodecState, and others that provide any\r\n   Matroska Reader with additional information to use in the\r\n   optimization of seeking performance.",
+    "correct_text": "   (via the CueClusterPosition element). Additional non-mandated\r\n   elements are part of the CuePoint element, such as CueDuration,\r\n   CueRelativePosition, CueCodecState, and others that provide any\r\n   Matroska Reader with additional information to use in the\r\n   optimization of seeking performance.\r\n\r\n   The absolute timestamp stored in CueTime corresponds to the sum of\r\n   the Cluster Timestamp and the Block Timestamp.  The CodecDelay,\r\n   DiscardPadding and SeekPreRoll are not taken in account.",
+    "notes": "The CueTime was under specified. It wasn't clear what time elements should be included and excluded from that value.\r\n\r\nThis new chapter adds the missing part. It corresponds to this fix: https://github.com/ietf-wg-cellar/matroska-specification/pull/946",
+    "submit_date": "2025-10-27",
+    "submitter_name": "Steve Lhomme",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
