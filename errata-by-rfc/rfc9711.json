@@ -32,7 +32,7 @@
   {
     "errata_id": "8528",
     "doc-id": "RFC9711",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "/ eat_nonce /       10: h'48df7b172d70b5a18935d0460a73dd71',\r\n/ eat_nonce /       10: h'e253cabedc9eec24ac4e25bcbeaf7765',\r\n/ eat_nonce /       10: h'd79b964ddd5471c1393c8888',\r\n/ eat_nonce /       10: h'99b67438dba40743266f70bf75feb1026d5134\r\n                              97a229bfe8',\r\n/ eat_nonce /         10: h'8b0b28782a23d3f6',\r\n/ eat_nonce / 10: h'5e19fba4483c7896',\r\n/ eat_nonce /       10: h'3515744961254b41a6cf9c02',",
@@ -40,8 +40,8 @@
     "notes": "For all the CWT examples in Appendix A, where the claim name is \"eat_nonce\" it should be changed to \"Nonce\", as \"eat_nonce\" is only for JWT.",
     "submit_date": "2025-08-09",
     "submitter_name": "Steven Bellock",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-08-13 09:12:49"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 04:19:28"
   }
 ]

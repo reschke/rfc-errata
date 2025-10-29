@@ -47,31 +47,31 @@
   {
     "errata_id": "8457",
     "doc-id": "RFC7636",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "4.1",
     "orig_text": "code-verifier = 43*128unreserved",
     "correct_text": "code_verifier = 43*128unreserved",
-    "notes": "The ABNF accidentally uses a hyphen/dash rather than an underscore in the code_verifier name in its rule.",
+    "notes": "The ABNF accidentally uses a hyphen/dash rather than an underscore in the code_verifier name in its rule.\n --VERIFIER NOTES-- \nThis is not an error and the errata should be rejected. As per the ABNF definition in https://www.rfc-editor.org/rfc/rfc5234.html#section-21 the name contains \"alphabetics, digits, and hyphens (dashes)\", and not underscores. The commenter may be expecting the ABNF rule name of code-verifier to match the parameter name of code_verifier, but they do not need to be the same. While this is confusing, the text is correct as it stands. ",
     "submit_date": "2025-06-13",
     "submitter_name": "Jeff Walden",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 04:06:48"
   },
   {
     "errata_id": "8458",
     "doc-id": "RFC7636",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "4.2",
     "orig_text": "code-challenge = 43*128unreserved",
     "correct_text": "code_challenge = 43*128unreserved",
-    "notes": "The ABNF accidentally uses a hyphen/dash rather than an underscore in the code_challenge name in its rule.",
+    "notes": "The ABNF accidentally uses a hyphen/dash rather than an underscore in the code_challenge name in its rule.\n --VERIFIER NOTES-- \nThis is not an error and the errata should be rejected. As per the ABNF definition in https://www.rfc-editor.org/rfc/rfc5234.html#section-21 the name contains \"alphabetics, digits, and hyphens (dashes)\", and not underscores. The commenter may be expecting the ABNF rule name of code challenge to match the parameter name of code challenge but they do not need to be the same. While this is confusing, the text is correct as it stands. ",
     "submit_date": "2025-06-13",
     "submitter_name": "Jeff Walden",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 04:09:35"
   }
 ]

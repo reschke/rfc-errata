@@ -2,7 +2,7 @@
   {
     "errata_id": "4670",
     "doc-id": "RFC7644",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.4.2.2",
     "orig_text": "Filters MUST be evaluated using the following order of operations, in\r\n   order of precedence:\r\n\r\n   1.  Grouping operators\r\n\r\n   2.  Logical operators - where \"not\" takes precedence over \"and\",\r\n       which takes precedence over \"or\"\r\n\r\n   3.  Attribute operators",
@@ -10,14 +10,14 @@
     "notes": "It seems that the precedence of logical and attribute precedence is reversed? The filter filter=title sw \"M\" and userType eq \"Employee\" is meant to be interpreted as filter=(title sw \"M\") and (userType eq \"Employee\"). \r\nThis is also the \"expected\" behaviour consistent with most other languages - with the notable exception of unary \"or\" which in SCIM is disambiguated as it can only apply to a parenthesized filter expression.",
     "submit_date": "2016-04-15",
     "submitter_name": "Vassilis Michalitsis",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 15:05:00"
   },
   {
     "errata_id": "4690",
     "doc-id": "RFC7644",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.4.2.2",
     "orig_text": "valFilter = attrExp / logExp / *1\"not\" \"(\" valFilter \")\"",
@@ -25,9 +25,9 @@
     "notes": "Figure 1 contains the ABNF for SCIM filters. The term \"logExp\" specifies \"FILTER\" as an option which unintentionally allows recursion. A valFilter should only allow simple sub-attribute expressions and simple logic.  Nesting of valuePath (e.g. attr[a eq b and attr[c eq d]]) should not be possible.",
     "submit_date": "2016-05-10",
     "submitter_name": "Phil Hunt",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 15:06:38"
   },
   {
     "errata_id": "4978",
@@ -197,7 +197,7 @@
   {
     "errata_id": "8084",
     "doc-id": "RFC7644",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.4.3",
     "orig_text": "   {\r\n     \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:ListResponse\"],\r\n     \"totalResults\":100,\r\n     \"itemsPerPage\":10,\r\n     \"startIndex\":1,\r\n     \"Resources\":[\r\n       {\r\n         \"id\":\"2819c223-7f76-413861904646\",\r\n         \"userName\":\"jsmith\",\r\n         \"displayName\":\"Smith, James\"\r\n       },\r\n       {\r\n         \"id\":\"c8596b90-7539-4f20968d1908\",\r\n         \"displayName\":\"Smith Family\"\r\n       },\r\n        ...\r\n     ]\r\n   }",
@@ -205,14 +205,14 @@
     "notes": "RFC7643 §3 indicates that the schema attribute is needed for all the representations:\r\n\r\n      The \"schemas\" attribute is a REQUIRED attribute and is an array of\r\n      Strings containing URIs that are used to indicate the namespaces\r\n      of the SCIM schemas that define the attributes present in the\r\n      current JSON structure. [...]\r\n      All representations of SCIM schemas MUST include a\r\n      non-empty array with value(s) of the URIs supported by that\r\n      representation.",
     "submit_date": "2024-08-19",
     "submitter_name": "Éloi Rivard",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-08-20 09:28:52"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 15:11:36"
   },
   {
     "errata_id": "8096",
     "doc-id": "RFC7644",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.5.2.1",
     "orig_text": " {\r\n     \"schemas\":\r\n       [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\r\n     \"Operations\":[{\r\n       \"op\":\"add\",\r\n       \"value\":{\r\n         \"emails\":[\r\n           {\r\n             \"value\":\"babs@jensen.org\",\r\n             \"type\":\"home\"\r\n           }\r\n         ],\r\n         \"nickname\":\"Babs\"\r\n     }]\r\n   }\r\n",
@@ -220,14 +220,14 @@
     "notes": "missing one closing curly bracket",
     "submit_date": "2024-09-07",
     "submitter_name": "Siqing Zheng",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2024-09-11 10:30:01"
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 15:10:17"
   },
   {
     "errata_id": "8097",
     "doc-id": "RFC7644",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.5.2.1",
     "orig_text": "  o  If the target location does not exist, the attribute and value are\r\n      added.\r\n\r\n   o  If the target location specifies a complex attribute, a set of\r\n      sub-attributes SHALL be specified in the \"value\" parameter.\r\n\r\n   o  If the target location specifies a multi-valued attribute, a new\r\n      value is added to the attribute.",
@@ -235,14 +235,14 @@
     "notes": "Looks Microsoft Azure had a different understanding about the patch 'add' operation, in which they add an additional element to the multi-value attribute by the filter in the path. \r\nFor example, \r\n{\r\n...\r\n       \"op\":\"add\",\r\n       \"path\":\"emails[type eq \\\"work\\\"].value\"\r\n       \"value\":\"example@email.com\"\r\n...\r\n  } \r\nMicrosoft Azure expects to add a new email with value \"example@email.com\" and type \"work\". \r\nHowever, I think it's a pretty hacky way to do it and may not be the RFC intent. I also found there was a discussion about it, which they claim the RFC is not very clear about the patch 'add' part. \r\nLink to discussion on Microsoft platform: https://learn.microsoft.com/en-us/answers/questions/708183/scim-patch-of-complex-multi-valued-attribute-inclu#:~:text=are%20relevant%20here%3A-,If%20the%20target%20location%20does%20not%20exist,-%2C%20the%20attribute%20and\r\n\r\nCould we please clarify if such 'add' patch by filter is expected or not? or may be add an extra example? \r\n\r\nThanks!",
     "submit_date": "2024-09-08",
     "submitter_name": "Siqing Zheng",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 15:09:23"
   },
   {
     "errata_id": "8365",
     "doc-id": "RFC7644",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4",
     "orig_text": "   /ResourceTypes\r\n      An HTTP GET to this endpoint is used to discover the types of\r\n      resources available on a SCIM service provider (e.g., Users and\r\n      Groups).  Each resource type defines the endpoints, the core\r\n      schema URI that defines the resource, and any supported schema\r\n      extensions.",
@@ -250,9 +250,9 @@
     "notes": "The word \"endpoint\" should be in singular. Each ResourceType can only define one endpoint because the attribute \"endpoint\" is single-valued in RFC7643 section 6.",
     "submit_date": "2025-04-01",
     "submitter_name": "Matthias Winter",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 03:58:03"
   },
   {
     "errata_id": "8367",

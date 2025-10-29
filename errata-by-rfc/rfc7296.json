@@ -107,16 +107,16 @@
   {
     "errata_id": "8407",
     "doc-id": "RFC7296",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.15.",
     "orig_text": "InitiatorSignedOctets = RealMessage1 | NonceRData | MACedIDForI\r\n\r\nNonceRPayload = PayloadHeader | NonceRData",
     "correct_text": "InitiatorSignedOctets = RealMessage1 | Nr| MACedIDForI\r\n\r\nNonceRPayload = PayloadHeader | Nr",
-    "notes": "I'm not sure whether \"NonceRData\" and \"NonceIData \" refers to Nr and Ni? I searched \"NonceRData\" but I cannot find its definition. \r\n\r\nBTW, because we have already included \"MACedIDForI\" that is generated from Nonce in InitiatorSignedOctets, can we remove \"NonceRData\" from InitiatorSignedOctets (assuming NonceRData is Nr)?",
+    "notes": "I'm not sure whether \"NonceRData\" and \"NonceIData \" refers to Nr and Ni? I searched \"NonceRData\" but I cannot find its definition. \r\n\r\nBTW, because we have already included \"MACedIDForI\" that is generated from Nonce in InitiatorSignedOctets, can we remove \"NonceRData\" from InitiatorSignedOctets (assuming NonceRData is Nr)?\n --VERIFIER NOTES-- \nThe proposed change is wrong. Nr in the RFC7296 diagrams\r\nrepresents the whole Nonce payload, including payload header,\r\nwhile only its content is included in to the authentication data.\r\n\r\nThis is expressed by the line:\r\n\r\nNonceRPayload = PayloadHeader | NonceRData\r\n\r\nThe correct change would be:\r\n\r\nNr = PayloadHeader | NonceRData\r\n\r\nHowever, while terms NonceRPayload, InitiatorIDPayload,\r\nRealMessage1, etc., are not formally defined in the RFC,\r\nthe explanation text above makes it clear what is meant.",
     "submit_date": "2025-05-07",
     "submitter_name": "Yan Jia",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 04:03:06"
   }
 ]

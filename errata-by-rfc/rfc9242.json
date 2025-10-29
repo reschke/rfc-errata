@@ -17,7 +17,7 @@
   {
     "errata_id": "8613",
     "doc-id": "RFC9242",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "3.3.2.",
     "orig_text": "   Note that it is possible to avoid actual reconstruction of the\r\n   message by incrementally calculating prf on decrypted (or ready to be\r\n   encrypted) fragments.  However, care must be taken to properly\r\n   replace the content of the Next Header and the Length fields so that\r\n   the result of computing the prf is the same as if it were computed on\r\n   the reconstructed message.\r\n",
@@ -25,8 +25,8 @@
     "notes": "s/Next Header/Next Payload/",
     "submit_date": "2025-10-23",
     "submitter_name": "Andrew Cagney",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-10-28 04:20:48"
   }
 ]
