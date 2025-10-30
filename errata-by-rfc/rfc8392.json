@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2024-06-11 09:39:34"
+  },
+  {
+    "errata_id": "8617",
+    "doc-id": "RFC8392",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "   NumericDate\r\n      The \"NumericDate\" term in this specification has the same meaning\r\n      and processing rules as the JWT \"NumericDate\" term defined in\r\n      Section 2 of [RFC7519], except that it is represented as a CBOR\r\n      numeric date (from Section 2.4.1 of [RFC7049]) instead of a JSON\r\n      number.  The encoding is modified so that the leading tag 1\r\n      (epoch-based date/time) MUST be omitted.\r\n",
+    "correct_text": "   NumericDate\r\n      The \"NumericDate\" term in this specification has the same meaning\r\n      and processing rules as the JWT \"NumericDate\" term defined in\r\n      Section 2 of [RFC7519], except that it is represented as a finite\r\n      CBOR numeric date (from Section 2.4.1 of [RFC7049]) instead of a\r\n      JSON number.  The encoding is modified so that the leading tag 1\r\n      (epoch-based date/time) MUST be omitted.",
+    "notes": "Section 2.4.1 of RFC7049 says that the value is a negative or positive integer or a floating point *number* (which does not include NaN floating pointing point values), but it does not say anything about floating point positive and negative infinity. This is likely to be missed by most implementers of RFC 8392.\r\n\r\n\r\nA JWT \"NumericDate\" was intended to mimic a value which can be expressed in JSON. JSON does not allow infinite values.\r\n\r\nIn addition, exp, nbf, and iat all share the same type. The iat is the \"issued at\" date. The idea of a creation date with an infinite value is nonsensical.",
+    "submit_date": "2025-10-29",
+    "submitter_name": "Rohan Mahy",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
