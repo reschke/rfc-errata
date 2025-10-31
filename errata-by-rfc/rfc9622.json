@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8619",
+    "doc-id": "RFC9622",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.1.5",
+    "orig_text": "\r\n      TransportProperties := ...\r\n      SecurityParameters  := ...\r\n\r\n      Preconnection := NewPreconnection(LocalSpecifier,\r\n                                        RemoteSpecifier,\r\n                                        TransportProperties,\r\n                                        SecurityProperties)\r\n      Listener := Preconnection.Listen()",
+    "correct_text": "\r\n      TransportProperties := ...\r\n      SecurityParameters  := ...\r\n\r\n      Preconnection := NewPreconnection(LocalSpecifier,\r\n                                        RemoteSpecifier,\r\n                                        TransportProperties,\r\n                                        SecurityParameters)\r\n      Listener := Preconnection.Listen()",
+    "notes": "Using wrong variable name for SecurityParameters variable in pseudocode, happens 4 times in the section.",
+    "submit_date": "2025-10-30",
+    "submitter_name": "Ingebrigt Hovind",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

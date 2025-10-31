@@ -28,5 +28,35 @@
     "verifier_id": "170",
     "verifier_name": "Francesca Palombini",
     "update_date": "2022-11-09 00:31:54"
+  },
+  {
+    "errata_id": "8620",
+    "doc-id": "RFC8188",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1",
+    "orig_text": "   The encrypted data in this example is the UTF-8-encoded string \"I am\r\n   the walrus\".  The input-keying material is the value \"yqdlZ-\r\n   tYemfogSmv7Ws5PQ\" (in base64url).  The 54-octet content body contains\r\n   a single record and is shown here using 71 base64url characters for\r\n   presentation reasons.\r\n\r\n   HTTP/1.1 200 OK\r\n   Content-Type: application/octet-stream\r\n   Content-Length: 54\r\n   Content-Encoding: aes128gcm\r\n\r\n   I1BsxtFttlv3u_Oo94xnmwAAEAAA-NAVub2qFgBEuQKRapoZu-IxkIva3MEB1PD-\r\n   ly8Thjg",
+    "correct_text": "   The encrypted data in this example is the UTF-8-encoded string \"I am\r\n   the walrus\".  The input-keying material is the value \"yqdlZ-\r\n   tYemfogSmv7Ws5PQ\" (in base64url).  The 54-octet content body contains\r\n   a single record and is shown here using 72 base64url characters for\r\n   presentation reasons.\r\n\r\n   HTTP/1.1 200 OK\r\n   Content-Type: application/octet-stream\r\n   Content-Length: 54\r\n   Content-Encoding: aes128gcm\r\n\r\n   I1BsxtFttlv3u_Oo94xnmwAAEAAA-NAVub2qFgBEuQKRapoZu_ul1ATXXzhZ8IY\r\n   2l5S6w8cG",
+    "notes": "The example is missing the padding delimiter octet.\r\n\r\nThe paragraph directly above this explicitly says it should have it.\r\n\r\n>   [...] This uses a\r\n>   record size of 4096 octets and no padding (just the single-octet\r\n>   padding delimiter), so only a partial record is present.\r\n\r\nAlso, without that the delimiter, the body is only 53 octets, not the 54 the description says it should be.",
+    "submit_date": "2025-10-30",
+    "submitter_name": "Patrick Barrett",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8621",
+    "doc-id": "RFC8188",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2",
+    "orig_text": "   HTTP/1.1 200 OK\r\n   Content-Length: 73\r\n   Content-Encoding: aes128gcm\r\n\r\n   uNCkWiNYzKTnBN9ji3-qWAAAABkCYTHOG8chz_gnvgOqdGYovxyjuqRyJFjEDyoF\r\n   1Fvkj6hQPdPHI51OEUKEpgz3SsLWIqS_uA",
+    "correct_text": "   HTTP/1.1 200 OK\r\n   Content-Length: 74\r\n   Content-Encoding: aes128gcm\r\n\r\n   uNCkWiNYzKTnBN9ji3-qWAAAABkCYTHOG8chz_gnvgOqdGYovxyjuqRyJFjEDyoF\r\n   1Fvkj6hQPdPHfNE6ZBBGizjWQMll3XVvzJ8",
+    "notes": "This is the same issue as Erata ID 8620 (https://www.rfc-editor.org/errata/eid8620), but for the next example.\r\n\r\nThis one I'm less sure about. The RFC never explicitly says whether the final padding delimiter is required or not, but, by my reading at least, does strongly imply it is required in several places.\r\n\r\nAssuming the final padding delimiter is required, this example should include it.",
+    "submit_date": "2025-10-30",
+    "submitter_name": "Patrick Barrett",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
