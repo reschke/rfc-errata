@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8623",
+    "doc-id": "RFC9052",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "C.5.1",
+    "orig_text": "MAC: AES-CMAC, ...",
+    "correct_text": "MAC: AES-CBC-MAC, ...",
+    "notes": "The actual message diagnostic uses the correct algorithm name, but the descriptive text calls it \"AES-CMAC\" which is a different algorithm (and one not currently in the IANA registry).\r\n\r\nSection C.6.1 has an identical typo.",
+    "submit_date": "2025-10-31",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
