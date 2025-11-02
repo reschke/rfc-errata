@@ -32,7 +32,7 @@
   {
     "errata_id": "8007",
     "doc-id": "RFC2640",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "B.2.1 & B.2.3",
     "orig_text": "The first step in the process can be performed by maintaining a\r\nmapping table that includes the local character set code and the\r\ncorresponding UCS code. For instance the ISO/IEC 8859-8 [ISO-8859]\r\ncode for the Hebrew letter \"VAV\" is 0xE4. The corresponding 4 byte\r\nISO/IEC 10646 code is 0x000005D5.\r\n\r\n=====================================================================\r\n\r\nThis example demonstrates mapping ISO/IEC 8859-8 character set to\r\nUTF-8 and back to ISO/IEC 8859-8. As noted earlier, the Hebrew letter\r\n\"VAV\" is convertd from the ISO/IEC 8859-8 character code 0xE4 to the\r\ncorresponding 4 byte ISO/IEC 10646 code of 0x000005D5 by a simple\r\nlookup of a conversion/mapping file.\r\n\r\n=====================================================================\r\n\r\nFinally, the UCS-4 character code is converted to ISO/IEC 8859-8\r\ncharacter code (using the mapping table which matches ISO/IEC 8859-8\r\nto UCS-4 ) to produce the original 0xE4 code for the Hebrew letter\r\n\"VAV\".",
@@ -40,8 +40,8 @@
     "notes": "The ISO-8859-8 encoding for the Hebrew letter \"VAV\" is 0xE5, not 0xE4.\r\nThe Unicode U+05D5 (0x000005D5) is the Hebrew letter \"VAV\" so everything else about these examples are correct. If you actually try converting 0xE4 you'll get Hebrew letter \"HE\" (U+05D4).",
     "submit_date": "2024-06-27",
     "submitter_name": "Tim Geiser",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-01 12:31:49"
   }
 ]

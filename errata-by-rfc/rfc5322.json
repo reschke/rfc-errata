@@ -452,16 +452,16 @@
   {
     "errata_id": "8464",
     "doc-id": "RFC5322",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.4",
     "orig_text": "obs-angle-addr  =   [CFWS] \"<\" obs-route addr-spec \">\" [CFWS]",
     "correct_text": "obs-angle-addr  =   [CFWS] \"<\" [obs-route] addr-spec \">\" [CFWS]",
-    "notes": "If I understand correctly, according to RFC 822 (the RFC 5322 'obsolete syntax'), an email address enclosed in angle brackets may or may not have a prepended route. If correct, the obs-route particle of the ABNF declaration should be labeled optional in brackets [].\r\n\r\nRFC 5322 states that \r\n\"mailbox addresses were allowed to have a route portion before the addr-spec when enclosed in \"<\" and \">\"\", which suggests that they were also allowed to not have a route portion.\r\n\r\nRFC 822 Section 6.1 defines the route is optional in an angle bracketed address:\r\nroute-addr  =  \"<\" [route] addr-spec \">\"\r\n\r\nand RFC 2822 Section 4.4, where the section in question seems to be copied from, does indeed label the route portion as optional in the ABNF:\r\nobs-angle-addr  =       [CFWS] \"<\" [obs-route] addr-spec \">\" [CFWS]",
+    "notes": "If I understand correctly, according to RFC 822 (the RFC 5322 'obsolete syntax'), an email address enclosed in angle brackets may or may not have a prepended route. If correct, the obs-route particle of the ABNF declaration should be labeled optional in brackets [].\r\n\r\nRFC 5322 states that \r\n\"mailbox addresses were allowed to have a route portion before the addr-spec when enclosed in \"<\" and \">\"\", which suggests that they were also allowed to not have a route portion.\r\n\r\nRFC 822 Section 6.1 defines the route is optional in an angle bracketed address:\r\nroute-addr  =  \"<\" [route] addr-spec \">\"\r\n\r\nand RFC 2822 Section 4.4, where the section in question seems to be copied from, does indeed label the route portion as optional in the ABNF:\r\nobs-angle-addr  =       [CFWS] \"<\" [obs-route] addr-spec \">\" [CFWS]\n --VERIFIER NOTES-- \nFrom Pete Resnick:\r\nThis is a bit obscure, but the current text is correct. The only place\r\nthat obs-angle-addr is used in the syntax is section 3.4:\r\n\r\n    angle-addr      =   [CFWS] \"<\" addr-spec \">\" [CFWS] /\r\n                        obs-angle-addr\r\n\r\nIf you do the substitution, you get:\r\n\r\n    angle-addr      =   [CFWS] \"<\" addr-spec \">\" [CFWS] /\r\n                        [CFWS] \"<\" obs-route addr-spec \">\" [CFWS]\r\n\r\nWhat that says is that angle-addr is either without a route, or with an\r\nobs-route. Making the obs-route in there as optional would be redundant.\r\nWe could have made angle-addr this way:\r\n\r\n    angle-addr      =   [CFWS] \"<\" [obs-route] addr-spec \">\" [CFWS]\r\n\r\nbut that breaks the pattern of having an obs- replacement as a final\r\nalternative, and I think it would probably be more confusing.",
     "submit_date": "2025-06-17",
     "submitter_name": "Mason K",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-01 11:45:07"
   }
 ]

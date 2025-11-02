@@ -272,7 +272,7 @@
   {
     "errata_id": "8064",
     "doc-id": "RFC2812",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.1.1",
     "orig_text": "   Numeric Replies:\r\n\r\n           ERR_NEEDMOREPARAMS              ERR_ALREADYREGISTRED",
@@ -280,9 +280,9 @@
     "notes": "Numeric reply list for the PASS message should include ERR_PASSWDMISMATCH as defined in section 5.2: Returned to indicate a failed attempt at registering a connection for which a password was required and was either not given or incorrect.",
     "submit_date": "2024-08-04",
     "submitter_name": "Mikhail Klimenko",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-01 12:33:35"
   },
   {
     "errata_id": "8485",
@@ -317,7 +317,7 @@
   {
     "errata_id": "8597",
     "doc-id": "RFC2812",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.3.1",
     "orig_text": "               =/ 14( SPACE middle ) [ SPACE [ \":\" ] trailing ]",
@@ -325,9 +325,9 @@
     "notes": "To comply with the ABNF specification and to be consistent with the other 'incremental alternative' rule definitions in the remainder of section 2.3.1, the <params> identifier should be present at the beginning of the rule definition.",
     "submit_date": "2025-10-11",
     "submitter_name": "John DeSilva",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-01 12:36:24"
   },
   {
     "errata_id": "991",

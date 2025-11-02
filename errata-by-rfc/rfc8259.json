@@ -197,16 +197,16 @@
   {
     "errata_id": "8622",
     "doc-id": "RFC8259",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4",
     "orig_text": "...The names within an object SHOULD be unique.",
     "correct_text": "Unknown, this contradicts the ECMA-404 specification.",
-    "notes": "In both the ECMA-404 and the RFC 8259 specifications, it is stated that both descriptions should be considered equal. However, in RFC 8259 it is stated that names in an object should be unique, whereas in ECMA-404 it says in section 6 : \"The JSON syntax does not impose any restrictions on\r\nthe strings used as names, does not require that name strings be unique...\"\r\n\r\nThis seems to expose a contradiction between the two, expectedly equal specifications.",
+    "notes": "In both the ECMA-404 and the RFC 8259 specifications, it is stated that both descriptions should be considered equal. However, in RFC 8259 it is stated that names in an object should be unique, whereas in ECMA-404 it says in section 6 : \"The JSON syntax does not impose any restrictions on\r\nthe strings used as names, does not require that name strings be unique...\"\r\n\r\nThis seems to expose a contradiction between the two, expectedly equal specifications.\n --VERIFIER NOTES-- \n Consensus is to reject.\r\n\r\nsee https://mailarchive.ietf.org/arch/msg/json/reBGZ98FYQeyvfi-bWkFtzJPrdk/",
     "submit_date": "2025-10-31",
     "submitter_name": "Fótyék Róbert",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-01 10:25:58"
   }
 ]

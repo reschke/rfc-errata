@@ -92,7 +92,7 @@
   {
     "errata_id": "6637",
     "doc-id": "RFC3501",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "9",
     "orig_text": "envelope        = \"(\" env-date SP env-subject SP env-from SP\r\n                  env-sender SP env-reply-to SP env-to SP env-cc SP\r\n                  env-bcc SP env-in-reply-to SP env-message-id \")\"",
@@ -100,8 +100,8 @@
     "notes": "Section 2.3.5 says:\r\n\r\n    A parsed representation of the [RFC-2822] header of the message.\r\n    Note that the IMAP Envelope structure is not the same as an\r\n    [SMTP] envelope.\r\n\r\nAlthought RFC-2822 is obsolete by RFC-5322 now, both says that the envelope should inlcude a \"References:\" header-field but the definition of the envelope in section 9 of RFC-3501 (see the part in \"Original Text\" above) doesn't include the \"references\" field.",
     "submit_date": "2021-07-10",
     "submitter_name": "TornaxO7",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-01 12:39:52"
   }
 ]
