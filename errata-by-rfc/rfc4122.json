@@ -167,7 +167,7 @@
   {
     "errata_id": "6225",
     "doc-id": "RFC4122",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.3",
     "orig_text": "ISO Object IDs (OIDs)",
@@ -175,9 +175,9 @@
     "notes": "An Object Identifier (OID) is an identification mechanism jointly developed by ITU-T and ISO/IEC.\r\n\r\nIt makes no sense saying that it is an \"ISO OID\". Actually, it can be very confusing, because people could think that \"ISO OID\" means an OID which is a descendant of { iso(1) }, which would exclude OIDs descending from { itu-t(0) } and { joint-iso-itu-t(2) }.\r\n\r\nAlso in Appendix C, \"Name string is an ISO OID\" should be changed to \"Name string is an OID\".\r\n\r\nMaybe it would also be good to mention how the OID should be formatted. I guess the intention of the author is the normal dot-notation \"2.999\" which is passed as ASCII text to the name-based UUID generation function.",
     "submit_date": "2020-07-07",
     "submitter_name": "Daniel Marschall",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-02 11:35:39"
   },
   {
     "errata_id": "6665",

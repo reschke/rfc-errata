@@ -17,7 +17,7 @@
   {
     "errata_id": "6349",
     "doc-id": "RFC5260",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6.1",
     "orig_text": "     require [\"date\", \"relational\", \"index\"];\r\n     if date :value \"gt\" :index 2 :zone \"-0500\" \"received\"\r\n             \"iso8601\" \"2007-02-26T09:00:00-05:00\",\r\n     { redirect \"aftercutoff@example.org\"; }\r\n",
@@ -25,8 +25,8 @@
     "notes": "There is a stray comma at the end of the date test.",
     "submit_date": "2020-12-06",
     "submitter_name": "Ken Murchison",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-02 11:42:53"
   }
 ]

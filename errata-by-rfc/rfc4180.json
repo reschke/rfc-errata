@@ -2,7 +2,7 @@
   {
     "errata_id": "5345",
     "doc-id": "RFC4180",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "6.  Fields containing line breaks (CRLF), double quotes, and commas \r\nshould be enclosed in double-quotes.",
@@ -10,9 +10,9 @@
     "notes": "CSV is clearly unparsable if commas are not enclosed in double quotes.",
     "submit_date": "2018-04-30",
     "submitter_name": "Abed BenBrahim",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-02 11:35:01"
   },
   {
     "errata_id": "5464",
@@ -62,7 +62,7 @@
   {
     "errata_id": "6230",
     "doc-id": "RFC4180",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "The last record in the file may or may not have an ending line break.\r\n\r\nfile = [header CRLF] record *(CRLF record) [CRLF]",
@@ -70,14 +70,14 @@
     "notes": "The grammar seems to be ambiguous in the case below:\r\n- Records have just one field;\r\n- The last record may have an empty value.\r\n\r\nFile:\r\n---\r\nheader1CRLF\r\naCRLF\r\nbCRLF\r\nEOF\r\n---\r\n\r\nIn the file above, we do not know if we have four records (header1, a, b and an empty value) with the last record not ending with a line break; or if we have three records (header1, a and b) with the last record ending with a line break.\r\n\r\nThe grammar allows empty fields:\r\nnon-escaped = *TEXTDATA\r\n\r\nAccording to RFC 2234:\r\n\"Default values are 0 and infinity so that *<element> allows any number, including zero;\"",
     "submit_date": "2020-07-13",
     "submitter_name": "Marco Diniz Sousa",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-02 11:36:34"
   },
   {
     "errata_id": "7572",
     "doc-id": "RFC4180",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "7.2 Informative Ref",
     "orig_text": "[4]  Repici, J., \"HOW-TO: The Comma Separated Value (CSV) File\r\n        Format\", 2004,\r\n        <http://www.creativyst.com/Doc/Articles/CSV/CSV01.htm>.",
@@ -85,8 +85,8 @@
     "notes": "Suggested corrected text updates the link which uses the TLS-conforming URL for the creativyst.com site and the date range of publication. It seems that some browsers might not cleanly redirect to the HTTPS address.",
     "submit_date": "2023-07-24",
     "submitter_name": "Robert Hairgrove",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-02 11:37:49"
   }
 ]

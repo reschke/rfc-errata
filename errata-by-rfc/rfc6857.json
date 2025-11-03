@@ -47,7 +47,7 @@
   {
     "errata_id": "6930",
     "doc-id": "RFC6857",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.1.8",
     "orig_text": "The <addr-spec> element that contains non-ASCII strings may appear in two forms as:\r\n\r\n   \"<\" addr-spec \">\"\r\n\r\n   or\r\n\r\n   addr-spec\r\n\r\n   Rewrite both as:\r\n\r\n   ENCODED-WORD \" :;\"\r\n",
@@ -55,8 +55,8 @@
     "notes": "Recommend \"Hold for document update\" and see the extensive comments on Erratum 6573.\r\n\r\nThe text above, while correct, is fairly horrible and might make the confusion between the requirements of Sections 3.1.5 and 3.1.8 even worse.  A complete rewrite of this section and possibly 3.1.5 would be a better fix.   Note the prohibition on Encoded Words in <addr-spec> in RFC 2047, which requires updating.   Also note that the \" :;\" construction, which is correct in Section 3.1.7, does not belong in the above.\r\n\r\nIt also not clear to me why, under some principle of minimal change, the brackets should not be just left alone if they appear in the original with no adjacent display-name.",
     "submit_date": "2022-04-10",
     "submitter_name": "John Klensin",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-02 11:54:36"
   }
 ]
