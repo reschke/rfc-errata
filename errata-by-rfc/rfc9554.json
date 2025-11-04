@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8626",
+    "doc-id": "RFC9554",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.5",
+    "orig_text": "Property parameters:\r\n    [...] In either case, it MUST NOT be assigned more than once.\r\n\r\n\r\nFormat definition:\r\n\r\nsocialpr-param = \"VALUE=uri\" / \"VALUE=text\" /\r\n                 service-type-param / any-param",
+    "correct_text": "Property parameters:\r\n    [...] In either case, it MUST NOT be assigned more than once.\r\n    The USERNAME parameter MAY be assigned if the value type is URI.\r\n\r\n\r\nFormat definition:\r\n\r\nsocialpr-param = \"VALUE=uri\" / \"VALUE=text\" /\r\n                 service-type-param / username-param /\r\n                 any-param",
+    "notes": "This clarifies that the USERNAME parameter is likely to be set on the SOCIALPROFILE property. The USERNAME parameter definition in section 4.10 does explicitly describe this relation. The SOCIALPROFILE property definition should do, too.",
+    "submit_date": "2025-11-03",
+    "submitter_name": "Robert Stepanek",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
