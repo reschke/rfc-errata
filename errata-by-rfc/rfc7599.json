@@ -107,31 +107,31 @@
   {
     "errata_id": "8512",
     "doc-id": "RFC7599",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "8.1",
     "orig_text": " A MAP-T CE receiving IPv4 packets SHOULD perform NAPT44 processing\r\n   and create any necessary NAPT44 bindings.  The source address and\r\n   source port range of packets resulting from the NAPT44 processing\r\n   MUST correspond to the source IPv4 address and source transport port\r\n   range assigned to the CE by means of the MAP Basic Mapping Rule\r\n   (BMR).\r\n\r\n   The IPv4 packet is subject to a longest IPv4 destination address +\r\n   port match MAP Rule selection, which then determines the parameters\r\n   for the subsequent NAT64 operation.  By default, all traffic is\r\n   matched to the DMR and is subject to the stateless NAT64 operation\r\n   using the DMR parameters for NAT64 (Section 5.1).  Packets that are\r\n   matched to (optional) Forwarding Mapping Rules (FMRs) are subject to\r\n   the stateless NAT64 operation using the FMR parameters (Section 5)\r\n   for the MAP algorithm.  In all cases, the CE's MAP IPv6 address\r\n   (Section 6) is used as a source address.\r\n\r\n   A MAP-T CE MUST support a Default Mapping Rule and SHOULD support one\r\n   or more Forwarding Mapping Rules.",
     "correct_text": "Append new paragraph:\r\nSome older IPv4 hosts may send UDP datagrams with the UDP checksum set to \r\nzero, however a zero checksum is not allowed for IPv6. To avoid datagram \r\ndrops, the CE SHOULD calculate valid IPv6 UDP checksums for any IPv4 UDP \r\ndatagrams where the checksum is zero as described in Section 4.5 of [RFC7915]. ",
-    "notes": "Also add normative reference to RFC 7915 in the references section.",
+    "notes": "Also add normative reference to RFC 7915 in the references section.\r\n\r\n--- Verifier note (Éric Vyncke) ---\r\n\r\nThe appended text is correct (as verified in real life deployments), but does not reflect the status of the Working Group at time of publication, i.e., it is not stricto sensu an errata.",
     "submit_date": "2025-07-14",
     "submitter_name": "Michael Overcash",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-11-06 06:08:55"
   },
   {
     "errata_id": "8513",
     "doc-id": "RFC7599",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "8.4",
     "orig_text": "A MAP-T BR receiving IPv4 packets uses a longest match IPv4 +\r\n   transport-layer port lookup to identify the target MAP-T domain and\r\n   select the FMR and DMR rules.  The MAP-T BR MUST then compute and\r\n   apply the IPv6 destination addresses from the IPv4 destination\r\n   address and port as per the selected FMR.  The MAP-T BR MUST also\r\n   compute and apply the IPv6 source addresses from the IPv4 source\r\n   address as per Section 5.1 (i.e., using the IPv4 source and the BR's\r\n   IPv6 prefix, it forms an IPv6-embedded IPv4 address).  The generic\r\n   IPv4-to-IPv6 header translation procedures outlined in [RFC6145]\r\n   apply throughout.  The resulting IPv6 packets are then passed to\r\n   regular IPv6 forwarding.\r\n\r\n   Note that the operation of a BR, when forwarding to/from MAP-T\r\n   domains that are defined without IPv4 address sharing, is the same as\r\n   that of stateless NAT64 IPv4/IPv6 translation.",
     "correct_text": "Some older IPv4 hosts may send UDP datagrams with the UDP checksum set to \r\nzero, however a zero checksum is not allowed for IPv6. To avoid datagram \r\ndrops, the BR MAY calculate valid IPv6 UDP checksums for any IPv4 UDP \r\ndatagrams where the checksum is zero as described in Section 4.5 of [RFC7915]. ",
-    "notes": "This is list as MAY since this could be an unreasonable burden on the BR as opposed to the CE.",
+    "notes": "This is list as MAY since this could be an unreasonable burden on the BR as opposed to the CE.\r\n\r\n--- Verifier Note (Éric Vyncke) ---\r\n\r\nWhile the appended text is correct (as exhibited in real life deployment) and should have been added in the original document; this does not reflect the view of the Working Group at time of publication, i.e., this is not stricto sensu an errata.",
     "submit_date": "2025-07-14",
     "submitter_name": "Michael Overcash",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-11-06 06:12:30"
   }
 ]

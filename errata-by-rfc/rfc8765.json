@@ -2,16 +2,16 @@
   {
     "errata_id": "8560",
     "doc-id": "RFC8765",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6.5",
     "orig_text": "For other types of DNS server, the RECONFIRM operation is currently\r\nundefined and SHOULD result in a NOERROR response, but it need not\r\ncause any other action to occur.",
     "correct_text": "For other types of DNS server, the RECONFIRM operation is currently\r\nundefined and MUST be silently ignored on reception.",
-    "notes": "RECONFIRM TLV is only allowed as a Primary TLV in a Unidirectional DSO message. Per RFC 8490, no response must be generated for Unidirectional DSO messages: server either processes, ignores or aborts the connection. Therefore it's wrong to recommend to \"a NOERROR response\".",
+    "notes": "RECONFIRM TLV is only allowed as a Primary TLV in a Unidirectional DSO message. Per RFC 8490, no response must be generated for Unidirectional DSO messages: server either processes, ignores or aborts the connection. Therefore it's wrong to recommend to \"a NOERROR response\".\r\n\r\n--- Verifier note (Éric Vyncke) ---\r\n\r\nSee also: https://mailarchive.ietf.org/arch/msg/dnssd/FP00REBOxT0PsxuqKZmQ1XvbaNw/",
     "submit_date": "2025-08-31",
     "submitter_name": "Ilya Kulakov",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-11-06 12:10:49"
   }
 ]
