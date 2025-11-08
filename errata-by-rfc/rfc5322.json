@@ -437,17 +437,17 @@
   {
     "errata_id": "8453",
     "doc-id": "RFC5322",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.2.2, 3.2.4",
     "orig_text": "This is a bit related to erratas 3135 and 4692.\r\n\r\nThe standard says in 3.2.2\r\n\r\n   Runs of FWS, comment, or CFWS that occur between lexical tokens in a\r\n   structured header field are semantically interpreted as a single\r\n   space character.\r\n\r\nThis seems to have evaluated from RFC 822 which said\r\n\r\n     3.4.2.  WHITE SPACE\r\n\r\n        Note:  In structured field bodies, multiple linear space ASCII\r\n               characters  (namely  HTABs  and  SPACEs) are treated as\r\n               single spaces[.]\r\n\r\nRFC 822 is pretty clear that a (RFC 5322) quoted-string defined as\r\n\r\n   ((1*([FWS] qcontent) [FWS])\r\n\r\nand stating that is shall be treated \"as an atom\", in a context of\r\n\r\n   Bat  \" \\t from \\t \"  hell < b  \" \\t l \\t \"  a  @exam.ple>\r\n\r\neffectively reduces to\r\n\r\n   Bat \" from \" hell <\"b l a\">@exam.ple>\r\n\r\n(Or is that already\r\n   Bat \" from \" hell <b \" l \" a@examp.ple>\r\nor even (that not me thinks)\r\n   Bat \"from\" hell <b\"  l  \"a@exampl.ple>\r\ni struggle.)\r\n\r\nHowever, with RFC 5322 words, and with the meaning of \"atom\", it seems to me, the effective reduction would be\r\n\r\n   Bat \"  from  \" hell <b \" \\t l \\t \" a@exam.ple>\r\nor\r\n   Bat \"  from  \" hell <b \"   l   \" a@exam.ple>\r\n\r\nif HTAB reduces to SP (i think that yes, anyway).\r\n\r\nIt is not clear, and in practice everybody does its thing the one or the other way, that much is plain!\r\n(This also applies to anything \"consecutive\" btw, does this stack up in a single-pass parser, or does it require a multi-pass parser?)",
     "correct_text": "I have no idea.\r\nI would reintroduce the RFC 822 wording somehow, so that the result is\r\n\r\n   Bat \" from \" hell <\"b l a\"@exam.ple>",
-    "notes": "My own parser formerly reduced to\r\n\r\n   \"Bat from hell\" <\"bla\"@exam.ple>\r\n\r\nand i changed it to\r\n\r\n   \"Bat__from__hell\" <\"b l a\"@exam.ple>\r\n \r\n(__ means twice space, thanks to this web editor, if i saw this correctly :)\r\nbecause we requote the entire thing no matter what, resulting in two adjacent space characters.\r\nI am a bit sad, but looking around it is not bad.  (To make it a rhyme.)",
+    "notes": "My own parser formerly reduced to\r\n\r\n   \"Bat from hell\" <\"bla\"@exam.ple>\r\n\r\nand i changed it to\r\n\r\n   \"Bat__from__hell\" <\"b l a\"@exam.ple>\r\n \r\n(__ means twice space, thanks to this web editor, if i saw this correctly :)\r\nbecause we requote the entire thing no matter what, resulting in two adjacent space characters.\r\nI am a bit sad, but looking around it is not bad.  (To make it a rhyme.)\n --VERIFIER NOTES-- \nThis report was reviewed by both Pete Resnick and Dave Crocker, concluding that 5322 and  5322bis (at the moment in the RFC editor's queue) addresses the matter of this report: whitespace in the local-part is in the so-called \"obsolete\" syntax in 5322 because it's not clear what a parser is meant to do in the scenario presented in this report.",
     "submit_date": "2025-06-06",
     "submitter_name": "Steffen Nurpmeso",
-    "verifier_id": "2",
+    "verifier_id": "183",
     "verifier_name": "Andy Newton",
-    "update_date": "2025-11-05 12:00:51"
+    "update_date": "2025-11-07 04:54:30"
   },
   {
     "errata_id": "8464",
