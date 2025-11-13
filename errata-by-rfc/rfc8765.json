@@ -13,5 +13,20 @@
     "verifier_id": "161",
     "verifier_name": "Éric Vyncke",
     "update_date": "2025-11-06 12:10:49"
+  },
+  {
+    "errata_id": "8631",
+    "doc-id": "RFC8765",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.3.1",
+    "orig_text": "n/a\r\n\r\nSee notes below",
+    "correct_text": "n/a",
+    "notes": "Hello,\r\n\r\nThis concerns the text in section 6.3.1. PUSH Message in the RFC. I'm puzzled about the text concerning the compression. I'll layout my concerns (without providing alternative text) and then point out some factual mistakes (I think) in this section.\r\n\r\nRFC 3597 section 4 states that only well-known RRs may be compressed, those are the RRs from 1035.\r\n\r\nSpecifically:\r\n\r\n> Future specifications for new RR types that contain domain names\r\n> within their RDATA MUST NOT allow the use of name compression for\r\n> those names, and SHOULD explicitly state that the embedded domain\r\n> names MUST NOT be compressed.\r\n\r\n> As noted in [RFC1123], the owner name of an RR is always eligible for compression.\r\n\r\nTaking this in consideration and the DSO is defining new \"RR\" types, where other RRs are the RDATA, the case can be made no compression should be allowed. RFC 6762 doesn't says it's updating RFC 3597, so that can not apply here.\r\n\r\nTaking this to the extreme I believe no compression should be allowed for any of these news types.\r\n\r\nSome factial observations:\r\n\r\nThe list of RR that require compressions is not correct:\r\n\r\n> NS, CNAME, PTR, DNAME, SOA, MX, AFSDB, RT, KX, RP, PX, SRV, NSEC\r\n\r\nDNAME, NSEC should not be in this list. SRV is doubtful, but I guess also not.\r\n\r\n\r\nAnd later, and more worrying:\r\n\r\n> Servers may generate PUSH messages up to a maximum DNS message length of 16,382 bytes,\r\n\r\nA DNS message has 16 bits for the length, giving it 64K of maximum length, compression is only up to 14 bits I think the two are confused here.\r\n\r\nKind Regards,\r\nMiek GIeben",
+    "submit_date": "2025-11-12",
+    "submitter_name": "Miek Gieben",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
