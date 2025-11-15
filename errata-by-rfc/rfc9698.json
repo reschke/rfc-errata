@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8635",
+    "doc-id": "RFC9698",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "   S: * OK [CAPABILITY IMAP4rev2 JMAPACCESS] done\r\n   S: 2 OK done\r\n   C: 2b JMAPACCESS\r\n   S: * JMAPACCESS \"https://example.com/.well-known/jmap\"\r\n   S: 2b OK done",
+    "correct_text": "   S: * OK [CAPABILITY IMAP4rev2 JMAPACCESS] done\r\n   S: 2 OK done\r\n   C: 2b GETJMAPACCESS\r\n   S: * JMAPACCESS \"https://example.com/.well-known/jmap\"\r\n   S: 2b OK done",
+    "notes": "Example 2 incorrectly uses \"JMAPACCESS\" as the command when it should be \"GETJMAPACCESS\".",
+    "submit_date": "2025-11-14",
+    "submitter_name": "Matt Diephouse",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2025-11-14 06:54:50"
+  }
+]

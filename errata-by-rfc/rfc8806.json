@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-10-31 09:57:06"
+  },
+  {
+    "errata_id": "8634",
+    "doc-id": "RFC8806",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "B.1",
+    "orig_text": "view root {\r\n    match-destinations { 127.12.12.12; };\r\n    zone \".\" {\r\n        type slave;\r\n        file \"rootzone.db\";\r\n        notify no;\r\n        masters {\r\n            199.9.14.201;         # b.root-servers.net\r\n            192.33.4.12;          # c.root-servers.net\r\n            199.7.91.13;          # d.root-servers.net\r\n            192.5.5.241;          # f.root-servers.net\r\n            192.112.36.4;         # g.root-servers.net\r\n            193.0.14.129;         # k.root-servers.net\r\n            192.0.47.132;         # xfr.cjr.dns.icann.org\r\n            192.0.32.132;         # xfr.lax.dns.icann.org\r\n            2001:500:200::b;      # b.root-servers.net\r\n            2001:500:2::c;        # c.root-servers.net\r\n            2001:500:2d::d;       # d.root-servers.net\r\n            2001:500:2f::f;       # f.root-servers.net\r\n            2001:500:12::d0d;     # g.root-servers.net\r\n            2001:7fd::1;          # k.root-servers.net\r\n            2620:0:2830:202::132; # xfr.cjr.dns.icann.org\r\n            2620:0:2d0:202::132;  # xfr.lax.dns.icann.org\r\n        };\r\n    };\r\n};\r\n\r\nview recursive {\r\n    dnssec-validation auto;\r\n    allow-recursion { any; };\r\n    recursion yes;\r\n    zone \".\" {\r\n        type static-stub;\r\n        server-addresses { 127.12.12.12; };\r\n    };\r\n};",
+    "correct_text": "// Warning:\r\n// Error handling and transitional states of a server with this\r\n// configuration do not conform to the requirements given in\r\n// this document.\r\n\r\nview root {\r\n    match-destinations { 127.12.12.12; };\r\n    zone \".\" {\r\n        type slave;\r\n        file \"rootzone.db\";\r\n        notify no;\r\n        masters {\r\n            199.9.14.201;         # b.root-servers.net\r\n            192.33.4.12;          # c.root-servers.net\r\n            199.7.91.13;          # d.root-servers.net\r\n            192.5.5.241;          # f.root-servers.net\r\n            192.112.36.4;         # g.root-servers.net\r\n            193.0.14.129;         # k.root-servers.net\r\n            192.0.47.132;         # xfr.cjr.dns.icann.org\r\n            192.0.32.132;         # xfr.lax.dns.icann.org\r\n            2001:500:200::b;      # b.root-servers.net\r\n            2001:500:2::c;        # c.root-servers.net\r\n            2001:500:2d::d;       # d.root-servers.net\r\n            2001:500:2f::f;       # f.root-servers.net\r\n            2001:500:12::d0d;     # g.root-servers.net\r\n            2001:7fd::1;          # k.root-servers.net\r\n            2620:0:2830:202::132; # xfr.cjr.dns.icann.org\r\n            2620:0:2d0:202::132;  # xfr.lax.dns.icann.org\r\n        };\r\n    };\r\n};\r\n\r\nview recursive {\r\n    dnssec-validation auto;\r\n    allow-recursion { any; };\r\n    recursion yes;\r\n    zone \".\" {\r\n        type static-stub;\r\n        server-addresses { 127.12.12.12; };\r\n    };\r\n};",
+    "notes": "This requirement is not met by the listed configuration:\r\nIn a resolver that is using an internal service for the root zone, if the contents of the root zone cannot be refreshed before the expire time in the SOA, the resolver MUST immediately switch to using non-local root servers.\r\n\r\nAlso, resolution will fail during server startup - before root zone is transferred for the first time. I would not be surprised if other edge cases are also non-conformant.\r\n\r\nThat is a feature (= intended behavior) of the listed configuration, not a bug in implementation.",
+    "submit_date": "2025-11-14",
+    "submitter_name": "Petr Špaček",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
