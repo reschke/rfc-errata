@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8638",
+    "doc-id": "RFC8636",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "8.1",
+    "orig_text": "ticket: Length =  55 bytes, Hex Representation =\r\n61353033 A0030201 05A1071B 0553552E 5345A210 300EA003 020101A1 0730051B\r\n036C6861 A311300F A0030201 12A20804 0668656A 68656A\r\n",
+    "correct_text": "<no new text>",
+    "notes": "This RFC was published based on draft-ietf-kitten-pkinit-alg-agility, which replaced draft-ietf-krb-wg-pkinit-alg-agility.  Versions of draft-ietf-krb-wg-pkinit-alg-agility through -04, inclusive, had a field in the OtherInfo type called 'ticket', and this is why the test vectors in section 8 still refer to 'ticket': it used to be an input to the KDF in an old version of the draft, but later it was dropped.  When the 'ticket' field of the OtherInfo type was dropped an oversight caused the 'ticket' input in section 8 not to also be dropped.",
+    "submit_date": "2025-11-16",
+    "submitter_name": "Nico Williams",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8639",
+    "doc-id": "RFC8636",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "   o  The algorithm identifier (algorithmID) input parameter is the\r\n      identifier of the respective KDF.  For example, this is id-pkinit-\r\n      kdf-ah-sha1 if the KDF uses SHA-1 as the hash.",
+    "correct_text": "   o  The algorithm identifier (algorithmID) input parameter is the\r\n      identifier of the respective KDF with absent parameters.  For\r\n      example, this is id-pkinit-kdf-ah-sha1 if the KDF uses SHA-1\r\n      as the hash.",
+    "notes": "The negotiation of KDF in PKINIT as of RFC 8636 uses an exchange of OBJECT IDENTIFIER values, not AlgorithmIdentifier values, but when a value of the OtherInfo type is created and serialized we need to know what parameters to use for the algorithmID member of the OtherInfo value, and this is not specified anywhere.\r\n\r\nElsewhere in RFC 8636 we see this text:\r\n\r\n   The KDFAlgorithmId structure contains an object identifier that\r\n   identifies a KDF.  The algorithm of the KDF and its parameters are\r\n   defined by the corresponding specification of that KDF.\r\n\r\nbut the KDFs are all specified in RFC 8636 itself and no parameters are specified for the KDFs.  There is an reference to NIST.SP.800-56Ar3 in section 6 of RFC 8636:\r\n\r\n   The KDF algorithm described in this document (based on [SP80056A])\r\n   can be implemented using any cryptographic hash function.\r\n\r\nbut NIST.SP.800-56Ar3 does not specify parameters to the KDFs either.\r\n\r\nThe question then is: what shall the parameters be set to in the OtherInfo algorithmID identifying the KDF?  There are two options: exclude the parameters member (it is OPTIONAL after all), or include it with the DER encoding of NULL (common for some algorithms)?\r\n\r\nLooking at MIT Kerberos I believe the parameters member is left absent, therefore that is what implementators should do.",
+    "submit_date": "2025-11-16",
+    "submitter_name": "Nico Williams",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
