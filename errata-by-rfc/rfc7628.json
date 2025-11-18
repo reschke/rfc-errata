@@ -22,11 +22,11 @@
     "section": "4.1",
     "orig_text": "[Negotiate TLS...]\r\nC: t1 AUTH OAUTHBEARER bixhPXVzZXJAZXhhbXBsZS5jb20sAWhvc3Q9c2Vy\r\n      dmVyLmV4YW1wbGUuY29tAXBvcnQ9NTg3AWF1dGg9QmVhcmVyIHZGOWRmd\r\n      DRxbVRjMk52YjNSbGNrQmhiSFJoZG1semRHRXVZMjl0Q2c9PQEB\r\nS: 235 Authentication successful.",
     "correct_text": "[Negotiate TLS...]\r\nC: AUTH OAUTHBEARER bixhPXVzZXJAZXhhbXBsZS5jb20sAWhvc3Q9c2VydmV\r\n      yLmV4YW1wbGUuY29tAXBvcnQ9NTg3AWF1dGg9QmVhcmVyIHZGOWRmdDRx\r\n      bVRjMk52YjNSbGNrQmhiSFJoZG1semRHRXVZMjl0Q2c9PQEB\r\nS: 235 Authentication successful.",
-    "notes": "Unlike IMAP, in SMTP a command is not be prefixed with a tag.",
+    "notes": "Unlike IMAP, in SMTP a command is not prefixed with a tag.\r\n",
     "submit_date": "2025-11-16",
     "submitter_name": "Ziqin Wang",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-11-17 07:14:12"
   }
 ]
