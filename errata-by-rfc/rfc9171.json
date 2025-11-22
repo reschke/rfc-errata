@@ -123,15 +123,15 @@
     "errata_id": "8645",
     "doc-id": "RFC9171",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "4.2.8",
     "orig_text": "4.2.8.  Block-Type-Specific Data\r\n\r\n   Block-type-specific data in each block (other than the primary block)\r\n   SHALL be the applicable CBOR encoding of the content of the block.\r\n   Details of this representation are included in the specification\r\n   defining the block type.\r\n\r\n",
     "correct_text": "4.2.8.  Block-Type-Specific Data\r\n\r\nBlock-type-specific data in each block (other than the primary block) \r\nSHALL be represented as a single definite-length CBOR byte string \r\nencoding the block-specific content of the block. Details of this \r\nencoding are included in the specification defining the block type \r\nand may use CBOR or any other form of encoding.\r\n",
     "notes": "According to 4.3.2 the only applicable CBOR representation for block-type-specific data is a definite-length byte string. The current text has lead to some misunderstandings that any CBOR item could be used as block-type-specific data. This is especially problematic for BPSEC which is assuming a CBOR byte string. The CDDL in Appendix B of RFC 9171 correctly describes block-type-specific-data as CBOR byte string.",
     "submit_date": "2025-11-19",
     "submitter_name": "Felix Flentge",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-11-21 08:43:16"
   }
 ]

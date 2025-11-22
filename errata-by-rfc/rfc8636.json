@@ -30,21 +30,6 @@
     "update_date": "2025-11-17 09:07:38"
   },
   {
-    "errata_id": "8640",
-    "doc-id": "RFC8636",
-    "errata_status_code": "Rejected",
-    "errata_type_code": "Technical",
-    "section": "8.4.2",
-    "orig_text": "   key-material: Length = 24 bytes, Hex Representation =\r\n   D3C78A79 D65213EF E9A826F7 5DFB01F7 2362FB16 FB01DAD6\r\n\r\n   key: Length = 32 bytes, Hex Representation =\r\n   D3C78A79 D65213EF E9A826F7 5DFB01F7 2362FB16 FB01DAD6\r\n",
-    "correct_text": "   key-material: Length = 24 bytes, Hex Representation =\r\n   D3C78B78 D75313E9 A926F75D FB012363 FA17FA01 DB20F24E\r\n\r\n   key: Length = 32 bytes, Hex Representation =\r\n   D3C78A79 D65213EF E9A826F7 5DFB01F7 2362FB16 FB01DAD6\r\n",
-    "notes": "The Kerberos random2key function (see RFCs 3961 and 3962) is the identity function for the AES enctypes, but for 3DES it is not.  The \"key-material\" output is supposed to the output of the KDF prior to application of the Kerberos random2key function.  The third test vector in section 8 (\"Test Vector for SHA-512, enctype 16\"), the one in section 8.4, is for the 3DES enctype because enctype 16 is the KRB5_ENCTYPE_DES3_CBC_SHA1 enctype (see RFCs 4120 and 3961), and as you can see the expected key length is 24 bytes (as expected for a 3DES-based enctype).\r\n\r\nTherefore the \"key-material\" output in section 8.4.2 can be expected to differ from the \"key\" output.  And in my (work in progress) code in Heimdal for implementing RFC 8636 so it is.  The key-material in the corrected text is the correct key material, though I should also check this in MIT Kerberos.\n --VERIFIER NOTES-- \n   This errata has been superseded by 8642 and 8643",
-    "submit_date": "2025-11-17",
-    "submitter_name": "Nico Williams",
-    "verifier_id": "173",
-    "verifier_name": "Paul Wouters",
-    "update_date": "2025-11-19 08:56:50"
-  },
-  {
     "errata_id": "8642",
     "doc-id": "RFC8636",
     "errata_status_code": "Verified",

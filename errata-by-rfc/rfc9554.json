@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8652",
+    "doc-id": "RFC9554",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.9",
+    "orig_text": "Example(s):\r\n\r\n    SOCIALPROFILE;SERVICE-TYPE=Mastodon:https://example.com/@foo\r\n",
+    "correct_text": "Example(s):\r\n\r\n    SOCIALPROFILE;SERVICE-TYPE=\"Mastodon\":https://example.com/@foo\r\n",
+    "notes": "The description of the SERVICE-TYPE parameter states that its value is case-sensitive. RFC 6350 allows case-sensitive, unquoted parameter values but its exemplifies the only case-sensitive parameter SORT-AS with a quoted parameter value. Doing so for the SERVICE-TYPE parameter too indicates to implementers to use quoted strings and is likely to improve interoperability.",
+    "submit_date": "2025-11-21",
+    "submitter_name": "Robert Stepanek",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

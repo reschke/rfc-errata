@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8653",
+    "doc-id": "RFC8209",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.1",
+    "orig_text": "Encoding options for the common name that are supported are printableString and UTF8String.",
+    "correct_text": "The common name attribute is encoded as PrintableString (RFC 6487, Section 4.5).",
+    "notes": "In all other RPKI object profiles a restricted character string type (PrintableString) is used in both issuer & subject name attributes, with the exception of the BGPsec certificate profile where an unjustified exception seems to have slipped in. In this context it is an unnecessary complication for implementers to have to make special accommodations for multibyte characters in some aspects of the BGPsec certificate profile.",
+    "submit_date": "2025-11-21",
+    "submitter_name": "Job Snijders",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
