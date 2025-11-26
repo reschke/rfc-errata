@@ -48,15 +48,15 @@
     "errata_id": "8654",
     "doc-id": "RFC9293",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "3.1",
     "orig_text": "   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Data |       |C|E|U|A|P|R|S|F|                               |\r\n   | Offset| Rsrvd |W|C|R|C|S|S|Y|I|            Window             |\r\n   |       |       |R|E|G|K|H|T|N|N|                               |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n[...]\r\n   Reserved (Rsrvd):  4 bits\r\n",
     "correct_text": "   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n   |  Data |R|R|R|R|C|E|U|A|P|R|S|F|                               |\r\n   | Offset|4|5|6|7|W|C|R|C|S|S|Y|I|            Window             |\r\n   |       | | | | |R|E|G|K|H|T|N|N|                               |\r\n   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n[...]\r\n   R4, R5, R6, R7:  1 bit each\r\n",
     "notes": "The packet diagram does not match the prose: this document in Section 6 \"IANA Considerations\" defines bits 4-7 as distinct bits rather than a single 4-bit field.\r\n\r\nThis definition as distinct bits is new to this document compared to the two previous TCP specifications (RFC 3168 and RFC 793), each of which defines the Reserved field of the TCP header as a single field, 4-bit and 6-bit respectively, and does not define any data structure for it.  Likewise, RFC 3168 Section 6.1 \"TCP\" says: \"This specification of the ECN Field leaves the Reserved field as a 4-bit field using bits 4-7.\"\r\n\r\nThis way, when the packet diagram shows the reserved part of the TCP header as a single field, it is consistent with the prose in RFC 3168 and RFC 793, but is an error in this document.",
     "submit_date": "2025-11-22",
     "submitter_name": "Denis Ovsienko",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2025-11-25 06:47:37"
   }
 ]

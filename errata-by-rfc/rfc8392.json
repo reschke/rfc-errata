@@ -58,5 +58,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8655",
+    "doc-id": "RFC8392",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.2.2",
+    "orig_text": "a4205820403697de87af64611c1d32a05dab0fe1fcb715a86ab435f1ec99192d\r\n795693880104024c53796d6d6574726963323536030a",
+    "correct_text": "a4205820403697de87af64611c1d32a05dab0fe1fcb715a86ab435f1ec99192d\r\n795693880104024c53796d6d65747269633235360304",
+    "notes": "The key advertises algorithm number 10 (AES-CCM-16-64-128) instead of 4 (HMAC 256/64). The last byte needs to change from 0a to 04 to match the \"/ alg /  3: 4 / HMAC 256/64 /\" CBOR diagnostic.",
+    "submit_date": "2025-11-25",
+    "submitter_name": "Dridi Boukelmoune",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
