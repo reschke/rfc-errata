@@ -133,5 +133,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8658",
+    "doc-id": "RFC8794",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "11.1.6.12",
+    "orig_text": "The recurring attribute is OPTIONAL. If the recurring attribute is not\r\npresent, then the EBML Element is not an Identically Recurring Element.",
+    "correct_text": "The recurring attribute is OPTIONAL. If the recurring attribute is\r\nnot set to true, then the EBML Element is not an Identically Recurring\r\nElement.",
+    "notes": "The recurring attribute is OPTIONAL. If recurring is present and set to false, then \r\nthe EBML Element is not an Identically Recurring Element.",
+    "submit_date": "2025-11-26",
+    "submitter_name": "Pétur Ingi Egilsson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
