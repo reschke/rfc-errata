@@ -2,7 +2,7 @@
   {
     "errata_id": "8610",
     "doc-id": "RFC9758",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "2^(32-1)",
@@ -10,8 +10,8 @@
     "notes": "2^(32-1) = 2^31 = 0x80000000, but the intended value is 2^32-1 = 0xFFFFFFFF.\r\n\r\nThe Registration Procedures for the 'ipn' Scheme URI Allocator Identifiers Registry and the Registration Procedures for the 'ipn' Scheme URI Default Allocator Node Numbers Registry use >=0x100000000 instead of >=0x80000001 as the largest range. Other parts of the text show that 0xFFFFFFFF is the intended value:\r\n\r\n* Section 4 says 4294967295\r\n* Section 6.3 says\r\n     allocator-identifier: uint .lt 4294967296,\r\n     node-number: uint .lt 4294967296,\r\n\r\nAlso note that Section 3.4.2 shows 0xFFFFFFFFF = 2^36-1 (nine F's instead of eight).",
     "submit_date": "2025-10-20",
     "submitter_name": "Nathan Luu",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "165",
+    "verifier_name": "Erik Kline",
+    "update_date": "2025-11-29 15:11:16"
   }
 ]
