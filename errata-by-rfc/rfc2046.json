@@ -193,5 +193,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-02-07 15:57:41"
+  },
+  {
+    "errata_id": "8667",
+    "doc-id": "RFC2046",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.2",
+    "orig_text": "   The complete US-ASCII character set is listed in ANSI X3.4- 1986.",
+    "correct_text": "   In US-ASCII octet sequences, the highest order bit (most significant\r\n   bit) in each octet is always zero.  The correct interpretation of the\r\n   remaining 7 bits in each octet is listed in ANSI X3.4-1986.",
+    "notes": "Section 2.2 of RFC 2045 defines the term “character set”:\r\n\r\n>    The term \"character set\" is used in MIME to refer to a method of\r\n>    converting a sequence of octets into a sequence of characters.\r\n\r\nRFC 2046 says that US-ASCII is a character set and points to ANSI X3.4-1986 for the definition of that character set. Unfortunately, ANSI X3.4-1986 does not give a complete definition of a character set because ANSI X3.4-1986 is not about sequences of octets. Section 4 of ANSI X3.4-1986 says:\r\n\r\n> The bits of the bit combinations of the 7-bit code are\r\n> identified by b₇, b₆, b₅, b₄, b₃, b₂, and b₁, where\r\n> b₇ is the highest order bit (most significant bit), and\r\n> b₁ is the lowest order bit (least significant bit).\r\n\r\nANSI X3.4-1986 never mentions a b₈ bit, or what to do if you want to decode a stream of octets. It only alludes to octets in passing. Section 2.1.1 of ANSI X3.4-1986 says:\r\n\r\n>   2.1.1 Conforming Interchange. The data stream\r\n> comprising the exchange of information using the\r\n> coding of this standard is subject to the following rules.\r\n> Conforming interchange:\r\n>   (1) Shall be a sequence of 7-bit or 8-bit bit combin-\r\n> ations.\r\n>   (2) Shall use the names of all control characters as\r\n> specified in this standard.\r\n>   (3) Shall not include any bit combinations allo-\r\n> cated by this standard for any purpose other than that\r\n> defined in this standard, unless they represent func-\r\n> tions or elements of other coded character sets that\r\n> have been invoked by code extension in accordance\r\n> with ANSI X3.41-1974, subject to mutual agreement\r\n> between the interchange parties.\r\n\r\n(An 8-bit bit combination is an octet that contains character data. See section 3.2 of ANSI X3.4-1986.)\r\n\r\nUnfortunately, the rest of ANSI X3.4-1986 doesn’t tell us how to handle sequences of 8-bit bit combinations. It only tells us how to handle 7-bit bit combinations. Section 9.2 of ANSI X3.41-1974 specifies that the highest order bit should be zero when storing ASCII in 8-bit bit combinations, but you don’t have to implement anything from ANSI X3.41-1974 in order to properly implement ANSI X3.4-1986. In fact, ANSI X3.41-1974 is mostly about shift and escape sequences so most of it must not be implemented for US-ASCII. As section 4.1.2 of RFC 2046 says:\r\n\r\n>    All of these character sets are used as pure 7bit or 8bit sets\r\n>    without any shift or escape functions.\r\n\r\nAdditionally, there shouldn’t have been a space after the hyphen in “ANSI X3.4- 1986”.\r\n\r\nSee also: RFC 20.",
+    "submit_date": "2025-12-02",
+    "submitter_name": "Jason Yundt",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
