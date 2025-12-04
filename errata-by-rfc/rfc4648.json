@@ -58,5 +58,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2023-10-11 14:32:24"
+  },
+  {
+    "errata_id": "8669",
+    "doc-id": "RFC4648",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "   The encoding process represents 24-bit groups of input bits as output\r\n   strings of 4 encoded characters.  Proceeding from left to right, a\r\n   24-bit input group is formed by concatenating 3 8-bit input groups.\r\n   These 24 bits are then treated as 4 concatenated 6-bit groups, each\r\n   of which is translated into a single character in the base 64\r\n   alphabet.",
+    "correct_text": "   The encoding process represents 24-bit groups of input bits as output\r\n   strings of 4 encoded characters.  Proceeding from left to right, a\r\n   24-bit input group is formed by concatenating 3 8-bit input groups.\r\n   These 24 bits are then treated as 4 concatenated 6-bit groups, each\r\n   of which is translated into a single character in the base 64\r\n   alphabet. When an octet stream is encoded via the base 64 encoding, the\r\n   octet stream must be presumed to be ordered with the most-significant-\r\n   bit first.  That is, the first bit in the stream will be the high-\r\n   order bit in the first octet, the eighth bit will be the low-\r\n   order bit in the first octet, and so on.",
+    "notes": "Section 6 (Base 32 Encoding) defines the bit order of an octet stream, while Section 4 does not.",
+    "submit_date": "2025-12-03",
+    "submitter_name": "Park Jaeon",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
