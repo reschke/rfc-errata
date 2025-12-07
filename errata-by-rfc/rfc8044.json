@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8671",
+    "doc-id": "RFC8044",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.17",
+    "orig_text": "... We note that the EVS-Data field may be of data type \"tlv\".",
+    "correct_text": "The \"evs\" data type SHOULD contain a sequence of \"tlv\"\r\ndata types.  The interpretation of the TLV-Type and TLV-Data\r\nfields is dependent on the vendor's definition of that\r\nattribute.",
+    "notes": "The \"vsa\" data type uses a \"SHOULD\" to recommend the \"tlv\" format.  For some reason, the \"evs\" data type does not have the same recommendation.\r\n\r\nThe corrected text copies the same recommendation from the \"vsa\" data type.",
+    "submit_date": "2025-12-06",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

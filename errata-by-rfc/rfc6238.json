@@ -133,5 +133,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8672",
+    "doc-id": "RFC6238",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2. Description",
+    "orig_text": "The implementation of this algorithm MUST support a time value T larger than a 32-bit integer when it is beyond the year 2038.",
+    "correct_text": "The implementation of this algorithm MUST feed the time value T as a 64-bit big-endian integer into the HMAC algorithm. Also the calculation \"T = (Current Unix time - T0) / X\" must be performed on 64-bit integers the prevent the year-2106-bug or year-2038-bug.\r\n\r\nor just\r\n\r\nThe implementation of this algorithm MUST feed the time value T as a 64-bit big-endian integer into the HMAC algorithm.",
+    "notes": "The wording \"larger than a 32-bit integer\" is useless in the context. Using anything else than 64-bit big-endian integer results in bogus output and failure to login. The mention of the year 2038 is confusing and essentially off-topic in the light of above ie the fact that not using 64-bit big-endian integer breaks the thing immediately.\r\n\r\nAlso code line\r\n\r\nint offset = hash[hash.length - 1] & 0xf;\r\n\r\ndoes something presumably correct but not mentioned anywhere in RFC6238 nor in the linked RFC4226. In the light of the substantial number of severe faults beyond simple typo, it would be best to publish a new RFC fully replacing both RFC6238 and RFC4226.",
+    "submit_date": "2025-12-06",
+    "submitter_name": "Taylor H",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
