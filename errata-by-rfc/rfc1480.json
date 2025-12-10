@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "errata_id": "8674",
+    "doc-id": "RFC1480",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "APPENDIX-I",
+    "orig_text": "                     APPENDIX-I:  US DOMAIN NAMES BNF\r\n                     ================================\r\n\r\n   <us-domain-name>    ::= <us-name><dot><us>\r\n\r\n   <us-name>           ::= <state-name><dot><state-code> |\r\n                           <fed-name><dot><fed>\r\n                           <dni-name><dot><dni>\r\n\r\n   <state-code>        ::= <the two-letter code of a state from the\r\n                            zip code directory>",
+    "correct_text": "                     APPENDIX-I:  US DOMAIN NAMES BNF\r\n                     ================================\r\n\r\n   <us-domain-name>    ::= <us-name><dot><us>\r\n\r\n   <us-name>           ::= <state-name><dot><state-code> |\r\n                           <fed-name><dot><fed> |\r\n                           <dni-name><dot><dni>\r\n\r\n   <state-code>        ::= <the two-letter code of a state from the\r\n                            zip code directory>",
+    "notes": "Missing a pipe after <fed-name><dot><fed>\r\n\r\nNow, I'm not super confident in my BNF syntax, but I'm 95% sure there should be a pipe there. Let me know.",
+    "submit_date": "2025-12-10",
+    "submitter_name": "Peter Briggs",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
