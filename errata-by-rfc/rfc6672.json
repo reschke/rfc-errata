@@ -28,5 +28,20 @@
     "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2023-08-03 06:40:28"
+  },
+  {
+    "errata_id": "8677",
+    "doc-id": "RFC6672",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8",
+    "orig_text": "<missing text>",
+    "correct_text": "DNAME redirects can be used to amplify the impact of successfully spoofing a\r\nsingle DNS response. An attacker can generate an arbitrary query name in the\r\nform of \"$random.example.\" and simultaneously try to spoof a response. The\r\n\"$random\" label provides the attacker with an unlimited number of spoof\r\nattempts. A successful spoofing can include a DNAME RR with a QNAME's parent\r\nname. Such a spoofed RR can redirect the whole parent zone to a malicious\r\ntarget, or create a resolution loop.\r\n\r\nConsumers of DNS responses might consider the trustworthiness of DNAME RRs: Are\r\nthey DNSSEC-secure? Were they received via a non-spoofable transport (TCP, TLS,\r\nUDP with DNS cookies, etc.)? Depending on security posture, consumers might\r\nchoose to not use untrustworthy DNAME RRs, or choose to re-query using a secure\r\ntransport like TCP.\r\n",
+    "notes": "I believe Security Considerations should mention higher risk associated with DNAME spoofing. Hardening described in the proposed text was deployed as (part of) fix for CVE-2025-40778 in BIND 9.",
+    "submit_date": "2025-12-12",
+    "submitter_name": "Petr Špaček",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

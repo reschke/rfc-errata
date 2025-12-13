@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8676",
+    "doc-id": "RFC7516",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "14.  Compute the Encoded Protected Header value BASE64URL(UTF8(JWE\r\n     Protected Header)).  If the JWE Protected Header is not present\r\n     (which can only happen when using the JWE JSON Serialization and\r\n     no \"protected\" member is present), let this value be the empty\r\n     string.",
+    "correct_text": "14.  Compute the Encoded Protected Header value BASE64URL(UTF8(JWE\r\n     Protected Header)).  If the JWE Protected Header is not present\r\n     (which can only happen when using the JWE JSON Serialization and\r\n     no \"protected\" member is present), let this value be the empty\r\n     string. Instead of serializing the JWE Protected Header JSON\r\n     object, use the Base64url decoded representation of JWE\r\n     Protected Header.",
+    "notes": "Step 3 says:\r\n\r\n    3.   Verify that the octet sequence resulting from decoding the\r\n         encoded JWE Protected Header is a UTF-8-encoded representation\r\n         of a completely valid JSON object conforming to RFC 7159\r\n         [RFC7159]; let the JWE Protected Header be this JSON object.\r\n\r\nSince JWE Protected Header is the JSON object, the serialized value might often end up different than the Base64url representation of the input value, this is because JSON is not canonical. So in step 14, instead of serializing the JSON object of the JWE Protected Header, the Base64url decoded value must be used to obtain the same value.",
+    "submit_date": "2025-12-12",
+    "submitter_name": "Burak Can Kus",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
