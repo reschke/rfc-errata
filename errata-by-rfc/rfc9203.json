@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8678",
+    "doc-id": "RFC9203",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.2",
+    "orig_text": "As specified in Section 5.8.3 of [RFC9200], the RS must notify the\r\nclient with an error response with code 4.01 (Unauthorized) for any\r\nlong running request before terminating the session, when the access\r\ntoken expires.",
+    "correct_text": "As specified in Section 5.10.3 of [RFC9200], the RS must notify the\r\nclient with an error response with code 4.01 (Unauthorized) for any\r\nlong running request before terminating the session, when the access\r\ntoken expires.",
+    "notes": "The quoted text from Section 4.2 of RFC 9203 defines interactions between the client and the RS.\r\n\r\nHowever, the referred Section 5.8.3 of RFC 9200 is about error responses for interactions with the AS.\r\n\r\nThe right section of RFC 9200 to refer to is instead 5.10.3, which says:\r\n\r\n\"If a token that authorizes a long-running request, such as a CoAP Observe [RFC7641], expires, the RS MUST send an error response with the response code equivalent to the CoAP code 4.01 (Unauthorized) to the client and then terminate processing the long-running request.\"",
+    "submit_date": "2025-12-16",
+    "submitter_name": "Marco Tiloca",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
