@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8681",
+    "doc-id": "RFC9172",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.1",
+    "orig_text": "   If an encrypted payload block cannot be decrypted (i.e., the\r\n   ciphertext cannot be authenticated), then the bundle MUST be\r\n   discarded and processed no further.  If an encrypted security target\r\n   other than the payload block cannot be decrypted, then the associated\r\n   security target and all security blocks associated with that target\r\n   MUST be discarded and processed no further.  In both cases, requested\r\n   status reports (see [RFC9171]) MAY be generated to reflect bundle or\r\n   block deletion.",
+    "correct_text": "   If an encrypted payload block cannot be decrypted (i.e., the \r\n   ciphertext cannot be authenticated), then the bundle MUST be deleted\r\n   and processed no further. If requested, a deletion status report (see\r\n   [RFC9171]) MAY be generated using the appropriate Bundle Status \r\n   Report Reason Codes (see Section 11.2) to report bundle deletion. If \r\n   an encrypted security target other than the payload block cannot be \r\n   decrypted, then the associated security target and all security \r\n   blocks associated with that target MUST be discarded and processed \r\n   no further.",
+    "notes": "There exists no block deletion status report in RFC9171.",
+    "submit_date": "2025-12-17",
+    "submitter_name": "Lukas Holst",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
