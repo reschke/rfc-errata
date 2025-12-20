@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": "8682",
+    "doc-id": "RFC9810",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "The encryptedValue choice has been deprecated in favor of encryptedData.",
+    "correct_text": "The encryptedValue choice has been deprecated in favor of envelopedData.",
+    "notes": "EnvelopedData should be used instead of the deprecated EncryptedValue, through the introduction of the EncryptedKey (https://datatracker.ietf.org/doc/html/rfc9810#section-5.3.19.9).\r\n   EncryptedKey ::= CHOICE {\r\n      encryptedValue        EncryptedValue, -- deprecated\r\n      envelopedData     [0] EnvelopedData }",
+    "submit_date": "2025-12-19",
+    "submitter_name": "Yixin Sun",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8683",
+    "doc-id": "RFC9810",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix C.4",
+    "orig_text": "crc[1].status.       present if and only if\r\n   failInfo          crc[0].status.status is \"rejection\"\r\ncrc[1].              present if and only if\r\n   certifiedKeyPair  crc[0].status.status is \"accepted\"\r\n                     or \"grantedWithMods\"",
+    "correct_text": "crc[1].status.       present if and only if\r\n   failInfo          crc[1].status.status is \"rejection\"\r\ncrc[1].              present if and only if\r\n   certifiedKeyPair  crc[1].status.status is \"accepted\"\r\n                     or \"grantedWithMods\"",
+    "notes": "This is under Initialization Response. It should be crc[1].status.status to correspond to the crc[1] on the left. This error is inherited from RFC 4210 (https://datatracker.ietf.org/doc/html/rfc4210#appendix-D.4).",
+    "submit_date": "2025-12-19",
+    "submitter_name": "Lize Shao",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8684",
+    "doc-id": "RFC9810",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix D.5",
+    "orig_text": "genr (GenReqContent)",
+    "correct_text": "genm (GenMsgContent)",
+    "notes": "This is under the genM block, for the \"body\" field. This error is inherited from RFC 4210 (https://datatracker.ietf.org/doc/html/rfc4210#appendix-E.5).",
+    "submit_date": "2025-12-19",
+    "submitter_name": "Hyeonmin Lee",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
