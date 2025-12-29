@@ -257,7 +257,7 @@
   {
     "errata_id": "8367",
     "doc-id": "RFC7644",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.4.1",
     "orig_text": "3.4.1.  Retrieving a Known Resource\r\n\r\n   To retrieve a known resource, clients send GET requests to the\r\n   resource endpoint, e.g., \"/Users/{id}\", \"/Groups/{id}\", or\r\n   \"/Schemas/{id}\", where \"{id}\" is a resource identifier (for example,\r\n   the value of the \"id\" attribute).",
@@ -265,8 +265,8 @@
     "notes": "The change clearifies that \"{id}\" is the value of the \"id\" attribute.\r\n\r\nIn the original text, the value of the \"id\" attribute is only mentioned as an example. It remains unclear if the value of the \"id\" attribute always is a \"resource identifier\" or if there may be exceptions. It also remains unclear, which other attribute values are considered \"resource identifiers\", e.g. the values of \"externalId\", \"userName\" for User resources, \"name\" for Resource Type resources, and so on.\r\n\r\nRFC6743 specifies for example:\r\n* \"id\" as \"A unique identifier for a SCIM resource\" (section 3.1)\r\n* \"externalId\" as \"identifier for the resource\" (section 3.1)\r\n* \"userName\" as \"unique identifier for the user\" (section 4.1.1)\r\nBut as a client I would rather not expect a GET call on \"/Users/{userName}\" or \"/Users/{externalId}\" to work. It is also unclear which object would be returned if the \"{externalId}\" or \"{userName}\" matches the \"{id}\" of a different user.",
     "submit_date": "2025-04-01",
     "submitter_name": "Matthias Winter",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-12-28 07:32:14"
   }
 ]
