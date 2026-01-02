@@ -283,5 +283,20 @@
     "verifier_id": "161",
     "verifier_name": "Eric Vyncke",
     "update_date": "2023-08-03 03:56:28"
+  },
+  {
+    "errata_id": "8691",
+    "doc-id": "RFC0791",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1.3",
+    "orig_text": "The ARPANET address would be derived from the internet address by the local network interface",
+    "correct_text": "The ARPANET address would be derived from the internet address by the internet module",
+    "notes": "This sentence claims the local net interface translates an IP address into a local net address. The local net interface knows nothing about internet addresses. This translation is the responsibility of layers above the local net.\r\n\r\nThe later section 2.3, subsection Addressing, makes this explicit:\r\n\r\n>The internet module maps internet addresses to local net addresses.",
+    "submit_date": "2026-01-01",
+    "submitter_name": "Alan Shultz",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
