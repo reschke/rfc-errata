@@ -43,5 +43,20 @@
     "verifier_id": "121",
     "verifier_name": "Peter Saint-Andre",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8692",
+    "doc-id": "RFC2142",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "   NNTP (see [[10]RFC977]), and <WEBMASTER@domain> for HTTP (see [[11]HTTP]).\r\n[…]\r\n   WEBMASTER      HTTP                [[23]RFC 2068]\r\n   WWW            HTTP                Synonym for WEBMASTER   \r\n[…]\r\n   [HTTP] Berners-Lee, T., et al, \"Hypertext Transfer Protocol --\r\n   HTTP/1.0\", [56]RFC 1945, May 1996.\r\n",
+    "correct_text": "   NNTP (see [[10]RFC977]).\r\n[…]\r\n[ … delete the other content shown …]\r\n",
+    "notes": "The authors mis-interpreted both RFC 1945 (HTTP 1.0) and 2068 (HTTP 1.1), in both which there is only one single mention of “webmaster@”, and it is:\r\n\r\n- an example\r\n- for the HTTP From header\r\n- which is a *request* header, not a response header\r\n- and as such shown by the HTTP *client*, not server\r\n- to submit information about the bot to the webserver operator\r\n\r\nSo, the webmaster@ address example is rather an example for a contact point for a bot operator (e.g. search engine — and Yandex at least is currently using it for this purpose).\r\n\r\nOh, and, the form title is wrong, it must be “Submit new RFC erratum”. “Errata” is plural of the singular word “erratum”.",
+    "submit_date": "2026-01-02",
+    "submitter_name": "mirabilos",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
