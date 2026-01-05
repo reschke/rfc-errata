@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8693",
+    "doc-id": "RFC8527",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.2.2",
+    "orig_text": "   Data in the operational state datatstore can come from multiple\r\n   sources.  The server should return the \"origin\" metadata annotation\r\n   value that most accurately indicates the source of the operational\r\n   value, as specified in Section 5.3.4 of [RFC8342].\r\n",
+    "correct_text": "   Data in the operational state datastore can come from multiple\r\n   sources.  The server should return the \"origin\" metadata annotation\r\n   value that most accurately indicates the source of the operational\r\n   value, as specified in Section 5.3.4 of [RFC8342].\r\n",
+    "notes": "Typo of datastore.",
+    "submit_date": "2026-01-04",
+    "submitter_name": "Per Andersson",
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-01-04 18:26:12"
+  }
+]
