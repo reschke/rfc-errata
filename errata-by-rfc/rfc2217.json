@@ -28,5 +28,20 @@
     "verifier_id": "162",
     "verifier_name": "Roman Danyliw",
     "update_date": "2022-05-09 17:05:16"
+  },
+  {
+    "errata_id": "8694",
+    "doc-id": "RFC2217",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "            Client to Access Server   Access Server to Client \r\nSIGNATURE            text                      text   \r\nSET-BAUDRATE            1                      101    \r\nSET-DATASIZE            2                      102    \r\n",
+    "correct_text": "            Client to Access Server   Access Server to Client \r\nSIGNATURE               0                      100   \r\nSET-BAUDRATE            1                      101    \r\nSET-DATASIZE            2                      102    \r\n",
+    "notes": "The full SIGNATURE command is specified as:\r\nIAC SB COM-PORT-OPTION SIGNATURE <text> IAC SE\r\n\r\nI.e. \"SIGNATURE\" must be a valid integer value and not \"text\".\r\nIt seems likely that this should have been 0 (Client to Access Server) and 100 (Access Server to Client).\r\n\r\nAt least one vendor understood and implemented it that way:\r\nhttps://www.hw-group.com/files/download/protocol/version/nvt_1-0-0.pdf",
+    "submit_date": "2026-01-05",
+    "submitter_name": "Jörn Heissler",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

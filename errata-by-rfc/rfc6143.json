@@ -17,7 +17,7 @@
   {
     "errata_id": "4951",
     "doc-id": "RFC6143",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.2.2",
     "orig_text": "   The client encrypts the challenge with DES, using a password supplied\r\n   by the user as the key.  To form the key, the password is truncated\r\n   to eight characters, or padded with null bytes on the right.  The\r\n   client then sends the resulting 16-byte response:",
@@ -25,23 +25,23 @@
     "notes": "Added text \"; then the bits of each byte of the key are reversed\" is essential to implementation of a VNC client or server which interoperates with existing VNC clients or servers, but the text fails to mention this.\r\n\r\nSee https://www.vidarholen.net/contents/junk/vnc.html\r\n\r\nI confirmed the claims of the above web page while writing my own VNC server. I implemented VNC authentication without mirroring the bytes of the DES key and TigerVNC 1.5.0 could not authenticate to my VNC server. When I added code to mirror each byte of the DES key as described by the above web page, TigerVNC 1.5.0 could authenticate to my test VNC server.",
     "submit_date": "2017-02-26",
     "submitter_name": "Simon Kissane",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": "2019-09-10 09:09:03"
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2026-01-05 13:44:04"
   },
   {
     "errata_id": "8689",
     "doc-id": "RFC6143",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "Normative references",
     "orig_text": "L",
     "correct_text": "P",
-    "notes": "The first initial of the first author (Peter Deutsch?) of the first normative reference (rfc1950?) disagrees with the author listing in that rfc.",
+    "notes": "The first initial of the first author (Peter Deutsch?) of the first normative reference (rfc1950?) disagrees with the author listing in that rfc.\n --VERIFIER NOTES-- \n  After discussion with the authors, this inconsistency has not caused any issues.",
     "submit_date": "2025-12-28",
     "submitter_name": "Jim J Jewett",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2026-01-05 13:43:20"
   }
 ]
