@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8697",
+    "doc-id": "RFC9755",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "treats message/global like message/rfc",
+    "correct_text": "treats message/global like message/rfc822",
+    "notes": "The correct content type should be message/rfc822.",
+    "submit_date": "2026-01-07",
+    "submitter_name": "Radowan Redoy",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

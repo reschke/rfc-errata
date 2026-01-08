@@ -73,5 +73,20 @@
     "verifier_id": "176",
     "verifier_name": "Orie Steele",
     "update_date": "2025-02-24 13:35:49"
+  },
+  {
+    "errata_id": "8695",
+    "doc-id": "RFC9562",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7.1",
+    "orig_text": "The versions within Table 1 described as \r\n\"Reserved for future definition\" or \"unused\" are \r\nomitted from this IANA registry until properly defined",
+    "correct_text": "The versions within Table 2 described as \r\n\"Reserved for future definition\" or \"unused\" are \r\nomitted from this IANA registry until properly defined",
+    "notes": "The UUID versions are listed in Table 2, not in Table 1. Table 1 lists the variants",
+    "submit_date": "2026-01-07",
+    "submitter_name": "Matthieu Mourisson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
