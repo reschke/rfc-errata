@@ -171,12 +171,12 @@
     "errata_type_code": "Editorial",
     "section": "4.5",
     "orig_text": "If insufficient fragments are received to complete reassembly\r\n         of a packet within 60 seconds of the reception of the first-\r\n         arriving fragment of that packet, reassembly of that packet\r\n         must be abandoned and all the fragments that have been received\r\n         for that packet must be discarded.  If the first fragment\r\n         (i.e., the one with a Fragment Offset of zero) has been\r\n         received, an ICMP Time Exceeded -- Fragment Reassembly Time\r\n         Exceeded message should be sent to the source of that fragment.",
-    "correct_text": "If insufficient fragments are received to complete reassembly\r\n         of a packet by 60 seconds of the reception of the first-\r\n         arriving fragment of that packet, reassembly of that packet\r\n         must be abandoned and all the fragments that have been received\r\n         for that packet must be discarded.  If the first fragment\r\n         (i.e., the one with a Fragment Offset of zero) has been\r\n         received, an ICMP Time Exceeded -- Fragment Reassembly Time\r\n         Exceeded message should be sent to the source of that fragment.",
+    "correct_text": "If insufficient fragments are received to complete reassembly\r\n         of a packet by 60 seconds after the reception of the first-\r\n         arriving fragment of that packet, reassembly of that packet\r\n         must be abandoned and all the fragments that have been received\r\n         for that packet must be discarded.  If the first fragment\r\n         (i.e., the one with a Fragment Offset of zero) has been\r\n         received, an ICMP Time Exceeded -- Fragment Reassembly Time\r\n         Exceeded message should be sent to the source of that fragment.",
     "notes": "There is some confusion that \"within 60 seconds\" allows for nodes to drop the connection before the 60 seconds is up. Therefore by stating \"by 60 seconds\" it is definitive is stating that the connection should not be dropped until the 60 seconds timer has run out.",
     "submit_date": "2026-01-07",
     "submitter_name": "Jeremy Duncan",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2026-01-08 12:19:13"
   }
 ]
