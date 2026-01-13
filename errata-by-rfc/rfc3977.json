@@ -332,16 +332,16 @@
   {
     "errata_id": "8688",
     "doc-id": "RFC3977",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "2",
-    "orig_text": "The terms \"NUL\", \"TAB\", \"LF\", \"CR, and \"space\" refer to the octets %x00, %x09, %x0A, %x0D, and %x20, respectively (that is, the octets with those codes in US-ASCII [ANSI1986] and thus in UTF-8 [RFC3629]).",
-    "correct_text": "The terms \"NUL\", \"TAB\", \"LF\", \"CR\", and \"space\" refer to the octets %x00, %x09, %x0A, %x0D, and %x20, respectively (that is, the octets with those codes in US-ASCII [ANSI1986] and thus in UTF-8 [RFC3629]).",
+    "orig_text": "The terms \"NUL\", \"TAB\", \"LF\", \"CR, and \"space\" refer to the octets %x00, %x09, \r\n%x0A, %x0D, and %x20, respectively (that is, the octets with those codes in US-\r\nASCII [ANSI1986] and thus in UTF-8 [RFC3629]).",
+    "correct_text": "The terms \"NUL\", \"TAB\", \"LF\", \"CR\", and \"space\" refer to the octets %x00, %x09, \r\n%x0A, %x0D, and %x20, respectively (that is, the octets with those codes in US-\r\nASCII [ANSI1986] and thus in UTF-8 [RFC3629]).",
     "notes": "The right quotation mark after CR is missing.",
     "submit_date": "2025-12-24",
     "submitter_name": "Maximilian Lorlacks",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-01-12 12:56:52"
   }
 ]

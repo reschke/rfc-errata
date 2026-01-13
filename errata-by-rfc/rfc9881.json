@@ -18,15 +18,15 @@
     "errata_id": "8700",
     "doc-id": "RFC9881",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "nistAlgorithms OBJECT IDENTIFIER ::= { joint-iso-itu-t(2)\r\n  country(16) us(840) organization(1) gov(101) csor(3)\r\n  nistAlgorithms(4) }",
     "correct_text": "nistAlgorithms OBJECT IDENTIFIER ::= { joint-iso-itu-t(2)\r\n  country(16) us(840) organization(1) gov(101) csor(3)\r\n  nistAlgorithm(4) }",
     "notes": "The term inside the object should be 'nistAlgorithm(4)' (i.e., without a trailing 's') to be consistent with the NIST definition (https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration).",
     "submit_date": "2026-01-09",
     "submitter_name": "Mrigank Pawagi",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2026-01-12 14:03:59"
   }
 ]

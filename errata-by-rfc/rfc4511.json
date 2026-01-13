@@ -137,16 +137,16 @@
   {
     "errata_id": "8679",
     "doc-id": "RFC4511",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "4.4",
     "orig_text": "   One unsolicited notification (Notice of Disconnection) is defined in\r\n   this document.  The specification of an unsolicited notification\r\n   consists of:\r\n\r\n   - the OBJECT IDENTIFIER assigned to the notification (to be specified\r\n     in the responseName,\r\n\r\n   - the format of the contents of the responseValue (if any),\r\n\r\n   - the circumstances which will cause the notification to be sent, and\r\n\r\n   - the semantics of the message.",
-    "correct_text": "   The specification of an unsolicited notification consists of:\r\n\r\n   - the OBJECT IDENTIFIER assigned to the notification (to be specified\r\n     in the responseName,\r\n\r\n   - the format of the contents of the responseValue (if any),\r\n\r\n   - the circumstances which will cause the notification to be sent, and\r\n\r\n   - the semantics of the message.\r\n\r\n   One unsolicited notification (Notice of Disconnection) is defined in this document, defined in section 4.4.1.",
+    "correct_text": "   The specification of an unsolicited notification consists of:\r\n\r\n   - the OBJECT IDENTIFIER assigned to the notification (to be specified\r\n     in the responseName,\r\n\r\n   - the format of the contents of the responseValue (if any),\r\n\r\n   - the circumstances which will cause the notification to be sent, and\r\n\r\n   - the semantics of the message.\r\n\r\nOne unsolicited notification (Notice of Disconnection) is defined in this \r\ndocument, defined in section 4.4.1.",
     "notes": "It looks like there are two separate paragrahs that were merged at a some point.\r\nThe fact the RFC defines one unsolicited notification (in section 4.4.1) is a separate item from the definition of the contents of any unsolicited notification.\r\nAs it is, it looks like the definition of the contents only applies or relates to the defined notification of section 4.4.1",
     "submit_date": "2025-12-16",
     "submitter_name": "Fabio Pistolesi",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-01-12 14:21:52"
   }
 ]

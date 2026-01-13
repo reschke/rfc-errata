@@ -168,7 +168,7 @@
     "errata_id": "8698",
     "doc-id": "RFC8200",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "4.5",
     "orig_text": "If insufficient fragments are received to complete reassembly\r\n         of a packet within 60 seconds of the reception of the first-\r\n         arriving fragment of that packet, reassembly of that packet\r\n         must be abandoned and all the fragments that have been received\r\n         for that packet must be discarded.  If the first fragment\r\n         (i.e., the one with a Fragment Offset of zero) has been\r\n         received, an ICMP Time Exceeded -- Fragment Reassembly Time\r\n         Exceeded message should be sent to the source of that fragment.",
     "correct_text": "If insufficient fragments are received to complete reassembly\r\n         of a packet by 60 seconds after the reception of the first-\r\n         arriving fragment of that packet, reassembly of that packet\r\n         must be abandoned and all the fragments that have been received\r\n         for that packet must be discarded.  If the first fragment\r\n         (i.e., the one with a Fragment Offset of zero) has been\r\n         received, an ICMP Time Exceeded -- Fragment Reassembly Time\r\n         Exceeded message should be sent to the source of that fragment.",
@@ -177,6 +177,6 @@
     "submitter_name": "Jeremy Duncan",
     "verifier_id": "2",
     "verifier_name": null,
-    "update_date": "2026-01-08 12:19:13"
+    "update_date": "2026-01-12 14:03:46"
   }
 ]

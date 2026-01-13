@@ -3,15 +3,15 @@
     "errata_id": "8675",
     "doc-id": "RFC9807",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "6.3.2.3",
     "orig_text": "concat(server_public_key, envelope) =\r\n    xor(credential_response_pad, response.masked_response)",
     "correct_text": "concat(server_public_key, envelope) = unknown?",
     "notes": "I believe the equation does not make sense, the ouput of a concatenation being equal to the XOR function, it seems something is missing, or sentence is a leftover? I don't know what the correct text should be",
     "submit_date": "2025-12-11",
     "submitter_name": "paul esteban",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2026-01-12 13:11:46"
   }
 ]
