@@ -28,5 +28,20 @@
     "verifier_id": "183",
     "verifier_name": "Andy Newton",
     "update_date": "2025-11-01 11:48:42"
+  },
+  {
+    "errata_id": "8703",
+    "doc-id": "RFC9605",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "C.2.",
+    "orig_text": "*  auth_key: The encryption subkey produced by the derive_subkeys()\r\n      algorithm\r\n\r\n",
+    "correct_text": "*  auth_key: The authentication subkey produced by the derive_subkeys()\r\n      algorithm\r\n\r\n",
+    "notes": "Copy/paste error on the description of the auth_key description string. It is the authentication subkey.",
+    "submit_date": "2026-01-15",
+    "submitter_name": "Aron Rosenberg",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
