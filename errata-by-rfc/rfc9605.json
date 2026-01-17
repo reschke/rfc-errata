@@ -32,7 +32,7 @@
   {
     "errata_id": "8703",
     "doc-id": "RFC9605",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "C.2.",
     "orig_text": "*  auth_key: The encryption subkey produced by the derive_subkeys()\r\n      algorithm\r\n\r\n",
@@ -40,8 +40,8 @@
     "notes": "Copy/paste error on the description of the auth_key description string. It is the authentication subkey.",
     "submit_date": "2026-01-15",
     "submitter_name": "Aron Rosenberg",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-01-16 11:07:46"
   }
 ]

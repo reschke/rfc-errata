@@ -118,5 +118,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8705",
+    "doc-id": "RFC8881",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "16.2.3.",
+    "orig_text": "   It is possible that the server receives a request that contains an\r\n   operation that is less than the first legal operation (OP_ACCESS) or\r\n   greater than the last legal operation (OP_RELEASE_LOCKOWNER).  In",
+    "correct_text": "   It is possible that the server receives a request that contains an\r\n   operation that is less than the first legal operation (OP_ACCESS) or\r\n   greater than the last legal operation (OP_RECLAIM_COMPLETE).  In",
+    "notes": "The last legal operation in RFC 8881 (NFSv4.1) is the OP_RECLAIM_COMPLETE.\r\nThe OP_RELEASE_LOCKOWNER operation was the last one in RFC 7530 (NFSv4.0).",
+    "submit_date": "2026-01-16",
+    "submitter_name": "Pali Rohár",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
