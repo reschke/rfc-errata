@@ -58,5 +58,20 @@
     "verifier_id": "186",
     "verifier_name": "Gorry Fairhurst",
     "update_date": "2026-01-20 02:17:47"
+  },
+  {
+    "errata_id": "8710",
+    "doc-id": "RFC9293",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3.2, Fig. 5",
+    "orig_text": "Figure 5:\r\nrcv RST (note 1)\r\n\r\nNote 1:\r\nThe transition from SYN-RECEIVED to LISTEN on receiving a RST is \r\nconditional on having reached SYN-RECEIVED after a passive OPEN.",
+    "correct_text": "Figure 5:\r\nrcv RST/SYN (note 1)\r\n\r\nNote 1:\r\nWhen a connection in SYN-RECEIVED was reached through a passive OPEN, \r\nthe connection returns to LISTEN in two cases, as specified in Section \r\n3.10.7.4:\r\n(1) when a RST is received, and (2) when a SYN is received.",
+    "notes": "Rationale:\r\nSection 3.10.7.4 specifies two cases in which a connection in SYN-RECEIVED, reached via a passive OPEN, returns to LISTEN: when a RST is received and when a SYN is received. Figure 5's edge label and Note 1 currently mention only the RST-based case. This change does not introduce new behavior; it aligns the label and Note 1 with the existing normative text.",
+    "submit_date": "2026-01-21",
+    "submitter_name": "Noga H. Rotman",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

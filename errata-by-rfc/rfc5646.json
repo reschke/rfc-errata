@@ -13,5 +13,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8711",
+    "doc-id": "RFC5646",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.1.5",
+    "orig_text": "The field ’Description’ contains a description of the tag or subtag\r\nin the record. The ’Description’ field MAY appear more than once per\r\nrecord. The ’Description’ field MAY include the full range of\r\nUnicode characters. At least one of the ’Description’ fields MUST be\r\nwritten or transcribed into the Latin script; additional\r\n’Description’ fields MAY be in any script or language.",
+    "correct_text": "The field ’Description’ contains a description of the tag or subtag\r\nin the record. The ’Description’ field MAY appear more than once per\r\nrecord. The ’Description’ field MAY include the full range of\r\nUnicode characters. At least one of the 'Description' fields MUST be\r\nwritten or transcribed into the Latin script (i.e., using characters\r\nwith Unicode Script property value Latin, as defined in UAX #24,\r\nplus characters with Script property value Common or Inherited when\r\nused in conjunction with Latin characters); additional ’Description’\r\nfields MAY be in any script or language.",
+    "notes": "The term \"Latin script\" is not defined anywhere in the document. This\r\ncreates implementation ambiguity: does it refer to:\r\n\r\n  (a) The US-ASCII letters A-Z, a-z (per ISO 646, which the RFC references\r\n      as the default restriction for registry fields in Section 3.1.1)\r\n\r\n  (b) Characters with Unicode Script property value \"Latin\" as defined\r\n      in UAX #24 (Unicode Standard Annex #24, \"Unicode Script Property\")\r\n\r\nThese interpretations differ substantially: option (a) covers 52 letters,\r\nwhile option (b) covers approximately 1,500 code points including\r\ncharacters such as é, ñ, ø, and ǁ (LATIN LETTER LATERAL CLICK).\r\n\r\nThe registry contains 516 Description fields using extended Latin\r\ncharacters (e.g., \"Norwegian Bokmål\", \"Volapük\", \"Arbëreshë Albanian\"),\r\ndemonstrating that interpretation (a) is not the operational practice.\r\n\r\nThe RFC explicitly permits \"the full range of Unicode characters\" in\r\nDescription fields (Section 3.1.5), so referencing Unicode's script\r\nproperty is consistent with the document's framework.\r\n\r\nUAX #24 (https://www.unicode.org/reports/tr24/) is a stable Unicode\r\nStandard Annex with clear definitions.",
+    "submit_date": "2026-01-22",
+    "submitter_name": "Pétur Ingi Egilsson",
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2026-01-22 10:52:09"
+  },
+  {
+    "errata_id": "8712",
+    "doc-id": "RFC5646",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.5",
+    "orig_text": "The ’Description’ fields provided in the request MUST contain at least one description written or transcribed into the Latin script;",
+    "correct_text": "The 'Description' fields provided in the request MUST contain at\r\nleast one description written or transcribed into the Latin script\r\n(i.e., using characters with Unicode Script property value Latin,\r\nas defined in UAX #24, plus characters with Script property value\r\nCommon or Inherited when used in conjunction with Latin characters);",
+    "notes": "Same notes as for Errata 8711.",
+    "submit_date": "2026-01-22",
+    "submitter_name": "Pétur Ingi Egilsson",
+    "verifier_id": "183",
+    "verifier_name": "Andy Newton",
+    "update_date": "2026-01-22 10:51:23"
   }
 ]
