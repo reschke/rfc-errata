@@ -103,5 +103,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8717",
+    "doc-id": "RFC6386",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "20.4",
+    "orig_text": "           if (dqf->quant_idx != q || quant_hdr->delta_update)",
+    "correct_text": "           /* if (dqf->quant_idx != q || quant_hdr->delta_update) */",
+    "notes": "In the reference decoder as-provided, in the event that the decoder has previously decoded a frame with a given yac_qi (`vp8_quant_hdr.q_index` in the code) and non-zero deltas, and in the next frame, `yac_qi` remains the same, but all deltas are not provided or are 0, then `quant_idx` will equal q and `delta_update` will be 0, so the table update will not be applied, leading to the previously decoded deltas being used.\r\n\r\nlibvpx v1.15.2 `vp8/decoder/decodeframe.c` lines 1083 and following (and the equivalent location in the first commit of libvpx) handles a similar optimization; however, the delta values are compared to their previous values in the 'get_delta_q' function.\r\n\r\nI believe the error in the reference decoder stems from a misoptimization attempting to 'lay the groundwork' for the same prevention of rebuilding of optimized dequantization tables.\r\n\r\nThese tables do not exist in the reference decoder, so the code being guarded here is relatively trivial.\r\n\r\nI have tested this change on a personal stripped-down fork of the libvpx 'dixie' branch (the closest 'relative' to the reference decoder that can easily be compiled) in order to confirm it does not immediately break decoding, but my test vector library is not particularly extensive, and the bug is one that would likely have to be triggered by chance in a normal encoding.\r\nStill, I believe the evidence in libvpx points to this errata being correct.\r\n\r\nlibvpx's interpretation appears to better align with the specification (section 9.6. Dequantization Indices), but not with the reference code; as it is the major shipping implementation, and as the behaviour doesn't really make sense, I'm inclined to believe libvpx is correct.\r\n\r\nThe `get_delta_q` function's use and behaviour is present in the optimized decoder since the 'Initial WebM release' commit, which indicates that the 'non-sticky' behaviour appears to have superseded the reference decoder.\r\n\r\nPlease note that only removing/commenting this line creates unused code which would not be correctable without a deeper series of changes.\r\nThe effects of disabling this optimization in this decoder appear to be trivial (simple once-per-frame logic), but in the 'full' decoder the process is a little more expensive for what appears to be dequantizer optimization reasons.",
+    "submit_date": "2026-01-23",
+    "submitter_name": "20kdc",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

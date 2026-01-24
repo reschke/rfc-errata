@@ -133,5 +133,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8716",
+    "doc-id": "RFC8881",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.4",
+    "orig_text": "   *  The per-file system attributes are:\r\n\r\n         supported_attrs, suppattr_exclcreat, fh_expire_type,\r\n         link_support, symlink_support, unique_handles, aclsupport,\r\n         cansettime, case_insensitive, case_preserving,\r\n         chown_restricted, files_avail, files_free, files_total,\r\n         fs_locations, homogeneous, maxfilesize, maxname, maxread,\r\n         maxwrite, no_trunc, space_avail, space_free, space_total,\r\n         time_delta, change_policy, fs_status, fs_layout_type,\r\n         fs_locations_info, fs_charset_cap\r\n\r\n   *  The per-file system object attributes are:\r\n\r\n         type, change, size, named_attr, fsid, rdattr_error, filehandle,\r\n         acl, archive, fileid, hidden, maxlink, mimetype, mode,\r\n         numlinks, owner, owner_group, rawdev, space_used, system,\r\n         time_access, time_backup, time_create, time_metadata,\r\n         time_modify, mounted_on_fileid, dir_notif_delay,\r\n         dirent_notif_delay, dacl, sacl, layout_type, layout_hint,\r\n         layout_blksize, layout_alignment, mdsthreshold, retention_get,\r\n         retention_set, retentevt_get, retentevt_set, retention_hold,\r\n         mode_set_masked",
+    "correct_text": "   *  The per-file system attributes are:\r\n\r\n         fsid, supported_attrs, suppattr_exclcreat, fh_expire_type,\r\n         link_support, symlink_support, unique_handles, aclsupport,\r\n         cansettime, case_insensitive, case_preserving,\r\n         chown_restricted, files_avail, files_free, files_total,\r\n         fs_locations, homogeneous, maxfilesize, maxname, maxread,\r\n         maxwrite, no_trunc, space_avail, space_free, space_total,\r\n         time_delta, change_policy, fs_status, fs_layout_type,\r\n         fs_locations_info, fs_charset_cap\r\n\r\n   *  The per-file system object attributes are:\r\n\r\n         type, change, size, named_attr, rdattr_error, filehandle,\r\n         acl, archive, fileid, hidden, maxlink, mimetype, mode,\r\n         numlinks, owner, owner_group, rawdev, space_used, system,\r\n         time_access, time_backup, time_create, time_metadata,\r\n         time_modify, mounted_on_fileid, dir_notif_delay,\r\n         dirent_notif_delay, dacl, sacl, layout_type, layout_hint,\r\n         layout_blksize, layout_alignment, mdsthreshold, retention_get,\r\n         retention_set, retentevt_get, retentevt_set, retention_hold,\r\n         mode_set_masked",
+    "notes": "The per-file system attribute in section 5.4 is defined as:\r\nThe value of the attribute will be the same for some or all file objects that share the same fsid attribute (Section 5.8.1.9).\r\n\r\nSo the fsid attribute needs to be classified as the per-file system attribute too, not as the per-file system object.",
+    "submit_date": "2026-01-23",
+    "submitter_name": "Pali Rohár",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
