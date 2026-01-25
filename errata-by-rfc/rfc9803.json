@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8718",
+    "doc-id": "RFC9803",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8",
+    "orig_text": "  <element name=\"create\" type=\"ttl:commandContainer\">\r\n    <unique name=\"uniqueRRTypeForCreate\">\r\n      <selector xpath=\"ttl:ttl\"/>\r\n      <field xpath=\"@for\"/>\r\n    </unique>\r\n  </element>\r\n\r\n  <element name=\"update\" type=\"ttl:commandContainer\">\r\n    <unique name=\"uniqueRRTypeForUpdate\">\r\n      <selector xpath=\"ttl:ttl\"/>\r\n      <field xpath=\"@for\"/>\r\n    </unique>\r\n  </element>\r\n\r\n  <element name=\"infData\" type=\"ttl:responseContainer\">\r\n    <unique name=\"uniqueRRTypeForInfo\">\r\n      <selector xpath=\"ttl:ttl\"/>\r\n      <field xpath=\"@for\"/>\r\n    </unique>\r\n  </element>",
+    "correct_text": "  <element name=\"create\" type=\"ttl:commandContainer\">\r\n    <unique name=\"uniqueRRTypeForCreate\">\r\n      <selector xpath=\"ttl:ttl\"/>\r\n      <field xpath=\"@custom\"/>\r\n      <field xpath=\"@for\"/>\r\n    </unique>\r\n  </element>\r\n\r\n  <element name=\"update\" type=\"ttl:commandContainer\">\r\n    <unique name=\"uniqueRRTypeForUpdate\">\r\n      <selector xpath=\"ttl:ttl\"/>\r\n      <field xpath=\"@custom\"/>\r\n      <field xpath=\"@for\"/>\r\n    </unique>\r\n  </element>\r\n\r\n  <element name=\"infData\" type=\"ttl:responseContainer\">\r\n    <unique name=\"uniqueRRTypeForInfo\">\r\n      <selector xpath=\"ttl:ttl\"/>\r\n      <field xpath=\"@custom\"/>\r\n      <field xpath=\"@for\"/>\r\n    </unique>\r\n  </element>",
+    "notes": "There may exist multiple custom record types, e.g., \r\n<ttl:ttl for=\"custom\" custom=\"NEWRRTYPE1\">3600</ttl:ttl>\r\n<ttl:ttl for=\"custom\" custom=\"NEWRRTYPE2\">3600</ttl:ttl>\r\nBoth \"for\" and \"custom\" attributes are needed to uniquely identify the record type. Therefore, the <unique> elements in the XML syntax should be updated as such.",
+    "submit_date": "2026-01-24",
+    "submitter_name": "Yixin Sun",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
