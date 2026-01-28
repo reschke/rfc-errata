@@ -2,16 +2,16 @@
   {
     "errata_id": "8709",
     "doc-id": "RFC9857",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "5.1",
-    "orig_text": "SR Binding SID sub-TLV",
-    "correct_text": "SR Binding SID TLV",
+    "orig_text": "   In the case of an SRv6, the SR Binding SID sub-TLV does not have the\r\n   ability to signal the SRv6 Endpoint behavior [RFC8986] or the\r\n   structure of the SID.  Therefore, the SR Binding SID sub-TLV SHOULD\r\n   NOT be used for the advertisement of an SRv6 Binding SID.  Instead,\r\n   the SRv6 Binding SID TLV defined in Section 5.2 SHOULD be used for\r\n   the signaling of an SRv6 Binding SID.  The use of the SR Binding SID\r\n   sub-TLV for advertisement of the SRv6 Binding SID has been\r\n   deprecated, and it is documented here only for backward compatibility\r\n   with implementations that followed early draft versions of this\r\n   specification.",
+    "correct_text": "   In the case of an SRv6, the SR Binding SID TLV does not have the\r\n   ability to signal the SRv6 Endpoint behavior [RFC8986] or the\r\n   structure of the SID.  Therefore, the SR Binding SID TLV SHOULD\r\n   NOT be used for the advertisement of an SRv6 Binding SID.  Instead,\r\n   the SRv6 Binding SID TLV defined in Section 5.2 SHOULD be used for\r\n   the signaling of an SRv6 Binding SID.  The use of the SR Binding SID\r\n   TLV for advertisement of the SRv6 Binding SID has been\r\n   deprecated, and it is documented here only for backward compatibility\r\n   with implementations that followed early draft versions of this\r\n   specification.",
     "notes": "The incorrect term `SR Binding SID sub-TLV' appears three times in the last paragraph of Section 5.1. The correct term is `SR Binding SID TLV'.",
     "submit_date": "2026-01-19",
     "submitter_name": "Hyeonmin Lee",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "185",
+    "verifier_name": "Ketan Talaulikar",
+    "update_date": "2026-01-27 07:24:47"
   }
 ]

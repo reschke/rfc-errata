@@ -107,17 +107,17 @@
   {
     "errata_id": "7824",
     "doc-id": "RFC7748",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5.2",
     "orig_text": "   Input scalar:\r\n     203d494428b8399352665ddca42f9de8fef600908e0d461cb021f8c5\r\n     38345dd77c3e4806e25f46d3315c44e0a5b4371282dd2c8d5be3095f\r\n   Input scalar as a number (base 10):\r\n     633254335906970592779259481534862372382525155\r\n     252028961056404001332122152890562527156973881\r\n     968934311400345568203929409663925541994577184\r\n   Input u-coordinate:\r\n     0fbcc2f993cd56d3305b0b7d9e55d4c1a8fb5dbb52f8e9a1e9b6201b\r\n     165d015894e56c4d3570bee52fe205e28a78b91cdfbde71ce8d157db\r\n   Input u-coordinate as a number (base 10):\r\n     622761797758325444462922068431234180649590390\r\n     024811299761625153767228042600197997696167956\r\n     134770744996690267634159427999832340166786063\r\n   Output u-coordinate:\r\n     884a02576239ff7a2f2f63b2db6a9ff37047ac13568e1e30fe63c4a7\r\n     ad1b3ee3a5700df34321d62077e63633c575c1c954514e99da7c179d",
     "correct_text": "   Input scalar:\r\n     203d494428b8399352665ddca42f9de8fef600908e0d461cb021f8c5\r\n     38345dd77c3e4806e25f46d3315c44e0a5b4371282dd2c8d5be3095f\r\n   Input scalar as a number (base 10):\r\n     633254335906970592779259481534862372382525155\r\n     252028961056404001332122152890562527156973881\r\n     968934311400345568203929409663925541994577184\r\n   Input u-coordinate:\r\n     1e37b1e6368991ebce5815bf6b567cedfec0d32246815a6707f02c4a\r\n     61247656f5df569f02613cc5bcedf7a924424ff063c9c0aff5b395ae\r\n   Input u-coordinate as a number (base 10):\r\n     495683502945530038677307449626580741146441879\r\n     406119444019011021926629134928724388368946852\r\n     962833749157931574628774133988199037473470238\r\n   Output u-coordinate:\r\n     d34142faca68f7a3ddf805fa39cc706d5ab3f5633ceff5e6462b775d\r\n     ef45f33083461dcf821cc3f0f74a813277e6895a35d958feef79a5bf",
-    "notes": "Regarding Section 5.2, X448, second vector, the given input u-coordinate is not part of a valid point on the Montgomery form of Curve448.\r\n\r\nI suggest replacing the point with a valid one: (2^447 + 100)*G\r\n\r\nSee the SageMath code (permalink): https://web.archive.org/web/20240227114733/https://pastebin.com/yAuzvEJG",
+    "notes": "Regarding Section 5.2, X448, second vector, the given input u-coordinate is not part of a valid point on the Montgomery form of Curve448.\r\n\r\nI suggest replacing the point with a valid one: (2^447 + 100)*G\r\n\r\nSee the SageMath code (permalink): https://web.archive.org/web/20240227114733/https://pastebin.com/yAuzvEJG\n --VERIFIER NOTES-- \nRejected. The mathematical observation is correct: the u-coordinate is on the quadratic twist, not the main curve. However, RFC author Mike Hamburg confirmed on the CFRG list that this is intentional. X448 is designed to accept both curve and twist points without membership checking (Section 7). The test vector provides coverage for the twist case. Removing it would reduce test coverage.\r\n\r\nCFRG list: http://mailarchive.ietf.org/arch/msg/cfrg/cAYh2Mj29xDEEbNAENbJynhksQk/",
     "submit_date": "2024-02-27",
     "submitter_name": "Jose Luis Amador Moreno",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2026-01-27 18:59:15"
   },
   {
     "errata_id": "7879",

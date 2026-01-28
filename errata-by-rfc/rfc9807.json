@@ -2,16 +2,16 @@
   {
     "errata_id": "8675",
     "doc-id": "RFC9807",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "6.3.2.3",
     "orig_text": "concat(server_public_key, envelope) =\r\n    xor(credential_response_pad, response.masked_response)",
     "correct_text": "concat(server_public_key, envelope) = unknown?",
-    "notes": "I believe the equation does not make sense, the ouput of a concatenation being equal to the XOR function, it seems something is missing, or sentence is a leftover? I don't know what the correct text should be",
+    "notes": "I believe the equation does not make sense, the ouput of a concatenation being equal to the XOR function, it seems something is missing, or sentence is a leftover? I don't know what the correct text should be\n --VERIFIER NOTES-- \nRejected. The submitter correctly identifies that the notation is confusing: having a function call on the left side of an assignment looks backwards. The equation is mathematically correct (XOR with the same pad recovers the concatenated data), but clearer notation would compute the XOR first, then parse the result. A future revision could address this. However, the proposed correction (\"= unknown?\") does not provide actionable replacement text.",
     "submit_date": "2025-12-11",
     "submitter_name": "paul esteban",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2026-01-12 13:11:46"
+    "verifier_id": "182",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2026-01-27 20:05:37"
   }
 ]

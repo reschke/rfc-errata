@@ -107,16 +107,16 @@
   {
     "errata_id": "8274",
     "doc-id": "RFC7539",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.3.2",
     "orig_text": " ChaCha state with the key setup.\r\n\r\n       61707865  3320646e  79622d32  6b206574\r\n       03020100  07060504  0b0a0908  0f0e0d0c\r\n       13121110  17161514  1b1a1918  1f1e1d1c\r\n       00000001  09000000  4a000000  00000000",
     "correct_text": " ChaCha state with the key setup.\r\n\r\n       61707865  3320646e  79622d32  6b206574\r\n       03020100  07060504  0b0a0908  0f0e0d0c\r\n       13121110  17161514  1b1a1918  1f1e1d1c\r\n       01000000  09000000  4a000000  00000000",
-    "notes": "Section 2.3 says: \"A 32-bit block count parameter, treated as a 32-bit little-endian integer\". In Section 2.3.2 the initial block counter is set to 1 which is 00000001 in big-endian hex. So I think, the corresponding entry in the state matrix (index 12) should be 01000000.\r\n\r\nNote from CFRG Chair: this change also applies to RFC 8439, which supercedes RFC 7539",
+    "notes": "Section 2.3 says: \"A 32-bit block count parameter, treated as a 32-bit little-endian integer\". In Section 2.3.2 the initial block counter is set to 1 which is 00000001 in big-endian hex. So I think, the corresponding entry in the state matrix (index 12) should be 01000000.\r\n\r\nNote from CFRG Chair: this change also applies to RFC 8439, which supercedes RFC 7539\n --VERIFIER NOTES-- \nRejected. The submitter correctly notes the \"little-endian\" description in Section 2.3, but this refers to parsing bytes into words and serializing words to bytes, not how values appear in the state matrix. The matrix displays 32-bit word values: the block counter is an integer placed into word 12, so value 1 displays as 00000001. If the proposed change were applied, the matrix would show 01000000 (integer 16,777,216), contradicting Block Count = 1. See also EID 6569 on RFC 8439 (similar confusion).",
     "submit_date": "2025-01-30",
     "submitter_name": "Alina Obst",
     "verifier_id": "182",
     "verifier_name": "Nick Sullivan",
-    "update_date": "2025-03-05 17:41:13"
+    "update_date": "2026-01-27 20:05:51"
   }
 ]
