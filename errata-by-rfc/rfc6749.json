@@ -433,5 +433,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8722",
+    "doc-id": "RFC6749",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1.5",
+    "orig_text": "If the authorization server issues a refresh token, it is included when issuing an access token (i.e., step (D) in Figure 1).\r\n",
+    "correct_text": "If the authorization server issues a refresh token, it is included when issuing an access token (i.e., step (B) in Figure 1).\r\n",
+    "notes": "The authorization server issues a refresh token in step (B) in Figure 1), not in step (D).",
+    "submit_date": "2026-01-28",
+    "submitter_name": "Martin Ottenwaelter",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
