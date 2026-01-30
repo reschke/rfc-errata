@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8723",
+    "doc-id": "RFC9172",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "   *  None of the security operations conflict with security operations\r\n      already present in the bundle.",
+    "correct_text": "   *  None of the security operations conflict with security operations\r\n      already present in the bundle.\r\n\r\n   *  In a set of integrity security operations, none of the operations\r\n      target the security block metadata with their associated \r\n      authenticated data, as this interferes with the processing of BIB\r\n      encryption.",
+    "notes": "Combining two or more integrity operations in a single security block, while the associated authenticated data targets the security block metadata, can lead to invalidation of a security result when following the rules of Section 3.9. When a BIB result is moved into a new BIB, then the security block number changes, thereby invalidating the BIB result. This additional constraint for combining security results prevents this invalidation.",
+    "submit_date": "2026-01-29",
+    "submitter_name": "Lukas Holst",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
