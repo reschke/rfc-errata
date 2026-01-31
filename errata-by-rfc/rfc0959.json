@@ -238,5 +238,20 @@
     "verifier_id": "176",
     "verifier_name": "Orie Steele",
     "update_date": "2024-05-03 12:23:12"
+  },
+  {
+    "errata_id": "8726",
+    "doc-id": "RFC0959",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix II",
+    "orig_text": "         CWD /usr/dm\r\n         200 directory changed to /usr/dm\r\n         MKD pathname\r\n         521-\"/usr/dm/pathname\" directory already exists;\r\n         521 taking no action.\r\n",
+    "correct_text": "         CWD /usr/dm\r\n         200 directory changed to /usr/dm\r\n         MKD pathname\r\n         553-Requested action not taken.\r\n         553 Name already exists.",
+    "notes": "There is no reply code \"521\".  Per the tables of permitted result codes, this should have been some variation on \"553 File name not allowed.\"",
+    "submit_date": "2026-01-31",
+    "submitter_name": "Gordon Steemson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
