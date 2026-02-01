@@ -178,5 +178,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2024-12-04 13:59:35"
+  },
+  {
+    "errata_id": "8727",
+    "doc-id": "RFC1123",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.2.13",
+    "orig_text": "                 Commands:\r\n                    USER, PASS, ACCT,\r\n                    PORT, PASV,\r\n                    TYPE, MODE, STRU,\r\n                    RETR, STOR, APPE,\r\n                    RNFR, RNTO, DELE,\r\n                    CWD,  CDUP, RMD,  MKD,  PWD,\r\n                    LIST, NLST,\r\n                    SYST, STAT,\r\n                    HELP, NOOP, QUIT.\r\n",
+    "correct_text": "                 Commands:\r\n                    USER, PASS, ACCT,\r\n                    PORT, PASV,\r\n                    TYPE, MODE, STRU,\r\n                    RETR, STOR, APPE,\r\n                    RNFR, RNTO, DELE,\r\n                    CWD,  CDUP, RMD,  MKD,  PWD,\r\n                    LIST, NLST,\r\n                    SITE, STAT,\r\n                    HELP, NOOP, QUIT.\r\n",
+    "notes": "There is no such command as “SYST”, but section 4.1.2.8 does urge the use of the SITE command, which seems like it was probably the intent here.",
+    "submit_date": "2026-02-01",
+    "submitter_name": "Gordon Steemson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
