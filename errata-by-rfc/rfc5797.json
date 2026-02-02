@@ -58,5 +58,20 @@
     "verifier_id": "176",
     "verifier_name": "Orie Steele",
     "update_date": "2024-04-01 14:25:57"
+  },
+  {
+    "errata_id": "8728",
+    "doc-id": "RFC5797",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.4",
+    "orig_text": "      Mandatory commands:\r\n\r\n      ABOR, ACCT, ALLO, APPE, CWD, DELE, HELP, LIST, MODE, NLST, NOOP,\r\n      PASS, PASV, PORT, QUIT, REIN, REST, RETR, RNFR, RNTO, SITE, STAT,\r\n      STOR, STRU, TYPE, USER\r\n\r\n      Optional commands:\r\n\r\n      CDUP, MKD, PWD, RMD, SMNT, STOU, SYST\r\n",
+    "correct_text": "      Mandatory commands:\r\n\r\n      ACCT, APPE, CDUP, CWD, DELE, HELP, LIST, MKD, MODE, NLST, NOOP,\r\n      PASS, PASV, PORT, PWD, QUIT, RETR, RMD, RNFR, RNTO, STAT, STOR,\r\n      STRU, SYST, TYPE, USER\r\n\r\n      Optional commands:\r\n\r\n      ABOR, ALLO, REIN, REST, SITE, SMNT, STOU\r\n",
+    "notes": "For some reason, five commands listed as optional in RFC 1123 (ABOR, ALLO, REIN, REST, and SITE) are marked mandatory here, and five other commands listed as mandatory in RFC 1123 (CDUP, MKD, PWD, RMD, and SYST) are marked optional here.  This error was naturally propagated into the IANA registry established by this RFC, which therefore also needs correction.",
+    "submit_date": "2026-02-01",
+    "submitter_name": "Gordon Steemson",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
