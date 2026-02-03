@@ -182,16 +182,16 @@
   {
     "errata_id": "8727",
     "doc-id": "RFC1123",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.1.2.13",
     "orig_text": "                 Commands:\r\n                    USER, PASS, ACCT,\r\n                    PORT, PASV,\r\n                    TYPE, MODE, STRU,\r\n                    RETR, STOR, APPE,\r\n                    RNFR, RNTO, DELE,\r\n                    CWD,  CDUP, RMD,  MKD,  PWD,\r\n                    LIST, NLST,\r\n                    SYST, STAT,\r\n                    HELP, NOOP, QUIT.\r\n",
     "correct_text": "                 Commands:\r\n                    USER, PASS, ACCT,\r\n                    PORT, PASV,\r\n                    TYPE, MODE, STRU,\r\n                    RETR, STOR, APPE,\r\n                    RNFR, RNTO, DELE,\r\n                    CWD,  CDUP, RMD,  MKD,  PWD,\r\n                    LIST, NLST,\r\n                    SITE, STAT,\r\n                    HELP, NOOP, QUIT.\r\n",
-    "notes": "There is no such command as “SYST”, but section 4.1.2.8 does urge the use of the SITE command, which seems like it was probably the intent here.",
+    "notes": "There is no such command as “SYST”, but section 4.1.2.8 does urge the use of the SITE command, which seems like it was probably the intent here.\r\n\r\n---- Verifier note ----\r\n\r\nAs noted later by the erratum reporter, section 4.1.3 of RFC 959 (FTP) has indeed a SYST command.\n --VERIFIER NOTES-- \n   ---- Verifier note ----\r\n\r\nAs noted later by the erratum reporter, section 4.1.3 of RFC 959 (FTP) has indeed a SYST command.",
     "submit_date": "2026-02-01",
     "submitter_name": "Gordon Steemson",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2026-02-01 23:31:41"
   }
 ]

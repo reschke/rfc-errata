@@ -2,7 +2,7 @@
   {
     "errata_id": "8523",
     "doc-id": "RFC9482",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2",
     "orig_text": "PKIMessages",
@@ -10,8 +10,8 @@
     "notes": "This pertains to all three occurrences of the word \"PKIMessages\" in sections 2, 2.3, and 2.5.\r\n\r\n\"PKIMessages\" can be misinterpreted as the ASN.1 type \"PKIMessages\", defined as:\r\n\r\n    PKIMessages ::= SEQUENCE SIZE (1..MAX) OF PKIMessage\r\n\r\nYet what is meant in all three occurrences in this RFC is simply: PKIMessage structures \r\n(i.e., one ore more structures of type PKIMessage), not a list/sequence of PKIMessage.\r\n\r\nNote: The same disambiguation has already been done in RFC 9811 \r\n(as mentioned in https://datatracker.ietf.org/doc/draft-ietf-lamps-rfc6712bis/10/).",
     "submit_date": "2025-08-01",
     "submitter_name": "David von Oheimb",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-08-13 09:07:06"
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2026-02-02 07:41:49"
   }
 ]

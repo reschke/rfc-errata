@@ -167,7 +167,7 @@
   {
     "errata_id": "8719",
     "doc-id": "RFC2131",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "3",
     "orig_text": "If the client detects that the\r\n     address is already in use (e.g., through the use of ARP), the\r\n     client MUST send a DHCPDECLINE message to the server and restarts\r\n     the configuration process.\r\n\r\n...\r\n\r\n      If the client detects that the IP address in the DHCPACK message\r\n      is already in use, the client MUST send a DHCPDECLINE message to the\r\n      server and restarts the configuration process by requesting a\r\n      new network address.\r\n",
@@ -175,8 +175,8 @@
     "notes": "2 occurences of the same minor typo (restarts instead of restart) at 3.1 number 5, and 3.2 number 3\r\n\r\ns/and restarts/and restart/",
     "submit_date": "2026-01-25",
     "submitter_name": "Eugene Adell",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "161",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2026-02-01 23:34:32"
   }
 ]
