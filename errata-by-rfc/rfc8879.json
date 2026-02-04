@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8738",
+    "doc-id": "RFC8879",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "After decompression, the Certificate message MUST be processed as if\r\nit were encoded without being compressed. This way, the parsing and\r\nthe verification have the same security properties as they would have\r\nin TLS normally.",
+    "correct_text": "After decompression, the Certificate message MUST be processed as if\r\nit were encoded without being compressed, with the exception of the\r\nhandshake transcript. The CompressedCertificate message is hashed into\r\nthe handshake transcript (Section 4.4.3 of [RFC8446]) in place of a\r\nCertificate message.\r\n",
+    "notes": "The corrected text is suggested by Martin Thomson.",
+    "submit_date": "2026-02-04",
+    "submitter_name": "Kazu Yamamoto",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
