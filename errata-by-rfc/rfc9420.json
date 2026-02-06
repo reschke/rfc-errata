@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8745",
+    "doc-id": "RFC9420",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "13.4",
+    "orig_text": "   *  A client adding a new member to a group MUST verify that the\r\n      LeafNode for the new member is compatible with the group's\r\n      extensions.  The capabilities field MUST indicate support for each\r\n      extension in the GroupContext.\r\n",
+    "correct_text": "   *  A client adding a new member to a group MUST verify that the\r\n      LeafNode for the new member is compatible with the group's\r\n      extensions.  The capabilities field MUST indicate support for each\r\n      extension in the GroupContext.\r\n\r\n   *  A client updating a leaf node in the group MUST verify that the\r\n      new LeafNode is compatible with the group's extensions.  The\r\n      capabilities field MUST indicate support for each extension in the\r\n      GroupContext. This applies both to Update proposals and LeafNode\r\n      objects in the update_path in a Commit.",
+    "notes": "The RFC says on the topic of validating LeafNode capabilities:\r\n\r\n> Note that the latter two requirements mean that all\r\n> MLS GroupContext extensions are mandatory, in the\r\n> sense that an extension in use by the group MUST be\r\n> supported by all members of the group.\r\n> --- https://www.rfc-editor.org/rfc/rfc9420.html#section-13.4-6\r\n\r\nTo that end, it requires that we check that the LeafNodes in KeyPackages\r\nthat are added support all extensions in the group context. However, it\r\ndoesn't seem to require that the same check is performed for LeafNodes in\r\nUpdate proposals or update paths.\r\n\r\nAlso see this thread on the mailing list: https://mailarchive.ietf.org/arch/msg/mls/k18P4FP7dfS2cBmP0kL6Uh50-ok/",
+    "submit_date": "2026-02-05",
+    "submitter_name": "Jan Winkelmann",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
