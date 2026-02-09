@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2025-05-28 07:40:25"
+  },
+  {
+    "errata_id": "8746",
+    "doc-id": "RFC8489",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Annex B.1",
+    "orig_text": "   Password: \"The<U+00AD>M<U+00AA>tr<U+2168>\" and \"TheMatrIX\" (without\r\n   quotes) respectively before and after OpaqueString [RFC8265]\r\n   processing",
+    "correct_text": "   Password: \"The<U+00AD>M<U+00AA>tr<U+2168>\" and \"The<U+00AD>MatrIX\" (without\r\n   quotes) respectively before and after OpaqueString [RFC8265]\r\n   processing",
+    "notes": "OpaqueString (as defined in https://datatracker.ietf.org/doc/html/rfc8265#section-4.2) will not remove the unicode code point U+00AD (soft hyphen). Removing U+00AD is only a consequence of SASLprep which contains (https://datatracker.ietf.org/doc/html/rfc4013#section-2.1): \"the \"commonly mapped to nothing\" characters [StringPrep, B.1] that can be mapped to nothing.\". the \"commonly mapped to nothing\" list in https://datatracker.ietf.org/doc/html/rfc3454#section-3.1 does contain U+00AD but this is not something that will be changed by OpaqueString processing.  The SHA256 HMAC will also need to be updated to match.",
+    "submit_date": "2026-02-08",
+    "submitter_name": "Matthew Waters",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

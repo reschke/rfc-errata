@@ -43,5 +43,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2025-09-12 08:46:11"
+  },
+  {
+    "errata_id": "8747",
+    "doc-id": "RFC7518",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7.1.1",
+    "orig_text": "Algorithm Analysis Documents(s):",
+    "correct_text": "Algorithm Analysis Document(s):",
+    "notes": "This is a typo in the registration template. The template is shared between JWS and JWE and the JWS document does not have this typo. The IANA registry itself does not contain this typo either.",
+    "submit_date": "2026-02-08",
+    "submitter_name": "Filip Skokan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
