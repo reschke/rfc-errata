@@ -18,15 +18,15 @@
     "errata_id": "8714",
     "doc-id": "RFC4363",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "5",
     "orig_text": "            mgmt(5) - the value of the corresponding instance of\r\n                dot1qTpFdbAddress is also the value of an\r\n                existing instance of dot1qStaticAddress.\"",
     "correct_text": "            mgmt(5) - the value of the corresponding instance of\r\n                dot1qTpFdbAddress is also the value of an\r\n                existing instance of dot1qStaticUnicastAddress.\"",
     "notes": "The RFC says for dot1qTpFdbStatus:\r\n\r\n            mgmt(5) - the value of the corresponding instance of\r\n                dot1qTpFdbAddress is also the value of an\r\n                existing instance of dot1qStaticAddress.\"\r\n\r\nIt is referring to dot1qStaticAddress. But there is no such object. Instead, it\r\nshould refer to 'dot1qStaticUnicastAddress'.",
     "submit_date": "2026-01-23",
     "submitter_name": "Ramakrishna DTV",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2026-02-09 12:24:43"
   }
 ]
