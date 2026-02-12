@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8752",
+    "doc-id": "RFC9783",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "5.1.2",
+    "orig_text": "epoch handle(s)",
+    "correct_text": "Epoch ID(s)",
+    "notes": "\"Epoch handle\" is neither defined nor even used in RFC9334. The mentioned section 10.3 of RFC9334 instead uses the term \"Epoch IDs\". So, there is no need to invent a new term in RFC9783.\r\n\r\n---\r\n\r\nOnly for additional reference: [0-3]\r\n\r\n[0] https://mailarchive.ietf.org/arch/msg/rats/CgvwdtLEEVxQj2Ab5y6RRugS8zk/\r\n\r\n[1]\r\nhttps://datatracker.ietf.org/meeting/124/materials/slides-124-rats-sessb-guideline-for-security-consideration-of-rats-00#page=8\r\n\r\n[2]\r\nhttps://datatracker.ietf.org/meeting/interim-2026-rats-01/materials/slides-interim-2026-rats-01-sessa-relayattacks-00.pdf#page=11\r\n\r\n[3] https://mailarchive.ietf.org/arch/msg/rats/wCM3H2HFXiKMSLgpEAdQG4w4MiE/",
+    "submit_date": "2026-02-11",
+    "submitter_name": "Muhammad Usama Sardar",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

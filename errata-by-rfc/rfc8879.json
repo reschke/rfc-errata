@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8753",
+    "doc-id": "RFC8879",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "   uncompressed_length:  The length of the Certificate message once it\r\n      is uncompressed.  If, after decompression, the specified length\r\n      does not match the actual length, the party receiving the invalid\r\n      message MUST abort the connection with the \"bad_certificate\"\r\n      alert.  The presence of this field allows the receiver to\r\n      preallocate the buffer for the uncompressed Certificate message\r\n      and enforce limits on the message size before performing\r\n      decompression.\r\n\r\n   compressed_certificate_message:  The result of applying the indicated\r\n      compression algorithm to the encoded Certificate message that\r\n      would have been sent if certificate compression was not in use.\r\n      The compression algorithm defines how the bytes in the\r\n      compressed_certificate_message field are converted into the\r\n      Certificate message.",
+    "correct_text": "   uncompressed_length:  The length of the Certificate message once it\r\n      is uncompressed.  This is the length of the encoded Certificate\r\n      structure, without a four-byte handshake header.  If, after\r\n      decompression, the specified length does not match the actual\r\n      length, the party receiving the invalid message MUST abort the\r\n      connection with the \"bad_certificate\" alert.  The presence of this\r\n      field allows the receiver to preallocate the buffer for the\r\n      uncompressed Certificate message and enforce limits on the message\r\n      size before performing decompression.\r\n\r\n   compressed_certificate_message:  The result of applying the indicated\r\n      compression algorithm to the encoded Certificate message that\r\n      would have been sent if certificate compression was not in use.\r\n      The compression algorithm defines how the bytes in the\r\n      compressed_certificate_message field are converted into the\r\n      Certificate message.  The input to the compression algorithm is\r\n      the encoded Certificate structure, without a four-byte handshake\r\n      header.",
+    "notes": "We're often a bit sloppy about whether a \"Certificate message\" means the literal bytes of the Certificate structure, or also the four-byte header when wrapped in a Handshake structure. Since this is important for interop, explicitly say which we mean. Skimming BoringSSL, NSS, and OpenSSL, we all took this interpretation. This interpretation is also the marginally more size-efficient one.",
+    "submit_date": "2026-02-11",
+    "submitter_name": "David Benjamin",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
