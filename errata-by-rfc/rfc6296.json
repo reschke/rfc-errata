@@ -13,5 +13,20 @@
     "verifier_id": "105",
     "verifier_name": "ron bonica",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8757",
+    "doc-id": "RFC6296",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.7",
+    "orig_text": "   Although any 16-bit portion of an IPv6 IID could contain 0xFFFF, an\r\n   IID of all-ones is a reserved anycast identifier that should not be\r\n   used on the network [RFC2526].  If an NPTv6 Translator discovers a\r\n   datagram with an IID of all-zeros while performing address mapping,\r\n   that datagram MUST be dropped, and an ICMPv6 Parameter Problem error\r\n   SHOULD be generated [RFC4443].",
+    "correct_text": "   Although any 16-bit portion of an IPv6 IID could contain 0xFFFF, an\r\n   IID of all-ones forms a reserved anycast address that should not be\r\n   used on the network [RFC2526].  If an NPTv6 Translator discovers a\r\n   datagram with an IID of all-ones while performing address mapping,\r\n   that datagram MUST be dropped, and an ICMPv6 Parameter Problem error\r\n   SHOULD be generated [RFC4443].",
+    "notes": "0x0000 and 0xFFFF have the same effect on the ones'-complement sum, so in defining the one-to-one mapping, one of them needs to be disallowed from making up the entire 64-bit IID (leaving no adjustable word). All-ones was chosen to be excluded from the mapping, since RFC 2526 reserved it as a (non-EUI-64) anycast address, so a datagram with an IID of all-ones (not all-zeros) MUST be dropped. Note that \"anycast identifier\", as defined in RFC 2526, refers to the last 7 bits (not the entire IID).",
+    "submit_date": "2026-02-12",
+    "submitter_name": "Kevin Israel",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

@@ -77,17 +77,17 @@
   {
     "errata_id": "8387",
     "doc-id": "RFC9260",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.3.10.6",
     "orig_text": "Unrecognized Chunk: variable length\r\n   The Unrecognized Chunk field contains the unrecognized chunk from\r\n   the SCTP packet complete with Chunk Type, Chunk Flags, and Chunk\r\n   Length.",
     "correct_text": "Unrecognized Chunk: variable length\r\n   The Unrecognized Chunk field contains the unrecognized chunk from\r\n   the SCTP packet complete with Chunk Type, Chunk Flags, Chunk Length,\r\n   and Chunk Value.",
-    "notes": "If the Unrecognized Chunk field of the Unrecognized Chunk Type (6) error cause only contained \"Chunk Type, Chunk Flags, and Chunk Length\" (as the RFC says) then the Cause Length would have fixed value 8. However, Unrecognized Chunk is defined as variable length, meaning that it must contain the entire unrecognized Chunk including its Chunk Value field.",
+    "notes": "If the Unrecognized Chunk field of the Unrecognized Chunk Type (6) error cause only contained \"Chunk Type, Chunk Flags, and Chunk Length\" (as the RFC says) then the Cause Length would have fixed value 8. However, Unrecognized Chunk is defined as variable length, meaning that it must contain the entire unrecognized Chunk including its Chunk Value field.\n --VERIFIER NOTES-- \nThe suggested text from the reporter would require the sender of the error cause to include the complete chunk with all of its chunk value. It is correct that a chunk consists of a Chunk Type, Chunk Flag, Chunk Length, and Chunk Value. However, requiring a complete chunk value might result in a packet being too large and thus requiring IP level fragmentation. The proposed text was not intended in RFC 9260, and therfore this Erratum is not applied in this form, because the specification cannot be changed. ",
     "submit_date": "2025-04-20",
     "submitter_name": "Iñaki Baz Castillo",
-    "verifier_id": "2",
-    "verifier_name": null,
-    "update_date": "2025-04-29 14:31:39"
+    "verifier_id": "186",
+    "verifier_name": "G Fairhurst",
+    "update_date": "2026-02-12 00:13:16"
   },
   {
     "errata_id": "8402",
@@ -96,12 +96,12 @@
     "errata_type_code": "Technical",
     "section": "5.1.6",
     "orig_text": "If the T1-init timer expires at \"A\" after the INIT or COOKIE ECHO\r\nchunks are sent, the same INIT or COOKIE ECHO chunk with the same\r\nInitiate Tag (i.e., Tag_A) or State Cookie is retransmitted and the\r\ntimer is restarted.",
-    "correct_text": "If the T1-init timer expires at \"A\" after the INIT chunk is sent or\r\nif the T1-cookie timer expires at \"A\" after the the COOKIE ECHO chunk\r\nis sent, the same INIT or COOKIE ECHO chunk with the same Initiate\r\nTag (i.e., Tag_A) or State Cookie is retransmitted and the timer is\r\nrestarted.",
-    "notes": "T1-init timer is cancelled at \"A\" upon receipt of INIT ACK chunk from \"Z\", so it's impossible that T1-init timer expires at \"A\" after the COOKIE ECHO chunk is sent (since COOKIE ECHO chunk is immediately sent after INIT ACK chunk is received).",
+    "correct_text": "If the T1-init timer expires at \"A\" after the INIT chunk is sent, \r\nthe same INIT chunk with the same Initiate Tag (i.e., Tag_A) is \r\nretransmitted and the T1-init timer is restarted. If the T1-cookie \r\ntimer expires at \"A\" after the the COOKIE ECHO chunk is sent, the \r\nsame COOKIE ECHO chunk with the same State Cookie is retransmitted \r\nand the T1-cookie timer is restarted.",
+    "notes": "The original text said the T1-init timer is cancelled at \"A\" upon receipt of INIT ACK chunk from \"Z\", so it is impossible that the T1-init timer expires at \"A\" after the COOKIE ECHO chunk is sent (since COOKIE ECHO chunk is immediately sent after INIT ACK chunk is received). The text is updated to clarify two cases.",
     "submit_date": "2025-05-02",
     "submitter_name": "Iñaki Baz Castillo",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "186",
+    "verifier_name": "G Fairhurst",
+    "update_date": "2026-02-12 00:06:04"
   }
 ]
