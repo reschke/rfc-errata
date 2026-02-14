@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8759",
+    "doc-id": "RFC9129",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.9",
+    "orig_text": "2.9. OSPF RPC Operations \r\n\r\nThe \"ietf-ospf\" module defines two RPC operations:\r\n\r\nclear-database:\r\n    Resets the contents of a particular OSPF LSDB, forces neighbor\r\n adjacencies to the 'DOWN' state, and reoriginates self-originated\r\n LSAs. \r\nclear-neighbor:\r\n    Resets a particular OSPF neighbor or group of neighbors\r\n associated with an OSPF interface. \r\n\r\n  rpcs:\r\n    +---x clear-neighbor\r\n    |  +---w input\r\n    |     +---w routing-protocol-name\r\n    |     +     -> /rt:routing/control-plane-protocols/\r\n    |     +         control-plane-protocol/name\r\n    |     +---w interface?               if:interface-ref\r\n    +---x clear-database\r\n       +---w input\r\n          +---w routing-protocol-name\r\n                -> /rt:routing/control-plane-protocols/\r\n                    control-plane-protocol/name\r\n",
+    "correct_text": "For OSPF RPC operations, besides routing-protocol-name - which is in\r\nfact the OSPF instance name and could be named as instance-name -\r\nwe would need to specify the instance-type (ospfv2 or ospfv3) too.\r\nWithout this, RPC cannot handle the situation of having an OSPFv2\r\nand OSPFv3 process with the same name. Using the same name is\r\nnot restricted by config part of the yang OSPF tree, as type/name\r\nare the keys of an OSPF instance.",
+    "notes": "For OSPF RPC operations, besides routing-protocol-name - which is in\r\nfact the OSPF instance name and could be named as instance-name -\r\nwe would need to specify the instance-type (ospfv2 or ospfv3) too.\r\nWithout this, RPC cannot handle the situation of having an OSPFv2\r\nand OSPFv3 process with the same name. Using the same name is\r\nnot restricted by config part of the yang OSPF tree, as type/name\r\nare the keys of an OSPF instance.",
+    "submit_date": "2026-02-13",
+    "submitter_name": "Tamás Juhász",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
