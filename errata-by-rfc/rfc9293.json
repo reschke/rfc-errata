@@ -73,5 +73,20 @@
     "verifier_id": "186",
     "verifier_name": "G Fairhurst",
     "update_date": "2026-02-11 08:18:54"
+  },
+  {
+    "errata_id": "8760",
+    "doc-id": "RFC9293",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.6.1",
+    "orig_text": "When a connection is closed actively, it MUST linger in the TIME-WAIT\r\nstate for a time 2xMSL (Maximum Segment Lifetime) (MUST-13). However,\r\nit MAY accept a new SYN from the remote TCP endpoint to reopen the\r\nconnection directly from TIME-WAIT state (MAY-2), if it:\r\n\r\n(1)\r\nassigns its initial sequence number for the new connection to be larger\r\nthan the largest sequence number it used on the previous connection\r\nincarnation, and\r\n(2)\r\nreturns to TIME-WAIT state if the SYN turns out to be an old duplicate.\r\nWhen the TCP Timestamp Options are available, an improved algorithm is\r\ndescribed in [40] in order to support higher connection establishment\r\nrates. This algorithm for reducing TIME-WAIT is a Best Current Practice\r\nthat SHOULD be implemented since Timestamp Options are commonly used,\r\nand using them to reduce TIME-WAIT provides benefits for busy Internet\r\nservers (SHLD-4).",
+    "correct_text": "(1)\r\nuses the Timestamp-based algorithm described in [40] when reopening a\r\nconnection directly from the TIME-WAIT state; and\r\n(2)\r\nreturns to TIME-WAIT state if the SYN turns out to be an old duplicate.\r\n\r\nIf TCP Timestamps are not available, the endpoint MUST NOT reopen the\r\nconnection directly from the TIME-WAIT state.",
+    "notes": "Rationale / Implementability:\r\nItem (1) currently requires choosing an ISN “larger than the largest sequence number used on the previous connection incarnation.” On widely deployed systems (e.g., Linux), TCP does not maintain a per-connection persistent record of the “largest sequence number used” from the prior incarnation in a way that can be reliably applied to a subsequent connection reopened from TIME-WAIT. In practice, it may happen for a newly established connection to use an ISN that is smaller than the largest sequence number observed on a previous incarnation of the same 4-tuple, especially under rapid reconnect / port reuse and high-rate workloads.\r\n\r\nInteroperability:\r\nMany middleboxes (firewalls/load balancers/NAT devices) enforce sequence/window validity based on their own view of the prior flow and may drop segments they consider out-of-window or anomalous during/after fast reuse. This makes reopening directly from TIME-WAIT without a robust anti-duplicate mechanism prone to interoperability failures.\r\n\r\nProposed fix:\r\nReplace the “largest sequence number” requirement with an explicit requirement to use the Timestamp-based Best Current Practice described in [40] (RFC 6191) when reopening directly from TIME-WAIT. If TCP Timestamps are not available, the endpoint MUST NOT reopen directly from TIME-WAIT and should follow the normal TIME-WAIT behavior (2xMSL).",
+    "submit_date": "2026-02-14",
+    "submitter_name": "Murat genc",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
