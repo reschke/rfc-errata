@@ -313,5 +313,50 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8761",
+    "doc-id": "RFC4791",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.8.2",
+    "orig_text": "   <C:calendar-query xmlns:D=\"DAV:\"\r\n                     xmlns:C=\"urn:ietf:params:xml:ns:caldav\">\r\n     <D:prop>\r\n       <C:calendar-data>",
+    "correct_text": "   <C:calendar-query xmlns:D=\"DAV:\"\r\n                     xmlns:C=\"urn:ietf:params:xml:ns:caldav\">\r\n     <D:prop>\r\n       <D:getetag/>\r\n       <C:calendar-data>",
+    "notes": "D:getetag is part of the response but missing in the request",
+    "submit_date": "2026-02-15",
+    "submitter_name": "Benjamin Raison",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8762",
+    "doc-id": "RFC4791",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.8.3",
+    "orig_text": "   <C:calendar-query xmlns:D=\"DAV:\"\r\n                     xmlns:C=\"urn:ietf:params:xml:ns:caldav\">\r\n     <D:prop>\r\n       <C:calendar-data>\r\n",
+    "correct_text": "   <C:calendar-query xmlns:D=\"DAV:\"\r\n                     xmlns:C=\"urn:ietf:params:xml:ns:caldav\">\r\n     <D:prop>\r\n       <D:getetag/>\r\n       <C:calendar-data>\r\n",
+    "notes": "D:getetag is part of the response but missing in the request",
+    "submit_date": "2026-02-15",
+    "submitter_name": "Benjamin Raison",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8763",
+    "doc-id": "RFC4791",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.8.4",
+    "orig_text": "   <C:calendar-query xmlns:D=\"DAV:\"\r\n                 xmlns:C=\"urn:ietf:params:xml:ns:caldav\">\r\n     <D:prop>\r\n       <C:calendar-data>",
+    "correct_text": "   <C:calendar-query xmlns:D=\"DAV:\"\r\n                 xmlns:C=\"urn:ietf:params:xml:ns:caldav\">\r\n     <D:prop>\r\n       <D:getetag/>\r\n       <C:calendar-data>",
+    "notes": "D:getetag is part of the response but missing in the request",
+    "submit_date": "2026-02-15",
+    "submitter_name": "Benjamin Raison",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
