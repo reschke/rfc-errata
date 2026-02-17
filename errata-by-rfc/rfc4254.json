@@ -43,5 +43,20 @@
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2023-07-28 11:03:49"
+  },
+  {
+    "errata_id": "8764",
+    "doc-id": "RFC4254",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "      byte      SSH_MSG_GLOBAL_REQUEST\r\n      string    request name in US-ASCII only\r\n      boolean   want reply\r\n      ....      request-specific data follows\r\n\r\n   The value of 'request name' follows the DNS extensibility naming\r\n   convention outlined in [SSH-ARCH].\r\n\r\n   The recipient will respond to this message with\r\n   SSH_MSG_REQUEST_SUCCESS or SSH_MSG_REQUEST_FAILURE if 'want reply' is\r\n   TRUE.\r\n\r\n      byte      SSH_MSG_REQUEST_SUCCESS\r\n      ....     response specific data\r\n\r\n   Usually, the 'response specific data' is non-existent.\r\n\r\n   If the recipient does not recognize or support the request, it simply\r\n   responds with SSH_MSG_REQUEST_FAILURE.\r\n\r\n      byte      SSH_MSG_REQUEST_FAILURE\r\n",
+    "correct_text": "      byte      SSH_MSG_GLOBAL_REQUEST\r\n      string    request name in US-ASCII only\r\n      boolean   want reply\r\n      ....      request-specific data follows\r\n\r\n   The value of 'request name' follows the DNS extensibility naming\r\n   convention outlined in [SSH-ARCH].\r\n\r\n   The recipient will respond to this message with\r\n   SSH_MSG_REQUEST_SUCCESS or SSH_MSG_REQUEST_FAILURE if 'want reply' is\r\n   TRUE.  If 'want reply' is false, the recipient MUST NOT send a response,\r\n   even if the request is not recognized or supported.\r\n\r\n      byte      SSH_MSG_REQUEST_SUCCESS\r\n      ....     response specific data\r\n\r\n   Usually, the 'response specific data' is non-existent.\r\n\r\n   If the recipient does not recognize or support the request, it simply\r\n   responds with SSH_MSG_REQUEST_FAILURE if 'want reply' is true.\r\n\r\n      byte      SSH_MSG_REQUEST_FAILURE\r\n",
+    "notes": "The original wording was unclear on whether a response could be sent if 'want reply' was false, especially in the case where the request was not recognized or supported.\r\n\r\nThis is important because both sides depend on the order of responses to match response with request in the event that multiple requests are sent, so it needs to be possible to deterministically know whether a response will be sent.  Therefore, if 'want reply' is false, the recipient MUST NOT send a response in any circumstances.",
+    "submit_date": "2026-02-16",
+    "submitter_name": "Joseph Galbraith",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
