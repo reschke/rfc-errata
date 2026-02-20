@@ -103,5 +103,20 @@
     "verifier_id": "186",
     "verifier_name": "G Fairhurst",
     "update_date": "2026-02-12 00:06:04"
+  },
+  {
+    "errata_id": "8772",
+    "doc-id": "RFC9260",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3.4",
+    "orig_text": "This section missed a description for 'Chunk Length' field.",
+    "correct_text": "   Chunk Length: 16 bits (unsigned integer)\r\n\r\n      Set to the size of the chunk in bytes, including the chunk header\r\n      and the SACK Information field.",
+    "notes": "Added missed description.",
+    "submit_date": "2026-02-20",
+    "submitter_name": "Zhao, Gang",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

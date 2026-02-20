@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8770",
+    "doc-id": "RFC9174",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2.2.",
+    "orig_text": "Once a transfer of a bundle has commenced, the entity MUST only send\r\nsegments containing sequential portions of that bundle until it sends\r\na segment with the END flag set to 1.",
+    "correct_text": "Once a transfer of a bundle has commenced, the entity MUST only send\r\nsegments containing sequential portions of that bundle until it sends\r\na segment with the END flag set to 1 or until the sender chooses to\r\ncancel the transfer.\r\n\r\nUpon reception of a data segment containing a new Transfer ID before\r\nreception of a data segment with the END flag set for any other\r\nearlier Transfer ID, the receiving entity SHALL consider the earlier\r\nTransfer to have failed. The failure of an individual transfer due to\r\nmissed data segment with END flag set SHOULD NOT cause the receiver to\r\nterminate the TCPCL session.",
+    "notes": "There was no specific mechanism for a sender to cancel a transfer after it has started. For large bundle PDUs this is a large commitment by the sender which could only be resolved by finishing the transfer or performing an unclean session termination, possibly interrupting transfers in the other direction in the same session. While this mechanism of transfer cancelation is not ideal because it is implied from the lack of messaging, presumably the reason why the sending entity chooses to cancel a transfer without terminating the session is that there are subsequent transfers needing to be sent. It is still completely valid and backward-compatible for an entity to simply never cancel a transfer.\r\n\r\nSeparately, there was no requirement on how a receiver needs to handle this case of a transfer simply having no more data segments received but still seeing other messages received.",
+    "submit_date": "2026-02-19",
+    "submitter_name": "Brian Sipos",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

@@ -43,5 +43,20 @@
     "verifier_id": "179",
     "verifier_name": "Deb Cooley",
     "update_date": "2025-10-28 04:19:28"
+  },
+  {
+    "errata_id": "8771",
+    "doc-id": "RFC9711",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.1.7",
+    "orig_text": "\"secboot\": true,",
+    "correct_text": "\"oemboot\": true,",
+    "notes": "secboot was renamed to oemboot in https://github.com/ietf-rats-wg/eat/pull/340. The example was renamed in https://github.com/ietf-rats-wg/eat/pull/342 but somehow the final RFC did not include the change.",
+    "submit_date": "2026-02-19",
+    "submitter_name": "Steven Bellock",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
