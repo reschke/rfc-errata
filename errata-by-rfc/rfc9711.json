@@ -58,5 +58,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8776",
+    "doc-id": "RFC9711",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.3.1",
+    "orig_text": "? heading => number,",
+    "correct_text": "? heading => number / null",
+    "notes": "From 4.2.10, \"If the entity is stationary, the heading is 'null'.\"",
+    "submit_date": "2026-02-20",
+    "submitter_name": "Steven Bellock",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8777",
+    "doc-id": "RFC9711",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.3.1",
+    "orig_text": "precession greater than one second.",
+    "correct_text": "precision greater than one second.",
+    "notes": "NA",
+    "submit_date": "2026-02-20",
+    "submitter_name": "Steven Bellock",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

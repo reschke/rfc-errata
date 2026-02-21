@@ -118,5 +118,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8774",
+    "doc-id": "RFC9260",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3.2 and 3.3.3",
+    "orig_text": "Also 3.3.9 3.3.12\r\n\r\nThese sections missed definition of 'Chunk Length' field.",
+    "correct_text": "   Chunk Length: 16 bits (unsigned integer)\r\n\r\n      Set to the size of the chunk in bytes, including the chunk header.",
+    "notes": "The definition of Chunk Length in 'Corrected Text' is just a sample. Those definitions should be added by people who are more familiar with the protocol.",
+    "submit_date": "2026-02-20",
+    "submitter_name": "Zhao, Gang",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

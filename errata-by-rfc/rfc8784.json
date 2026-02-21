@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8775",
+    "doc-id": "RFC8784",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "In addition, the policy SHOULD be set to negotiate only quantum-\r\nsecure symmetric algorithms; while this RFC doesn't claim to give\r\nadvice as to what algorithms are secure (as that may change based on\r\nfuture cryptographical results), below is a list of defined IKEv2 and\r\nIPsec algorithms that should not be used, as they are known to\r\nprovide less than 128 bits of post-quantum security:\r\n\r\n*  Any IKEv2 encryption algorithm, PRF, or integrity algorithm with a\r\n   key size less than 256 bits.\r\n\r\n*  Any ESP transform with a key size less than 256 bits.\r\n\r\n*  PRF_AES128_XCBC and PRF_AES128_CBC: even though they can use as\r\n   input a key of arbitrary size, such input keys are converted into\r\n   a 128-bit key for internal use.",
+    "correct_text": "In general, the discussion on Grover's algorithm in the security\r\nconsiderations needs to be revisited. Since the document was published,\r\nthe cryptographic community has come to the wide agreement that Grover's\r\nalgorithm has extremely large implementation cost which practically\r\nnegates its theoretical advantage over classical computers. \r\n\r\nAs such, using (good) 128-bit secure algorithms is just fine.",
+    "notes": "This also transitively affects RFC 9867 which points to this RFC's security considerations.",
+    "submit_date": "2026-02-20",
+    "submitter_name": "Thom Wiggers",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

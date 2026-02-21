@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8773",
+    "doc-id": "RFC3645",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "   This document describes a protocol for DNS security using GSS-API.\r\n   The security provided by this protocol is only as effective as the\r\n   security provided by the underlying GSS mechanisms.\r\n\r\n   All the security considerations from RFC 2845, RFC 2930 and RFC 2743\r\n   apply to the protocol described in this document.",
+    "correct_text": "   This document describes a protocol for DNS security using GSS-API.\r\n   The security provided by this protocol is only as effective as the\r\n   security provided by the underlying GSS mechanisms.\r\n\r\n   All the security considerations from RFC 2845, RFC 2930 and RFC 2743\r\n   apply to the protocol described in this document.\r\n\r\n   The mechanism in Section 4.1.1 effectively allows pre-authentication\r\n   oracle.  This allow a pre-authentication information disclosure in\r\n   GSS-API TKEY negotiation.  An unauthenticated attacker can determine\r\n   which GSSAPI session keynames are currently active in the server's\r\n   dynamic keyring by observing differential error codes in TKEY responses.",
+    "notes": "The other angle would be to change the section 4.1.1 to disallow reporting the BADNAME error and handle everything uniformly.",
+    "submit_date": "2026-02-20",
+    "submitter_name": "Ondřej Surý",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
