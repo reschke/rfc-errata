@@ -47,7 +47,7 @@
   {
     "errata_id": "8354",
     "doc-id": "RFC9535",
-    "errata_status_code": "Verified",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A says:",
     "orig_text": "function-argument   = literal /\r\n                      filter-query / ; (includes singular-query)\r\n                      logical-expr /\r\n                      function-expr",
@@ -55,8 +55,23 @@
     "notes": "The ABNF grammars in RFC 9535 were designed to be directly usable with PEG (Parsing Expression Grammar) parsers.\r\n\r\nHowever, PEG parsers will fail to parse $[?blt(1==1)] or $[?true(1)==0] with the grammar as given, as they employ prioritized choice, where the order matters.\r\n\r\nIn the order given, they will try to match the `literal` rule in `function-argument` with the input `1==1`, and find that the `1` indeed matches a `number`, completing the match for `function-argument` and preempting the other choices.  The intended rest of the `function-argument`, `==1` does not match anything, and the rule fails.\r\nBy putting the more complex `logical-expr` first, the whole `1==1` matches, and the rule succeeds as intended.\r\n\r\nSimilary, the function name `true` matches as the literal `true` instead, and preempts parsing `true(1)` as the more complex `function-expr`.  Putting the `literal` choice last prevents the preemptive match.\r\n",
     "submit_date": "2025-03-24",
     "submitter_name": "Vladimír Gorej",
+    "verifier_id": "2",
+    "verifier_name": "Andy Newton",
+    "update_date": "2026-02-23 07:06:36"
+  },
+  {
+    "errata_id": "8779",
+    "doc-id": "RFC9535",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "ERRATUM 8354",
+    "orig_text": ";; N.B. This text is from the Erratum 8534 and not from the original RFC\r\n\r\nfunction-argument   = logical-expr /\r\n                      filter-query / ; (includes singular-query)\r\n                      function-expr /\r\n                      literal",
+    "correct_text": "function-argument   = filter-query / ; (includes singular-query)\r\n                      logical-expr /\r\n                      function-expr /\r\n                      literal",
+    "notes": "Accepting the affirmations of ERRATUM 8354, especially that the ABNF grammars are designed for PEG (Parsing Expression Grammar) parsers.\r\n\r\nWhereas Erratum 8354 proposes making the logical-expr a higher priority than literal (i.e. for PEG parser, earlier in the list of alternative elements) for the function-argument rule, it causes a new problem by placing logical-expr before the filter-query element, an ordering that will break the parsing of a JSONPATH query such as $[?value(@.*)==4] because the function argument @.* will be recognized as a logical-expr instead of a filter-query and, subsequently, as per section 2.4.3 Well Typedness of Function Expressions subsection 2, the sole formal parameter for the value() function extension is of NodesType and hence requires a filter-query for type correctness.\r\n\r\nNOTE: The RFC Editor has been asked to reclassify Errata ID 8354 as Hold For Document Update.",
+    "submit_date": "2026-02-22",
+    "submitter_name": "Alan Painter",
     "verifier_id": "183",
     "verifier_name": "Andy Newton",
-    "update_date": "2025-03-27 11:31:32"
+    "update_date": "2026-02-23 04:02:29"
   }
 ]
