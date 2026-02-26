@@ -358,5 +358,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8784",
+    "doc-id": "RFC7950",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9.12.4",
+    "orig_text": "   If the second member type in the union had been of type \"string\"\r\n   instead of an enumeration, the current value would have matched, and\r\n   the resulting configuration would have been valid.",
+    "correct_text": "   If the second member type in the union had been of type \"string\"\r\n   instead of an enumeration, the current value would have matched, and\r\n   the resulting configuration would have been valid. However, the leaf's\r\n   value must then be reinterpreted if a matching instance is added later.",
+    "notes": "From the example wording, it looks like that the event-to-be-watched is only target instance removal for a successfully resolved leafref. Yet from the specification, one can infer that one indeed needs to watch also for creation of a target instance for unsuccessfully resolved possible leafref, and therefore the example is misleading.",
+    "submit_date": "2026-02-25",
+    "submitter_name": "Maria Matejka",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

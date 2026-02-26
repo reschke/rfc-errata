@@ -88,5 +88,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8782",
+    "doc-id": "RFC9711",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.1.7",
+    "orig_text": "\"ueid\": \"AJj1Ck_2wFhhyIYNE6Y46g==\",",
+    "correct_text": "\"ueid\": \"AJj1Ck_2wFhhyIYNE6Y46g\",",
+    "notes": "Per the definition of base64url encoding in https://www.rfc-editor.org/rfc/rfc9711.html#section-2-5.2.1, all trailing '=' characters are omitted. In addition, the regular expression for base64-url-text does not include the '=' character.",
+    "submit_date": "2026-02-25",
+    "submitter_name": "Steven Bellock",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8783",
+    "doc-id": "RFC9711",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.3",
+    "orig_text": "oemid-random-json = base64-url-text .size 24",
+    "correct_text": "oemid-random-json = base64-url-text .size 22",
+    "notes": "16 bytes encoded into base64url, with padding, results in 24 bytes. However, the two padding characters, '==', are removed as per the definition of base64url encoding in https://www.rfc-editor.org/rfc/rfc9711.html#section-2-5.2.1, resulting in 22 bytes.",
+    "submit_date": "2026-02-25",
+    "submitter_name": "Steven Bellock",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

@@ -2,7 +2,7 @@
   {
     "errata_id": "8343",
     "doc-id": "RFC9535",
-    "errata_status_code": "Verified",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.4",
     "orig_text": "function-argument   = literal /\r\n                      filter-query / ; (includes singular-query)\r\n                      logical-expr /\r\n                      function-expr",
@@ -10,14 +10,14 @@
     "notes": "The ABNF grammars in RFC 9535 were designed to be directly usable with PEG (Parsing Expression Grammar) parsers.\r\n\r\nHowever, PEG parsers will fail to parse $[?blt(1==1)] or $[?true(1)==0] with the grammar as given, as they employ prioritized choice, where the order matters.\r\n\r\nIn the order given, they will try to match the `literal` rule in `function-argument` with the input `1==1`, and find that the `1` indeed matches a `number`, completing the match for `function-argument` and preempting the other choices.  The intended rest of the `function-argument`, `==1` does not match anything, and the rule fails.\r\nBy putting the more complex `logical-expr` first, the whole `1==1` matches, and the rule succeeds as intended.\r\n\r\nSimilary, the function name `true` matches as the literal `true` instead, and preempts parsing `true(1)` as the more complex `function-expr`.  Putting the `literal` choice last prevents the preemptive match.\r\n",
     "submit_date": "2025-03-24",
     "submitter_name": "Vladimír Gorej",
-    "verifier_id": "183",
+    "verifier_id": "2",
     "verifier_name": "Andy Newton",
-    "update_date": "2025-03-27 11:30:22"
+    "update_date": "2026-02-25 11:02:18"
   },
   {
     "errata_id": "8352",
     "doc-id": "RFC9535",
-    "errata_status_code": "Verified",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.3.5.1",
     "orig_text": "comparable          = literal /\r\n                      singular-query / ; singular query value\r\n                      function-expr    ; ValueType\r\n",
@@ -25,14 +25,14 @@
     "notes": "The ABNF grammars in RFC 9535 were designed to be directly usable with PEG (Parsing Expression Grammar) parsers.\r\n\r\nHowever, PEG parsers will fail to parse $[?blt(1==1)] or $[?true(1)==0] with the grammar as given, as they employ prioritized choice, where the order matters.\r\n\r\nIn the order given, they will try to match the `literal` rule in `function-argument` with the input `1==1`, and find that the `1` indeed matches a `number`, completing the match for `function-argument` and preempting the other choices.  The intended rest of the `function-argument`, `==1` does not match anything, and the rule fails.\r\nBy putting the more complex `logical-expr` first, the whole `1==1` matches, and the rule succeeds as intended.\r\n\r\nSimilary, the function name `true` matches as the literal `true` instead, and preempts parsing `true(1)` as the more complex `function-expr`.  Putting the `literal` choice last prevents the preemptive match.\r\n",
     "submit_date": "2025-03-24",
     "submitter_name": "Vladimír Gorej",
-    "verifier_id": "183",
+    "verifier_id": "2",
     "verifier_name": "Andy Newton",
-    "update_date": "2025-03-27 11:30:45"
+    "update_date": "2026-02-25 11:02:39"
   },
   {
     "errata_id": "8353",
     "doc-id": "RFC9535",
-    "errata_status_code": "Verified",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A says:",
     "orig_text": "comparable          = literal /\r\n                      singular-query / ; singular query value\r\n                      function-expr    ; ValueType",
@@ -40,9 +40,9 @@
     "notes": "The ABNF grammars in RFC 9535 were designed to be directly usable with PEG (Parsing Expression Grammar) parsers.\r\n\r\nHowever, PEG parsers will fail to parse $[?blt(1==1)] or $[?true(1)==0] with the grammar as given, as they employ prioritized choice, where the order matters.\r\n\r\nIn the order given, they will try to match the `literal` rule in `function-argument` with the input `1==1`, and find that the `1` indeed matches a `number`, completing the match for `function-argument` and preempting the other choices.  The intended rest of the `function-argument`, `==1` does not match anything, and the rule fails.\r\nBy putting the more complex `logical-expr` first, the whole `1==1` matches, and the rule succeeds as intended.\r\n\r\nSimilary, the function name `true` matches as the literal `true` instead, and preempts parsing `true(1)` as the more complex `function-expr`.  Putting the `literal` choice last prevents the preemptive match.\r\n",
     "submit_date": "2025-03-24",
     "submitter_name": "Vladimír Gorej",
-    "verifier_id": "183",
+    "verifier_id": "2",
     "verifier_name": "Andy Newton",
-    "update_date": "2025-03-27 11:31:17"
+    "update_date": "2026-02-25 11:03:01"
   },
   {
     "errata_id": "8354",
