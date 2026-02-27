@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8786",
+    "doc-id": "RFC9555",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3.1",
+    "orig_text": "ADR;JSCOMPS=\"s,\\, ;11;s, ;10;3\":\r\n;;54321 Oak St;Reston;;;;;;;Oak St;54321;;;;;;",
+    "correct_text": "ADR;JSCOMPS=\"s,\\, ;10;s, ;11;3\":\r\n;;54321 Oak St;Reston;;;;;;;54321;Oak St;;;;;;",
+    "notes": "‘number' should be position 10 and ‘name' position 11 according to RFC9554.",
+    "submit_date": "2026-02-26",
+    "submitter_name": "Mauro De Gennaro",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
