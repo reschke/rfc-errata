@@ -28,5 +28,20 @@
     "verifier_id": "155",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2024-12-02 10:15:46"
+  },
+  {
+    "errata_id": "8787",
+    "doc-id": "RFC9460",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "2.2",
+    "orig_text": "(...)\r\nSvcParamKeys SHALL appear in increasing numeric order.\r\n\r\nClients MUST consider an RR malformed if:\r\n\r\nthe end of the RDATA occurs within a SvcParam.\r\nSvcParamKeys are not in strictly increasing numeric order.\r\n(...)",
+    "correct_text": "(...)\r\nSvcParamKeys MUST appear in increasing numeric order.\r\n\r\nClients MUST consider an RR malformed if:\r\n\r\nthe end of the RDATA occurs within a SvcParam.\r\nSvcParamKeys are not in strictly increasing numeric order.\r\n(...)",
+    "notes": "The protocol will only be successful if the DNS server must provide the SvcParamKeys in increasing numeric order, because the client will consider them malformed otherwise.\r\nUsually the principle \"be strict what you send, but be liberal in what you accept\" seems reversed here.\n --VERIFIER NOTES-- \n\r\nPer RFC2119:\r\n\r\n1. MUST This word, or the terms \"REQUIRED\" or \"SHALL\", mean that the\r\ndefinition is an absolute requirement of the specification.",
+    "submit_date": "2026-02-27",
+    "submitter_name": "Ulrich Windl",
+    "verifier_id": "184",
+    "verifier_name": "Mohamed Boucadair (IESG)",
+    "update_date": "2026-02-27 03:10:19"
   }
 ]
