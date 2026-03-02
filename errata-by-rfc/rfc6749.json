@@ -433,5 +433,35 @@
     "verifier_id": "179",
     "verifier_name": "Deb Cooley",
     "update_date": "2026-02-11 09:39:36"
+  },
+  {
+    "errata_id": "8790",
+    "doc-id": "RFC6749",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1",
+    "orig_text": "Request and response parameters MUST NOT be included more than once.",
+    "correct_text": "Request and response parameters defined by this specification MUST NOT be included more than once. This requirement also applies to parameters defined by extensions unless the extension explicitly defines otherwise for a specific parameter.",
+    "notes": "This builds upon verified erratum 5708 (https://www.rfc-editor.org/errata/eid5708) which added \"defined by this specification\" to scope the restriction to parameters defined in RFC 6749 and not to extension-defined parameters. However, that change left ambiguity about what rules apply to extension parameters. Several extensions explicitly allow repeated parameters, e.g., the \"resource\" parameter in RFC 8707 Section 2 (\"Multiple resource parameters MAY be used to indicate that the requested token is intended to be used at multiple resources.\") and the \"resource\" and \"audience\" parameters in RFC 8693 Section 2.1. The added sentence makes clear that extension parameters default to not being repeated, unless the extension defining them explicitly allows it. See also: https://mailarchive.ietf.org/arch/msg/oauth/l3Yp2W4QXHdCXgO3NVpC6syUMws/",
+    "submit_date": "2026-03-01",
+    "submitter_name": "Filip Skokan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8791",
+    "doc-id": "RFC6749",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2",
+    "orig_text": "Request and response parameters MUST NOT be included more than once.",
+    "correct_text": "Request and response parameters defined by this specification MUST NOT be included more than once. This requirement also applies to parameters defined by extensions unless the extension explicitly defines otherwise for a specific parameter.",
+    "notes": "Section 3.2 (Token Endpoint) contains the same text as Section 3.1 (Authorization Endpoint). Verified erratum 5708 (https://www.rfc-editor.org/errata/eid5708) addressed the identical text in Section 3.1 by adding \"defined by this specification\" but did not correct the same text in Section 3.2. This erratum applies both that same scoping fix and the additional extension-parameter clarification to Section 3.2. Several extensions explicitly allow repeated parameters at the token endpoint, e.g., the \"resource\" parameter in RFC 8707 Section 2 (\"Multiple resource parameters MAY be used to indicate that the requested token is intended to be used at multiple resources.\") and the \"resource\" and \"audience\" parameters in RFC 8693 Section 2.1. The added text makes clear that extension parameters default to not being repeated, unless the extension defining them explicitly allows it. See also: https://mailarchive.ietf.org/arch/msg/oauth/l3Yp2W4QXHdCXgO3NVpC6syUMws/",
+    "submit_date": "2026-03-01",
+    "submitter_name": "Filip Skokan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
