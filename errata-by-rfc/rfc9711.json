@@ -77,17 +77,17 @@
   {
     "errata_id": "8777",
     "doc-id": "RFC9711",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.3.1",
-    "orig_text": "precession greater than one second.",
-    "correct_text": "precision greater than one second.",
+    "orig_text": "A 64-bit integer representation of the CBOR epoch-based time [RFC8949] used by \r\nthis claim can represent a range of +/- 500 billion years, so the only point of \r\na floating-point timestamp is to have precession greater than one second. ",
+    "correct_text": "A 64-bit integer representation of the CBOR epoch-based time [RFC8949] used by \r\nthis claim can represent a range of +/- 500 billion years, so the only point of \r\na floating-point timestamp is to have precision greater than one second. ",
     "notes": "NA",
     "submit_date": "2026-02-20",
     "submitter_name": "Steven Bellock",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-02 12:38:04"
   },
   {
     "errata_id": "8782",

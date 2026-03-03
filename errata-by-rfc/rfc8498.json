@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8793",
+    "doc-id": "RFC8498",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "P-Served-User: <sip:bob@example.com>; term; regstate=reg",
+    "correct_text": "P-Served-User: <sip:bob@example.com>; sescase=term; regstate=reg",
+    "notes": "P-Served-User header across call flow examples in section 7 is formed incorrectly - according to grammar in section 6.2, session case should be expressed by \"sescase\" param with \"orig\" / \"term\" value ; using just \"term\" as a valueless param is inconsistent with the rest of the spec and with RFC 5502.\r\n\r\nEach incorrect occurrence in the examples should be fixed accordingly.",
+    "submit_date": "2026-03-02",
+    "submitter_name": "Przemysław Ołtarzewski",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

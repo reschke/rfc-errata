@@ -673,5 +673,35 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8794",
+    "doc-id": "RFC8446",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "2.3",
+    "orig_text": "         Client                                               Server\r\n\r\n         ClientHello\r\n         + early_data\r\n         + key_share*\r\n         + psk_key_exchange_modes\r\n         + pre_shared_key\r\n         (Application Data*)     -------->\r\n                                                         ServerHello\r\n                                                    + pre_shared_key\r\n                                                        + key_share*\r\n                                               {EncryptedExtensions}\r\n                                                       + early_data*\r\n                                                          {Finished}\r\n                                 <--------       [Application Data*]\r\n         (EndOfEarlyData)\r\n         {Finished}              -------->\r\n         [Application Data]      <------->        [Application Data]",
+    "correct_text": "         Client                                               Server\r\n\r\n         ClientHello\r\n         + early_data\r\n         + key_share*\r\n         + psk_key_exchange_modes\r\n         + pre_shared_key\r\n         (Application Data*)     -------->\r\n                                                         ServerHello\r\n                                                    + pre_shared_key\r\n                                                        + key_share*\r\n                                               {EncryptedExtensions}\r\n                                                       + early_data*\r\n                                                          {Finished}\r\n                                 <--------       [Application Data*]\r\n         (EndOfEarlyData*)\r\n         {Finished}              -------->\r\n         [Application Data]      <------->        [Application Data]",
+    "notes": "Section 4.5 reads: \"If the server sent an \"early_data\" extension in EncryptedExtensions, the client MUST send an EndOfEarlyData message after receiving the server Finished.  If the server does not send an \"early_data\" extension in EncryptedExtensions, then the client MUST NOT send an EndOfEarlyData message.\"\r\nTherefore, EndOfEarlyData is sent only if the server sends an \"early_data\" extension and should be marked as situation-dependent.\r\n\r\nSEC AD (Paul Wouters) note: this is now filed against the 8446bis doc: https://github.com/tlswg/tls13-spec/issues/1409",
+    "submit_date": "2026-03-02",
+    "submitter_name": "Loïc Ferreira",
+    "verifier_id": "173",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2026-03-02 09:50:00"
+  },
+  {
+    "errata_id": "8795",
+    "doc-id": "RFC8446",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.6.2",
+    "orig_text": "A client that receives a CertificateRequest message without having sent the \r\n\"post_handshake_auth\" extension MUST send an \"unexpected_message\" fatal alert.",
+    "correct_text": "A client that receives a CertificateRequest message encrypted with the \r\nserver_application_traffic_secret_N without having sent the \r\n\"post_handshake_auth\" extension MUST send an \"unexpected_message\" fatal alert.",
+    "notes": "This sentence is to be understood in the context of a possible post-handshake authentication. During a main handshake, a CertificateRequest message (encrypted with the server_handshake_traffic_secret) may be sent by the server (without need for the client to send a \"post_handshake_auth\" extension).",
+    "submit_date": "2026-03-02",
+    "submitter_name": "Loïc Ferreira",
+    "verifier_id": "2",
+    "verifier_name": null,
+    "update_date": "2026-03-02 14:04:13"
   }
 ]
