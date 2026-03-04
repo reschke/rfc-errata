@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8801",
+    "doc-id": "RFC9910",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2",
+    "orig_text": "The relation searches defined in this document rely on the syntax\r\ndescribed above.  Each search works in the same way for each object\r\nclass.",
+    "correct_text": "The relation searches defined in this document rely on the syntax\r\ndescribed above.  The search for IP addresses works as described\r\nin the section below. The search for reverse domain names works as\r\nthe relationship between the reverse domain name and the \r\ncorresponding IP address(es) used to provision them, where that \r\nrelationship is defined in the section below. The search for \r\nautnums is defined by server policy.",
+    "notes": "Autnums have no natural hierarchy in the numbers themselves, and therefore the search semantics for the relationships is depends on server policy.\r\n\r\nThe classification for this report should be Held For Document Update.",
+    "submit_date": "2026-03-03",
+    "submitter_name": "Andy Newton",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

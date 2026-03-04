@@ -703,5 +703,20 @@
     "verifier_id": "2",
     "verifier_name": null,
     "update_date": "2026-03-02 14:04:13"
+  },
+  {
+    "errata_id": "8799",
+    "doc-id": "RFC8446",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2",
+    "orig_text": "         Client                                               Server\r\n\r\n   Initial Handshake:\r\n          ClientHello\r\n          + key_share               -------->\r\n                                                          ServerHello\r\n                                                          + key_share\r\n                                                {EncryptedExtensions}\r\n                                                {CertificateRequest*}\r\n                                                       {Certificate*}\r\n                                                 {CertificateVerify*}\r\n                                                           {Finished}\r\n                                    <--------     [Application Data*]\r\n          {Certificate*}\r\n          {CertificateVerify*}\r\n          {Finished}                -------->\r\n                                    <--------      [NewSessionTicket]\r\n          [Application Data]        <------->      [Application Data]",
+    "correct_text": "         Client                                               Server\r\n\r\n   Initial Handshake:\r\n          ClientHello\r\n          + key_share\r\n          + psk_key_exchange_modes  -------->\r\n                                                          ServerHello\r\n                                                          + key_share\r\n                                                {EncryptedExtensions}\r\n                                                {CertificateRequest*}\r\n                                                       {Certificate*}\r\n                                                 {CertificateVerify*}\r\n                                                           {Finished}\r\n                                    <--------     [Application Data*]\r\n          {Certificate*}\r\n          {CertificateVerify*}\r\n          {Finished}                -------->\r\n                                    <--------      [NewSessionTicket]\r\n          [Application Data]        <------->      [Application Data]",
+    "notes": "According to Errata ID 7003, Section 4.6.1 should say: \"At any time after the server has received both a \"psk_key_exchange_modes\" extension and a Finished message, it MAY send a NewSessionTicket message.\"",
+    "submit_date": "2026-03-03",
+    "submitter_name": "Loïc Ferreira",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
