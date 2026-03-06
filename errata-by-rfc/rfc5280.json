@@ -343,20 +343,5 @@
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2025-09-03 06:26:42"
-  },
-  {
-    "errata_id": "8789",
-    "doc-id": "RFC5280",
-    "errata_status_code": "Held for Document Update",
-    "errata_type_code": "Editorial",
-    "section": "GLOBAL",
-    "orig_text": "Section 4.2.1.12 says:\r\n\r\n   id-kp-serverAuth             OBJECT IDENTIFIER ::= { id-kp 1 }\r\n   -- TLS WWW server authentication\r\n   -- Key usage bits that may be consistent: digitalSignature,\r\n   -- keyEncipherment or keyAgreement\r\n\r\n   id-kp-clientAuth             OBJECT IDENTIFIER ::= { id-kp 2 }\r\n   -- TLS WWW client authentication\r\n   -- Key usage bits that may be consistent: digitalSignature\r\n   -- and/or keyAgreement\r\nIt should say:\r\n\r\n   id-kp-serverAuth             OBJECT IDENTIFIER ::= { id-kp 1 }\r\n   -- TLS server authentication\r\n   -- Key usage bits that may be consistent: digitalSignature,\r\n   -- keyEncipherment or keyAgreement\r\n\r\n   id-kp-clientAuth             OBJECT IDENTIFIER ::= { id-kp 2 }\r\n   -- TLS client authentication\r\n   -- Key usage bits that may be consistent: digitalSignature\r\n   -- and/or keyAgreement\r\nNotes:\r\n\r\nThe proposed change removes the WWW part of the description. In practice these object identifiers are used for server and client applications, but not necessarily web applications. In particular:\r\n- openssl verification considers them unconditionally even if the server is not a web server or the client a web client\r\n- There is no object identifier that can be used for protocols like SMTP, IMAP, POP3, LDAP, radius, ...; in practice all these protocols are deployed with the identifiers for WWW\r\n- Standards like common criteria assume that these object identifiers are for generic server and clients [0].\r\n\r\n[0]. https://www.niap-ccevs.org/MMO/PP/-442-/#FCS_TLSC_EXT.1.1\r\n\r\nReport New Errata",
-    "correct_text": "Section 4.2.1.12 says:\r\n\r\n   id-kp-serverAuth             OBJECT IDENTIFIER ::= { id-kp 1 }\r\n   -- TLS WWW server authentication\r\n   -- Key usage bits that may be consistent: digitalSignature,\r\n   -- keyEncipherment or keyAgreement\r\n\r\n   id-kp-clientAuth             OBJECT IDENTIFIER ::= { id-kp 2 }\r\n   -- TLS WWW client authentication\r\n   -- Key usage bits that may be consistent: digitalSignature\r\n   -- and/or keyAgreement\r\nIt should say:\r\n\r\n   id-kp-serverAuth             OBJECT IDENTIFIER ::= { id-kp 1 }\r\n   -- TLS server authentication\r\n   -- Key usage bits that may be consistent: digitalSignature,\r\n   -- keyEncipherment or keyAgreement\r\n\r\n   id-kp-clientAuth             OBJECT IDENTIFIER ::= { id-kp 2 }\r\n   -- TLS client authentication\r\n   -- Key usage bits that may be consistent: digitalSignature\r\n   -- and/or keyAgreement\r\nNotes:\r\n\r\nThe proposed change removes the WWW part of the description. In practice these object identifiers are used for server and client applications, but not necessarily web applications. In particular:\r\n- openssl verification considers them unconditionally even if the server is not a web server or the client a web client\r\n- There is no object identifier that can be used for protocols like SMTP, IMAP, POP3, LDAP, radius, ...; in practice all these protocols are deployed with the identifiers for WWW\r\n- Standards like common criteria assume that these object identifiers are for generic server and clients [0].\r\n\r\n[0]. https://www.niap-ccevs.org/MMO/PP/-442-/#FCS_TLSC_EXT.1.1\r\n\r\nReport New Errata",
-    "notes": "Sec AD (Paul Wouters): Changed to Editorial,  as the suggested changes are in an ASN.1 comment",
-    "submit_date": "2026-02-28",
-    "submitter_name": "Elizabeth Peraza Slator",
-    "verifier_id": "173",
-    "verifier_name": "Paul Wouters",
-    "update_date": "2026-03-03 09:33:45"
   }
 ]
