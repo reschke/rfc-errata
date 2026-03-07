@@ -13,5 +13,20 @@
     "verifier_id": "176",
     "verifier_name": "Orie Steele",
     "update_date": "2025-01-22 16:38:04"
+  },
+  {
+    "errata_id": "8810",
+    "doc-id": "RFC9639",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9.2.2",
+    "orig_text": "shifting a 14-bit sample right by 2 pads it to a 16-bit sample, which\r\nthen has two zero least-significant bits.",
+    "correct_text": "shifting a 14-bit sample left by 2 pads it to a 16-bit sample, which\r\nthen has two zero least-significant bits.",
+    "notes": "Change right to left",
+    "submit_date": "2026-03-06",
+    "submitter_name": "Károly Wikidál",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

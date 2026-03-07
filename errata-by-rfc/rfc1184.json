@@ -2,16 +2,16 @@
   {
     "errata_id": "8800",
     "doc-id": "RFC1184",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "5.3",
-    "orig_text": "Regardless of what mode has been negotiated, the server side is\r\n   responsible for doing all output processing.  Specificly, it should\r\n   send \"CR LF\" when it wants the \"newline\" function, \"CR NUL\" when it\r\n   wants just a carriage return, and \"LF\" when it wants just a linefeed.",
-    "correct_text": "Regardless of what mode has been negotiated, the server side is\r\n   responsible for doing all output processing.  Specifically, it should\r\n   send \"CR LF\" when it wants the \"newline\" function, \"CR NUL\" when it\r\n   wants just a carriage return, and \"LF\" when it wants just a linefeed.",
+    "orig_text": "Regardless of what mode has been negotiated, the server side is\r\nresponsible for doing all output processing.  Specificly, it should\r\nsend \"CR LF\" when it wants the \"newline\" function, \"CR NUL\" when it\r\nwants just a carriage return, and \"LF\" when it wants just a linefeed.",
+    "correct_text": "Regardless of what mode has been negotiated, the server side is\r\nresponsible for doing all output processing.  Specifically, it should\r\nsend \"CR LF\" when it wants the \"newline\" function, \"CR NUL\" when it\r\nwants just a carriage return, and \"LF\" when it wants just a linefeed.",
     "notes": "Changed the word specificly to specifically.",
     "submit_date": "2026-03-03",
     "submitter_name": "Dag Henrik Fjær",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-06 11:22:38"
   }
 ]

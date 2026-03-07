@@ -725,13 +725,13 @@
     "errata_status_code": "Reported",
     "errata_type_code": "Technical",
     "section": "E.1",
-    "orig_text": "The PSK binder value forms a binding between a PSK and the current handshake, as well as between the session where the PSK was established and the current session. This binding transitively includes the original handshake transcript, because that transcript is digested into the values which produce the resumption master secret.",
-    "correct_text": "The PSK binder value forms a binding between a PSK and the current handshake, as well as between the session where the PSK was established (if established via a NewSessionTicket message) and the current session. This binding transitively includes the original handshake transcript, because that transcript is digested into the values which produce the resumption master secret.",
+    "orig_text": "The PSK binder value forms a binding between a PSK and the current handshake, as \r\nwell as between the session where the PSK was established and the current \r\nsession. This binding transitively includes the original handshake transcript, \r\nbecause that transcript is digested into the values which produce the resumption \r\nmaster secret.",
+    "correct_text": "The PSK binder value forms a binding between a PSK and the current handshake, as \r\nwell as between the session where the PSK was established (if established via a \r\nNewSessionTicket message) and the current session. This binding transitively \r\nincludes the original handshake transcript, because that transcript is digested \r\ninto the values which produce the resumption master secret.",
     "notes": "The last sentence is not correct since it does not hold for an external PSK (computed independently from the resumption master secret).\r\n\r\nNB: section 4.2.11.2 adds this precision: \"The PSK binder value forms a binding between a PSK and the current handshake, as well as a binding between the handshake in which the PSK was generated (if via a NewSessionTicket message) and the current handshake.\"",
     "submit_date": "2026-03-04",
     "submitter_name": "Loïc Ferreira",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2026-03-06 11:27:20"
   }
 ]
