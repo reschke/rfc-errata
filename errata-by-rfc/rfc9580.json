@@ -73,5 +73,20 @@
     "verifier_id": "173",
     "verifier_name": "Paul Wouters",
     "update_date": "2025-08-28 10:46:42"
+  },
+  {
+    "errata_id": "8814",
+    "doc-id": "RFC9580",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.6",
+    "orig_text": "A ZLIB-compressed series of packets is compressed with raw ZLIB-style\r\nblocks [RFC1950].",
+    "correct_text": "A ZLIB-compressed series of packets is compressed using the ZLIB\r\ncompressed data format [RFC1950].\r\n\r\nor\r\n\r\nA ZLIB-compressed series of packets is compressed with ZLIB-style\r\nblocks [RFC1950].\r\n\r\n(Or other words to that effect — the intent is to remove the\r\nword \"raw\").",
+    "notes": "In OpenPGP, only ZIP compression uses raw blocks. The ZLIB and BZip2 algorithms both have headers present. A ZLIB stream without headers would be noncompliant to RFC-1950, section 2.3 (\"A compliant compressor must produce streams with correct CMF, FLG and ADLER32...\").\r\n\r\nThe \"raw\" was not present in RFC-4880. I believe it came in via https://gitlab.com/openpgp-wg/rfc4880bis/-/commit/c326b8d4b946b2d51eb9885677e0521fb0ecf1a9",
+    "submit_date": "2026-03-08",
+    "submitter_name": "Daphne Shaw",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
