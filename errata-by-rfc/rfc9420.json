@@ -58,5 +58,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8815",
+    "doc-id": "RFC9420",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "12.2",
+    "orig_text": "For a regular, i.e., not external, Commit, the list is invalid if any\r\nof the following occurs:\r\n\r\n*  It contains an individual proposal that is invalid as specified in\r\n   Section 12.1.",
+    "correct_text": "For a regular, i.e., not external, Commit, the list is invalid if any\r\nof the following occurs:\r\n\r\n*  It contains a reference to a proposal that was not previously\r\n   received by the group member.\r\n\r\n*  It contains an individual proposal that is invalid as specified in\r\n   Section 12.1.",
+    "notes": "According to section 12.4, the proposals vector in a Commit message may contain references to proposals. Moreover, this vector should be validated according to the rules in Section 12.2. However, in the published RFC, these rules do not refer to proposal references and as a result do not verify whether such references are valid. Our modification addresses this problem.",
+    "submit_date": "2026-03-09",
+    "submitter_name": "Ludovic Paillat",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
