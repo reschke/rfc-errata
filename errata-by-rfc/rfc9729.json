@@ -2,7 +2,7 @@
   {
     "errata_id": "8807",
     "doc-id": "RFC9729",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.3",
     "orig_text": "48545450205369676E61747572652041757468656E7469636174696F6E",
@@ -10,8 +10,8 @@
     "notes": "The original hex in Figure 3 corresponds to \"HTTP Signature Authentication\", which is the wrong context string. Thus, it should be updated to the correct hex to reflect \"HTTP Concealed Authentication\" as specified in Section 3.3.",
     "submit_date": "2026-03-05",
     "submitter_name": "Radowan Redoy",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "187",
+    "verifier_name": "Mike Bishop",
+    "update_date": "2026-03-10 06:44:21"
   }
 ]

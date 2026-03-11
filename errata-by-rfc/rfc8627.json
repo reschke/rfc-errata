@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8816",
+    "doc-id": "RFC8627",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.2.  Repair Packets",
+    "orig_text": "        0                   1                   2                   3\r\n        0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |1|0| P|X|  CC  |M| PT recovery |         length recovery       |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |                          TS recovery                          |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |   SSRCCount   |                    reserved                   |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |                             SSRC_i                            |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |           SN base_i           |  M (columns)  |    N (rows)   |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n\r\n\r\n                    Figure 13: Protocol format for F=1",
+    "correct_text": "        0                   1                   2                   3\r\n        0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |0|1| P|X|  CC  |M| PT recovery |         length recovery       |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |                          TS recovery                          |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |   SSRCCount   |                    reserved                   |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |                             SSRC_i                            |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n       |           SN base_i           |  M (columns)  |    N (rows)   |\r\n       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\r\n\r\n\r\n\r\n                    Figure 13: Protocol format for F=1",
+    "notes": "Attention: Error in https://datatracker.ietf.org/doc/draft-ietf-payload-flexible-fec-scheme/03/ instead of https://datatracker.ietf.org/doc/rfc8627/.\r\n\r\nThanks!",
+    "submit_date": "2026-03-10",
+    "submitter_name": "Dalio Guo",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
