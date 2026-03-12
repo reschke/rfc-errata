@@ -17,16 +17,16 @@
   {
     "errata_id": "8818",
     "doc-id": "RFC9761",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "7",
     "orig_text": "\"matches\": {\r\n  ...\r\n  \"actions\": {\r\n     \"forwarding\": \"accept\"\r\n  }\r\n}",
     "correct_text": "\"matches\": {\r\n  ...\r\n},\r\n\"actions\": {\r\n   \"forwarding\": \"accept\"\r\n}",
-    "notes": "\"actions\" is nested within \"matches\" in the original text, while they should be in parallel based on RFC8520 (https://www.rfc-editor.org/rfc/rfc8520.html).",
+    "notes": "\"actions\" is nested within \"matches\" in the original text, while they should be in parallel based on RFC8520 (https://www.rfc-editor.org/rfc/rfc8520.html).\r\n\r\nVerifier Notes: In consultation with the authors, this was agreed to be Verified.",
     "submit_date": "2026-03-11",
     "submitter_name": "Lize Shao",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-03-11 11:43:24"
   }
 ]
