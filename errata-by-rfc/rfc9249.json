@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "Erik Kline",
     "update_date": "2023-04-06 16:02:24"
+  },
+  {
+    "errata_id": "8826",
+    "doc-id": "RFC9249",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8",
+    "orig_text": "  grouping key {\r\n    description\r\n      \"The key\";\r\n    nacm:default-deny-all;\r\n    choice key-string-style {\r\n      description\r\n        \"Key string styles\";\r\n",
+    "correct_text": "  grouping key {\r\n    description\r\n      \"The key\";\r\n    choice key-string-style {\r\n      nacm:default-deny-all;\r\n      description\r\n        \"Key string styles\";\r\n",
+    "notes": "A grouping-stmt is not a data-def-stmt.\r\nOnly the data-def-stmts within a grouping get expanded.\r\nThe data-def-stmts do not inherit other sub-statements of grouping-stmt.\r\nThe external 'nacm' statement appears as a sub-statement of grouping-stmt here.\r\n\r\nFrom RFC 8341\r\n         The 'default-deny-all' extension MAY appear within a data\r\n          definition statement, 'rpc' statement, or 'notification'\r\n          statement.  It is ignored otherwise.",
+    "submit_date": "2026-03-13",
+    "submitter_name": "Andy Bierman",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
