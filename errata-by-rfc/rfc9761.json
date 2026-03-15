@@ -28,5 +28,20 @@
     "verifier_id": "177",
     "verifier_name": "Mahesh Jethanandani",
     "update_date": "2026-03-11 11:43:24"
+  },
+  {
+    "errata_id": "8828",
+    "doc-id": "RFC9761",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7",
+    "orig_text": "{\r\n   \"ietf-mud:mud\": {\r\n      ...\r\n      \"ietf-access-control-list:acls\": {\r\n         ...\r\n      }\r\n   }\r\n}",
+    "correct_text": "{\r\n   \"ietf-mud:mud\": {\r\n      ...\r\n   },\r\n   \"ietf-access-control-list:acls\": {\r\n      ...\r\n   }\r\n}",
+    "notes": "Instead of being nested within \"ietf-mud:mud\", \"ietf-access-control-list:acls\" goes parallel to \"ietf-mud:mud\", both as root objects. This will make it consistent with RFC8520 (see JSON example in Section 9, https://datatracker.ietf.org/doc/html/rfc8520#section-9).",
+    "submit_date": "2026-03-14",
+    "submitter_name": "Wenxi Wang",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
