@@ -13,5 +13,20 @@
     "verifier_id": "186",
     "verifier_name": "Gorry Fairhurst",
     "update_date": "2026-01-20 02:07:40"
+  },
+  {
+    "errata_id": "8834",
+    "doc-id": "RFC9868",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "14",
+    "orig_text": "Any options whose length exceeds that of the UDP packet (i.e.,\r\nintending to use data that would have been beyond the surplus area)\r\nSHOULD be silently ignored (again to model legacy behavior).",
+    "correct_text": "If any option has an inherently invalid Length field value\r\n(i.e., underrun of the option itself or overrun of the surplus\r\narea), then all options MUST be silently ignored (again to\r\nmodel legacy behavior).",
+    "notes": "This is to make the description in Section 14 consistent with Section 10 (https://www.rfc-editor.org/rfc/rfc9868.html#section-10-22), which captures (1) invalid length, not limited to overruns; (2) when one option is malformed, all options MUST be ignored; (3) MUST rule instead of SHOULD rule.",
+    "submit_date": "2026-03-17",
+    "submitter_name": "Yixin Sun",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

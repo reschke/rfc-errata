@@ -13,5 +13,20 @@
     "verifier_id": "164",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2022-10-13 07:45:31"
+  },
+  {
+    "errata_id": "8833",
+    "doc-id": "RFC8851",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.2.2",
+    "orig_text": "The H.264 \"MaxBR\" parameter (and its equivalent \"max-br\" format\r\n   parameter) corresponds to the \"max-bps\" restriction defined in this\r\n   specification, by way of a conversion factor of 1000 or 1200; see\r\n   [RFC6184] for details regarding which factor gets used under\r\n   differing circumstances.",
+    "correct_text": "The H.264 \"MaxBR\" parameter (and its equivalent \"max-br\" format\r\n   parameter) corresponds to the \"max-br\" restriction defined in this\r\n   specification, by way of a conversion factor of 1000 or 1200; see\r\n   [RFC6184] for details regarding which factor gets used under\r\n   differing circumstances.",
+    "notes": "Incorrectly refers to a previous name used for the max-br parameter. There is no value called max-bps in this spec, it is now called max-br.",
+    "submit_date": "2026-03-17",
+    "submitter_name": "Aron Rosenberg",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

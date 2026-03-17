@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8835",
+    "doc-id": "RFC9815",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.3",
+    "orig_text": "the Current-Link's Remote Identifier MUST match the \r\nRemote-Link's Local Identifier, and the Current-Link's \r\nRemote Identifier MUST match the Remote-Link's \r\nLocal Identifier.",
+    "correct_text": "the Current-Link's Remote Identifier MUST match the \r\nRemote-Link's Local Identifier, and the Current-Link's \r\nLocal Identifier MUST match the Remote-Link's \r\nRemote Identifier.",
+    "notes": "The same sentence is repeated twice in the original text. The second half should indicate the other side of matching, i.e., Current-Link's Local matching with Remote-Link's Remote.",
+    "submit_date": "2026-03-17",
+    "submitter_name": "Mrigank Pawagi",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8836",
+    "doc-id": "RFC9815",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "10.5",
+    "orig_text": "TIME_TO_LEARN",
+    "correct_text": "TIME_TO_LEARN_INTERVAL",
+    "notes": "The correct terminology is TIME_TO_LEARN_INTERVAL based on RFC8405 (https://www.rfc-editor.org/rfc/rfc8405).",
+    "submit_date": "2026-03-17",
+    "submitter_name": "Mrigank Pawagi",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
