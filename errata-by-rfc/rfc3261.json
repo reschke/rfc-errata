@@ -19,15 +19,15 @@
     "doc-id": "RFC3261",
     "errata_status_code": "Verified",
     "errata_type_code": "Technical",
-    "section": "",
-    "orig_text": "I would like to show you an error in RFC 3261. I've discussed in\r\nSIP-implementors mailing list too.\r\n\r\nin RFC 3261 page 44 par 8.1.3.4 there is an example of URI (contact URI)\r\nwith uri headers:\r\n\r\nsip:user@host?Subject=foo&Call-Info=<http://www.foo.com>\r\n\r\nI've noticed that URI header \"Call-Info\" has a value with characters not\r\nallowed in uri headers.\r\n\r\nThe BNF says that an header value must contain characters in   \r\nhnv-unreserved or unreserved or escaped but '<' and '>' are not in that set.\r\n\r\nThe right example should be the following:\r\nsip:user@host?Subject=foo&Call-Info=%3Chttp://www.foo.com%3E  \r\n",
-    "correct_text": "[not submitted]",
-    "notes": "from pending",
+    "section": "8.1.3.4",
+    "orig_text": "sip:user@host?Subject=foo&Call-Info=<http://www.foo.com>",
+    "correct_text": "sip:user@host?Subject=foo&Call-Info=%3Chttp://www.foo.com%3E ",
+    "notes": "[from pending]\r\nI would like to show you an error in RFC 3261. I've discussed in\r\nSIP-implementors mailing list too.\r\n\r\nin RFC 3261 page 44 par 8.1.3.4 there is an example of URI (contact URI)\r\nwith uri headers:\r\n\r\nsip:user@host?Subject=foo&Call-Info=<http://www.foo.com>\r\n\r\nI've noticed that URI header \"Call-Info\" has a value with characters not\r\nallowed in uri headers.\r\n\r\nThe BNF says that an header value must contain characters in   \r\nhnv-unreserved or unreserved or escaped but '<' and '>' are not in that set.\r\n\r\nThe right example should be the following:\r\nsip:user@host?Subject=foo&Call-Info=%3Chttp://www.foo.com%3E  ",
     "submit_date": "2005-12-15",
     "submitter_name": "Marco Ambu",
     "verifier_id": "118",
     "verifier_name": "Robert Sparks",
-    "update_date": "2019-09-10 09:09:03"
+    "update_date": "2026-03-17 18:39:05"
   },
   {
     "errata_id": "1470",

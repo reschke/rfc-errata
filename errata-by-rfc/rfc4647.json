@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8838",
+    "doc-id": "RFC4647",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.2",
+    "orig_text": "...ignored by Extended Filtering (see Section\r\n   3.2.2)..",
+    "correct_text": "...ignored by Extended Filtering (see Section\r\n   3.3.2)..",
+    "notes": "The document refers to the Section 3.2.2 as a description of Extended Filtering but there is no such section. The correct section is 3.3.2.",
+    "submit_date": "2026-03-17",
+    "submitter_name": "Mandrusov Roman",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
