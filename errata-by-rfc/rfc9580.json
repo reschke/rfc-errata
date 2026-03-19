@@ -88,5 +88,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8847",
+    "doc-id": "RFC9580",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9.1",
+    "orig_text": "32 octets, size octet, encoded key [Section 5.1.6]\r\n\r\n56 octets, size octet, encoded key [Section 5.1.7]",
+    "correct_text": "32 octets, size octet, [sym. algo ID if v3 PKESK,]\r\nencoded key [Section 5.1.6]\r\n\r\n56 octets, size octet, [sym. algo ID if v3 PKESK,]\r\nencoded key [Section 5.1.7]",
+    "notes": "In Table 18 (OpenPGP Public Key Algorithms Registry), the last column (PKESK Format) is missing a value for the X25519 and X448 rows in the case of v3 PKESKs. See the referenced sections 5.1.6 and 5.1.7.\r\n\r\nThis also affects the corresponding IANA registry (OpenPGP Public Key Algorithms), which will need to be updated as well.",
+    "submit_date": "2026-03-18",
+    "submitter_name": "Daniel Huigens",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8844",
+    "doc-id": "RFC2251",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.2.3",
+    "orig_text": "f the bind was successful, the resultCode will be success, therwise it will be \r\none of:",
+    "correct_text": "If the bind was successful, the resultCode will be success, otherwise it will be \r\none of:",
+    "notes": "The sentence is missing an 'I' for 'If' and an 'o' for 'otherwise'.",
+    "submit_date": "2026-03-18",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-18 14:16:53"
+  },
+  {
+    "errata_id": "8845",
+    "doc-id": "RFC2251",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.11",
+    "orig_text": "The MessageID MUST be that of a an operation which was requested earlier in \r\nthis connection.",
+    "correct_text": "The MessageID MUST be that of an operation which was requested earlier in \r\nthis connection.",
+    "notes": "The sentence has \"a an operation\" which should be \"an operation\".",
+    "submit_date": "2026-03-18",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-18 14:18:00"
+  }
+]

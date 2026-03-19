@@ -2,31 +2,31 @@
   {
     "errata_id": "8839",
     "doc-id": "RFC1309",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "3.1.2",
-    "orig_text": " Now that we've seen what kinds of information can be kept in the Directory, we should look at how the Directory stores this information and how a Directory users accesses the information.",
-    "correct_text": " Now that we've seen what kinds of information can be kept in the Directory, we should look at how the Directory stores this information and how a Directory user accesses the information.",
+    "orig_text": "Now that we've seen what kinds of information can be kept in the Directory, we \r\nshould look at how the Directory stores this information and how a Directory \r\nusers accesses the information.",
+    "correct_text": "Now that we've seen what kinds of information can be kept in the Directory, we \r\nshould look at how the Directory stores this information and how a Directory \r\nuser accesses the information.",
     "notes": "The first sentence in the section ends \"...how a Directory users accesses the information.\" It should be \"...how a Directory user accesses the information.\"",
     "submit_date": "2026-03-17",
     "submitter_name": "Shreyas Rajagopal",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-18 14:11:48"
   },
   {
     "errata_id": "8840",
     "doc-id": "RFC1309",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "3.1.1.2",
-    "orig_text": "An given object class A may be a subclass of another class B, in which case object class A inherits all the mandatory and optional attributes of B in addition to its own.",
-    "correct_text": "A given object class A may be a subclass of another class B, in which case object class A inherits all the mandatory and optional attributes of B in addition to its own.",
+    "orig_text": "An given object class A may be a subclass of another class B, in which case \r\nobject class A inherits all the mandatory and optional attributes of B in \r\naddition to its own.",
+    "correct_text": "A given object class A may be a subclass of another class B, in which case \r\nobject class A inherits all the mandatory and optional attributes of B in \r\naddition to its own.",
     "notes": "The last sentence of the second paragraph begins like \"An given object...\" which should be replaced by \"A given object...\"",
     "submit_date": "2026-03-17",
     "submitter_name": "Shreyas Rajagopal",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-18 14:13:00"
   }
 ]
