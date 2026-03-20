@@ -2,17 +2,17 @@
   {
     "errata_id": "8835",
     "doc-id": "RFC9815",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6.3",
-    "orig_text": "the Current-Link's Remote Identifier MUST match the \r\nRemote-Link's Local Identifier, and the Current-Link's \r\nRemote Identifier MUST match the Remote-Link's \r\nLocal Identifier.",
-    "correct_text": "the Current-Link's Remote Identifier MUST match the \r\nRemote-Link's Local Identifier, and the Current-Link's \r\nLocal Identifier MUST match the Remote-Link's \r\nRemote Identifier.",
+    "orig_text": "For unnumbered links to match during the IPv4 or IPv6\r\nSPF computation, the Current-Link and Remote-Link's\r\nAddress Family Link Descriptor TLV must match the\r\naddress family of the IPv4 or IPv6 SPF computation, the\r\nCurrent-Link's Remote Identifier MUST match the Remote-\r\nLink's Local Identifier, and the Current-Link's Remote\r\nIdentifier MUST match the Remote-Link's Local\r\nIdentifier. ",
+    "correct_text": "For unnumbered links to match during the IPv4 or IPv6\r\nSPF computation, the Current-Link and Remote-Link's\r\nAddress Family Link Descriptor TLV must match the\r\naddress family of the IPv4 or IPv6 SPF computation, the\r\nCurrent-Link's Remote Identifier MUST match the Remote-\r\nLink's Local Identifier, and the Current-Link's Local\r\nIdentifier MUST match the Remote-Link's Remote\r\nIdentifier. ",
     "notes": "The same sentence is repeated twice in the original text. The second half should indicate the other side of matching, i.e., Current-Link's Local matching with Remote-Link's Remote.",
     "submit_date": "2026-03-17",
     "submitter_name": "Mrigank Pawagi",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "185",
+    "verifier_name": "Ketan Talaulikar",
+    "update_date": "2026-03-19 08:07:08"
   },
   {
     "errata_id": "8836",
