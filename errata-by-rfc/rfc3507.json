@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8852",
+    "doc-id": "RFC3507",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.5",
+    "orig_text": "If the preview is 1024 bytes and the origin response is 1025 bytes (and the ICAP server responds with 100-continue), then these chunks would appear on the wire:\r\n\r\n      200\\r\\n\r\n      <512 bytes of data>\\r\\n\r\n      200\\r\\n\r\n      <512 bytes of data>\\r\\n\r\n      0\\r\\n\r\n\r\n      <100 Continue Message>\r\n\r\n      1\\r\\n\r\n      <1 byte of data>\\r\\n\r\n      0\\r\\n\\r\\n  <no ieof because we are no longer in preview mode>",
+    "correct_text": "If the preview is 1024 bytes and the origin response is 1025 bytes (and the ICAP server responds with 100-continue), then these chunks would appear on the wire:\r\n\r\n      200\\r\\n\r\n      <512 bytes of data>\\r\\n\r\n      200\\r\\n\r\n      <512 bytes of data>\\r\\n\r\n      0\\r\\n\\r\\n\r\n\r\n      <100 Continue Message>\r\n\r\n      1\\r\\n\r\n      <1 byte of data>\\r\\n\r\n      0\\r\\n\\r\\n  <no ieof because we are no longer in preview mode>",
+    "notes": "The end of preview mode should be indicated by the chunk body terminator string, which would be \"0\\r\\n\\r\\n\" (essentially an empty final chunk).",
+    "submit_date": "2026-03-24",
+    "submitter_name": "Timothy Fu",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
