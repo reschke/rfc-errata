@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8855",
+    "doc-id": "RFC8663",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.1",
+    "orig_text": "If the No-PHP (NP) Flag in OSPF or the Persistent (P) \r\nFlag in IS-IS is clear:\r\n\r\npop the top label\r\nIf the No-PHP (NP) Flag in OSPF or the Persistent (P)\r\nFlag in IS-IS is set:\r\n\r\n\r\n",
+    "correct_text": "If the No-PHP Flag in OSPF (NP) or in IS-IS (P) is clear:\r\n\r\npop the top label\r\nIf the No-PHP Flag in OSPF (NP) or in IS-IS (P) is set:\r\n\r\n",
+    "notes": "The original text mentions Persistent flag in the context of IS-IS but persistent flag has nothing to do with PHP operation of the labels. Refer sec 2.1.1. in https://www.rfc-editor.org/rfc/rfc8667.html#name-flags",
+    "submit_date": "2026-03-25",
+    "submitter_name": "Imtiyaz Mohammad",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
