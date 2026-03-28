@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "Francesca Palombini",
     "update_date": "2023-12-18 09:27:06"
+  },
+  {
+    "errata_id": "8858",
+    "doc-id": "RFC9457",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "     \"title\": \"An RFC 7807 problem object\",",
+    "correct_text": "     \"title\": \"An RFC 9457 problem object\",",
+    "notes": "I suppose this could be either Editorial or Technical, depending on if EID7731 is taken into account or not, but I'm going to lean towards Technical. \r\n\r\nAppendix A is correctly describing an RFC 7807 compliant schema, but it is out of context and quite likely in error, given that EID7731 is in Verified status.\r\n\r\nThe schema is used by various repositories downstream, regardless of the \"text of the specification\" being superior to the schema, and that can mask RFC 7807 being obsolete.",
+    "submit_date": "2026-03-28",
+    "submitter_name": "dylan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
