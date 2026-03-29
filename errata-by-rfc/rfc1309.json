@@ -28,5 +28,50 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2026-03-18 14:13:00"
+  },
+  {
+    "errata_id": "8859",
+    "doc-id": "RFC1309",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.1",
+    "orig_text": "If two or more people have listings for the same name in the same locality, there is no additional information which with to select the correct number.",
+    "correct_text": "If two or more people have listings for the same name in the same locality, there is no additional information with which to select the correct number.",
+    "notes": "The third line in the second paragraph of Section 2.1 ends \"....information which with to select the correct number.\" It should be \"...information with which to select the correct number\"",
+    "submit_date": "2026-03-28",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8860",
+    "doc-id": "RFC1309",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.1.1.2",
+    "orig_text": "\"top\" has one mandatory attribute \"objectClass\", and nooptional attributes",
+    "correct_text": "\"top\" has one mandatory attribute \"objectClass\", and no optional attributes",
+    "notes": "In the given diagram, the text beside the \"top\" box says \"... and nooptional attributes\". It should be \"...and no optional attributes\"",
+    "submit_date": "2026-03-28",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8861",
+    "doc-id": "RFC1309",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3",
+    "orig_text": "Despite this, however, X.500 is very good at what it was designed to do; i.e., to provide primary directory services and \"resource location\" for a wide band oftypes of information.",
+    "correct_text": "Despite this, however, X.500 is very good at what it was designed to do; i.e., to provide primary directory services and \"resource location\" for a wide band of types of information.",
+    "notes": "The last line in section 3.3 ends \"...for a wide band oftypes of information.\" It should be \"..for a wide band of types of information.\"",
+    "submit_date": "2026-03-28",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
