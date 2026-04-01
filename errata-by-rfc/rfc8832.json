@@ -18,15 +18,15 @@
     "errata_id": "8848",
     "doc-id": "RFC8832",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "5.2",
     "orig_text": "   This message is sent in response to a DATA_CHANNEL_OPEN_RESPONSE\r\n   message.  It is sent on the stream used for user messages using the\r\n   data channel.  Reception of this message tells the opener that the\r\n   data channel setup handshake is complete.",
     "correct_text": "   This message is sent in response to a DATA_CHANNEL_OPEN message.  \r\n   It is sent on the stream used for user messages using the data \r\n   channel. Reception of this message tells the opener that the\r\n   data channel setup handshake is complete.",
     "notes": "RFC 8832 defines only two message types: DATA_CHANNEL_OPEN (0x03) and DATA_CHANNEL_ACK (0x02). There is no DATA_CHANNEL_OPEN_RESPONSE message defined anywhere in the document. The reference appears in early drafts of the protocol (draft-jesup-rtcweb-data-protocol-00, March 2012), which defined a DATA_CHANNEL_OPEN_RESPONSE (msg_type 1) as a separate message. This seems to have been replaced with DATA_CHANNEL_ACK. Section 6 (Procedures) correctly describes the ACK as a response to the OPEN message, confirming this is an editorial oversight.",
     "submit_date": "2026-03-20",
     "submitter_name": "JC Yan",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2026-03-31 12:42:15"
   }
 ]

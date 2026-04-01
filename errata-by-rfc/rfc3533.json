@@ -32,16 +32,16 @@
   {
     "errata_id": "8825",
     "doc-id": "RFC3533",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "6",
     "orig_text": "7. CRC_checksum: a 4 Byte field containing a 32 bit CRC checksum of\r\n   the page (including header with zero CRC field and page content).\r\n   The generator polynomial is 0x04c11db7.",
-    "correct_text": "7. CRC_checksum: a 4 Byte field containing a 32 bit CRC checksum of\r\n   the page (including header with zero CRC field and full page content).\r\n   The generator polynomial is 0x04c11db7.",
+    "correct_text": "7. CRC_checksum: a 4 Byte field containing a 32 bit CRC checksum of\r\n   the page (including page content as well as the header with a\r\n   zeroed CRC field).  The generator polynomial is 0x04c11db7.\r\n",
     "notes": "The current text is ambiguous and makes it unclear whether you are calculating the checksum with a zeroed CRC field and zeroed page content or the zeroed CRC field and including the full page content (ie. are you using it to verify that the header was written correctly or the page content and header were both written correctly). The point of the CRC is to verify both, so perhaps it's obvious that it should be the latter, but I briefly considered that the CRC may only apply to the page header so it seems worth clarifying the ambiguous language.",
     "submit_date": "2026-03-12",
     "submitter_name": "Sam Whited",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "157",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-03-31 12:59:20"
   }
 ]
