@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8864",
+    "doc-id": "RFC9594",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.4.1",
+    "orig_text": "      -  The arrays 'role_filter' and 'id_filter' MUST NOT both be\r\n         empty, i.e., in CDDL notation: [ bool, [ ], [ ] ].  If the\r\n         'get_creds' parameter has such a format, the request MUST be\r\n         considered malformed, and the KDC MUST reply with a 4.00 (Bad\r\n         Request) error response.",
+    "correct_text": "      -  The arrays 'role_filter' and 'id_filter' MUST NOT both be\r\n         empty, i.e., in CBOR diagnostic notation: [ true, [ ], [ ] ]\r\n         or [ false, [ ], [ ] ].  If the 'get_creds' parameter has such\r\n         a format, the request MUST be considered malformed, and the\r\n         KDC MUST reply with a 4.00 (Bad Request) error response.",
+    "notes": "In the original text, the CDDL notation is not valid CDDL, but rather a hybrid of CDDL and CBOR diagnostic notation.\r\n\r\nThe new text uses the intended and valid CBOR diagnostic notation, separately covering the two cases where the first element of the outer array is true or false.",
+    "submit_date": "2026-04-01",
+    "submitter_name": "Marco Tiloca",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

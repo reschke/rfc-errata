@@ -118,5 +118,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2024-07-15 10:26:36"
+  },
+  {
+    "errata_id": "8863",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "IMAPrev",
+    "correct_text": "IMAP4rev",
+    "notes": "In the document, there are two instances of \"IMAPrev1\" and one instance of \"IMAPrev2\". These are presumably misspellings of \"IMAP4rev1\" and \"IMAP4rev2\", respectively. Note the missing \"4\" between \"IMAP\" and \"rev\". These misspellings occur in section 9 and appendix A.",
+    "submit_date": "2026-04-01",
+    "submitter_name": "Seth McDonald",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
