@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8869",
+    "doc-id": "RFC9651",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "   An Item can be an Integer (Section 3.3.1), a Decimal (Section 3.3.2),\r\n   a String (Section 3.3.3), a Token (Section 3.3.4), a Byte Sequence\r\n   (Section 3.3.5), a Boolean (Section 3.3.6), or a Date\r\n   (Section 3.3.7).  It can have associated parameters (Section 3.1.2).",
+    "correct_text": "   An Item can be an Integer (Section 3.3.1), a Decimal (Section 3.3.2),\r\n   a String (Section 3.3.3), a Token (Section 3.3.4), a Byte Sequence\r\n   (Section 3.3.5), a Boolean (Section 3.3.6), a Date\r\n   (Section 3.3.7), or a Display String (Section 3.3.8).  It can have\r\n   associated parameters (Section 3.1.2).",
+    "notes": "Display String missing.",
+    "submit_date": "2026-04-06",
+    "submitter_name": "Julian Reschke",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
