@@ -2,7 +2,7 @@
   {
     "errata_id": "8872",
     "doc-id": "RFC9907",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.19.2",
     "orig_text": "   This practice is not safe for identities defined in a common module\r\n   such as \"iana-if-type\" because the client is not required to know\r\n   about \"my-module\" just because it knows about the \"iana-if-type\"\r\n   module.",
@@ -10,8 +10,8 @@
     "notes": "The module in that section is called \"example-module\". Maybe \"my-module\" was used previously but the text in the last paragraph wasn't changed.",
     "submit_date": "2026-04-08",
     "submitter_name": "Reshad Rahman",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-04-09 10:09:44"
   }
 ]

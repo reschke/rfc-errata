@@ -17,7 +17,7 @@
   {
     "errata_id": "8870",
     "doc-id": "RFC9312",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Editorial",
     "section": "3.8",
     "orig_text": "The round-trip time (RTT) of QUIC flows can be inferred by\r\nobservation once per flow during the handshake in passive TCP\r\nmeasurement;",
@@ -25,8 +25,8 @@
     "notes": "The \"as\" got dropped from -18 to RFC9312.\r\nThe earlier wording is clearer because it refers to passive TCP measurement only as an analogy, avoiding the incorrect implication that QUIC RTT inference involves TCP.",
     "submit_date": "2026-04-07",
     "submitter_name": "Ike Kunze",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "186",
+    "verifier_name": "G Fairhurst",
+    "update_date": "2026-04-09 12:09:10"
   }
 ]

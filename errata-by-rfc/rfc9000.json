@@ -103,5 +103,20 @@
     "verifier_id": "172",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2025-03-18 03:39:39"
+  },
+  {
+    "errata_id": "8875",
+    "doc-id": "RFC9000",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.2.2",
+    "orig_text": "On receiving a PATH_CHALLENGE frame, an endpoint MUST respond by\r\nechoing the data contained in the PATH_CHALLENGE frame in a\r\nPATH_RESPONSE frame.  An endpoint MUST NOT delay transmission of a\r\npacket containing a PATH_RESPONSE frame unless constrained by\r\ncongestion control.",
+    "correct_text": "On receiving a PATH_CHALLENGE frame, an endpoint MUST respond by\r\nechoing the data contained in the PATH_CHALLENGE frame in a\r\nPATH_RESPONSE frame.  An endpoint MUST NOT delay transmission of a\r\npacket containing a PATH_RESPONSE frame unless constrained by\r\ncongestion control.\r\n\r\nAs with any frame type, the general guidance in Section 21.9\r\napplies when excessive quantities of PATH_CHALLENGE frames are\r\nindicative of an attack.",
+    "notes": "Section 8.2.2 does not cross-reference the general peer DoS\r\nguidance in Section 21.9 or make explicit that that guidance\r\nalso applies to excessive PATH_CHALLENGE traffic. As a result,\r\nimplementers reading Section 8.2.2 in isolation can reasonably\r\nconclude that a PATH_RESPONSE must be generated for every\r\nPATH_CHALLENGE, even under resource pressure. Because\r\nPATH_CHALLENGE is only 9 bytes on the wire (Section 19.17), a\r\nsingle minimal 1200-byte datagram can carry over 100\r\nPATH_CHALLENGE frames. Combined with ACK withholding to prevent\r\nfreeing of queued state, this creates a practical memory\r\nexhaustion vector.\r\n\r\nIn December 2023, three implementations were found vulnerable to\r\nthis pattern and issued coordinated fixes:\r\n  - quic-go:  CVE-2023-49295\r\n  - quiche:   CVE-2023-6193\r\n  - quicly:   CVE-2023-50247\r\n(See https://seemann.io/posts/2023-12-18---exploiting-quics-path-validation/)\r\n\r\nPost-fix implementations have adopted incompatible defensive\r\nstrategies (bounded queuing, single-slot overwrite). Those\r\ndefenses can appear inconsistent with a literal reading of\r\nSection 8.2.2 even though Section 21.9 already provides general\r\nlatitude to drop packets or close the connection under attack.\r\nAn explicit cross-reference would clarify this relationship.",
+    "submit_date": "2026-04-10",
+    "submitter_name": "Abhinav Agarwal",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
