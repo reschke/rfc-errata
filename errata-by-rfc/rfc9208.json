@@ -2,7 +2,7 @@
   {
     "errata_id": "8846",
     "doc-id": "RFC9208",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7",
     "orig_text": "quota-list =       \"(\" quota-resource *(SP quota-resource) \")\"\r\n",
@@ -10,8 +10,8 @@
     "notes": "The definition of the QUOTA response, in section 4.2.1, states that the \"list contains zero or more triplets\" and \"an empty list means there are no administrative resource limits in the quota root.\"\r\n\r\nTherefore, the formal syntax for \"quota-list\" should allow an empty list.",
     "submit_date": "2026-03-18",
     "submitter_name": "Nicholas Evans",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andrew Newton",
+    "update_date": "2026-04-13 13:04:41"
   }
 ]

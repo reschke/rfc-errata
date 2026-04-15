@@ -212,16 +212,16 @@
   {
     "errata_id": "8874",
     "doc-id": "RFC8259",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "6",
     "orig_text": "6.  Numbers\r\n\r\n   The representation of numbers is similar to that used in most\r\n   programming languages.  A number is represented in base 10 using\r\n   decimal digits.  It contains an integer component that may be\r\n   prefixed with an optional minus sign, which may be followed by a\r\n   fraction part and/or an exponent part.  Leading zeros are not\r\n   allowed.\r\n\r\n   A fraction part is a decimal point followed by one or more digits.\r\n\r\n   An exponent part begins with the letter E in uppercase or lowercase,\r\n   which may be followed by a plus or minus sign.  The E and optional\r\n   sign are followed by one or more digits.\r\n\r\n   Numeric values that cannot be represented in the grammar below (such\r\n   as Infinity and NaN) are not permitted.\r\n\r\n      number = [ minus ] int [ frac ] [ exp ]\r\n\r\n      decimal-point = %x2E       ; .\r\n\r\n      digit1-9 = %x31-39         ; 1-9\r\n\r\n      e = %x65 / %x45            ; e E\r\n\r\n      exp = e [ minus / plus ] 1*DIGIT\r\n\r\n      frac = decimal-point 1*DIGIT\r\n\r\n      int = zero / ( digit1-9 *DIGIT )\r\n\r\n      minus = %x2D               ; -\r\n\r\n      plus = %x2B                ; +\r\n\r\n      zero = %x30                ; 0\r\n\r\n   This specification allows implementations to set limits on the range\r\n   and precision of numbers accepted.  Since software that implements\r\n   IEEE 754 binary64 (double precision) numbers [IEEE754] is generally\r\n   available and widely used, good interoperability can be achieved by\r\n   implementations that expect no more precision or range than these\r\n   provide, in the sense that implementations will approximate JSON\r\n   numbers within the expected precision.  A JSON number such as 1E400\r\n   or 3.141592653589793238462643383279 may indicate potential\r\n   interoperability problems, since it suggests that the software that\r\n   created it expects receiving software to have greater capabilities\r\n   for numeric magnitude and precision than is widely available.\r\n\r\n   Note that when such software is used, numbers that are integers and\r\n   are in the range [-(2**53)+1, (2**53)-1] are interoperable in the\r\n   sense that implementations will agree exactly on their numeric\r\n   values.",
     "correct_text": "...\r\nTODO something like\r\nhttps://github.com/adligo/ten10b_v1.adligo.org\r\nalso see\r\nhttps://www.ietf.org/archive/id/draft-morgan-ten64-00.html#commentary\r\n...",
-    "notes": "Since JSON is based on ECMAScript now, it should be explicit in how ECMAScript's (decimal) numbers are serialized and deserialized.  It should include which algorithms should be used, when, and why.  It should be exceedingly specific about rounding, if and when rounding should ever be used!  Without being explicit, various implementations will not be able to communicate apples to apples.",
+    "notes": "Since JSON is based on ECMAScript now, it should be explicit in how ECMAScript's (decimal) numbers are serialized and deserialized.  It should include which algorithms should be used, when, and why.  It should be exceedingly specific about rounding, if and when rounding should ever be used!  Without being explicit, various implementations will not be able to communicate apples to apples.\n --VERIFIER NOTES-- \n JSON is not based on ECMAScript.\r\n\r\nSee email thread: https://mailarchive.ietf.org/arch/msg/json/gucVG-EN3b2XJsKBsOJBU_6-LLI/",
     "submit_date": "2026-04-09",
     "submitter_name": "Scott Morgan",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "183",
+    "verifier_name": "Andrew Newton",
+    "update_date": "2026-04-13 13:07:33"
   }
 ]

@@ -193,5 +193,20 @@
     "verifier_id": "176",
     "verifier_name": "Orie Steele",
     "update_date": "2025-01-14 07:32:42"
+  },
+  {
+    "errata_id": "8877",
+    "doc-id": "RFC6265",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.1",
+    "orig_text": "       3.  If the found-month flag is not set and the date-token matches\r\n           the month production, set the found-month flag and set the\r\n           month-value to the month denoted by the date-token.  Skip the\r\n           remaining sub-steps and continue to the next date-token.\r\n",
+    "correct_text": "       3.  If the found-month flag is not set and the date-token case-\r\n           insensitively matches the month production, set the found-month\r\n           flag and set the month-value to the month denoted by the date-token.\r\n           Skip the remaining sub-steps and continue to the next date-token.\r\n",
+    "notes": "The grammar for the `month` production only contains lower case month names, like `\"jan\"`. Nothing (that I have been able to find) says that the input text is converted to lower case, nor that mathcing or grammar terminals are case insensitive.\r\n\r\nThe examples in section 3.1 includes this date: \"Expires=Sun, 06 Nov 1994 08:49:37 GMT\", which suggests that being case insensitive was intended.\r\n\r\n(I'm not sure the \"case-insensitively matches\" defined in section 2.3 can be applied to a grammar production, and not just a pair of strings. If it cannot be used in this way, then a different approach is needed.)",
+    "submit_date": "2026-04-13",
+    "submitter_name": "Lasse Nielsen",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
