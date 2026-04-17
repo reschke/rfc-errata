@@ -33,15 +33,15 @@
     "errata_id": "8867",
     "doc-id": "RFC1928",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "6",
     "orig_text": "The BIND request is used in protocols which require the client to accept connections from the server.",
     "correct_text": "The BIND request is used for protocols that require the client to accept connections from the server.",
     "notes": "\"in\" is incorrect here because it implies that protocols such as FTP (that require the client to accept connections from the server) themselves have BIND requests, which is not true; rather, BIND requests to SOCKS servers are used _for_ such protocols. Also, \"that\" is better than \"which\" in this context, because it's used in a restrictive manner.",
     "submit_date": "2026-04-03",
     "submitter_name": "David Tyas",
-    "verifier_id": "99",
+    "verifier_id": "2",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2026-04-15 12:29:03"
   }
 ]
