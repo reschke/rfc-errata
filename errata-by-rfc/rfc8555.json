@@ -313,5 +313,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8883",
+    "doc-id": "RFC8555",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.5",
+    "orig_text": "\r\n     \"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       }\r\n     ]",
+    "correct_text": "\r\n     \"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       }\r\n     ]",
+    "notes": "Section 8 says:\r\n\r\n   Challenge objects all contain the following basic fields:\r\n\r\n...\r\n\r\n   status (required, string):  The status of this challenge.  Possible\r\n      values are \"pending\", \"processing\", \"valid\", and \"invalid\" (see\r\n      Section 7.1.6).\r\n\r\nBut section 7.5 is missing the challenge statuses.",
+    "submit_date": "2026-04-16",
+    "submitter_name": "Shirom Makkad",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
