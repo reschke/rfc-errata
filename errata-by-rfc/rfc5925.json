@@ -103,5 +103,20 @@
     "verifier_id": "172",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2024-05-15 03:45:00"
+  },
+  {
+    "errata_id": "8884",
+    "doc-id": "RFC5925",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.2",
+    "orig_text": "The implementation of SNEs is not specified in this document, but one\r\n   possible way is described here that can be used for either RCV.SNE,\r\n   SND.SNE, or both.\r\n\r\n   Consider an implementation with two SNEs as required (SND.SNE, RCV.\r\n   SNE), and additional variables as listed below, all initialized to\r\n   zero, as well as a current TCP segment field (SEG.SEQ):\r\n\r\n   o  SND.PREV_SEQ, needed to detect rollover of SND.SEQ\r\n\r\n   o  RCV.PREV_SEQ, needed to detect rollover of RCV.SEQ\r\n\r\n   o  SND.SNE_FLAG, which indicates when to increment the SND.SNE\r\n\r\n   o  RCV.SNE_FLAG, which indicates when to increment the RCV.SNE\r\n\r\n   When a segment is received, the following algorithm (in C-like\r\n   pseudocode) computes the SNE used in the MAC; this is the \"RCV\" side,\r\n   and an equivalent algorithm can be applied to the \"SND\" side:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTouch, et al.                Standards Track                   [Page 25]\r\n\r\nRFC 5925              The TCP Authentication Option            June 2010\r\n\r\n\r\n      /* set the flag when the SEG.SEQ first rolls over */\r\n      if ((RCV.SNE_FLAG == 0)\r\n         && (RCV.PREV_SEQ > 0x7fff) && (SEG.SEQ < 0x7fff)) {\r\n            RCV.SNE = RCV.SNE + 1;\r\n            RCV.SNE_FLAG = 1;\r\n      }\r\n      /* decide which SNE to use after incremented */\r\n      if ((RCV.SNE_FLAG == 1) && (SEG.SEQ > 0x7fff)) {\r\n         SNE = RCV.SNE - 1; # use the pre-increment value\r\n      } else {\r\n         SNE = RCV.SNE; # use the current value\r\n      }\r\n      /* reset the flag in the *middle* of the window */\r\n      if ((RCV.PREV_SEQ < 0x7fff) && (SEG.SEQ > 0x7fff)) {\r\n         RCV.SNE_FLAG = 0;\r\n      }\r\n      /* save the current SEQ for the next time through the code */\r\n      RCV.PREV_SEQ = SEG.SEQ;\r\n\r\n   In the above code, the first time the sequence number rolls over,\r\n   i.e., when the new number is low (in the bottom half of the number\r\n   space) and the old number is high (in the top half of the number\r\n   space), the SNE is incremented and a flag is set.\r\n\r\n   If the flag is set and a high number is seen, it must be a reordered\r\n   segment, so use the pre-increment SNE; otherwise, use the current\r\n   SNE.\r\n\r\n   The flag will be cleared by the time the number rolls all the way\r\n   around.\r\n\r\n   The flag prevents the SNE from being incremented again until the flag\r\n   is reset, which happens in the middle of the window (when the old\r\n   number is in the bottom half and the new is in the top half).\r\n   Because the receive window is never larger than half of the number\r\n   space, it is impossible to both set and reset the flag at the same\r\n   time -- outstanding segments, regardless of reordering, cannot\r\n   straddle both regions simultaneously.",
+    "correct_text": "The implementation of SNEs is specified in RFC 9817.",
+    "notes": "The deleted text includes a buggy version of the SNE algorithm. RFC 9817 specifies a better SNE algorithm.\r\n\r\nImplementation that use the RFC 9817 SNE algorithm will be mostly, but not 100% backwards compatible with implementations that implement the deleted RFC 5925 version.\r\n\r\nThanks to Pig Chen for raising this issue.",
+    "submit_date": "2026-04-17",
+    "submitter_name": "Ron Bonica",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
