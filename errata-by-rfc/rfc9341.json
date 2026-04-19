@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8885",
+    "doc-id": "RFC9341",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.2",
+    "orig_text": "   Note that, for all the one-way delay alternatives described in the\r\n   next sections, by summing the one-way delays of the two directions of\r\n   a path, it is always possible to measure the two-way delay (round-\r\n   trip \"virtual\" delay).  The Network Time Protocol (NTP) [RFC5905] or\r\n   the IEEE 1588 Precision Time Protocol (PTP) [IEEE-1588] (as discussed\r\n   in the previous section) can be used for the timestamp formats\r\n   depending on the needed precision.\r\n",
+    "correct_text": "   Note that, for all the one-way delay alternatives described in the\r\n   next sections, by summing the one-way delays of the two directions of\r\n   a path, it is always possible to measure the two-way delay (round-\r\n   trip \"virtual\" delay).  The Network Time Protocol (NTP) [RFC5905] or\r\n   the IEEE 1588 Precision Time Protocol (PTP) [IEEE-1588] can be used \r\n   for the timestamp formats depending on the needed precision.\r\n",
+    "notes": "The previous section does not discuss timestamps.",
+    "submit_date": "2026-04-18",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
