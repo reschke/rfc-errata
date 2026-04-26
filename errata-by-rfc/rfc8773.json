@@ -13,5 +13,20 @@
     "verifier_id": "2",
     "verifier_name": "RFC Editor",
     "update_date": "2024-04-09 18:51:09"
+  },
+  {
+    "errata_id": "8888",
+    "doc-id": "RFC8773",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "Early Secret = HKDF-Extract(External PSK, 0)",
+    "correct_text": "Early Secret = HKDF-Extract(0, External PSK)",
+    "notes": "As discussed in https://mailarchive.ietf.org/arch/msg/tls/6Wk82oBGd61rTK23DgfYb7BmRKM/ and https://github.com/tlswg/rfc8773bis/pull/2",
+    "submit_date": "2026-04-24",
+    "submitter_name": "Muhammad Usama Sardar",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
