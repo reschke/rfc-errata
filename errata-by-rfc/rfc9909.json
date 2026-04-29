@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "8891",
+    "doc-id": "RFC9909",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "csor(3) 4",
+    "correct_text": "csor(3) nistAlgorithm(4)",
+    "notes": "It is suggested that the definition\r\n“nistAlgorithms OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) 4 }”\r\nbe revised to\r\n“nistAlgorithms OBJECT IDENTIFIER ::= { joint-iso-ccitt(2) country(16) us(840) organization(1) gov(101) csor(3) nistAlgorithm(4) }”\r\nin order to improve consistency with NIST terminology. In particular, replacing the numeric identifier “4” with the named identifier “nistAlgorithm(4)” is recommended to align with the naming convention used in the NIST Computer Security Objects Register (CSOR) and to enhance clarity and readability.\r\nFor reference, the NIST CSOR is available at: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration",
+    "submit_date": "2026-04-27",
+    "submitter_name": "Abel C. H. Chen",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8892",
+    "doc-id": "RFC9909",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "csor(3) 4",
+    "correct_text": "csor(3) nistAlgorithm(4)",
+    "notes": "It is suggested that the definition\r\n“nistAlgorithms OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) 4 }”\r\nbe revised to\r\n“nistAlgorithms OBJECT IDENTIFIER ::= { joint-iso-ccitt(2) country(16) us(840) organization(1) gov(101) csor(3) nistAlgorithm(4) }”\r\nin order to improve consistency with NIST terminology. In particular, replacing the numeric identifier “4” with the named identifier “nistAlgorithm(4)” is recommended to align with the naming convention used in the NIST Computer Security Objects Register (CSOR) and to enhance clarity and readability.\r\nFor reference, the NIST CSOR is available at: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration",
+    "submit_date": "2026-04-27",
+    "submitter_name": "Abel C. H. Chen",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
