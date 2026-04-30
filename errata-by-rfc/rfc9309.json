@@ -43,5 +43,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8895",
+    "doc-id": "RFC9309",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.3.1.5",
+    "orig_text": "Crawlers MUST try to parse each line of the robots.txt file. Crawlers \r\nMUST use the  parseable rules.",
+    "correct_text": "Crawlers MUST try to parse each line of the robots.txt file. Crawlers \r\nMUST use the  parseable rules.\r\n\r\nTo improve maintainability of robots.txt files and reduce duplication \r\nof rule groups, implementations MAY support a comma-separated list of \r\nuser-agent tokens within a single \"User-agent\" field.\r\n\r\nFor example:\r\n    User-agent: agent1, agent2, agent3\r\n\r\nis interpreted as equivalent to:\r\n    User-agent: agent1\r\n    User-agent: agent2\r\n    User-agent: agent3\r\n\r\nWhen such a construct is encountered:\r\n\r\n- Parsers that support this extension SHOULD split the value on comma\r\n  separators, trim optional whitespace, and treat each token as an \r\n  independent User-agent field belonging to the same group.\r\n\r\n- Parsers that do not support this extension will interpret the full \r\n  value as a single user-agent token. As per this specification, \r\n  unmatched user-agent tokens simply result in the group being ignored\r\n  for that crawler, preserving backward compatibility.\r\n\r\n- Implementations SHOULD NOT treat comma-separated user-agent values \r\n  as a parsing error.\r\n\r\nThis extension is OPTIONAL and intended as a best practice to reduce \r\nrepetition of identical rule groups across multiple user-agents.",
+    "notes": "About 0.3% of robots.txt have an comma in the user-agent fields already. Including http://queue.tickets.fifa.com/robots.txt  and  http://www.rsn-msk.ru/robots.txt",
+    "submit_date": "2026-04-28",
+    "submitter_name": "Fabrice Canel",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
