@@ -13,5 +13,20 @@
     "verifier_id": "113",
     "verifier_name": "Lars Eggert",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8897",
+    "doc-id": "RFC6740",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.3",
+    "orig_text": "(Additionally, in IPv4 the IPv4 subnet mask uses bits from the host ID, a further confusion of the structure, even thought it is an extremely useful engineering mechanism.)",
+    "correct_text": "(Additionally, in IPv4 the IPv4 subnet mask uses bits from the host ID, a further confusion of the structure, even though it is an extremely useful engineering mechanism.)",
+    "notes": "Simple typo, used thought instead of though.",
+    "submit_date": "2026-04-29",
+    "submitter_name": "Jake Telford",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

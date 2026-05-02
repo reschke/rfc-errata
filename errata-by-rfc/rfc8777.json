@@ -47,16 +47,16 @@
   {
     "errata_id": "8609",
     "doc-id": "RFC8777",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "  #!/usr/bin/env python3\r\n  import sys\r\n  name=sys.argv[1]\r\n  wire=''\r\n  for dn in name.split('.'):\r\n    if len(dn) > 0:\r\n      wire += ('%02x' % len(dn))\r\n      wire += (''.join('%02x'%ord(x) for x in dn))\r\n  print(len(wire)//2) + 2\r\n  print(wire)",
     "correct_text": "  #!/usr/bin/env python3\r\n  import sys\r\n  name=sys.argv[1]\r\n  wire=''\r\n  for dn in name.split('.'):\r\n    if len(dn) > 0:\r\n      wire += ('%02x' % len(dn))\r\n      wire += (''.join('%02x'%ord(x) for x in dn))\r\n  wire += '00'\r\n  print(len(wire)//2 + 2)\r\n  print(wire)",
-    "notes": "Given erratum 6218 (<https://www.rfc-editor.org/errata/eid6218>: missing final empty root label), already verified, the Python code should also produce the correct output.",
+    "notes": "Given erratum 6218 (<https://www.rfc-editor.org/errata/eid6218>: missing final empty root label), already verified, the Python code should also produce the correct output.\r\n\r\n======Verifier Notes\r\n\r\nAfter discussion with Jim Reid (DNSDIR Chair) in Shenzhen, I was convinced that more discussion is needed to agree on the exact changes and that the fix may concern several places in the document. The situation is even complicated because this erratum  concerns the same code as EID 6155 [1], which was verified in 2021 (thanks Rebecca VanRheenen for the note).\r\n\r\nSee more details at https://mailarchive.ietf.org/arch/msg/mboned/F_bgq3YO4B1p_ajTaofOZzixNwQ/",
     "submit_date": "2025-10-18",
     "submitter_name": "Viktor Dukhovni",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "184",
+    "verifier_name": "Mohamed BOUCADAIR",
+    "update_date": "2026-04-30 00:34:05"
   }
 ]

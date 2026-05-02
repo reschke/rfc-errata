@@ -73,5 +73,20 @@
     "verifier_id": "166",
     "verifier_name": "Rob Wilton",
     "update_date": "2024-02-26 01:05:01"
+  },
+  {
+    "errata_id": "8898",
+    "doc-id": "RFC8520",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B",
+    "orig_text": "       \"ietf-mud-detext-example:is-detnet-required\": \"false\",\r\n       \"is-supported\": true,",
+    "correct_text": "       \"ietf-mud-detext-example:is-detnet-required\": false,\r\n       \"is-supported\": true,",
+    "notes": "is-detnet-required is defined as a boolean in that same Section. The rule defined in rfc7951#section-6.3 should be followed for JSON representation.",
+    "submit_date": "2026-04-30",
+    "submitter_name": "Mohamed BOUCADAIR",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

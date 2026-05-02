@@ -13,5 +13,20 @@
     "verifier_id": "182",
     "verifier_name": "Nick Sullivan",
     "update_date": "2026-02-12 14:54:07"
+  },
+  {
+    "errata_id": "8896",
+    "doc-id": "RFC9858",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "A.1\r\nMessage     54657374206d65737361676520666f72  |Test message for|\r\n            205348413235362d3139320a          | SHA-256/192.|\r\n\r\nA.2\r\nMessage     54657374206d65737361676520666f72  |Test message for|\r\n            205348414b453235362d3139320a      | SHAKE256/192.|\r\n\r\nA.3\r\nMessage     54657374206d657361676520666f7220  |Test message for|\r\n            5348414b453235362d3235360a        |SHAKE256/256.|",
+    "correct_text": "A.1\r\nMessage     54657374206d65737361676520666f72  |Test message for|\r\n            205348413235362d3139320a          | SHA256-192.|\r\n\r\nA.2\r\nMessage     54657374206d65737361676520666f72  |Test message for|\r\n            205348414b453235362d3139320a      | SHAKE256-192.|\r\n\r\nA.3\r\nMessage     54657374206d657361676520666f7220  |Test message for|\r\n            5348414b453235362d3235360a        |SHAKE256-256.|",
+    "notes": "The ascii text is incorrect, hex encoding is correct.\r\n\r\nI've checked with https://github.com/pornin/crrl/blob/main/src/lms.rs (\"KAT_MSG\"). The values haven't changed since draft 9 mentioned in that file. Have also checked A.1 using another work-in-progress implementation.\r\n\r\nCase A.4 doesn't need changing, the hex and ascii match.",
+    "submit_date": "2026-04-29",
+    "submitter_name": "Matt Johnston",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

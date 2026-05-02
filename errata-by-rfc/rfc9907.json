@@ -17,16 +17,16 @@
   {
     "errata_id": "8880",
     "doc-id": "RFC9907",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.30.3.2",
     "orig_text": "IANA is requested to add this note to the registry:\r\n\r\n    New values must not be directly added to the \"iana-foo\" YANG\r\n    module.  They must instead be added to the \"foo\" registry.",
     "correct_text": "IANA is requested to add this note to the registry:\r\n\r\n    New values must not be directly added to the \"iana-foo\" YANG\r\n    module.  They must instead be added to the \"foo\" registry.\r\n\r\nIANA is requested to add this note to [reference-to-the-iana-foo-\r\nregistry]:\r\n\r\n   When this registry is modified, the YANG module \"iana-foo\"\r\n   [IANA_FOO_URL] must be updated as defined in RFC IIII.",
-    "notes": "* The note was present in the approved draft, but was lost during editing of that section. The note was at the button of the template but, as can be seen in Section 4.30.3.1, it was moved upper to group both notes.\r\n\r\n* Section 5.3.1 (Requirements for All Modules) says:\r\n\r\nCURRENT:\r\n\r\n   In addition, when the module is published, IANA must add the\r\n   following notes to:\r\n\r\n   The YANG Module Names registry:\r\n      New values must not be directly added to the \"iana-foo\" YANG\r\n      module.  They must instead be added to the \"foo\" registry.\r\n\r\n   The underlying registry:\r\n      When this registry is modified, the YANG module \"iana-foo\"\r\n      [IANA_FOO_URL] must be updated as defined in RFC IIII.\r\n\r\n* IANA will always implement these two actions per 5.3.1, but better to have the templates in 4.30.3.1/4.30.3.2 consistent.",
+    "notes": "* The note was present in the approved draft, but was lost during editing of that section. The note was at the button of the template but, as can be seen in Section 4.30.3.1, it was moved upper to group both notes.\r\n\r\n* Section 5.3.1 (Requirements for All Modules) says:\r\n\r\nCURRENT:\r\n\r\n   In addition, when the module is published, IANA must add the\r\n   following notes to:\r\n\r\n   The YANG Module Names registry:\r\n      New values must not be directly added to the \"iana-foo\" YANG\r\n      module.  They must instead be added to the \"foo\" registry.\r\n\r\n   The underlying registry:\r\n      When this registry is modified, the YANG module \"iana-foo\"\r\n      [IANA_FOO_URL] must be updated as defined in RFC IIII.\r\n\r\n* IANA will always implement these two actions per 5.3.1, but better to have the templates in 4.30.3.1/4.30.3.2 consistent.\r\n\r\nVerifier Note: Please see the following thread for any discussion related to this Errata - https://mailarchive.ietf.org/arch/msg/netmod/ZCuhdmxX_RyIKFwtu9RLpiQ1izE/",
     "submit_date": "2026-04-15",
     "submitter_name": "Mohamed BOUCADAIR",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-04-29 16:27:27"
   }
 ]

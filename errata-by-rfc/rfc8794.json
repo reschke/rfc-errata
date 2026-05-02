@@ -137,31 +137,31 @@
   {
     "errata_id": "8658",
     "doc-id": "RFC8794",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "11.1.6.12",
     "orig_text": "The recurring attribute is OPTIONAL. If the recurring attribute is not\r\npresent, then the EBML Element is not an Identically Recurring Element.",
     "correct_text": "The recurring attribute is OPTIONAL. If the recurring attribute is\r\nnot set to true, then the EBML Element is not an Identically Recurring\r\nElement.",
-    "notes": "The recurring attribute is OPTIONAL. If recurring is present and set to false, then \r\nthe EBML Element is not an Identically Recurring Element.",
+    "notes": "The recurring attribute is OPTIONAL. If recurring is present and set to false, then \r\nthe EBML Element is not an Identically Recurring Element.\n --VERIFIER NOTES-- \nIf the attribute is present, the recurring aspect of the element is the value set in the attribute. The text  does not need to mention it.\r\n\r\nThe original text covers the case that the attribute is not present, in which case the default needs to be specified, as it is in the original text. This follows the same construction used for most of the other attributes in this section.",
     "submit_date": "2025-11-26",
     "submitter_name": "Pétur Ingi Egilsson",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "189",
+    "verifier_name": "Charles Eckel",
+    "update_date": "2026-04-29 07:49:48"
   },
   {
     "errata_id": "8854",
     "doc-id": "RFC8794",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "11.1.6.5.",
     "orig_text": "Within an EBML Schema, the XPath of the \"@maxOccurs\" attribute is\r\n\"/EBMLSchema/element/@maxOccurs\".\r\n\r\n\"maxOccurs\" is a nonnegative integer expressing the maximum permitted\r\nnumber of occurrences of this EBML Element within its Parent Element.\r\n\r\nEach instance of the Parent Element MUST contain at most this many\r\ninstances of this EBML Element, including the unwritten mandatory\r\nelement with a default value; see Section 11.1.19.  If the EBML\r\nElement has an empty EBMLParentPath, then \"maxOccurs\" refers to\r\nconstraints on the occurrence of the EBML Element within the EBML\r\nDocument.\r\n\r\nThe \"maxOccurs\" attribute is OPTIONAL.  If the \"maxOccurs\" attribute\r\nis not present, then there is no upper bound for the permitted number\r\nof occurrences of this EBML Element within its Parent Element or\r\nwithin the EBML Document, depending on whether or not the\r\nEBMLParentPath of the EBML Element is empty.\r\n\r\nThe semantic meaning of \"maxOccurs\" within an EBML Schema is\r\nanalogous to the meaning of \"maxOccurs\" within an XML Schema; when it\r\nis not present, it's similar to xml:maxOccurs=\"unbounded\" in an XML\r\nSchema.",
     "correct_text": "Within an EBML Schema, the XPath of the \"@maxOccurs\" attribute is\r\n\"/EBMLSchema/element/@maxOccurs\".\r\n\r\n\"maxOccurs\" is a nonnegative integer, or the term \"unbounded\"\r\nexpressing the maximum permitted number of occurrences of this\r\nEBML Element within its Parent Element.\r\n\r\nEach instance of the Parent Element MUST contain at most this many\r\ninstances of this EBML Element, including the unwritten mandatory\r\nelement with a default value; see Section 11.1.19.  If the EBML\r\nElement has an empty EBMLParentPath, then \"maxOccurs\" refers to\r\nconstraints on the occurrence of the EBML Element within the EBML\r\nDocument.\r\n\r\nWhen the value of \"maxOccurs\" is \"unbounded\", then there is no upper\r\nbound for the permitted number of occurrences of this EBML Element\r\nwithin its Parent Element or within the EBML Document, depending on\r\nwhether or not the EBMLParentPath of the EBML Element is empty.\r\n\r\nThe \"maxOccurs\" attribute is OPTIONAL. The default value of \"maxOccurs\"\r\nis \"unbounded\". Therefore, when \"maxOccurs\" attribute is not present\r\nthe maximum occurence of this EBML Element is not limited.\r\n\r\nThe semantic meaning of \"maxOccurs\" within an EBML Schema is\r\nanalogous to the meaning of \"maxOccurs\" within an XML Schema.\r\nThe only difference is their default value.",
-    "notes": "maxOccurs doesn't have a defined default value and has no upper bound. The XSD was updated in errate 7185, but the text was not changed.\r\n\r\nSee https://github.com/ietf-wg-cellar/ebml-specification/issues/395 and https://www.rfc-editor.org/errata/eid7185",
+    "notes": "maxOccurs doesn't have a defined default value and has no upper bound. The XSD was updated in errate 7185, but the text was not changed.\r\n\r\nSee https://github.com/ietf-wg-cellar/ebml-specification/issues/395 and https://www.rfc-editor.org/errata/eid7185\n --VERIFIER NOTES-- \nThis errata is not wrong per se, but the value “unbounded” should not be written in any XML file or EBML specification. This is just an XML schema description.\r\nThe proper way to say that an element has no maximum occurrence is to not write the maxOccurs attribute. As explained in the Original Text quoted here. It even says that not being present is equivalent to being unbounded.[1]\r\n\r\n[1] https://mailarchive.ietf.org/arch/msg/cellar/K6i0yD1i32C_O8JqIUNTp2ILR_k/\r\n",
     "submit_date": "2026-03-25",
     "submitter_name": "Laszlo Gorog",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "189",
+    "verifier_name": "Charles Eckel",
+    "update_date": "2026-04-29 07:58:17"
   }
 ]

@@ -92,7 +92,7 @@
   {
     "errata_id": "8739",
     "doc-id": "RFC2865",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.2",
     "orig_text": "The NAS MAY\r\ninclude the Attributes Service-Type = Framed-User and Framed-Protocol\r\n= PPP as a hint to the RADIUS server that PPP service is expected.\r\n\r\nThe NAS MAY include the Attributes Service-Type = Framed-\r\nUser and Framed-Protocol = PPP as a hint to the RADIUS server that\r\nPPP service is expected.",
@@ -100,8 +100,8 @@
     "notes": "§ 2.2 refers to the \"Service-Type\" value named \"Framed-User\" twice but § 5.6 refers to this value as \"Framed\" (2)",
     "submit_date": "2026-02-04",
     "submitter_name": "Ondřej Hošek",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "177",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-04-30 12:09:51"
   }
 ]
