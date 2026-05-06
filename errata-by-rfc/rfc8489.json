@@ -58,5 +58,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "8900",
+    "doc-id": "RFC8489",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Appendix A",
+    "orig_text": "<CODE BEGINS>\r\n   int type(int method, int cls) {\r\n     return (method & 0x1F80) << 2 | (method & 0x0070) << 1\r\n       | (method & 0x000F) | (cls & 0x0002) << 7\r\n       | (cls & 0x0001) << 4;\r\n     }\r\n   <CODE ENDS>",
+    "correct_text": "<CODE BEGINS>\r\n   int type(int method, int cls) {\r\n     return (method & 0xF80) << 2 | (method & 0x070) << 1\r\n       | (method & 0x00F) | (cls & 0x0002) << 7\r\n       | (cls & 0x0001) << 4;\r\n     }\r\n   <CODE ENDS>",
+    "notes": "The STUN method is 12 bits with a max value of 0x0FFF.  The mask 0x1F80 covers an extra bit.  Perhaps shortening the masks to 3 digits could make things more clear?",
+    "submit_date": "2026-05-04",
+    "submitter_name": "Evan",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
