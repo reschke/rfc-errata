@@ -32,17 +32,17 @@
   {
     "errata_id": "7340",
     "doc-id": "RFC9083",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "Appendix F",
     "orig_text": "   *  Noted that all members of the \"events\" and \"Public IDs\" arrays are\r\n      REQUIRED.",
     "correct_text": "   *  Noted which members of the \"events\" and \"Public IDs\" arrays are\r\n      REQUIRED.",
-    "notes": "According to the \"events\" array, not all members are REQUIRED.",
+    "notes": "According to the \"events\" array, not all members are REQUIRED.\r\n\r\n===Verifier Notes\r\n\r\nSection 4.5 says:\r\n\r\nThe \"events\" array consists of objects, each with the following members:\r\n\r\n\"eventAction\" -- a REQUIRED string denoting the reason for the event\r\n\"eventActor\" -- an OPTIONAL identifier denoting the actor responsible for the event\r\n\"eventDate\" -- a REQUIRED string containing the time and date the event occurred\r\n\"links\" -- OPTIONAL; see Section 4.2\r\n\r\nSee also https://mailarchive.ietf.org/arch/msg/regext/d5OJsmmTTG2T2p_DiuWsqUyK-h4/",
     "submit_date": "2023-02-07",
     "submitter_name": "Rudi Floren",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "184",
+    "verifier_name": "Mohamed BOUCADAIR",
+    "update_date": "2026-05-05 06:12:21"
   },
   {
     "errata_id": "7985",
