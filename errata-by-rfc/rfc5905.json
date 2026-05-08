@@ -523,5 +523,35 @@
     "verifier_id": "165",
     "verifier_name": "Erik Kline",
     "update_date": "2025-10-18 16:10:55"
+  },
+  {
+    "errata_id": "8903",
+    "doc-id": "RFC5905",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "11.2.1",
+    "orig_text": "This results in three tuples, lowpoint (p, -1, theta -\r\n   lambda), midpoint (p, 0, theta), and highpoint (p, +1, theta +\r\n   lambda), where lambda is the root synchronization distance.",
+    "correct_text": "This results in three tuples, lowpoint (p, -1, theta -\r\n   LAMBDA), midpoint (p, 0, theta), and highpoint (p, +1, theta +\r\n   LAMBDA), where LAMBDA is the root synchronization distance.",
+    "notes": "Two distinct quantities are inconsistently referred to as either \"lambda\" or \"LAMBDA\": the peer synchronisation distance, and the root synchronisation distance.\r\nIn Section 10, the peer synchronisation distance is defined as (delta / 2) + epsilon and denoted by the minuscule lambda.\r\nIn section 11.2.3, the root synchronisation distance is defined as EPSILON + DELTA / 2 and denoted by the majuscule LAMBDA. The root synchronisation distance is also referred to as LAMBDA in Section 4.\r\nHowever, in sections 11.2.1 and 11.2.2, the root synchronisation distance is referred to with the minuscule lambda, leading to an editorial inconsistency between the identifiers for peer and root synchronisation distances.",
+    "submit_date": "2026-05-06",
+    "submitter_name": "Aidan R",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8904",
+    "doc-id": "RFC5905",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "11.2.2",
+    "orig_text": "The candidates of the majority clique are placed on the survivor list\r\n   v in the form of tuples (p, theta_p, psi_p, lambda_p), where p is an\r\n   association identifier, theta_p, psi_p, and stratum_p the current\r\n   offset, jitter and stratum of association p, respectively, and\r\n   lambda_p is a merit factor equal to stratum_p * MAXDIST + lambda,\r\n   where lambda is the root synchronization distance for association p.",
+    "correct_text": "The candidates of the majority clique are placed on the survivor list\r\n   v in the form of tuples (p, theta_p, psi_p, lambda_p), where p is an\r\n   association identifier, theta_p, psi_p, and stratum_p the current\r\n   offset, jitter and stratum of association p, respectively, and\r\n   lambda_p is a merit factor equal to stratum_p * MAXDIST + LAMBDA,\r\n   where LAMBDA is the root synchronization distance for association p.",
+    "notes": "Two distinct quantities are inconsistently referred to as either \"lambda\" or \"LAMBDA\": the peer synchronisation distance, and the root synchronisation distance.\r\nIn Section 10, the peer synchronisation distance is defined as (delta / 2) + epsilon and denoted by the minuscule lambda.\r\nIn section 11.2.3, the root synchronisation distance is defined as EPSILON + DELTA / 2 and denoted by the majuscule LAMBDA. The root synchronisation distance is also referred to as LAMBDA in Section 4.\r\nHowever, in sections 11.2.1 and 11.2.2, the root synchronisation distance is referred to with the minuscule lambda, leading to an editorial inconsistency between the identifiers for peer and root synchronisation distances.",
+    "submit_date": "2026-05-06",
+    "submitter_name": "Aidan R",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
