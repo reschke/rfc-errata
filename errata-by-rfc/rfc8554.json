@@ -28,5 +28,20 @@
     "verifier_id": "182",
     "verifier_name": "Nick Sullivan",
     "update_date": "2025-01-18 10:57:49"
+  },
+  {
+    "errata_id": "8907",
+    "doc-id": "RFC8554",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "   struct lms_key_n32 {\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n",
+    "correct_text": "   struct lms_key_n32 {\r\n     lms_algorithm_type lms_alg_type;\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n",
+    "notes": "As section 5.3 reads:\r\n   The LMS public key can be represented as the byte string\r\n     u32str(type) || u32str(otstype) || I || T[1]\r\n\r\nBut the definition of \"u32str(type)\" is missing in chapter 3.3 in the above defined structure.",
+    "submit_date": "2026-05-07",
+    "submitter_name": "Olaf Stücker",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]

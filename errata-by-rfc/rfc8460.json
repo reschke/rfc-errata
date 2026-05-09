@@ -62,16 +62,16 @@
   {
     "errata_id": "8582",
     "doc-id": "RFC8460",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5.1 (and 4.4)",
     "orig_text": "filename        = sender \"!\" policy-domain \"!\" begin-timestamp\r\n                      \"!\" end-timestamp [ \"!\" unique-id ] \".\" extension",
     "correct_text": "filename        = sender \"!\" recipient-domain \"!\" begin-timestamp\r\n                      \"!\" end-timestamp [ \"!\" unique-id ] \".\" extension",
-    "notes": "Section 5.1 currently mandates that the TLSRPT filename be constructed with policy-domain. The policy-domain as defined in Section 1.1 may differ from the recipient domain (MX host for DANE and undefined for no-policy-found cases) and is already included in the JSON.\r\n\r\nIn practice, TLSRPT filenames almost always contain the recipient domain, which is defined earlier in the RFC but never included in the JSON itself. Implementing Section 5.1 literally (using the policy-domain instead of the recipient domain) would break TLSRPT for shared report mailboxes. For example:\r\n\r\n- Multiple customer domains sharing an MX provider\r\n- External MX smart hosts implementing DANE, where the policy-domain is the MX hostname providing TLSA records\r\n\r\nIn these cases, the report recipient cannot reliably determine which recipient domain the report is aimed at if only the policy-domain is used in the filename.\r\n\r\nSuggested correction:\r\n\r\n1. Update the filename ABNF to use the recipient domain instead of the policy-domain to reflect the status quo.\r\n\r\n2. Include a consistent recipient-domain field in the TLSRPT JSON for unambiguous identification.\r\n\r\nThis ensures parsers can reliably determine which recipient domain the report is intended for, preserves TLSRPT’s usefulness for shared mailboxes, and allows easier and standardized implementation across different reporting environments.",
+    "notes": "Section 5.1 currently mandates that the TLSRPT filename be constructed with policy-domain. The policy-domain as defined in Section 1.1 may differ from the recipient domain (MX host for DANE and undefined for no-policy-found cases) and is already included in the JSON.\r\n\r\nIn practice, TLSRPT filenames almost always contain the recipient domain, which is defined earlier in the RFC but never included in the JSON itself. Implementing Section 5.1 literally (using the policy-domain instead of the recipient domain) would break TLSRPT for shared report mailboxes. For example:\r\n\r\n- Multiple customer domains sharing an MX provider\r\n- External MX smart hosts implementing DANE, where the policy-domain is the MX hostname providing TLSA records\r\n\r\nIn these cases, the report recipient cannot reliably determine which recipient domain the report is aimed at if only the policy-domain is used in the filename.\r\n\r\nSuggested correction:\r\n\r\n1. Update the filename ABNF to use the recipient domain instead of the policy-domain to reflect the status quo.\r\n\r\n2. Include a consistent recipient-domain field in the TLSRPT JSON for unambiguous identification.\r\n\r\nThis ensures parsers can reliably determine which recipient domain the report is intended for, preserves TLSRPT’s usefulness for shared mailboxes, and allows easier and standardized implementation across different reporting environments.\n --VERIFIER NOTES-- \nThe MIME filename hint does not have semantic\r\nsignificance.  This is a RECOMMENDED value, and a receiving system\r\nshould generally ignore this entirely, and process the report JSON\r\npayload without regard to the filename.\r\n\r\nFor obvious security reasons the filename must not be trusted, and the\r\nreport might never be stored as a separate file, with results stored in\r\na database or transformed into an API call.\r\n\r\nThe recipient domain is not a better choice, but it\r\nreally should not matter, the filename is a nonce, it has no semantic\r\nvalue.",
     "submit_date": "2025-09-23",
     "submitter_name": "Ömer Güven",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-05-07 12:10:51"
   }
 ]

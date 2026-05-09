@@ -47,7 +47,7 @@
   {
     "errata_id": "8771",
     "doc-id": "RFC9711",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "A.1.7",
     "orig_text": "\"secboot\": true,",
@@ -55,14 +55,14 @@
     "notes": "secboot was renamed to oemboot in https://github.com/ietf-rats-wg/eat/pull/340. The example was renamed in https://github.com/ietf-rats-wg/eat/pull/342 but somehow the final RFC did not include the change.",
     "submit_date": "2026-02-19",
     "submitter_name": "Steven Bellock",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-05-07 12:22:13"
   },
   {
     "errata_id": "8776",
     "doc-id": "RFC9711",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.3.1",
     "orig_text": "? heading => number,",
@@ -70,9 +70,9 @@
     "notes": "From 4.2.10, \"If the entity is stationary, the heading is 'null'.\"",
     "submit_date": "2026-02-20",
     "submitter_name": "Steven Bellock",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-05-07 12:22:28"
   },
   {
     "errata_id": "8777",
@@ -92,7 +92,7 @@
   {
     "errata_id": "8782",
     "doc-id": "RFC9711",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "A.1.7",
     "orig_text": "\"ueid\": \"AJj1Ck_2wFhhyIYNE6Y46g==\",",
@@ -100,14 +100,14 @@
     "notes": "Per the definition of base64url encoding in https://www.rfc-editor.org/rfc/rfc9711.html#section-2-5.2.1, all trailing '=' characters are omitted. In addition, the regular expression for base64-url-text does not include the '=' character.",
     "submit_date": "2026-02-25",
     "submitter_name": "Steven Bellock",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-05-07 12:22:47"
   },
   {
     "errata_id": "8783",
     "doc-id": "RFC9711",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2.3",
     "orig_text": "oemid-random-json = base64-url-text .size 24",
@@ -115,8 +115,8 @@
     "notes": "16 bytes encoded into base64url, with padding, results in 24 bytes. However, the two padding characters, '==', are removed as per the definition of base64url encoding in https://www.rfc-editor.org/rfc/rfc9711.html#section-2-5.2.1, resulting in 22 bytes.",
     "submit_date": "2026-02-25",
     "submitter_name": "Steven Bellock",
-    "verifier_id": "99",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_id": "179",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-05-07 12:23:01"
   }
 ]
