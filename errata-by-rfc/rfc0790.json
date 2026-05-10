@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8909",
+    "doc-id": "RFC0790",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Page 9",
+    "orig_text": "65 101 TACACS Database Service [SGC]\r\n65 101 UNASSIGNED [JBP]\r\n69 105 Unassigned [JBP]\r\n69 105 Trivial File Transfer [47,KRS]",
+    "correct_text": "65 101 TACACS Database Service [SGC]\r\n69 105 Trivial File Transfer [47,KRS]",
+    "notes": "There are duplicate/redundant entries in the \"Host Specific Functions\" table on page 9. \r\n\r\n1. Decimal port 65 is listed twice: once as assigned to \"TACACS Database Service\" and once as \"UNASSIGNED.\" \r\n2. Decimal port 69 is listed twice: once as \"Unassigned\" and once as \"Trivial File Transfer.\" \r\n\r\nThese are logical contradictions in the registry that likely occurred during manual clerical updates to the document in 1981.",
+    "submit_date": "2026-05-08",
+    "submitter_name": "Anish Kumar Patel",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
+  }
+]
