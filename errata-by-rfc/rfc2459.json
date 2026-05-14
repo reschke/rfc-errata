@@ -13,5 +13,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8911",
+    "doc-id": "RFC2459",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Table of Contents",
+    "orig_text": "T\bT\bT\bTa\ba\ba\bab\bb\bb\bbl\bl\bl\ble\be\be\be o\bo\bo\bof\bf\bf\bf C\bC\bC\bCo\bo\bo\bon\bn\bn\bnt\bt\bt\bte\be\be\ben\bn\bn\bnt\bt\bt\bts\bs\bs\bs",
+    "correct_text": "Table of Contents",
+    "notes": "the letters of \"Table of Contents\" are quadrupled and there are backspace characters (^H\r\n(ASCII 0x08)) between most of the letters",
+    "submit_date": "2026-05-12",
+    "submitter_name": "Jean Mahoney",
+    "verifier_id": "2",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-05-12 13:04:49"
   }
 ]
