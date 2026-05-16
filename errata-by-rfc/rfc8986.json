@@ -13,5 +13,20 @@
     "verifier_id": "174",
     "verifier_name": "Andrew Alston",
     "update_date": "2022-05-26 06:30:42"
+  },
+  {
+    "errata_id": "8914",
+    "doc-id": "RFC8986",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "3.2",
+    "orig_text": " This SID is advertised in the control plane as\r\n         2001:db8:bbbb:3:100:: with an SRv6 Endpoint Behavior codepoint\r\n         value of 5.",
+    "correct_text": " This SID is advertised in the control plane as\r\n         2001:db8:bbbb:3:100:: with an SRv6 Endpoint Behavior codepoint\r\n         value of 4.",
+    "notes": "100 -> is value 4",
+    "submit_date": "2026-05-14",
+    "submitter_name": "chiennan_lin",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
