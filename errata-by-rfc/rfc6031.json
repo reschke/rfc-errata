@@ -13,5 +13,20 @@
     "verifier_id": "128",
     "verifier_name": "Stephen Farrell",
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8915",
+    "doc-id": "RFC6031",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.6 and A.2",
+    "orig_text": "FriendlyName ::= SEQUENCE {\r\n     friendlyName        UTF8String,\r\n     friendlyNameLangTag UTF8String OPTIONAL }\r\n",
+    "correct_text": "FriendlyName ::= SEQUENCE {\r\n     friendlyName        UTF8String,\r\n     friendlyNameLangTag UTF8String DEFAULT \"en\"\r\n        (CONSTRAINED BY { -- MUST be a language tag per RFC5646 --}) \r\n  }\r\n",
+    "notes": "The text in 3.2.6 implies this corrected definition. Changes to both the body of the document and the ASN.1 module appendix.\r\n\r\n\"When the\r\n   friendlyNameLangTag field is absent, English, whose associated\r\n   language tag is \"en\", is used.  The value of the friendlyNameLangTag\r\n   field MUST be a language tag, as described in [RFC5646].\"\r\n\r\nRecommend HFDU if verified.",
+    "submit_date": "2026-05-16",
+    "submitter_name": "Michael StJohns",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
