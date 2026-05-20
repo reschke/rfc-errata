@@ -28,5 +28,20 @@
     "verifier_id": "99",
     "verifier_name": null,
     "update_date": "2019-09-10 09:09:03"
+  },
+  {
+    "errata_id": "8919",
+    "doc-id": "RFC5939",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.2-4.4",
+    "orig_text": "      t=0 0\r\n      c=IN IP4 192.0.2.1",
+    "correct_text": "      c=IN IP4 192.0.2.1\r\n      t=0 0\r\n",
+    "notes": "Examples 4.2-4.4 and 3.6.2.1 all have the SDP time before the connection line.  SDP ordering is important and requires t= after c= line.",
+    "submit_date": "2026-05-18",
+    "submitter_name": "Scott Godin",
+    "verifier_id": "99",
+    "verifier_name": null,
+    "update_date": null
   }
 ]
