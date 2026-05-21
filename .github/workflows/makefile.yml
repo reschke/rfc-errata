@@ -17,7 +17,7 @@ jobs:
 
     - name: Download errata from RFC Editor
       run: |
-        curl https://www.rfc-editor.org/errata.json -o errata.json.raw --etag-compare errata.json.etag --etag-save errata.json.etag
+        curl https://www.rfc-editor.org/errata.json -L -o errata.json.raw --etag-compare errata.json.etag --etag-save errata.json.etag
         jq "sort_by(.errata_id)" errata.json.raw > errata.json
 
     - name: Extract by RFC
