@@ -1,17 +1,1 @@
-[
-  {
-    "errata_id": "7183",
-    "doc-id": "RFC8206",
-    "errata_status_code": "Rejected",
-    "errata_type_code": "Technical",
-    "section": "3",
-    "orig_text": "Since SPs are using migration methods that are transparent to customers and therefore do not require coordination with customers, they do not have as much control over the length of the transition period as they might with something completely under their administrative control",
-    "correct_text": "Since SPs are using migration methods that are transparent to customers and therefore do not require coordination with customers, they can transition at any time without delay.",
-    "notes": "I have no corrected text. If the migration methods are transparent, how is it possible that SPs \"do not have as much control over the length of the transition period as they might with something completely under their administrative control\"? As it's transparent they would in fact have complete administrative control.\n --VERIFIER NOTES-- \n   === \r\nThis report is rejected because the current statement is correct in the context in which it is written.  In short, SPs and customers both need to transition their configurations to the new ASN.\r\n\r\nhttps://mailarchive.ietf.org/arch/msg/sidr/6OYVQlXdJcllkB-motxDi7uuqhg/",
-    "submit_date": "2022-10-26",
-    "submitter_name": "Iljitsch van Beijnum",
-    "verifier_id": "148",
-    "verifier_name": "Alvaro Retana",
-    "update_date": "2022-10-27 03:52:38"
-  }
-]
+[]
