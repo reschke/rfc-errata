@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "errata_id": "8839",
+    "doc-id": "RFC1309",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.2",
+    "orig_text": "Now that we've seen what kinds of information can be kept in the Directory, we \r\nshould look at how the Directory stores this information and how a Directory \r\nusers accesses the information.",
+    "correct_text": "Now that we've seen what kinds of information can be kept in the Directory, we \r\nshould look at how the Directory stores this information and how a Directory \r\nuser accesses the information.",
+    "notes": "The first sentence in the section ends \"...how a Directory users accesses the information.\" It should be \"...how a Directory user accesses the information.\"",
+    "submit_date": "2026-03-17",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-18 21:11:48"
+  },
+  {
+    "errata_id": "8840",
+    "doc-id": "RFC1309",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.1.2",
+    "orig_text": "An given object class A may be a subclass of another class B, in which case \r\nobject class A inherits all the mandatory and optional attributes of B in \r\naddition to its own.",
+    "correct_text": "A given object class A may be a subclass of another class B, in which case \r\nobject class A inherits all the mandatory and optional attributes of B in \r\naddition to its own.",
+    "notes": "The last sentence of the second paragraph begins like \"An given object...\" which should be replaced by \"A given object...\"",
+    "submit_date": "2026-03-17",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-18 21:13:00"
+  },
+  {
+    "errata_id": "8859",
+    "doc-id": "RFC1309",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.1",
+    "orig_text": "If two or more people have listings for the same name in the same locality, \r\nthere is no additional information which with to select the correct number.",
+    "correct_text": "If two or more people have listings for the same name in the same locality, \r\nthere is no additional information with which to select the correct number.",
+    "notes": "The third line in the second paragraph of Section 2.1 ends \"....information which with to select the correct number.\" It should be \"...information with which to select the correct number\"",
+    "submit_date": "2026-03-28",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-31 19:55:27"
+  },
+  {
+    "errata_id": "8860",
+    "doc-id": "RFC1309",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.1.2",
+    "orig_text": "\"top\" has one mandatory attribute \"objectClass\", and nooptional attributes",
+    "correct_text": "\"top\" has one mandatory attribute \"objectClass\", and no optional attributes",
+    "notes": "In the given diagram, the text beside the \"top\" box says \"... and nooptional attributes\". It should be \"...and no optional attributes\"",
+    "submit_date": "2026-03-28",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-31 19:57:57"
+  },
+  {
+    "errata_id": "8861",
+    "doc-id": "RFC1309",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.3",
+    "orig_text": "Despite this, however, X.500 is very good at what it was designed to do; i.e., \r\nto provide primary directory services and \"resource location\" for a wide band \r\noftypes of information.",
+    "correct_text": "Despite this, however, X.500 is very good at what it was designed to do; i.e., \r\nto provide primary directory services and \"resource location\" for a wide band of \r\ntypes of information.",
+    "notes": "The last line in section 3.3 ends \"...for a wide band oftypes of information.\" It should be \"..for a wide band of types of information.\"",
+    "submit_date": "2026-03-28",
+    "submitter_name": "Shreyas Rajagopal",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2026-03-31 19:58:34"
+  }
+]

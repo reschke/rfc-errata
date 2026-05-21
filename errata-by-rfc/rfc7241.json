@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "4058",
+    "doc-id": "RFC7241",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.4",
+    "orig_text": "(three IEEE 802 plenaries plus three\r\nIETF 802 interim meetings each year,\r\ncompared to three IETF plenaries per year)",
+    "correct_text": "(three IEEE 802 plenaries plus three\r\nIEEE 802 interim meetings each year,\r\ncompared to three IETF plenaries per year)",
+    "notes": "\"IETF 802 interim\" should read \"IEEE 802 interim\"",
+    "submit_date": "2014-07-21",
+    "submitter_name": "James Lepp",
+    "verifier_id": "",
+    "verifier_name": "Russ Housley",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "7609",
+    "doc-id": "RFC7241",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "3.3",
+    "orig_text": "(available at <https://datatracker.ietf.org/documents/LIAISON/file41.pdf>)",
+    "correct_text": "(available at <https://www.ietf.org/lib/dt/documents/LIAISON/file41.pdf>)",
+    "notes": "The datatracker location of the liaison statement from IEEE 802 has moved, leaving a dead link in RFC 7241.\n --VERIFIER NOTES-- \n   The link was correct at time of publication. In addition, a redirect is in place so it still works.",
+    "submit_date": "2023-08-19",
+    "submitter_name": "Peter Yee",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-04-10 01:54:54"
+  }
+]

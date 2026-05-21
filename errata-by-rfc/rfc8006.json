@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "5150",
+    "doc-id": "RFC8006",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.10",
+    "orig_text": "         \"generic-metadata-type\": \"MI.SourceMetadata\",\r\n         \"generic-metadata-value\": {\r\n           \"sources\": [\r\n             {\r\n               \"endpoint\": [\"acq1.ucdn.example\"],\r\n               \"protocol\": \"http/1.1\"\r\n             },\r\n             {\r\n               \"endpoint\": [\"acq2.ucdn.example\"],\r\n               \"protocol\": \"http/1.1\"\r\n             }\r\n           ]\r\n         }\r\n",
+    "correct_text": "         \"generic-metadata-type\": \"MI.SourceMetadata\",\r\n         \"generic-metadata-value\": {\r\n           \"sources\": [\r\n             {\r\n               \"endpoints\": [\"acq1.ucdn.example\"],\r\n               \"protocol\": \"http/1.1\"\r\n             },\r\n             {\r\n               \"endpoints\": [\"acq2.ucdn.example\"],\r\n               \"protocol\": \"http/1.1\"\r\n             }\r\n           ]\r\n         }\r\n",
+    "notes": "The SourceMetadata object contains an array of \"sources\", which in turn contains an array of \"endpoints\".  The example in section 6.10 uses the singular \"endpoint\" instead of the plural \"endpoints\".  The examples in sections 4.2.1 and 4.2.1.1 correctly use the plural \"endpoints\" for the property name, as defined in section 4.2.1.1.",
+    "submit_date": "2017-10-08",
+    "submitter_name": "Kevin J. Ma",
+    "verifier_id": "",
+    "verifier_name": "Alexey Melnikov",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "7657",
+    "doc-id": "RFC8006",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.10",
+    "orig_text": "   {\r\n     \"metadata\": [\r\n       {\r\n         \"generic-metadata-type\": \"MI.TimeWindowACL\",\r\n         \"generic-metadata-value\": {\r\n           \"times\": [\r\n             \"windows\": [\r\n               {\r\n                 \"start\": \"1213948800\",\r\n                 \"end\": \"1478047392\"\r\n               }\r\n             ],\r\n             \"action\": \"allow\"\r\n           ]\r\n         }\r\n       }\r\n     ]\r\n   }",
+    "correct_text": "   {\r\n     \"metadata\": [\r\n       {\r\n         \"generic-metadata-type\": \"MI.TimeWindowACL\",\r\n         \"generic-metadata-value\": {\r\n           \"times\": [\r\n              {\r\n                \"windows\": [\r\n                  {\r\n                    \"start\": 1213948800,\r\n                    \"end\": 1478047392\r\n                  }\r\n                ],\r\n                \"action\": \"allow\"\r\n              }\r\n           ]\r\n         }\r\n       }\r\n     ]\r\n   }",
+    "notes": "1. The \"times\" property of  the TimeWindowACL object has an array of TimeWindowRule type, so I changed it to \"windows\" and \"action\" are contained in braces.\r\n2. The \"start\" and \"end\" property of the TimeWindow object have a Time type, which is an alias of Integer. So I changed their values (\"1213948800\", \"1478047392\") to Integer (1213948800, 1478047392).\r\n",
+    "submit_date": "2023-09-26",
+    "submitter_name": "Kazuki Takashima",
+    "verifier_id": "",
+    "verifier_name": "Francesca Palombini",
+    "update_date": "2023-11-07 08:44:44"
+  }
+]

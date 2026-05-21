@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "8223",
+    "doc-id": "RFC9606",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "Each key/value pair is encoded using the format rules defined\r\nin Section 6.3 of [RFC6763].",
+    "correct_text": "Each key/value pair is encoded as its own constituent string\r\nusing the format rules defined in Section 6.3 of [RFC6763].",
+    "notes": "Although the example in section 6 indicates that each key/value pair inhabits its own string,\r\nthe requirement is stated indirectly by reference to RFC6763(6.3).\r\n\r\nThis requirement need to be explicitly included in section 4.\r\n\r\nI am aware of one implementation which mistakenly encodes three attributes within a single string.\n --VERIFIER NOTES-- \nSee the author's reply at https://mailarchive.ietf.org/arch/msg/add/czP4qw0XdeZ38tDqUk7adHj51A4/ and the verifier agrees with the author.",
+    "submit_date": "2024-12-28",
+    "submitter_name": "Dick Franks",
+    "verifier_id": "",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-27 08:10:44"
+  },
+  {
+    "errata_id": "8425",
+    "doc-id": "RFC9606",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "3, paragraph 2",
+    "orig_text": "A DNS client can retrieve the resolver information using\r\nthe RESINFO RR  type and the QNAME of the domain name that\r\nis used to authenticate the DNS resolver (referred to as\r\nthe Authentication Domain Name (ADN) in DNR [RFC9463]).\r\n",
+    "correct_text": "A DNS client can retrieve the resolver information using\r\nthe RESINFO RR  type and the QNAME of the domain name that\r\nis used to authenticate the DNS resolver (referred to as\r\nthe Authentication Domain Name (ADN) in DNR [RFC9463])",
+    "notes": "The link to RFC9463 at the end of the paragraph has an Anchor of  \r\n   https://www.rfc-editor.org/rfc/rfc9606.html#RFC9463\r\nwhich just pointspback to itself, instead of to the actual RFC946 document\r\n\r\nThe correct link should IMHO be\r\n  https://www.rfc-editor.org/rfc/rfc9463\r\n\r\n(or maybe it should point to the relevant line in Section 9 References that has details of the RFCs)?\n --VERIFIER NOTES-- \nThe link points to the reference entry where the full link is provided. This convention is present throughout the RFC Series.",
+    "submit_date": "2025-05-20",
+    "submitter_name": "Mathias Koerber",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-05-28 14:28:02"
+  }
+]

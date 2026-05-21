@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "errata_id": "6372",
+    "doc-id": "RFC8894",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.3.3",
+    "orig_text": "   The messageData for this type consists of an\r\n   IssuerAndSubject:\r\n\r\n   issuerAndSubject ::= SEQUENCE {\r\n       issuer     Name,\r\n       subject    Name\r\n       }\r\n",
+    "correct_text": "   The messageData for this type consists of an\r\n   IssuerAndSubject:\r\n\r\n   IssuerAndSubject ::= SEQUENCE {\r\n       issuer     Name,\r\n       subject    Name\r\n       }",
+    "notes": "For the ASN.1 to compile properly, the definition must begin with a capital letter.",
+    "submit_date": "2020-12-28",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "",
+    "verifier_name": "Roman Danyliw",
+    "update_date": "2022-01-19 22:22:36"
+  },
+  {
+    "errata_id": "7550",
+    "doc-id": "RFC8894",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.1",
+    "orig_text": "Once the messageData has been encrypted, it is signed with the\r\nsender's public key.",
+    "correct_text": "Once the messageData has been encrypted, it is signed with the\r\nsender's private key.",
+    "notes": "The sender should use their private key, rather than their public key, to sign the data.",
+    "submit_date": "2023-06-23",
+    "submitter_name": "Simone Guidi",
+    "verifier_id": "",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-01-17 01:01:12"
+  },
+  {
+    "errata_id": "8210",
+    "doc-id": "RFC8894",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.3",
+    "orig_text": "If the key being certified allows encryption, then the CA's\r\nCertResp will use the same certificate's public key when\r\nencrypting the response.\r\n",
+    "correct_text": "If the key being certified allows encryption, then the CA's\r\nCertRep will use the same certificate's public key when\r\nencrypting the response.",
+    "notes": "There is no \"CertResp\" defined in the document. I believe this is supposed to be \"CertRep\".",
+    "submit_date": "2024-12-10",
+    "submitter_name": "Angelica Semenec",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-12-11 16:49:25"
+  },
+  {
+    "errata_id": "8245",
+    "doc-id": "RFC8894",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "    signerInfo {\r\n      signedAttrs {\r\n        transactionID,\r\n        messageType,\r\n        pkiStatus,\r\n        failInfo,          -- Optional\r\n        senderNonce / recipientNonce,\r\n        },\r\n      signature\r\n      }\r\n    }",
+    "correct_text": "    signerInfo {\r\n      authenticatedAttributes {\r\n        transactionID,\r\n        messageType,\r\n        pkiStatus,\r\n        failInfo,          -- Optional\r\n        senderNonce / recipientNonce,\r\n        },\r\n      signature\r\n      }",
+    "notes": "There is no reference to \"signedAttrs\" in the RFC other than once Figure 6. I believe this is supposed to be \"authenticatedAttributes\" based on the information in section 3.2 and 3.2.1\n --VERIFIER NOTES-- \n   See text in Errata 8247 for rejection rationale",
+    "submit_date": "2025-01-07",
+    "submitter_name": "Angelica Semenec",
+    "verifier_id": "",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-17 13:35:57"
+  },
+  {
+    "errata_id": "8247",
+    "doc-id": "RFC8894",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "authenticated attributes\r\n\r\nand\r\n\r\nauthenticatedAttributes",
+    "correct_text": "signed attributes\r\n\r\nand\r\n\r\nsignedAttrs",
+    "notes": "Throughout the document it refers to \"authenticated attributes\" and the \"authenticatedAttributes\" set.  However, SCEP uses the SignedData content type which doesn't have an authenticatedAttributes field (other content types do have this field, e.g. the RFC 2630 version of AuthenticatedData). It should refer to signed attributes instead.  This aligns with Figure 6 which includes the signerInfo.signedAttrs field.\r\n\r\nNote, if this errata is correct then errata 8245 is incorrect.",
+    "submit_date": "2025-01-10",
+    "submitter_name": "Daniel Van Geest",
+    "verifier_id": "",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-17 13:33:41"
+  }
+]

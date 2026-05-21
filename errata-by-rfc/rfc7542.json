@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "5462",
+    "doc-id": "RFC7542",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "The \"utf8-realm\" SHOULD be supplied by the \"next hop\" or \"home\"\r\nsystem that also supplies the routing information necessary for\r\npackets to reach the next hop.",
+    "correct_text": "The \"utf8-realm\" SHOULD be supplied by the \"next hop\" or \"home\"\r\nsystem that also supplies the routing information necessary for\r\npackets to reach the next hop.\r\n\r\nThe final home system SHOULD validate the NAI in the received packet\r\nagainst the list of Realms hosted by the home system.  If no match\r\nis found, the request SHOULD be rejected.",
+    "notes": "It doesn't explicitly say that home systems only authenticate users for their own realms.  It may help to have this stated explicitly.\r\n\r\nSome text will also be added to draft-ietf-radext-coa-proxy in order to make this clearer.",
+    "submit_date": "2018-08-14",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": "",
+    "verifier_name": "Benjamin Kaduk",
+    "update_date": "2019-12-11 22:23:20"
+  },
+  {
+    "errata_id": "8105",
+    "doc-id": "RFC7542",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.4",
+    "orig_text": "Examples of valid Network Access Identifiers include the following:\r\n[...]\r\n        \\(user\\)@example.net",
+    "correct_text": "Examples of invalid Network Access Identifiers include the following:\r\n[...]\r\n        \\(user\\)@example.net",
+    "notes": "\\(user\\)@example.net is listed as a valid example, but neither backslashes nor parentheses are allowed in the ABNF rules (sections 2.1 and 2.2).  Obsoleted RFC 4282 had ABNF rules to allow for backslash escapes, but RFC 7542 does not.  These are the only backslashes in the entire document.\r\n\r\nPerhaps this example should be moved to the invalid examples list?\r\n\r\nOr perhaps the ABNF rules should be extended to allow some forms of backslash escapes, although probably not to the same wide-open extent as RFC 4282?",
+    "submit_date": "2024-09-16",
+    "submitter_name": "Matthew Ogilvie",
+    "verifier_id": "",
+    "verifier_name": "Deb Cooley",
+    "update_date": "2025-01-24 12:32:15"
+  }
+]

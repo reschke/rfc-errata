@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "errata_id": "4045",
+    "doc-id": "RFC1533",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "3.10",
+    "orig_text": "The code for the log server option is 8.",
+    "correct_text": "The code for the cookie server option is 8.",
+    "notes": "\n --VERIFIER NOTES-- \n   RFC 1533 was obsoleted by RFC 2132.",
+    "submit_date": "2014-07-07",
+    "submitter_name": "Susumu Endoh",
+    "verifier_id": "",
+    "verifier_name": "Ted Lemon",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "8456",
+    "doc-id": "RFC1533",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.18",
+    "orig_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  n  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "correct_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  4  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "notes": "The length is static, not dynamic. The length in the diagram  should be 4, not n.\n --VERIFIER NOTES-- \n      This errata is a duplicate of errata 8488",
+    "submit_date": "2025-06-13",
+    "submitter_name": "Jason Giberson",
+    "verifier_id": "",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-27 07:51:03"
+  },
+  {
+    "errata_id": "8487",
+    "doc-id": "RFC1533",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.18",
+    "orig_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  n  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "correct_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  4  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "notes": "The length is static, not dynamic. The length in the diagram  should be 4, not n.\n --VERIFIER NOTES-- \n   This errata is a duplicate of errata 8488",
+    "submit_date": "2025-06-13",
+    "submitter_name": "Jason Giberson",
+    "verifier_id": "",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-27 07:50:35"
+  },
+  {
+    "errata_id": "8488",
+    "doc-id": "RFC1533",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.18",
+    "orig_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  n  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "correct_text": "3.18. Swap Server\r\n\r\n   This specifies the IP address of the client's swap server.\r\n\r\n   The code for this option is 16 and its length is 4.\r\n\r\n    Code   Len    Swap Server Address\r\n   +-----+-----+-----+-----+-----+-----+\r\n   |  16 |  4  |  a1 |  a2 |  a3 |  a4 |\r\n   +-----+-----+-----+-----+-----+-----+",
+    "notes": "The length is static, not dynamic. The length in the diagram  should be 4, not n.\n --VERIFIER NOTES-- \nWhile the correct is valid, this RFC has been obsoleted by RFC 2132 and a errata 487 has already been filed against the same error in RFC 2132.\r\nSee also: https://datatracker.ietf.org/doc/statement-iesg-iesg-processing-of-rfc-errata-for-the-ietf-stream-20210507/",
+    "submit_date": "2025-06-13",
+    "submitter_name": "Jason Giberson",
+    "verifier_id": "",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2025-06-27 07:47:16"
+  }
+]

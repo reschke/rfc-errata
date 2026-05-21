@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "5305",
+    "doc-id": "RFC6242",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "   This document also recommends that SSH servers be configurable to\r\n   allow access to the \"netconf\" SSH subsystem over other ports.  Use of\r\n   that configuration option without corresponding changes to firewall\r\n   or network device configuration may unintentionally result in the\r\n   ability for nodes outside of the firewall or other administrative\r\n   boundaries to gain access to the \"netconf\" SSH subsystem.\r\n",
+    "correct_text": "   This document also recommends that SSH servers be configurable to\r\n   allow access to the \"netconf\" SSH subsystem over other ports.  Use of\r\n   that configuration option without corresponding changes to firewall\r\n   or network device configuration may unintentionally result in the\r\n   inability for nodes outside of the firewall or other administrative\r\n   boundaries to gain access to the \"netconf\" SSH subsystem.\r\n",
+    "notes": "ability -> inability\n --VERIFIER NOTES-- \nIt was discussed among reporter, document authors, and WG members and the conclusion was that the original text in the document is technically correct. \r\n\r\nEmail discussion: \r\nhttps://mailarchive.ietf.org/arch/msg/netconf/xMBJjW9Sn5xzXZYhwVbRM0Im1fg\r\n ",
+    "submit_date": "2018-03-26",
+    "submitter_name": "HengyingFan",
+    "verifier_id": "",
+    "verifier_name": "Ignas Bagdonas",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "8569",
+    "doc-id": "RFC6242",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1",
+    "orig_text": "   S: <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n   S: <hello xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n   S:   <capabilities>\r\n   S:     <capability>\r\n   S:       urn:ietf:params:netconf:base:1.1\r\n   S:     </capability>\r\n   S:     <capability>\r\n   S:       urn:ietf:params:ns:netconf:capability:startup:1.0\r\n   S:     </capability>\r\n   S:   </capabilities>\r\n   S:   <session-id>4</session-id>\r\n   S: </hello>\r\n   S: ]]>]]>\r\n",
+    "correct_text": "   S: <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n   S: <hello xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\r\n   S:   <capabilities>\r\n   S:     <capability>\r\n   S:       urn:ietf:params:netconf:base:1.1\r\n   S:     </capability>\r\n   S:     <capability>\r\n   S:       urn:ietf:params:netconf:capability:startup:1.0\r\n   S:     </capability>\r\n   S:   </capabilities>\r\n   S:   <session-id>4</session-id>\r\n   S: </hello>\r\n   S: ]]>]]>\r\n",
+    "notes": "Correct the startup capability in accordance with the URN defined in RFC 6241 Section 10.4 and registered in IANA.",
+    "submit_date": "2025-09-11",
+    "submitter_name": "Ahmed Elhassany",
+    "verifier_id": "",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2025-09-14 03:40:07"
+  }
+]

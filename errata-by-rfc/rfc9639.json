@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "8256",
+    "doc-id": "RFC9639",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "8.2",
+    "orig_text": "   SSAAAAAASSBBBBBBSSCCCCCC\r\n   ^   ^   ^   ^   ^   ^\r\n   |   |   |   |   |  Bits of 2nd sample of 1st channel\r\n   |   |   |   |  Sign extension bits of 2nd sample of 2nd channel\r\n   |   |   |  Bits of 1st sample of 2nd channel\r\n   |   |  Sign extension bits of 1st sample of 2nd channel\r\n   |  Bits of 1st sample of 1st channel\r\n   Sign extension bits of 1st sample of 1st channel",
+    "correct_text": "   SSAAAAAASSBBBBBBSSCCCCCC\r\n   ^   ^   ^   ^   ^   ^\r\n   |   |   |   |   |  Bits of 2nd sample of 1st channel\r\n   |   |   |   |  Sign extension bits of 2nd sample of 1st channel\r\n   |   |   |  Bits of 1st sample of 2nd channel\r\n   |   |  Sign extension bits of 1st sample of 2nd channel\r\n   |  Bits of 1st sample of 1st channel\r\n   Sign extension bits of 1st sample of 1st channel",
+    "notes": "One of the diagram labels appears to contradict the sign-extension + interleaving method described in the preceding paragraph.",
+    "submit_date": "2025-01-20",
+    "submitter_name": "Casey",
+    "verifier_id": "",
+    "verifier_name": "Orie Steele",
+    "update_date": "2025-01-23 00:38:04"
+  },
+  {
+    "errata_id": "8810",
+    "doc-id": "RFC9639",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "9.2.2",
+    "orig_text": "shifting a 14-bit sample right by 2 pads it to a 16-bit sample, which\r\nthen has two zero least-significant bits.",
+    "correct_text": "shifting a 14-bit sample left by 2 pads it to a 16-bit sample, which\r\nthen has two zero least-significant bits.",
+    "notes": "Change right to left",
+    "submit_date": "2026-03-06",
+    "submitter_name": "Károly Wikidál",
+    "verifier_id": "",
+    "verifier_name": "Charles Eckel",
+    "update_date": "2026-04-28 21:14:08"
+  }
+]

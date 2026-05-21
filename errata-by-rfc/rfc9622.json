@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "errata_id": "8619",
+    "doc-id": "RFC9622",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.1.5",
+    "orig_text": "      TransportProperties := ...\r\n      SecurityParameters  := ...\r\n\r\n      Preconnection := NewPreconnection(LocalSpecifier,\r\n                                        RemoteSpecifier,\r\n                                        TransportProperties,\r\n                                        SecurityProperties)\r\n      Listener := Preconnection.Listen()",
+    "correct_text": "      TransportProperties := ...\r\n      SecurityParameters  := ...\r\n\r\n      Preconnection := NewPreconnection(LocalSpecifier,\r\n                                        RemoteSpecifier,\r\n                                        TransportProperties,\r\n                                        SecurityParameters)\r\n      Listener := Preconnection.Listen()",
+    "notes": "There were four occurances in pseudocode of the variable name \"SecurityParameters\". The RFC is updated to replace each of these with the variable name \"SecurityParameters\", as used elsewhere in  this RFC.",
+    "submit_date": "2025-10-30",
+    "submitter_name": "Ingebrigt Hovind",
+    "verifier_id": "",
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-01-20 10:29:33"
+  }
+]

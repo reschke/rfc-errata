@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "3978",
+    "doc-id": "RFC3516",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.3",
+    "orig_text": "If the domain of the decoded data is \"8bit\" and the data does\r\nnot contain the NUL octet, the server SHOULD return the data in\r\na <string> instead of a <literal8>; this allows the client to\r\ndetermine if the \"8bit\" data contains the NUL octet without\r\nhaving to explicitly scan the data stream for for NULs.",
+    "correct_text": "If the domain of the decoded data is \"8bit\" and the data does\r\nnot contain the NUL octet, the server SHOULD return the data in\r\na <string> instead of a <literal8>; this allows the client to\r\ndetermine if the \"8bit\" data contains the NUL octet without\r\nhaving to explicitly scan the data stream for NULs.",
+    "notes": "Typo: duplication of \"for\".",
+    "submit_date": "2014-04-29",
+    "submitter_name": "Michael Slusarz",
+    "verifier_id": "",
+    "verifier_name": "Nevil Brownlee",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "8217",
+    "doc-id": "RFC3516",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "   msg-att-static =/  \"BINARY\" section-binary SP (nstring / literal8)\r\n                      / \"BINARY.SIZE\" section-binary SP number",
+    "correct_text": "   msg-att-static =/  \"BINARY\" section-binary [\"<\" number \">\"] SP (nstring / literal8)\r\n                      / \"BINARY.SIZE\" section-binary SP number",
+    "notes": "Section 4.3 describes the response as:\r\n\r\n    BINARY<section-binary>[<<number>>]\r\n\r\nBut the number is missing from the ABNF.\r\n\r\nIt seems like Dovecot sends the number in the response, and imaptest expects it.",
+    "submit_date": "2024-12-21",
+    "submitter_name": "Simon Ser",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

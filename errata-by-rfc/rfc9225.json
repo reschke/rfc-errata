@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "errata_id": "6910",
+    "doc-id": "RFC9225",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4. Best Current",
+    "orig_text": "6. In fact, assume all internal inputs also are the result of bugs.\r\n",
+    "correct_text": "6. In fact, assume all internal inputs also are the result of bugs.\r\n\r\n7. If the bug population increases after each subsequent software \r\nrelease, it is generally RECOMMENDED to deploy a Software Bug [BOMbs],\r\nand return when the air has cleared.\r\n\r\n[BOMbs] National Telecommunications and Information Administration,\r\nUnited States Department of Commerce, 2021, https://ntia.gov/SBOM",
+    "notes": "Extend the RFC to include another best practice, associated with BOMbs.\n --VERIFIER NOTES-- \nThanks for your thoughts.  Follow-ups to this RFC are welcome, but must stand on their own merit.",
+    "submit_date": "2022-04-01",
+    "submitter_name": "Joe Klein",
+    "verifier_id": "",
+    "verifier_name": "Eliot Lear (ISE)",
+    "update_date": "2022-08-21 06:24:31"
+  },
+  {
+    "errata_id": "6911",
+    "doc-id": "RFC9225",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4",
+    "orig_text": "4. Best Current Practises",
+    "correct_text": "4. Best Current Practices",
+    "notes": "",
+    "submit_date": "2022-04-01",
+    "submitter_name": "Kyoung-Hwan Yun",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-10-02 17:33:21"
+  },
+  {
+    "errata_id": "8586",
+    "doc-id": "RFC9225",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "The commute was deemed infeasible\r\n   due to a lack of reasonably priced commercial transport options in\r\n   that region of the solar system.",
+    "correct_text": "The commute was deemed infeasible\r\n   due to a lack of reasonably priced commercial \r\ntransportation options in that region of the solar system.",
+    "notes": "As hinted at in errata 6911, document uses US spelling.\r\nhttps://grammar.collinsdictionary.com/english-usage/what-is-the-difference-between-transport-and-transportation\n --VERIFIER NOTES-- \nThe use of “transport” aligns with the definition in the Merriam Webster Dictionary (see https://www.merriam-webster.com/dictionary/transport).",
+    "submit_date": "2025-09-28",
+    "submitter_name": "Gertjan Haaijer",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-10-02 17:34:58"
+  }
+]

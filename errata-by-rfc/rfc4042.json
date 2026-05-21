@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "errata_id": "7868",
+    "doc-id": "RFC4042",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "and codepoints in the range U+1000 - U+10FFFF (remainder of\r\n   [UNICODE]) are represented by three nonets.",
+    "correct_text": "and codepoints in the range U+10000 - U+10FFFF (remainder of\r\n   [UNICODE]) are represented by three nonets.",
+    "notes": "It seems to me that a 0 is lacking in the definition of a range.",
+    "submit_date": "2024-03-24",
+    "submitter_name": "Davide Cavagnino",
+    "verifier_id": "",
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-03-01 20:19:44"
+  },
+  {
+    "errata_id": "7869",
+    "doc-id": "RFC4042",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "the range U+E0000 - U+EFFFF are copied as values 0x30000 - 0x3ffff;\r\n   that is, these values are shifted by 0x70000.",
+    "correct_text": "the range U+E0000 - U+EFFFF are copied as values 0x30000 - 0x3ffff;\r\n   that is, these values are shifted by 0xB0000.",
+    "notes": "It seems to me that the difference between the original and mapped ranges is 0xB0000",
+    "submit_date": "2024-03-24",
+    "submitter_name": "Davide Cavagnino",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2024-03-25 17:21:03"
+  },
+  {
+    "errata_id": "8325",
+    "doc-id": "RFC4042",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "   UINT9 *UCS4_to_UTF9 (UINT9 *utf9P,UINT31 ucs4)\r\n   {\r\n     if (ucs4 > 0x100) {\r\n       if (ucs4 > 0x10000) {\r\n         if (ucs4 > 0x1000000)\r\n   /* ... */",
+    "correct_text": "   UINT9 *UCS4_to_UTF9 (UINT9 *utf9P,UINT31 ucs4)\r\n   {\r\n     if (ucs4 >= 0x100) {\r\n       if (ucs4 >= 0x10000) {\r\n         if (ucs4 >= 0x1000000)\r\n   /* ... */",
+    "notes": "Errors in the conditionals in the C code.",
+    "submit_date": "2025-03-10",
+    "submitter_name": "Kang-Che Sung",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

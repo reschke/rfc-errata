@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "errata_id": "8589",
+    "doc-id": "RFC8949",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.6.1",
+    "orig_text": "   ...for the\r\n   purpose of map key equivalence, NaN values are equivalent if they\r\n   have the same significand after zero-extending both significands at\r\n   the right to 64 bits.",
+    "correct_text": "   ...for the\r\n   purpose of map key equivalence, NaN values are equivalent if they\r\n   have the same significand after zero-extending both significands at\r\n   the right to 64 bits, and if they both have the same sign bit.",
+    "notes": "   This is a mathematical description of equivalence, but implementors\r\n   may use whatever means they deem appropriate to detect this equivalence.",
+    "submit_date": "2025-10-01",
+    "submitter_name": "Joe Hildebrand",
+    "verifier_id": "",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-11-07 13:09:38"
+  }
+]

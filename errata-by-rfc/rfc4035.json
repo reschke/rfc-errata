@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "errata_id": "3044",
+    "doc-id": "RFC4035",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Updates",
+    "orig_text": "Updates: 1034, 1035, 2136, 2181, 2308, 3225,                   M. Larson\r\n         3007, 3597, 3226                                       VeriSign\r\n",
+    "correct_text": "Updates: 1034, 1035, 2136, 2181, 2308, 3225,                   M. Larson\r\n         3597, 3226                                             VeriSign\r\n",
+    "notes": "4033, 4034 and 4035 all list 3007 as being updated but none update 3007",
+    "submit_date": "2011-12-07",
+    "submitter_name": "Mark Andrews",
+    "verifier_id": "",
+    "verifier_name": "Brian Haberman",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "5226",
+    "doc-id": "RFC4035",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3.1.4.1",
+    "orig_text": "   The need for special processing by a security-aware name server only\r\n   arises when all the following conditions are met:\r\n\r\n   o  The name server has received a query for the DS RRset at a zone\r\n      cut.\r\n\r\n   o  The name server is authoritative for the child zone.\r\n\r\n   o  The name server is not authoritative for the parent zone.\r\n\r\n   o  The name server does not offer recursion.",
+    "correct_text": "   The need for special processing by a security-aware name server only\r\n   arises when all the following conditions are met:\r\n\r\n   o  The name server has received a query for the DS RRset at a zone\r\n      cut.\r\n\r\n   o  The name server is authoritative for the child zone.\r\n\r\n   o  The name server is not authoritative for any zone above the\r\n      child's apex.\r\n\r\n   o  The name server does not offer recursion.",
+    "notes": "The original text is ambiguous in the face of an authoritative server having zones C.B.A. and A. but not B.A., and could cause DS queries for C to return a NODATA at C's apex, instead of the desired referral to B. which would allow resolution to continue correctly.",
+    "submit_date": "2018-01-04",
+    "submitter_name": "Peter van Dijk",
+    "verifier_id": "",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2023-08-03 11:53:19"
+  },
+  {
+    "errata_id": "7972",
+    "doc-id": "RFC4035",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4.2",
+    "orig_text": "   Security-aware resolvers MAY query for missing security RRs in an\r\n   attempt to perform validation; implementations that choose to do so\r\n   must be aware that the answers received may not be sufficient to\r\n   validate the original response.  For example, a zone update may have\r\n   changed (or deleted) the desired information between the original and\r\n   follow-up queries.",
+    "correct_text": "   Security-aware resolvers MAY query for missing security RRs in an\r\n   attempt to perform validation; implementations that choose to do so\r\n   MUST be aware that the answers received may not be sufficient to\r\n   validate the original response.  For example, a zone update may have\r\n   changed (or deleted) the desired information between the original and\r\n   follow-up queries.",
+    "notes": "\"MUST\" is a key word according to RFC 2119/BCP 14 and should be capitalized.\n --VERIFIER NOTES-- \n As it appears to the original authors, remaining members of dnsext mailing list, and myself as INT AD, the \"must\" here is not normative and should be kept in lowercase.\r\n\r\nSee also:\r\nhttps://mailarchive.ietf.org/arch/msg/dnsext/1PZ58ajXFj_RodKgHzus6d6UB-U/",
+    "submit_date": "2024-06-06",
+    "submitter_name": "Nate Choe",
+    "verifier_id": "",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-06-07 20:58:08"
+  },
+  {
+    "errata_id": "8037",
+    "doc-id": "RFC4035",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "5.3.1.",
+    "orig_text": "   [...] the validator cannot predetermine which DNSKEY\r\n   RR to use to authenticate the signature, and it MUST try each\r\n   matching DNSKEY RR until either the signature is validated or the\r\n   validator has run out of matching public keys to try.",
+    "correct_text": "   [...] the validator cannot predetermine which DNSKEY\r\n   RR to use to authenticate the signature, and it SHOULD try each\r\n   matching DNSKEY RR until either the signature is validated or the\r\n   validator has run out of matching public keys to try.",
+    "notes": "The original text requires validators to invest an unreasonable amount of work to validate a given signature in case there are many such DNSKEY RRs. The issue was exploited in the construction of CPU resource exhaustion attacks (CVE-2023-50387). For more details see our publication with ACM CCS'24 on the KeyTrap denial of service vulnerabilities.\r\n\r\n-- verifier note --\r\nWhile the concern is valid, this erratum does not represent the DNSEXT WG consensus at the time of writing, i.e., it cannot be \"verified\"",
+    "submit_date": "2024-07-18",
+    "submitter_name": "Elias Heftrig",
+    "verifier_id": "",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-08-07 15:37:24"
+  }
+]

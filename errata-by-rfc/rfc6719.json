@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "errata_id": "4878",
+    "doc-id": "RFC6719",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "Abstract",
+    "orig_text": "MRHOF works with additive metrics along a route, and\r\nthe metrics it uses are determined by the metrics that the RPL\r\nDestination Information Object (DIO) messages advertise.",
+    "correct_text": "MRHOF works with additive metrics along a route, and\r\nthe metrics it uses are determined by the metrics that the RPL\r\nDODAG Information Object (DIO) messages advertise.",
+    "notes": "DIO stands for DODAG Information Object",
+    "submit_date": "2016-12-06",
+    "submitter_name": "Cenk Gündogan",
+    "verifier_id": "",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "4879",
+    "doc-id": "RFC6719",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "1",
+    "orig_text": "RPL advertises metrics in RPL Destination Information\r\nObject (DIO) messages with a Metric Container suboption.",
+    "correct_text": "RPL advertises metrics in RPL DODAG Information\r\nObject (DIO) messages with a Metric Container suboption.",
+    "notes": "DIO stands for DODAG Information Object",
+    "submit_date": "2016-12-06",
+    "submitter_name": "Cenk Gündogan",
+    "verifier_id": "",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "5283",
+    "doc-id": "RFC6719",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "3.3",
+    "orig_text": "whose paths have a large range of Ranks will likely result in\r\nsubptimal routing: nodes might not choose good paths because they are",
+    "correct_text": "whose paths have a large range of Ranks will likely result in\r\nsuboptimal routing: nodes might not choose good paths because they are",
+    "notes": "Incorrect spelling of suboptimal.",
+    "submit_date": "2018-03-07",
+    "submitter_name": "Dario Tedeschi",
+    "verifier_id": "",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "7772",
+    "doc-id": "RFC6719",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.3",
+    "orig_text": "to covert",
+    "correct_text": "to convert",
+    "notes": "describing the conversion of path cost into a rank value.",
+    "submit_date": "2024-01-22",
+    "submitter_name": "Dominique Barthel",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2024-01-22 18:12:04"
+  },
+  {
+    "errata_id": "7773",
+    "doc-id": "RFC6719",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.2",
+    "orig_text": "If the cost \r\nof the path through the preferred parent and the worst parent is too \r\nlarge, a node MAY keep a smaller parent set than PARENT_SET_SIZE.",
+    "correct_text": "If the difference in cost of the paths through the preferred parent \r\nand the worst parent is too large, a node MAY keep a smaller parent \r\nset than PARENT_SET_SIZE.\r\n\r\n",
+    "notes": "This sentence is meant to explain that there is no benefit in keeping in the parent set neighbors that have too high a path cost compared to that of the preferred parent.\r\nThe original text omits the notion of difference in cost. It also contains a circular reference: indeed, the worst parent is the neighbor within the parent set that has the highest cost.\r\n\r\nVerifier's note: the submitter also included this option:\r\n\r\n```\r\nor better yet\r\n\r\n\"A node MAY keep a parent set smaller than PARENT_SET_SIZE, so that \r\nthe difference in cost of the paths through the preferred parent and \r\nthe worst parent is not too large.\"\r\n```\r\n\r\nI agree this is a clearer way to express the concept and I think it should be considered if there's ever a bis prepared of the spec, however, I elected to verify the first option given because it represents the minimal change needed to make the document correct.",
+    "submit_date": "2024-01-22",
+    "submitter_name": "Dominique Barthel",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-02-07 18:18:18"
+  }
+]

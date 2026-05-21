@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "errata_id": "7871",
+    "doc-id": "RFC9460",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "D.2",
+    "orig_text": "example.com.   SVCB   1 foo.example.com. key667=\"hello\\210qoo\"\r\n\r\n\\# 32 (\r\n00 01                                              ; priority\r\n03 66 6f 6f 07 65 78 61 6d 70 6c 65 03 63 6f 6d 00 ; target\r\n02 9b                                              ; key 667\r\n00 09                                              ; length 9\r\n68 65 6c 6c 6f d2 71 6f 6f                         ; value\r\n)\r\n\r\n\\x00\\x01                                           # priority\r\n\\x03foo\\x07example\\x03com\\x00                      # target\r\n\\x02\\x9b                                           # key 667\r\n\\x00\\x09                                           # length 9\r\nhello\\xd2qoo                                       # value",
+    "correct_text": "example.com.   SVCB   1 foo.example.com. key667=\"hello\\210qoo\"\r\n\r\n\\# 32 (\r\n00 01                                              ; priority\r\n03 66 6f 6f 07 65 78 61 6d 70 6c 65 03 63 6f 6d 00 ; target\r\n02 9b                                              ; key 667\r\n00 09                                              ; length 9\r\n68 65 6c 6c 6f 88 71 6f 6f                         ; value\r\n)\r\n\r\n\\x00\\x01                                           # priority\r\n\\x03foo\\x07example\\x03com\\x00                      # target\r\n\\x02\\x9b                                           # key 667\r\n\\x00\\x09                                           # length 9\r\nhello\\x88qoo                                       # value",
+    "notes": "Original report:\r\nThe escaped octal number \"\\210\" when encoded to hexadecimal should be \"88\" or \"\\x88\", NOT \"d2\" or \"\\xd2\".\r\n\r\nThe \"d2\" or \"\\xd2\" is hexadecimal value for decimal number \"210\".\r\n\r\n\r\nWK Edit: I am rejecting this Errata -- the display format (key667=\"hello\\210qoo\") is encoded using the DNS RFC1035 syntax, which specifies:\r\n\\DDD            where each D is a digit is the octet corresponding to\r\n                the decimal number described by DDD.\r\n\r\nThis is, um, surprising to many, and a relatively common source of issues in the DNS parsing world. \r\n\r\nI encourage future updates of the RFC to include a \"footnote\" / parenthetical pointing this out...\n --VERIFIER NOTES-- \n   I am rejecting this Errata -- the display format (key667=\"hello\\210qoo\") is encoded using the DNS RFC1035 syntax, which specifies:\r\n\\DDD where each D is a digit is the octet corresponding to\r\nthe decimal number described by DDD.\r\n\r\nThis is, um, surprising to many, and a relatively common source of issues in the DNS parsing world.\r\n\r\nI encourage future updates of the RFC to include a \"footnote\" / parenthetical pointing this out...\r\n\r\n",
+    "submit_date": "2024-03-25",
+    "submitter_name": "Shulhan",
+    "verifier_id": "",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-04-16 08:41:29"
+  },
+  {
+    "errata_id": "8168",
+    "doc-id": "RFC9460",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "2.3",
+    "orig_text": "This record would indicate that \"foo://api.example.com:8443\" is\r\n   aliased to \"svc4.example.net\".  The owner of \"example.net\", in turn,\r\n   could publish this record:\r\n\r\n   svc4.example.net.  7200  IN SVCB 3 svc4.example.net. (\r\n       alpn=\"bar\" port=\"8004\" )\r\n\r\n   This record would indicate that these services are served on port\r\n   number 8004, which supports the protocol \"bar\" and its associated\r\n   transport in addition to the default transport protocol for \"foo://\".",
+    "correct_text": "This record would indicate that \"foo://api.example.com:8443\" is\r\n   aliased to \"svc4.example.net\".  The owner of \"example.net\", in turn,\r\n   could publish this record:\r\n\r\n   svc4.example.net.  7200  IN SVCB 3 svc4.example.net. (\r\n       alpn=\"bar\" port=8004 )\r\n\r\n   This record would indicate that these services are served on port\r\n   number 8004, which supports the protocol \"bar\" and its associated\r\n   transport in addition to the default transport protocol for \"foo://\".",
+    "notes": "As far as I understand the rest of the RFC as well as the other examples provided, the port must not be quoted as stated in 7.2 (\"port\"):\r\nThe presentation value of the SvcParamValue is a single decimal integer between 0 and 65535 in ASCII.\r\n\r\n\r\n[WK: Rejecting this errata with a note from the DNSOP list: https://mailarchive.ietf.org/arch/msg/dnsop/BHLZtTaDLiHcMWe2NDnl_HJ0RwM/\r\n\r\nText: \r\n\"This report is incorrect.  SvcParamValues always are presented via a char-string encoding as defined in Appendix A, so quotes are always allowed.  The \"single decimal integer\" applies to the \"value\" which is derived by reversing the escaping of the char-string, producing a *OCTET in ABNF.\r\n\r\nThanks for the close read!\r\nBen Schwartz\"\n --VERIFIER NOTES-- \n Thank you for the Errata report. \r\n\r\nI'm rejecting it as per: https://mailarchive.ietf.org/arch/msg/dnsop/BHLZtTaDLiHcMWe2NDnl_HJ0RwM/\r\n\r\nThanks again,\r\nWarren (Ops AD)",
+    "submit_date": "2024-11-04",
+    "submitter_name": "Julian Keck",
+    "verifier_id": "",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-12-02 18:15:46"
+  },
+  {
+    "errata_id": "8787",
+    "doc-id": "RFC9460",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "2.2",
+    "orig_text": "(...)\r\nSvcParamKeys SHALL appear in increasing numeric order.\r\n\r\nClients MUST consider an RR malformed if:\r\n\r\nthe end of the RDATA occurs within a SvcParam.\r\nSvcParamKeys are not in strictly increasing numeric order.\r\n(...)",
+    "correct_text": "(...)\r\nSvcParamKeys MUST appear in increasing numeric order.\r\n\r\nClients MUST consider an RR malformed if:\r\n\r\nthe end of the RDATA occurs within a SvcParam.\r\nSvcParamKeys are not in strictly increasing numeric order.\r\n(...)",
+    "notes": "The protocol will only be successful if the DNS server must provide the SvcParamKeys in increasing numeric order, because the client will consider them malformed otherwise.\r\nUsually the principle \"be strict what you send, but be liberal in what you accept\" seems reversed here.\n --VERIFIER NOTES-- \n\r\nPer RFC2119:\r\n\r\n1. MUST This word, or the terms \"REQUIRED\" or \"SHALL\", mean that the\r\ndefinition is an absolute requirement of the specification.",
+    "submit_date": "2026-02-27",
+    "submitter_name": "Ulrich Windl",
+    "verifier_id": "",
+    "verifier_name": "Mohamed Boucadair (IESG)",
+    "update_date": "2026-02-27 11:10:19"
+  }
+]

@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "7232",
+    "doc-id": "RFC5870",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.3.",
+    "orig_text": "Due to it's short length",
+    "correct_text": "Due to its short length",
+    "notes": "https://www.grammarly.com/blog/its-vs-its/",
+    "submit_date": "2022-11-01",
+    "submitter_name": "Christian Paul",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-11-01 23:29:17"
+  },
+  {
+    "errata_id": "8389",
+    "doc-id": "RFC5870",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "6.4",
+    "orig_text": "The URIs <geo:22.300;-118.44> and <geo:22.3;-118.4400> are equal",
+    "correct_text": "The URIs <geo:22.300,-118.44> and <geo:22.3,-118.4400> are equal",
+    "notes": "The correct coordinate separator is \",\", not \";\".",
+    "submit_date": "2025-04-22",
+    "submitter_name": "Anton Khorev",
+    "verifier_id": "",
+    "verifier_name": "Andy Newton",
+    "update_date": "2025-04-23 12:53:57"
+  }
+]

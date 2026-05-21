@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "5262",
+    "doc-id": "RFC7270",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.12",
+    "orig_text": "        value : 0x89 = 137\r\n        binary: 10001001\r\n        decode: 10        -> Drop\r\n                  001001  -> Fragmentation and DF set",
+    "correct_text": "        value : 0x89 = 137\r\n        binary: 10001001\r\n        decode: 10        -> Drop\r\n                  001001  -> Bad TTL",
+    "notes": "Per the \"Reason Code (status = 10b, Dropped)\" table, \"Fragmentation and DF set\" is code 000101b:\r\n\r\n      10 000101b = 133 = Fragmentation and DF set\r\n\r\nwhereas code 001001b is \"Bad TTL\":\r\n\r\n      10 001001b = 137 = bad TTL\r\n\r\n\r\n IANA's IPFIX registry has been updated accordingly: https://www.iana.org/assignments/ipfix.",
+    "submit_date": "2018-02-15",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": "Benoit Claise",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "7775",
+    "doc-id": "RFC7270",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.12",
+    "orig_text": "Abstract Data Type:  unsigned32",
+    "correct_text": "Abstract Data Type:  unsigned8",
+    "notes": "Section 4.12 describes an 8-bit forwardingStatus field, and xrefs CCO-NF9FMT where FORWARDING STATUS has a length of 1 (ie, 8 bits).\r\n\r\nIANA's IPFIX registry lists the Abstract Data Type for forwardingStatus as \"unsigned8\".\r\n\r\nThe \"unsigned32\" Abstract Data Type is out of sync with these other documents.",
+    "submit_date": "2024-01-23",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

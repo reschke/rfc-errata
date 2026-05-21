@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "errata_id": "7683",
+    "doc-id": "RFC9135",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.2.",
+    "orig_text": "  2.  However, if PE2 is configured for asymmetric IRB mode, PE2 will\r\n       advertise TS4 MAC/IP information in a MAC/IP Advertisement route\r\n       with a zero Label2 field and no Route Target identifying IP-VRF1.\r\n       In this case, PE2 will install TS4 information in its ARP table\r\n       and BT1.  When a packet from TS2 to TS4 arrives at PE1, a longest\r\n       prefix match on IP-VRF1's route table will yield the local IRB\r\n       interface to BT1, where a subsequent ARP and bridge table lookup\r\n       will provide the information for an asymmetric forwarding mode to\r\n       PE2.",
+    "correct_text": "  2.  However, if PE2 is configured for asymmetric IRB mode, PE2 will\r\n       advertise TS4 MAC/IP information in a MAC/IP Advertisement route\r\n       with a zero Label2 field and no Route Target identifying IP-VRF1.\r\n       In this case, PE1 will install TS4 information in its ARP table\r\n       and BT1.  When a packet from TS2 to TS4 arrives at PE1, a longest\r\n       prefix match on IP-VRF1's route table will yield the local IRB\r\n       interface to BT1, where a subsequent ARP and bridge table lookup\r\n       will provide the information for an asymmetric forwarding mode to\r\n       PE2.",
+    "notes": "PE1 will use ARP table for forwarding traffic to PE2 - seems like typo",
+    "submit_date": "2023-10-19",
+    "submitter_name": "Denis Vrkic",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-02-09 21:23:24"
+  },
+  {
+    "errata_id": "7684",
+    "doc-id": "RFC9135",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.1",
+    "orig_text": " This route is advertised along with the following extended community:\r\n\r\n   *  Tunnel Type Extended Community",
+    "correct_text": " This route is advertised along with the following extended community:\r\n\r\n   *  Encapsulation Extended Community",
+    "notes": "I guess that solud be Encapsulation Extended Community (or  maybe Tunnel Encapsulation Attribute)\r\n\r\nVerifier notes:\r\nSee https://mailarchive.ietf.org/arch/msg/bess/TgQR3NHd6wgcYow0B76i7ToBmr0/",
+    "submit_date": "2023-10-19",
+    "submitter_name": "Denis Vrkic",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-02-12 15:31:48"
+  },
+  {
+    "errata_id": "7686",
+    "doc-id": "RFC9135",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "6.1",
+    "orig_text": "6.1.  Control Plane - Advertising PE\r\n\r\n   When a PE (e.g., PE1 in Figure 4 above) learns the MAC and IP address\r\n   of an attached TS (e.g., via an ARP request or ND Neighbor\r\n   Solicitation), it populates its MAC-VRF/BT, IP-VRF, and ARP table or\r\n   NDP cache just as in the case for symmetric IRB.",
+    "correct_text": "6.1.  Control Plane - Advertising PE\r\n\r\n   When a PE (e.g., PE1 in Figure 4 above) learns the MAC and IP address\r\n   of an attached TS (e.g., via an ARP request or ND Neighbor\r\n   Solicitation), it populates its MAC-VRF/BT and ARP table or\r\n   NDP cache.",
+    "notes": "- advertising PE  (egress PE)  is not advertising Label2 (\"the MPLS Label2 field MUST NOT be included in this route.\")\r\n - so this must be asymmetric egress PE\r\n - in 4.2 is stated that: \"the asymmetric IRB mode simplifies the forwarding model\r\n   and saves space in the IP-VRF route table, since host routes are not   installed in the route table.\"\r\n - so i guess that,  advertising  PE  in asymmetric mode, is NOT leaning/storing local IP to IP-VRF table only ARP (bound to IP-VRF) and MAC into MAC-VRF\n --VERIFIER NOTES-- \n   See https://mailarchive.ietf.org/arch/msg/bess/9pvIR6OysyFKso9rDRb-CJj7we8/",
+    "submit_date": "2023-10-20",
+    "submitter_name": "Denis Vrkic",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-02-12 15:28:26"
+  },
+  {
+    "errata_id": "8375",
+    "doc-id": "RFC9135",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "6.3",
+    "orig_text": "The ingress PE gets the destination TS's MAC address for that TS's IP \r\naddress from its ARP table or NDP cache. It encapsulates the packet \r\nwith that destination MAC address and a source MAC address \r\ncorresponding to that IRB interface and sends the packet to its \r\ndestination subnet MAC-VRF/BT.\r\n\r\n",
+    "correct_text": "The ingress PE gets the destination TS's MAC address for that TS's IP \r\naddress from its ARP table or NDP cache. It encapsulates the packet \r\nwith that destination MAC address and a source MAC address \r\ncorresponding to that IRB interface. \r\nIn addition, if all following conditions for the EVPN instance in \r\nquestion are met:\r\n\r\n- uses MPLS encapsulation\r\n- implements VLAN-aware bundle service interface as defined in \r\n  Section 6.3 of RFC 7432\r\n\r\nthen the VLAN tag with the \"normalized VID\" of the corresponding BT \r\nis pushed on the customer IP packet.\r\n\r\nThe resulting packet is sent to its destination subnet MAC-VRF/BT.\r\n\r\n",
+    "notes": "Section 6.3 of RFC 743 OPTIONALLY allows a MAC-VRF that implements VLAN-aware bundle service interface and uses MPLS encapsulation to advertise the same label for all its broadcast domains. This option is only allowed when each broadcast domain in such a MAC-VRF is represented by the same VID in all the PEs. With this option, a VLAN tag with the \"normalized\" VID of the specific ingress domain MUST be present when the packet crosses the underlay, and MUST be used for identification of the specific broadcast domain in the egress PE.\r\n\r\nIn the case of inter-subnet forwarding, the original VLAN tag of IP packets undergoing such forwarding does not identify the broadcast domain to which the packet would be sent.",
+    "submit_date": "2025-04-06",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": "",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2025-05-02 08:45:17"
+  },
+  {
+    "errata_id": "8478",
+    "doc-id": "RFC9135",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "IP-VRF is identified by its corresponding Route Target and Route \r\nDistinguisher, and MAC-VRF is also identified by its corresponding Route\r\nTarget and Route Distinguisher. If operating in EVPN VLAN-based mode, \r\nthen a receiving PE that receives an EVPN route with a MAC-VRF Route \r\nTarget can identify the corresponding bridge table; however, if \r\noperating in EVPN VLAN-aware bundle mode, then the receiving PE needs \r\nboth the MAC-VRF Route Target and VLAN ID in order to identify the \r\ncorresponding bridge table.",
+    "correct_text": "IP-VRF is identified by its corresponding Route Target and Route \r\nDistinguisher, and MAC-VRF is also identified by its corresponding Route\r\nTarget and Route Distinguisher. If operating in EVPN VLAN-based mode, \r\nthen a receiving PE that receives an EVPN route with a MAC-VRF Route \r\nTarget can identify the corresponding bridge table; however, if \r\noperating in EVPN VLAN-aware bundle mode, then the receiving PE needs \r\nboth the MAC-VRF Route Target and Ethernet Tag ID in the NLRI of \r\nthe route in order to identify the corresponding bridge table. ",
+    "notes": "MAC/IP Advertisement (EVPN Type 2) routes for IP-->MAC pairs do not carry any information about VLAN IDs used in encapsulation of ARP (or NA) messages that trigger their advertisement.\r\nInstead, they carry  Ethernet Tag IDs of Broadcast Domains in which these messages have been received which may represent the original VLAN ID or the so-called \"normalized\" VLAN ID of the Broadcast Domain as defined in Section 6.3 of RFC 7432.",
+    "submit_date": "2025-06-24",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": "",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2025-06-26 12:09:41"
+  }
+]

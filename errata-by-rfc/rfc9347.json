@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "8042",
+    "doc-id": "RFC9347",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7.2",
+    "orig_text": "3-255 \tReserved",
+    "correct_text": "2-255 \tUnassigned",
+    "notes": "The same section, in the previous line, states \"1 \tCongestion Control Format \tRFC 9347\" so 2 is not covered in the registry. It's likely meant to be \"Unassigned\"?",
+    "submit_date": "2024-07-22",
+    "submitter_name": "Antony Antony",
+    "verifier_id": "",
+    "verifier_name": "Paul Wouters",
+    "update_date": "2024-07-23 00:30:39"
+  },
+  {
+    "errata_id": "8212",
+    "doc-id": "RFC9347",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1",
+    "orig_text": "   As the use of the AGGFRAG_PAYLOAD payload is currently only defined\r\n   for non-transport-mode tunnels, the USE_AGGFRAG notification MUST NOT\r\n   be combined with the USE_TRANSPORT notification.\r\n",
+    "correct_text": "   As the use of the AGGFRAG_PAYLOAD payload is currently only defined\r\n   for non-transport-mode tunnels, the USE_AGGFRAG notification MUST NOT\r\n   be combined with the USE_TRANSPORT_MODE notification.\r\n",
+    "notes": "There is no \"USE_TRANSPORT\" notification in IKEv2. The correct name is \"USE_TRANSPORT_MODE \"(note, that in the other place of this Section the correct name was used).",
+    "submit_date": "2024-12-18",
+    "submitter_name": "Valery Smyslov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

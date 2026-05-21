@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "errata_id": "7409",
+    "doc-id": "RFC8554",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Section 6.4, Table 3",
+    "orig_text": "   +---------+------------+---------+-------------+ \r\n   | ParmSet | KeyGenTime | SigSize | KeyLifetime | \r\n   +---------+------------+---------+-------------+ \r\n                         ... \r\n\r\n   | 15/10   | 6 sec      | 3172    | 9 hours     | \r\n   |         |            |         |             | \r\n   | 15/15   | 6 sec      | 3332    | 12 days     | \r\n   |         |            |         |             | \r\n   | 20/10   | 3 min      | 3332    | 12 days     | \r\n   |         |            |         |             | \r\n   | 20/15   | 3 min      | 3492    | 1 year      | \r\n   |         |            |         |             | \r\n   | 25/10   | 1.5 hour   | 3492    | 1 year      | \r\n   |         |            |         |             | \r\n   | 25/15   | 1.5 hour   | 3652    | 34 years    | \r\n   +---------+------------+---------+-------------+ \r\n ",
+    "correct_text": "   +---------+------------+---------+-------------+ \r\n   | ParmSet | KeyGenTime | SigSize | KeyLifetime | \r\n   +---------+------------+---------+-------------+ \r\n                         ... \r\n\r\n   | 15/10   | 6 sec      | 3124    | 9 hours     | \r\n   |         |            |         |             | \r\n   | 15/15   | 6 sec      | 3284    | 12 days     | \r\n   |         |            |         |             | \r\n   | 20/10   | 3 min      | 3284    | 12 days     | \r\n   |         |            |         |             | \r\n   | 20/15   | 3 min      | 3444    | 1 year      | \r\n   |         |            |         |             | \r\n   | 25/10   | 1.5 hour   | 3444    | 1 year      | \r\n   |         |            |         |             | \r\n   | 25/15   | 1.5 hour   | 3604    | 34 years    | \r\n   +---------+------------+---------+-------------+ \r\n",
+    "notes": "The signature sizes for the two-level HSS parameters in Table 3 are all 48 bytes larger than they should be.  It looks like they were computed assuming a 64-byte identifier I in the level-1 LMS public key pub[1],  but the identifier was reduced to 16 bytes in draft -07.  The signature sizes for the single-level HSS parameters are all correct because they do not have intermediate LMS public keys.",
+    "submit_date": "2023-03-29",
+    "submitter_name": "Peter Campbell",
+    "verifier_id": "",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2026-01-27 20:35:57"
+  },
+  {
+    "errata_id": "7994",
+    "doc-id": "RFC8554",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "   /* leighton-micali signatures (lms) */\r\n\r\n   union lms_path switch (lms_algorithm_type type) {\r\n    case lms_sha256_n32_h5:\r\n      bytestring32 path_n32_h5[5];\r\n    case lms_sha256_n32_h10:\r\n      bytestring32 path_n32_h10[10];\r\n    case lms_sha256_n32_h15:\r\n      bytestring32 path_n32_h15[15];\r\n    case lms_sha256_n32_h20:\r\n      bytestring32 path_n32_h20[20];\r\n    case lms_sha256_n32_h25:\r\n      bytestring32 path_n32_h25[25];\r\n    default:\r\n      void;     /* error condition */\r\n   };\r\n\r\n   struct lms_signature {\r\n     unsigned int q;\r\n     lmots_signature lmots_sig;\r\n     lms_path nodes;\r\n   };\r\n\r\n   struct lms_key_n32 {\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n\r\n   union lms_public_key switch (lms_algorithm_type type) {\r\n    case lms_sha256_n32_h5:\r\n    case lms_sha256_n32_h10:\r\n    case lms_sha256_n32_h15:\r\n    case lms_sha256_n32_h20:\r\n    case lms_sha256_n32_h25:\r\n         lms_key_n32 z_n32;",
+    "correct_text": "   /* leighton-micali signatures (lms) */\r\n\r\n   union lms_path switch (lms_algorithm_type type) {\r\n    case lms_sha256_m32_h5:\r\n      bytestring32 path_m32_h5[5];\r\n    case lms_sha256_m32_h10:\r\n      bytestring32 path_m32_h10[10];\r\n    case lms_sha256_m32_h15:\r\n      bytestring32 path_m32_h15[15];\r\n    case lms_sha256_m32_h20:\r\n      bytestring32 path_m32_h20[20];\r\n    case lms_sha256_m32_h25:\r\n      bytestring32 path_m32_h25[25];\r\n    default:\r\n      void;     /* error condition */\r\n   };\r\n\r\n   struct lms_signature {\r\n     unsigned int q;\r\n     lmots_signature lmots_sig;\r\n     lms_path nodes;\r\n   };\r\n\r\n   struct lms_key_m32 {\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n\r\n   union lms_public_key switch (lms_algorithm_type type) {\r\n    case lms_sha256_m32_h5:\r\n    case lms_sha256_m32_h10:\r\n    case lms_sha256_m32_h15:\r\n    case lms_sha256_m32_h20:\r\n    case lms_sha256_m32_h25:\r\n         lms_key_m32 z_m32;\r\n",
+    "notes": "While \"n\" is the parameter used in LMOTS, \"m\" is the parameter used in LMS. In order to be consistent with the other parts of RFC 8554 and with the IANA registry, the LMS parameter set names need to be changed from \"_n32_\" to \"_m32_\". For consistency, all other references to the number of bytes in each node should changed from \"n32\" to \"m32\".\r\n\r\nHold for document update.\r\n\r\nErrata 7994 changes LMS parameter names to _m32_ in Section 3.3 for consistency with IANA registry terminology, which is primarily an editorial fix for accurate reference. - CFRG co-chair",
+    "submit_date": "2024-06-17",
+    "submitter_name": "David Cooper",
+    "verifier_id": "",
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2025-01-18 18:57:49"
+  },
+  {
+    "errata_id": "8907",
+    "doc-id": "RFC8554",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "   struct lms_key_n32 {\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n",
+    "correct_text": "   struct lms_key_n32 {\r\n     lms_algorithm_type lms_alg_type;\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n",
+    "notes": "As section 5.3 reads:\r\n   The LMS public key can be represented as the byte string\r\n     u32str(type) || u32str(otstype) || I || T[1]\r\n\r\nBut the definition of \"u32str(type)\" is missing in chapter 3.3 in the above defined structure.",
+    "submit_date": "2026-05-07",
+    "submitter_name": "Olaf Stücker",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

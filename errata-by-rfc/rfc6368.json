@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "4309",
+    "doc-id": "RFC6368",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "   In the traditional model, where External BGP sessions are used\r\n   between the BGP/MPLS VPN PE and CE, the PE router identifies itself\r\n   as belonging to the customer network autonomous system.",
+    "correct_text": "   In the traditional model, where External BGP sessions are used\r\n   between the BGP/MPLS VPN PE and CE, the PE router identifies itself\r\n   as belonging to the provider network autonomous system.",
+    "notes": "",
+    "submit_date": "2015-03-20",
+    "submitter_name": "Guillaume Gaulon",
+    "verifier_id": "",
+    "verifier_name": "Alia Atlas",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "7834",
+    "doc-id": "RFC6368",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "Using this mechanism isolates the customer network from the\r\nattributes used in the customer network and vice versa.  Attributes\r\nsuch as the route reflection cluster list attribute are segregated\r\nsuch that customer network cluster identifiers won't be considered by\r\nthe customer network route reflectors and vice versa.",
+    "correct_text": "Using this mechanism isolates the customer network from the\r\nattributes used in the provider network and vice versa.  Attributes\r\nsuch as the route reflection cluster list attribute are segregated\r\nsuch that customer network cluster identifiers won't be considered by\r\nthe provider network route reflectors and vice versa.",
+    "notes": "\"customer network\" is used twice instead of \"provider network\"",
+    "submit_date": "2024-03-01",
+    "submitter_name": "Hugues Le Bastard",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-03-07 14:39:49"
+  }
+]

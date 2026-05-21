@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "errata_id": "3166",
+    "doc-id": "RFC6482",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "...EE certificate's IP address delegation extension.",
+    "correct_text": "...EE certificate's IP address delegation extension.  The EE certificate\r\nMUST NOT use \"inherit\" elements as described in [RFC3779].",
+    "notes": "Having spoken to the authors, the authors' intent was to disallow \"inherit\" in ROA EE certificates in order to simplify validation of ROAs.  Implementers agree, and as of March 2012, the three public validator implementations already enforce this.\r\n\r\nThis erratum simply states it explicitly, whereas the original text might be misread as leaving room for indirectly-specified resources via \"inherit\".\r\n\r\nThis errata was discussed by the WG, please see SIDR list archive.",
+    "submit_date": "2012-03-25",
+    "submitter_name": "Andrew Chi",
+    "verifier_id": "",
+    "verifier_name": "Stewart Bryant",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "5609",
+    "doc-id": "RFC6482",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Table of Contents",
+    "orig_text": "   5. Security Considerations .........................................5\r\n   6. Acknowledgments .................................................6\r\n   7. References ......................................................6\r\n      7.1. Normative References .......................................6\r\n      7.2. Informative References .....................................6",
+    "correct_text": "   5. Security Considerations .........................................5\r\n   6. IANA Considerations .............................................6\r\n   7. Acknowledgments .................................................6\r\n   8. References ......................................................6\r\n      8.1. Normative References .......................................6\r\n      8.2. Informative References .....................................6",
+    "notes": "The Table of Contents omits the \"IANA Considerations\" section, which should be section 6, which consequently causes the numbered sections to be follow be labeled incorrectly.",
+    "submit_date": "2019-01-20",
+    "submitter_name": "John Kristoff",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "5881",
+    "doc-id": "RFC6482",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "   END\r\n",
+    "correct_text": "   id-ct-routeOriginAuthz OBJECT IDENTIFIER ::= { 1 2 840 113549 1 9 16 1 24 }\r\n\r\n   END\r\n",
+    "notes": "The object identifier for the ROA content type is mentioned in the document, but it is not included in the ASN.1 Module.",
+    "submit_date": "2019-10-23",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2019-10-24 18:04:55"
+  },
+  {
+    "errata_id": "7079",
+    "doc-id": "RFC6482",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "   Before a relying party can use a ROA to validate a routing\r\n   announcement, the relying party MUST first validate the ROA.  To\r\n   validate a ROA, the relying party MUST perform all the validation\r\n   checks specified in [RFC6488] as well as the following additional\r\n   ROA-specific validation step.\r\n\r\n   o  The IP address delegation extension [RFC3779] is present in the\r\n      end-entity (EE) certificate (contained within the ROA), and each\r\n      IP address prefix(es) in the ROA is contained within the set of IP\r\n      addresses specified by the EE certificate's IP address delegation\r\n      extension.",
+    "correct_text": "   Before a relying party can use a ROA to validate a routing\r\n   announcement, the relying party MUST first validate the ROA.  To\r\n   validate a ROA, the relying party MUST perform all the validation\r\n   checks specified in [RFC6488] as well as the following additional\r\n   ROA-specific validation step.\r\n\r\n   o  The IP address delegation extension [RFC3779] is present in the\r\n      end-entity (EE) certificate (contained within the ROA), and each\r\n      IP address prefix(es) in the ROA is contained within the set of IP\r\n      addresses specified by the EE certificate's IP address delegation\r\n      extension.\r\n   o  The AS Resources extension is not used in Route Origin Authorizations\r\n      and MUST be omitted.",
+    "notes": "The ROA RFC is a bit under-specified compared to other RPKI Signed Object profile definitions. (For example, RFC 8209 § 3.1.3.4 is less ambiguous on the matter of RFC3779 extensions.)\n --VERIFIER NOTES-- \nThis is a material (albeit small) change to the spec and doesn't appear to reflect the WG consensus at time of publication. Therefore rejecting, see https://mailarchive.ietf.org/arch/msg/sidr/A_2jMTLbpgpK1H0G3QsVJ44T-kE/ as well.",
+    "submit_date": "2022-08-10",
+    "submitter_name": "Job Snijders",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2022-09-06 18:54:33"
+  },
+  {
+    "errata_id": "7525",
+    "doc-id": "RFC6482",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "Within the ROAIPAddressFamily structure, addressFamily contains the Address Family Identifier (AFI) of an IP address family.  This specification only supports IPv4 and IPv6.  Therefore, addressFamily MUST be either 0001 or 0002.\r\n\r\nWithin a ROAIPAddress structure, the addresses field represents prefixes as a sequence of type IPAddress.  (See [RFC3779] for more details).  If present, the maxLength MUST be an integer ...\r\n",
+    "correct_text": "Within the ROAIPAddressFamily structure, addressFamily contains the Address Family Identifier (AFI) of an IP address family.  This specification only supports IPv4 and IPv6.  Therefore, addressFamily MUST be either 0001 or 0002. The addresses field represents prefixes as a sequence of type ROAIPAddress.  \r\n\r\nWithin the ROAIPAddress structure, the address field represents an IPv4 or IPv6 prefix of type IPaddress (See [RFC3779] for more details).  If present, the maxLength MUST be an integer ...",
+    "notes": "Original text contradicts does not align with normative ASN.1 schema.\n --VERIFIER NOTES-- \nSee discussion on the sidrops list at https://mailarchive.ietf.org/arch/msg/sidrops/cFCZREOerU-jGWWG5zh5PdXTLKE/\r\n\r\nThis erratum is filed against RFC 6482. Although RFC 6482 has not yet been marked \"obsolete\", this is only a formality -- draft-ietf-sidrops-rfc6482bis-09 has been approved for publication and is currently in the RFC Editor queue. When editing is complete and rfc6482bis is published as an RFC, 6482 will indeed be obsolete. In that spirit, I'm applying guideline 7 from https://www.ietf.org/about/groups/iesg/statements/processing-errata-ietf-stream/ and rejecting this erratum. Note that in the thread referenced above, Job says the erratum is fixed in the bis. If it's not, a new erratum should be raised against the bis.",
+    "submit_date": "2023-05-26",
+    "submitter_name": "Sacha Boudjema",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-11 22:39:51"
+  }
+]

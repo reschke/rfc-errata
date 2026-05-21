@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "6608",
+    "doc-id": "RFC819",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "Appendix C",
+    "orig_text": "Whenever a name server is called it may be a recursive server or an\r\ninteractive server.",
+    "correct_text": "Whenever a name server is called it may be a recursive server or an\r\niterative server.",
+    "notes": "Wording is changed to reflect the industry-accepted distinction between iterative and recursive name servers.",
+    "submit_date": "2021-06-12",
+    "submitter_name": "Greg Skinner",
+    "verifier_id": "",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2021-06-12 11:50:30"
+  }
+]

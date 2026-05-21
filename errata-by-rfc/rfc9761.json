@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "errata_id": "8817",
+    "doc-id": "RFC9761",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.2",
+    "orig_text": "prefix acl-tls",
+    "correct_text": "prefix ietf-acl-tls",
+    "notes": "The correct prefix name is ietf-acl-tls (see Section 11.1 in RFC9761).",
+    "submit_date": "2026-03-11",
+    "submitter_name": "Lize Shao",
+    "verifier_id": "",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-03-11 05:01:12"
+  },
+  {
+    "errata_id": "8818",
+    "doc-id": "RFC9761",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "7",
+    "orig_text": "\"matches\": {\r\n  ...\r\n  \"actions\": {\r\n     \"forwarding\": \"accept\"\r\n  }\r\n}",
+    "correct_text": "\"matches\": {\r\n  ...\r\n},\r\n\"actions\": {\r\n   \"forwarding\": \"accept\"\r\n}",
+    "notes": "\"actions\" is nested within \"matches\" in the original text, while they should be in parallel based on RFC8520 (https://www.rfc-editor.org/rfc/rfc8520.html).\r\n\r\nVerifier Notes: In consultation with the authors, this was agreed to be Verified.",
+    "submit_date": "2026-03-11",
+    "submitter_name": "Lize Shao",
+    "verifier_id": "",
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-03-11 18:43:24"
+  },
+  {
+    "errata_id": "8828",
+    "doc-id": "RFC9761",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "7",
+    "orig_text": "{\r\n   \"ietf-mud:mud\": {\r\n      ...\r\n      \"ietf-access-control-list:acls\": {\r\n         ...\r\n      }\r\n   }\r\n}",
+    "correct_text": "{\r\n   \"ietf-mud:mud\": {\r\n      ...\r\n   },\r\n   \"ietf-access-control-list:acls\": {\r\n      ...\r\n   }\r\n}",
+    "notes": "Instead of being nested within \"ietf-mud:mud\", \"ietf-access-control-list:acls\" goes parallel to \"ietf-mud:mud\", both as root objects. This will make it consistent with RFC8520 (see JSON example in Section 9, https://datatracker.ietf.org/doc/html/rfc8520#section-9).",
+    "submit_date": "2026-03-14",
+    "submitter_name": "Wenxi Wang",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

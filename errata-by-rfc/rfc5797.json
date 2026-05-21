@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "errata_id": "2581",
+    "doc-id": "RFC5797",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "   | STOU  | base | Store Unique      | a    | o    | 959, 1123        |",
+    "correct_text": "   | STOU  | base | Store Unique      | s    | o    | 959, 1123        |",
+    "notes": "RFC0959 has defined STOU as FTP (S)ervice command, but not (A)ccess Control command",
+    "submit_date": "2010-10-19",
+    "submitter_name": "VicTor Smirnoff",
+    "verifier_id": "",
+    "verifier_name": "Peter Saint-Andre",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "3471",
+    "doc-id": "RFC5797",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "5",
+    "orig_text": "",
+    "correct_text": "",
+    "notes": "Section 5 states that the IANA has set up the registry, but does not give any hints as to how to find it. A link to its location would be handy. I presume the correct location is http://www.iana.org/assignments/ftp-commands-extensions/ftp-commands-extensions.xml\n --VERIFIER NOTES-- \nA a practice, we do not put URLs for registries into RFCs. Not an appropriate use of the errata system, in any event.   ",
+    "submit_date": "2013-01-27",
+    "submitter_name": "Alun Jones",
+    "verifier_id": "",
+    "verifier_name": "Pete Resnick",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "5748",
+    "doc-id": "RFC5797",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "   | RNTO  | base | Rename From       | s    | m    | 959              |",
+    "correct_text": "   | RNTO  | base | Rename To         | s    | m    | 959              |",
+    "notes": "Obviously RNTO = Rename To as defined in RFC 959",
+    "submit_date": "2019-06-08",
+    "submitter_name": "Eugene Adell",
+    "verifier_id": "",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 21:24:04"
+  },
+  {
+    "errata_id": "7532",
+    "doc-id": "RFC5797",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "sections 3 and 7",
+    "orig_text": "(multiple occurrences of each within Table 1, column “RFC#s/References and Notes”)\r\n2640\r\n3659",
+    "correct_text": "(in section 7.2)\r\n\r\n[RFC2640] Curtin, B., \"Internationalization of the File Transfer Protocol\", RFC 2640, July 1999.\r\n\r\n(and)\r\n\r\n[RFC3659] Hethmon, P., \"Extensions to FTP\", RFC 3659, March 2007.",
+    "notes": "These RFCs are referenced prominently in the table which the remainder of the RFC is centered upon, but were omitted from the actual “References” section.  Merely to find out what their topics were, I had to go and query for them on the rfc-editor website.  This is inefficient in both network resources and user time.",
+    "submit_date": "2023-06-02",
+    "submitter_name": "Gordon Steemson",
+    "verifier_id": "",
+    "verifier_name": "Orie Steele",
+    "update_date": "2024-04-01 21:25:57"
+  },
+  {
+    "errata_id": "8728",
+    "doc-id": "RFC5797",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.4",
+    "orig_text": "      Mandatory commands:\r\n\r\n      ABOR, ACCT, ALLO, APPE, CWD, DELE, HELP, LIST, MODE, NLST, NOOP,\r\n      PASS, PASV, PORT, QUIT, REIN, REST, RETR, RNFR, RNTO, SITE, STAT,\r\n      STOR, STRU, TYPE, USER\r\n\r\n      Optional commands:\r\n\r\n      CDUP, MKD, PWD, RMD, SMNT, STOU, SYST\r\n",
+    "correct_text": "      Mandatory commands:\r\n\r\n      ACCT, APPE, CDUP, CWD, DELE, HELP, LIST, MKD, MODE, NLST, NOOP,\r\n      PASS, PASV, PORT, PWD, QUIT, RETR, RMD, RNFR, RNTO, STAT, STOR,\r\n      STRU, SYST, TYPE, USER\r\n\r\n      Optional commands:\r\n\r\n      ABOR, ALLO, REIN, REST, SITE, SMNT, STOU\r\n",
+    "notes": "For some reason, five commands listed as optional in RFC 1123 (ABOR, ALLO, REIN, REST, and SITE) are marked mandatory here, and five other commands listed as mandatory in RFC 1123 (CDUP, MKD, PWD, RMD, and SYST) are marked optional here.  This error was naturally propagated into the IANA registry established by this RFC, which therefore also needs correction.",
+    "submit_date": "2026-02-01",
+    "submitter_name": "Gordon Steemson",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

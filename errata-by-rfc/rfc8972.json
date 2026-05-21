@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "errata_id": "8199",
+    "doc-id": "RFC8972",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.4",
+    "orig_text": "Also, the Session-Reflector MUST copy the value of the DSCP and ECN\r\nfields of the IP header of the received STAMP test packet into the\r\nDSCP2 field in the reflected test packet.",
+    "correct_text": "Also, the Session-Reflector MUST copy the value of the DSCP and ECN\r\nfields of the IP header of the received STAMP test packet into the\r\nDSCP2 and ECN fields, respectively, in the reflected test packet.",
+    "notes": "First, thank you to all the IETF contributors who do such amazing work to keep the Internet going (seriously!). I noticed this minor omission while implementing the specification. I spoke with Mr. Mirsky (one of the authors) who suggested I file this report. Of course, the authors' intent is not in doubt, but he suggested that I submit this report nonetheless. Besides this very minor misstatement, as someone writing an implementation who was completely uninvolved in drafting the RFC, I have found this document to be incredibly readable and easy to follow -- thank you!\r\n\r\n[Edit: WK (Ops AD): Thanks for the Errata (and the kind note) ].",
+    "submit_date": "2024-12-04",
+    "submitter_name": "William Hawkins",
+    "verifier_id": "",
+    "verifier_name": "Warren Kumari (Ops AD)",
+    "update_date": "2024-12-04 18:59:56"
+  },
+  {
+    "errata_id": "8339",
+    "doc-id": "RFC8972",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.7",
+    "orig_text": "The Session-Reflector MUST validate the Length value of the STAMP test\r\npacket.",
+    "correct_text": "The Session-Reflector MUST validate the Length value of the\r\nFollow-Up Telemetry TLV in that STAMP test packet.\r\n",
+    "notes": "--- Verifier note ---\r\nUpdated the type of errata to technical from editorial.\r\n\r\nThere is no length field discussed for the test packet. The behavior is about checking the length of a Follow-Up Telemetry TLV included in a test packet.",
+    "submit_date": "2025-03-18",
+    "submitter_name": "William Hawkins",
+    "verifier_id": "",
+    "verifier_name": "Mohamed Boucadair",
+    "update_date": "2025-03-25 06:41:37"
+  },
+  {
+    "errata_id": "8591",
+    "doc-id": "RFC8972",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.3",
+    "orig_text": "Timestamp In:  A one-octet field that characterizes the method by\r\n   which the ingress of the Session-Reflector obtained the timestamp\r\n   T2.  A timestamp may be obtained with hardware assistance via a\r\n   software API from a local wall clock or from a remote clock (the\r\n   latter is referred to as a \"control plane\").  Table 9 lists the\r\n   possible values.\r\n\r\nSync Src Out:  A one-octet field that characterizes the source of\r\n   clock synchronization at the egress of the Session-Reflector.\r\n   Table 7 lists the possible values.\r\n\r\nTimestamp Out:  A one-octet field that characterizes the method by\r\n   which the egress of the Session-Reflector obtained the timestamp\r\n   T3.  Table 9 lists the possible values.",
+    "correct_text": "Timestamp In:  A one-octet field that characterizes the method by\r\n   which timestamps are obtained at the ingress of the \r\n   Session-Reflector.\r\n   A timestamp may be obtained with hardware assistance via a\r\n   software API from a local wall clock or from a remote clock (the\r\n   latter is referred to as a \"control plane\").  Table 9 lists the\r\n   possible values.\r\n\r\nSync Src Out:  A one-octet field that characterizes the source of\r\n   clock synchronization at the egress of the Session-Reflector.\r\n   Table 7 lists the possible values.\r\n\r\nTimestamp Out:  A one-octet field that characterizes the method by\r\n   which timestamps are obtained at the egress of\r\n   the Session-Reflector. Table 9 lists the possible values.",
+    "notes": "First, and as usual, I sincerely appreciate the technical accuracy of the authors of the STAMP-related RFCs. As an implementer, the writing and specificity make it easy to build compliant software. I hope that this errata report is helpful for future implementers.\r\n\r\nSecond, I apologize for not knowing the best way to refer to two, non contiguous phrases from the same section that both require changes. I hope that what I have included makes it obvious what needs to be changed.\r\n\r\nI have conferred with one of the RFC's authors who indicated that the inclusion of T2 and T3 were simply the result of an error in drafting. We collaborated via email to arrive at the corrected text I have submitted here. I say that only to indicate that I have attempted to do enough research prior to submitting this report so that it is not a waste of time but _not_ to imply that the person with whom I communicated endorses this report.\r\n\r\nThank you again for your work!\r\nWill\r\n\r\n==Verifier Note\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/ippm/t4-ZrPhTKo6JCaApOTfBJUA-w9s/",
+    "submit_date": "2025-10-03",
+    "submitter_name": "William Hawkins",
+    "verifier_id": "",
+    "verifier_name": "Mohamed Boucadair",
+    "update_date": "2025-10-07 07:56:24"
+  },
+  {
+    "errata_id": "8592",
+    "doc-id": "RFC8972",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.7",
+    "orig_text": "A Session-Reflector might be able to put only an \"SW Local\" (see\r\nTable 9) timestamp in the Follow-Up Timestamp field.",
+    "correct_text": "A Session-Reflector might be able to put only an \"SW Local\" (see\r\nTable 9) timestamp in the Timestamp field of the reflected STAMP\r\npacket (Figure 2).",
+    "notes": "Sorry for the back-to-back submissions -- I had these queued up and had delayed submission.\r\n\r\nIn an earlier version of the RFC, the sentence quoted in the Original Text read\r\n\r\n\"A Session-Reflector might be able to put in the Timestamp field only a \"SW Local\" (see Table 6) timestamp.\" \r\n\r\n(see, inter alia, https://datatracker.ietf.org/doc/html/draft-ietf-ippm-stamp-option-tlv-02#section-4.7)\r\n\r\nI have confirmed with one of the draft's original authors that a simple copy editing error was the cause of this tiny mistake. The sentence at the beginning of section 4.7 is meant to refer to the Timestamp field in the STAMP packet transmitted by the Session Reflector.\r\n\r\nThe earlier draft of this RFC specified that what is currently named the Follow-Up Timestamp field should be named the Timestamp field. The name collision resulted in an overzealous search/replace hiccup. I hope that having the record reflect the correct field name will save future developers from having to scratch their head like I did.\r\n\r\nAs usual, I sincerely appreciate the technical accuracy of the authors of the STAMP-related RFCs. As an implementer, the writing and specificity make it easy to build compliant software. I hope that this errata report is helpful for future implementers.\r\n\r\n==Verifier note\r\n\r\nSee https://mailarchive.ietf.org/arch/msg/ippm/_sK9708NnI79IRif4AFN8LmmkZs/",
+    "submit_date": "2025-10-04",
+    "submitter_name": "William Hawkins",
+    "verifier_id": "",
+    "verifier_name": "Mohamed Boucadair",
+    "update_date": "2025-10-07 07:51:03"
+  }
+]

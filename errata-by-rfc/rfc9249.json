@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "7401",
+    "doc-id": "RFC9249",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Technical",
+    "section": "8",
+    "orig_text": "  identity hmac-sha-256 {\r\n    description\r\n      \"HMAC-SHA-256 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }\r\n\r\n  identity hmac-sha-384 {\r\n    description\r\n      \"HMAC-SHA-384 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }\r\n\r\n  identity hmac-sha-512 {\r\n    description\r\n      \"HMAC-SHA-512 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }",
+    "correct_text": "  identity hmac-sha-256 {\r\n    base crypto-algorithm;\r\n    description\r\n      \"HMAC-SHA-256 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }\r\n\r\n  identity hmac-sha-384 {\r\n    base crypto-algorithm;\r\n    description\r\n      \"HMAC-SHA-384 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }\r\n\r\n  identity hmac-sha-512 {\r\n    base crypto-algorithm;\r\n    description\r\n      \"HMAC-SHA-512 authentication algorithm\";\r\n    reference\r\n      \"SHS: Secure Hash Standard (SHS) (FIPS PUB 180-4)\";\r\n  }",
+    "notes": "The identity definitions of \"hmac-sha-256\", \"hmac-sha-384\" and \"hmac-sha-512\" lack the \"base crypto-algorithm;\" statement and therefore basically cannot be used in the scope of ietf-ntp@2022-07-05.yang.",
+    "submit_date": "2023-03-21",
+    "submitter_name": "Maurice Angermann",
+    "verifier_id": "",
+    "verifier_name": "Erik Kline",
+    "update_date": "2023-04-06 23:02:24"
+  },
+  {
+    "errata_id": "8826",
+    "doc-id": "RFC9249",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8",
+    "orig_text": "  grouping key {\r\n    description\r\n      \"The key\";\r\n    nacm:default-deny-all;\r\n    choice key-string-style {\r\n      description\r\n        \"Key string styles\";\r\n",
+    "correct_text": "  grouping key {\r\n    description\r\n      \"The key\";\r\n    choice key-string-style {\r\n      nacm:default-deny-all;\r\n      description\r\n        \"Key string styles\";\r\n",
+    "notes": "A grouping-stmt is not a data-def-stmt.\r\nOnly the data-def-stmts within a grouping get expanded.\r\nThe data-def-stmts do not inherit other sub-statements of grouping-stmt.\r\nThe external 'nacm' statement appears as a sub-statement of grouping-stmt here.\r\n\r\nFrom RFC 8341\r\n         The 'default-deny-all' extension MAY appear within a data\r\n          definition statement, 'rpc' statement, or 'notification'\r\n          statement.  It is ignored otherwise.",
+    "submit_date": "2026-03-13",
+    "submitter_name": "Andy Bierman",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

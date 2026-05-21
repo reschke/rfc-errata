@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "errata_id": "4812",
+    "doc-id": "RFC5882",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "10.1.2",
+    "orig_text": "   IS-IS may be used to support only one data protocol, or multiple data\r\n   protocols.  [ISIS] specifies a common topology for multiple data\r\n   protocols, but work is under way to support multiple topologies.  If\r\n   multiple topologies are used to support multiple data protocols (or\r\n   multiple classes of service of the same data protocol), the topology-\r\n   specific path associated with a failing BFD session should no longer\r\n   be advertised in IS-IS Label Switched Paths (LSPs) in order to signal\r\n   a lack of connectivity.",
+    "correct_text": "   IS-IS may be used to support only one data protocol, or multiple data\r\n   protocols.  [ISIS] specifies a common topology for multiple data\r\n   protocols, but work is under way to support multiple topologies.  If\r\n   multiple topologies are used to support multiple data protocols (or\r\n   multiple classes of service of the same data protocol), the topology-\r\n   specific path associated with a failing BFD session should no longer\r\n   be advertised in IS-IS Link State Packets (LSPs) in order to signal\r\n   a lack of connectivity.",
+    "notes": "In the context of this section (that discusses usage of BFD sessions for detection of failure of an IS-IS adjacency) the abbreviation \"LSP\" should be expanded as \"Link State Packet\" and not as \"Label Switched Path\". \r\n\r\nFrom my POV this is an editorial erratum since I believe the readers of the RFC understand what the authors wanted to say.",
+    "submit_date": "2016-09-27",
+    "submitter_name": "Alexander (\"Sasha\") Vainshtein",
+    "verifier_id": "",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "8921",
+    "doc-id": "RFC5882",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "4.3.2.2",
+    "orig_text": "   Control protocols that cannot signal a planned restart depend on the\r\n   recently restarted system to signal the Graceful Restart prior to the\r\n   control protocol adjacency timeout.  In most cases, whether the\r\n   restart is planned or unplanned, it is likely that the BFD session\r\n   will time out prior to the onset of Graceful Restart, in which case a\r\n   topology change SHOULD be signaled in the control protocol as\r\n   specified in Section 3.2.",
+    "correct_text": "   Control protocols that cannot signal a planned restart depend on the\r\n   recently restarted system to signal the Graceful Restart prior to the\r\n   control protocol adjacency timeout.  In most cases, whether the\r\n   restart is planned or unplanned, it is likely that the BFD session\r\n   will time out prior to the onset of Graceful Restart, in which case a\r\n   topology change SHOULD be signaled in the control protocol as\r\n   specified in Section 4.2.",
+    "notes": "In this paragraph Section 3.2 should read as Section 4.2. From the history of this document, it can be seen that draft-ietf-bfd-generic-04 introduced a new section 3 while the reference to the original section 3.2 was not updated.",
+    "submit_date": "2026-05-19",
+    "submitter_name": "Xiao Min",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8922",
+    "doc-id": "RFC5882",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "10.1.2",
+    "orig_text": "   The basic mechanisms are covered in Section 3 above.  At this time,\r\n   OSPFv2 and OSPFv3 carry routing information for a single data\r\n   protocol (IPv4 and IPv6, respectively) so when it is desired to\r\n   signal a topology change after a BFD session failure, this should be\r\n   done by tearing down the corresponding OSPF neighbor.\r\n\r\n   IS-IS may be used to support only one data protocol, or multiple data\r\n   protocols.  [ISIS] specifies a common topology for multiple data\r\n   protocols, but work is under way to support multiple topologies.  If\r\n   multiple topologies are used to support multiple data protocols (or\r\n   multiple classes of service of the same data protocol), the topology-\r\n   specific path associated with a failing BFD session should no longer\r\n   be advertised in IS-IS Label Switched Paths (LSPs) in order to signal\r\n   a lack of connectivity.  Otherwise, a failing BFD session should be\r\n   signaled by simulating an IS-IS adjacency failure.\r\n\r\n   OSPF has a planned restart signaling mechanism, whereas IS-IS does\r\n   not.  The appropriate mechanisms outlined in Section 3.3 should be\r\n   used.",
+    "correct_text": "   The basic mechanisms are covered in Section 4 above.  At this time,\r\n   OSPFv2 and OSPFv3 carry routing information for a single data\r\n   protocol (IPv4 and IPv6, respectively) so when it is desired to\r\n   signal a topology change after a BFD session failure, this should be\r\n   done by tearing down the corresponding OSPF neighbor.\r\n\r\n   IS-IS may be used to support only one data protocol, or multiple data\r\n   protocols.  [ISIS] specifies a common topology for multiple data\r\n   protocols, but work is under way to support multiple topologies.  If\r\n   multiple topologies are used to support multiple data protocols (or\r\n   multiple classes of service of the same data protocol), the topology-\r\n   specific path associated with a failing BFD session should no longer\r\n   be advertised in IS-IS Label Switched Paths (LSPs) in order to signal\r\n   a lack of connectivity.  Otherwise, a failing BFD session should be\r\n   signaled by simulating an IS-IS adjacency failure.\r\n\r\n   OSPF has a planned restart signaling mechanism, whereas IS-IS does\r\n   not.  The appropriate mechanisms outlined in Section 4.3 should be\r\n   used.",
+    "notes": "In this section, Section 3 should read as Section 4 and Section 3.3 should read as Section 4.3. From the history of this document, it can be seen that draft-ietf-bfd-generic-04 introduced a new section 3 while the references to the original section 3 and section 3.3 were not updated.",
+    "submit_date": "2026-05-19",
+    "submitter_name": "Xiao Min",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8923",
+    "doc-id": "RFC5882",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "10.2",
+    "orig_text": "   [BGP-GRACE] describes a Graceful Restart mechanism for BGP.  If\r\n   Graceful Restart is not taking place on an EBGP session, and the\r\n   corresponding BFD session fails, the EBGP session should be torn down\r\n   in accordance with Section 3.2.",
+    "correct_text": "   [BGP-GRACE] describes a Graceful Restart mechanism for BGP.  If\r\n   Graceful Restart is not taking place on an EBGP session, and the\r\n   corresponding BFD session fails, the EBGP session should be torn down\r\n   in accordance with Section 4.2.",
+    "notes": "In this paragraph Section 3.2 should read as Section 4.2. From the history of this document, it can be seen that draft-ietf-bfd-generic-04 introduced a new section 3 while the reference to the original section 3.2 was not updated.",
+    "submit_date": "2026-05-19",
+    "submitter_name": "Xiao Min",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "7630",
+    "doc-id": "RFC826",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "The Problem:",
+    "orig_text": "The world is a jungle in general, and the networking game\r\ncontributes many animals.  ",
+    "correct_text": "The world is a jungle in general, and in the networking game\r\ncontribute many animals.  ",
+    "notes": "The original text makes no sense.\n --VERIFIER NOTES-- \nWhile the original text is somewhat idiomatic, it makes perfect sense. The proposed rewrite, on the other hand, doesn't.",
+    "submit_date": "2023-09-05",
+    "submitter_name": "enea eugen",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-12 01:23:15"
+  },
+  {
+    "errata_id": "7909",
+    "doc-id": "RFC826",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "The \"Packet format\" section says:",
+    "orig_text": "        16.bit: (ar$pro) Protocol address space.  For Ethernet\r\n                         hardware, this is from the set of type\r\n                         fields ether_typ$<protocol>.",
+    "correct_text": "        16.bit: (ar$pro) Protocol address space.  For Ethernet\r\n                         hardware, this is from the set of type\r\n                         fields ether_type$<protocol>.",
+    "notes": "In original text last letter \"e\" is missing in \"ether_type$<protocol>\".\r\n\r\n--- Verifier note (Eric Vyncke, INT AD) ---\r\nAfter reclassification into \"editorial\", this erratum is approved.",
+    "submit_date": "2024-04-26",
+    "submitter_name": "Alexander Bondarenko",
+    "verifier_id": "",
+    "verifier_name": "Eric Vyncke",
+    "update_date": "2024-04-26 18:01:17"
+  }
+]

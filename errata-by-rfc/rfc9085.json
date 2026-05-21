@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "errata_id": "6666",
+    "doc-id": "RFC9085",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.3.1",
+    "orig_text": "   Flags:  1-octet value that should be set as:\r\n\r\n      *  IS-IS Prefix-SID flags as defined in Section 2.1.1 of\r\n         [RFC8667].\r\n\r\n      *  OSPFv2 Prefix-SID flags as defined in Section 5 of [RFC8665].\r\n\r\n      *  OSPFv3 Prefix-SID flags as defined in Section 6 of [RFC8665].",
+    "correct_text": "   Flags:  1-octet value that should be set as:\r\n\r\n      *  IS-IS Prefix-SID flags as defined in Section 2.1.1 of\r\n         [RFC8667].\r\n\r\n      *  OSPFv2 Prefix-SID flags as defined in Section 5 of [RFC8665].\r\n\r\n      *  OSPFv3 Prefix-SID flags as defined in Section 6 of [RFC8666].",
+    "notes": "The reference to the OSPFv3 spec in the text above needs to be corrected to RFC8666 instead of RFC8665.\r\n\r\nThis editorial error seems to have crept in during the RFC publication process. The draft version submitted by the WG and reviewed by the IESG has the correct text : https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ls-segment-routing-ext-18#section-2.3.1",
+    "submit_date": "2021-08-27",
+    "submitter_name": "Ketan Talaulikar",
+    "verifier_id": "",
+    "verifier_name": "Alvaro Retana",
+    "update_date": "2021-09-03 20:17:11"
+  },
+  {
+    "errata_id": "7734",
+    "doc-id": "RFC9085",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.3.5",
+    "orig_text": "11 or 12 octets depending on the label or index encoding of the SID.",
+    "correct_text": "15 or 16 octets depending on the label or index encoding of the SID.",
+    "notes": "Length of the TLV does not account for the Prefix-SID Sub-TLVs type and length fields: 2 octets each = 4 octets in total.\r\nThis is valid for all variants: IS-IS, OSPFv2 and OSPFv3.\r\n\r\nNote: see also https://mailarchive.ietf.org/arch/msg/idr/G_3KN-XXqyXbSXO1doiNJbK_gIA/",
+    "submit_date": "2023-12-18",
+    "submitter_name": "Alexandru Bran",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-12 17:47:46"
+  },
+  {
+    "errata_id": "7736",
+    "doc-id": "RFC9085",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "2.3.5",
+    "orig_text": "   A Prefix NLRI, that has been advertised with a Range TLV, is\r\n   considered a normal routing prefix (i.e., prefix reachability) only\r\n   when there is also an IGP metric TLV (TLV 1095) associated it.\r\n   Otherwise, it is considered only as the first prefix in the range for\r\n   prefix-to-SID mapping advertisement.",
+    "correct_text": "   A Prefix NLRI, that has been advertised with a Range TLV, is\r\n   considered a normal routing prefix (i.e., prefix reachability) only\r\n   when there is also a Prefix Metric TLV (TLV 1155) associated with it.\r\n   Otherwise, it is considered only as the first prefix in the range for\r\n   prefix-to-SID mapping advertisement.",
+    "notes": "The current text is referring to the wrong BGP-LS TLV. Since the Range TLV is associated with a Prefix NLRI, the \"Prefix Metric TLV (TLV 1155)\" should be referenced here since the \"IGP metric TLV (TLV 1095)\" is associated with a Link NLRI.\r\n\r\nVerifier note: in addition to the fix proposed by Ketan, I added a preposition: \"associated with it\", and corrected an indefinite article: \"a Prefix\".",
+    "submit_date": "2023-12-20",
+    "submitter_name": "Ketan Talaulikar",
+    "verifier_id": "",
+    "verifier_name": "John Scudder",
+    "update_date": "2024-01-16 18:09:53"
+  }
+]

@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "8626",
+    "doc-id": "RFC9554",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.5",
+    "orig_text": "Property parameters:\r\n    [...] In either case, it MUST NOT be assigned more than once.\r\n\r\n\r\nFormat definition:\r\n\r\nsocialpr-param = \"VALUE=uri\" / \"VALUE=text\" /\r\n                 service-type-param / any-param",
+    "correct_text": "Property parameters:\r\n    [...] In either case, it MUST NOT be assigned more than once.\r\n    The USERNAME parameter MAY be assigned if the value type is URI.\r\n\r\n\r\nFormat definition:\r\n\r\nsocialpr-param = \"VALUE=uri\" / \"VALUE=text\" /\r\n                 service-type-param / username-param /\r\n                 any-param",
+    "notes": "This clarifies that the USERNAME parameter is likely to be set on the SOCIALPROFILE property. The USERNAME parameter definition in section 4.10 does explicitly describe this relation. The SOCIALPROFILE property definition should do, too.",
+    "submit_date": "2025-11-03",
+    "submitter_name": "Robert Stepanek",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": null
+  },
+  {
+    "errata_id": "8652",
+    "doc-id": "RFC9554",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.9",
+    "orig_text": "Example(s):\r\n\r\n    SOCIALPROFILE;SERVICE-TYPE=Mastodon:https://example.com/@foo\r\n",
+    "correct_text": "Example(s):\r\n\r\n    SOCIALPROFILE;SERVICE-TYPE=\"Mastodon\":https://example.com/@foo\r\n",
+    "notes": "The description of the SERVICE-TYPE parameter states that its value is case-sensitive. RFC 6350 allows case-sensitive, unquoted parameter values but its exemplifies the only case-sensitive parameter SORT-AS with a quoted parameter value. Doing so for the SERVICE-TYPE parameter too indicates to implementers to use quoted strings and is likely to improve interoperability.",
+    "submit_date": "2025-11-21",
+    "submitter_name": "Robert Stepanek",
+    "verifier_id": "",
+    "verifier_name": "Orie Steele",
+    "update_date": "2025-12-03 00:19:25"
+  }
+]

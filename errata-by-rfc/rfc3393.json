@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "errata_id": "6981",
+    "doc-id": "RFC3393",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.7.1",
+    "orig_text": "      It is the claim here (see remarks in section 1.3) that the effects\r\n      of skew are rather small over the time scales that we are\r\n      discussing here, since temperature variations in a system tend to\r\n      be slow relative to packet inter-transmission times and the range\r\n      of drift is so small.\r\n",
+    "correct_text": "      It is the claim here (see remarks in section 1.4) that the effects\r\n      of skew are rather small over the time scales that we are\r\n      discussing here, since temperature variations in a system tend to\r\n      be slow relative to packet inter-transmission times and the range\r\n      of drift is so small.\r\n",
+    "notes": "Incorrect reference - 1.3 instead 1.4",
+    "submit_date": "2022-05-26",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2022-06-17 00:36:48"
+  },
+  {
+    "errata_id": "8282",
+    "doc-id": "RFC3393",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2.4.",
+    "orig_text": "T1 is the wire-time at which Scr sent the first bit of the first packet, \r\nand T2 is the wire-time at which Src sent the first bit of the second packet.",
+    "correct_text": "T1 is the wire-time at which Src sent the first bit of the first packet, \r\nand T2 is the wire-time at which Src sent the first bit of the second packet.",
+    "notes": "The first mention of Scr is misspelled. It should be Src.",
+    "submit_date": "2025-02-05",
+    "submitter_name": "Pablo Navarro",
+    "verifier_id": "",
+    "verifier_name": "RFC Editor",
+    "update_date": "2025-02-06 16:14:53"
+  }
+]
