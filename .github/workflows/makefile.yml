@@ -28,4 +28,6 @@ jobs:
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add errata-by-rfc/rfc*json errata.json
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Update errata" && git push)
+        # git diff --quiet && git diff --staged --quiet || (git commit -m "Update errata" && git push)
+        FILES=$(git diff --cached --name-only -- '*.ts' | xargs -n1 basename | paste -sd ', ' -)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Updated $FILES"  && git push)
