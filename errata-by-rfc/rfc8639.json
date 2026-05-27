@@ -32,17 +32,17 @@
   {
     "errata_id": "8073",
     "doc-id": "RFC8639",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4",
-    "orig_text": "  identity configurable-encoding {\r\n    description\r\n      \"If a transport identity derives from this identity, it means\r\n       that it supports configurable encodings.  An example of a\r\n       configurable encoding might be a new identity such as",
-    "correct_text": "  identity configurable-encoding {\r\n    base transport;\r\n    description\r\n      \"If a transport identity derives from this identity, it means\r\n       that it supports configurable encodings.  An example of a\r\n       configurable encoding might be a new identity such as",
-    "notes": "This identity is incorrectly located in the section 'identities for encodings'\r\nIt is actually an identity for the 'transport' leaf.\r\nThe base is missing making it incorrect\r\n(page 44)",
+    "orig_text": "identity configurable-encoding {\r\n    description\r\n      \"If a transport identity derives from this identity, it means\r\n       that it supports configurable encodings.  An example of a\r\n       configurable encoding might be a new identity such as",
+    "correct_text": "identity configurable-encoding {\r\n    base transport;\r\n    description\r\n      \"If a transport identity derives from this identity, it means\r\n       that it supports configurable encodings.  An example of a\r\n       configurable encoding might be a new identity such as",
+    "notes": "This identity is incorrectly located in the section 'identities for encodings'\r\nIt is actually an identity for the 'transport' leaf.\r\nThe base is missing making it incorrect\r\n(page 44)\r\n\r\nVerifier Note: The configurable-encoding identity is intentionally designed as a capability marker (mixin), not a subtype of transport. Transport identities that support configurable encodings should derive from both transport and configurable-encoding. The when condition on the encoding leaf functions correctly with this design. Appendix A demonstrates the valid case of a transport that does not support configurable encodings. Adding base transport to configurable-encoding would change the semantics by making any identity derived from it transitively a transport, which is not the intent.",
     "submit_date": "2024-08-11",
     "submitter_name": "Andy Bierman",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-05-26 22:44:03"
   },
   {
     "errata_id": "8427",

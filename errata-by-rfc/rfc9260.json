@@ -92,17 +92,17 @@
   {
     "errata_id": "8402",
     "doc-id": "RFC9260",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.1.6",
     "orig_text": "If the T1-init timer expires at \"A\" after the INIT or COOKIE ECHO\r\nchunks are sent, the same INIT or COOKIE ECHO chunk with the same\r\nInitiate Tag (i.e., Tag_A) or State Cookie is retransmitted and the\r\ntimer is restarted.",
-    "correct_text": "If the T1-init timer expires at \"A\" after the INIT chunk is sent, \r\nthe same INIT chunk with the same Initiate Tag (i.e., Tag_A) is \r\nretransmitted and the T1-init timer is restarted. If the T1-cookie \r\ntimer expires at \"A\" after the the COOKIE ECHO chunk is sent, the \r\nsame COOKIE ECHO chunk with the same State Cookie is retransmitted \r\nand the T1-cookie timer is restarted.",
-    "notes": "The original text said the T1-init timer is cancelled at \"A\" upon receipt of INIT ACK chunk from \"Z\", so it is impossible that the T1-init timer expires at \"A\" after the COOKIE ECHO chunk is sent (since COOKIE ECHO chunk is immediately sent after INIT ACK chunk is received). The text is updated to clarify two cases.",
+    "correct_text": "If the T1-init timer expires at \"A\" after the INIT chunk is sent, the\r\nsame INIT chunk with the same Initiate Tag (i.e., Tag_A) is retransmitted\r\nand the T1-init timer is restarted.\r\n\r\nIf the T1-cookie timer expires at \"A\" after the the COOKIE ECHO chunk\r\nis sent, the same COOKIE ECHO chunk with the same State Cookie is\r\nretransmitted and the T1-cookie timer is restarted.",
+    "notes": "The original text said the T1-init timer is cancelled at \"A\" upon receipt of INIT ACK chunk from \"Z\", so it is impossible that the T1-init timer expires at \"A\" after the COOKIE ECHO chunk is sent (since COOKIE ECHO chunk is immediately sent after INIT ACK chunk is received). The text is updated to clarify two cases. Text suggestion expanded by M. Tuexen.",
     "submit_date": "2025-05-02",
     "submitter_name": "Iñaki Baz Castillo",
     "verifier_id": "",
-    "verifier_name": "G Fairhurst",
-    "update_date": "2026-02-12 08:06:04"
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-05-26 13:43:43"
   },
   {
     "errata_id": "8772",

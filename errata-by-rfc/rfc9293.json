@@ -122,7 +122,7 @@
   {
     "errata_id": "8916",
     "doc-id": "RFC9293",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.3.2.",
     "orig_text": "Arc connecting LAST-ACK with CLOSE.\r\n\r\nASCII diagram:\r\n\r\n  | rcv ACK of FIN   -------   |                          CLOSE  |\r\n  | --------------   snd ACK   |                         ------- |\r\n  V        x                   V                         snd FIN V\r\n+---------+               +---------+                    +---------+\r\n|FINWAIT-2|               | CLOSING |                    | LAST-ACK|\r\n+---------+               +---------+                    +---------+\r\n  |              rcv ACK of FIN |                 rcv ACK of FIN |\r\n  |  rcv FIN     -------------- |    Timeout=2MSL -------------- |\r\n  |  -------            x       V    ------------        x       V\r\n   \\ snd ACK              +---------+delete TCB          +---------+\r\n     -------------------->|TIME-WAIT|------------------->| CLOSED  |\r\n                          +---------+                    +---------+\r\nFigure 5: TCP Connection State Diagram",
@@ -131,7 +131,7 @@
     "submit_date": "2026-05-18",
     "submitter_name": "Martin S Olivier",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-05-26 13:30:12"
   }
 ]

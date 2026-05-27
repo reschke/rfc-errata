@@ -107,7 +107,7 @@
   {
     "errata_id": "8875",
     "doc-id": "RFC9000",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "8.2.2",
     "orig_text": "On receiving a PATH_CHALLENGE frame, an endpoint MUST respond by\r\nechoing the data contained in the PATH_CHALLENGE frame in a\r\nPATH_RESPONSE frame.  An endpoint MUST NOT delay transmission of a\r\npacket containing a PATH_RESPONSE frame unless constrained by\r\ncongestion control.",
@@ -116,7 +116,7 @@
     "submit_date": "2026-04-10",
     "submitter_name": "Abhinav Agarwal",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-05-26 13:45:30"
   }
 ]
