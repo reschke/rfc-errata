@@ -88,5 +88,20 @@
     "verifier_id": "",
     "verifier_name": "Cullen Jennings",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "8926",
+    "doc-id": "RFC4028",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.2",
+    "orig_text": "If, however, the proxy remembers that\r\n   the UAC did support the session timer, additional processing is\r\n   needed.",
+    "correct_text": "If, however, the proxy remembers that\r\n   the UAC did support the session timer, and UAC's desired refresher is not set to 'uas',\r\n   additional processing is needed.",
+    "notes": "A UAC MAY include the refresher parameter with value 'uas' in the Session-Expires header of an initial INVITE request, explicitly indicating that it is not willing to act as the refreshing party and expects the UAS to perform session refresh. In such a case, a proxy SHOULD NOT override the refresher parameter to 'uac' and SHOULD NOT insert the 'timer' option tag into any Require header field in the response. The proxy SHOULD forward the response upstream normally.\r\n\r\nNote that Section 7.2 defines a case: when no Require or Session-Expires header field is present in the 2xx response (i.e., the UAS does not support the session timer extension), the UAC that still wishes to use the session timer performs refresh itself.",
+    "submit_date": "2026-05-25",
+    "submitter_name": "Tran Minh Duc",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-05-28 16:57:59"
   }
 ]

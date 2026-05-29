@@ -198,16 +198,16 @@
     "errata_id": "6433",
     "doc-id": "RFC7208",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "3",
-    "orig_text": "   Each SPF record is placed in the DNS tree at the owner name it\r\n   pertains to, not in a subdomain under the owner name.  This is\r\n   similar to how SRV records [RFC2782] are done.",
-    "correct_text": "   Each SPF record is placed in the DNS tree at the owner name it\r\n   pertains to, not in a subdomain under the owner name.  This is\r\n   different from how SRV records [RFC2782] are done.",
-    "notes": "SRV records are placed at specific subdomains, which is not the case for SPF records. (I've chosen Editorial instead of Technical because the meaning of this paragraph should be clear from the context and thus this feels more like a typo.)",
+    "orig_text": "Each SPF record is placed in the DNS tree at the owner name it\r\n   pertains to, not in a subdomain under the owner name.  This is\r\n   similar to how SRV records [RFC2782] are done.",
+    "correct_text": "Each SPF record is placed in the DNS tree at the owner name it\r\n   pertains to, not in a subdomain under the owner name.  This is\r\n   different from how SRV records [RFC2782] are done.",
+    "notes": "SRV records are placed at specific subdomains, which is not the case for SPF records. (I've chosen Editorial instead of Technical because the meaning of this paragraph should be clear from the context and thus this feels more like a typo.)\r\n\r\nRPC changed from \"Editorial\" to \"Technical\": Unable to verify, requires review.",
     "submit_date": "2021-02-17",
     "submitter_name": "Kaspar Etter",
     "verifier_id": "",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2026-05-28 17:11:45"
   },
   {
     "errata_id": "6595",
