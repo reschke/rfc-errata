@@ -58,5 +58,20 @@
     "verifier_id": "",
     "verifier_name": "Alvaro Retana",
     "update_date": "2022-03-10 14:40:26"
+  },
+  {
+    "errata_id": "8929",
+    "doc-id": "RFC8175",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "12.18",
+    "orig_text": "The Link Characteristics Request Message MUST also contain at least\r\n   one of each of the following Data Items:",
+    "correct_text": "The Link Characteristics Request Message MUST also contain at least\r\n   one of the following Data Items:",
+    "notes": "The following paragraph makes it clear that there can be only one or two of the three listed items. Thus \"of each\" should be removed. (Errata originally reported on the MANET mailing list by Henning Rogge https://mailarchive.ietf.org/arch/msg/manet/Hy4W-0awcEh73S_bxx-H4Bhc3nQ/ )",
+    "submit_date": "2026-06-02",
+    "submitter_name": "Donald Eastlake",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-03 20:45:50"
   }
 ]
