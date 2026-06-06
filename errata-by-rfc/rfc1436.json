@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2023-06-23 20:32:11"
+  },
+  {
+    "errata_id": "8962",
+    "doc-id": "RFC1436",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "C: Opens Connection.\r\nC: Sends Selector String, Tab, Search String.\r\nS: Sends Menu Entity.",
+    "correct_text": "C: Opens Connection.\r\nS: Accepts Connection\r\nC: Sends Selector String, Tab, Search String.\r\nS: Sends Menu Entity.",
+    "notes": "The \"Full-Text Search Transaction\" section lacks the \"S: Accepts Connection\" step of the transaction.\r\n\r\n(tangentially, the \"Accepts Connection\" vs \"Accepts connection\" is inconsistent throughout the document, so it wouldn't hurt to choose one capitalization and stick to it)",
+    "submit_date": "2026-06-04",
+    "submitter_name": "Tim Chase",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-05 19:01:52"
   }
 ]
