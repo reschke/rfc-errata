@@ -313,5 +313,20 @@
     "verifier_id": "",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2024-03-22 02:39:17"
+  },
+  {
+    "errata_id": "8998",
+    "doc-id": "RFC6376",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.7",
+    "orig_text": "data-hash:  is the output from using the hash-alg algorithm, to hash\r\n               the header including the DKIM-Signature header, and the\r\n               body hash.",
+    "correct_text": "data-hash:  is the output from using the hash-alg algorithm to hash\r\n               the headers including the DKIM-Signature header.",
+    "notes": "The body hash is already included in the DKIM-Signature header and is not added to the hash algorithm input separately. Erratum 5252 already corrects the pseudocode description of data-hash; this corrects the corresponding prose description. I also added a couple of grammatical fixes.",
+    "submit_date": "2026-06-09",
+    "submitter_name": "Roman Donchenko",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-10 18:18:38"
   }
 ]

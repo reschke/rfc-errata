@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "8996",
+    "doc-id": "RFC9149",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "Servers MUST NOT send the \"ticket_request\" extension in any handshake message, including ServerHello or HelloRetryRequest messages. A client MUST abort the connection with an \"illegal_parameter\" alert if the \"ticket_request\" extension is present in any server handshake message.",
+    "correct_text": "Servers MUST NOT send the \"ticket_request\" extension in any handshake message, including ServerHello or HelloRetryRequest messages. A client MUST abort the connection with an \"unsupported_extension\" alert if the \"ticket_request\" extension is present in any server handshake message.",
+    "notes": "RFC 8446 defines the illegal_parameter alert as used when \"A field in the handshake was incorrect or inconsistent with other fields.  This alert is used for errors which conform to the formal protocol syntax but are otherwise incorrect.\", and the unsupported_extension alert as \"Sent by endpoints receiving any handshake message containing an extension known to be prohibited for inclusion in the given handshake message, or including any extensions in a ServerHello or Certificate not first offered in the corresponding ClientHello or CertificateRequest.\". \r\n\r\nThe unsupported_extension alert seems like a direct mapping to the condition described in Section 3 of RFC 9149: the client endpoint received a handshake message containing an extension that's known to be prohibited for inclusion in the given handshake message. In contrast it's harder to draw a straight-line justification for using illegal_parameter.",
+    "submit_date": "2026-06-09",
+    "submitter_name": "Daniel McCarney",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-10 18:17:33"
+  }
+]

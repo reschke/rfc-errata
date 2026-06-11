@@ -73,5 +73,20 @@
     "verifier_id": "",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2025-03-18 10:36:24"
+  },
+  {
+    "errata_id": "8999",
+    "doc-id": "RFC9114",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.2.4",
+    "orig_text": "An implementation MUST ignore any parameter with an identifier it does not understand.",
+    "correct_text": "An implementation MUST ignore any parameter with an identifier it does not understand, except for reserved setting identifiers as specified in Section 7.2.4.1.",
+    "notes": "Section 7.2.4 states that a receiver MUST ignore any SETTINGS parameter with an identifier it does not understand. However, Section 7.2.4.1 states that reserved setting identifiers (0x00, 0x02-0x05, which were defined in HTTP/2 but have no corresponding HTTP/3 setting) MUST NOT be sent, and their receipt MUST be treated as a connection error of type H3_SETTINGS_ERROR.\r\n\r\nThese two rules contradict each other for reserved identifiers: the general rule says \"ignore\", but the specific rule says \"treat as connection error\". A receiver that does not understand a reserved identifier would follow the general rule and ignore it, when it should actually treat it as a connection error.\r\n\r\nThe suggested fix adds an exception clause to the general rule, making it clear that the reserved identifier handling in Section 7.2.4.1 takes precedence.",
+    "submit_date": "2026-06-10",
+    "submitter_name": "zhangph",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-10 18:19:01"
   }
 ]
