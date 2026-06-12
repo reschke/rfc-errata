@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": "Francesca Palombini",
     "update_date": "2024-01-16 14:58:15"
+  },
+  {
+    "errata_id": "9004",
+    "doc-id": "RFC9111",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.5",
+    "orig_text": "A shared cache MUST NOT use a cached response to a request with an\r\nAuthorization header field (Section 11.6.2 of [HTTP]) to satisfy any\r\nsubsequent request unless the response contains a Cache-Control field\r\nwith a response directive (Section 5.2.2) that allows it to be stored\r\nby a shared cache, and the cache conforms to the requirements of that\r\ndirective for that response.  In this specification, the following\r\nresponse directives have such an effect: must-revalidate\r\n(Section 5.2.2.2), public (Section 5.2.2.9), and s-maxage\r\n(Section 5.2.2.10).",
+    "correct_text": "A shared cache MUST NOT use a cached response to a request with an\r\nAuthorization header field (Section 11.6.2 of [HTTP]) to satisfy any\r\nsubsequent request unless the response contains a Cache-Control field\r\nwith a response directive (Section 5.2.2) that allows it to be stored\r\nby a shared cache, and the cache conforms to the requirements of that\r\ndirective for that response.  In this specification, the following\r\nresponse directives have such an effect: must-revalidate\r\n(Section 5.2.2.2), public (Section 5.2.2.9), and s-maxage\r\n(Section 5.2.2.10).  Note that proxy-revalidate (Section 5.2.2.8) is\r\nnot included here: although Section 5.2.2.8 states it is analogous to\r\nmust-revalidate, it governs revalidation behavior after a response\r\nbecomes stale and does not itself authorize a shared cache to store a\r\nresponse to an authenticated request.",
+    "notes": "Section 5.2.2.8 states that proxy-revalidate \"is analogous to must-revalidate (Section 5.2.2.2), except that proxy-revalidate does not apply to private caches\" — i.e., proxy-revalidate is the shared-cache-specific counterpart of must-revalidate. However, the list in Section 3.5 of response directives that allow a shared cache to store a response to an authenticated request includes must-revalidate but omits proxy-revalidate. This creates an apparent inconsistency between Sections 3.5 and 5.2.2.8. This is submitted as Editorial. The proposed corrected text adds a clarifying note explaining why proxy-revalidate is excluded (it governs revalidation after staleness, not storage authorization), so the relationship between the two sections is made explicit and reader confusion is removed. No change to caching behavior is requested.",
+    "submit_date": "2026-06-11",
+    "submitter_name": "zhangph",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-11 18:06:23"
   }
 ]

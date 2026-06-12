@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "9001",
+    "doc-id": "RFC9721",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Abstract",
+    "orig_text": "The extensions are backward compatible with existing EVPN-IRB implementations and aim to optimize network performance in scenarios involving frequent IP address mobility.",
+    "correct_text": "The extensions while backwards incompatible, allow EVPN-IRB implementations to deterministically handle scenarios involving frequent IP address mobility",
+    "notes": "The mobility procedures defined in RFC9721 does not seem backwards compatible with the procedures defined in RFC7432. \r\n\r\nExample:\r\n\r\nPremise: \r\n\r\n1. An RFC7432 speaker has MAC Mx with sequence number = 1\r\n2. An RFC9721 speaker has MAC My with sequence number = 2\r\n\r\nSequence of Events:\r\n\r\n1. The RFC9721 speaker learns a local ARP for IPx-My, and advertised MAC-IP route with sequence number 2\r\n2. IPx moves to be behind RFC7432 speaker\r\n3. RFC7432 speaker would simply advertise IPx-Mx with sequence number 1\r\n4. When RFC9721 speaker receives the MAC-IP route advertised by RFC7432 for IPx-Mx, it will be unable to remove it's local ARP binding because the remote route has an inferior sequence number.\r\n\r\nThis makes the schemes not compatible with each other.",
+    "submit_date": "2026-06-11",
+    "submitter_name": "Anand Narayanan",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-11 18:04:53"
+  },
+  {
+    "errata_id": "9002",
+    "doc-id": "RFC9721",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Abstract",
+    "orig_text": "The extensions are backward compatible with existing EVPN-IRB implementations and aim to optimize network performance in scenarios involving frequent IP address mobility.",
+    "correct_text": "The extensions while backwards incompatible, allow EVPN-IRB implementations to deterministically handle scenarios involving frequent IP address mobility",
+    "notes": "The mobility procedures defined in RFC9721 does not seem backwards compatible with the procedures defined in RFC7432. \r\n\r\nExample:\r\n\r\nPremise: \r\n\r\n1. An RFC7432 speaker has MAC Mx with sequence number = 1\r\n2. An RFC9721 speaker has MAC My with sequence number = 2\r\n\r\nSequence of Events:\r\n\r\n1. The RFC9721 speaker learns a local ARP for IPx-My, and advertised MAC-IP route with sequence number 2\r\n2. IPx moves to be behind RFC7432 speaker\r\n3. RFC7432 speaker would simply advertise IPx-Mx with sequence number 1\r\n4. When RFC9721 speaker receives the MAC-IP route advertised by RFC7432 for IPx-Mx, it will be unable to remove it's local ARP binding because the remote route has an inferior sequence number.\r\n\r\nThis makes the schemes not compatible with each other.",
+    "submit_date": "2026-06-11",
+    "submitter_name": "Anand Narayanan",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-11 18:05:59"
+  }
+]
