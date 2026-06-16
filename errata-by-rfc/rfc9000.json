@@ -122,16 +122,16 @@
   {
     "errata_id": "9003",
     "doc-id": "RFC9000",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "12.5",
     "orig_text": "Note that it is not possible to send the following frames in 0-RTT\r\npackets for various reasons: ACK, CRYPTO, HANDSHAKE_DONE, NEW_TOKEN,\r\nPATH_RESPONSE, and RETIRE_CONNECTION_ID.  A server MAY treat receipt\r\nof these frames in 0-RTT packets as a connection error of type\r\nPROTOCOL_VIOLATION.",
     "correct_text": "Note that it is not possible to send the following frames in 0-RTT\r\npackets for various reasons: ACK, CRYPTO, HANDSHAKE_DONE, NEW_TOKEN,\r\nPATH_RESPONSE, and RETIRE_CONNECTION_ID.  A server MAY treat receipt\r\nof these frames in 0-RTT packets as a connection error of type\r\nPROTOCOL_VIOLATION.  Note that receipt of a NEW_TOKEN frame is always\r\na connection error of type PROTOCOL_VIOLATION, as specified in\r\nSection 19.7, and is not subject to the MAY above.",
-    "notes": "Section 19.7 states unconditionally that \"a server MUST treat receipt of a NEW_TOKEN frame as a connection error of type PROTOCOL_VIOLATION\", because NEW_TOKEN is a server-to-client frame. Section 12.5 lists NEW_TOKEN among the frames for which a server MAY treat receipt in 0-RTT packets as a connection error. For the specific case of a server receiving a NEW_TOKEN frame in a 0-RTT packet, the permissive MAY in Section 12.5 reads as if it could override the unconditional MUST in Section 19.7. While Section 19.7 (being specific to NEW_TOKEN) would normally govern, the spec does not explicitly state this precedence, leaving an apparent normative-strength overlap. This is submitted as Editorial: the proposed note in Section 12.5 clarifies that Section 19.7's MUST takes precedence for NEW_TOKEN in all packet number spaces, removing the ambiguity. (No change to intended behavior is requested, only clarification of the relationship between the two sections.)",
+    "notes": "Section 19.7 states unconditionally that \"a server MUST treat receipt of a NEW_TOKEN frame as a connection error of type PROTOCOL_VIOLATION\", because NEW_TOKEN is a server-to-client frame. Section 12.5 lists NEW_TOKEN among the frames for which a server MAY treat receipt in 0-RTT packets as a connection error. For the specific case of a server receiving a NEW_TOKEN frame in a 0-RTT packet, the permissive MAY in Section 12.5 reads as if it could override the unconditional MUST in Section 19.7. While Section 19.7 (being specific to NEW_TOKEN) would normally govern, the spec does not explicitly state this precedence, leaving an apparent normative-strength overlap. This is submitted as Editorial: the proposed note in Section 12.5 clarifies that Section 19.7's MUST takes precedence for NEW_TOKEN in all packet number spaces, removing the ambiguity. (No change to intended behavior is requested, only clarification of the relationship between the two sections.)\r\n\r\n- It complicates the section to mention NEW_TOKEN this way. The text should be changed when the document is next updated.",
     "submit_date": "2026-06-11",
     "submitter_name": "zhangph",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-11 18:06:11"
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-06-15 07:28:12"
   }
 ]
