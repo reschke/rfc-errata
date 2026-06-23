@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9007",
+    "doc-id": "RFC6572",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "1       1      1      1        80  Message-Authenticator\r\n...\r\n0       0-1    0      0       145  Mobile-Node-Identifier",
+    "correct_text": "1       1      1      1        80  Message-Authenticator [1]\r\n...\r\n0       1      0      0       145  Mobile-Node-Identifier [2]\r\n\r\n[Note 1] This specification does not change the requirements for Message-Authenticator in all Access-* packets.  Instead, it \r\nrequires that Message-Authenticator is present for users of this specification\r\n\r\n[Note 2] The presence of Mobile-Node-Identifier indicates that this specification is being used.",
+    "notes": "The text for [Note 1] and [Note 2] can largely be copied from the notes in the recent errata for RFC 5090.  I didn't save a copy of that text.\r\n\r\nThis errata is mainly for implementers.  We do not expect to update this specification.",
+    "submit_date": "2026-06-21",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-22 19:30:24"
+  }
+]

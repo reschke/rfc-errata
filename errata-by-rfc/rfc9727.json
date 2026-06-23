@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9009",
+    "doc-id": "RFC9727",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1",
+    "orig_text": "\"api-catalog\": \"https://www.example.net/.well-known/api-catalog\"",
+    "correct_text": "\"api-catalog\": [\r\n {\r\n  \"href\": \"https://www.example.net/.well-known/api-catalog\"\r\n }\r\n]",
+    "notes": "Section 4.2.2 of RFC 9264 says:\r\n- \"The value of the \"linkset\" member is an array in which a distinct JSON object -- the \"link context object\" (see Section 4.2.2) -- is used \r\nto represent links that have the same link context.\"\r\n- \"Even if there is only one link target object, it MUST be wrapped in an array.\"",
+    "submit_date": "2026-06-21",
+    "submitter_name": "Ben van Hartingsveldt",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-22 19:31:59"
+  }
+]

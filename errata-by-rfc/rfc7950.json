@@ -373,5 +373,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9005",
+    "doc-id": "RFC7950",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.1",
+    "orig_text": "o  All referential integrity constraints defined via the \"path\" statement MUST be satisfied.",
+    "correct_text": "o All referential integrity constraints defined by the value of a leaf with the \"instance-identifier\" type or via the \"path\" statement of the \"leafref\" type MUST be satisfied if the \"require-instance\" property for that type is true.",
+    "notes": "The original bullet item has two problems:\r\n\r\n1. Its formulation was adopted from RFC 6020 without taking into account that the \"require-instance\" statement was added to the \"leafref\" type in YANG 1.1.\r\n\r\n2. The \"instance-identifier\" type defines another referential integrity constraint that should be treated the same as the \"leafref\" constraint.",
+    "submit_date": "2026-06-22",
+    "submitter_name": "Ladislav Lhotka",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-22 19:18:26"
   }
 ]

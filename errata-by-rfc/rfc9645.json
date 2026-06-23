@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": "Mahesh Jethanandani",
     "update_date": "2025-02-13 01:14:12"
+  },
+  {
+    "errata_id": "9012",
+    "doc-id": "RFC9645",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "Thus, in order to support both TLS 1.2 and TLS 1.3, the cipher suites\r\n   part of the \"hello-params-grouping\" grouping should include the\r\n   following three parameters for configuring its permitted TLS\r\n   algorithms: TLS Cipher Suites, TLS SignatureScheme, and TLS Supported\r\n   Groups.",
+    "correct_text": "Thus, in order to support both TLS 1.2 and TLS 1.3, the cipher suites\r\n   part of the \"hello-params-grouping\" grouping should include the\r\n   following three parameters for configuring its permitted TLS\r\n   algorithms: TLS Cipher Suites, TLS SignatureScheme, and TLS Supported\r\n   Groups. Only TLS Cipher Suites is supported in this version.",
+    "notes": "The current text in RFC 9645 describes that the hello-params-grouping includes three parameters: TLS Cipher Suites, \r\nTLS SignatureScheme, and TLS Supported Groups. However, the YANG definition of hello-params-grouping does not \r\ninclude all of these parameters. In particular, only TLS Cipher Suites are currently represented.\r\n\r\nAs a result, the text cannot be realised by implementations using the published YANG model. This has been observed \r\nin practice when attempting to configure TLS 1.3 PSK‑DHE (psk_dhe_ke), where control over supported groups (e.g., named \r\ngroups such as P‑256) is required but not expressible through the existing model.\r\n\r\nBecause modules such as ietf-system-tacacs-plus reuse hello-params-grouping, this limitation propagates to dependent models \r\nand prevents operators from configuring TLS parameters that are required for interoperability and policy enforcement.\r\n\r\nThis erratum clarifies the specification by updating the descriptive text to match the actual contents of the YANG grouping, thereby \r\navoiding ambiguity for implementers and readers.",
+    "submit_date": "2026-06-17",
+    "submitter_name": "Rod Persky",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-22 19:44:29"
   }
 ]
