@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2024-06-11 13:50:20"
+  },
+  {
+    "errata_id": "9014",
+    "doc-id": "RFC8945",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.4",
+    "orig_text": "Instead, the client SHOULD log an error and continue to wait for a signed response until the request times out.",
+    "correct_text": "Instead, the client SHOULD log an error and MUST regard the message as corrupt and discard it.",
+    "notes": "The previous sentence says that the response might have been spoofed or manipulated.\r\n\r\n> Regardless of the RCODE, a message containing a TSIG RR that is unsigned as specified in Section 5.3.2 or that fails verification SHOULD NOT be considered an acceptable response, as it may have been spoofed or manipulated.\r\n\r\nIf the connection between client and server is under attack than waiting for more spoofed or manipulated responses is the worst thing that the client can do is to wait for more spoofed responses to come.\r\n\r\nThere are basically two scenarios:\r\n- off-path attacker guessed port+id -> and we certainly don't want to wait for more spoofed responses to come\r\n- on-path attacker -> all is lost anyway, waiting will not help",
+    "submit_date": "2026-06-24",
+    "submitter_name": "Ondřej Surý",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-24 20:55:01"
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "9013",
+    "doc-id": "RFC10008",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.5",
+    "orig_text": "QUERY /rfc-index.xml HTTP/1.1\r\nHost: example.org\r\nDate: Mon, 8, Sep 2025, 11:00:00 GMT\r\nContent-Type: application/sql\r\nAccept: text/csv\r\nIf-Modified-Since: Sun, 31 Aug 2025, 08:44:00 GMT\r\nVary: Accept-Query, Content-Type\r\n\r\n...Same query, but using SQL...",
+    "correct_text": "QUERY /rfc-index.xml HTTP/1.1\r\nHost: example.org\r\nDate: Mon, 8, Sep 2025, 11:00:00 GMT\r\nContent-Type: application/sql\r\nAccept: text/csv\r\nIf-Modified-Since: Sun, 31 Aug 2025, 08:44:00 GMT\r\n\r\n...Same query, but using SQL...",
+    "notes": "The conditional QUERY request shown in Appendix A.5 contains a \"Vary\"\r\nheader field. \"Vary\" is defined as a response header field\r\n(Section 12.5.5 of RFC 9110); it has no defined semantics when sent in\r\na request. Its appearance in this request message appears to be a\r\ncopy-paste artifact from the corresponding 304 response shown just\r\nbelow, which legitimately carries the same field value. The corrected\r\ntext removes the \"Vary\" line from the request. The \"Vary\" field in the\r\n304 (Not Modified) response is correct and is left unchanged.",
+    "submit_date": "2026-06-23",
+    "submitter_name": "Fatih Serdar Çakmak",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-24 20:51:43"
+  },
+  {
+    "errata_id": "9016",
+    "doc-id": "RFC10008",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.4.2",
+    "orig_text": "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\nLast-Modified: Sun, 17 November 2024, 16:12:01 GMT\r\nETag: \"42-1\"\r\nDate: Sun, 17 Nov 2024, 16:13:17 GMT",
+    "correct_text": "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\nLast-Modified: Sun, 17 Nov 2024 16:12:01 GMT\r\nETag: \"42-1\"\r\nDate: Sun, 17 Nov 2024 16:13:17 GMT",
+    "notes": "The Last-Modified field in this example uses \"November\" spelled out in\r\nfull. The IMF-fixdate format required for HTTP dates (Section 5.6.7 of\r\nRFC 9110) uses a three-letter month abbreviation, i.e. \"Nov\". A strict\r\nparser would reject the full month name. The corrected text uses \"Nov\",\r\nmatching the abbreviation already used in the Date field of the same\r\nresponse and throughout the rest of the document.\r\n\r\n(Note: the same example also contains a stray comma after the year in\r\nboth the Last-Modified and Date fields  \"2024, 16:12:01\" rather than\r\n\"2024 16:12:01\"  which is likewise non-conformant with IMF-fixdate.\r\nThe corrected text removes these as well, since they appear in the same\r\nlines being corrected. This stray-comma pattern recurs in several other\r\nexamples but is not enumerated here.)",
+    "submit_date": "2026-06-23",
+    "submitter_name": "Fatih Serdar Çakmak",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-24 20:55:59"
+  }
+]
