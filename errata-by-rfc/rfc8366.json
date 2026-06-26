@@ -47,16 +47,16 @@
   {
     "errata_id": "9011",
     "doc-id": "RFC8366",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.4",
     "orig_text": "An eContentType of 40 indicates that the content is a JSON-encoded voucher.",
     "correct_text": "An eContentType of 1.2.840.113549.1.9.16.1.40 indicates that the content is a JSON-encoded voucher.",
-    "notes": "Provided the whole OID value, not just the last component.",
+    "notes": "Provided the whole OID value, not just the last component.\r\n\r\nVerifier Note: Please see discussion of this on the mailing list at https://mailarchive.ietf.org/arch/msg/anima/z_THm5rmewf47mwfDhYUiHLZPDQ/.",
     "submit_date": "2026-06-17",
     "submitter_name": "Russ Housley",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-22 19:42:51"
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-06-25 15:28:47"
   }
 ]
