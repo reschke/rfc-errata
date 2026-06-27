@@ -347,32 +347,32 @@
   {
     "errata_id": "7021",
     "doc-id": "RFC7950",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "11",
     "orig_text": "A definition in a published module may be revised in any of the\r\n   following ways:\r\n\r\n   o  An \"enumeration\" type may have new enums added, provided the old\r\n      enums's values do not change.  Note that inserting a new enum\r\n      before an existing enum or reordering existing enums will result\r\n      in new values for the existing enums, unless they have explicit\r\n      values assigned to them.",
     "correct_text": "A definition in a published module may be revised in any of the\r\n   following ways:\r\n\r\n   o  The \"revision-date\" substatement of an existing \"import\" statement \r\n      may get a changed argument.\r\n\r\n\r\n   o  An \"enumeration\" type may have new enums added, provided the old\r\n      enums's values do not change.  Note that inserting a new enum\r\n      before an existing enum or reordering existing enums will result\r\n      in new values for the existing enums, unless they have explicit\r\n      values assigned to them.",
-    "notes": "In section 5.1.1 it is stated that a module may be republished with an updated \"import\" \r\nstatement. This is needed, otherwise a user of the revision-date statement (inside an import) would never be able to migrate to a newer version of the imported module.\r\n\r\nHowever in section 11.  Updating a Module   this change is not listed in the list of allowed updates, thus it is forbidden.",
+    "notes": "In section 5.1.1 it is stated that a module may be republished with an updated \"import\" \r\nstatement. This is needed, otherwise a user of the revision-date statement (inside an import) would never be able to migrate to a newer version of the imported module.\r\n\r\nHowever in section 11.  Updating a Module   this change is not listed in the list of allowed updates, thus it is forbidden.\r\n\r\nVerifier's Note: §5.1.1 already explicitly covers republishing a module with an updated import statement. The omission from §11 does not prohibit this action, and the claim (in the Notes section) that it prevents migration is incorrect — unpinned imports resolve automatically to the latest revision (which contains the new enum definition), and pinned imports are updated as a deliberate new publication already sanctioned by §5.1.1. No gap exists that requires correction.",
     "submit_date": "2022-07-12",
     "submitter_name": "Balazs Lengyel",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-06-26 20:44:24"
   },
   {
     "errata_id": "8784",
     "doc-id": "RFC7950",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "9.12.4",
-    "orig_text": "   If the second member type in the union had been of type \"string\"\r\n   instead of an enumeration, the current value would have matched, and\r\n   the resulting configuration would have been valid.",
-    "correct_text": "   If the second member type in the union had been of type \"string\"\r\n   instead of an enumeration, the current value would have matched, and\r\n   the resulting configuration would have been valid. However, the leaf's\r\n   value must then be reinterpreted if a matching instance is added later.",
-    "notes": "From the example wording, it looks like that the event-to-be-watched is only target instance removal for a successfully resolved leafref. Yet from the specification, one can infer that one indeed needs to watch also for creation of a target instance for unsuccessfully resolved possible leafref, and therefore the example is misleading.",
+    "orig_text": "If the second member type in the union had been of type \"string\"\r\n   instead of an enumeration, the current value would have matched, and\r\n   the resulting configuration would have been valid.",
+    "correct_text": "If the second member type in the union had been of type \"string\"\r\n   instead of an enumeration, the current value would have matched, and\r\n   the resulting configuration would have been valid. However, the leaf's\r\n   value must then be reinterpreted if a matching instance is added later.",
+    "notes": "From the example wording, it looks like that the event-to-be-watched is only target instance removal for a successfully resolved leafref. Yet from the specification, one can infer that one indeed needs to watch also for creation of a target instance for unsuccessfully resolved possible leafref, and therefore the example is misleading.\r\n\r\nVerifier's Note: \r\n\r\nThe concern expressed as part of this Errata does not survive scrutiny of YANG's validation model. Per RFC 7950, validation is holistic: it is triggered by any change to the intended configuration and evaluates the entire datastore without reference to its prior state. Consequently, when a leafref target is created, the same validation pass that validates the new instance also re-evaluates all outstanding leafref constraints, including those nested within union types. No implementation-level asymmetry exists; no special monitoring of target-creation events is required beyond normal change-triggered validation.\r\n\r\nThe existing text in Section 9.12.4 correctly describes the behavior illustrated by its specific example. It does not purport to enumerate all events that trigger re-evaluation — that is a function of the general validation model defined elsewhere in the RFC.\r\n\r\nAdditionally, the sentence at issue sits within a paragraph addressing schema-node concerns while itself speaking to data-node behavior. This is a presentation issue in an example section, not a normative deficiency. If the example text causes implementor confusion, that is appropriate material for a future revision (e.g., yang-next) rather than an erratum to the current specification.",
     "submit_date": "2026-02-25",
     "submitter_name": "Maria Matejka",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Mahesh Jethanandani",
+    "update_date": "2026-06-26 22:06:57"
   },
   {
     "errata_id": "9005",
