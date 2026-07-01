@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "9020",
+    "doc-id": "RFC9935",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "For more detailed ML-KEM specific security considerations regarding this, randomness, misbinding properties, \r\ndecapsulation failures, key reuse, and key checks, refer to [ML-KEM-SEC-CONS].",
+    "correct_text": "For more detailed ML-KEM specific security considerations regarding this, randomness, misbinding properties, \r\ndecapsulation failures, key reuse, and key checks, refer to [ML-KEM-SEC-CONS]. In the X.509 certificate, the \r\ndigital signature should provide a security level equal to or higher than that of the KEM public key.",
+    "notes": "I have observed a potential issue in some application scenarios, where the public key in the certificate may use an ML-KEM-1024 public key, \r\nwhile the corresponding signature is generated using ML-DSA-44. This could lead to a situation in which a lower-security-level digital signature is \r\nused to sign or endorse a higher-security-level public key.\r\n\r\nIn light of this, I would respectfully suggest considering an additional clarification in Section 9. Specifically, after the sentence: “For more detailed \r\nML-KEM specific security considerations regarding this, randomness, misbinding properties, decapsulation failures, key reuse, and key checks, refer \r\nto [ML-KEM-SEC-CONS].”\r\n\r\nIt may be helpful to add the following statement: “In the X.509 certificate, the digital signature should provide a security level equal to or higher than that of the KEM public key.”",
+    "submit_date": "2026-06-25",
+    "submitter_name": "Abel C. H. Chen",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-30 14:30:47"
+  },
+  {
+    "errata_id": "9021",
+    "doc-id": "RFC9935",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "For more detailed ML-KEM specific security considerations regarding this, randomness, misbinding properties, decapsulation failures, key reuse, and \r\nkey checks, refer to [ML-KEM-SEC-CONS].",
+    "correct_text": "For more detailed ML-KEM specific security considerations regarding this, randomness, misbinding properties, decapsulation failures, key reuse, and \r\nkey checks, refer to [ML-KEM-SEC-CONS]. In the X.509 certificate, the digital signature should provide a security level equal to or higher than that of \r\nthe ML-KEM public key.",
+    "notes": "I have observed a potential issue in some application scenarios, where the public key in the certificate may use an ML-KEM-1024 public key, while the \r\ncorresponding signature is generated using ML-DSA-44. This could lead to a situation in which a lower-security-level digital signature is used to sign \r\nor endorse a higher-security-level public key. \r\n\r\nIn light of this, I would respectfully suggest considering an additional clarification in Section 9.\r\n\r\nIt may be helpful to add the following statement: “In the X.509 certificate, the digital signature should provide a security level equal to or higher than that of the ML-KEM public key.”",
+    "submit_date": "2026-06-25",
+    "submitter_name": "Abel C. H. Chen",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-30 14:31:19"
+  }
+]

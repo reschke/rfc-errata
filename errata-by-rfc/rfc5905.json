@@ -543,7 +543,7 @@
     "errata_id": "8904",
     "doc-id": "RFC5905",
     "errata_status_code": "Reported",
-    "errata_type_code": "Editorial",
+    "errata_type_code": "Technical",
     "section": "11.2.2",
     "orig_text": "The candidates of the majority clique are placed on the survivor list\r\n   v in the form of tuples (p, theta_p, psi_p, lambda_p), where p is an\r\n   association identifier, theta_p, psi_p, and stratum_p the current\r\n   offset, jitter and stratum of association p, respectively, and\r\n   lambda_p is a merit factor equal to stratum_p * MAXDIST + lambda,\r\n   where lambda is the root synchronization distance for association p.",
     "correct_text": "The candidates of the majority clique are placed on the survivor list\r\n   v in the form of tuples (p, theta_p, psi_p, lambda_p), where p is an\r\n   association identifier, theta_p, psi_p, and stratum_p the current\r\n   offset, jitter and stratum of association p, respectively, and\r\n   lambda_p is a merit factor equal to stratum_p * MAXDIST + LAMBDA,\r\n   where LAMBDA is the root synchronization distance for association p.",
@@ -552,6 +552,6 @@
     "submitter_name": "Aidan R",
     "verifier_id": "",
     "verifier_name": null,
-    "update_date": null
+    "update_date": "2026-06-30 15:14:05"
   }
 ]

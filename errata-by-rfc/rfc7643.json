@@ -583,5 +583,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9018",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.2",
+    "orig_text": "...\r\n{\r\n        \"name\" : \"sort\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"A complex type that specifies sort result\r\n          options.\",\r\n        \"required\" : true,\r\n        \"returned\" : \"default\",\r\n        \"mutability\" : \"readOnly\",\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"supported\",\r\n            \"type\" : \"boolean\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"A Boolean value specifying whether or not\r\n              the operation is supported.\",\r\n            \"required\" : true,\r\n            \"mutability\" : \"readOnly\",\r\n            \"returned\" : \"default\"\r\n          }\r\n        ]\r\n      },\r\n      {\r\n        \"name\" : \"authenticationSchemes\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A complex type that specifies supported\r\n          authentication scheme properties.\",\r\n        \"required\" : true,\r\n        \"returned\" : \"default\",\r\n        \"mutability\" : \"readOnly\",\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"name\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n...",
+    "correct_text": "...\r\n{\r\n        \"name\" : \"sort\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"A complex type that specifies sort result\r\n          options.\",\r\n        \"required\" : true,\r\n        \"returned\" : \"default\",\r\n        \"mutability\" : \"readOnly\",\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"supported\",\r\n            \"type\" : \"boolean\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"A Boolean value specifying whether or not\r\n              the operation is supported.\",\r\n            \"required\" : true,\r\n            \"mutability\" : \"readOnly\",\r\n            \"returned\" : \"default\"\r\n          }\r\n        ]\r\n      },\r\n{\r\n      \"name\": \"etag\",\r\n      \"type\": \"complex\",\r\n      \"subAttributes\": [\r\n        {\r\n          \"name\": \"supported\",\r\n          \"type\": \"boolean\",\r\n          \"multiValued\": false,\r\n          \"description\": \"A Boolean value specifying whether or not the operation is supported.\",\r\n          \"required\": true,\r\n          \"caseExact\": false,\r\n          \"mutability\": \"readOnly\",\r\n          \"returned\": \"default\"\r\n        }\r\n      ],\r\n      \"multiValued\": false,\r\n      \"description\": \"A complex type that specifies ETag configuration options.\",\r\n      \"required\": true,\r\n      \"caseExact\": false,\r\n      \"mutability\": \"readOnly\",\r\n      \"returned\": \"default\"\r\n    },\r\n      {\r\n        \"name\" : \"authenticationSchemes\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A complex type that specifies supported\r\n          authentication scheme properties.\",\r\n        \"required\" : true,\r\n        \"returned\" : \"default\",\r\n        \"mutability\" : \"readOnly\",\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"name\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n...",
+    "notes": "Section 5 marks etag as REQUIRED. The example in section 8.5 also contains the field. \r\n\r\nHowever, section \"8.7.2 - Service Provider Schema Representation\" omits it.",
+    "submit_date": "2026-06-29",
+    "submitter_name": "Thomas Plantin",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-30 14:25:00"
   }
 ]

@@ -88,5 +88,20 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2022-03-14 21:54:01"
+  },
+  {
+    "errata_id": "9019",
+    "doc-id": "RFC20",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "6.4",
+    "orig_text": "In specific applications, it may be desirable to employ distinctive styling of individual graphics to facilitate their use for specific purposes as,\r\nfor example, to stylize the graphics in code positions 2/1 and 5/15 into those frequently associated with logical OR (|) and logical NOT\r\n(252), respectively.",
+    "correct_text": "In specific applications, it may be desirable to employ distinctive styling of individual graphics to facilitate their use for specific purposes as,\r\nfor example, to stylize the graphics in code positions 2/1 and 5/14 into those frequently associated with logical OR (|) and logical NOT\r\n(¬), respectively.",
+    "notes": "Corrected text taken from USA Standard Code for Information Interchange, USAS X3.4-1968 (https://archive.org/details/enf-ascii-1968-1970/mode/2up).",
+    "submit_date": "2026-06-29",
+    "submitter_name": "Greg Skinner",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-06-30 14:29:43"
   }
 ]
