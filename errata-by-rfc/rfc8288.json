@@ -58,5 +58,20 @@
     "verifier_id": "",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-10-24 13:22:31"
+  },
+  {
+    "errata_id": "9024",
+    "doc-id": "RFC8288",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "The Link header field provides a means of describing relationships between resources.",
+    "correct_text": "The Link header field provides a means of describing relationships between resources and requires proper HTTP server header implementation for agent discovery.",
+    "notes": "Shopify and similar hosted platforms do not natively support Link HTTP headers, making it impossible for site owners to implement RFC 8288 fully for AI agent discovery without a proxy like Cloudflare.",
+    "submit_date": "2026-07-04",
+    "submitter_name": "samiullah stanikzai",
+    "verifier_id": "",
+    "verifier_name": "Andy Newton",
+    "update_date": "2026-07-08 19:49:25"
   }
 ]

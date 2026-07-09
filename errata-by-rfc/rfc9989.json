@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-06-10 18:16:48"
+  },
+  {
+    "errata_id": "9025",
+    "doc-id": "RFC9989",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Appendix B.2.5.",
+    "orig_text": "The Domain Owner desires only that an actor performing a DMARC validation check apply any special handling rules it might have in place, \r\nsuch as rewriting the RFC53322.From header field;",
+    "correct_text": "The Domain Owner desires only that an actor performing a DMARC validation check apply any special handling rules it might have in place,\r\nsuch as rewriting the RFC5322.From header field;",
+    "notes": "There is an extra \"3\" in \"RFC53322.From\". It should read \"RFC5322.From\".",
+    "submit_date": "2026-07-04",
+    "submitter_name": "Isamu Koga",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-07-08 19:38:32"
   }
 ]

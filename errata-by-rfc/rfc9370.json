@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9022",
+    "doc-id": "RFC9370",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.1",
+    "orig_text": "The updated SKEYSEED value is then used to derive the following\r\nkeying materials.\r\n\r\n   {SK_d(1) | SK_ai(1) | SK_ar(1) | SK_ei(1) | SK_er(1) | SK_pi(1) |\r\n    SK_pr(1)} = prf+ (SKEYSEED(1), Ni | Nr | SPIi | SPIr)\r\n\r\nAs per [RFC9242], both peers compute IntAuth_i1 and IntAuth_r1 using\r\nthe SK_pi(1) and SK_pr(1) keys, respectively.  These values are\r\nrequired in the IKE_AUTH phase of the exchange.",
+    "correct_text": "The updated SKEYSEED value is then used to derive the following\r\nkeying materials.\r\n\r\n   {SK_d(1) | SK_ai(1) | SK_ar(1) | SK_ei(1) | SK_er(1) | SK_pi(1) |\r\n    SK_pr(1)} = prf+ (SKEYSEED(1), Ni | Nr | SPIi | SPIr)\r\n\r\nAs per [RFC9242], both peers compute IntAuth_i1 and IntAuth_r1 using\r\nthe SK_pi and SK_pr keys from IKE_SA_INIT (i.e., the value preceding the exchange),\r\nrespectively.  These values are required in the IKE_AUTH phase of the exchange.",
+    "notes": "RFC 9242 states that the keys used during epoch i are the keys from epoch (i-1). From RFC 9242, section 3.3.2: \r\n\r\nEach calculation of IntAuth_[i/r]* uses its own keys SK_p[i/r]*,\r\nwhich are the most recently updated SK_p[i/r] keys available before\r\nthe corresponded IKE_INTERMEDIATE exchange is started.",
+    "submit_date": "2026-07-07",
+    "submitter_name": "Thom Wiggers",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-08 19:28:46"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9023",
+    "doc-id": "RFC9980",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.4",
+    "orig_text": "4.   Parse the ecdhSecretKey and mlkemSecretKey from the algorithm-\r\n        specific data of the own secret key encoded in the format\r\n        specified in Section 4.3.2",
+    "correct_text": "4.   Parse the ecdhSecretKey and mlkemSecretKey from the algorithm-\r\n        specific data of the own secret key, and the ecdhPublicKey from\r\n        the algorithm-specific data of the own public key, encoded in\r\n        the format specified in Section 4.3.2",
+    "notes": "Step 9 of the decryption procedure in Section 4.2.4 uses ecdhPublicKey as\r\nan input to multiKeyCombine():\r\n\r\n   9.   Compute KEK = multiKeyCombine(mlkemKeyShare, ecdhKeyShare,\r\n        ecdhCipherText, ecdhPublicKey, algId) as defined in\r\n        Section 4.2.1\r\n\r\nHowever, no step of the decryption procedure (steps 1-8) obtains\r\necdhPublicKey. Step 4 parses only the secret components (ecdhSecretKey and\r\nmlkemSecretKey). By contrast, the encryption procedure in Section 4.2.3\r\nextracts this value explicitly in its step 3 (\"Extract the ecdhPublicKey\r\nand mlkemPublicKey components ... from ... pkComposite\"); the decryption\r\nprocedure was written as a mirror of the encryption procedure but omits\r\nthe corresponding extraction step.\r\n\r\nThe value is uniquely determined and always available to the decryptor:\r\nthe recipient's ECDH public key is present in the public-key portion of\r\nits own key material (Section 4.3.2.1) and can equivalently be recomputed\r\nfrom ecdhSecretKey. There is therefore no ambiguity and no interoperability\r\nimpact; the numbered procedure is simply incomplete as written. The\r\ncorrected step 4 obtains ecdhPublicKey from the recipient's own public key\r\nalongside the secret components it already parses, so that the value\r\nreferenced in step 9 is defined.\r\n\r\n(Only ecdhPublicKey is required on the decryption side; mlkemPublicKey is\r\nnot, since neither ML-KEM.Decaps nor the key combiner in Section 4.2.1\r\nconsumes it.)",
+    "submit_date": "2026-07-05",
+    "submitter_name": "Gefei Li",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-08 19:32:30"
+  }
+]
