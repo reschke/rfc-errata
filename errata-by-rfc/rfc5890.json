@@ -88,5 +88,20 @@
     "verifier_id": "",
     "verifier_name": "Murray Kucherawy",
     "update_date": "2023-06-01 15:45:10"
+  },
+  {
+    "errata_id": "9026",
+    "doc-id": "RFC5890",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "2.3.2.1",
+    "orig_text": "It is also subject to the constraints about permitted\r\n      characters that are specified in Section 4.2 of the Protocol\r\n      document and the rules in the Sections 2 and 3 of the Tables\r\n      document,",
+    "correct_text": "It is also subject to the constraints about permitted \r\ncharacters that are specified in Section 4.2 of RFC 5891 (the Protocol document) \r\nand the rules in the Sections 2 and 3 of RFC 5892 (the Tables document),",
+    "notes": "The section auto-linker in the HTML view detects the section references, but assumes that they are internal section references inside RFC 5890, leading to reader confusion. I hope that this small editorial change can fix the issue and correct the cross-document links. (I'm aware that the HTML version is not normative, but it is very useful nevertheless).",
+    "submit_date": "2026-07-10",
+    "submitter_name": "Georg Lukas",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-13 21:02:56"
   }
 ]

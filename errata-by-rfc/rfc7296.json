@@ -118,5 +118,20 @@
     "verifier_id": "",
     "verifier_name": "Deb Cooley",
     "update_date": "2025-10-28 11:03:06"
+  },
+  {
+    "errata_id": "9027",
+    "doc-id": "RFC7296",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.21.1",
+    "orig_text": "Note that some error notifications such as COOKIE,\r\nINVALID_KE_PAYLOAD or INVALID_MAJOR_VERSION may lead to a subsequent\r\nsuccessful exchange.",
+    "correct_text": "Note that some error notifications such as INVALID_KE_PAYLOAD or \r\nINVALID_MAJOR_VERSION and status notifications such as COOKIE may lead to a subsequent\r\nsuccessful exchange.\r\n\r\nAlternative text:\r\n\r\nNote that some failure notifications such as COOKIE, INVALID_KE_PAYLOAD or\r\nINVALID_MAJOR_VERSION may lead to a subsequent successful exchange.",
+    "notes": "COOKIE is listed under \"NOTIFY messages: status types\"\r\n  COOKIE                                   16390",
+    "submit_date": "2026-07-09",
+    "submitter_name": "Andrew Cagney",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-13 21:06:13"
   }
 ]
