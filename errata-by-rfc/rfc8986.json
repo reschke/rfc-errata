@@ -17,16 +17,16 @@
   {
     "errata_id": "8914",
     "doc-id": "RFC8986",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.2",
     "orig_text": "This SID is advertised in the control plane as\r\n         2001:db8:bbbb:3:100:: with an SRv6 Endpoint Behavior codepoint\r\n         value of 5.",
     "correct_text": "This SID is advertised in the control plane as\r\n         2001:db8:bbbb:3:100:: with an SRv6 Endpoint Behavior codepoint\r\n         value of 4.",
-    "notes": "100 -> is value 4",
+    "notes": "100 -> is value 4\r\n\r\nRejection notes: This erratum is wrong. The reporter seems to be mistaken that the endpoint behavior is encoded within the SID. The SRv6 Endpoint Behavior for End.X is 5 per https://www.iana.org/assignments/segment-routing/segment-routing.xhtml#srv6-endpoint-behaviors",
     "submit_date": "2026-05-14",
     "submitter_name": "chiennan_lin",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-10 18:23:25"
+    "verifier_name": "Ketan Talaulikar",
+    "update_date": "2026-07-16 05:47:30"
   }
 ]
