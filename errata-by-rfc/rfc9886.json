@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Eric Vyncke",
     "update_date": "2026-03-30 12:38:55"
+  },
+  {
+    "errata_id": "9029",
+    "doc-id": "RFC9886",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A",
+    "orig_text": "In A.1.1.: 7.b.0.a.1.9.e.1.7.5.1.a.0.6.e.5. IN HHIT (\r\nIn A.1.2.: a.0.0. IN NS ns1.hda-10.example.com\r\nIn A.2.1.: 0.a.9.0.7.2.4.d.5.4.e.e.5.1.6.6.5.0. IN HHIT (\r\nand      : 8.2.e.6.5.2.b.6.7.3.4.d.e.0.6.2.5.0. IN HHIT (\r\nIn A.2.2.:    2.b.6.c.b.4.a.9.9.6.4.2.8.0.3.1. IN HHIT (\r\nand      :    2.b.6.c.b.4.a.9.9.6.4.2.8.0.3.1. IN BRID (",
+    "correct_text": "7.b.0.a.1.9.e.1.7.5.1.a.0.6.e.5 IN HHIT (\r\na.0.0 IN NS ns1.hda-10.example.com\r\n0.a.9.0.7.2.4.d.5.4.e.e.5.1.6.6.5.0 IN HHIT (\r\n8.2.e.6.5.2.b.6.7.3.4.d.e.0.6.2.5.0 IN HHIT (\r\n2.b.6.c.b.4.a.9.9.6.4.2.8.0.3.1 IN HHIT (\r\n2.b.6.c.b.4.a.9.9.6.4.2.8.0.3.1 IN BRID (",
+    "notes": "Throughout section A, the owner names of the HHIT and BRID resource records are fully qualified domain names, ending in a dot \".\", but the $ORIGIN statement preceding these names indicate that the intention was for them to be partly qualified domain names, or relative names, without the dot at the end.",
+    "submit_date": "2026-07-14",
+    "submitter_name": "Willem Toorop",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-20 13:50:46"
   }
 ]

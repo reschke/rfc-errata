@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9031",
+    "doc-id": "RFC9175",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.4.",
+    "orig_text": "For actuator applications with low delay tolerance, to avoid additional round trips for multiple requests in rapid sequence, the server may send preemptive Echo option values in successful requests, irrespectively of whether or not the request contained an Echo option. The client then uses the Echo option with the new value in the next actuation request, and the server compares the receive time accordingly.",
+    "correct_text": "For actuator applications with low delay tolerance, to avoid additional round trips for multiple requests in rapid sequence, the server may send preemptive Echo option values in successful responses, irrespectively of whether or not the request contained an Echo option. The client then uses the Echo option with the new value in the next actuation request, and the server compares the receive time accordingly.",
+    "notes": "I think this paragraph refers to positive responses, not requests.",
+    "submit_date": "2026-07-20",
+    "submitter_name": "Karol Witusik",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-20 14:01:12"
+  }
+]

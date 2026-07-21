@@ -73,5 +73,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9030",
+    "doc-id": "RFC4648",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5",
+    "orig_text": "The pad character \"=\" is typically percent-encoded when used in an\r\nURI [9], but if the data length is known implicitly, this can be\r\navoided by skipping the padding; see section 3.2.",
+    "correct_text": "The pad character \"=\" is typically percent-encoded when used in a\r\nURI [9], but if the data length is known implicitly, this can be\r\navoided by skipping the padding; see section 3.2.",
+    "notes": "The more generally accepted indefinite article when referring to a URI is \"a,\" both in this use case and when the acronym is expanded to \"Uniform Resource Identifier.\"",
+    "submit_date": "2026-07-18",
+    "submitter_name": "Tyler Morgan",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-07-20 13:55:54"
   }
 ]

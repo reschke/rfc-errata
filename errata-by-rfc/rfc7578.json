@@ -43,5 +43,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9032",
+    "doc-id": "RFC7578",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.1",
+    "orig_text": "The field names in the underlying need not match what the user sees on the screen.",
+    "correct_text": "The field names in the underlying form need not match what the user sees on the screen.",
+    "notes": "There seems to be a word (or more) missing after the word 'underlying'. I guessed it should be 'underlying form', though the original intention may have been the underlying form, markup, HTML, header, transport, or something else.",
+    "submit_date": "2026-07-20",
+    "submitter_name": "Amichai Rothman",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-20 13:54:55"
   }
 ]
