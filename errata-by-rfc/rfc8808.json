@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9033",
+    "doc-id": "RFC8808",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "GLOBAL",
+    "orig_text": "Request for Comments: 8808\r\nCategory: Standards Track\r\nISSN: 2070-1721",
+    "correct_text": "Request for Comments: 8808\r\nUpdates: 8342\r\nCategory: Standards Track\r\nISSN: 2070-1721",
+    "notes": "RFC 8808 Section 3 formally defines the \"Factory-Default\" datastore, and the YANG in Section 4 \r\nshows the identity \"factory-default\" extending the base identity \"ds:datastore\", which is defined in \r\nRFC 8342.  Thus, it seems accurate that RFC 8808 updates RFC8342.\r\n\r\nCurrently, due to RFC 8342 not having the \"Updated by\" line, it seems many NMDA\r\nimplementations are unaware that the <factory-default> datastore exists, and hence the NMDA\r\nsolution appears lacking.\r\n\r\nIt would be good if the RFC Editor could update the metadata about both documents.",
+    "submit_date": "2026-07-23",
+    "submitter_name": "Kent Watsen",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-07-23 14:38:09"
+  }
+]
