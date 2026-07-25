@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9035",
+    "doc-id": "RFC7265",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "param-value = string / param-multi\r\nparam-multi = begin-array\r\n              [ string *(value-separator string) ]\r\n              end-array",
+    "correct_text": "param-value = string / param-multi\r\nparam-multi = begin-array\r\n              string *(value-separator string)\r\n              end-array",
+    "notes": "The current syntax allows empty parameter arrays, however, iCalendar\r\n(RFC 5545) doesn't support empty arrays, instead treating it as a\r\nsingle empty string. This breaks the one-to-one mapping between\r\niCalendar and jCal.\r\n\r\nCompare with the excerpt from RFC 5545\r\n\r\n     param         = param-name \"=\" param-value *(\",\" param-value)\r\n     param-value   = paramtext / quoted-string\r\n     paramtext     = *SAFE-CHAR",
+    "submit_date": "2026-07-22",
+    "submitter_name": "Hugo Hörnquist",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-24 16:12:06"
   }
 ]

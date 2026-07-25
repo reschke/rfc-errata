@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-07-08 19:28:46"
+  },
+  {
+    "errata_id": "9036",
+    "doc-id": "RFC9370",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2.4-5",
+    "orig_text": "The responder MUST include this notification in a CREATE_CHILD_SA or IKE_FOLLOWUP_KE response message in case the next IKE_FOLLOWUP_KE exchange is expected, filling it with some data that would allow linking the current exchange to the next one. The initiator MUST send back this notification intact in the request message of the next IKE_FOLLOWUP_KE exchange.",
+    "correct_text": "Suspect the text was meant to say something like:\r\n\r\n  The responder MUST include this notification in a CREATE_CHILD_SA or IKE_FOLLOWUP_KE response message in the case of a further IKE_FOLLOWUP_KE exchange is expected, ...\r\n\r\nBut better text would something like:\r\n\r\n The responder MUST include this notification in the CREATE_CHILD_SA response message, and in all but the final IKE_FOLLOWUP_KE response message, ...",
+    "notes": "To my reading, the current sentence states that an ADDITIONAL_KEY_EXCHANGE notification payload MUST be included in all IKE_FOLLOW_UP response messages, just \"in case\" a further IKE_FOLLOW_UP exchange is needed (we're not sure so we're hedging our bets).",
+    "submit_date": "2026-07-21",
+    "submitter_name": "Andrew Cagney",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-24 16:12:29"
   }
 ]

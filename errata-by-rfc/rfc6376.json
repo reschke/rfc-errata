@@ -328,5 +328,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-06-10 18:18:38"
+  },
+  {
+    "errata_id": "9038",
+    "doc-id": "RFC6376",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.5",
+    "orig_text": "t= Signature Timestamp (plain-text unsigned decimal integer;\r\n      RECOMMENDED, default is an unknown creation time).  The time that\r\n      this signature was created.  The format is the number of seconds\r\n      since 00:00:00 on January 1, 1970 in the UTC time zone.  The value\r\n      is expressed as an unsigned integer in decimal ASCII.  This value\r\n      is not constrained to fit into a 31- or 32-bit integer.\r\n      Implementations SHOULD be prepared to handle values up to at least\r\n      10^12 (until approximately AD 200,000; this fits into 40 bits).",
+    "correct_text": "Ditto, but 10^12 a.k.a. 40 bits is not AD 200,000.\r\n(Unless this goes in line with Paul McCartney's \"three thousand or fouurr thouuuusand\" in the Cavern Club appearance in 1999, the first after his wife died.)\r\n\r\nIt rather is\r\n\r\n$ xa '  10**12  / 60 / 60 / 24 / 365'\r\n0b 00000000 00000000 00000000 00000000 00000000 00000000 01111011 11011101\r\n075735 | 0x7BDD | 31709\r\n\r\n(with 40 bits really being\r\n$ xa '  ((2**40) - 1)  / 60 / 60 / 24 / 365'\r\n0b 00000000 00000000 00000000 00000000 00000000 00000000 10001000 00110001\r\n0104061 | 0x8831 | 34865)\r\n\r\nSo \"approximately AD 32000\".",
+    "notes": "Maybe an iterated DKIMv1 needs this clarification.",
+    "submit_date": "2026-07-20",
+    "submitter_name": "Steffen",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-24 16:13:24"
   }
 ]

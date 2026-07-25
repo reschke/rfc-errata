@@ -103,5 +103,20 @@
     "verifier_id": "",
     "verifier_name": "Mahesh Jethanandani",
     "update_date": "2026-04-30 19:09:51"
+  },
+  {
+    "errata_id": "9034",
+    "doc-id": "RFC2865",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1",
+    "orig_text": "Upon receipt of an Access-Request from a valid client, an\r\n      appropriate reply MUST be transmitted.",
+    "correct_text": "Access-Request packets MUST contain a Message-Authenticator attribute.\r\n\r\n      Upon receipt of an Access-Request from a valid client, an\r\n      appropriate reply MUST be transmitted.",
+    "notes": "This errata is a note for readers of RFC 2865, to indicate that the existing definition is subject to attacks.  The issue of CVEs was brought up in the plenary in IETF 126.\r\n\r\nThe CVE in question is https://nvd.nist.gov/vuln/detail/cve-2024-3596\r\n\r\nRFC2865 will be updated by https://datatracker.ietf.org/doc/draft-ietf-radext-deprecating-radius/.  We do not expect to rev 2865.  But it's still useful to note errata directly in RFC 2865, until such time as the update is published.",
+    "submit_date": "2026-07-22",
+    "submitter_name": "Alan DeKok",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-24 16:11:52"
   }
 ]

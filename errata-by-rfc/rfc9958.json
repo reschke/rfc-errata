@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9039",
+    "doc-id": "RFC9958",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Table 4",
+    "orig_text": "| 5        | ML-KEM-1024 | 1568       | 3168       | 1588           |",
+    "correct_text": "| 5        | ML-KEM-1024 | 1568       | 3168       | 1568           |",
+    "notes": "Table 4 states that ML-KEM-1024 'Ciphertext/signature size (in bytes)' is 1588. The correct value appears to be 1568.\r\nSource: NIST FIPS 203 https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf",
+    "submit_date": "2026-07-21",
+    "submitter_name": "Heikki Vatiainen",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-07-24 16:19:16"
+  }
+]
