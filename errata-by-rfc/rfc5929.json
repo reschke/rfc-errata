@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9041",
+    "doc-id": "RFC5929",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1",
+    "orig_text": "o  if the certificate's signatureAlgorithm uses no hash functions or\r\n      uses multiple hash functions, then this channel binding type's\r\n      channel bindings are undefined at this time (updates to is channel\r\n      binding type may occur to address this issue if it ever arises).",
+    "correct_text": "o  if no unique suitable hash function could be identified from the\r\n      certificate's signatureAlgorithm, then use the identity function.",
+    "notes": "ML-DSA [FIPS-204] falls into the third category of the original text, as it\r\ndoes not have associated hash, although it uses SHAKE128 & SHAKE256 internally\r\n(there are probably other examples as well). This in turn leads to issues\r\naround channel binding implementation like in [1], where it's not clear how to\r\ncreate the needed digest.\r\n\r\nThe proposal is to close the gap in such a way that does not require any\r\nknownedge of the connection internal state, thus simpy the identity function is\r\nused for the digest.\r\n\r\nAn alternative of similar type would be to use a specified hash instead, e.g.\r\nSHA-256. This would be a bit easier for final implementation, for example\r\nPostgreSQL uses OpenSSL and all what's needed is to pass chosen algorithm to\r\nX509_digest. OpenSSL does not have an \"identity function\" as an algorithm, so\r\nthe main proposed change would be a bit more verbose to implement, but it's\r\nconcidered to be conceptually simpler.\r\n\r\n[1]: https://www.postgresql.org/message-id/CAFjYY+JCCQeh03nzVG6Rs9MUgU_kOvhMbNaaS6kn_c4CcAZkTg@mail.gmail.com",
+    "submit_date": "2026-07-24",
+    "submitter_name": "Dmitrii Dolgov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-27 20:38:07"
+  }
+]
