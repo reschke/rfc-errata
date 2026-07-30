@@ -43,5 +43,20 @@
     "verifier_id": "",
     "verifier_name": "Deb Cooley",
     "update_date": "2025-12-28 15:09:43"
+  },
+  {
+    "errata_id": "9044",
+    "doc-id": "RFC9810",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.1.1",
+    "orig_text": "In such\r\na case, the senderKID field MUST hold an identifier (i.e., a\r\nreference number) that indicates to the receiver the appropriate\r\nshared secret information to use to verify the message.",
+    "correct_text": "If the sender does not know its own DN and\r\nit protects the message using a shared secret,\r\nthe senderKID field MUST hold an identifier (i.e., a\r\nreference number) that indicates to the receiver the appropriate\r\nshared secret information to use to verify the message.",
+    "notes": "The above extension allows for the following case:\r\nIf the sender does not know its own DN\r\nand does not protect the message, providing a senderKID is not relevant.",
+    "submit_date": "2026-07-28",
+    "submitter_name": "David von Oheimb",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-29 13:49:47"
   }
 ]

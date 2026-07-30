@@ -178,5 +178,20 @@
     "verifier_id": "",
     "verifier_name": "Deb Cooley",
     "update_date": "2025-04-03 17:33:46"
+  },
+  {
+    "errata_id": "9045",
+    "doc-id": "RFC8410",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "pk-X25519 PUBLIC-KEY ::= {\r\n        IDENTIFIER id-X25519\r\n        -- KEY no ASN.1 wrapping --\r\n        PARAMS ARE absent\r\n        CERT-KEY-USAGE { keyAgreement }\r\n        PRIVATE-KEY CurvePrivateKey\r\n    }\r\n\r\n    KeyWrapAlgorithms KEY-WRAP ::= {\r\n        kwa-aes128-wrap | kwa-aes256-wrap,\r\n        ...\r\n    }\r\n\r\n    kaa-X448 KEY-AGREE ::= {\r\n        IDENTIFIER id-X448\r\n        PARAMS ARE absent\r\n        PUBLIC-KEYS {pk-X448}\r\n        UKM -- TYPE no ASN.1 wrapping  -- ARE preferredPresent\r\n        SMIME-CAPS {\r\n           TYPE AlgorithmIdentifier{KEY-WRAP, {KeyWrapAlgorithms}}\r\n           IDENTIFIED BY id-X448 }\r\n    }\r\n\r\n    pk-X448 PUBLIC-KEY ::= {\r\n        IDENTIFIER id-X448\r\n        -- KEY no ASN.1 wrapping --\r\n        PARAMS ARE absent\r\n        CERT-KEY-USAGE { keyAgreement }\r\n        PRIVATE-KEY CurvePrivateKey\r\n    }",
+    "correct_text": "pk-X25519 PUBLIC-KEY ::= {\r\n        IDENTIFIER id-X25519\r\n        -- KEY no ASN.1 wrapping --\r\n        PARAMS ARE absent\r\n        CERT-KEY-USAGE { keyAgreement, encipherOnly, decipherOnly }\r\n        PRIVATE-KEY CurvePrivateKey\r\n    }\r\n\r\n    KeyWrapAlgorithms KEY-WRAP ::= {\r\n        kwa-aes128-wrap | kwa-aes256-wrap,\r\n        ...\r\n    }\r\n\r\n    kaa-X448 KEY-AGREE ::= {\r\n        IDENTIFIER id-X448\r\n        PARAMS ARE absent\r\n        PUBLIC-KEYS {pk-X448}\r\n        UKM -- TYPE no ASN.1 wrapping  -- ARE preferredPresent\r\n        SMIME-CAPS {\r\n           TYPE AlgorithmIdentifier{KEY-WRAP, {KeyWrapAlgorithms}}\r\n           IDENTIFIED BY id-X448 }\r\n    }\r\n\r\n    pk-X448 PUBLIC-KEY ::= {\r\n        IDENTIFIER id-X448\r\n        -- KEY no ASN.1 wrapping --\r\n        PARAMS ARE absent\r\n        CERT-KEY-USAGE { keyAgreement, encipherOnly, decipherOnly }\r\n        PRIVATE-KEY CurvePrivateKey\r\n    }",
+    "notes": "This erratum remains applicable after RFC 9295. RFC 9295 Section 3\r\nreplaces RFC 8410 Section 5 and normatively requires keyAgreement while\r\npermitting either encipherOnly or decipherOnly to also be present for\r\ncertificates whose SubjectPublicKeyInfo identifies X25519 or X448. RFC\r\n9295 does not update the ASN.1 module in RFC 8410 Section 9, where both\r\npk-X25519 and pk-X448 continue to omit these two permitted bits.\r\n\r\nRFC 5912 defines PUBLIC-KEY.&keyUsage as the set of bits legal for the\r\nkey type and explicitly states that this set does not express how bits\r\nmay be paired. Adding encipherOnly and decipherOnly to CERT-KEY-USAGE\r\ntherefore does not permit both bits to be asserted together; RFC 9295\r\nSection 3 continues to govern valid combinations.\r\n\r\nThe correction is also consistent with RFC 5280 Section 4.2.1.3, which\r\ndefines encipherOnly and decipherOnly only in conjunction with\r\nkeyAgreement, and with the Diffie-Hellman, KEA, and elliptic-curve key\r\nagreement PUBLIC-KEY definitions in RFC 5912, which list keyAgreement,\r\nencipherOnly, and decipherOnly as legal key-usage bits.",
+    "submit_date": "2026-07-29",
+    "submitter_name": "Kaj Kowalski",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-07-29 13:50:15"
   }
 ]
