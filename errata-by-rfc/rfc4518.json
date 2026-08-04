@@ -58,5 +58,20 @@
     "verifier_id": "",
     "verifier_name": "Kurt Zeilenga",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9048",
+    "doc-id": "RFC4518",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Appendix B.",
+    "orig_text": "In particular, the statements should be taken to mean that if an assertion value and \r\nattribute value match without any consideration to insignificant characters, then that \r\nassertion value should also match any attribute value that differs only by inclusion nor \r\nremoval of insignificant characters.",
+    "correct_text": "In particular, the statements should be taken to mean that if an assertion value and \r\nattribute value match without any consideration to insignificant characters, then that \r\nassertion value should also match any attribute value that differs only by inclusion or \r\nremoval of insignificant characters.",
+    "notes": "r/nor/or",
+    "submit_date": "2026-07-28",
+    "submitter_name": "Peng Yuan",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-08-03 16:49:12"
   }
 ]

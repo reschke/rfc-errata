@@ -328,5 +328,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9050",
+    "doc-id": "RFC8555",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "o  A \"newAccount\" resource (Section 7.3)\r\n\r\no  A \"newOrder\" resource (Section 7.4)",
+    "correct_text": "o  A \"newAccount\" resource (Section 7.3)\r\n\r\no  A \"newAuthz\" resource (Section 7.4)",
+    "notes": "The item for the \"newAuthz\" resource is missing in the list of resources",
+    "submit_date": "2026-07-28",
+    "submitter_name": "Sask",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-03 16:32:18"
   }
 ]

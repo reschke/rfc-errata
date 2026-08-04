@@ -58,5 +58,35 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2024-05-09 21:17:14"
+  },
+  {
+    "errata_id": "9046",
+    "doc-id": "RFC3647",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.5.4",
+    "orig_text": "*  Frequency with which audit logs are processed or archived, for example, weekly, \r\nfollowing an alarm or anomalous event, or when ever the audit log is n% full;",
+    "correct_text": "*  Frequency with which audit logs are processed or archived, for example, weekly, \r\nfollowing an alarm or anomalous event, or whenever the audit log is n% full;",
+    "notes": "r/when ever/whenever",
+    "submit_date": "2026-07-28",
+    "submitter_name": "Peng Yuan",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-08-03 16:47:54"
+  },
+  {
+    "errata_id": "9047",
+    "doc-id": "RFC3647",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "4.9",
+    "orig_text": "This ordering is intended help lawyers review CPs, CPSs, and other documents \r\nadhering to this framework.",
+    "correct_text": "This ordering is intended to help lawyers review CPs, CPSs, and other documents \r\nadhering to this framework.",
+    "notes": "r/intended help/intended to help",
+    "submit_date": "2026-07-28",
+    "submitter_name": "Peng Yuan",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-08-03 16:48:45"
   }
 ]

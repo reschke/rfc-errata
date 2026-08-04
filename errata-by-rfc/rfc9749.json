@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9055",
+    "doc-id": "RFC9749",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5",
+    "orig_text": "When destroying push subscriptions that include the data type PushSubscription, \r\nthe server MAY issue one final StateChange push notification using the old URL and \r\napplication server key to notify the client of changes to the PushSubscription data type. \r\nThis prompts the client to make a PushSubscription/changes method call. The response \r\nto this call will contain an updated sessionState, which refers to a session object that \r\ncontains the new VAPID key.",
+    "correct_text": "(Delete the paragraph.)",
+    "notes": "The PushSubscription object is not associated with an account id, and so cannot appear in \r\nthe StateChange object as specified in RFC8620. Additionally, there is no \r\n\"PushSubscription/changes\" method call defined in RFC8620 — only \"PushSubscription/get\" \r\nand \"PushSubscription/set\".\r\n\r\nSuggested fix is to remove this paragraph. There is no good way of doing this right now, \r\nand it was a MAY anyway, not essential. Session state changes are likely to be picked up \r\nvery quickly by a client anyway as they will get it as soon as they make any API call.",
+    "submit_date": "2026-07-31",
+    "submitter_name": "Neil Jenkins",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-03 16:40:08"
+  }
+]

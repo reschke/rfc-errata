@@ -73,5 +73,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9052",
+    "doc-id": "RFC9483",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2",
+    "orig_text": "crlEntryDetails           REQUIRED\r\n    -- MUST contain a sequence of one reasonCode of type CRLReason\r\n    --   (see [RFC5280], Section 5.3.1)\r\n    -- If the reason for this revocation is not known or shall not\r\n    --   be published, the reasonCode MUST be 0 (unspecified)",
+    "correct_text": "crlEntryDetails           RECOMMENDED\r\n    -- MUST contain a sequence of one reasonCode of type CRLReason\r\n    --   (see [RFC5280], Section 5.3.1) if the reason \r\n    --   for this revocation is known and shall be published.\r\n    -- SHOULD be omitted otherwise.",
+    "notes": "This resolves a conflict with RFC 5280 section 5.3.1, which says: \r\nthe reason code CRL entry extension SHOULD be absent instead of using the unspecified (0) reasonCode value.",
+    "submit_date": "2026-07-30",
+    "submitter_name": "David von Oheimb",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-03 16:33:04"
   }
 ]
