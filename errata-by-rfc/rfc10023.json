@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9090",
+    "doc-id": "RFC10023",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.6, Table 1, first entry",
+    "orig_text": "\"Root zone\"",
+    "correct_text": "\"TLD Zone\" OR \"Top-Level Domain\"",
+    "notes": "In this example, the \"_for-sale\" prefix is neither within the root\r\nzone nor would it semantically refer to it. It would signal that the\r\nwhole TLD is \"for sale\". Another way to say describe the \"situation\"\r\n(as per the table header) that the \"_for-sale\" prefix resides \"at the\r\nzone apex\" (of the \"example\" TLD, in this case), but again, there is\r\nno relation to the root zone.",
+    "submit_date": "2026-08-04",
+    "submitter_name": "Peter Koch",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-10 16:27:30"
+  }
+]

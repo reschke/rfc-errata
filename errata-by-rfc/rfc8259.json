@@ -223,5 +223,20 @@
     "verifier_id": "",
     "verifier_name": "Andrew Newton",
     "update_date": "2026-04-13 20:07:33"
+  },
+  {
+    "errata_id": "9095",
+    "doc-id": "RFC8259",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "11",
+    "orig_text": "<iesg@ietf.org>\r\n\r\nNote:  No \"charset\" parameter is defined for this registration.\r\n      Adding one really has no effect on compliant recipients.",
+    "correct_text": "<iesg@ietf.org>",
+    "notes": "The first sentence of the note first repeats and \r\nwith the second sentence contradicts the statement made a few lines earlier\r\nin the section: `Optional parameters:  n/a` that there are no media type parameters allowed.\r\n\r\nDisallowing the \"charset\" parameter is in line with the change from RFC7159 \r\nthat `Section 8.1 was changed to require the use of UTF-8 when transmitted over a network.` \r\nThe \"no effect\" statement in the note was understandable for the obsolete standards \r\nwhere other encodings were allowed. \r\nBut the rationale for it in RFC8259 is not obvious nor given. \r\nAs argument to the contrary: Security aware applications over the last years increasingly implement \r\nstrict whitelisting of allowed variations. Seeing a charset parameter where non is allowed will not pass\r\nby a strictly whitelisting, compliant recipient implementation. \r\nAnd thus it will have a negative effect on those compliant recipients - which makes the note wrong. \r\n(If the WG would have wished for interoperability with the old standards at this point, it would\r\nhave allowed \"charset\"  as optional and then added a note that only \"utf-8\" is compatible with this RFC.)\r\n(This errata report has some similarities with Errata-ID: 5853 but is different in that it suggests to\r\nfully remove the wrong note.)\r\n\r\nSuggestion: remove the wrong note (and the then superfluous repetition)",
+    "submit_date": "2026-08-06",
+    "submitter_name": "Bernhard E. Reiter",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-10 16:38:45"
   }
 ]

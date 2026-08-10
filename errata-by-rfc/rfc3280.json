@@ -58,5 +58,20 @@
     "verifier_id": "",
     "verifier_name": "Paul Wouters",
     "update_date": "2024-01-12 20:37:00"
+  },
+  {
+    "errata_id": "9097",
+    "doc-id": "RFC3280",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.2.2",
+    "orig_text": "The serial number MUST be a positive integer assigned by the CA to\r\n   each certificate.  It MUST be unique for each certificate issued by a\r\n   given CA (i.e., the issuer name and serial number identify a unique\r\n   certificate).  CAs MUST force the serialNumber to be a non-negative\r\n   integer.",
+    "correct_text": "The serial number MUST be a positive integer assigned by the CA to\r\n   each certificate.  It MUST be unique for each certificate issued by\r\n   a given CA (i.e., the issuer name and serial number identify a\r\n   unique certificate).  CAs MUST force the serialNumber to be\r\n   positive integer.",
+    "notes": "r/non-negative/positive\r\nThe text contains inconsistent requirements for the certificate\r\nserialNumber. The first sentence requires the serial number to be a\r\npositive integer, which excludes zero. However, the last sentence\r\nrequires CAs to force the serialNumber to be a non-negative integer,\r\nwhich permits zero. These two requirements are contradictory and may\r\ncause ambiguity for certificate issuers regarding whether a serial\r\nnumber of zero is permitted. The last sentence should use \"positive\r\ninteger\" instead of \"non-negative integer\" to maintain consistency\r\nwithin this section.",
+    "submit_date": "2026-08-07",
+    "submitter_name": "Peng Yuan",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-10 16:42:10"
   }
 ]

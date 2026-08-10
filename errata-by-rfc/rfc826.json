@@ -43,5 +43,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-06-30 14:24:44"
+  },
+  {
+    "errata_id": "9092",
+    "doc-id": "RFC826",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Packet Reception",
+    "orig_text": "?Is the opcode ares_op$REQUEST?  (NOW look at the opcode!!)\r\n      Yes:\r\n\tSwap hardware and protocol fields, putting the local\r\n\t    hardware and protocol addresses in the sender fields.",
+    "correct_text": "?Is the opcode ares_op$REQUEST?  (NOW look at the opcode!!)\r\n      Yes:\r\n        Putting the local hardware address in the sender hardware\r\n        field and the local protocol address in the sender protocol\r\n        field. For completeness, the target hardware field may be set\r\n        to the original request's sender hardware address, and the\r\n        target protocol address field may be set to the original\r\n        request's protocol address.",
+    "notes": "The instruction to \"Swap hardware and protocol fields\" is ambiguous\r\nand can lead to conflicting interpretations. This correction is\r\nstrictly a clarification of the protocol's intended behavior and does\r\nnot alter the actual implementation requirements of RFC 826.\r\n\r\nPossible interpretations include:\r\n1. Exchanging the hardware and protocol fields themselves (which does not make sense), e.g.,\r\nar$sha <--> ar$spa and ar$tha <--> ar$tpa.\r\n2. Exchanging the sender and target hardware and protocol fields, e.g.,\r\nar$sha <--> ar$tha and ar$spa <--> ar$tpa.\r\n\r\nThe second interpretation is closer to the intended behavior, but it is still problematic\r\nbecause in an ARP request ar$tha is typically all zeros (unknown). Copying ar$tha into\r\nar$sha would therefore produce an invalid sender hardware address.\r\n\r\nThe essential operation is to place the local hardware address in ar$sha and the local\r\nprotocol address in ar$spa when forming the reply.\r\n\r\nRFC 826 indicates that the target protocol address and target hardware address are\r\nincluded primarily for completeness and monitoring. It also notes that the target protocol\r\naddress is not strictly required in replies and that the target hardware address may be\r\nused by some implementations as the packet’s hardware destination address.\r\n\r\nSince RFC 826 predates RFC 2119 and does not define strict requirement levels for\r\nthese fields, this errata uses the wording “may” when describing the population of\r\nar$tha and ar$tpa.",
+    "submit_date": "2026-08-05",
+    "submitter_name": "August Frank Lee",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-10 16:33:44"
   }
 ]

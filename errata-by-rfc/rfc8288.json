@@ -73,5 +73,20 @@
     "verifier_id": "",
     "verifier_name": "Andy Newton",
     "update_date": "2026-07-08 19:49:25"
+  },
+  {
+    "errata_id": "9091",
+    "doc-id": "RFC8288",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "Previous definitions of the Link header did not equate the token and\r\n   quoted-string forms explicitly; the title parameter was always\r\n   quoted, and the hreflang parameter was always a token.  Senders\r\n   wishing to maximize interoperability will send them in those forms.\r\n\r\n   Individual link-params specify their syntax in terms of the value\r\n   after any necessary unquoting (as per [RFC7230], Section 3.2.6).\r\n\r\n   This specification establishes the link-params \"rel\", \"anchor\", and\r\n   \"rev\" (which are part of the general link model), as well as\r\n   \"hreflang\", \"media\", \"title\", \"title*\", and \"type\" (which are target\r\n   attributes defined by the serialisation).",
+    "correct_text": "​Link relation types MUST be compared as ASCII case-insensitive strings.",
+    "notes": "The original text refers to ABNF 'LOALPHA' (which contains only\r\nlowercase ASCII letters) to specify case-insensitive comparison, which\r\nis contradictory and confusing. Defining comparison as \"ASCII\r\ncase-insensitive\" accurately reflects the intent to match relation\r\ntypes regardless of whether upper or lowercase characters are used.",
+    "submit_date": "2026-08-05",
+    "submitter_name": "Angelie Marie Francisco",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-10 16:29:36"
   }
 ]

@@ -73,5 +73,20 @@
     "verifier_id": "",
     "verifier_name": "Ketan Talaulikar",
     "update_date": "2026-07-16 08:33:34"
+  },
+  {
+    "errata_id": "9098",
+    "doc-id": "RFC8029",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "The 127/8 range for IPv4 and that same range embedded in an\r\n   IPv4-mapped IPv6 address for IPv6 was chosen for a number of reasons.",
+    "correct_text": "The 127/8 range for IPv4 and the Dummy IPv6 Prefix 100:0:0:1::/64 [RFC9780]\r\nfor IPv6 were chosen for a number of reasons, including the requirements\r\nlisted above.",
+    "notes": "The IPv4-mapped IPv6 loopback address block doesn't conform to the\r\nfollowing requirements put forward in Section 2.1:\r\n2.  If an LSP is broken in such a way that it prematurely terminates,\r\n       the diagnostic packet MUST NOT be IP forwarded.\r\n\r\nBecause, unlike the IPv4 loopback range, it is a routable\r\naddress. IANA allocated the Dummy IPv6 Prefix to match the\r\nfunctionality provided by the IPv4 loopback address range.",
+    "submit_date": "2026-08-09",
+    "submitter_name": "Greg Mirsky",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-10 16:43:39"
   }
 ]

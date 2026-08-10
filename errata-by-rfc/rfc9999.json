@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9088",
+    "doc-id": "RFC9999",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6 and 9.6.2",
+    "orig_text": "Section 6\r\n----------\r\n   $cbor-tag /= tag-cm-cbor<1668547091, cbor-collection>\r\n   $cbor-tag /= tag-cm-cbor<1668547092, signed-cbor-cmw>\r\n\r\n   $cbor-tag /= tag-cm-data<1668547093> ; bytes(cmw+json collection)\r\n   $cbor-tag /= tag-cm-data<1668547094> ; bytes(cmw+jws)\r\n\r\nTable 4\r\n--------\r\n   +============+===============================+\r\n   | Tag Number | Tag Content                   |\r\n   +============+===============================+\r\n   | 1668547091 | bytes .cbor cbor-collection   |\r\n   +------------+-------------------------------+\r\n   | 1668547092 | bytes .cbor signed-cbor-cmw   |\r\n   +------------+-------------------------------+\r\n   | 1668547093 | bytes-wrapped json-collection |\r\n   +------------+-------------------------------+\r\n   | 1668547094 | bytes-wrapped signed-json-cmw |\r\n   +------------+-------------------------------+\r\n\r\nFigure 7\r\n---------\r\n   $cbor-tag /= tag-cm-cbor<1668547091, cbor-collection>\r\n   $cbor-tag /= tag-cm-cbor<1668547092, signed-cbor-cmw>\r\n   $cbor-tag /= tag-cm-data<1668547093> ; bytes(cmw+json collection)\r\n   $cbor-tag /= tag-cm-data<1668547094> ; bytes(cmw+jws)",
+    "correct_text": "Section 6\r\n----------\r\n   $cbor-tag /= tag-cm-cbor<1668547091, cbor-collection>\r\n   $cbor-tag /= tag-cm-data<1668547092> ; bytes(cmw+json collection)\r\n\r\n   $cbor-tag /= tag-cm-cbor<1668547093, signed-cbor-cmw>\r\n   $cbor-tag /= tag-cm-data<1668547094> ; bytes(cmw+jws)\r\n\r\nTable 4\r\n--------\r\nTag Number\tTag Content\r\n1668547091\tbytes .cbor cbor-collection\r\n1668547092\tbytes-wrapped json-collection\r\n1668547093\tbytes .cbor signed-cbor-cmw\r\n1668547094\tbytes-wrapped signed-json-cmw\r\n\r\nFigure 7\r\n---------\r\n   $cbor-tag /= tag-cm-cbor<1668547091, cbor-collection>\r\n   $cbor-tag /= tag-cm-data<1668547092> ; bytes(cmw+json collection)\r\n   $cbor-tag /= tag-cm-cbor<1668547093, signed-cbor-cmw>\r\n   $cbor-tag /= tag-cm-data<1668547094> ; bytes(cmw+jws)",
+    "notes": "Under the assumption that Table 3 and https://www.iana.org/assignments/core-parameters \r\nare the authoritative IDs, then the RFC9277-calculated tags for cmw+json and cmw+cose \r\nare swapped in the given section, table, and figure.",
+    "submit_date": "2026-08-04",
+    "submitter_name": "Steven Bellock",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-10 16:05:34"
+  }
+]

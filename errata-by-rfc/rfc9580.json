@@ -103,5 +103,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9094",
+    "doc-id": "RFC9580",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "12.1",
+    "orig_text": "This specification makes use of the PKCS#1 functions EME-PKCS1-v1_5\r\n   and EMSA-PKCS1-v1_5.  However, the calling conventions of these\r\n   functions have changed in the past.  To avoid potential confusion and\r\n   interoperability problems, we are including local copies in this\r\n   document, adapted from those in PKCS#1 v2.1 [RFC8017].  [RFC8017]\r\n   should be treated as the ultimate authority on PKCS#1 for OpenPGP.\r\n   Nonetheless, we believe that there is value in having a self-\r\n   contained document that avoids problems in the future with needed\r\n   changes in the conventions.",
+    "correct_text": "This specification makes use of the PKCS#1 functions EME-PKCS1-v1_5\r\n   and EMSA-PKCS1-v1_5.  However, the calling conventions of these\r\n   functions have changed in the past.  To avoid potential confusion and\r\n   interoperability problems, we are including local copies in this\r\n   document, adapted from those in PKCS#1 v2.2 [RFC8017].  [RFC8017]\r\n   should be treated as the ultimate authority on PKCS#1 for OpenPGP.\r\n   Nonetheless, we believe that there is value in having a self-\r\n   contained document that avoids problems in the future with needed\r\n   changes in the conventions.",
+    "notes": "RFC 8017 describes PKCS#1 v2.2, not PKCS#1 v2.1",
+    "submit_date": "2026-08-06",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-10 16:36:40"
   }
 ]
