@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "errata_id": "9133",
+    "doc-id": "RFC1752",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.1",
+    "orig_text": "The criteria described in this document include: (from Kasten94)\r\n\r\n   * complete specification - The proposal must completely describe the\r\n     proposed protocol.  We must select an IPng by referencing specific\r\n     documents, not to future work.\r\n   * architectural simplicity - The IP-layer protocol should be as\r\n     simple as possible with functions located elsewhere that are more\r\n     appropriately performed at protocol layers other than the IP layer.\r\n   * scale - The IPng Protocol must allow identifying and addressing at\r\n     least 10**9 leaf-networks (and preferably much more)\r\n   * topological flexibility - The routing architecture and protocols\r\n     ofIPng must allow for many different network topologies.  They must\r\n     not assume that the network's physical structure is a tree.\r\n[...]",
+    "correct_text": "The criteria described in this document include: (from Kasten94)\r\n\r\n   * complete specification - The proposal must completely describe the\r\n     proposed protocol.  We must select an IPng by referencing specific\r\n     documents, not to future work.\r\n   * architectural simplicity - The IP-layer protocol should be as\r\n     simple as possible with functions located elsewhere that are more\r\n     appropriately performed at protocol layers other than the IP layer.\r\n   * scale - The IPng Protocol must allow identifying and addressing at\r\n     least 10**9 leaf-networks (and preferably much more)\r\n   * topological flexibility - The routing architecture and protocols\r\n     of IPng must allow for many different network topologies.  They must\r\n     not assume that the network's physical structure is a tree.\r\n[...]",
+    "notes": "Missing space between \"of\" and \"IPng\".",
+    "submit_date": "2026-08-13",
+    "submitter_name": "Elia Nitsche",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-08-14 18:50:04"
+  }
+]
