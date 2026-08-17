@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9141",
+    "doc-id": "RFC10022",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
+    "section": "A.1",
+    "orig_text": "where M is the number of messages in the mailbox and N is the requested\r\nbatch count.",
+    "correct_text": "where M is the number of messages in the mailbox and N is the requested\r\nbatch size.",
+    "notes": "\"batch count\" --> \"batch size\"\r\n\r\nThe rest of the document uses the term \"batch size\" (eg, #3.1.3).",
+    "submit_date": "2026-08-17",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-08-17 20:24:38"
+  }
+]

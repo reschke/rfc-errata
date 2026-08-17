@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Mahesh Jethanandani",
     "update_date": "2026-04-29 23:27:27"
+  },
+  {
+    "errata_id": "9134",
+    "doc-id": "RFC9907",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.30.3.2.",
+    "orig_text": "\"value\":       Contains the decimal value of the IANA-assigned\r\n               value.",
+    "correct_text": "\"value\":       Is included only if a registration contains an explicit value.\r\n               Contains the decimal value of the IANA-assigned value.",
+    "notes": "RFC 9907 refers to the enum's substatement \"value\", described in https://datatracker.ietf.org/doc/html/rfc7950#section-9.6.4.2.  \r\nIn YANG, the \"value\" statement is optional and typically not specified when the YANG-assigned value is the correct value.  \r\nA \"value\" substatement shouldn't be required.",
+    "submit_date": "2026-08-15",
+    "submitter_name": "Kent Watsen",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-17 16:44:14"
   }
 ]

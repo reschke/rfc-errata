@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9135",
+    "doc-id": "RFC1042",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "Interoperation with Ethernet",
+    "orig_text": "Note that the MTU for the Ethernet allows a 1500 octet IP datagram,\r\nwith the MTU for the 802.3 network allows only a 1492 octet IP\r\ndatagram.",
+    "correct_text": "Note that the MTU for the Ethernet allows a 1500 octet IP datagram,\r\nwhile the MTU for the 802.3 network allows only a 1492 octet IP\r\ndatagram.",
+    "notes": "Replace \"with\" by \"while\".",
+    "submit_date": "2026-08-16",
+    "submitter_name": "Aurélien Gérôme",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-08-17 16:47:35"
   }
 ]

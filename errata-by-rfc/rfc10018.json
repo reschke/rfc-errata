@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9139",
+    "doc-id": "RFC10018",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.1.1.1. and 4.2.1.",
+    "orig_text": "4.1.1.1.1.) \"When an SR P2MP P-tunnel is not shared across MVPNs, i.e., there is one-to-one association between an EVI and an SR P2MP P-tunnel, the MPLS Label field is set to zero as per [RFC6514]. In this case, the SR-MPLS Tree-SID of the PTI of the SR P2MP Policy advertised in the P-tunnel is sufficient to identify the MVPN instance for delivering the payload.\"\r\n\r\n4.2.1.) \"PE1 will encapsulate the MVPN payload into the MPLS label stack <L1, L2, L3, L10> with L10 as the BoS label.\"",
+    "correct_text": "4.1.1.1.1.) \"When an SR P2MP P-tunnel is not shared across EVIs, i.e., there is one-to-one association between an EVI and an SR P2MP P-tunnel, the MPLS Label field is set to zero as per [RFC6514]. In this case, the SR-MPLS Tree-SID of the PTI of the SR P2MP Policy advertised in the P-tunnel is sufficient to identify the EVI for delivering the payload.\"\r\n\r\n4.2.1.) \"PE1 will encapsulate the EVPN payload into the MPLS label stack <L1, L2, L3, L10> with L10 as the BoS label.\"",
+    "notes": "In section 4.1.1.1.1, two occurrences of \"MVPN\" appear to be copied from Section 3.2.1.1.\r\n\r\nIn section 4.2.1, \"MVPN payload\" should be \"EVPN payload\" (copied from 3.3.1).",
+    "submit_date": "2026-08-17",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-17 20:19:15"
+  }
+]

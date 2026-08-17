@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9137",
+    "doc-id": "RFC10031",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2",
+    "orig_text": "For example, a constraint that specifies that the acceptable names must all be within an\r\nOrganizationally Unique Identifier (OUI) of '00-00-5e' for an EUI-48 address would have\r\na value part of '00005E000000'H, a mask part of 'FFFFFFFF000000'H, and would be\r\nencoded as OCTET STRING '00005E000000FFFFFF000000'H.",
+    "correct_text": "For example, a constraint that specifies that the acceptable names must all be within an\r\nOrganizationally Unique Identifier (OUI) of '00-00-5e' for an EUI-48 address would have\r\na value part of '00005E000000'H, a mask part of 'FFFFFF000000'H, and would be\r\nencoded as OCTET STRING '00005E000000FFFFFF000000'H.",
+    "notes": "The mask contains one too many octets (seven rather than six). There are too many FF's.",
+    "submit_date": "2026-08-16",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-17 17:00:04"
+  }
+]

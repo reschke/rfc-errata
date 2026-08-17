@@ -298,5 +298,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9140",
+    "doc-id": "RFC791",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "3.3. Page 32",
+    "orig_text": "SEND (src, dst, prot, TOS, TTL, BufPTR, len, Id, DF, opt => result)",
+    "correct_text": "SEND (src, dst, prot, TOS, TTL, BufPTR, len, Id, DF, opt, => result)",
+    "notes": "Missing a comma after \"opt\" argument.",
+    "submit_date": "2026-08-15",
+    "submitter_name": "Aurélien Gérôme",
+    "verifier_id": "",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-08-17 20:47:56"
   }
 ]
