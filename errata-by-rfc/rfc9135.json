@@ -77,16 +77,16 @@
   {
     "errata_id": "9000",
     "doc-id": "RFC9135",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5.1 and 5.2",
     "orig_text": "In Section 5.1:\r\nThis route MUST be advertised with two Route Targets, one corresponding to the MAC-VRF of the tenant's subnet \r\nand another corresponding to the tenant's IP-VRF.\r\n\r\nIn Section 5.2:\r\nWhen a PE (e.g., PE2 in Figure 4 above) receives this EVPN MAC/IP Advertisement route, it performs the following:\r\n\r\nThe MAC-VRF Route Target and Ethernet Tag, if the latter is non-zero, are used to identify the correct MAC-VRF and bridge table, \r\nand if they are found, the MAC address is imported. \r\nThe IP-VRF Route Target is used to identify the correct IP-VRF, and if it is found, the IP address is imported.",
     "correct_text": "In Section 5,1:\r\nThis route MUST be advertised with two Route Targets, one corresponding to the MAC-VRF of the tenant's subnet and another corresponding to the tenant's IP-VRF. \r\nThe Route Targets corresponding to the tenants IP-VRF SHOULD be omitted if the IP address the NLRI of teh route is a link-local IPv6 address.\r\n\r\nIn Section 5.2:\r\nWhen a PE (e.g., PE2 in Figure 4 above) receives this EVPN MAC/IP Advertisement route, it performs the following:\r\n\r\nThe MAC-VRF Route Target and Ethernet Tag, if the latter is non-zero, are used to identify the correct MAC-VRF and bridge table, \r\nand if they are found, the MAC address is imported. \r\nIf the IP address in the NLRI of the route is not an IPv6 link-local address, the IP-VRF Route Target is used to identify the correct IP-VRF, and if it is found, the IP address is imported.",
-    "notes": "As per Section 2.5.6 of RFC 4291, \"Routers must not forward any packets with Link-Local source or destination addresses to other links\". \r\n\r\nTherefore, these addresses MUST NOT be in the IP-VRF in ingress PE, and there is no need to attach Route Targets of the IP-VRF in the egress PE because they are used solely for identification of the importing IP-VRF in the ingress PE.",
+    "notes": "Claim by submitter\r\n============\r\nAs per Section 2.5.6 of RFC 4291, \"Routers must not forward any packets with Link-Local source or destination addresses to other links\". \r\n\r\nTherefore, these addresses MUST NOT be in the IP-VRF in ingress PE, and there is no need to attach Route Targets of the IP-VRF in the egress PE because they are used solely for identification of the importing IP-VRF in the ingress PE.\r\n\r\nAD Review\r\n=======\r\nI agree with the underlying observation that an IPv6 link-local address must not become an inter-subnet forwarding route. However, I do not think the proposed correction can be verified as written.\r\n\r\nRFC 4291 prohibits forwarding packets with link-local source or destination addresses to another link, but this does not mean that link-local addresses cannot appear as interface- or zone-scoped state within an IP-VRF.\r\n\r\nMore importantly, the proposed correction conflicts with RFC 9135 itself. Section 4.2 uses the presence of both Label2 and an IP-VRF Route Target to identify symmetric IRB. Section 9.1.1 also says that an RT-2 carrying both Label1 and Label2 but only a MAC-VRF Route Target MUST be treated as withdrawn. Omitting only the IP-VRF Route Target would therefore cause compliant receivers to discard the route.\r\n\r\nThere may be a valid clarification or protocol update here: a link-local MAC/IP binding could perhaps be advertised only for MAC-VRF and Proxy-ND purposes, without Label2 or IP-VRF import. However, that would require coordinated changes to several sections and discussion in BESS.\r\n\r\nI therefore recommend rejecting this erratum as written and taking the underlying IPv6 link-local handling question to the BESS working group.",
     "submit_date": "2026-06-10",
     "submitter_name": "Alexander (\"Sasha\") Vainshtein",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-10 18:19:23"
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2026-08-18 10:25:12"
   }
 ]

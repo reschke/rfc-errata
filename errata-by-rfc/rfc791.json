@@ -313,5 +313,20 @@
     "verifier_id": "",
     "verifier_name": "Éric Vyncke",
     "update_date": "2026-08-17 20:47:56"
+  },
+  {
+    "errata_id": "9142",
+    "doc-id": "RFC791",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.3. Page 32",
+    "orig_text": "RECV (BufPTR, prot, => result, src, dst, TOS, len, opt)",
+    "correct_text": "RECV (BufPTR, prot => result, src, dst, TOS, len, opt)",
+    "notes": "Remove comma between \"prot\" and \"=>\", as per Éric Vyncke's suggestion after rejecting erratum #9140.",
+    "submit_date": "2026-08-17",
+    "submitter_name": "Aurélien Gérôme",
+    "verifier_id": "",
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-08-18 15:15:33"
   }
 ]
