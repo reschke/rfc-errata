@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "9144",
+    "doc-id": "RFC6211",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "id-aa-cmsAlgorithmProtect OBJECT IDENTIFIER ::= {\r\n        iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)\r\n        pkcs9(9) 52 }",
+    "correct_text": "id-aa-cmsAlgorithmProtect OBJECT IDENTIFIER ::= {\r\n        iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)\r\n        pkcs9(9) smime(16) aa(2) 52 }",
+    "notes": "The OID value needs to match the IANA registry: https://www.iana.org/assignments/smi-numbers#security-smime-2",
+    "submit_date": "2026-08-19",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-19 19:28:52"
+  },
+  {
+    "errata_id": "9145",
+    "doc-id": "RFC6211",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "id-aa-CMSAlgorithmProtection OBJECT IDENTIFIER ::= { iso(1)\r\n            member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs9(9) 52 }",
+    "correct_text": "id-aa-cmsAlgorithmProtection OBJECT IDENTIFIER ::= { iso(1)\r\n            member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs9(9)\r\n            smime(16) aa(2) 52 }",
+    "notes": "The ASN.1 module in appendix A has a lower case \"CMS\", and the two need to match.\r\n\r\nThe OID value needs to match the IANA registry: https://www.iana.org/assignments/smi-numbers#security-smime-2",
+    "submit_date": "2026-08-19",
+    "submitter_name": "Russ Housley",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-19 19:28:57"
+  }
+]
