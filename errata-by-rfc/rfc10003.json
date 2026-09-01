@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "9153",
+    "doc-id": "RFC10003",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Figure 3",
+    "orig_text": "Content-Type: application/pkcs7-mime; smime-type=CMC-Request;\r\n    name=smime.p7c",
+    "correct_text": "Content-Type: application/pkcs7-mime; smime-type=CMC-Request;\r\n    name=smime.p7m",
+    "notes": "Correct \"p7c\" to \"p7m\" per the preceding prose. \"p7c\" may be a copy-paste error from Figure 2.",
+    "submit_date": "2026-08-28",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-31 15:14:40"
+  },
+  {
+    "errata_id": "9154",
+    "doc-id": "RFC10003",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8",
+    "orig_text": "IANA has assigned a TCP port number in the \"Dynamic and/or Private Ports Range\" of the \"Service Name and Transport Protocol Port Number Registry\" for the use of CMC.",
+    "correct_text": "IANA has assigned a TCP port number in the \"User Ports Range\" of the \"Service Name and Transport Protocol Port Number Registry\" for the use of CMC.",
+    "notes": "Correct \"Dynamic and/or Private Ports Range\" to \"User Ports Range\".\r\n\r\nPer the registry, port number 5318 is in the \"User Ports\" range:\r\n\r\n  Port numbers are assigned in various ways, based on three ranges:\r\n  System Ports (0-1023),\r\n  User Ports (1024-49151),\r\n  and the Dynamic and/or Private Ports (49152-65535);\r\n\r\nThe distinction is important because:\r\n\r\n1. \"Dynamic Ports are not assigned.\"\r\n2. The ranges have different review and approval processes.",
+    "submit_date": "2026-08-28",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-31 15:14:52"
+  }
+]

@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Madison Church",
     "update_date": "2026-07-08 19:38:32"
+  },
+  {
+    "errata_id": "9150",
+    "doc-id": "RFC9989",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "11.6 (also Appendix B.2.3, B.2.4)",
+    "orig_text": "Section 11.6:\r\n   To avoid abuse by bad actors, reporting addresses generally have to\r\n   be inside the domains about which reports are requested.  To\r\n   accommodate special cases, such as a need to get reports about\r\n   domains that cannot actually receive mail, Section 3 of [RFC9990]\r\n   describes a DNS-based mechanism for validating approved external\r\n   reporting.\r\n\r\nAppendix B.2.3:\r\n   Because the address used in the \"ruf\" tag is outside the\r\n   Organizational Domain in which this record is published, conforming\r\n   Mail Receivers MUST implement additional checks as described in\r\n   Section 3 of [RFC9990].\r\n\r\nAppendix B.2.4:\r\n   Intermediaries and other third parties should refer to Section 3 of\r\n   [RFC9990] for the full details of this mechanism.",
+    "correct_text": "Section 11.6:\r\n   ... Section 4 of [RFC9990] describes a DNS-based mechanism for\r\n   validating approved external reporting.\r\n\r\nAppendix B.2.3:\r\n   ... conforming Mail Receivers MUST implement additional checks as\r\n   described in Section 4 of [RFC9990].\r\n\r\nAppendix B.2.4:\r\n   Intermediaries and other third parties should refer to Section 4 of\r\n   [RFC9990] for the full details of this mechanism.",
+    "notes": "In RFC 9990, Section 3 is \"DMARC Feedback\" (report format and delivery). The DNS-based verification mechanism for external reporting addresses is Section 4, \"Verifying External Destinations\". All three cross-references intend the verification mechanism, so each should read \"Section 4 of [RFC9990]\". The reference in Appendix B.2.3 is normative (MUST), so the incorrect pointer misdirects implementers.",
+    "submit_date": "2026-08-27",
+    "submitter_name": "VENKAT NOOKALA",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-31 15:14:21"
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "9155",
+    "doc-id": "RFC10002",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.1. ASN.1 Module for CMC",
+    "orig_text": "unsuportedExt   (5),",
+    "correct_text": "unsupportedExt   (5),",
+    "notes": "Typo in the ASN.1 Module. Disagrees with the definition in \"6.1.4. CMCFailInfo\" and several points in the prose which all correctly use \"unsupportedExt\".",
+    "submit_date": "2026-08-28",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-31 15:14:57"
+  },
+  {
+    "errata_id": "9156",
+    "doc-id": "RFC10002",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.1. ASN.1 Module for CMC",
+    "orig_text": "RevokeRequest ::= SEQUENCE {\r\n      issuerName            Name,\r\n      serialNumber          INTEGER,\r\n      reason                CRLReason,\r\n      invalidityDate        GeneralizedTime OPTIONAL,\r\n      passphrase            OCTET STRING OPTIONAL,\r\n      comment               UTF8String OPTIONAL }",
+    "correct_text": "RevokeRequest ::= SEQUENCE {\r\n      issuerName            Name,\r\n      serialNumber          INTEGER,\r\n      reason                CRLReason,\r\n      invalidityDate        GeneralizedTime OPTIONAL,\r\n      sharedSecret          OCTET STRING OPTIONAL,\r\n      comment               UTF8String OPTIONAL }",
+    "notes": "In RevokeRequest, correct \"passphrase\" to \"sharedSecret\".\r\n\r\nSection 6.11 defines RevokeRequest with a sharedSecret, and sharedSecret is mentioned in the prose.\r\nThe ASN.1 module defines RevokeRequest with a passphrase which is not mentioned anywhere else.",
+    "submit_date": "2026-08-28",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-31 15:15:04"
+  }
+]

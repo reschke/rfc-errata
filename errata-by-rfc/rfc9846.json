@@ -43,5 +43,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-07-29 13:48:31"
+  },
+  {
+    "errata_id": "9157",
+    "doc-id": "RFC9846",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Editorial",
+    "section": "Appendix F.1",
+    "orig_text": "derived from the main secret",
+    "correct_text": "derived from the Main Secret",
+    "notes": "\"the main secret\" is undefined in RFC9846. Figure 5 (https://www.rfc-editor.org/rfc/rfc9846.html#figure-5) defines Main Secret. Please note that the original text appears twice within Appendix F.1.",
+    "submit_date": "2026-08-30",
+    "submitter_name": "Muhammad Usama Sardar",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-08-31 15:15:08"
   }
 ]
