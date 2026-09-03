@@ -119012,7 +119012,7 @@
   {
     "errata_id": "9150",
     "doc-id": "RFC9989",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "11.6 (also Appendix B.2.3, B.2.4)",
     "orig_text": "Section 11.6:\r\n   To avoid abuse by bad actors, reporting addresses generally have to\r\n   be inside the domains about which reports are requested.  To\r\n   accommodate special cases, such as a need to get reports about\r\n   domains that cannot actually receive mail, Section 3 of [RFC9990]\r\n   describes a DNS-based mechanism for validating approved external\r\n   reporting.\r\n\r\nAppendix B.2.3:\r\n   Because the address used in the \"ruf\" tag is outside the\r\n   Organizational Domain in which this record is published, conforming\r\n   Mail Receivers MUST implement additional checks as described in\r\n   Section 3 of [RFC9990].\r\n\r\nAppendix B.2.4:\r\n   Intermediaries and other third parties should refer to Section 3 of\r\n   [RFC9990] for the full details of this mechanism.",
@@ -119021,13 +119021,13 @@
     "submit_date": "2026-08-27",
     "submitter_name": "VENKAT NOOKALA",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-31 15:14:21"
+    "verifier_name": "Madison Church",
+    "update_date": "2026-09-02 19:06:13"
   },
   {
     "errata_id": "9151",
     "doc-id": "RFC10004",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "5.3",
     "orig_text": "See Section 3.2.1.3.3 of [CMC-STRUCT] and Section 3.2.1.3.3 of [CMC-STRUCT] for alternative methods.",
@@ -119036,13 +119036,13 @@
     "submit_date": "2026-08-27",
     "submitter_name": "Paul Aitken",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-31 15:14:24"
+    "verifier_name": "Madison Church",
+    "update_date": "2026-09-02 19:05:16"
   },
   {
     "errata_id": "9152",
     "doc-id": "RFC9711",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Editorial",
     "section": "4.2.15",
     "orig_text": "The second item is MUST be the actual manifest.",
@@ -119051,8 +119051,8 @@
     "submit_date": "2026-08-28",
     "submitter_name": "Steven Bellock",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-31 15:14:30"
+    "verifier_name": "Madison Church",
+    "update_date": "2026-09-02 19:00:12"
   },
   {
     "errata_id": "9153",
@@ -119128,6 +119128,81 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-08-31 15:15:08"
+  },
+  {
+    "errata_id": "9158",
+    "doc-id": "RFC9513",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "11",
+    "orig_text": "Table 1: SRv6 Endpoint Behaviors in OSPFv3\r\n\r\n| End.DT64 | 20 | Y | N | N |",
+    "correct_text": "Table 1: SRv6 Endpoint Behaviors in OSPFv3\r\n\r\n| End.DT46 | 20 | Y | N | N |",
+    "notes": "The endpoint behavior name \"End.DT64\" is a typographical error. The correct name is \"End.DT46\".\r\n\r\nRFC 8986, Section 4.8, defines the End.DT46 behavior, and the IANA \"SRv6 Endpoint Behaviors\" registry assigns code point 20 (0x0014) to End.DT46. No End.DT64 behavior is defined in RFC 8986 or registered by IANA.\r\n\r\nRFC 9513 itself also uses the correct name End.DT46 in Section 4.4. Therefore, the entry in Table 1 of Section 11 should read \"End.DT46\" rather than \"End.DT64\". The endpoint behavior code point and the applicability columns remain unchanged.",
+    "submit_date": "2026-09-01",
+    "submitter_name": "Carlo Pio Luigi Ciciriello",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-09-02 18:41:53"
+  },
+  {
+    "errata_id": "9159",
+    "doc-id": "RFC10042",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "If any of these checks fail, the client\r\nMUST abort using a disconnect message (SSH_MSG_DISCONNECT) with a\r\nSSH_DISCONNECT_KEY_EXCHANGE_FAILED as the reason.",
+    "correct_text": "If any of these checks fail, the server\r\nMUST abort using a disconnect message (SSH_MSG_DISCONNECT) with a\r\nSSH_DISCONNECT_KEY_EXCHANGE_FAILED as the reason.",
+    "notes": "The client has no information about the results of the server-side check.\r\n\r\nRFC EDITOR: Edited Original/Corrected text to only include sentence that is affected.",
+    "submit_date": "2026-09-01",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-02 18:53:21"
+  },
+  {
+    "errata_id": "9160",
+    "doc-id": "RFC10042",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5",
+    "orig_text": "The security considerations given in [RFC5656] and [RFC8731] also\r\n   apply to the ECDH part of the P/T Hybrid key exchange schemes defined\r\n   in this document.",
+    "correct_text": "The security considerations given in [RFC5656] and [RFC8731] also\r\n   apply to the ECDH part of the PQ/T Hybrid key exchange schemes defined\r\n   in this document.",
+    "notes": "Typo",
+    "submit_date": "2026-09-01",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-09-02 19:00:32"
+  },
+  {
+    "errata_id": "9161",
+    "doc-id": "RFC9846",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1.2",
+    "orig_text": "Correct the lower bound on CertificateRequest.extensions to be 0 bytes.  This was an error \r\nin the syntax as it is possible to send no extensions, which results in length 0.",
+    "correct_text": "Correct the lower bound on CertificateRequest.extensions to be 0 bytes.  This corrects the presentation \r\nsyntax to represent an empty vector; Section 4.4.2 nevertheless requires the \"signature_algorithms\" extension in a conforming CertificateRequest.",
+    "notes": "The presentation-language bound and the message-specific sender requirement address different layers. Extension extensions<0..2^16-1> makes a zero-length vector syntactically representable. However, Section 4.4.2 requires the \"signature_algorithms\" extension in every conforming CertificateRequest under the base specification. The existing Section 1.2 sentence conflates syntactic representability with permitted sender behavior. The corrected text changes no wire rule or sender requirement.",
+    "submit_date": "2026-09-01",
+    "submitter_name": "Antun Jurkovikj",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-02 18:57:39"
+  },
+  {
+    "errata_id": "9162",
+    "doc-id": "RFC9110",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "When a field name is repeated within a section, its combined\r\n   field value consists of the list of corresponding field line values\r\n   within that section, concatenated in order, with each field line\r\n   value separated by a comma.\r\n\r\n   For example, this section:\r\n\r\n   Example-Field: Foo, Bar\r\n   Example-Field: Baz\r\n\r\n   contains two field lines, both with the field name \"Example-Field\".\r\n   The first field line has a field line value of \"Foo, Bar\", while the\r\n   second field line value is \"Baz\".  The field value for \"Example-\r\n   Field\" is the list \"Foo, Bar, Baz\".",
+    "correct_text": "When a field name is repeated within a section, its combined\r\n   field value consists of the list of corresponding field line values\r\n   within that section, concatenated in order, with each field line\r\n   value separated by a comma SP (\", \").\r\n\r\n   For example, this section:\r\n\r\n   Example-Field: Foo, Bar\r\n   Example-Field: Baz\r\n\r\n   contains two field lines, both with the field name \"Example-Field\".\r\n   The first field line has a field line value of \"Foo, Bar\", while the\r\n   second field line value is \"Baz\".  The field value for \"Example-\r\n   Field\" is the list \"Foo, Bar, Baz\".",
+    "notes": "The original text says, \"with each field line value separated by a comma\", but in the example, it shows the field line values being separated by a comma SP (\", \") instead of just a comma (\",\"). Hence, either the given definition of \"combined field value\" is incorrect, or the example intended to demonstrate it is incorrect.",
+    "submit_date": "2026-09-01",
+    "submitter_name": "Julian Shepherd",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-02 18:59:03"
   },
   {
     "errata_id": "917",

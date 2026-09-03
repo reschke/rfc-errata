@@ -58,5 +58,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-08-31 15:15:08"
+  },
+  {
+    "errata_id": "9161",
+    "doc-id": "RFC9846",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1.2",
+    "orig_text": "Correct the lower bound on CertificateRequest.extensions to be 0 bytes.  This was an error \r\nin the syntax as it is possible to send no extensions, which results in length 0.",
+    "correct_text": "Correct the lower bound on CertificateRequest.extensions to be 0 bytes.  This corrects the presentation \r\nsyntax to represent an empty vector; Section 4.4.2 nevertheless requires the \"signature_algorithms\" extension in a conforming CertificateRequest.",
+    "notes": "The presentation-language bound and the message-specific sender requirement address different layers. Extension extensions<0..2^16-1> makes a zero-length vector syntactically representable. However, Section 4.4.2 requires the \"signature_algorithms\" extension in every conforming CertificateRequest under the base specification. The existing Section 1.2 sentence conflates syntactic representability with permitted sender behavior. The corrected text changes no wire rule or sender requirement.",
+    "submit_date": "2026-09-01",
+    "submitter_name": "Antun Jurkovikj",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-02 18:57:39"
   }
 ]

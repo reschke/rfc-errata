@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "9159",
+    "doc-id": "RFC10042",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1",
+    "orig_text": "If any of these checks fail, the client\r\nMUST abort using a disconnect message (SSH_MSG_DISCONNECT) with a\r\nSSH_DISCONNECT_KEY_EXCHANGE_FAILED as the reason.",
+    "correct_text": "If any of these checks fail, the server\r\nMUST abort using a disconnect message (SSH_MSG_DISCONNECT) with a\r\nSSH_DISCONNECT_KEY_EXCHANGE_FAILED as the reason.",
+    "notes": "The client has no information about the results of the server-side check.\r\n\r\nRFC EDITOR: Edited Original/Corrected text to only include sentence that is affected.",
+    "submit_date": "2026-09-01",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-02 18:53:21"
+  },
+  {
+    "errata_id": "9160",
+    "doc-id": "RFC10042",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5",
+    "orig_text": "The security considerations given in [RFC5656] and [RFC8731] also\r\n   apply to the ECDH part of the P/T Hybrid key exchange schemes defined\r\n   in this document.",
+    "correct_text": "The security considerations given in [RFC5656] and [RFC8731] also\r\n   apply to the ECDH part of the PQ/T Hybrid key exchange schemes defined\r\n   in this document.",
+    "notes": "Typo",
+    "submit_date": "2026-09-01",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-09-02 19:00:32"
+  }
+]
