@@ -119250,6 +119250,36 @@
     "update_date": "2026-09-08 15:47:13"
   },
   {
+    "errata_id": "9166",
+    "doc-id": "RFC9111",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2.3",
+    "orig_text": "The Cache-Control header field can be extended through the use of one or more extension cache directives.",
+    "correct_text": "The Cache-Control header field can be extended through the use of one or more extension cache directives. Additionally, other HTTP extensions (such as header fields) can also modify the operation of HTTP caches.",
+    "notes": "During no-vary-search standardisation, we encountered views that this text precluded other HTTP extensions from modifying the operation of a HTTP cache without updating this specification. This clarification should be held for document update.",
+    "submit_date": "2026-09-09",
+    "submitter_name": "Mark Nottingham",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-09 18:00:12"
+  },
+  {
+    "errata_id": "9167",
+    "doc-id": "RFC3492",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.1",
+    "orig_text": "(D) Czech: Pro<ccaron>prost<ecaron>nemluv<iacute><ccaron>esky\r\n       U+0050 u+0072 u+006F u+010D u+0070 u+0072 u+006F u+0073 u+0074\r\n       u+011B u+006E u+0065 u+006D u+006C u+0075 u+0076 u+00ED u+010D\r\n       u+0065 u+0073 u+006B u+0079\r\n       Punycode: Proprostnemluvesky-uyb24dma41a",
+    "correct_text": "(D) Czech: Pro<ccaron>prost<ecaron>nemluv<iacute><ccaron>esky\r\n       U+0050 u+0072 u+006F u+010D u+0070 u+0072 u+006F u+0073 u+0074\r\n       u+011B u+006E u+0065 u+006D u+006C u+0075 u+0076 u+00ED u+010D\r\n       u+0065 u+0073 u+006B u+0079\r\n       Punycode: proprostnemluvesky-uyb24dma41a",
+    "notes": "The uppercase `P` in the encoded string appears to be a typo.",
+    "submit_date": "2026-09-08",
+    "submitter_name": "Jake McClintock",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-09 18:00:24"
+  },
+  {
     "errata_id": "917",
     "doc-id": "RFC4728",
     "errata_status_code": "Verified",

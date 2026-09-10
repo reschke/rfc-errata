@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-06-11 18:06:23"
+  },
+  {
+    "errata_id": "9166",
+    "doc-id": "RFC9111",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2.3",
+    "orig_text": "The Cache-Control header field can be extended through the use of one or more extension cache directives.",
+    "correct_text": "The Cache-Control header field can be extended through the use of one or more extension cache directives. Additionally, other HTTP extensions (such as header fields) can also modify the operation of HTTP caches.",
+    "notes": "During no-vary-search standardisation, we encountered views that this text precluded other HTTP extensions from modifying the operation of a HTTP cache without updating this specification. This clarification should be held for document update.",
+    "submit_date": "2026-09-09",
+    "submitter_name": "Mark Nottingham",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-09 18:00:12"
   }
 ]

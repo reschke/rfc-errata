@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Brian Haberman",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9167",
+    "doc-id": "RFC3492",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.1",
+    "orig_text": "(D) Czech: Pro<ccaron>prost<ecaron>nemluv<iacute><ccaron>esky\r\n       U+0050 u+0072 u+006F u+010D u+0070 u+0072 u+006F u+0073 u+0074\r\n       u+011B u+006E u+0065 u+006D u+006C u+0075 u+0076 u+00ED u+010D\r\n       u+0065 u+0073 u+006B u+0079\r\n       Punycode: Proprostnemluvesky-uyb24dma41a",
+    "correct_text": "(D) Czech: Pro<ccaron>prost<ecaron>nemluv<iacute><ccaron>esky\r\n       U+0050 u+0072 u+006F u+010D u+0070 u+0072 u+006F u+0073 u+0074\r\n       u+011B u+006E u+0065 u+006D u+006C u+0075 u+0076 u+00ED u+010D\r\n       u+0065 u+0073 u+006B u+0079\r\n       Punycode: proprostnemluvesky-uyb24dma41a",
+    "notes": "The uppercase `P` in the encoded string appears to be a typo.",
+    "submit_date": "2026-09-08",
+    "submitter_name": "Jake McClintock",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-09 18:00:24"
   }
 ]
