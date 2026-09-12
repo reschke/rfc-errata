@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9168",
+    "doc-id": "RFC9209",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1.5",
+    "orig_text": "Proxy-Status: proxy.example.net; error=\"http_protocol_error\";\r\n              details=\"Malformed response header: space before colon\"",
+    "correct_text": "Proxy-Status: proxy.example.net; error=http_protocol_error;\r\n              details=\"Malformed response header: space before colon\"",
+    "notes": "The `error` parameter is defined to be a Token in Section 2.1.1. In the other examples, it is properly shown as a Token, but in Section 2.1.5's example, it is shown as a String.",
+    "submit_date": "2026-09-09",
+    "submitter_name": "Andrew Paseltiner",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-11 16:21:51"
+  }
+]

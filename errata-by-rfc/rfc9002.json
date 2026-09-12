@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": "Zaheduzzaman Sarker",
     "update_date": "2023-06-13 13:13:04"
+  },
+  {
+    "errata_id": "9169",
+    "doc-id": "RFC9002",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A.8",
+    "orig_text": "GetLossTimeAndSpace():\r\n  time = loss_time[Initial]\r\n  space = Initial\r\n  for pn_space in [ Handshake, ApplicationData ]:\r\n    if (time == 0 || loss_time[pn_space] < time):\r\n      time = loss_time[pn_space];\r\n      space = pn_space\r\n  return time, space",
+    "correct_text": "GetLossTimeAndSpace():\r\n  time = loss_time[Initial]\r\n  space = Initial\r\n  for pn_space in [ Handshake, ApplicationData ]:\r\n    if (loss_time[pn_space] != 0 &&\r\n        (time == 0 || loss_time[pn_space] < time)):\r\n      time = loss_time[pn_space];\r\n      space = pn_space\r\n  return time, space",
+    "notes": "loss_time is initialized to zero for every packet-number space, and the\r\nsurrounding pseudocode uses zero to mean that no time-threshold loss deadline\r\nis pending. GetLossTimeAndSpace is therefore intended to return the minimum\r\nnonzero deadline, or zero if no deadline exists.\r\n\r\nThe published comparison allows a later zero entry to replace a real pending\r\ndeadline. For example, inputs of Initial=5, Handshake=0, and\r\nApplicationData=10 return 10 instead of 5; inputs of Initial=5,\r\nHandshake=10, and ApplicationData=0 return zero instead of 5. Callers can then\r\narm the wrong deadline and packet-number space or incorrectly proceed to PTO\r\nprocessing.\r\n\r\nThe correction only prevents the zero sentinel from participating in the\r\nminimum selection. It changes no QUIC wire behavior or recovery design.\r\nEarlier working-group source contained this guard before it was lost during a\r\nlater PTO-helper refactor.",
+    "submit_date": "2026-09-09",
+    "submitter_name": "Antun Jurkovikj",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-11 16:22:18"
   }
 ]

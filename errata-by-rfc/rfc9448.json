@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "9172",
+    "doc-id": "RFC9448",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4",
+    "orig_text": "\"challenges\": [\r\n    {\r\n      \"type\": \"tkauth-01\",\r\n      \"tkauth-type\": \"atc\",\r\n      \"token-authority\": \"https://authority.example.org\",\r\n      \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n      \"token\": \"IlirfxKKXAsHtmzK29Pj8A\"\r\n    }\r\n  ]",
+    "correct_text": "\"challenges\": [\r\n    {\r\n      \"type\": \"tkauth-01\",\r\n      \"tkauth-type\": \"atc\",\r\n      \"token-authority\": \"https://authority.example.org\",\r\n      \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n      \"status\": \"pending\",\r\n      \"token\": \"IlirfxKKXAsHtmzK29Pj8A\"\r\n    }\r\n  ]",
+    "notes": "RFC 8555, Section 8, lists \"status\" as a required field of a challenge object.\r\nThe tkauth-01 challenge object within the \"challenges\" array omits it. At this\r\npoint in the flow the challenge is pending, so the object should include\r\n\"status\": \"pending\". (The enclosing authorization object correctly carries its\r\nown \"status\": \"pending\"; the omission is only on the inner challenge object.)",
+    "submit_date": "2026-09-11",
+    "submitter_name": "Chris Wendt",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-11 16:23:32"
+  },
+  {
+    "errata_id": "9173",
+    "doc-id": "RFC9448",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "\"identifiers\": [\r\n  \"type\":\"TNAuthList\",\r\n  \"value\":\"F83n2a...avn27DN3\"\r\n],",
+    "correct_text": "\"identifiers\": [\r\n  {\"type\":\"TNAuthList\",\r\n   \"value\":\"F83n2a...avn27DN3\"}\r\n],",
+    "notes": "The \"identifiers\" member is a JSON array, but its contents are written as a\r\nsequence of bare name/value pairs, which is not valid JSON. Per RFC 8555,\r\neach ACME identifier is a JSON object, so the array must contain an object:\r\n[{\"type\":\"TNAuthList\",\"value\":\"...\"}]. This matches the form used correctly\r\nelsewhere in the document (e.g., the new-order request examples). The example\r\nis informative, but as printed it cannot be parsed as JSON.",
+    "submit_date": "2026-09-11",
+    "submitter_name": "Chris Wendt",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-11 16:23:41"
+  }
+]
