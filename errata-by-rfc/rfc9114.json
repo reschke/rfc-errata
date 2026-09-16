@@ -88,5 +88,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-06-10 18:19:01"
+  },
+  {
+    "errata_id": "9176",
+    "doc-id": "RFC9114",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3.1",
+    "orig_text": "This pseudo-header field MUST NOT be empty for \"http\" or \"https\"\r\nURIs; \"http\" or \"https\" URIs that do not contain a path component\r\nMUST include a value of / (ASCII 0x2f).  An OPTIONS request that\r\ndoes not include a path component includes the value * (ASCII\r\n0x2a) for the :path pseudo-header field; see Section 7.1 of\r\n[HTTP].",
+    "correct_text": "This pseudo-header field MUST NOT be empty for \"http\" or \"https\"\r\nURIs; \"http\" or \"https\" URIs that do not contain a path component\r\nMUST include a value of / (ASCII 0x2f).  An OPTIONS request that\r\ndoes not include a path or query component includes the value *\r\n(ASCII 0x2a) for the :path pseudo-header field; see Section 7.1 of\r\n[HTTP].",
+    "notes": "The :path definition includes both the path and query components, but the\r\nOPTIONS exception tests only for an absent path. RFC 9112 Section 3.2.4\r\nlimits the corresponding conversion to \"*\" to an empty path and no query\r\ncomponent.\r\n\r\nFor example, a valid HTTP/1.1 OPTIONS request to a proxy with absolute-form\r\nrequest-target https://example.com?x=1 has an empty path and a query. Its\r\nHTTP/3 :path is /?x=1, not *. A present but empty query likewise needs its\r\ndelimiter preserved: https://example.com? maps to /?.\r\n\r\nReading the exception as limited to server-wide OPTIONS gives the intended\r\nresult, but that limitation is missing from its stated condition. This is\r\nan instruction conflict, not a claim that the combined HTTP rules permit\r\nquery loss or that deployed implementations lose queries.\r\n\r\nAdding \"or query\" makes the condition explicit while preserving server-wide\r\nOPTIONS, ordinary path/query construction, and the other request mappings.\r\n\r\nRFC 9113 Section 8.3.1 contains the corresponding path-only OPTIONS condition.",
+    "submit_date": "2026-09-13",
+    "submitter_name": "Antun Jurkovikj",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-15 13:12:46"
   }
 ]

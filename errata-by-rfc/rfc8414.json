@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2026-01-12 21:36:12"
+  },
+  {
+    "errata_id": "9178",
+    "doc-id": "RFC8414",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1 and 3.2",
+    "orig_text": "In the first example of Section 3.1, \"https://example.com\" is the issuer. Section 3.2 has an example response that identifies the issuer as \"https://server.example.com\".",
+    "correct_text": "Section 3.2 should update the issuer for the example response to be \"https://example.com\"",
+    "notes": "If I am understanding how the issuer is used to generate the well-known URL for the discovery document, it seems that the issuer in the response example in Section 3.2 should be \"https://example.com\" to match one of the examples in 3.1.\r\n\r\nSection 6.2 also confirms that prefix for the URL for the metadata request and the issuer field in the discovery document must match exactly. Making the examples align with that would make it easier to understand.\r\n \r\nI have seen many issuers in the wild that do not match the issuer derived from the discovery document URL, so it seems that this part of the standard is commonly violated. For example, of Google, Microsoft, and Quickbooks Online OAuth implementations, only the Google's implementation complies with the Section 6.2 guidance of matching issuer URL prefix and issuer field in the discovery doc.",
+    "submit_date": "2026-09-15",
+    "submitter_name": "Wren Turkal",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-15 13:16:41"
   }
 ]
