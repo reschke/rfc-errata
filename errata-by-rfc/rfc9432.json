@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9180",
+    "doc-id": "RFC9432",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7 and 9.1",
+    "orig_text": "As catalog zones are transmitted using DNS zone transfers, it is\r\nRECOMMENDED that catalog zone transfers be protected from unexpected\r\nmodifications by way of authentication, e.g., by using a Transaction\r\nSignature (TSIG) [RFC8945] or Strict or Mutual TLS authentication\r\nwith DNS zone transfer over TLS or QUIC [RFC9103].\r\n\r\nUse of DNS UPDATE [RFC2136] to modify the content of catalog zones\r\nSHOULD similarly be authenticated.\r\n\r\nZone transfers of member zones SHOULD similarly be authenticated.\r\nTSIG shared secrets used for member zones SHOULD NOT be mentioned in\r\nthe catalog zone data.  However, key identifiers may be shared within\r\ncatalog zones.\r\n\r\nCatalog zones reveal the zones served by their consumers, including\r\ntheir properties.  To prevent unintentional exposure of catalog zone\r\ncontents, it is RECOMMENDED to limit the systems able to query them\r\nand to conduct catalog zone transfers confidentially [RFC9103].",
+    "correct_text": "As catalog zones are transmitted using DNS zone transfers, it is\r\nRECOMMENDED that catalog zone transfers be protected from unexpected\r\nmodifications by way of authentication, e.g., by using a Transaction\r\nSignature (TSIG) [RFC8945] or Strict or Mutual TLS authentication\r\nwith DNS zone transfer over TLS or QUIC [RFC9103] [RFC9250].\r\n\r\nUse of DNS UPDATE [RFC2136] to modify the content of catalog zones\r\nSHOULD similarly be authenticated.\r\n\r\nZone transfers of member zones SHOULD similarly be authenticated.\r\nTSIG shared secrets used for member zones SHOULD NOT be mentioned in\r\nthe catalog zone data.  However, key identifiers may be shared within\r\ncatalog zones.\r\n\r\nCatalog zones reveal the zones served by their consumers, including\r\ntheir properties.  To prevent unintentional exposure of catalog zone\r\ncontents, it is RECOMMENDED to limit the systems able to query them\r\nand to conduct catalog zone transfers confidentially [RFC9103]\r\n[RFC9250].",
+    "notes": "RFC 9103 specifies DNS zone transfer over TLS. RFC 9250 specifies\r\nDNS over QUIC, including AXFR and IXFR in Section 5.7. Its Section\r\n5.1 retains RFC 9103's authentication requirements for zone transfer.\r\n\r\nSection 7 already includes QUIC. Adding RFC 9250 supplies its defining\r\nreference while retaining RFC 9103. This does not change the existing\r\nauthentication or confidentiality recommendations.\r\n\r\nAdd the following entry to Section 9.1 (Normative References):\r\n\r\n[RFC9250]  Huitema, C., Dickinson, S., and A. Mankin, \"DNS over\r\n           Dedicated QUIC Connections\", RFC 9250,\r\n           DOI 10.17487/RFC9250, May 2022,\r\n           <https://www.rfc-editor.org/info/rfc9250>.",
+    "submit_date": "2026-09-15",
+    "submitter_name": "Antun Jurkovikj",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-17 15:12:20"
+  }
+]
