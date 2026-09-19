@@ -119520,6 +119520,21 @@
     "update_date": "2026-09-17 16:23:01"
   },
   {
+    "errata_id": "9182",
+    "doc-id": "RFC9842",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.2.2, step 6",
+    "orig_text": "6.  Let PATTERN be a \"URL pattern struct\" created by running the\r\n    steps to \"create a URL pattern\" by setting input=MATCH and\r\n    baseURL=URL (see Section 1.4 of [URLPATTERN]).",
+    "correct_text": "6.  Let PATTERN be a \"URL pattern struct\" created by running the\r\n    steps to \"create a URL pattern\" by setting input=MATCH and\r\n    baseURL=BASEURL (see Section 1.4 of [URLPATTERN]).",
+    "notes": "Step 2 defines BASEURL as the dictionary request URL, while step 3\r\ndefines URL as the outbound request URL. Step 6 uses the latter as\r\nthe base for constructing the dictionary's match pattern. Relative\r\npatterns therefore acquire a different meaning depending on the\r\noutbound request.\r\n\r\nFor example, a dictionary at https://example.com/assets/dict.bin\r\nwith match=\"*\" has pathname pattern /assets/* when constructed as\r\nspecified in Section 2.1.1. For an outbound request to\r\nhttps://example.com/private/account, Section 2.2.2 instead constructs\r\n/private/* and returns a match. Using BASEURL retains /assets/* and\r\ndoes not match. Conversely, match=\"child/*\" can fail to match the\r\nintended /assets/child/page because the published operand constructs\r\n/assets/child/child/*.\r\n\r\nThe correction restores the dictionary request URL as the base.\r\nThe outbound request URL remains the matching input in step 7.\r\nThe same-origin and destination checks remain unchanged. The\r\nbaseURL=URL expression in Section 2.1.1 is correct and is not changed:\r\nURL there denotes the dictionary request URL.\r\n\r\nThis reports an algorithm error, not an observed deployed failure.",
+    "submit_date": "2026-09-17",
+    "submitter_name": "Antun Jurkovikj",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-18 14:10:47"
+  },
+  {
     "errata_id": "919",
     "doc-id": "RFC4728",
     "errata_status_code": "Verified",
