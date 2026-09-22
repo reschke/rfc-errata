@@ -119535,6 +119535,36 @@
     "update_date": "2026-09-18 14:10:47"
   },
   {
+    "errata_id": "9183",
+    "doc-id": "RFC2510",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2.8",
+    "orig_text": "witness             OCTET STRING,\r\n         -- the result of applying the one-way function (owf) to a\r\n         -- randomly-generated INTEGER, A.",
+    "correct_text": "witness             OCTET STRING,\r\n         -- the result of applying the one-way function (owf) to the DER encoding of a\r\n         -- randomly-generated INTEGER, A.",
+    "notes": "It was not specified how to encode the INTEGER before hashing it.",
+    "submit_date": "2026-09-18",
+    "submitter_name": "David von Oheimb",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-21 17:10:02"
+  },
+  {
+    "errata_id": "9184",
+    "doc-id": "RFC4210",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "E.7 (appendix)",
+    "orig_text": "witness             OCTET STRING,\r\n         -- the result of applying the one-way function (owf) to a\r\n         -- randomly-generated INTEGER, A.",
+    "correct_text": "witness             OCTET STRING,\r\n         -- the result of applying the one-way function (owf) to the DER encoding of a\r\n         -- randomly-generated INTEGER, A.",
+    "notes": "It was not specified how to encode the INTEGER before hashing it.",
+    "submit_date": "2026-09-18",
+    "submitter_name": "David von Oheimb",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-21 17:10:05"
+  },
+  {
     "errata_id": "919",
     "doc-id": "RFC4728",
     "errata_status_code": "Verified",
