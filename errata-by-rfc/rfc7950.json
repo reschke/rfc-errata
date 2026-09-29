@@ -388,5 +388,20 @@
     "verifier_id": "",
     "verifier_name": "Mahesh Jethanandani",
     "update_date": "2026-06-24 16:43:44"
+  },
+  {
+    "errata_id": "9187",
+    "doc-id": "RFC7950",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.10",
+    "orig_text": "NETCONF XML Example:\r\n\r\n     <notification\r\n         xmlns=\"urn:ietf:params:netconf:capability:notification:1.0\">\r\n       <eventTime>2007-09-01T10:00:00Z</eventTime>\r\n       <link-failure xmlns=\"urn:example:system\">\r\n         <if-name>so-1/2/3.0</if-name>\r\n         <if-admin-status>up</if-admin-status>\r\n         <if-oper-status>down</if-oper-status>\r\n       </link-failure>\r\n     </notification>",
+    "correct_text": "NETCONF XML Example:\r\n\r\n     <notification\r\n         xmlns=\"urn:ietf:params:xml:ns:netconf:notification:1.0\">\r\n       <eventTime>2007-09-01T10:00:00Z</eventTime>\r\n       <link-failure xmlns=\"urn:example:system\">\r\n         <if-name>so-1/2/3.0</if-name>\r\n         <if-admin-status>up</if-admin-status>\r\n         <if-oper-status>down</if-oper-status>\r\n       </link-failure>\r\n     </notification>",
+    "notes": "Matches with https://datatracker.ietf.org/doc/html/rfc5277#section-4.\r\n\r\nRFC Editor: updated original/corrected texts w/ correct spacing",
+    "submit_date": "2026-09-25",
+    "submitter_name": "Benoit Claise",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-28 15:14:59"
   }
 ]

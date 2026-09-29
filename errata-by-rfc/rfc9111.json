@@ -43,5 +43,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-09-09 18:00:12"
+  },
+  {
+    "errata_id": "9185",
+    "doc-id": "RFC9111",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3.4",
+    "orig_text": "The initial set of stored responses to update are those that could\r\nhave been chosen for that request -- i.e., those that meet the\r\nrequirements in Section 4, except the last requirement to be fresh,\r\nable to be served stale, or just validated.",
+    "correct_text": "Replace the original paragraph with,\r\n\r\n  The initial set consists of stored responses that satisfy all of\r\n  the following conditions with respect to the request that\r\n  elicited the 304 response:\r\n\r\n  * The target URI matches that of the request.\r\n\r\n  * The method associated with the stored response permits its use\r\n    for the request.\r\n\r\n  * Either the selecting request header fields match as specified\r\n    in Section 4.1, or the stored response and the 304 response\r\n    contain ETag field values that match using the strong\r\n    comparison function defined in Section 8.8.3.2 of [HTTP].\r\n\r\nAt the end of Section 4.3.4, append\r\n\r\nWhen a response is identified for update through a strong\r\nentity-tag match despite a selecting-header mismatch, the cache\r\nMUST, for the purposes of Section 4.1, associate the updated\r\nresponse with the header fields of the request that elicited the\r\n304 response. Subsequent matching uses those request header fields\r\nand the updated response's Vary field. The cache MAY retain a\r\nseparate, unmodified entry associated with the original request.",
+    "notes": "The choice to recast the affected paragraph as a list of criteria rather than a\r\nlist of exceptions to the Section 4 requirements is editorial. The key technical\r\nchange is to allow the initial set to include stored responses whose requests\r\nhave nonmatching selecting request header fields if the stored response is a\r\nstrong ETag match to the 304 response.\r\n\r\nSuppose we have a stored request,\r\n\r\n  GET /\r\n  Accept-Language: en, fr\r\n\r\nwith response\r\n\r\n  200 OK\r\n  Vary: Accept-Language\r\n  Content-Language: en\r\n  ETag: \"xyz\"\r\n\r\nWe later receive a request,\r\n\r\n  GET /\r\n  Accept-Language: en, de\r\n\r\nSection 4.3.1 permits the cache to forward that request with\r\n\r\n  If-None-Match: \"xyz\"\r\n\r\nIf the selected representation at the origin still has the strong entity tag\r\n\"xyz\", the origin can respond:\r\n\r\n  304 Not Modified\r\n  Vary: Accept-Language\r\n  Content-Language: en\r\n  ETag: \"xyz\"\r\n  \r\nThe strong ETag establishes that the stored representation is the representation\r\nselected for the validating request. Nevertheless, the current wording of\r\nSection 4.3.4 excludes the stored response before comparing the ETag, solely\r\nbecause its Accept-Language value does not match under Section 4.1.\r\n\r\nRFC 2616 and 7234 allowed this use of validation to resolve content-negotiation\r\nmismatches. The restriction added in RFC 9111 was intended to prevent a\r\nvalidation response from updating unrelated stored responses, particularly where\r\nvalidators do not uniquely identify a representation. HTTP Working Group issue #839\r\nrecords the concern that a Last-Modified value treated as a strong validator could\r\ncause a 304 response to update distinct representations that share a modification\r\ntimestamp.\r\n\r\nThe correct text preserves the existing restriction in the cases that originally\r\nmotivated it, while allowing a strong ETag match to perform the representation\r\nidentification contemplated by Section 4.3.1.",
+    "submit_date": "2026-09-24",
+    "submitter_name": "Daniel Fox Franke",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-28 15:11:43"
   }
 ]

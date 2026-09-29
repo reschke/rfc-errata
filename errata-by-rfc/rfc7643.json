@@ -598,5 +598,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-06-30 14:25:00"
+  },
+  {
+    "errata_id": "9190",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.1",
+    "orig_text": "{\r\n        \"name\" : \"password\",\r\n        \"type\" : \"string\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The User's cleartext password.  This\r\nattribute is intended to be used as a means to specify an initial\r\npassword when creating a new User or to reset an existing User's\r\npassword.\",\r\n        \"required\" : false,\r\n        \"caseExact\" : false,\r\n        \"mutability\" : \"writeOnly\",\r\n        \"returned\" : \"never\",\r\n        \"uniqueness\" : \"none\"\r\n      },",
+    "correct_text": "{\r\n        \"name\" : \"password\",\r\n        \"type\" : \"string\",\r\n        \"multiValued\" : false,\r\n        \"description\" : \"The User's cleartext password.  This\r\nattribute is intended to be used as a means to specify an initial\r\npassword when creating a new User or to reset an existing User's\r\npassword.\",\r\n        \"required\" : false,\r\n        \"caseExact\" : true,\r\n        \"mutability\" : \"writeOnly\",\r\n        \"returned\" : \"never\",\r\n        \"uniqueness\" : \"none\"\r\n      },",
+    "notes": "With \"caseExact\" set to false, a filter on \"password\" ignores case (RFC 7644 Section 3.4.2.2). This contradicts the rest of the specifications:\r\n\r\n- Section 4.1.1 says the equality test \"generates the salted hash of the filter value and tests for a match with the locally held value\". A salted hash comparison is case-sensitive.\r\n\r\n- RFC 7644 Section 5 requires the rules of RFC 7613 Section 4 (the OpaqueString profile, now RFC 8265 Section 4.2) before comparing passwords. Its case-mapping rule says uppercase and titlecase characters MUST NOT be mapped to their lowercase equivalents.\r\n\r\nThe password attribute must therefore be marked as case-exact.",
+    "submit_date": "2026-09-28",
+    "submitter_name": "Éloi Rivard",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-28 15:18:02"
   }
 ]

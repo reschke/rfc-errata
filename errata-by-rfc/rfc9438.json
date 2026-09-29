@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": "Martin Duke",
     "update_date": "2024-02-26 20:34:10"
+  },
+  {
+    "errata_id": "9186",
+    "doc-id": "RFC9438",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.4 and 4.5",
+    "orig_text": "In Section 4.4:\r\n\r\n   In this region, cwnd MUST be incremented by\r\n\r\n                              target - cwnd\r\n                              ─────────────\r\n                                   cwnd\r\n\r\n   for each received new ACK, where target is calculated as described\r\n   in Section 4.2.\r\n\r\nIn Section 4.5:\r\n\r\n   In this region, cwnd MUST be incremented by\r\n\r\n                              target - cwnd\r\n                              ─────────────\r\n                                   cwnd\r\n\r\n   for each received new ACK, where target is calculated as described\r\n   in Section 4.2.",
+    "correct_text": "In Section 4.4:\r\n\r\n   In this region, cwnd MUST be incremented by\r\n\r\n                              target - cwnd\r\n                              ───────────── * segments_acked\r\n                                   cwnd\r\n\r\n   for each received new ACK, where target is calculated as described\r\n   in Section 4.2.\r\n\r\nIn Section 4.5:\r\n\r\n   In this region, cwnd MUST be incremented by\r\n\r\n                              target - cwnd\r\n                              ───────────── * segments_acked\r\n                                   cwnd\r\n\r\n   for each received new ACK, where target is calculated as described\r\n   in Section 4.2.",
+    "notes": "The increment specified in Sections 4.4 and 4.5 does not account for the amount of data newly acknowledged by an ACK. As a result, a literal implementation increases cwnd once per ACK by the same amount regardless of how many segments the ACK acknowledges.\r\n\r\nThe specified update approximates movement from cwnd toward target over one RTT only when approximately one ACK is generated per segment. When delayed ACKs or ACK thinning cause one ACK to acknowledge multiple segments, cwnd grows more slowly than intended. Consequently, CUBIC's growth rate outside the Reno-friendly region depends on the receiver's ACK ratio, which can cause substantial unfairness between otherwise identical flows using different ACK policies.\r\n\r\nMultiplying the increment by segments_acked, as already done when updating W_est in Figure 4, makes the increase proportional to the amount of newly acknowledged data and preserves the intended growth rate across different ACK ratios. The definition of segments_acked and the corresponding adjustment for implementations that express cwnd in bytes are provided in Section 4.1.\r\n\r\nThe issue was discussed in the CCWG mailing list that started from https://mailarchive.ietf.org/arch/msg/ccwg/ZTYECT1NQijwwxq2sDLE0scbQAg/.",
+    "submit_date": "2026-09-25",
+    "submitter_name": "Kazuho Oku",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-28 15:12:14"
   }
 ]
