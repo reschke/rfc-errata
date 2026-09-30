@@ -119252,7 +119252,7 @@
   {
     "errata_id": "9166",
     "doc-id": "RFC9111",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.2.3",
     "orig_text": "The Cache-Control header field can be extended through the use of one or more extension cache directives.",
@@ -119261,8 +119261,8 @@
     "submit_date": "2026-09-09",
     "submitter_name": "Mark Nottingham",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-09 18:00:12"
+    "verifier_name": "Mike Bishop",
+    "update_date": "2026-09-29 17:38:25"
   },
   {
     "errata_id": "9167",
@@ -119683,6 +119683,36 @@
     "verifier_id": "",
     "verifier_name": "Madison Church",
     "update_date": "2026-09-28 16:48:01"
+  },
+  {
+    "errata_id": "9192",
+    "doc-id": "RFC9173",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.3.3.1, A.3.3.2, A.3.3.3, A.3.5",
+    "orig_text": "Section A.3.3.1, Figure 16:\r\n\r\n          Primary Block IPPT: h'00581c88070000820282010282028202\r\n                                018202820201820018281a000f4240'\r\n         Bundle Age Block\r\n                        IPPT: h'004319012c'\r\n          Primary Block\r\n                   Signature: h'cac6ce8e4c5dae57988b757e49a6dd14\r\n                                31dc04763541b2845098265bc817241b'\r\n\r\nSection A.3.3.2, Figure 17:\r\n\r\n      [            / Primary Block Results                        /\r\n          [1, h'cac6ce8e4c5dae57988b757e49a6dd14\r\n                31dc04763541b2845098265bc817241b']       / MAC    /\r\n       ],\r\n\r\nSection A.3.3.2:\r\n\r\n   The CBOR encoding of the BIB block-type-specific data field (the\r\n   abstract security block) is:\r\n\r\n   0x8200020101820282030082820105820300828182015820cac6ce8e4c5dae57988b\r\n   757e49a6dd1431dc04763541b2845098265bc817241b81820158203ed614c0d97f49\r\n   b3633627779aa18a338d212bf3c92b97759d9739cd50725596\r\n\r\nSection A.3.3.3, Figure 18:\r\n\r\n     h'8200020101820282030082820105820300828182015820cac6ce8e4c5dae5798\r\n     8b757e49a6dd1431dc04763541b2845098265bc817241b81820158203ed614c0d9\r\n     7f49b3633627779aa18a338d212bf3c92b97759d9739cd50725596'\r\n\r\nSection A.3.3.3:\r\n\r\n   The CBOR encoding of the BIB block is:\r\n\r\n   0x850b030000585c8200020101820282030082820105820300828182015820cac6ce\r\n   8e4c5dae57988b757e49a6dd1431dc04763541b2845098265bc817241b8182015820\r\n   3ed614c0d97f49b3633627779aa18a338d212bf3c92b97759d9739cd50725596\r\n\r\nSection A.3.5:\r\n\r\n   The CBOR encoding of the full output bundle, with the BIB and BCB\r\n   added is:\r\n\r\n   0x9f88070000820282010282028202018202820201820018281a000f4240850b0300\r\n   00585c8200020101820282030082820105820300828182015820cac6ce8e4c5dae57\r\n   988b757e49a6dd1431dc04763541b2845098265bc817241b81820158203ed614c0d9\r\n   7f49b3633627779aa18a338d212bf3c92b97759d9739cd50725596850c0401005834\r\n   8101020182028202018382014c5477656c7665313231323132820201820400818182\r\n   0150efa4b5ac0108e3816c5606479801bc0485070200004319012c85010100005823\r\n   3a09c1e63fe23a7f66a59c7303837241e070b02619fc59c5214a22f08cd70795e73e\r\n   9aff",
+    "correct_text": "Section A.3.3.1, Figure 16:\r\n\r\n          Primary Block IPPT: h'00880700008202820102820282020182\r\n                                02820201820018281a000f4240'\r\n         Bundle Age Block\r\n                        IPPT: h'004319012c'\r\n          Primary Block\r\n                   Signature: h'8e059b8e71f7218264185a666bf3e453\r\n                                076f2b883f4dce9b3cdb6464ed0dcf0f'\r\n\r\nSection A.3.3.2, Figure 17:\r\n\r\n      [            / Primary Block Results                        /\r\n          [1, h'8e059b8e71f7218264185a666bf3e453\r\n                076f2b883f4dce9b3cdb6464ed0dcf0f']       / MAC    /\r\n       ],\r\n\r\nSection A.3.3.2:\r\n\r\n   The CBOR encoding of the BIB block-type-specific data field (the\r\n   abstract security block) is:\r\n\r\n   0x82000201018202820300828201058203008281820158208e059b8e71f721826418\r\n   5a666bf3e453076f2b883f4dce9b3cdb6464ed0dcf0f81820158203ed614c0d97f49\r\n   b3633627779aa18a338d212bf3c92b97759d9739cd50725596\r\n\r\nSection A.3.3.3, Figure 18:\r\n\r\n     h'82000201018202820300828201058203008281820158208e059b8e71f7218264\r\n     185a666bf3e453076f2b883f4dce9b3cdb6464ed0dcf0f81820158203ed614c0d9\r\n     7f49b3633627779aa18a338d212bf3c92b97759d9739cd50725596'\r\n\r\nSection A.3.3.3:\r\n\r\n   The CBOR encoding of the BIB block is:\r\n\r\n   0x850b030000585c82000201018202820300828201058203008281820158208e059b\r\n   8e71f7218264185a666bf3e453076f2b883f4dce9b3cdb6464ed0dcf0f8182015820\r\n   3ed614c0d97f49b3633627779aa18a338d212bf3c92b97759d9739cd50725596\r\n\r\nSection A.3.5:\r\n\r\n   The CBOR encoding of the full output bundle, with the BIB and BCB\r\n   added is:\r\n\r\n   0x9f88070000820282010282028202018202820201820018281a000f4240850b0300\r\n   00585c82000201018202820300828201058203008281820158208e059b8e71f72182\r\n   64185a666bf3e453076f2b883f4dce9b3cdb6464ed0dcf0f81820158203ed614c0d9\r\n   7f49b3633627779aa18a338d212bf3c92b97759d9739cd50725596850c0401005834\r\n   8101020182028202018382014c5477656c7665313231323132820201820400818182\r\n   0150efa4b5ac0108e3816c5606479801bc0485070200004319012c85010100005823\r\n   3a09c1e63fe23a7f66a59c7303837241e070b02619fc59c5214a22f08cd70795e73e\r\n   9aff",
+    "notes": "The examples in Appendix A are informative, but the result for the primary block in Appendix A.3 is computed over an IPPT that the normative text does not allow. Implementations that reproduce the published value will not interoperate with implementations that follow the text.\r\n\r\nIn A.3 the security target is the primary block, and the published IPPT wraps the primary block in a CBOR byte string (h'00581c8807...'). Section 3.7, step 5, states that for a primary block target the IPPT contains \"the canonical form of the primary block\". RFC 9172, Section 4, defines that canonical form \"as specified in [RFC9171]\" and states that canonical forms \"MUST include their own CBOR encoding and MUST NOT include any other encapsulating CBOR encoding\". RFC 9171, Section 4.3.1, represents the primary block as a CBOR array, not a byte string. The byte string head (0x58 0x1c) is therefore an encapsulating encoding that the text excludes.\r\n\r\nTwo further points support this reading. The NOTE following step 5 explains that step 2 is skipped for a primary block target to avoid \"adding the bundle's primary block twice\", which presumes that steps 2 and 5 contribute the same bytes. And in Appendix A.4, where the primary block is included through the primary block flag of step 2, the published IPPT appends the primary block unwrapped, and the published result confirms it.\r\n\r\nThe corrected text removes the byte string head from the primary block IPPT and replaces the primary block result with HMAC 256/256 over the corrected IPPT, using the key given in Figure 16. The new result changes Figures 16, 17 and 18, the encodings in A.3.3.2 and A.3.3.3, and the final bundle in A.3.5. All other values, including the Bundle Age Block result and every length field, are unchanged. Both the published and the corrected results were recomputed from the key and inputs given in Figure 16.\r\n\r\nThis is reported as Technical rather than Editorial because, as the introduction to Appendix A says, the examples \"can inform unit test suites for individual implementations as well as interoperability test suites amongst implementations\", and the error changes the bytes that an implementation must compute.",
+    "submit_date": "2026-09-28",
+    "submitter_name": "Rick Taylor",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-29 15:38:59"
+  },
+  {
+    "errata_id": "9193",
+    "doc-id": "RFC9711",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.1.1.2",
+    "orig_text": "/ ueid /           256: h'0198f50a4ff6c05861c8860d13a638ea',",
+    "correct_text": "/ ueid /           256: h'0198f50a4ff6c05861c8860d13a638eaaa',",
+    "notes": "In various places throughout the examples in Appendix A,  the `ueid` value is show to be 16 bytes, including the initial \"type\" byte, 0x01 (indicating random generation). As per description in section 4.2.1.1, the random value itself should be 16 (or 24, or 32) bytes, so the whole `ueid` should be 17 bytes, including the initial type byte.",
+    "submit_date": "2026-09-29",
+    "submitter_name": "Sergei Trofimov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-29 15:39:15"
   },
   {
     "errata_id": "92",

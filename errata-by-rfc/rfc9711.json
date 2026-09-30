@@ -133,5 +133,20 @@
     "verifier_id": "",
     "verifier_name": "Madison Church",
     "update_date": "2026-09-02 19:00:12"
+  },
+  {
+    "errata_id": "9193",
+    "doc-id": "RFC9711",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "A.1.1.2",
+    "orig_text": "/ ueid /           256: h'0198f50a4ff6c05861c8860d13a638ea',",
+    "correct_text": "/ ueid /           256: h'0198f50a4ff6c05861c8860d13a638eaaa',",
+    "notes": "In various places throughout the examples in Appendix A,  the `ueid` value is show to be 16 bytes, including the initial \"type\" byte, 0x01 (indicating random generation). As per description in section 4.2.1.1, the random value itself should be 16 (or 24, or 32) bytes, so the whole `ueid` should be 17 bytes, including the initial type byte.",
+    "submit_date": "2026-09-29",
+    "submitter_name": "Sergei Trofimov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-09-29 15:39:15"
   }
 ]
