@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9194",
+    "doc-id": "RFC7512",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "pkcs11:token=Name%20with%20a%20small%20A%20with%20acute:%20%C3%A1;",
+    "correct_text": "pkcs11:token=Name%20with%20small%20A%20with%20acute:%20%C3%A1;",
+    "notes": "The `label` member of the `CK_TOKEN_INFO` is defined as a fixed length 32B buffer in the PKCS#11 specification. This example presents a token label that has 34 B, causing strict applications matching the lengths from the pkcs11 specification (or just failing to match the URI as this URI can never be matched against anything).\r\n\r\nThe suggested test removes 2 bytes from the string to fit into the buffer.",
+    "submit_date": "2026-09-29",
+    "submitter_name": "Jakub Jelen",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-02 14:13:49"
   }
 ]

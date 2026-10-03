@@ -133,5 +133,20 @@
     "verifier_id": "",
     "verifier_name": "Barry Leiba",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9198",
+    "doc-id": "RFC6321",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "type-until = element until {\r\n       type-date |\r\n       type-date-time\r\n   }",
+    "correct_text": "type-until = element until {\r\n       value-date |\r\n       value-date-time\r\n   }",
+    "notes": "This has been reported before here: https://errata.rfc-editor.org/eid3315/\r\nThis provides a suggestion on how to solve this.\r\n\r\nI believe this is a correction, consistent with the standard. The argumentation below:\r\n\r\nContext: The RFC defines `pattern-date` and `value-date` , `pattern-date-time` and `value-date-time`.\r\n\r\n(1) The RFC has a consistency: Each tag identifies the one pattern for the data and with that allows a single data type in the programming language to be mapped.\r\nPatterns are either used once or in case of `value-period`, the tag <end> and <start> imply a single pattern `pattern-date-time`.\r\n\r\n(2) Implementing this for Python, \"value-date | value-date-time\" creates a consistent code base with type selection based on the tag. Using `pattern-date | pattern-date-time` requires selection of the type based on the text's content (either date or date-time). That would make UNTIL the only place that does that in RFC6321.\r\n\r\n[RPC] Note to Verifier: Please consider whether adjustments are needed for https://errata.rfc-editor.org/eid3315/. For example, if this erratum is verified, perhaps EID 3315 should be deleted or reclassified as \"Rejected\" with a pointer to this one, etc.",
+    "submit_date": "2026-09-30",
+    "submitter_name": "Nicco Kunzmann",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-02 17:03:46"
   }
 ]
