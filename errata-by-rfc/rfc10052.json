@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9203",
+    "doc-id": "RFC10052",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3.1.2",
+    "orig_text": "An optional Layer 3 Address Group sub-TLV is a variable-length sub-\r\nTLV that includes the IP Prefix and IP Prefix Length fields used by\r\nthe Session-Sender to select the Session-Reflectors for a response.\r\nThe format of the Layer 3 Address Group sub-TLV is presented in\r\nFigure 3.",
+    "correct_text": "An optional Layer 3 Address Group sub-TLV is a variable-length sub-\r\nTLV that includes the IP Prefix and Prefix Length fields used by\r\nthe Session-Sender to select the Session-Reflectors for a response.\r\nThe format of the Layer 3 Address Group sub-TLV is presented in\r\nFigure 3.",
+    "notes": "The field is called Prefix Length, not IP Prefix Length (see Figure 3)",
+    "submit_date": "2026-10-05",
+    "submitter_name": "Nikolai Malykh",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-10-05 14:46:54"
+  }
+]
