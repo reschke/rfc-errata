@@ -103,5 +103,20 @@
     "verifier_id": "",
     "verifier_name": "Deb Cooley",
     "update_date": "2025-06-27 16:56:17"
+  },
+  {
+    "errata_id": "9212",
+    "doc-id": "RFC7519",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "4",
+    "orig_text": "4.  JWT Claims\r\n\r\n   The JWT Claims Set represents a JSON object whose members are the\r\n   claims conveyed by the JWT.  The Claim Names within a JWT Claims Set\r\n   MUST be unique; JWT parsers MUST either reject JWTs with duplicate\r\n   Claim Names or use a JSON parser that returns only the lexically last\r\n   duplicate member name, as specified in Section 15.12 (\"The JSON\r\n   Object\") of ECMAScript 5.1 [ECMAScript].",
+    "correct_text": "There is no section 15.12 in the document. As It was mentioned in section 4",
+    "notes": "https://www.rfc-editor.org/info/rfc7519/#section-4\r\n\r\nVerifier Notes:\r\nThis is an issue with HTML generation from text; it has been submitted on github.com/ietf-tools/rfc2html/. The section pointer refers to Section 15.12 of [ECMAScript], which was correct at the time of publication.",
+    "submit_date": "2026-10-06",
+    "submitter_name": "Joe",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-10-07 19:17:35"
   }
 ]

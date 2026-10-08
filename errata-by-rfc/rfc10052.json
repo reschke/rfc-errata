@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": "Madison Church",
     "update_date": "2026-10-05 14:46:54"
+  },
+  {
+    "errata_id": "9205",
+    "doc-id": "RFC10052",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3 / Length",
+    "orig_text": "A two-octet field. The value is variable and MUST NOT be smaller than 12 octets.",
+    "correct_text": "A two-octet field. The value is variable and MUST NOT be smaller than 8 octets.",
+    "notes": "The fixed Value fields of the Reflected Test Packet Control TLV (Figure 1) total only 8 octets: Length of the Reflected Packet (2) + Number of the Reflected Packets (2) + Interval Between the Reflected Packets (4). Per RFC 8972 Section 4, the TLV Length counts the Value field only (it excludes the 4-octet STAMP TLV Flags/Type/Length header). Therefore the minimum should be 8, not 12.",
+    "submit_date": "2026-10-06",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-07 18:18:18"
   }
 ]

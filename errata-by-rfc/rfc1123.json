@@ -193,5 +193,20 @@
     "verifier_id": "",
     "verifier_name": "Eric Vyncke",
     "update_date": "2026-02-02 07:31:41"
+  },
+  {
+    "errata_id": "9207",
+    "doc-id": "RFC1123",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.3.1",
+    "orig_text": "(10)                         Receive DATA X+2\r\n                              Send ACK X+3\r\n(11) Receive ACK X+1 again\r\n     Send DATA X+2 again\r\n(12)                         Receive DATA X+2 again\r\n                              Send ACK X+3 again",
+    "correct_text": "(10)                         Receive DATA X+2\r\n                              Send ACK X+2\r\n(11) Receive ACK X+1 again\r\n     Send DATA X+2 again\r\n(12)                         Receive DATA X+2 again\r\n                              Send ACK X+2 again",
+    "notes": "TFTP responds to DATA with an ACK containing the same blocknumber as the block it acknowledges. Thus an ACK X+3 for DATA X+2 is incorrect.",
+    "submit_date": "2026-10-07",
+    "submitter_name": "Finn van Delden",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-07 18:20:03"
   }
 ]

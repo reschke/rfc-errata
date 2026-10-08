@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": "9210",
+    "doc-id": "RFC10038",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2",
+    "orig_text": "IALocator-Options:  Options associated with this SRv6 Locator.  A\r\n         variable-length field (determined by subtracting the length of\r\n         SRv6-Locator from Option-Len minus 12).  The status code\r\n         NoSRv6LocatorAvail indicates the server has no locators available\r\n         to assign to the IA_SRV6_LOCATOR(s).",
+    "correct_text": "IALocator-Options:  Options associated with this SRv6 Locator.  A\r\n         variable-length field (determined by subtracting the length of\r\n         SRv6-Locator from Option-Len minus 16).  The status code\r\n         NoSRv6LocatorAvail indicates the server has no locators available\r\n         to assign to the IA_SRV6_LOCATOR(s).",
+    "notes": "Correct \"12\" to \"16\".\r\n\r\nSection 4.2 defines: \"Option-Len: 16 + the length of SRv6-Locator + the length of the IALocator-Options field in octets.\"\r\n\r\nTherefore the length of IALocator-Options is  Option-Len − 16 − length(SRv6-Locator) , i.e. \"Option-Len minus 16,\" not \"Option-Len minus 12.\"\r\n\r\nThe erroneous \"12\" may have been carried over from the IA_SRV6_LOCATOR option in Section 4.1, whose fixed portion (IAID + T1 + T2 = 12 octets) is correctly \"Option-Len minus 12.\"",
+    "submit_date": "2026-10-07",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-07 18:28:49"
+  },
+  {
+    "errata_id": "9211",
+    "doc-id": "RFC10038",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2",
+    "orig_text": "A client uses Request, Renew, Rebind, Release, and Decline messages\r\nduring the normal lifecycle of SRv6 Locator assignment.",
+    "correct_text": "A client uses Request, Renew, Rebind, and Release messages during\r\nthe normal lifecycle of SRv6 Locator assignment.",
+    "notes": "Section 5.2 lists the Decline message as part of the SRv6 Locator assignment lifecycle, but the Decline message is not supported elsewhere in the document. \"Decline\" applies to assigned addresses and is not used for delegated prefixes, so it does not apply here.",
+    "submit_date": "2026-10-07",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-07 18:29:06"
+  },
+  {
+    "errata_id": "9213",
+    "doc-id": "RFC10038",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "Section 7",
+    "orig_text": "IANA has also assigned the following DHCPv6 status code in the\r\n\"Status Codes\" registry at <http://www.iana.org/assignments/\r\ndhcpv6-parameters>:",
+    "correct_text": "IANA has also assigned the following DHCPv6 status code in the\r\n\"Status Codes\" registry at <https://www.iana.org/assignments/\r\ndhcpv6-parameters>:",
+    "notes": "http: -> https:\r\n\r\nConsistent with the text above Table 1 which already cites the correct URL: <https://www.iana.org/assignments/dhcpv6-parameters>\r\n\r\nVerifier Notes:\r\nWhile the URL should use https, this does not meet our criteria for an erratum because the URL works and redirects correctly to the https form.",
+    "submit_date": "2026-10-07",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-10-07 19:36:20"
+  }
+]

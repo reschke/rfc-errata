@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9204",
+    "doc-id": "RFC5723",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3.3",
+    "orig_text": "The value of the AUTH payload is derived in a manner similar to the\r\nusage of IKEv2 pre-shared secret authentication:\r\n\r\n            AUTH = prf(SK_px, <message octets>)",
+    "correct_text": "The AUTH payload's \"Auth Method\" field SHOULD be set to \"Shared Key Message Integrity Code\" (2).\r\nThe value of the AUTH payload's \"Authentication Data\"  is derived in a manner similar to the\r\nusage of IKEv2 pre-shared secret authentication:\r\n\r\n            AUTH = prf(SK_px, <message octets>)",
+    "notes": "The use of \"Shared Key Message Integrity Code\" is implied only.",
+    "submit_date": "2026-10-05",
+    "submitter_name": "Andrew Cagney",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-07 18:17:52"
+  }
+]
