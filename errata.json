@@ -54842,17 +54842,17 @@
   {
     "errata_id": "4395",
     "doc-id": "RFC5705",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4",
-    "orig_text": "   If no context is provided, it then computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random\r\n               )[length]\r\n\r\n   If context is provided, it computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random +\r\n               context_value_length + context_value\r\n               )[length]\r\n",
-    "correct_text": "   If no context is provided, it then computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random\r\n               )[0..length-1]\r\n\r\n   If context is provided, it computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random +\r\n               context_value_length + context_value\r\n               )[0..length-1]\r\n",
+    "orig_text": "If no context is provided, it then computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random\r\n               )[length]\r\n\r\n   If context is provided, it computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random +\r\n               context_value_length + context_value\r\n               )[length]",
+    "correct_text": "If no context is provided, it then computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random\r\n               )[0..length-1]\r\n\r\n   If context is provided, it computes:\r\n\r\n           PRF(SecurityParameters.master_secret, label,\r\n               SecurityParameters.client_random +\r\n               SecurityParameters.server_random +\r\n               context_value_length + context_value\r\n               )[0..length-1]",
     "notes": "The current notation is not in line with that of RFC 5246, where the [0..N-1] notation is used on a PRF outcome in Sections 7.4.9 and 8.1 and similar [A..B] notation is also used elsewhere.  This makes me believe that the current text is technically wrong, and not in line with the intentions stated informally below it,\r\n\r\n   The output is a pseudorandom bit string of length bytes generated\r\n   from the master_secret.",
     "submit_date": "2015-06-16",
     "submitter_name": "Rick van Rein",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2019-09-10 16:09:03"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 10:30:26"
   },
   {
     "errata_id": "4396",
@@ -114917,17 +114917,17 @@
   {
     "errata_id": "8738",
     "doc-id": "RFC8879",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5",
     "orig_text": "After decompression, the Certificate message MUST be processed as if\r\nit were encoded without being compressed. This way, the parsing and\r\nthe verification have the same security properties as they would have\r\nin TLS normally.",
-    "correct_text": "After decompression, the Certificate message MUST be processed as if\r\nit were encoded without being compressed, with the exception of the\r\nhandshake transcript. The CompressedCertificate message is hashed into\r\nthe handshake transcript (Section 4.4.3 of [RFC8446]) in place of a\r\nCertificate message.\r\n",
+    "correct_text": "After decompression, the Certificate message MUST be processed as if\r\nit were encoded without being compressed, with the exception of the\r\nhandshake transcript. The CompressedCertificate message is hashed into\r\nthe handshake transcript (Section 4.4.3 of [RFC8446]) in place of a\r\nCertificate message.",
     "notes": "The corrected text is suggested by Martin Thomson.",
     "submit_date": "2026-02-04",
     "submitter_name": "Kazu Yamamoto",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 10:40:20"
   },
   {
     "errata_id": "8739",
@@ -115037,7 +115037,7 @@
   {
     "errata_id": "8750",
     "doc-id": "RFC9763",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A. ASN.1 M",
     "orig_text": "RequesterCertificate ::= SEQUENCE {\r\n  certID        IssuerAndSerialNumber,\r\n  requestTime   BinaryTime,\r\n  locationInfo  UniformResourceIdentifiers,\r\n  signature     BIT STRING }\r\n\r\nUniformResourceIdentifiers ::= SEQUENCE SIZE (1..MAX) OF URI",
@@ -115046,8 +115046,8 @@
     "submit_date": "2026-02-10",
     "submitter_name": "Guiliano Lehmann",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 08:23:21"
   },
   {
     "errata_id": "8752",
@@ -115067,17 +115067,17 @@
   {
     "errata_id": "8753",
     "doc-id": "RFC8879",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4",
-    "orig_text": "   uncompressed_length:  The length of the Certificate message once it\r\n      is uncompressed.  If, after decompression, the specified length\r\n      does not match the actual length, the party receiving the invalid\r\n      message MUST abort the connection with the \"bad_certificate\"\r\n      alert.  The presence of this field allows the receiver to\r\n      preallocate the buffer for the uncompressed Certificate message\r\n      and enforce limits on the message size before performing\r\n      decompression.\r\n\r\n   compressed_certificate_message:  The result of applying the indicated\r\n      compression algorithm to the encoded Certificate message that\r\n      would have been sent if certificate compression was not in use.\r\n      The compression algorithm defines how the bytes in the\r\n      compressed_certificate_message field are converted into the\r\n      Certificate message.",
-    "correct_text": "   uncompressed_length:  The length of the Certificate message once it\r\n      is uncompressed.  This is the length of the encoded Certificate\r\n      structure, without a four-byte handshake header.  If, after\r\n      decompression, the specified length does not match the actual\r\n      length, the party receiving the invalid message MUST abort the\r\n      connection with the \"bad_certificate\" alert.  The presence of this\r\n      field allows the receiver to preallocate the buffer for the\r\n      uncompressed Certificate message and enforce limits on the message\r\n      size before performing decompression.\r\n\r\n   compressed_certificate_message:  The result of applying the indicated\r\n      compression algorithm to the encoded Certificate message that\r\n      would have been sent if certificate compression was not in use.\r\n      The compression algorithm defines how the bytes in the\r\n      compressed_certificate_message field are converted into the\r\n      Certificate message.  The input to the compression algorithm is\r\n      the encoded Certificate structure, without a four-byte handshake\r\n      header.",
+    "orig_text": "uncompressed_length:  The length of the Certificate message once it\r\n      is uncompressed.  If, after decompression, the specified length\r\n      does not match the actual length, the party receiving the invalid\r\n      message MUST abort the connection with the \"bad_certificate\"\r\n      alert.  The presence of this field allows the receiver to\r\n      preallocate the buffer for the uncompressed Certificate message\r\n      and enforce limits on the message size before performing\r\n      decompression.\r\n\r\n   compressed_certificate_message:  The result of applying the indicated\r\n      compression algorithm to the encoded Certificate message that\r\n      would have been sent if certificate compression was not in use.\r\n      The compression algorithm defines how the bytes in the\r\n      compressed_certificate_message field are converted into the\r\n      Certificate message.",
+    "correct_text": "uncompressed_length:  The length of the Certificate message once it\r\n      is uncompressed.  This is the length of the encoded Certificate\r\n      structure, without a four-byte handshake header.  If, after\r\n      decompression, the specified length does not match the actual\r\n      length, the party receiving the invalid message MUST abort the\r\n      connection with the \"bad_certificate\" alert.  The presence of this\r\n      field allows the receiver to preallocate the buffer for the\r\n      uncompressed Certificate message and enforce limits on the message\r\n      size before performing decompression.\r\n\r\n   compressed_certificate_message:  The result of applying the indicated\r\n      compression algorithm to the encoded Certificate message that\r\n      would have been sent if certificate compression was not in use.\r\n      The compression algorithm defines how the bytes in the\r\n      compressed_certificate_message field are converted into the\r\n      Certificate message.  The input to the compression algorithm is\r\n      the encoded Certificate structure, without a four-byte handshake\r\n      header.",
     "notes": "We're often a bit sloppy about whether a \"Certificate message\" means the literal bytes of the Certificate structure, or also the four-byte header when wrapped in a Handshake structure. Since this is important for interop, explicitly say which we mean. Skimming BoringSSL, NSS, and OpenSSL, we all took this interpretation. This interpretation is also the marginally more size-efficient one.",
     "submit_date": "2026-02-11",
     "submitter_name": "David Benjamin",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 10:37:41"
   },
   {
     "errata_id": "8757",
@@ -115652,17 +115652,17 @@
   {
     "errata_id": "8802",
     "doc-id": "RFC9068",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.2",
-    "orig_text": "iss  REQUIRED - as defined in Section 4.1.1 of [RFC7519].\r\n",
-    "correct_text": "iss  OPTIONAL - as defined in Section 4.1.1 of [RFC7519].\r\n",
+    "orig_text": "iss  REQUIRED - as defined in Section 4.1.1 of [RFC7519].",
+    "correct_text": "iss  OPTIONAL - as defined in Section 4.1.1 of [RFC7519].",
     "notes": "rfc7519:\r\n4.1.1.  \"iss\" (Issuer) Claim\r\n\r\n   The \"iss\" (issuer) claim identifies the principal that issued the\r\n   JWT.  The processing of this claim is generally application specific.\r\n   The \"iss\" value is a case-sensitive string containing a StringOrURI\r\n   value.  Use of this claim is OPTIONAL.",
     "submit_date": "2026-03-04",
     "submitter_name": "David Hermo Blanco",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 08:24:58"
   },
   {
     "errata_id": "8803",
@@ -115712,7 +115712,7 @@
   {
     "errata_id": "8806",
     "doc-id": "RFC9483",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.1.4",
     "orig_text": "2. The certReqId in the cp message MUST be -1.",
@@ -115721,8 +115721,8 @@
     "submit_date": "2026-03-05",
     "submitter_name": "Guiliano Lehmann",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:15:18"
   },
   {
     "errata_id": "8807",
@@ -115772,17 +115772,17 @@
   {
     "errata_id": "8814",
     "doc-id": "RFC9580",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.6",
     "orig_text": "A ZLIB-compressed series of packets is compressed with raw ZLIB-style\r\nblocks [RFC1950].",
-    "correct_text": "A ZLIB-compressed series of packets is compressed using the ZLIB\r\ncompressed data format [RFC1950].\r\n\r\nor\r\n\r\nA ZLIB-compressed series of packets is compressed with ZLIB-style\r\nblocks [RFC1950].\r\n\r\n(Or other words to that effect — the intent is to remove the\r\nword \"raw\").",
+    "correct_text": "A ZLIB-compressed series of packets is compressed using the ZLIB\r\ncompressed data format [RFC1950].\r\n\r\n(the intent is to remove the\r\nword \"raw\").",
     "notes": "In OpenPGP, only ZIP compression uses raw blocks. The ZLIB and BZip2 algorithms both have headers present. A ZLIB stream without headers would be noncompliant to RFC-1950, section 2.3 (\"A compliant compressor must produce streams with correct CMF, FLG and ADLER32...\").\r\n\r\nThe \"raw\" was not present in RFC-4880. I believe it came in via https://gitlab.com/openpgp-wg/rfc4880bis/-/commit/c326b8d4b946b2d51eb9885677e0521fb0ecf1a9",
     "submit_date": "2026-03-08",
     "submitter_name": "Daphne Shaw",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 08:43:19"
   },
   {
     "errata_id": "8815",
@@ -116177,7 +116177,7 @@
   {
     "errata_id": "8847",
     "doc-id": "RFC9580",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "9.1",
     "orig_text": "32 octets, size octet, encoded key [Section 5.1.6]\r\n\r\n56 octets, size octet, encoded key [Section 5.1.7]",
@@ -116186,8 +116186,8 @@
     "submit_date": "2026-03-18",
     "submitter_name": "Daniel Huigens",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 08:41:07"
   },
   {
     "errata_id": "8848",
@@ -116417,17 +116417,17 @@
   {
     "errata_id": "8864",
     "doc-id": "RFC9594",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.4.1",
-    "orig_text": "      -  The arrays 'role_filter' and 'id_filter' MUST NOT both be\r\n         empty, i.e., in CDDL notation: [ bool, [ ], [ ] ].  If the\r\n         'get_creds' parameter has such a format, the request MUST be\r\n         considered malformed, and the KDC MUST reply with a 4.00 (Bad\r\n         Request) error response.",
-    "correct_text": "      -  The arrays 'role_filter' and 'id_filter' MUST NOT both be\r\n         empty, i.e., in CBOR diagnostic notation: [ true, [ ], [ ] ]\r\n         or [ false, [ ], [ ] ].  If the 'get_creds' parameter has such\r\n         a format, the request MUST be considered malformed, and the\r\n         KDC MUST reply with a 4.00 (Bad Request) error response.",
+    "orig_text": "-  The arrays 'role_filter' and 'id_filter' MUST NOT both be\r\n         empty, i.e., in CDDL notation: [ bool, [ ], [ ] ].  If the\r\n         'get_creds' parameter has such a format, the request MUST be\r\n         considered malformed, and the KDC MUST reply with a 4.00 (Bad\r\n         Request) error response.",
+    "correct_text": "-  The arrays 'role_filter' and 'id_filter' MUST NOT both be\r\n         empty, i.e., in CBOR diagnostic notation: [ true, [ ], [ ] ]\r\n         or [ false, [ ], [ ] ].  If the 'get_creds' parameter has such\r\n         a format, the request MUST be considered malformed, and the\r\n         KDC MUST reply with a 4.00 (Bad Request) error response.",
     "notes": "In the original text, the CDDL notation is not valid CDDL, but rather a hybrid of CDDL and CBOR diagnostic notation.\r\n\r\nThe new text uses the intended and valid CBOR diagnostic notation, separately covering the two cases where the first element of the outer array is true or false.",
     "submit_date": "2026-04-01",
     "submitter_name": "Marco Tiloca",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 08:45:18"
   },
   {
     "errata_id": "8865",
@@ -116462,7 +116462,7 @@
   {
     "errata_id": "8867",
     "doc-id": "RFC1928",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "6",
     "orig_text": "The BIND request is used in protocols which require the client to accept connections from the server.",
@@ -116471,8 +116471,8 @@
     "submit_date": "2026-04-03",
     "submitter_name": "David Tyas",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-04-15 19:29:03"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 10:07:51"
   },
   {
     "errata_id": "8868",
@@ -116657,17 +116657,17 @@
   {
     "errata_id": "8883",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.5",
-    "orig_text": "\r\n     \"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       }\r\n     ]",
-    "correct_text": "\r\n     \"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       }\r\n     ]",
+    "orig_text": "\"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       }\r\n     ]",
+    "correct_text": "\"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       }\r\n     ]",
     "notes": "Section 8 says:\r\n\r\n   Challenge objects all contain the following basic fields:\r\n\r\n...\r\n\r\n   status (required, string):  The status of this challenge.  Possible\r\n      values are \"pending\", \"processing\", \"valid\", and \"invalid\" (see\r\n      Section 7.1.6).\r\n\r\nBut section 7.5 is missing the challenge statuses.",
     "submit_date": "2026-04-16",
     "submitter_name": "Shirom Makkad",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 10:10:55"
   },
   {
     "errata_id": "8884",
@@ -116777,7 +116777,7 @@
   {
     "errata_id": "8891",
     "doc-id": "RFC9909",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "csor(3) 4",
@@ -116786,13 +116786,13 @@
     "submit_date": "2026-04-27",
     "submitter_name": "Abel C. H. Chen",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-30 14:59:28"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 10:24:02"
   },
   {
     "errata_id": "8892",
     "doc-id": "RFC9909",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "csor(3) 4",
@@ -116801,8 +116801,8 @@
     "submit_date": "2026-04-27",
     "submitter_name": "Abel C. H. Chen",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-30 15:08:44"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 10:25:58"
   },
   {
     "errata_id": "8894",
@@ -117062,17 +117062,17 @@
   {
     "errata_id": "8915",
     "doc-id": "RFC6031",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.2.6 and A.2",
-    "orig_text": "FriendlyName ::= SEQUENCE {\r\n     friendlyName        UTF8String,\r\n     friendlyNameLangTag UTF8String OPTIONAL }\r\n",
-    "correct_text": "FriendlyName ::= SEQUENCE {\r\n     friendlyName        UTF8String,\r\n     friendlyNameLangTag UTF8String DEFAULT \"en\"\r\n        (CONSTRAINED BY { -- MUST be a language tag per RFC5646 --}) \r\n  }\r\n",
+    "orig_text": "FriendlyName ::= SEQUENCE {\r\n     friendlyName        UTF8String,\r\n     friendlyNameLangTag UTF8String OPTIONAL }",
+    "correct_text": "FriendlyName ::= SEQUENCE {\r\n     friendlyName        UTF8String,\r\n     friendlyNameLangTag UTF8String DEFAULT \"en\"\r\n        (CONSTRAINED BY { -- MUST be a language tag per RFC5646 --}) \r\n  }",
     "notes": "The text in 3.2.6 implies this corrected definition. Changes to both the body of the document and the ASN.1 module appendix.\r\n\r\n\"When the\r\n   friendlyNameLangTag field is absent, English, whose associated\r\n   language tag is \"en\", is used.  The value of the friendlyNameLangTag\r\n   field MUST be a language tag, as described in [RFC5646].\"\r\n\r\nRecommend HFDU if verified.",
     "submit_date": "2026-05-16",
     "submitter_name": "Michael StJohns",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:18:42"
   },
   {
     "errata_id": "8916",
@@ -117167,17 +117167,17 @@
   {
     "errata_id": "8924",
     "doc-id": "RFC7643",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.1",
-    "orig_text": "   Attribute names MUST conform to the following ABNF rules:\r\n\r\n               ATTRNAME   = ALPHA *(nameChar)\r\n               nameChar   = \"$\" / \"-\" / \"_\" / DIGIT / ALPHA\r\n\r\n                    Figure 1: ABNF for Attribute Names",
-    "correct_text": "   Attribute names MUST conform to the following ABNF rules:\r\n\r\n               ATTRNAME   = [\"$\"] ALPHA *(nameChar)\r\n               nameChar   = \"$\" / \"-\" / \"_\" / DIGIT / ALPHA\r\n\r\n                    Figure 1: ABNF for Attribute Names",
+    "orig_text": "Attribute names MUST conform to the following ABNF rules:\r\n\r\n               ATTRNAME   = ALPHA *(nameChar)\r\n               nameChar   = \"$\" / \"-\" / \"_\" / DIGIT / ALPHA\r\n\r\n                    Figure 1: ABNF for Attribute Names",
+    "correct_text": "Attribute names MUST conform to the following ABNF rules:\r\n\r\n               ATTRNAME   = [\"$\"] ALPHA *(nameChar)\r\n               nameChar   = \"$\" / \"-\" / \"_\" / DIGIT / ALPHA\r\n\r\n                    Figure 1: ABNF for Attribute Names",
     "notes": "The ABNF rules specifies that attribute names must start with an alphabetical character. However, field \"$ref\" does not comply with these rules as it starts with a dollar sign ($). Because \"$ref\" is referenced multiple times in both RFC 7643 and RFC 7644, this is most likely intended behaviour and the ATTRNAME is missing an optional dollar sign at the front.",
     "submit_date": "2026-05-19",
     "submitter_name": "Saku Heiskanen",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:17:07"
   },
   {
     "errata_id": "8925",
@@ -117392,7 +117392,7 @@
   {
     "errata_id": "8996",
     "doc-id": "RFC9149",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "Servers MUST NOT send the \"ticket_request\" extension in any handshake message, including ServerHello or HelloRetryRequest messages. A client MUST abort the connection with an \"illegal_parameter\" alert if the \"ticket_request\" extension is present in any server handshake message.",
@@ -117401,8 +117401,8 @@
     "submit_date": "2026-06-09",
     "submitter_name": "Daniel McCarney",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-10 18:17:33"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:23:04"
   },
   {
     "errata_id": "8997",
@@ -117812,7 +117812,7 @@
   {
     "errata_id": "9020",
     "doc-id": "RFC9935",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "9",
     "orig_text": "For more detailed ML-KEM specific security considerations regarding this, randomness, misbinding properties, \r\ndecapsulation failures, key reuse, and key checks, refer to [ML-KEM-SEC-CONS].",
@@ -117821,13 +117821,13 @@
     "submit_date": "2026-06-25",
     "submitter_name": "Abel C. H. Chen",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-30 14:30:47"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:26:41"
   },
   {
     "errata_id": "9021",
     "doc-id": "RFC9935",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "9",
     "orig_text": "For more detailed ML-KEM specific security considerations regarding this, randomness, misbinding properties, decapsulation failures, key reuse, and \r\nkey checks, refer to [ML-KEM-SEC-CONS].",
@@ -117836,13 +117836,13 @@
     "submit_date": "2026-06-25",
     "submitter_name": "Abel C. H. Chen",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-30 14:31:19"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:25:24"
   },
   {
     "errata_id": "9022",
     "doc-id": "RFC9370",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "A.1",
     "orig_text": "The updated SKEYSEED value is then used to derive the following\r\nkeying materials.\r\n\r\n   {SK_d(1) | SK_ai(1) | SK_ar(1) | SK_ei(1) | SK_er(1) | SK_pi(1) |\r\n    SK_pr(1)} = prf+ (SKEYSEED(1), Ni | Nr | SPIi | SPIr)\r\n\r\nAs per [RFC9242], both peers compute IntAuth_i1 and IntAuth_r1 using\r\nthe SK_pi(1) and SK_pr(1) keys, respectively.  These values are\r\nrequired in the IKE_AUTH phase of the exchange.",
@@ -117851,8 +117851,8 @@
     "submit_date": "2026-07-07",
     "submitter_name": "Thom Wiggers",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-07-08 19:28:46"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:27:35"
   },
   {
     "errata_id": "9023",
@@ -117917,7 +117917,7 @@
   {
     "errata_id": "9027",
     "doc-id": "RFC7296",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.21.1",
     "orig_text": "Note that some error notifications such as COOKIE,\r\nINVALID_KE_PAYLOAD or INVALID_MAJOR_VERSION may lead to a subsequent\r\nsuccessful exchange.",
@@ -117926,8 +117926,8 @@
     "submit_date": "2026-07-09",
     "submitter_name": "Andrew Cagney",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-07-13 21:06:13"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:29:14"
   },
   {
     "errata_id": "9028",
@@ -118067,7 +118067,7 @@
   {
     "errata_id": "9036",
     "doc-id": "RFC9370",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.2.4-5",
     "orig_text": "The responder MUST include this notification in a CREATE_CHILD_SA or IKE_FOLLOWUP_KE response message in case the next IKE_FOLLOWUP_KE exchange is expected, filling it with some data that would allow linking the current exchange to the next one. The initiator MUST send back this notification intact in the request message of the next IKE_FOLLOWUP_KE exchange.",
@@ -118076,8 +118076,8 @@
     "submit_date": "2026-07-21",
     "submitter_name": "Andrew Cagney",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-07-24 16:12:29"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:35:27"
   },
   {
     "errata_id": "9037",
@@ -118142,7 +118142,7 @@
   {
     "errata_id": "9040",
     "doc-id": "RFC9846",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "E.2",
     "orig_text": "A TLS server can also receive a ClientHello indicating a version\r\n   number smaller than its highest supported version.  If the\r\n   \"supported_versions\" extension is present, the server MUST negotiate\r\n   using that extension as described in Section 4.3.1.  If the\r\n   \"supported_versions\" extension is not present, the server MUST\r\n   negotiate the minimum of ClientHello.legacy_version and TLS 1.2.  For\r\n   example, if the server supports TLS 1.0, 1.1, and 1.2, and\r\n   legacy_version is TLS 1.0, the server will proceed with a TLS 1.0\r\n   ServerHello.  If the \"supported_versions\" extension is absent and the\r\n   server only supports versions greater than\r\n   ClientHello.legacy_version, the server MUST abort the handshake with\r\n   a \"protocol_version\" alert.",
@@ -118151,8 +118151,8 @@
     "submit_date": "2026-07-24",
     "submitter_name": "Eric Rescorla",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-07-27 20:37:55"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:30:14"
   },
   {
     "errata_id": "9041",
@@ -118202,7 +118202,7 @@
   {
     "errata_id": "9044",
     "doc-id": "RFC9810",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.1.1",
     "orig_text": "In such\r\na case, the senderKID field MUST hold an identifier (i.e., a\r\nreference number) that indicates to the receiver the appropriate\r\nshared secret information to use to verify the message.",
@@ -118211,8 +118211,8 @@
     "submit_date": "2026-07-28",
     "submitter_name": "David von Oheimb",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-07-29 13:49:47"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:30:56"
   },
   {
     "errata_id": "9045",
@@ -118307,7 +118307,7 @@
   {
     "errata_id": "9050",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "o  A \"newAccount\" resource (Section 7.3)\r\n\r\no  A \"newOrder\" resource (Section 7.4)",
@@ -118316,13 +118316,13 @@
     "submit_date": "2026-07-28",
     "submitter_name": "Sask",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-03 16:32:18"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:37:06"
   },
   {
     "errata_id": "9051",
     "doc-id": "RFC9810",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.2.8.3.3",
     "orig_text": "witness             OCTET STRING,\r\n   -- the result of applying the OWF to a\r\n   -- randomly generated INTEGER, A.",
@@ -118331,13 +118331,13 @@
     "submit_date": "2026-07-30",
     "submitter_name": "David von Oheimb",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-03 16:32:54"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:50:53"
   },
   {
     "errata_id": "9052",
     "doc-id": "RFC9483",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2",
     "orig_text": "crlEntryDetails           REQUIRED\r\n    -- MUST contain a sequence of one reasonCode of type CRLReason\r\n    --   (see [RFC5280], Section 5.3.1)\r\n    -- If the reason for this revocation is not known or shall not\r\n    --   be published, the reasonCode MUST be 0 (unspecified)",
@@ -118346,8 +118346,8 @@
     "submit_date": "2026-07-30",
     "submitter_name": "David von Oheimb",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-03 16:33:04"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:43:53"
   },
   {
     "errata_id": "9053",
@@ -118442,7 +118442,7 @@
   {
     "errata_id": "9088",
     "doc-id": "RFC9999",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6 and 9.6.2",
     "orig_text": "Section 6\r\n----------\r\n   $cbor-tag /= tag-cm-cbor<1668547091, cbor-collection>\r\n   $cbor-tag /= tag-cm-cbor<1668547092, signed-cbor-cmw>\r\n\r\n   $cbor-tag /= tag-cm-data<1668547093> ; bytes(cmw+json collection)\r\n   $cbor-tag /= tag-cm-data<1668547094> ; bytes(cmw+jws)\r\n\r\nTable 4\r\n--------\r\n   +============+===============================+\r\n   | Tag Number | Tag Content                   |\r\n   +============+===============================+\r\n   | 1668547091 | bytes .cbor cbor-collection   |\r\n   +------------+-------------------------------+\r\n   | 1668547092 | bytes .cbor signed-cbor-cmw   |\r\n   +------------+-------------------------------+\r\n   | 1668547093 | bytes-wrapped json-collection |\r\n   +------------+-------------------------------+\r\n   | 1668547094 | bytes-wrapped signed-json-cmw |\r\n   +------------+-------------------------------+\r\n\r\nFigure 7\r\n---------\r\n   $cbor-tag /= tag-cm-cbor<1668547091, cbor-collection>\r\n   $cbor-tag /= tag-cm-cbor<1668547092, signed-cbor-cmw>\r\n   $cbor-tag /= tag-cm-data<1668547093> ; bytes(cmw+json collection)\r\n   $cbor-tag /= tag-cm-data<1668547094> ; bytes(cmw+jws)",
@@ -118451,8 +118451,8 @@
     "submit_date": "2026-08-04",
     "submitter_name": "Steven Bellock",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-10 16:05:34"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:38:03"
   },
   {
     "errata_id": "9089",
@@ -118787,7 +118787,7 @@
   {
     "errata_id": "9137",
     "doc-id": "RFC10031",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3.2",
     "orig_text": "For example, a constraint that specifies that the acceptable names must all be within an\r\nOrganizationally Unique Identifier (OUI) of '00-00-5e' for an EUI-48 address would have\r\na value part of '00005E000000'H, a mask part of 'FFFFFFFF000000'H, and would be\r\nencoded as OCTET STRING '00005E000000FFFFFF000000'H.",
@@ -118796,8 +118796,8 @@
     "submit_date": "2026-08-16",
     "submitter_name": "Paul Aitken",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-17 17:00:04"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:40:38"
   },
   {
     "errata_id": "9138",
@@ -119147,7 +119147,7 @@
   {
     "errata_id": "9159",
     "doc-id": "RFC10042",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.1",
     "orig_text": "If any of these checks fail, the client\r\nMUST abort using a disconnect message (SSH_MSG_DISCONNECT) with a\r\nSSH_DISCONNECT_KEY_EXCHANGE_FAILED as the reason.",
@@ -119156,8 +119156,8 @@
     "submit_date": "2026-09-01",
     "submitter_name": "Nikolai Malykh",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-02 18:53:21"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:43:06"
   },
   {
     "errata_id": "9160",
@@ -119327,7 +119327,7 @@
   {
     "errata_id": "9170",
     "doc-id": "RFC9882",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "id-mod-x509-ml-dsa-2024(119)",
@@ -119336,8 +119336,8 @@
     "submit_date": "2026-09-10",
     "submitter_name": "Abel C. H. Chen",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-11 16:22:39"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:47:07"
   },
   {
     "errata_id": "9171",
@@ -119357,7 +119357,7 @@
   {
     "errata_id": "9172",
     "doc-id": "RFC9448",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4",
     "orig_text": "\"challenges\": [\r\n    {\r\n      \"type\": \"tkauth-01\",\r\n      \"tkauth-type\": \"atc\",\r\n      \"token-authority\": \"https://authority.example.org\",\r\n      \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n      \"token\": \"IlirfxKKXAsHtmzK29Pj8A\"\r\n    }\r\n  ]",
@@ -119366,13 +119366,13 @@
     "submit_date": "2026-09-11",
     "submitter_name": "Chris Wendt",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-11 16:23:32"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:44:58"
   },
   {
     "errata_id": "9173",
     "doc-id": "RFC9448",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7",
     "orig_text": "\"identifiers\": [\r\n  \"type\":\"TNAuthList\",\r\n  \"value\":\"F83n2a...avn27DN3\"\r\n],",
@@ -119381,8 +119381,8 @@
     "submit_date": "2026-09-11",
     "submitter_name": "Chris Wendt",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-11 16:23:41"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:46:07"
   },
   {
     "errata_id": "9174",
@@ -119537,7 +119537,7 @@
   {
     "errata_id": "9183",
     "doc-id": "RFC2510",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.2.8",
     "orig_text": "witness             OCTET STRING,\r\n         -- the result of applying the one-way function (owf) to a\r\n         -- randomly-generated INTEGER, A.",
@@ -119546,13 +119546,13 @@
     "submit_date": "2026-09-18",
     "submitter_name": "David von Oheimb",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-21 17:10:02"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:51:28"
   },
   {
     "errata_id": "9184",
     "doc-id": "RFC4210",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "E.7 (appendix)",
     "orig_text": "witness             OCTET STRING,\r\n         -- the result of applying the one-way function (owf) to a\r\n         -- randomly-generated INTEGER, A.",
@@ -119561,8 +119561,8 @@
     "submit_date": "2026-09-18",
     "submitter_name": "David von Oheimb",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-21 17:10:05"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:49:10"
   },
   {
     "errata_id": "9185",
@@ -119717,7 +119717,7 @@
   {
     "errata_id": "9194",
     "doc-id": "RFC7512",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "pkcs11:token=Name%20with%20a%20small%20A%20with%20acute:%20%C3%A1;",
@@ -119726,8 +119726,8 @@
     "submit_date": "2026-09-29",
     "submitter_name": "Jakub Jelen",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-02 14:13:49"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:54:43"
   },
   {
     "errata_id": "9195",
@@ -120058,6 +120058,21 @@
     "verifier_id": "",
     "verifier_name": "Madison Church",
     "update_date": "2026-10-07 19:36:20"
+  },
+  {
+    "errata_id": "9214",
+    "doc-id": "RFC7901",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.1",
+    "orig_text": "o  The upstream recursive resolver adds the CHAIN option to the DNS\r\n      response as follows:\r\n\r\n      *  Option-code, set to 13\r\n\r\n      *  Option-length, set to 5\r\n\r\n      *  The closest trust point is set to \"com.\" (0x03 0x63 0x6f 0x6d\r\n         0x00)",
+    "correct_text": "o  The upstream recursive resolver adds the CHAIN option to the DNS\r\n      response as follows:\r\n\r\n      *  Option-code, set to 13\r\n\r\n      *  Option-length, set to 13\r\n\r\n      *  The closest trust point is set to \"example.com.\" (0x07 0x65 0x78 0x61 0x6d 0x70 0x6c 0x65 0x03 0x63 0x6f 0x6d 0x00)",
+    "notes": "The provided example seems inconsistent with: https://datatracker.ietf.org/doc/html/rfc7901#section-5.4\r\nSpecifically:\r\n   If a CHAIN answer would be bigger than the recursive resolver is\r\n   willing to serve, it SHOULD send a partial chain starting with the\r\n   data closest to the top of the chain.  The client MAY resend the\r\n   query with an updated closest trust point until it has received the full chain. \r\n   The CHAIN response will contain the lowest closest trust\r\n   point that was included in the CHAIN answer.\r\n\r\nI may be confusing the wording here or misunderstanding things, but I understood that the lowest closest trust point in the example response is \"example.com.\" and not \"com.\". This is especially important to enable clients to use the CHAIN option value instead of checking records in the authority section.",
+    "submit_date": "2026-10-09",
+    "submitter_name": "Ensar Sarajčić",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-12 17:03:53"
   },
   {
     "errata_id": "922",

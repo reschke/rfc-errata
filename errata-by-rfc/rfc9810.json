@@ -47,7 +47,7 @@
   {
     "errata_id": "9044",
     "doc-id": "RFC9810",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.1.1",
     "orig_text": "In such\r\na case, the senderKID field MUST hold an identifier (i.e., a\r\nreference number) that indicates to the receiver the appropriate\r\nshared secret information to use to verify the message.",
@@ -56,13 +56,13 @@
     "submit_date": "2026-07-28",
     "submitter_name": "David von Oheimb",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-07-29 13:49:47"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:30:56"
   },
   {
     "errata_id": "9051",
     "doc-id": "RFC9810",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.2.8.3.3",
     "orig_text": "witness             OCTET STRING,\r\n   -- the result of applying the OWF to a\r\n   -- randomly generated INTEGER, A.",
@@ -71,7 +71,7 @@
     "submit_date": "2026-07-30",
     "submitter_name": "David von Oheimb",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-03 16:32:54"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:50:53"
   }
 ]

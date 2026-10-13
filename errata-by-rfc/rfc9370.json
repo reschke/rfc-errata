@@ -2,7 +2,7 @@
   {
     "errata_id": "9022",
     "doc-id": "RFC9370",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "A.1",
     "orig_text": "The updated SKEYSEED value is then used to derive the following\r\nkeying materials.\r\n\r\n   {SK_d(1) | SK_ai(1) | SK_ar(1) | SK_ei(1) | SK_er(1) | SK_pi(1) |\r\n    SK_pr(1)} = prf+ (SKEYSEED(1), Ni | Nr | SPIi | SPIr)\r\n\r\nAs per [RFC9242], both peers compute IntAuth_i1 and IntAuth_r1 using\r\nthe SK_pi(1) and SK_pr(1) keys, respectively.  These values are\r\nrequired in the IKE_AUTH phase of the exchange.",
@@ -11,13 +11,13 @@
     "submit_date": "2026-07-07",
     "submitter_name": "Thom Wiggers",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-07-08 19:28:46"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:27:35"
   },
   {
     "errata_id": "9036",
     "doc-id": "RFC9370",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.2.4-5",
     "orig_text": "The responder MUST include this notification in a CREATE_CHILD_SA or IKE_FOLLOWUP_KE response message in case the next IKE_FOLLOWUP_KE exchange is expected, filling it with some data that would allow linking the current exchange to the next one. The initiator MUST send back this notification intact in the request message of the next IKE_FOLLOWUP_KE exchange.",
@@ -26,7 +26,7 @@
     "submit_date": "2026-07-21",
     "submitter_name": "Andrew Cagney",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-07-24 16:12:29"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:35:27"
   }
 ]

@@ -317,22 +317,22 @@
   {
     "errata_id": "8883",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7.5",
-    "orig_text": "\r\n     \"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       }\r\n     ]",
-    "correct_text": "\r\n     \"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       }\r\n     ]",
+    "orig_text": "\"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\"\r\n       }\r\n     ]",
+    "correct_text": "\"challenges\": [\r\n       {\r\n         \"type\": \"http-01\",\r\n         \"url\": \"https://example.com/acme/chall/prV_B7yEyA4\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       },\r\n       {\r\n         \"type\": \"dns-01\",\r\n         \"url\": \"https://example.com/acme/chall/Rg5dV14Gh1Q\",\r\n         \"token\": \"DGyRejmCefe7v4NfDGDKfA\",\r\n         \"status\": \"pending\"\r\n       }\r\n     ]",
     "notes": "Section 8 says:\r\n\r\n   Challenge objects all contain the following basic fields:\r\n\r\n...\r\n\r\n   status (required, string):  The status of this challenge.  Possible\r\n      values are \"pending\", \"processing\", \"valid\", and \"invalid\" (see\r\n      Section 7.1.6).\r\n\r\nBut section 7.5 is missing the challenge statuses.",
     "submit_date": "2026-04-16",
     "submitter_name": "Shirom Makkad",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 10:10:55"
   },
   {
     "errata_id": "9050",
     "doc-id": "RFC8555",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "o  A \"newAccount\" resource (Section 7.3)\r\n\r\no  A \"newOrder\" resource (Section 7.4)",
@@ -341,7 +341,7 @@
     "submit_date": "2026-07-28",
     "submitter_name": "Sask",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-03 16:32:18"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:37:06"
   }
 ]

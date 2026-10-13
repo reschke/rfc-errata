@@ -2,7 +2,7 @@
   {
     "errata_id": "9088",
     "doc-id": "RFC9999",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6 and 9.6.2",
     "orig_text": "Section 6\r\n----------\r\n   $cbor-tag /= tag-cm-cbor<1668547091, cbor-collection>\r\n   $cbor-tag /= tag-cm-cbor<1668547092, signed-cbor-cmw>\r\n\r\n   $cbor-tag /= tag-cm-data<1668547093> ; bytes(cmw+json collection)\r\n   $cbor-tag /= tag-cm-data<1668547094> ; bytes(cmw+jws)\r\n\r\nTable 4\r\n--------\r\n   +============+===============================+\r\n   | Tag Number | Tag Content                   |\r\n   +============+===============================+\r\n   | 1668547091 | bytes .cbor cbor-collection   |\r\n   +------------+-------------------------------+\r\n   | 1668547092 | bytes .cbor signed-cbor-cmw   |\r\n   +------------+-------------------------------+\r\n   | 1668547093 | bytes-wrapped json-collection |\r\n   +------------+-------------------------------+\r\n   | 1668547094 | bytes-wrapped signed-json-cmw |\r\n   +------------+-------------------------------+\r\n\r\nFigure 7\r\n---------\r\n   $cbor-tag /= tag-cm-cbor<1668547091, cbor-collection>\r\n   $cbor-tag /= tag-cm-cbor<1668547092, signed-cbor-cmw>\r\n   $cbor-tag /= tag-cm-data<1668547093> ; bytes(cmw+json collection)\r\n   $cbor-tag /= tag-cm-data<1668547094> ; bytes(cmw+jws)",
@@ -11,7 +11,7 @@
     "submit_date": "2026-08-04",
     "submitter_name": "Steven Bellock",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-10 16:05:34"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:38:03"
   }
 ]

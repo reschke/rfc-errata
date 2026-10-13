@@ -2,7 +2,7 @@
   {
     "errata_id": "9159",
     "doc-id": "RFC10042",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "2.1",
     "orig_text": "If any of these checks fail, the client\r\nMUST abort using a disconnect message (SSH_MSG_DISCONNECT) with a\r\nSSH_DISCONNECT_KEY_EXCHANGE_FAILED as the reason.",
@@ -11,8 +11,8 @@
     "submit_date": "2026-09-01",
     "submitter_name": "Nikolai Malykh",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-02 18:53:21"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:43:06"
   },
   {
     "errata_id": "9160",

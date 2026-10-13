@@ -2,7 +2,7 @@
   {
     "errata_id": "8996",
     "doc-id": "RFC9149",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3",
     "orig_text": "Servers MUST NOT send the \"ticket_request\" extension in any handshake message, including ServerHello or HelloRetryRequest messages. A client MUST abort the connection with an \"illegal_parameter\" alert if the \"ticket_request\" extension is present in any server handshake message.",
@@ -11,7 +11,7 @@
     "submit_date": "2026-06-09",
     "submitter_name": "Daniel McCarney",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-10 18:17:33"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 13:23:04"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "errata_id": "8750",
     "doc-id": "RFC9763",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A. ASN.1 M",
     "orig_text": "RequesterCertificate ::= SEQUENCE {\r\n  certID        IssuerAndSerialNumber,\r\n  requestTime   BinaryTime,\r\n  locationInfo  UniformResourceIdentifiers,\r\n  signature     BIT STRING }\r\n\r\nUniformResourceIdentifiers ::= SEQUENCE SIZE (1..MAX) OF URI",
@@ -11,7 +11,7 @@
     "submit_date": "2026-02-10",
     "submitter_name": "Guiliano Lehmann",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-10-12 08:23:21"
   }
 ]
