@@ -13,5 +13,35 @@
     "verifier_id": "",
     "verifier_name": "James N Guichard",
     "update_date": "2023-04-19 14:15:42"
+  },
+  {
+    "errata_id": "9221",
+    "doc-id": "RFC9303",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.4",
+    "orig_text": "A KDF value of NONE (0) may be used to specify that the ITR has no\r\n   preferred KDF ID.",
+    "correct_text": "A KDF value of NOPREF (0) may be used to specify that the ITR has no\r\n   preferred KDF ID.",
+    "notes": "Section 8.5 of this document (\"Key Derivation Functions\") registers\r\nvalue 0 with the name \"NOPREF\", and Section 6.2 uses \"A KDF value of\r\nNOPREF (0)\" with that meaning.  Using the name \"NONE\" here for the same\r\nregistry value is inconsistent and may confuse implementers checking\r\nthe IANA registry.",
+    "submit_date": "2026-10-14",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-15 17:17:29"
+  },
+  {
+    "errata_id": "9226",
+    "doc-id": "RFC9303",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "6.9",
+    "orig_text": "If the ITR did indicate a Requested HMAC ID in the Map-Request and the PKT HAMC ID in the\r\ncorresponding Map-Reply is different, or if the ITR did not indicate a Requested HMAC ID in the\r\nMap-Request and the PKT HMAC ID in the corresponding Map-Reply is not supported, then the ITR\r\nMUST discard the Map-Reply and send, according to rate-limitation policies defined in [RFC9301],\r\na new Map-Request with a different 'Requested HMAC ID' field, according to ITR's local policy.",
+    "correct_text": "If the ITR did indicate a Requested HMAC ID in the Map-Request and the PKT HMAC ID in the\r\ncorresponding Map-Reply is different, or if the ITR did not indicate a Requested HMAC ID in the\r\nMap-Request and the PKT HMAC ID in the corresponding Map-Reply is not supported, then the ITR\r\nMUST discard the Map-Reply and send, according to rate-limitation policies defined in [RFC9301],\r\na new Map-Request with a different 'Requested HMAC ID' field, according to ITR's local policy.",
+    "notes": "\"HAMC\" is a typographical error for \"HMAC\".  The acronym HMAC appears 91\r\ntimes elsewhere in this document; \"HAMC\" appears only here (Section 6.9).\r\n\r\nVerifier Notes: Updated text to include entire sentence.",
+    "submit_date": "2026-10-14",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-10-15 17:27:33"
   }
 ]

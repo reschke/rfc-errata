@@ -88,5 +88,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9222",
+    "doc-id": "RFC8520",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.2",
+    "orig_text": "Note that when using either of these with a MUD file, because access\r\n   is associated with a particular Thing, MUD files MUST NOT contain\r\n   either a src-dnsname in an ACL associated with from-device-policy or\r\n   a dst-dnsname associated with to-device-policy.",
+    "correct_text": "Note that when using either of these with a MUD file, because access\r\n   is associated with a particular Thing, MUD files MUST NOT contain\r\n   either a src-dnsname in an ACL associated with from-device-policy or\r\n   a dst-dnsname associated with to-device-policy.  If a MUD file\r\n   violates this rule, the MUD manager MUST reject the file.",
+    "notes": "This MUST NOT constrains MUD file contents only.  The document does\r\nnot specify what a MUD manager is to do when it receives a file that\r\nviolates it.  At least three behaviors are plausible: reject the whole\r\nfile, ignore the offending ACE, or drop only the dnsname match while\r\nretaining the rest of the ACE.  These are not equivalent: the third\r\nwidens the ACE to match any host and turns a fail-closed rule into a\r\nfail-open one.\r\n\r\nSection 13.2 specifies handling for signature validation failure\r\n(\"the MUD manager MUST cease processing the MUD file\").  No\r\ncorresponding rule exists for violations of this MUST NOT.  The\r\ncorrection adds explicit fail-closed handling consistent with Section\r\n13.2.",
+    "submit_date": "2026-10-15",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-15 17:17:49"
   }
 ]

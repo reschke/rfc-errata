@@ -43,5 +43,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9220",
+    "doc-id": "RFC9761",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.3",
+    "orig_text": "DTLS Protocol Version 1.3.\r\n\r\n              DTLS 1.3 ClientHello contains a\r\n              supported_versions extension with 0x0304\r\n              contained in its body and the ClientHello contains\r\n              0xfefd in 'legacy_version'.",
+    "correct_text": "DTLS Protocol Version 1.3.\r\n\r\n              DTLS 1.3 ClientHello contains a\r\n              supported_versions extension with 0xfefc\r\n              contained in its body and the ClientHello contains\r\n              0xfefd in 'legacy_version'.",
+    "notes": "Per RFC 9147, Section 5.3 (ClientHello): \"The supported_versions\r\nentries for DTLS 1.0 and DTLS 1.2 are 0xfeff and 0xfefd (to match the\r\nwire versions).  The value 0xfefc is used to indicate DTLS 1.3.\"\r\n\r\nThe value 0xfefc is therefore the DTLS 1.3 version value that a DTLS\r\n1.3 ClientHello carries in its supported_versions extension; the value\r\n0x0304 is the TLS 1.3 version value and only appears in the\r\nsupported_versions extension of TLS 1.3 ClientHellos (see Section 4.2.1\r\nof RFC 8446).\r\n\r\nThe description in this enum incorrectly states that a DTLS 1.3\r\nClientHello \"contains a supported_versions extension with 0x0304\".\r\nAn implementation following this description would look for 0x0304 in\r\nthe supported_versions extension and would fail to identify any real\r\nDTLS 1.3 ClientHello.\r\n\r\nThe same incorrect value appears in the corresponding prose paragraph of\r\nthis section: \"DTLS 1.3 ClientHello messages are identified as having a\r\n'legacy_version' of 0xfefd and a 'supported_versions' extension present\r\nwith 0x0304 as the highest version.\"  (The value 0xfefd in\r\n'legacy_version' is correct.)",
+    "submit_date": "2026-10-14",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-15 17:16:46"
   }
 ]

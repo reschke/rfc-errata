@@ -193,5 +193,20 @@
     "verifier_id": "",
     "verifier_name": "Martin Duke",
     "update_date": "2021-01-19 23:40:16"
+  },
+  {
+    "errata_id": "9224",
+    "doc-id": "RFC8303",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.2",
+    "orig_text": "Further, MPTCP must be disabled in case the application is binding\r\n      to a specific address [RFC6897].",
+    "correct_text": "Further, if the application has not explicitly enabled MPTCP and\r\n      is binding to a specific address or interface, MPTCP must be\r\n      disabled; if the application has explicitly enabled MPTCP and is\r\n      binding to a specific address or interface, MPTCP must remain\r\n      enabled but use only the addresses explicitly provided by the\r\n      application [RFC6897].",
+    "notes": "[RFC6897] states two rules, not one.  Section 4.2.1 says that binding\r\nto a specific address or interface \"implies that the application is\r\nnot aware of MPTCP and will disable the use of MPTCP on this\r\nconnection\".  But Section 5.3.2 states: \"if an application enables\r\nMPTCP but binds to a specific address or interface, MPTCP MUST be\r\nenabled, but MPTCP MUST respect the application's choice and only use\r\naddresses that are explicitly provided by the application.\"\r\n\r\nThe sentence in RFC 8303 omits the second rule and therefore conflicts\r\nwith [RFC6897] for applications that explicitly enable MPTCP and then\r\nbind to a specific address.  In addition, \"a specific address\" is not\r\ndefined here; [RFC6897] consistently says \"a specific address or\r\ninterface\" throughout.",
+    "submit_date": "2026-10-15",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-15 17:19:06"
   }
 ]

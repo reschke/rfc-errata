@@ -118,5 +118,20 @@
     "verifier_id": "",
     "verifier_name": "Madison Church",
     "update_date": "2026-08-11 21:20:05"
+  },
+  {
+    "errata_id": "9218",
+    "doc-id": "RFC9580",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6",
+    "orig_text": "The base64 encoding used is described in Section 4 of [RFC4648], and it is wrapped into lines of no more than 76 characters each.\r\n\r\nWhen decoding base64, an OpenPGP implementation MUST ignore all whitespace.",
+    "correct_text": "The base64 encoding used is described in Section 4 of [RFC4648], and it is wrapped into lines of no more than 76 characters each.\r\n\r\nWhen decoding base64, an OpenPGP implementation MUST ignore all whitespace except as they count towards the line length.\r\n\r\nAlternatively:\r\n\r\nThe base64 encoding used is described in Section 4 of [RFC4648], and it is wrapped into lines of no more than 76 characters each.\r\n\r\nWhen decoding base64, an OpenPGP implementation MUST ignore all whitespace.  Whitespace does not count towards the line length.",
+    "notes": "The text says that whitespace should be ignored, but it is unclear if the whitespace should count towards the line length or not.  I suspect it should be counted as I think that the intent of the line length limit is to make reading a line easier by having an upper limit on the total line length.  Allowing a variable amount of whitespace would mean that lines could be extremely long.",
+    "submit_date": "2026-10-13",
+    "submitter_name": "Neal H. Walfield",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-15 17:14:41"
   }
 ]

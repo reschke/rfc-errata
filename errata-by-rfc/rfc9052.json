@@ -13,5 +13,35 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9219",
+    "doc-id": "RFC9052",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "C.5.4",
+    "orig_text": "MAC: HMAC w/ SHA-256, 128-bit key",
+    "correct_text": "MAC: HMAC w/ SHA-256, 256-bit key",
+    "notes": "Both recipients wrap a 32-byte key and each AES-KW output is 40 bytes.",
+    "submit_date": "2026-10-13",
+    "submitter_name": "Steven Bellock",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-15 17:15:40"
+  },
+  {
+    "errata_id": "9225",
+    "doc-id": "RFC9052",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "1.5",
+    "orig_text": "In a CBOR map defined by this specification, the presence a label that is \r\nneither a text string nor an integer is an error.",
+    "correct_text": "In a CBOR map defined by this specification, the presence of a label that is \r\nneither a text string nor an integer is an error.",
+    "notes": "NA\r\n\r\nVerifier Notes: Updated text to include full sentence.",
+    "submit_date": "2026-10-13",
+    "submitter_name": "Steven Bellock",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-10-15 17:22:13"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "errata_id": "9210",
     "doc-id": "RFC10038",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2",
     "orig_text": "IALocator-Options:  Options associated with this SRv6 Locator.  A\r\n         variable-length field (determined by subtracting the length of\r\n         SRv6-Locator from Option-Len minus 12).  The status code\r\n         NoSRv6LocatorAvail indicates the server has no locators available\r\n         to assign to the IA_SRV6_LOCATOR(s).",
@@ -11,13 +11,13 @@
     "submit_date": "2026-10-07",
     "submitter_name": "Paul Aitken",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-07 18:28:49"
+    "verifier_name": "Jim Guichard",
+    "update_date": "2026-10-15 11:57:47"
   },
   {
     "errata_id": "9211",
     "doc-id": "RFC10038",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.2",
     "orig_text": "A client uses Request, Renew, Rebind, Release, and Decline messages\r\nduring the normal lifecycle of SRv6 Locator assignment.",
@@ -26,8 +26,8 @@
     "submit_date": "2026-10-07",
     "submitter_name": "Paul Aitken",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-07 18:29:06"
+    "verifier_name": "Jim Guichard",
+    "update_date": "2026-10-15 11:58:57"
   },
   {
     "errata_id": "9213",

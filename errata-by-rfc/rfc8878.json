@@ -103,5 +103,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9223",
+    "doc-id": "RFC8878",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.1.1.3",
+    "orig_text": "Within private environments, any dictionary ID can be used.  However,\r\n   for frames and dictionaries distributed in public space,\r\n   Dictionary_ID must be attributed carefully.  The following ranges are\r\n   reserved for use only with dictionaries that have been registered\r\n   with IANA (see Section 7.4):\r\n\r\n   low range:  <= 32767\r\n\r\n   high range:  >= (1 << 31)\r\n\r\n   Any other value for Dictionary_ID can be used by private arrangement\r\n   between participants.\r\n\r\n   Any payload presented for decompression that references an\r\n   unregistered reserved dictionary ID results in an error.",
+    "correct_text": "Within private environments, any dictionary ID can be used.  However,\r\n   for frames and dictionaries distributed in public space,\r\n   Dictionary_ID must be attributed carefully.  The following ranges are\r\n   reserved for use only with dictionaries that have been registered\r\n   with IANA (see Section 7.4):\r\n\r\n   low range:  <= 32767\r\n\r\n   high range:  >= (1 << 31)\r\n\r\n   Any other value for Dictionary_ID can be used by private arrangement\r\n   between participants.\r\n\r\n   Any payload presented for decompression that references a dictionary\r\n   ID for which the referenced dictionary is not available to the decoder\r\n   results in an error.",
+    "notes": "The phrase \"unregistered reserved dictionary ID\" is not implementable\r\n(a decoder cannot determine IANA registration status) and conflicts with\r\nthe earlier sentence permitting any ID in private environments.\r\nSection 5 uses conditional phrasing (\"If ... distributed in a private\r\nenvironment\"), and Section 7.4 states that at publication no IANA\r\nregistry existed.  The correction makes the error condition decoder-side\r\n(dictionary not available locally) rather than registry-side.",
+    "submit_date": "2026-10-15",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-15 17:18:49"
   }
 ]
