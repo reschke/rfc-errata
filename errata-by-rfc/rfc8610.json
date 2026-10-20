@@ -73,5 +73,20 @@
     "verifier_id": "",
     "verifier_name": "Francesca Palombini",
     "update_date": "2022-06-01 22:03:14"
+  },
+  {
+    "errata_id": "9229",
+    "doc-id": "RFC8610",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.8.6",
+    "orig_text": "A variant of the \".ne\" control is the \".default\" control, which\r\n   expresses an additional intent: the value specified by the\r\n   right-hand-side type is intended as a default value for the\r\n   left-hand-side type given, and the implied .ne control is there to\r\n   prevent this value from being sent over the wire.",
+    "correct_text": "A variant of the \".ne\" control is the \".default\" control, which\r\n   expresses an additional intent: the value specified by the\r\n   right-hand-side type is intended as a default value for the\r\n   left-hand-side type given.  The \".default\" control does not add a\r\n   validation constraint: an occurrence that matches the left-hand-side\r\n   type validates successfully, whether or not it equals the default\r\n   value.  Encoders SHOULD omit an entry whose value equals the default\r\n   value.",
+    "notes": "The sentence can be read two ways: (a) as imposing a validation\r\nconstraint (the \"implied .ne control\" rejecting an entry equal to the\r\ndefault), or (b) as advisory intent for encoders and tools, leaving\r\nvalidation unchanged.  Observed practice is uniform for reading (b):\r\nthe reference \"cddl\" tool (0.12.14), libcddl, and cddl-rs (0.10.7) all\r\naccept a map entry whose value equals the default.  If the implied .ne\r\nwere normative for validation, all three would be non-conformant.\r\n\r\nThe correction states the advisory reading explicitly and adds the\r\nencoder-side guidance (\"SHOULD omit\").  An adjacent section uses the\r\nsame \"variant ... expresses an additional intent\" pattern for the\r\n\".within\" control while stating its formal semantics explicitly\r\n(Section 3.8.5); this correction brings \".default\" to the same level of\r\nclarity.  Note that RFC 9682 (Updates: 8610) does not touch this\r\ncontrol.",
+    "submit_date": "2026-10-16",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-19 19:14:21"
   }
 ]

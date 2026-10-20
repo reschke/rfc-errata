@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9230",
+    "doc-id": "RFC9549",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1",
+    "orig_text": "For instance, ♚.example, which contains the Unicode character U+1F0A1 (BLACK CHESS KING), results in a failure under this specification, but it becomes xn--45h.example under [UTS46].",
+    "correct_text": "For instance, ♚.example, which contains the Unicode character U+265A (BLACK CHESS KING), results in a failure under this specification, but it becomes xn--45h.example under [UTS46].",
+    "notes": "U+1F0A1 is PLAYING CARD ACE OF SPADES. \r\nBLACK CHESS KING is U+265A (Miscellaneous Symbols, general category So). \r\nThe character used in the example string is U+265A, so only the code point in the text is wrong.\r\n\r\nRFC Editor:\r\nWe believe that \"xn--45h.example under [UTS46]\" may also need updates in the Corrected text.",
+    "submit_date": "2026-10-16",
+    "submitter_name": "David Vieira Kurz",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-19 20:54:22"
+  }
+]

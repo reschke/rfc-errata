@@ -118,5 +118,35 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-10-15 17:18:49"
+  },
+  {
+    "errata_id": "9227",
+    "doc-id": "RFC8878",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1.1.3.2.1",
+    "orig_text": "The last field, Reserved, must be all zeroes.",
+    "correct_text": "The last field, Reserved, must be all zeroes.  If this field is not\r\n   all zeroes, the frame is considered corrupt and a compliant decoder\r\n   must reject it.",
+    "notes": "Unlike the two other reserved fields in this document, this sentence\r\nstates no decoder-side rule:\r\n\r\n- Section 3.1.1.1.1.4 (Frame_Header_Descriptor Reserved Bit): \"A\r\n  decoder compliant with this specification version must ensure it is\r\n  not set.\"\r\n\r\n- Section 3.1.1.2 (Reserved block type): \"If such a value is present,\r\n  it is considered to be corrupt data, and a compliant decoder must\r\n  reject it.\"\r\n\r\nThe correction adds explicit decoder behavior consistent with Section\r\n3.1.1.2.  This gap has already caused implementation divergence: the\r\neducational decoder shipped with the reference implementation rejects\r\nframes with non-zero Reserved bits in Symbol_Compression_Modes, while\r\nthe reference decoder accepted them.",
+    "submit_date": "2026-10-15",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-19 19:13:10"
+  },
+  {
+    "errata_id": "9228",
+    "doc-id": "RFC8878",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "A compliant decompressor must be able to decompress at least one\r\n   working set of parameters that conforms to the specifications\r\n   presented here.  It may also ignore informative fields, such as the\r\n   checksum.  Whenever it does not support a parameter defined in the\r\n   compressed stream, it must produce an unambiguous error code and\r\n   associated error message explaining which parameter is unsupported.",
+    "correct_text": "A compliant decompressor must be able to decompress at least one\r\n   working set of parameters that conforms to the specifications\r\n   presented here.  Whenever it does not support a parameter defined in\r\n   the compressed stream, it must produce an unambiguous error code and\r\n   associated error message explaining which parameter is unsupported.\r\n   The Content_Checksum (Section 3.1.1.1.1.5), when present, SHOULD be\r\n   verified; a mismatch indicates data corruption.",
+    "notes": "The term \"informative fields\" is not defined anywhere in this document\r\n(the phrase occurs once), and its only example is the Content_Checksum\r\n-- the only mechanism the format provides for detecting corruption of\r\nthe decoded data.  No other part of the document requires a decoder to\r\nverify it.\r\n\r\nObserved consequences: decoders that skip checksum verification accept\r\nframes that other decoders reject.  In a dictionary-substitution\r\nscenario (a decoder presented with a dictionary whose ID matches the\r\nframe's Dictionary_ID but whose content differs), the substitution goes\r\nundetected and silently corrupted output is produced wherever the\r\nchecksum is not verified; with verification performed, the corruption\r\nis detected.\r\n\r\nThe correction removes the checksum from the class of ignorable fields\r\nand asks for verification with SHOULD, matching its role as the\r\ndocumented integrity mechanism (an \"optional xxHash-64 checksum ...\r\nfor detection of data corruption\", Section 3).  Note that this document\r\ndoes not use RFC 2119 keywords; \"SHOULD\" in the corrected text is\r\nproposed with its customary meaning.",
+    "submit_date": "2026-10-16",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-19 19:13:56"
   }
 ]
