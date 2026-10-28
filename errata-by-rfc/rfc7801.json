@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2022-04-13 18:34:22"
+  },
+  {
+    "errata_id": "9234",
+    "doc-id": "RFC7801",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.5.2",
+    "orig_text": "D_(K_1,...,K_10)(a)=X[K_1]L^(-1)S^(-1)X[K_2]...\r\n   L^(-1)S^(-1)X[K_9] L^(-1)S^(-1)X[K_10](a),",
+    "correct_text": "D_(K_1,...,K_10)(a)=X[K_1]S^(-1)L^(-1)X[K_2]...\r\n   S^(-1)L^(-1)X[K_9] S^(-1)L^(-1)X[K_10](a),",
+    "notes": "The inverse of encryption function must have all inversed transformations be applied to \"a\" in inverse order.\r\n\r\nExample of decryption from section 5.6 shows these inversed transformations applied to ciphertext in this order, not in order described in section 4.5.2. And this produces correct result of decryption.",
+    "submit_date": "2026-10-24",
+    "submitter_name": "Matvey Zenin",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-27 22:27:32"
   }
 ]

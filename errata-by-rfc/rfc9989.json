@@ -43,5 +43,50 @@
     "verifier_id": "",
     "verifier_name": "Madison Church",
     "update_date": "2026-09-02 19:06:13"
+  },
+  {
+    "errata_id": "9235",
+    "doc-id": "RFC9989",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.10.1",
+    "orig_text": "In the absence of applicable \"sp\" or \"np\" tags, the \"p\" tag policy is used for subdomains.",
+    "correct_text": "If the applicable tag is absent, use \"sp\" for a non-existent subdomain when \"sp\" is \r\npresent (as described for \"np\" in Section 4.7), and otherwise use the \"p\" tag policy.",
+    "notes": "Section 4.7 says that if \"np\" is absent, the \"sp\" policy applies to non-existent subdomains when \"sp\" is present, and \"p\" only when \"sp\" is also absent. The sentence in 4.10.1 can be read as \"use p when np is absent\", even when sp is present. For a record such as \"v=DMARC1; p=reject; sp=none\" and a non-existent subdomain, section 4.7 gives none and the 4.10.1 sentence can be read to give reject. We suggest making 4.10.1 match 4.7.",
+    "submit_date": "2026-10-24",
+    "submitter_name": "Mehedi Hasan and Tasmim Afroj Lamia",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-27 22:29:24"
+  },
+  {
+    "errata_id": "9236",
+    "doc-id": "RFC9989",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.7 (also 4.10.1)",
+    "orig_text": "Section 4.7 (\"p\" tag):\r\n      If this tag\r\n      is not present in an otherwise syntactically valid DMARC Policy\r\n      Record, then the record is treated as if it included \"p=none\" (see\r\n      Section 4.10.1). \r\n\r\nSection 4.10.1:\r\n   If a retrieved DMARC Policy Record does not contain a valid \"p\" tag,\r\n   or contains an \"sp\" or \"np\" tag that is not valid, then:\r\n\r\n   *  If a \"rua\" tag is present and contains at least one syntactically\r\n      valid reporting URI, the Mail Receiver MUST act as if a record\r\n      containing \"p=none\" was retrieved and continue processing.\r\n\r\n   *  Otherwise, the Mail Receiver applies no DMARC processing to this\r\n      message.",
+    "correct_text": "Section 4.7 (\"p\" tag):\r\nIf this tag is not present, see Section 4.10.1 for how the record is handled.",
+    "notes": "For a record with no \"p\" tag and no valid \"rua\" (for example \"v=DMARC1\"), section 4.7 says to treat it as \"p=none\" (DMARC applies), and section 4.10.1 says to apply no DMARC processing. In our tests, almost all implementations follow 4.10.1. We suggest changing the 4.7 sentence to point to the rule in 4.10.1.",
+    "submit_date": "2026-10-24",
+    "submitter_name": "Mehedi Hasan and Tasmim Afroj Lamia",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-27 22:31:36"
+  },
+  {
+    "errata_id": "9237",
+    "doc-id": "RFC9989",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.8 (also 4.10.1)",
+    "orig_text": "Section 4.8:\r\n   Syntax errors in the\r\n   remainder of the record MUST be discarded in favor of default values\r\n   (if any) or ignored outright.\r\n\r\nSection 4.10.1:\r\n   If a retrieved DMARC Policy Record does not contain a valid \"p\" tag,\r\n   or contains an \"sp\" or \"np\" tag that is not valid, then:\r\n\r\n   *  If a \"rua\" tag is present and contains at least one syntactically\r\n      valid reporting URI, the Mail Receiver MUST act as if a record\r\n      containing \"p=none\" was retrieved and continue processing.\r\n\r\n   *  Otherwise, the Mail Receiver applies no DMARC processing to this\r\n      message.",
+    "correct_text": "Section 4.8:\r\nSyntax errors in the remainder of the record MUST be discarded in favor \r\nof default values (if any) or ignored outright, except for invalid \"p\", \"sp\", \r\nand \"np\" values, which are handled as described in Section 4.10.1.",
+    "notes": "For a record such as \"v=DMARC1; p=reject; sp=bogus\" with no \"rua\", section 4.8 says to ignore the bad \"sp\" value, so \"p=reject\" still applies. Section 4.10.1 says an invalid \"sp\" means no DMARC processing at all. The same conflict exists in RFC 7489 (sections 6.3 and 6.6.3). In our tests, implementations split into three groups: some follow 4.10.1, some ignore the bad tag as in 4.8, and some treat the whole record as an error. We suggest stating which rule wins.",
+    "submit_date": "2026-10-24",
+    "submitter_name": "Mehedi Hasan and Tasmim Afroj Lamia",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-27 22:33:47"
   }
 ]

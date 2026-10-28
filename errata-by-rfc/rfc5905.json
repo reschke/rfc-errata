@@ -598,5 +598,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-10-15 17:13:58"
+  },
+  {
+    "errata_id": "9233",
+    "doc-id": "RFC5905",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.3",
+    "orig_text": "| Name      | Formula    | Description           |\r\n+-----------+------------+-----------------------+\r\n[...]\r\n| precision | rho        | precision exponent    |",
+    "correct_text": "| Name      | Formula    | Description           |\r\n+-----------+------------+-----------------------+\r\n[...]\r\n| precision | rho        | precision             |",
+    "notes": "In sections 6, 8, 9.2 and 10, rho is defined as the precision \"expressed in seconds\", and used in that unit in all the formulas. \r\nBut in Figure 7 of section 7.3, rho is defined as the \"precision exponent\". In order to have consistency, \"exponent\" should be removed here.",
+    "submit_date": "2026-10-23",
+    "submitter_name": "Marc JOLIVET",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-27 22:26:30"
   }
 ]

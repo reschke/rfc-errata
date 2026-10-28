@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": "Warren Kumari (Ops AD)",
     "update_date": "2020-09-10 22:59:58"
+  },
+  {
+    "errata_id": "9241",
+    "doc-id": "RFC2889",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.5.5.2",
+    "orig_text": "(150%-50%/150%).",
+    "correct_text": "((150% - 100%)/150%).",
+    "notes": "The preceding text specifies a total offered load of 150% of\r\nthe congested port's capacity and a maximum output of 100%.\r\n\r\nThe expected loss fraction is therefore:\r\n\r\n    (150% - 100%)/150% = 1/3\r\n\r\nThis is approximately 33%, consistent with the result stated\r\nin the paragraph.\r\n\r\nThe original expression uses an incorrect subtraction operand\r\nand lacks the necessary grouping. This correction changes only\r\nthe expression; it preserves the stated conclusion.",
+    "submit_date": "2026-10-26",
+    "submitter_name": "lishiao",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-27 22:44:45"
   }
 ]

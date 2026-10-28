@@ -253,5 +253,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9232",
+    "doc-id": "RFC959",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.2",
+    "orig_text": "Note that all FTP implementation must support",
+    "correct_text": "Note that all FTP implementations must support",
+    "notes": "\"Implementation\" should be plural in this context since \"all\" takes a plural countable noun.\r\nThat (current) singular form would be valid if we used \"any\".",
+    "submit_date": "2026-10-21",
+    "submitter_name": "Khalid Belkassmi E.H.",
+    "verifier_id": "",
+    "verifier_name": "Alice Russo",
+    "update_date": "2026-10-27 23:06:31"
   }
 ]

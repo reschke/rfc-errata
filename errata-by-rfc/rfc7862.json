@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9244",
+    "doc-id": "RFC7862",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "14.2.3",
+    "orig_text": "14.2.3.  MOTIVATION\r\n\r\n   The GETDEVICELIST operation was introduced in [RFC5661] specifically\r\n   to request a list of devices at file system mount time from block\r\n   layout type servers.  However, the use of the GETDEVICELIST operation\r\n   introduces a race condition versus notification about changes to pNFS\r\n   device IDs as provided by CB_NOTIFY_DEVICEID.  Implementation\r\n   experience with block layout servers has shown that there is no need\r\n   for GETDEVICELIST.  Clients have to be able to request new devices\r\n   using GETDEVICEINFO at any time in response to either a new deviceid\r\n   in LAYOUTGET results or the CB_NOTIFY_DEVICEID callback operation.\r\n\r\n14.2.4.  DESCRIPTION\r\n\r\n   Clients and servers MUST NOT implement the GETDEVICELIST operation.",
+    "correct_text": "14.2.3.  MOTIVATION\r\n\r\n   The GETDEVICELIST operation was introduced in [RFC5661] specifically\r\n   to request a list of devices at file system mount time from block\r\n   layout type servers.  It is also useful to clients of layout types\r\n   with many storage devices, which can use the list to establish\r\n   connections to those devices before the first I/O.  Clients still\r\n   have to be able to request new devices using GETDEVICEINFO at any\r\n   time in response to either a new deviceid in LAYOUTGET results or\r\n   the CB_NOTIFY_DEVICEID callback operation.\r\n\r\n14.2.4.  DESCRIPTION\r\n\r\n   GETDEVICELIST is OPTIONAL, and is as described in Section 18.41 of\r\n   [RFC5661].  A GETDEVICELIST reply can race with CB_NOTIFY_DEVICEID\r\n   in the same way a GETDEVICEINFO reply can, and the client handles\r\n   it as described in Section 18.40.4 of [RFC5661].",
+    "notes": "Section 14.2.3 says GETDEVICELIST introduces a race with\r\nCB_NOTIFY_DEVICEID, but I can't find an ordering that breaks.\r\n\r\nGETDEVICELIST returns only device IDs, so a CHANGE crossing its reply\r\nhas nothing to make stale.  Notifications are registered per device ID\r\nby GETDEVICEINFO, and the client has no address for an ID until that\r\nGETDEVICEINFO completes.  A DELETE crossing the reply is covered by\r\nthe \"mark the device ID as deleted\" rule in RFC 5661 Section 18.40.4,\r\nwhich already names GETDEVICELIST, and device IDs are never reused.\r\nIf an ID is deleted between the list and GETDEVICEINFO, the client\r\njust gets NFS4ERR_NOENT.\r\n\r\nWe'd like the operation back for flex files clients with many data\r\nservers.  Those clients pay for connection setup (TCP, and\r\nRPC-with-TLS) on the first I/O to each data server, and a device list\r\nat mount lets them do that work up front.\r\n\r\nI raised this on the nfsv4 list on 2026-10-22 and haven't had any\r\nreplies:\r\nhttps://mailarchive.ietf.org/arch/msg/nfsv4/L1UyZH5PaZupkAGp2s6oJEfSo34/",
+    "submit_date": "2026-10-27",
+    "submitter_name": "Benjamin Coddington",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-27 22:49:04"
   }
 ]

@@ -133,5 +133,20 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2026-04-15 19:21:33"
+  },
+  {
+    "errata_id": "9240",
+    "doc-id": "RFC9051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "msg-att-static  = \"ENVELOPE\" SP envelope /\r\n                  \"INTERNALDATE\" SP date-time /\r\n                  \"RFC822.SIZE\" SP number64 /\r\n                  \"BODY\" [\"STRUCTURE\"] SP body /\r\n                  \"BODY\" section [\"<\" number \">\"] SP nstring /\r\n                  \"BINARY\" section-binary SP (nstring / literal8) /\r\n                  \"BINARY.SIZE\" section-binary SP number /\r\n                  \"UID\" SP uniqueid\r\n                    ; MUST NOT change for a message",
+    "correct_text": "msg-att-static  = \"ENVELOPE\" SP envelope /\r\n                  \"INTERNALDATE\" SP date-time /\r\n                  \"RFC822.SIZE\" SP number64 /\r\n                  \"BODY\" [\"STRUCTURE\"] SP body /\r\n                  \"BODY\" section [\"<\" number64 \">\"] SP nstring /\r\n                  \"BINARY\" section-binary SP (nstring / literal8) /\r\n                  \"BINARY.SIZE\" section-binary SP number /\r\n                  \"UID\" SP uniqueid\r\n                    ; MUST NOT change for a message",
+    "notes": "A partial request accepts number64 as offset:\r\n\r\npartial         = \"<\" number64 \".\" nz-number64 \">\"\r\n                    ; Partial FETCH request. 0-based offset of\r\n                    ; the first octet, followed by the number of\r\n                    ; octets in the fragment.\r\n\r\nHowever, the response side only allows a (32-bit) number. Thus, a server cannot echo back the original offset when replying.\r\n\r\nSee discussion at https://github.com/emersion/go-imap/pull/768",
+    "submit_date": "2026-10-25",
+    "submitter_name": "Simon Ser",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-27 22:42:35"
   }
 ]

@@ -403,5 +403,20 @@
     "verifier_id": "",
     "verifier_name": "Mahesh Jethanandani",
     "update_date": "2026-10-02 21:27:24"
+  },
+  {
+    "errata_id": "9242",
+    "doc-id": "RFC7950",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.4.1.1",
+    "orig_text": "<a xmlns=\"urn:example:a\">\r\n  <b>\r\n    <id>1</id>\r\n  </b>\r\n  <b>\r\n    <id>2</id>\r\n  </b>\r\n</a>\r\n<failure>\r\n  <b-ref>2</b-ref>\r\n</failure>\r\n// possibly other top-level nodes here",
+    "correct_text": "<a xmlns=\"urn:example:a\">\r\n  <b>\r\n    <id>1</id>\r\n  </b>\r\n  <b>\r\n    <id>2</id>\r\n  </b>\r\n</a>\r\n<failure xmlns=\"urn:example:a\">\r\n  <b-ref>2</b-ref>\r\n</failure>\r\n// possibly other top-level nodes here",
+    "notes": "XML element \"<failure>\" corresponding to a notification defined at the top level of the module \"example-a\" has to be qualified with the namespace URI of that module.",
+    "submit_date": "2026-10-26",
+    "submitter_name": "Ladislav Lhotka",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-27 22:46:28"
   }
 ]

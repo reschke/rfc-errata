@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Mirja Kühlewind (IAB chair)",
     "update_date": "2020-12-14 14:08:34"
+  },
+  {
+    "errata_id": "9243",
+    "doc-id": "RFC7322",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
+    "section": "6.2",
+    "orig_text": "[CLUSTER]  RFC Editor, \"Clusters in the RFC Editor Queue\",\r\n              <http://www.rfc-editor.org/cluster_def.html>.",
+    "correct_text": "[CLUSTER]  RFC Editor, \"Clusters in the RFC Editor Queue\",\r\n              <https://authors.ietf.org/rfc-publication-process#clusters>.",
+    "notes": "the link (http://www.rfc-editor.org/cluster_def.html) is broken. no page exists at that link. \r\n\r\nsince no rfc defines a 'cluster', it might be worthwhile to redirect people to the internet-draft author resources webpage; which explains what a 'cluster' is.\r\n\r\nReviewer notes: \r\nThis URL was functional at the time of publication.",
+    "submit_date": "2026-10-26",
+    "submitter_name": "Arjun Yadav",
+    "verifier_id": "",
+    "verifier_name": "Alice Russo",
+    "update_date": "2026-10-27 23:03:37"
   }
 ]
