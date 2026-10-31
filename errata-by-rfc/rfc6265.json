@@ -208,5 +208,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9249",
+    "doc-id": "RFC6265",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.1.1",
+    "orig_text": "cookie-av         = expires-av / max-age-av / domain-av /\r\n                     path-av / secure-av / httponly-av /\r\n                     extension-av",
+    "correct_text": "cookie-av         = extension-av\r\n                       ; expires-av, max-age-av, domain-av, path-av,\r\n                       ; secure-av and httponly-av are not referenced\r\n                       ; by cookie-av; they describe the well-behaved\r\n                       ; form of the attributes that servers SHOULD\r\n                       ; produce (see Section 4.1.2)",
+    "notes": "Many parsers process ABNF alternatives left-to-right and do not backtrack\r\nif an alternative partially matches but the enclosing rule ultimately fails.\r\nEvery alternative of cookie-av is a subset of extension-av (*av-octet, as\r\ncorrected by Errata ID 3444). Such parsers therefore commit to a partial\r\nmatch of a specific alternative and reject valid set-cookie-strings, e.g.\r\n(quotes delimit the strings):\r\n\r\n  \"id=a; Secure \"                  ; trailing SP\r\n  \"id=a; Max-Age=60 \"              ; trailing SP\r\n  \"id=a; HttpOnly=\"\r\n  \"id=a; Domain=example.com:80\"\r\n\r\nall of which are valid cookie-av via extension-av.\r\n\r\nAs each specific alternative is a subset of extension-av, the corrected rule\r\naccepts exactly the same language. It only removes the ambiguity; it does not\r\nchange which set-cookie-strings conform to the grammar. User agents interpret\r\nattributes by name following Section 5.2, which does not use these rules.\r\n\r\nAlternatively, extension-av could be placed first. For such parsers this has\r\nthe same effect, as extension-av matches every attribute and the specific\r\nalternatives become unreachable. The corrected text states this directly.\r\n\r\nThis is analogous to Errata ID 8242 (cookie-value).",
+    "submit_date": "2026-10-28",
+    "submitter_name": "Vladimír Gorej",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-30 15:50:48"
   }
 ]

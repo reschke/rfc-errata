@@ -43,5 +43,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-10-27 22:27:32"
+  },
+  {
+    "errata_id": "9246",
+    "doc-id": "RFC7801",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.3",
+    "orig_text": "S:V_128-> V_128  S(a)=(a_15||...||a_0)=pi(a_15)||...||pi(a_0), where\r\n      a_15||...||a_0 belongs to V_128, a_i belongs to V_8, i=0,1,...,15,",
+    "correct_text": "S:V_128-> V_128  S(a)=S(a_15||...||a_0)=pi(a_15)||...||pi(a_0), where\r\n      a_15||...||a_0 belongs to V_128, a_i belongs to V_8, i=0,1,...,15,",
+    "notes": "The second S is missing, incorrectly equating the input with the substitution output.",
+    "submit_date": "2026-10-30",
+    "submitter_name": "Dmitry Bobrovskiy",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-30 15:49:44"
   }
 ]

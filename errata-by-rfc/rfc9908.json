@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9247",
+    "doc-id": "RFC9908",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.6.2",
+    "orig_text": "Provide a CSR with an ECC public key from sha521 and include your serial number, friendly name, and favorite drink, and hash it with SHA512.",
+    "correct_text": "Provide a CSR with an ECC public key from P-521 and include your serial number, friendly name, and favorite drink, and hash it with SHA512.",
+    "notes": "Could also use secp521r1.",
+    "submit_date": "2026-10-29",
+    "submitter_name": "Sean Anderson",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-30 15:50:02"
+  }
+]

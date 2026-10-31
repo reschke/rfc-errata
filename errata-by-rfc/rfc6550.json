@@ -178,5 +178,20 @@
     "verifier_id": "",
     "verifier_name": "Alvaro Retana",
     "update_date": "2021-04-22 20:55:13"
+  },
+  {
+    "errata_id": "9248",
+    "doc-id": "RFC6550",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.7.6.",
+    "orig_text": "MinHopRankIncrease: 16-bit unsigned integer used to configure\r\n         MinHopRankIncrease as described in Section 3.5.1.  The default\r\n         value of MinHopRankInc is DEFAULT_MIN_HOP_RANK_INCREASE.",
+    "correct_text": "MinHopRankIncrease: 16-bit unsigned integer used to configure\r\n         MinHopRankIncrease as described in Section 3.5.1.  The default\r\n         value of MinHopRankInc is DEFAULT_MIN_HOP_RANK_INCREASE.\r\n         MinHopRankIncrease MUST NOT be 0.",
+    "notes": "If this value becomes 0, we have a division by 0 in the rank comparison in Section 3.5.1\r\n\r\nRPL implementations already (and only quite recently) decided to error out in this case:\r\n\r\n- https://github.com/contiki-ng/contiki-ng/commit/c66d09282a3dc8b2bfb9d4eb2b374932ae537abd#diff-ce769affdeff3914176ee901713fa4b04637cdcf2b0129feb4faea29ab55464cR336-R339\r\n- https://github.com/RIOT-OS/RIOT/commit/2ada72f83641d751ec4128d9fb1a761ced4580dc",
+    "submit_date": "2026-10-29",
+    "submitter_name": "Martine Sophie Lenders",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-30 15:50:24"
   }
 ]

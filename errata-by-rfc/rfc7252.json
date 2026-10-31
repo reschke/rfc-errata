@@ -133,5 +133,20 @@
     "verifier_id": "",
     "verifier_name": "Francesca Palombini",
     "update_date": "2023-01-18 09:28:38"
+  },
+  {
+    "errata_id": "9245",
+    "doc-id": "RFC7252",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.7.1",
+    "orig_text": "If the request to the\r\ndestination returns a response that cannot be processed by the proxy\r\n(e.g, due to unrecognized critical options or message format errors),\r\nthen a 5.02 (Bad Gateway) response MUST be returned.",
+    "correct_text": "If the request to the\r\ndestination returns a response that cannot be processed by the proxy\r\n(e.g, due to unrecognized Unsafe options or message format errors),\r\nthen a 5.02 (Bad Gateway) response MUST be returned.",
+    "notes": "The current text contradicts the end of the section:\r\n\r\nUnsafe options in a response that are not recognized by the CoAP-to-\r\nCoAP proxy server MUST lead to a 5.02 (Bad Gateway) response.  Again,\r\nSafe-to-Forward options that are not recognized MUST be forwarded.",
+    "submit_date": "2026-10-30",
+    "submitter_name": "AudaciousAxiom",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-10-30 15:49:18"
   }
 ]
