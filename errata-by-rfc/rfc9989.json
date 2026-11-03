@@ -88,5 +88,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-10-27 22:33:47"
+  },
+  {
+    "errata_id": "9262",
+    "doc-id": "RFC9989",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix B.2.5",
+    "orig_text": "\"mailto:tld-test@thirdparty.example.net; \"\r\n\"mailto:tld-test@thirdparty.example.net\" )",
+    "correct_text": "\"mailto:example-tld-test@thirdparty.example.net; \"\r\n\"mailto:example-tld-test@thirdparty.example.net\" )",
+    "notes": "The first line appears in the first DNS record of the example, and the second line in the second record. The prose names example-tld-test@thirdparty.example.net. The prose and the two DNS records specify different report destinations. Both records should use the address stated in the prose. The same difference is in RFC 7489 Appendix B.2.5.\r\n\r\nAI tools assisted with drafting and review. I take responsibility for this report.",
+    "submit_date": "2026-11-01",
+    "submitter_name": "Rifat Jumagulov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:21:03"
   }
 ]

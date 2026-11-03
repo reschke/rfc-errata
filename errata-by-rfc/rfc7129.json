@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9261",
+    "doc-id": "RFC7129",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.6",
+    "orig_text": "NSEC3 1 0 2 DEAD 15BG9L6359F5CH23E34DDUA6N1RIHL9H TXT RRSIG )",
+    "correct_text": "NSEC3 1 0 2 DEAD 117GERCPRCJGG8J04EV1NDRK8D1JT14K TXT RRSIG )",
+    "notes": "Appendix C gives H(1.h) = 117gercprcjgg8j04ev1ndrk8d1jt14k and H(@) = 15bg9l6359f5ch23e34ddua6n1rihl9h. I recomputed both with algorithm 1, salt DEAD, 2 iterations, and they match. In hash order the zone of Figure 8 is 117g, 15bg, 1avv, 75b9, 8555, so under RFC 5155 Section 7.1 the record for 8555 has the next name 117g. Figure 9 shows the same arrow from 3.3 to 1.h. As printed, the span 8555 to 15bg wraps past 117g and covers 1.h, an existing name. With the correction the record still covers both hashes that Section 5.6 uses it for.\r\n\r\nAI models helped review the text and build small test models; Arxo ran the checks, and I take responsibility for the reports.",
+    "submit_date": "2026-11-01",
+    "submitter_name": "Rifat Jumagulov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:20:52"
+  }
+]

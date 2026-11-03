@@ -1,0 +1,62 @@
+[
+  {
+    "errata_id": "9250",
+    "doc-id": "RFC10051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "13.1",
+    "orig_text": "<!ELEMENT supported-task-mode-set(supported-task-mode*)>",
+    "correct_text": "<!ELEMENT supported-task-mode-set (supported-task-mode*)>",
+    "notes": "Missing whitespace between the element name and the content model. XML's grammar for an element declaration requires whitespace between the Name and the content model. As-is, it's technically invalid DTD.",
+    "submit_date": "2026-11-02",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:14:48"
+  },
+  {
+    "errata_id": "9251",
+    "doc-id": "RFC10051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "12.1 Example",
+    "orig_text": "REASON: https://example.com/reason/delivered-on-time",
+    "correct_text": "REASON:https://example.com/reason/delivered-on-time",
+    "notes": "The space after  REASON:  makes the value begin with a space. iCalendar content lines have no leading space.\r\n(Every other  REASON  example is correct.)",
+    "submit_date": "2026-11-02",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:15:33"
+  },
+  {
+    "errata_id": "9252",
+    "doc-id": "RFC10051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.4",
+    "orig_text": "DTSTAMP:20130226T1104510Z",
+    "correct_text": "DTSTAMP:20130226T110451Z",
+    "notes": "The timestamp has a 7-digit time field. The valid form is  YYYYMMDDTHHMMSSZ  (6-digit time)",
+    "submit_date": "2026-11-02",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:15:42"
+  },
+  {
+    "errata_id": "9253",
+    "doc-id": "RFC10051",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9.1",
+    "orig_text": "Example:\r\n         ATTENDEE;REASON=\"https://example.com/reason/not-enough-time\";\r\n          PARTSTAT=FAILED:mailto:jsmith@example.com",
+    "correct_text": "Example:\r\n         ATTENDEE;PARTSTAT=FAILED:mailto:jsmith@example.com\r\n         ...\r\n         BEGIN:PARTICIPANT\r\n         CALENDAR-ADDRESS:mailto:jsmith@example.com\r\n         REASON:https://example.com/reason/not-enough-time\r\n         END:PARTICIPANT",
+    "notes": "The example uses  REASON  as a property parameter on the  ATTENDEE  property. However,  REASON  is defined by this document only as a property (Section 10.2: value type URI, conformant in the  VSTATUS  and  PARTICIPANT  calendar components); no  REASON  property parameter is defined either in RFC 10051 or in RFC 5545. As written, the example references an undefined parameter and will not validate.\r\n\r\nThe document's own Section 7.4 (\"Relating Reason and Comments to 'ATTENDEE' Property Status Changes\") shows the intended construction: retain  PARTSTAT  on the  ATTENDEE  property and convey the reason via a  REASON  property inside a  PARTICIPANT  calendar component. The corrected text follows that pattern.",
+    "submit_date": "2026-11-02",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:15:56"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9254",
+    "doc-id": "RFC6268",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "AttributeCertificateV1\r\n   FROM AttributeCertificateVersion1-2009\r\n     { iso(1) identified-organization(3) dod(6) internet(1)\r\n     security(5) mechanisms(5) pkix(7) id-mod(0)\r\n     id-mod-v1AttrCert-02(49) } ;",
+    "correct_text": "AttributeCertificateV1\r\n  FROM AttributeCertificateVersion1-2009\r\n      { iso(1) identified-organization(3) dod(6) internet(1) security(5)\r\n        mechanisms(5) pkix(7) id-mod(0) id-mod-v1AttrCert-02(49) } ;",
+    "notes": "This errata mirrors errata 2665 from RFC 5911.",
+    "submit_date": "2026-11-02",
+    "submitter_name": "Daniel Van Geest",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:17:03"
+  }
+]

@@ -343,5 +343,20 @@
     "verifier_id": "",
     "verifier_name": "Paul Wouters",
     "update_date": "2025-09-03 13:26:42"
+  },
+  {
+    "errata_id": "9259",
+    "doc-id": "RFC5280",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.1.5",
+    "orig_text": "(f)  Recognize and process any other critical extension present in\r\n        the certificate n.  Process any other recognized non-critical\r\n        extension present in certificate n that is relevant to path\r\n        processing.",
+    "correct_text": "(f)  Recognize and process any other critical extension present in\r\n        the certificate n.  Process any other recognized non-critical\r\n        extension present in certificate n that is relevant to path\r\n        processing.\r\n\r\n   If check (f) fails, the procedure terminates, returning a failure\r\n   indication and an appropriate reason.",
+    "notes": "Unlike Section 6.1.4, Section 6.1.5 does not explicitly state the failure outcome when step (f) cannot be completed.\r\n\r\nSection 6.1.4 has the same step as (o) for certificates 1 to n-1 and then says \"If check (a), (k), (l), (n), or (o) fails, the procedure terminates, returning a failure indication and an appropriate reason.\" Section 6.1.5 has no such sentence. Its closing paragraph names only the policy result: \"If either (1) the value of explicit_policy variable is greater than zero or (2) the valid_policy_tree is not NULL, then path processing has succeeded.\" RFC 9618 Section 5.5 replaces that paragraph and also keeps it about policy only.\r\n\r\nSection 4.2 says: \"A certificate-using system MUST reject the certificate if it encounters a critical extension it does not recognize or a critical extension that contains information that it cannot process.\" The introduction to Section 6.1 says: \"Note that clients MUST reject the certificate if it contains an unsupported critical extension.\" The correction adds the matching outcome to Section 6.1.5, in the same form as Section 6.1.4.\r\n\r\nTests and implementations already reject such a certificate. NIST PKITS 4.16.2 (Invalid Unknown Critical Certificate Extension Test2) puts the unknown critical extension in the end-entity certificate and expects the path to fail. x509-limbo expects failure for rfc5280::unknown-critical-extension-ee, and its anomaly reports list no disagreement for this test. OpenSSL 3.6.4, Go 1.25.1 crypto/x509 and pyca/cryptography 46.0.4 reject a test chain with an unknown critical extension in the end-entity certificate and accept the same chain without it.\r\n\r\nAI models helped review the text and build small test models; Arxo ran the checks, and I take responsibility for the reports.",
+    "submit_date": "2026-11-01",
+    "submitter_name": "Rifat Jumagulov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:19:40"
   }
 ]

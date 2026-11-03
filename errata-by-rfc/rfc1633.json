@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Wes Eddy",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9263",
+    "doc-id": "RFC1633",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "5.2",
+    "orig_text": "It should be possible to engineer RSVP to sypplement the global refresh mechanism with a local repair mechanism, using hints about route changes from the routing mechanism.",
+    "correct_text": "It should be possible to engineer RSVP to supplement the global refresh mechanism with a local repair mechanism, using hints about route changes from the routing mechanism.",
+    "notes": "sypplement -> supplement",
+    "submit_date": "2026-10-31",
+    "submitter_name": "Dawid Osuchowski",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-11-02 22:23:58"
   }
 ]

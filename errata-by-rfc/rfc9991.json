@@ -1,0 +1,47 @@
+[
+  {
+    "errata_id": "9256",
+    "doc-id": "RFC9991",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "dkim=pass (512-bit key; secure) header.d=consumer.example",
+    "correct_text": "dkim=pass (256-bit key; secure) header.d=consumer.example",
+    "notes": "The same field has header.a=ed25519-sha256. RFC 8463 says \"since Ed25519 public keys are 256 bits long\". 512 bits is the length of an Ed25519 signature.\r\n\r\nAI tools assisted with drafting and review. I take responsibility for this report.",
+    "submit_date": "2026-11-01",
+    "submitter_name": "Rifat Jumagulov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:18:00"
+  },
+  {
+    "errata_id": "9257",
+    "doc-id": "RFC9991",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "From: DMARC Filter <DMARC@gen.example>;\r\nMessage-Id: <20220719055748.4AE9D403CC@gen.example>;",
+    "correct_text": "From: DMARC Filter <DMARC@gen.example>\r\nMessage-Id: <20220719055748.4AE9D403CC@gen.example>",
+    "notes": "The first line is the From field and the second line is the Message-Id field.\r\n\r\nThe final semicolon is not allowed by the RFC 5322 syntax of either field.\r\n\r\nAI tools assisted with drafting and review. I take responsibility for this report.",
+    "submit_date": "2026-11-01",
+    "submitter_name": "Rifat Jumagulov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:18:47"
+  },
+  {
+    "errata_id": "9258",
+    "doc-id": "RFC9991",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix A",
+    "orig_text": "Received: from mail.forwarder.example\r\n  (mail.forwarder.example [IPv6:2001:db8::23ac])\r\n  by mail.gen.example (Postfix) with ESMTP id 5E8B0C159826\r\n  for <x@gen.example>; Sun, 14 Aug 2022 07:58:29 -0700 (PDT)",
+    "correct_text": "Received: from mail.forwarder.example\r\n  (mail.forwarder.example [192.0.2.2])\r\n  by mail.gen.example (Postfix) with ESMTP id 5E8B0C159826\r\n  for <x@gen.example>; Mon, 18 Jul 2022 22:57:48 -0700 (PDT)",
+    "notes": "The report says \"received from IP 192.0.2.2 on Tue, 19 Jul 2022 00:57:48 -0500\" and has \"Source-IP: 192.0.2.2\". This Received field gives another address and a date in August, after the report. The receiving hop should agree with the receipt time and source address stated in the report. The proposed values make the example internally consistent: 05:57:48 UTC, four seconds after the previous hop.\r\n\r\nChanging the report to the IPv6 address is also possible, but it needs more changes.\r\n\r\nAI tools assisted with drafting and review. I take responsibility for this report.",
+    "submit_date": "2026-11-01",
+    "submitter_name": "Rifat Jumagulov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:19:06"
+  }
+]

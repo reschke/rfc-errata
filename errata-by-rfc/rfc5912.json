@@ -148,5 +148,20 @@
     "verifier_id": "",
     "verifier_name": "Benjamin Kaduk",
     "update_date": "2022-01-04 02:27:38"
+  },
+  {
+    "errata_id": "9255",
+    "doc-id": "RFC5912",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "AttributeCertificateVersion1-2009\r\n      { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)\r\n      smime(16) modules(0) id-mod-v1AttrCert-02(49) } ;",
+    "correct_text": "AttributeCertificateVersion1-2009\r\n      { iso(1) identified-organization(3) dod(6) internet(1) security(5)\r\n        mechanisms(5) pkix(7) id-mod(0) id-mod-v1AttrCert-02(49) } ;",
+    "notes": "Errata 2649 (Verified) is incorrect, it fixed the latter part of the OID, however dod(6) is under identified-organization(3), not member-body(2).\r\n\r\nNote that RFC 5911 had errata 2648 which made the same mistake that 2649 did for RFC 5912, however RFC 5911 had a follow-up errata 2665 which made the correct fix, but there was no such follow-up for RFC 5912. This errata fixes that.",
+    "submit_date": "2026-11-02",
+    "submitter_name": "Daniel Van Geest",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:17:29"
   }
 ]

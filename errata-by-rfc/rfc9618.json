@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9260",
+    "doc-id": "RFC9618",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.1",
+    "orig_text": "The complete algorithm for building this structure is described in\r\n   steps (d), (e), and (f) in Section 6.1.3 of [RFC5280]; steps (h),\r\n   (i), and (j) in Section 6.1.4 of [RFC5280]; and steps (a), (b), and\r\n   (g) in Section 6.1.5 of [RFC5280].",
+    "correct_text": "The complete algorithm for building this structure is described in\r\n   steps (d), (e), and (f) in Section 6.1.3 of [RFC5280]; steps (a),\r\n   (b), (h), (i), and (j) in Section 6.1.4 of [RFC5280]; and steps (a),\r\n   (b), and (g) in Section 6.1.5 of [RFC5280].",
+    "notes": "Step (b) of Section 6.1.4 of RFC 5280 is where policy mappings change the tree: it sets the expected_policy_set of the mapped nodes, or deletes them when policy_mapping is 0. RFC 9618 itself replaces this step in Section 5.4 (\"The following replaces step (b) in Section 6.1.4 of [RFC5280]\"). Step (a) of Section 6.1.4 checks the policyMappings extension before step (b) uses it. The list in Section 3.1 leaves out both steps, so a reader who builds the tree from the listed steps alone does not apply policy mappings.\r\n\r\nAI models helped review the text and build small test models; Arxo ran the checks, and I take responsibility for the reports.",
+    "submit_date": "2026-11-01",
+    "submitter_name": "Rifat Jumagulov",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-02 22:20:33"
+  }
+]
