@@ -63737,17 +63737,17 @@
   {
     "errata_id": "4965",
     "doc-id": "RFC3091",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "1.     TCP Based Digit Generator Service\r\n\r\n   One REQUIRED PIgen service is defined as a stateless TCP service.  A\r\n   server listens on TCP port 314159.\r\n\r\n...\r\n\r\n1.1.   Approximate Service\r\n\r\n   An OPTIONAL PIgen service is defined as a stateless TCP service.  A\r\n   server listens on TCP port 220007.\r\n\r\n...\r\n\r\n2.     UDP Based Digit Generator Service\r\n\r\n   An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   server listens on UDP port 314159.\r\n\r\n...\r\n\r\n2.2.   Approximate Service\r\n\r\n   An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   server listens on UDP port 220007.",
     "correct_text": "1.     TCP Based Digit Generator Service\r\n\r\n   One REQUIRED PIgen service is defined as a stateless TCP service.  A\r\n   server listens on TCP port 31415.\r\n\r\n...\r\n\r\n1.1.   Approximate Service\r\n\r\n   An OPTIONAL PIgen service is defined as a stateless TCP service.  A\r\n   server listens on TCP port 22007.\r\n\r\n...\r\n\r\n2.     UDP Based Digit Generator Service\r\n\r\n   An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   server listens on UDP port 31415.\r\n\r\n...\r\n\r\n2.2.   Approximate Service\r\n\r\n   An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   server listens on UDP port 22007.",
-    "notes": "Ports as specified in the original text exceed 16-bit integer space, violating TCP (RFC793 3.1) and UDP (RFC768, \"Format\"). As it stands, this error prevents development of fully-compliant implementations of this protocol.\r\nNote that in this correction I have elected not to round the TCP and UDP ports in sec. 1 and 2 to 31416 - this is to better-preserve the immediate recognizability of the port as the PIgen service.\r\nAlso note that the IP multicast group address specified in sec. 3 exceeds the 32-bit address space specified in RFC 791 sec. 2.3. I have abstained from proposing a correction to this, as I could not think of an IANA-compliant address that still incorporates digits of pi.",
+    "notes": "I appreciate your attempt to implement this service.  The port numbers and address space are somewhat part of the joke.\r\n\r\nOriginal note from the author:\r\n\r\nPorts as specified in the original text exceed 16-bit integer space, violating TCP (RFC793 3.1) and UDP (RFC768, \"Format\"). As it stands, this error prevents development of fully-compliant implementations of this protocol.\r\nNote that in this correction I have elected not to round the TCP and UDP ports in sec. 1 and 2 to 31416 - this is to better-preserve the immediate recognizability of the port as the PIgen service.\r\nAlso note that the IP multicast group address specified in sec. 3 exceeds the 32-bit address space specified in RFC 791 sec. 2.3. I have abstained from proposing a correction to this, as I could not think of an IANA-compliant address that still incorporates digits of pi.",
     "submit_date": "2017-03-12",
     "submitter_name": "Jesse Friedman",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2019-09-10 16:09:03"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 15:41:15"
   },
   {
     "errata_id": "4966",
@@ -67652,17 +67652,17 @@
   {
     "errata_id": "5217",
     "doc-id": "RFC3091",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Editorial",
     "section": "3",
-    "orig_text": "   An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   random distribution of digits of Pi are sent using the payload format\r\n   described in section 2.1.2. to the IP multicast group\r\n   314.159.265.359.",
-    "correct_text": "   An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   random distribution of digits of Pi are sent using the payload format\r\n   described in section 2.1.2. to the IPv6 multicast group\r\n   ff0e:3141:5926:5358:9793:2384:6264:3833.",
-    "notes": "314.159.265.359 is not a valid IPv4 address, because it contains octets larger than 255. Using IPv6 multicast allows 28 digits of Pi in the address and will accelerate the transition to it.",
+    "orig_text": "An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   random distribution of digits of Pi are sent using the payload format\r\n   described in section 2.1.2. to the IP multicast group\r\n   314.159.265.359.",
+    "correct_text": "An OPTIONAL PIgen service is defined as a stateless UDP service.  A\r\n   random distribution of digits of Pi are sent using the payload format\r\n   described in section 2.1.2. to the IPv6 multicast group\r\n   ff0e:3141:5926:5358:9793:2384:6264:3833.",
+    "notes": "Thank you for this report.  I don't think this address was lost on the authors.\r\n\r\n314.159.265.359 is not a valid IPv4 address, because it contains octets larger than 255. Using IPv6 multicast allows 28 digits of Pi in the address and will accelerate the transition to it.",
     "submit_date": "2017-12-26",
     "submitter_name": "Luís Câmara",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2019-09-10 16:09:03"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 15:42:53"
   },
   {
     "errata_id": "5218",
@@ -68072,32 +68072,32 @@
   {
     "errata_id": "5245",
     "doc-id": "RFC5805",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.4",
-    "orig_text": "\r\n\"The server returns an End Transaction Response with a resultCode of\r\n   success (0) and no responseValue to indicate all the requested\r\n   updates were applied.\"",
+    "orig_text": "\"The server returns an End Transaction Response with a resultCode of\r\n   success (0) and no responseValue to indicate all the requested\r\n   updates were applied.\"",
     "correct_text": "The server returns an End Transaction Response with a resultCode of\r\n   success (0) and optionally a responseValue with updateControls, \r\nif any to indicate all the requested updates were applied.",
-    "notes": "The original text mention that the responseValue should not be sent back when the commit was successful, which would makes the updateControls useless. As the caller would need to get back the controls result for each operation having a control, we need to send them back when the transaction is successful.",
+    "notes": "This change is potentially not interoperable with existing code.  The reporter is generally correct on the problem, tho.\r\n\r\nOriginal submitter note:\r\n\r\nThe original text mention that the responseValue should not be sent back when the commit was successful, which would makes the updateControls useless. As the caller would need to get back the controls result for each operation having a control, we need to send them back when the transaction is successful.",
     "submit_date": "2018-01-28",
     "submitter_name": "Emmanuel Lecharny",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2019-09-10 16:09:03"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 17:47:37"
   },
   {
     "errata_id": "5246",
     "doc-id": "RFC5805",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "2.3",
-    "orig_text": "      txnEndRes ::= SEQUENCE {\r\n           messageID MessageID OPTIONAL,\r\n                -- msgid associated with non-success resultCode\r\n           updatesControls SEQUENCE OF updateControls SEQUENCE {\r\n                messageID MessageID,\r\n                     -- msgid associated with controls\r\n                controls  Controls\r\n           } OPTIONAL\r\n      }\r\n",
-    "correct_text": "      TxnEndRes ::= SEQUENCE {\r\n           messageID MessageID OPTIONAL,\r\n                -- msgid associated with non-success resultCode\r\n           updatesControls SEQUENCE OF updateControl SEQUENCE {\r\n                messageID MessageID,\r\n                     -- msgid associated with controls\r\n                controls  Controls\r\n           } OPTIONAL\r\n      }\r\n\r\n      UpdateControl SEQUENCE {\r\n                messageID MessageID,\r\n                     -- msgid associated with controls\r\n                controls  Controls\r\n      }",
-    "notes": "The type after SEQUENCE OF should be different than the name used before SEQUENCE OF, to avoid confusion. \r\n'txnEndRes' should also be 'TxnEndRes' as it's a typeReference, so it should start with a upper case, accordingly to the ASN.1 grammar specification",
+    "orig_text": "txnEndRes ::= SEQUENCE {\r\n           messageID MessageID OPTIONAL,\r\n                -- msgid associated with non-success resultCode\r\n           updatesControls SEQUENCE OF updateControls SEQUENCE {\r\n                messageID MessageID,\r\n                     -- msgid associated with controls\r\n                controls  Controls\r\n           } OPTIONAL\r\n      }",
+    "correct_text": "TxnEndRes ::= SEQUENCE {\r\n           messageID MessageID OPTIONAL,\r\n                -- msgid associated with non-success resultCode\r\n           updatesControls SEQUENCE OF updateControl SEQUENCE {\r\n                messageID MessageID,\r\n                     -- msgid associated with controls\r\n                controls  Controls\r\n           } OPTIONAL\r\n      }\r\n\r\n      UpdateControl SEQUENCE {\r\n                messageID MessageID,\r\n                     -- msgid associated with controls\r\n                controls  Controls\r\n      }",
+    "notes": "Because this introduces changes to a deployed grammar, an update of the MIB would be required.\r\n\r\nReporter's original note:\r\n\r\nThe type after SEQUENCE OF should be different than the name used before SEQUENCE OF, to avoid confusion. \r\n'txnEndRes' should also be 'TxnEndRes' as it's a typeReference, so it should start with a upper case, accordingly to the ASN.1 grammar specification",
     "submit_date": "2018-01-28",
     "submitter_name": "Emmanuel Lecharny",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2019-09-10 16:09:03"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 17:37:11"
   },
   {
     "errata_id": "5247",
@@ -81242,17 +81242,17 @@
   {
     "errata_id": "6084",
     "doc-id": "RFC7868",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.6.2.3.",
-    "orig_text": "   The formula for the conversion for Max-Throughput value directly from\r\n   the interface without consideration of congestion-based effects is as\r\n   follows:\r\n\r\n                                  (EIGRP_BANDWIDTH * EIGRP_WIDE_SCALE)\r\n        Max-Throughput = K1 *     ------------------------------------\r\n                                       Interface Bandwidth (kbps)\r\n\r\n\r\n   If K2 is used, the effect of congestion as a measure of load reported\r\n   by the interface will be used to simulate the \"available Throughput\"\r\n   by adjusting the maximum Throughput according to the formula:\r\n\r\n                                           K2 * Max-Throughput\r\n        Net-Throughput = Max-Throughput + ---------------------\r\n                                              256 - Load\r\n",
-    "correct_text": "   The formula for the conversion for Max-Throughput value directly from\r\n   the interface without consideration of congestion-based effects is as\r\n   follows:\r\n\r\n                           EIGRP_BANDWIDTH * EIGRP_WIDE_SCALE\r\n        Max-Throughput =  ------------------------------------\r\n                               Interface Bandwidth (kbps)\r\n\r\n\r\n   If K2 is used, the effect of congestion as a measure of load reported\r\n   by the interface will be used to simulate the \"available Throughput\"\r\n   by adjusting the maximum Throughput according to the formula:\r\n\r\n                                                K2 * Max-Throughput\r\n        Net-Throughput = K1 * Max-Throughput + ---------------------\r\n                                                     256 - Load\r\n",
+    "orig_text": "The formula for the conversion for Max-Throughput value directly from\r\n   the interface without consideration of congestion-based effects is as\r\n   follows:\r\n\r\n                                  (EIGRP_BANDWIDTH * EIGRP_WIDE_SCALE)\r\n        Max-Throughput = K1 *     ------------------------------------\r\n                                       Interface Bandwidth (kbps)\r\n\r\n\r\n   If K2 is used, the effect of congestion as a measure of load reported\r\n   by the interface will be used to simulate the \"available Throughput\"\r\n   by adjusting the maximum Throughput according to the formula:\r\n\r\n                                           K2 * Max-Throughput\r\n        Net-Throughput = Max-Throughput + ---------------------\r\n                                              256 - Load",
+    "correct_text": "The formula for the conversion for Max-Throughput value directly from\r\n   the interface without consideration of congestion-based effects is as\r\n   follows:\r\n\r\n                           EIGRP_BANDWIDTH * EIGRP_WIDE_SCALE\r\n        Max-Throughput =  ------------------------------------\r\n                               Interface Bandwidth (kbps)\r\n\r\n\r\n   If K2 is used, the effect of congestion as a measure of load reported\r\n   by the interface will be used to simulate the \"available Throughput\"\r\n   by adjusting the maximum Throughput according to the formula:\r\n\r\n                                                K2 * Max-Throughput\r\n        Net-Throughput = K1 * Max-Throughput + ---------------------\r\n                                                     256 - Load",
     "notes": "K1 can't be a part of Max-Throughput as it affects Net-Throughput twice. Moreover: in case of K1=0, K2 become ignored as it will be multiplied by 0.\r\n\r\nTogether with errata ID: 5242 which fixes metric formula {metric =[Net-Throughput+Latency+(K6*ExtAttr)] * K5/(K4+Rel) }, results become correct and are same as on live equipment.",
     "submit_date": "2020-04-10",
     "submitter_name": "Rafał Cygnarowski",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 14:55:59"
   },
   {
     "errata_id": "6085",
@@ -83117,17 +83117,17 @@
   {
     "errata_id": "6206",
     "doc-id": "RFC2549",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "GLOBAL",
     "orig_text": "Multicasting is supported, but requires the implementation of a clone\r\ndevice.  Carriers may be lost if they are based on a tree as it is\r\nbeing pruned.  The carriers propagate via an inheritance tree.  The\r\ncarriers have an average TTL of 15 years, so their use in expanding\r\nring searches is limited.\r\n\r\nAdditional quality of service discussion can be found in a Michelin's\r\nguide.",
     "correct_text": "Multicasting is supported, but requires the implementation of a clone\r\ndevice.  Carriers may be lost if they are based on a tree as it is\r\nbeing pruned.  The carriers propagate via an inheritance tree.  The\r\ncarriers have an average TTL of 15 years, so their use in expanding\r\nring searches is limited.\r\n\r\nNOTE: Geese are for UDP only, as they are indifferent to any query,\r\nregardless of target. Expect all Geese allocated traffic to be one\r\nway only.\r\n\r\nAdditional quality of service discussion can be found in a Michelin's\r\nguide.",
-    "notes": "Geese have not been thoroughly considered for their jerk-ishness and need to be included in the documentation as a warning to anyone considering utilization of aviary modes of data transportation.",
+    "notes": "Geese have not been thoroughly considered for their jerk-ishness and need to be included in the documentation as a warning to anyone considering utilization of aviary modes of data transportation.\r\n\r\nThank you for your report.  Without an appropriate properly reviewed evidence and analysis, I'm not prepared to accept this assertion.",
     "submit_date": "2020-06-07",
     "submitter_name": "Derek McCullough",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2020-07-01 16:47:47"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 08:57:23"
   },
   {
     "errata_id": "6207",
@@ -103367,7 +103367,7 @@
   {
     "errata_id": "7869",
     "doc-id": "RFC4042",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4",
     "orig_text": "the range U+E0000 - U+EFFFF are copied as values 0x30000 - 0x3ffff;\r\n   that is, these values are shifted by 0x70000.",
@@ -103376,8 +103376,8 @@
     "submit_date": "2024-03-24",
     "submitter_name": "Davide Cavagnino",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2024-03-25 17:21:03"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 15:58:45"
   },
   {
     "errata_id": "787",
@@ -106637,17 +106637,17 @@
   {
     "errata_id": "8110",
     "doc-id": "RFC5841",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
     "section": "2",
     "orig_text": "All the simple emotions described as expressible\r\n   via this mechanism can be displayed with two or three 7-bit, ASCII-\r\n   encoded characters.",
     "correct_text": "All the simple emotions described as expressible \r\n   via this mechanism MAY be displayed with two or three 7-bit, ASCII-\r\n   encoded characters.",
-    "notes": "can to MAY, as to align better with RFC2119",
+    "notes": "Thank you for your submission.  No need to go to 2119 text at this stage.\r\n\r\nOriginal submitter text:\r\n\r\ncan to MAY, as to align better with RFC2119",
     "submit_date": "2024-09-20",
     "submitter_name": "Dinhero21",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2024-09-23 20:47:40"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 15:47:40"
   },
   {
     "errata_id": "8111",
@@ -109397,17 +109397,17 @@
   {
     "errata_id": "8325",
     "doc-id": "RFC4042",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.2",
-    "orig_text": "   UINT9 *UCS4_to_UTF9 (UINT9 *utf9P,UINT31 ucs4)\r\n   {\r\n     if (ucs4 > 0x100) {\r\n       if (ucs4 > 0x10000) {\r\n         if (ucs4 > 0x1000000)\r\n   /* ... */",
-    "correct_text": "   UINT9 *UCS4_to_UTF9 (UINT9 *utf9P,UINT31 ucs4)\r\n   {\r\n     if (ucs4 >= 0x100) {\r\n       if (ucs4 >= 0x10000) {\r\n         if (ucs4 >= 0x1000000)\r\n   /* ... */",
+    "orig_text": "UINT9 *UCS4_to_UTF9 (UINT9 *utf9P,UINT31 ucs4)\r\n   {\r\n     if (ucs4 > 0x100) {\r\n       if (ucs4 > 0x10000) {\r\n         if (ucs4 > 0x1000000)\r\n   /* ... */",
+    "correct_text": "UINT9 *UCS4_to_UTF9 (UINT9 *utf9P,UINT31 ucs4)\r\n   {\r\n     if (ucs4 >= 0x100) {\r\n       if (ucs4 >= 0x10000) {\r\n         if (ucs4 >= 0x1000000)\r\n   /* ... */",
     "notes": "Errors in the conditionals in the C code.",
     "submit_date": "2025-03-10",
     "submitter_name": "Kang-Che Sung",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 15:59:56"
   },
   {
     "errata_id": "8326",
@@ -114722,17 +114722,17 @@
   {
     "errata_id": "8717",
     "doc-id": "RFC6386",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "20.4",
-    "orig_text": "           if (dqf->quant_idx != q || quant_hdr->delta_update)",
-    "correct_text": "           /* if (dqf->quant_idx != q || quant_hdr->delta_update) */",
-    "notes": "In the reference decoder as-provided, in the event that the decoder has previously decoded a frame with a given yac_qi (`vp8_quant_hdr.q_index` in the code) and non-zero deltas, and in the next frame, `yac_qi` remains the same, but all deltas are not provided or are 0, then `quant_idx` will equal q and `delta_update` will be 0, so the table update will not be applied, leading to the previously decoded deltas being used.\r\n\r\nlibvpx v1.15.2 `vp8/decoder/decodeframe.c` lines 1083 and following (and the equivalent location in the first commit of libvpx) handles a similar optimization; however, the delta values are compared to their previous values in the 'get_delta_q' function.\r\n\r\nI believe the error in the reference decoder stems from a misoptimization attempting to 'lay the groundwork' for the same prevention of rebuilding of optimized dequantization tables.\r\n\r\nThese tables do not exist in the reference decoder, so the code being guarded here is relatively trivial.\r\n\r\nI have tested this change on a personal stripped-down fork of the libvpx 'dixie' branch (the closest 'relative' to the reference decoder that can easily be compiled) in order to confirm it does not immediately break decoding, but my test vector library is not particularly extensive, and the bug is one that would likely have to be triggered by chance in a normal encoding.\r\nStill, I believe the evidence in libvpx points to this errata being correct.\r\n\r\nlibvpx's interpretation appears to better align with the specification (section 9.6. Dequantization Indices), but not with the reference code; as it is the major shipping implementation, and as the behaviour doesn't really make sense, I'm inclined to believe libvpx is correct.\r\n\r\nThe `get_delta_q` function's use and behaviour is present in the optimized decoder since the 'Initial WebM release' commit, which indicates that the 'non-sticky' behaviour appears to have superseded the reference decoder.\r\n\r\nPlease note that only removing/commenting this line creates unused code which would not be correctable without a deeper series of changes.\r\nThe effects of disabling this optimization in this decoder appear to be trivial (simple once-per-frame logic), but in the 'full' decoder the process is a little more expensive for what appears to be dequantizer optimization reasons.",
+    "orig_text": "if (dqf->quant_idx != q || quant_hdr->delta_update)",
+    "correct_text": "/* if (dqf->quant_idx != q || quant_hdr->delta_update) */",
+    "notes": "This erratum is held for update because potential conflicts with deployed implementations.  The bug is real.  The fix?  That should be addressed in an update.\r\n\r\nFrom the reporter.\r\n\r\nIn the reference decoder as-provided, in the event that the decoder has previously decoded a frame with a given yac_qi (`vp8_quant_hdr.q_index` in the code) and non-zero deltas, and in the next frame, `yac_qi` remains the same, but all deltas are not provided or are 0, then `quant_idx` will equal q and `delta_update` will be 0, so the table update will not be applied, leading to the previously decoded deltas being used.\r\n\r\nlibvpx v1.15.2 `vp8/decoder/decodeframe.c` lines 1083 and following (and the equivalent location in the first commit of libvpx) handles a similar optimization; however, the delta values are compared to their previous values in the 'get_delta_q' function.\r\n\r\nI believe the error in the reference decoder stems from a misoptimization attempting to 'lay the groundwork' for the same prevention of rebuilding of optimized dequantization tables.\r\n\r\nThese tables do not exist in the reference decoder, so the code being guarded here is relatively trivial.\r\n\r\nI have tested this change on a personal stripped-down fork of the libvpx 'dixie' branch (the closest 'relative' to the reference decoder that can easily be compiled) in order to confirm it does not immediately break decoding, but my test vector library is not particularly extensive, and the bug is one that would likely have to be triggered by chance in a normal encoding.\r\nStill, I believe the evidence in libvpx points to this errata being correct.\r\n\r\nlibvpx's interpretation appears to better align with the specification (section 9.6. Dequantization Indices), but not with the reference code; as it is the major shipping implementation, and as the behaviour doesn't really make sense, I'm inclined to believe libvpx is correct.\r\n\r\nThe `get_delta_q` function's use and behaviour is present in the optimized decoder since the 'Initial WebM release' commit, which indicates that the 'non-sticky' behaviour appears to have superseded the reference decoder.\r\n\r\nPlease note that only removing/commenting this line creates unused code which would not be correctable without a deeper series of changes.\r\nThe effects of disabling this optimization in this decoder appear to be trivial (simple once-per-frame logic), but in the 'full' decoder the process is a little more expensive for what appears to be dequantizer optimization reasons.",
     "submit_date": "2026-01-23",
     "submitter_name": "20kdc",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 15:21:06"
   },
   {
     "errata_id": "8718",
@@ -119762,7 +119762,7 @@
   {
     "errata_id": "9197",
     "doc-id": "RFC8764",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.2.1",
     "orig_text": "The query MUST NOT be for record type ANY (255), class ANY (255), or\r\nclass NONE (0).",
@@ -119771,8 +119771,8 @@
     "submit_date": "2026-10-01",
     "submitter_name": "Petr Špaček",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-02 14:18:03"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 08:58:54"
   },
   {
     "errata_id": "9198",
@@ -120392,17 +120392,17 @@
   {
     "errata_id": "9234",
     "doc-id": "RFC7801",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.5.2",
     "orig_text": "D_(K_1,...,K_10)(a)=X[K_1]L^(-1)S^(-1)X[K_2]...\r\n   L^(-1)S^(-1)X[K_9] L^(-1)S^(-1)X[K_10](a),",
     "correct_text": "D_(K_1,...,K_10)(a)=X[K_1]S^(-1)L^(-1)X[K_2]...\r\n   S^(-1)L^(-1)X[K_9] S^(-1)L^(-1)X[K_10](a),",
-    "notes": "The inverse of encryption function must have all inversed transformations be applied to \"a\" in inverse order.\r\n\r\nExample of decryption from section 5.6 shows these inversed transformations applied to ciphertext in this order, not in order described in section 4.5.2. And this produces correct result of decryption.",
+    "notes": "The inverse of encryption function must have all inverse transformations be applied to \"a\" in inverse order.\r\n\r\nExample of decryption from section 5.6 shows these inverse transformations applied to ciphertext in this order, not in order described in section 4.5.2. And this produces correct result of decryption.",
     "submit_date": "2026-10-24",
     "submitter_name": "Matvey Zenin",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-27 22:27:32"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 15:01:54"
   },
   {
     "errata_id": "9235",
@@ -120587,8 +120587,8 @@
   {
     "errata_id": "9246",
     "doc-id": "RFC7801",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "4.3",
     "orig_text": "S:V_128-> V_128  S(a)=(a_15||...||a_0)=pi(a_15)||...||pi(a_0), where\r\n      a_15||...||a_0 belongs to V_128, a_i belongs to V_8, i=0,1,...,15,",
     "correct_text": "S:V_128-> V_128  S(a)=S(a_15||...||a_0)=pi(a_15)||...||pi(a_0), where\r\n      a_15||...||a_0 belongs to V_128, a_i belongs to V_8, i=0,1,...,15,",
@@ -120596,8 +120596,8 @@
     "submit_date": "2026-10-30",
     "submitter_name": "Dmitry Bobrovskiy",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-30 15:49:44"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 15:03:56"
   },
   {
     "errata_id": "9247",
@@ -120842,7 +120842,7 @@
   {
     "errata_id": "9261",
     "doc-id": "RFC7129",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.6",
     "orig_text": "NSEC3 1 0 2 DEAD 15BG9L6359F5CH23E34DDUA6N1RIHL9H TXT RRSIG )",
@@ -120851,8 +120851,8 @@
     "submit_date": "2026-11-01",
     "submitter_name": "Rifat Jumagulov",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-02 22:20:52"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 08:58:14"
   },
   {
     "errata_id": "9262",

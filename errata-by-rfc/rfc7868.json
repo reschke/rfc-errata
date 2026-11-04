@@ -77,17 +77,17 @@
   {
     "errata_id": "6084",
     "doc-id": "RFC7868",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.6.2.3.",
-    "orig_text": "   The formula for the conversion for Max-Throughput value directly from\r\n   the interface without consideration of congestion-based effects is as\r\n   follows:\r\n\r\n                                  (EIGRP_BANDWIDTH * EIGRP_WIDE_SCALE)\r\n        Max-Throughput = K1 *     ------------------------------------\r\n                                       Interface Bandwidth (kbps)\r\n\r\n\r\n   If K2 is used, the effect of congestion as a measure of load reported\r\n   by the interface will be used to simulate the \"available Throughput\"\r\n   by adjusting the maximum Throughput according to the formula:\r\n\r\n                                           K2 * Max-Throughput\r\n        Net-Throughput = Max-Throughput + ---------------------\r\n                                              256 - Load\r\n",
-    "correct_text": "   The formula for the conversion for Max-Throughput value directly from\r\n   the interface without consideration of congestion-based effects is as\r\n   follows:\r\n\r\n                           EIGRP_BANDWIDTH * EIGRP_WIDE_SCALE\r\n        Max-Throughput =  ------------------------------------\r\n                               Interface Bandwidth (kbps)\r\n\r\n\r\n   If K2 is used, the effect of congestion as a measure of load reported\r\n   by the interface will be used to simulate the \"available Throughput\"\r\n   by adjusting the maximum Throughput according to the formula:\r\n\r\n                                                K2 * Max-Throughput\r\n        Net-Throughput = K1 * Max-Throughput + ---------------------\r\n                                                     256 - Load\r\n",
+    "orig_text": "The formula for the conversion for Max-Throughput value directly from\r\n   the interface without consideration of congestion-based effects is as\r\n   follows:\r\n\r\n                                  (EIGRP_BANDWIDTH * EIGRP_WIDE_SCALE)\r\n        Max-Throughput = K1 *     ------------------------------------\r\n                                       Interface Bandwidth (kbps)\r\n\r\n\r\n   If K2 is used, the effect of congestion as a measure of load reported\r\n   by the interface will be used to simulate the \"available Throughput\"\r\n   by adjusting the maximum Throughput according to the formula:\r\n\r\n                                           K2 * Max-Throughput\r\n        Net-Throughput = Max-Throughput + ---------------------\r\n                                              256 - Load",
+    "correct_text": "The formula for the conversion for Max-Throughput value directly from\r\n   the interface without consideration of congestion-based effects is as\r\n   follows:\r\n\r\n                           EIGRP_BANDWIDTH * EIGRP_WIDE_SCALE\r\n        Max-Throughput =  ------------------------------------\r\n                               Interface Bandwidth (kbps)\r\n\r\n\r\n   If K2 is used, the effect of congestion as a measure of load reported\r\n   by the interface will be used to simulate the \"available Throughput\"\r\n   by adjusting the maximum Throughput according to the formula:\r\n\r\n                                                K2 * Max-Throughput\r\n        Net-Throughput = K1 * Max-Throughput + ---------------------\r\n                                                     256 - Load",
     "notes": "K1 can't be a part of Max-Throughput as it affects Net-Throughput twice. Moreover: in case of K1=0, K2 become ignored as it will be multiplied by 0.\r\n\r\nTogether with errata ID: 5242 which fixes metric formula {metric =[Net-Throughput+Latency+(K6*ExtAttr)] * K5/(K4+Rel) }, results become correct and are same as on live equipment.",
     "submit_date": "2020-04-10",
     "submitter_name": "Rafał Cygnarowski",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-03 14:55:59"
   },
   {
     "errata_id": "6086",
