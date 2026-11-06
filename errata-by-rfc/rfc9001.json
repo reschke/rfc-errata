@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-10-29 17:27:27"
+  },
+  {
+    "errata_id": "9272",
+    "doc-id": "RFC9001",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "5.4.3",
+    "orig_text": "This section defines the packet protection algorithm for\r\n   AEAD_AES_128_GCM, AEAD_AES_128_CCM, and AEAD_AES_256_GCM.",
+    "correct_text": "This section defines the header protection algorithm for\r\n   AEAD_AES_128_GCM, AEAD_AES_128_CCM, and AEAD_AES_256_GCM.",
+    "notes": "The section is titled \"AES-Based Header Protection\" and defines the\r\nheader protection mask, mask = AES-ECB(hp_key, sample); the AEAD used\r\nfor packet protection is defined in Section 5.3.  Section 5.4.1 also\r\nrefers to Section 5.4.3 as defining header protection functions, and\r\nSection 5.4 states that header protection uses a key derived separately\r\nfrom the packet protection key.  The correction changes \"packet\" to\r\n\"header\".",
+    "submit_date": "2026-11-05",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-11-05 17:25:07"
   }
 ]

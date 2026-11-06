@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9289",
+    "doc-id": "RFC10041",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.5",
+    "orig_text": "must \"not(../advertise-unreachable-link = 'true' and \"\r\n         + \"/rt:routing/rt:control-plane-protocols/\"\r\n         + \"rt:control-plane-protocol/ospf:ospf/ospf:areas/\"\r\n         + \"ospf:area/\"\r\n         + \"ospf-unreach-link:unreachable-link-advertisement/\"\r\n         + \"ospf-unreach-link:enabled = 'false')\" {",
+    "correct_text": "must \"not(../advertise-unreachable-link = 'true' and \"\r\n        + \"../../../ospf-unreach-link:unreachable-link-advertisement/\"\r\n        + \"ospf-unreach-link:enabled = 'false')\" {",
+    "notes": "The second operand is an absolute path to the  enabled  leaf of all areas, with no predicate binding to the interface's own area. Since XPath node-set = 'false'  is existential, the constraint is violated whenever the interface flag is  true  and any area anywhere has  enabled = 'false' .  The  description  states the intent is the interface's \"OSPF area level capability,\" which argues for a relative path up to the containing area.\r\n\r\nSo correct /rt:routing/rt:control-plane-protocols/rt:control-plane-protocol/ospf:ospf/ospf:areas/ospf:area/  to  ../../../",
+    "submit_date": "2026-11-03",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-05 16:53:43"
+  }
+]

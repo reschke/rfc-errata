@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Orie Steele",
     "update_date": "2025-03-28 17:51:08"
+  },
+  {
+    "errata_id": "9269",
+    "doc-id": "RFC3915",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.5",
+    "orig_text": "Example \"restore request\" <update> response:\r\n\r\n   S:<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\r\n   S:<epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\"\r\n   S:     xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n   S:     xsi:schemaLocation=\"urn:ietf:params:xml:ns:epp-1.0\r\n   S:     epp-1.0.xsd\">\r\n   S:  <response>\r\n   S:    <result code=\"1000\">\r\n   S:      <msg lang=\"en\">Command completed successfully</msg>\r\n   S:    </result>\r\n   S:    <extension>\r\n   S:      <rgp:upData xmlns:rgp=\"urn:ietf:params:xml:ns:rgp-1.0\"\r\n   S:       xsi:schemaLocation=\"urn:ietf:params:xml:ns:rgp-1.0\r\n   S:       rgp-1.0.xsd\">\r\n   S:        <rgp:rgpStatus s=\"pendingRestore\"/>\r\n   S:      </rgp:upData>\r\n   S:    </extension>\r\n   S:    <trID>\r\n   S:      <clTRID>ABC-12345</clTRID>\r\n   S:      <svTRID>54321-XYZ</svTRID>\r\n   S:    </trID>\r\n   S:  </response>\r\n   S:</epp>",
+    "correct_text": "Example \"restore request\" <update> response:\r\n\r\n   S:<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\r\n   S:<epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\"\r\n   S:     xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n   S:     xsi:schemaLocation=\"urn:ietf:params:xml:ns:epp-1.0\r\n   S:     epp-1.0.xsd\">\r\n   S:  <response>\r\n   S:    <result code=\"1001\">\r\n   S:      <msg lang=\"en\">Command completed successfully; action pending</msg>\r\n   S:    </result>\r\n   S:    <extension>\r\n   S:      <rgp:upData xmlns:rgp=\"urn:ietf:params:xml:ns:rgp-1.0\"\r\n   S:       xsi:schemaLocation=\"urn:ietf:params:xml:ns:rgp-1.0\r\n   S:       rgp-1.0.xsd\">\r\n   S:        <rgp:rgpStatus s=\"pendingRestore\"/>\r\n   S:      </rgp:upData>\r\n   S:    </extension>\r\n   S:    <trID>\r\n   S:      <clTRID>ABC-12345</clTRID>\r\n   S:      <svTRID>54321-XYZ</svTRID>\r\n   S:    </trID>\r\n   S:  </response>\r\n   S:</epp>",
+    "notes": "RFC 3915 describes a 2-step restore process in Figure 1: EPP Server State Machine, where the restore request is submitted with the action pending of submitting the restore report.  RFC 5731 and RFC 5733 include a multistep transfer process, where a transfer request returns the response code of \"1001\" with the message \"Command completed successfully; action pending\" to indicate that an action is pending to complete the transfer process.  Similarly, the 2-step restore process is pending the action of submitting the restore report, so the correct response code of \"1001\" with the message \"Command completed successfully; action pending\" needs to be reflected in the example \"restore request\" <update> response.",
+    "submit_date": "2026-11-03",
+    "submitter_name": "James Gould",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-05 16:39:08"
   }
 ]

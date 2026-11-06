@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9290",
+    "doc-id": "RFC10039",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "1",
+    "orig_text": "Accordingly, this document updates the BGP best-path selection procedures specified in [RFC4271]",
+    "correct_text": ".",
+    "notes": "The document header does not carry an \"Updates: 4271\" clause, and the Abstract does not mention the update.  Either the header and Abstract should reflect the update relationship, or the normative-sounding \"updates ... [RFC4271]\" text should be softened to describe the extension without asserting a formal \"Updates\" relationship.",
+    "submit_date": "2026-11-03",
+    "submitter_name": "Paul Aitken",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-05 16:53:53"
+  }
+]

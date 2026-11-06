@@ -412,11 +412,11 @@
     "section": "6.4.1.1",
     "orig_text": "<a xmlns=\"urn:example:a\">\r\n  <b>\r\n    <id>1</id>\r\n  </b>\r\n  <b>\r\n    <id>2</id>\r\n  </b>\r\n</a>\r\n<failure>\r\n  <b-ref>2</b-ref>\r\n</failure>\r\n// possibly other top-level nodes here",
     "correct_text": "<a xmlns=\"urn:example:a\">\r\n  <b>\r\n    <id>1</id>\r\n  </b>\r\n  <b>\r\n    <id>2</id>\r\n  </b>\r\n</a>\r\n<failure xmlns=\"urn:example:a\">\r\n  <b-ref>2</b-ref>\r\n</failure>\r\n// possibly other top-level nodes here",
-    "notes": "XML element \"<failure>\" corresponding to a notification defined at the top level of the module \"example-a\" has to be qualified with the namespace URI of that module.",
+    "notes": "XML element \"<failure>\" corresponding to a notification defined at the top level of the module \"example-a\" has to be qualified with the namespace URI of that module.\r\n\r\nVerifier Notes:\r\nVerified. Per RFC 7950 Section 6.4.1, the accessible tree for a\r\n   top-level notification has the notification node as a child of the\r\n   root, alongside the top-level data nodes, and YANG node identifiers\r\n   are always qualified names with a non-null namespace URI. Per Section\r\n   7.16.2, the namespace of a top-level notification's element is the\r\n   module's XML namespace. In the example, the default namespace\r\n   declared on <a> does not extend to its sibling <failure>, so\r\n   <failure> needs its own xmlns=\"urn:example:a\".",
     "submit_date": "2026-10-26",
     "submitter_name": "Ladislav Lhotka",
     "verifier_id": "",
     "verifier_name": "Mahesh Jethanandani",
-    "update_date": "2026-11-04 17:03:31"
+    "update_date": "2026-11-05 21:56:07"
   }
 ]

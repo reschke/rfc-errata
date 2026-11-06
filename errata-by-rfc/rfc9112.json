@@ -58,5 +58,20 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2025-02-06 19:30:34"
+  },
+  {
+    "errata_id": "9284",
+    "doc-id": "RFC9112",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.3",
+    "orig_text": "If the target URI's authority component is empty and its URI scheme\r\nrequires a non-empty authority (as is the case for \"http\" and\r\n\"https\"), the server can reject the request or determine whether a\r\nconfigured default applies that is consistent with the incoming\r\nconnection's context.  Context might include connection details like\r\naddress and port, what security has been applied, and locally defined\r\ninformation specific to that server's configuration.  An empty\r\nauthority is replaced with the configured default before further\r\nprocessing of the request.",
+    "correct_text": "If the target URI's authority component is empty and its URI scheme\r\nrequires a non-empty authority (as is the case for \"http\" and\r\n\"https\"), the server can reject the request or determine whether a\r\nconfigured default applies that is consistent with the incoming\r\nconnection's context.  This does not apply to an HTTP/1.1 request\r\nmessage whose Host header field has an invalid field value: such a\r\nrequest is handled as required by Section 3.2, and only requests\r\nthat lack a Host header field or have an empty Host field value can\r\nuse a configured default authority.  Context might include\r\nconnection details like address and port, what security has been\r\napplied, and locally defined information specific to that server's\r\nconfiguration.  An empty authority is replaced with the configured\r\ndefault before further processing of the request.",
+    "notes": "Section 3.2 mandates a 400 response to any HTTP/1.1 request whose\r\nHost header field has an invalid field value.  Section 3.3, however,\r\nfolds an invalid Host field value into the empty-authority case (\"If\r\nthere is no Host header field or if its field value is empty or\r\ninvalid, the target URI's authority component is empty\") and then\r\npermits the server to replace the empty authority with a configured\r\ndefault and continue processing the request.  For the same request,\r\nthe two passages thus require incompatible handling, and the document\r\nprovides no text subordinating one to the other.\r\n\r\nAn empty Host value is distinct from an invalid one: Section 3.2\r\nitself requires a client to send an empty Host field value when the\r\ntarget URI has no authority component, so the default-authority path\r\nremains meaningful for the empty and absent cases.  It is the newly\r\nadded \"or invalid\" that conflicts with the mandatory 400; RFC 7230's\r\nSection 5.5 keyed this path only on \"a Host header field is supplied\r\nwith a non-empty field-value\".\r\n\r\nThe proposed text resolves the conflict in favor of Section 3.2,\r\nmatching RFC 7230 Section 5.4's long-standing requirement.",
+    "submit_date": "2026-11-05",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-05 16:52:23"
   }
 ]

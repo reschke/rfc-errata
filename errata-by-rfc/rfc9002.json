@@ -28,5 +28,35 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-09-11 16:22:18"
+  },
+  {
+    "errata_id": "9270",
+    "doc-id": "RFC9002",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "B.1",
+    "orig_text": "kLossReductionFactor:  Scaling factor applied to reduce the\r\n      congestion window when a new loss event is detected.  Section 7\r\n      recommends a value of 0.5.",
+    "correct_text": "kLossReductionFactor:  Scaling factor applied to reduce the\r\n      congestion window when a new loss event is detected.  Section 7.3.2\r\n      requires the slow start threshold to be set to half the value of\r\n      the congestion window when loss is detected, which this constant\r\n      implements.",
+    "notes": "Section 7.3.2 requires, with a MUST, that a sender set the slow start\r\nthreshold to half the value of the congestion window when loss is\r\ndetected, and the pseudocode in Section B.6 computes that threshold as\r\ncongestion_window * kLossReductionFactor.  Section 7 therefore mandates\r\nthe half-window result rather than recommending a value for this\r\nconstant; a value other than 0.5 would violate Section 7.3.2.  The\r\ncorrection states that relationship.",
+    "submit_date": "2026-11-05",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-05 16:39:42"
+  },
+  {
+    "errata_id": "9279",
+    "doc-id": "RFC9002",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Technical",
+    "section": "6.2.4",
+    "orig_text": "Alternatively, instead of sending an ack-eliciting packet, the sender\r\nMAY mark any packets still in flight as lost.",
+    "correct_text": "Alternatively, when there is no new or previously sent data to send,\r\nthe sender MAY, instead of sending an ack-eliciting packet as\r\nrequired above, mark any packets still in flight as lost.",
+    "notes": "The section requires (MUST) that a sender send at least one\r\nack-eliciting probe when the PTO timer expires, but later permits the\r\nsender, \"instead of sending an ack-eliciting packet\", to mark any\r\npackets still in flight as lost.  A sender exercising that\r\nalternative sends no packet at all, which violates the MUST, and the\r\nalternative is not scoped to any condition.  The correction limits\r\nthe alternative to the no-data case already described in the\r\nsurrounding text and marks it explicitly as an exception to the probe\r\nrequirement.",
+    "submit_date": "2026-11-05",
+    "submitter_name": "Wenbin Zhou",
+    "verifier_id": "",
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-11-05 17:27:07"
   }
 ]

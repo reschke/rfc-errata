@@ -2,7 +2,7 @@
   {
     "errata_id": "9143",
     "doc-id": "RFC7314",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4",
     "orig_text": "If a secondary receives an EDNS EXPIRE option in a response to an SOA query, it SHALL update its expire timer \r\nto be the maximum of the value returned in the EDNS EXPIRE option and the current timer value.",
@@ -11,7 +11,7 @@
     "submit_date": "2026-08-18",
     "submitter_name": "Ondřej Surý",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-18 14:29:24"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-05 09:51:41"
   }
 ]

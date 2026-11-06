@@ -88,5 +88,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9268",
+    "doc-id": "RFC8620",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7.2.2",
+    "orig_text": "When a PushSubscription is created, the server MUST immediately push\r\na *PushVerification* object to the URL.  It has the following\r\nproperties:\r\n\r\no  @type: \"String\"\r\n\r\n   This MUST be the string \"PushVerification\".\r\n\r\no  pushSubscriptionId: \"String\"\r\n\r\n   The id of the push subscription that was created.\r\n\r\no  verificationCode: \"String\"\r\n\r\n   The verification code to add to the push subscription.  This MUST\r\n   contain sufficient entropy to avoid the client being able to guess\r\n   the code via brute force.",
+    "correct_text": "When a PushSubscription is created, the server MUST immediately push\r\na *PushVerification* object to the URL.  It has the following\r\nproperties:\r\n\r\no  @type: \"String\"\r\n\r\n   This MUST be the string \"PushVerification\".\r\n\r\no  pushSubscriptionId: \"Id\"\r\n\r\n   The id of the push subscription that was created.\r\n\r\no  verificationCode: \"String\"\r\n\r\n   The verification code to add to the push subscription.  This MUST\r\n   contain sufficient entropy to avoid the client being able to guess\r\n   the code via brute force.",
+    "notes": "The type of \"pushSubscriptionId\" should be \"Id\" to match the type used in the rest of RFC.",
+    "submit_date": "2026-11-03",
+    "submitter_name": "Matt Diephouse",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-05 16:38:35"
   }
 ]

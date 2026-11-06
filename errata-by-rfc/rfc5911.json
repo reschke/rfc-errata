@@ -58,5 +58,20 @@
     "verifier_id": "",
     "verifier_name": "Sean Turner",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9285",
+    "doc-id": "RFC5911",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "11",
+    "orig_text": "cea-aes192-GCM CONTENT-ENCRYPTION ::= {\r\n          IDENTIFIER id-aes128-GCM\r\n          PARAMS TYPE GCMParameters ARE required\r\n          SMIME-CAPS { IDENTIFIED BY id-aes192-GCM }\r\n  }\r\n  id-aes192-GCM OBJECT IDENTIFIER ::= { aes 26 }\r\n\r\n  cea-aes256-GCM CONTENT-ENCRYPTION ::= {\r\n          IDENTIFIER id-aes128-GCM\r\n          PARAMS TYPE GCMParameters ARE required\r\n          SMIME-CAPS { IDENTIFIED BY id-aes256-GCM }\r\n  }\r\n  id-aes256-GCM OBJECT IDENTIFIER ::= { aes 46 }",
+    "correct_text": "cea-aes192-GCM CONTENT-ENCRYPTION ::= {\r\n          IDENTIFIER id-aes192-GCM\r\n          PARAMS TYPE GCMParameters ARE required\r\n          SMIME-CAPS { IDENTIFIED BY id-aes192-GCM }\r\n  }\r\n  id-aes192-GCM OBJECT IDENTIFIER ::= { aes 26 }\r\n\r\n  cea-aes256-GCM CONTENT-ENCRYPTION ::= {\r\n          IDENTIFIER id-aes256-GCM\r\n          PARAMS TYPE GCMParameters ARE required\r\n          SMIME-CAPS { IDENTIFIED BY id-aes256-GCM }\r\n  }\r\n  id-aes256-GCM OBJECT IDENTIFIER ::= { aes 46 }",
+    "notes": "cea-aes192-GCM and cea-aes256-GCM were both using id-aes128-GCM as their IDENTIFIER instead of the correct 192/256 identifier.",
+    "submit_date": "2026-11-05",
+    "submitter_name": "Daniel Van Geest",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-05 16:52:38"
   }
 ]

@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9287",
+    "doc-id": "RFC9939",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3",
+    "orig_text": "ct-privateKeyInfo CONTENT-TYPE ::= { PrivateKeyInfo\r\n    IDENTIFIED BY id-ct-privateKeyInfo }\r\n\r\n   ct-encrPrivateKeyInfo CONTENT-TYPE ::= { EncryptedPrivateKeyInfo\r\n    IDENTIFIED BY id-ct-encrPrivateKeyInfo }",
+    "correct_text": "ct-privateKeyInfo CONTENT-TYPE ::= { TYPE PrivateKeyInfo\r\n    IDENTIFIED BY id-ct-privateKeyInfo }\r\n\r\n   ct-encrPrivateKeyInfo CONTENT-TYPE ::= { TYPE EncryptedPrivateKeyInfo\r\n    IDENTIFIED BY id-ct-encrPrivateKeyInfo }",
+    "notes": "Adds TYPE to the content type definitions.  This is consistent with RFC 5911's erratum 2612 which specifies how to define a content type: \"ct-Foo CONTENT-TYPE ::= {TYPE Foo IDENTIFIED BY id-Foo}\".\r\n\r\nAlternatively, this ASN.1 module could change its CONTENT-TYPE import from CryptographicMessageSyntax-2009 to CryptographicMessageSyntax-2010, however that would interfere with other text in RFC 9939 including a normative reference.",
+    "submit_date": "2026-11-04",
+    "submitter_name": "Daniel Van Geest",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-05 16:53:18"
+  }
+]
