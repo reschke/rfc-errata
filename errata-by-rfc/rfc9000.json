@@ -212,7 +212,7 @@
   {
     "errata_id": "9282",
     "doc-id": "RFC9000",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "14.1",
     "orig_text": "A server MUST discard an Initial packet that is carried in a UDP\r\ndatagram with a payload that is smaller than the smallest allowed\r\nmaximum datagram size of 1200 bytes.  A server MAY also immediately\r\nclose the connection by sending a CONNECTION_CLOSE frame with an error\r\ncode of PROTOCOL_VIOLATION; see Section 10.2.3.",
@@ -221,22 +221,22 @@
     "submit_date": "2026-11-05",
     "submitter_name": "Wenbin Zhou",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:51:00"
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-11-06 09:08:34"
   },
   {
     "errata_id": "9283",
     "doc-id": "RFC9000",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Held for Document Update",
+    "errata_type_code": "Editorial",
     "section": "9.3",
     "orig_text": "An endpoint MAY skip validation of a peer address if that address has\r\nbeen seen recently.",
     "correct_text": "An endpoint MAY skip validation of a peer address if that address has\r\nbeen validated recently.",
-    "notes": "Section 9.3 first states that an endpoint which permits a connection\r\nmigration MUST initiate path verification of the new peer address, and\r\nthen allows skipping validation of addresses \"seen recently\".  For a peer\r\nmigrating back to a recently seen address, both statements apply, and a\r\nMAY cannot override the MUST.  The intended scope of the MAY, per the\r\nrationale in the following sentence, is returning to a previously\r\nvalidated path; \"validated recently\" states that scope directly.",
+    "notes": "Section 9.3 first states that an endpoint which permits a connection\r\nmigration MUST initiate path verification of the new peer address, and\r\nthen allows skipping validation of addresses \"seen recently\".  For a peer\r\nmigrating back to a recently seen address, both statements apply, and a\r\nMAY cannot override the MUST.  The intended scope of the MAY, per the\r\nrationale in the following sentence, is returning to a previously\r\nvalidated path; \"validated recently\" states that scope directly.\r\n\r\nGF&MT: Hold for document update.",
     "submit_date": "2026-11-05",
     "submitter_name": "Wenbin Zhou",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:51:20"
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-11-06 09:07:44"
   }
 ]
