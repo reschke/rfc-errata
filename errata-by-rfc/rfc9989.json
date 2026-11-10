@@ -103,5 +103,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-11-02 22:21:03"
+  },
+  {
+    "errata_id": "9295",
+    "doc-id": "RFC9989",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "11.8",
+    "orig_text": "An attacker is able to send mail with the Author Domain of \"evil.example.com\" and an Authenticated Identifier of \"mail.example.com\".",
+    "correct_text": "An attacker is able to send mail with the Author Domain of \"mail.example.com\" and an Authenticated Identifier of \"evil.example.com\".",
+    "notes": "It's not stated outright which domain the attacker can control, but presumably it is \"evil.example.com\", like in the preceding example. In this case, it doesn't make sense for the attacker to spoof email coming from evil.example.com, nor could they obtain an authenticated identifier of \"mail.example.com\".",
+    "submit_date": "2026-11-07",
+    "submitter_name": "Roman Donchenko",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-09 17:39:58"
   }
 ]

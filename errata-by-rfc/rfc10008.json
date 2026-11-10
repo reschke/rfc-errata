@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-06-24 20:55:59"
+  },
+  {
+    "errata_id": "9296",
+    "doc-id": "RFC10008",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.7",
+    "orig_text": "The cache key for a QUERY request (Section 2 of\r\n[HTTP-CACHING]) MUST incorporate the request\r\ncontent (Section 6 of [HTTP-CACHING]) and\r\nrelated metadata (Section 8 of [HTTP]).",
+    "correct_text": "The cache key for a QUERY request (Section 2 of\r\n[HTTP-CACHING]) MUST incorporate the request\r\ncontent (Section 6.4 of [HTTP]) and\r\nrelated metadata (Section 8 of [HTTP]).",
+    "notes": "Section 6 of RFC 9111 ([HTTP-CACHING]) does not\r\ndefine HTTP message content. The relevant\r\ndefinition is Section 6.4 of RFC 9110 ([HTTP]),\r\nwhich defines HTTP message content.\r\n\r\nThis correction fixes the incorrect cross-reference\r\nwithout changing the intended technical requirement.",
+    "submit_date": "2026-11-08",
+    "submitter_name": "Jin Dongxun",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-09 17:40:42"
   }
 ]

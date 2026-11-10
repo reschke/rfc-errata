@@ -613,5 +613,35 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-09-28 15:18:02"
+  },
+  {
+    "errata_id": "9292",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.1",
+    "orig_text": "{\r\n        \"name\" : \"members\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A list of members of the Group.\",\r\n        \"required\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"Identifier of the member of this Group.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : false,\r\n            \"mutability\" : \"immutable\",\r\n            \"returned\" : \"default\",\r\n            \"uniqueness\" : \"none\"\r\n          },",
+    "correct_text": "{\r\n        \"name\" : \"members\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A list of members of the Group.\",\r\n        \"required\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"Identifier of the member of this Group.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : true,\r\n            \"mutability\" : \"immutable\",\r\n            \"returned\" : \"default\",\r\n            \"uniqueness\" : \"none\"\r\n          },",
+    "notes": "In the Group, the sub-attribute \"value\" of the attribute \"members\" is defined as 'The \"value\" sub-attribute contains the value of an \"id\" attribute of a SCIM resource' (section 4.2). The \"id\" is case-exact (section 3.1). Therefore, \"members.value\" must also be case-exact.",
+    "submit_date": "2026-11-06",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-09 17:39:27"
+  },
+  {
+    "errata_id": "9293",
+    "doc-id": "RFC7643",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "8.7.1",
+    "orig_text": "{\r\n        \"name\" : \"groups\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A list of groups to which the user belongs,\r\neither through direct membership, through nested groups, or\r\ndynamically calculated.\",\r\n        \"required\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The identifier of the User's group.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : false,\r\n            \"mutability\" : \"readOnly\",\r\n            \"returned\" : \"default\",\r\n            \"uniqueness\" : \"none\"\r\n          },",
+    "correct_text": "{\r\n        \"name\" : \"groups\",\r\n        \"type\" : \"complex\",\r\n        \"multiValued\" : true,\r\n        \"description\" : \"A list of groups to which the user belongs,\r\neither through direct membership, through nested groups, or\r\ndynamically calculated.\",\r\n        \"required\" : false,\r\n        \"subAttributes\" : [\r\n          {\r\n            \"name\" : \"value\",\r\n            \"type\" : \"string\",\r\n            \"multiValued\" : false,\r\n            \"description\" : \"The identifier of the User's group.\",\r\n            \"required\" : false,\r\n            \"caseExact\" : true,\r\n            \"mutability\" : \"readOnly\",\r\n            \"returned\" : \"default\",\r\n            \"uniqueness\" : \"none\"\r\n          },",
+    "notes": "In the User, the sub-attribute \"value\" of the attribute \"groups\" is defined as: 'If the SCIM service provider exposes a \"Group\" resource, the \"value\" sub-attribute MUST be the \"id\", [...] of the corresponding \"Group\" resources to which the user belongs' (section 4.1.2). The \"id\" is case-exact (section 3.1). The resource schema representation example in section 8.7.1 includes a schema for \"Group\". Therefore, \"groups.value\" must be case-exact in the example.",
+    "submit_date": "2026-11-06",
+    "submitter_name": "Matthias Winter",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-09 17:39:37"
   }
 ]

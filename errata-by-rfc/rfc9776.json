@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9297",
+    "doc-id": "RFC9776",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "9",
+    "orig_text": "IGMP provides any form of confidentiality.",
+    "correct_text": "IGMP does not provide any form of confidentiality.",
+    "notes": "The following sentence (\"any device on a link can passivelyreceive any IGMP message\") shows that the intended statement is that IGMP provides no confidentiality.",
+    "submit_date": "2026-11-09",
+    "submitter_name": "Andrew Alston",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-09 17:40:57"
+  }
+]

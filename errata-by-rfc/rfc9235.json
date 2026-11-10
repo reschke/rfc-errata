@@ -238,5 +238,20 @@
     "verifier_id": "",
     "verifier_name": "Martin Duke",
     "update_date": "2024-01-18 22:50:14"
+  },
+  {
+    "errata_id": "9294",
+    "doc-id": "RFC9235",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Technical",
+    "section": "4.2.2",
+    "orig_text": "Receive_SYN_traffic_key:\r\n\r\n     b5 b2 89 6b b3 66 4e 81 76 b0 ed c6 e7 99 52 41a\r\n     01 a8 30 7f",
+    "correct_text": "Receive_SYN_traffic_key:\r\n\r\n     b5 b2 89 6b b3 66 4e 81 76 b0 ed c6 e7 99 52 41\r\n     01 a8 30 7f",
+    "notes": "The 16th octet of the Receive_SYN_traffic_key is printed with three hex\r\ndigits (\"41a\"). The correct value is 0x41. With 0x41, the key equals\r\nKDF_HMAC_SHA1 of the Master_Key \"testvector\" and the connection context\r\ngiven in this section, and the MAC listed in the same section\r\n(09 30 6f 9a ce a6 3a 8c 68 cb 9a 70) verifies over the packet shown.\r\nThe other candidate readings (0x4a, 0x1a, 0xa4) do not reproduce that MAC.\r\nThis is independent of erratum 7038, which corrects only this section's\r\nTCP checksum.",
+    "submit_date": "2026-11-06",
+    "submitter_name": "Chandrakant Dasappanavar",
+    "verifier_id": "",
+    "verifier_name": "Gorry Fairhurst",
+    "update_date": "2026-11-09 18:02:27"
   }
 ]
