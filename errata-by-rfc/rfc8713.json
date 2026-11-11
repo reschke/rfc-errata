@@ -103,5 +103,20 @@
     "verifier_id": "",
     "verifier_name": "Lars Eggert",
     "update_date": "2023-08-11 11:17:37"
+  },
+  {
+    "errata_id": "9298",
+    "doc-id": "RFC8713",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.7.3",
+    "orig_text": "The confirming bodies review their respective candidates; they may \r\nat their discretion communicate with the NomCom, and then consent \r\nto some, all, or none of the candidates.\r\n\r\nThe sitting IAB members review the IESG candidates.\r\n \r\nThe Internet Society Board of Trustees reviews the IAB candidates.\r\n \r\nThe sitting IESG members review the IETF Trust Trustee candidates.\r\n\r\nThe IETF LLC Director candidate is reviewed as specified in\r\n[RFC8711].",
+    "correct_text": "The active members of the following bodies MAY confirm the NomCom-selected:\r\n\r\n- IAB: Area Director candidates (thereby becoming ex-officio IESG members).\r\n- ISOC Board of Trustees: IAB members.\r\n- Area Directors (simultaneously IESG members): IETF Trustees.\r\n\r\nThereby \"active\" means members who have not recused themselves or have\r\nbeen formally recused by their respective bodies due to a conflict of interest.\r\n\r\nThe NomCom-selected IETF Administration LLC Director candidate MAY be confirmed \r\nas defined in [RFC8711].",
+    "notes": "This technical erratum explicitly replaces and obsoletes Errata IDs 7174, 7270, and 7273.",
+    "submit_date": "2026-11-09",
+    "submitter_name": "Timo Gerke",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-10 18:20:40"
   }
 ]

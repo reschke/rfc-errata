@@ -113642,17 +113642,17 @@
   {
     "errata_id": "8631",
     "doc-id": "RFC8765",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "6.3.1",
     "orig_text": "n/a\r\n\r\nSee notes below",
     "correct_text": "n/a",
-    "notes": "Hello,\r\n\r\nThis concerns the text in section 6.3.1. PUSH Message in the RFC. I'm puzzled about the text concerning the compression. I'll layout my concerns (without providing alternative text) and then point out some factual mistakes (I think) in this section.\r\n\r\nRFC 3597 section 4 states that only well-known RRs may be compressed, those are the RRs from 1035.\r\n\r\nSpecifically:\r\n\r\n> Future specifications for new RR types that contain domain names\r\n> within their RDATA MUST NOT allow the use of name compression for\r\n> those names, and SHOULD explicitly state that the embedded domain\r\n> names MUST NOT be compressed.\r\n\r\n> As noted in [RFC1123], the owner name of an RR is always eligible for compression.\r\n\r\nTaking this in consideration and the DSO is defining new \"RR\" types, where other RRs are the RDATA, the case can be made no compression should be allowed. RFC 6762 doesn't says it's updating RFC 3597, so that can not apply here.\r\n\r\nTaking this to the extreme I believe no compression should be allowed for any of these news types.\r\n\r\nSome factial observations:\r\n\r\nThe list of RR that require compressions is not correct:\r\n\r\n> NS, CNAME, PTR, DNAME, SOA, MX, AFSDB, RT, KX, RP, PX, SRV, NSEC\r\n\r\nDNAME, NSEC should not be in this list. SRV is doubtful, but I guess also not.\r\n\r\n\r\nAnd later, and more worrying:\r\n\r\n> Servers may generate PUSH messages up to a maximum DNS message length of 16,382 bytes,\r\n\r\nA DNS message has 16 bits for the length, giving it 64K of maximum length, compression is only up to 14 bits I think the two are confused here.\r\n\r\nKind Regards,\r\nMiek GIeben",
+    "notes": "Hello,\r\n\r\nThis concerns the text in section 6.3.1. PUSH Message in the RFC. I'm puzzled about the text concerning the compression. I'll layout my concerns (without providing alternative text) and then point out some factual mistakes (I think) in this section.\r\n\r\nRFC 3597 section 4 states that only well-known RRs may be compressed, those are the RRs from 1035.\r\n\r\nSpecifically:\r\n\r\n> Future specifications for new RR types that contain domain names\r\n> within their RDATA MUST NOT allow the use of name compression for\r\n> those names, and SHOULD explicitly state that the embedded domain\r\n> names MUST NOT be compressed.\r\n\r\n> As noted in [RFC1123], the owner name of an RR is always eligible for compression.\r\n\r\nTaking this in consideration and the DSO is defining new \"RR\" types, where other RRs are the RDATA, the case can be made no compression should be allowed. RFC 6762 doesn't says it's updating RFC 3597, so that can not apply here.\r\n\r\nTaking this to the extreme I believe no compression should be allowed for any of these news types.\r\n\r\nSome factial observations:\r\n\r\nThe list of RR that require compressions is not correct:\r\n\r\n> NS, CNAME, PTR, DNAME, SOA, MX, AFSDB, RT, KX, RP, PX, SRV, NSEC\r\n\r\nDNAME, NSEC should not be in this list. SRV is doubtful, but I guess also not.\r\n\r\n\r\nAnd later, and more worrying:\r\n\r\n> Servers may generate PUSH messages up to a maximum DNS message length of 16,382 bytes,\r\n\r\nA DNS message has 16 bits for the length, giving it 64K of maximum length, compression is only up to 14 bits I think the two are confused here.\r\n\r\nKind Regards,\r\nMiek GIeben\r\n\r\n--- Verifier note (Éric Vyncke) ---\r\n\r\nPer Ted Lemon's email https://mailarchive.ietf.org/arch/msg/dnssd/_8sv737qNxBt-Qi3YtvKZPukLV0/",
     "submit_date": "2025-11-12",
     "submitter_name": "Miek Gieben",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-11-10 07:13:19"
   },
   {
     "errata_id": "8634",
@@ -114392,7 +114392,7 @@
   {
     "errata_id": "8691",
     "doc-id": "RFC791",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "1.3",
     "orig_text": "The ARPANET address would be derived from the internet address by the local network interface",
@@ -114401,8 +114401,8 @@
     "submit_date": "2026-01-01",
     "submitter_name": "Alan Shultz",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-11-10 07:28:55"
   },
   {
     "errata_id": "8692",
@@ -115277,17 +115277,17 @@
   {
     "errata_id": "8773",
     "doc-id": "RFC3645",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7",
-    "orig_text": "   This document describes a protocol for DNS security using GSS-API.\r\n   The security provided by this protocol is only as effective as the\r\n   security provided by the underlying GSS mechanisms.\r\n\r\n   All the security considerations from RFC 2845, RFC 2930 and RFC 2743\r\n   apply to the protocol described in this document.",
-    "correct_text": "   This document describes a protocol for DNS security using GSS-API.\r\n   The security provided by this protocol is only as effective as the\r\n   security provided by the underlying GSS mechanisms.\r\n\r\n   All the security considerations from RFC 2845, RFC 2930 and RFC 2743\r\n   apply to the protocol described in this document.\r\n\r\n   The mechanism in Section 4.1.1 effectively allows pre-authentication\r\n   oracle.  This allow a pre-authentication information disclosure in\r\n   GSS-API TKEY negotiation.  An unauthenticated attacker can determine\r\n   which GSSAPI session keynames are currently active in the server's\r\n   dynamic keyring by observing differential error codes in TKEY responses.",
+    "orig_text": "This document describes a protocol for DNS security using GSS-API.\r\n   The security provided by this protocol is only as effective as the\r\n   security provided by the underlying GSS mechanisms.\r\n\r\n   All the security considerations from RFC 2845, RFC 2930 and RFC 2743\r\n   apply to the protocol described in this document.",
+    "correct_text": "This document describes a protocol for DNS security using GSS-API.\r\n   The security provided by this protocol is only as effective as the\r\n   security provided by the underlying GSS mechanisms.\r\n\r\n   All the security considerations from RFC 2845, RFC 2930 and RFC 2743\r\n   apply to the protocol described in this document.\r\n\r\n   The mechanism in Section 4.1.1 effectively allows pre-authentication\r\n   oracle.  This allow a pre-authentication information disclosure in\r\n   GSS-API TKEY negotiation.  An unauthenticated attacker can determine\r\n   which GSSAPI session keynames are currently active in the server's\r\n   dynamic keyring by observing differential error codes in TKEY responses.",
     "notes": "The other angle would be to change the section 4.1.1 to disallow reporting the BADNAME error and handle everything uniformly.",
     "submit_date": "2026-02-20",
     "submitter_name": "Ondřej Surý",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-11-10 07:17:45"
   },
   {
     "errata_id": "8774",
@@ -117587,7 +117587,7 @@
   {
     "errata_id": "9007",
     "doc-id": "RFC6572",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "5.2",
     "orig_text": "1       1      1      1        80  Message-Authenticator\r\n...\r\n0       0-1    0      0       145  Mobile-Node-Identifier",
@@ -117596,8 +117596,8 @@
     "submit_date": "2026-06-21",
     "submitter_name": "Alan DeKok",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-06-22 19:30:24"
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-11-10 07:31:56"
   },
   {
     "errata_id": "9008",
@@ -117947,17 +117947,17 @@
   {
     "errata_id": "9029",
     "doc-id": "RFC9886",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "A",
     "orig_text": "In A.1.1.: 7.b.0.a.1.9.e.1.7.5.1.a.0.6.e.5. IN HHIT (\r\nIn A.1.2.: a.0.0. IN NS ns1.hda-10.example.com\r\nIn A.2.1.: 0.a.9.0.7.2.4.d.5.4.e.e.5.1.6.6.5.0. IN HHIT (\r\nand      : 8.2.e.6.5.2.b.6.7.3.4.d.e.0.6.2.5.0. IN HHIT (\r\nIn A.2.2.:    2.b.6.c.b.4.a.9.9.6.4.2.8.0.3.1. IN HHIT (\r\nand      :    2.b.6.c.b.4.a.9.9.6.4.2.8.0.3.1. IN BRID (",
     "correct_text": "7.b.0.a.1.9.e.1.7.5.1.a.0.6.e.5 IN HHIT (\r\na.0.0 IN NS ns1.hda-10.example.com\r\n0.a.9.0.7.2.4.d.5.4.e.e.5.1.6.6.5.0 IN HHIT (\r\n8.2.e.6.5.2.b.6.7.3.4.d.e.0.6.2.5.0 IN HHIT (\r\n2.b.6.c.b.4.a.9.9.6.4.2.8.0.3.1 IN HHIT (\r\n2.b.6.c.b.4.a.9.9.6.4.2.8.0.3.1 IN BRID (",
-    "notes": "Throughout section A, the owner names of the HHIT and BRID resource records are fully qualified domain names, ending in a dot \".\", but the $ORIGIN statement preceding these names indicate that the intention was for them to be partly qualified domain names, or relative names, without the dot at the end.",
+    "notes": "Throughout section A, the owner names of the HHIT and BRID resource records are fully qualified domain names, ending in a dot \".\", but the $ORIGIN statement preceding these names indicate that the intention was for them to be partly qualified domain names, or relative names, without the dot at the end.\r\n\r\n--- Verifier note (Éric Vyncke) ---\r\n\r\nThanks for spotting the error, it is verified.",
     "submit_date": "2026-07-14",
     "submitter_name": "Willem Toorop",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-07-20 13:50:46"
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-11-10 07:07:58"
   },
   {
     "errata_id": "903",
@@ -121427,7 +121427,7 @@
   {
     "errata_id": "9297",
     "doc-id": "RFC9776",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "9",
     "orig_text": "IGMP provides any form of confidentiality.",
@@ -121436,8 +121436,23 @@
     "submit_date": "2026-11-09",
     "submitter_name": "Andrew Alston",
     "verifier_id": "",
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2026-11-10 14:25:55"
+  },
+  {
+    "errata_id": "9298",
+    "doc-id": "RFC8713",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.7.3",
+    "orig_text": "The confirming bodies review their respective candidates; they may \r\nat their discretion communicate with the NomCom, and then consent \r\nto some, all, or none of the candidates.\r\n\r\nThe sitting IAB members review the IESG candidates.\r\n \r\nThe Internet Society Board of Trustees reviews the IAB candidates.\r\n \r\nThe sitting IESG members review the IETF Trust Trustee candidates.\r\n\r\nThe IETF LLC Director candidate is reviewed as specified in\r\n[RFC8711].",
+    "correct_text": "The active members of the following bodies MAY confirm the NomCom-selected:\r\n\r\n- IAB: Area Director candidates (thereby becoming ex-officio IESG members).\r\n- ISOC Board of Trustees: IAB members.\r\n- Area Directors (simultaneously IESG members): IETF Trustees.\r\n\r\nThereby \"active\" means members who have not recused themselves or have\r\nbeen formally recused by their respective bodies due to a conflict of interest.\r\n\r\nThe NomCom-selected IETF Administration LLC Director candidate MAY be confirmed \r\nas defined in [RFC8711].",
+    "notes": "This technical erratum explicitly replaces and obsoletes Errata IDs 7174, 7270, and 7273.",
+    "submit_date": "2026-11-09",
+    "submitter_name": "Timo Gerke",
+    "verifier_id": "",
     "verifier_name": null,
-    "update_date": "2026-11-09 17:40:57"
+    "update_date": "2026-11-10 18:20:40"
   },
   {
     "errata_id": "93",
