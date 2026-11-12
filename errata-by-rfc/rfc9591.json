@@ -7,12 +7,12 @@
     "section": "appendix-C",
     "orig_text": "def trusted_dealer_keygen(\r\n        secret_key, MAX_PARTICIPANTS, MIN_PARTICIPANTS):\r\n  # Generate random coefficients for the polynomial\r\n  coefficients = []\r\n  for i in range(0, MIN_PARTICIPANTS - 1):\r\n    coefficients.append(G.RandomScalar())\r\n  participant_private_keys, coefficients = secret_share_shard(\r\n      secret_key, coefficients, MAX_PARTICIPANTS)\r\n  vss_commitment = vss_commit(coefficients):\r\n  return participant_private_keys, vss_commitment[0], vss_commitment",
     "correct_text": "def trusted_dealer_keygen(\r\n        secret_key, MAX_PARTICIPANTS, MIN_PARTICIPANTS):\r\n  # Generate random coefficients for the polynomial\r\n  coefficients = []\r\n  for i in range(0, MIN_PARTICIPANTS - 1):\r\n    coefficients.append(G.RandomScalar())\r\n  participant_private_keys, coefficients = secret_share_shard(\r\n      secret_key, coefficients, MAX_PARTICIPANTS)\r\n  vss_commitment = vss_commit(coefficients)\r\n  return participant_private_keys, vss_commitment[0], vss_commitment",
-    "notes": "Removed a stray `:` after `vss_commitment = vss_commit(coefficients)` in the `trusted_dealer_keygen` pseudo code",
+    "notes": "Removed a stray `:` after `vss_commitment = vss_commit(coefficients)` in the `trusted_dealer_keygen` pseudo code\r\n\r\n--VERIFIER NOTE--\r\nVerified. Appendix C: the trailing colon after the vss_commit call in\r\ntrusted_dealer_keygen is a typo, since nothing starts a block at that\r\nline. Reclassified as Editorial.",
     "submit_date": "2026-10-07",
     "submitter_name": "Elichai Turkel",
     "verifier_id": "",
     "verifier_name": null,
-    "update_date": "2026-10-07 18:18:55"
+    "update_date": "2026-11-12 01:43:15"
   },
   {
     "errata_id": "9208",
