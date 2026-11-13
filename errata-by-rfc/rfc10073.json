@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9300",
+    "doc-id": "RFC10073",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "<CODE STARTS>",
+    "correct_text": "<CODE BEGINS>",
+    "notes": "The ASN.1 module uses the non-standard \"CODE STARTS\" tag to denote the start of the module Code Component. The correct tag to use to denote the start of a Code Component is \"CODE BEGINS\".",
+    "submit_date": "2026-11-10",
+    "submitter_name": "Corey Bonnell",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-12 21:40:51"
+  }
+]

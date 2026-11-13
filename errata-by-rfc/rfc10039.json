@@ -2,16 +2,16 @@
   {
     "errata_id": "9290",
     "doc-id": "RFC10039",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "1",
     "orig_text": "Accordingly, this document updates the BGP best-path selection procedures specified in [RFC4271]",
     "correct_text": ".",
-    "notes": "The document header does not carry an \"Updates: 4271\" clause, and the Abstract does not mention the update.  Either the header and Abstract should reflect the update relationship, or the normative-sounding \"updates ... [RFC4271]\" text should be softened to describe the extension without asserting a formal \"Updates\" relationship.",
+    "notes": "Assertion:\r\nThe document header does not carry an \"Updates: 4271\" clause, and the Abstract does not mention the update.  Either the header and Abstract should reflect the update relationship, or the normative-sounding \"updates ... [RFC4271]\" text should be softened to describe the extension without asserting a formal \"Updates\" relationship.\r\n\r\nComments for rejecting the proposed errata:\r\nRFC10039 procedures do not apply to SAFI 1, which is the SAFI what RFC4271 specifies. There was WG consensus to avoid specs to update RFC4271 to tweak or additions for something for a specific AFI/SAFI/feature to claim updates on RFC4271. This was discussed during IESG ballot processing ( https://mailarchive.ietf.org/arch/msg/bess/5DC5XmXn5hI9pF0REFVYhB85DMw/ )",
     "submit_date": "2026-11-03",
     "submitter_name": "Paul Aitken",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:53:53"
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2026-11-12 14:14:47"
   }
 ]

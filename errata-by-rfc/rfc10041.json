@@ -2,7 +2,7 @@
   {
     "errata_id": "9289",
     "doc-id": "RFC10041",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2.5",
     "orig_text": "must \"not(../advertise-unreachable-link = 'true' and \"\r\n         + \"/rt:routing/rt:control-plane-protocols/\"\r\n         + \"rt:control-plane-protocol/ospf:ospf/ospf:areas/\"\r\n         + \"ospf:area/\"\r\n         + \"ospf-unreach-link:unreachable-link-advertisement/\"\r\n         + \"ospf-unreach-link:enabled = 'false')\" {",
@@ -11,7 +11,7 @@
     "submit_date": "2026-11-03",
     "submitter_name": "Paul Aitken",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:53:43"
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2026-11-12 14:15:32"
   }
 ]

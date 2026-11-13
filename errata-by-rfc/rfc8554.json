@@ -32,16 +32,16 @@
   {
     "errata_id": "8907",
     "doc-id": "RFC8554",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.3",
-    "orig_text": "   struct lms_key_n32 {\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n",
-    "correct_text": "   struct lms_key_n32 {\r\n     lms_algorithm_type lms_alg_type;\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n",
-    "notes": "As section 5.3 reads:\r\n   The LMS public key can be represented as the byte string\r\n     u32str(type) || u32str(otstype) || I || T[1]\r\n\r\nBut the definition of \"u32str(type)\" is missing in chapter 3.3 in the above defined structure.",
+    "orig_text": "struct lms_key_n32 {\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };",
+    "correct_text": "struct lms_key_n32 {\r\n     lms_algorithm_type lms_alg_type;\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };",
+    "notes": "As section 5.3 reads:\r\n   The LMS public key can be represented as the byte string\r\n     u32str(type) || u32str(otstype) || I || T[1]\r\n\r\nBut the definition of \"u32str(type)\" is missing in chapter 3.3 in the above defined structure.\r\n\r\n--VERIFIER NOTE--\r\nRejected. The type field is not missing; it is supplied by the enclosing union. In Section 3.3, lms_key_n32 never stands alone. It appears only as an arm of:\r\n\r\n   union lms_public_key switch (lms_algorithm_type type) { ... }\r\n\r\nXDR encodes a union as its discriminant followed by the selected arm (RFC 4506, Section 4.15). The discriminant is a 4-byte value, and it is exactly the u32str(type) of Section 5.3. Section 5.3 says as much: \"Section 3.3 specifies the format of the type variable.\"\r\n\r\nThe encoded public key is therefore already\r\n\r\n   type (4) || otstype (4) || I (16) || T[1] (32) = 56 bytes\r\n\r\nwhich matches Section 5.3, the \"exactly 24 + m bytes\" length check in Algorithm 6, and the Appendix F test vectors, where the LMS type word appears exactly once.\r\n\r\nThe proposed change would put a second copy of the type on the wire, producing a 60-byte key that no parser or test vector in the document accepts.\r\n\r\nThe naming concerns in this struct (n32 vs m32) are tracked separately under EID 7994, Held for Document Update.",
     "submit_date": "2026-05-07",
     "submitter_name": "Olaf Stücker",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2026-11-12 16:43:02"
   }
 ]

@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Dan Romascanu",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9302",
+    "doc-id": "RFC5997",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.2",
+    "orig_text": "The Response Authenticator is a 16-octet MD5 checksum of the Code\r\n(5), ID (179), Length (20), the Request Authenticator from above, and\r\nthe shared secret.\r\n\r\n      02 b3 00 14 0f 6f 92 14 5f 10 7e 2f 50 4e 86 0a\r\n      48 60 66 9c\r\n\r\n       1 Code = Accounting-Response (5)\r\n       1 ID = 179\r\n       2 Length = 20\r\n      16 Request Authenticator\r\n\r\n      Attributes:\r\n         None.",
+    "correct_text": "The Response Authenticator is a 16-octet MD5 checksum of the Code\r\n(2), ID (179), Length (20), the Request Authenticator from above, and\r\nthe shared secret.\r\n\r\n      02 b3 00 14 0f 6f 92 14 5f 10 7e 2f 50 4e 86 0a\r\n      48 60 66 9c\r\n\r\n       1 Code = Access-Accept (2)\r\n       1 ID = 179\r\n       2 Length = 20\r\n      16 Request Authenticator\r\n\r\n      Attributes:\r\n         None.",
+    "notes": "The explanation text describes an Accounting-Response which is code 5 but the example shows a packet which has a code of 2 (Access-Accept). The correction could either correct the explanation text as I have given - or regenerate a new example (preferable) which shows an Accounting-Response packet",
+    "submit_date": "2026-11-11",
+    "submitter_name": "Daniel Hulse",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-12 21:45:02"
   }
 ]

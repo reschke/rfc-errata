@@ -43,5 +43,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": "2026-11-05 16:39:08"
+  },
+  {
+    "errata_id": "9299",
+    "doc-id": "RFC3915",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.5",
+    "orig_text": "A second <rgp:statement> element that contains a text statement that the information in the restore report is factual to the best of the client's knowledge.  An OPTIONAL \"lang\" attribute MAY be present to identify the language if English (value \"en\") is not used to represent the statement.",
+    "correct_text": "An OPTIONAL second <rgp:statement> element that contains a text statement that the information in the restore report is factual to the best of the client's knowledge.  An OPTIONAL \"lang\" attribute MAY be present to identify the language if English (value \"en\") is not used to represent the statement.",
+    "notes": "The XML schema defines the \"statement\" as a minimum (default) of 1 and a maximum of 2 elements: \r\n\r\n   <element name=\"statement\" type=\"rgp:reportTextType\" maxOccurs=\"2\"/>\r\n\r\nIf the intent was to make 2 statements required, the XML schema would have defined the \"statement\" element as:\r\n\r\n   <element name=\"statement\" type=\"rgp:reportTextType\" minOccurs=\"2\" maxOccurs=\"2\"/>\r\n\r\nThe XML schema is normative, so to address the gap, the text should define the second statement as OPTIONAL.",
+    "submit_date": "2026-11-10",
+    "submitter_name": "James Gould",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-12 21:40:43"
   }
 ]

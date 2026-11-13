@@ -118,5 +118,20 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2025-01-06 16:55:55"
+  },
+  {
+    "errata_id": "9301",
+    "doc-id": "RFC3461",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2",
+    "orig_text": "An optional parameter for the RCPT command, using the\r\nesmtp-keyword \"NOTIFY\", (to specify the conditions under which a\r\nDelivery Status Notification should be generated), is defined in\r\nsection 5.1,\r\n\r\nAn optional parameter for the RCPT command, using the\r\nesmtp-keyword \"ORCPT\", (used to convey the \"original\"\r\n(sender-specified) recipient address), is defined in section\r\n5.2, and\r\n\r\nAn optional parameter for the MAIL command, using the\r\nesmtp-keyword \"RET\", (to request that DSNs containing an\r\nindication of delivery failure either return the entire contents\r\nof a message or only the message headers), is defined in section\r\n5.3,",
+    "correct_text": "An optional parameter for the RCPT command, using the\r\nesmtp-keyword \"NOTIFY\", (to specify the conditions under which a\r\nDelivery Status Notification should be generated), is defined in\r\nsection 4.1,\r\n\r\nAn optional parameter for the RCPT command, using the\r\nesmtp-keyword \"ORCPT\", (used to convey the \"original\"\r\n(sender-specified) recipient address), is defined in section\r\n4.2,\r\n\r\nAn optional parameter for the MAIL command, using the\r\nesmtp-keyword \"RET\", (to request that DSNs containing an\r\nindication of delivery failure either return the entire contents\r\nof a message or only the message headers), is defined in section\r\n4.3,",
+    "notes": "The references should be:\r\n- \"4.1\" instead of \"5.1\" for the \"NOTIFY\" section,\r\n- \"4.2\" instead of \"5.2\" for the \"ORCPT\" section,\r\n- \"4.3\" instead of \"5.3\" for the \"RET\" section.\r\n\r\nThe second paragraph contains, at the end, an unnecessary \"and\" conjunction.",
+    "submit_date": "2026-11-11",
+    "submitter_name": "kevinonthebit",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-11-12 21:45:43"
   }
 ]

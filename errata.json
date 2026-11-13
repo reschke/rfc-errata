@@ -116987,17 +116987,17 @@
   {
     "errata_id": "8907",
     "doc-id": "RFC8554",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "3.3",
-    "orig_text": "   struct lms_key_n32 {\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n",
-    "correct_text": "   struct lms_key_n32 {\r\n     lms_algorithm_type lms_alg_type;\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };\r\n",
-    "notes": "As section 5.3 reads:\r\n   The LMS public key can be represented as the byte string\r\n     u32str(type) || u32str(otstype) || I || T[1]\r\n\r\nBut the definition of \"u32str(type)\" is missing in chapter 3.3 in the above defined structure.",
+    "orig_text": "struct lms_key_n32 {\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };",
+    "correct_text": "struct lms_key_n32 {\r\n     lms_algorithm_type lms_alg_type;\r\n     lmots_algorithm_type ots_alg_type;\r\n     opaque I[16];\r\n     opaque K[32];\r\n   };",
+    "notes": "As section 5.3 reads:\r\n   The LMS public key can be represented as the byte string\r\n     u32str(type) || u32str(otstype) || I || T[1]\r\n\r\nBut the definition of \"u32str(type)\" is missing in chapter 3.3 in the above defined structure.\r\n\r\n--VERIFIER NOTE--\r\nRejected. The type field is not missing; it is supplied by the enclosing union. In Section 3.3, lms_key_n32 never stands alone. It appears only as an arm of:\r\n\r\n   union lms_public_key switch (lms_algorithm_type type) { ... }\r\n\r\nXDR encodes a union as its discriminant followed by the selected arm (RFC 4506, Section 4.15). The discriminant is a 4-byte value, and it is exactly the u32str(type) of Section 5.3. Section 5.3 says as much: \"Section 3.3 specifies the format of the type variable.\"\r\n\r\nThe encoded public key is therefore already\r\n\r\n   type (4) || otstype (4) || I (16) || T[1] (32) = 56 bytes\r\n\r\nwhich matches Section 5.3, the \"exactly 24 + m bytes\" length check in Algorithm 6, and the Appendix F test vectors, where the LMS type word appears exactly once.\r\n\r\nThe proposed change would put a second copy of the type on the wire, producing a 60-byte key that no parser or test vector in the document accepts.\r\n\r\nThe naming concerns in this struct (n32 vs m32) are tracked separately under EID 7994, Held for Document Update.",
     "submit_date": "2026-05-07",
     "submitter_name": "Olaf Stücker",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2026-11-12 16:43:02"
   },
   {
     "errata_id": "8909",
@@ -119927,8 +119927,8 @@
   {
     "errata_id": "9206",
     "doc-id": "RFC9591",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
     "section": "appendix-C",
     "orig_text": "def trusted_dealer_keygen(\r\n        secret_key, MAX_PARTICIPANTS, MIN_PARTICIPANTS):\r\n  # Generate random coefficients for the polynomial\r\n  coefficients = []\r\n  for i in range(0, MIN_PARTICIPANTS - 1):\r\n    coefficients.append(G.RandomScalar())\r\n  participant_private_keys, coefficients = secret_share_shard(\r\n      secret_key, coefficients, MAX_PARTICIPANTS)\r\n  vss_commitment = vss_commit(coefficients):\r\n  return participant_private_keys, vss_commitment[0], vss_commitment",
     "correct_text": "def trusted_dealer_keygen(\r\n        secret_key, MAX_PARTICIPANTS, MIN_PARTICIPANTS):\r\n  # Generate random coefficients for the polynomial\r\n  coefficients = []\r\n  for i in range(0, MIN_PARTICIPANTS - 1):\r\n    coefficients.append(G.RandomScalar())\r\n  participant_private_keys, coefficients = secret_share_shard(\r\n      secret_key, coefficients, MAX_PARTICIPANTS)\r\n  vss_commitment = vss_commit(coefficients)\r\n  return participant_private_keys, vss_commitment[0], vss_commitment",
@@ -119936,8 +119936,8 @@
     "submit_date": "2026-10-07",
     "submitter_name": "Elichai Turkel",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-12 01:43:15"
+    "verifier_name": "Nick Sullivan",
+    "update_date": "2026-11-12 16:41:00"
   },
   {
     "errata_id": "9207",
@@ -121292,7 +121292,7 @@
   {
     "errata_id": "9289",
     "doc-id": "RFC10041",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2.5",
     "orig_text": "must \"not(../advertise-unreachable-link = 'true' and \"\r\n         + \"/rt:routing/rt:control-plane-protocols/\"\r\n         + \"rt:control-plane-protocol/ospf:ospf/ospf:areas/\"\r\n         + \"ospf:area/\"\r\n         + \"ospf-unreach-link:unreachable-link-advertisement/\"\r\n         + \"ospf-unreach-link:enabled = 'false')\" {",
@@ -121301,8 +121301,8 @@
     "submit_date": "2026-11-03",
     "submitter_name": "Paul Aitken",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:53:43"
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2026-11-12 14:15:32"
   },
   {
     "errata_id": "929",
@@ -121322,17 +121322,17 @@
   {
     "errata_id": "9290",
     "doc-id": "RFC10039",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "1",
     "orig_text": "Accordingly, this document updates the BGP best-path selection procedures specified in [RFC4271]",
     "correct_text": ".",
-    "notes": "The document header does not carry an \"Updates: 4271\" clause, and the Abstract does not mention the update.  Either the header and Abstract should reflect the update relationship, or the normative-sounding \"updates ... [RFC4271]\" text should be softened to describe the extension without asserting a formal \"Updates\" relationship.",
+    "notes": "Assertion:\r\nThe document header does not carry an \"Updates: 4271\" clause, and the Abstract does not mention the update.  Either the header and Abstract should reflect the update relationship, or the normative-sounding \"updates ... [RFC4271]\" text should be softened to describe the extension without asserting a formal \"Updates\" relationship.\r\n\r\nComments for rejecting the proposed errata:\r\nRFC10039 procedures do not apply to SAFI 1, which is the SAFI what RFC4271 specifies. There was WG consensus to avoid specs to update RFC4271 to tweak or additions for something for a specific AFI/SAFI/feature to claim updates on RFC4271. This was discussed during IESG ballot processing ( https://mailarchive.ietf.org/arch/msg/bess/5DC5XmXn5hI9pF0REFVYhB85DMw/ )",
     "submit_date": "2026-11-03",
     "submitter_name": "Paul Aitken",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:53:53"
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2026-11-12 14:14:47"
   },
   {
     "errata_id": "9291",
@@ -121455,6 +121455,21 @@
     "update_date": "2026-11-10 18:20:40"
   },
   {
+    "errata_id": "9299",
+    "doc-id": "RFC3915",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.5",
+    "orig_text": "A second <rgp:statement> element that contains a text statement that the information in the restore report is factual to the best of the client's knowledge.  An OPTIONAL \"lang\" attribute MAY be present to identify the language if English (value \"en\") is not used to represent the statement.",
+    "correct_text": "An OPTIONAL second <rgp:statement> element that contains a text statement that the information in the restore report is factual to the best of the client's knowledge.  An OPTIONAL \"lang\" attribute MAY be present to identify the language if English (value \"en\") is not used to represent the statement.",
+    "notes": "The XML schema defines the \"statement\" as a minimum (default) of 1 and a maximum of 2 elements: \r\n\r\n   <element name=\"statement\" type=\"rgp:reportTextType\" maxOccurs=\"2\"/>\r\n\r\nIf the intent was to make 2 statements required, the XML schema would have defined the \"statement\" element as:\r\n\r\n   <element name=\"statement\" type=\"rgp:reportTextType\" minOccurs=\"2\" maxOccurs=\"2\"/>\r\n\r\nThe XML schema is normative, so to address the gap, the text should define the second statement as OPTIONAL.",
+    "submit_date": "2026-11-10",
+    "submitter_name": "James Gould",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-12 21:40:43"
+  },
+  {
     "errata_id": "93",
     "doc-id": "RFC4430",
     "errata_status_code": "Held for Document Update",
@@ -121483,6 +121498,51 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9300",
+    "doc-id": "RFC10073",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "7",
+    "orig_text": "<CODE STARTS>",
+    "correct_text": "<CODE BEGINS>",
+    "notes": "The ASN.1 module uses the non-standard \"CODE STARTS\" tag to denote the start of the module Code Component. The correct tag to use to denote the start of a Code Component is \"CODE BEGINS\".",
+    "submit_date": "2026-11-10",
+    "submitter_name": "Corey Bonnell",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-12 21:40:51"
+  },
+  {
+    "errata_id": "9301",
+    "doc-id": "RFC3461",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "2",
+    "orig_text": "An optional parameter for the RCPT command, using the\r\nesmtp-keyword \"NOTIFY\", (to specify the conditions under which a\r\nDelivery Status Notification should be generated), is defined in\r\nsection 5.1,\r\n\r\nAn optional parameter for the RCPT command, using the\r\nesmtp-keyword \"ORCPT\", (used to convey the \"original\"\r\n(sender-specified) recipient address), is defined in section\r\n5.2, and\r\n\r\nAn optional parameter for the MAIL command, using the\r\nesmtp-keyword \"RET\", (to request that DSNs containing an\r\nindication of delivery failure either return the entire contents\r\nof a message or only the message headers), is defined in section\r\n5.3,",
+    "correct_text": "An optional parameter for the RCPT command, using the\r\nesmtp-keyword \"NOTIFY\", (to specify the conditions under which a\r\nDelivery Status Notification should be generated), is defined in\r\nsection 4.1,\r\n\r\nAn optional parameter for the RCPT command, using the\r\nesmtp-keyword \"ORCPT\", (used to convey the \"original\"\r\n(sender-specified) recipient address), is defined in section\r\n4.2,\r\n\r\nAn optional parameter for the MAIL command, using the\r\nesmtp-keyword \"RET\", (to request that DSNs containing an\r\nindication of delivery failure either return the entire contents\r\nof a message or only the message headers), is defined in section\r\n4.3,",
+    "notes": "The references should be:\r\n- \"4.1\" instead of \"5.1\" for the \"NOTIFY\" section,\r\n- \"4.2\" instead of \"5.2\" for the \"ORCPT\" section,\r\n- \"4.3\" instead of \"5.3\" for the \"RET\" section.\r\n\r\nThe second paragraph contains, at the end, an unnecessary \"and\" conjunction.",
+    "submit_date": "2026-11-11",
+    "submitter_name": "kevinonthebit",
+    "verifier_id": "",
+    "verifier_name": "Madison Church",
+    "update_date": "2026-11-12 21:45:43"
+  },
+  {
+    "errata_id": "9302",
+    "doc-id": "RFC5997",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "6.2",
+    "orig_text": "The Response Authenticator is a 16-octet MD5 checksum of the Code\r\n(5), ID (179), Length (20), the Request Authenticator from above, and\r\nthe shared secret.\r\n\r\n      02 b3 00 14 0f 6f 92 14 5f 10 7e 2f 50 4e 86 0a\r\n      48 60 66 9c\r\n\r\n       1 Code = Accounting-Response (5)\r\n       1 ID = 179\r\n       2 Length = 20\r\n      16 Request Authenticator\r\n\r\n      Attributes:\r\n         None.",
+    "correct_text": "The Response Authenticator is a 16-octet MD5 checksum of the Code\r\n(2), ID (179), Length (20), the Request Authenticator from above, and\r\nthe shared secret.\r\n\r\n      02 b3 00 14 0f 6f 92 14 5f 10 7e 2f 50 4e 86 0a\r\n      48 60 66 9c\r\n\r\n       1 Code = Access-Accept (2)\r\n       1 ID = 179\r\n       2 Length = 20\r\n      16 Request Authenticator\r\n\r\n      Attributes:\r\n         None.",
+    "notes": "The explanation text describes an Accounting-Response which is code 5 but the example shows a packet which has a code of 2 (Access-Accept). The correction could either correct the explanation text as I have given - or regenerate a new example (preferable) which shows an Accounting-Response packet",
+    "submit_date": "2026-11-11",
+    "submitter_name": "Daniel Hulse",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-12 21:45:02"
   },
   {
     "errata_id": "931",
