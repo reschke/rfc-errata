@@ -17,7 +17,7 @@
   {
     "errata_id": "9169",
     "doc-id": "RFC9002",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A.8",
     "orig_text": "GetLossTimeAndSpace():\r\n  time = loss_time[Initial]\r\n  space = Initial\r\n  for pn_space in [ Handshake, ApplicationData ]:\r\n    if (time == 0 || loss_time[pn_space] < time):\r\n      time = loss_time[pn_space];\r\n      space = pn_space\r\n  return time, space",
@@ -26,8 +26,8 @@
     "submit_date": "2026-09-09",
     "submitter_name": "Antun Jurkovikj",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-11 16:22:18"
+    "verifier_name": "Mike Bishop",
+    "update_date": "2026-11-13 16:20:11"
   },
   {
     "errata_id": "9270",

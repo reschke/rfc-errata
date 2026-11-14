@@ -197,17 +197,17 @@
   {
     "errata_id": "9281",
     "doc-id": "RFC9000",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "A.2",
     "orig_text": "min_bits = log(num_unacked, 2) + 1\r\n     num_bytes = ceil(min_bits / 8)",
-    "correct_text": "min_bits = log(num_unacked, 2) + 2\r\n     num_bytes = ceil(min_bits / 8)",
-    "notes": "Section 17.1 requires the sender to use a packet number size able to\r\nrepresent more than twice as large a range as the difference between the\r\nlargest acknowledged packet number and the packet number being sent,\r\ni.e., 2^n > 2*d.  The sample algorithm computes min_bits =\r\nlog2(num_unacked) + 1, which yields exactly 2*d rather than more than\r\ntwice whenever num_unacked is a power of two and min_bits is a multiple\r\nof eight (e.g., num_unacked = 2^15 produces a 16-bit encoding whose\r\nrange is exactly twice the difference, while the requirement demands 17\r\nbits).  Using log2(num_unacked) + 2 satisfies the requirement; because\r\nmin_bits is rounded up to whole bytes, this only changes the result at\r\nexactly those boundary cases.  The equivalent sentence in Section 17.1\r\n(\"the size of the packet number encoding is at least one bit more than\r\nthe base-2 logarithm of the number of contiguous unacknowledged packet\r\nnumbers\") requires the same correction.",
+    "correct_text": "min_bits = log(num_unacked, 2) + 1\r\n     num_bytes = floor(min_bits / 8) + 1",
+    "notes": "Section 17.1 requires the sender to use a packet number size able to\r\nrepresent more than twice as large a range as the difference between the\r\nlargest acknowledged packet number and the packet number being sent,\r\ni.e., 2^n > 2*d.  The sample algorithm computes min_bits =\r\nlog2(num_unacked) + 1, which yields exactly 2*d rather than more than\r\ntwice whenever num_unacked is a power of two and min_bits is a multiple\r\nof eight (e.g., num_unacked = 2^15 produces a 16-bit encoding whose\r\nrange is exactly twice the difference, while the requirement demands 17\r\nbits).  Using log2(num_unacked) + 2 satisfies the requirement; because\r\nmin_bits is rounded up to whole bytes, this only changes the result at\r\nexactly those boundary cases.  The equivalent sentence in Section 17.1\r\n(\"the size of the packet number encoding is at least one bit more than\r\nthe base-2 logarithm of the number of contiguous unacknowledged packet\r\nnumbers\") requires the same correction.\r\n\r\n-- Verifier Notes:\r\n\r\nThe corrected text differs from the reporter’s proposal. Section 17.1 requires an encoding of n bits where 2^n > 2 * num_unacked. The original pseudocode violates this when num_unacked is exactly 2^7, 2^15, or 2^23, because min_bits is then a whole multiple of 8 and ceil() does not round it up. The reporter’s “+ 2\" corrects those three values, but also adds an unnecessary byte in the ranges (2^6, 2^7), (2^14, 2^15) and (2^22, 2^23). Changing to floor() + 1 ensures only the boundary cases are different.\r\n\r\nThe comment in Figure 46 should read: \r\n // The number of bits must be more than one greater\r\n // than the base-2 logarithm of the number of contiguous\r\n // unacknowledged packet numbers, including the new packet.\r\n\r\nThe corresponding sentence in Section 17.1 should read:\r\n   As a result, the size of the packet number encoding is more than one bit \r\n   larger than the base-2 logarithm of the number of contiguous unacknowledged \r\n   packet numbers, including the new packet.\r\n\r\nAt the boundary values, the decoding algorithm in Appendix A.3 still recovers the correct packet number even with the uncorrected encoding algorithm.",
     "submit_date": "2026-11-05",
     "submitter_name": "Wenbin Zhou",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:50:52"
+    "verifier_name": "Mike Bishop",
+    "update_date": "2026-11-13 20:49:45"
   },
   {
     "errata_id": "9282",

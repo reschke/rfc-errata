@@ -182,23 +182,23 @@
   {
     "errata_id": "9162",
     "doc-id": "RFC9110",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "5.2",
     "orig_text": "When a field name is repeated within a section, its combined\r\n   field value consists of the list of corresponding field line values\r\n   within that section, concatenated in order, with each field line\r\n   value separated by a comma.\r\n\r\n   For example, this section:\r\n\r\n   Example-Field: Foo, Bar\r\n   Example-Field: Baz\r\n\r\n   contains two field lines, both with the field name \"Example-Field\".\r\n   The first field line has a field line value of \"Foo, Bar\", while the\r\n   second field line value is \"Baz\".  The field value for \"Example-\r\n   Field\" is the list \"Foo, Bar, Baz\".",
     "correct_text": "When a field name is repeated within a section, its combined\r\n   field value consists of the list of corresponding field line values\r\n   within that section, concatenated in order, with each field line\r\n   value separated by a comma SP (\", \").\r\n\r\n   For example, this section:\r\n\r\n   Example-Field: Foo, Bar\r\n   Example-Field: Baz\r\n\r\n   contains two field lines, both with the field name \"Example-Field\".\r\n   The first field line has a field line value of \"Foo, Bar\", while the\r\n   second field line value is \"Baz\".  The field value for \"Example-\r\n   Field\" is the list \"Foo, Bar, Baz\".",
-    "notes": "The original text says, \"with each field line value separated by a comma\", but in the example, it shows the field line values being separated by a comma SP (\", \") instead of just a comma (\",\"). Hence, either the given definition of \"combined field value\" is incorrect, or the example intended to demonstrate it is incorrect.",
+    "notes": "The original text says, \"with each field line value separated by a comma\", but in the example, it shows the field line values being separated by a comma SP (\", \") instead of just a comma (\",\"). Hence, either the given definition of \"combined field value\" is incorrect, or the example intended to demonstrate it is incorrect.\r\n\r\nVerifier notes: Section 5.3 specifies that combined field line values are separated by a comma and optional whitespace, with comma SP recommended for consistency; the example follows that recommendation. Whitespace around the comma does not change the field value (Section 5.6.1)",
     "submit_date": "2026-09-01",
     "submitter_name": "Julian Shepherd",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-02 18:59:03"
+    "verifier_name": "Mike Bishop",
+    "update_date": "2026-11-13 16:40:23"
   },
   {
     "errata_id": "9164",
     "doc-id": "RFC9110",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
     "section": "Appendix A",
     "orig_text": "In the collected ABNF below, list rules are expanded per Section 5.6.1.",
     "correct_text": "In the collected ABNF below, list rules are expanded per Section 5.6.1.  The collected rules are otherwise a normalised rendering of the rules defined in the body: adjacent quoted terminals may be combined into a single quoted string, case-sensitive strings may be written in hexadecimal notation, and repetition bounds may be written in their shortest equivalent form.",
@@ -206,7 +206,7 @@
     "submit_date": "2026-09-07",
     "submitter_name": "Alexander Leschinsky, G&L Geißendörfer & Leschinsky GmbH",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-09-08 15:43:23"
+    "verifier_name": "Mike Bishop",
+    "update_date": "2026-11-13 16:35:45"
   }
 ]
