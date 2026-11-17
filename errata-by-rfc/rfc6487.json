@@ -163,5 +163,20 @@
     "verifier_id": "",
     "verifier_name": "RFC Editor",
     "update_date": "2025-07-09 13:59:41"
+  },
+  {
+    "errata_id": "9315",
+    "doc-id": "RFC6487",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "GLOBAL",
+    "orig_text": "\"IP Resources\"\r\n\"AS Resources\"",
+    "correct_text": "\"IP Address delegation\"\r\n\"Autonomous System Identifier delegation\"",
+    "notes": "The phrases \"IP Resources\" or \"AS Resources\" were not used in RFC 3779, this corrigendum aligns the terminology to the actual specification.",
+    "submit_date": "2026-11-16",
+    "submitter_name": "Job Snijders",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-16 18:48:36"
   }
 ]

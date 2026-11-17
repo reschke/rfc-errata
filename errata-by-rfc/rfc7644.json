@@ -268,5 +268,35 @@
     "verifier_id": "",
     "verifier_name": "Deb Cooley",
     "update_date": "2025-12-28 15:32:14"
+  },
+  {
+    "errata_id": "9309",
+    "doc-id": "RFC7644",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.4.2.1",
+    "orig_text": "filter=(meta.resourceType eq User) or (meta.resourceType eq Group)",
+    "correct_text": "filter=(meta.resourceType eq \"User\") or (meta.resourceType eq \"Group\")",
+    "notes": "The ABNF in Section 3.4.2.2 defines `compValue = false / null / true / number / string` with \"rules from JSON (RFC 7159)\". The bare words User and Group are not JSON values, so this example does not conform to the document's own grammar and will be rejected by a conforming parser.",
+    "submit_date": "2026-11-13",
+    "submitter_name": "Quint Daenen",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-16 18:40:23"
+  },
+  {
+    "errata_id": "9310",
+    "doc-id": "RFC7644",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "3.7.1",
+    "orig_text": "GET /v2/Groups?filter=displayName sw 'Group'",
+    "correct_text": "GET /v2/Groups?filter=displayName sw \"Group\"",
+    "notes": "Per the `compValue` rule in Section 3.4.2.2, a string is a JSON string and therefore uses double quotes. Single quotes are not valid, so this example does not conform to the document's own grammar.",
+    "submit_date": "2026-11-13",
+    "submitter_name": "Quint Daenen",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-16 18:41:05"
   }
 ]
