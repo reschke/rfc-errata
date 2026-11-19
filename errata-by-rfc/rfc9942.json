@@ -1,0 +1,32 @@
+[
+  {
+    "errata_id": "9316",
+    "doc-id": "RFC9942",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.2.1",
+    "orig_text": "In a signed proof, the payload is the Merkle Tree root that\r\ncorresponds to the log at size tree-size.",
+    "correct_text": "In a signed proof, the payload is the Merkle Tree root that\r\ncorresponds to the log at size tree-size. tree-size and leaf-index\r\nare carried in the unprotected header and are not covered by the\r\nsignature. Because the same inclusion path can yield the same root\r\nunder more than one (tree-size, leaf-index) pair, a verified receipt\r\nauthenticates the entry's inclusion under the signed root, but not\r\nits leaf-index or the tree size. A relying party that depends on\r\neither value needs to obtain it from signed data, such as a signed\r\ntree head for the same root and size.",
+    "notes": "The signature covers the protected header and the Merkle Tree root;\r\nstep 2 of the verification procedure in this section confirms\r\ninclusion. tree-size and leaf-index (Figure 3) are carried in the\r\nvdp of the unprotected header (Figure 5), outside the signature.\r\nUnder the algorithm in RFC 9162 Section 2.1.3.2, most receipts still\r\nverify, with the same signature, after only tree-size is changed, and\r\nsome after leaf-index is changed along with it. With tree-size held\r\nfixed, no other leaf-index verifies, and the entry cannot be\r\nsubstituted, so inclusion is unaffected.\r\n\r\nReproduction: https://github.com/AugmentEV/rfc9942-receipt-position\r\nIndependently reproduced by Colin Winter (production log,\r\nlog.markovianprotocol.com), Laurent Lemonnier (production log,\r\nts.isoluce.net) and Konrad Gruszka (b7n0de; RFC 9162 trees of up to\r\n64 leaves). An independent implementation, scitt-cose 0.5.0, accepts\r\nboth an original and a size-edited receipt. Thanks to Jon Geater for\r\nsuggesting errata and to Chris Hopley for implementation experience.\r\nRelated text for the CCF receipt profile:\r\nhttps://github.com/ietf-wg-scitt/draft-ietf-scitt-receipts-ccf-profile/pull/36\r\nDiscussed on scitt@ietf.org, November 2026.\r\nSuggested status: Hold for Document Update.",
+    "submit_date": "2026-11-18",
+    "submitter_name": "Bassem Kudsi",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-18 16:40:26"
+  },
+  {
+    "errata_id": "9317",
+    "doc-id": "RFC9942",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "5.3.1",
+    "orig_text": "In a signed consistency proof, the newer Merkle Tree root (proven to\r\nbe consistent with an older Merkle Tree root) is a detached payload\r\nand corresponds to the log at size tree-size-2.",
+    "correct_text": "In a signed consistency proof, the newer Merkle Tree root (proven to\r\nbe consistent with an older Merkle Tree root) is a detached payload\r\nand corresponds to the log at size tree-size-2. tree-size-1 and\r\ntree-size-2 are carried in the unprotected header and are not\r\ncovered by the signature, and the same consistency path can verify\r\nfor more than one pair of sizes. A relying party that depends on\r\neither size needs to bind it to the corresponding root through\r\nsigned data, such as signed tree heads.",
+    "notes": "Here's the §5.3.1 erratum. Section: `5.3.1`. Type: Technical.\r\n\r\nOriginal Text\r\n\r\nIn a signed consistency proof, the newer Merkle Tree root (proven to\r\nbe consistent with an older Merkle Tree root) is a detached payload\r\nand corresponds to the log at size tree-size-2.\r\n\r\nCorrected Text\r\n\r\nIn a signed consistency proof, the newer Merkle Tree root (proven to\r\nbe consistent with an older Merkle Tree root) is a detached payload\r\nand corresponds to the log at size tree-size-2. tree-size-1 and\r\ntree-size-2 are carried in the unprotected header and are not\r\ncovered by the signature, and the same consistency path can verify\r\nfor more than one pair of sizes. A relying party that depends on\r\neither size needs to bind it to the corresponding root through\r\nsigned data, such as signed tree heads.\r\n\r\n\r\nNotes\r\n\r\nCompanion to the erratum on Section 5.2.1. tree-size-1 and tree-size-2 (Figure 7) are carried in the vdp of the unprotected header; the signature covers the protected header and the newer root only. Under the algorithm in RFC 9162 Section 2.1.4.2, on synthetic trees covering all 2,016 size pairs 1 <= m < n <= 64, 1,984 proofs still verify with only tree-size-2 changed; the 32 exceptions are the pairs (odd m, m+1). With tree-size-2 held fixed, no other tree-size-1 verified. With both sizes changed, every proof verified under another pair, for example (2m, 2n-1), where the verifier does not independently hold the size of the older root. Found by Tiago Pinto and reproduced by the submitter with an independent implementation. Discussed on scitt@ietf.org, November 2026. Suggested status: Hold for Document Update.",
+    "submit_date": "2026-11-18",
+    "submitter_name": "Bassem Kudsi",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-18 18:42:49"
+  }
+]
