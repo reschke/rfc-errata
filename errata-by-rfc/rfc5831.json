@@ -47,16 +47,16 @@
   {
     "errata_id": "5739",
     "doc-id": "RFC5831",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6",
-    "orig_text": "      3.4 SIGMA := SIGMA (+)' M[s]",
-    "correct_text": "      3.4 SIGMA := SIGMA (+)' M_s",
+    "orig_text": "3.4 SIGMA := SIGMA (+)' M[s]",
+    "correct_text": "3.4 SIGMA := SIGMA (+)' M_s",
     "notes": "M[s] is not defined, and GOST R 34.11-94 also says M_s.",
     "submit_date": "2019-05-25",
     "submitter_name": "Vitaly Chikunov",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2019-09-10 16:09:03"
+    "verifier_name": "Eliot Lear",
+    "update_date": "2026-11-23 13:41:07"
   }
 ]

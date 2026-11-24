@@ -13,5 +13,20 @@
     "verifier_id": "",
     "verifier_name": "Gunter Van de Velde",
     "update_date": "2026-11-12 14:15:32"
+  },
+  {
+    "errata_id": "9330",
+    "doc-id": "RFC10041",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "4.2.5",
+    "orig_text": "augment \"/rt:routing/rt:control-plane-protocols/\"\r\n           + \"rt:control-plane-protocol/ospf:ospf/\"\r\n           + \"ospf:areas/ospf:area/ospf:interfaces/ospf:interface\" {\r\n       when \"derived-from(/rt:routing/rt:control-plane-protocols/\"\r\n          + \"rt:control-plane-protocol/rt:type, 'ospf:ospfv2') or \"\r\n          + \"derived-from(/rt:routing/rt:control-plane-protocols/\"\r\n          + \"rt:control-plane-protocol/rt:type, 'ospf:ospfv3')\" {\r\n         description\r\n           \"This augments the OSPF interfaces.\";\r\n       }",
+    "correct_text": "augment \"/rt:routing/rt:control-plane-protocols/\"\r\n           + \"rt:control-plane-protocol/ospf:ospf/\"\r\n           + \"ospf:areas/ospf:area/ospf:interfaces/ospf:interface\" {\r\n       when \"derived-from-or-self(../../../../../rt:type, \"\r\n          + \"'ospf:ospfv2') or \"\r\n          + \"derived-from-or-self(../../../../../rt:type, \"\r\n          + \"'ospf:ospfv3')\" {\r\n         description\r\n           \"This augments the OSPF interfaces.\";\r\n       }",
+    "notes": "Erratum EID 9289 (Verified) corrected the \"must\" statement of leaf advertise-unreachable-link in Section 4.2.5. The enclosing interface augment's \"when\" statement has two further XPath defects that cause standards-compliant YANG 1.1 validators (RFC 7950) to reject advertise-unreachable-link on every valid OSPF configuration:\r\n\r\n1. Per RFC 7950 Section 10.4.1, derived-from() returns true only if the first argument is strictly derived from, and NOT equal to, the identity in the second argument. In standard configurations rt:type is set to the identity \"ietf-ospf:ospfv2\" or \"ietf-ospf:ospfv3\" itself (RFC 9129), so both derived-from() calls evaluate to false and the augmented leaf can never be instantiated. The area-level augment in the same module (Section 4.2.5) already uses derived-from-or-self(../../../rt:type, 'ospf:ospfv2') or derived-from-or-self(../../../rt:type, 'ospf:ospfv3'), as does RFC 9129.\r\n\r\n2. The absolute path /rt:routing/rt:control-plane-protocols/rt:control-plane-protocol/rt:type has no predicate binding it to the enclosing control-plane-protocol instance. The relative path ../../../../../rt:type (ospf:interface -> ospf:interfaces -> ospf:area -> ospf:areas -> ospf:ospf -> rt:control-plane-protocol) scopes the check to the augmented protocol instance, consistent with the area-level augment.\r\n\r\nVerified with the yangson YANG 1.1 datastore validator: with EID 9289 applied, a configuration setting advertise-unreachable-link = true on an interface of an area with unreachable-link-advertisement/enabled = true is rejected (\"member-not-allowed\") for both rt:type = ietf-ospf:ospfv2 and ospfv3; with the corrected text both are accepted, the \"must\" constraint still rejects enabled = false, and pyang --ietf reports no errors.",
+    "submit_date": "2026-11-21",
+    "submitter_name": "Yan Chen",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-23 19:42:40"
   }
 ]

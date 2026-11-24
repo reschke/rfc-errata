@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9331",
+    "doc-id": "RFC7662",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Document title",
+    "orig_text": "OAuth 2.0 Token Introspection",
+    "correct_text": "OAuth 2.0 Token Info Endpoint",
+    "notes": "\"Introspection\" means examining one's own internal state. Read from the position of the party that uses this specification, the protected resource, the title suggests that the protected resource examines the token itself to learn about it.\r\n\r\nThe specification defines the opposite. As the Abstract says, it is \"a method for a protected resource to query an OAuth 2.0 authorization server to determine the active state of an OAuth 2.0 token and to determine meta-information about this token.\" The protected resource does not look inside the token at all; it sends the token to an endpoint and receives information about it in the response. \r\n\r\nThe mismatch causes real confusion with self-contained tokens such as JWT access tokens (RFC 9068), where the protected resource does examine the token locally, and that local validation is the thing this specification is an alternative to.\r\n\r\n\"Token Info Endpoint\" describes the mechanism as defined, and is consistent with the UserInfo Endpoint in OpenID Connect, which has the same shape: present a token, receive claims in the response.",
+    "submit_date": "2026-11-19",
+    "submitter_name": "Aaron Parecki",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-23 20:02:41"
   }
 ]

@@ -1,0 +1,17 @@
+[
+  {
+    "errata_id": "9319",
+    "doc-id": "RFC8512",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "container ports-stats {\r\n              if-feature \"napt44 or nat64\";\r\n              description\r\n                \"Statistics related to port numbers usage.\";\r\n              leaf ports-allocated {\r\n                type yang:gauge32;\r\n                description\r\n                  \"Number of allocated ports from all pools.\";\r\n              }\r\n              leaf ports-free {\r\n                type yang:gauge32;\r\n                description\r\n                  \"Number of unallocated addresses from all pools.\";\r\n              }\r\n            }",
+    "correct_text": "container ports-stats {\r\n              if-feature \"napt44 or nat64\";\r\n              description\r\n                \"Statistics related to port numbers usage.\";\r\n              leaf ports-allocated {\r\n                type yang:gauge32;\r\n                description\r\n                  \"Number of allocated ports from all pools.\";\r\n              }\r\n              leaf ports-free {\r\n                type yang:gauge32;\r\n                description\r\n                  \"Number of unallocated ports from all pools.\";\r\n              }\r\n            }",
+    "notes": "s/addresses/ports\r\n\r\nports-free was referring to addresses. It should instead refer to ports.",
+    "submit_date": "2026-11-19",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": "",
+    "verifier_name": "Rebecca VanRheenen",
+    "update_date": "2026-11-23 18:27:09"
+  }
+]
