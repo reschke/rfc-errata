@@ -73547,17 +73547,17 @@
   {
     "errata_id": "5589",
     "doc-id": "RFC5453",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "3",
-    "orig_text": "   +-----------------------------------------+-------------------------+\r\n   |        Interface Identifier Range       |       Description       |\r\n   +-----------------------------------------+-------------------------+\r\n   |           0000:0000:0000:0000           |  Subnet-Router Anycast  |\r\n   |                                         |        [RFC4291]        |\r\n   |                                         |                         |\r\n   | FDFF:FFFF:FFFF:FF80-FDFF:FFFF:FFFF:FFFF | Reserved Subnet Anycast |\r\n   |                                         |    Addresses[RFC2526]   |\r\n   +-----------------------------------------+-------------------------+\r\n\r\n                       Table 1: Current Assignments",
-    "correct_text": "   +-----------------------------------------+-------------------------+\r\n   |        Interface Identifier Range       |       Description       |\r\n   +-----------------------------------------+-------------------------+\r\n   |           0000:0000:0000:0000           |  Subnet-Router Anycast  |\r\n   |                                         |        [RFC4291]        |\r\n   |                                         |                         |\r\n   | FDFF:FFFF:FFFF:FF80-FDFF:FFFF:FFFF:FFFF | Reserved Subnet Anycast |\r\n   | FFFF:FFFF:FFFF:FF80-FFFF:FFFF:FFFF:FFFF |    Addresses[RFC2526]   |\r\n   +-----------------------------------------+-------------------------+\r\n\r\n                       Table 1: Current Assignments",
-    "notes": "Both these ranges are in fact reserved by Section 2 of RFC2526. Under current recommendations [RFC7217] the FDFF range is no longer recommended for routine use, and the FFFF range is equally likely to occur in a pseudo-random 64-bit IID. Credit to Kerry Lynn for pointing this out.",
+    "orig_text": "+-----------------------------------------+-------------------------+\r\n   |        Interface Identifier Range       |       Description       |\r\n   +-----------------------------------------+-------------------------+\r\n   |           0000:0000:0000:0000           |  Subnet-Router Anycast  |\r\n   |                                         |        [RFC4291]        |\r\n   |                                         |                         |\r\n   | FDFF:FFFF:FFFF:FF80-FDFF:FFFF:FFFF:FFFF | Reserved Subnet Anycast |\r\n   |                                         |    Addresses[RFC2526]   |\r\n   +-----------------------------------------+-------------------------+\r\n\r\n                       Table 1: Current Assignments",
+    "correct_text": "+-----------------------------------------+-------------------------+\r\n   |        Interface Identifier Range       |       Description       |\r\n   +-----------------------------------------+-------------------------+\r\n   |           0000:0000:0000:0000           |  Subnet-Router Anycast  |\r\n   |                                         |        [RFC4291]        |\r\n   |                                         |                         |\r\n   | FDFF:FFFF:FFFF:FF80-FDFF:FFFF:FFFF:FFFF | Reserved Subnet Anycast |\r\n   | FFFF:FFFF:FFFF:FF80-FFFF:FFFF:FFFF:FFFF |    Addresses[RFC2526]   |\r\n   +-----------------------------------------+-------------------------+\r\n\r\n                       Table 1: Current Assignments",
+    "notes": "Both these ranges are in fact reserved by Section 2 of RFC2526. Under current recommendations [RFC7217] the FDFF range is no longer recommended for routine use, and the FFFF range is equally likely to occur in a pseudo-random 64-bit IID. Credit to Kerry Lynn for pointing this out.\r\n\r\n--- Verifier note (Éric Vyncke) ---\r\n\r\nAssuming a prefix length of 64, then the table 2 of section 3 of RFC 2526 actually states that FFFF:FFFF:FFFF:FF80-FFFF:FFFF:FFFF:FFFF is also reserved for subnet anycast addresses.",
     "submit_date": "2019-01-02",
     "submitter_name": "Brian Carpenter",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2019-09-10 16:09:03"
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-11-24 12:55:13"
   },
   {
     "errata_id": "559",
@@ -110102,17 +110102,17 @@
   {
     "errata_id": "8373",
     "doc-id": "RFC4291",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.5.6",
-    "orig_text": "   Routers must not forward any packets with Link-Local source or\r\n   destination addresses to other links.",
+    "orig_text": "Routers must not forward any packets with Link-Local source or\r\n   destination addresses to other links.",
     "correct_text": "Routers MUST not forward any packets with Link-Local source or destination addresses to other links.  Hop-limit MUST be set to 1.",
-    "notes": "I believe it would be reasonable for someone to override the behavior via setsockopt() call but that the default behavior of an internet connected host should set hlimit=1",
+    "notes": "I believe it would be reasonable for someone to override the behavior via setsockopt() call but that the default behavior of an internet connected host should set hlimit=1\r\n\r\n--- Verifier notes (Éric Vyncke) ---\r\n\r\nThe uppercase BCP14 term is not defined in RFC 4291.\r\n\r\nAlso, the hop-limit set to 1 was not discussed when RFC 4291 was approved and errata only applies when the text does not reflect the WG consensus (in this case there were no discussion). Moreover, RFC 4861 clearly says that NDP (sent to/from link-local notably) must set the hop-limit to 255.",
     "submit_date": "2025-04-04",
     "submitter_name": "Jared Mauch",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-11-24 12:36:54"
   },
   {
     "errata_id": "8375",
@@ -114497,8 +114497,8 @@
   {
     "errata_id": "8698",
     "doc-id": "RFC8200",
-    "errata_status_code": "Reported",
-    "errata_type_code": "Technical",
+    "errata_status_code": "Rejected",
+    "errata_type_code": "Editorial",
     "section": "4.5",
     "orig_text": "If insufficient fragments are received to complete reassembly\r\n         of a packet within 60 seconds of the reception of the first-\r\n         arriving fragment of that packet, reassembly of that packet\r\n         must be abandoned and all the fragments that have been received\r\n         for that packet must be discarded.  If the first fragment\r\n         (i.e., the one with a Fragment Offset of zero) has been\r\n         received, an ICMP Time Exceeded -- Fragment Reassembly Time\r\n         Exceeded message should be sent to the source of that fragment.",
     "correct_text": "If insufficient fragments are received to complete reassembly\r\n         of a packet by 60 seconds after the reception of the first-\r\n         arriving fragment of that packet, reassembly of that packet\r\n         must be abandoned and all the fragments that have been received\r\n         for that packet must be discarded.  If the first fragment\r\n         (i.e., the one with a Fragment Offset of zero) has been\r\n         received, an ICMP Time Exceeded -- Fragment Reassembly Time\r\n         Exceeded message should be sent to the source of that fragment.",
@@ -114506,8 +114506,8 @@
     "submit_date": "2026-01-07",
     "submitter_name": "Jeremy Duncan",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-01-12 22:03:46"
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-11-24 12:27:28"
   },
   {
     "errata_id": "8699",
@@ -122038,6 +122038,36 @@
     "verifier_id": "",
     "verifier_name": "Rebecca VanRheenen",
     "update_date": "2026-11-23 20:10:29"
+  },
+  {
+    "errata_id": "9333",
+    "doc-id": "RFC8512",
+    "errata_status_code": "Verified",
+    "errata_type_code": "Editorial",
+    "section": "3",
+    "orig_text": "container port-stats {\r\n                if-feature \"napt44 or nat64\";\r\n                description\r\n                  \"Statistics related to port numbers usage.\";\r\n                leaf ports-allocated {\r\n                  type yang:gauge32;\r\n                  description\r\n                    \"Number of allocated ports from this pool.\";\r\n                }\r\n                leaf ports-free {\r\n                  type yang:gauge32;\r\n                  description\r\n                    \"Number of unallocated addresses from this pool.\";\r\n                }\r\n              }",
+    "correct_text": "container port-stats {\r\n                if-feature \"napt44 or nat64\";\r\n                description\r\n                  \"Statistics related to port numbers usage.\";\r\n                leaf ports-allocated {\r\n                  type yang:gauge32;\r\n                  description\r\n                    \"Number of allocated ports from this pool.\";\r\n                }\r\n                leaf ports-free {\r\n                  type yang:gauge32;\r\n                  description\r\n                    \"Number of unallocated ports in this pool.\";\r\n                }\r\n              }",
+    "notes": "s/addresses/ports\r\n\r\nports-free was referring to addresses. It should instead refer to ports.\r\n\r\nPlease note this erratum is similar but not same as \r\nhttps://errata.rfc-editor.org/eid9319/",
+    "submit_date": "2026-11-24",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": "",
+    "verifier_name": "Rebecca VanRheenen",
+    "update_date": "2026-11-24 19:05:59"
+  },
+  {
+    "errata_id": "9334",
+    "doc-id": "RFC7515",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix C.  Notes on Implementing base64url Encoding without Padding",
+    "orig_text": "This appendix describes how to implement base64url encoding and\r\n   decoding functions without padding based upon standard base64\r\n   encoding and decoding functions that do use padding.\r\n\r\n   To be concrete, example C# code implementing these functions is shown\r\n   below.  Similar code could be used in other languages.\r\n\r\n     static string base64urlencode(byte [] arg)\r\n     {\r\n       string s = Convert.ToBase64String(arg); // Regular base64 encoder\r\n       s = s.Split('=')[0]; // Remove any trailing '='s\r\n       s = s.Replace('+', '-'); // 62nd char of encoding\r\n       s = s.Replace('/', '_'); // 63rd char of encoding\r\n       return s;\r\n     }\r\n\r\n     static byte [] base64urldecode(string arg)\r\n     {\r\n       string s = arg;\r\n       s = s.Replace('-', '+'); // 62nd char of encoding\r\n       s = s.Replace('_', '/'); // 63rd char of encoding\r\n       switch (s.Length % 4) // Pad with trailing '='s\r\n       {\r\n         case 0: break; // No pad chars in this case\r\n         case 2: s += \"==\"; break; // Two pad chars\r\n         case 3: s += \"=\"; break; // One pad char\r\n         default: throw new System.Exception(\r\n           \"Illegal base64url string!\");\r\n       }\r\n       return Convert.FromBase64String(s); // Standard base64 decoder\r\n     }\r\n\r\n   As per the example code above, the number of '=' padding characters\r\n   that needs to be added to the end of a base64url-encoded string\r\n   without padding to turn it into one with padding is a deterministic\r\n   function of the length of the encoded string.  Specifically, if the\r\n   length mod 4 is 0, no padding is added; if the length mod 4 is 2, two\r\n   '=' padding characters are added; if the length mod 4 is 3, one '='\r\n   padding character is added; if the length mod 4 is 1, the input is\r\n   malformed.\r\n\r\n   An example correspondence between unencoded and encoded values\r\n   follows.  The octet sequence below encodes into the string below,\r\n   which when decoded, reproduces the octet sequence.\r\n\r\n   3 236 255 224 193\r\n   A-z_4ME",
+    "correct_text": "This appendix describes how to implement base64url encoding and\r\n   decoding functions without padding based upon standard base64\r\n   encoding and decoding functions that do use padding.\r\n\r\n   To be concrete, example C# code implementing these functions is shown\r\n   below. Similar code could be used in other languages.\r\n\r\n     static string Base64UrlEncode(byte[] arg) => Base64Url.EncodeToString(arg);\r\n\r\n     static byte[] Base64UrlDecode(string arg) => Base64Url.DecodeFromChars(arg);\r\n\r\n   An example correspondence between unencoded and encoded values\r\n   follows.  The octet sequence below encodes into the string below,\r\n   which when decoded, reproduces the octet sequence.\r\n\r\n   3 236 255 224 193\r\n   A-z_4ME",
+    "notes": "Although effective for demonstrating the underlying steps, the original example is neither idiomatic C# nor production-ready, as it incurs excessive memory allocations and multiple iterations over the input. Given native Base64Url support in C# and most modern languages, the example has been updated to a cleaner, more efficient implementation.",
+    "submit_date": "2026-11-24",
+    "submitter_name": "Laszlo Deak",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-24 19:13:58"
   },
   {
     "errata_id": "934",

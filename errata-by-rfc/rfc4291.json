@@ -137,17 +137,17 @@
   {
     "errata_id": "8373",
     "doc-id": "RFC4291",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "2.5.6",
-    "orig_text": "   Routers must not forward any packets with Link-Local source or\r\n   destination addresses to other links.",
+    "orig_text": "Routers must not forward any packets with Link-Local source or\r\n   destination addresses to other links.",
     "correct_text": "Routers MUST not forward any packets with Link-Local source or destination addresses to other links.  Hop-limit MUST be set to 1.",
-    "notes": "I believe it would be reasonable for someone to override the behavior via setsockopt() call but that the default behavior of an internet connected host should set hlimit=1",
+    "notes": "I believe it would be reasonable for someone to override the behavior via setsockopt() call but that the default behavior of an internet connected host should set hlimit=1\r\n\r\n--- Verifier notes (Éric Vyncke) ---\r\n\r\nThe uppercase BCP14 term is not defined in RFC 4291.\r\n\r\nAlso, the hop-limit set to 1 was not discussed when RFC 4291 was approved and errata only applies when the text does not reflect the WG consensus (in this case there were no discussion). Moreover, RFC 4861 clearly says that NDP (sent to/from link-local notably) must set the hop-limit to 255.",
     "submit_date": "2025-04-04",
     "submitter_name": "Jared Mauch",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Éric Vyncke",
+    "update_date": "2026-11-24 12:36:54"
   },
   {
     "errata_id": "863",

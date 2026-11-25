@@ -58,5 +58,20 @@
     "verifier_id": "",
     "verifier_name": "Deb Cooley",
     "update_date": "2025-10-28 11:17:16"
+  },
+  {
+    "errata_id": "9334",
+    "doc-id": "RFC7515",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "Appendix C.  Notes on Implementing base64url Encoding without Padding",
+    "orig_text": "This appendix describes how to implement base64url encoding and\r\n   decoding functions without padding based upon standard base64\r\n   encoding and decoding functions that do use padding.\r\n\r\n   To be concrete, example C# code implementing these functions is shown\r\n   below.  Similar code could be used in other languages.\r\n\r\n     static string base64urlencode(byte [] arg)\r\n     {\r\n       string s = Convert.ToBase64String(arg); // Regular base64 encoder\r\n       s = s.Split('=')[0]; // Remove any trailing '='s\r\n       s = s.Replace('+', '-'); // 62nd char of encoding\r\n       s = s.Replace('/', '_'); // 63rd char of encoding\r\n       return s;\r\n     }\r\n\r\n     static byte [] base64urldecode(string arg)\r\n     {\r\n       string s = arg;\r\n       s = s.Replace('-', '+'); // 62nd char of encoding\r\n       s = s.Replace('_', '/'); // 63rd char of encoding\r\n       switch (s.Length % 4) // Pad with trailing '='s\r\n       {\r\n         case 0: break; // No pad chars in this case\r\n         case 2: s += \"==\"; break; // Two pad chars\r\n         case 3: s += \"=\"; break; // One pad char\r\n         default: throw new System.Exception(\r\n           \"Illegal base64url string!\");\r\n       }\r\n       return Convert.FromBase64String(s); // Standard base64 decoder\r\n     }\r\n\r\n   As per the example code above, the number of '=' padding characters\r\n   that needs to be added to the end of a base64url-encoded string\r\n   without padding to turn it into one with padding is a deterministic\r\n   function of the length of the encoded string.  Specifically, if the\r\n   length mod 4 is 0, no padding is added; if the length mod 4 is 2, two\r\n   '=' padding characters are added; if the length mod 4 is 3, one '='\r\n   padding character is added; if the length mod 4 is 1, the input is\r\n   malformed.\r\n\r\n   An example correspondence between unencoded and encoded values\r\n   follows.  The octet sequence below encodes into the string below,\r\n   which when decoded, reproduces the octet sequence.\r\n\r\n   3 236 255 224 193\r\n   A-z_4ME",
+    "correct_text": "This appendix describes how to implement base64url encoding and\r\n   decoding functions without padding based upon standard base64\r\n   encoding and decoding functions that do use padding.\r\n\r\n   To be concrete, example C# code implementing these functions is shown\r\n   below. Similar code could be used in other languages.\r\n\r\n     static string Base64UrlEncode(byte[] arg) => Base64Url.EncodeToString(arg);\r\n\r\n     static byte[] Base64UrlDecode(string arg) => Base64Url.DecodeFromChars(arg);\r\n\r\n   An example correspondence between unencoded and encoded values\r\n   follows.  The octet sequence below encodes into the string below,\r\n   which when decoded, reproduces the octet sequence.\r\n\r\n   3 236 255 224 193\r\n   A-z_4ME",
+    "notes": "Although effective for demonstrating the underlying steps, the original example is neither idiomatic C# nor production-ready, as it incurs excessive memory allocations and multiple iterations over the input. Given native Base64Url support in C# and most modern languages, the example has been updated to a cleaner, more efficient implementation.",
+    "submit_date": "2026-11-24",
+    "submitter_name": "Laszlo Deak",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-24 19:13:58"
   }
 ]
