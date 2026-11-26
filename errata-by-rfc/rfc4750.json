@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Stewart Bryant",
     "update_date": "2019-09-10 16:09:03"
+  },
+  {
+    "errata_id": "9337",
+    "doc-id": "RFC4750",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.1.7",
+    "orig_text": "The Neighbor Table and the Virtual Neighbor Table describe the\r\n   neighbors to the OSPF Process.",
+    "correct_text": "The Neighbor Table and the Virtual Neighbor Table describe the\r\n   neighbors to the OSPF Process. It should be noted that Neighbor table has a\r\n   limitation. The index definition of ospfNbrTable does not guarantee unique\r\n   identification of OSPF neighbor entries in a topology where multiple\r\n   unnumbered interfaces on one router connect to numbered interfaces on another router.",
+    "notes": "1. Introduction\r\n\r\nThe index definition of ospfNbrTable does not guarantee unique identification of\r\nOSPF neighbor entries in a topology where multiple unnumbered interfaces on one \r\nrouter connect to numbered interfaces on another router.\r\n\r\nThis can result in duplicate SNMP table indexes for distinct OSPF neighbor adjacencies.\r\n\r\n2. Existing specification\r\n\r\nRFC 4750 defines the index of ospfNbrEntry as:\r\n\r\nINDEX { ospfNbrIpAddr, ospfNbrAddressLessIndex }\r\n\r\nThe specification defines ospfNbrAddressLessIndex as follows:\r\n\r\n    On an interface having an IP address, its value is zero.\r\n    On an addressless interface, its value is the corresponding ifIndex in the IF-MIB.\r\n\r\nAdditionally, ospfNbrIpAddr represents the IP source address used by the neighbor.\r\nFor addressless links, this is the address of another interface belonging to the neighbor.\r\n\r\n3. Problem scenario\r\n\r\nConsider the following topology:\r\n\r\n                  Router R1\r\n             (Two unnumbered interfaces)\r\n\r\n                Gi0/0       Gi0/1\r\n               ifIndex 10  ifIndex 11\r\n                   |          |\r\n                   |          |\r\n                   |          |\r\n               Gi0/0       Gi0/1\r\n             10.1.1.2     10.1.2.2\r\n\r\n                  Router R2\r\n              (Numbered interfaces)\r\n\r\nAssumptions:\r\n\r\n    R1 has two unnumbered interfaces.\r\n    R2 has two numbered interfaces.\r\n    Both interfaces establish independent OSPF adjacencies.\r\n    R1 uses the same IP source address for OSPF packets transmitted over both unnumbered interfaces.\r\n\r\nLet the common source IP address used by R1 be X.X.X.X.\r\n\r\n4. Resulting SNMP table entries on R2\r\n\r\nSince R2's interfaces are numbered, RFC 4750 requires ospfNbrAddressLessIndex to be zero for both entries.\r\n\r\nConsequently, the resulting neighbor table entries would be:\r\nospfNbrIpAddr\tospfNbrAddressLessIndex\tospfNbrRtrId\r\nX.X.X.X           0                     1.1.1.1\r\nX.X.X.X           0                     1.1.1.1\r\n\r\nBoth entries have the same composite index:\r\n\r\n(X.X.X.X, 0)\r\n\r\nHowever, they represent two distinct OSPF adjacencies established over two different physical interfaces.\r\n\r\nThis creates an SNMP table indexing collision.",
+    "submit_date": "2026-11-25",
+    "submitter_name": "Ramakrishna DTV",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-26 00:59:13"
   }
 ]

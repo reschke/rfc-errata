@@ -28,5 +28,35 @@
     "verifier_id": "",
     "verifier_name": null,
     "update_date": null
+  },
+  {
+    "errata_id": "9338",
+    "doc-id": "RFC5662",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "///\r\n/// %#ifndef _AUTH_SYS_DEFINE_FOR_NFSv41\r\n/// %#define _AUTH_SYS_DEFINE_FOR_NFSv41\r\n/// %#include <rpc/auth_sys.h>\r\n/// %typedef struct authsys_parms authsys_parms;\r\n/// %#endif /* _AUTH_SYS_DEFINE_FOR_NFSv41 */\r\n///",
+    "correct_text": "///\r\n/// /*\r\n///  * From RFC 5531, Section 8.2 and Appendix A\r\n///  */\r\n/// const AUTH_NONE  = 0;\r\n/// const AUTH_SYS   = 1;\r\n/// const RPCSEC_GSS = 6;\r\n///\r\n/// struct authsys_parms {\r\n///         unsigned int    stamp;\r\n///         string          machinename<255>;\r\n///         unsigned int    uid;\r\n///         unsigned int    gid;\r\n///         unsigned int    gids<16>;\r\n/// };\r\n///",
+    "notes": "Section 2 of RFC 5662 presents the NFSv4.1 protocol definition in the XDR language of RFC 4506, which it cites normatively. Lines that begin with \"%\" are not part of that language. The \"%\" prefix is an rpcgen convention: rpcgen copies the rest of the line verbatim into its generated C output. An XDR compiler that implements RFC 4506 rejects these lines. A code generator for another target language, such as Rust or Python, has no use for the C they contain.\r\n\r\nMost of the \"%\" lines in Section 2 carry only comments and can become ordinary XDR comments without changing the protocol. The block quoted above carries C preprocessor directives and a C typedef that import authsys_parms from the host's RPC headers. Without that block, the extracted XDR does not define authsys_parms, which callback_sec_parms4 uses for its AUTH_SYS arm. The extracted XDR does not define AUTH_NONE, AUTH_SYS, or RPCSEC_GSS either. The corrected text supplies these definitions in XDR, taken from RFC 5531 Section 8.2 and  Appendix A.",
+    "submit_date": "2026-11-25",
+    "submitter_name": "Chuck Lever",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-26 01:00:14"
+  },
+  {
+    "errata_id": "9340",
+    "doc-id": "RFC5662",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2",
+    "orig_text": "/// union nfs_cb_argop4 switch (unsigned argop) {\r\n...\r\n/// union nfs_cb_resop4 switch (unsigned resop) {",
+    "correct_text": "/// union nfs_cb_argop4 switch (nfs_cb_opnum4 argop) {\r\n...\r\n/// union nfs_cb_resop4 switch (nfs_cb_opnum4 resop) {",
+    "notes": "RFC 4506 Section 4.15 permits a union discriminant of type \"int\", \"unsigned int\", or an enumerated type. The discriminants of nfs_cb_argop4 and nfs_cb_resop4 are declared with the bare type \"unsigned\", which is not an XDR type. rpcgen accepts the bare type because C does, but an XDR compiler that implements RFC 4506 strictly rejects both declarations.\r\n\r\nThe corrected text declares both discriminants as nfs_cb_opnum4, as RFC 5662 already does for nfs_argop4 and nfs_resop4 with nfs_opnum4, and as RFC 7863 does for these two unions. The encoding on the wire does not change, because every nfs_cb_opnum4 value is non-negative and an enum encodes as a 4-byte integer, as unsigned int does.",
+    "submit_date": "2026-11-25",
+    "submitter_name": "Chuck Lever",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-26 01:05:45"
   }
 ]

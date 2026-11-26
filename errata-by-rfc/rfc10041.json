@@ -17,7 +17,7 @@
   {
     "errata_id": "9330",
     "doc-id": "RFC10041",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2.5",
     "orig_text": "augment \"/rt:routing/rt:control-plane-protocols/\"\r\n           + \"rt:control-plane-protocol/ospf:ospf/\"\r\n           + \"ospf:areas/ospf:area/ospf:interfaces/ospf:interface\" {\r\n       when \"derived-from(/rt:routing/rt:control-plane-protocols/\"\r\n          + \"rt:control-plane-protocol/rt:type, 'ospf:ospfv2') or \"\r\n          + \"derived-from(/rt:routing/rt:control-plane-protocols/\"\r\n          + \"rt:control-plane-protocol/rt:type, 'ospf:ospfv3')\" {\r\n         description\r\n           \"This augments the OSPF interfaces.\";\r\n       }",
@@ -26,7 +26,7 @@
     "submit_date": "2026-11-21",
     "submitter_name": "Yan Chen",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-23 19:42:40"
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2026-11-25 07:18:53"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "errata_id": "9311",
     "doc-id": "RFC9983",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "4.2",
     "orig_text": "augment \"/rt:routing/rt:control-plane-protocols/\"\r\n           + \"rt:control-plane-protocol/ospf:ospf/\"\r\n           + \"ospf:areas/ospf:area/ospf:interfaces/ospf:interface\" {\r\n       when \"derived-from(/rt:routing/rt:control-plane-protocols/\"\r\n          + \"rt:control-plane-protocol/rt:type, 'ospf:ospfv2')\" {\r\n         description\r\n           \"This augments the OSPFv2 interface.\";\r\n       }\r\n       description\r\n         \"This augments OSPFv2 interface with anycast\r\n          property advertisement.\";\r\n       leaf anycast-flag {\r\n         type boolean;\r\n         must \"not(../anycast-flag = 'true' and \"\r\n            + \"/rt:routing/rt:control-plane-protocols/\"\r\n            + \"rt:control-plane-protocol/ospf:ospf/\"\r\n            + \"ospf:areas/ospf:area/ospf:interfaces/\"\r\n            + \"ospf:interface/ospf:node-flag = 'true')\" {\r\n           error-message \"The anycast-flag and the node-flag MUST \"\r\n                       + \"NOT both be set to 1 (true).\";\r\n           description\r\n             \"Ensures architectural consistency by preventing a prefix\r\n              from being marked as both anycast and node-specific.\";\r\n         }",
@@ -11,7 +11,7 @@
     "submit_date": "2026-11-14",
     "submitter_name": "Yan Chen",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-16 18:41:17"
+    "verifier_name": "Gunter Van de Velde",
+    "update_date": "2026-11-25 07:18:28"
   }
 ]

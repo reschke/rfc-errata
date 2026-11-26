@@ -28,5 +28,20 @@
     "verifier_id": "",
     "verifier_name": "Orie Steele",
     "update_date": "2024-04-01 21:20:47"
+  },
+  {
+    "errata_id": "9341",
+    "doc-id": "RFC5731",
+    "errata_status_code": "Reported",
+    "errata_type_code": "Technical",
+    "section": "2.3",
+    "orig_text": "-  inactive\r\n\r\n      Delegation information has not been associated with the object.\r\n      This is the default status when a domain object is first created\r\n      and there are no associated host objects for the DNS delegation.\r\n      This status can also be set by the server when all host-object\r\n      associations are removed.",
+    "correct_text": "-  inactive\r\n\r\n      Delegation information has not been associated with the object.\r\n      This is the default status when a domain object is first created\r\n      and there are no associated host objects or host attributes (name servers) for the DNS delegation.\r\n      This status can also be set by the server when all name servers\r\n      are removed.",
+    "notes": "A literal interpretation of the original text would hold that domain objects in EPP servers that use host attributes will always have the \"inactive\" status since the server does not support host objects, and therefore the domain can never have \"host-object associations\".\r\n\r\nIt seems clear to me that the original intent was for the \"inactive\" status to also apply to domain names without any any host attributes, as well as those without any associated host objects.\r\n\r\nThe corrected text replaces the first occurrence of \"host objects\" with \"host objects or host attributes (name servers)\" which is the formulation used in the definition for the <domain:ns> element in Section 3.1.2, and uses \"name servers\" thereafter.",
+    "submit_date": "2026-11-25",
+    "submitter_name": "Gavin Brown",
+    "verifier_id": "",
+    "verifier_name": null,
+    "update_date": "2026-11-26 01:07:07"
   }
 ]
