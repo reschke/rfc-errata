@@ -17,7 +17,7 @@
   {
     "errata_id": "9288",
     "doc-id": "RFC4108",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "IMPORTS\r\n       EnvelopedData\r\n       FROM CryptographicMessageSyntax -- [CMS]\r\n            { iso(1) member-body(2) us(840) rsadsi(113549)\r\n              pkcs(1) pkcs-9(9) smime(16) modules(0) cms-2004(24) };",
@@ -26,7 +26,7 @@
     "submit_date": "2026-11-04",
     "submitter_name": "Daniel Van Geest",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:53:30"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:34:37"
   }
 ]

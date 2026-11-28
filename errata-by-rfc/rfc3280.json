@@ -62,7 +62,7 @@
   {
     "errata_id": "9097",
     "doc-id": "RFC3280",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.1.2.2",
     "orig_text": "The serial number MUST be a positive integer assigned by the CA to\r\n   each certificate.  It MUST be unique for each certificate issued by a\r\n   given CA (i.e., the issuer name and serial number identify a unique\r\n   certificate).  CAs MUST force the serialNumber to be a non-negative\r\n   integer.",
@@ -71,7 +71,7 @@
     "submit_date": "2026-08-07",
     "submitter_name": "Peng Yuan",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-10 16:42:10"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 00:41:43"
   }
 ]

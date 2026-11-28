@@ -2,7 +2,7 @@
   {
     "errata_id": "9204",
     "doc-id": "RFC5723",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.3.3",
     "orig_text": "The value of the AUTH payload is derived in a manner similar to the\r\nusage of IKEv2 pre-shared secret authentication:\r\n\r\n            AUTH = prf(SK_px, <message octets>)",
@@ -11,7 +11,7 @@
     "submit_date": "2026-10-05",
     "submitter_name": "Andrew Cagney",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-07 18:17:52"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 00:44:54"
   }
 ]

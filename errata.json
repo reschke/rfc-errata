@@ -79292,17 +79292,17 @@
   {
     "errata_id": "5962",
     "doc-id": "RFC5958",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A",
-    "orig_text": "   PrivateKeyAlgorithms ALGORITHM ::= {\r\n     ... -- Extensible\r\n   }\r\n\r\n   KeyEncryptionAlgorithms ALGORITHM ::= {\r\n     ... -- Extensible\r\n   }",
-    "correct_text": "   PrivateKeyAlgorithms PUBLIC-KEY ::= {\r\n     ... -- Extensible\r\n   }\r\n\r\n   KeyEncryptionAlgorithms CONTENT-ENCRYPTION ::= {\r\n     ... -- Extensible\r\n   }",
+    "orig_text": "PrivateKeyAlgorithms ALGORITHM ::= {\r\n     ... -- Extensible\r\n   }\r\n\r\n   KeyEncryptionAlgorithms ALGORITHM ::= {\r\n     ... -- Extensible\r\n   }",
+    "correct_text": "PrivateKeyAlgorithms PUBLIC-KEY ::= {\r\n     ... -- Extensible\r\n   }\r\n\r\n   KeyEncryptionAlgorithms CONTENT-ENCRYPTION ::= {\r\n     ... -- Extensible\r\n   }",
     "notes": "The above given information object sets are used in defining types PrivateKeyAlgorithmIdentifier and EncryptionAlgorithmIdentifier:\r\n\r\n   PrivateKeyAlgorithmIdentifier ::= AlgorithmIdentifier\r\n                                      { PUBLIC-KEY,\r\n                                        { PrivateKeyAlgorithms } }\r\n\r\n   EncryptionAlgorithmIdentifier ::= AlgorithmIdentifier\r\n                                       { CONTENT-ENCRYPTION,\r\n                                         { KeyEncryptionAlgorithms } }\r\n\r\nThe parameterized type AlgorithmIdentifier has two parameters, one an information object class and the other an information object set.  The information object set must be contain objects of the given class, or else the table constraint in AlgorithmIdentifier will not be valid.  This requirement is not met as PrivateKeyAlgorithms  and KeyEncryptionAlgorithms are currently defined, and therefore the definition is not valid according to ITU-T X.682.\r\n\r\nAn alternative correction would be to change the type definitions to specify \"ALGORITHM\" in the invocation of the parameterized type AlgorithmIdentifier.",
     "submit_date": "2020-01-22",
     "submitter_name": "Kevin Braun",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:15:05"
   },
   {
     "errata_id": "5963",
@@ -118592,7 +118592,7 @@
   {
     "errata_id": "9097",
     "doc-id": "RFC3280",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "4.1.2.2",
     "orig_text": "The serial number MUST be a positive integer assigned by the CA to\r\n   each certificate.  It MUST be unique for each certificate issued by a\r\n   given CA (i.e., the issuer name and serial number identify a unique\r\n   certificate).  CAs MUST force the serialNumber to be a non-negative\r\n   integer.",
@@ -118601,8 +118601,8 @@
     "submit_date": "2026-08-07",
     "submitter_name": "Peng Yuan",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-08-10 16:42:10"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 00:41:43"
   },
   {
     "errata_id": "9098",
@@ -119897,7 +119897,7 @@
   {
     "errata_id": "9204",
     "doc-id": "RFC5723",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "4.3.3",
     "orig_text": "The value of the AUTH payload is derived in a manner similar to the\r\nusage of IKEv2 pre-shared secret authentication:\r\n\r\n            AUTH = prf(SK_px, <message octets>)",
@@ -119906,8 +119906,8 @@
     "submit_date": "2026-10-05",
     "submitter_name": "Andrew Cagney",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-07 18:17:52"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 00:44:54"
   },
   {
     "errata_id": "9205",
@@ -120122,7 +120122,7 @@
   {
     "errata_id": "9218",
     "doc-id": "RFC9580",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "6",
     "orig_text": "The base64 encoding used is described in Section 4 of [RFC4648], and it is wrapped into lines of no more than 76 characters each.\r\n\r\nWhen decoding base64, an OpenPGP implementation MUST ignore all whitespace.",
@@ -120131,8 +120131,8 @@
     "submit_date": "2026-10-13",
     "submitter_name": "Neal H. Walfield",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-15 17:14:41"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 00:51:54"
   },
   {
     "errata_id": "9219",
@@ -120332,7 +120332,7 @@
   {
     "errata_id": "9230",
     "doc-id": "RFC9549",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "1",
     "orig_text": "For instance, ♚.example, which contains the Unicode character U+1F0A1 (BLACK CHESS KING), results in a failure under this specification, but it becomes xn--45h.example under [UTS46].",
@@ -120341,8 +120341,8 @@
     "submit_date": "2026-10-16",
     "submitter_name": "David Vieira Kurz",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-19 20:54:22"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 00:48:53"
   },
   {
     "errata_id": "9231",
@@ -120602,7 +120602,7 @@
   {
     "errata_id": "9247",
     "doc-id": "RFC9908",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "5.6.2",
     "orig_text": "Provide a CSR with an ECC public key from sha521 and include your serial number, friendly name, and favorite drink, and hash it with SHA512.",
@@ -120611,8 +120611,8 @@
     "submit_date": "2026-10-29",
     "submitter_name": "Sean Anderson",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-10-30 15:50:02"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 00:54:46"
   },
   {
     "errata_id": "9248",
@@ -120737,7 +120737,7 @@
   {
     "errata_id": "9255",
     "doc-id": "RFC5912",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "7",
     "orig_text": "AttributeCertificateVersion1-2009\r\n      { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)\r\n      smime(16) modules(0) id-mod-v1AttrCert-02(49) } ;",
@@ -120746,8 +120746,8 @@
     "submit_date": "2026-11-02",
     "submitter_name": "Daniel Van Geest",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-02 22:17:29"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:08:21"
   },
   {
     "errata_id": "9256",
@@ -120797,7 +120797,7 @@
   {
     "errata_id": "9259",
     "doc-id": "RFC5280",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "6.1.5",
     "orig_text": "(f)  Recognize and process any other critical extension present in\r\n        the certificate n.  Process any other recognized non-critical\r\n        extension present in certificate n that is relevant to path\r\n        processing.",
@@ -120806,8 +120806,8 @@
     "submit_date": "2026-11-01",
     "submitter_name": "Rifat Jumagulov",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-02 22:19:40"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:26:19"
   },
   {
     "errata_id": "926",
@@ -120827,7 +120827,7 @@
   {
     "errata_id": "9260",
     "doc-id": "RFC9618",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "3.1",
     "orig_text": "The complete algorithm for building this structure is described in\r\n   steps (d), (e), and (f) in Section 6.1.3 of [RFC5280]; steps (h),\r\n   (i), and (j) in Section 6.1.4 of [RFC5280]; and steps (a), (b), and\r\n   (g) in Section 6.1.5 of [RFC5280].",
@@ -120836,8 +120836,8 @@
     "submit_date": "2026-11-01",
     "submitter_name": "Rifat Jumagulov",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-02 22:20:33"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:02:47"
   },
   {
     "errata_id": "9261",
@@ -121232,7 +121232,7 @@
   {
     "errata_id": "9285",
     "doc-id": "RFC5911",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "11",
     "orig_text": "cea-aes192-GCM CONTENT-ENCRYPTION ::= {\r\n          IDENTIFIER id-aes128-GCM\r\n          PARAMS TYPE GCMParameters ARE required\r\n          SMIME-CAPS { IDENTIFIED BY id-aes192-GCM }\r\n  }\r\n  id-aes192-GCM OBJECT IDENTIFIER ::= { aes 26 }\r\n\r\n  cea-aes256-GCM CONTENT-ENCRYPTION ::= {\r\n          IDENTIFIER id-aes128-GCM\r\n          PARAMS TYPE GCMParameters ARE required\r\n          SMIME-CAPS { IDENTIFIED BY id-aes256-GCM }\r\n  }\r\n  id-aes256-GCM OBJECT IDENTIFIER ::= { aes 46 }",
@@ -121241,8 +121241,8 @@
     "submit_date": "2026-11-05",
     "submitter_name": "Daniel Van Geest",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:52:38"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:32:11"
   },
   {
     "errata_id": "9286",
@@ -121277,7 +121277,7 @@
   {
     "errata_id": "9288",
     "doc-id": "RFC4108",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Verified",
     "errata_type_code": "Technical",
     "section": "Appendix A",
     "orig_text": "IMPORTS\r\n       EnvelopedData\r\n       FROM CryptographicMessageSyntax -- [CMS]\r\n            { iso(1) member-body(2) us(840) rsadsi(113549)\r\n              pkcs(1) pkcs-9(9) smime(16) modules(0) cms-2004(24) };",
@@ -121286,8 +121286,8 @@
     "submit_date": "2026-11-04",
     "submitter_name": "Daniel Van Geest",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-05 16:53:30"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:34:37"
   },
   {
     "errata_id": "9289",
@@ -122012,7 +122012,7 @@
   {
     "errata_id": "9331",
     "doc-id": "RFC7662",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "Document title",
     "orig_text": "OAuth 2.0 Token Introspection",
@@ -122021,8 +122021,8 @@
     "submit_date": "2026-11-19",
     "submitter_name": "Aaron Parecki",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-23 20:02:41"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:36:37"
   },
   {
     "errata_id": "9332",
@@ -122057,7 +122057,7 @@
   {
     "errata_id": "9334",
     "doc-id": "RFC7515",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Rejected",
     "errata_type_code": "Technical",
     "section": "Appendix C.  Notes on Implementing base64url Encoding without Padding",
     "orig_text": "This appendix describes how to implement base64url encoding and\r\n   decoding functions without padding based upon standard base64\r\n   encoding and decoding functions that do use padding.\r\n\r\n   To be concrete, example C# code implementing these functions is shown\r\n   below.  Similar code could be used in other languages.\r\n\r\n     static string base64urlencode(byte [] arg)\r\n     {\r\n       string s = Convert.ToBase64String(arg); // Regular base64 encoder\r\n       s = s.Split('=')[0]; // Remove any trailing '='s\r\n       s = s.Replace('+', '-'); // 62nd char of encoding\r\n       s = s.Replace('/', '_'); // 63rd char of encoding\r\n       return s;\r\n     }\r\n\r\n     static byte [] base64urldecode(string arg)\r\n     {\r\n       string s = arg;\r\n       s = s.Replace('-', '+'); // 62nd char of encoding\r\n       s = s.Replace('_', '/'); // 63rd char of encoding\r\n       switch (s.Length % 4) // Pad with trailing '='s\r\n       {\r\n         case 0: break; // No pad chars in this case\r\n         case 2: s += \"==\"; break; // Two pad chars\r\n         case 3: s += \"=\"; break; // One pad char\r\n         default: throw new System.Exception(\r\n           \"Illegal base64url string!\");\r\n       }\r\n       return Convert.FromBase64String(s); // Standard base64 decoder\r\n     }\r\n\r\n   As per the example code above, the number of '=' padding characters\r\n   that needs to be added to the end of a base64url-encoded string\r\n   without padding to turn it into one with padding is a deterministic\r\n   function of the length of the encoded string.  Specifically, if the\r\n   length mod 4 is 0, no padding is added; if the length mod 4 is 2, two\r\n   '=' padding characters are added; if the length mod 4 is 3, one '='\r\n   padding character is added; if the length mod 4 is 1, the input is\r\n   malformed.\r\n\r\n   An example correspondence between unencoded and encoded values\r\n   follows.  The octet sequence below encodes into the string below,\r\n   which when decoded, reproduces the octet sequence.\r\n\r\n   3 236 255 224 193\r\n   A-z_4ME",
@@ -122066,8 +122066,8 @@
     "submit_date": "2026-11-24",
     "submitter_name": "Laszlo Deak",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": "2026-11-24 19:13:58"
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:38:46"
   },
   {
     "errata_id": "9335",

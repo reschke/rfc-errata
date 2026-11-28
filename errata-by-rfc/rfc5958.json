@@ -17,17 +17,17 @@
   {
     "errata_id": "5962",
     "doc-id": "RFC5958",
-    "errata_status_code": "Reported",
+    "errata_status_code": "Held for Document Update",
     "errata_type_code": "Technical",
     "section": "Appendix A",
-    "orig_text": "   PrivateKeyAlgorithms ALGORITHM ::= {\r\n     ... -- Extensible\r\n   }\r\n\r\n   KeyEncryptionAlgorithms ALGORITHM ::= {\r\n     ... -- Extensible\r\n   }",
-    "correct_text": "   PrivateKeyAlgorithms PUBLIC-KEY ::= {\r\n     ... -- Extensible\r\n   }\r\n\r\n   KeyEncryptionAlgorithms CONTENT-ENCRYPTION ::= {\r\n     ... -- Extensible\r\n   }",
+    "orig_text": "PrivateKeyAlgorithms ALGORITHM ::= {\r\n     ... -- Extensible\r\n   }\r\n\r\n   KeyEncryptionAlgorithms ALGORITHM ::= {\r\n     ... -- Extensible\r\n   }",
+    "correct_text": "PrivateKeyAlgorithms PUBLIC-KEY ::= {\r\n     ... -- Extensible\r\n   }\r\n\r\n   KeyEncryptionAlgorithms CONTENT-ENCRYPTION ::= {\r\n     ... -- Extensible\r\n   }",
     "notes": "The above given information object sets are used in defining types PrivateKeyAlgorithmIdentifier and EncryptionAlgorithmIdentifier:\r\n\r\n   PrivateKeyAlgorithmIdentifier ::= AlgorithmIdentifier\r\n                                      { PUBLIC-KEY,\r\n                                        { PrivateKeyAlgorithms } }\r\n\r\n   EncryptionAlgorithmIdentifier ::= AlgorithmIdentifier\r\n                                       { CONTENT-ENCRYPTION,\r\n                                         { KeyEncryptionAlgorithms } }\r\n\r\nThe parameterized type AlgorithmIdentifier has two parameters, one an information object class and the other an information object set.  The information object set must be contain objects of the given class, or else the table constraint in AlgorithmIdentifier will not be valid.  This requirement is not met as PrivateKeyAlgorithms  and KeyEncryptionAlgorithms are currently defined, and therefore the definition is not valid according to ITU-T X.682.\r\n\r\nAn alternative correction would be to change the type definitions to specify \"ALGORITHM\" in the invocation of the parameterized type AlgorithmIdentifier.",
     "submit_date": "2020-01-22",
     "submitter_name": "Kevin Braun",
     "verifier_id": "",
-    "verifier_name": null,
-    "update_date": null
+    "verifier_name": "Deb Cooley",
+    "update_date": "2026-11-28 01:15:05"
   },
   {
     "errata_id": "8490",
